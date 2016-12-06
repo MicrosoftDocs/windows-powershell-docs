@@ -1,7 +1,0 @@
-# [Microsoft Enterprise Desktop Virtualization](index.md)
-## [MED-V Cmdlets](medv-cmdlets.md)
-### [Export-MedvConfiguration](export-medvconfiguration.md)
-### [New-MedvConfiguration](new-medvconfiguration.md)
-## [MED-V Workspace Cmdlets](medv-workspace-cmdlets.md)
-### [Export-MedvWorkspace](export-medvworkspace.md)
-### [New-MedvWorkspace](new-medvworkspace.md)

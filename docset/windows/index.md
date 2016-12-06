@@ -1,1 +1,3 @@
-# Windows 10 and Windows Server 2016
+---
+redirect_url: https://technet.microsoft.com/library/mt156946.aspx
+---

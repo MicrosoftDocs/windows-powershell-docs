@@ -3,5 +3,5 @@
 ## [Get-ControlledGpo](get-controlledgpo.md)
 ## [Lock-ControlledGpo](lock-controlledgpo.md)
 ## [Publish-ControlledGpo](publish-controlledgpo.md)
-## [Remove-ControlledGpo](remove-Ccntrolledgpo.md)
+## [Remove-ControlledGpo](remove-controlledgpo.md)
 ## [Unlock-ControlledGpo](unlock-controlledgpo.md)

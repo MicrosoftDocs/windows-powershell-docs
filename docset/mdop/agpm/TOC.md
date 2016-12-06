@@ -1,0 +1,7 @@
+# [Advanced Group Policy Management Cmdlets](index.md)
+## [Add-ControlledGpo](add-controlledgpo.md)
+## [Get-ControlledGpo](get-controlledgpo.md)
+## [Lock-ControlledGpo](lock-controlledgpo.md)
+## [Publish-ControlledGpo](publish-controlledgpo.md)
+## [Remove-ControlledGpo](remove-Ccntrolledgpo.md)
+## [Unlock-ControlledGpo](unlock-controlledgpo.md)

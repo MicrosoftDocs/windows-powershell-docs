@@ -229,6 +229,6 @@ Time                                   DateTime
 
 [Write-MbamRecoveryInformation](write-mbamrecoveryinformation.md)
 
-[Microsoft BitLocker Administration and Monitoring](./MBAM.md)
+[Microsoft BitLocker Administration and Monitoring](index.md)
 
 

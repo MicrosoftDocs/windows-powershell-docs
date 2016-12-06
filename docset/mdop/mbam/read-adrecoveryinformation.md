@@ -284,6 +284,6 @@ Time                              DateTime
 
 [Read-ADTpmInformation](read-adtpminformation.md)
 
-[Microsoft BitLocker Administration and Monitoring](./MBAM.md)
+[Microsoft BitLocker Administration and Monitoring](index.md)
 
 

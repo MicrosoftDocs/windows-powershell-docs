@@ -143,6 +143,6 @@ The BitLocker recovery key for the specified volume.
 
 ## RELATED LINKS
 
-[Microsoft BitLocker Administration and Monitoring](./MBAM.md)
+[Microsoft BitLocker Administration and Monitoring](index.md)
 
 

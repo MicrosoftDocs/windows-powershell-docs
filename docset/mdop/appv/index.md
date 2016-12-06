@@ -2,7 +2,7 @@
 title: Microsoft Application Virtualization
 description: 
 keywords: powershell, cmdlet
-author: 
+author: jamiejdt
 manager: 
 ms.date: 2016-12-05
 ms.topic: reference

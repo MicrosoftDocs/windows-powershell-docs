@@ -5,7 +5,7 @@ schema: 2.0.0
 title: Export-MedvConfiguration
 description: 
 keywords: powershell, cmdlet
-author: 
+author: jamiejdt
 manager: 
 ms.date: 2016-12-05
 ms.topic: reference

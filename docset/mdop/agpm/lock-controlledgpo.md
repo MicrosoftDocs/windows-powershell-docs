@@ -1,5 +1,5 @@
 ---
-author: 
+author: jamiejdt
 description: 
 external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
 keywords: powershell, cmdlet

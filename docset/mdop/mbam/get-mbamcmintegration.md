@@ -1,5 +1,5 @@
 ---
-author: 
+author: jamiejdt
 description: 
 external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
 keywords: powershell, cmdlet

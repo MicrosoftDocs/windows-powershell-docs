@@ -1,5 +1,5 @@
 ---
-author: 
+author: jamiejdt
 description: 
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet

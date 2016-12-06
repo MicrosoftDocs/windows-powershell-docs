@@ -7,7 +7,7 @@ Locale: en-US
 title: AppVSequencer
 description: 
 keywords: powershell, cmdlet
-author: 
+author: jamiejdt
 manager: 
 ms.date: 2016-12-05
 ms.topic: reference

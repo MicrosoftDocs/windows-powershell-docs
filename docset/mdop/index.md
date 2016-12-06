@@ -24,7 +24,7 @@ The table below shows the latest published version of the Help for each module. 
 
 | Product | Latest product version |
 | - | - |
-| Advanced Group Policy Management | 4.0 SP3 |
+| [Advanced Group Policy Management](agpm/index.md) | 4.0 SP3 |
 | Microsoft Application Virtualization | 5.1 |
 | Microsoft Bitlocker Administration and Monitoring | 2.5 |
 | Microsoft Enterprise Desktop Virtualization | 2.0 |

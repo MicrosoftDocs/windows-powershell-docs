@@ -16,7 +16,7 @@
 ## [Test-MbamCMIntegration](test-mbamcmintegration.md)
 ## [Test-MbamDatabase](test-mbamdatabase.md)
 ## [Test-MbamReport](test-mbamreport.md)
-## [Test-MbamWebApplication](rest-mbamwebapplication.md)
+## [Test-MbamWebApplication](test-mbamwebapplication.md)
 ## [Write-MbamComputerUser](write-mbamcomputeruser.md)
 ## [Write-MbamRecoveryInformation](write-mbamrecoveryinformation.md)
 ## [Write-MbamTPMInformation](write-mbamtpminformation.md)

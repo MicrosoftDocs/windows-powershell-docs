@@ -1,5 +1,5 @@
 ---
-author:
+author: jamiejdt
 description: Microsoft Desktop Optimization Pack Automation with Windows PowerShell
 external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet

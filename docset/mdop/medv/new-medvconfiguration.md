@@ -1,5 +1,5 @@
 ---
-external help file: MEDV2_CmdletHelp.xml
+external help file: Microsoft.Medv.Administration.Commands.Configuration.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: New-MedvConfiguration
@@ -22,25 +22,25 @@ Creates an object that contains configuration settings for MED-V.
 ## SYNTAX
 
 ```
-New-MedvConfiguration [-DiagEventLogLevel <NONE | ERROR | WARNING | INFORMATION | DEBUG>] [-ForceDefaults]
+New-MedvConfiguration [-DiagEventLogLevel {NONE | ERROR | WARNING | INFORMATION | DEBUG}] [-ForceDefaults [<SwitchParameter>]]
  [-FtsAddUserToAdminGroupEnabled <Boolean>] [-FtsComputerNameMask <String>] [-FtsDeleteVMStateTimeout <Int32>]
  [-FtsDetachVfdTimeout <Int32>] [-FtsDialogUrl <String>] [-FtsExplorerTimeout <Int32>]
  [-FtsFailureDialogMsg <String>] [-FtsLogFilePaths <String[]>] [-FtsMaxPostponeTime <Int32>]
- [-FtsMaxRetryCount <Int32>] [-FtsMode <ATTENDED | UNATTENDED | SILENT>]
+ [-FtsMaxRetryCount <Int32>] [-FtsMode {ATTENDED | UNATTENDED | SILENT}]
  [-FtsNonInteractiveRetryTimeoutInc <Int32>] [-FtsNonInteractiveTimeout <Int32>]
  [-FtsPostponeUtcDateTimeLimit <String>] [-FtsRetryDialogMsg <String>] [-FtsSetComputerNameEnabled <Boolean>]
  [-FtsSetJoinDomainEnabled <Boolean>] [-FtsSetMachineObjectOUEnabled <Boolean>]
  [-FtsSetRegionalSettingsEnabled <Boolean>] [-FtsSetUserDataEnabled <Boolean>] [-FtsStartDialogMsg <String>]
- [-FtsTaskCancelTimeout <Int32>] [-FtsTaskVMTurnOffTimeout <Int32>] [-FtsUpgradeTimeout <Int32>]
+ [-FtsTaskCancelTimeout <Int32>] [-FtsTaskVMTurnOffTimeout <int>] [-FtsUpgradeTimeout <int>]
  [-UxAppPublishingEnabled <Boolean>] [-UxAudioSharingEnabled <Boolean>] [-UxClipboardSharingEnabled <Boolean>]
  [-UxCredentialCacheEnabled <Boolean>] [-UxDialogTimeout <Int32>] [-UxHideVmTimeout <Int32>]
  [-UxLogonStartEnabled <Boolean>] [-UxPrinterSharingEnabled <Boolean>] [-UxRebootAbsoluteDelayTimeout <Int32>]
- [-UxRedirectUrls <String[]>] [-UxShowExit <Boolean>] [-UxSmartCardLogonEnabled <Boolean>]
+ [-UxRedirectUrls <string[]>] [-UxShowExit <bool>] [-UxSmartCardLogonEnabled <Boolean>]
  [-UxSmartCardSharingEnabled <Boolean>] [-UxUSBDeviceSharingEnabled <Boolean>]
- [-VmCloseAction <HIBERNATE | SHUTDOWN | TURN-OFF>] [-VmGuestMemFromHostMem <Int32[]>]
+ [-VmCloseAction {HIBERNATE | SHUTDOWN | TURN-OFF}] [-VmGuestMemFromHostMem <Int32[]>]
  [-VmGuestUpdateDuration <Int32>] [-VmGuestUpdateTime <String>] [-VmHostMemToGuestMem <Int32[]>]
  [-VmHostMemToGuestMemCalcEnabled <Boolean>] [-VmMemory <Int32>] [-VmMultiUserEnabled <Boolean>]
- [-VmNetworkingMode <BRIDGED | NAT>] [-VmTaskTimeout <Int32>]
+ [-VmNetworkingMode {BRIDGED | NAT}] [-VmTaskTimeout <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -153,9 +153,9 @@ Each warning level includes information from the prior levels.
 For example, the Information event level includes both Warning and Error level events.
 
 ```yaml
-Type: NONE | ERROR | WARNING | INFORMATION | DEBUG
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Log
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Indicates whether to automatically add the user to the Administrator group of th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: AddAdmin
 
 Required: False
 Position: Named
@@ -208,7 +208,7 @@ The cmdlet replaces a `*` character at the end of the mask by a random alphanume
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: CompMask
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ Specifies the time-out value, in seconds, when initial setup attempts to delete 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: DeleteTime
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ Specifies the time-out value, in seconds, when initial setup attempts to detach 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: DetachTime
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ Specifies a custom URL displayed in the initial setup dialog messages.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: FtsUrl
 
 Required: False
 Position: Named
@@ -268,7 +268,7 @@ Specifies the time-out value, in seconds, that the initial setup completion appl
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: MaxExplorerTime
 
 Required: False
 Position: Named
@@ -283,7 +283,7 @@ Specifies a customizable message to display when initial setup fails.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: FailMsg
 
 Required: False
 Position: Named
@@ -298,7 +298,7 @@ Specifies an array of log files to collect during initial setup.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: SetupLog
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ Specifies the maximum number of hours that initial setup can be postponed.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: MaxPostpone
 
 Required: False
 Position: Named
@@ -328,7 +328,7 @@ Specifies the maximum number of times initial setup can attempt to run.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: MaxRetry
 
 Required: False
 Position: Named
@@ -349,9 +349,9 @@ Hides the virtual machine windows during initial setup.
 Hides all user interaction during initial setup.
 
 ```yaml
-Type: ATTENDED | UNATTENDED | SILENT
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Mode
 
 Required: False
 Position: Named
@@ -366,7 +366,7 @@ Specifies the amount of time, in minutes, by which to increase the **NonInteract
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: FtsTimeoutInc
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ Specifies the time-out value, in minutes, on the first attempt to perform initia
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: FtsTimeout
 
 Required: False
 Position: Named
@@ -397,7 +397,7 @@ Specify this parameter in the format yyyy-mm-dd hh:mm with hours in 24 hour-cloc
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: PostponeDate
 
 Required: False
 Position: Named
@@ -412,7 +412,7 @@ Specifies a message to display when initial setup fails and must retry.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: RetryMsg
 
 Required: False
 Position: Named
@@ -427,7 +427,7 @@ Indicates whether to update the **ComputerName** setting under the **\[UserData\
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: SetCompName
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ Specifies whether to update the **JoinDomain** setting under the **\[Identificat
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: JoinDomain
 
 Required: False
 Position: Named
@@ -458,7 +458,7 @@ If the value of **FtsSetJoinDomainEnabled** is not ENABLED, this parameter has n
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: MachineOU
 
 Required: False
 Position: Named
@@ -473,7 +473,7 @@ Specifies whether to update the settings under the **\[RegionalSettings\]** sect
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: SetRegion
 
 Required: False
 Position: Named
@@ -488,7 +488,7 @@ Specifies whether to update the **FullName** and the **OrgName** settings under 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: SetUserData
 
 Required: False
 Position: Named
@@ -503,7 +503,7 @@ Specifies the message to display when initial setup is ready to start.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: StartMsg
 
 Required: False
 Position: Named
@@ -518,7 +518,7 @@ Specifies the time-out value, in seconds, that initial setup waits for the virtu
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: CancelTime
 
 Required: False
 Position: Named
@@ -533,7 +533,7 @@ Specifies the time-out value, in seconds, that initial setup waits for the virtu
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: TurnOffTime
 
 Required: False
 Position: Named
@@ -548,7 +548,7 @@ Specifies the time-out value, in minutes, to use when trying to upgrade the MED-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: UpgradeTime
 
 Required: False
 Position: Named
@@ -564,7 +564,7 @@ If application publishing is enabled, applications in the MED-V workspace are pu
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: AppPub
 
 Required: False
 Position: Named
@@ -579,7 +579,7 @@ Indicates whether to enable sharing of the audio I/O device between the MED-V wo
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: Audio
 
 Required: False
 Position: Named
@@ -594,7 +594,7 @@ Indicates whether to enable sharing of the clipboard between the MED-V workspace
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: Clipboard
 
 Required: False
 Position: Named
@@ -614,7 +614,7 @@ You can lessen the risk to user credentials by disabling the storing of end-user
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: Cred
 
 Required: False
 Position: Named
@@ -629,7 +629,7 @@ Specifies the amount of time, in seconds, for dialogs that prompt a user to post
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: DialogTime
 
 Required: False
 Position: Named
@@ -644,7 +644,7 @@ Specifies time-out value, in minutes, that the full screen virtual machine windo
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: HideTime
 
 Required: False
 Position: Named
@@ -660,7 +660,7 @@ If you specify a value of $False, the MED-V workspace is started when the first 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: Logon
 
 Required: False
 Position: Named
@@ -675,7 +675,7 @@ Indicates whether to enable sharing of printers between the MED-V workspace and 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: Print
 
 Required: False
 Position: Named
@@ -690,7 +690,7 @@ Specifies the time-out value, in minutes, before MED-V restarts.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: Reboot
 
 Required: False
 Position: Named
@@ -705,7 +705,7 @@ Specifies an array of URLs to redirect to the MED-V workspace.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: Urls
 
 Required: False
 Position: Named
@@ -720,7 +720,7 @@ Indicates whether to show the Exit menu in the MED-V Host Agent tray icon.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: ShowExit
 
 Required: False
 Position: Named
@@ -736,7 +736,7 @@ If *UxSmartCardLogonEnabled* and *UxCredentialCacheEnabled* are both enabled, *U
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: SmartCardLogon
 
 Required: False
 Position: Named
@@ -751,7 +751,7 @@ Indicates whether to share smart cards between the MED-V workspace and the host 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: SmartCard
 
 Required: False
 Position: Named
@@ -766,7 +766,7 @@ Specifies whether to share USB devices between the MED-V workspace and the host 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: USB
 
 Required: False
 Position: Named
@@ -786,9 +786,9 @@ Valid values are:
 If the **LogonStart** is enabled, the value of this parameter has no effect.
 
 ```yaml
-Type: HIBERNATE | SHUTDOWN | TURN-OFF
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Close
 
 Required: False
 Position: Named
@@ -810,7 +810,7 @@ If **HostMemToVmMemCalcEnabled** is not enabled, the value that you specify for 
 ```yaml
 Type: Int32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: GuestMem
 
 Required: False
 Position: Named
@@ -827,7 +827,7 @@ Valid values are: 0 to 1440 minutes.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: UpdateDuration
 
 Required: False
 Position: Named
@@ -843,7 +843,7 @@ Specify a time in the format hh:mm using 24-hour clock time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: UpdateTime
 
 Required: False
 Position: Named
@@ -861,7 +861,7 @@ The amount of RAM on the host computer is read and the nearest value in this lis
 ```yaml
 Type: Int32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases: HostMem
 
 Required: False
 Position: Named
@@ -876,7 +876,7 @@ Indicates whether to calculate the amount of memory allocated for the MED-V work
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: MemCalc
 
 Required: False
 Position: Named
@@ -893,7 +893,7 @@ If **HostMemToVmMemCalc** is enabled, the value that you specify for this parame
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: Mem
 
 Required: False
 Position: Named
@@ -908,7 +908,7 @@ Indicates whether multiple users share a single MED-V workspace.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases: MultiUser
 
 Required: False
 Position: Named
@@ -922,9 +922,9 @@ Specifies the type of network connection that the MED-V workspace uses.
 Valid values are: NAT and BRIDGED.
 
 ```yaml
-Type: BRIDGED | NAT
+Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: Net
 
 Required: False
 Position: Named
@@ -939,7 +939,7 @@ Specifies a general time-out value, in seconds, that MED-V waits for a task such
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases: TaskTime
 
 Required: False
 Position: Named
@@ -947,6 +947,9 @@ Default value: 600
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

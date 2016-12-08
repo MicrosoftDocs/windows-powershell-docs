@@ -1,5 +1,5 @@
 ---
-external help file: MEDV2_CmdletHelp.xml
+external help file: Microsoft.Medv.Administration.Commands.Configuration.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Export-MedvConfiguration
@@ -22,8 +22,7 @@ Exports a MED-V configuration object to a registry file.
 ## SYNTAX
 
 ```
-Export-MedvConfiguration [-Path] <String> [-Append] [-Force] [-NoClobber] [-PassThru]
- -InputObject <MedvConfiguration> [-Confirm] [-WhatIf]
+Export-MedvConfiguration [-Path] <String> [-Append [<SwitchParameter>]] [-Force [<SwitchParameter>]] [-NoClobber [<SwitchParameter>]] [-PassThru [<SwitchParameter>]] -InputObject <MedvConfiguration> [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -150,12 +149,12 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
@@ -166,13 +165,12 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named
@@ -180,6 +178,9 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -196,6 +197,6 @@ This cmdlet genterates **FileInfo** object.
 
 ## RELATED LINKS
 
-[New-MedvConfiguration](new-medvconfiguration.md)
+[New-MedvConfiguration](./New-MedvConfiguration.md)
 
 

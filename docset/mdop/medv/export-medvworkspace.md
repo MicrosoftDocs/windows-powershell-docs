@@ -1,5 +1,5 @@
 ---
-external help file: MEDV2_WkSpCmdlet.xml
+external help file: Microsoft.Medv.Administration.Commands.WorkspacePackager.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Export-MedvWorkspace
@@ -22,7 +22,7 @@ Creates Windows Installer file and related files.
 ## SYNTAX
 
 ```
-Export-MedvWorkspace [-Path] <String> [-InputObject] <MedvWorkspace> [-Overwrite] [-Confirm] [-WhatIf]
+Export-MedvWorkspace [-Path] <String> [-InputObject] <MedvWorkspace> [-Overwrite [<SwitchParameter>]] [-Confirm [<SwitchParameter>]] [-WhatIf [<SwitchParameter>]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +49,7 @@ To obtain a **MedvWorkspace** object, use the **New-MedvWorkspace** cmdlet.
 ```yaml
 Type: MedvWorkspace
 Parameter Sets: (All)
-Aliases: 
+Aliases: i
 
 Required: True
 Position: 2
@@ -79,7 +79,7 @@ Specifies the full path of the Windows Installer file to generate.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: p
 
 Required: True
 Position: 1
@@ -94,7 +94,7 @@ Prompts you for confirmation before running the cmdlet.Prompts you for confirmat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named
@@ -119,6 +119,9 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -132,6 +135,6 @@ A **MedvWorkspace** object contains the information and location of all files ne
 
 ## RELATED LINKS
 
-[New-MedvWorkspace](new-medvworkspace.md)
+[New-MedvWorkspace](./New-MedvWorkspace.md)
 
 

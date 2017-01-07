@@ -4,7 +4,7 @@ Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390747
 Help Version: 5.0.0.0
 Locale: en-US
-title: ADFS
+title: Active Directory Federation Services
 description: 
 keywords: powershell, cmdlet
 author: brianlic-msft
@@ -16,7 +16,7 @@ ms.technology: powershell
 ms.assetid: 15AE4876-52DA-4539-BEA1-E60BC73FB30D
 ---
 
-# ADFS Module
+# Active Directory Federation Services
 ## Description
 This reference provides command-line reference documentation for the IT professional of the Windows PowerShell cmdlets that you can use to deploy and administer Active Directory Federation Services (AD FS) in Windows Server.
 

@@ -1,0 +1,85 @@
+---
+author: brianlic-msft
+description: 
+external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Get-AdfsFarmInformation
+ms.assetid: C05237E5-0C2F-44F2-A2BE-0CF4935A3E39
+---
+
+# Get-AdfsFarmInformation
+
+## SYNOPSIS
+Gets AD FS behavior level and farm node information.
+
+## SYNTAX
+
+```
+Get-AdfsFarmInformation [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Get-AdfsFarmInformation** cmdlet gets the current Active Directory Federation Services (AD FS) behavior level and farm node information.
+
+## EXAMPLES
+
+### Example 1: Get farm information
+```
+PS C:\>Get-AdfsFarmInformation
+```
+
+This cmdlet gets AD FS behavior level and farm node information.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Set-AdfsFarmInformation](./Set-AdfsFarmInformation.md)
+

@@ -1,0 +1,41 @@
+---
+Module Name: AppBackgroundTask
+Module Guid: EB40BD55-3BAB-4FA6-88EE-0DCF3CAD5A25
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390750
+Help Version: 5.0.0.0
+Locale: en-US
+title: AppBackgroundTask
+description: 
+keywords: powershell, cmdlet
+author: brianlic
+manager: alanth
+ms.date: 2016-12-20
+ms.topic: reference
+ms.prod: powershell
+ms.technology: powershell
+ms.assetid: 859B925B-6E44-40AA-8453-0BB77E592DDF
+---
+
+# AppBackgroundTask Module
+## Description
+This reference provides cmdlet descriptions and syntax for all App Background Task cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+## AppBackgroundTask Cmdlets
+### [Disable-AppBackgroundTaskDiagnosticLog](./Disable-AppBackgroundTaskDiagnosticLog.md)
+Disables background task logging in Event Viewer.
+
+### [Enable-AppBackgroundTaskDiagnosticLog](./Enable-AppBackgroundTaskDiagnosticLog.md)
+Enables background task logging in Event Viewer.
+
+### [Get-AppBackgroundTask](./Get-AppBackgroundTask.md)
+Gets background task information.
+
+### [Set-AppBackgroundTaskResourcePolicy](./Set-AppBackgroundTaskResourcePolicy.md)
+Configures the use of the global pool by background tasks.
+
+### [Start-AppBackgroundTask](./Start-AppBackgroundTask.md)
+Starts a background task.
+
+### [Unregister-AppBackgroundTask](./Unregister-AppBackgroundTask.md)
+Unregisters a background task.
+

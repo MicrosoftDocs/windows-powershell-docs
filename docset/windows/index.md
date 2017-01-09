@@ -20,3 +20,4 @@ The table below also shows the latest published version of the Help for each mod
 | ADFS | [Active Directory Federation Services](adfs/index.md) |
 | ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrms/administration/index.md) |
 | ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
+| AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |

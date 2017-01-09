@@ -1,0 +1,230 @@
+---
+author: brianlic
+description: 
+external help file: MSFT_NetQosFlowControl.cdxml-help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-27
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Disable-NetQosFlowControl
+ms.assetid: 19B107BD-76AC-4E1F-A963-DECF9400E223
+---
+
+# Disable-NetQosFlowControl
+
+## SYNOPSIS
+Disables link level flow control based on the IEEE 802.1p priority.
+
+## SYNTAX
+
+### ByIfAlias (Default)
+```
+Disable-NetQosFlowControl [[-Priority] <Byte[]>] [[-InterfaceAlias] <String>] [-PassThru]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByIfIndex
+```
+Disable-NetQosFlowControl [[-Priority] <Byte[]>] [[-InterfaceIndex] <UInt32>] [-PassThru]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### InputObject (cdxml)
+```
+Disable-NetQosFlowControl -InputObject <CimInstance[]> [-PassThru] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Disable-NetQosFlowControl** cmdlet disables priority-based flow control (PFC) in Windows Server® 2012 and later.
+PFC is part of the IEEE data center bridging (DCB) standard.
+If Windows Server 2012 or later is configured to be **not willing** to accept configurations from a remote device, Windows Server 2012 or later programs DCB capable network adapters, which disables PFC at the link level.
+
+For more information about remote device configurations, see the Set-NetQosDcbxSetting cmdlet.
+
+For more information about PFC, see the Enable-NetQosFlowControl cmdlet.
+
+## EXAMPLES
+
+### Example 1: Disable flow control on traffic for a priority
+```
+PS C:\> Disable-NetQosFlowControl -Priority 6
+```
+
+This command disables flow control on traffic tagged with priority 6.
+
+## PARAMETERS
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CimSession
+```yaml
+Type: CimSession[]
+Parameter Sets: (All)
+Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: InputObject (cdxml)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -InterfaceAlias
+```yaml
+Type: String
+Parameter Sets: ByIfAlias
+Aliases: IfAlias
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InterfaceIndex
+```yaml
+Type: UInt32
+Parameter Sets: ByIfIndex
+Aliases: IfIndex
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PassThru
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Priority
+```yaml
+Type: Byte[]
+Parameter Sets: ByIfAlias, ByIfIndex
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosFlowControlSettingData[]
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+The MSFT_NetQosFlowControlSettingData object contains the flow control setting per priority.
+
+## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetQosFlowControlSettingData
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+This cmdlet returns a **MSFT_NetQosFlowControlSettingData** object that contains flow control settings per priority.
+Only if the *PassThru* parameter is specified does this cmdlet return the **MSFT_NetQosFlowControlSettingData** object.
+
+## NOTES
+
+## RELATED LINKS
+
+[Enable-NetQosFlowControl](./Enable-NetQosFlowControl.md)
+
+[Get-NetQosFlowControl](./Get-NetQosFlowControl.md)
+
+[Set-NetQosDcbxSetting](./Set-NetQosDcbxSetting.md)
+
+[Set-NetQosFlowControl](./Set-NetQosFlowControl.md)
+

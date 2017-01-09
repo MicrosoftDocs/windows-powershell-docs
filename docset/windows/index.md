@@ -27,3 +27,4 @@ The table below also shows the latest published version of the Help for each mod
 | Appx | [Appx](appx/index.md) |
 | AssignedAccess | [Assigned Access](assigned-access/index.md) |
 | BestPractices | [Best Practices Analyser](best-practices/index.md) |
+| BitLocker | [BitLocker](bitlocker/index.md) |

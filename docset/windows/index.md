@@ -37,7 +37,7 @@ The table below also shows the latest published version of the Help for each mod
 | DCBQOS | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
 | DeviceHealthAttestion | [DeviceHealthAttestation](dha/devicehealthattestation.md) |
-| DFSN | [Distributed File System Namespace](dfs-namespace/index.md)
-| DFSR | [Distributed File System Replication](dfs-replication/index.md) |
+| DFSN | [Distributed File System Namespace](dfs/namespace/index.md) |
+| DFSR | [Distributed File System Replication](dfs/replication/index.md) |
 
 | Defender | [Windows Defender](defender/index.md) |

@@ -41,5 +41,5 @@ The table below also shows the latest published version of the Help for each mod
 | DFSR | [Distributed File System Replication](dfs/replication/index.md) |
 | DhcpServer | [DHCP Server](dhcp-server/dhcpserver.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
-
+| DISM | [DISM](dism/index.md) |
 | Defender | [Windows Defender](defender/index.md) |

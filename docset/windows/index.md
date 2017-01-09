@@ -29,3 +29,4 @@ The table below also shows the latest published version of the Help for each mod
 | BestPractices | [Best Practices Analyser](best-practices/index.md) |
 | BitLocker | [BitLocker](bitlocker/index.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |
+| BootEventCollector | [Boot Event Collector](boot-event-collector/booteventcollector.md) |

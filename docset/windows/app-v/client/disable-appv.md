@@ -1,0 +1,59 @@
+---
+author: brianlic
+description: 
+external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Disable-Appv
+ms.assetid: 6397B0E7-1CE5-4F2D-85A2-84BB3C76243F
+---
+
+# Disable-Appv
+
+## SYNOPSIS
+Disables the App-V service.
+
+## SYNTAX
+
+```
+Disable-Appv [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Disable-Appv** cmdlet disables the Microsoft Application Virtualization (App-V) service on Windows 10 Anniversary Edition computers.
+This cmdlet disables the download of all App-V apps from App-V Server or System Center 2016 Configuration Manager.
+If this cmdlet succeeds, it returns a message.
+You must restart the computer for the change to take effect.
+
+## EXAMPLES
+
+### Example 1: Disable the App-V service
+```
+PS C:\>Disable-Appv
+```
+
+This command disables the App-V service.
+
+## PARAMETERS
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Enable-Appv](./Enable-Appv.md)
+
+[Get-AppvStatus](./Get-AppvStatus.md)
+

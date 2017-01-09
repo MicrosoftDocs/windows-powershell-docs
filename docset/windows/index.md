@@ -22,3 +22,5 @@ The table below also shows the latest published version of the Help for each mod
 | ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
 | AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |
 | AppLocker | [AppLocker](applocker/index.md) |
+| AppVClient | [App-V Client](app-v/client/index.md) |
+| AppVSequencer | [App-V Sequencer](app-v/sequencer/index.md) |

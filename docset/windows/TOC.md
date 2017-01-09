@@ -456,3 +456,8 @@
 ### [Clear-AssignedAccess](assigned-access/clear-assignedaccess.md)
 ### [Get-AssignedAccess](assigned-access/get-assignedaccess.md)
 ### [Set-AssignedAccess](assigned-access/set-assignedaccess.md)
+## [Best Practices Analyzer](best-practices/index.md)
+### [Get-BpaModel](best-practices/get-bpamodel.md)
+### [Get-BpaResult](best-practices/get-bparesult.md)
+### [Invoke-BpaModel](best-practices/invoke-bpamodel.md)
+### [Set-BpaResult](best-practices/set-bparesult.md)

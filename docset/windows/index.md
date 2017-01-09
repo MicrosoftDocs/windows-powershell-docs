@@ -36,3 +36,4 @@ The table below also shows the latest published version of the Help for each mod
 | ConfigCI | [Code Integrity](code-integrity/index.md) |
 | DCBQOS | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
+| Defender | [Windows Defender](defender/index.md) |

@@ -13,4 +13,8 @@ The table below also shows the latest published version of the Help for each mod
 
 | Module name | Title and link to Web version |
 | - | - |
+| ADCSAdministration | [Active Directory Certificate Services Administration](adcs/administration/index.md) |
+| ADCSDeployment | [Active Directory Certificate Services Deployment](adcs/deployment/index.md) |
 | ADFS | [Active Directory Federation Services](adfs/index.md) |
+| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrms/administration/index.md) |
+| ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |

@@ -630,7 +630,22 @@
 ### [Start-DedupJob](data-deduplication/start-dedupjob.md)
 ### [Stop-DedupJob](data-deduplication/stop-dedupjob.md)
 ### [Update-DedupStatus](data-deduplication/update-dedupstatus.md)
-
+## [Device Health Attestation](dha/devicehealthattestation.md)
+### [Backup-DHASConfiguration](dha/backup-dhasconfiguration.md)
+### [Get-DHASActiveEncryptionCertificate](dha/get-dhasactiveencryptioncertificate.md)
+### [Get-DHASActiveSigningCertificate](dha/get-dhasactivesigningcertificate.md)
+### [Get-DHASCertificateChainPolicy](dha/get-dhascertificatechainpolicy.md)
+### [Get-DHASInactiveEncryptionCertificate](dha/get-dhasinactiveencryptioncertificate.md)
+### [Get-DHASInactiveSigningCertificate](dha/get-dhasinactivesigningcertificate.md)
+### [Install-DeviceHealthAttestation](dha/install-devicehealthattestation.md)
+### [Remove-DHASInactiveEncryptionCertificate](dha/remove-dhasinactiveencryptioncertificate.md)
+### [Remove-DHASInactiveSigningCertificate](dha/remove-dhasinactivesigningcertificate.md)
+### [Restore-DHASConfiguration](dha/restore-dhasconfiguration.md)
+### [Set-DHASActiveEncryptionCertificate](dha/set-dhasactiveencryptioncertificate.md)
+### [Set-DHASActiveSigningCertificate](dha/set-dhasactivesigningcertificate.md)
+### [Set-DHASCertificateChainPolicy](dha/set-dhascertificatechainpolicy.md)
+### [Set-DHASSupportedAuthenticationSchema](dha/set-dhassupportedauthenticationschema.md)
+### [Uninstall-DeviceHealthAttestation](dha/uninstall-devicehealthattestation.md)
 
 
 

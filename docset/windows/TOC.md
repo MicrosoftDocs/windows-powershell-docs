@@ -837,6 +837,18 @@
 ### [Set-DhcpServerv6Reservation](dhcp-server/set-dhcpserverv6reservation.md)
 ### [Set-DhcpServerv6Scope](dhcp-server/set-dhcpserverv6scope.md)
 ### [Set-DhcpServerv6StatelessStore](dhcp-server/set-dhcpserverv6statelessstore.md)
+## [Direct Access client](direct-access-client/index.md)
+### [Disable-DAManualEntryPointSelection](direct-access-client/disable-damanualentrypointselection.md)
+### [Enable-DAManualEntryPointSelection](direct-access-client/enable-damanualentrypointselection.md)
+### [Get-DAClientExperienceConfiguration](direct-access-client/get-daclientexperienceconfiguration.md)
+### [Get-DAEntryPointTableItem](direct-access-client/get-daentrypointtableitem.md)
+### [New-DAEntryPointTableItem](direct-access-client/new-daentrypointtableitem.md)
+### [Remove-DAEntryPointTableItem](direct-access-client/remove-daentrypointtableitem.md)
+### [Rename-DAEntryPointTableItem](direct-access-client/rename-daentrypointtableitem.md)
+### [Reset-DAClientExperienceConfiguration](direct-access-client/reset-daclientexperienceconfiguration.md)
+### [Reset-DAEntryPointTableItem](direct-access-client/reset-daentrypointtableitem.md)
+### [Set-DAClientExperienceConfiguration](direct-access-client/set-daclientexperienceconfiguration.md)
+### [Set-DAEntryPointTableItem](direct-access-client/set-daentrypointtableitem.md)
 
 
 ## [Windows Defender](defender/index.md)

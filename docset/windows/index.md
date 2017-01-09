@@ -33,3 +33,4 @@ The table below also shows the latest published version of the Help for each mod
 | BranchCahe | [Branch Cache](branch-cache/index.md) |
 | CIM | [Common Information Model](cim/index.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](cluster-aware-updating/index.md) |
+| ConfigCI | [Code Integrity](code-integrity/index.md) |

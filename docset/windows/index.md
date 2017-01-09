@@ -25,3 +25,4 @@ The table below also shows the latest published version of the Help for each mod
 | AppVClient | [App-V Client](app-v/client/index.md) |
 | AppVSequencer | [App-V Sequencer](app-v/sequencer/index.md) |
 | Appx | [Appx](appx/index.md) |
+| AssignedAccess | [Assigned Access](assigned-access/index.md) |

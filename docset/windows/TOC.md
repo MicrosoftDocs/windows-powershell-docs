@@ -452,3 +452,7 @@
 ### [Remove-AppxPackage](appx/remove-appxpackage.md)
 ### [Remove-AppxVolume](appx/remove-appxvolume.md)
 ### [Set-AppxDefaultVolume](appx/set-appxdefaultvolume.md)
+## [Assigned Access](assigned-access/index.md)
+### [Clear-AssignedAccess](assigned-access/clear-assignedaccess.md)
+### [Get-AssignedAccess](assigned-access/get-assignedaccess.md)
+### [Set-AssignedAccess](assigned-access/set-assignedaccess.md)

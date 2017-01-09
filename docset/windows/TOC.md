@@ -716,7 +716,7 @@
 ### [Update-DfsrConfigurationFromAD](dfs/replication/update-dfsrconfigurationfromad.md)
 ### [Write-DfsrHealthReport](dfs/replication/write-dfsrhealthreport.md)
 ### [Write-DfsrPropagationReport](dfs/replication/write-dfsrpropagationreport.md)
-## [Distributed Host Configuration Protocol](dhcp-server/dhcpserver.md)
+## [DHCP Server](dhcp-server/dhcpserver.md)
 ### [Add-DhcpServerInDC](dhcp-server/add-dhcpserverindc.md)
 ### [Add-DhcpServerSecurityGroup](dhcp-server/add-dhcpserversecuritygroup.md)
 ### [Add-DhcpServerv4Class](dhcp-server/add-dhcpserverv4class.md)

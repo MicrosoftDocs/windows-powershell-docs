@@ -28,3 +28,4 @@ The table below also shows the latest published version of the Help for each mod
 | AssignedAccess | [Assigned Access](assigned-access/index.md) |
 | BestPractices | [Best Practices Analyser](best-practices/index.md) |
 | BitLocker | [BitLocker](bitlocker/index.md) |
+| BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |

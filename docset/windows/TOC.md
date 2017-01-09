@@ -175,7 +175,7 @@
 #### [Test-ADServiceAccount](adds/administration/test-adserviceaccount.md)
 #### [Uninstall-ADServiceAccount](adds/administration/uninstall-adserviceaccount.md)
 #### [Unlock-ADAccount](adds/administration/unlock-adaccount.md)
-### [Active Direction Domain Services Deployment](adds/deployment/index.md)
+### [Active Directory Domain Services Deployment](adds/deployment/index.md)
 #### [Add-ADDSReadOnlyDomainControllerAccount](adds/deployment/add-addsreadonlydomaincontrolleraccount.md)
 #### [Install-ADDSDomain](adds/deployment/install-addsdomain.md)
 #### [Install-ADDSDomainController](adds/deployment/install-addsdomaincontroller.md)

@@ -51,8 +51,8 @@ The table below also shows the latest published version of the Help for each mod
 | GroupPolicy | [Group Policy](group-policy/index.md) |
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
 | HostComputeService | [Containers](containers/hostcomputeservice.md) |
-| HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md)
-
+| HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
+| HgsClient | [Host Guardian Service Client](host-guardian-service/client/hgsclient.md) |
 
 
 | Defender | [Windows Defender](defender/index.md) |

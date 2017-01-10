@@ -36,6 +36,7 @@ The table below also shows the latest published version of the Help for each mod
 | ConfigCI | [Code Integrity](code-integrity/index.md) |
 | DCBQOS | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
+| Defender | [Windows Defender](defender/index.md) |
 | DeviceHealthAttestion | [DeviceHealthAttestation](dha/index.md) |
 | DFSN | [Distributed File System Namespace](dfs/namespace/index.md) |
 | DFSR | [Distributed File System Replication](dfs/replication/index.md) |
@@ -54,5 +55,5 @@ The table below also shows the latest published version of the Help for each mod
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
-
-| Defender | [Windows Defender](defender/index.md) |
+| HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
+| HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |

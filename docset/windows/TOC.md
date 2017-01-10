@@ -1869,6 +1869,16 @@
 #### [Unlock-WmsUsbStorage](multipoint/services/unlock-wmsusbstorage.md)
 #### [Unpublish-WmsDesktop](multipoint/services/unpublish-wmsdesktop.md)
 #### [Update-WmsStation](multipoint/services/update-wmsstation.md)
+### [Multipoint VDI](multipoint/vdi/index.md)
+#### [Disable-WmsVirtualDesktopRole](multipoint/vdi/disable-wmsvirtualdesktoprole.md)
+#### [Enable-WmsVirtualDesktopRole](multipoint/vdi/enable-wmsvirtualdesktoprole.md)
+#### [Get-WmsVirtualDesktop](multipoint/vdi/get-wmsvirtualdesktop.md)
+#### [Import-WmsVirtualDesktop](multipoint/vdi/import-wmsvirtualdesktop.md)
+#### [New-WmsVirtualDesktop](multipoint/vdi/new-wmsvirtualdesktop.md)
+#### [New-WmsVirtualDesktopTemplate](multipoint/vdi/new-wmsvirtualdesktoptemplate.md)
+#### [Open-WmsVirtualDesktop](multipoint/vdi/open-wmsvirtualdesktop.md)
+
+
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)
 ### [Get-MpComputerStatus](defender/get-mpcomputerstatus.md)

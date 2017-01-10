@@ -1770,6 +1770,13 @@
 ### [Set-IscsiVirtualDisk](iscsi-target/set-iscsivirtualdisk.md)
 ### [Set-IscsiVirtualDiskSnapshot](iscsi-target/set-iscsivirtualdisksnapshot.md)
 ### [Stop-IscsiVirtualDiskOperation](iscsi-target/stop-iscsivirtualdiskoperation.md)
+## [Key Distribution Server](kds/index.md)
+### [Add-KdsRootKey](kds/add-kdsrootkey.md)
+### [Clear-KdsCache](kds/clear-kdscache.md)
+### [Get-KdsConfiguration](kds/get-kdsconfiguration.md)
+### [Get-KdsRootKey](kds/get-kdsrootkey.md)
+### [Set-KdsConfiguration](kds/set-kdsconfiguration.md)
+### [Test-KdsRootKey](kds/test-kdsrootkey.md)
 
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)

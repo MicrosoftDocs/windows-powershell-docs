@@ -64,3 +64,4 @@ The table below also shows the latest published version of the Help for each mod
 | IpamServer | [IP Address Management Server](ipam/index.md) |
 | Iscsi | [iSCSI](iscsi/index.md) |
 | IscsiTarget | [iSCSI Target](iscsi-target/index.md) |
+| KDS | [Key Distribution Server](kds/index.md) |

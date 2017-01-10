@@ -47,7 +47,8 @@ The table below also shows the latest published version of the Help for each mod
 | EventTracMan | [EventTracManCmdlets](etw/eventtracmancmdlets.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failover-clusters/index.md) |
-| File Server Resource Manager | [File Server Resource Manager](fsrm/index.md) |
+| FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
+| GroupPolicy | [Group Policy](group-policy/index.md) |
 
 
 | Defender | [Windows Defender](defender/index.md) |

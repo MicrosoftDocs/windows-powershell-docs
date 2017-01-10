@@ -57,3 +57,4 @@ The table below also shows the latest published version of the Help for each mod
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
+| HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md)

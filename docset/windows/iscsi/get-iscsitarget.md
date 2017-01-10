@@ -1,0 +1,239 @@
+---
+author: brianlic
+description: 
+external help file: iSCSITarget.cdxml-help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Get-IscsiTarget
+ms.assetid: 686A3960-380E-4E4D-A6A4-24F9DFCC793E
+---
+
+# Get-IscsiTarget
+
+## SYNOPSIS
+Returns an iSCSI target object for each iSCSI target that is registered with the iSCSI initiator.
+
+## SYNTAX
+
+### ByNodeAddress (Default)
+```
+Get-IscsiTarget [-NodeAddress <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+### ByiSCSIConnection
+```
+Get-IscsiTarget [-IscsiConnection <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+### ByiSCSISession
+```
+Get-IscsiTarget [-IscsiSession <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+### ByiSCSITargetPortal
+```
+Get-IscsiTarget [-IscsiTargetPortal <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
+```
+
+### ByInitiatorPort
+```
+Get-IscsiTarget [-InitiatorPort <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Get-IscsiTarget** cmdlet returns information about connected iSCSI targets.
+
+## EXAMPLES
+
+### Example 1: Get iSCSI targets
+```
+PS C:\>Get-IscsiTarget
+IsConnected NodeAddress 
+----------- ----------- 
+True iqn.1991-05.com.contoso:testiscsi-deepcore-target
+```
+
+This command returns an iSCSI target object for each iSCSI target that is registered with the iSCSI initiator.
+
+## PARAMETERS
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CimSession
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+The default is the current session on the local computer.
+
+```yaml
+Type: CimSession[]
+Parameter Sets: (All)
+Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InitiatorPort
+Accepts a MSFT initiator port object as an input.
+The MSFT initiator port object is output from the Get-InitiatorPort cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByInitiatorPort
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -IscsiConnection
+Accepts a MSFT iSCSI connection object as an input.
+The MSFT iSCSI connection object is output from the Get-IscsiConnection cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByiSCSIConnection
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -IscsiSession
+Accepts a MSFT iSCSI session object as an input.
+The MSFT iSCSI session object is output from the Get-IscsiSession cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByiSCSISession
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -IscsiTargetPortal
+Accepts a MSFT iSCSI target portal object as an input.
+The MSFT iSCSI target portal object is output from the Get-IscsiTargetPortal cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByiSCSITargetPortal
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -NodeAddress
+Specifies the IQN of the discovered target.
+
+```yaml
+Type: String[]
+Parameter Sets: ByNodeAddress
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### Microsoft.Management.Infrastructure.Ciminstance#MSFT_InitiatorPort
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiConnection
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiSession
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+## OUTPUTS
+
+### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTarget
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+## NOTES
+
+## RELATED LINKS
+
+[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+
+[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+
+[Get-IscsiConnection](./Get-IscsiConnection.md)
+
+[Get-IscsiSession](./Get-IscsiSession.md)
+
+[Get-IscsiTargetPortal](./Get-IscsiTargetPortal.md)
+

@@ -62,3 +62,4 @@ The table below also shows the latest published version of the Help for each mod
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
 | International | [International](international/index.md) |
 | IpamServer | [IP Address Management Server](ipam/index.md) |
+| Iscsi | [iSCSI](iscsi/index.md) |

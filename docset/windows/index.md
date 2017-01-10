@@ -42,4 +42,9 @@ The table below also shows the latest published version of the Help for each mod
 | DhcpServer | [DHCP Server](dhcp-server/dhcpserver.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
 | DISM | [DISM](dism/index.md) |
+| DNSClient | [DNS client](dns-client/index.md) |
+| DNSServer | [DNS Server](dns-server/index.md) |
+| MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
+
+
 | Defender | [Windows Defender](defender/index.md) |

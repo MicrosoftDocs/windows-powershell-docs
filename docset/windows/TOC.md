@@ -1946,6 +1946,20 @@
 ### [Set-NetAdapterRss](network-adapter/set-netadapterrss.md)
 ### [Set-NetAdapterSriov](network-adapter/set-netadaptersriov.md)
 ### [Set-NetAdapterVmq](network-adapter/set-netadaptervmq.md)
+## [Network Address Translation](nat/index.md)
+### [Add-NetNatExternalAddress](nat/add-netnatexternaladdress.md)
+### [Add-NetNatStaticMapping](nat/add-netnatstaticmapping.md)
+### [Get-NetNat](nat/get-netnat.md)
+### [Get-NetNatExternalAddress](nat/get-netnatexternaladdress.md)
+### [Get-NetNatGlobal](nat/get-netnatglobal.md)
+### [Get-NetNatSession](nat/get-netnatsession.md)
+### [Get-NetNatStaticMapping](nat/get-netnatstaticmapping.md)
+### [New-NetNat](nat/new-netnat.md)
+### [Remove-NetNat](nat/remove-netnat.md)
+### [Remove-NetNatExternalAddress](nat/remove-netnatexternaladdress.md)
+### [Remove-NetNatStaticMapping](nat/remove-netnatstaticmapping.md)
+### [Set-NetNat](nat/set-netnat.md)
+### [Set-NetNatGlobal](nat/set-netnatglobal.md)
 
 
 

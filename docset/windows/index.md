@@ -72,5 +72,6 @@ The table below also shows the latest published version of the Help for each mod
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
 | NetAdapter | [Network Adapter](network-adapter/index.md) |
+| NetConnection | [Network connection](network-connection/index.md) |
 | NetNat | [Network Address Translation](nat/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

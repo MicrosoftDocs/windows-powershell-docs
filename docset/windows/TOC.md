@@ -1960,7 +1960,9 @@
 ### [Remove-NetNatStaticMapping](nat/remove-netnatstaticmapping.md)
 ### [Set-NetNat](nat/set-netnat.md)
 ### [Set-NetNatGlobal](nat/set-netnatglobal.md)
-
+## [Network connection](network-connection/index.md)
+### [Get-NetConnectionProfile](network-connection/get-netconnectionprofile.md)
+### [Set-NetConnectionProfile](network-connection/set-netconnectionprofile.md)
 
 
 ## [TCP/IP](tcpip/index.md)

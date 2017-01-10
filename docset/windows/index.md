@@ -60,3 +60,4 @@ The table below also shows the latest published version of the Help for each mod
 | HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
 | Hyper-V | [Hyper-V](hyper-v/index.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
+| International | [International](international/index.md) |

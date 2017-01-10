@@ -52,7 +52,7 @@ The table below also shows the latest published version of the Help for each mod
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
 | HostComputeService | [Containers](containers/hostcomputeservice.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
-| HgsClient | [Host Guardian Service Client](host-guardian-service/client/hgsclient.md) |
-
+| HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
+| HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 
 | Defender | [Windows Defender](defender/index.md) |

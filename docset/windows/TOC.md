@@ -1342,6 +1342,13 @@
 #### [Remove-HgsGuardian](host-guardian-service/client/remove-hgsguardian.md)
 #### [Revoke-HgsKeyProtectorAccess](host-guardian-service/client/revoke-hgskeyprotectoraccess.md)
 #### [Set-HgsClientConfiguration](host-guardian-service/client/set-hgsclientconfiguration.md)
+### [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md)
+#### [Get-HgsTrace](host-guardian-service/diagnostics/get-hgstrace.md)
+#### [Get-HgsTraceFileData](host-guardian-service/diagnostics/get-hgstracefiledata.md)
+#### [New-HgsTraceTarget](host-guardian-service/diagnostics/new-hgstracetarget.md)
+#### [Test-HgsTraceTarget](host-guardian-service/diagnostics/test-hgstracetarget.md)
+
+
 
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)

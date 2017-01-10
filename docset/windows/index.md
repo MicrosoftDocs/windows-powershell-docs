@@ -70,5 +70,6 @@ The table below also shows the latest published version of the Help for each mod
 | Msmq | [MSMQ](msmq/index.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
-
+| NetLdpAgent | [NetLdpAgent](netldp/index.md) |
+| NetAdapter | [Network Adapter](network-adapter/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

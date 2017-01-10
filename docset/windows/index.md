@@ -46,6 +46,7 @@ The table below also shows the latest published version of the Help for each mod
 | DNSServer | [DNS Server](dns-server/index.md) |
 | EventTracMan | [EventTracManCmdlets](etw/eventtracmancmdlets.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
+| FailoverClusters | [Failover clusters](failover-clusters/index.md) |
 
 
 | Defender | [Windows Defender](defender/index.md) |

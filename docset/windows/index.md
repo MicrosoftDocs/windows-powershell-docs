@@ -68,3 +68,4 @@ The table below also shows the latest published version of the Help for each mod
 | MMAgent | [Memory Management Agent](mmagent/index.md) |
 | Mpio | [MPIO](mpio/index.md) |
 | Msmq | [MSMQ](msmq/index.md) |
+| MultiPoint | [MultiPoint Services](multipoint/services/index.md) |

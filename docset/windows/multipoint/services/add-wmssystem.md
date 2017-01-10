@@ -1,0 +1,116 @@
+---
+author: brianlic
+description: 
+external help file: MultiPoint.dll-Help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Add-WmsSystem
+ms.assetid: 9C987F88-6FC7-4D3E-A7D6-CEA04679EBC0
+---
+
+# Add-WmsSystem
+
+## SYNOPSIS
+Adds a computer that can be remotely managed.
+
+## SYNTAX
+
+```
+Add-WmsSystem [-ComputerName] <String[]> [-ManagedSystemsType] <ManagedSystemTypes>
+ [-Credential] <PSCredential> [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Add-WmsSystem** cmdlet enables the local computer to remotely manage a computer with either the MultiPoint role or MultiPoint connector installed.
+
+## EXAMPLES
+
+### 1:
+```
+
+```
+
+## PARAMETERS
+
+### -ComputerName
+Specifies an array of host names of MultiPoint systems to add.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Credential
+Specifies the Administrator credentials for the computer to add.
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedSystemsType
+Specifies the type of managed systems.
+The acceptable values for this parameter are: MultiPointServers, PersonalComputers.
+
+```yaml
+Type: ManagedSystemTypes
+Parameter Sets: (All)
+Aliases: 
+Accepted values: MultiPointServers, PersonalComputers
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### string[]
+The input is an array of fully qualified host names of the computers that should have remote management enabled.
+
+## OUTPUTS
+
+### WmsSystem
+For each computer added a **WmsSystem** object is returned which contains specific infromation about the configuration and state of the MultiPoint system on that computer.
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-WmsSystem](./Get-WmsSystem.md)
+
+[Remove-WmsSystem](./Remove-WmsSystem.md)
+
+[Restart-WmsSystem](./Restart-WmsSystem.md)
+
+[Search-WmsSystem](./Search-WmsSystem.md)
+
+[Set-WmsSystem](./Set-WmsSystem.md)
+
+[Stop-WmsSystem](./Stop-WmsSystem.md)
+

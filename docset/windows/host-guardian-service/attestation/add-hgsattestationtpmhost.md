@@ -1,0 +1,179 @@
+---
+author: brianlic
+description: 
+external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Add-HgsAttestationTpmHost
+ms.assetid: EA27047A-6DEB-4CF1-A39D-8457E78610FB
+---
+
+# Add-HgsAttestationTpmHost
+
+## SYNOPSIS
+Adds a guarded host with TPM 2.0 to the Attestation service in HGS.
+
+## SYNTAX
+
+### File
+```
+Add-HgsAttestationTpmHost [-Name <String>] [-ForeignKey <String>] -Path <String> [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### Console
+```
+Add-HgsAttestationTpmHost [-Name <String>] [-ForeignKey <String>] -Xml <XmlDocument> [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Add-HgsAttestationTpmHost** cmdlet adds a guarded host to the Attestation service in Host Guardian Service (HGS).
+To use this cmdlet, this host must have trusted platform module (TPM) 2.0 hardware.
+
+## EXAMPLES
+
+### Example 1: Add a TPM host
+```
+PS C:\>Add-HgsAttestationTpmHost -Name "TpmHost21" -Path "C:\TpmHost21.xml"
+```
+
+This command adds a TPM host to the Attestation service.
+This command uses an .xml file that is output of the **Get-PlatformIdentifier** cmdlet.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForeignKey
+{{Fill ForeignKey Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the friendly name of the guarded host that this cmdlet adds to the Attestation service.
+This host must have TPM 2.0 hardware.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the full path of an .xml file.
+Create this file by using the **Get-PlatformIdentifier** cmdlet.
+For more information, type `Get-Help Get-PlatformIdentifier`.
+
+```yaml
+Type: String
+Parameter Sets: File
+Aliases: FilePath
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Xml
+Specifies the full path of an .xml file that contains binary data.
+Create this file by using **Get-PlatformIdentifier**.
+
+```yaml
+Type: XmlDocument
+Parameter Sets: Console
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### String
+This cmdlet returns a string.
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-HgsAttestationTpmHost](./Get-HgsAttestationTpmHost.md)
+
+[Remove-HgsAttestationTpmHost](./Remove-HgsAttestationTpmHost.md)
+

@@ -1777,6 +1777,12 @@
 ### [Get-KdsRootKey](kds/get-kdsrootkey.md)
 ### [Set-KdsConfiguration](kds/set-kdsconfiguration.md)
 ### [Test-KdsRootKey](kds/test-kdsrootkey.md)
+## [Memory Management Agent](mmagent/index.md)
+### [Debug-MMAppPrelaunch](mmagent/debug-mmappprelaunch.md)
+### [Disable-MMAgent](mmagent/disable-mmagent.md)
+### [Enable-MMAgent](mmagent/enable-mmagent.md)
+### [Get-MMAgent](mmagent/get-mmagent.md)
+### [Set-MMAgent](mmagent/set-mmagent.md)
 
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)

@@ -44,7 +44,7 @@ The table below also shows the latest published version of the Help for each mod
 | DISM | [DISM](dism/index.md) |
 | DNSClient | [DNS client](dns-client/index.md) |
 | DNSServer | [DNS Server](dns-server/index.md) |
-| EventTracMan | [EventTracManCmdlets](etw/eventtracmancmdlets.md) |
+| EventTracingManagement | [EventTracManCmdlets](etw/eventtracmancmdlets.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failover-clusters/index.md) |
 | FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |

@@ -50,6 +50,7 @@ The table below also shows the latest published version of the Help for each mod
 | FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
 | GroupPolicy | [Group Policy](group-policy/index.md) |
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
+| HostComputeService | [Containers](containers/hostcomputeservice.md) |
 
 
 | Defender | [Windows Defender](defender/index.md) |

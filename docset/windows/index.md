@@ -36,19 +36,20 @@ The table below also shows the latest published version of the Help for each mod
 | ConfigCI | [Code Integrity](code-integrity/index.md) |
 | DCBQOS | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
-| DeviceHealthAttestion | [DeviceHealthAttestation](dha/devicehealthattestation.md) |
+| DeviceHealthAttestion | [DeviceHealthAttestation](dha/index.md) |
 | DFSN | [Distributed File System Namespace](dfs/namespace/index.md) |
 | DFSR | [Distributed File System Replication](dfs/replication/index.md) |
-| DhcpServer | [DHCP Server](dhcp-server/dhcpserver.md) |
+| DhcpServer | [DHCP Server](dhcp-server/index.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
 | DISM | [DISM](dism/index.md) |
 | DNSClient | [DNS client](dns-client/index.md) |
 | DNSServer | [DNS Server](dns-server/index.md) |
-| EventTracingManagement | [EventTracManCmdlets](etw/eventtracmancmdlets.md) |
+| EventTracingManagement | [EventTracManCmdlets](etw/index.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failover-clusters/index.md) |
 | FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
 | GroupPolicy | [Group Policy](group-policy/index.md) |
+| HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
 
 
 | Defender | [Windows Defender](defender/index.md) |

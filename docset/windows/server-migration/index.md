@@ -1,8 +1,5 @@
 ---
 Module Name: Microsoft.Windows.ServerManager.Migration
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 title: Microsoft.Windows.ServerManager.Migration
 description: 
@@ -15,6 +12,12 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
 ---
+
+<! --
+Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Download Help Link: {{Please enter FwLink manually}}
+Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+-->
 
 # Microsoft.Windows.ServerManager.Migration Module
 ## Description

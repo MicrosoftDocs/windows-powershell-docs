@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
 keywords: powershell, cmdlet

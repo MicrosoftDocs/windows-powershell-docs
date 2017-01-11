@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
 keywords: powershell, cmdlet

@@ -7,7 +7,7 @@ Locale: en-US
 title: Active Directory Federation Services
 description: 
 keywords: powershell, cmdlet
-author: brianlic-msft
+author: brianlic-msft-msft
 manager: alanth
 ms.date: 2016-12-20
 ms.topic: reference

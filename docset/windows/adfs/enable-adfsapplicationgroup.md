@@ -1,5 +1,5 @@
 ---
-author: brianlic-msft
+author: brianlic-msft-msft
 description: 
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet

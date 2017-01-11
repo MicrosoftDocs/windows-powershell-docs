@@ -7,7 +7,7 @@ Locale: en-US
 title: HardwareCertification
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: brianlic-msft
 manager: alanth
 ms.date: 2016-12-20
 ms.topic: reference

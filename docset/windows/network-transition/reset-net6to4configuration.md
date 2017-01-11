@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: MSFT_Net6to4Configuration.cdxml-help.xml
 keywords: powershell, cmdlet

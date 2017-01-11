@@ -1,7 +1,7 @@
 ---
 title: Windows 10 and Windows Server 2016
 description: Windows 10 and Windows Server 2016
-author: brianlic-msft
+author: brianlic-msft-msft
 ms.assetid: f16d306b-a30a-45b3-a585-c450ad7ba93b
 ---
 

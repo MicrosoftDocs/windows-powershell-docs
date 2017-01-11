@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: PS_DnsServerResourceRecordAging_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet

@@ -7,7 +7,7 @@ Locale: en-US
 title: EventTracManCmdlets
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: brianlic-msft
 manager: alanth
 ms.date: 2017-01-05
 ms.topic: reference

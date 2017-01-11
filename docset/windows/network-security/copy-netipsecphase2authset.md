@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: NetIPsecPhase2AuthSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet

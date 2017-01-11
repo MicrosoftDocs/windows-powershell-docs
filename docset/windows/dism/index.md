@@ -7,7 +7,7 @@ Locale: en-US
 title: DISM
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: brianlic-msft
 manager: alanth
 ms.date: 2016-12-21
 ms.topic: reference

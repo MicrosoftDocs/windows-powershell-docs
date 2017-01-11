@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 keywords: powershell, cmdlet

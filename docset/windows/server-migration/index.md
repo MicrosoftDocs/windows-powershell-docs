@@ -4,7 +4,7 @@ Locale: en-US
 title: Microsoft.Windows.ServerManager.Migration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: brianlic-msft
 manager: alanth
 ms.date: 2017-01-03
 ms.topic: reference

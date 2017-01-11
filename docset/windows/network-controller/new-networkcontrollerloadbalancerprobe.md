@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet

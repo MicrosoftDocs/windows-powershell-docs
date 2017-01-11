@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: PS_RemoteAccessConnectionStatistics_v2.0.0.cdxml-help.xml
 keywords: powershell, cmdlet

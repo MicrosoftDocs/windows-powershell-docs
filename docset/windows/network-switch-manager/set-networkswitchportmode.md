@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: NetworkSwitchEthernetPort-help.xml
 keywords: powershell, cmdlet

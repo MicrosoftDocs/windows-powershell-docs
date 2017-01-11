@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: MSFT_NetAdapterRsc.cdxml-help.xml
 keywords: powershell, cmdlet

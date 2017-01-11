@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet

@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: FsrmFmjAction.cdxml-help.xml
 keywords: powershell, cmdlet

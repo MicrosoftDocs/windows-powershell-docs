@@ -1,5 +1,5 @@
 ---
-author: brianlic
+author: brianlic-msft
 description: 
 external help file: microsoft.windows.kits.hardware.certification.management.dll-Help.xml
 keywords: powershell, cmdlet

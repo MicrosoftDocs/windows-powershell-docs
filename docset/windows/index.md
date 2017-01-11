@@ -106,4 +106,5 @@ The table below also shows the latest published version of the Help for each mod
 | ShieldedVMTemplate | [Shielded Virtual Machine template](shielded-virtual-machines/template/index.md) |
 | SmbShare | [SmbShare share](smb/share/index.md) |
 | SmbWitness | [SMB Witness](smb/witness/index.md) |
+| SMISConfig | [SMIS Config](smis-config/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

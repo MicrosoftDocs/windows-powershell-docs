@@ -2779,6 +2779,10 @@
 ### [SMB Witness](smb/witness/index.md)
 #### [Get-SmbWitnessClient](smb/witness/get-smbwitnessclient.md)
 #### [Move-SmbWitnessClient](smb/witness/move-smbwitnessclient.md)
+## [SMIS Config](smis-config/index.md)
+### [Register-SmisProvider](smis-config/register-smisprovider.md)
+### [Search-SmisProvider](smis-config/search-smisprovider.md)
+### [Unregister-SmisProvider](smis-config/unregister-smisprovider.md)
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

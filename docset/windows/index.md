@@ -22,8 +22,8 @@ The table below also shows the latest published version of the Help for each mod
 | ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
 | AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |
 | AppLocker | [AppLocker](applocker/index.md) |
-| AppVClient | [App-V Client](app-v/client/index.md) |
-| AppVSequencer | [App-V Sequencer](app-v/sequencer/index.md) |
+| AppvClient | [App-V Client](app-v/client/index.md) |
+| AppvSequencer | [App-V Sequencer](app-v/sequencer/index.md) |
 | Appx | [Appx](appx/index.md) |
 | AssignedAccess | [Assigned Access](assigned-access/index.md) |
 | BestPractices | [Best Practices Analyser](best-practices/index.md) |
@@ -34,13 +34,13 @@ The table below also shows the latest published version of the Help for each mod
 | CIM | [Common Information Model](cim/index.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](cluster-aware-updating/index.md) |
 | ConfigCI | [Code Integrity](code-integrity/index.md) |
-| DCBQOS | [Data Center Bridging Quality of Service](dcbqos/index.md) |
+| DcbQos | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
 | Defender | [Windows Defender](defender/index.md) |
-| DeviceHealthAttestion | [DeviceHealthAttestation](dha/index.md) |
-| DFSN | [Distributed File System Namespace](dfs/namespace/index.md) |
-| DFSR | [Distributed File System Replication](dfs/replication/index.md) |
-| DhcpServer | [DHCP Server](dhcp-server/index.md) |
+| DeviceHealthAttestion | [Device Health Attestation](dha/index.md) |
+| Dfsn | [Distributed File System Namespace](dfs/namespace/index.md) |
+| Dfsn | [Distributed File System Replication](dfs/replication/index.md) |
+| DHCPServer | [DHCP Server](dhcp-server/index.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
 | DISM | [DISM](dism/index.md) |
 | DNSClient | [DNS client](dns-client/index.md) |
@@ -51,12 +51,12 @@ The table below also shows the latest published version of the Help for each mod
 | FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
 | GroupPolicy | [Group Policy](group-policy/index.md) |
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
-| HostComputeService | [Containers](containers/index.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
+| HostComputeService | [Containers](containers/index.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
 | Hyper-V | [Hyper-V](hyper-v/index.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
@@ -74,26 +74,27 @@ The table below also shows the latest published version of the Help for each mod
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
 | NetAdapter | [Network Adapter](network-adapter/index.md) |
 | NetConnection | [Network connection](network-connection/index.md) |
+| NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
+| NetLbfo | [NIC Teaming](nic-teaming/index.md) |
 | NetNat | [Network Address Translation](nat/index.md) |
+| NetQoS | [Quality of Service](qos/index.md) |
+| NetSecurity | [Network security](network-security/index.md) |
+| NetTCPIP | [TCP/IP](tcpip/index.md) |
+| NetWNV | [Network Virtualization](network-virtualization/index.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
-| NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
-| NetLbfo | [NIC Teaming](nic-teaming/index.md) |
-| NetQoS | [Quality of Service](qos/index.md) |
-| NetSecurity | [Network security](network-security/index.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
 | NetworkSwitchManager | [Network Switch Manager](network-switch-manager/index.md) |
 | NetSwitchTeam | [Network Switch Team](network-switch-team/index.md) |
 | NetworkTransition | [Network Transition](network-transition/index.md) |
-| Netwnv | [Network Virtualization](network-virtualization/index.md) |
 | NFS | [Network File System](nfs/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
 | PCSVDevice | [Physical Computer System View device](pcsv/index.md) |
 | PKIClient | [Public Key Infrastructure](pki/index.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
-| Print Management | [Print management](print/index.md) |
+| PrintManagement | [Print management](print/index.md) |
 | RemoteAccess | [Remote access](remote-access/index.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |
@@ -112,7 +113,6 @@ The table below also shows the latest published version of the Help for each mod
 | StorageQoS | [Storage QoS](storage-qos/index.md) |
 | StorageReplica | [Storage Replica](storage-replica/index.md) |
 | SyncShare | [Sync Share](sync-share/index.md) |
-| TCPIP | [TCP/IP](tcpip/index.md) |
 | TLS | [TLS](tls/index.md) |
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
 | TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |
@@ -121,8 +121,8 @@ The table below also shows the latest published version of the Help for each mod
 | VAMT | [Volume Activation Management Tool](vamt/index.md) |
 | VpnClient | [VPN client](vpn-client/index.md) |
 | WDAC | [Windows Data Access Components](wdac/index.md) |
-| WebApplicationProxy | [Web Application Proxy](wap/index.md) |
 | WebAdministration | [Web Administration](web-administration/index.md) |
+| WebApplicationProxy | [Web Application Proxy](wap/index.md) |
 | WDS | [Windows Deployment Services](wds/index.md) |
 | WHEA | [Windows Hardware Error Architecture](whea/index.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |

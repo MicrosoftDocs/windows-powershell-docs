@@ -2421,6 +2421,11 @@
 ### [Stop-PcsvDevice](pcsv/stop-pcsvdevice.md)
 ## [Platform Identifier](platform-identifier/index.md)
 ### [Get-PlatformIdentifier](platform-identifier/get-platformidentifier.md)
+## [Plug and Play](pnp/index.md)
+### [Disable-PnpDevice](pnp/disable-pnpdevice.md)
+### [Enable-PnpDevice](pnp/enable-pnpdevice.md)
+### [Get-PnpDevice](pnp/get-pnpdevice.md)
+### [Get-PnpDeviceProperty](pnp/get-pnpdeviceproperty.md)
 
 ## [Quality of Service](qos/index.md)
 ### [Get-NetQosPolicy](qos/get-netqospolicy.md)

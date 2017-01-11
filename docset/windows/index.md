@@ -90,4 +90,5 @@ The table below also shows the latest published version of the Help for each mod
 | NPS | [Network Policy Server](nps/index.md) |
 | PCSVDevice | [Physical Computer System View device](pcsv/pcsvdevice.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
+| PnpDevice | [Plug and Play](pnp/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

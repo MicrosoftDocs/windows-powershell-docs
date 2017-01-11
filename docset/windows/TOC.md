@@ -2740,7 +2740,7 @@
 #### [Initialize-VMShieldingHelperVHD](shielded-virtual-machines/template/initialize-vmshieldinghelpervhd.md)
 #### [Protect-TemplateDisk](shielded-virtual-machines/template/protect-templatedisk.md)
 ## [Server Message Block](smb/index.md)
-### [Server Message Block share](smb/share/index.md)
+### [SMB share](smb/share/index.md)
 #### [Block-SmbShareAccess](smb/share/block-smbshareaccess.md)
 #### [Close-SmbOpenFile](smb/share/close-smbopenfile.md)
 #### [Close-SmbSession](smb/share/close-smbsession.md)
@@ -2776,7 +2776,9 @@
 #### [Set-SmbShare](smb/share/set-smbshare.md)
 #### [Unblock-SmbShareAccess](smb/share/unblock-smbshareaccess.md)
 #### [Update-SmbMultichannelConnection](smb/share/update-smbmultichannelconnection.md)
-
+### [SMB Witness](smb/witness/index.md)
+#### [Get-SmbWitnessClient](smb/witness/get-smbwitnessclient.md)
+#### [Move-SmbWitnessClient](smb/witness/move-smbwitnessclient.md)
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

@@ -120,9 +120,10 @@ The table below also shows the latest published version of the Help for each mod
 | UEV | [User Experience Virtualization](uev/index.md) |
 | VAMT | [Volume Activation Management Tool](vamt/index.md) |
 | VpnClient | [VPN client](vpn-client/index.md) |
-| wdac | [Windows Data Access Components](wdac/index.md) |
+| WDAC | [Windows Data Access Components](wdac/index.md) |
 | WebApplicationProxy | [Web Application Proxy](wap/index.md) |
 | WebAdministration | [Web Administration](web-administration/index.md) |
-| wds | [Windows Deployment Services](wds/index.md) |
+| WDS | [Windows Deployment Services](wds/index.md) |
+| WHEA | [Windows Hardware Error Architecture](whea/index.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
 | WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |

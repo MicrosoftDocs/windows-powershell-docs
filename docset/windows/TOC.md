@@ -3266,3 +3266,6 @@
 ### [Disable-WindowsErrorReporting](wer/disable-windowserrorreporting.md)
 ### [Enable-WindowsErrorReporting](wer/enable-windowserrorreporting.md)
 ### [Get-WindowsErrorReporting](wer/get-windowserrorreporting.md)
+## [Windows Hardware Error Architecture](whea/index.md)
+### [Get-WheaMemoryPolicy](whea/get-wheamemorypolicy.md)
+### [Set-WheaMemoryPolicy](whea/set-wheamemorypolicy.md)

@@ -106,5 +106,5 @@ This cmdlet generates an **EndorsementKeyObject** object that contains the follo
 
 ## RELATED LINKS
 
-[Trusted Platform Module Cmdlets in Windows PowerShell](./TrustedPlatformModule.md)
+[Trusted Platform Module Cmdlets in Windows PowerShell](./index.md)
 

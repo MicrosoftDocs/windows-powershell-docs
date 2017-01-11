@@ -219,5 +219,5 @@ This cmdlet accepts an authentication policy silo object.
 
 [Set-ADAuthenticationPolicySilo](./Set-ADAuthenticationPolicySilo.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
 

@@ -216,5 +216,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Windows Update Cmdlets](./WindowsUpdate.md)
+[Windows Update Cmdlets](./Index.md)
 

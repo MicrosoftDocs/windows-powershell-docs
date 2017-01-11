@@ -133,5 +133,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Sync Share Cmdlets in Windows PowerShell](./SyncShare.md)
+[Sync Share Cmdlets in Windows PowerShell](./index.md)
 

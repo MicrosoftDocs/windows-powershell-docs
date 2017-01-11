@@ -269,5 +269,5 @@ This cmdlet returns one or more account objects that represent the users, comput
 
 [Remove-ADDomainControllerPasswordReplicationPolicy](./Remove-ADDomainControllerPasswordReplicationPolicy.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
 

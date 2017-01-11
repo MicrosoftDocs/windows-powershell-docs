@@ -170,5 +170,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-BgpRouteFlapDampening](./Set-BgpRouteFlapDampening.md)
 
-[Remote Access Cmdlets](./RemoteAccess.md)
+[Remote Access Cmdlets](./index.md)
 

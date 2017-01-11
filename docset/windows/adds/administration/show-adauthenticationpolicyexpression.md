@@ -247,5 +247,5 @@ This cmdlet outputs a SDDL security descriptor.
 
 [New-ADAuthenticationPolicy](./New-ADAuthenticationPolicy.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
 

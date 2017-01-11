@@ -305,5 +305,5 @@ Derived types, such as the following are also accepted:
 
 [Unlock-ADAccount](./Unlock-ADAccount.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
 

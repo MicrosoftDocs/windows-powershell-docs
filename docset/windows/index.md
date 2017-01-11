@@ -51,7 +51,7 @@ The table below also shows the latest published version of the Help for each mod
 | FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
 | GroupPolicy | [Group Policy](group-policy/index.md) |
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
-| HostComputeService | [Containers](containers/hostcomputeservice.md) |
+| HostComputeService | [Containers](containers/index.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
@@ -76,7 +76,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetConnection | [Network connection](network-connection/index.md) |
 | NetNat | [Network Address Translation](nat/index.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
-| NetworkController | [Network Controller](network-controller/networkcontroller.md) |
+| NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
@@ -89,7 +89,7 @@ The table below also shows the latest published version of the Help for each mod
 | Netwnv | [Network Virtualization](network-virtualization/index.md) |
 | NFS | [Network File System](nfs/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
-| PCSVDevice | [Physical Computer System View device](pcsv/pcsvdevice.md) |
+| PCSVDevice | [Physical Computer System View device](pcsv/index.md) |
 | PKIClient | [Public Key Infrastructure](pki/index.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |

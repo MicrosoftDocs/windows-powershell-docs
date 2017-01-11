@@ -88,5 +88,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[IIS Administration Cmdlets for Windows PowerShell](./IISAdministration.md)
+[IIS Administration Cmdlets for Windows PowerShell](./index.md)
 

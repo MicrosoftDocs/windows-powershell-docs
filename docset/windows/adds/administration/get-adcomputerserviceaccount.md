@@ -225,5 +225,5 @@ Returns one or more objects that represent the service accounts hosted by the sp
 
 [Remove-ADComputerServiceAccount](./Remove-ADComputerServiceAccount.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
 

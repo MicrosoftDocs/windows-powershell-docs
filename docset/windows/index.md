@@ -95,4 +95,5 @@ The table below also shows the latest published version of the Help for each mod
 | Print Management | [Print management](print/index.md) |
 | RemoteAccess | [Remote access](remote-access/index.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
+| ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

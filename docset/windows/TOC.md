@@ -2175,6 +2175,14 @@
 ### [Stop-NlbClusterNode](nlb-cluster/stop-nlbclusternode.md)
 ### [Suspend-NlbCluster](nlb-cluster/suspend-nlbcluster.md)
 ### [Suspend-NlbClusterNode](nlb-cluster/suspend-nlbclusternode.md)
+## [Network Policy Server](nps/index.md)
+### [Export-NpsConfiguration](nps/export-npsconfiguration.md)
+### [Get-NpsRadiusClient](nps/get-npsradiusclient.md)
+### [Get-NpsSharedSecretTemplate](nps/get-npssharedsecrettemplate.md)
+### [Import-NpsConfiguration](nps/import-npsconfiguration.md)
+### [New-NpsRadiusClient](nps/new-npsradiusclient.md)
+### [Remove-NpsRadiusClient](nps/remove-npsradiusclient.md)
+### [Set-NpsRadiusClient](nps/set-npsradiusclient.md)
 
 
 ## [TCP/IP](tcpip/index.md)

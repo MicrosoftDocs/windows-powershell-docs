@@ -92,5 +92,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[SMB Share Cmdlets in Windows PowerShell](./SmbShare.md)
+[SMB Share Cmdlets in Windows PowerShell](./index.md)
 

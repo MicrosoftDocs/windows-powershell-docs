@@ -93,5 +93,6 @@ The table below also shows the latest published version of the Help for each mod
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
 | Print Management | [Print management](print/index.md) |
-| RemoteAccess | [Remote Access](remote-access/index.md) |
+| RemoteAccess | [Remote access](remote-access/index.md) |
+| RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

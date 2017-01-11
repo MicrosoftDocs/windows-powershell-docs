@@ -117,3 +117,4 @@ The table below also shows the latest published version of the Help for each mod
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
 | TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |
 | UserAccessLogging | [User Access Logging](ual/index.md) |
+| UEV | [User Experience Virtualization](uev/index.md) |

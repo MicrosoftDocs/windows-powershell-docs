@@ -82,5 +82,6 @@ The table below also shows the latest published version of the Help for each mod
 | NetSecurity | [Network security](network-security/index.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
 | NetworkSwitchManager | [Network Switch Manager](network-switch-manager/index.md) |
+| NetSwitchTeam | [Network Switch Team](network-switch-team/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

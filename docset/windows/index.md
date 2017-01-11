@@ -110,4 +110,5 @@ The table below also shows the latest published version of the Help for each mod
 | StartLayout | [Start Layout](start-layout/index.md) |
 | Storage | [Storage](storage/index.md) |
 | StorageQoS | [Storage QoS](storage-qos/index.md) |
+| StorageReplica | [Storage Replica](storage-replica/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

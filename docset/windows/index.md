@@ -88,5 +88,6 @@ The table below also shows the latest published version of the Help for each mod
 | Netwnv | [Network Virtualization](network-virtualization/index.md) |
 | NFS | [Network File System](nfs/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
+| PCSVDevice | [Physical Computer System View device](pcsv/pcsvdevice.md) |
 
 | TCPIP | [TCP/IP](tcpip/index.md) |

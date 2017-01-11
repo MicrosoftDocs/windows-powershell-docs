@@ -2409,6 +2409,16 @@
 ### [Set-NetLbfoTeam](nic-teaming/set-netlbfoteam.md)
 ### [Set-NetLbfoTeamMember](nic-teaming/set-netlbfoteammember.md)
 ### [Set-NetLbfoTeamNic](nic-teaming/set-netlbfoteamnic.md)
+## [Physical Computer System View device](pcsv/index.md)
+### [Clear-PcsvDeviceLog](pcsv/clear-pcsvdevicelog.md)
+### [Get-PcsvDevice](pcsv/get-pcsvdevice.md)
+### [Get-PcsvDeviceLog](pcsv/get-pcsvdevicelog.md)
+### [Restart-PcsvDevice](pcsv/restart-pcsvdevice.md)
+### [Set-PcsvDeviceBootConfiguration](pcsv/set-pcsvdevicebootconfiguration.md)
+### [Set-PcsvDeviceNetworkConfiguration](pcsv/set-pcsvdevicenetworkconfiguration.md)
+### [Set-PcsvDeviceUserPassword](pcsv/set-pcsvdeviceuserpassword.md)
+### [Start-PcsvDevice](pcsv/start-pcsvdevice.md)
+### [Stop-PcsvDevice](pcsv/stop-pcsvdevice.md)
 
 
 ## [Quality of Service](qos/index.md)

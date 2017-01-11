@@ -114,3 +114,4 @@ The table below also shows the latest published version of the Help for each mod
 | SyncShare | [Sync Share](sync-share/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |
 | TLS | [TLS](tls/index.md) |
+| TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |

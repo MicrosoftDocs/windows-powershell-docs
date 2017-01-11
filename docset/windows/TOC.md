@@ -3017,6 +3017,9 @@
 ### [Export-TlsSessionTicketKey](tls/export-tlssessionticketkey.md)
 ### [Get-TlsCipherSuite](tls/get-tlsciphersuite.md)
 ### [New-TlsSessionTicketKey](tls/new-tlssessionticketkey.md)
+## [Troubleshooting Pack](troubleshooting-pack/index.md)
+### [Get-TroubleshootingPack](troubleshooting-pack/get-troubleshootingpack.md)
+### [Invoke-TroubleshootingPack](troubleshooting-pack/invoke-troubleshootingpack.md)
 
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)

@@ -1,5 +1,0 @@
-### [Get-DAConnectionStatus](get-daconnectionstatus.md)
-### [Get-NCSIPolicyConfiguration](get-ncsipolicyconfiguration.md)
-### [NetworkConnectivityStatus](index.md)
-### [Reset-NCSIPolicyConfiguration](reset-ncsipolicyconfiguration.md)
-### [Set-NCSIPolicyConfiguration](set-ncsipolicyconfiguration.md)

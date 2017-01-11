@@ -2708,6 +2708,18 @@
 ### [Get-WindowsFeature](server-manager/get-windowsfeature.md)
 ### [Install-WindowsFeature](server-manager/install-windowsfeature.md)
 ### [Uninstall-WindowsFeature](server-manager/uninstall-windowsfeature.md)
+## [Server Manager tasks](server-manager-tasks/index.md)
+### [Get-SMCounterSample](server-manager-tasks/get-smcountersample.md)
+### [Get-SMPerformanceCollector](server-manager-tasks/get-smperformancecollector.md)
+### [Get-SMServerBpaResult](server-manager-tasks/get-smserverbparesult.md)
+### [Get-SMServerClusterName](server-manager-tasks/get-smserverclustername.md)
+### [Get-SMServerEvent](server-manager-tasks/get-smserverevent.md)
+### [Get-SMServerFeature](server-manager-tasks/get-smserverfeature.md)
+### [Get-SMServerInventory](server-manager-tasks/get-smserverinventory.md)
+### [Get-SMServerService](server-manager-tasks/get-smserverservice.md)
+### [Remove-SMServerPerformanceLog](server-manager-tasks/remove-smserverperformancelog.md)
+### [Start-SMPerformanceCollector](server-manager-tasks/start-smperformancecollector.md)
+### [Stop-SMPerformanceCollector](server-manager-tasks/stop-smperformancecollector.md)
 
 
 

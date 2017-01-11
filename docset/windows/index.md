@@ -89,6 +89,7 @@ The table below also shows the latest published version of the Help for each mod
 | NFS | [Network File System](nfs/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
 | PCSVDevice | [Physical Computer System View device](pcsv/pcsvdevice.md) |
+| PKIClient | [Public Key Infrastructure](pki/index.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
 | Print Management | [Print management](print/index.md) |

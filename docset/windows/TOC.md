@@ -2783,7 +2783,10 @@
 ### [Register-SmisProvider](smis-config/register-smisprovider.md)
 ### [Search-SmisProvider](smis-config/search-smisprovider.md)
 ### [Unregister-SmisProvider](smis-config/unregister-smisprovider.md)
-
+## [Start Layout](start-layout/index.md)
+### [Export-StartLayout](start-layout/export-startlayout.md)
+### [Get-StartApps](start-layout/get-startapps.md)
+### [Import-StartLayout](start-layout/import-startlayout.md)
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)
 ### [Get-NetCompartment](tcpip/get-netcompartment.md)

@@ -107,4 +107,5 @@ The table below also shows the latest published version of the Help for each mod
 | SmbShare | [SmbShare share](smb/share/index.md) |
 | SmbWitness | [SMB Witness](smb/witness/index.md) |
 | SMISConfig | [SMIS Config](smis-config/index.md) |
+| StartLayout | [Start Layout](start-layout/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

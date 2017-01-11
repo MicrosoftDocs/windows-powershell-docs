@@ -113,3 +113,4 @@ The table below also shows the latest published version of the Help for each mod
 | StorageReplica | [Storage Replica](storage-replica/index.md) |
 | SyncShare | [Sync Share](sync-share/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |
+| TLS | [TLS](tls/index.md) |

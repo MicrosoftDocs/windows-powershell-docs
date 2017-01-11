@@ -2974,8 +2974,6 @@
 ### [Repair-SyncShare](sync-share/repair-syncshare.md)
 ### [Set-SyncServerSetting](sync-share/set-syncserversetting.md)
 ### [Set-SyncShare](sync-share/set-syncshare.md)
-
-
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)
 ### [Get-NetCompartment](tcpip/get-netcompartment.md)
@@ -3011,6 +3009,15 @@
 ### [Set-NetTCPSetting](tcpip/set-nettcpsetting.md)
 ### [Set-NetUDPSetting](tcpip/set-netudpsetting.md)
 ### [Test-NetConnection](tcpip/test-netconnection.md)
+## [TLS](tls/index.md)
+### [Disable-TlsCipherSuite](tls/disable-tlsciphersuite.md)
+### [Disable-TlsSessionTicketKey](tls/disable-tlssessionticketkey.md)
+### [Enable-TlsCipherSuite](tls/enable-tlsciphersuite.md)
+### [Enable-TlsSessionTicketKey](tls/enable-tlssessionticketkey.md)
+### [Export-TlsSessionTicketKey](tls/export-tlssessionticketkey.md)
+### [Get-TlsCipherSuite](tls/get-tlsciphersuite.md)
+### [New-TlsSessionTicketKey](tls/new-tlssessionticketkey.md)
+
 ## [Windows Defender](defender/index.md)
 ### [Add-MpPreference](defender/add-mppreference.md)
 ### [Get-MpComputerStatus](defender/get-mpcomputerstatus.md)

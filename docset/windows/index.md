@@ -125,3 +125,4 @@ The table below also shows the latest published version of the Help for each mod
 | WebAdministration | [Web Administration](web-administration/index.md) |
 | wds | [Windows Deployment Services](wds/index.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
+| WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |

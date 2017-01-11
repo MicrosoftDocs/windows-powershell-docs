@@ -3262,3 +3262,7 @@
 ### [Get-WindowsDeveloperLicense](windows-developer-license/get-windowsdeveloperlicense.md)
 ### [Show-WindowsDeveloperLicenseRegistration](windows-developer-license/show-windowsdeveloperlicenseregistration.md)
 ### [Unregister-WindowsDeveloperLicense](windows-developer-license/unregister-windowsdeveloperlicense.md)
+## [Windows Error Reporting](wer/index.md)
+### [Disable-WindowsErrorReporting](wer/disable-windowserrorreporting.md)
+### [Enable-WindowsErrorReporting](wer/enable-windowserrorreporting.md)
+### [Get-WindowsErrorReporting](wer/get-windowserrorreporting.md)

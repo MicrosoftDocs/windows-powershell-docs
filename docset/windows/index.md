@@ -109,4 +109,5 @@ The table below also shows the latest published version of the Help for each mod
 | SMISConfig | [SMIS Config](smis-config/index.md) |
 | StartLayout | [Start Layout](start-layout/index.md) |
 | Storage | [Storage](storage/index.md) |
+| StorageQoS | [Storage QoS](storage-qos/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

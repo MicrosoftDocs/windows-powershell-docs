@@ -2931,6 +2931,16 @@
 ### [Update-StoragePool](storage/update-storagepool.md)
 ### [Update-StorageProviderCache](storage/update-storageprovidercache.md)
 ### [Write-VolumeCache](storage/write-volumecache.md)
+## [Storage QoS](storage-qos/index.md)
+### [Get-StorageQoSFlow](storage-qos/get-storageqosflow.md)
+### [Get-StorageQosPolicy](storage-qos/get-storageqospolicy.md)
+### [Get-StorageQosPolicyStore](storage-qos/get-storageqospolicystore.md)
+### [Get-StorageQosVolume](storage-qos/get-storageqosvolume.md)
+### [New-StorageQosPolicy](storage-qos/new-storageqospolicy.md)
+### [Remove-StorageQosPolicy](storage-qos/remove-storageqospolicy.md)
+### [Set-StorageQosPolicy](storage-qos/set-storageqospolicy.md)
+### [Set-StorageQosPolicyStore](storage-qos/set-storageqospolicystore.md)
+
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

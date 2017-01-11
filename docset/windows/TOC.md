@@ -2963,6 +2963,17 @@
 ### [Suspend-SRGroup](storage-replica/suspend-srgroup.md)
 ### [Sync-SRGroup](storage-replica/sync-srgroup.md)
 ### [Test-SRTopology](storage-replica/test-srtopology.md)
+## [Sync Share](sync-share/index.md)
+### [Disable-SyncShare](sync-share/disable-syncshare.md)
+### [Enable-SyncShare](sync-share/enable-syncshare.md)
+### [Get-SyncServerSetting](sync-share/get-syncserversetting.md)
+### [Get-SyncShare](sync-share/get-syncshare.md)
+### [Get-SyncUserStatus](sync-share/get-syncuserstatus.md)
+### [New-SyncShare](sync-share/new-syncshare.md)
+### [Remove-SyncShare](sync-share/remove-syncshare.md)
+### [Repair-SyncShare](sync-share/repair-syncshare.md)
+### [Set-SyncServerSetting](sync-share/set-syncserversetting.md)
+### [Set-SyncShare](sync-share/set-syncshare.md)
 
 
 ## [TCP/IP](tcpip/index.md)

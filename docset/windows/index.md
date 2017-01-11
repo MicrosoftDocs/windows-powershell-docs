@@ -111,4 +111,5 @@ The table below also shows the latest published version of the Help for each mod
 | Storage | [Storage](storage/index.md) |
 | StorageQoS | [Storage QoS](storage-qos/index.md) |
 | StorageReplica | [Storage Replica](storage-replica/index.md) |
+| SyncShare | [Sync Share](sync-share/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

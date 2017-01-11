@@ -124,3 +124,4 @@ The table below also shows the latest published version of the Help for each mod
 | WebApplicationProxy | [Web Application Proxy](wap/index.md) |
 | WebAdministration | [Web Administration](web-administration/index.md) |
 | wds | [Windows Deployment Services](wds/index.md) |
+| WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |

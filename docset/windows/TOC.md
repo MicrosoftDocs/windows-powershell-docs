@@ -3258,3 +3258,7 @@
 ### [Set-WdsClient](wds/set-wdsclient.md)
 ### [Set-WdsInstallImage](wds/set-wdsinstallimage.md)
 ### [Set-WdsInstallImageGroup](wds/set-wdsinstallimagegroup.md)
+## [Windows Developer License](windows-developer-license/index.md)
+### [Get-WindowsDeveloperLicense](windows-developer-license/get-windowsdeveloperlicense.md)
+### [Show-WindowsDeveloperLicenseRegistration](windows-developer-license/show-windowsdeveloperlicenseregistration.md)
+### [Unregister-WindowsDeveloperLicense](windows-developer-license/unregister-windowsdeveloperlicense.md)

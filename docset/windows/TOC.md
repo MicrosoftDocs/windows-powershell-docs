@@ -2726,6 +2726,10 @@
 ### [Import-SmigServerSetting](server-migration/import-smigserversetting.md)
 ### [Receive-SmigServerData](server-migration/receive-smigserverdata.md)
 ### [Send-SmigServerData](server-migration/send-smigserverdata.md)
+## [Shielded Virtual Machines](shielded-virtual-machines/index.md)
+### [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md)
+#### [Import-ShieldingDataFile](shielded-virtual-machines/data-file/import-shieldingdatafile.md)
+#### [New-VolumeIDQualifier](shielded-virtual-machines/data-file/new-volumeidqualifier.md)
 
 
 ## [TCP/IP](tcpip/index.md)

@@ -76,4 +76,5 @@ The table below also shows the latest published version of the Help for each mod
 | NetNat | [Network Address Translation](nat/index.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
 | NetworkController | [Network Controller](network-controller/networkcontroller.md) |
+| NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

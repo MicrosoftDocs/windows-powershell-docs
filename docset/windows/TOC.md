@@ -2105,6 +2105,12 @@
 ### [Uninstall-NetworkController](network-controller/uninstall-networkcontroller.md)
 ### [Uninstall-NetworkControllerCluster](network-controller/uninstall-networkcontrollercluster.md)
 ### [Update-NetworkController](network-controller/update-networkcontroller.md)
+## [Network Controller diagnostics](network-controller-diagnostics/index.md)
+### [Debug-NetworkController](network-controller-diagnostics/debug-networkcontroller.md)
+### [Debug-NetworkControllerConfigurationState](network-controller-diagnostics/debug-networkcontrollerconfigurationstate.md)
+### [Debug-ServiceFabricNodeStatus](network-controller-diagnostics/debug-servicefabricnodestatus.md)
+### [Get-NetworkControllerDeploymentInfo](network-controller-diagnostics/get-networkcontrollerdeploymentinfo.md)
+### [Get-NetworkControllerReplica](network-controller-diagnostics/get-networkcontrollerreplica.md)
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

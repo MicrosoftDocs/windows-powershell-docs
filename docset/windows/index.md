@@ -78,6 +78,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetworkController | [Network Controller](network-controller/networkcontroller.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
+| NetQoS | [Quality of Service](qos/index.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

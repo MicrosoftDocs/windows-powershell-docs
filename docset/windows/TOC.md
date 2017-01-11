@@ -2184,7 +2184,11 @@
 ### [Remove-NpsRadiusClient](nps/remove-npsradiusclient.md)
 ### [Set-NpsRadiusClient](nps/set-npsradiusclient.md)
 
-
+## [Quality of Service](qos/index.md)
+### [Get-NetQosPolicy](qos/get-netqospolicy.md)
+### [New-NetQosPolicy](qos/new-netqospolicy.md)
+### [Remove-NetQosPolicy](qos/remove-netqospolicy.md)
+### [Set-NetQosPolicy](qos/set-netqospolicy.md)
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)
 ### [Get-NetCompartment](tcpip/get-netcompartment.md)

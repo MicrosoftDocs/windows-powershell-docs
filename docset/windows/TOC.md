@@ -2720,7 +2720,12 @@
 ### [Remove-SMServerPerformanceLog](server-manager-tasks/remove-smserverperformancelog.md)
 ### [Start-SMPerformanceCollector](server-manager-tasks/start-smperformancecollector.md)
 ### [Stop-SMPerformanceCollector](server-manager-tasks/stop-smperformancecollector.md)
-
+## [Server Migration](server-migration/index.md)
+### [Export-SmigServerSetting](server-migration/export-smigserversetting.md)
+### [Get-SmigServerFeature](server-migration/get-smigserverfeature.md)
+### [Import-SmigServerSetting](server-migration/import-smigserversetting.md)
+### [Receive-SmigServerData](server-migration/receive-smigserverdata.md)
+### [Send-SmigServerData](server-migration/send-smigserverdata.md)
 
 
 ## [TCP/IP](tcpip/index.md)

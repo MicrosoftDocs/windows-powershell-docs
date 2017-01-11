@@ -2419,7 +2419,8 @@
 ### [Set-PcsvDeviceUserPassword](pcsv/set-pcsvdeviceuserpassword.md)
 ### [Start-PcsvDevice](pcsv/start-pcsvdevice.md)
 ### [Stop-PcsvDevice](pcsv/stop-pcsvdevice.md)
-
+## [Platform Identifier](platform-identifier/index.md)
+### [Get-PlatformIdentifier](platform-identifier/get-platformidentifier.md)
 
 ## [Quality of Service](qos/index.md)
 ### [Get-NetQosPolicy](qos/get-netqospolicy.md)

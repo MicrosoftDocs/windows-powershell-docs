@@ -116,5 +116,4 @@ Provide this object to the Protect-ShieldingDataFile to create a provisioning da
 
 ## RELATED LINKS
 
-[Protect-ShieldingDataFile](./Protect-ShieldingDataFile.md)
 

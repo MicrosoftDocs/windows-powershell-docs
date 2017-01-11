@@ -50,5 +50,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[HGS Server Cmdlets](./HgsServer.md)
+[HGS Server Cmdlets](./index.md)
 

@@ -186,5 +186,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Export-HgsServerState](./Export-HgsServerState.md)
 
-[HGS Server Cmdlets](./HgsServer.md)
+[HGS Server Cmdlets](./index.md)
 

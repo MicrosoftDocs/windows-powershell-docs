@@ -213,7 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-DNSClientServerAddress](../Domain Name System (DNS) Client/Get-DnsClientServerAddress.md)
 
-[Get-NetAdapter](../Network Adapter/Get-NetAdapter.md)
+[Get-NetAdapter](../network-adapter/Get-NetAdapter.md)
 
 [Get-NetIPAddress](./Get-NetIPAddress.md)
 

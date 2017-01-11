@@ -180,7 +180,7 @@ For more information, type `Get-Help Install-WindowsFeature`. When you enable th
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](../Server Manager/Install-WindowsFeature.md)
+[Install-WindowsFeature](../server-manager/Install-WindowsFeature.md)
 
 [Get-SmbBandwidthLimit](./Get-SmbBandwidthLimit.md)
 

@@ -456,5 +456,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [New-NetIPsecMainModeCryptoProposal](./New-NetIPsecMainModeCryptoProposal.md)
 
-[New-GPO](../Group Policy/New-GPO.md)
+[New-GPO](../group-policy/New-GPO.md)
 

@@ -156,5 +156,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Search-SmisProvider](./Search-SmisProvider.md)
 
-[Get-StorageProvider](../Storage/Get-StorageProvider.md)
+[Get-StorageProvider](../storage/Get-StorageProvider.md)
 

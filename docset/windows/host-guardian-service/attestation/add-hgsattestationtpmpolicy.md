@@ -152,5 +152,5 @@ This cmdlet returns attestation policy information.
 
 ## RELATED LINKS
 
-[Add-HgsAttestationCIPolicy](./Add-HgsAttestationCIPolicy.md)
+
 

@@ -1963,7 +1963,11 @@
 ## [Network connection](network-connection/index.md)
 ### [Get-NetConnectionProfile](network-connection/get-netconnectionprofile.md)
 ### [Set-NetConnectionProfile](network-connection/set-netconnectionprofile.md)
-
+## [Network connectivity status](ncsi/index.md)
+### [Get-DAConnectionStatus](ncsi/get-daconnectionstatus.md)
+### [Get-NCSIPolicyConfiguration](ncsi/get-ncsipolicyconfiguration.md)
+### [Reset-NCSIPolicyConfiguration](ncsi/reset-ncsipolicyconfiguration.md)
+### [Set-NCSIPolicyConfiguration](ncsi/set-ncsipolicyconfiguration.md)
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

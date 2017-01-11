@@ -84,5 +84,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetworkSwitchManager | [Network Switch Manager](network-switch-manager/index.md) |
 | NetSwitchTeam | [Network Switch Team](network-switch-team/index.md) |
 | NetworkTransition | [Network Transition](network-transition/index.md) |
+| Netwnv | [Network Virtualization](network-virtualization/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
+
 | TCPIP | [TCP/IP](tcpip/index.md) |

@@ -96,4 +96,5 @@ The table below also shows the latest published version of the Help for each mod
 | RemoteAccess | [Remote access](remote-access/index.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |
+| SecureBoot | [Secure Boot](secure-boot/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

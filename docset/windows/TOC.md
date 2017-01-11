@@ -2693,6 +2693,12 @@
 ### [Stop-ScheduledTask](scheduled-tasks/stop-scheduledtask.md)
 ### [Unregister-ClusteredScheduledTask](scheduled-tasks/unregister-clusteredscheduledtask.md)
 ### [Unregister-ScheduledTask](scheduled-tasks/unregister-scheduledtask.md)
+## [Secure Boot](secure-boot/index.md)
+### [Confirm-SecureBootUEFI](secure-boot/confirm-securebootuefi.md)
+### [Format-SecureBootUEFI](secure-boot/format-securebootuefi.md)
+### [Get-SecureBootPolicy](secure-boot/get-securebootpolicy.md)
+### [Get-SecureBootUEFI](secure-boot/get-securebootuefi.md)
+### [Set-SecureBootUEFI](secure-boot/set-securebootuefi.md)
 
 
 

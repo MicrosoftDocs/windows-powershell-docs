@@ -128,3 +128,4 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
 | WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |
 | WindowsSearch | [Windows Search](windows-search/index.md) |
+| WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |

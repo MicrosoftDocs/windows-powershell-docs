@@ -2702,6 +2702,12 @@
 ## [Server Core](server-core/index.md)
 ### [Get-DisplayResolution](server-core/get-displayresolution.md)
 ### [Set-DisplayResolution](server-core/set-displayresolution.md)
+## [Server Manager](server-manager/index.md)
+### [Disable-ServerManagerStandardUserRemoting](server-manager/disable-servermanagerstandarduserremoting.md)
+### [Enable-ServerManagerStandardUserRemoting](server-manager/enable-servermanagerstandarduserremoting.md)
+### [Get-WindowsFeature](server-manager/get-windowsfeature.md)
+### [Install-WindowsFeature](server-manager/install-windowsfeature.md)
+### [Uninstall-WindowsFeature](server-manager/uninstall-windowsfeature.md)
 
 
 

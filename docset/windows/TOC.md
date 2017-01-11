@@ -2699,6 +2699,9 @@
 ### [Get-SecureBootPolicy](secure-boot/get-securebootpolicy.md)
 ### [Get-SecureBootUEFI](secure-boot/get-securebootuefi.md)
 ### [Set-SecureBootUEFI](secure-boot/set-securebootuefi.md)
+## [Server Core](server-core/index.md)
+### [Get-DisplayResolution](server-core/get-displayresolution.md)
+### [Set-DisplayResolution](server-core/set-displayresolution.md)
 
 
 

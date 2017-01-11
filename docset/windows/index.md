@@ -102,4 +102,5 @@ The table below also shows the latest published version of the Help for each mod
 | ServerManager | [Server Manager](server-manager/index.md) |
 | ServerManagerTasks | [Server Manager tasks](server-manager-tasks/index.md) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
+| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shielded-virtual-machines/provisioning/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

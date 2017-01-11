@@ -2730,7 +2730,12 @@
 ### [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md)
 #### [Import-ShieldingDataFile](shielded-virtual-machines/data-file/import-shieldingdatafile.md)
 #### [New-VolumeIDQualifier](shielded-virtual-machines/data-file/new-volumeidqualifier.md)
-
+### [Shielded Virtual Machine provisioning](shielded-virtual-machines/provisioning/shieldedvmprovisioning.md)
+#### [Get-KeyProtectorFromShieldingDataFile](shielded-virtual-machines/provisioning/get-keyprotectorfromshieldingdatafile.md)
+#### [Get-ShieldedVMProvisioningStatus](shielded-virtual-machines/provisioning/get-shieldedvmprovisioningstatus.md)
+#### [Initialize-ShieldedVM](shielded-virtual-machines/provisioning/initialize-shieldedvm.md)
+#### [New-ShieldedVMSpecializationDataFile](shielded-virtual-machines/provisioning/new-shieldedvmspecializationdatafile.md)
+#### [Test-ShieldingDataApplicability](shielded-virtual-machines/provisioning/test-shieldingdataapplicability.md)
 
 ## [TCP/IP](tcpip/index.md)
 ### [Find-NetRoute](tcpip/find-netroute.md)

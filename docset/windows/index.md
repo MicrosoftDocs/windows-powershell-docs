@@ -127,3 +127,4 @@ The table below also shows the latest published version of the Help for each mod
 | WHEA | [Windows Hardware Error Architecture](whea/index.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
 | WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |
+| WindowsSearch | [Windows Search](windows-search/index.md) |

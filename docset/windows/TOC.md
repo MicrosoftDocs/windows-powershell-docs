@@ -3269,3 +3269,6 @@
 ## [Windows Hardware Error Architecture](whea/index.md)
 ### [Get-WheaMemoryPolicy](whea/get-wheamemorypolicy.md)
 ### [Set-WheaMemoryPolicy](whea/set-wheamemorypolicy.md)
+## [Windows Search](windows-search/index.md)
+### [Get-WindowsSearchSetting](windows-search/get-windowssearchsetting.md)
+### [Set-WindowsSearchSetting](windows-search/set-windowssearchsetting.md)

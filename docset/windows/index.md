@@ -91,4 +91,5 @@ The table below also shows the latest published version of the Help for each mod
 | PCSVDevice | [Physical Computer System View device](pcsv/pcsvdevice.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
+| Print Management | [Print management](print/index.md) |
 | TCPIP | [TCP/IP](tcpip/index.md) |

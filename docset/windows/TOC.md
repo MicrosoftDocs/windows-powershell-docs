@@ -2677,6 +2677,8 @@
 ### [Test-RDOUAccess](remote-desktop/test-rdouaccess.md)
 ### [Test-RDVirtualDesktopADMachineAccountReuse](remote-desktop/test-rdvirtualdesktopadmachineaccountreuse.md)
 ### [Update-RDVirtualDesktopCollection](remote-desktop/update-rdvirtualdesktopcollection.md)
+## [Remote Desktop Services](remote-desktop-services/index.md)
+### [Convert-License](remote-desktop-services/convert-license.md)
 ## [Scheduled Tasks](scheduled-tasks/index.md)
 ### [Disable-ScheduledTask](scheduled-tasks/disable-scheduledtask.md)
 ### [Enable-ScheduledTask](scheduled-tasks/enable-scheduledtask.md)

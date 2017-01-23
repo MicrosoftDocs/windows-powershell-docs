@@ -27,7 +27,7 @@ Get-WsusClassification [-UpdateServer <IUpdateServer>] [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-WsusClassification** cmdlet gets the list of all Windows Server Update Services (WSUS) classifications.
-You can filter this list using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet with the results passed into the Set-WsusClassification cmdlet.
+You can filter this list using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusClassification](./Set-WsusClassification.md) cmdlet.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ This command gets the classification with a title of Drivers.
 
 ### -UpdateServer
 Specifies the object that contains the WSUS server.
-This value is obtained by calling the Get-WsusServer cmdlet and passing the resulting IUpdateServer object into this cmdlet.
+This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.md) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
 
 ```yaml
 Type: IUpdateServer
@@ -96,4 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-WsusClassification](./Set-WsusClassification.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

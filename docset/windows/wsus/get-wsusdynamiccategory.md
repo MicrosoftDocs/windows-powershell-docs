@@ -40,20 +40,20 @@ The **Get-WsusDynamicCategory** cmdlet gets dynamic categories on a Windows Serv
 
 ### Example 1: Get all dynamic categories for specified servers
 ```
-PS C:\>Get-WsusServer | Get-WsusDynamicCategory
+PS C:\> Get-WsusServer | Get-WsusDynamicCategory
 Name                                     Type                                     Status
 ----                                     ----                                     ------
 5d6a452a-55ba-4e11-adac-85e180bda3d6     ComputerModel                            True
 PCI/Device07                             Device                                   True
 ```
 
-This command gets all dynamic categories from the current update server by using the Get-WsusServer cmdlet.
+This command gets all dynamic categories from the current update server by using the [Get-WsusServer](./Get-WsusServer.md) cmdlet.
 The command passes the server to the current cmdlet by using the pipeline operator.
 The current cmdlet gets the available dynamic categories for the update server.
 
 ### Example 2: Get a named dynamic category
 ```
-PS C:\>Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+PS C:\> Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
 Name                                     Type                                     Status
 ----                                     ----                                     ------
 PCI/Device07                             Device                                   True
@@ -63,7 +63,7 @@ This command gets the dynamic category named PCI/Device07 that is a Device type.
 
 ### Example 3: Get dynamic categories by type
 ```
-PS C:\>Get-WsusDynamicCategory -DynamicCategoryTypeFilter ComputerModel
+PS C:\> Get-WsusDynamicCategory -DynamicCategoryTypeFilter ComputerModel
 Name                                     Type                                     Status
 ----                                     ----                                     ------
 5d6a452a-55ba-4e11-adac-85e180bda3d6     ComputerModel                            True
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 
 ### -DynamicCategoryTypeFilter
 Specifies the type of the dynamic categories that this cmdlet gets.
-The possible values are the same as those of the **DynamicCategoryType** parameter.
+The possible values are the same as those of the *DynamicCategoryType* parameter.
 
 ```yaml
 Type: DynamicCategoryType
@@ -127,7 +127,6 @@ Accept wildcard characters: False
 ```
 
 ### -First
-{{Fill First Description}}
 
 ```yaml
 Type: Int64
@@ -157,7 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-{{Fill Skip Description}}
 
 ```yaml
 Type: Int64
@@ -226,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-WsusDynamicCategory](./Set-WsusDynamicCategory.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

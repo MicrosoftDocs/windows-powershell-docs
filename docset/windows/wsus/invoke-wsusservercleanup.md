@@ -43,7 +43,7 @@ This command runs this cmdlet on the local WSUS server specifying the option to 
 
 ### Example 2: Run cleanup for obsolete computers and updates
 ```
-PS C:\> Get-WsusServer consoso | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
+PS C:\> Get-WsusServer "contsoso" | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
 Obsolete Updates Deleted: 62 
 Obsolete Computers Deleted: 0
 ```
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -UpdateServer
 Specifies the object that contains the WSUS server.
-This value is obtained by calling the Get-WsusServer cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.md) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
 
 ```yaml
 Type: IUpdateServer
@@ -205,4 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-WsusServer](./Get-WsusServer.md)
-

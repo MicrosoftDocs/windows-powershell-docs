@@ -40,9 +40,9 @@ Get-WsusComputer [-UpdateServer <IUpdateServer>] [-NameIncludes <String>]
 ## DESCRIPTION
 The **Get-WsusComputer** cmdlet gets one or more Windows Server Update Services (WSUS) computers based on the specified filtering criteria such as operating system, computer name, update installation status, last reported status time, and etcetera.
 
-If the Get-WsusServer cmdlet is run and the resulting **IUpdateServer** object is passed into this cmdlet, then the specified server will be used rather than the local server.
+If the [Get-WsusServer](./Get-WsusServer.md) cmdlet is run and the resulting **IUpdateServer** object is passed into this cmdlet, then the specified server will be used rather than the local server.
 
-This cmdlet can be passed into the Add-WsusComputer cmdlet.
+This cmdlet can be passed into the [Add-WsusComputer](./Add-WsusComputer.md) cmdlet.
 
 ## EXAMPLES
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -FromLastReportedStatusTime
 Specifies the earliest reported status time.
-This parameter can be used in combination with the **ToLastReportedStatusTime** parameter in order to create a date range to use in the search.
+This parameter can be used in combination with the *ToLastReportedStatusTime* parameter in order to create a date range to use in the search.
 
 ```yaml
 Type: DateTime
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -FromLastSyncTime
 Specifies the earliest last synchronization time for which to search.
-This parameter can be used in combination with the **ToLastSynchTime** parameter in order to create a date range to use in the search.
+This parameter can be used in combination with the *ToLastSynchTime* parameter in order to create a date range to use in the search.
 
 ```yaml
 Type: DateTime
@@ -212,8 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeSubgroups
-Specifies that the **ComputerTargetGroups** parameter should include descendant groups.
-This value has no impact if the **ComputerTargetGroups** parameter is not used.
+Specifies that the *ComputerTargetGroups* parameter should include descendant groups.
+This value has no impact if the *ComputerTargetGroups* parameter is not used.
 
 ```yaml
 Type: SwitchParameter
@@ -285,7 +285,7 @@ Accept wildcard characters: False
 
 ### -ToLastReportedStatusTime
 Specifies the latest reported status time.
-This parameter can be used in combination with the **FromLastReportedStatusTime** parameter in order to create a date range to use in the search.
+This parameter can be used in combination with the *FromLastReportedStatusTime* parameter in order to create a date range to use in the search.
 
 ```yaml
 Type: DateTime
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 
 ### -ToLastSyncTime
 Specifies the latest last synchronization time for which to search.
-This parameter can be used in combination with the **FromLastSynchTime** parameter in order to create a date range to use in the search.
+This parameter can be used in combination with the *FromLastSynchTime* parameter in order to create a date range to use in the search.
 
 ```yaml
 Type: DateTime
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 
 ### -UpdateServer
 Specifies the object that contains the WSUS server.
-This value is obtained by calling the Get-WsusServer cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.md) cmdlet and passing the resulting *IUpdateServer* object into this cmdlet.
 
 ```yaml
 Type: IUpdateServer
@@ -349,4 +349,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-WsusComputer](./Add-WsusComputer.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

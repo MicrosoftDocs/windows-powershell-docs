@@ -35,7 +35,7 @@ To use this cmdlet, you must be a member of the Administrators group or Backup O
 
 ### Example 1: Get the VSS setting from the backup policy
 ```
-PS C:\>$Policy = Get-WBPolicy
+PS C:\> $Policy = Get-WBPolicy
 PS C:\> Get-WBVssBackupOption -Policy $Policy
 ```
 

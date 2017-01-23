@@ -45,7 +45,7 @@ The command also uses the *Force* parameter to suppress the confirmation message
 
 ### Example 2: Remove a specified backup policy
 ```
-PS C:\>$Policy = Get-WBPolicy
+PS C:\> $Policy = Get-WBPolicy
 PS C:\> Remove-WBPolicy -Policy $Policy
 ```
 

@@ -27,9 +27,9 @@ Add-WsusComputer -Computer <WsusComputer> -TargetGroupName <String> [-WhatIf] [-
 
 ## DESCRIPTION
 The **Add-WsusComputer** cmdlet adds the specified computer to the specified target group on the local server or a specified server.
-You can invoke this command by using the pipeline operator for the results of the Get-WsusComputer cmdlet.
-Calling the Get-WsusComputer cmdlet and passing the results into this cmdlet enables you to leverage the filtering capabilities of the Get-WsusComputer cmdlet in moving the desired computers to the specified target group.
-The server used in the Get-WsusComputer cmdlet is also used in this cmdlet.
+You can invoke this command by using the pipeline operator for the results of the [Get-WsusComputer](./Get-WsusComputer.md) cmdlet.
+Calling the **Get-WsusComputer** cmdlet and passing the results into this cmdlet enables you to leverage the filtering capabilities of the **Get-WsusComputer** cmdlet in moving the desired computers to the specified target group.
+The server used in the **Get-WsusComputer** cmdlet is also used in this cmdlet.
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ This command adds all computers with winvm in the name to the target group named
 
 ### -Computer
 Specifies the object that contains the client computer to be added.
-This value is obtained by running the Get-WsusComputer cmdlet and piping the resulting **WsusComputer** object into this cmdlet.
+This value is obtained by running the **Get-WsusComputer** cmdlet and piping the resulting **WsusComputer** object into this cmdlet.
 
 ```yaml
 Type: WsusComputer
@@ -122,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WsusComputer](./Get-WsusComputer.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

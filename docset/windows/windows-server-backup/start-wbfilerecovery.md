@@ -46,12 +46,12 @@ Because the command includes the *Force* parameter, the backup proceeds without 
 
 ### Example 2: Recover files to a new location
 ```
-PS C:\>Get-WBBackupVolumeBrowsePath -BackupSet $Backup -VolumeInBackup $Backup.Volume[0]
-\\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\ PS C:\>dir \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\dir1\File1.txt
+PS C:\> Get-WBBackupVolumeBrowsePath -BackupSet $Backup -VolumeInBackup $Backup.Volume[0]
+\\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\ PS C:\> dir \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\dir1\File1.txt
 Directory: \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\dir1
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
--a---        12/13/2011   2:35 PM          0 File1.txt PS C:\>Start-WBFileRecovery -BackupSet $Backup -FilePathToRecover "\\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\Dir1\File1.txt" -RecoveryTarget "F:\Dir1"
+-a---        12/13/2011   2:35 PM          0 File1.txt PS C:\> Start-WBFileRecovery -BackupSet $Backup -FilePathToRecover "\\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\Dir1\File1.txt" -RecoveryTarget "F:\Dir1"
 Warning
 Start recovery of files from C:\Dir1\File1.txt to F:\Fir1 ? 
  [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y

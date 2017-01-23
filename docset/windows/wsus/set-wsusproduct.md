@@ -27,8 +27,8 @@ Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonP
 
 ## DESCRIPTION
 The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize.
-In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet.
-You can run the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet to filter results.
+In order to use this cmdlet, the [Get-WsusProduct](./Get-WsusProduct.md) cmdlet must be run with its results passed into this cmdlet.
+You can run the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ### -Product
 Specifies the product for which the updates are to be synchronized.
 If the **Disable** parameter is used, then this parameter specifies the product for which the updates are not to be synchronized.
-This parameter value is passed from the Get-WsusProduct cmdlet.
+This parameter value is passed from the [Get-WsusProduct](./Get-WsusProduct.md) cmdlet.
 
 ```yaml
 Type: WsusProduct
@@ -124,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WsusProduct](./Get-WsusProduct.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

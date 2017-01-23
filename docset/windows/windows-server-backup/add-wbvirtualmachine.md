@@ -46,7 +46,7 @@ PS C:\> Add-WBVirtualMachine -Policy $Policy -VirtualMachine $VirtualMachines
 
 This example adds the list of volumes in the $VirtualMachines variable to the **WBPolicy** object contained in the $Policy variable.
 
-The first command stores the result of the Get-WBPolicy cmdlet in the $Policy variable.
+The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet in the $Policy variable.
 
 The second command stores the result of the **Get-WBVirtualMachine** cmdlet in the $VirtualMachines variable.
 
@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WBVirtualMachine](./Get-WBVirtualMachine.md)
 
 [Remove-WBVirtualMachine](./Remove-WBVirtualMachine.md)
-

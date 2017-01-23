@@ -29,9 +29,9 @@ Set-WsusClassification -Classification <WsusClassification> [-Disable] [-WhatIf]
 ## DESCRIPTION
 The **Set-WsusClassification** cmdlet enables or disables the category of updates, for example, security or critical, to be synchronized.
 
-To use this cmdlet without filtering results, the Get-WsusClassification cmdlet must be run, then the results are passed it into this cmdlet.
+To use this cmdlet without filtering results, the [Get-WsusClassification](./Get-WsusClassification.md) cmdlet must be run, then the results are passed it into this cmdlet.
 
-To use this cmdlet with filtered results, the Get-WsusClassification cmdlet must be run, then results are filtered using the Where-Objecthttp://go.microsoft.com/fwlink/?LinkID=113423 cmdlet and passed into this cmdlet.
+To use this cmdlet with filtered results, the **Get-WsusClassification** cmdlet must be run, then results are filtered using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet and passed into this cmdlet.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ This command specifies that you do not want driver updates.
 ### -Classification
 Specifies the classification of updates that are to be synchronized.
 If the **Disable** parameter is used, then this parameter specifies the classification of updates that are not to be synchronized.
-This parameter value is passed from the Get-WsusClassification cmdlet.
+This parameter value is passed from the **Get-WsusClassification** cmdlet.
 
 ```yaml
 Type: WsusClassification
@@ -125,4 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=289623)
 
 [Get-WsusClassification](./Get-WsusClassification.md)
-

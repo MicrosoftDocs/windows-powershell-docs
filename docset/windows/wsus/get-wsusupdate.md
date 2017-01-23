@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -UpdateServer
 Specifies the object that contains the WSUS server.
-This value is obtained by calling the Get-WsusServer cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
+This value is obtained by calling the [Get-WsusServer](./Get-WsusServer.md) cmdlet and passing the resulting **IUpdateServer** object into this cmdlet.
 
 ```yaml
 Type: IUpdateServer
@@ -205,4 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Deny-WsusUpdate](./Deny-WsusUpdate.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

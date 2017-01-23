@@ -29,14 +29,14 @@ Add-WBBareMetalRecovery [-Policy] <WBPolicy> [<CommonParameters>]
 The **Add-WBBareMetalRecovery** cmdlet adds items to a backup policy object so that backups that use that policy can perform bare metal recoveries.
 A bare metal recovery is the process of rebuilding a computer after a catastrophic failure.
 The recovery process backs up the system volume and master boot record by copying the entire volume and using Volume Shadow Copy Service (VSS) writers to ensure that all applications are in a consistent state for the copy.
-For more information about bare metal recovery, see Backup for Bare Metal Recoveryhttp://technet.microsoft.com/en-us/library/bb795820.aspx (http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
+For more information about bare metal recovery, see [Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx) (http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
 If you add the ability to perform a bare metal recovery to a policy, you also add the ability to perform a system state recovery.
 This is true even though the **SystemState** property of the bare metal recovery policy has a value of False.
 
 Before you can add a backup target to a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -90,4 +90,3 @@ None
 [Get-WBVolume](./Get-WBVolume.md)
 
 [Remove-WBBareMetalRecovery](./Remove-WBBareMetalRecovery.md)
-

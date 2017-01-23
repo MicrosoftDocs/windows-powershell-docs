@@ -41,9 +41,9 @@ PS C:\> Add-WBVolume -Policy $Policy -Volume $Volumes
 
 This example adds a list of volumes for backup to the **WBPolicy** object.
 
-The first command stores the output of the Get-WBVolume cmdlet in the variable named $Volumes.
+The first command stores the output of the [Get-WBVolume](./Get-WBVolume.md) cmdlet in the variable named $Volumes.
 
-The second command calls the Get-WBPolicy cmdlet and assigns the result to the $Policy variable.
+The second command calls the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet and assigns the result to the $Policy variable.
 
 The third command adds the volumes in the $Volumes variable to the backup policy.
 
@@ -104,4 +104,3 @@ This cmdlet returns a list of **WBVolume** objects in the **WBPolicy** object, i
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBVolume](./Remove-WBVolume.md)
-

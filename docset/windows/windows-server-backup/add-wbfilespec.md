@@ -29,11 +29,11 @@ Add-WBFileSpec [-Policy] <WBPolicy> [-FileSpec] <WBFileSpec[]> [<CommonParameter
 The **Add-WBFileSpec** cmdlet adds a backup file specification, which specifies the items to include in or exclude from a backup, to a backup policy.
 A **WBFileSpec** object contains the backup file specification, and a **WBPolicy** object contains the backup policy.
 The **WBFileSpec** object can include or exclude multiple files, folders, or volumes.
-You can create a list of items to include or exclude by using the New-WBFileSpec cmdlet and then using the Add-WBFileSpec cmdlet to update the **WBPolicy** object.
+You can create a list of items to include or exclude by using the [New-WBFileSpec](./New-WBFileSpec.md) cmdlet and then using the **Add-WBFileSpec** cmdlet to update the **WBPolicy** object.
 
 Before you can add a backup file specification to a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
 To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -126,4 +126,3 @@ None
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBFileSpec](./Remove-WBFileSpec.md)
-

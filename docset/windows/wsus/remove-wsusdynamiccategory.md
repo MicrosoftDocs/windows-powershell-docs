@@ -40,7 +40,7 @@ The **Remove-WsusDynamicCategory** cmdlet removes a dynamic category from a Wind
 
 ### Example 1: Remove a dynamic category
 ```
-PS C:\>Remove-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
+PS C:\> Remove-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
 ```
 
 This command removes a dynamic category named PCI/Device07 of the Device type from the local update server.
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ### -InputObject
 Specifies a dynamic category object.
 This cmdlet removes the dynamic category that this parameter specifies.
-To obtain a dynamic category, use the Get-WsusDynamicCategory cmdlet.
+To obtain a dynamic category, use the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.md) cmdlet.
 
 ```yaml
 Type: IDynamicCategory
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ### -UpdateServer
 Specifies a WSUS server.
 This cmdlet removes a dynamic category from the server that this parameter specifies.
-To obtain a server, use the Get-WsusServer cmdlet.
+To obtain a server, use the [Get-WsusServer](./Get-WsusServer.md) cmdlet.
 If you do not specify a value for this parameter, the cmdlet removes dynamic categories from the local server.
 
 ```yaml
@@ -168,4 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.md)
 
 [Set-WsusDynamicCategory](./Set-WsusDynamicCategory.md)
-

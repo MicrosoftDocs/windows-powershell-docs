@@ -38,7 +38,7 @@ This cmdlet requires access to a Microsoft symbol server.
 
 ### Example 1: Merge and convert Windows Update trace files
 ```
-PS C:\>Get-WindowsUpdateLog
+PS C:\> Get-WindowsUpdateLog
 Converting C:\Windows\logs\WindowsUpdate into C:\Users\Admin\Desktop\WindowsUpdate.log 
 
 
@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Windows Update Cmdlets](./Index.md)
-

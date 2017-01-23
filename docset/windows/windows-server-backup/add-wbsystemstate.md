@@ -30,8 +30,8 @@ The **Add-WBSystemState** cmdlet adds the system state components to a policy co
 Use backups created through this policy to perform a system state recovery.
 
 The **WBPolicy** object must be in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that is set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that is set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -87,4 +87,3 @@ This cmdlet accepts a **WBPolicy** object as input.
 [Get-WBSystemState](./Get-WBSystemState.md)
 
 [Remove-WBSystemState](./Remove-WBSystemState.md)
-

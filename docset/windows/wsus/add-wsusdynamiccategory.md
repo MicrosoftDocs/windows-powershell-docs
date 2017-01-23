@@ -42,7 +42,7 @@ In order to transfer dynamic categories from one update server to another, pass 
 
 ### Example 1: Add a dynamic category to the local WSUS server
 ```
-PS C:\>Add-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07" 
+PS C:\> Add-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07" 
 Name                                     Type                                     Status
 ----                                     ----                                     ------
 PCI/Device07                             Device                                   True
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the dynamic category object that this cmdlet adds to the server.
-To obtain a dynamic category, use the Get-WsusDynamicCategory cmdlet.
+To obtain a dynamic category, use the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.md) cmdlet.
 
 ```yaml
 Type: IDynamicCategory
@@ -122,7 +122,7 @@ Accept wildcard characters: False
 
 ### -UpdateServer
 Specifies the WSUS server to which this cmdlet adds the dynamic category.
-To obtain a server, use the Get-WsusServer cmdlet.
+To obtain a server, use the [Get-WsusServer](./Get-WsusServer.md) cmdlet.
 If you do not specify a value for this parameter, the cmdlet adds the dynamic category to the local server.
 
 ```yaml
@@ -174,4 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-WsusDynamicCategory](./Set-WsusDynamicCategory.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

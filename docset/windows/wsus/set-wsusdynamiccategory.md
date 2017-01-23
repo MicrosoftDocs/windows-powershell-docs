@@ -41,10 +41,10 @@ The **Set-WsusDynamicCategory** cmdlet sets the synchronization status of a dyna
 
 ### Example 1: Set the synchronization status of a dynamic category
 ```
-PS C:\>Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07" | Set-WsusDynamicCategory -Status Blocked
+PS C:\> Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07" | Set-WsusDynamicCategory -Status Blocked
 ```
 
-This command gets a dynamic category from the local server by using the Get-WsusDynamicCategory cmdlet.
+This command gets a dynamic category from the local server by using the [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.md) cmdlet.
 The command passes the dynamic category to the current cmdlet by using the pipeline operator.
 The current cmdlet sets the synchronization status to Blocked.
 This value means that no updates are synchronized for this dynamic category.
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ### -InputObject
 Specifies a dynamic category object.
 This cmdlet modifies the synchronization settings for the dynamic category that this parameter specifies.
-To obtain a dynamic category, use the Get-WsusDynamicCategory cmdlet.
+To obtain a dynamic category, use the **Get-WsusDynamicCategory** cmdlet.
 
 ```yaml
 Type: IDynamicCategory
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ### -UpdateServer
 Specifies a WSUS server.
 This cmdlet modifies a dynamic category on the server that this parameter specifies.
-To obtain a server, use the Get-WsusServer cmdlet.
+To obtain a server, use the [Get-WsusServer](./Get-WsusServer.md) cmdlet.
 If you do not specify a value for this parameter, the cmdlet modifies dynamic categories on the local server.
 
 ```yaml
@@ -209,4 +209,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WsusDynamicCategory](./Remove-WsusDynamicCategory.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

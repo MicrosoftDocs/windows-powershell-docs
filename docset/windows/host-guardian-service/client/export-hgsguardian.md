@@ -1,0 +1,91 @@
+---
+author: brianlic-msft
+description: 
+external help file: HgsClient-help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Export-HgsGuardian
+ms.assetid: 54809486-1104-45F8-B108-1EE07863B1AD
+---
+
+# Export-HgsGuardian
+
+## SYNOPSIS
+Exports a guardian that contains public keys.
+
+## SYNTAX
+
+```
+Export-HgsGuardian [-InputObject] <CimInstance> [-Path] <String> [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Export-HgsGuardian** cmdlet exports a guardian that contains public keys to an .xml file.
+
+## EXAMPLES
+
+### Example 1: Export a guardian
+```
+PS C:\>Get-HgsGuardian -Name "Guardian11" | Export-HGsGuardian -Path "C:\LocalHGSFiles\Guardian11.xml"
+```
+
+This command uses the Get-HgsGuardian cmdlet to get the guardian named Guardian11, and then passes the object to the current cmdlet by using the pipeline operator.
+That cmdlet exports the guardian to the specified file.
+
+## PARAMETERS
+
+### -InputObject
+{{Fill InputObject Description}}
+
+```yaml
+Type: CimInstance
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the path to the file to write an XML representation of the guardian.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: FilePath
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-HgsGuardian](./Get-HgsGuardian.md)
+
+[Import-HgsGuardian](./Import-HgsGuardian.md)
+
+[New-HgsGuardian](./New-HgsGuardian.md)
+
+[Remove-HgsGuardian](./Remove-HgsGuardian.md)
+

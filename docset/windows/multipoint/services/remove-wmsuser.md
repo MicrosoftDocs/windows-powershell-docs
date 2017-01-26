@@ -1,0 +1,126 @@
+---
+author: brianlic-msft
+description: 
+external help file: MultiPoint.dll-Help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Remove-WmsUser
+ms.assetid: D633D175-85E6-4ECA-8BFB-65FBBA9240C4
+---
+
+# Remove-WmsUser
+
+## SYNOPSIS
+Removes a local user from the current MultiPoint Server system.
+
+## SYNTAX
+
+```
+Remove-WmsUser [-Name] <String> [-Server <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Remove-WmsUser** cmdlet removes a local user from the current Windows MultiPoint Server system.
+
+## EXAMPLES
+
+### Example 1: Remove a user
+```
+PS C:\>Remove-WmsUser -Name "Student01"
+```
+
+This command removes the user named Student01.
+
+## PARAMETERS
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the user account to remove.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Server
+Specifies the fully qualified host name of the MultiPoint Server that is the target of the command.
+The default is localhost.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ComputerName
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+###  
+None.
+
+## OUTPUTS
+
+###  
+None.
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-WmsUser]()
+
+[New-WmsUser]()
+
+[Set-WmsUser](./Set-WmsUser.md)
+

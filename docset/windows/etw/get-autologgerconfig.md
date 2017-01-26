@@ -1,0 +1,142 @@
+---
+author: brianlic-msft
+description: 
+external help file: MSFT_AutologgerConfig_v1.0.cdxml-help.xml
+keywords: powershell, cmdlet
+manager: alanth
+ms.date: 2017-01-05
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Get-AutologgerConfig
+ms.assetid: A2A199A6-D1D9-4168-AA15-E6F43E39C6F4
+---
+
+# Get-AutologgerConfig
+
+## SYNOPSIS
+Enumerates existing AutoLogger session configurations.
+
+## SYNTAX
+
+```
+Get-AutologgerConfig [[-Name] <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **Get-AutologgerConfig** cmdlet enumerates existing AutoLogger session configurations.
+
+## EXAMPLES
+
+### Example 1: Get a configuration
+```
+PS C:\>Get-AutologgerConfig -Name "WFP-IPsec Trace"
+Name                       : WFP-IPsec Trace
+BufferSize                 : 
+ClockType                  : 2
+DisableRealtimePersistence : 
+FileCount                  : 
+FileName                   : %SystemRoot%\System32\LogFiles\WMI\wfp.etl
+FileMax                    : 
+FlushTimer                 : 
+Guid                       : {0762bd13-14d5-4928-9db0-6c4e96312988}
+LogFileMode                : 0x1202
+MaximumFileSize                : 8
+MaximumBuffers             : 
+MinimumBuffers             : 
+Start                      : 0
+InitStatus                 : 0
+```
+
+This command gets the AutoLogger configuration named WFP-IPsec Trace.
+
+## PARAMETERS
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CimSession
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+The default is the current session on the local computer.
+
+```yaml
+Type: CimSession[]
+Parameter Sets: (All)
+Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the AutoLogger session.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Configuring and Starting an AutoLogger Session](http://msdn.microsoft.com/library/windows/desktop/aa363687.aspx)
+
+[Logging Mode Constants](http://msdn.microsoft.com/library/windows/desktop/aa364080.aspx)
+
+[New-AutologgerConfig](./New-AutologgerConfig.md)
+
+[Remove-AutologgerConfig](./Remove-AutologgerConfig.md)
+
+[Set-AutologgerConfig](./Set-AutologgerConfig.md)
+

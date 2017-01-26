@@ -34,7 +34,7 @@ This cmdlet requires FTP 7 or later.
 
 ### Example 1: Create an FTP site binding
 ```
-IIS:\>New-WebFtpSite -Name "testFtpSite" -Port 21 -PhysicalPath "c:\test" -HostHeader "mySite" -IPAddress "127.0.0.1"
+IIS:\> New-WebFtpSite -Name "testFtpSite" -Port 21 -PhysicalPath "c:\test" -HostHeader "mySite" -IPAddress "127.0.0.1"
 ```
 
 This command creates an FTP site named testFtpSite.

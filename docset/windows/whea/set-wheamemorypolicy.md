@@ -50,26 +50,26 @@ WHEA memory policy elements are:
 
 ### Example 1: Enable WHEA predictive failure analysis
 ```
-PS C:\>Set-WheaMemoryPolicy -DisablePFA $False
+PS C:\> Set-WheaMemoryPolicy -DisablePFA $False
 ```
 
 This command enables predictive failure analysis on the local computer.
 
 ### Example 2: Change the memory time out policy on a remote computer
 ```
-PS C:\>Set-WHEAMemoryPolicy -ComputerName "TestPC" -PFATimeout 600
+PS C:\> Set-WHEAMemoryPolicy -ComputerName "TestPC" -PFATimeout 600
 ```
 
 This command changes the WHEA memory policy on the remote computer named TestPC to use a timeout of 600 seconds.
 
 ### Example 3: Get and set WHEA memory policy in a script
 ```
-PS C:\>$X = Get-WheaMemoryPolicy
-PS C:\>$X.DisableOffline = $True
-PS C:\>$X | Set-WheaMemoryPolicy
+PS C:\> $X = Get-WheaMemoryPolicy
+PS C:\> $X.DisableOffline = $True
+PS C:\> $X | Set-WheaMemoryPolicy
 ```
 
-This command gets the memory policy in the variable $X, sets the value of X.DisableOffline to True, and then uses $X to set the memory policy.
+This command gets the memory policy in the variable $X, sets the value of X. DisableOffline to True, and then uses $X to set the memory policy.
 
 ## PARAMETERS
 
@@ -200,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-WheaMemoryPolicy](./Get-WheaMemoryPolicy.md)
-

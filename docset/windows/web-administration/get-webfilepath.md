@@ -32,7 +32,7 @@ The **Get-WebFilePath** cmdlet gets the physical path to the location of the spe
 
 ### Example 1: Get the physical path of the default website
 ```
-IIS:\>Get-WebFilePath -PSPath "IIS:\Sites\Default Web Site"
+IIS:\> Get-WebFilePath -PSPath "IIS:\Sites\Default Web Site"
 Directory: Microsoft.PowerShell.Core\FileSystem::C:\inetpub
 
 Mode    LastWriteTime        Length    Name

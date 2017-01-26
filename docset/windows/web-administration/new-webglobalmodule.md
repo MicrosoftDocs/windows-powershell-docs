@@ -32,7 +32,7 @@ The **New-WebGlobalModule** cmdlet creates an Internet Information Services (IIS
 
 ### Example 1: Add a new module
 ```
-IIS:\>New-WebGlobalModule -Name "testGlobalModule" -Image "c:\test\test.dll"
+IIS:\> New-WebGlobalModule -Name "testGlobalModule" -Image "c:\test\test.dll"
 ```
 
 This command adds a new module to the global Modules list.

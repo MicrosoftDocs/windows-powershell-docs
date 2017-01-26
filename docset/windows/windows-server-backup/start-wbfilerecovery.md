@@ -30,7 +30,7 @@ Start-WBFileRecovery [-BackupSet] <WBBackupSet> [-SourcePath] <String> [[-Target
 The **Start-WBFileRecovery** cmdlet starts a file recovery operation.
 For file recovery, you must specify the backup set from which to recover the file, along with the file that you want to recover.
 
-To browse the volumes in backup, use the Get-WBBackupVolumeBrowsePath cmdlet.
+To browse the volumes in backup, use the [Get-WBBackupVolumeBrowsePath](./Get-WBBackupVolumeBrowsePath.md) cmdlet.
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Completed.
 
 This example recovers the file named C:\Dir1\File1.txt to the alternate location F:\Dir1.
 
-The first command uses the Get-WBBackupVolumeBrowsePath cmdlet to get the volume browse path for the file that you recover.
+The first command uses the **Get-WBBackupVolumeBrowsePath** cmdlet to get the volume browse path for the file that you recover.
 The first element of the Volume array within the backup set stored in the variable named $Backup specifies the volume from which to obtain the backup files.
 
 The second command checks the path that you obtained from the first command for a file named File1.txt.
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -SourcePath
 Specifies the file path that this cmdlet recovers from the backup.
-You can prefix the file path with a volume browse path that you get from the Get-WBBackupVolumeBrowsePath cmdlet.
+You can prefix the file path with a volume browse path that you get from the **Get-WBBackupVolumeBrowsePath** cmdlet.
 
 ```yaml
 Type: String
@@ -216,7 +216,7 @@ The recovery process uses file recovery options when you recover files to their 
 
 ### System.String
 If you do not specify the *Async* parameter, the recovery operation displays status messages at periodic intervals until the recovery is complete.
-While the recovery operation runs you can use the Get-WBJob cmdlet to get the status of the operation.
+While the recovery operation runs you can use the **Get-WBJob** cmdlet to get the status of the operation.
 After the operation is complete, you can use the `Get-WBJob -Previous 1` command to get the completed recovery status.
 
 ## NOTES
@@ -226,4 +226,3 @@ After the operation is complete, you can use the `Get-WBJob -Previous 1` command
 [Get-WBBackupVolumeBrowsePath](./Get-WBBackupVolumeBrowsePath.md)
 
 [Get-WBJob](./Get-WBJob.md)
-

@@ -34,7 +34,7 @@ The **Add-WebConfiguration** cmdlet adds a collection element to an existing Int
 
 ### Example 1: Add a new default document
 ```
-IIS:\>Add-WebConfiguration -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Value @{value="new-index.html"}
+IIS:\> Add-WebConfiguration -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Value @{value="new-index.html"}
 ```
 
 This command adds a new default document to the default document collection of the default website.
@@ -231,4 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-WebConfigurationProperty](./Add-WebConfigurationProperty.md)
 
 [Set-WebConfiguration](./Set-WebConfiguration.md)
-

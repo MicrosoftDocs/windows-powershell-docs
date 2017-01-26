@@ -32,7 +32,7 @@ The **Start-WebItem** cmdlet starts an application pool or a website.
 
 ### Example 1: Start a website
 ```
-IIS:\>Start-WebItem -PSPath "IIS:\Sites\Default Web Site"
+IIS:\> Start-WebItem -PSPath "IIS:\Sites\Default Web Site"
 ```
 
 This command starts the site named Default Web Site.

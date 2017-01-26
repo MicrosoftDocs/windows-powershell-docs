@@ -46,7 +46,7 @@ The **Remove-WebBinding** cmdlet removes a binding from an Internet Information 
 
 ### Example 1: Add and remove a site binding
 ```
-IIS:\>New-WebBinding -Name "Default Web Site" -Port 1234 -IPAddress "*" -HostHeader "testsite" "Sleep 5 seconds before removing the binding"; Sleep 5 
+IIS:\> New-WebBinding -Name "Default Web Site" -Port 1234 -IPAddress "*" -HostHeader "testsite" "Sleep 5 seconds before removing the binding"; Sleep 5 
 IIS:\> Get-WebBinding -Port 1234 -Name "Default Web Site" | Remove-WebBinding
 ```
 

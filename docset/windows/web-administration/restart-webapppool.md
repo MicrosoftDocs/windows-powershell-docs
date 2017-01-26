@@ -32,7 +32,7 @@ The **Restart-WebAppPool** cmdlet restarts the specified application pool.
 
 ### Example 1: Restart an application pool
 ```
-IIS:\>Restart-WebAppPool -Name "DefaultAppPool"
+IIS:\> Restart-WebAppPool -Name "DefaultAppPool"
 ```
 
 This command restarts the application pool named DefaultAppPool.

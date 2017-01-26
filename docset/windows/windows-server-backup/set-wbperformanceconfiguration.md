@@ -55,7 +55,7 @@ PS C:\> Set-WBPerformanceConfiguration -Volume $Backup.Volume[1] AlwaysFull
 
 This example sets the performance settings for a specific volume.
 
-The first command stores the result of the Get-WBBackupSet cmdlet in the variable named $Backup.
+The first command stores the result of the [Get-WBBackupSet](./Get-WBBackupSet.md) cmdlet in the variable named $Backup.
 
 The second command sets the **AlwaysFull** performance setting on the second volume of $Backup.
 
@@ -132,4 +132,3 @@ You can pipe global settings or the per volume performance setting.
 ## RELATED LINKS
 
 [Get-WBPerformanceConfiguration](./Get-WBPerformanceConfiguration.md)
-

@@ -30,8 +30,8 @@ The **Remove-WBFileSpec** cmdlet removes a **WBFileSpec** object that contains a
 A backup file specification contains a list of items to include in or exclude from backups that use the backup policy.
 
 Before you can remove a backup file specification from a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -133,4 +133,3 @@ None
 [Get-WBFileSpec](./Get-WBFileSpec.md)
 
 [Get-WBPolicy](./Get-WBPolicy.md)
-

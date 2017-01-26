@@ -32,7 +32,7 @@ The **Get-WebConfigFile** cmdlet gets the physical path of the Internet Informat
 
 ### Example 1: Open the Web.config file for the default website
 ```
-IIS:\>Notepad (Get-WebConfigFile -PSPath "IIS:\Sites\Default Web Site")
+IIS:\> Notepad (Get-WebConfigFile -PSPath "IIS:\Sites\Default Web Site")
 ```
 
 This command uses Notepad to open the Web.config file for the default website.

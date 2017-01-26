@@ -29,7 +29,7 @@ Get-WBFileSpec [-Policy] <WBPolicy> [-WhatIf] [-Confirm] [<CommonParameters>]
 The **Get-WBFileSpec** cmdlet gets the list of **WBFileSpec** objects that contain backup file specifications for a **WBPolicy** object that contains a backup policy.
 A **WBFileSpec** object defines the items to include in or exclude from backups that you create by using the backup policy.
 
-Use the New-WBFileSpec and Add-WBFileSpec cmdlets to define and apply changes to the backup policy.
+Use the [New-WBFileSpec](./New-WBFileSpec.md) and [Add-WBFileSpec](./Add-WBFileSpec.md) cmdlets to define and apply changes to the backup policy.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -114,4 +114,3 @@ This cmdlet returns a list of **WBFileSpec** objects that contain backup file sp
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBFileSpec](./Remove-WBFileSpec.md)
-

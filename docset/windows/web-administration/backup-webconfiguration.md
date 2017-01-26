@@ -33,7 +33,7 @@ The cmdlet creates a folder with the name specified by the *Name* parameter for 
 
 ### Example 1: Back up an IIS configuration
 ```
-IIS:\>Backup-WebConfiguration -Name "MyIISBackup"
+IIS:\> Backup-WebConfiguration -Name "MyIISBackup"
 
 Name           Creation Date
 
@@ -86,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Select-WebConfiguration](./Select-WebConfiguration.md)
 
 [Set-WebConfiguration](./Set-WebConfiguration.md)
-

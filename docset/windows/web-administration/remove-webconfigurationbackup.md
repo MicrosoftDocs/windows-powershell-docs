@@ -32,7 +32,7 @@ The **Remove-WebConfigurationBackup** cmdlet removes an Internet Information Ser
 
 ### Example 1: Add and remove an IIS configuration backup
 ```
-IIS:\>Backup-WebConfiguration -Name "MyNewBackup" 
+IIS:\> Backup-WebConfiguration -Name "MyNewBackup" 
 IIS:\> Get-WebConfigurationBackup -Name "MyNewBackup" 
 IIS:\> sleep 5 
 IIS:\> Remove-WebConfigurationBackup -Name "MyNewBackup"

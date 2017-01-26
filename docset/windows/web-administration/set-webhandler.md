@@ -34,7 +34,7 @@ The **Set-WebHandler** cmdlet configures an Internet Information Services (IIS) 
 
 ### Example 1: Change a property of a handler
 ```
-IIS:\>Set-WebHandler -Name "StaticFile" -Path "*.htm"
+IIS:\> Set-WebHandler -Name "StaticFile" -Path "*.htm"
 ```
 
 This command sets properties of a handler.

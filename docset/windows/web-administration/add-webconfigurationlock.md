@@ -33,7 +33,7 @@ The **Add-WebConfigurationLock** cmdlet locks an Internet Information Services (
 
 ### Example 1: Add and remove configuration locks
 ```
-IIS:\>Add-WebConfigurationLock -Type "general" -Filter "//asp" 
+IIS:\> Add-WebConfigurationLock -Type "general" -Filter "//asp" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp" 
 IIS:\> Add-WebConfigurationLock -Type "inclusive" -Filter "//asp/@lcid" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp/@lcid" 
@@ -180,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebConfigurationLock](./Get-WebConfigurationLock.md)
 
 [Remove-WebConfigurationLock](./Remove-WebConfigurationLock.md)
-

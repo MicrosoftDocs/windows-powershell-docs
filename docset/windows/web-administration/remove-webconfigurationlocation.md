@@ -33,7 +33,7 @@ The **Remove-WebConfigurationLocation** cmdlet removes an Internet Information S
 
 ### Example 1: Add and remove a configuration location
 ```
-IIS:\>Set-WebConfigurationProperty -PSPath "IIS:\" -Filter "//windowsAuthentication" -Location "Default Web Site/mypage.htm" -Name "enabled" -Value $True 
+IIS:\> Set-WebConfigurationProperty -PSPath "IIS:\" -Filter "//windowsAuthentication" -Location "Default Web Site/mypage.htm" -Name "enabled" -Value $True 
 IIS:\> Get-WebConfigurationLocation -Name "Default Web Site" -PSPath "IIS:\" "Sleep 5 seconds before removing the configuration location"; Sleep 5 
 IIS:\> Remove-WebConfigurationLocation -Name "Default Web Site/my*" 
 IIS:\> Get-WebConfigurationLocation -Name "Default Web Site" -PSPath "IIS:\"

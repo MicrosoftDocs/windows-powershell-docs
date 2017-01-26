@@ -27,7 +27,7 @@ Get-WBDisk [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-WBDisk** cmdlet gets a list of internal and external disks that are online for the local computer.
-You can add these disks to a **WBPolicy** object that contains a backup policy by using the New-WBBackupTarget cmdlet to specify online disks as backup storage locations.
+You can add these disks to a **WBPolicy** object that contains a backup policy by using the [New-WBBackupTarget](./New-WBBackupTarget.md) cmdlet to specify online disks as backup storage locations.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -70,4 +70,3 @@ This cmdlet returns an array of **WBDisk** objects for the hard disks that the c
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

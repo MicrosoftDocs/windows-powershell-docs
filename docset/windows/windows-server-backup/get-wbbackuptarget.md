@@ -28,9 +28,9 @@ Get-WBBackupTarget [-Policy] <WBPolicy> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-WBBackupTarget** cmdlet gets backup storage locations that you specified for a **WBPolicy** object that contains a backup policy.
 Valid locations include disks, volumes, or remote shared folders.
-To view the list of all online disks, use the Get-WBDisk cmdlet.
+To view the list of all online disks, use the [Get-WBDisk](./Get-WBDisk.md) cmdlet.
 
-You can add the locations that the cmdlet returns to a **WBPolicy** object by specifying them as backup storage locations to the New-WBBackupTarget cmdlet.
+You can add the locations that the cmdlet returns to a **WBPolicy** object by specifying them as backup storage locations to the [New-WBBackupTarget](./New-WBBackupTarget.md) cmdlet.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -91,4 +91,3 @@ This cmdlet returns a list of the storage locations that the backup policy objec
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

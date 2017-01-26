@@ -48,7 +48,7 @@ PS C:\> Start-WBSystemStateRecovery -BackupSet $Backup -Force -RestartComputer -
 
 This example starts a system state recovery operation, and then restarts the computer at the end of the recovery operation.
 
-The first command stores the result of Get-WBBackupSet in a variable named $Backup.
+The first command stores the result of [Get-WBBackupSet](./Get-WBBackupSet.md) in a variable named $Backup.
 
 The second command starts the system state recovery from the backup stored in the $Backup variable.
 The command also uses the *Force* parameter to perform the recovery without prompting, the *RestartComputer* parameter to restart the computer when recovery finishes, and the *Async* parameter to suppress status output.
@@ -202,4 +202,3 @@ After completion of recovery, run Get-WBJob with the *Previous* parameter and an
 [Get-WBBackupSet](./Get-WBBackupSet.md)
 
 [Get-WBJob](./Get-WBJob.md)
-

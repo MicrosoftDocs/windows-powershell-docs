@@ -33,7 +33,7 @@ The **Set-WebManagedModule** cmdlet configures an Internet Information Services 
 
 ### Example 1: Change a property of a managed module
 ```
-IIS:\>Set-WebManagedModule -Name "UrlMappingsModule" -Type "Test.Test"
+IIS:\> Set-WebManagedModule -Name "UrlMappingsModule" -Type "Test.Test"
 ```
 
 This command changes the type of the module named UrlMappingsModule.

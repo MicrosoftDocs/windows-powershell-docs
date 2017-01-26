@@ -33,7 +33,7 @@ The **Enable-WebRequestTracing** cmdlet enables request tracing, and automatical
 
 ### Example 1: Enable request tracing for the default website
 ```
-IIS:\>Enable-WebRequestTracing -Name "Default Web Site"
+IIS:\> Enable-WebRequestTracing -Name "Default Web Site"
 ```
 
 This command enables request tracing for the default website, which also automatically creates a rule that traces status code 500 errors.

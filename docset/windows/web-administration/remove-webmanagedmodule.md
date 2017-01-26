@@ -33,7 +33,7 @@ The **Remove-WebManagedModule** cmdlet removes a managed module from Internet In
 
 ### Example 1: Remove a module
 ```
-IIS:\>Remove-WebManagedModule -Name "TestModule" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Remove-WebManagedModule -Name "TestModule" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command removes the module named TestModule from the default website.

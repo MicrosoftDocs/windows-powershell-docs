@@ -32,7 +32,7 @@ The **Restore-WebConfiguration** cmdlet restores an Internet Information Service
 
 ### Example 1: Restore a backup
 ```
-IIS:\>Restore-WebConfiguration -Name "MyBackup"
+IIS:\> Restore-WebConfiguration -Name "MyBackup"
 ```
 
 This command restores the IIS configuration backup named MyBackup.

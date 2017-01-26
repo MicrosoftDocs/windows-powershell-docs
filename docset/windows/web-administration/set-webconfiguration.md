@@ -41,7 +41,7 @@ Specify an element as a configuration section or an XPath query.
 
 ### Example 1: Set new bindings on an existing website
 ```
-IIS:\>Set-WebConfiguration -Filter "/system.applicationHost/sites/site[@name=" DemoSite"]/bindings" -PSPath "IIS:\" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
+IIS:\> Set-WebConfiguration -Filter "/system.applicationHost/sites/site[@name=" DemoSite"]/bindings" -PSPath "IIS:\" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```
 
 This command replaces the existing bindings of the Web site named DemoSite with new bindings.

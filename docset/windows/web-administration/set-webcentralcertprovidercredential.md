@@ -32,7 +32,7 @@ The **Set-WebCentralCertProviderCredential** cmdlet changes the user-account cre
 
 ### Example 1: Set credentials
 ```
-PS C:\>Set-WebCentralCertProviderCredentials -UserName "CertStoreUser"
+PS C:\> Set-WebCentralCertProviderCredentials -UserName "CertStoreUser"
 UserName=CertStoreUser
 
 Password=

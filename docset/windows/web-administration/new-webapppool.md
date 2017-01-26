@@ -32,7 +32,7 @@ The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) app
 
 ### Example 1: Create an IIS application pool
 ```
-IIS:\>New-WebAppPool -Name "NewAppPool"
+IIS:\> New-WebAppPool -Name "NewAppPool"
 ```
 
 This command creates an IIS application pool named NewAppPool.

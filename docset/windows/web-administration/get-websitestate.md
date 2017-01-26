@@ -32,7 +32,7 @@ The **Get-WebsiteState** cmdlet gets the state of an Internet Information Servic
 
 ### Example 1: Get the state of a website
 ```
-IIS:\>Get-WebsiteState -Name "Default Web Site"
+IIS:\> Get-WebsiteState -Name "Default Web Site"
 Value
 -----
 Started

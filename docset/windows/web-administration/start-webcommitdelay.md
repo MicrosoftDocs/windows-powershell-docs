@@ -33,7 +33,7 @@ The commitment of changes is delayed until the Stop-WebCommitDelay cmdlet is run
 
 ### Example 1: Delay the commitment of changes
 ```
-PS C:\>Start-WebCommitDelay
+PS C:\> Start-WebCommitDelay
 ```
 
 This command delays the modification of IIS configuration settings until the Stop-WebCommitDelay cmdlet is run.

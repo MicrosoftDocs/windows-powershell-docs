@@ -31,14 +31,14 @@ The **Remove-WBBackupTarget** cmdlet removes backup storage locations from a bac
 A **WBPolicy** object defines the backup policy.
 
 Before you can remove a backup target from a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 If you specify a disk as a storage location for backups, the server formats the disk before use and permanently deletes any existing data on the disk.
 
 You can add only one storage type at a time to a policy.
 If you specify a shared folder as the storage location, you cannot add more locations because you can specify only one shared folder as a storage location at any time.
-However, you can specify multiple disks or volumes at one time by calling the Add-WBBackupTarget cmdlet for each location.
+However, you can specify multiple disks or volumes at one time by calling the [Add-WBBackupTarget](./Add-WBBackupTarget.md) cmdlet for each location.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -116,4 +116,3 @@ This cmdlet returns a list of **WBBackupTarget** objects left in the policy.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [New-WBBackupTarget](./New-WBBackupTarget.md)
-

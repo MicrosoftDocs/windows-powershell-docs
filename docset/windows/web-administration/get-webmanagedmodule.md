@@ -32,7 +32,7 @@ The **Get-WebManagedModule** cmdlet gets the managed modules that are configured
 
 ### Example 1: Get modules for the default website
 ```
-IIS:\>Get-WebManagedModule -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Get-WebManagedModule -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command gets configuration information for modules configured for the default website.

@@ -33,7 +33,7 @@ The **Rename-WebConfigurationLocation** cmdlet renames the specified configurati
 
 ### Example 1: Rename a configuration location
 ```
-IIS:\>Rename-WebConfigurationLocation -Name "Default Web Site/oldApp" -NewName "Default Web Site/newApp" -PSPath "IIS:\"
+IIS:\> Rename-WebConfigurationLocation -Name "Default Web Site/oldApp" -NewName "Default Web Site/newApp" -PSPath "IIS:\"
 ```
 
 This command renames a configuration location on the default website from oldApp to newApp.

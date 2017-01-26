@@ -32,7 +32,7 @@ The **Stop-Website** cmdlet stops the specified Internet Information Services (I
 
 ### Example 1: Stop a website
 ```
-IIS:\>Stop-WebSite -Name "Default Web Site"
+IIS:\> Stop-WebSite -Name "Default Web Site"
 ```
 
 This command stops the site named Default Web Site.

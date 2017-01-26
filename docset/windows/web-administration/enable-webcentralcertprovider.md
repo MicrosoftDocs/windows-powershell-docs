@@ -33,7 +33,7 @@ The **Enable-WebCentralCertProvider** cmdlet enables a central certificate provi
 
 ### Example 1: Enable a central certificate store
 ```
-PS C:\>Enable-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore" -UserName "CertStoreUser" -Password "Pa$$w0rd"
+PS C:\> Enable-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore" -UserName "CertStoreUser" -Password "Pa$$w0rd"
 ```
 
 This command enables a new central certificate store.

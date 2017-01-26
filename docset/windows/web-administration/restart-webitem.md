@@ -32,7 +32,7 @@ The **Restart-WebItem** cmdlet restarts an application pool or a website.
 
 ### Example 1: Restart an application pool
 ```
-IIS:\>Restart-WebItem -PSPath 'IIS:\AppPools\DefaultAppPool'
+IIS:\> Restart-WebItem -PSPath 'IIS:\AppPools\DefaultAppPool'
 ```
 
 This command restarts the application pool named DefaultAppPool.

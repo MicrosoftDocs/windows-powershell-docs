@@ -31,8 +31,8 @@ The **Enable-WindowsErrorReporting** cmdlet enables Windows Error Reporting (WER
 Windows Error Reporting is a flexible feedback infrastructure that gathers information about hardware and software problems, reports the information to Microsoft, and gives users any available solutions.
 Windows Error Reporting generates reports in response to system events, such as application crashes or kernel faults.
 
-To get the current WER status, use the Get-WindowsErrorReporting cmdlet.
-If you enable WER, you can use the Disable-WindowsErrorReporting cmdlet to disable it.
+To get the current WER status, use the [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md) cmdlet.
+If you enable WER, you can use the [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.md) cmdlet to disable it.
 After you run this cmdlet, WER no longer sends information about application failures to Microsoft.
 
 ## EXAMPLES
@@ -64,4 +64,3 @@ Otherwise, it returns $False.
 [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.md)
 
 [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
-

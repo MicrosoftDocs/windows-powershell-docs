@@ -34,7 +34,7 @@ This cmdlet does not delete the provider.
 
 ### Example 1: Clear certificates
 ```
-PS C:\>Clear-WebCentralCertProvider
+PS C:\> Clear-WebCentralCertProvider
 ```
 
 This command removes all settings for the central certificate provider without removing the provider itself.
@@ -76,4 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebCentralCertProvider](./Get-WebCentralCertProvider.md)
 
 [Set-WebCentralCertProvider](./Set-WebCentralCertProvider.md)
-

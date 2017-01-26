@@ -29,9 +29,9 @@ Get-WBBareMetalRecovery [-Policy] <WBPolicy> [<CommonParameters>]
 The **Get-WBBareMetalRecovery** cmdlet gets a Boolean value that indicates whether or not a **WBPolicy** object that contains a backup policy can perform bare metal recoveries from backups.
 A bare metal recovery is the process of rebuilding a computer after a catastrophic failure.
 The recovery process backs up the system volume and master boot record by copying the entire volume and using Volume Shadow Copy Service (VSS) writers to ensure that all applications are in a consistent state for the copy.
-For more information about bare metal recovery, see Backup for Bare Metal Recoveryhttp://technet.microsoft.com/en-us/library/bb795820.aspx (http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
+For more information about bare metal recovery, see [Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx)(http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
-If a policy does not include the ability to perform bare metal recoveries from backups, use the Add-WBBareMetalRecovery cmdlet to add this ability.
+If a policy does not include the ability to perform bare metal recoveries from backups, use the [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md) cmdlet to add this ability.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -83,4 +83,3 @@ This cmdlet returns a Boolean value to indicate whether the server can run backu
 [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md)
 
 [Remove-WBBareMetalRecovery](./Remove-WBBareMetalRecovery.md)
-

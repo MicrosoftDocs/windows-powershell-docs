@@ -33,7 +33,7 @@ The **Get-WebConfiguration** cmdlet gets the Internet Information Services (IIS)
 
 ### Example 1: Query authentication settings
 ```
-IIS:\>Get-WebConfiguration -Filter "System.WebServer/Security/Authentication/* /*" -Recurse | where {$_.enabled -eq $True} | Format-List
+IIS:\> Get-WebConfiguration -Filter "System.WebServer/Security/Authentication/* /*" -Recurse | where {$_.enabled -eq $True} | Format-List
 ```
 
 This command queries for all authentication settings specified under the default website.

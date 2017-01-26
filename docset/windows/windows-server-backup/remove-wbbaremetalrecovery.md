@@ -30,8 +30,8 @@ The **Remove-WBBareMetalRecovery** cmdlet removes a request to include items tha
 Depending on the contents of the **WBFileSpec** object, the backup process can still back up some items that perform a bare metal recovery, but the backup process itself may not be able to perform a bare metal recovery.
 
 Before you can add a backup target to a **WBPolicy** object, you must put the **WBPolicy** object in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the  *Editable* parameter.
-The New-WBPolicy cmdlet creates a **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that you have set as the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the  *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -83,4 +83,3 @@ None
 [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md)
 
 [Get-WBBareMetalRecovery](./Get-WBBareMetalRecovery.md)
-

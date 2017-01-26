@@ -29,8 +29,8 @@ New-WBPolicy [<CommonParameters>]
 The **New-WBPolicy** cmdlet creates a backup policy object.
 The new backup policy object does not contain information about the volumes included in the policy, the files in the backup, the backup target, or any scheduled times.
 
-To make a new policy for scheduled backups, use the Set-WBPolicy cmdlet to define what items to include or exclude in backups, when to run backups, and where to store backups.
-To make a one-time backup from policy settings, use the Start-WBBackup cmdlet.
+To make a new policy for scheduled backups, use the [Set-WBPolicy](./Set-WBPolicy.md) cmdlet to define what items to include or exclude in backups, when to run backups, and where to store backups.
+To make a one-time backup from policy settings, use the [Start-WBBackup](./Start-WBBackup.md) cmdlet.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -70,4 +70,3 @@ This cmdlet returns and generates an empty **WBPolicy** object in edit mode.
 [Set-WBPolicy](./Set-WBPolicy.md)
 
 [Start-WBBackup](./Start-WBBackup.md)
-

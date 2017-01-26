@@ -33,7 +33,7 @@ The **Set-WebGlobalModule** cmdlet specifies configuration settings for an Inter
 
 ### Example 1: Change a property of a global module
 ```
-IIS:\>Set-WebGlobalModule -Name "UriCacheModule" -Image "c:\test.dll"
+IIS:\> Set-WebGlobalModule -Name "UriCacheModule" -Image "c:\test.dll"
 ```
 
 This command changes the image name of the UriCacheModule to c:\test.dll.

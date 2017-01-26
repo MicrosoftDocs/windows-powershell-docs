@@ -33,7 +33,7 @@ The **New-WebManagedModule** cmdlet adds a new managed module to the Internet In
 
 ### Example 1: Add a new managed module to the default website
 ```
-IIS:\>New-WebManagedModule -Name "ContosoModule" -Type "Contoso.MyModule"
+IIS:\> New-WebManagedModule -Name "ContosoModule" -Type "Contoso.MyModule"
 ```
 
 This command adds a new module named ContosoModule to the default website.

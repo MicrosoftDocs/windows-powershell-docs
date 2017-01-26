@@ -32,7 +32,7 @@ The **Get-Website** cmdlet gets configuration information for an Internet Inform
 
 ### Example 1: Get information about the default website
 ```
-IIS:\>Get-Website -Name "Default Web Site"
+IIS:\> Get-Website -Name "Default Web Site"
 Name             ID State   Physical Path                 Bindings
 ----             -- -----   -------------                 --------
 Default Web Site 1  Started %SystemDrive%\inetpub\wwwroot http *:80:

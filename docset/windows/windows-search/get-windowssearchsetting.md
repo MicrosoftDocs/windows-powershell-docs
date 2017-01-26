@@ -35,7 +35,7 @@ You can also see SafeSearch settings.
 
 ### Example 1: Get Windows Search settings
 ```
-PS C:\>Get-WindowsSearchSetting
+PS C:\> Get-WindowsSearchSetting
 ```
 
 This command gets Windows Search settings.
@@ -85,4 +85,3 @@ Windows Search excludes adult images, videos, and text from results.
 ## RELATED LINKS
 
 [Set-WindowsSearchSetting](./Set-WindowsSearchSetting.md)
-

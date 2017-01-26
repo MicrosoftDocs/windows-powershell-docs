@@ -34,7 +34,7 @@ This cmdlet is identical to Clear-WebRequestTracingSettings.
 
 ### Example 1: Remove request tracing from the default website
 ```
-IIS:\>Clear-WebRequestTracingSetting -Name "Default Web Site"
+IIS:\> Clear-WebRequestTracingSetting -Name "Default Web Site"
 ```
 
 This command removes request tracing from the default website.
@@ -101,4 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-WebRequestTracing](./Disable-WebRequestTracing.md)
 
 [Clear-WebRequestTracingSettings](./Clear-WebRequestTracingSettings.md)
-

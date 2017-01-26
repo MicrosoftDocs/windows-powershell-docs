@@ -33,7 +33,7 @@ The **Remove-WebHandler** cmdlet removes a request handler from Internet Informa
 
 ### Example 1: Remove a handler
 ```
-IIS:\>Remove-WebHandler -Name "TestHandler" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Remove-WebHandler -Name "TestHandler" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command removes the request handler named TestHandler from the default website.

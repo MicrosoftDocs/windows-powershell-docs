@@ -30,8 +30,8 @@ The **Remove-WBSystemState** cmdlet removes the system state components from a p
 Depending on what the **WBPolicy** object includes, you may still backup some of the components that are part of the system state, but you may not be able to use the components in a system state recovery.
 
 The **WBPolicy** object must be in edit mode.
-To put the **WBPolicy** object in edit mode for a policy that is the scheduled backup policy, use the Get-WBPolicy cmdlet with the *Editable* parameter.
-The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
+To put the **WBPolicy** object in edit mode for a policy that is the scheduled backup policy, use the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet with the *Editable* parameter.
+The [New-WBPolicy](./New-WBPolicy.md) cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -45,7 +45,7 @@ PS C:\> Remove-WBSystemState -Policy $Policy
 
 This example removes the system state components from the **WBPolicy** object.
 
-The first command stores the results of the Get-WBPolicy cmdlet in the variable named $Policy.
+The first command stores the results of the **Get-WBPolicy** cmdlet in the variable named $Policy.
 
 The second command removes system state components from the backup policy in the variable $Policy.
 
@@ -89,4 +89,3 @@ The cmdlet removes the **WBSystemState** object if it is present.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBSystemState](./Get-WBSystemState.md)
-

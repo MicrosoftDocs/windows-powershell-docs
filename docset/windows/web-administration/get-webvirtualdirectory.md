@@ -32,7 +32,7 @@ The **Get-WebVirtualDirectory** cmdlet gets a list of the virtual directories on
 
 ### Example 1: Getting a virtual directory
 ```
-IIS:\>Get-WebVirtualDirectory -Site "Default Web Site" -Application "TestApp"
+IIS:\> Get-WebVirtualDirectory -Site "Default Web Site" -Application "TestApp"
 ```
 
 This command returns the list of virtual directories on the default website on which the application named TestApp is configured.

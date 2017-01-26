@@ -32,7 +32,7 @@ The **Stop-WebItem** cmdlet stops a site or an application pool.
 
 ### Example 1: Stop a website
 ```
-IIS:\>Stop-WebItem -PSPath "IIS:\Sites\Default Web Site"
+IIS:\> Stop-WebItem -PSPath "IIS:\Sites\Default Web Site"
 ```
 
 This command stops the site named Default Web Site.
@@ -40,7 +40,7 @@ No output is returned.
 
 ### Example 2: Stop a website with feedback
 ```
-IIS:\>Stop-WebItem -PSPath "IIS:\Sites\Default Web Site" -Passthru
+IIS:\> Stop-WebItem -PSPath "IIS:\Sites\Default Web Site" -Passthru
 Name        ID     State    Physical Path                  Bindings
 
 ----        --     -----    -------------                  --------

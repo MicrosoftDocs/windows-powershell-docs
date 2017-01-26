@@ -33,7 +33,7 @@ The **New-WebApplication** cmdlet creates an Internet Information Services (IIS)
 
 ### Example 1: Create a web application
 ```
-IIS:\>New-WebApplication -Name "TestApp" -Site "Default Web Site" -PhysicalPath "C:\Test" -ApplicationPool "DefaultAppPool"
+IIS:\> New-WebApplication -Name "TestApp" -Site "Default Web Site" -PhysicalPath "C:\Test" -ApplicationPool "DefaultAppPool"
 ```
 
 This command creates a web application named TestApp on the default website.

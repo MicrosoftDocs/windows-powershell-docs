@@ -32,7 +32,7 @@ If you disable Developer Mode, you can no longer install and test your apps by u
 Any app that you deployed from Visual Studio no longer runs on the current computer.
 
 You must have administrative credentials to disable Developer Mode.
-For more information, see Enable your device for developmenthttps://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.If you have not enabled Developer Mode for the current computer, this cmdlet returns an error.
+For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library. If you have not enabled Developer Mode for the current computer, this cmdlet returns an error.
 
 ## EXAMPLES
 
@@ -110,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WindowsDeveloperLicense](./Get-WindowsDeveloperLicense.md)
 
 [Show-WindowsDeveloperLicenseRegistration](./Show-WindowsDeveloperLicenseRegistration.md)
-

@@ -44,14 +44,14 @@ Globbing, or the use of wildcards, is supported.
 
 ### Example 1: Change the extension of all handlers mapped to .aspx
 ```
-IIS:\>Set-WebConfigurationProperty -Filter "//handlers/add[@path='*.aspx']" -PSPath "IIS:\" -Name "path" -Value "*.mspx"
+IIS:\> Set-WebConfigurationProperty -Filter "//handlers/add[@path='*.aspx']" -PSPath "IIS:\" -Name "path" -Value "*.mspx"
 ```
 
 This command changes all handler paths to *.mspx that were mapped to *.aspx.
 
 ### Example 2: Set new bindings on an existing website
 ```
-IIS:\>Set-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath "IIS:\" -Name "Bindings" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
+IIS:\> Set-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath "IIS:\" -Name "Bindings" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```
 
 This command sets new bindings on an existing website.

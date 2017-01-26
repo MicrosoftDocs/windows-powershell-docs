@@ -33,21 +33,21 @@ The **Clear-WebConfiguration** cmdlet removes configuration settings from the sp
 
 ### Example 1: Remove ASP configuration on the root node
 ```
-C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath "IIS:\"
+C:\PS> Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath "IIS:\"
 ```
 
 This command removes the \<asp\> section from the root node.
 
 ### Example 2: Remove a configuration property from the root node
 ```
-C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp/@lcid" -PSPath "IIS:\"
+C:\PS> Clear-WebConfiguration -Filter "/system.webServer/asp/@lcid" -PSPath "IIS:\"
 ```
 
 This command removes the **lcid** property from the IIS configuration root node.
 
 ### Example 3: Remove ASP configuration from the site node
 ```
-IIS:\>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command removes the \<asp\> section from the IIS configuration node for the default website.
@@ -186,4 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restore-WebConfiguration](./Restore-WebConfiguration.md)
 
 [Set-WebConfiguration](./Set-WebConfiguration.md)
-

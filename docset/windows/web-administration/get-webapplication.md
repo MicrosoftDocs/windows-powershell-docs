@@ -32,7 +32,7 @@ The **Get-WebApplication** cmdlet gets the web applications associated with a sp
 
 ### Example 1: Get the web applications associated with the default website
 ```
-IIS:\>Get-WebApplication -Site "Default Web Site"
+IIS:\> Get-WebApplication -Site "Default Web Site"
 ```
 
 This command gets the web applications associated with the default website.

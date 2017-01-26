@@ -33,7 +33,7 @@ The **Disable-WebGlobalModule** cmdlet disables the specified Internet Informati
 
 ### Example 1: Disable a module
 ```
-IIS:\>Disable-WebGlobalModule -Name "FastCgiModule" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Disable-WebGlobalModule -Name "FastCgiModule" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command disables the FastCGI module for the default website.

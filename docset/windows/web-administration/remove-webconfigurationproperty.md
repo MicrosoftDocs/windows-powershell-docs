@@ -34,7 +34,7 @@ The **Remove-WebConfigurationProperty** cmdlet removes an Internet Information S
 
 ### Example 1: Remove the first binding on a site
 ```
-IIS:\>Remove-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="Default Web Site"]' -Name "Bindings.collection" -AtIndex 0
+IIS:\> Remove-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="Default Web Site"]' -Name "Bindings.collection" -AtIndex 0
 ```
 
 This command removes the first binding on the default website.

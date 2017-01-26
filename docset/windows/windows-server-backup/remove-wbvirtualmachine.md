@@ -45,7 +45,7 @@ PS C:\> Remove-WBVirtualMachine $Policy -All
 
 This example removes all virtual machines from the backup policy.
 
-The first command calls the Get-WBPolicy cmdlet and assigns the result to the $Policy variable.
+The first command calls the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet and assigns the result to the $Policy variable.
 
 The second command removes the virtual machines from the backup policy stored in the $Policy variable.
 
@@ -147,4 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WBVirtualMachine](./Get-WBVirtualMachine.md)
 
 [Get-WBPolicy](./Get-WBPolicy.md)
-

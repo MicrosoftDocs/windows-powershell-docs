@@ -33,14 +33,14 @@ You can choose to either commit or discard configuration changes made by using t
 
 ### Example 1: Commit configuration changes
 ```
-PS C:\>Stop-WebCommitDelay -Commit $True
+PS C:\> Stop-WebCommitDelay -Commit $True
 ```
 
 This command commits the configuration changes made since the Start-WebCommitDelay cmdlet was run.
 
 ### Example 2: Discard configuration changes
 ```
-PS C:\>Stop-WebCommitDelay -Commit $False
+PS C:\> Stop-WebCommitDelay -Commit $False
 ```
 
 This command discards the configuration changes made since the Start-WebCommitDelay cmdlet was run.

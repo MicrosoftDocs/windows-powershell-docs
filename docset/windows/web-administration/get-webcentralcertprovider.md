@@ -34,7 +34,7 @@ The settings that you can retrieve include whether the provider is enabled, the 
 
 ### Example 1: Retrieve all settings
 ```
-PS C:\>Get-WebCentralCertProvider
+PS C:\> Get-WebCentralCertProvider
 Enabled=True
 
 CertStoreLocation=\\MyCertServer\CertStore
@@ -50,7 +50,7 @@ This command retrieves all configuration settings of the central certificate pro
 
 ### Example 2: Retrieve the location of the central certificate storethe
 ```
-PS C:\>Get-WebCentralCertProvider -CertStoreLocation
+PS C:\> Get-WebCentralCertProvider -CertStoreLocation
 CertStoreLocation=\\MyCertServer\CertStore
 ```
 

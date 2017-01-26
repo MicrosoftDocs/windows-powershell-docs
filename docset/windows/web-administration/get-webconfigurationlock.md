@@ -33,7 +33,7 @@ The **Get-WebConfigurationLock** cmdlet gets the locking status of the specified
 
 ### Example 1: Get the locking status of an IIS configuration
 ```
-IIS:\>Get-WebConfigurationLock -Filter "//asp" -PSPath "IIS:\"
+IIS:\> Get-WebConfigurationLock -Filter "//asp" -PSPath "IIS:\"
 ```
 
 This command returns the locking status of the asp IIS configuration section.

@@ -30,7 +30,7 @@ Start-WBHyperVRecovery [-BackupSet] <WBBackupSet> [-VMInBackup] <WBVirtualMachin
 The **Start-WBHyperVRecovery** cmdlet starts a recovery operation for a Hyper-V virtual machine.
 Use the application array from a **WBBackupSet** object to specify the virtual machines that you want to recover.
 
-For an overview of Hyper-V, see HyperV Overviewhttp://technet.microsoft.com/en-us/library/hh831531.aspx (http://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
+For an overview of Hyper-V, see [HyperV Overview](http://technet.microsoft.com/en-us/library/hh831531.aspx) (http://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ The second command recovers the virtual machine that has the ID F7D8AAF4-D086-47
 ## PARAMETERS
 
 ### -Async
-Indicates that Windows PowerShell® returns immediately after it starts the recovery and does not display status messages.
+Indicates that Windows PowerShell returns immediately after it starts the recovery and does not display status messages.
 
 ```yaml
 Type: SwitchParameter
@@ -203,4 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [HyperV Overview](http://technet.microsoft.com/en-us/library/hh831531.aspx)
 
 [Get-WBBackupSet](./Get-WBBackupSet.md)
-

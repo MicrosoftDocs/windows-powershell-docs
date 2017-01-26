@@ -32,7 +32,7 @@ The **Get-WebGlobalModule** cmdlet gets the global modules configured in Interne
 
 ### Example 1: Getting configuration information about a module
 ```
-IIS:\>Get-WebGlobalModule -Name "UriCacheModule"
+IIS:\> Get-WebGlobalModule -Name "UriCacheModule"
 ```
 
 This command returns information about the configuration of the module named UriCacheModule.

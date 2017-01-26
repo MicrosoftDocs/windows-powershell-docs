@@ -34,7 +34,7 @@ The **New-Website** cmdlet creates an Internet Information Services (IIS) websit
 
 ### Example 1: Create a website
 ```
-IIS:\>New-WebSite -Name "TestSite" -Port 80 -HostHeader "TestSite" -PhysicalPath "$Env:systemdrive\inetpub\testsite"
+IIS:\> New-WebSite -Name "TestSite" -Port 80 -HostHeader "TestSite" -PhysicalPath "$Env:systemdrive\inetpub\testsite"
 ```
 
 This command creates a website named TestSite.

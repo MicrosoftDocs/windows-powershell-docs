@@ -32,7 +32,7 @@ The **Remove-WebAppPool** cmdlet removes an application pool from Internet Infor
 
 ### Example 1: Remove an application pool
 ```
-IIS:\>New-WebAppPool -Name "MyNewAppPool" "Sleep for 5 seconds before AppPool gets removed"; Sleep 5 
+IIS:\> New-WebAppPool -Name "MyNewAppPool" "Sleep for 5 seconds before AppPool gets removed"; Sleep 5 
 IIS:\> Remove-WebAppPool -Name "MyNewAppPool"
 ```
 

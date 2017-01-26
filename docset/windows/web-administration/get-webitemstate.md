@@ -39,7 +39,7 @@ This command returns information about the state of all the sites on the IIS ser
 
 ### Example 2: Get the state of the default website using HTTP
 ```
-IIS:\>Get-WebItemState -PSPath ".\Default Web Site" -Protocol "http"
+IIS:\> Get-WebItemState -PSPath ".\Default Web Site" -Protocol "http"
 Value
 
 -----

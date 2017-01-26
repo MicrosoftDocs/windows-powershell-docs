@@ -35,7 +35,7 @@ Globbing is supported.
 
 ### Example 1: Adding a default document
 ```
-IIS:\>Add-WebConfigurationProperty -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Name "Collection" -Value "new-index.html"
+IIS:\> Add-WebConfigurationProperty -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Name "Collection" -Value "new-index.html"
 ```
 
 This command adds a new default document named new-index.html to the top of the list of existing documents.
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Specifies the version of the .NET Framework in the form vn.n, such as v4.0 or v2.0.
 The default is v4.0.
 Specify this parameter only when the *PSPath* parameter is set to either Machine or Machine/Webroot.
-If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell® ignores the value of *Clr* and returns a warning.
+If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell ignores the value of *Clr* and returns a warning.
 
 ```yaml
 Type: String
@@ -263,4 +263,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WebConfigurationProperty](./Remove-WebConfigurationProperty.md)
 
 [Set-WebConfigurationProperty](./Set-WebConfigurationProperty.md)
-

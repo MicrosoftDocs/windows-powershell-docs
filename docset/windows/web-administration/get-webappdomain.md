@@ -33,7 +33,7 @@ The **Get-WebAppDomain** cmdlet gets the application domains in which the specif
 
 ### Example 1: Get the application domain of a running worker process
 ```
-IIS:\>Get-WebAppDomain -ProcessId 5872 -ApplicationPool "DefaultAppPool" 
+IIS:\> Get-WebAppDomain -ProcessId 5872 -ApplicationPool "DefaultAppPool" 
 IIS:\> Get-ChildItem IIS:\AppPools\DefaultAppPool\WorkerProcesses
 ```
 

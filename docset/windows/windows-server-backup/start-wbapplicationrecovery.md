@@ -158,7 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 If you do not specify the *Async* parameter, the recovery operation displays status messages at periodic intervals until the recovery is complete.
-While the recovery operation is running, you can use the Get-WBJob cmdlet to get the status of the operation.
+While the recovery operation is running, you can use the [Get-WBJob](./Get-WBJob.md) cmdlet to get the status of the operation.
 After the operation is complete you can use the `Get-WBJob -Previous 1` command to get the completed recovery status.
 
 ## NOTES
@@ -166,4 +166,3 @@ After the operation is complete you can use the `Get-WBJob -Previous 1` command 
 ## RELATED LINKS
 
 [Get-WBBackupSet](./Get-WBBackupSet.md)
-

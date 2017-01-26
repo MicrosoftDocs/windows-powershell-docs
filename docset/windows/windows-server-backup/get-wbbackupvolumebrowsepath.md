@@ -27,7 +27,7 @@ Get-WBBackupVolumeBrowsePath [-BackupSet] <WBBackupSet> [-VolumeInBackup] <WBVol
 
 ## DESCRIPTION
 The **Get-WBBackupVolumeBrowsePath** cmdlet mounts a volume in a **WBBackup** object that contains a backup so that you can browse the files on the volume.
-You can use the path that this cmdlet returns as a parameter to a Start-WBFileRecovery cmdlet to specify a file recovery path.
+You can use the path that this cmdlet returns as a parameter to a [Start-WBFileRecovery](./Start-WBFileRecovery.md) cmdlet to specify a file recovery path.
 
 ## EXAMPLES
 
@@ -90,7 +90,7 @@ You must specify the **WBBackupSet** object that contains the backup set along w
 
 ### System.String
 This cmdlet returns the mount path for the volume that you back up if the mount is successful.
-You can use the mount path with a dir command to browse the volume or specify the file recovery path as a parameter to the Start-WBFileRecovery cmdlet.
+You can use the mount path with a dir command to browse the volume or specify the file recovery path as a parameter to the **Start-WBFileRecovery** cmdlet.
 This path is valid for only 10 minutes, and Windows Server® 2012 Backup deletes the mount path after that.
 To continue browsing this path, call the **Get-WBBackupVolumeBrowsePath** cmdlet again with the same parameters within the 10-minute interval to make the path valid again for 10 more minutes, and repeat the process as needed.
 
@@ -99,4 +99,3 @@ To continue browsing this path, call the **Get-WBBackupVolumeBrowsePath** cmdlet
 ## RELATED LINKS
 
 [Start-WBFileRecovery](./Start-WBFileRecovery.md)
-

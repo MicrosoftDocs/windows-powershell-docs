@@ -34,7 +34,7 @@ The settings that you can set include whether the provider is enabled, the locat
 
 ### Example 1: Set the central certificate store location
 ```
-PS C:\>Set-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore"
+PS C:\> Set-WebCentralCertProvider -CertStoreLocation "\\MyCertServer\CertStore"
 ```
 
 This command sets the physical location of the central certificate store.

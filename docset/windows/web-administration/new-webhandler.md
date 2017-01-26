@@ -34,7 +34,7 @@ The **New-WebHandler** cmdlet creates an Internet Information Services (IIS) req
 
 ### Example 1: Add a new handler
 ```
-IIS:\>New-WebHandler -Name "TestHandler" -Path "*.test" -Verb "GET,POST" -Modules "IsapiModule" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> New-WebHandler -Name "TestHandler" -Path "*.test" -Verb "GET,POST" -Modules "IsapiModule" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command adds a handler named TestHandler to the default website.

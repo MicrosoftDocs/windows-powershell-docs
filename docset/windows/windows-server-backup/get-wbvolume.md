@@ -63,10 +63,10 @@ PS C:\> Get-WBVolume -Disk $Disks[0]
 
 This example gets all volumes present on a disk.
 
-The first command stores the output of the Get-WBDisk cmdlet in the $Disks variable.
+The first command stores the output of the [Get-WBDisk](./Get-WBDisk.md) cmdlet in the $Disks variable.
 The command gets a list of all disks on the system.
 
-The second command uses the Get-WBVolume cmdlet to get a list of volumes on the first disk.
+The second command uses the **Get-WBVolume** cmdlet to get a list of volumes on the first disk.
 
 ### Example 2: Get a list of all volumes in the backup policy
 ```
@@ -76,7 +76,7 @@ PS C:\> Get-WBVolume -Policy $Policy
 
 This example gets a list of all volumes that you added for backup in the **WBPolicy** object.
 
-The first command stores the result of the Get-WBPolicy cmdlet in a variable named $Policy.
+The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.md) cmdlet in a variable named $Policy.
 
 The second command gets the volumes from the $Policy variable.
 
@@ -228,7 +228,7 @@ In addition, you can use this cmdlet with the parameters *CriticalVolumes* and *
 This cmdlet returns an array of volumes in the **WBPolicy** object.
 
 ## NOTES
-* You can add the volumes that you get from this cmdlet to the **WBPolicy** object by using the Add-WBVolume cmdlet to specify them as volumes to be backed up, or by using the New-WBBackupTarget cmdlet to specify them as backup storage locations.
+* You can add the volumes that you get from this cmdlet to the **WBPolicy** object by using the **Add-WBVolume** cmdlet to specify them as volumes to be backed up, or by using the **New-WBBackupTarget** cmdlet to specify them as backup storage locations.
 
 ## RELATED LINKS
 
@@ -239,4 +239,3 @@ This cmdlet returns an array of volumes in the **WBPolicy** object.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Remove-WBVolume](./Remove-WBVolume.md)
-

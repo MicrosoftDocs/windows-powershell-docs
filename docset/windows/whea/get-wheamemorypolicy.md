@@ -32,7 +32,7 @@ The **Get-WheaMemoryPolicy** cmdlet gets the Windows Hardware Error Architecture
 
 ### Example 1: Get the WHEA memory policy settings from the local computer
 ```
-PS C:\>Get-WHEAMemoryPolicy
+PS C:\> Get-WHEAMemoryPolicy
 DisableOffline : False
 DisablePFA : False
 PersistMemoryOffline : True
@@ -41,7 +41,7 @@ PFAErrorThreshold : 16
 PFATimeOut : 86400
 ```
 
-This command gets WHEA memory policy values from the local computer as a WheaMemoryPolicy object.
+This command gets WHEA memory policy values from the local computer as a **WheaMemoryPolicy** object.
 
 ## PARAMETERS
 
@@ -76,4 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-WheaMemoryPolicy](./Set-WheaMemoryPolicy.md)
-

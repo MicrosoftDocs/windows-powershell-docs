@@ -29,7 +29,7 @@ Get-WindowsDeveloperLicense [<CommonParameters>]
 The **Get-WindowsDeveloperLicense** cmdlet provides information about whether you enabled Developer Mode for the current computer.
 You no longer need a developer license.
 Therefore, there is no longer an expiration date for a developer license.
-For more information, see Enable your device for developmenthttps://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.
+For more information, see [Enable your device for development](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) (https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn706236.aspx) in the Microsoft Developer Network library.
 
 ## EXAMPLES
 
@@ -60,4 +60,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Unregister-WindowsDeveloperLicense](./Unregister-WindowsDeveloperLicense.md)
 
 [Show-WindowsDeveloperLicenseRegistration](./Show-WindowsDeveloperLicenseRegistration.md)
-

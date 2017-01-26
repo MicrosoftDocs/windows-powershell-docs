@@ -33,7 +33,7 @@ If you specify the *Name* parameter, information is returned for the specified h
 
 ### Example 1: Get the handler section
 ```
-IIS:\>Get-WebHandler -PSPath "IIS:\Sites\Default Web Site"
+IIS:\> Get-WebHandler -PSPath "IIS:\Sites\Default Web Site"
 ```
 
 This command gets handlers configured for the default website.

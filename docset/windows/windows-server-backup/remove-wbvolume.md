@@ -42,11 +42,11 @@ PS C:\> Remove-WBVolume -Policy $Policy -Volume $Volume
 This example removes the specified volume from the backup policy.
 The output is the list of volumes left in the **WBPolicy** object.
 
-The first command stores the output of Get-WBPolicy in the variable named $Policy.
+The first command stores the output of [Get-WBPolicy](./Get-WBPolicy.md) in the variable named $Policy.
 
-The second command stores the output of Get-WBVolume in the variable $Volume.
+The second command stores the output of [Get-WBVolume](./Get-WBVolume.md) in the variable $Volume.
 
-The third command uses Remove-WBVolume to remove the volumes in the variable $Volume from the backup policy object.
+The third command uses **Remove-WBVolume** to remove the volumes in the variable $Volume from the backup policy object.
 
 ## PARAMETERS
 
@@ -136,4 +136,3 @@ This cmdlet returns a the list of **WBVolume** objects left in **WBPolicy** afte
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBVolume](./Get-WBVolume.md)
-

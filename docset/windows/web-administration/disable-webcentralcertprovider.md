@@ -27,13 +27,13 @@ Disable-WebCentralCertProvider [<CommonParameters>]
 
 ## DESCRIPTION
 The **Disable-WebCentralCertProvider** cmdlet takes the central certificate provider offline.
-Use the Set-WebCentralCertProvider cmdlet to re-enable the provider.
+Use the [Set-WebCentralCertProvider](./Set-WebCentralCertProvider.md) cmdlet to re-enable the provider.
 
 ## EXAMPLES
 
 ### Example 1: Disable the central certificate provider
 ```
-PS C:\>Disable-WebCentralCertProvider
+PS C:\> Disable-WebCentralCertProvider
 ```
 
 This command takes the central certificate provider offline.
@@ -58,4 +58,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebCentralCertProvider](./Get-WebCentralCertProvider.md)
 
 [Set-WebCentralCertProvider](./Set-WebCentralCertProvider.md)
-

@@ -32,7 +32,7 @@ The **Select-WebConfiguration** cmdlet returns information about Internet Inform
 
 ### Example 1: Get configuration settings
 ```
-IIS:\>Select-WebConfiguration -Filter "get-config(MACHINE/WEBROOT/APPHOST/testSite)/appSettings"
+IIS:\> Select-WebConfiguration -Filter "get-config(MACHINE/WEBROOT/APPHOST/testSite)/appSettings"
 ```
 
 This command returns the configuration collection from the appSettings location.

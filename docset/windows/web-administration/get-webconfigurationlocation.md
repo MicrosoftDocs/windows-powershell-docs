@@ -32,7 +32,7 @@ The **Get-WebConfigurationLocation** cmdlet gets the location of a specified con
 
 ### Example 1: Get location tags
 ```
-IIS:\>Get-WebConfigurationLocation
+IIS:\> Get-WebConfigurationLocation
 ```
 
 This command returns all locations that are configured by using location tags.

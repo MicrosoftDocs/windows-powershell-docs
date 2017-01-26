@@ -40,7 +40,7 @@ The **Set-WebBinding** cmdlet changes a property of an existing Internet Informa
 
 ### Example 1: Change a web site binding property
 ```
-IIS:\>Set-WebBinding -Name "Default Web Site" -BindingInformation "*:80:" -PropertyName "Port" -Value "1234"
+IIS:\> Set-WebBinding -Name "Default Web Site" -BindingInformation "*:80:" -PropertyName "Port" -Value "1234"
 ```
 
 This command changes the setting for the **Port** property for the default website from 80 to 1234.

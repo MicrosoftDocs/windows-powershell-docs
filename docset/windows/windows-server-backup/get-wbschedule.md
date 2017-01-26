@@ -28,7 +28,7 @@ Get-WBSchedule [-Policy] <WBPolicy> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-WBSchedule** cmdlet gets the current schedule for backups in the **WBPolicy** object.
 Backups run daily at the times specified in the schedule.
-To change the schedule, use the Set-WBSchedule cmdlet.
+To change the schedule, use the [Set-WBSchedule](./Set-WBSchedule.md) cmdlet.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.
 
@@ -42,7 +42,7 @@ PS C:\> Get-WBSchedule -Policy $Policy
 
 This example gets the scheduled backup times from the **WBPolicy** object.
 
-The first command stores the result of the Get-WBPolicy in the variable named $Policy.
+The first command stores the result of the [Get-WBPolicy](./Get-WBPolicy.md) in the variable named $Policy.
 
 The second command gets the backup schedule from the backup policy object.
 
@@ -83,4 +83,3 @@ This cmdlet returns a list of **Datetime** objects in the **WBPolicy** object.
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBSchedule](./Set-WBSchedule.md)
-

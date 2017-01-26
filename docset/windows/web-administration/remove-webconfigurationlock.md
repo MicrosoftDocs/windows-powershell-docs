@@ -33,7 +33,7 @@ The **Remove-WebConfigurationLock** cmdlet removes a lock on configuration setti
 
 ### Example 1: Add and remove configuration locks
 ```
-IIS:\>Add-WebConfigurationLock -Type "general" -Filter "//asp" 
+IIS:\> Add-WebConfigurationLock -Type "general" -Filter "//asp" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp" 
 IIS:\> Add-WebConfigurationLock -Type "inclusive" -Filter "//asp/@lcid" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp/@lcid" 

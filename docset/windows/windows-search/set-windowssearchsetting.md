@@ -36,14 +36,14 @@ You can also specify SafeSearch settings.
 
 ### Example 1: Personalize Windows Search
 ```
-PS C:\>Set-WindowsSearchSetting -SearchExperienceSetting "Personalized"
+PS C:\> Set-WindowsSearchSetting -SearchExperienceSetting "Personalized"
 ```
 
 This command allows Windows Search to use search history, but not specific location of the user, to personalize results.
 
 ### Example 2: Modify Windows Search settings
 ```
-PS C:\>Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonlizedAndLocation"
+PS C:\> Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonlizedAndLocation"
 ```
 
 This command modifies Windows Search settings.
@@ -148,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-WindowsSearchSetting](./Get-WindowsSearchSetting.md)
-

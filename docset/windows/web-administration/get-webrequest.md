@@ -32,7 +32,7 @@ The **Get-WebRequest** cmdlet gets Internet Information Services (IIS) requests 
 
 ### Example 1: Get requests that are currently being run
 ```
-IIS:\>Get-Item -AppPool "IIS:\AppPools\DefaultAppPool" | Get-WebRequest
+IIS:\> Get-Item -AppPool "IIS:\AppPools\DefaultAppPool" | Get-WebRequest
 ```
 
 This command gets a list of IIS requests that are currently being run.

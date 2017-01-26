@@ -40,7 +40,7 @@ The **Enable-WebGlobalModule** cmdlet enables the specified Internet Information
 
 ### Example 1: Enable a module for a site
 ```
-IIS:\>Enable-WebGlobalModule -Name "UriCacheModule" -PSPath "IIS:\sites\Default Web Site"
+IIS:\> Enable-WebGlobalModule -Name "UriCacheModule" -PSPath "IIS:\sites\Default Web Site"
 ```
 
 This command enables the module named UriCacheModule for the default website.

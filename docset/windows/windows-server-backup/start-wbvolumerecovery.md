@@ -54,9 +54,9 @@ PS C:\> Start-WBVolumeRecovery -BackupSet $Backup -VolumeInBackup $Backup.Volume
 
 This example starts volume recovery for the System Reserved volume and restores to the recovery target volume.
 
-The first command stores the output of the Get-WBBackupSet cmdlet in the variable named $Backup.
+The first command stores the output of the [Get-WBBackupSet](./Get-WBBackupSet.md) cmdlet in the variable named $Backup.
 
-The second command stores the output of the Get-WBVolume cmdlet in the variable named $RecoveryTarget.
+The second command stores the output of the [Get-WBVolume](./Get-WBVolume.md) cmdlet in the variable named $RecoveryTarget.
 
 The third command starts the recovery operation for the volume specifying the $Backup variable as the backup to use and the $RecoveryTarget variable as the volume to restore.
 
@@ -167,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 If you do not specify the *Async* parameter, the status of the recovery operation displays at periodic intervals until the recovery operation finishes.
-You can also use the Get-WBJob cmdlet to get the status of the current recovery operation.
+You can also use the **Get-WBJob** cmdlet to get the status of the current recovery operation.
 Type `Get-WBJob -Previous 1` to get the status after the recovery operation completes.
 
 ## NOTES
@@ -179,4 +179,3 @@ Type `Get-WBJob -Previous 1` to get the status after the recovery operation comp
 [Get-WBVolume](./Get-WBVolume.md)
 
 [Resume-WBVolumeRecovery](./Resume-WBVolumeRecovery.md)
-

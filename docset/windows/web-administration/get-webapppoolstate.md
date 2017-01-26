@@ -32,7 +32,7 @@ The **Get-WebAppPoolState** cmdlet gets the run-time state of an Internet Inform
 
 ### Example 1: Get the run-time state of the DefaultAppPool
 ```
-IIS:\>Get-WebAppPoolState -Name "DefaultAppPool"
+IIS:\> Get-WebAppPoolState -Name "DefaultAppPool"
 Value
 
 -----

@@ -33,7 +33,7 @@ The **Get-WebBinding** cmdlet gets information about the bindings configured on 
 
 ### Example 1: Get the site bindings of the default website
 ```
-IIS:\>Get-WebBinding -Name "Default Web Site"
+IIS:\> Get-WebBinding -Name "Default Web Site"
 ```
 
 This command gets the bindings configured on the default website.

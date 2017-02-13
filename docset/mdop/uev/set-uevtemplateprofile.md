@@ -1,13 +1,17 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 author: jamiejdt
-description: 
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: 
+manager: alanth 
 ms.assetid: 8173FE86-C002-4FE9-98E1-ABB3996BC135
 ms.date: 2016-12-05
 ms.devlang: powershell
-ms.service: MDOP
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -120,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,16 +1,20 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 external help file: Microsoft.Medv.Administration.Commands.WorkspacePackager.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: New-MedvWorkspace
-description: 
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: jamiejdt
-manager: 
+manager: alanth 
 ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
-ms.service: MDOP
 ms.assetid: 2B8498E7-38E2-4A78-84B7-541E6364F810
 ---
 
@@ -103,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

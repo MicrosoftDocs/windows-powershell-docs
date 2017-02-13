@@ -1,15 +1,19 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 Module Name: Microsoft.Medv.Administration.Commands.WorkspacePackager
 Locale: en-US
 title: MEDVWorkspaceCmdlets
-description: 
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: jamiejdt
-manager: 
+manager: alanth 
 ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
-ms.service: MDOP
 ms.assetid: A86F98A7-9F03-4195-A182-4A99274A3482
 ---
 

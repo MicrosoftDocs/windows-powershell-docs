@@ -1,18 +1,22 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 Module Name: AppVClient
 Module Guid: 596D7B43-928B-44D4-89E7-17D34740ECC2
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403112
 Help Version: 4.0.1.0
 Locale: en-US
 title: AppVClient
-description: 
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: jamiejdt
-manager: 
+manager: alanth 
 ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
-ms.service: MDOP
 ms.assetid: 2C062DCE-24E0-441D-AB3B-695702329DB0
 ---
 

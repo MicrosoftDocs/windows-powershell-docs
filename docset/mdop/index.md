@@ -1,13 +1,17 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 author: jamiejdt
-description: Microsoft Desktop Optimization Pack Automation with Windows PowerShell
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: 
+manager: alanth 
 ms.assetid: 69e05c33-3b61-449d-88ad-757e73f6de19
 ms.date: 2016-12-05
 ms.devlang: powershell
-ms.service: MDOP
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -29,3 +33,4 @@ The table below shows the latest published version of the Help for each module. 
 | [Microsoft Bitlocker Administration and Monitoring](mbam/index.md) | 2.5 |
 | [Microsoft Enterprise Desktop Virtualization](medv/index.md) | 2.0 |
 | [User Experience Virtualization](uev/index.md) | 2.1 SP1 |
+

@@ -1,18 +1,22 @@
 ---
+ms.technology: powershell-mdop
+ms.mktglfcycl: manage
+ms.author: brianlic
+ms.prod: w10
+ms.sitesec: library
 Module Name: AppVSequencer
 Module Guid: 120C1A42-E4B5-4FCF-9DBD-D416BD3B41F5
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403113
 Help Version: 4.0.0.0
 Locale: en-US
 title: AppVSequencer
-description: 
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: jamiejdt
-manager: 
+manager: alanth 
 ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
-ms.service: MDOP
 ms.assetid: 663AAEE6-FE1C-417A-9540-451E5D9271CE
 ---
 

@@ -1,6 +1,16 @@
 ---
 title: Windows PowerShell module reference
 description: Windows PowerShell module reference
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: brianlic
+manager: alanth
+ms.topic: reference
+author: brianlic-msft
+ms.prod: w10
+keywords: powershell, cmdlet
+ms.date: 2016-12-27
+ms.technology: powershell-windows
 ---
 
 # Windows PowerShell module reference

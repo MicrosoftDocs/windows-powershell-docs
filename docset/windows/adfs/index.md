@@ -9,7 +9,7 @@ Help Version: 5.0.0.0
 title: Active Directory Federation Services
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft-msft
+author: brianlic-msft
 manager: alanth
 ms.date: 2016-12-20
 ms.topic: reference

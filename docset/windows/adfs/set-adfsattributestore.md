@@ -2,7 +2,7 @@
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: brianlic
-author: brianlic-msft-msft
+author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet

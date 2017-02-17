@@ -4,7 +4,7 @@ Welcome! This repository houses the Windows 10, Windows Server 2016, and MDOP Po
 
 Edits to this content are published in the following places:
 
-- [Windows 10 and Windows Server 2016](https://technet.microsoft.com/itpro/powershell/windows)
+- [Windows 10 and Windows Server 2016](https://technet.microsoft.com/itpro/powershell/windows/index)
 - [Microsoft Desktop Optimization Pack](https://technet.microsoft.com/itpro/powershell/mdop) 
 
 ## Contributing

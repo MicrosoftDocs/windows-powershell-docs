@@ -8,7 +8,7 @@
       "build_output_subfolder": "powershell",
       "locale": "en-us",
       "version": 0,
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -21,7 +21,7 @@
     "brianlic@microsoft.com"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
-  "git_repository_branch_open_to_public_contributors": "docs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,

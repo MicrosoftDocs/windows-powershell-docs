@@ -21,7 +21,7 @@
     "brianlic@microsoft.com"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
-  "git_repository_branch_open_to_public_contributors": "master",
+  "git_repository_branch_open_to_public_contributors": "docs",
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,

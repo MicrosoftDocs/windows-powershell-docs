@@ -58,7 +58,7 @@ Clear-Disk -InputObject <CimInstance[]> [-RemoveData] [-RemoveOEM] [-CimSession 
 The **Clear-Disk** cmdlet clears the disk by removing the partition and volume information.
 
 If the disk contains active data volumes, then the *RemoveData* parameter is required as this will delete all data from the specified disk.
-This cmdlet will not clear OEM recovery partitions unless *ForceOEM* parameter is also specified.
+This cmdlet will not clear OEM recovery partitions unless *RemoveOEM* parameter is also specified.
 
 ## EXAMPLES
 

@@ -29,16 +29,16 @@ Get-NanoServerPackage [[-MediaPath] <String>] [[-BasePath] <String>] [[-LogPath]
 ```
 
 ## DESCRIPTION
-The **Get-NanoServerPackages** cmdlet gets packages that are available to embed into a Nano Server installation image.
+The **Get-NanoServerPackage** cmdlet gets packages that are available to embed into a Nano Server installation image.
 
 ## EXAMPLES
 
 ### Example 1: Get available packages
 ```
-PS C:\> Get-NanoServerPackages -MediaPath "D:\"
+PS C:\> Get-NanoServerPackage -MediaPath D:\
 ```
 
-This command gets packages available on the source media.
+This command gets packages available on the source media mounted on the D: drive.
 
 ## PARAMETERS
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Specifies the log path.
+Specifies the path where log files from the operation will be collected.
 
 ```yaml
 Type: String
@@ -97,6 +97,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 None.
 
 ## OUTPUTS
+### System.String
 
 ## NOTES
 

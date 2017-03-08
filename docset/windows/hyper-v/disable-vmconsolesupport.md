@@ -20,7 +20,7 @@ ms.assetid: C1BCE062-4E39-4696-90CC-41FFBC963C34
 # Disable-VMConsoleSupport
 
 ## SYNOPSIS
-Disables keyboard, video, and mouse for virtual machines.
+Disables keyboard, video, and mouse for a generation 2 virtual machine.
 
 ## SYNTAX
 

@@ -1,13 +1,13 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
+ms.author: jgerend
+author: JasonGerend
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SyncShare.cdxml-help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 2016-12-20
+keywords: powershell, cmdlet, work folders
+manager: dongill
+ms.date: 3-9-2017
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -48,10 +48,10 @@ The **Set-SyncShare** cmdlet modifies the settings for a Sync Share.
 
 ### Example 1: Modify a sync share to enable inherited permissions
 ```
-PS C:\> Set-SyncShare -Name "Share01" -KeepParentFolderPermission
+PS C:\> Set-SyncShare -Name "Share01" -InheritParentFolderPermission
 ```
 
-This command modifies settings on the share named Share01, and sets the *KeepParentFolderPermission* parameter to enable the share to inherit permissions from the parent folder.
+This command modifies settings on the share named Share01, and sets the *InheritParentFolderPermission* parameter to enable the share to inherit permissions from the parent folder.
 
 ### Example 2: Modify the sync share to change the user group
 ```

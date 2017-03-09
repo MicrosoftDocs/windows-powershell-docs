@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeSpan
-Specifies the time span for which to generate the cluster log.
+Specifies the time span in minutes for which to generate the cluster log.
 
 ```yaml
 Type: UInt32

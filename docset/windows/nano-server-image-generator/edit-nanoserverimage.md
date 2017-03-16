@@ -70,7 +70,7 @@ PS C:\> Edit-NanoServerImage -MediaPath D:\ -BasePath .\Base -TargetPath .\NanoS
 
 This example assumes that you've run the **New-NanoServerImage** cmdlet and specified .\Base as the base path.
 
-This command copies required files from D:\ to .\Base. It converts the Nano Server .wim file into a .vhdx file and moves it to .\NanoServer.vhdx. It adds the Compute (Hyper-V) package, sets the computer name to Nano, sets the administrator password to Passw0rd, and performs an offline domain join of the machine to ContosoDomain.
+This command edits the existing Nano Server image (NanoServer.vhdx) specified by the TargetPath parameter and the existing Nano Server files in the .\Base folder as specified by the BasePath parameter are reused. The command adds the Compute (Hyper-V) package, sets the computer name to Nano, sets the administrator password to Passw0rd, and performs an offline domain join of the machine to ContosoDomain.
 
 ## PARAMETERS
 

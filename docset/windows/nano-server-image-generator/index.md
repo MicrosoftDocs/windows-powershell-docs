@@ -6,6 +6,7 @@ Module Name: NanoServerImageGenerator
 Module Guid: D1079600-AD0A-4837-8ED9-CE3D6797F5A2
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=715584
 Help Version: 5.0.0.1
+Locale: en-US
 title: NanoServerImageGenerator
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

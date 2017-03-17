@@ -75,7 +75,7 @@ The table below also shows the latest published version of the Help for each mod
 | Msmq | [MSMQ](msmq/index.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
-| NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/index.md) |
+| NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
 | NetAdapter | [Network Adapter](network-adapter/index.md) |
 | NetConnection | [Network connection](network-connection/index.md) |

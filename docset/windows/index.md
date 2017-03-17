@@ -62,7 +62,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
 | HostComputeService | [Containers](containers/index.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
-| Hyper-V | [Hyper-V](hyper-v/index.md) |
+| Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
 | International | [International](international/index.md) |
 | IpamServer | [IP Address Management Server](ipam/index.md) |
@@ -75,7 +75,7 @@ The table below also shows the latest published version of the Help for each mod
 | Msmq | [MSMQ](msmq/index.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
-| NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/index.md) |
+| NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
 | NetAdapter | [Network Adapter](network-adapter/index.md) |
 | NetConnection | [Network connection](network-connection/index.md) |

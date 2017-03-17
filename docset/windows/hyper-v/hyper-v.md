@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: Hyper-V
 Module Guid: AF4BDDD0-8583-4FF2-84B2-A33F5C8DE8A7
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=390775
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: Hyper-V
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -658,4 +659,5 @@ Tests the connection between a primary server and a Replica server.
 
 ### [Update-VMVersion](./Update-VMVersion.md)
 Updates the version of virtual machines.
+
 

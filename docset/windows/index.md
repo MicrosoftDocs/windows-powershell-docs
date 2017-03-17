@@ -62,7 +62,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
 | HostComputeService | [Containers](containers/index.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
-| Hyper-V | [Hyper-V](hyper-v/index.md) |
+| Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
 | International | [International](international/index.md) |
 | IpamServer | [IP Address Management Server](ipam/index.md) |

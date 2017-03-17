@@ -1388,7 +1388,7 @@
 #### [Set-HgsServer](host-guardian-service/server/set-hgsserver.md)
 #### [Test-HgsServer](host-guardian-service/server/test-hgsserver.md)
 #### [Uninstall-HgsServer](host-guardian-service/server/uninstall-hgsserver.md)
-## [Hyper-V](hyper-v/index.md)
+## [Hyper-V](hyper-v/hyper-v.md)
 ### [Add-VMDvdDrive](hyper-v/add-vmdvddrive.md)
 ### [Add-VMFibreChannelHba](hyper-v/add-vmfibrechannelhba.md)
 ### [Add-VMGroupMember](hyper-v/add-vmgroupmember.md)

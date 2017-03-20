@@ -285,35 +285,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RollingNTLMSecret
-Specifies whether the policy requires the rolling NT LAN Manager (NTLM) secret for the user for NTLM authentication.
-The acceptable values for this parameter are:
-
-- Disabled 
-- Optional 
-- Required
-
-Windows Server 2016 DFL domains automatically rolls a NTLM secret whenever the domain password of the user is changed.
-Therefore, a password change is not required to enable the feature for a user.
-If the password has not been changed since the domain became Windows Server 2016 DFL, then no rolling NTLM secret exists for the user.
-If no rolling NTLM secret exists and the policy enables this feature, when a user signs on from a device which supports the new rolling NTLM secret, it prompts the user to change the password.
-
-Warning: If you require the rolling secret for NTLM authentication, NTLM authentication failures can occur when users attempt to use the domain password from forms-based authentication, such as from down-level devices and hosts which use NTLM authentication.
-To allow fallback to the domain password, configure the rolling NTLM secret to be optional.
-
-```yaml
-Type: ADStrongNTLMPolicyType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Disabled, Optional, Required
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Server
 Specifies the Active Directory Domain Services instance to which to connect, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.

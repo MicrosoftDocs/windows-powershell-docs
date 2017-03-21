@@ -46,7 +46,7 @@ This command runs this cmdlet on the local WSUS server specifying the option to 
 
 ### Example 2: Run cleanup for obsolete computers and updates
 ```
-PS C:\> Get-WsusServer "contsoso" | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
+PS C:\> Get-WsusServer "contoso" | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
 Obsolete Updates Deleted: 62 
 Obsolete Computers Deleted: 0
 ```

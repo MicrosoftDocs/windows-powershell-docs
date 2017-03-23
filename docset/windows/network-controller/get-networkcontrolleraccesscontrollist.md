@@ -30,7 +30,7 @@ Get-NetworkControllerAccessControlList [[-ResourceId] <String[]>] -ConnectionUri
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerAccessControlList** cmdlet gets the access control list for a network controller.
+The **Get-NetworkControllerAccessControlList** cmdlet gets access control lists associated with a network controller.
 
 ## EXAMPLES
 

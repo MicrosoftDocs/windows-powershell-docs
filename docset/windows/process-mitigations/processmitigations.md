@@ -20,7 +20,7 @@ Locale: en-US
 
 # ProcessMitigations Module
 ## Description
-{{Manually Enter Description Here}}
+{The Process Mitigation Management Tool provides functionalities to allow users to configure and audit exploit mitigations for increased process security or for continued enforecement of Enhanced Mitigation Experience Toolkit (EMET) policy settings.}
 
 ## ProcessMitigations Cmdlets
 ### [ConvertTo-ProcessMitigationPolicy](ConvertTo-ProcessMitigationPolicy.md)

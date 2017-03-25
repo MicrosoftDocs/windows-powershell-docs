@@ -415,5 +415,5 @@ Specifies a claims transformation policy object that is a template for the new c
 
 [Set-ADClaimTransformPolicy](./Set-ADClaimTransformPolicy.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

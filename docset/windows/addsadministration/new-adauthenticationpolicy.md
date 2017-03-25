@@ -506,5 +506,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-ADAuthenticationPolicy](./Set-ADAuthenticationPolicy.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

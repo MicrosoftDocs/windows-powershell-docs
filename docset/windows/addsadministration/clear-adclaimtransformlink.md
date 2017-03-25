@@ -268,5 +268,5 @@ An account object (**Microsoft.ActiveDirectory.Management.ADTrust**) is received
 
 [Set-ADClaimTransformLink](./Set-ADClaimTransformLink.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

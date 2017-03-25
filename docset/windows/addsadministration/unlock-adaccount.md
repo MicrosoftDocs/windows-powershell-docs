@@ -304,5 +304,5 @@ Derived types, such as the following, are also accepted:
 
 [Set-ADAccountPassword](./Set-ADAccountPassword.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

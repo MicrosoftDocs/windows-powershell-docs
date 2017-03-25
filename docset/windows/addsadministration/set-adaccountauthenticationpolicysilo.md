@@ -277,5 +277,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Grant-ADAuthenticationPolicySiloAccess](./Grant-ADAuthenticationPolicySiloAccess.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

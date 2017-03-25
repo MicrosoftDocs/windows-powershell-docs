@@ -276,5 +276,5 @@ By default, this cmdlet does not generate any output.
 
 [Get-ADDomain](./Get-ADDomain.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

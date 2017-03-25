@@ -496,5 +496,5 @@ By default, this cmdlet does not generate any output.
 
 [Remove-ADCentralAccessRule](./Remove-ADCentralAccessRule.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

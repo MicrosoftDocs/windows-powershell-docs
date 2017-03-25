@@ -238,5 +238,5 @@ Returns the default domain password policy object for the specified domain.
 
 [Get-ADDomain](./Get-ADDomain.md)
 
-[AD DS Administration Cmdlets in Windows PowerShell](./index.md)
+[AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
 

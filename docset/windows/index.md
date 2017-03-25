@@ -17,7 +17,7 @@ The table below also shows the latest published version of the Help for each mod
 
 | Module name | Title and link to Web version |
 | - | - |
-| ActiveDirectory | [Active Directory Domain Services Administration](adds/administration/index.md) |
+| ActiveDirectory | [Active Directory Domain Services Administration](addsadministration/activedirectory.md) |
 | ADCSAdministration | [Active Directory Certificate Services Administration](adcsadministration/adcsadministration.md) |
 | ADCSDeployment | [Active Directory Certificate Services Deployment](adcsdeployment/adcsdeployment.md) |
 | ADDSDeployment | [Active Directory Domain Services Deployment](adds/deployment/index.md) |

@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: ActiveDirectory
 Module Guid: 43C15630-959C-49E4-A977-758C5CC93408
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
-Help Version: 4.0.6.0
+Help Version: 4.0.6.1
 Locale: en-US
 title: ActiveDirectory
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -464,4 +464,5 @@ Uninstalls an Active Directory managed service account from a computer or remove
 
 ### [Unlock-ADAccount](./Unlock-ADAccount.md)
 Unlocks an Active Directory account.
+
 

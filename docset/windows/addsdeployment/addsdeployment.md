@@ -6,6 +6,7 @@ Module Name: ADDSDeployment
 Module Guid: DF736400-2E72-4A7B-8EDA-D5B28421881F
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
 Help Version: 4.0.3.0
+Locale: en-US
 title: ADDSDeployment
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

@@ -864,6 +864,61 @@
 "source_path": "docset/windows/adds/administration/unlock-adaccount",
 "redirect_url": "/itpro/powershell/windows/addsadministration/unlock-adaccount",
 "redirect_document_id": true
-}
+},
+{
+"source_path": "docset/windows/adds/deployment/add-addsreadonlydomaincontrolleraccount",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/add-addsreadonlydomaincontrolleraccount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/index",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/addsdeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/install-addsdomain",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/install-addsdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/install-addsdomaincontroller",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/install-addsdomaincontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/install-addsforest",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/install-addsforest",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/test-addsdomaincontrollerinstallation",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/test-addsdomaincontrollerinstallation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/test-addsdomaincontrolleruninstallation",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/test-addsdomaincontrolleruninstallation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/test-addsdomaininstallation",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/test-addsdomaininstallation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/test-addsforestinstallation",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/test-addsforestinstallation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/test-addsreadonlydomaincontrolleraccountcreation",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/test-addsreadonlydomaincontrolleraccountcreation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adds/deployment/uninstall-addsdomaincontroller",
+"redirect_url": "/itpro/powershell/windows/addsdeployment/uninstall-addsdomaincontroller",
+"redirect_document_id": true
+},
 ]
 }

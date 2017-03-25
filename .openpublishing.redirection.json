@@ -59,6 +59,71 @@
 "source_path": "docset/windows/adcs/administration/remove-catemplate.md",
 "redirect_url": "/itpro/powershell/windows/adcsadministration/restore-caroleservice",
 "redirect_document_id": true
-}
+},
+{
+"source_path": "docset/windows/adcs/deployment/index.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/adcsdeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcscertificationauthority.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcscertificationauthority",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcsenrollmentpolicywebservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcsenrollmentpolicywebservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcsenrollmentwebservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcsenrollmentwebservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcsnetworkdeviceenrollmentservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcsnetworkdeviceenrollmentservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcsonlineresponder.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcsonlineresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/install-adcswebenrollment.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/install-adcswebenrollment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcscertificationauthority.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcscertificationauthority",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcsenrollmentpolicywebservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcsenrollmentpolicywebservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcsenrollmentwebservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcsenrollmentwebservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcsnetworkdeviceenrollmentservice",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcsnetworkdeviceenrollmentservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcsonlineresponder",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcsonlineresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/deployment/uninstall-adcswebenrollment",
+"redirect_url": "/itpro/powershell/windows/adcsdeployment/uninstall-adcswebenrollment",
+"redirect_document_id": true
+},
 ]
 }

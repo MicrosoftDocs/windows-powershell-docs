@@ -1,0 +1,64 @@
+{ 
+"redirections": [
+{
+"source_path": "docset/windows/adcs/administration/cortana-at-work-scenario-7.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/add-caauthorityinformationaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/add-cacrldistributionpoint.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/add-cacrldistributionpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/add-catemplate.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/add-catemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/backup-caroleservice.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/backup-caroleservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/confirm-caendorsementkeyinfo.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/confirm-caendorsementkeyinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/get-caauthorityinformationaccess.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/get-caauthorityinformationaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/get-cacrldistributionpoint.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/get-cacrldistributionpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/get-catemplate.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/get-catemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/index.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/adcsadministration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/remove-caauthorityinformationaccess.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/remove-caauthorityinformationaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/remove-cacrldistributionpoint.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/remove-cacrldistributionpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adcs/administration/remove-catemplate.md",
+"redirect_url": "/itpro/powershell/windows/adcsadministration/restore-caroleservice",
+"redirect_document_id": true
+}
+]
+}

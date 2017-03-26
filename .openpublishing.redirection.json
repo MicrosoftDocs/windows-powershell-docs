@@ -1244,6 +1244,101 @@
 "source_path": "docset/windows/appvsequencer/update-appvsequencerpackage.md",
 "redirect_url": "/itpro/powershell/windows/appvsequencer/update-appvsequencerpackage",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/index.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/appxcmdlets",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/add-appxpackage.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/add-appxpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/add-appxvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/add-appxvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/dismount-appxvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/dismount-appxvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxdefaultvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxdefaultvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxlasterror.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxlasterror",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxlog.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxlog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxpackage.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxpackagemanifest.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxpackagemanifest",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/get-appxvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/mount-appxvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/mount-appxvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/move-appxpackage.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/move-appxpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/remove-appxpackage.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/remove-appxpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/remove-appxvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/remove-appxvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appx/set-appxdefaultvolume.md",
+"redirect_url": "/itpro/powershell/windows/appxcmdlets/set-appxdefaultvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/assigned-access/index.md",
+"redirect_url": "/itpro/powershell/windows/assignedaccess/assignedaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/assigned-access/clear-assignedaccess.md",
+"redirect_url": "/itpro/powershell/windows/assignedaccess/clear-assignedaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/assigned-access/get-assignedaccess.md",
+"redirect_url": "/itpro/powershell/windows/assignedaccess/get-assignedaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/assigned-access/set-assignedaccess.md",
+"redirect_url": "/itpro/powershell/windows/assignedaccess/set-assignedaccess",
+"redirect_document_id": true
 }
 ]
 }

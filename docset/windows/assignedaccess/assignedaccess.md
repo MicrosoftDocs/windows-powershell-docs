@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: AssignedAccess
 Module Guid: 9E72217E-9E27-45F7-81FC-048763587E0A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390753
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: AssignedAccess
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -31,4 +32,5 @@ Gets the current configuration for assigned access.
 
 ### [Set-AssignedAccess](./Set-AssignedAccess.md)
 Configures a user to launch only one app.
+
 

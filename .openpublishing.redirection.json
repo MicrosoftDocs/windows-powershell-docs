@@ -1969,6 +1969,21 @@
 "source_path": "docset/windows/code-integrity/set-ruleoption.md",
 "redirect_url": "/itpro/powershell/windows/configci/set-ruleoption",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/containers/index.md",
+"redirect_url": "/itpro/powershell/windows/hostcomputeservice/hostcomputeservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/containers/get-computeprocess.md",
+"redirect_url": "/itpro/powershell/windows/hostcomputeservice/get-computeprocess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/containers/stop-computeprocess.md",
+"redirect_url": "/itpro/powershell/windows/hostcomputeservice/stop-computeprocess",
+"redirect_document_id": true
 }
 ]
 }

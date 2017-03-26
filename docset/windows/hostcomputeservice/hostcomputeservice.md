@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HostComputeService
 Module Guid: D19D4F4C-6CA6-4071-ABCF-3AB62544A1A1
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=627287
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: HostComputeService
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -28,4 +29,5 @@ Gets a list of running compute systems from the Hyper-V Host Compute Service.
 
 ### [Stop-ComputeProcess](./Stop-ComputeProcess.md)
 Stops a running compute system in the Hyper-V Host Compute Service.
+
 

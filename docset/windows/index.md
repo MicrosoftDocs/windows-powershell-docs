@@ -37,7 +37,7 @@ The table below also shows the latest published version of the Help for each mod
 | BranchCahe | [Branch Cache](branch-cache/index.md) |
 | CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
-| ConfigCI | [Code Integrity](code-integrity/index.md) |
+| ConfigCI | [Code Integrity](configci/configci.md) |
 | DcbQos | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |
 | Defender | [Windows Defender](defender/index.md) |

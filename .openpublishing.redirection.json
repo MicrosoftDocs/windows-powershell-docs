@@ -1889,6 +1889,86 @@
 "source_path": "docset/windows/cluster-aware-updating/stoptest-causetup.md",
 "redirect_url": "/itpro/powershell/windows/clusterawareupdating/test-causetup",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/index.md",
+"redirect_url": "/itpro/powershell/windows/configci/configci",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/add-signerrule.md",
+"redirect_url": "/itpro/powershell/windows/configci/add-signerrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/convertfrom-cipolicy.md",
+"redirect_url": "/itpro/powershell/windows/configci/convertfrom-cipolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/edit-cipolicyrule.md",
+"redirect_url": "/itpro/powershell/windows/configci/edit-cipolicyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/get-cipolicy.md",
+"redirect_url": "/itpro/powershell/windows/configci/get-cipolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/get-cipolicyidinfo.md",
+"redirect_url": "/itpro/powershell/windows/configci/get-cipolicyidinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/get-cipolicyinfo.md",
+"redirect_url": "/itpro/powershell/windows/configci/get-cipolicyinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/get-systemdriver.md",
+"redirect_url": "/itpro/powershell/windows/configci/get-systemdriver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/merge-cipolicy.md",
+"redirect_url": "/itpro/powershell/windows/configci/merge-cipolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/new-cipolicy.md",
+"redirect_url": "/itpro/powershell/windows/configci/new-cipolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/new-cipolicyrule.md",
+"redirect_url": "/itpro/powershell/windows/configci/new-cipolicyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/remove-cipolicyrule.md",
+"redirect_url": "/itpro/powershell/windows/configci/remove-cipolicyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/set-cipolicyidinfo.md",
+"redirect_url": "/itpro/powershell/windows/configci/set-cipolicyidinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/set-cipolicyversion.md",
+"redirect_url": "/itpro/powershell/windows/configci/set-cipolicyversion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/set-hvcioptions.md",
+"redirect_url": "/itpro/powershell/windows/configci/set-hvcioptions",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/code-integrity/set-ruleoption.md",
+"redirect_url": "/itpro/powershell/windows/configci/set-ruleoption",
+"redirect_document_id": true
 }
 ]
 }

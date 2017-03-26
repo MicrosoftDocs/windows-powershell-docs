@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ConfigCI
 Module Guid: 28C9A37E-C849-4370-B672-E5563447B0E1
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=626871
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: ConfigCI
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -68,4 +69,5 @@ Modifies hypervisor Code Integrity options for a policy.
 
 ### [Set-RuleOption](./Set-RuleOption.md)
 Modifies rule options in a Code Integrity policy.
+
 

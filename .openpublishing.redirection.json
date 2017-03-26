@@ -1729,6 +1729,81 @@
 "source_path": "docset/windows/branch-cache/set-bcsecretkey.md",
 "redirect_url": "/itpro/powershell/windows/branchcache/set-bcsecretkey",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/index.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/cimcmdlets",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/export-binarymilog.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/export-binarymilog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/get-cimassociatedinstance.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/get-cimassociatedinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/get-cimclass.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/get-cimclass",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/get-ciminstance.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/get-ciminstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/get-cimsession.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/get-cimsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/import-binarymilog.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/import-binarymilog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/invoke-cimmethod.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/invoke-cimmethod",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/new-ciminstance.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/new-ciminstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/new-cimsession.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/new-cimsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/new-cimsessionoption.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/new-cimsessionoption",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/register-cimindicationevent.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/register-cimindicationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/remove-ciminstance.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/remove-ciminstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/remove-cimsession.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/remove-cimsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cim/set-ciminstance.md",
+"redirect_url": "/itpro/powershell/windows/cimcmdlets/set-ciminstance",
+"redirect_document_id": true
 }
 ]
 }

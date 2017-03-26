@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: CimCmdlets
 Module Guid: FB6CC51D-C096-4B38-B78D-0FED6277096A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390758
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: CimCmdlets
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -65,4 +66,5 @@ Removes one or more CIM sessions.
 
 ### [Set-CimInstance](./Set-CimInstance.md)
 Modifies a CIM instance on a CIM server by calling the ModifyInstance method of the CIM class..
+
 

@@ -33,7 +33,7 @@ The table below also shows the latest published version of the Help for each mod
 | BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
 | BitLocker | [BitLocker](bitlocker/bitlocker.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bitstransfer/bitstransfer.md) |
-| BootEventCollector | [Boot Event Collector](boot-event-collector/index.md) |
+| BootEventCollector | [Boot Event Collector](booteventcollector/booteventcollector.md) |
 | BranchCahe | [Branch Cache](branch-cache/index.md) |
 | CIM | [Common Information Model](cim/index.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](cluster-aware-updating/index.md) |

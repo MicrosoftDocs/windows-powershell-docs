@@ -1409,6 +1409,166 @@
 "source_path": "docset/windows/bits/suspend-bitstransfer.md",
 "redirect_url": "/itpro/powershell/windows/bitstransfer/suspend-bitstransfer",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/index.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/booteventcollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/checkpoint-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/checkpoint-sbecactiveconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/clear-sbecprovidercache.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/clear-sbecprovidercache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/disable-sbecautologger.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/disable-sbecautologger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/disable-sbecbcd.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/disable-sbecbcd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/enable-sbecautologger.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/enable-sbecautologger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/enable-sbecbcd.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/enable-sbecbcd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/enable-sbecbootimage.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/enable-sbecbootimage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/enable-sbecwdsbcd.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/enable-sbecwdsbcd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbecactiveconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbecbackupconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbecbackupconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbecdestination.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbecdestination",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbecforwarding.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbecforwarding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbechistory.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbechistory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbeclocalizedmessage.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbeclocalizedmessage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbeclogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbeclogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/get-sbectraceproviders.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/get-sbectraceproviders",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/new-sbecunattendfragment.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/new-sbecunattendfragment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/redo-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/redo-sbecactiveconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/restore-sbecbackupconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/restore-sbecbackupconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/save-sbecinstance.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/save-sbecinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/save-sbeclogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/save-sbeclogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/set-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/set-sbecactiveconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/start-sbecinstance.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/start-sbecinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/start-sbeclogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/start-sbeclogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/start-sbecntkernellogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/start-sbecntkernellogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/start-sbecsimplelogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/start-sbecsimplelogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/stop-sbecinstance.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/stop-sbecinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/stop-sbeclogsession.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/stop-sbeclogsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/test-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/test-sbecactiveconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/test-sbecconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/test-sbecconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/boot-event-oollector/undo-sbecactiveconfig.md",
+"redirect_url": "/itpro/powershell/windows/booteventcollector/undo-sbecactiveconfig",
+"redirect_document_id": true
 }
 ]
 }

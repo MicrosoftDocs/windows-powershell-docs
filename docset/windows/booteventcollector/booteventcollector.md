@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: BootEventCollector
 Module Guid: 7E4C6113-1789-4C2D-ABAA-BEA1EF5C62E8
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=518772
-Help Version: 5.0.0.0
+Help Version: 5.0.0.2
+Locale: en-US
 title: BootEventCollector
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -118,4 +119,6 @@ Validates a configuration.
 
 ### [Undo-SbecActiveConfig](./Undo-SbecActiveConfig.md)
 Reverts a change to the active configuration.
+
+
 

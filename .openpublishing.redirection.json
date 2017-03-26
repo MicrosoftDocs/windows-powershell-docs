@@ -1049,6 +1049,176 @@
 "source_path": "docset/windows/adrms/deployment/update-adrms.md",
 "redirect_url": "/itpro/powershell/windows/adrms/update-adrms",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/index.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/appvclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/add-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/add-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/add-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/add-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/add-appvpublishingserver.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/add-appvpublishingserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/disable-appv.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/disable-appv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/disable-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/disable-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/enable-appv.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/enable-appv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/enable-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/enable-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvclientapplication.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvclientapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvclientmode.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvclientmode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvpublishingserver.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvpublishingserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvstatus.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/get-appvvirtualprocess.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/get-appvvirtualprocess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/mount-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/mount-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/mount-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/mount-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/publish-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/publish-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/remove-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/remove-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/remove-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/remove-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/remove-appvpublishingserver.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/remove-appvpublishingserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/repair-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/repair-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/repair-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/repair-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/send-appvclientreport.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/send-appvclientreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/set-appvclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/set-appvclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/set-appvclientmode.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/set-appvclientmode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/set-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/set-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/set-appvpublishingserver.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/set-appvpublishingserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/start-appvvirtualprocess.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/start-appvvirtualprocess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/stop-appvclientconnectiongroup.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/stop-appvclientconnectiongroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/stop-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/stop-appvclientpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/sync-appvpublishingserver.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/sync-appvpublishingserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/app-v/appvclient/unpublish-appvclientpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvclient/unpublish-appvclientpackage",
+"redirect_document_id": true
 }
 ]
 }

@@ -1221,27 +1221,27 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/appvsequencer/index.md",
-"redirect_url": "/itpro/powershell/windows/appvsequencer/appvsequencer",
+"source_path": "docset/windows/app-v/sequencer/index.md",
+"redirect_url": "/itpro/powershell/windows/app-v/sequencer/appvsequencer",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/appvsequencer/expand-appvsequencerpackage.md",
+"source_path": "docset/windows/app-v/sequencer/expand-appvsequencerpackage.md",
 "redirect_url": "/itpro/powershell/windows/appvsequencer/expand-appvsequencerpackage",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/appvsequencer/new-appvpackageaccelerator.md",
+"source_path": "docset/windows/app-v/sequencer/new-appvpackageaccelerator.md",
 "redirect_url": "/itpro/powershell/windows/appvsequencer/new-appvpackageaccelerator",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/appvsequencer/new-appvsequencerpackage.md",
+"source_path": "docset/windows/app-v/sequencer/new-appvsequencerpackage.md",
 "redirect_url": "/itpro/powershell/windows/appvsequencer/new-appvsequencerpackage",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/appvsequencer/update-appvsequencerpackage.md",
+"source_path": "docset/windows/app-v/sequencer/update-appvsequencerpackage.md",
 "redirect_url": "/itpro/powershell/windows/appvsequencer/update-appvsequencerpackage",
 "redirect_document_id": true
 },
@@ -1339,6 +1339,31 @@
 "source_path": "docset/windows/assigned-access/set-assignedaccess.md",
 "redirect_url": "/itpro/powershell/windows/assignedaccess/set-assignedaccess",
 "redirect_document_id": true
-}
+},
+{
+"source_path": "docset/windows/best-practices/index.md",
+"redirect_url": "/itpro/powershell/windows/bestpractices/bestpractices",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/best-practices/get-bpamodel.md",
+"redirect_url": "/itpro/powershell/windows/bestpractices/get-bpamodel",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/best-practices/get-bparesult.md",
+"redirect_url": "/itpro/powershell/windows/bestpractices/get-bparesult",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/best-practices/invoke-bpamodel.md",
+"redirect_url": "/itpro/powershell/windows/bestpractices/invoke-bpamodel",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/best-practices/set-bparesult.md",
+"redirect_url": "/itpro/powershell/windows/bestpractices/set-bparesult",
+"redirect_document_id": true
+},
 ]
 }

@@ -30,7 +30,7 @@ The table below also shows the latest published version of the Help for each mod
 | AppvSequencer | [App-V Sequencer](appvsequencer/appvsequencer.md) |
 | Appx | [Appx](appxcmdlets/appxcmdlets.md) |
 | AssignedAccess | [Assigned Access](assignedaccess/ssignedaccess.md) |
-| BestPractices | [Best Practices Analyser](best-practices/index.md) |
+| BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
 | BitLocker | [BitLocker](bitlocker/index.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |
 | BootEventCollector | [Boot Event Collector](boot-event-collector/index.md) |

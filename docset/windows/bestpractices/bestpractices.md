@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: BestPractices
 Module Guid: 5551EA86-919D-499B-948F-87305E4F2344
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285737
-Help Version: 4.0.2.0
+Help Version: 4.0.2.1
+Locale: en-US
 title: BestPractices
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -34,4 +35,5 @@ Starts a BPA scan for a specific model that is installed on a computer.
 
 ### [Set-BpaResult](./Set-BpaResult.md)
 Excludes or includes existing results of a BPA scan to display only the specified scan results.
+
 

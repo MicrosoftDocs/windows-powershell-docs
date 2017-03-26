@@ -17,33 +17,33 @@ The table below also shows the latest published version of the Help for each mod
 
 | Module name | Title and link to Web version |
 | - | - |
-| ActiveDirectory | [Active Directory Domain Services Administration](adds/administration/index.md) |
-| ADCSAdministration | [Active Directory Certificate Services Administration](adcs/administration/index.md) |
-| ADCSDeployment | [Active Directory Certificate Services Deployment](adcs/deployment/index.md) |
-| ADDSDeployment | [Active Directory Domain Services Deployment](adds/deployment/index.md) |
-| ADFS | [Active Directory Federation Services](adfs/index.md) |
-| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrms/administration/index.md) |
-| ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
-| AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |
-| AppLocker | [AppLocker](applocker/index.md) |
-| AppvClient | [App-V Client](app-v/client/index.md) |
-| AppvSequencer | [App-V Sequencer](app-v/sequencer/index.md) |
-| Appx | [Appx](appx/index.md) |
-| AssignedAccess | [Assigned Access](assigned-access/index.md) |
-| BestPractices | [Best Practices Analyser](best-practices/index.md) |
-| BitLocker | [BitLocker](bitlocker/index.md) |
-| BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |
-| BootEventCollector | [Boot Event Collector](boot-event-collector/index.md) |
+| ActiveDirectory | [Active Directory Domain Services Administration](addsadministration/activedirectory.md) |
+| ADCSAdministration | [Active Directory Certificate Services Administration](adcsadministration/adcsadministration.md) |
+| ADCSDeployment | [Active Directory Certificate Services Deployment](adcsdeployment/adcsdeployment.md) |
+| ADDSDeployment | [Active Directory Domain Services Deployment](addsdeployment/addsdeployment.md) |
+| ADFS | [Active Directory Federation Services](adfs/adfs.md) |
+| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrmsadmin/adrmsadmin.md) |
+| ADRMS | [Active Directory Rights Management Services Deployment](adrms/adrms.md) |
+| AppBackgroundTask | [App Background Task](appbackgroundtask/appbackgroundtask.md) |
+| AppLocker | [AppLocker](applocker/applocker.md) |
+| AppvClient | [App-V Client](appvclient/appvclient.md) |
+| AppvSequencer | [App-V Sequencer](appvsequencer/appvsequencer.md) |
+| Appx | [Appx](appxcmdlets/appxcmdlets.md) |
+| AssignedAccess | [Assigned Access](assignedaccess/assignedaccess.md) |
+| BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
+| BitLocker | [BitLocker](bitlocker/bitlocker.md) |
+| BitsTransfer | [Background Intelligent Transfer Service](bitstransfer/bitstransfer.md) |
+| BootEventCollector | [Boot Event Collector](booteventcollector/booteventcollector.md) |
 | BranchCahe | [Branch Cache](branch-cache/index.md) |
-| CIM | [Common Information Model](cim/index.md) |
-| ClusterAwareUpdating | [Cluster Aware Updating](cluster-aware-updating/index.md) |
-| ConfigCI | [Code Integrity](code-integrity/index.md) |
-| DcbQos | [Data Center Bridging Quality of Service](dcbqos/index.md) |
-| Deduplication | [Data Deduplication](data-deduplication/index.md) |
-| Defender | [Windows Defender](defender/index.md) |
-| DeviceHealthAttestion | [Device Health Attestation](dha/index.md) |
-| Dfsn | [Distributed File System Namespace](dfs/namespace/index.md) |
-| Dfsn | [Distributed File System Replication](dfs/replication/index.md) |
+| CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
+| ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
+| ConfigCI | [Code Integrity](configci/configci.md) |
+| DcbQos | [Data Center Bridging Quality of Service](dcbqos/dcbqos.md) |
+| Deduplication | [Data Deduplication](deduplication/deduplication.md) |
+| Defender | [Windows Defender](defender/defender.md) |
+| DeviceHealthAttestion | [Device Health Attestation](devicehealthattestation/devicehealthattestation.md) |
+| Dfsn | [Distributed File System Namespace](dfsn/dfsn.md) |
+| Dfsn | [Distributed File System Replication](dfsr/dfsr.md) |
 | DHCPServer | [DHCP Server](dhcp-server/index.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
 | DISM | [DISM](dism/index.md) |
@@ -60,7 +60,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
-| HostComputeService | [Containers](containers/index.md) |
+| HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |

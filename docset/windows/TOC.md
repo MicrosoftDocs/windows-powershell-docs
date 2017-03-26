@@ -600,7 +600,7 @@
 ## [Containers](hostcomputeservice/hostcomputeservice.md)
 ### [Get-ComputeProcess](hostcomputeservice/get-computeprocess.md)
 ### [Stop-ComputeProcess](hostcomputeservice/stop-computeprocess.md)
-## [Data Center Bridging Quality of Service](dcbqos/index.md)
+## [Data Center Bridging Quality of Service](dcbqos/dcbqos.md)
 ### [Disable-NetQosFlowControl](dcbqos/disable-netqosflowcontrol.md)
 ### [Enable-NetQosFlowControl](dcbqos/enable-netqosflowcontrol.md)
 ### [Get-NetQosDcbxSetting](dcbqos/get-netqosdcbxsetting.md)

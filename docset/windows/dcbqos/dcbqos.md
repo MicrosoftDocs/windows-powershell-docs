@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: DcbQoS
 Module Guid: B57D41F8-8B6B-4012-912F-B08109101281
 Download Help Link: na
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: DcbQoS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -63,5 +64,6 @@ Sets the traffic class settings.
 
 
 ### [Switch-NetQosTrafficClass](./Switch-NetQosTrafficClass.md)
+
 
 

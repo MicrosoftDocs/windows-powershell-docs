@@ -38,7 +38,7 @@ The table below also shows the latest published version of the Help for each mod
 | CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
 | ConfigCI | [Code Integrity](configci/configci.md) |
-| DcbQos | [Data Center Bridging Quality of Service](dcbqos/index.md) |
+| DcbQos | [Data Center Bridging Quality of Service](dcbqos/dcbqos.md) |
 | Deduplication | [Data Deduplication](deduplication/deduplication.md) |
 | Defender | [Windows Defender](defender/index.md) |
 | DeviceHealthAttestion | [Device Health Attestation](dha/index.md) |

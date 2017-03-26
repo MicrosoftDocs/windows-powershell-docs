@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ADFS
 Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390747
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: Active Directory Federation Services
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -532,4 +533,5 @@ Updates the claims provider trust from federation metadata.
 
 ### [Update-AdfsRelyingPartyTrust](./Update-AdfsRelyingPartyTrust.md)
 Updates the relying party trust from federation metadata.
+
 

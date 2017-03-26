@@ -21,7 +21,7 @@ The table below also shows the latest published version of the Help for each mod
 | ADCSAdministration | [Active Directory Certificate Services Administration](adcsadministration/adcsadministration.md) |
 | ADCSDeployment | [Active Directory Certificate Services Deployment](adcsdeployment/adcsdeployment.md) |
 | ADDSDeployment | [Active Directory Domain Services Deployment](addsdeployment/addsdeployment.md) |
-| ADFS | [Active Directory Federation Services](adfs/index.md) |
+| ADFS | [Active Directory Federation Services](adfs/adfs.md) |
 | ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrms/administration/index.md) |
 | ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
 | AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |

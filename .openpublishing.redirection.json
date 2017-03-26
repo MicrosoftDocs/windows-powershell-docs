@@ -1569,6 +1569,166 @@
 "source_path": "docset/windows/boot-event-oollector/undo-sbecactiveconfig.md",
 "redirect_url": "/itpro/powershell/windows/booteventcollector/undo-sbecactiveconfig",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/index.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/branchcache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/clear-bccache.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/clear-bccache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/disable-bc.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/disable-bc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/disable-bcdowngrading.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/disable-bcdowngrading",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/disable-bcserveonbattery.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/disable-bcserveonbattery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bcdistributed.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bcdistributed",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bcdowngrading.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bcdowngrading",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bchostedclient.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bchostedclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bchostedserver.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bchostedserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bclocal.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bclocal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/enable-bcserveonbattery.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/enable-bcserveonbattery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/export-bccachepackage.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/export-bccachepackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/export-bcsecretkey.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/export-bcsecretkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bcclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bcclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bccontentserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bccontentserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bcdatacache.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bcdatacache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bcdatacacheextension.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bcdatacacheextension",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bchashcache.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bchashcache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bchostedcacheserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bchostedcacheserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bcnetworkconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bcnetworkconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/get-bcstatus.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/get-bcstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/import-bccachepackage.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/import-bccachepackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/import-bcsecretkey.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/import-bcsecretkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/publish-bcfilecontent.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/publish-bcfilecontent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/publish-bcwebcontent.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/publish-bcwebcontent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/remove-bcdatacacheextension.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/remove-bcdatacacheextension",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/reset-bc.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/reset-bc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/set-bcauthentication.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/set-bcauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/set-bccache.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/set-bccache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/set-bcdatacacheentrymaxage.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/set-bcdatacacheentrymaxage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/set-bcminsmblatency.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/set-bcminsmblatency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/branch-cache/set-bcsecretkey.md",
+"redirect_url": "/itpro/powershell/windows/branchcache/set-bcsecretkey",
+"redirect_document_id": true
 }
 ]
 }

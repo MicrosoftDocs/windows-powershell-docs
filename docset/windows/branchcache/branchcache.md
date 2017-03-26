@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: BranchCache
 Module Guid: D57AEE1E-6FE7-4BBC-8C57-8675A3A83E0D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390757
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: BranchCache
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -119,4 +120,5 @@ Sets the minimum latency that must exist between client and server before transp
 
 ### [Set-BCSecretKey](./Set-BCSecretKey.md)
 Sets the cryptographic key used in the generation of segment secrets.
+
 

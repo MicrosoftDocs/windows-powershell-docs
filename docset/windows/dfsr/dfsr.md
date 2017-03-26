@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: DFSR
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390764
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: DFSR
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -157,4 +158,5 @@ Generates a DFS Replication health report.
 
 ### [Write-DfsrPropagationReport](./Write-DfsrPropagationReport.md)
 Generates reports for propagation test files in a replication group.
+
 

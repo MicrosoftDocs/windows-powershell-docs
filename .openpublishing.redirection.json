@@ -2184,6 +2184,236 @@
 "source_path": "docset/windows/dfs/namespace/set-dfsnserverconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/dfsn/set-dfsnserverconfiguration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/index.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/dfsr",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/add-dfsrconnection.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/add-dfsrconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/add-dfsrmember.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/add-dfsrmember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/convertfrom-dfsrguid.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/convertfrom-dfsrguid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/export-dfsrclone.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/export-dfsrclone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrbacklog.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrbacklog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrclonestate.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrclonestate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrconnection.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrconnectionschedule.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrconnectionschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrdelegation.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsreplicatedfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsreplicatedfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrfilehash.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrfilehash",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrgroupschedule.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrgroupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsridrecord.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsridrecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrmember.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrmember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrmembership.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrmembership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrpreservedfiles.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrpreservedfiles",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrserviceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrserviceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/get-dfsrstate.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/get-dfsrstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/grant-dfsrdelegation.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/grant-dfsrdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/import-dfsrclone.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/import-dfsrclone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/new-dfsreplicatedfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/new-dfsreplicatedfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/new-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/new-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/remove-dfsrconnection.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/remove-dfsrconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/remove-dfsreplicatedfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/remove-dfsreplicatedfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/remove-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/remove-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/remove-dfsrmember.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/remove-dfsrmember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/remove-dfsrpropagationtestfile.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/remove-dfsrpropagationtestfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/reset-dfsrclonestate.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/reset-dfsrclonestate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/restore-dfsrpreservedfiles.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/restore-dfsrpreservedfiles",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/revoke-dfsrdelegation.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/revoke-dfsrdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrconnection.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrconnectionschedule.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrconnectionschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsreplicatedfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsreplicatedfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrgroupschedule.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrgroupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrmember.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrmember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrmembership.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrmembership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/set-dfsrserviceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/set-dfsrserviceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/start-dfsrpropagationtest.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/start-dfsrpropagationtest",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/suspend-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/suspend-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/sync-dfsreplicationgroup.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/sync-dfsreplicationgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/update-dfsrconfigurationfromad.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/update-dfsrconfigurationfromad",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/write-dfsrhealthreport.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/write-dfsrhealthreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/replication/write-dfsrpropagationreport.md",
+"redirect_url": "/itpro/powershell/windows/dfsr/write-dfsrpropagationreport",
+"redirect_document_id": true
 }
 ]
 }

@@ -43,7 +43,7 @@ The table below also shows the latest published version of the Help for each mod
 | Defender | [Windows Defender](defender/defender.md) |
 | DeviceHealthAttestion | [Device Health Attestation](dha/index.md) |
 | Dfsn | [Distributed File System Namespace](dfsn/dfsn.md) |
-| Dfsn | [Distributed File System Replication](dfs/replication/index.md) |
+| Dfsn | [Distributed File System Replication](dfsr/dfsr.md) |
 | DHCPServer | [DHCP Server](dhcp-server/index.md) |
 | DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
 | DISM | [DISM](dism/index.md) |

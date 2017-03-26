@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ClusterAwareUpdating
 Module Guid: 4E804861-1DCE-46C1-868D-C8F2AB9D220A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390759
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: ClusterAwareUpdating
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -74,4 +75,5 @@ Tests whether a cluster is properly set up to apply software updates using CAU.
 
 ### [Unregister-CauPlugin](./Unregister-CauPlugin.md)
 Removes a software updating plug-in from the list of plug-ins that are used by CAU.
+
 

@@ -1804,6 +1804,91 @@
 "source_path": "docset/windows/cim/set-ciminstance.md",
 "redirect_url": "/itpro/powershell/windows/cimcmdlets/set-ciminstance",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/index.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/clusterawareupdating",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/add-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/add-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/disable-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/disable-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/enable-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/enable-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/export-caureport.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/export-caureport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/get-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/get-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/get-cauplugin.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/get-cauplugin",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/get-caureport.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/get-caureport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/get-caurun.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/get-caurun",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/invoke-caurun.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/invoke-caurun",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/invoke-causcan.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/invoke-causcan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/register-cauplugin.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/register-cauplugin",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/remove-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/remove-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/save-caudebugtrace.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/save-caudebugtrace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/set-cauclusterrole.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/set-cauclusterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/stop-caurun.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/stop-caurun",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/cluster-aware-updating/stoptest-causetup.md",
+"redirect_url": "/itpro/powershell/windows/clusterawareupdating/test-causetup",
+"redirect_document_id": true
 }
 ]
 }

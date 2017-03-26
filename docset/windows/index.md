@@ -36,7 +36,7 @@ The table below also shows the latest published version of the Help for each mod
 | BootEventCollector | [Boot Event Collector](booteventcollector/booteventcollector.md) |
 | BranchCahe | [Branch Cache](branch-cache/index.md) |
 | CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
-| ClusterAwareUpdating | [Cluster Aware Updating](cluster-aware-updating/index.md) |
+| ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
 | ConfigCI | [Code Integrity](code-integrity/index.md) |
 | DcbQos | [Data Center Bridging Quality of Service](dcbqos/index.md) |
 | Deduplication | [Data Deduplication](data-deduplication/index.md) |

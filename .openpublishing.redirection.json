@@ -920,5 +920,115 @@
 "redirect_url": "/itpro/powershell/windows/addsdeployment/uninstall-addsdomaincontroller",
 "redirect_document_id": true
 },
+{
+"source_path": "docset/windows/adrms/administration/index.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/adrmsadmin",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/export-rmsreportdefinitionlanguage.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/export-rmsreportdefinitionlanguage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/export-rmstpd.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/export-rmstpd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/export-rmstud.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/export-rmstud",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmscertchain.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmscertchain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmscertinfo.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmscertinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmschildcert.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmschildcert",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmsencryptedil.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmsencryptedil",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmsrequestinfo.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmsrequestinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmssvcaccount.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmssvcaccount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmssystemhealthreport.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmssystemhealthreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/get-rmsuserrequestreport.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/get-rmsuserrequestreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/import-rmstpd.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/import-rmstpd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/import-rmstud.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/import-rmstud",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/initialize-rmscryptomode2.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/initialize-rmscryptomode2",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/install-rmsmfgenrollment.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/install-rmsmfgenrollment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/install-rmsmfgsupport.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/install-rmsmfgsupport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/set-rmssvcaccount.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/set-rmssvcaccount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/uninstall-rmsmfgenrollment.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/uninstall-rmsmfgenrollment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/uninstall-rmsmfgsupport.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/uninstall-rmsmfgsupport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/update-rmscluster.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/update-rmscluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/administration/update-rmsmfgenrollment.md",
+"redirect_url": "/itpro/powershell/windows/adrmsadmin/update-rmsmfgenrollment",
+"redirect_document_id": true
+}
 ]
 }

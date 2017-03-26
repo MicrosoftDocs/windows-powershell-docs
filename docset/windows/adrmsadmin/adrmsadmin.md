@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ADRMSAdmin
 Module Guid: BEB3DB13-EED6-4F7B-8420-079E395B58F9
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390749
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: ADRMSAdmin
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -85,4 +86,5 @@ Updates the AD RMS cluster information.
 
 ### [Update-RmsMfgEnrollment](./Update-RmsMfgEnrollment.md)
 Updates enrollment information for an AD RMS server enrolled with the Microsoft Federation Gateway service.
+
 

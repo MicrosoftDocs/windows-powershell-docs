@@ -22,7 +22,7 @@ The table below also shows the latest published version of the Help for each mod
 | ADCSDeployment | [Active Directory Certificate Services Deployment](adcsdeployment/adcsdeployment.md) |
 | ADDSDeployment | [Active Directory Domain Services Deployment](addsdeployment/addsdeployment.md) |
 | ADFS | [Active Directory Federation Services](adfs/adfs.md) |
-| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrms/administration/index.md) |
+| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](adrmsadmin/adrmsadmin.md) |
 | ADRMS | [Active Directory Rights Management Services Deployment](adrms/deployment/index.md) |
 | AppBackgroundTask | [App Background Task](appbackgroundtask/index.md) |
 | AppLocker | [AppLocker](applocker/index.md) |

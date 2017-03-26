@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: Deduplication
 Module Guid: 1395ECA7-7EAF-4958-A114-FB8AB76B86CC
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390761
-Help Version: 5.0.5.0
+Help Version: 5.0.5.1
+Locale: en-US
 title: Deduplication
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -71,4 +72,5 @@ Cancels one or more specified data deduplication jobs.
 
 ### [Update-DedupStatus](./Update-DedupStatus.md)
 Scans volumes for fresh data deduplication savings.
+
 

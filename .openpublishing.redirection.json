@@ -1984,6 +1984,91 @@
 "source_path": "docset/windows/containers/stop-computeprocess.md",
 "redirect_url": "/itpro/powershell/windows/hostcomputeservice/stop-computeprocess",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/index.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/deduplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/disable-dedupvolume.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/disable-dedupvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/enable-dedupvolume.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/enable-dedupvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/expand-dedupfile.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/expand-dedupfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/get-dedupjob.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/get-dedupjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/get-dedupmetadata.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/get-dedupmetadata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/get-dedupschedule.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/get-dedupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/get-dedupstatus.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/get-dedupstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/get-dedupvolume.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/get-dedupvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/measure-dedupfilemetadata.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/measure-dedupfilemetadata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/new-dedupschedule.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/new-dedupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/remove-dedupschedule.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/remove-dedupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/set-dedupschedule.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/set-dedupschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/set-dedupvolume.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/set-dedupvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/start-dedupjob.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/start-dedupjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/stop-dedupjob.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/stop-dedupjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/data-deduplication/update-dedupstatus.md",
+"redirect_url": "/itpro/powershell/windows/deduplication/update-dedupstatus",
+"redirect_document_id": true
 }
 ]
 }

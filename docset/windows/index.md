@@ -41,7 +41,7 @@ The table below also shows the latest published version of the Help for each mod
 | DcbQos | [Data Center Bridging Quality of Service](dcbqos/dcbqos.md) |
 | Deduplication | [Data Deduplication](deduplication/deduplication.md) |
 | Defender | [Windows Defender](defender/defender.md) |
-| DeviceHealthAttestion | [Device Health Attestation](dha/index.md) |
+| DeviceHealthAttestion | [Device Health Attestation](devicehealthattestation/devicehealthattestation.md) |
 | Dfsn | [Distributed File System Namespace](dfsn/dfsn.md) |
 | Dfsn | [Distributed File System Replication](dfsr/dfsr.md) |
 | DHCPServer | [DHCP Server](dhcp-server/index.md) |

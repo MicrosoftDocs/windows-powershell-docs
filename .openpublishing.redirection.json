@@ -2414,6 +2414,86 @@
 "source_path": "docset/windows/dfs/replication/write-dfsrpropagationreport.md",
 "redirect_url": "/itpro/powershell/windows/dfsr/write-dfsrpropagationreport",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/index.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/devicehealthattestation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/backup-dhasconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/backup-dhasconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/get-dhasactiveencryptioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/get-dhasactiveencryptioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/get-dhasactivesigningcertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/get-dhasactivesigningcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/get-dhascertificatechainpolicy.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/get-dhascertificatechainpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/get-dhasinactiveencryptioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/get-dhasinactiveencryptioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/get-dhasinactivesigningcertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/get-dhasinactivesigningcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/install-devicehealthattestation.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/install-devicehealthattestation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/remove-dhasinactiveencryptioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/remove-dhasinactiveencryptioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/remove-dhasinactivesigningcertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/remove-dhasinactivesigningcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/restore-dhasconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/restore-dhasconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/set-dhasactiveencryptioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/set-dhasactiveencryptioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/set-dhasactivesigningcertificate.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/set-dhasactivesigningcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/set-dhascertificatechainpolicy.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/set-dhascertificatechainpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/set-dhassupportedauthenticationschema.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/set-dhassupportedauthenticationschema",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dha/uninstall-devicehealthattestation.md",
+"redirect_url": "/itpro/powershell/windows/devicehealthattestation/uninstall-devicehealthattestation",
+"redirect_document_id": true
 }
 ]
 }

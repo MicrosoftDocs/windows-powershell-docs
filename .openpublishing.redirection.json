@@ -2069,6 +2069,121 @@
 "source_path": "docset/windows/data-deduplication/update-dedupstatus.md",
 "redirect_url": "/itpro/powershell/windows/deduplication/update-dedupstatus",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/index.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/dfsn",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnaccess.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnfoldertarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnfoldertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnroot.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnroot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnroottarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnroottarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/get-dfsnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/get-dfsnserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/grant-dfsnaccess.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/grant-dfsnaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/move-dfsnfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/move-dfsnfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/new-dfsnfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/new-dfsnfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/new-dfsnfoldertarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/new-dfsnfoldertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/new-dfsnroot.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/new-dfsnroot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/new-dfsnroottarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/new-dfsnroottarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/remove-dfsnaccess.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/remove-dfsnaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/remove-dfsnfolder.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/remove-dfsnfolder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/remove-dfsnfoldertarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/remove-dfsnfoldertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/remove-dfsnroot.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/remove-dfsnroot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/remove-dfsnroottarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/remove-dfsnroottarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/revoke-dfsnaccess.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/revoke-dfsnaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/set-dfsnfoldertarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/set-dfsnfoldertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/set-dfsnroot.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/set-dfsnroot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/set-dfsnroottarget.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/set-dfsnroottarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dfs/namespace/set-dfsnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/dfsn/set-dfsnserverconfiguration",
+"redirect_document_id": true
 }
 ]
 }

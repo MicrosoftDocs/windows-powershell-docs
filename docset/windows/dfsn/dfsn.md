@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: DFSN
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390763
-Help Version: 5.0.100.0
+Help Version: 5.0.100.1
+Locale: en-US
 title: DFSN
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -92,4 +93,5 @@ Changes settings for a root target of a DFS namespace.
 
 ### [Set-DfsnServerConfiguration](./Set-DfsnServerConfiguration.md)
 Changes settings for a DFS namespace root server.
+
 

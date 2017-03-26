@@ -1029,6 +1029,26 @@
 "source_path": "docset/windows/adrms/administration/update-rmsmfgenrollment.md",
 "redirect_url": "/itpro/powershell/windows/adrmsadmin/update-rmsmfgenrollment",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/deployment/index.md",
+"redirect_url": "/itpro/powershell/windows/adrms/adrms",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/deployment/install-adrms.md",
+"redirect_url": "/itpro/powershell/windows/adrms/install-adrms",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/deployment/uninstall-adrms.md",
+"redirect_url": "/itpro/powershell/windows/adrms/uninstall-adrms",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/adrms/deployment/update-adrms.md",
+"redirect_url": "/itpro/powershell/windows/adrms/update-adrms",
+"redirect_document_id": true
 }
 ]
 }

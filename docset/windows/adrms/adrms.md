@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ADRMS
 Module Guid: A127FB5D-22A6-4056-A043-B16196305CC7
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390748
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: ADRMS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -31,4 +32,5 @@ Removes configuration for an existing deployment of AD RMS Server.
 
 ### [Update-ADRMS](./Update-ADRMS.md)
 Updates an existing deployment of AD RMS Server.
+
 

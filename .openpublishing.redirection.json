@@ -1365,5 +1365,50 @@
 "redirect_url": "/itpro/powershell/windows/bestpractices/set-bparesult",
 "redirect_document_id": true
 },
+{
+"source_path": "docset/windows/bits/index.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/add-bitsfile.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/add-bitsfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/complete-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/complete-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/get-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/get-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/remove-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/remove-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/resume-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/resume-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/set-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/set-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/start-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/start-bitstransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/bits/suspend-bitstransfer.md",
+"redirect_url": "/itpro/powershell/windows/bitstransfer/suspend-bitstransfer",
+"redirect_document_id": true
+}
 ]
 }

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: BitsTransfer
 Module Guid: 8FA5064B-8479-4C5C-86EA-0D311FE48875
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390756
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: BitsTransfer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -46,4 +47,5 @@ Creates a BITS transfer job.
 
 ### [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
 Suspends a BITS transfer job.
+
 

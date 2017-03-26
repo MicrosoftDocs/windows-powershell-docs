@@ -3226,7 +3226,7 @@
 ### [Remove-OdbcDsn](wdac/remove-odbcdsn.md)
 ### [Set-OdbcDriver](wdac/set-odbcdriver.md)
 ### [Set-OdbcDsn](wdac/set-odbcdsn.md)
-## [Windows Defender](defender/index.md)
+## [Windows Defender](defender/defender.md)
 ### [Add-MpPreference](defender/add-mppreference.md)
 ### [Get-MpComputerStatus](defender/get-mpcomputerstatus.md)
 ### [Get-MpPreference](defender/get-mppreference.md)

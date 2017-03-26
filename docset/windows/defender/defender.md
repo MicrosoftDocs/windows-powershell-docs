@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: Defender
 Module Guid: C46BE3DC-30A9-452F-A5FD-4BF9CA87A854
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
-Help Version: 5.0.3.0
+Help Version: 5.0.3.1
+Locale: en-US
 title: Defender
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -59,4 +60,5 @@ Starts a Windows Defender offline scan.
 
 ### [Update-MpSignature](./Update-MpSignature.md)
 Updates the antimalware definitions on a computer.
+
 

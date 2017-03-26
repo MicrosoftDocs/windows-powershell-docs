@@ -4,8 +4,9 @@ ms.sitesec: library
 ms.author: brianlic
 Module Name: BitLocker
 Module Guid: 0FF02BB8-300A-4262-AC08-E06DD810F1B6
-Download Help Link: na
-Help Version: 5.0.0.0
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390755
+Help Version: 5.0.0.1
+Locale: en-US
 title: BitLocker
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -61,4 +62,5 @@ Suspends Bitlocker encryption for the specified volume.
 
 ### [Unlock-BitLocker](./Unlock-BitLocker.md)
 Restores access to data on a BitLocker volume.
+
 

@@ -31,7 +31,7 @@ The table below also shows the latest published version of the Help for each mod
 | Appx | [Appx](appxcmdlets/appxcmdlets.md) |
 | AssignedAccess | [Assigned Access](assignedaccess/ssignedaccess.md) |
 | BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
-| BitLocker | [BitLocker](bitlocker/index.md) |
+| BitLocker | [BitLocker](bitlocker/bitlocker.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |
 | BootEventCollector | [Boot Event Collector](boot-event-collector/index.md) |
 | BranchCahe | [Branch Cache](branch-cache/index.md) |

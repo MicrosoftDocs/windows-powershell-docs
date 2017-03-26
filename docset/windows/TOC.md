@@ -459,7 +459,7 @@
 ### [Get-BpaResult](bestpractices/get-bparesult.md)
 ### [Invoke-BpaModel](bestpractices/invoke-bpamodel.md)
 ### [Set-BpaResult](bestpractices/set-bparesult.md)
-## [BitLocker](bitlocker/index.md)
+## [BitLocker](bitlocker/bitlocker.md)
 ### [Add-BitLockerKeyProtector](bitlocker/add-bitlockerkeyprotector.md)
 ### [Backup-BitLockerKeyProtector](bitlocker/backup-bitlockerkeyprotector.md)
 ### [Clear-BitLockerAutoUnlock](bitlocker/clear-bitlockerautounlock.md)

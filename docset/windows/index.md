@@ -29,7 +29,7 @@ The table below also shows the latest published version of the Help for each mod
 | AppvClient | [App-V Client](appvclient/appvclient.md) |
 | AppvSequencer | [App-V Sequencer](appvsequencer/appvsequencer.md) |
 | Appx | [Appx](appxcmdlets/appxcmdlets.md) |
-| AssignedAccess | [Assigned Access](assignedaccess/ssignedaccess.md) |
+| AssignedAccess | [Assigned Access](assignedaccess/assignedaccess.md) |
 | BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
 | BitLocker | [BitLocker](bitlocker/bitlocker.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bits/index.md) |

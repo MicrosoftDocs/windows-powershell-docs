@@ -1219,6 +1219,31 @@
 "source_path": "docset/windows/app-v/appvclient/unpublish-appvclientpackage.md",
 "redirect_url": "/itpro/powershell/windows/appvclient/unpublish-appvclientpackage",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appvsequencer/index.md",
+"redirect_url": "/itpro/powershell/windows/appvsequencer/appvsequencer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appvsequencer/expand-appvsequencerpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvsequencer/expand-appvsequencerpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appvsequencer/new-appvpackageaccelerator.md",
+"redirect_url": "/itpro/powershell/windows/appvsequencer/new-appvpackageaccelerator",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appvsequencer/new-appvsequencerpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvsequencer/new-appvsequencerpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/appvsequencer/update-appvsequencerpackage.md",
+"redirect_url": "/itpro/powershell/windows/appvsequencer/update-appvsequencerpackage",
+"redirect_document_id": true
 }
 ]
 }

@@ -27,7 +27,7 @@ The table below also shows the latest published version of the Help for each mod
 | AppBackgroundTask | [App Background Task](appbackgroundtask/appbackgroundtask.md) |
 | AppLocker | [AppLocker](applocker/applocker.md) |
 | AppvClient | [App-V Client](appvclient/appvclient.md) |
-| AppvSequencer | [App-V Sequencer](app-v/sequencer/index.md) |
+| AppvSequencer | [App-V Sequencer](appvsequencer/appvsequencer.md) |
 | Appx | [Appx](appx/index.md) |
 | AssignedAccess | [Assigned Access](assigned-access/index.md) |
 | BestPractices | [Best Practices Analyser](best-practices/index.md) |

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: AppvSequencer
 Module Guid: 120C1A42-E4B5-4FCF-9DBD-D416BD3B41F5
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403113
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: AppvSequencer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -34,4 +35,5 @@ Creates a new App-V package.
 
 ### [Update-AppvSequencerPackage](./Update-AppvSequencerPackage.md)
 Upgrades virtual application packages.
+
 

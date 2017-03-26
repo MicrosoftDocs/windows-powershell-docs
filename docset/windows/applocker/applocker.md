@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: AppLocker
 Module Guid: 9DAFD409-67DE-4108-8EE9-73CD61F5B7BF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390751
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: AppLocker
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -37,4 +38,5 @@ Sets the AppLocker policy for the specified GPO.
 
 ### [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
 Specifies the AppLocker policy to determine whether the input files will be allowed to run for a given user.
+
 

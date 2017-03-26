@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: AppBackgroundTask
 Module Guid: EB40BD55-3BAB-4FA6-88EE-0DCF3CAD5A25
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390750
-Help Version: 5.0.0.0
+Help Version: 5.0.0.2
+Locale: en-US
 title: AppBackgroundTask
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -40,4 +41,6 @@ Starts a background task.
 
 ### [Unregister-AppBackgroundTask](./Unregister-AppBackgroundTask.md)
 Unregisters a background task.
+
+
 

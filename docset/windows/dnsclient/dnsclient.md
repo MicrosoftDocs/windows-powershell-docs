@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: DnsClient
 Module Guid: 5696D5EF-FA2D-4997-94F1-0BC13DAA2AC5
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390768
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: DnsClient
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -70,4 +71,5 @@ Modifies a DNS client Name Resolution Policy Table (NRPT) rule for the specified
 
 ### [Set-DnsClientServerAddress](./Set-DnsClientServerAddress.md)
 Sets DNS server addresses associated with the TCP/IP properties on an interface.
+
 

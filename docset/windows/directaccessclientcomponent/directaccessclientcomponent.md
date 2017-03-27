@@ -4,8 +4,9 @@ ms.sitesec: library
 ms.author: brianlic
 Module Name: DirectAccessClientComponent
 Module Guid: 244F8FC0-A410-4B87-8237-7496F557E6D4
-Download Help Link: na
-Help Version: 5.0.0.0
+Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285546
+Help Version: 5.0.0.1
+Locale: en-US
 title: DirectAccessClientComponent
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -56,4 +57,5 @@ Modifies the configuration of the specified DirectAccess client user experience.
 
 ### [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
 Modifies the configuration of a DirectAccess entry point stored in a Group Policy object.
+
 

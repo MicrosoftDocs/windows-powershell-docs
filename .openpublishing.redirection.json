@@ -3144,6 +3144,91 @@
 "source_path": "docset/windows/direct-access-client/set-daentrypointtableitem.md",
 "redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/set-daentrypointtableitem",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/index.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/dnsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/add-dnsclientnrptrule.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/add-dnsclientnrptrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/clear-dnsclientcache.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/clear-dnsclientcache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclient.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientcache.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientcache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientnrptglobal.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientnrptglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientnrptpolicy.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientnrptpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientnrptrule.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientnrptrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/get-dnsclientserveraddress.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/get-dnsclientserveraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/register-dnsclient.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/register-dnsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/remove-dnsclientnrptrule.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/remove-dnsclientnrptrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/set-dnsclient.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/set-dnsclientglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclientglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/set-dnsclientnrptglobal.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclientnrptglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/set-dnsclientnrptrule.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclientnrptrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-client/set-dnsclientserveraddress.md",
+"redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclientserveraddress",
+"redirect_document_id": true
 }
 ]
 }

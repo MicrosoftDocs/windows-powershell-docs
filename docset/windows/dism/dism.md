@@ -3,9 +3,10 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: brianlic
 Module Name: DISM
-Module Guid: CMDLETS
+Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390767
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: DISM
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -163,4 +164,5 @@ Updates the Windows image file boot (WIMBoot) configuration entry, associated wi
 
 ### [Use-WindowsUnattend](./Use-WindowsUnattend.md)
 Applies an unattended answer file to a Windows image.
+
 

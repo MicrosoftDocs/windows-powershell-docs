@@ -2866,11 +2866,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4failoverscope.md",
-"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4failoverscope",
-"redirect_document_id": true
-},
-{
 "source_path": "docset/windows/dhcp-server/remove-dhcpserverv4filter.md",
 "redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4filter",
 "redirect_document_id": true

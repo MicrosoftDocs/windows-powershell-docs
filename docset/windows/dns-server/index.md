@@ -6,6 +6,7 @@ Module Name: DnsServer
 Module Guid: 46F598E5-9907-42B2-AFBB-68E5F7E34604
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390769
 Help Version: 5.0.5.0
+Module: en-US
 title: DnsServer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

@@ -2494,6 +2494,601 @@
 "source_path": "docset/windows/dha/uninstall-devicehealthattestation.md",
 "redirect_url": "/itpro/powershell/windows/devicehealthattestation/uninstall-devicehealthattestation",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/index.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverindc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserversecuritygroup.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserversecuritygroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4failover.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4failover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4failoverscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4failoverscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4filter.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4filter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4multicastexclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4multicastexclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4multicastscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4multicastscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4policy.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4policy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4policyiprange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4policyiprange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv4superscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv4superscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/add-dhcpserverv6scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/add-dhcpserverv6scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/backup-dhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/backup-dhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/export-dhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/export-dhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverauditlog.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverauditlog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverdatabase.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverdnscredential.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverdnscredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverindc.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverindc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserversetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4binding.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4binding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4dnssetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4dnssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4failover.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4failover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4filter.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4filter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4filterlist.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4filterlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4freeipaddress.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4freeipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4multicastexclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4multicastexclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4multicastscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4multicastscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4multicastscopestatistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4multicastscopestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4policy.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4policy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4policyiprange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4policyiprange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4scopestatistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4scopestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4statistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4statistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4superscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4superscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv4superscopestatistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv4superscopestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6binding.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6binding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6dnssetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6dnssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6freeipaddress.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6freeipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6scopestatistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6scopestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6statelessstatistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6statelessstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6statelessstore.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6statelessstore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverv6statistics.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverv6statistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/get-dhcpserverversion.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/get-dhcpserverversion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/import-dhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/import-dhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/invoke-dhcpserverv4failoverreplication.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/invoke-dhcpserverv4failoverreplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverdnscredential.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverdnscredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverindc.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverindc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4failover.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4failover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4failoverscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4failoverscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4failoverscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4failoverscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4filter.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4filter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4multicastexclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4multicastexclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4multicastlease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4multicastlease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4multicastscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4multicastscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4policy.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4policy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4policyiprange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4policyiprange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv4superscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv4superscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6exclusionrange.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6exclusionrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6lease.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6lease",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/remove-dhcpserverv6scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/remove-dhcpserverv6scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/rename-dhcpserverv4superscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/rename-dhcpserverv4superscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/repair-dhcpserverv4iprecord.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/repair-dhcpserverv4iprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/restore-dhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/restore-dhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverauditlog.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverauditlog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverdatabase.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverdnscredential.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverdnscredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserversetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4binding.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4binding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4dnssetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4dnssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4failover.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4failover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4filterlist.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4filterlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4multicastscope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4multicastscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4policy.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4policy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv4scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv4scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6binding.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6binding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6class.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6class",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6dnssetting.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6dnssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6optiondefinition.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6optiondefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6optionvalue.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6optionvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6reservation.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6reservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6scope.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6scope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dhcp-server/set-dhcpserverv6statelessstore.md",
+"redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6statelessstore",
+"redirect_document_id": true
 }
 ]
 }

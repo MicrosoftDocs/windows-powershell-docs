@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: DhcpServer
 Module Guid: 90EAA9DF-133A-450C-8728-91055CD946A1
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390765
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: DhcpServer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -385,4 +386,5 @@ Modifies the properties of the IPv6 scope on the DHCP server service.
 
 ### [Set-DhcpServerv6StatelessStore](./Set-DhcpServerv6StatelessStore.md)
 Sets properties of IPv6 stateless store for an IPv6 prefix.
+
 

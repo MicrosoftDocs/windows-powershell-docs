@@ -3566,11 +3566,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzonetransferpolicy",
-"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonetransferpolicy",
-"redirect_document_id": true
-},
-{
 "source_path": "docset/windows/dns-server/import-dnsserverresourcerecordds",
 "redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsserverresourcerecordds",
 "redirect_document_id": true
@@ -3628,11 +3623,6 @@
 {
 "source_path": "docset/windows/dns-server/remove-dnsserverrecursionscope",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverrecursionscope",
-"redirect_document_id": true
-},
-{
-"source_path": "docset/windows/dns-server/remove-dnsserverresourcerecord",
-"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverresourcerecord",
 "redirect_document_id": true
 },
 {

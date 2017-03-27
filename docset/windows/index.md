@@ -45,7 +45,7 @@ The table below also shows the latest published version of the Help for each mod
 | Dfsn | [Distributed File System Namespace](dfsn/dfsn.md) |
 | Dfsn | [Distributed File System Replication](dfsr/dfsr.md) |
 | DHCPServer | [DHCP Server](dhcpserver/dhcpserver.md) |
-| DirectAccessClientComponent | [Direct Access client](direct-access-client/index.md) |
+| DirectAccessClientComponent | [Direct Access client](directaccessclientcomponent/directaccessclientcomponent.md) |
 | DISM | [DISM](dism/index.md) |
 | DNSClient | [DNS client](dns-client/index.md) |
 | DNSServer | [DNS Server](dns-server/index.md) |

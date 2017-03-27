@@ -3084,6 +3084,66 @@
 "source_path": "docset/windows/dhcp-server/set-dhcpserverv6statelessstore.md",
 "redirect_url": "/itpro/powershell/windows/dhcpserver/set-dhcpserverv6statelessstore",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/index.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/directaccessclientcomponent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/disable-damanualentrypointselection.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/disable-damanualentrypointselection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/enable-damanualentrypointselection.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/enable-damanualentrypointselection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/get-daclientexperienceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/get-daclientexperienceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/get-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/get-daentrypointtableitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/new-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/new-daentrypointtableitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/remove-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/remove-daentrypointtableitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/rename-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/rename-daentrypointtableitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/reset-daclientexperienceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/reset-daclientexperienceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/reset-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/reset-daentrypointtableitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/set-daclientexperienceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/set-daclientexperienceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/direct-access-client/set-daentrypointtableitem.md",
+"redirect_url": "/itpro/powershell/windows/directaccessclientcomponent/set-daentrypointtableitem",
+"redirect_document_id": true
 }
 ]
 }

@@ -2071,6 +2071,11 @@
 "redirect_document_id": true
 },
 {
+"source_path": "docset/windows/defender/index.md",
+"redirect_url": "/itpro/powershell/windows/defender/defender",
+"redirect_document_id": true
+},
+{
 "source_path": "docset/windows/dfs/namespace/index.md",
 "redirect_url": "/itpro/powershell/windows/dfsn/dfsn",
 "redirect_document_id": true

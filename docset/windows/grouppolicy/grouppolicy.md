@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: GroupPolicy
 Module Guid: 03E49E3A-BE77-4422-9D97-8FE355C2284C
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390772
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: GroupPolicy
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -103,4 +104,5 @@ Configures a Registry preference item under either Computer Configuration or Use
 
 ### [Set-GPRegistryValue](./Set-GPRegistryValue.md)
 Configures one or more registry-based policy settings under either Computer Configuration or User Configuration in a GPO.
+
 

@@ -4581,11 +4581,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/fsrm/get-fsrmstoragereport.md",
-"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmstoragereport",
-"redirect_document_id": true
-},
-{
 "source_path": "docset/windows/fsrm/new-fsrmaction.md",
 "redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmaction",
 "redirect_document_id": true
@@ -4888,6 +4883,141 @@
 {
 "source_path": "docset/windows/fsrm/wait-fsrmstoragereport.md",
 "redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/index.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/grouppolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/backup-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/backup-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/copy-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/copy-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpinheritance.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpinheritance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gporeport.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gporeport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gppermission.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gppermission",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpresultantsetofpolicy.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpresultantsetofpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpstartergpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpstartergpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/import-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/import-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/invoke-gpupdate.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/invoke-gpupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gpstartergpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gpstartergpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/rename-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/rename-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/restore-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/restore-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpinheritance.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpinheritance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gppermission.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gppermission",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpregistryvalue",
 "redirect_document_id": true
 }
 ]

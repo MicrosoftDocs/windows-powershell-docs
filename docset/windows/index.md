@@ -53,7 +53,7 @@ The table below also shows the latest published version of the Help for each mod
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failoverclusters/failoverclusters.md) |
 | FileServerResourceManager | [File Server Resource Manager](fileserverresourcemanager/fileserverresourcemanager.md) |
-| GroupPolicy | [Group Policy](group-policy/index.md) |
+| GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
 | HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |

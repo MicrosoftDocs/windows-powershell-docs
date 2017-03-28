@@ -20,6 +20,7 @@ ms.assetid: 3437FA3E-56B3-45FC-BA32-5CAC219BFAF6
 # Get-NetworkControllerInternalResourceInstances
 
 ## SYNOPSIS
+This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
 
 ## SYNTAX
 
@@ -29,13 +30,19 @@ Get-NetworkControllerInternalResourceInstances [[-ResourceId] <String[]>] -Conne
 ```
 
 ## DESCRIPTION
+This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
 
 ## EXAMPLES
+This example shows all the resources in the Network Controller with their corresponding instance IDs. The "Properties" field has the actual reference of the resource and the provisioning state.
 
-
+```
+Get-NetworkControllerInternalResourceInstances -ConnectionUri https://networkcontroller
+```
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -88,6 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies an array of one or more resources to retrieve. If ResourceID is not provided, all the resources in the Network Controller will be retrieved.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -106,6 +119,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+The resource has the following output:
+1. Resource ID
+2. Instance ID of the resource
+3. Actual reference of the resource
+4. Provisioning state of the resource
 
 ## NOTES
 

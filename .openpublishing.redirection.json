@@ -2071,6 +2071,11 @@
 "redirect_document_id": true
 },
 {
+"source_path": "docset/windows/defender/index.md",
+"redirect_url": "/itpro/powershell/windows/defender/defender",
+"redirect_document_id": true
+},
+{
 "source_path": "docset/windows/dfs/namespace/index.md",
 "redirect_url": "/itpro/powershell/windows/dfsn/dfsn",
 "redirect_document_id": true
@@ -3228,6 +3233,666 @@
 {
 "source_path": "docset/windows/dns-client/set-dnsclientserveraddress.md",
 "redirect_url": "/itpro/powershell/windows/dnsclient/set-dnsclientserveraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/index.md",
+"redirect_url": "/itpro/powershell/windows/dnsserver/dnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverclientsubnet.md",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverclientsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverconditionalforwarderzone.md",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverconditionalforwarderzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverdirectorypartition.md",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverdirectorypartition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverforwarder.md",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverprimaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverprimaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverqueryresolutionpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverqueryresolutionpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverrecursionscope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverrecursionscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecord",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorda",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecorda",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordaaaa",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordaaaa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordcname",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordcname",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorddnskey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecorddnskey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordds",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordds",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordmx",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordmx",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordptr",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordptr",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverresponseratelimitingexceptionlist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresponseratelimitingexceptionlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverroothint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverroothint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserversecondaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserversecondaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserversigningkey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserversigningkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverstubzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverstubzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsservertrustanchor",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsservertrustanchor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsservervirtualizationinstance",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsservervirtualizationinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverzonedelegation",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonedelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverzonescope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonescope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/add-dnsserverzonetransferpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonetransferpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/clear-dnsservercache",
+"redirect_url": "/itpro/powershell/windows/dnsserver/clear-dnsservercache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/clear-dnsserverstatistics",
+"redirect_url": "/itpro/powershell/windows/dnsserver/clear-dnsserverstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/convertto-dnsserverprimaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/convertto-dnsserverprimaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/convertto-dnsserversecondaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/convertto-dnsserversecondaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/disable-dnsserverpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/disable-dnsserverpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/disable-dnsserversigningkeyrollover",
+"redirect_url": "/itpro/powershell/windows/dnsserver/disable-dnsserversigningkeyrollover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/enable-dnsserverpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/enable-dnsserverpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/enable-dnsserversigningkeyrollover",
+"redirect_url": "/itpro/powershell/windows/dnsserver/enable-dnsserversigningkeyrollover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/export-dnsserverdnssecpublickey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/export-dnsserverdnssecpublickey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/export-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/export-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserver",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsservercache",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservercache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverclientsubnet",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverclientsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverdiagnostics",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverdirectorypartition",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdirectorypartition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverdnsseczonesetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdnsseczonesetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverdssetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserveredns",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserveredns",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverforwarder",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverglobalnamezone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverglobalnamezone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverglobalqueryblocklist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverglobalqueryblocklist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverqueryresolutionpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverqueryresolutionpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverrecursion",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverrecursion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverrecursionscope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverrecursionscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverresourcerecord",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimiting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresponseratelimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimitingexceptionlist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresponseratelimitingexceptionlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverroothint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverroothint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverscavenging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverscavenging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserversetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserversigningkey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserversigningkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverstatistics",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsservertrustanchor",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservertrustanchor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsservertrustpoint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservertrustpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsservervirtualizationinstance",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservervirtualizationinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverzoneaging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzoneaging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverzonedelegation",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonedelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverzonescope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonescope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/get-dnsserverzonetransferpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonetransferpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/import-dnsserverresourcerecordds",
+"redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsserverresourcerecordds",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/import-dnsserverroothint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsserverroothint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/import-dnsservertrustanchor",
+"redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsservertrustanchor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/invoke-dnsserversigningkeyrollover",
+"redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserversigningkeyrollover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/invoke-dnsserverzonesign",
+"redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserverzonesign",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/invoke-dnsserverzoneunsign",
+"redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserverzoneunsign",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/register-dnsserverdirectorypartition",
+"redirect_url": "/itpro/powershell/windows/dnsserver/register-dnsserverdirectorypartition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverclientsubnet",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverclientsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverdirectorypartition",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverdirectorypartition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverforwarder",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverqueryresolutionpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverqueryresolutionpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverrecursionscope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverrecursionscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverresourcerecord",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverresponseratelimitingexceptionlist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverresponseratelimitingexceptionlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverroothint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverroothint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserversigningkey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserversigningkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsservertrustanchor",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsservertrustanchor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsservervirtualizationinstance",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsservervirtualizationinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverzonedelegation",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonedelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverzonescope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonescope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/remove-dnsserverzonetransferpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonetransferpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/reset-dnsserverzonekeymasterrole",
+"redirect_url": "/itpro/powershell/windows/dnsserver/reset-dnsserverzonekeymasterrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/restore-dnsserverprimaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/restore-dnsserverprimaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/restore-dnsserversecondaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/restore-dnsserversecondaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/resume-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/resume-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserver",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsservercache",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsservercache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverclientsubnet",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverclientsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverconditionalforwarderzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverconditionalforwarderzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverdiagnostics",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverdnsseczonesetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdnsseczonesetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverdssetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdssetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserveredns",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserveredns",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverforwarder",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverglobalnamezone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverglobalnamezone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverglobalqueryblocklist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverglobalqueryblocklist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverprimaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverprimaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverqueryresolutionpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverqueryresolutionpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverrecursion",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverrecursion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverrecursionscope",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverrecursionscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverresourcerecord",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverresourcerecordaging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresourcerecordaging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimiting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresponseratelimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimitingexceptionlist",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresponseratelimitingexceptionlist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverroothint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverroothint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverscavenging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverscavenging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserversecondaryzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversecondaryzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserversetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserversigningkey",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversigningkey",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverstubzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverstubzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsservervirtualizationinstance",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsservervirtualizationinstance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverzoneaging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzoneaging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverzonedelegation",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzonedelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/set-dnsserverzonetransferpolicy",
+"redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzonetransferpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/show-dnsservercache",
+"redirect_url": "/itpro/powershell/windows/dnsserver/show-dnsservercache",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/show-dnsserverkeystorageprovider",
+"redirect_url": "/itpro/powershell/windows/dnsserver/show-dnsserverkeystorageprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/start-dnsserverscavenging",
+"redirect_url": "/itpro/powershell/windows/dnsserver/start-dnsserverscavenging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/start-dnsserverzonetransfer",
+"redirect_url": "/itpro/powershell/windows/dnsserver/start-dnsserverzonetransfer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/step-dnsserversigningkeyrollover",
+"redirect_url": "/itpro/powershell/windows/dnsserver/step-dnsserversigningkeyrollover",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/suspend-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/suspend-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/sync-dnsserverzone",
+"redirect_url": "/itpro/powershell/windows/dnsserver/sync-dnsserverzone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/test-dnsserver",
+"redirect_url": "/itpro/powershell/windows/dnsserver/test-dnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/test-dnsserverdnsseczonesetting",
+"redirect_url": "/itpro/powershell/windows/dnsserver/test-dnsserverdnsseczonesetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/unregister-dnsserverdirectorypartition",
+"redirect_url": "/itpro/powershell/windows/dnsserver/unregister-dnsserverdirectorypartition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/dns-server/update-dnsservertrustpoint",
+"redirect_url": "/itpro/powershell/windows/dnsserver/update-dnsservertrustpoint",
 "redirect_document_id": true
 }
 ]

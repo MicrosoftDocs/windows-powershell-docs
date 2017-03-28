@@ -20,6 +20,7 @@ ms.assetid: 14A99CB6-2655-4E26-8F6C-97B7C8F9BE31
 # Get-NetworkControllerLoadBalancerMux
 
 ## SYNOPSIS
+This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller
 
 ## SYNTAX
 
@@ -29,13 +30,19 @@ Get-NetworkControllerLoadBalancerMux [[-ResourceId] <String[]>] -ConnectionUri <
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller. Multiple load balancer VMs can be deployed to load balance traffic to virtual machines in the virtual network.
 
 ## EXAMPLES
-
+This example retrieves the configuration of a load balancer MUX named Mux1 from the Network Controller
+```
+Get-NetworkControllerLoadBalancerMux -ConnectionUri https://networkcontroller -ResourceId Mux1
+```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -88,6 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique identifier for the resource
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -106,6 +119,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties can be retrieved for a load balancer MUX:
+1. Router configuration - This includes local ASN of the MUX router and peer router configuration (Name, local IP address, peer IP address, Peer ASN)
+2. Certificate of the MUX
+3. An array of connections that specifies the information needed to connect to the MUX for the purposes of managing and controlling the device.
+4. Virtual server associated with the MUX resource
 
 ## NOTES
 

@@ -47,8 +47,8 @@ The table below also shows the latest published version of the Help for each mod
 | DHCPServer | [DHCP Server](dhcpserver/dhcpserver.md) |
 | DirectAccessClientComponent | [Direct Access client](directaccessclientcomponent/directaccessclientcomponent.md) |
 | DISM | [DISM](dism/dism.md) |
-| DNSClient | [DNS client](dns-client/index.md) |
-| DNSServer | [DNS Server](dns-server/index.md) |
+| DNSClient | [DNS client](dnsclient/dnsclient.md) |
+| DNSServer | [DNS Server](dnsserver/dnsserver.md) |
 | EventTracingManagement | [EventTracManCmdlets](etw/index.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failover-clusters/index.md) |

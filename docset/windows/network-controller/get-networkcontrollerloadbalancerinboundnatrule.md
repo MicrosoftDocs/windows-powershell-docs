@@ -20,6 +20,7 @@ ms.assetid: 7892CA83-FBBA-43C8-B62E-DA01FF7AB4D1
 # Get-NetworkControllerLoadBalancerInboundNatRule
 
 ## SYNOPSIS
+This cmdlet retrieves an inbound NAT rule associated with a load balancer resource.
 
 ## SYNTAX
 
@@ -30,13 +31,19 @@ Get-NetworkControllerLoadBalancerInboundNatRule [-LoadBalancerId] <String[]> [[-
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves an inbound NAT rule associated with a load balancer resource. This can be used to forward external traffic to a specific VM in the virtual network
 
 ## EXAMPLES
-
+This example retrieves an inbound NAT rule named InNat1 from a load balancer resource named lb1
+```
+Get-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId InNat1
+```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -50,6 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -63,6 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -76,6 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
+Specifies the load balancer where the inbount NAT rule belongs
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,6 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique identifier for the inbound NAT rule.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -120,6 +135,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties can be retrieved for an inbound NAT rule:
+1. Front end port
+2. Back end port
+3. Whether floating IP is enabled
+4. Idle timeout (in minutes)
+5. Protocol
+6. Back end IP addresses behind the NAT
+7. Front end IP for the NAT
 
 ## NOTES
 

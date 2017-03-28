@@ -54,7 +54,7 @@ The table below also shows the latest published version of the Help for each mod
 | FailoverClusters | [Failover clusters](failoverclusters/failoverclusters.md) |
 | FileServerResourceManager | [File Server Resource Manager](fileserverresourcemanager/fileserverresourcemanager.md) |
 | GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
-| HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
+| HardwareCertification | [Hardware Certification](hardwarecertification/hardwarecertification.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |

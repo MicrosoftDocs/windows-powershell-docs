@@ -5019,6 +5019,46 @@
 "source_path": "docset/windows/group-policy/set-gpregistryvalue.md",
 "redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpregistryvalue",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/index.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/hardwarecertification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/export-hwcerttestcollectiontoxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/export-hwcerttestcollectiontoxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/import-hwcerttestcollectionfromxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/import-hwcerttestcollectionfromxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/merge-hwcerttestcollectionfrompackage.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/merge-hwcerttestcollectionfrompackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/merge-hwcerttestcollectionfromxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/merge-hwcerttestcollectionfromxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcertprojectdefinitionfile.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcertprojectdefinitionfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcerttestcollection.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcerttestcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcerttestcollectionexcelreport.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcerttestcollectionexcelreport",
+"redirect_document_id": true
 }
 ]
 }

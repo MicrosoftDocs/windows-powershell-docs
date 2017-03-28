@@ -4484,6 +4484,411 @@
 "source_path": "docset/windows/failover-clusters/update-clustervirtualmachineconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/failoverclusters/update-clustervirtualmachineconfiguration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/index.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmadrsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmadrsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmeffectivenamespace.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmeffectivenamespace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmmacro.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmmacro",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmrmstemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmrmstemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationpropertyvalue.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationpropertyvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjcondition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjcondition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjnotification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjnotification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjnotificationaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjnotificationaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquotathreshold.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquotathreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/reset-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/reset-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/reset-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/reset-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/send-fsrmtestemail.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/send-fsrmtestemail",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmadrsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmadrsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmstoragereport",
+"redirect_document_id": true
 }
 ]
 }

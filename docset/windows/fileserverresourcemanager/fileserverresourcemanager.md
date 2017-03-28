@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: FileServerResourceManager
 Module Guid: FAA199B6-C378-4AAD-9D4D-F0E99F3F4845
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390771
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: FileServerResourceManager
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -259,4 +260,5 @@ Waits for file management jobs to finish running.
 
 ### [Wait-FsrmStorageReport](./Wait-FsrmStorageReport.md)
 Waits for a period of time or until storage reports is finished running.
+
 

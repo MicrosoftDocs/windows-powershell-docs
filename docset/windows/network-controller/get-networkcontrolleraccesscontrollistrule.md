@@ -20,7 +20,7 @@ ms.assetid: 7D5ACAC1-07CF-4603-8F83-06DAF8ED952F
 # Get-NetworkControllerAccessControlListRule
 
 ## SYNOPSIS
-Gets the ACL rule for a network controller.
+Gets a rule from an access control list for a network controller.
 
 ## SYNTAX
 
@@ -31,15 +31,16 @@ Get-NetworkControllerAccessControlListRule [-AccessControlListId] <String[]> [[-
 ```
 
 ## DESCRIPTION
-The **Get-NetworkControllerAccessControlListRule** cmdlet gets the access control list (ACL) rule for a network controller.
-
+The **Get-NetworkControllerAccessControlListRule** cmdlet gets a rule from an access control list for a network controller.
 ## EXAMPLES
-
-
+This example retrieves all rules belonging to an Access Control List named Subnet1Acl from the Network Controller.
+```
+Get-NetworkControllerAccessControlListRule -ConnectionUri https://networkcontroller -AccessControlListId "Subnet1ACL"
+```
 ## PARAMETERS
 
 ### -AccessControlListId
-Specifies the ID of the ACL.
+Specifies the ID of the Access Control List where the rule belongs.
 
 ```yaml
 Type: String[]
@@ -137,6 +138,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Each rule has the following output:
+1. Name
+2. Protocol
+3. Source and destination port range
+4. Source and destination IP address prefix
+5. Action on the rule (Allow/Deny)
+6. Priority of rule
+7. Type of rule (inbound/outbound)
+8. Whether logging is enabled/disabled on the rule
 
 ## NOTES
 

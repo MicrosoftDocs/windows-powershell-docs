@@ -20,6 +20,7 @@ ms.assetid: 3DE80088-3F0E-4BBA-8A9C-C6259BBF5CBD
 # Get-NetworkControllerLoadBalancerProbe
 
 ## SYNOPSIS
+This cmdlet retrieves the health probes associated with a load balancer resource
 
 ## SYNTAX
 
@@ -30,13 +31,18 @@ Get-NetworkControllerLoadBalancerProbe [-LoadBalancerId] <String[]> [[-ResourceI
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves the health probes associated with a load balancer resource. Health probes are used by the load balancer to determine the health state of the backend pool members.
 
 ## EXAMPLES
-
-
+This example retrieves all the health probe rules associated with the load balancer resource named lb1
+```
+Get-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1
+```
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -50,6 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -63,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -76,6 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
+Specifies the load balancer where the halth probe belongs
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,6 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique identifier for the health probe reource.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -120,7 +134,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
+Following properties can be retrieved for a load balancer probe:
+1. Protocol
+2. Port
+3. Request path that has to be probed
+4. Probe interval (in seconds)
+5. Number of retries after which a backend resource is deemed unhealthy
+6. Load balancing rules that are associated with this probe
 ## NOTES
 
 ## RELATED LINKS

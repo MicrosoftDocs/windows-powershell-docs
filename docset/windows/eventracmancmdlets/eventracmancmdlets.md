@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: EventTracManCmdlets
 Module Guid: 80CB11CF-96B5-4D48-84BD-F85F65DE78AE
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=524348
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: EventTracManCmdlets
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -67,4 +68,5 @@ Stops the specified ETW session.
 
 ### [Update-EtwTraceSession](./Update-EtwTraceSession.md)
 Modifies an existing ETW session.
+
 

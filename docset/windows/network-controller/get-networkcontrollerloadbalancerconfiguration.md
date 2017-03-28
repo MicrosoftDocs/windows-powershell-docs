@@ -20,7 +20,7 @@ ms.assetid: 9A4BA797-325C-47D7-8298-28D1982D0853
 # Get-NetworkControllerLoadBalancerConfiguration
 
 ## SYNOPSIS
-
+Retrieves the configuration of the load balancer from the Network Controller
 ## SYNTAX
 
 ```
@@ -29,13 +29,15 @@ Get-NetworkControllerLoadBalancerConfiguration [-ConnectionUri <Uri>] [-Certific
 ```
 
 ## DESCRIPTION
-
+Retrieves the configuration of the load balancer from the Network Controller. This includes the load balancing service virtual IP (VIP) and the different VIP pools associated with the load balancer
 ## EXAMPLES
-
+This example retrieves the load balancer configuration from Network Controller. In this example, The Network Controller is hosted at https://networkcontroller.
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -93,6 +99,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties can be retrieved for a load balancer configuration:
+1. Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
+2. Virtual IP pools associated with the load balancer. These should be existing IP pools as part of existing logical networks
+3. IP address ranges to be excluded from outbound NAT
 
 ## NOTES
 

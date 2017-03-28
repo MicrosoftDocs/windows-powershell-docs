@@ -20,7 +20,7 @@ ms.assetid: 3AB83D2B-2E4C-4C30-AEEA-4C22619DE2A6
 # Get-NetworkControllerLoadBalancerFrontendIpConfiguration
 
 ## SYNOPSIS
-
+This cmdlet retrieves the front end IP configuration of a load balancer resource from the Network Controller
 ## SYNTAX
 
 ```
@@ -30,13 +30,18 @@ Get-NetworkControllerLoadBalancerFrontendIpConfiguration [-LoadBalancerId] <Stri
 ```
 
 ## DESCRIPTION
-
+This cmdlet retrieves the front end IP configuration of a load balancer resource from the Network Controller. The front-end IP is commonly referred to as a Virtual IP (VIP). The VIP must be taken from an unused IP in one of the logical network IP Pool which has been previously given to the load balancer manager.
 ## EXAMPLES
+This example retrieves all the front end IP resource associated with a load balancer resource named lb1
 
-
+```
+Get-NetworkControllerLoadBalancerFrontEndIpconfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1
+```
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -50,6 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -63,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -76,6 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
+Specifies the load balancer where the resource belongs
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,6 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique identifier of the resource
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -120,7 +133,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-
+Following properties can be retrieved for front end IP configuration of load balancer resource:
+1. Private IP address (VIP)
+2. Private IP address allocation method: Static or dynamic
+3. Load balancing rules associated with the resource
+4. Inbound NAT rules associated with the resource
+5. Outbound NAT rules associated with the resource
+6. Subnet associated with the resource
+7. Access control list associated with the resource
+8. Service insertion rules associated with the resource
 ## NOTES
 
 ## RELATED LINKS

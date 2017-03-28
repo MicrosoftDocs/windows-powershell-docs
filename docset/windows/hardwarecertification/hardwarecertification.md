@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HardwareCertification
 Module Guid: 3A1FCD12-4C5B-4E54-81E8-547D545A2C50
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390773
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: HardwareCertification
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -43,4 +44,5 @@ Creates a test collection file from a project definition file.
 
 ### [New-HwCertTestCollectionExcelReport](./New-HwCertTestCollectionExcelReport.md)
 Creates an HCK test summary report.
+
 

@@ -49,19 +49,19 @@ The table below also shows the latest published version of the Help for each mod
 | DISM | [DISM](dism/dism.md) |
 | DNSClient | [DNS client](dnsclient/dnsclient.md) |
 | DNSServer | [DNS Server](dnsserver/dnsserver.md) |
-| EventTracingManagement | [EventTracManCmdlets](etw/index.md) |
+| EventTracingManagement | [EventTracManCmdlets](eventtracmancmdlets/eventtracmancmdlets.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
-| FailoverClusters | [Failover clusters](failover-clusters/index.md) |
-| FileServerResourceManager | [File Server Resource Manager](fsrm/index.md) |
-| GroupPolicy | [Group Policy](group-policy/index.md) |
-| HardwareCertification | [Hardware Certification](hardware-certification/index.md) |
+| FailoverClusters | [Failover clusters](failoverclusters/failoverclusters.md) |
+| FileServerResourceManager | [File Server Resource Manager](fileserverresourcemanager/fileserverresourcemanager.md) |
+| GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
+| HardwareCertification | [Hardware Certification](hardwarecertification/hardwarecertification.md) |
 | HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
 | HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
 | HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
-| HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
+| HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
 | International | [International](international/index.md) |

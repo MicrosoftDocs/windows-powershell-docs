@@ -3261,638 +3261,1893 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverprimaryzone",
+"source_path": "docset/windows/dns-server/add-dnsserverprimaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverprimaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverqueryresolutionpolicy",
+"source_path": "docset/windows/dns-server/add-dnsserverqueryresolutionpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverqueryresolutionpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverrecursionscope",
+"source_path": "docset/windows/dns-server/add-dnsserverrecursionscope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverrecursionscope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecord",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecord.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecord",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorda",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorda.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecorda",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordaaaa",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordaaaa.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordaaaa",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordcname",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordcname.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordcname",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorddnskey",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecorddnskey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecorddnskey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordds",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordds.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordds",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordmx",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordmx.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordmx",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordptr",
+"source_path": "docset/windows/dns-server/add-dnsserverresourcerecordptr.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresourcerecordptr",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverresponseratelimitingexceptionlist",
+"source_path": "docset/windows/dns-server/add-dnsserverresponseratelimitingexceptionlist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverresponseratelimitingexceptionlist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverroothint",
+"source_path": "docset/windows/dns-server/add-dnsserverroothint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverroothint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserversecondaryzone",
+"source_path": "docset/windows/dns-server/add-dnsserversecondaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserversecondaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserversigningkey",
+"source_path": "docset/windows/dns-server/add-dnsserversigningkey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserversigningkey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverstubzone",
+"source_path": "docset/windows/dns-server/add-dnsserverstubzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverstubzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsservertrustanchor",
+"source_path": "docset/windows/dns-server/add-dnsservertrustanchor.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsservertrustanchor",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsservervirtualizationinstance",
+"source_path": "docset/windows/dns-server/add-dnsservervirtualizationinstance.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsservervirtualizationinstance",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverzonedelegation",
+"source_path": "docset/windows/dns-server/add-dnsserverzonedelegation.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonedelegation",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverzonescope",
+"source_path": "docset/windows/dns-server/add-dnsserverzonescope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonescope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/add-dnsserverzonetransferpolicy",
+"source_path": "docset/windows/dns-server/add-dnsserverzonetransferpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/add-dnsserverzonetransferpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/clear-dnsservercache",
+"source_path": "docset/windows/dns-server/clear-dnsservercache.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/clear-dnsservercache",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/clear-dnsserverstatistics",
+"source_path": "docset/windows/dns-server/clear-dnsserverstatistics.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/clear-dnsserverstatistics",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/convertto-dnsserverprimaryzone",
+"source_path": "docset/windows/dns-server/convertto-dnsserverprimaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/convertto-dnsserverprimaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/convertto-dnsserversecondaryzone",
+"source_path": "docset/windows/dns-server/convertto-dnsserversecondaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/convertto-dnsserversecondaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/disable-dnsserverpolicy",
+"source_path": "docset/windows/dns-server/disable-dnsserverpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/disable-dnsserverpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/disable-dnsserversigningkeyrollover",
+"source_path": "docset/windows/dns-server/disable-dnsserversigningkeyrollover.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/disable-dnsserversigningkeyrollover",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/enable-dnsserverpolicy",
+"source_path": "docset/windows/dns-server/enable-dnsserverpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/enable-dnsserverpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/enable-dnsserversigningkeyrollover",
+"source_path": "docset/windows/dns-server/enable-dnsserversigningkeyrollover.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/enable-dnsserversigningkeyrollover",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/export-dnsserverdnssecpublickey",
+"source_path": "docset/windows/dns-server/export-dnsserverdnssecpublickey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/export-dnsserverdnssecpublickey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/export-dnsserverzone",
+"source_path": "docset/windows/dns-server/export-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/export-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserver",
+"source_path": "docset/windows/dns-server/get-dnsserver.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserver",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsservercache",
+"source_path": "docset/windows/dns-server/get-dnsservercache.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservercache",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverclientsubnet",
+"source_path": "docset/windows/dns-server/get-dnsserverclientsubnet.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverclientsubnet",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverdiagnostics",
+"source_path": "docset/windows/dns-server/get-dnsserverdiagnostics.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdiagnostics",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverdirectorypartition",
+"source_path": "docset/windows/dns-server/get-dnsserverdirectorypartition.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdirectorypartition",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverdnsseczonesetting",
+"source_path": "docset/windows/dns-server/get-dnsserverdnsseczonesetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdnsseczonesetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverdssetting",
+"source_path": "docset/windows/dns-server/get-dnsserverdssetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverdssetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserveredns",
+"source_path": "docset/windows/dns-server/get-dnsserveredns.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserveredns",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverforwarder",
+"source_path": "docset/windows/dns-server/get-dnsserverforwarder.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverforwarder",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverglobalnamezone",
+"source_path": "docset/windows/dns-server/get-dnsserverglobalnamezone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverglobalnamezone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverglobalqueryblocklist",
+"source_path": "docset/windows/dns-server/get-dnsserverglobalqueryblocklist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverglobalqueryblocklist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverqueryresolutionpolicy",
+"source_path": "docset/windows/dns-server/get-dnsserverqueryresolutionpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverqueryresolutionpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverrecursion",
+"source_path": "docset/windows/dns-server/get-dnsserverrecursion.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverrecursion",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverrecursionscope",
+"source_path": "docset/windows/dns-server/get-dnsserverrecursionscope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverrecursionscope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverresourcerecord",
+"source_path": "docset/windows/dns-server/get-dnsserverresourcerecord.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresourcerecord",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimiting",
+"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimiting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresponseratelimiting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimitingexceptionlist",
+"source_path": "docset/windows/dns-server/get-dnsserverresponseratelimitingexceptionlist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverresponseratelimitingexceptionlist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverroothint",
+"source_path": "docset/windows/dns-server/get-dnsserverroothint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverroothint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverscavenging",
+"source_path": "docset/windows/dns-server/get-dnsserverscavenging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverscavenging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserversetting",
+"source_path": "docset/windows/dns-server/get-dnsserversetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserversetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserversigningkey",
+"source_path": "docset/windows/dns-server/get-dnsserversigningkey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserversigningkey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverstatistics",
+"source_path": "docset/windows/dns-server/get-dnsserverstatistics.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverstatistics",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsservertrustanchor",
+"source_path": "docset/windows/dns-server/get-dnsservertrustanchor.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservertrustanchor",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsservertrustpoint",
+"source_path": "docset/windows/dns-server/get-dnsservertrustpoint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservertrustpoint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsservervirtualizationinstance",
+"source_path": "docset/windows/dns-server/get-dnsservervirtualizationinstance.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsservervirtualizationinstance",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzone",
+"source_path": "docset/windows/dns-server/get-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzoneaging",
+"source_path": "docset/windows/dns-server/get-dnsserverzoneaging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzoneaging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzonedelegation",
+"source_path": "docset/windows/dns-server/get-dnsserverzonedelegation.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonedelegation",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzonescope",
+"source_path": "docset/windows/dns-server/get-dnsserverzonescope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonescope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/get-dnsserverzonetransferpolicy",
+"source_path": "docset/windows/dns-server/get-dnsserverzonetransferpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/get-dnsserverzonetransferpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/import-dnsserverresourcerecordds",
+"source_path": "docset/windows/dns-server/import-dnsserverresourcerecordds.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsserverresourcerecordds",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/import-dnsserverroothint",
+"source_path": "docset/windows/dns-server/import-dnsserverroothint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsserverroothint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/import-dnsservertrustanchor",
+"source_path": "docset/windows/dns-server/import-dnsservertrustanchor.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/import-dnsservertrustanchor",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/invoke-dnsserversigningkeyrollover",
+"source_path": "docset/windows/dns-server/invoke-dnsserversigningkeyrollover.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserversigningkeyrollover",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/invoke-dnsserverzonesign",
+"source_path": "docset/windows/dns-server/invoke-dnsserverzonesign.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserverzonesign",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/invoke-dnsserverzoneunsign",
+"source_path": "docset/windows/dns-server/invoke-dnsserverzoneunsign.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/invoke-dnsserverzoneunsign",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/register-dnsserverdirectorypartition",
+"source_path": "docset/windows/dns-server/register-dnsserverdirectorypartition.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/register-dnsserverdirectorypartition",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverclientsubnet",
+"source_path": "docset/windows/dns-server/remove-dnsserverclientsubnet.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverclientsubnet",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverdirectorypartition",
+"source_path": "docset/windows/dns-server/remove-dnsserverdirectorypartition.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverdirectorypartition",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverforwarder",
+"source_path": "docset/windows/dns-server/remove-dnsserverforwarder.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverforwarder",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverqueryresolutionpolicy",
+"source_path": "docset/windows/dns-server/remove-dnsserverqueryresolutionpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverqueryresolutionpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverrecursionscope",
+"source_path": "docset/windows/dns-server/remove-dnsserverrecursionscope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverrecursionscope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverresourcerecord",
+"source_path": "docset/windows/dns-server/remove-dnsserverresourcerecord.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverresourcerecord",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverresponseratelimitingexceptionlist",
+"source_path": "docset/windows/dns-server/remove-dnsserverresponseratelimitingexceptionlist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverresponseratelimitingexceptionlist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverroothint",
+"source_path": "docset/windows/dns-server/remove-dnsserverroothint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverroothint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserversigningkey",
+"source_path": "docset/windows/dns-server/remove-dnsserversigningkey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserversigningkey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsservertrustanchor",
+"source_path": "docset/windows/dns-server/remove-dnsservertrustanchor.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsservertrustanchor",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsservervirtualizationinstance",
+"source_path": "docset/windows/dns-server/remove-dnsservervirtualizationinstance.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsservervirtualizationinstance",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverzone",
+"source_path": "docset/windows/dns-server/remove-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverzonedelegation",
+"source_path": "docset/windows/dns-server/remove-dnsserverzonedelegation.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonedelegation",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverzonescope",
+"source_path": "docset/windows/dns-server/remove-dnsserverzonescope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonescope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/remove-dnsserverzonetransferpolicy",
+"source_path": "docset/windows/dns-server/remove-dnsserverzonetransferpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/remove-dnsserverzonetransferpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/reset-dnsserverzonekeymasterrole",
+"source_path": "docset/windows/dns-server/reset-dnsserverzonekeymasterrole.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/reset-dnsserverzonekeymasterrole",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/restore-dnsserverprimaryzone",
+"source_path": "docset/windows/dns-server/restore-dnsserverprimaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/restore-dnsserverprimaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/restore-dnsserversecondaryzone",
+"source_path": "docset/windows/dns-server/restore-dnsserversecondaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/restore-dnsserversecondaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/resume-dnsserverzone",
+"source_path": "docset/windows/dns-server/resume-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/resume-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserver",
+"source_path": "docset/windows/dns-server/set-dnsserver.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserver",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsservercache",
+"source_path": "docset/windows/dns-server/set-dnsservercache.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsservercache",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverclientsubnet",
+"source_path": "docset/windows/dns-server/set-dnsserverclientsubnet.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverclientsubnet",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverconditionalforwarderzone",
+"source_path": "docset/windows/dns-server/set-dnsserverconditionalforwarderzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverconditionalforwarderzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverdiagnostics",
+"source_path": "docset/windows/dns-server/set-dnsserverdiagnostics.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdiagnostics",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverdnsseczonesetting",
+"source_path": "docset/windows/dns-server/set-dnsserverdnsseczonesetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdnsseczonesetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverdssetting",
+"source_path": "docset/windows/dns-server/set-dnsserverdssetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverdssetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserveredns",
+"source_path": "docset/windows/dns-server/set-dnsserveredns.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserveredns",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverforwarder",
+"source_path": "docset/windows/dns-server/set-dnsserverforwarder.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverforwarder",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverglobalnamezone",
+"source_path": "docset/windows/dns-server/set-dnsserverglobalnamezone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverglobalnamezone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverglobalqueryblocklist",
+"source_path": "docset/windows/dns-server/set-dnsserverglobalqueryblocklist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverglobalqueryblocklist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverprimaryzone",
+"source_path": "docset/windows/dns-server/set-dnsserverprimaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverprimaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverqueryresolutionpolicy",
+"source_path": "docset/windows/dns-server/set-dnsserverqueryresolutionpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverqueryresolutionpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverrecursion",
+"source_path": "docset/windows/dns-server/set-dnsserverrecursion.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverrecursion",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverrecursionscope",
+"source_path": "docset/windows/dns-server/set-dnsserverrecursionscope.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverrecursionscope",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverresourcerecord",
+"source_path": "docset/windows/dns-server/set-dnsserverresourcerecord.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresourcerecord",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverresourcerecordaging",
+"source_path": "docset/windows/dns-server/set-dnsserverresourcerecordaging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresourcerecordaging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimiting",
+"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimiting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresponseratelimiting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimitingexceptionlist",
+"source_path": "docset/windows/dns-server/set-dnsserverresponseratelimitingexceptionlist.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverresponseratelimitingexceptionlist",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverroothint",
+"source_path": "docset/windows/dns-server/set-dnsserverroothint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverroothint",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverscavenging",
+"source_path": "docset/windows/dns-server/set-dnsserverscavenging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverscavenging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserversecondaryzone",
+"source_path": "docset/windows/dns-server/set-dnsserversecondaryzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversecondaryzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserversetting",
+"source_path": "docset/windows/dns-server/set-dnsserversetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserversigningkey",
+"source_path": "docset/windows/dns-server/set-dnsserversigningkey.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserversigningkey",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverstubzone",
+"source_path": "docset/windows/dns-server/set-dnsserverstubzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverstubzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsservervirtualizationinstance",
+"source_path": "docset/windows/dns-server/set-dnsservervirtualizationinstance.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsservervirtualizationinstance",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverzoneaging",
+"source_path": "docset/windows/dns-server/set-dnsserverzoneaging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzoneaging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverzonedelegation",
+"source_path": "docset/windows/dns-server/set-dnsserverzonedelegation.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzonedelegation",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/set-dnsserverzonetransferpolicy",
+"source_path": "docset/windows/dns-server/set-dnsserverzonetransferpolicy.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/set-dnsserverzonetransferpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/show-dnsservercache",
+"source_path": "docset/windows/dns-server/show-dnsservercache.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/show-dnsservercache",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/show-dnsserverkeystorageprovider",
+"source_path": "docset/windows/dns-server/show-dnsserverkeystorageprovider.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/show-dnsserverkeystorageprovider",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/start-dnsserverscavenging",
+"source_path": "docset/windows/dns-server/start-dnsserverscavenging.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/start-dnsserverscavenging",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/start-dnsserverzonetransfer",
+"source_path": "docset/windows/dns-server/start-dnsserverzonetransfer.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/start-dnsserverzonetransfer",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/step-dnsserversigningkeyrollover",
+"source_path": "docset/windows/dns-server/step-dnsserversigningkeyrollover.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/step-dnsserversigningkeyrollover",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/suspend-dnsserverzone",
+"source_path": "docset/windows/dns-server/suspend-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/suspend-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/sync-dnsserverzone",
+"source_path": "docset/windows/dns-server/sync-dnsserverzone.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/sync-dnsserverzone",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/test-dnsserver",
+"source_path": "docset/windows/dns-server/test-dnsserver.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/test-dnsserver",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/test-dnsserverdnsseczonesetting",
+"source_path": "docset/windows/dns-server/test-dnsserverdnsseczonesetting.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/test-dnsserverdnsseczonesetting",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/unregister-dnsserverdirectorypartition",
+"source_path": "docset/windows/dns-server/unregister-dnsserverdirectorypartition.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/unregister-dnsserverdirectorypartition",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/dns-server/update-dnsservertrustpoint",
+"source_path": "docset/windows/dns-server/update-dnsservertrustpoint.md",
 "redirect_url": "/itpro/powershell/windows/dnsserver/update-dnsservertrustpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/index.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/eventtracmancmdlets",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/add-etwtraceprovider.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/add-etwtraceprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/get-autologgerconfig.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/get-autologgerconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/get-etwtraceprovider.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/get-etwtraceprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/get-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/get-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/new-autologgerconfig.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/new-autologgerconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/new-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/new-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/remove-autologgerconfig.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/remove-autologgerconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/remove-etwtraceprovider.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/remove-etwtraceprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/save-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/save-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/send-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/send-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/set-autologgerconfig.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/set-autologgerconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/set-etwtraceprovider.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/set-etwtraceprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/start-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/start-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/stop-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/stop-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/etw/update-etwtracesession.md",
+"redirect_url": "/itpro/powershell/windows/eventtracmancmdlets/update-etwtracesession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/index.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/failoverclusters",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustercheckpoint.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustercheckpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterdisk.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterfileserverrole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterfileserverrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergenericapplicationrole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergenericapplicationrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergenericscriptrole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergenericscriptrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergenericservicerole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergenericservicerole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergroupsetdependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergroupsetdependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustergrouptoset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustergrouptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusteriscsitargetserverrole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusteriscsitargetserverrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterresourcedependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterresourcedependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterresourcetype.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterresourcetype",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clusterscaleoutfileserverrole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clusterscaleoutfileserverrole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustersharedvolume.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustersharedvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustervirtualmachinerole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustervirtualmachinerole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/add-clustervmmonitoreditem.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/add-clustervmmonitoreditem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/block-clusteraccess.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/block-clusteraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/clear-clusterdiskreservation.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/clear-clusterdiskreservation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/clear-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/clear-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/disable-clusterstoragespacesdirect.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/disable-clusterstoragespacesdirect",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/enable-clusterstoragespacesdirect.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/enable-clusterstoragespacesdirect",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusteraccess.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusteraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusteravailabledisk.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusteravailabledisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustercheckpoint.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustercheckpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterdiagnosticinfo.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterdiagnosticinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterfaultdomain.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterfaultdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterfaultdomainxml.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterfaultdomainxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustergroupset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustergroupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustergroupsetdependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustergroupsetdependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterlog.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterlog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusternetwork.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusternetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusternetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusternetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterownernode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterownernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterparameter.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterparameter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterquorum.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterquorum",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterresourcedependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterresourcedependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterresourcedependencyreport.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterresourcedependencyreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterresourcetype.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterresourcetype",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustersharedvolume.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustersharedvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustersharedvolumestate.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustersharedvolumestate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clusterstoragespacesdirect.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clusterstoragespacesdirect",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/get-clustervmmonitoreditem.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/get-clustervmmonitoreditem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/grant-clusteraccess.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/grant-clusteraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/move-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/move-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/move-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/move-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/move-clustersharedvolume.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/move-clustersharedvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/move-clustervirtualmachinerole.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/move-clustervirtualmachinerole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/new-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/new-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/new-clusterfaultdomain.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/new-clusterfaultdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/new-clustergroupset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/new-clustergroupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/new-clusternameaccount.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/new-clusternameaccount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusteraccess.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusteraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustercheckpoint.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustercheckpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusterfaultdomain.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusterfaultdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustergroupfromset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustergroupfromset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustergroupset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustergroupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustergroupsetdependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustergroupsetdependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusterresourcedependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusterresourcedependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clusterresourcetype.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clusterresourcetype",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustersharedvolume.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustersharedvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/remove-clustervmmonitoreditem.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/remove-clustervmmonitoreditem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/repair-clusterstoragespacesdirect.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/repair-clusterstoragespacesdirect",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/reset-clustervmmonitoredstate.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/reset-clustervmmonitoredstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/resume-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/resume-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/resume-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/resume-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterfaultdomain.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterfaultdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterfaultdomainxml.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterfaultdomainxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clustergroupset.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clustergroupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterlog.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterlog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterownernode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterownernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterparameter.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterparameter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterquorum.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterquorum",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterresourcedependency.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterresourcedependency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterstoragespacesdirect.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterstoragespacesdirect",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/set-clusterstoragespacesdirectdisk.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/set-clusterstoragespacesdirectdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/start-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/start-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/start-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/start-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/start-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/start-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/start-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/start-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/stop-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/stop-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/stop-clustergroup.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/stop-clustergroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/stop-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/stop-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/stop-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/stop-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/suspend-clusternode.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/suspend-clusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/suspend-clusterresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/suspend-clusterresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/test-cluster.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/test-cluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/test-clusterresourcefailure.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/test-clusterresourcefailure",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/update-clusterfunctionallevel.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/update-clusterfunctionallevel",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/update-clusteripresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/update-clusteripresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/update-clusternetworknameresource.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/update-clusternetworknameresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/failover-clusters/update-clustervirtualmachineconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/failoverclusters/update-clustervirtualmachineconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/index.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmadrsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmadrsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmeffectivenamespace.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmeffectivenamespace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmmacro.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmmacro",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmrmstemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmrmstemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/get-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/get-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationpropertyvalue.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationpropertyvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjcondition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjcondition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjnotification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjnotification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmfmjnotificationaction.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmfmjnotificationaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmquotathreshold.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmquotathreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/new-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/new-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/remove-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/remove-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/reset-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/reset-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/reset-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/reset-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/send-fsrmtestemail.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/send-fsrmtestemail",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmadrsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmadrsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmclassificationrule.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmclassificationrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilegroup.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilegroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreen.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreen",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreenexception.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreenexception",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmfilescreentemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmfilescreentemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmmgmtproperty.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmmgmtproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmquotatemplate.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmquotatemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmsetting.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/set-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/set-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/start-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/start-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/stop-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/stop-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmautoquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmautoquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmclassificationpropertydefinition.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmclassificationpropertydefinition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/update-fsrmquota.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/update-fsrmquota",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmclassification.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmclassification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmfilemanagementjob.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmfilemanagementjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/fsrm/wait-fsrmstoragereport.md",
+"redirect_url": "/itpro/powershell/windows/fileserverresourcemanager/wait-fsrmstoragereport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/index.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/grouppolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/backup-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/backup-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/copy-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/copy-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpinheritance.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpinheritance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gporeport.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gporeport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gppermission.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gppermission",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpresultantsetofpolicy.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpresultantsetofpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/get-gpstartergpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/get-gpstartergpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/import-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/import-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/invoke-gpupdate.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/invoke-gpupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/new-gpstartergpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/new-gpstartergpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/remove-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/remove-gpregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/rename-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/rename-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/restore-gpo.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/restore-gpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpinheritance.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpinheritance",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gplink.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gplink",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gppermission.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gppermission",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpprefregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpprefregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/group-policy/set-gpregistryvalue.md",
+"redirect_url": "/itpro/powershell/windows/grouppolicy/set-gpregistryvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/index.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/hardwarecertification",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/export-hwcerttestcollectiontoxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/export-hwcerttestcollectiontoxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/import-hwcerttestcollectionfromxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/import-hwcerttestcollectionfromxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/merge-hwcerttestcollectionfrompackage.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/merge-hwcerttestcollectionfrompackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/merge-hwcerttestcollectionfromxml.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/merge-hwcerttestcollectionfromxml",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcertprojectdefinitionfile.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcertprojectdefinitionfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcerttestcollection.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcerttestcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hardware-certification/new-hwcerttestcollectionexcelreport.md",
+"redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcerttestcollectionexcelreport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/hnvdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/debug-slbdatapath.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/debug-slbdatapath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/debug-virtualmachinequeueoperation.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/debug-virtualmachinequeueoperation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/disable-muxechoresponder.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/disable-muxechoresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/enable-muxechoresponder.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/enable-muxechoresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-customerroute.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-customerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-networkcontrollervipresource.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-networkcontrollervipresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-pacamapping.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-pacamapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-provideraddress.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-provideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-viphostmapping.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-viphostmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-vmnetworkadapterportid.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-vmnetworkadapterportid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-vmswitchexternalportid.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-vmswitchexternalportid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-diphostreachability.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-diphostreachability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-encapoverheadsettings.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-encapoverheadsettings",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-logicalnetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-logicalnetworkconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-logicalnetworksupportsjumbopacket.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-logicalnetworksupportsjumbopacket",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-vipreachability.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-vipreachability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-virtualnetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-virtualnetworkconnection",
 "redirect_document_id": true
 }
 ]

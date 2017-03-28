@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HNVDiagnostics
 Module Guid: 75E89C8E-8680-4EA4-BB7E-E55316BD56A6
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799342
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: HNVDiagnostics
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -73,4 +74,5 @@ Tests whether DIPs are reachable.
 
 ### [Test-VirtualNetworkConnection](./Test-VirtualNetworkConnection.md)
 Tests a virtual network connection.
+
 

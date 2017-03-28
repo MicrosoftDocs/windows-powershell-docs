@@ -13,41 +13,40 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Add-ClusterGroupToSet
-ms.assetid: 403DDD62-F96B-4394-A6DD-ECFEF7D12400
+title: Remove-ClusterGroupFromSet
+ms.assetid: EA9096D3-05A3-4336-94C7-111988491FF4
 ---
 
-# Add-ClusterGroupToSet
+# Remove-ClusterGroupFromSet
 
 ## SYNOPSIS
-Adds a group to a set.
+Removes a group from a set.
 
 ## SYNTAX
 
 ### Query (cdxml) (Default)
 ```
-Add-ClusterGroupToSet [[-Name] <String[]>] [-Group] <String> [-CimSession <CimSession[]>]
+Remove-ClusterGroupFromSet [[-Name] <String[]>] [-Group] <String> [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Add-ClusterGroupToSet -InputObject <CimInstance[]> [-Group] <String> [-CimSession <CimSession[]>]
+Remove-ClusterGroupFromSet -InputObject <CimInstance[]> [-Group] <String> [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Add-ClusterGroupToSet** cmdlet adds a group to a set.
-A group can only belong to one set.
+The **Remove-ClusterGroupFromSet** cmdlet removes a group from a set.
 
 ## EXAMPLES
 
-### Example 1: Add a cluster group to a set
+### Example 1: Remove a group from the specified group set
 ```
-PS C:\> Add-ClusterGroupToSet -Name "Set001" -Group "Group001"
+PS C:\> Remove-ClusterGroupFromSet -Name "Set001" -Group "Group001"
 ```
 
-This command adds the cluster group named Group001 to the set named Set001.
+This command removes the group named Group001 from group set named Set001.
 
 ## PARAMETERS
 
@@ -91,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-Specifies the name of the group that this cmdlet adds to the set.
+Specifies the name of the group that this cmdlet removes.
 
 ```yaml
 Type: String
@@ -121,12 +120,12 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the set, as an array, to add the group to.
+Specifies an array of names of the set that this cmdlet removes the group from.
 
 ```yaml
 Type: String[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases: Set
 
 Required: False
 Position: 0
@@ -152,9 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell� calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+The default is the current session on the local computer.
 
 ```yaml
 Type: Int32
@@ -179,7 +178,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
-
-[Failover Clusters](./index.md)
+[Failover Clusters](./failoverclusters.md)
 

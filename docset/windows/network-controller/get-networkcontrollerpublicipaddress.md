@@ -20,6 +20,7 @@ ms.assetid: 1D52D036-BA61-4F79-BF29-F3B5B4986B16
 # Get-NetworkControllerPublicIpAddress
 
 ## SYNOPSIS
+This cmdlet retrieves a public IP address resource from the Network Controller
 
 ## SYNTAX
 
@@ -29,13 +30,18 @@ Get-NetworkControllerPublicIpAddress [[-ResourceId] <String[]>] -ConnectionUri <
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves a public IP address resource from the Network Controller. This publicIpAddress resource is used by the virtualGateway resource and the loadBalancer resource to indicate the IP Address that can be used to communicate with the virtual network from outside it.
 
 ## EXAMPLES
-
-
+This example retrieves all the public IP address resources from the Network Controller. Network Controller is represented by the REST uri https://networkcontroller.
+```
+Get-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller
+```
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -88,6 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique ID of the resource
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -106,6 +118,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties can be retrieved from this cmdlet:
+1. The public IP Address of the resource
+2. Allocation method of the public IP address: Static or dynamic
+3. Properties of a DNS record associated with this public IP address
+4. Idle timeout of the TCP connection
+5. Reference to private IP address that the public IP address is associated to
 
 ## NOTES
 

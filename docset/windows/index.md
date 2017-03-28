@@ -61,7 +61,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
 | HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
-| HNVDiagnostics | [HNV Diagnostics](hnv-diagnostics/index.md) |
+| HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iis/administration/index.md) |
 | International | [International](international/index.md) |

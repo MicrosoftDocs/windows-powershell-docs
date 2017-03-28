@@ -5059,6 +5059,96 @@
 "source_path": "docset/windows/hardware-certification/new-hwcerttestcollectionexcelreport.md",
 "redirect_url": "/itpro/powershell/windows/hardwarecertification/new-hwcerttestcollectionexcelreport",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/hnvdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/debug-slbdatapath.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/debug-slbdatapath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/debug-virtualmachinequeueoperation.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/debug-virtualmachinequeueoperation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/disable-muxechoresponder.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/disable-muxechoresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/enable-muxechoresponder.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/enable-muxechoresponder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-customerroute.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-customerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-networkcontrollervipresource.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-networkcontrollervipresource",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-pacamapping.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-pacamapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-provideraddress.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-provideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-viphostmapping.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-viphostmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-vmnetworkadapterportid.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-vmnetworkadapterportid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/get-vmswitchexternalportid.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/get-vmswitchexternalportid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-diphostreachability.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-diphostreachability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-encapoverheadsettings.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-encapoverheadsettings",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-logicalnetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-logicalnetworkconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-logicalnetworksupportsjumbopacket.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-logicalnetworksupportsjumbopacket",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-vipreachability.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-vipreachability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hnv-diagnostics/test-virtualnetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-virtualnetworkconnection",
+"redirect_document_id": true
 }
 ]
 }

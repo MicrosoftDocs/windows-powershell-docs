@@ -100,7 +100,7 @@ The table below also shows the latest published version of the Help for each mod
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
 | PrintManagement | [Print management](print/index.md) |
-| ProcessMitigations | [Process Mitigations](process-mitigations/processmitigations.md) |
+| ProcessMitigations | [Process Mitigations](processmitigations/processmitigations.md) |
 | RemoteAccess | [Remote access](remote-access/index.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
 | RemoteDesktopServices | [Remote Desktop Services](remote-desktop-services/index.md) |

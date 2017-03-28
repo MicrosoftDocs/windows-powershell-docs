@@ -181,5 +181,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
 
-[Failover Clusters](./index.md)
+[Failover Clusters](./failoverclusters.md)
 

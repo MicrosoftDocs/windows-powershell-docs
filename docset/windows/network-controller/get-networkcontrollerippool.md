@@ -20,6 +20,7 @@ ms.assetid: BDE15D73-0342-41B1-88B2-45234CF8451A
 # Get-NetworkControllerIpPool
 
 ## SYNOPSIS
+This cmdlet retrieves the settings of an IP pool from the Network Controller.
 
 ## SYNTAX
 
@@ -30,13 +31,19 @@ Get-NetworkControllerIpPool [-NetworkId] <String[]> [-SubnetId] <String[]> [[-Re
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves the settings of an IP pool from the Network Controller. Specifically, it retrieves the start and end address of the pool, IP addresses in the pool that are being used for VIPs and the usage of IP addresses in the pool
 
 ## EXAMPLES
-
+This example retrieves all the IP pools that are present in a subnet called Subnet1. Subnet1 is present in a network called ln1.
+```
+Get-NetworkControllerIpPool -ConnectionUri https://networkcontroller -NetworkId ln1 -SubnetId subnet1
+```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -50,6 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -63,6 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -76,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkId
+Specifies the network where the IP pool belongs
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,6 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Specifies the unique identifier for the IP pool
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -115,6 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubnetId
+Specifies the subnet where the IP pool belongs
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -133,6 +149,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties are displayed by the cmdlet
+1. Start IP address of the pool
+2. End IP address of the pool
+3. IP addresses being used for load balancer VIPs
+4. Number of IP addresses in the pool that have been allocated
 
 ## NOTES
 

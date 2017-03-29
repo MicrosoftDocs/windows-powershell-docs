@@ -56,7 +56,7 @@ The table below also shows the latest published version of the Help for each mod
 | GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
 | HardwareCertification | [Hardware Certification](hardwarecertification/hardwarecertification.md) |
 | HgsAttestation | [Host Guardian Service Attestation](hgsattestation/hgsattestation.md) |
-| HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
+| HgsClient | [Host Guardian Service Client](hgsclient/hgsclient.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |

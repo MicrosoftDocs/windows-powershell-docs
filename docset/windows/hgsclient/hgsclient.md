@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HgsClient
 Module Guid: DE3E9B0F-0845-4B05-8CB1-65669405130C
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519076
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: HgsClient
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -58,4 +59,5 @@ Revokes access for a guardian to a key protector.
 
 ### [Set-HgsClientConfiguration](./Set-HgsClientConfiguration.md)
 Modifies the configuration of a Host Guardian Service client.
+
 

@@ -5151,68 +5151,133 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/index.md",
+"source_path": "docset/windows/host-guardian-service/attestation/index.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/hgsattestation",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationhostgroup.md",
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationhostgroup.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationhostgroup",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationtpmhost.md",
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationtpmhost.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmhost",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationtpmpolicy.md",
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationtpmpolicy.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/disable-hgsattestationpolicy.md",
+"source_path": "docset/windows/host-guardian-service/attestation/disable-hgsattestationpolicy.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/disable-hgsattestationpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/enable-hgsattestationpolicy.md",
+"source_path": "docset/windows/host-guardian-service/attestation/enable-hgsattestationpolicy.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/enable-hgsattestationpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationhostgroup.md",
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationhostgroup.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationhostgroup",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationpolicy.md",
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationpolicy.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationsignercertificate.md",
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationsignercertificate.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationsignercertificate",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationtpmhost.md",
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationtpmhost.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationtpmhost",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationhostgroup.md",
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationhostgroup.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationhostgroup",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationpolicy.md",
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationpolicy.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationpolicy",
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationtpmhost.md",
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationtpmhost.md",
 "redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/hgsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/convertto-hgskeyprotector.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/convertto-hgskeyprotector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/export-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/export-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsattestationbaselinepolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsattestationbaselinepolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/grant-hgskeyprotectoraccess.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/grant-hgskeyprotectoraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/import-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/import-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/new-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/new-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/new-hgskeyprotector.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/new-hgskeyprotector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/remove-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/remove-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/revoke-hgskeyprotectoraccess.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/revoke-hgskeyprotectoraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/set-hgsclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/set-hgsclientconfiguration",
 "redirect_document_id": true
 }
 ]

@@ -5369,6 +5369,16 @@
 "source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectionconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectionconfiguration",
 "redirect_document_id": true
-}
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/hgserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/clear-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/clear-hgsserver",
+"redirect_document_id": true
+},
 ]
 }

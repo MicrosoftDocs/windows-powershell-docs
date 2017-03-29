@@ -59,7 +59,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsClient | [Host Guardian Service Client](hgsclient/hgsclient.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](hgsdiagnostics/hgsdiagnostics.md) |
 | HgsKeyProtection | [Host Guardian Service Key Protection](hgskeyprotection/hgskeyprotection.md) |
-| HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
+| HgsServer | [Host Guardian Service Server](hgsserver/hgsserver.md) |
 | HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |

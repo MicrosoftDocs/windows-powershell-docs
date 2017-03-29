@@ -58,7 +58,7 @@ The table below also shows the latest published version of the Help for each mod
 | HgsAttestation | [Host Guardian Service Attestation](hgsattestation/hgsattestation.md) |
 | HgsClient | [Host Guardian Service Client](hgsclient/hgsclient.md) |
 | HgsDiagnostics | [Host Guardian Service Diagnostics](hgsdiagnostics/hgsdiagnostics.md) |
-| HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
+| HgsKeyProtection | [Host Guardian Service Key Protection](hgskeyprotection/hgskeyprotection.md) |
 | HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
 | HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |

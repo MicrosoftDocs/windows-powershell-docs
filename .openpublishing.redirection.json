@@ -5304,6 +5304,71 @@
 "source_path": "docset/windows/host-guardian-service/diagnostics/test-hgstracetarget.md",
 "redirect_url": "/itpro/powershell/windows/hgsdiagnostics/test-hgstracetarget",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/index.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/hgskeyprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/add-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/add-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/add-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/add-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/export-hgskeyprotectionstate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/export-hgskeyprotectionstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/import-hgskeyprotectionstate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/import-hgskeyprotectionstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/remove-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/remove-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/remove-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/remove-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectionattestationsignercertificatepolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectionattestationsignercertificatepolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectionconfiguration",
+"redirect_document_id": true
 }
 ]
 }

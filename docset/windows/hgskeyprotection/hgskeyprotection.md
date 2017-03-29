@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HgsKeyProtection
 Module Guid: 651CE3CF-BA16-4933-B656-7CD7BD64C3A8
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519075
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: HgsKeyProtection
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -58,4 +59,5 @@ Modifies properties of a key certificate in the Key Protection Service.
 
 ### [Set-HgsKeyProtectionConfiguration](./Set-HgsKeyProtectionConfiguration.md)
 Modifies the configuration of the Key Protection Service.
+
 

@@ -5279,6 +5279,31 @@
 "source_path": "docset/windows/host-guardian-service/client/set-hgsclientconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/hgsclient/set-hgsclientconfiguration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/hgsdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/get-hgstrace.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/get-hgstrace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/get-hgstracefiledata.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/get-hgstracefiledata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/new-hgstracetarget.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/new-hgstracetarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/test-hgstracetarget.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/test-hgstracetarget",
+"redirect_document_id": true
 }
 ]
 }

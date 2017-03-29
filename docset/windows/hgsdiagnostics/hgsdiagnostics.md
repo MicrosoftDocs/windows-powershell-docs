@@ -6,6 +6,7 @@ Module Name: HgsDiagnostics
 Module Guid: 0D5D372A-6B2C-4C48-9151-1DEAD3B52FA7
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=760404
 Help Version: 5.0.0.0
+Locale: en-US
 title: HgsDiagnostics
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

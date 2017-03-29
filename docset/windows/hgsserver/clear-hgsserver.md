@@ -138,7 +138,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[HGS Server Cmdlets](./index.md)
+[HGS Server Cmdlets](./hgsserver.md)
 
 [Initialize-HgsServer](./Initialize-HgsServer.md)
 

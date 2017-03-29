@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: HgsAttestation
 Module Guid: B0121942-ED2D-4A2B-959E-F0CFA64B48A9
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519073
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: HgsAttestation
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -58,4 +59,5 @@ Removes an attestation policy from HGS.
 
 ### [Remove-HgsAttestationTpmHost](./Remove-HgsAttestationTpmHost.md)
 Removes a guarded host with TPM 2.0 from the Attestation service in HGS.
+
 

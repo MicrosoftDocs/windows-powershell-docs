@@ -5149,6 +5149,71 @@
 "source_path": "docset/windows/hnv-diagnostics/test-virtualnetworkconnection.md",
 "redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-virtualnetworkconnection",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/hgsattestation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/add-hgsattestationtpmpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/disable-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/disable-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/enable-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/enable-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/get-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian/attestation/remove-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationtpmhost",
+"redirect_document_id": true
 }
 ]
 }

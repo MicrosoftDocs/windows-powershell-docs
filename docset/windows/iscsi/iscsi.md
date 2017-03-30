@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: iSCSI
 Module Guid: 53E1C251-4283-4B07-AB02-FC492C7AB8C5
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390778
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: iSCSI
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -62,4 +62,5 @@ Refreshes the information about connected iSCSI target objects.
 
 ### [Update-IscsiTargetPortal](./Update-IscsiTargetPortal.md)
 Updates information about the specified iSCSI target portal.
+
 

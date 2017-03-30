@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MPIO
 Module Guid: 2FBFFABE-343D-4DB8-AD9E-A8943F50D096
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285760
-Help Version: 4.0.3.0
+Help Version: 4.0.3.1
+Locale: en-US
 title: MPIO
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -61,4 +62,5 @@ Sets the default load balance policy for MPIO devices.
 
 ### [Update-MPIOClaimedHW](./Update-MPIOClaimedHW.md)
 Attempts to claim devices that are currently in the MSDSM supported hardware list.
+
 

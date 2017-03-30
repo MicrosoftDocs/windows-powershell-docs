@@ -6124,6 +6124,11 @@
 "source_path": "docset/windows/mmagent/index.md",
 "redirect_url": "/itpro/powershell/windows/mmagent/mmagent",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/mpio/index.md",
+"redirect_url": "/itpro/powershell/windows/mpio/mpio",
+"redirect_document_id": true
 }
 ]
 }

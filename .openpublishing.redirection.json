@@ -6819,6 +6819,26 @@
 "source_path": "docset/windows/network-adapter/set-netadaptersriov.md",
 "redirect_url": "/itpro/powershell/windows/netadapter/set-netadaptersriov",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldpagent/index.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/netldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldpagent/disable-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/disable-netlldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldpagent/enable-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/enable-netlldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldpagent/get-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/get-netlldpagent",
+"redirect_document_id": true
 }
 ]
 }

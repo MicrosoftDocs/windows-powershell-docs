@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: NetAdapter
 Module Guid: 1042B422-63A8-4016-A6D6-293E19E8F8A6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390794
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: NetAdapter
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -215,4 +215,5 @@ Sets the SR-IOV properties of the network adapter, such as the number of virtual
 
 ### [Set-NetAdapterVmq](./Set-NetAdapterVmq.md)
 Sets the VMQ properties of a network adapter.
+
 

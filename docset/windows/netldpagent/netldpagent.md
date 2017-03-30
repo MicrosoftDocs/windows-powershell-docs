@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetLdpAgent
 Module Guid: 46F598E5-9907-42B2-AFBB-68EAF7E34604
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=808419
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: NetLdpAgent
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -31,4 +32,5 @@ Enables LLDP on a network interface on a computer.
 
 ### [Get-NetLldpAgent](./Get-NetLldpAgent.md)
 Gets the settings of the LLDP agent on a network interface on a host computer.
+
 

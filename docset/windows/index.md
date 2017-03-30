@@ -83,7 +83,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |
 | NetQoS | [Quality of Service](qos/index.md) |
-| NetSecurity | [Network security](network-security/index.md) |
+| NetSecurity | [Network security](netsecurity/netsecurity.md) |
 | NetTCPIP | [TCP/IP](tcpip/index.md) |
 | NetWNV | [Network Virtualization](network-virtualization/index.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |

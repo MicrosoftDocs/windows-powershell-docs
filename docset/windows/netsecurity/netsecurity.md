@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetSecurity
 Module Guid: 4B26FF51-7AEE-4731-9CF7-508B82532CBF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285764
-Help Version: 4.0.3.0
+Help Version: 4.0.3.1
+Locale: en-US
 title: NetSecurity
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -277,4 +278,5 @@ Gets the list of IP addresses to be added and deleted to an IPsec rule based on 
 
 ### [Update-NetIPsecRule](./Update-NetIPsecRule.md)
 Updates an IPsec rule by adding or removing a set of IP addresses.
+
 

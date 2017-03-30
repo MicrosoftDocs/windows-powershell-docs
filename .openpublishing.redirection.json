@@ -6999,6 +6999,433 @@
 "source_path": "docset/windows/network-event/stop-neteventsession.md",
 "redirect_url": "/itpro/powershell/windows/neteventpacketcapture/stop-neteventsession",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/index.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/netsecurity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/find-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/find-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-dapolicychange.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-dapolicychange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewalladdressfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewalladdressfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallapplicationfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallapplicationfilter",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/get-netfirewallinterfacefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallinterfacefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallinterfacetypefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallinterfacetypefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallportfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurityget-netfirewallportfilternetsecurity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallprofile.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallsecurityfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallsecurityfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallservicefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallservicefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecquickmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecquickmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netfirewallrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecauthproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecauthproposal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecmainmodecryptoproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmodecryptoproposal",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecquickmodecryptoproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecquickmodecryptoproposal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/open-netgpo.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/open-netgpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecphase2authset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/remove-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecquickmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecquickmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/rename-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecmainmoderule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/rename-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/save-netgpo.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/save-netgpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewalladdressfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewalladdressfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallapplicationfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallapplicationfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallinterfacefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallinterfacefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallinterfacetypefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallinterfacetypefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallportfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallprofile.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallsecurityfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallsecurityfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallservicefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallservicefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/show-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/show-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/show-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/show-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/sync-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/sync-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/update-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/update-netipsecrule",
+"redirect_document_id": true
 }
 ]
 }

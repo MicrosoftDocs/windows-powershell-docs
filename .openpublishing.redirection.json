@@ -7426,6 +7426,106 @@
 "source_path": "docset/windows/network-security/update-netipsecrule.md",
 "redirect_url": "/itpro/powershell/windows/netsecurity/update-netipsecrule",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/index.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/networkswitchmanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchglobaldata.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchglobaldata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/new-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/new-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/remove-networkswitchethernetportipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/remove-networkswitchethernetportipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/remove-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/remove-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/restore-networkswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/restore-networkswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/save-networkswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/save-networkswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchethernetportipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchethernetportipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchportmode.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchportmode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchportproperty.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchportproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchvlanproperty.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchvlanproperty",
+"redirect_document_id": true
 }
 ]
 }

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetworkSwitchManager
 Module Guid: 53B60D16-69AD-4453-BF41-83EFA5AC35B8
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216365
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetworkSwitchManager
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -79,4 +80,5 @@ Sets the port properties for a network switch.
 
 ### [Set-NetworkSwitchVlanProperty](./Set-NetworkSwitchVlanProperty.md)
 Modifies properties on a VLAN on a network switch.
+
 

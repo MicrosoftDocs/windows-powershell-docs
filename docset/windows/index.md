@@ -90,7 +90,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
-| NetworkSwitchManager | [Network Switch Manager](network-switch-manager/index.md) |
+| NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
 | NetSwitchTeam | [Network Switch Team](network-switch-team/index.md) |
 | NetworkTransition | [Network Transition](network-transition/index.md) |
 | NFS | [Network File System](nfs/index.md) |

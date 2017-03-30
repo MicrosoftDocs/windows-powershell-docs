@@ -1793,7 +1793,7 @@
 ### [Set-MPIOSetting](mpio/set-mpiosetting.md)
 ### [Set-MSDSMGlobalDefaultLoadBalancePolicy](mpio/set-msdsmglobaldefaultloadbalancepolicy.md)
 ### [Update-MPIOClaimedHW](mpio/update-mpioclaimedhw.md)
-## [MSMQ](msmq/index.md)
+## [MSMQ](msmq/msmq.md)
 ### [Clear-MSMQOutgoingQueue](msmq/clear-msmqoutgoingqueue.md)
 ### [Clear-MSMQQueue](msmq/clear-msmqqueue.md)
 ### [Enable-MSMQCertificate](msmq/enable-msmqcertificate.md)

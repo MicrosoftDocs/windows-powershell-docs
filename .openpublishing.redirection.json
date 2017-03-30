@@ -6134,6 +6134,11 @@
 "source_path": "docset/windows/msdtc/index.md",
 "redirect_url": "/itpro/powershell/windows/msdtc/msdtc",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/msmq/index.md",
+"redirect_url": "/itpro/powershell/windows/msmq/msmq",
+"redirect_document_id": true
 }
 ]
 }

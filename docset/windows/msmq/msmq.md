@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MSMQ
 Module Guid: 33CA09B1-A7FE-42E0-8AA1-E7203746CA94
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285552
-Help Version: 4.0.5.0
+Help Version: 4.0.5.1
+Locale: en-US
 title: MSMQ
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -88,4 +89,5 @@ Modifies the access rights of a queue manager.
 
 ### [Suspend-MsmqOutgoingQueue](./Suspend-MsmqOutgoingQueue.md)
 Pauses outgoing queues.
+
 

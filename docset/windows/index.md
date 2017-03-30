@@ -72,7 +72,7 @@ The table below also shows the latest published version of the Help for each mod
 | MMAgent | [Memory Management Agent](mmagent/mmagent.md) |
 | Mpio | [MPIO](mpio/mpio.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/msdtc.md) |
-| Msmq | [MSMQ](msmq/index.md) |
+| Msmq | [MSMQ](msmq/msmq.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
 | NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |

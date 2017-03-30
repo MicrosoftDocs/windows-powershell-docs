@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: NetConnection
 Module Guid: CE4FF86E-9416-4F2D-A869-C860AC543B5E
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390795
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: NetConnection
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -29,4 +29,5 @@ Gets a connection profile.
 
 ### [Set-NetConnectionProfile](./Set-NetConnectionProfile.md)
 Changes the network category of a connection profile.
+
 

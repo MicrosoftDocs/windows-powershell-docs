@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetSwitchTeam
 Module Guid: E83097B1-4470-4F37-8CE3-A6B0AC5ED8F5
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390801
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetSwitchTeam
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -45,4 +46,5 @@ Removes a network adapter member from a switch team.
 
 ### [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
 Changes the name of a switch team.
+
 

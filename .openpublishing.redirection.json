@@ -7521,6 +7521,46 @@
 "source_path": "docset/windows/network-switch-manager/set-networkswitchvlanproperty.md",
 "redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchvlanproperty",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/index.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/add-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/add-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/get-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/get-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/get-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/get-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/new-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/new-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/remove-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/remove-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/remove-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/remove-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/rename-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/rename-netswitchteam",
+"redirect_document_id": true
 }
 ]
 }

@@ -6129,6 +6129,11 @@
 "source_path": "docset/windows/mpio/index.md",
 "redirect_url": "/itpro/powershell/windows/mpio/mpio",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/msdtc/index.md",
+"redirect_url": "/itpro/powershell/windows/msdtc/msdtc",
+"redirect_document_id": true
 }
 ]
 }

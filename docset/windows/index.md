@@ -50,7 +50,6 @@ The table below also shows the latest published version of the Help for each mod
 | DNSClient | [DNS client](dnsclient/dnsclient.md) |
 | DNSServer | [DNS Server](dnsserver/dnsserver.md) |
 | EventTracingManagement | [EventTracManCmdlets](eventtracmancmdlets/eventtracmancmdlets.md) |
-| MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failoverclusters/failoverclusters.md) |
 | FileServerResourceManager | [File Server Resource Manager](fileserverresourcemanager/fileserverresourcemanager.md) |
 | GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
@@ -72,6 +71,7 @@ The table below also shows the latest published version of the Help for each mod
 | Microsoft.Windows.ServerManager.Migration | [Server Migration](server-migration/index.md) |
 | MMAgent | [Memory Management Agent](mmagent/mmagent.md) |
 | Mpio | [MPIO](mpio/mpio.md) |
+| MSDTC | [Distributed Transaction Coordinator](msdtc/msdtc.md) |
 | Msmq | [MSMQ](msmq/index.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |

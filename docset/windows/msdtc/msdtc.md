@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MsDtc
 Module Guid: 52923875-F2E3-4AD2-8E0C-96C7B10E2E3D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390791
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: MsDtc
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -145,4 +146,5 @@ Uninstalls the local transactions coordinator.
 
 ### [Write-DtcTransactionsTraceSession](./Write-DtcTransactionsTraceSession.md)
 Writes the data from an active DTC transactions trace session into the log file.
+
 

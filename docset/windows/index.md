@@ -73,8 +73,8 @@ The table below also shows the latest published version of the Help for each mod
 | Mpio | [MPIO](mpio/mpio.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/msdtc.md) |
 | Msmq | [MSMQ](msmq/msmq.md) |
-| Multipoint | [MultiPoint Services](multipoint/services/index.md) |
-| MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
+| Multipoint | [MultiPoint Services](multipoint/multipoint.md) |
+| MultiPointVdi | [Multipoint VDI](multipointvdi/multipointvdi.md) |
 | NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
 | NetAdapter | [Network Adapter](network-adapter/index.md) |

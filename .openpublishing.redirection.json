@@ -6139,6 +6139,281 @@
 "source_path": "docset/windows/msmq/index.md",
 "redirect_url": "/itpro/powershell/windows/msmq/msmq",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/add-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/add-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/clear-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/clear-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/close-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/close-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/close-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/close-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disconnect-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disconnect-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsalert.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsalert",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsversion.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsversion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/hide-wmsidentifier.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/hide-wmsidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/join-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/join-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/lock-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/lock-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/lock-wmsusbstorage.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/lock-wmsusbstorage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/new-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/new-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/open-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/open-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/publish-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/publish-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/remove-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/remove-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/remove-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/remove-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/restart-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/restart-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/resume-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/resume-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/search-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/search-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/show-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/show-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/show-wmsidentifier.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/show-wmsidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/split-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/split-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/stop-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/stop-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/suspend-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/suspend-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unlock-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unlock-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unlock-wmsusbstorage.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unlock-wmsusbstorage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unpublish-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unpublish-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/update-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/update-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/index.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/multipointvdi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/disable-wmsvirtualdesktoprole.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/disable-wmsvirtualdesktoprole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/enable-wmsvirtualdesktoprole.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/enable-wmsvirtualdesktoprole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/get-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/get-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/import-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/import-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/new-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/new-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/new-wmsvirtualdesktoptemplate.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/new-wmsvirtualdesktoptemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/open-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/open-wmsvirtualdesktop",
+"redirect_document_id": true
 }
 ]
 }

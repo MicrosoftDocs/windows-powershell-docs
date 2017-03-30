@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MultipointVdi
 Module Guid: 7F53F4D9-97BA-4322-9C8D-008F1CA4BE6A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216350
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: MultipointVdi
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -43,4 +44,5 @@ Create a virtual desktop template.
 
 ### [Open-WmsVirtualDesktop](./Open-WmsVirtualDesktop.md)
 Opens a window connected to a virtual desktop template.
+
 

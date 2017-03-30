@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MultiPoint
 Module Guid: EF349263-9FC1-4B71-8DA7-F74E0E18A151
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216322
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: MultiPoint
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -163,4 +164,5 @@ Stops the sharing of the specified session desktop.
 
 ### [Update-WmsStation](./Update-WmsStation.md)
 Forces a station to reload its configuration settings.
+
 

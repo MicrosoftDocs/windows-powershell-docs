@@ -8086,6 +8086,11 @@
 "source_path": "docset/windows/nlb-cluster/suspend-nlbclusternode.md",
 "redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/suspend-nlbclusternode",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nps/index.md",
+"redirect_url": "/itpro/powershell/windows/nps/nps",
+"redirect_document_id": true
 }
 ]
 }

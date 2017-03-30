@@ -94,7 +94,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |
 | NetworkTransition | [Network Transition](networktransition/networktransition.md) |
 | NFS | [Network File System](nfs/nfs.md) |
-| NPS | [Network Policy Server](nps/index.md) |
+| NPS | [Network Policy Server](nps/nps.md) |
 | PCSVDevice | [Physical Computer System View device](pcsv/index.md) |
 | PKIClient | [Public Key Infrastructure](pki/index.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |

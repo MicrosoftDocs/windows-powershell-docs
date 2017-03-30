@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NPS
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390808
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NPS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -43,4 +44,5 @@ Removes a RADIUS client.
 
 ### [Set-NpsRadiusClient](./Set-NpsRadiusClient.md)
 Specifies configuration settings for a RADIUS client.
+
 

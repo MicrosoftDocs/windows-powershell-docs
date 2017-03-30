@@ -2217,7 +2217,7 @@
 ### [Stop-NlbClusterNode](networkloadbalancingclusters/stop-nlbclusternode.md)
 ### [Suspend-NlbCluster](networkloadbalancingclusters/suspend-nlbcluster.md)
 ### [Suspend-NlbClusterNode](networkloadbalancingclusters/suspend-nlbclusternode.md)
-## [Network Policy Server](nps/index.md)
+## [Network Policy Server](nps/nps.md)
 ### [Export-NpsConfiguration](nps/export-npsconfiguration.md)
 ### [Get-NpsRadiusClient](nps/get-npsradiusclient.md)
 ### [Get-NpsSharedSecretTemplate](nps/get-npssharedsecrettemplate.md)

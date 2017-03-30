@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: NetworkLoadBalancingClusters
 Module Guid: 52832D3A-17D8-48FF-A5BC-F5078492ECBE
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285558
-Help Version: 4.0.3.1
+Help Version: 4.0.3.2
 Locale: en-US
 title: NetworkLoadBalancingClusters
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -128,5 +128,6 @@ Suspends all nodes of a NLB cluster.
 
 ### [Suspend-NlbClusterNode](./Suspend-NlbClusterNode.md)
 Suspends a specific node in a NLB cluster.
+
 
 

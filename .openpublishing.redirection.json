@@ -6414,6 +6414,26 @@
 "source_path": "docset/windows/multipoint/vdi/open-wmsvirtualdesktop.md",
 "redirect_url": "/itpro/powershell/windows/multipointvdi/open-wmsvirtualdesktop",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/index.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/nanoserverimagegenerator",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/edit-nanoserverimage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/edit-nanoserverimage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/get-nanoserverpackage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/get-nanoserverpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/new-nanoserverimage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/new-nanoserverimage",
+"redirect_document_id": true
 }
 ]
 }

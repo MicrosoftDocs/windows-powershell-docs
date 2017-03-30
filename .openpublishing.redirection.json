@@ -8240,6 +8240,31 @@
 "source_path": "docset/windows/platform-identifier/get-platformidentifier.md",
 "redirect_url": "/itpro/powershell/windows/platformidentifier/get-platformidentifier",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/index.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/disable-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/disable-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/enable-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/enable-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/get-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/get-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/get-pnpdeviceproperty.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/get-pnpdeviceproperty",
+"redirect_document_id": true
 }
 ]
 }

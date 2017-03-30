@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: PnpDevice
 Module Guid: AD34BC8B-1CF8-47D8-BD82-F681C5358E1C
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524801
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: PnpDevice
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -34,4 +35,5 @@ Returns information about PnP devices.
 
 ### [Get-PnpDeviceProperty](./Get-PnpDeviceProperty.md)
 Gets detailed properties for a PnP device.
+
 

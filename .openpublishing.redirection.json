@@ -8265,6 +8265,119 @@
 "source_path": "docset/windows/pnp/get-pnpdeviceproperty.md",
 "redirect_url": "/itpro/powershell/windows/pnpdevice/get-pnpdeviceproperty",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/index.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/printmanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printerdriver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/print/get-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerdriver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printerproperty.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/read-printernfctag.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/read-printernfctag",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printerdriver",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/print/remove-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/rename-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/rename-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/restart-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/restart-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/resume-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/resume-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printerproperty.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printerproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/suspend-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/suspend-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/write-printernfctag.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/write-printernfctag",
+"redirect_document_id": true
 }
 ]
 }

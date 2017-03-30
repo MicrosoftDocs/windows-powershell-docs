@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: PrintManagement
 Module Guid: 8466AE97-2C03-4385-A501-7E74CF6BB1DF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390813
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: PrintManagement
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -88,4 +89,5 @@ Suspends a print job on the specified printer.
 
 ### [Write-PrinterNfcTag](./Write-PrinterNfcTag.md)
 Writes printer connection data to an NFC tag.
+
 

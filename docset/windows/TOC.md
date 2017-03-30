@@ -1725,7 +1725,7 @@
 ### [Set-IpamServerInventory](ipamserver/set-ipamserverinventory.md)
 ### [Set-IpamSubnet](ipamserver/set-ipamsubnet.md)
 ### [Update-IpamServer](ipamserver/update-ipamserver.md)
-## [iSCSI](iscsi/index.md)
+## [iSCSI](iscsi/iscsi.md)
 ### [Connect-IscsiTarget](iscsi/connect-iscsitarget.md)
 ### [Disconnect-IscsiTarget](iscsi/disconnect-iscsitarget.md)
 ### [Get-IscsiConnection](iscsi/get-iscsiconnection.md)

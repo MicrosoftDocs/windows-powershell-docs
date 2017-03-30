@@ -66,7 +66,7 @@ The table below also shows the latest published version of the Help for each mod
 | IISAdministration | [IIS Administration](iisadministration/iisadministration.md) |
 | International | [International](international/international.md) |
 | IpamServer | [IP Address Management Server](ipamserver/ipamserver.md) |
-| Iscsi | [iSCSI](iscsi/index.md) |
+| Iscsi | [iSCSI](iscsi/iscsi.md) |
 | IscsiTarget | [iSCSI Target](iscsi-target/index.md) |
 | KDS | [Key Distribution Server](kds/index.md) |
 | Microsoft.Windows.ServerManager.Migration | [Server Migration](server-migration/index.md) |

@@ -5826,11 +5826,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/ipam/invoke-ipamserverprovisioning.md",
-"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamserverprovisioning",
-"redirect_document_id": true
-},
-{
 "source_path": "docset/windows/ipam/move-ipamdatabase.md",
 "redirect_url": "/itpro/powershell/windows/ipamserver/move-ipamdatabase",
 "redirect_document_id": true
@@ -5978,6 +5973,11 @@
 {
 "source_path": "docset/windows/ipam/update-ipamserver.md",
 "redirect_url": "/itpro/powershell/windows/ipamserver/update-ipamserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi/index.md",
+"redirect_url": "/itpro/powershell/windows/iscsi/iscsi",
 "redirect_document_id": true
 }
 ]

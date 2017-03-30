@@ -6,6 +6,7 @@ Module Name: iSCSI
 Module Guid: 53E1C251-4283-4B07-AB02-FC492C7AB8C5
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390778
 Help Version: 5.0.0.0
+Locale: en-US
 title: iSCSI
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

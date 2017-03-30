@@ -70,7 +70,7 @@ The table below also shows the latest published version of the Help for each mod
 | IscsiTarget | [iSCSI Target](iscsitarget/iscsitarget.md) |
 | KDS | [Key Distribution Server](kds/kds.md) |
 | Microsoft.Windows.ServerManager.Migration | [Server Migration](server-migration/index.md) |
-| MMAgent | [Memory Management Agent](mmagent/index.md) |
+| MMAgent | [Memory Management Agent](mmagent/mmagent.md) |
 | Mpio | [MPIO](mpio/index.md) |
 | Msmq | [MSMQ](msmq/index.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |

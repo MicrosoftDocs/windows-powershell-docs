@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: MMAgent
 Module Guid: E1383A06-D48B-45E0-81E4-5EAD146E81A8
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390789
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: MMAgent
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -37,4 +38,5 @@ Gets the state of application launch prefetching, operation API prefetching func
 
 ### [Set-MMAgent](./Set-MMAgent.md)
 Sets the maximum number of prefetch files for scenarios that the Operation Recorder API records.
+
 

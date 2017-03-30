@@ -6119,6 +6119,11 @@
 "source_path": "docset/windows/kds/index.md",
 "redirect_url": "/itpro/powershell/windows/kds/kds",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/mmagent/index.md",
+"redirect_url": "/itpro/powershell/windows/mmagent/mmagent",
+"redirect_document_id": true
 }
 ]
 }

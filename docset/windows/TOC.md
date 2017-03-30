@@ -1773,7 +1773,7 @@
 ### [Get-KdsRootKey](kds/get-kdsrootkey.md)
 ### [Set-KdsConfiguration](kds/set-kdsconfiguration.md)
 ### [Test-KdsRootKey](kds/test-kdsrootkey.md)
-## [Memory Management Agent](mmagent/index.md)
+## [Memory Management Agent](mmagent/mmagent.md)
 ### [Debug-MMAppPrelaunch](mmagent/debug-mmappprelaunch.md)
 ### [Disable-MMAgent](mmagent/disable-mmagent.md)
 ### [Enable-MMAgent](mmagent/enable-mmagent.md)

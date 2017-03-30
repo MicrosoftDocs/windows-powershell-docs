@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: NetLbfo
 Module Guid: 80CF4C6D-30B7-4B0F-A035-DBB23A65EF1D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390797
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: NetLbfo
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -64,4 +64,5 @@ Sets the role of a member network adapter in a NIC team.
 
 ### [Set-NetLbfoTeamNic](./Set-NetLbfoTeamNic.md)
 Sets a new VLAN id on a team interface, or restores the interface to Default mode.
+
 

@@ -2418,7 +2418,7 @@
 ### [Set-PcsvDeviceUserPassword](pcsvdevice/set-pcsvdeviceuserpassword.md)
 ### [Start-PcsvDevice](pcsvdevice/start-pcsvdevice.md)
 ### [Stop-PcsvDevice](pcsvdevice/stop-pcsvdevice.md)
-## [Platform Identifier](platform-identifier/index.md)
+## [Platform Identifier](platformidentifier/platformidentifier.md)
 ### [Get-PlatformIdentifier](platform-identifier/get-platformidentifier.md)
 ## [Plug and Play](pnp/index.md)
 ### [Disable-PnpDevice](pnp/disable-pnpdevice.md)

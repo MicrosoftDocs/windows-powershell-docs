@@ -97,7 +97,7 @@ The table below also shows the latest published version of the Help for each mod
 | NPS | [Network Policy Server](nps/nps.md) |
 | PCSVDevice | [Physical Computer System View device](pcsvdevice/pcsvdevice.md) |
 | PKIClient | [Public Key Infrastructure](pkiclient/pkiclient.md) |
-| PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
+| PlatformIdentifier | [Platform Identifier](platformidentifier/platformidentifier.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |
 | PrintManagement | [Print management](print/index.md) |
 | RemoteAccess | [Remote access](remote-access/index.md) |

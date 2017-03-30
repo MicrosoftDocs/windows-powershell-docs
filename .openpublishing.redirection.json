@@ -8230,6 +8230,16 @@
 "source_path": "docset/windows/pki/test-certificate.md",
 "redirect_url": "/itpro/powershell/windows/pkiclient/test-certificate",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/platform-identifier/index.md",
+"redirect_url": "/itpro/powershell/windows/platformidentifier/platformidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/platform-identifier/get-platformidentifier.md",
+"redirect_url": "/itpro/powershell/windows/platformidentifier/get-platformidentifier",
+"redirect_document_id": true
 }
 ]
 }

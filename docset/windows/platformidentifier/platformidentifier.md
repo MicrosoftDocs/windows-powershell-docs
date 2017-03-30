@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: PlatformIdentifier
 Module Guid: 327C8F02-3D5D-42DA-ABB3-3AB07C62839D
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799341
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: PlatformIdentifier
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -25,4 +26,5 @@ This reference provides cmdlet descriptions and syntax for the platform identifi
 ## PlatformIdentifier Cmdlets
 ### [Get-PlatformIdentifier](./Get-PlatformIdentifier.md)
 Gathers computer identifiers into an XML document.
+
 

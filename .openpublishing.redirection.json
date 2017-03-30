@@ -6854,6 +6854,151 @@
 "source_path": "docset/windows/network-connection/set-netconnectionprofile.md",
 "redirect_url": "/itpro/powershell/windows/netconnection/set-netconnectionprofile",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/index.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/neteventpacketcapture",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/neteventpackagecapture.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/neteventpackagecapture",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/new-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/new-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/start-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/start-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/stop-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/stop-neteventsession",
+"redirect_document_id": true
 }
 ]
 }

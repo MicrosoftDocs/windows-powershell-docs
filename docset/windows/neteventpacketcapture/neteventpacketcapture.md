@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetEventPacketCapture
 Module Guid: 7E984F2F-35DA-48A2-A3C1-40CE59930A7C
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=532774
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetEventPacketCapture
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -103,4 +104,5 @@ Starts event and packet capture for a network event session.
 
 ### [Stop-NetEventSession](./Stop-NetEventSession.md)
 Stops event and packet capture for a network event session.
+
 

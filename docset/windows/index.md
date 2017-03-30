@@ -78,7 +78,7 @@ The table below also shows the latest published version of the Help for each mod
 | NanoServerImageGenerator | [Nano Server Image Generator](nanoserverimagegenerator/nanoserverimagegenerator.md) |
 | NetLdpAgent | [NetLdpAgent](netldpagent/netldpagent.md) |
 | NetAdapter | [Network Adapter](netadapter/netadapter.md) |
-| NetConnection | [Network connection](network-connection/index.md) |
+| NetConnection | [Network connection](netconnection/netconnection.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |

@@ -5149,6 +5149,996 @@
 "source_path": "docset/windows/hnv-diagnostics/test-virtualnetworkconnection.md",
 "redirect_url": "/itpro/powershell/windows/hnvdiagnostics/test-virtualnetworkconnection",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/hgsattestation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/add-hgsattestationtpmpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/add-hgsattestationtpmpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/disable-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/disable-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/enable-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/enable-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/get-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/get-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationhostgroup.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationhostgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationpolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/attestation/remove-hgsattestationtpmhost.md",
+"redirect_url": "/itpro/powershell/windows/hgsattestation/remove-hgsattestationtpmhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/hgsclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/convertto-hgskeyprotector.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/convertto-hgskeyprotector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/export-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/export-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsattestationbaselinepolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsattestationbaselinepolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/get-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/get-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/grant-hgskeyprotectoraccess.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/grant-hgskeyprotectoraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/import-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/import-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/new-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/new-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/new-hgskeyprotector.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/new-hgskeyprotector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/remove-hgsguardian.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/remove-hgsguardian",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/revoke-hgskeyprotectoraccess.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/revoke-hgskeyprotectoraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/client/set-hgsclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgsclient/set-hgsclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/hgsdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/get-hgstrace.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/get-hgstrace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/get-hgstracefiledata.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/get-hgstracefiledata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/new-hgstracetarget.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/new-hgstracetarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/diagnostics/test-hgstracetarget.md",
+"redirect_url": "/itpro/powershell/windows/hgsdiagnostics/test-hgstracetarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/index.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/hgskeyprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/add-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/add-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/add-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/add-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/export-hgskeyprotectionstate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/export-hgskeyprotectionstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/get-hgskeyprotectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/get-hgskeyprotectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/import-hgskeyprotectionstate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/import-hgskeyprotectionstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/remove-hgskeyprotectionattestationsignercertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/remove-hgskeyprotectionattestationsignercertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/remove-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/remove-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectionattestationsignercertificatepolicy.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectionattestationsignercertificatepolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectioncertificate.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectioncertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/key-protection/set-hgskeyprotectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/hgskeyprotection/set-hgskeyprotectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/index.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/hgserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/clear-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/clear-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/export-hgsserverstate.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/export-hgsserverstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/get-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/get-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/import-hgsserverstate.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/import-hgsserverstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/initialize-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/initialize-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/install-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/install-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/set-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/set-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/test-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/test-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/host-guardian-service/server/uninstall-hgsserver.md",
+"redirect_url": "/itpro/powershell/windows/hgsserver/uninstall-hgsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hyper-v/index.md",
+"redirect_url": "/itpro/powershell/windows/hyper-v/hyper-v",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/index.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/iisadministration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/clear-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/clear-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/clear-iisconfigcollection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/clear-iisconfigcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/disable-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/disable-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/disable-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/disable-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/enable-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/enable-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/enable-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/enable-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/export-iisconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/export-iisconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisapppool.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigattributevalue.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigattributevalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigcollection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigsection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigsection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisservermanager.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisservermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/new-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/new-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/new-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/new-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigattribute.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigattribute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/reset-iisservermanager.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/reset-iisservermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iiscentralcertprovidercredential.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iiscentralcertprovidercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iisconfigattributevalue.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iisconfigattributevalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/start-iiscommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/start-iiscommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/start-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/start-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/stop-iiscommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/stop-iiscommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/stop-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/stop-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/international/index.md",
+"redirect_url": "/itpro/powershell/windows/international/international",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/index.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/ipamserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/disable-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/disable-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/enable-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/enable-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreeaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreeaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreerange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreerange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreesubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreesubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddressutilizationthreshold.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddressutilizationthreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpsuperscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpsuperscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsconditionalforwarder.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsconditionalforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsresourcerecord.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnszone.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnszone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamipaddressauditevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamipaddressauditevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/invoke-ipamgpoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamgpoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/invoke-ipamserverprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamserverprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/move-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/move-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamdhcpconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamdhcpconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamipaddressauditevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamipaddressauditevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamutilizationdata.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamutilizationdata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/rename-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/rename-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/rename-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/rename-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaccessscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaccessscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddressutilizationthreshold.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddressutilizationthreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/update-ipamserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/update-ipamserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi/index.md",
+"redirect_url": "/itpro/powershell/windows/iscsi/iscsi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/index.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/iscsitarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/add-iscsivirtualdisktargetmapping.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/add-iscsivirtualdisktargetmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/checkpoint-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/checkpoint-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/convert-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/convert-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/dismount-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/dismount-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/export-iscsitargetserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/export-iscsitargetserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/export-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/export-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsitargetserversetting.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsitargetserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/import-iscsitargetserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/import-iscsitargetserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/import-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/import-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/mount-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/mount-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/new-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/new-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/new-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/new-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisktargetmapping.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisktargetmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/resize-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/resize-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/restore-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/restore-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsitargetserversetting.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsitargetserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/stop-iscsivirtualdiskoperation.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/stop-iscsivirtualdiskoperation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/kds/index.md",
+"redirect_url": "/itpro/powershell/windows/kds/kds",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/mmagent/index.md",
+"redirect_url": "/itpro/powershell/windows/mmagent/mmagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/mpio/index.md",
+"redirect_url": "/itpro/powershell/windows/mpio/mpio",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/msdtc/index.md",
+"redirect_url": "/itpro/powershell/windows/msdtc/msdtc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/msmq/index.md",
+"redirect_url": "/itpro/powershell/windows/msmq/msmq",
+"redirect_document_id": true
 }
 ]
 }

@@ -50,29 +50,29 @@ The table below also shows the latest published version of the Help for each mod
 | DNSClient | [DNS client](dnsclient/dnsclient.md) |
 | DNSServer | [DNS Server](dnsserver/dnsserver.md) |
 | EventTracingManagement | [EventTracManCmdlets](eventtracmancmdlets/eventtracmancmdlets.md) |
-| MSDTC | [Distributed Transaction Coordinator](msdtc/index.md) |
 | FailoverClusters | [Failover clusters](failoverclusters/failoverclusters.md) |
 | FileServerResourceManager | [File Server Resource Manager](fileserverresourcemanager/fileserverresourcemanager.md) |
 | GroupPolicy | [Group Policy](grouppolicy/grouppolicy.md) |
 | HardwareCertification | [Hardware Certification](hardwarecertification/hardwarecertification.md) |
-| HgsAttestation | [Host Guardian Service Attestation](host-guardian-service/attestation/index.md) |
-| HgsClient | [Host Guardian Service Client](host-guardian-service/client/index.md) |
-| HgsDiagnostics | [Host Guardian Service Diagnostics](host-guardian-service/diagnostics/index.md) |
-| HgsKeyProtection | [Host Guardian Service Key Protection](host-guardian-service/key-protection/index.md) |
-| HgsServer | [Host Guardian Service Server](host-guardian-service/server/index.md) |
+| HgsAttestation | [Host Guardian Service Attestation](hgsattestation/hgsattestation.md) |
+| HgsClient | [Host Guardian Service Client](hgsclient/hgsclient.md) |
+| HgsDiagnostics | [Host Guardian Service Diagnostics](hgsdiagnostics/hgsdiagnostics.md) |
+| HgsKeyProtection | [Host Guardian Service Key Protection](hgskeyprotection/hgskeyprotection.md) |
+| HgsServer | [Host Guardian Service Server](hgsserver/hgsserver.md) |
 | HostComputeService | [Containers](hostcomputeservice/hostcomputeservice.md) |
 | HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
-| IISAdministration | [IIS Administration](iis/administration/index.md) |
-| International | [International](international/index.md) |
-| IpamServer | [IP Address Management Server](ipam/index.md) |
-| Iscsi | [iSCSI](iscsi/index.md) |
-| IscsiTarget | [iSCSI Target](iscsi-target/index.md) |
-| KDS | [Key Distribution Server](kds/index.md) |
+| IISAdministration | [IIS Administration](iisadministration/iisadministration.md) |
+| International | [International](international/international.md) |
+| IpamServer | [IP Address Management Server](ipamserver/ipamserver.md) |
+| Iscsi | [iSCSI](iscsi/iscsi.md) |
+| IscsiTarget | [iSCSI Target](iscsitarget/iscsitarget.md) |
+| KDS | [Key Distribution Server](kds/kds.md) |
 | Microsoft.Windows.ServerManager.Migration | [Server Migration](server-migration/index.md) |
-| MMAgent | [Memory Management Agent](mmagent/index.md) |
-| Mpio | [MPIO](mpio/index.md) |
-| Msmq | [MSMQ](msmq/index.md) |
+| MMAgent | [Memory Management Agent](mmagent/mmagent.md) |
+| Mpio | [MPIO](mpio/mpio.md) |
+| MSDTC | [Distributed Transaction Coordinator](msdtc/msdtc.md) |
+| Msmq | [MSMQ](msmq/msmq.md) |
 | Multipoint | [MultiPoint Services](multipoint/services/index.md) |
 | MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
 | NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |

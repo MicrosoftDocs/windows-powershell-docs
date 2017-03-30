@@ -73,33 +73,33 @@ The table below also shows the latest published version of the Help for each mod
 | Mpio | [MPIO](mpio/mpio.md) |
 | MSDTC | [Distributed Transaction Coordinator](msdtc/msdtc.md) |
 | Msmq | [MSMQ](msmq/msmq.md) |
-| Multipoint | [MultiPoint Services](multipoint/services/index.md) |
-| MultiPointVdi | [Multipoint VDI](multipoint/vdi/index.md) |
-| NanoServerImageGenerator | [Nano Server Image Generator](nano-server-image-generator/nanoserverimagegenerator.md) |
-| NetLdpAgent | [NetLdpAgent](netldp/index.md) |
-| NetAdapter | [Network Adapter](network-adapter/index.md) |
-| NetConnection | [Network connection](network-connection/index.md) |
-| NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
+| Multipoint | [MultiPoint Services](multipoint/multipoint.md) |
+| MultiPointVdi | [Multipoint VDI](multipointvdi/multipointvdi.md) |
+| NanoServerImageGenerator | [Nano Server Image Generator](nanoserverimagegenerator/nanoserverimagegenerator.md) |
+| NetLdpAgent | [NetLdpAgent](netldpagent/netldpagent.md) |
+| NetAdapter | [Network Adapter](netadapter/netadapter.md) |
+| NetConnection | [Network connection](netconnection/netconnection.md) |
+| NetEventPacketCapture | [Network Event Packet Capture](neteventpacketcapture/neteventpacketcapture.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
-| NetNat | [Network Address Translation](nat/index.md) |
-| NetQoS | [Quality of Service](qos/index.md) |
-| NetSecurity | [Network security](network-security/index.md) |
+| NetNat | [Network Address Translation](netnat/netnat.md) |
+| NetQoS | [Quality of Service](netqos/netqos.md) |
+| NetSecurity | [Network security](netsecurity/netsecurity.md) |
 | NetTCPIP | [TCP/IP](tcpip/index.md) |
-| NetWNV | [Network Virtualization](network-virtualization/index.md) |
+| NetWNV | [Network Virtualization](netwnv/netwnv.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
-| NetworkSwitchManager | [Network Switch Manager](network-switch-manager/index.md) |
-| NetSwitchTeam | [Network Switch Team](network-switch-team/index.md) |
-| NetworkTransition | [Network Transition](network-transition/index.md) |
-| NFS | [Network File System](nfs/index.md) |
-| NPS | [Network Policy Server](nps/index.md) |
-| PCSVDevice | [Physical Computer System View device](pcsv/index.md) |
-| PKIClient | [Public Key Infrastructure](pki/index.md) |
-| PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
-| PnpDevice | [Plug and Play](pnp/index.md) |
-| PrintManagement | [Print management](print/index.md) |
+| NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
+| NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |
+| NetworkTransition | [Network Transition](networktransition/networktransition.md) |
+| NFS | [Network File System](nfs/nfs.md) |
+| NPS | [Network Policy Server](nps/nps.md) |
+| PCSVDevice | [Physical Computer System View device](pcsvdevice/pcsvdevice.md) |
+| PKIClient | [Public Key Infrastructure](pkiclient/pkiclient.md) |
+| PlatformIdentifier | [Platform Identifier](platformidentifier/platformidentifier.md) |
+| PnpDevice | [Plug and Play](pnpdevice/pnpdevice.md) |
+| PrintManagement | [Print management](printmanagement/index.md) |
 | ProcessMitigations | [Process Mitigations](processmitigations/processmitigations.md) |
 | RemoteAccess | [Remote access](remote-access/index.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
@@ -140,4 +140,3 @@ The table below also shows the latest published version of the Help for each mod
 | WSUS | [Windows Server Update Services](wsus/index.md) |
 | WindowsUpdate | [Windows Update](windows-update/index.md) |
 
->>>>>>> windows

@@ -6139,6 +6139,2270 @@
 "source_path": "docset/windows/msmq/index.md",
 "redirect_url": "/itpro/powershell/windows/msmq/msmq",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/add-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/add-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/clear-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/clear-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/close-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/close-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/close-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/close-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disable-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disable-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/disconnect-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/disconnect-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/enable-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/enable-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsalert.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsalert",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsversion.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsversion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/get-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/get-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/hide-wmsidentifier.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/hide-wmsidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/join-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/join-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/lock-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/lock-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/lock-wmsusbstorage.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/lock-wmsusbstorage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/new-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/new-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/open-wmsapp.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/open-wmsapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/publish-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/publish-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/remove-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/remove-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/remove-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/remove-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/restart-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/restart-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/resume-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/resume-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/search-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/search-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsscheduledupdate.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsscheduledupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsuser.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/set-wmsweblimiting.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/set-wmsweblimiting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/show-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/show-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/show-wmsidentifier.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/show-wmsidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/split-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/split-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/stop-wmssystem.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/stop-wmssystem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/suspend-wmsdiskprotection.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/suspend-wmsdiskprotection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unlock-wmssession.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unlock-wmssession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unlock-wmsusbstorage.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unlock-wmsusbstorage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/unpublish-wmsdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/unpublish-wmsdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/services/update-wmsstation.md",
+"redirect_url": "/itpro/powershell/windows/multipoint/update-wmsstation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/index.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/multipointvdi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/disable-wmsvirtualdesktoprole.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/disable-wmsvirtualdesktoprole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/enable-wmsvirtualdesktoprole.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/enable-wmsvirtualdesktoprole",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/get-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/get-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/import-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/import-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/new-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/new-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/new-wmsvirtualdesktoptemplate.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/new-wmsvirtualdesktoptemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/multipoint/vdi/open-wmsvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/multipointvdi/open-wmsvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/index.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/nanoserverimagegenerator",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/edit-nanoserverimage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/edit-nanoserverimage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/get-nanoserverpackage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/get-nanoserverpackage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nano-server-image-generator/new-nanoserverimage.md",
+"redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/new-nanoserverimage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/index.md",
+"redirect_url": "/itpro/powershell/windows/netnat/netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/add-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/add-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/add-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/add-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatglobal.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatsession.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/new-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/new-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/set-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/set-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/set-netnatglobal.md",
+"redirect_url": "/itpro/powershell/windows/netnat/set-netnatglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/index.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/netadapter/",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterhardwareinfo.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterhardwareinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptersriovvf.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptersriovvf",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterstatistics.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervmqqueue.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervmqqueue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervport.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/new-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/new-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/remove-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/remove-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/rename-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/rename-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/reset-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/reset-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/restart-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/restart-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldp/index.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/netldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldp/disable-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/disable-netlldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldp/enable-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/enable-netlldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/netldp/get-netlldpagent.md",
+"redirect_url": "/itpro/powershell/windows/netldpagent/get-netlldpagent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-connection/index.md",
+"redirect_url": "/itpro/powershell/windows/netconnection/netconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-connection/get-netconnectionprofile.md",
+"redirect_url": "/itpro/powershell/windows/netconnection/get-netconnectionprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-connection/set-netconnectionprofile.md",
+"redirect_url": "/itpro/powershell/windows/netconnection/set-netconnectionprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/index.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/neteventpacketcapture",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/add-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/add-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/get-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/get-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/neteventpackagecapture.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/neteventpackagecapture",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/new-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/new-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventvmnetworkadapter.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventvmnetworkadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventvmswitch.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventvmswitch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/remove-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/remove-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventpacketcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventpacketcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/set-neteventwfpcaptureprovider.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/set-neteventwfpcaptureprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/start-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/start-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-event/stop-neteventsession.md",
+"redirect_url": "/itpro/powershell/windows/neteventpacketcapture/stop-neteventsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/index.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/netsecurity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/copy-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/disable-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/disable-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/enable-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/enable-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/find-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/find-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-dapolicychange.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-dapolicychange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewalladdressfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewalladdressfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallapplicationfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallapplicationfilter",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/get-netfirewallinterfacefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallinterfacefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallinterfacetypefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallinterfacetypefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallportfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurityget-netfirewallportfilternetsecurity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallprofile.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallsecurityfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallsecurityfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallservicefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallservicefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netfirewallsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netfirewallsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecmainmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecmainmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecquickmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecquickmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/get-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/get-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netfirewallrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecauthproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecauthproposal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecmainmodecryptoproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmodecryptoproposal",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/new-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecquickmodecryptoproposal.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecquickmodecryptoproposal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/new-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/new-netipsecrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/open-netgpo.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/open-netgpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecmainmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecmainmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecphase2authset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/remove-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecquickmodesa.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecquickmodesa",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/remove-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/remove-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/rename-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecmainmoderule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-security/rename-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/rename-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/rename-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/save-netgpo.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/save-netgpo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewalladdressfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewalladdressfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallapplicationfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallapplicationfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallinterfacefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallinterfacefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallinterfacetypefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallinterfacetypefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallportfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallprofile.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallsecurityfilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallsecurityfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallservicefilter.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallservicefilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netfirewallsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netfirewallsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecdospsetting.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecdospsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecmainmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecmainmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecmainmoderule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecmainmoderule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecphase1authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecphase1authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecphase2authset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecphase2authset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecquickmodecryptoset.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecquickmodecryptoset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/set-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/set-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/show-netfirewallrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/show-netfirewallrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/show-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/show-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/sync-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/sync-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-security/update-netipsecrule.md",
+"redirect_url": "/itpro/powershell/windows/netsecurity/update-netipsecrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/index.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/networkswitchmanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/disable-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/disable-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/enable-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/enable-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchethernetport.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchethernetport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchfeature.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchglobaldata.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchglobaldata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/get-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/get-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/new-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/new-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/remove-networkswitchethernetportipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/remove-networkswitchethernetportipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/remove-networkswitchvlan.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/remove-networkswitchvlan",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/restore-networkswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/restore-networkswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/save-networkswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/save-networkswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchethernetportipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchethernetportipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchportmode.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchportmode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchportproperty.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchportproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-manager/set-networkswitchvlanproperty.md",
+"redirect_url": "/itpro/powershell/windows/networkswitchmanager/set-networkswitchvlanproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/index.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/add-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/add-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/get-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/get-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/get-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/get-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/new-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/new-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/remove-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/remove-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/remove-netswitchteammember.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/remove-netswitchteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-switch-team/rename-netswitchteam.md",
+"redirect_url": "/itpro/powershell/windows/netswitchteam/rename-netswitchteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/index.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/networktransition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/add-netiphttpscertbinding.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/add-netiphttpscertbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netiphttpsprofile.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netiphttpsprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netiphttpsprofile.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netiphttpsprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netdnstransitionmonitoring.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netdnstransitionmonitoring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netiphttpsstate.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netiphttpsstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netnattransitionmonitoring.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netnattransitionmonitoring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netteredoconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netteredostate.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netteredostate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/new-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/new-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/new-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/new-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netiphttpscertbinding.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netiphttpscertbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/rename-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/rename-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netteredoconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransitionset-netiphttpsconfigurationnetworktransition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netteredoconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/index.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/netwnv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationglobal.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/select-netvirtualizationnexthop.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/select-netvirtualizationnexthop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationglobal.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nfs/index.md",
+"redirect_url": "/itpro/powershell/windows/nfs/nfs",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/index.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/netlbfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/add-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/add-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/add-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/add-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/new-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/new-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/rename-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/rename-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/index.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/networkloadbalancingclusters",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/disable-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/disable-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/enable-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/enable-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusterdriverinfo.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusterdriverinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternodenetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternodenetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/new-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/new-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/new-nlbclusteripv6address.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/new-nlbclusteripv6address",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbcluster",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusterportrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclustervip",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/resume-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/resume-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/resume-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/resume-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrulenodehandlingpriority.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrulenodehandlingpriority",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrulenodeweight.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrulenodeweight",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/start-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/start-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/start-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/start-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/stop-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/stop-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/stop-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/stop-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/suspend-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/suspend-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/suspend-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/suspend-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nps/index.md",
+"redirect_url": "/itpro/powershell/windows/nps/nps",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/index.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/clear-pcsvdevicelog.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/clear-pcsvdevicelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/get-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/get-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/get-pcsvdevicelog.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/get-pcsvdevicelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/restart-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/restart-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/set-pcsvdevicebootconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdevicebootconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/pcsv/set-pcsvdevicenetworkconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdevicenetworkconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/set-pcsvdeviceuserpassword.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdeviceuserpassword",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/start-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/start-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/stop-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/stop-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/index.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/pkiclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/add-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/add-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/export-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/export-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/export-pfxcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/export-pfxcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificateautoenrollmentpolicy.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificateautoenrollmentpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-pfxdata.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-pfxdata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/import-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/import-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/import-pfxcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/import-pfxcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/new-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/new-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/new-selfsignedcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/new-selfsignedcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/remove-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/remove-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/remove-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/remove-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/set-certificateautoenrollmentpolicy.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/set-certificateautoenrollmentpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/switch-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/switch-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/test-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/test-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/platform-identifier/index.md",
+"redirect_url": "/itpro/powershell/windows/platformidentifier/platformidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/platform-identifier/get-platformidentifier.md",
+"redirect_url": "/itpro/powershell/windows/platformidentifier/get-platformidentifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/index.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/disable-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/disable-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/enable-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/enable-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/get-pnpdevice.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/get-pnpdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pnp/get-pnpdeviceproperty.md",
+"redirect_url": "/itpro/powershell/windows/pnpdevice/get-pnpdeviceproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/index.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/printmanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printerdriver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/add-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/add-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/print/get-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerdriver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printerproperty.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printerproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/get-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/get-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/read-printernfctag.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/read-printernfctag",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printerdriver.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printerdriver",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/print/remove-printerport.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printerport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/remove-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/remove-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/rename-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/rename-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/restart-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/restart-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/resume-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/resume-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printer.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/set-printerproperty.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/set-printerproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/suspend-printjob.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/suspend-printjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/print/write-printernfctag.md",
+"redirect_url": "/itpro/powershell/windows/printmanagement/write-printernfctag",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/index.md",
+"redirect_url": "/itpro/powershell/windows/netqos/netqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/get-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/get-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/new-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/new-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/remove-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/remove-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/set-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/set-netqospolicy",
+"redirect_document_id": true
 }
 ]
 }

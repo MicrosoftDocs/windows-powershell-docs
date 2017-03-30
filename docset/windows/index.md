@@ -67,7 +67,7 @@ The table below also shows the latest published version of the Help for each mod
 | International | [International](international/international.md) |
 | IpamServer | [IP Address Management Server](ipamserver/ipamserver.md) |
 | Iscsi | [iSCSI](iscsi/iscsi.md) |
-| IscsiTarget | [iSCSI Target](iscsi-target/index.md) |
+| IscsiTarget | [iSCSI Target](iscsitarget/iscsitarget.md) |
 | KDS | [Key Distribution Server](kds/index.md) |
 | Microsoft.Windows.ServerManager.Migration | [Server Migration](server-migration/index.md) |
 | MMAgent | [Memory Management Agent](mmagent/index.md) |

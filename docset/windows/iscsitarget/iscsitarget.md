@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: IscsiTarget
 Module Guid: A1DA990A-4DC2-4F7E-BEB4-046A89B9D473
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390779
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: IscsiTarget
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -100,4 +101,5 @@ Sets the description for a snapshot.
 
 ### [Stop-IscsiVirtualDiskOperation](./Stop-IscsiVirtualDiskOperation.md)
 Stops a long-running operation in progress on an iSCSI virtual disk.
+
 

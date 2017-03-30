@@ -5979,6 +5979,141 @@
 "source_path": "docset/windows/iscsi/index.md",
 "redirect_url": "/itpro/powershell/windows/iscsi/iscsi",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/index.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/iscsitarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/add-iscsivirtualdisktargetmapping.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/add-iscsivirtualdisktargetmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/checkpoint-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/checkpoint-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/convert-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/convert-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/dismount-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/dismount-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/export-iscsitargetserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/export-iscsitargetserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/export-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/export-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsitargetserversetting.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsitargetserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/get-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/get-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/import-iscsitargetserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/import-iscsitargetserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/import-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/import-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/mount-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/mount-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/new-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/new-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/new-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/new-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/remove-iscsivirtualdisktargetmapping.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/remove-iscsivirtualdisktargetmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/resize-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/resize-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/restore-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/restore-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsiservertarget.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsiservertarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsitargetserversetting.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsitargetserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsivirtualdisk.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsivirtualdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/set-iscsivirtualdisksnapshot.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/set-iscsivirtualdisksnapshot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iscsi-target/stop-iscsivirtualdiskoperation.md",
+"redirect_url": "/itpro/powershell/windows/iscsitarget/stop-iscsivirtualdiskoperation",
+"redirect_document_id": true
 }
 ]
 }

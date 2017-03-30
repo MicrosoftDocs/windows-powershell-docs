@@ -5419,6 +5419,11 @@
 "source_path": "docset/windows/host-guardian-service/server/uninstall-hgsserver.md",
 "redirect_url": "/itpro/powershell/windows/hgsserver/uninstall-hgsserver",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/hyper-v/index.md",
+"redirect_url": "/itpro/powershell/windows/hyper-v/hyper-v",
+"redirect_document_id": true
 }
 ]
 }

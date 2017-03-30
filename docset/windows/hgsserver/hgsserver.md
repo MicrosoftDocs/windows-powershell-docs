@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: HgsServer
 Module Guid: FDA18D7C-B57D-47D7-801C-14832537A1BA
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519072
-Help Version: 5.0.0.1
+Help Version: 5.0.0.2
 Locale: en-US
 title: HgsServer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -50,5 +50,6 @@ Tests if the local computer can function as a Host Guardian Service server node.
 
 ### [Uninstall-HgsServer](./Uninstall-HgsServer.md)
 Removes a local node from a Host Guardian Service and from the domain.
+
 
 

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetNat
 Module Guid: E5439F56-42AA-4FDF-8705-50C782A89345
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390798
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetNat
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -61,4 +62,5 @@ Modifies settings for NAT objects.
 
 ### [Set-NetNatGlobal](./Set-NetNatGlobal.md)
 Modifies global settings for NAT instances on a computer.
+
 

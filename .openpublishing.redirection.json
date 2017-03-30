@@ -6434,6 +6434,76 @@
 "source_path": "docset/windows/nano-server-image-generator/new-nanoserverimage.md",
 "redirect_url": "/itpro/powershell/windows/nanoserverimagegenerator/new-nanoserverimage",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/index.md",
+"redirect_url": "/itpro/powershell/windows/netnat/netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/add-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/add-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/add-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/add-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatglobal.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatsession.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/get-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/get-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/new-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/new-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnatexternaladdress.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnatexternaladdress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/remove-netnatstaticmapping.md",
+"redirect_url": "/itpro/powershell/windows/netnat/remove-netnatstaticmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/set-netnat.md",
+"redirect_url": "/itpro/powershell/windows/netnat/set-netnat",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nat/set-netnatglobal.md",
+"redirect_url": "/itpro/powershell/windows/netnat/set-netnatglobal",
+"redirect_document_id": true
 }
 ]
 }

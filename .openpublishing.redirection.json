@@ -5424,6 +5424,166 @@
 "source_path": "docset/windows/hyper-v/index.md",
 "redirect_url": "/itpro/powershell/windows/hyper-v/hyper-v",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/index.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/iisadministration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/clear-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/clear-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/clear-iisconfigcollection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/clear-iisconfigcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/disable-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/disable-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/disable-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/disable-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/enable-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/enable-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/enable-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/enable-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/export-iisconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/export-iisconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisapppool.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigattributevalue.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigattributevalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigcollection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisconfigsection.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisconfigsection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iisservermanager.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iisservermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iissharedconfig.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iissharedconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/get-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/get-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/new-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/new-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/new-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/new-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigattribute.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigattribute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigcollectionelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigcollectionelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iisconfigelement.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iisconfigelement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/remove-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/remove-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/reset-iisservermanager.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/reset-iisservermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iiscentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iiscentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iiscentralcertprovidercredential.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iiscentralcertprovidercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/set-iisconfigattributevalue.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/set-iisconfigattributevalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/start-iiscommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/start-iiscommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/start-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/start-iissite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/stop-iiscommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/stop-iiscommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/iis/administration/stop-iissite.md",
+"redirect_url": "/itpro/powershell/windows/iisadministration/stop-iissite",
+"redirect_document_id": true
 }
 ]
 }

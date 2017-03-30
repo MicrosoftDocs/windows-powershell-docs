@@ -6,6 +6,7 @@ Module Name: IISAdministration
 Module Guid: 07640789-476A-4713-A091-F5B365129C32
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216321
 Help Version: 5.0.3.0
+Locale: en-uS
 title: IISAdministration
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

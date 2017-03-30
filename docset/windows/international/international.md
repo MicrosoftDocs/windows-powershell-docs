@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: International
 Module Guid: 561544E6-3A83-4D24-B140-78AD771EAF10
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390776
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: International
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -79,4 +79,5 @@ Sets the Windows UI language override setting for the current user account.
 
 ### [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
 Sets the language list and associated properties for the current user account.
+
 

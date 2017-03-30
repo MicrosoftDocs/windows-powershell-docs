@@ -154,5 +154,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Stop-IISSite](./Stop-IISSite.md)
 
-[IIS Administration Cmdlets for Windows PowerShell](./index.md)
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 

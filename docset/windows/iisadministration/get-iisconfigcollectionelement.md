@@ -104,5 +104,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-IISConfigCollectionElement](./Remove-IISConfigCollectionElement.md)
 
-[IIS Administration Cmdlets for Windows PowerShell](./index.md)
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 

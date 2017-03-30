@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: IpamServer
 Module Guid: 69775F93-9317-4234-A558-13B6655FC41B
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390777
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: IpamServer
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -250,4 +251,5 @@ Modifies an existing IP subnet in IPAM.
 
 ### [Update-IpamServer](./Update-IpamServer.md)
 Updates an IPAM server following an operating system upgrade.
+
 

@@ -5589,6 +5589,396 @@
 "source_path": "docset/windows/international/index.md",
 "redirect_url": "/itpro/powershell/windows/international/international",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/index.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/ipamserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/add-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/add-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/disable-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/disable-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/enable-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/enable-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/export-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/export-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreeaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreeaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreerange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreerange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/find-ipamfreesubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/find-ipamfreesubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamaddressutilizationthreshold.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamaddressutilizationthreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcapability.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcapability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdhcpsuperscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdhcpsuperscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsconditionalforwarder.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsconditionalforwarder",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsresourcerecord.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsresourcerecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnsserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnsserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamdnszone.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamdnszone",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamipaddressauditevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamipaddressauditevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/get-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/get-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/import-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/import-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/invoke-ipamgpoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamgpoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/invoke-ipamserverprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamserverprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/invoke-ipamserverprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/invoke-ipamserverprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/move-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/move-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamdhcpconfigurationevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamdhcpconfigurationevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamipaddressauditevent.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamipaddressauditevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/remove-ipamutilizationdata.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/remove-ipamutilizationdata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/rename-ipamcustomfield.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/rename-ipamcustomfield",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/rename-ipamcustomvalue.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/rename-ipamcustomvalue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaccessscope.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaccessscope",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddress.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddressspace.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddressspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamaddressutilizationthreshold.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamaddressutilizationthreshold",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamblock.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamblock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamcustomfieldassociation.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamcustomfieldassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamdatabase.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamdatabase",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamdiscoverydomain.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamdiscoverydomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamrange.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/set-ipamsubnet.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/set-ipamsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ipam/update-ipamserver.md",
+"redirect_url": "/itpro/powershell/windows/ipamserver/update-ipamserver",
+"redirect_document_id": true
 }
 ]
 }

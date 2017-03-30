@@ -65,7 +65,7 @@ The table below also shows the latest published version of the Help for each mod
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iisadministration/iisadministration.md) |
 | International | [International](international/international.md) |
-| IpamServer | [IP Address Management Server](ipam/index.md) |
+| IpamServer | [IP Address Management Server](ipamserver/ipamserver.md) |
 | Iscsi | [iSCSI](iscsi/index.md) |
 | IscsiTarget | [iSCSI Target](iscsi-target/index.md) |
 | KDS | [Key Distribution Server](kds/index.md) |

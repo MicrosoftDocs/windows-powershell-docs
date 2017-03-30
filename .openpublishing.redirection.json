@@ -6114,6 +6114,11 @@
 "source_path": "docset/windows/iscsi-target/stop-iscsivirtualdiskoperation.md",
 "redirect_url": "/itpro/powershell/windows/iscsitarget/stop-iscsivirtualdiskoperation",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/kds/index.md",
+"redirect_url": "/itpro/powershell/windows/kds/kds",
+"redirect_document_id": true
 }
 ]
 }

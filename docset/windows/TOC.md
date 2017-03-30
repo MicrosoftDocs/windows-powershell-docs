@@ -1766,7 +1766,7 @@
 ### [Set-IscsiVirtualDisk](iscsitarget/set-iscsivirtualdisk.md)
 ### [Set-IscsiVirtualDiskSnapshot](iscsitarget/set-iscsivirtualdisksnapshot.md)
 ### [Stop-IscsiVirtualDiskOperation](iscsitarget/stop-iscsivirtualdiskoperation.md)
-## [Key Distribution Server](kds/index.md)
+## [Key Distribution Server](kds/kds.md)
 ### [Add-KdsRootKey](kds/add-kdsrootkey.md)
 ### [Clear-KdsCache](kds/clear-kdscache.md)
 ### [Get-KdsConfiguration](kds/get-kdsconfiguration.md)

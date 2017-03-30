@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: KDS
 Module Guid: 176542F6-2A6B-11E0-AB18-D010E0D72085
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390781
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: KDS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -40,4 +41,5 @@ Sets the configuration of Microsoft Group KdsSvc.
 
 ### [Test-KdsRootKey](./Test-KdsRootKey.md)
 Tests the root key configuration.
+
 

@@ -20,6 +20,7 @@ ms.assetid: 09F402C6-4773-47F7-B7BB-A85A1D42A26A
 # Get-NetworkControllerState
 
 ## SYNOPSIS
+This cmdlet retrieves the provisioning state of NetworkControllerState resource. 
 
 ## SYNTAX
 
@@ -29,13 +30,20 @@ Get-NetworkControllerState [-ConnectionUri <Uri>] [-CertificateThumbprint <Strin
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves the provisioning state of NetworkControllerState resource. To get the current configuration and state of the Network Controller services, you need to execute Invoke-NetworkControllerState. After executing Invoke-NetworkControllerState, you can use Get-NetworkControllerState to get the provisioning state of the resource (whether the configuration and state of the Network Controller services were successfully dumped on the Network Controller nodes)
 
 ## EXAMPLES
-
+This example shows that the provisioning state of NetworkControllerState resource is succeeded. The state of all the Network Controller services has been dumped on the Network Controller nodes.
+```
+$state=Get-NetworkControllerState -ConnectionUri https://networkcontroller
+$state.Properties
+```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -93,6 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Provisioning state of the resource
 
 ## NOTES
 

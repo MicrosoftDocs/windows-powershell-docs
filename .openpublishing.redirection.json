@@ -7011,11 +7011,6 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/network-security/copy-netfirewallrule.md",
-"redirect_url": "/itpro/powershell/windows/netsecurity/copy-netfirewallrule",
-"redirect_document_id": true
-},
-{
 "source_path": "docset/windows/network-security/copy-netipsecmainmodecryptoset.md",
 "redirect_url": "/itpro/powershell/windows/netsecurity/copy-netipsecmainmodecryptoset",
 "redirect_document_id": true

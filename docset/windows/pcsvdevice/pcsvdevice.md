@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: PCSVDevice
 Module Guid: 576FF287-7D01-46A3-8A88-94DF7581A2B0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390809
-Help Version: 2.0.0.0
+Help Version: 2.0.0.1
+Locale: en-US
 title: PCSVDevice
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -49,4 +50,5 @@ Starts the specified remote hardware device.
 
 ### [Stop-PcsvDevice](./Stop-PcsvDevice.md)
 Shuts down a remote hardware device.
+
 

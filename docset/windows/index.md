@@ -95,7 +95,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetworkTransition | [Network Transition](networktransition/networktransition.md) |
 | NFS | [Network File System](nfs/nfs.md) |
 | NPS | [Network Policy Server](nps/nps.md) |
-| PCSVDevice | [Physical Computer System View device](pcsv/index.md) |
+| PCSVDevice | [Physical Computer System View device](pcsvdevice/pcsvdevice.md) |
 | PKIClient | [Public Key Infrastructure](pki/index.md) |
 | PlatformIdentifier | [Platform Identifier](platform-identifier/index.md) |
 | PnpDevice | [Plug and Play](pnp/index.md) |

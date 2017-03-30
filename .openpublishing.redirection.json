@@ -8091,6 +8091,55 @@
 "source_path": "docset/windows/nps/index.md",
 "redirect_url": "/itpro/powershell/windows/nps/nps",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/index.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/clear-pcsvdevicelog.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/clear-pcsvdevicelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/get-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/get-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/get-pcsvdevicelog.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/get-pcsvdevicelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/restart-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/restart-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/set-pcsvdevicebootconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdevicebootconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/pcsv/set-pcsvdevicenetworkconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdevicenetworkconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/set-pcsvdeviceuserpassword.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/set-pcsvdeviceuserpassword",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/start-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/start-pcsvdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pcsv/stop-pcsvdevice.md",
+"redirect_url": "/itpro/powershell/windows/pcsvdevice/stop-pcsvdevice",
+"redirect_document_id": true
 }
 ]
 }

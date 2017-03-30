@@ -8378,6 +8378,31 @@
 "source_path": "docset/windows/print/write-printernfctag.md",
 "redirect_url": "/itpro/powershell/windows/printmanagement/write-printernfctag",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/index.md",
+"redirect_url": "/itpro/powershell/windows/netqos/netqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/get-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/get-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/new-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/new-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/remove-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/remove-netqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/qos/set-netqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/netqos/set-netqospolicy",
+"redirect_document_id": true
 }
 ]
 }

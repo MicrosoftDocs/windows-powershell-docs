@@ -82,7 +82,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetEventPacketCapture | [Network Event Packet Capture](neteventpacketcapture/neteventpacketcapture.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |
-| NetQoS | [Quality of Service](qos/index.md) |
+| NetQoS | [Quality of Service](netqos/netqos.md) |
 | NetSecurity | [Network security](netsecurity/netsecurity.md) |
 | NetTCPIP | [TCP/IP](tcpip/index.md) |
 | NetWNV | [Network Virtualization](netwnv/netwnv.md) |

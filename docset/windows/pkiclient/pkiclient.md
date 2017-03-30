@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: PKIClient
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390811
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: PKIClient
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -73,4 +74,5 @@ Marks one certificate as having been replaced by another certificate.
 
 ### [Test-Certificate](./Test-Certificate.md)
 Verifies a certificate according to the input parameters.
+
 

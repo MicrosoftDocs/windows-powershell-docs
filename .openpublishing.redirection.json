@@ -8140,6 +8140,96 @@
 "source_path": "docset/windows/pcsv/stop-pcsvdevice.md",
 "redirect_url": "/itpro/powershell/windows/pcsvdevice/stop-pcsvdevice",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/index.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/pkiclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/add-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/add-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/export-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/export-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/export-pfxcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/export-pfxcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificateautoenrollmentpolicy.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificateautoenrollmentpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/get-pfxdata.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/get-pfxdata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/import-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/import-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/import-pfxcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/import-pfxcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/new-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/new-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/new-selfsignedcertificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/new-selfsignedcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/remove-certificateenrollmentpolicyserver.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/remove-certificateenrollmentpolicyserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/remove-certificatenotificationtask.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/remove-certificatenotificationtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/set-certificateautoenrollmentpolicy.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/set-certificateautoenrollmentpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/switch-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/switch-certificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/pki/test-certificate.md",
+"redirect_url": "/itpro/powershell/windows/pkiclient/test-certificate",
+"redirect_document_id": true
 }
 ]
 }

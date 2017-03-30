@@ -79,7 +79,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetLdpAgent | [NetLdpAgent](netldpagent/netldpagent.md) |
 | NetAdapter | [Network Adapter](netadapter/netadapter.md) |
 | NetConnection | [Network connection](netconnection/netconnection.md) |
-| NetEventPacketCapture | [Network Event Packet Capture](neteventpackagecapture/neteventpackagecapture.md) |
+| NetEventPacketCapture | [Network Event Packet Capture](neteventpacketcapture/neteventpacketcapture.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |
 | NetQoS | [Quality of Service](qos/index.md) |
@@ -92,7 +92,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
 | NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
 | NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |
-| NetworkTransition | [Network Transition](network-transition/index.md) |
+| NetworkTransition | [Network Transition](networktransition/networktransition.md) |
 | NFS | [Network File System](nfs/index.md) |
 | NPS | [Network Policy Server](nps/index.md) |
 | PCSVDevice | [Physical Computer System View device](pcsv/index.md) |

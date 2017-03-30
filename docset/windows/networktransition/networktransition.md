@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetworkTransition
 Module Guid: EFF9CCF9-53ED-423D-B0DA-23E6772AACAA
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390806
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetworkTransition
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -124,4 +125,5 @@ Sets the NAT64 configuration on a computer.
 
 ### [Set-NetTeredoConfiguration](./Set-NetTeredoConfiguration.md)
 Modifies the Teredo configuration of a computer or a Group Policy object (GPO).
+
 

@@ -2339,7 +2339,7 @@
 ### [Remove-NetSwitchTeam](netswitchteam/remove-netswitchteam.md)
 ### [Remove-NetSwitchTeamMember](netswitchteam/remove-netswitchteammember.md)
 ### [Rename-NetSwitchTeam](netswitchteam/rename-netswitchteam.md)
-## [Network transition](network-transition/index.md)
+## [Network transition](networktransition/networktransition.md)
 ### [Add-NetIPHttpsCertBinding](network-transition/add-netiphttpscertbinding.md)
 ### [Disable-NetDnsTransitionConfiguration](network-transition/disable-netdnstransitionconfiguration.md)
 ### [Disable-NetIPHttpsProfile](network-transition/disable-netiphttpsprofile.md)

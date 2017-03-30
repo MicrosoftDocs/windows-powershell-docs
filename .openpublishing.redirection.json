@@ -7561,6 +7561,181 @@
 "source_path": "docset/windows/network-switch-team/rename-netswitchteam.md",
 "redirect_url": "/itpro/powershell/windows/netswitchteam/rename-netswitchteam",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/index.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/networktransition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/add-netiphttpscertbinding.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/add-netiphttpscertbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netiphttpsprofile.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netiphttpsprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/disable-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/disable-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netiphttpsprofile.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netiphttpsprofile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/enable-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/enable-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netdnstransitionmonitoring.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netdnstransitionmonitoring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netiphttpsstate.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netiphttpsstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netnattransitionmonitoring.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netnattransitionmonitoring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netteredoconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/get-netteredostate.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/get-netteredostate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/new-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/new-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/new-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/new-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netiphttpscertbinding.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netiphttpscertbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/remove-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/remove-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/rename-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/rename-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netiphttpsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/reset-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/reset-netteredoconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-net6to4configuration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-net6to4configuration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netdnstransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netdnstransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netiphttpsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransitionset-netiphttpsconfigurationnetworktransition",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netisatapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netisatapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netnattransitionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netnattransitionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-transition/set-netteredoconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networktransition/set-netteredoconfiguration",
+"redirect_document_id": true
 }
 ]
 }

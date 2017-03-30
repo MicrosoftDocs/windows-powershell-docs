@@ -7911,6 +7911,181 @@
 "source_path": "docset/windows/nic-teaming/set-netlbfoteamnic.md",
 "redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteamnic",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/index.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/networkloadbalancingclusters",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/add-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/add-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/disable-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/disable-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/enable-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/enable-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusterdriverinfo.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusterdriverinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusternodenetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusternodenetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/get-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/get-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/new-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/new-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/new-nlbclusteripv6address.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/new-nlbclusteripv6address",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbcluster",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclusterportrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/remove-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/remove-nlbclustervip",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/resume-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/resume-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/resume-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/resume-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusternodedip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusternodedip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrule.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrulenodehandlingpriority.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrulenodehandlingpriority",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/nlb-cluster/set-nlbclusterportrulenodeweight.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclusterportrulenodeweight",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/set-nlbclustervip.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/set-nlbclustervip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/start-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/start-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/start-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/start-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/stop-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/stop-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/stop-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/stop-nlbclusternode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/suspend-nlbcluster.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/suspend-nlbcluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nlb-cluster/suspend-nlbclusternode.md",
+"redirect_url": "/itpro/powershell/windows/networkloadbalancingclusters/suspend-nlbclusternode",
+"redirect_document_id": true
 }
 ]
 }

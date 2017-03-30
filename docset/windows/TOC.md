@@ -2138,7 +2138,7 @@
 ### [Set-NetEventWFPCaptureProvider](neteventpacketcapture/set-neteventwfpcaptureprovider.md)
 ### [Start-NetEventSession](neteventpacketcapture/start-neteventsession.md)
 ### [Stop-NetEventSession](neteventpacketcapture/stop-neteventsession.md)
-## [Network File System](nfs/index.md)
+## [Network File System](nfs/nfs.md)
 ### [Disconnect-NfsSession](nfs/disconnect-nfssession.md)
 ### [Get-NfsClientConfiguration](nfs/get-nfsclientconfiguration.md)
 ### [Get-NfsClientgroup](nfs/get-nfsclientgroup.md)

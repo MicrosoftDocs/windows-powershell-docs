@@ -7836,6 +7836,11 @@
 "source_path": "docset/windows/network-virtualization/set-netvirtualizationproviderroute.md",
 "redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationproviderroute",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nfs/index.md",
+"redirect_url": "/itpro/powershell/windows/nfs/nfs",
+"redirect_document_id": true
 }
 ]
 }

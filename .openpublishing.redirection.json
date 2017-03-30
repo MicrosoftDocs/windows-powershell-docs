@@ -7736,6 +7736,106 @@
 "source_path": "docset/windows/network-transition/set-netteredoconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/networktransition/set-netteredoconfiguration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/index.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/netwnv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationglobal.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/get-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/get-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/new-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/new-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/remove-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/remove-netvirtualizationproviderroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/select-netvirtualizationnexthop.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/select-netvirtualizationnexthop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationcustomerroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationcustomerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationglobal.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationglobal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationlookuprecord.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationlookuprecord",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationprovideraddress.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationprovideraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-virtualization/set-netvirtualizationproviderroute.md",
+"redirect_url": "/itpro/powershell/windows/netwnv/set-netvirtualizationproviderroute",
+"redirect_document_id": true
 }
 ]
 }

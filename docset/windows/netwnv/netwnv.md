@@ -6,6 +6,7 @@ Module Name: NetWNV
 Module Guid: B47767EC-A4D6-488D-915D-5070791AC6D4
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390803
 Help Version: 5.0.1.0
+Locale: en-US
 title: NetWNV
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

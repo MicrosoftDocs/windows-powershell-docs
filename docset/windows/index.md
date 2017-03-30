@@ -85,7 +85,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetQoS | [Quality of Service](qos/index.md) |
 | NetSecurity | [Network security](netsecurity/netsecurity.md) |
 | NetTCPIP | [TCP/IP](tcpip/index.md) |
-| NetWNV | [Network Virtualization](network-virtualization/index.md) |
+| NetWNV | [Network Virtualization](netwnv/netwnv.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |

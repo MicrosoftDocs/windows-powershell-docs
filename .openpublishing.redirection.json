@@ -7841,6 +7841,76 @@
 "source_path": "docset/windows/nfs/index.md",
 "redirect_url": "/itpro/powershell/windows/nfs/nfs",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/index.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/netlbfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/add-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/add-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/add-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/add-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/get-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/get-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/new-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/new-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/remove-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/remove-netlbfoteamnic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/rename-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/rename-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteam.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteam",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteammember.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteammember",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/nic-teaming/set-netlbfoteamnic.md",
+"redirect_url": "/itpro/powershell/windows/netlbfo/set-netlbfoteamnic",
+"redirect_document_id": true
 }
 ]
 }

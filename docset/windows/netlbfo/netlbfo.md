@@ -6,6 +6,7 @@ Module Name: NetLbfo
 Module Guid: 80CF4C6D-30B7-4B0F-A035-DBB23A65EF1D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390797
 Help Version: 5.0.0.0
+Locale: en-US
 title: NetLbfo
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

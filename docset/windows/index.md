@@ -77,7 +77,7 @@ The table below also shows the latest published version of the Help for each mod
 | MultiPointVdi | [Multipoint VDI](multipointvdi/multipointvdi.md) |
 | NanoServerImageGenerator | [Nano Server Image Generator](nanoserverimagegenerator/nanoserverimagegenerator.md) |
 | NetLdpAgent | [NetLdpAgent](netldp/index.md) |
-| NetAdapter | [Network Adapter](network-adapter/index.md) |
+| NetAdapter | [Network Adapter](netadapter/netadapter.md) |
 | NetConnection | [Network connection](network-connection/index.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](network-event/index.md) |
 | NetLbfo | [NIC Teaming](nic-teaming/index.md) |

@@ -6,6 +6,7 @@ Module Name: NetAdapter
 Module Guid: 1042B422-63A8-4016-A6D6-293E19E8F8A6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390794
 Help Version: 5.0.0.0
+Locale: en-US
 title: NetAdapter
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

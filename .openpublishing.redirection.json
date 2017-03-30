@@ -6504,6 +6504,321 @@
 "source_path": "docset/windows/nat/set-netnatglobal.md",
 "redirect_url": "/itpro/powershell/windows/netnat/set-netnatglobal",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/index.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/netadapter/",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/disable-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/disable-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/enable-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/enable-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterhardwareinfo.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterhardwareinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrdma.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrdma",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptersriov",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptersriovvf.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptersriovvf",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadapterstatistics.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadapterstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervmq.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervmq",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervmqqueue.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervmqqueue",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/get-netadaptervport.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/get-netadaptervport",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/new-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/new-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/remove-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/remove-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/rename-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/rename-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/reset-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/reset-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/restart-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/restart-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapter.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapteradvancedproperty.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapteradvancedproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterbinding.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterchecksumoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterchecksumoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterencapsulatedpackettaskoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterencapsulatedpackettaskoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapteripsecoffload.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapteripsecoffload",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterlso.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterlso",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterpowermanagement.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterpowermanagement",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterqos.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterrsc.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterrsc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadapterrss.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadapterrss",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-adapter/set-netadaptersriov.md",
+"redirect_url": "/itpro/powershell/windows/netadapter/set-netadaptersriov",
+"redirect_document_id": true
 }
 ]
 }

@@ -1629,7 +1629,7 @@
 ### [Start-IISSite](iisadministration/start-iissite.md)
 ### [Stop-IISCommitDelay](iisadministration/stop-iiscommitdelay.md)
 ### [Stop-IISSite](iisadministration/stop-iissite.md)
-## [International](international/index.md)
+## [International](international/international.md)
 ### [Get-WinAcceptLanguageFromLanguageListOptOut](international/get-winacceptlanguagefromlanguagelistoptout.md)
 ### [Get-WinCultureFromLanguageListOptOut](international/get-winculturefromlanguagelistoptout.md)
 ### [Get-WinDefaultInputMethodOverride](international/get-windefaultinputmethodoverride.md)

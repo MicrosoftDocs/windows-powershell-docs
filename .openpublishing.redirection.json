@@ -5584,6 +5584,11 @@
 "source_path": "docset/windows/iis/administration/stop-iissite.md",
 "redirect_url": "/itpro/powershell/windows/iisadministration/stop-iissite",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/international/index.md",
+"redirect_url": "/itpro/powershell/windows/international/international",
+"redirect_document_id": true
 }
 ]
 }

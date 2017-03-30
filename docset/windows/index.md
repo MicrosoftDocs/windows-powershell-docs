@@ -64,7 +64,7 @@ The table below also shows the latest published version of the Help for each mod
 | HNVDiagnostics | [HNV Diagnostics](hnvdiagnostics/hnvdiagnostics.md) |
 | Hyper-V | [Hyper-V](hyper-v/hyper-v.md) |
 | IISAdministration | [IIS Administration](iisadministration/iisadministration.md) |
-| International | [International](international/index.md) |
+| International | [International](international/international.md) |
 | IpamServer | [IP Address Management Server](ipam/index.md) |
 | Iscsi | [iSCSI](iscsi/index.md) |
 | IscsiTarget | [iSCSI Target](iscsi-target/index.md) |

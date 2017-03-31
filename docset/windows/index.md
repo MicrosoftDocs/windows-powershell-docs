@@ -105,7 +105,7 @@ The table below also shows the latest published version of the Help for each mod
 | RemoteDesktopServices | [Remote Desktop Services](remotedesktopservices/remotedesktopservices.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduledtasks/scheduledtasks.md) |
 | SecureBoot | [Secure Boot](secureboot/secureboot.md) |
-| ServerCore | [Server Core](server-core/index.md) |
+| ServerCore | [Server Core](servercore/servercore.md) |
 | ServerManager | [Server Manager](server-manager/index.md) |
 | ServerManagerTasks | [Server Manager tasks](server-manager-tasks/index.md) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |

@@ -9445,6 +9445,21 @@
 "source_path": "docset/windows/secure-boot/set-securebootuefi.md",
 "redirect_url": "/itpro/powershell/windows/secureboot/set-securebootuefi",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/index.md",
+"redirect_url": "/itpro/powershell/windows/servercore/servercore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/set-displayresolution.md",
+"redirect_url": "/itpro/powershell/windows/servercoreset-displayresolutionservercore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/get-displayresolution.md",
+"redirect_url": "/itpro/powershell/windows/servercore/get-displayresolution",
+"redirect_document_id": true
 }
 ]
 }

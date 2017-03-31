@@ -6,6 +6,7 @@ Module Name: ServerCore
 Module Guid: 21B0D06C-E02A-46CC-849B-11C36EC94FB8
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390824
 Help Version: 5.0.0.0
+Locale: en-US
 title: ServerCore
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

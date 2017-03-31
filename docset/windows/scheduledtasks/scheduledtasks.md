@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: ScheduledTasks
 Module Guid: 5378EE8E-E349-49BB-83B9-F3D9C396C0A6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390822
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
 Locale: en-US
 title: ScheduledTasks
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -80,4 +80,5 @@ Removes a scheduled task from a failover cluster.
 
 ### [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
 Unregisters a scheduled task.
+
 

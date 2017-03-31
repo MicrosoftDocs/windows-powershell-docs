@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: SecureBoot
 Module Guid: A5BD98E1-E44C-44FB-B88F-5AF9BDE66FDF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390823
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: SecureBoot
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -38,4 +38,5 @@ Gets the UEFI variable values related to Secure Boot.
 
 ### [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
 Sets the Secure Boot-related UEFI variables.
+
 

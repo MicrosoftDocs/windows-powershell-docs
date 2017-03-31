@@ -9415,6 +9415,36 @@
 "source_path": "docset/windows/scheduled-tasks/unregister-scheduledtask.md",
 "redirect_url": "/itpro/powershell/windows/scheduledtasks/unregister-scheduledtask",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/index.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/secureboot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/confirm-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/confirm-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/format-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/format-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/get-securebootpolicy.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/get-securebootpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/get-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/get-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/set-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/set-securebootuefi",
+"redirect_document_id": true
 }
 ]
 }

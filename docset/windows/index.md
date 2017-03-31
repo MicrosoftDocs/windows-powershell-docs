@@ -104,7 +104,7 @@ The table below also shows the latest published version of the Help for each mod
 | RemoteDesktop | [Remote Desktop](remotedesktop/remotedesktop.md) |
 | RemoteDesktopServices | [Remote Desktop Services](remotedesktopservices/remotedesktopservices.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduledtasks/scheduledtasks.md) |
-| SecureBoot | [Secure Boot](secure-boot/index.md) |
+| SecureBoot | [Secure Boot](secureboot/secureboot.md) |
 | ServerCore | [Server Core](server-core/index.md) |
 | ServerManager | [Server Manager](server-manager/index.md) |
 | ServerManagerTasks | [Server Manager tasks](server-manager-tasks/index.md) |

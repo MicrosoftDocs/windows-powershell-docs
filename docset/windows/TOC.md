@@ -2475,7 +2475,6 @@
 ### [New-NetQosPolicy](netqos/new-netqospolicy.md)
 ### [Remove-NetQosPolicy](netqos/remove-netqospolicy.md)
 ### [Set-NetQosPolicy](netqos/set-netqospolicy.md)
->>>>>>> master
 ## [Remote Access](remote-access/index.md)
 ### [Add-BgpCustomRoute](remote-access/add-bgpcustomroute.md)
 ### [Add-BgpPeer](remote-access/add-bgppeer.md)

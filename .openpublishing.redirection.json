@@ -9315,6 +9315,106 @@
 "source_path": "docset/windows/remote-desktop-services/convert-license.md",
 "redirect_url": "/itpro/powershell/windows/remotedesktopservices/convert-license",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/index.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/scheduledtasks",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/disable-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/disable-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/enable-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/enable-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/export-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/export-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-scheduledtaskinfo.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-scheduledtaskinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtaskaction.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtaskaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtaskprincipal.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtaskprincipal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtasksettingsset.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtasksettingsset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtasktrigger.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtasktrigger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/register-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/register-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/register-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/register-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/set-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/set-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/set-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/set-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/start-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/start-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/stop-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/stop-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/unregister-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/unregister-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/unregister-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/unregister-scheduledtask",
+"redirect_document_id": true
 }
 ]
 }

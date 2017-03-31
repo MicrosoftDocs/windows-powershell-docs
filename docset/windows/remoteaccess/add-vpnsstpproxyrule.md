@@ -178,5 +178,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-VpnSstpProxyRule](./Set-VpnSstpProxyRule.md)
 
-[Remote Access Cmdlets](./index.md)
+[Remote Access Cmdlets](./remoteaccess.md)
 

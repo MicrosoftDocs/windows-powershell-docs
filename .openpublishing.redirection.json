@@ -9305,6 +9305,16 @@
 "source_path": "docset/windows/remote-desktop/update-rdvirtualdesktopcollection.md",
 "redirect_url": "/itpro/powershell/windows/remotedesktop/update-rdvirtualdesktopcollection",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop-services/index.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktopservices/remotedesktopservices",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop-services/convert-license.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktopservices/convert-license",
+"redirect_document_id": true
 }
 ]
 }

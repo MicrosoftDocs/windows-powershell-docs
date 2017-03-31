@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: RemoteDesktopServices
 Module Guid: 9FDB63CA-68AE-4034-A9FA-78529396C689
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=294194
-Help Version: 4.0.2.1
+Help Version: 4.0.2.2
+Locale: en-US
 title: RemoteDesktopServices
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -25,5 +26,6 @@ This reference provides cmdlet descriptions and syntax for all Remote Desktop Se
 ## RemoteDesktopServices Cmdlets
 ### [Convert-License](./Convert-License.md)
 Converts licenses in a key pack to per-device or per-user licenses.
+
 
 

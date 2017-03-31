@@ -102,7 +102,7 @@ The table below also shows the latest published version of the Help for each mod
 | PrintManagement | [Print management](printmanagement/printmanagement.md) |
 | RemoteAccess | [Remote access](remoteaccess/remoteaccess.md) |
 | RemoteDesktop | [Remote Desktop](remotedesktop/remotedesktop.md) |
-| RemoteDesktopServices | [Remote Desktop Services](remote-desktop-services/index.md) |
+| RemoteDesktopServices | [Remote Desktop Services](remotedesktopservices/remotedesktopservices.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |
 | SecureBoot | [Secure Boot](secure-boot/index.md) |
 | ServerCore | [Server Core](server-core/index.md) |

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: RemoteAccess
 Module Guid: D9D222A9-756C-41F8-B23A-2A596093216B
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390819
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: RemoteAccess
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -382,4 +383,5 @@ Uninstalls DirectAccess (DA) and VPN, both Remote Access (RA) VPN and site-to-si
 
 ### [Update-DAMgmtServer](./Update-DAMgmtServer.md)
 Updates the list of Management servers of the DirectAccess (DA) deployment.
+
 

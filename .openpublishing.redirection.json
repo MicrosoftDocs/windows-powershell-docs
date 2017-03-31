@@ -8403,6 +8403,512 @@
 "source_path": "docset/windows/qos/set-netqospolicy.md",
 "redirect_url": "/itpro/powershell/windows/netqos/set-netqospolicy",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/index.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgproutingpolicyforpeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgproutingpolicyforpeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daappserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daappserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-damgmtserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-damgmtserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessipfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessloadbalancernode.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessloadbalancernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessradius",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpnipaddressrange.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpnipaddressrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/clear-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-bgprouteflapdampening",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/clear-remoteaccessinboxaccountingstore.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-remoteaccessinboxaccountingstore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/clear-vpns2sinterfacestatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-vpns2sinterfacestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/connect-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/connect-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-daotpauthentication",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/disable-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disconnect-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disconnect-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disconnect-vpnuser.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disconnect-vpnuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-bgprouteflapdampening",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/enable-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteinformation.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteinformation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgpstatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgpstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daappserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daappserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daentrypointdc.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daentrypointdc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-damgmtserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-damgmtserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-danetworklocationserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-danetworklocationserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessaccounting.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessaccounting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessconnectionstatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconnectionstatistics",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessconnectionstatisticssummary.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconnectionstatisticssummary",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccesshealth.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccesshealth",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessipfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessloadbalancer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessradius",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessuseractivity.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessuseractivity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-routingprotocolpreference.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-routingprotocolpreference",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnauthprotocol.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnauthprotocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpns2sinterfacestatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpns2sinterfacestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/install-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/install-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/new-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/new-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/new-vpntrafficselector.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/new-vpntrafficselector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgproutingpolicyforpeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgproutingpolicyforpeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daappserverconnection.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daappserverconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daentrypointdc.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daentrypointdc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-danetworklocationserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-danetworklocationserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccessaccounting.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessaccounting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccessconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessinboxaccountingstore.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessinboxaccountingstore",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessipfilter",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessloadbalancer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessradius",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessroutingdomain",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-routingprotocolpreference.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-routingprotocolpreference",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnauthprotocol.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnauthprotocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnauthtype.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnauthtype",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnipaddressassignment.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnipaddressassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/start-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/start-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/stop-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/stop-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/uninstall-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/uninstall-remoteaccess",
+"redirect_document_id": true
 }
 ]
 }

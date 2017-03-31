@@ -100,7 +100,7 @@ The table below also shows the latest published version of the Help for each mod
 | PlatformIdentifier | [Platform Identifier](platformidentifier/platformidentifier.md) |
 | PnpDevice | [Plug and Play](pnpdevice/pnpdevice.md) |
 | PrintManagement | [Print management](printmanagement/printmanagement.md) |
-| RemoteAccess | [Remote access](remote-access/index.md) |
+| RemoteAccess | [Remote access](remoteaccess/remoteaccess.md) |
 | RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
 | RemoteDesktopServices | [Remote Desktop Services](remote-desktop-services/index.md) |
 | ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |

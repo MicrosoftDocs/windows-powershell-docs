@@ -8909,6 +8909,402 @@
 "source_path": "docset/windows/remote-access/uninstall-remoteaccess.md",
 "redirect_url": "/itpro/powershell/windows/remoteaccess/uninstall-remoteaccess",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/index.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remotedesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdvirtualdesktoptocollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdvirtualdesktoptocollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/disable-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/disable-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/disconnect-rduser.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/disconnect-rduser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/enable-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/enable-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/export-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/export-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/export-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/export-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdavailableapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdavailableapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdconnectionbrokerhighavailability.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdconnectionbrokerhighavailability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rddeploymentgatewayconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rddeploymentgatewayconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdfiletypeassociation.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdfiletypeassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdlicenseconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdlicenseconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdremotedesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdremotedesktop",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdserver",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessioncollection",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessioncollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessioncollectionconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdusersession.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdusersession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollectionjobstatus.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollectionjobstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopconcurrency.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopconcurrency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopidlecount.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopidlecount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktoptemplateexportpath.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktoptemplateexportpath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdworkspace.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdworkspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/grant-rdouaccess.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/grant-rdouaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/import-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/import-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/import-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/import-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/invoke-rduserlogoff.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/invoke-rduserlogoff",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/move-rdvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/move-rdvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+
+{
+"source_path": "docset/windows/remote-desktop/new-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdsessioncollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdsessiondeployment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdsessiondeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdvirtualdesktopdeployment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdvirtualdesktopdeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rddatabaseconnectionstring.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rddatabaseconnectionstring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdsessioncollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdvirtualdesktopfromcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdvirtualdesktopfromcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/send-rdusermessage.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/send-rdusermessage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdactivemanagementserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdactivemanagementserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdclientaccessname.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdclientaccessname",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdconnectionbrokerhighavailability.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdconnectionbrokerhighavailability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rddatabaseconnectionstring.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rddatabaseconnectionstring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rddeploymentgatewayconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rddeploymentgatewayconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdfiletypeassociation.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdfiletypeassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdlicenseconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdlicenseconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdremotedesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdremotedesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdsessioncollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdsessioncollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopcollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopcollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopconcurrency.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopconcurrency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopidlecount.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopidlecount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktoptemplateexportpath.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktoptemplateexportpath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdworkspace.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdworkspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/stop-rdvirtualdesktopcollectionjob.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/stop-rdvirtualdesktopcollectionjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/test-rdouaccess.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/test-rdouaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/test-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/test-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/update-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/update-rdvirtualdesktopcollection",
+"redirect_document_id": true
 }
 ]
 }

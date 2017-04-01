@@ -106,7 +106,7 @@ The table below also shows the latest published version of the Help for each mod
 | ScheduledTasks | [Scheduled Tasks](scheduledtasks/scheduledtasks.md) |
 | SecureBoot | [Secure Boot](secureboot/secureboot.md) |
 | ServerCore | [Server Core](servercore/servercore.md) |
-| ServerManager | [Server Manager](server-manager/index.md) |
+| ServerManager | [Server Manager](servermanager/servermanager.md) |
 | ServerManagerTasks | [Server Manager tasks](server-manager-tasks/index.md) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
 | ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shielded-virtual-machines/provisioning/index.md) |

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ServerManager
 Module Guid: D8E0CAE9-8E9B-45BC-BFED-0AAD50938AF0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390825
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: ServerManager
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -41,4 +42,5 @@ Installs one or more roles, role services, or features on either the local or a 
 
 ### [Uninstall-WindowsFeature](./Uninstall-WindowsFeature.md)
 Uninstalls specified Windows Server roles, role services, and features from a computer that is running Windows Server 2012 R2.
+
 

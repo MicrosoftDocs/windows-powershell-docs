@@ -9460,6 +9460,36 @@
 "source_path": "docset/windows/server-core/get-displayresolution.md",
 "redirect_url": "/itpro/powershell/windows/servercore/get-displayresolution",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/index.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/servermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/disable-servermanagerstandarduserremoting.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/disable-servermanagerstandarduserremoting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/enable-servermanagerstandarduserremoting.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/enable-servermanagerstandarduserremoting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/get-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/get-windowsfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/install-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/install-windowsfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/uninstall-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/uninstall-windowsfeature",
+"redirect_document_id": true
 }
 ]
 }

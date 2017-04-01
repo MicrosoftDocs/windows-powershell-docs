@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetTCPIP
 Module Guid: 2D0B6C7F-16A0-4185-843F-AE47B6DB4551
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390802
-Help Version: 5.0.4.0
+Help Version: 5.0.4.1
+Locale: en-US
 title: NetTCPIP
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -124,4 +125,5 @@ Modifies UDP settings.
 
 ### [Test-NetConnection](./Test-NetConnection.md)
 Displays diagnostic information for a connection.
+
 

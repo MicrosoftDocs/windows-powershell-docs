@@ -10115,6 +10115,181 @@
 "source_path": "docset/windows/sync-share/set-syncshare.md",
 "redirect_url": "/itpro/powershell/windows/syncshare/set-syncshare",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/index.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/nettcpip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/find-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/find-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netcompartment.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netcompartment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipinterface.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipv4protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipv4protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipv6protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipv6protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netoffloadglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netoffloadglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netprefixpolicy.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netprefixpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettcpconnection.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettcpconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettcpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettcpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netudpendpoint.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netudpendpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netudpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netudpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netrouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipinterface.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipv4protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipv4protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipv6protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipv6protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netoffloadglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netoffloadglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-nettcpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-nettcpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netudpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netudpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/test-netconnection.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/test-netconnection",
+"redirect_document_id": true
 }
 ]
 }

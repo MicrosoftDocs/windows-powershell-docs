@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: StartLayout
 Module Guid: C361139B-C043-44A9-B94F-513FBAF1AF0D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390831
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: StartLayout
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -31,4 +32,5 @@ Gets the names and AppIDs of installed apps.
 
 ### [Import-StartLayout](./Import-StartLayout.md)
 Imports the layout of the Start into a mounted Windows image.
+
 

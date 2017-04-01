@@ -115,7 +115,7 @@ The table below also shows the latest published version of the Help for each mod
 | SmbWitness | [SMB Witness](smbwitness/smbwitness.md) |
 | SMISConfig | [SMIS Config](smisconfig/smisconfig.md) |
 | SoftwareInventoryLogging | [Software Inventory Logging](softwareinventorylogging/softwareinventorylogging.md) |
-| StartLayout | [Start Layout](start-layout/index.md) |
+| StartLayout | [Start Layout](startlayout/startlayout.md) |
 | Storage | [Storage](storage/index.md) |
 | StorageQoS | [Storage QoS](storage-qos/index.md) |
 | StorageReplica | [Storage Replica](storage-replica/index.md) |

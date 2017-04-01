@@ -9896,5 +9896,10 @@
 "redirect_url": "/itpro/powershell/windows/startlayout/import-startlayout",
 "redirect_document_id": true
 },
+{
+"source_path": "docset/windows/storage/index.md",
+"redirect_url": "/itpro/powershell/windows/storage/storage",
+"redirect_document_id": true
+},
 ]
 }

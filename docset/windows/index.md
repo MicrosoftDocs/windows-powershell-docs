@@ -109,7 +109,7 @@ The table below also shows the latest published version of the Help for each mod
 | ServerManager | [Server Manager](servermanager/servermanager.md) |
 | ServerManagerTasks | [Server Manager tasks](servermanagertasks/servermanagertasks.md) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
-| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shielded-virtual-machines/provisioning/index.md) |
+| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shieldedvmprovisioning/shieldedvmprovisioning.md) |
 | ShieldedVMTemplate | [Shielded Virtual Machine template](shielded-virtual-machines/template/index.md) |
 | SmbShare | [SmbShare share](smb/share/index.md) |
 | SmbWitness | [SMB Witness](smb/witness/index.md) |

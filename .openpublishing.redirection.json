@@ -9550,6 +9550,61 @@
 "source_path": "docset/windows/server-manager-tasks/stop-smperformancecollector.md",
 "redirect_url": "/itpro/powershell/windows/servermanagertasks/stop-smperformancecollector",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/shieldedvmdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/import-shieldingdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/import-shieldingdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/new-volumeidqualifier.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/new-volumeidqualifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/shieldedvmprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/get-keyprotectorfromshieldingdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/get-keyprotectorfromshieldingdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/initialize-shieldedvm.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/initialize-shieldedvm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/new-shieldedvmspecializationdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/new-shieldedvmspecializationdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/test-shieldingdataapplicability.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/test-shieldingdataapplicability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/shieldedvmtemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/initialize-vmshieldinghelpervhd.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/initialize-vmshieldinghelpervhd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/protect-templatedisk.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/protect-templatedisk",
+"redirect_document_id": true
 }
 ]
 }

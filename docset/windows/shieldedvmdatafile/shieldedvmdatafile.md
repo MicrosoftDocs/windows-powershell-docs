@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ShieldedVMDataFile
 Module Guid: 9E8B69B3-2CC7-4060-8D66-6F86BE39FEBF
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524081
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: ShieldedVMDataFile
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -28,5 +29,6 @@ Imports shielding data.
 
 ### [New-VolumeIDQualifier](./New-VolumeIDQualifier.md)
 Creates a volume ID qualifier.
+
 
 

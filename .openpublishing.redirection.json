@@ -9901,5 +9901,50 @@
 "redirect_url": "/itpro/powershell/windows/storage/storage",
 "redirect_document_id": true
 },
+{
+"source_path": "docset/windows/storage-qos/index.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/storageqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqosflow.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqosflow",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqospolicystore.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqospolicystore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqosvolume.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqosvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/new-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/new-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/remove-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/remove-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/set-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/set-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/set-storageqospolicystore.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/set-storageqospolicystore",
+"redirect_document_id": true
+}
 ]
 }

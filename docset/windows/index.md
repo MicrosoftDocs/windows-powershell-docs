@@ -117,7 +117,7 @@ The table below also shows the latest published version of the Help for each mod
 | SoftwareInventoryLogging | [Software Inventory Logging](softwareinventorylogging/softwareinventorylogging.md) |
 | StartLayout | [Start Layout](startlayout/startlayout.md) |
 | Storage | [Storage](storage/storage.md) |
-| StorageQoS | [Storage QoS](storage-qos/index.md) |
+| StorageQoS | [Storage QoS](storageqos/storageqos.md) |
 | StorageReplica | [Storage Replica](storage-replica/index.md) |
 | SyncShare | [Sync Share](sync-share/index.md) |
 | TLS | [TLS](tls/index.md) |

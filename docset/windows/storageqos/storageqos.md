@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: StorageQoS
 Module Guid: 18CD46DA-E6A6-47F6-84B3-D4EDD6E3ECCF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216367
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: StorageQoS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -46,4 +47,5 @@ Modifies an existing Storage QoS policy.
 
 ### [Set-StorageQosPolicyStore](./Set-StorageQosPolicyStore.md)
 Sets the fields on the policy store object.
+
 

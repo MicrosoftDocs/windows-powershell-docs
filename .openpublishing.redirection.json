@@ -9490,6 +9490,66 @@
 "source_path": "docset/windows/server-manager/uninstall-windowsfeature.md",
 "redirect_url": "/itpro/powershell/windows/servermanager/uninstall-windowsfeature",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/index.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/servermanagertasks",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smcountersample.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smcountersample",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smperformancecollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverbparesult.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverbparesult",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverclustername.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverclustername",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverevent.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverservice.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/remove-smserverperformancelog.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/remove-smserverperformancelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/start-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/start-smperformancecollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/stop-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/stop-smperformancecollector",
+"redirect_document_id": true
 }
 ]
 }

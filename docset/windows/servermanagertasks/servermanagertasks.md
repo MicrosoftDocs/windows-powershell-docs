@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: ServerManagerTasks
 Module Guid: BF4656AC-2663-4636-8B38-7D78FD587D0B
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390826
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: ServerManagerTasks
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -55,4 +56,5 @@ Starts a data collector set.
 
 ### [Stop-SMPerformanceCollector](./Stop-SMPerformanceCollector.md)
 Stops a data collector set.
+
 

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: SmbWitness
 Module Guid: EF018256-3318-4E74-A823-158022778487
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390828
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: SmbWitness
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -28,4 +29,5 @@ Retrieves information about the SMB clients connected to the SMB witness servers
 
 ### [Move-SmbWitnessClient](./Move-SmbWitnessClient.md)
 Requests an SMB client to move the associated SMB connection to a specified cluster node.
+
 

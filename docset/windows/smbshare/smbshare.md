@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: SmbShare
 Module Guid: 3AF1699D-CC54-4E54-81CF-28D2DF5CCE0A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390827
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: SmbShare
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -127,4 +128,5 @@ Removes all of the deny ACEs for the trustee from the security descriptor of the
 
 ### [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
 Forces the SMB client to update the multi-channel-related information.
+
 

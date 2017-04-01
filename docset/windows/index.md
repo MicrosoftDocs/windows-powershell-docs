@@ -111,8 +111,8 @@ The table below also shows the latest published version of the Help for each mod
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
 | ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shieldedvmprovisioning/shieldedvmprovisioning.md) |
 | ShieldedVMTemplate | [Shielded Virtual Machine template](shieldedvmtemplate/shieldedvmtemplate.md) |
-| SmbShare | [SmbShare share](smb/share/index.md) |
-| SmbWitness | [SMB Witness](smb/witness/index.md) |
+| SmbShare | [SmbShare share](smbshare/smbshare.md) |
+| SmbWitness | [SMB Witness](smbwitness/smbwitness.md) |
 | SMISConfig | [SMIS Config](smis-config/index.md) |
 | SoftwareInventoryLogging | [Software Inventory Logging](softwareinventorylogging/softwareinventorylogging.md) |
 | StartLayout | [Start Layout](start-layout/index.md) |

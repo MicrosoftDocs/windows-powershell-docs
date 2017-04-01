@@ -9661,5 +9661,200 @@
 "redirect_url": "/itpro/powershell/windows/softwareinventorylogging/stop-sillogging",
 "redirect_document_id": true
 },
+{
+"source_path": "docset/windows/smb/share/index.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/block-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/block-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/close-smbopenfile.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/close-smbopenfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/close-smbsession.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/close-smbsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/disable-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/disable-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/enable-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/enable-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbclientnetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbclientnetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmultichannelconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmultichannelconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbopenfile.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbopenfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbservernetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbservernetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbsession.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/grant-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/grant-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/revoke-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/revoke-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbpathacl.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbpathacl",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/unblock-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/unblock-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/update-smbmultichannelconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/update-smbmultichannelconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/index.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/smbwitness",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/get-smbwitnessclient.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/get-smbwitnessclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/move-smbwitnessclient.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/move-smbwitnessclient",
+"redirect_document_id": true
+}
 ]
 }

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: SyncShare
 Module Guid: 5CE60F84-4560-40A6-AB86-62E7F8BA89D1
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390835
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: SyncShare
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -52,4 +53,5 @@ Modifies settings of the Sync Share.
 
 ### [Set-SyncShare](./Set-SyncShare.md)
 Modifies the settings for a Sync Share.
+
 

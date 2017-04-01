@@ -119,7 +119,7 @@ The table below also shows the latest published version of the Help for each mod
 | Storage | [Storage](storage/storage.md) |
 | StorageQoS | [Storage QoS](storageqos/storageqos.md) |
 | StorageReplica | [Storage Replica](storagereplica/storagereplica.md) |
-| SyncShare | [Sync Share](sync-share/index.md) |
+| SyncShare | [Sync Share](syncshare/syncshare.md) |
 | TLS | [TLS](tls/index.md) |
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
 | TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |

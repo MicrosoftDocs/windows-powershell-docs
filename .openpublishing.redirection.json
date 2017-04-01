@@ -10060,6 +10060,61 @@
 "source_path": "docset/windows/storage-replica/test-srtopology.md",
 "redirect_url": "/itpro/powershell/windows/storagereplica/test-srtopology",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/index.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/disable-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/disable-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/enable-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/enable-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncserversetting.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncuserstatus.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncuserstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/new-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/new-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/remove-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/remove-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/repair-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/repair-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/set-syncserversetting.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/set-syncserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/set-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/set-syncshare",
+"redirect_document_id": true
 }
 ]
 }

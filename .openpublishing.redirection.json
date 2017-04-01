@@ -9945,6 +9945,121 @@
 "source_path": "docset/windows/storage-qos/set-storageqospolicystore.md",
 "redirect_url": "/itpro/powershell/windows/storageqos/set-storageqospolicystore",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/index.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/storagereplica",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/clear-srmetadata.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/clear-srmetadata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/export-srconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/export-srconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/grant-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/grant-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/grant-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/grant-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/new-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/new-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/new-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/new-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/revoke-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/revoke-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/revoke-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/revoke-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/suspend-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/suspend-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/sync-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/sync-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/test-srtopology.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/test-srtopology",
+"redirect_document_id": true
 }
 ]
 }

@@ -118,7 +118,7 @@ The table below also shows the latest published version of the Help for each mod
 | StartLayout | [Start Layout](startlayout/startlayout.md) |
 | Storage | [Storage](storage/storage.md) |
 | StorageQoS | [Storage QoS](storageqos/storageqos.md) |
-| StorageReplica | [Storage Replica](storage-replica/index.md) |
+| StorageReplica | [Storage Replica](storagereplica/storagereplica.md) |
 | SyncShare | [Sync Share](sync-share/index.md) |
 | TLS | [TLS](tls/index.md) |
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |

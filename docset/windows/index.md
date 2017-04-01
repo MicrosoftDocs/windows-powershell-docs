@@ -110,11 +110,11 @@ The table below also shows the latest published version of the Help for each mod
 | ServerManagerTasks | [Server Manager tasks](servermanagertasks/servermanagertasks.md) |
 | ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
 | ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shieldedvmprovisioning/shieldedvmprovisioning.md) |
-| ShieldedVMTemplate | [Shielded Virtual Machine template](shielded-virtual-machines/template/index.md) |
+| ShieldedVMTemplate | [Shielded Virtual Machine template](shieldedvmtemplate/shieldedvmtemplate.md) |
 | SmbShare | [SmbShare share](smb/share/index.md) |
 | SmbWitness | [SMB Witness](smb/witness/index.md) |
 | SMISConfig | [SMIS Config](smis-config/index.md) |
-| SoftwareInventoryLogging | [Software Inventory Logging](sil/index.md) |
+| SoftwareInventoryLogging | [Software Inventory Logging](softwareinventorylogging/softwareinventorylogging.md) |
 | StartLayout | [Start Layout](start-layout/index.md) |
 | Storage | [Storage](storage/index.md) |
 | StorageQoS | [Storage QoS](storage-qos/index.md) |

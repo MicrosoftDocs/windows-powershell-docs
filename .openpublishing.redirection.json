@@ -9605,6 +9605,61 @@
 "source_path": "docset/windows/shielded-virtual-machines/template/protect-templatedisk.md",
 "redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/protect-templatedisk",
 "redirect_document_id": true
-}
+},
+{
+"source_path": "docset/windows/sil/index.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/softwareinventorylogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silcomputer.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silcomputer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-sildata.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-sildata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silsoftware.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silsoftware",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silualaccess.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silualaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silwindowsupdate.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silwindowsupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/publish-sildata.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/publish-sildata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/set-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/set-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/start-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/start-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/stop-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/stop-sillogging",
+"redirect_document_id": true
+},
 ]
 }

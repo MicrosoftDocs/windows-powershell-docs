@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: SoftwareInventoryLogging
 Module Guid: 421A5B89-0F16-4DF7-B607-FFFD66107510
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390830
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: SoftwareInventoryLogging
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -51,4 +52,5 @@ Starts Software Inventory Logging daily logging.
 
 ### [Stop-SilLogging](./Stop-SilLogging.md)
 Stops Software Inventory Logging daily logging.
+
 

@@ -129,5 +129,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SilData](./Get-SilData.md)
 
-[SIL_Cmdlets](./index.md)
+[SIL_Cmdlets](./softwareinventorylogging.md)
 

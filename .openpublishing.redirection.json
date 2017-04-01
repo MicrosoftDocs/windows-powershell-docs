@@ -9855,6 +9855,26 @@
 "source_path": "docset/windows/smb/witness/move-smbwitnessclient.md",
 "redirect_url": "/itpro/powershell/windows/smbwitness/move-smbwitnessclient",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/index.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/smisconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/register-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/register-smisprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/search-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/search-smisprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/unregister-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/unregister-smisprovider",
+"redirect_document_id": true
 }
 ]
 }

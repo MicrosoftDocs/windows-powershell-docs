@@ -10630,6 +10630,401 @@
 "source_path": "docset/windows/wer/get-windowserrorreporting.md",
 "redirect_url": "/itpro/powershell/windows/windowserrorreporting/get-windowserrorreporting",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/index.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/webadministration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/backup-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/backup-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webrequesttracingsetting.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webrequesttracingsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webrequesttracingsettings.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webrequesttracingsettings",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/convertto-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/convertto-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webrequesttracing.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webrequesttracing",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webrequesttracing.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webrequesttracing",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webappdomain.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webappdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webapppoolstate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webapppoolstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigfile.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationbackup.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webfilepath.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webfilepath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webitemstate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webitemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webrequest.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webrequest",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-websitestate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-websitestate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-weburl.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-weburl",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webapppool",
+"redirect_document_id": true
+}, 	
+{
+"source_path": "docset/windows/web-administration/new-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webftpsite.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webftpsite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationbackup.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/rename-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/rename-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restart-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restart-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restart-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restart-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restore-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restore-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/select-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/select-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webcentralcertprovidercredential.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webcentralcertprovidercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webcommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webcommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webcommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webcommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-website",
+"redirect_document_id": true
 }
 ]
 }

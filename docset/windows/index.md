@@ -129,7 +129,7 @@ The table below also shows the latest published version of the Help for each mod
 | VAMT | [Volume Activation Management Tool](vamt/vamt.md) |
 | VpnClient | [VPN client](vpnclient/vpnclient.md) |
 | WDAC | [Windows Data Access Components](wdac/index.md) |
-| WebAdministration | [Web Administration](web-administration/index.md) |
+| WebAdministration | [Web Administration](webadministration/webadministration.md) |
 | WebApplicationProxy | [Web Application Proxy](webapplicationproxy/webapplicationproxy.md) |
 | WDS | [Windows Deployment Services](wds/index.md) |
 | WHEA | [Windows Hardware Error Architecture](whea/index.md) |
@@ -139,5 +139,3 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |
 | WSUS | [Windows Server Update Services](wsus/index.md) |
 | WindowsUpdate | [Windows Update](windows-update/index.md) |
-
->>>>>>> windows

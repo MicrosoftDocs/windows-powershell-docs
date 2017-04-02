@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WindowsDevLic
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390849
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: WindowsDevLic
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -35,4 +36,5 @@ Provides information about how to enable a device for development.
 
 ### [Unregister-WindowsDeveloperLicense](./Unregister-WindowsDeveloperLicense.md)
 Disables Developer Mode on the current computer.
+
 

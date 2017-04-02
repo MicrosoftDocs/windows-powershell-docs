@@ -11027,8 +11027,28 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/web-whea/index.md",
+"source_path": "docset/windows/whea/index.md",
 "redirect_url": "/itpro/powershell/windows/whea/whea",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/index.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/windowsdevlic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/get-windowsdeveloperlicense.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/get-windowsdeveloperlicense",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/show-windowsdeveloperlicenseregistration.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/show-windowsdeveloperlicenseregistration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/unregister-windowsdeveloperlicense.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/unregister-windowsdeveloperlicense",
 "redirect_document_id": true
 }
 ]

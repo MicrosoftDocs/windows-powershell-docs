@@ -11025,6 +11025,11 @@
 "source_path": "docset/windows/web-administration/stop-website.md",
 "redirect_url": "/itpro/powershell/windows/webadministration/stop-website",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-whea/index.md",
+"redirect_url": "/itpro/powershell/windows/whea/whea",
+"redirect_document_id": true
 }
 ]
 }

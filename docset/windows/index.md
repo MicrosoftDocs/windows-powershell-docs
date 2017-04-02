@@ -132,7 +132,7 @@ The table below also shows the latest published version of the Help for each mod
 | WebAdministration | [Web Administration](webadministration/webadministration.md) |
 | WebApplicationProxy | [Web Application Proxy](webapplicationproxy/webapplicationproxy.md) |
 | WDS | [Windows Deployment Services](wds/index.md) |
-| WHEA | [Windows Hardware Error Architecture](whea/index.md) |
+| WHEA | [Windows Hardware Error Architecture](whea/whea.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
 | WindowsErrorReporting | [Windows Error Reporting](windowserrorreporting/windowserrorreporting.md) |
 | WindowsSearch | [Windows Search](windows-search/index.md) |

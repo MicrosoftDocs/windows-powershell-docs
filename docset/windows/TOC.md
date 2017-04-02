@@ -3276,7 +3276,7 @@
 ### [Disable-WindowsErrorReporting](windowserrorreporting/disable-windowserrorreporting.md)
 ### [Enable-WindowsErrorReporting](windowserrorreporting/enable-windowserrorreporting.md)
 ### [Get-WindowsErrorReporting](windowserrorreporting/get-windowserrorreporting.md)
-## [Windows Hardware Error Architecture](whea/index.md)
+## [Windows Hardware Error Architecture](whea/whea.md)
 ### [Get-WheaMemoryPolicy](whea/get-wheamemorypolicy.md)
 ### [Set-WheaMemoryPolicy](whea/set-wheamemorypolicy.md)
 ## [Windows Search](windows-search/index.md)

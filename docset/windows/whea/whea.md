@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WHEA
 Module Guid: B7BF4D74-F837-430E-810F-234F26021253
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390848
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: WHEA
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -28,4 +29,5 @@ Gets the WHEA memory policies for a computer.
 
 ### [Set-WheaMemoryPolicy](./Set-WheaMemoryPolicy.md)
 Sets the WHEA memory policy for a computer.
+
 

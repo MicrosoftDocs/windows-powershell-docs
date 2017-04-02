@@ -3208,7 +3208,7 @@
 ### [Stop-WebCommitDelay](webadministration/stop-webcommitdelay.md)
 ### [Stop-WebItem](webadministration/stop-webitem.md)
 ### [Stop-Website](webadministration/stop-website.md)
-## [Windows Data Access Components](wdac/index.md)
+## [Windows Data Access Components](wdac/wdac.md)
 ### [Add-OdbcDsn](wdac/add-odbcdsn.md)
 ### [Disable-OdbcPerfCounter](wdac/disable-odbcperfcounter.md)
 ### [Disable-WdacBidTrace](wdac/disable-wdacbidtrace.md)

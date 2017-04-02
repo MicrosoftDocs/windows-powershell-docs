@@ -86,10 +86,10 @@ The table below also shows the latest published version of the Help for each mod
 | NetSecurity | [Network security](netsecurity/netsecurity.md) |
 | NetTCPIP | [TCP/IP](nettcpip/nettcpip.md) |
 | NetWNV | [Network Virtualization](netwnv/netwnv.md) |
-| NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
+| NetworkConnectivityStatus | [Network connectivity status](networkconnectivitystatus/networkconnectivitystatus.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
-| NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
+| NetworkLoadBalancingClusters | [Network Load Balancing Clusters](networkloadbalancingclusters/networkloadbalancingclusters.md) |
 | NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
 | NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |
 | NetworkTransition | [Network Transition](networktransition/networktransition.md) |
@@ -128,7 +128,7 @@ The table below also shows the latest published version of the Help for each mod
 | UEV | [User Experience Virtualization](uev/uev.md) |
 | VAMT | [Volume Activation Management Tool](vamt/vamt.md) |
 | VpnClient | [VPN client](vpnclient/vpnclient.md) |
-| WDAC | [Windows Data Access Components](wdac/index.md) |
+| WDAC | [Windows Data Access Components](wdac/wdac.md) |
 | WebAdministration | [Web Administration](webadministration/webadministration.md) |
 | WebApplicationProxy | [Web Application Proxy](webapplicationproxy/webapplicationproxy.md) |
 | WDS | [Windows Deployment Services](wds/index.md) |

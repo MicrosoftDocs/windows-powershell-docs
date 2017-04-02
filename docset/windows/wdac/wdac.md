@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: Wdac
 Module Guid: 78A7A38C-A446-43FE-B643-9ABACF843112
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390844
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: Wdac
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -58,4 +59,5 @@ Configures the properties for installed ODBC drivers.
 
 ### [Set-OdbcDsn](./Set-OdbcDsn.md)
 Configures properties for existing ODBC DSNs.
+
 

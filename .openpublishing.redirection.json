@@ -11340,6 +11340,11 @@
 "source_path": "docset/windows/ncsi/set-ncsipolicyconfiguration.md",
 "redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/set-ncsipolicyconfiguration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wdac/index.md",
+"redirect_url": "/itpro/powershell/windows/wdac/wdac",
+"redirect_document_id": true
 }
 ]
 }

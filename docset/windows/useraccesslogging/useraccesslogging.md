@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: UserAccessLogging
 Module Guid: E507509A-EB81-4AF2-A141-B50CB24000F0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390840
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: UserAccessLogging
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -64,4 +65,5 @@ Gets information that can uniquely identify a server.
 
 ### [Get-UalUserAccess](./Get-UalUserAccess.md)
 Gets UAL records of client requests per user.
+
 

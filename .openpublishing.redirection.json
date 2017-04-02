@@ -10295,6 +10295,136 @@
 "source_path": "docset/windows/tls/index.md",
 "redirect_url": "/itpro/powershell/windows/tls/tls",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/clear-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/clear-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/convertto-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/convertto-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/disable-tpmautoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/disable-tpmautoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/enable-tpmautoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/enable-tpmautoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpmendorsementkeyinfo.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpmendorsementkeyinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpmsupportedfeature.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpmsupportedfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/import-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/import-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/initialize-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/initialize-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/set-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/set-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/unblock-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/unblock-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/index.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/useraccesslogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/disable-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/disable-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/enable-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/enable-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailyaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailyaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailydeviceaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailydeviceaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailyuseraccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailyuseraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdeviceaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdeviceaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdns.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdns",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualhyperv.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualhyperv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualoverview.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualoverview",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualserverdevice.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualserverdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualserveruser.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualserveruser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualsystemid.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualsystemid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualuseraccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualuseraccess",
+"redirect_document_id": true
 }
 ]
 }

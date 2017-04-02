@@ -80,11 +80,11 @@ The table below also shows the latest published version of the Help for each mod
 | NetAdapter | [Network Adapter](netadapter/netadapter.md) |
 | NetConnection | [Network connection](netconnection/netconnection.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](neteventpacketcapture/neteventpacketcapture.md) |
-| NetLbfo | [NIC Teaming](nic-teaming/index.md) |
+| NetLbfo | [NIC Teaming](netlbfo/netlbfo.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |
 | NetQoS | [Quality of Service](netqos/netqos.md) |
 | NetSecurity | [Network security](netsecurity/netsecurity.md) |
-| NetTCPIP | [TCP/IP](tcpip/index.md) |
+| NetTCPIP | [TCP/IP](nettcpip/nettcpip.md) |
 | NetWNV | [Network Virtualization](netwnv/netwnv.md) |
 | NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |

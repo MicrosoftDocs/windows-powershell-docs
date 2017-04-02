@@ -11312,8 +11312,33 @@
 "redirect_document_id": true
 },
 {
-"source_path": "docset/windows/wsus/wsus.md",
+"source_path": "docset/windows/wsus/index.md",
 "redirect_url": "/itpro/powershell/windows/wsus/wsus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/index.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/networkconnectivitystatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/get-daconnectionstatus.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/get-daconnectionstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/get-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/get-ncsipolicyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/reset-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/reset-ncsipolicyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/set-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/set-ncsipolicyconfiguration",
 "redirect_document_id": true
 }
 ]

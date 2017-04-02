@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: NetworkConnectivityStatus
 Module Guid: 6C9A449B-B0C6-4386-B139-EE0A55638803
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390804
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: NetworkConnectivityStatus
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -34,4 +35,5 @@ Resets a configuration for NCSI.
 
 ### [Set-NCSIPolicyConfiguration](./Set-NCSIPolicyConfiguration.md)
 Specifies the policy store from which the cmdlet should pull configuration information.
+
 

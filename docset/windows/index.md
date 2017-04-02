@@ -125,7 +125,7 @@ The table below also shows the latest published version of the Help for each mod
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
 | TrustedPlatformModule | [Trusted Platform Module](trustedplatformmodule/trustedplatformmodule.md) |
 | UserAccessLogging | [User Access Logging](useraccesslogging/useraccesslogging.md) |
-| UEV | [User Experience Virtualization](uev/index.md) |
+| UEV | [User Experience Virtualization](uev/uev.md) |
 | VAMT | [Volume Activation Management Tool](vamt/vamt.md) |
 | VpnClient | [VPN client](vpn-client/index.md) |
 | WDAC | [Windows Data Access Components](wdac/index.md) |

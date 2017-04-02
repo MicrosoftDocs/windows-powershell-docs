@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: UEV
 Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=826061
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: UEV
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -97,4 +98,5 @@ Unregisters a settings location template from Microsoft User Experience Virtuali
 
 ### [Update-UevTemplate](./Update-UevTemplate.md)
 Updates settings location templates in UE-V.
+
 

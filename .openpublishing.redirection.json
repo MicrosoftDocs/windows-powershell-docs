@@ -10430,6 +10430,11 @@
 "source_path": "docset/windows/vamt/index.md",
 "redirect_url": "/itpro/powershell/windows/vamt/vamt",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/uev/index.md",
+"redirect_url": "/itpro/powershell/windows/uev/uev",
+"redirect_document_id": true
 }
 ]
 }

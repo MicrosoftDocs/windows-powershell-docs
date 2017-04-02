@@ -10545,6 +10545,71 @@
 "source_path": "docset/windows/vpn-client/set-vpnconnectiontriggertrustednetwork.md",
 "redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectiontriggertrustednetwork",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/index.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/webapplicationproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/add-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/add-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyavailableadfsrelyingparty.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyavailableadfsrelyingparty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyhealth.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyhealth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxysslcertificate.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxysslcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/install-webapplicationproxy.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/install-webapplicationproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/remove-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/remove-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxysslcertificate.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxysslcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/update-webapplicationproxydeviceregistration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/update-webapplicationproxydeviceregistration",
+"redirect_document_id": true
 }
 ]
 }

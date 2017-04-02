@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WebApplicationProxy
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390847
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: WebApplicationProxy
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -58,4 +59,5 @@ Installs an SSL certificate for a federation server proxy.
 
 ### [Update-WebApplicationProxyDeviceRegistration](./Update-WebApplicationProxyDeviceRegistration.md)
 Configures the AD FS SSL endpoint listeners that correspond to the UPN suffixes.
+
 

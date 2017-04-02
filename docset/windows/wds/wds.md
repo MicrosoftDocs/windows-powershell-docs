@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: WDS
 Module Guid: 95B28FD4-92C3-41E8-B338-2DF356BA9ECA
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=280236
-Help Version: 4.0.3.0
+Help Version: 4.0.3.1
 Locale: en-US
 title: WDS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -122,4 +122,5 @@ Modifies the properties of an install image.
 
 ### [Set-WdsInstallImageGroup](./Set-WdsInstallImageGroup.md)
 Modifies the name and access permissions of an install image group.
+
 

@@ -11050,6 +11050,21 @@
 "source_path": "docset/windows/windows-developer-license/unregister-windowsdeveloperlicense.md",
 "redirect_url": "/itpro/powershell/windows/windowsdevlic/unregister-windowsdeveloperlicense",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/index.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/windowssearch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/get-windowssearchsetting.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/get-windowssearchsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/set-windowssearchsetting.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/set-windowssearchsetting",
+"redirect_document_id": true
 }
 ]
 }

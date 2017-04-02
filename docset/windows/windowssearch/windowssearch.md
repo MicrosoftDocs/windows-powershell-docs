@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WindowsSearch
 Module Guid: 562C6233-EAEE-4876-B36C-D6B1F256D4E6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390852
-Help Version: 5.0.1.0
+Help Version: 5.0.1.1
+Locale: en-US
 title: WindowsSearch
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -30,4 +31,5 @@ Gets the values of settings for Windows Search.
 
 ### [Set-WindowsSearchSetting](./Set-WindowsSearchSetting.md)
 Modifies values that control Windows Search.
+
 

@@ -34,7 +34,7 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker](bitlocker/bitlocker.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bitstransfer/bitstransfer.md) |
 | BootEventCollector | [Boot Event Collector](booteventcollector/booteventcollector.md) |
-| BranchCahe | [Branch Cache](branch-cache/index.md) |
+| BranchCahe | [Branch Cache](branchcache/branchcache.md) |
 | CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
 | ConfigCI | [Code Integrity](configci/configci.md) |
@@ -108,7 +108,7 @@ The table below also shows the latest published version of the Help for each mod
 | ServerCore | [Server Core](servercore/servercore.md) |
 | ServerManager | [Server Manager](servermanager/servermanager.md) |
 | ServerManagerTasks | [Server Manager tasks](servermanagertasks/servermanagertasks.md) |
-| ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
+| ShieldedVMDataFile | [Shielded Virtual Machine data file](shieldedvmdatafile/shieldedvmdatafile.md) |
 | ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shieldedvmprovisioning/shieldedvmprovisioning.md) |
 | ShieldedVMTemplate | [Shielded Virtual Machine template](shieldedvmtemplate/shieldedvmtemplate.md) |
 | SmbShare | [SmbShare share](smbshare/smbshare.md) |
@@ -136,6 +136,6 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsDevLic | [Windows Developer License](windowsdevlic/windowsdevlic.md) |
 | WindowsErrorReporting | [Windows Error Reporting](windowserrorreporting/windowserrorreporting.md) |
 | WindowsSearch | [Windows Search](windowssearch/windowssearch.md) |
-| WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |
+| WindowsServerBackup | [Windows Server Backup](windowsserverbackup/windowsserverbackup.md) |
 | WSUS | [Windows Server Update Services](wsus/wsus.md) |
 | WindowsUpdate | [Windows Update](windowsupdate/windowsupdate.md) |

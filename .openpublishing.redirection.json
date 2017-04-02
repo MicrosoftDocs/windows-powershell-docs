@@ -11310,6 +11310,11 @@
 "source_path": "docset/windows/windows-update/get-windowsupdatelog.md",
 "redirect_url": "/itpro/powershell/windows/windowssupdate/get-windowsupdatelog",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wsus/wsus.md",
+"redirect_url": "/itpro/powershell/windows/wsus/wsus",
+"redirect_document_id": true
 }
 ]
 }

@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WSUS
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390839
-Help Version: 5.0.2.0
+Help Version: 5.0.2.1
+Locale: en-US
 title: WSUS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -70,4 +71,5 @@ Sets whether the product representing the category of updates to synchronize is 
 
 ### [Set-WsusServerSynchronization](./Set-WsusServerSynchronization.md)
 Sets whether the WSUS server synchronizes from Microsoft Update or an upstream server.
+
 

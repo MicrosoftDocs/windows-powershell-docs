@@ -3330,7 +3330,7 @@
 ### [Start-WBSystemStateRecovery](windowsserverbackup/start-wbsystemstaterecovery.md)
 ### [Start-WBVolumeRecovery](windowsserverbackup/start-wbvolumerecovery.md)
 ### [Stop-WBJob](windowsserverbackup/stop-wbjob.md)
-## [Windows Server Update Services](wsus/index.md)
+## [Windows Server Update Services](wsus/wsus.md)
 ### [Add-WsusComputer](wsus/add-wsuscomputer.md)
 ### [Add-WsusDynamicCategory](wsus/add-wsusdynamiccategory.md)
 ### [Approve-WsusUpdate](wsus/approve-wsusupdate.md)

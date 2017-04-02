@@ -11305,6 +11305,11 @@
 "source_path": "docset/windows/windows-server-backup/stop-wbjob.md",
 "redirect_url": "/itpro/powershell/windows/windowsserverbackup/stop-wbjob",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-update/get-windowsupdatelog.md",
+"redirect_url": "/itpro/powershell/windows/windowssupdate/get-windowsupdatelog",
+"redirect_document_id": true
 }
 ]
 }

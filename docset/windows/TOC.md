@@ -3347,6 +3347,6 @@
 ### [Set-WsusDynamicCategory](wsus/set-wsusdynamiccategory.md)
 ### [Set-WsusProduct](wsus/set-wsusproduct.md)
 ### [Set-WsusServerSynchronization](wsus/set-wsusserversynchronization.md)
-## [Windows Update](windows-update/index.md)
-### [Get-WindowsUpdateLog](windows-update/get-windowsupdatelog.md)
+## [Windows Update](windowsupdate/windowsupdate.md)
+### [Get-WindowsUpdateLog](windowsupdate/get-windowsupdatelog.md)
 

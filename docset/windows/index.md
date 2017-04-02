@@ -138,4 +138,4 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsSearch | [Windows Search](windowssearch/windowssearch.md) |
 | WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |
 | WSUS | [Windows Server Update Services](wsus/index.md) |
-| WindowsUpdate | [Windows Update](windows-update/index.md) |
+| WindowsUpdate | [Windows Update](windowsupdate/windowsupdate.md) |

@@ -3234,7 +3234,7 @@
 ### [Start-MpScan](defender/start-mpscan.md)
 ### [Start-MpWDOScan](defender/start-mpwdoscan.md)
 ### [Update-MpSignature](defender/update-mpsignature.md)
-## [Windows Deployment Services](wds/index.md)
+## [Windows Deployment Services](wds/wds.md)
 ### [Add-WdsDriverPackage](wds/add-wdsdriverpackage.md)
 ### [Approve-WdsClient](wds/approve-wdsclient.md)
 ### [Copy-WdsInstallImage](wds/copy-wdsinstallimage.md)

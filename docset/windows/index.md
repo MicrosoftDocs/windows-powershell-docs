@@ -131,7 +131,7 @@ The table below also shows the latest published version of the Help for each mod
 | WDAC | [Windows Data Access Components](wdac/wdac.md) |
 | WebAdministration | [Web Administration](webadministration/webadministration.md) |
 | WebApplicationProxy | [Web Application Proxy](webapplicationproxy/webapplicationproxy.md) |
-| WDS | [Windows Deployment Services](wds/index.md) |
+| WDS | [Windows Deployment Services](wds/wds.md) |
 | WHEA | [Windows Hardware Error Architecture](whea/whea.md) |
 | WindowsDevLic | [Windows Developer License](windowsdevlic/windowsdevlic.md) |
 | WindowsErrorReporting | [Windows Error Reporting](windowserrorreporting/windowserrorreporting.md) |

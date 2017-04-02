@@ -11345,6 +11345,11 @@
 "source_path": "docset/windows/wdac/index.md",
 "redirect_url": "/itpro/powershell/windows/wdac/wdac",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wds/index.md",
+"redirect_url": "/itpro/powershell/windows/wds/wds",
+"redirect_document_id": true
 }
 ]
 }

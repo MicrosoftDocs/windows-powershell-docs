@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WindowsServerBackup
 Module Guid: D27A5D7A-8B1D-4B0A-809D-65EF33EE2F2D
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285580
-Help Version: 4.0.4.0
+Help Version: 4.0.4.1
+Locale: en-US
 title: WindowsServerBackup
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -163,4 +164,5 @@ Starts a volume recovery operation.
 
 ### [Stop-WBJob](./Stop-WBJob.md)
 Stops the current backup or recovery job.
+
 

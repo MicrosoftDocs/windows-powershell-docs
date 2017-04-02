@@ -11065,6 +11065,246 @@
 "source_path": "docset/windows/windows-search/set-windowssearchsetting.md",
 "redirect_url": "/itpro/powershell/windows/windowssearch/set-windowssearchsetting",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/index.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/windowsserverbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackupset.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackupvolumebrowsepath.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackupvolumebrowsepath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbdisk.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbjob.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbperformanceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbperformanceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbschedule.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbsummary.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbsummary",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvssbackupoption.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvssbackupoption",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbackupset.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbackupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbcatalog.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbcatalog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/restore-wbcatalog.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/restore-wbcatalog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/resume-wbbackup.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/resume-wbbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/resume-wbvolumerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/resume-wbvolumerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbperformanceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbperformanceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbschedule.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbvssbackupoption.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbvssbackupoption",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbapplicationrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbapplicationrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbbackup.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbfilerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbfilerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbhypervrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbhypervrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbsystemstaterecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbsystemstaterecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbvolumerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbvolumerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/stop-wbjob.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/stop-wbjob",
+"redirect_document_id": true
 }
 ]
 }

@@ -10610,6 +10610,26 @@
 "source_path": "docset/windows/wap/update-webapplicationproxydeviceregistration.md",
 "redirect_url": "/itpro/powershell/windows/webapplicationproxy/update-webapplicationproxydeviceregistration",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/index.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/disable-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/disable-windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/enable-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/enable-windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/get-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/get-windowserrorreporting",
+"redirect_document_id": true
 }
 ]
 }

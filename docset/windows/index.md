@@ -134,7 +134,7 @@ The table below also shows the latest published version of the Help for each mod
 | WDS | [Windows Deployment Services](wds/index.md) |
 | WHEA | [Windows Hardware Error Architecture](whea/index.md) |
 | WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
-| WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |
+| WindowsErrorReporting | [Windows Error Reporting](windowserrorreporting/windowserrorreporting.md) |
 | WindowsSearch | [Windows Search](windows-search/index.md) |
 | WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |
 | WSUS | [Windows Server Update Services](wsus/index.md) |

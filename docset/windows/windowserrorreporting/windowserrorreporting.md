@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: WindowsErrorReporting
 Module Guid: 4BC4DED7-249B-41AC-973F-83AF4D25D82B
 Download Help Link: na
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: WindowsErrorReporting
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -31,4 +32,5 @@ Enables Windows Error Reporting.
 
 ### [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
 Retrieves the Windows Error Reporting status.
+
 

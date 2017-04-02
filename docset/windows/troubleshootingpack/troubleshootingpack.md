@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: TroubleshootingPack
 Module Guid: D6FDB0D8-2B0F-406B-AFC6-68F60569EBDF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390837
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: TroubleshootingPack
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -28,4 +29,5 @@ Gets a troubleshooting pack or generates an answer file.
 
 ### [Invoke-TroubleshootingPack](./Invoke-TroubleshootingPack.md)
 Runs a troubleshooting pack.
+
 

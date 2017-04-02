@@ -122,7 +122,7 @@ The table below also shows the latest published version of the Help for each mod
 | SyncShare | [Sync Share](syncshare/syncshare.md) |
 | TCPIP | [TCPIP](nettcpip/nettcpip.md)
 | TLS | [TLS](tls/tls.md) |
-| TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
+| TroubleshootingPack | [Troubleshooting Pack](troubleshootingpack/troubleshootingpack.md) |
 | TrustedPlatformModule | [Trusted Platform Module](trustedplatformmodule/trustedplatformmodule.md) |
 | UserAccessLogging | [User Access Logging](useraccesslogging/useraccesslogging.md) |
 | UEV | [User Experience Virtualization](uev/uev.md) |

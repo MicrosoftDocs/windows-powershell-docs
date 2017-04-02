@@ -10450,6 +10450,101 @@
 "source_path": "docset/windows/troubleshooting-pack/invoke-troubleshootingpack.md",
 "redirect_url": "/itpro/powershell/windows/troubleshootingpack/invoke-troubleshootingpack",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/index.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/vpnclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectionroute.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectionroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectiontriggerapplication.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectiontriggerapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/get-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/get-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/get-vpnconnectiontrigger.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/get-vpnconnectiontrigger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/new-eapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/new-eapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/new-vpnserveraddress.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/new-vpnserveraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectionroute.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectionroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggerapplication.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggerapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggertrustednetwork.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggertrustednetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectionipsecconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectionipsecconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectionproxy.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectionproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectiontriggertrustednetwork.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectiontriggertrustednetwork",
+"redirect_document_id": true
 }
 ]
 }

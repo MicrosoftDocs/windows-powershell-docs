@@ -127,7 +127,7 @@ The table below also shows the latest published version of the Help for each mod
 | UserAccessLogging | [User Access Logging](useraccesslogging/useraccesslogging.md) |
 | UEV | [User Experience Virtualization](uev/uev.md) |
 | VAMT | [Volume Activation Management Tool](vamt/vamt.md) |
-| VpnClient | [VPN client](vpn-client/index.md) |
+| VpnClient | [VPN client](vpnclient/vpnclient.md) |
 | WDAC | [Windows Data Access Components](wdac/index.md) |
 | WebAdministration | [Web Administration](web-administration/index.md) |
 | WebApplicationProxy | [Web Application Proxy](wap/index.md) |

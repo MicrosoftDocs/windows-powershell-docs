@@ -5,7 +5,7 @@ ms.author: brianlic
 Module Name: TLS
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390836
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
 Locale: en-US
 title: TLS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -44,4 +44,5 @@ Gets the list of cipher suites for TLS for a computer.
 
 ### [New-TlsSessionTicketKey](./New-TlsSessionTicketKey.md)
 Creates a TLS session ticket key configuration file.
+
 

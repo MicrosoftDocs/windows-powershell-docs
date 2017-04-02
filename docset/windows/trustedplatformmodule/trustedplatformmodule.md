@@ -5,7 +5,8 @@ ms.author: brianlic
 Module Name: TrustedPlatformModule
 Module Guid: 17FC1F02-CFF3-45FB-AC4F-126594C70B1E
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390838
-Help Version: 5.0.0.0
+Help Version: 5.0.0.1
+Locale: en-US
 title: TrustedPlatformModule
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -55,4 +56,5 @@ Changes the TPM owner authorization value.
 
 ### [Unblock-Tpm](./Unblock-Tpm.md)
 Resets a TPM lockout.
+
 

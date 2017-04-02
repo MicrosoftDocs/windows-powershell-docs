@@ -123,7 +123,7 @@ The table below also shows the latest published version of the Help for each mod
 | TCPIP | [TCPIP](nettcpip/nettcpip.md)
 | TLS | [TLS](tls/tls.md) |
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
-| TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |
+| TrustedPlatformModule | [Trusted Platform Module](trustedplatformmodule/trustedplatformmodule.md) |
 | UserAccessLogging | [User Access Logging](ual/index.md) |
 | UEV | [User Experience Virtualization](uev/index.md) |
 | VAMT | [Volume Activation Management Tool](vamt/index.md) |

@@ -10425,6 +10425,11 @@
 "source_path": "docset/windows/ual/get-ualuseraccess.md",
 "redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualuseraccess",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vamt/index.md",
+"redirect_url": "/itpro/powershell/windows/vamt/vamt",
+"redirect_document_id": true
 }
 ]
 }

@@ -3083,7 +3083,7 @@
 ### [Test-UevTemplate](uev/test-uevtemplate.md)
 ### [Unregister-UevTemplate](uev/unregister-uevtemplate.md)
 ### [Update-UevTemplate](uev/update-uevtemplate.md)
-## [Volume Activation Management Tool](vamt/index.md)
+## [Volume Activation Management Tool](vamt/vamt.md)
 ### [Add-VamtProductKey](vamt/add-vamtproductkey.md)
 ### [Export-VamtData](vamt/export-vamtdata.md)
 ### [Find-VamtManagedMachine](vamt/find-vamtmanagedmachine.md)

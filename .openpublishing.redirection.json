@@ -10290,6 +10290,11 @@
 "source_path": "docset/windows/tcpip/test-netconnection.md",
 "redirect_url": "/itpro/powershell/windows/nettcpip/test-netconnection",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tls/index.md",
+"redirect_url": "/itpro/powershell/windows/tls/tls",
+"redirect_document_id": true
 }
 ]
 }

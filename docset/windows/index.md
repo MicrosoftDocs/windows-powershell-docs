@@ -121,7 +121,7 @@ The table below also shows the latest published version of the Help for each mod
 | StorageReplica | [Storage Replica](storagereplica/storagereplica.md) |
 | SyncShare | [Sync Share](syncshare/syncshare.md) |
 | TCPIP | [TCPIP](nettcpip/nettcpip.md)
-| TLS | [TLS](tls/index.md) |
+| TLS | [TLS](tls/tls.md) |
 | TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
 | TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |
 | UserAccessLogging | [User Access Logging](ual/index.md) |

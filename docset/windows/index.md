@@ -34,7 +34,7 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker](bitlocker/bitlocker.md) |
 | BitsTransfer | [Background Intelligent Transfer Service](bitstransfer/bitstransfer.md) |
 | BootEventCollector | [Boot Event Collector](booteventcollector/booteventcollector.md) |
-| BranchCahe | [Branch Cache](branch-cache/index.md) |
+| BranchCahe | [Branch Cache](branchcache/branchcache.md) |
 | CIM | [Common Information Model](cimcmdlets/cimcmdlets.md) |
 | ClusterAwareUpdating | [Cluster Aware Updating](clusterawareupdating/clusterawareupdating.md) |
 | ConfigCI | [Code Integrity](configci/configci.md) |
@@ -80,16 +80,16 @@ The table below also shows the latest published version of the Help for each mod
 | NetAdapter | [Network Adapter](netadapter/netadapter.md) |
 | NetConnection | [Network connection](netconnection/netconnection.md) |
 | NetEventPacketCapture | [Network Event Packet Capture](neteventpacketcapture/neteventpacketcapture.md) |
-| NetLbfo | [NIC Teaming](nic-teaming/index.md) |
+| NetLbfo | [NIC Teaming](netlbfo/netlbfo.md) |
 | NetNat | [Network Address Translation](netnat/netnat.md) |
 | NetQoS | [Quality of Service](netqos/netqos.md) |
 | NetSecurity | [Network security](netsecurity/netsecurity.md) |
-| NetTCPIP | [TCP/IP](tcpip/index.md) |
+| NetTCPIP | [TCP/IP](nettcpip/nettcpip.md) |
 | NetWNV | [Network Virtualization](netwnv/netwnv.md) |
-| NetworkConnectivityStatus | [Network connectivity status](ncsi/index.md) |
+| NetworkConnectivityStatus | [Network connectivity status](networkconnectivitystatus/networkconnectivitystatus.md) |
 | NetworkController | [Network Controller](network-controller/index.md) |
 | NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
-| NetworkLoadBalancingClusters | [Network Load Balancing Clusters](nlb-cluster/index.md) |
+| NetworkLoadBalancingClusters | [Network Load Balancing Clusters](networkloadbalancingclusters/networkloadbalancingclusters.md) |
 | NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
 | NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |
 | NetworkTransition | [Network Transition](networktransition/networktransition.md) |
@@ -99,48 +99,44 @@ The table below also shows the latest published version of the Help for each mod
 | PKIClient | [Public Key Infrastructure](pkiclient/pkiclient.md) |
 | PlatformIdentifier | [Platform Identifier](platformidentifier/platformidentifier.md) |
 | PnpDevice | [Plug and Play](pnpdevice/pnpdevice.md) |
-<<<<<<< HEAD
-| PrintManagement | [Print management](printmanagement/index.md) |
-| ProcessMitigations | [Process Mitigations](processmitigations/processmitigations.md) |
-=======
 | PrintManagement | [Print management](printmanagement/printmanagement.md) |
->>>>>>> master
-| RemoteAccess | [Remote access](remote-access/index.md) |
-| RemoteDesktop | [Remote Desktop](remote-desktop/index.md) |
-| RemoteDesktopServices | [Remote Desktop Services](remote-desktop-services/index.md) |
-| ScheduledTasks | [Scheduled Tasks](scheduled-tasks/index.md) |
-| SecureBoot | [Secure Boot](secure-boot/index.md) |
-| ServerCore | [Server Core](server-core/index.md) |
-| ServerManager | [Server Manager](server-manager/index.md) |
-| ServerManagerTasks | [Server Manager tasks](server-manager-tasks/index.md) |
-| ShieldedVMDataFile | [Shielded Virtual Machine data file](shielded-virtual-machines/data-file/index.md) |
-| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shielded-virtual-machines/provisioning/index.md) |
-| ShieldedVMTemplate | [Shielded Virtual Machine template](shielded-virtual-machines/template/index.md) |
-| SmbShare | [SmbShare share](smb/share/index.md) |
-| SmbWitness | [SMB Witness](smb/witness/index.md) |
-| SMISConfig | [SMIS Config](smis-config/index.md) |
-| SoftwareInventoryLogging | [Software Inventory Logging](sil/index.md) |
-| StartLayout | [Start Layout](start-layout/index.md) |
-| Storage | [Storage](storage/index.md) |
-| StorageQoS | [Storage QoS](storage-qos/index.md) |
-| StorageReplica | [Storage Replica](storage-replica/index.md) |
-| SyncShare | [Sync Share](sync-share/index.md) |
-| TLS | [TLS](tls/index.md) |
-| TroubleshootingPack | [Troubleshooting Pack](troubleshooting-pack/index.md) |
-| TrustedPlatformModule | [Trusted Platform Module](tpm/index.md) |
-| UserAccessLogging | [User Access Logging](ual/index.md) |
-| UEV | [User Experience Virtualization](uev/index.md) |
-| VAMT | [Volume Activation Management Tool](vamt/index.md) |
-| VpnClient | [VPN client](vpn-client/index.md) |
-| WDAC | [Windows Data Access Components](wdac/index.md) |
-| WebAdministration | [Web Administration](web-administration/index.md) |
-| WebApplicationProxy | [Web Application Proxy](wap/index.md) |
-| WDS | [Windows Deployment Services](wds/index.md) |
-| WHEA | [Windows Hardware Error Architecture](whea/index.md) |
-| WindowsDevLic | [Windows Developer License](windows-developer-license/index.md) |
-| WindowsErrorReporting | [Windows Error Reporting](wer/index.md) |
-| WindowsSearch | [Windows Search](windows-search/index.md) |
-| WindowsServerBackup | [Windows Server Backup](windows-server-backup/index.md) |
-| WSUS | [Windows Server Update Services](wsus/index.md) |
-| WindowsUpdate | [Windows Update](windows-update/index.md) |
-
+| ProcessMitigations | [Process Mitigations](processmitigations/processmitigations.md) |
+| RemoteAccess | [Remote access](remoteaccess/remoteaccess.md) |
+| RemoteDesktop | [Remote Desktop](remotedesktop/remotedesktop.md) |
+| RemoteDesktopServices | [Remote Desktop Services](remotedesktopservices/remotedesktopservices.md) |
+| ScheduledTasks | [Scheduled Tasks](scheduledtasks/scheduledtasks.md) |
+| SecureBoot | [Secure Boot](secureboot/secureboot.md) |
+| ServerCore | [Server Core](servercore/servercore.md) |
+| ServerManager | [Server Manager](servermanager/servermanager.md) |
+| ServerManagerTasks | [Server Manager tasks](servermanagertasks/servermanagertasks.md) |
+| ShieldedVMDataFile | [Shielded Virtual Machine data file](shieldedvmdatafile/shieldedvmdatafile.md) |
+| ShieldedVMProvisioning | [Shielded Virtual Machine provisioning](shieldedvmprovisioning/shieldedvmprovisioning.md) |
+| ShieldedVMTemplate | [Shielded Virtual Machine template](shieldedvmtemplate/shieldedvmtemplate.md) |
+| SmbShare | [SmbShare share](smbshare/smbshare.md) |
+| SmbWitness | [SMB Witness](smbwitness/smbwitness.md) |
+| SMISConfig | [SMIS Config](smisconfig/smisconfig.md) |
+| SoftwareInventoryLogging | [Software Inventory Logging](softwareinventorylogging/softwareinventorylogging.md) |
+| StartLayout | [Start Layout](startlayout/startlayout.md) |
+| Storage | [Storage](storage/storage.md) |
+| StorageQoS | [Storage QoS](storageqos/storageqos.md) |
+| StorageReplica | [Storage Replica](storagereplica/storagereplica.md) |
+| SyncShare | [Sync Share](syncshare/syncshare.md) |
+| TCPIP | [TCPIP](nettcpip/nettcpip.md)
+| TLS | [TLS](tls/tls.md) |
+| TroubleshootingPack | [Troubleshooting Pack](troubleshootingpack/troubleshootingpack.md) |
+| TrustedPlatformModule | [Trusted Platform Module](trustedplatformmodule/trustedplatformmodule.md) |
+| UserAccessLogging | [User Access Logging](useraccesslogging/useraccesslogging.md) |
+| UEV | [User Experience Virtualization](uev/uev.md) |
+| VAMT | [Volume Activation Management Tool](vamt/vamt.md) |
+| VpnClient | [VPN client](vpnclient/vpnclient.md) |
+| WDAC | [Windows Data Access Components](wdac/wdac.md) |
+| WebAdministration | [Web Administration](webadministration/webadministration.md) |
+| WebApplicationProxy | [Web Application Proxy](webapplicationproxy/webapplicationproxy.md) |
+| WDS | [Windows Deployment Services](wds/wds.md) |
+| WHEA | [Windows Hardware Error Architecture](whea/whea.md) |
+| WindowsDevLic | [Windows Developer License](windowsdevlic/windowsdevlic.md) |
+| WindowsErrorReporting | [Windows Error Reporting](windowserrorreporting/windowserrorreporting.md) |
+| WindowsSearch | [Windows Search](windowssearch/windowssearch.md) |
+| WindowsServerBackup | [Windows Server Backup](windowsserverbackup/windowsserverbackup.md) |
+| WSUS | [Windows Server Update Services](wsus/wsus.md) |
+| WindowsUpdate | [Windows Update](windowsupdate/windowsupdate.md) |

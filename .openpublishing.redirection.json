@@ -8403,6 +8403,2953 @@
 "source_path": "docset/windows/qos/set-netqospolicy.md",
 "redirect_url": "/itpro/powershell/windows/netqos/set-netqospolicy",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/index.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-bgproutingpolicyforpeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-bgproutingpolicyforpeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daappserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daappserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-damgmtserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-damgmtserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessipfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessloadbalancernode.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessloadbalancernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-remoteaccessradius",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpnipaddressrange.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpnipaddressrange",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/add-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/add-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/clear-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-bgprouteflapdampening",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/clear-remoteaccessinboxaccountingstore.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-remoteaccessinboxaccountingstore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/clear-vpns2sinterfacestatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/clear-vpns2sinterfacestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/connect-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/connect-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disable-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-daotpauthentication",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/disable-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disable-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disconnect-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disconnect-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/disconnect-vpnuser.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/disconnect-vpnuser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-bgprouteflapdampening",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/enable-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/enable-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/enable-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouteinformation.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouteinformation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-bgpstatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-bgpstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daappserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daappserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daentrypointdc.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daentrypointdc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-damgmtserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-damgmtserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-danetworklocationserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-danetworklocationserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-daserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-daserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessaccounting.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessaccounting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessconnectionstatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconnectionstatistics",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessconnectionstatisticssummary.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessconnectionstatisticssummary",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccesshealth.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccesshealth",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessipfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessloadbalancer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/get-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessradius",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessroutingdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-remoteaccessuseractivity.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-remoteaccessuseractivity",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-routingprotocolpreference.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-routingprotocolpreference",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnauthprotocol.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnauthprotocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpns2sinterfacestatistics.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpns2sinterfacestatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/get-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/get-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/install-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/install-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/new-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/new-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/new-vpntrafficselector.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/new-vpntrafficselector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgpcustomroute.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgpcustomroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/remove-bgprouteaggregate.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/remove-bgprouteaggregate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgprouteflapdampening.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgprouteflapdampening",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgprouter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgproutingpolicy.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgproutingpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-bgproutingpolicyforpeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-bgproutingpolicyforpeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daappserverconnection.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daappserverconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daclient.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daclientdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daclientdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daentrypoint.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daentrypoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daentrypointdc.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daentrypointdc",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-damultisite.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-damultisite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-danetworklocationserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-danetworklocationserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daotpauthentication.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daotpauthentication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-daserver.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-daserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccessaccounting.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessaccounting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-remoteaccessconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessinboxaccountingstore.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessinboxaccountingstore",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessipfilter.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessipfilter",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessloadbalancer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessradius.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessradius",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-remoteaccessroutingdomain.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-remoteaccessroutingdomain",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-access/set-routingprotocolpreference.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-routingprotocolpreference",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnauthprotocol.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnauthprotocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnauthtype.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnauthtype",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnipaddressassignment.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnipaddressassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpns2sinterface.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpns2sinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/set-vpnsstpproxyrule.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/set-vpnsstpproxyrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/start-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/start-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/stop-bgppeer.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/stop-bgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-access/uninstall-remoteaccess.md",
+"redirect_url": "/itpro/powershell/windows/remoteaccess/uninstall-remoteaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/index.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remotedesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/add-rdvirtualdesktoptocollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/add-rdvirtualdesktoptocollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/disable-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/disable-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/disconnect-rduser.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/disconnect-rduser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/enable-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/enable-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/export-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/export-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/export-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/export-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdavailableapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdavailableapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdconnectionbrokerhighavailability.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdconnectionbrokerhighavailability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rddeploymentgatewayconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rddeploymentgatewayconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdfiletypeassociation.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdfiletypeassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdlicenseconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdlicenseconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdremotedesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdremotedesktop",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdserver",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessioncollection",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessioncollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessioncollectionconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/remote-desktop/get-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdusersession.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdusersession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopcollectionjobstatus.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopcollectionjobstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopconcurrency.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopconcurrency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktopidlecount.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktopidlecount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdvirtualdesktoptemplateexportpath.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdvirtualdesktoptemplateexportpath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/get-rdworkspace.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/get-rdworkspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/grant-rdouaccess.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/grant-rdouaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/import-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/import-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/import-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/import-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/invoke-rduserlogoff.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/invoke-rduserlogoff",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/move-rdvirtualdesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/move-rdvirtualdesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+
+{
+"source_path": "docset/windows/remote-desktop/new-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdsessioncollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdsessiondeployment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdsessiondeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/new-rdvirtualdesktopdeployment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/new-rdvirtualdesktopdeployment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rddatabaseconnectionstring.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rddatabaseconnectionstring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdsessioncollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdsessioncollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/remove-rdvirtualdesktopfromcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/remove-rdvirtualdesktopfromcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/send-rdusermessage.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/send-rdusermessage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdactivemanagementserver.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdactivemanagementserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdcertificate.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdclientaccessname.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdclientaccessname",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdconnectionbrokerhighavailability.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdconnectionbrokerhighavailability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rddatabaseconnectionstring.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rddatabaseconnectionstring",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rddeploymentgatewayconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rddeploymentgatewayconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdfiletypeassociation.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdfiletypeassociation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdlicenseconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdlicenseconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalsessiondesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalsessiondesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalvirtualdesktopassignment.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalvirtualdesktopassignment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdpersonalvirtualdesktoppatchschedule.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdpersonalvirtualdesktoppatchschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdremoteapp.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdremoteapp",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdremotedesktop.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdremotedesktop",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdsessioncollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdsessioncollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdsessionhost.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdsessionhost",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopcollectionconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopcollectionconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopconcurrency.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopconcurrency",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktopidlecount.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktopidlecount",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdvirtualdesktoptemplateexportpath.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdvirtualdesktoptemplateexportpath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/set-rdworkspace.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/set-rdworkspace",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/stop-rdvirtualdesktopcollectionjob.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/stop-rdvirtualdesktopcollectionjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/test-rdouaccess.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/test-rdouaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/test-rdvirtualdesktopadmachineaccountreuse.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/test-rdvirtualdesktopadmachineaccountreuse",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop/update-rdvirtualdesktopcollection.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktop/update-rdvirtualdesktopcollection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop-services/index.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktopservices/remotedesktopservices",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/remote-desktop-services/convert-license.md",
+"redirect_url": "/itpro/powershell/windows/remotedesktopservices/convert-license",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/index.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/scheduledtasks",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/disable-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/disable-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/enable-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/enable-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/export-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/export-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/get-scheduledtaskinfo.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/get-scheduledtaskinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtaskaction.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtaskaction",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtaskprincipal.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtaskprincipal",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtasksettingsset.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtasksettingsset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/new-scheduledtasktrigger.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/new-scheduledtasktrigger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/register-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/register-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/register-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/register-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/set-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/set-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/set-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/set-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/start-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/start-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/stop-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/stop-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/unregister-clusteredscheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/unregister-clusteredscheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/scheduled-tasks/unregister-scheduledtask.md",
+"redirect_url": "/itpro/powershell/windows/scheduledtasks/unregister-scheduledtask",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/index.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/secureboot",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/confirm-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/confirm-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/format-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/format-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/get-securebootpolicy.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/get-securebootpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/get-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/get-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/secure-boot/set-securebootuefi.md",
+"redirect_url": "/itpro/powershell/windows/secureboot/set-securebootuefi",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/index.md",
+"redirect_url": "/itpro/powershell/windows/servercore/servercore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/set-displayresolution.md",
+"redirect_url": "/itpro/powershell/windows/servercoreset-displayresolutionservercore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-core/get-displayresolution.md",
+"redirect_url": "/itpro/powershell/windows/servercore/get-displayresolution",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/index.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/servermanager",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/disable-servermanagerstandarduserremoting.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/disable-servermanagerstandarduserremoting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/enable-servermanagerstandarduserremoting.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/enable-servermanagerstandarduserremoting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/get-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/get-windowsfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/install-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/install-windowsfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager/uninstall-windowsfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanager/uninstall-windowsfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/index.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/servermanagertasks",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smcountersample.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smcountersample",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smperformancecollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverbparesult.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverbparesult",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverclustername.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverclustername",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverevent.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverevent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverfeature.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverinventory.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverinventory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/get-smserverservice.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/get-smserverservice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/remove-smserverperformancelog.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/remove-smserverperformancelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/start-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/start-smperformancecollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/server-manager-tasks/stop-smperformancecollector.md",
+"redirect_url": "/itpro/powershell/windows/servermanagertasks/stop-smperformancecollector",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/shieldedvmdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/import-shieldingdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/import-shieldingdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/data-file/new-volumeidqualifier.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmdatafile/new-volumeidqualifier",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/shieldedvmprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/get-keyprotectorfromshieldingdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/get-keyprotectorfromshieldingdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/initialize-shieldedvm.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/initialize-shieldedvm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/new-shieldedvmspecializationdatafile.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/new-shieldedvmspecializationdatafile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/provisioning/test-shieldingdataapplicability.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmprovisioning/test-shieldingdataapplicability",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/index.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/shieldedvmtemplate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/initialize-vmshieldinghelpervhd.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/initialize-vmshieldinghelpervhd",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/shielded-virtual-machines/template/protect-templatedisk.md",
+"redirect_url": "/itpro/powershell/windows/shieldedvmtemplate/protect-templatedisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/index.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/softwareinventorylogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silcomputer.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silcomputer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-sildata.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-sildata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silsoftware.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silsoftware",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silualaccess.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silualaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/get-silwindowsupdate.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/get-silwindowsupdate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/publish-sildata.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/publish-sildata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/set-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/set-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/start-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/start-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sil/stop-sillogging.md",
+"redirect_url": "/itpro/powershell/windows/softwareinventorylogging/stop-sillogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/index.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/block-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/block-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/close-smbopenfile.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/close-smbopenfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/close-smbsession.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/close-smbsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/disable-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/disable-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/enable-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/enable-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbclientnetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbclientnetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbdelegation.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmultichannelconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmultichannelconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbopenfile.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbopenfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbservernetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbservernetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbsession.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbsession",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/get-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/get-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/grant-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/grant-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/new-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/new-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbmapping.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbmapping",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbmultichannelconstraint.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbmultichannelconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/remove-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/remove-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/revoke-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/revoke-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbbandwidthlimit.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbbandwidthlimit",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbclientconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbclientconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbpathacl.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbpathacl",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbserverconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbserverconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/set-smbshare.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/set-smbshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/unblock-smbshareaccess.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/unblock-smbshareaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/share/update-smbmultichannelconnection.md",
+"redirect_url": "/itpro/powershell/windows/smbshare/update-smbmultichannelconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/index.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/smbwitness",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/get-smbwitnessclient.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/get-smbwitnessclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smb/witness/move-smbwitnessclient.md",
+"redirect_url": "/itpro/powershell/windows/smbwitness/move-smbwitnessclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/index.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/smisconfig",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/register-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/register-smisprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/search-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/search-smisprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/smis-config/unregister-smisprovider.md",
+"redirect_url": "/itpro/powershell/windows/smisconfig/unregister-smisprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/start-layout/index.md",
+"redirect_url": "/itpro/powershell/windows/startlayout/startlayout",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/start-layout/export-startlayout.md",
+"redirect_url": "/itpro/powershell/windows/startlayout/export-startlayout",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/start-layout/get-startapps.md",
+"redirect_url": "/itpro/powershell/windows/startlayout/get-startapps",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/start-layout/import-startlayout.md",
+"redirect_url": "/itpro/powershell/windows/startlayout/import-startlayout",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage/index.md",
+"redirect_url": "/itpro/powershell/windows/storage/storage",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/index.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/storageqos",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqosflow.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqosflow",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqospolicystore.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqospolicystore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/get-storageqosvolume.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/get-storageqosvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/new-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/new-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/remove-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/remove-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/set-storageqospolicy.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/set-storageqospolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-qos/set-storageqospolicystore.md",
+"redirect_url": "/itpro/powershell/windows/storageqos/set-storageqospolicystore",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/index.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/storagereplica",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/clear-srmetadata.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/clear-srmetadata",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/export-srconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/export-srconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/get-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/get-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/grant-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/grant-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/grant-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/grant-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/new-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/new-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/new-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/new-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/remove-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/remove-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/revoke-sraccess.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/revoke-sraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/revoke-srdelegation.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/revoke-srdelegation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srnetworkconstraint.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srnetworkconstraint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/set-srpartnership.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/set-srpartnership",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/suspend-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/suspend-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/sync-srgroup.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/sync-srgroup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/storage-replica/test-srtopology.md",
+"redirect_url": "/itpro/powershell/windows/storagereplica/test-srtopology",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/index.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/disable-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/disable-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/enable-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/enable-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncserversetting.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/get-syncuserstatus.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/get-syncuserstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/new-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/new-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/remove-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/remove-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/repair-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/repair-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/set-syncserversetting.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/set-syncserversetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/sync-share/set-syncshare.md",
+"redirect_url": "/itpro/powershell/windows/syncshare/set-syncshare",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/index.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/nettcpip",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/find-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/find-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netcompartment.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netcompartment",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipinterface.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipv4protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipv4protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netipv6protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netipv6protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netoffloadglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netoffloadglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netprefixpolicy.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netprefixpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettcpconnection.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettcpconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettcpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettcpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netudpendpoint.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netudpendpoint",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/get-netudpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/get-netudpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-netrouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/new-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/new-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/remove-nettransportfilter.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/remove-nettransportfilter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipaddress.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipinterface.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipv4protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipv4protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netipv6protocol.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netipv6protocol",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netneighbor.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netneighbor",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netoffloadglobalsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netoffloadglobalsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netroute.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-nettcpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-nettcpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/set-netudpsetting.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/set-netudpsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tcpip/test-netconnection.md",
+"redirect_url": "/itpro/powershell/windows/nettcpip/test-netconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tls/index.md",
+"redirect_url": "/itpro/powershell/windows/tls/tls",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/clear-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/clear-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/convertto-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/convertto-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/disable-tpmautoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/disable-tpmautoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/enable-tpmautoprovisioning.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/enable-tpmautoprovisioning",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpmendorsementkeyinfo.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpmendorsementkeyinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/get-tpmsupportedfeature.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/get-tpmsupportedfeature",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/import-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/import-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/initialize-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/initialize-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/set-tpmownerauth.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/set-tpmownerauth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/tpm/unblock-tpm.md",
+"redirect_url": "/itpro/powershell/windows/trustedplatformmodule/unblock-tpm",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/index.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/useraccesslogging",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/disable-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/disable-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/enable-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/enable-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ual.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ual",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailyaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailyaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailydeviceaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailydeviceaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdailyuseraccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdailyuseraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdeviceaccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdeviceaccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualdns.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualdns",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualhyperv.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualhyperv",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualoverview.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualoverview",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualserverdevice.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualserverdevice",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualserveruser.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualserveruser",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualsystemid.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualsystemid",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ual/get-ualuseraccess.md",
+"redirect_url": "/itpro/powershell/windows/useraccesslogging/get-ualuseraccess",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vamt/index.md",
+"redirect_url": "/itpro/powershell/windows/vamt/vamt",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/uev/index.md",
+"redirect_url": "/itpro/powershell/windows/uev/uev",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/troubleshooting-pack/index.md",
+"redirect_url": "/itpro/powershell/windows/troubleshootingpack/troubleshootingpack",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/troubleshooting-pack/get-troubleshootingpack.md",
+"redirect_url": "/itpro/powershell/windows/troubleshootingpack/get-troubleshootingpack",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/troubleshooting-pack/invoke-troubleshootingpack.md",
+"redirect_url": "/itpro/powershell/windows/troubleshootingpack/invoke-troubleshootingpack",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/index.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/vpnclient",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectionroute.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectionroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectiontriggerapplication.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectiontriggerapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/add-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/add-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/get-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/get-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/get-vpnconnectiontrigger.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/get-vpnconnectiontrigger",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/new-eapconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/new-eapconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/new-vpnserveraddress.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/new-vpnserveraddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectionroute.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectionroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggerapplication.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggerapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/remove-vpnconnectiontriggertrustednetwork.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/remove-vpnconnectiontriggertrustednetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnection.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectionipsecconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectionipsecconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectionproxy.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectionproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectiontriggerdnsconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectiontriggerdnsconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/vpn-client/set-vpnconnectiontriggertrustednetwork.md",
+"redirect_url": "/itpro/powershell/windows/vpnclient/set-vpnconnectiontriggertrustednetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/index.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/webapplicationproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/add-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/add-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyavailableadfsrelyingparty.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyavailableadfsrelyingparty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxyhealth.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxyhealth",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/get-webapplicationproxysslcertificate.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/get-webapplicationproxysslcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/install-webapplicationproxy.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/install-webapplicationproxy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/remove-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/remove-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxyapplication.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxyapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/set-webapplicationproxysslcertificate.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/set-webapplicationproxysslcertificate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wap/update-webapplicationproxydeviceregistration.md",
+"redirect_url": "/itpro/powershell/windows/webapplicationproxy/update-webapplicationproxydeviceregistration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/index.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/disable-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/disable-windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/enable-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/enable-windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wer/get-windowserrorreporting.md",
+"redirect_url": "/itpro/powershell/windows/windowserrorreporting/get-windowserrorreporting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/index.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/webadministration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/add-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/add-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/backup-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/backup-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webrequesttracingsetting.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webrequesttracingsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/clear-webrequesttracingsettings.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/clear-webrequesttracingsettings",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/convertto-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/convertto-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/disable-webrequesttracing.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/disable-webrequesttracing",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/enable-webrequesttracing.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/enable-webrequesttracing",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webappdomain.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webappdomain",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webapppoolstate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webapppoolstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigfile.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigfile",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationbackup.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webfilepath.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webfilepath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webitemstate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webitemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webrequest.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webrequest",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-websitestate.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-websitestate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-weburl.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-weburl",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/get-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/get-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webapppool",
+"redirect_document_id": true
+}, 	
+{
+"source_path": "docset/windows/web-administration/new-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webftpsite.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webftpsite",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/new-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/new-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webapplication.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webapplication",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationbackup.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationlock.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationlock",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/remove-webvirtualdirectory.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/remove-webvirtualdirectory",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/rename-webconfigurationlocation.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/rename-webconfigurationlocation",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restart-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restart-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restart-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restart-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/restore-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/restore-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/select-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/select-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webbinding.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webbinding",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webcentralcertprovider.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webcentralcertprovider",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webcentralcertprovidercredential.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webcentralcertprovidercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webconfigurationproperty.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webconfigurationproperty",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webglobalmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webglobalmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webhandler.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webhandler",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/set-webmanagedmodule.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/set-webmanagedmodule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webcommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webcommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/start-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/start-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webapppool.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webapppool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webcommitdelay.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webcommitdelay",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-webitem.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-webitem",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/web-administration/stop-website.md",
+"redirect_url": "/itpro/powershell/windows/webadministration/stop-website",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/whea/index.md",
+"redirect_url": "/itpro/powershell/windows/whea/whea",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/index.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/windowsdevlic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/get-windowsdeveloperlicense.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/get-windowsdeveloperlicense",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/show-windowsdeveloperlicenseregistration.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/show-windowsdeveloperlicenseregistration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-developer-license/unregister-windowsdeveloperlicense.md",
+"redirect_url": "/itpro/powershell/windows/windowsdevlic/unregister-windowsdeveloperlicense",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/index.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/windowssearch",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/get-windowssearchsetting.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/get-windowssearchsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-search/set-windowssearchsetting.md",
+"redirect_url": "/itpro/powershell/windows/windowssearch/set-windowssearchsetting",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/index.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/windowsserverbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/add-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/add-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackupset.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbackupvolumebrowsepath.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbackupvolumebrowsepath",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbdisk.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbdisk",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbjob.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbperformanceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbperformanceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbschedule.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbsummary.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbsummary",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/get-wbvssbackupoption.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/get-wbvssbackupoption",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/new-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/new-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbackupset.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbackupset",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbackuptarget.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbackuptarget",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbbaremetalrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbbaremetalrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbcatalog.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbcatalog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbfilespec.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbfilespec",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbsystemstate.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbsystemstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbvirtualmachine.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbvirtualmachine",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/remove-wbvolume.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/remove-wbvolume",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/restore-wbcatalog.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/restore-wbcatalog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/resume-wbbackup.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/resume-wbbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/resume-wbvolumerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/resume-wbvolumerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbperformanceconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbperformanceconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbpolicy.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbpolicy",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbschedule.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbschedule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/set-wbvssbackupoption.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/set-wbvssbackupoption",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbapplicationrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbapplicationrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbbackup.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbbackup",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbfilerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbfilerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbhypervrecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbhypervrecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbsystemstaterecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbsystemstaterecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/start-wbvolumerecovery.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/start-wbvolumerecovery",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-server-backup/stop-wbjob.md",
+"redirect_url": "/itpro/powershell/windows/windowsserverbackup/stop-wbjob",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/windows-update/get-windowsupdatelog.md",
+"redirect_url": "/itpro/powershell/windows/windowssupdate/get-windowsupdatelog",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wsus/index.md",
+"redirect_url": "/itpro/powershell/windows/wsus/wsus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/index.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/networkconnectivitystatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/get-daconnectionstatus.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/get-daconnectionstatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/get-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/get-ncsipolicyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/reset-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/reset-ncsipolicyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/ncsi/set-ncsipolicyconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkconnectivitystatus/set-ncsipolicyconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wdac/index.md",
+"redirect_url": "/itpro/powershell/windows/wdac/wdac",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/wds/index.md",
+"redirect_url": "/itpro/powershell/windows/wds/wds",
+"redirect_document_id": true
 }
 ]
 }

@@ -1,14 +1,14 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: processmitigations.dll-Help.xml
+external help file: ProcessMitigations.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.author: brianlic
 ms.date: 2017-03-29
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
@@ -24,7 +24,7 @@ Converts an mitigation policy file formats.
 ## SYNTAX
 
 ```
-ConvertTo-ProcessMitigationPolicy [-EMETFile <String>] [-Output <String>] [<CommonParameters>]
+ConvertTo-ProcessMitigationPolicy -EMETFilePath <String> -OutputFilePath <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,34 +41,29 @@ Converts EMET file policy.xml to result.xml, may also generate a CI file CI-resu
 
 ## PARAMETERS
 
-### -EMETFile
-EMET File or Pinning Rule File to convert.
-
-```yaml
+### -EMETFilePath
+{{Fill EMETFilePath Description}}```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: f
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Output
-File to save the output to.
-May also create a "CI-"\`output.xml\` file if necessary
-
-```yaml
+### -OutputFilePath
+{{Fill OutputFilePath Description}}```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: o
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: processmitigations.dll-Help.xml
+external help file: ProcessMitigations.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.author: brianlic
 ms.date: 2017-03-29
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ProcessMitigation
 ---
-
 
 # Get-ProcessMitigation
 
@@ -26,17 +25,17 @@ Gets the current process mitigation settings, either from the registry, from a r
 
 ### NameMode
 ```
-Get-ProcessMitigation [[-Name] <String>] [-Running] [<CommonParameters>]
+Get-ProcessMitigation [-Name] <String> [-DisplayRunningProcess] [<CommonParameters>]
 ```
 
 ### IdMode
 ```
-Get-ProcessMitigation [[-Id] <Int32[]>] [-Running] [<CommonParameters>]
+Get-ProcessMitigation [-Id] <Int32[]> [-DisplayRunningProcess] [<CommonParameters>]
 ```
 
 ### SaveMode
 ```
-Get-ProcessMitigation [-Save <String>] [<CommonParameters>]
+Get-ProcessMitigation [-RegistryConfigFilePath <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,40 +74,8 @@ Gets the all process mitigation settings from the registry and saves them to the
 
 ## PARAMETERS
 
-### -Id
-Process Id to retrieve current running process mitigation settings from
-
-```yaml
-Type: Int32[]
-Parameter Sets: IdMode
-Aliases: 
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Current process name to get current running (Or from registry) process mitigation settings from one (Can be more than one instance)
-
-```yaml
-Type: String
-Parameter Sets: NameMode
-Aliases: n
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Running
-Gets the process mitigation settings on a running process -Name instead of from the registry
-
-```yaml
+### -DisplayRunningProcess
+{{Displays the current mitigation settings for a specific process}}```yaml
 Type: SwitchParameter
 Parameter Sets: NameMode
 Aliases: r
@@ -132,10 +99,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Save
-Saves all the process mitigation settings in the registry to this file
+### -Id
+Process Id to retrieve current running process mitigation settings from
 
 ```yaml
+Type: Int32[]
+Parameter Sets: IdMode
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Current process name to get current running (Or from registry) process mitigation settings from one (Can be more than one instance)
+
+```yaml
+Type: String
+Parameter Sets: NameMode
+Aliases: n
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -RegistryConfigFilePath
+{{Fill RegistryConfigFilePath Description}}```yaml
 Type: String
 Parameter Sets: SaveMode
 Aliases: s

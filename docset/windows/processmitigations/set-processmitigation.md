@@ -1,14 +1,14 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: processmitigations.dll-Help.xml
+external help file: ProcessMitigations.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.author: brianlic
 ms.date: 2017-03-29
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
@@ -30,7 +30,7 @@ Set-ProcessMitigation [[-Name] <String>] [-Disable <String[]>] [-Enable <String[
 
 ### FullPolicy
 ```
-Set-ProcessMitigation [-File <String>] [<CommonParameters>]
+Set-ProcessMitigation -PolicyFilePath <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -91,21 +91,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -File
-An XML file with mitigation settings for many processes that is applied to the registry
-
-```yaml
-Type: String
-Parameter Sets: FullPolicy
-Aliases: x
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Name
 Name of the process to apply mitigation settings to.
 Can be in the format "notepad" or "notepad.exe"
@@ -118,7 +103,20 @@ Aliases:
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName)
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -PolicyFilePath
+{{Fill PolicyFilePath Description}}```yaml
+Type: String
+Parameter Sets: FullPolicy
+Aliases: x
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

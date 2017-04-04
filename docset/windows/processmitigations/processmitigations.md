@@ -1,20 +1,8 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 Module Name: ProcessMitigations
 Module Guid: 1e8f5a4c-f11b-41a5-bdbd-4695ca4a503e
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=845399
 Help Version: 5.0.0.0
-title: Process Mitigations
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
-ms.date: 2017-03-29
-ms.topic: reference
-ms.prod: w10
-ms.technology: powershell-windows
 Locale: en-US
 ---
 

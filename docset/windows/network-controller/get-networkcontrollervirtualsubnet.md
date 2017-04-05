@@ -20,6 +20,7 @@ ms.assetid: 213E8037-4E46-47C6-9F78-3047195EFE4E
 # Get-NetworkControllerVirtualSubnet
 
 ## SYNOPSIS
+This cmdlet retrieves a virtual subnet belonging to a virtual network
 
 ## SYNTAX
 
@@ -30,13 +31,19 @@ Get-NetworkControllerVirtualSubnet [-VirtualNetworkId] <String[]> [[-ResourceId]
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves a virtual subnet belonging to a virtual network
 
 ## EXAMPLES
-
+This cmdlet retrieves all the virtual subnets belonging to the virtual network vnet1.
+```
+Get-NetworkControllerVirtualSubnet -ConnectionUri https://networkcontroller -VirtualNetworkId vnet1
+```
 
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -50,6 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -63,6 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -89,6 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+Sepcifies the unqiue identifier for the virtual subnet
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -102,6 +115,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetworkId
+Specifies the virtual network where the virtual subnet belongs
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -120,6 +135,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties of a virtual subnet are retrieved:
+1. Address prefix
+2. Access control list associated with the subnet
+3. Route table associated with the subnet
+4. IP configuration
+5. Service insertion rules associated with the subnet
 
 ## NOTES
 

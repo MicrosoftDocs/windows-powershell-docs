@@ -20,6 +20,7 @@ ms.assetid: 617F439B-D3EC-4C06-B24F-853D1777F2AE
 # Get-NetworkControllerVirtualSwitchConfiguration
 
 ## SYNOPSIS
+This cmdlet retrieves the global settings of the virtual switch from the Network Controller
 
 ## SYNTAX
 
@@ -29,13 +30,18 @@ Get-NetworkControllerVirtualSwitchConfiguration [-ConnectionUri <Uri>] [-Certifi
 ```
 
 ## DESCRIPTION
+This cmdlet retrieves the global settings of the virtual switch from the Network Controller. This primarily retrieves Quality of Service settings for all virtual switches managed by the Network Controller.
 
 ## EXAMPLES
-
-
+This example provides the virtual switch configuration of Network Controller, with REST endpoint as https://networkcontroller. The details of the configuration is present in the Properties resource.
+```
+Get-NetworkControllerVirtualSwitchConfiguration -ConnectionUri https://networkcontroller
+```
 ## PARAMETERS
 
 ### -CertificateThumbprint
+Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -49,6 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -62,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
+
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
@@ -93,6 +103,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+Following properties can be retrieved for the virtual switch configuration:
+1. Number of interfaces that have Quality of Service (QoS) enabled
+2. Reservation mode for QoS: absolute or Weight
+3. Link speed percentage
+4. Default reservation for QoS
+5. Whether hardware limits are enabled for QoS
+6. Whether hardware reservations are enabled for QoS
+7. Whether software reservations are enabled for QoS
 
 ## NOTES
 

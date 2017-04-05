@@ -20,7 +20,7 @@ ms.assetid: 5040E9B9-D832-47A5-BB62-4B20C54760D1
 # New-NetworkControllerAccessControlList
 
 ## SYNOPSIS
-Creates an ACL for a Network Controller.
+This cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface
 
 ## SYNTAX
 
@@ -32,10 +32,41 @@ New-NetworkControllerAccessControlList [-ResourceId] <String> [[-Tags] <PSObject
 ```
 
 ## DESCRIPTION
-The **New-NetworkControllerAccessControlList** cmdlet creates an access control list (ACL) for a Network Controller.
+The **New-NetworkControllerAccessControlList** cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface. Each access control list can contain multiple rules.
 
 ## EXAMPLES
-
+This example creates an access control list with two rules. The first rule allows all inbound network traffic. The second rule allows all outbound network traffic.
+```
+$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
+$ruleproperties.Protocol = "All"  
+$ruleproperties.SourcePortRange = "0-65535"  
+$ruleproperties.DestinationPortRange = "0-65535"  
+$ruleproperties.Action = "Allow"  
+$ruleproperties.SourceAddressPrefix = "*"  
+$ruleproperties.DestinationAddressPrefix = "*"  
+$ruleproperties.Priority = "100"  
+$ruleproperties.Type = "Inbound"  
+$ruleproperties.Logging = "Enabled"  
+$aclrule1 = new-object Microsoft.Windows.NetworkController.AclRule  
+$aclrule1.Properties = $ruleproperties  
+$aclrule1.ResourceId = "AllowAll_Inbound"  
+$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
+$ruleproperties.Protocol = "All"  
+$ruleproperties.SourcePortRange = "0-65535"  
+$ruleproperties.DestinationPortRange = "0-65535"  
+$ruleproperties.Action = "Allow"  
+$ruleproperties.SourceAddressPrefix = "*"  
+$ruleproperties.DestinationAddressPrefix = "*"  
+$ruleproperties.Priority = "110"
+$ruleproperties.Type = "Outbound"  
+$ruleproperties.Logging = "Enabled"  
+$aclrule2 = new-object Microsoft.Windows.NetworkController.AclRule  
+$aclrule2.Properties = $ruleproperties  
+$aclrule2.ResourceId = "AllowAll_Outbound"  
+$acllistproperties = new-object Microsoft.Windows.NetworkController.AccessControlListProperties  
+$acllistproperties.AclRules = @($aclrule1, $aclrule2)  
+New-NetworkControllerAccessControlList -ResourceId "AllowAll" -Properties $acllistproperties -ConnectionUri <NC REST FQDN> 
+```
 
 ## PARAMETERS
 
@@ -151,7 +182,17 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-Specifies properties of the ACL.
+Specifies the properties of an access control list. Each ACL consists of rules, with each rule having the following properties:
+1. Name
+2. Protocol
+3. Source port range
+4. Destination port range
+5. Action (Allow/Deny)
+6. Source Address prefix
+7. Destination address prefix
+8. Priority
+9. Type of rule (inbound/outbound)
+10. Whether logging is enabled or disabled
 
 ```yaml
 Type: AccessControlListProperties
@@ -166,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the resource ID of the ACL.
+Specifies the unique identifier of the Access Control list.
 
 ```yaml
 Type: String
@@ -181,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
-Specifies metadata for the resource.
+Specifies metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
@@ -212,7 +253,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -230,6 +270,17 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+Each access control list contains multiple ACL rules. Each rule contains the following:
+1. Name
+2. Protocol
+3. Source port range
+4. Destination port range
+5. Action (Allow/Deny)
+6. Source Address prefix
+7. Destination address prefix
+8. Priority
+9. Type of rule (inbound/outbound)
+10. Whether logging is enabled or disabled
 
 ## OUTPUTS
 

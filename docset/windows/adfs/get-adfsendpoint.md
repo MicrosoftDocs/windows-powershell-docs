@@ -88,9 +88,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String[]
+System.Uri[]
 
 ## OUTPUTS
+
+### System.Object
 
 ### Microsoft.IdentityServer.PowerShell.Resources.Endpoint
 This cmdlet returns class structure that represents the endpoints for the Federation Service.

@@ -1,26 +1,13 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 2016-12-20
-ms.prod: w10
-ms.technology: powershell-windows
-ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Get-AdfsApplicationPermission
-ms.assetid: EAE924E8-5BC3-4D00-9ED0-96FB35B96420
 ---
 
 # Get-AdfsApplicationPermission
 
 ## SYNOPSIS
-Gets permission for an application.
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -40,15 +27,21 @@ Get-AdfsApplicationPermission [[-ServerRoleIdentifiers] <String[]>] [<CommonPara
 ```
 
 ## DESCRIPTION
-The **Get-AdfsApplicationPermission** cmdlet gets permission for an application in Active Directory Federation Services (AD FS).
+{{Fill in the Description}}
 
 ## EXAMPLES
 
+### Example 1
+```
+PS C:\> {{ Add example code here }}
+```
+
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -ClientRoleIdentifiers
-Specifies an array of client role identifiers.
+{{Fill ClientRoleIdentifiers Description}}
 
 ```yaml
 Type: String[]
@@ -63,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identifiers
-Specifies an array of identifiers.
+{{Fill Identifiers Description}}
 
 ```yaml
 Type: String[]
@@ -78,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRoleIdentifiers
-Specifies an array of server role identifiers.
+{{Fill ServerRoleIdentifiers Description}}
 
 ```yaml
 Type: String[]
@@ -93,19 +86,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String[]
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Grant-AdfsApplicationPermission](./Grant-AdfsApplicationPermission.md)
-
-[Revoke-AdfsApplicationPermission](./Revoke-AdfsApplicationPermission.md)
-
-[Set-AdfsApplicationPermission](./Set-AdfsApplicationPermission.md)
 

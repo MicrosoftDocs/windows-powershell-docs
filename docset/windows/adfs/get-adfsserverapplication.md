@@ -137,7 +137,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+Microsoft.IdentityServer.Management.Resources.ServerApplication
+Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 

@@ -1,26 +1,13 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 2016-12-20
-ms.prod: w10
-ms.technology: powershell-windows
-ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Get-AdfsServerApplication
-ms.assetid: 368AA5D3-5523-47EE-8A0A-049CB8D7AB37
 ---
 
 # Get-AdfsServerApplication
 
 ## SYNOPSIS
-Gets configuration settings for a server application role for an application in AD FS.
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -50,15 +37,21 @@ Get-AdfsServerApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParamet
 ```
 
 ## DESCRIPTION
-The **Get-AdfsServerApplication** cmdlet gets configuration settings for a server application role for an application in Active Directory Federation Services (AD FS).
+{{Fill in the Description}}
 
 ## EXAMPLES
 
+### Example 1
+```
+PS C:\> {{ Add example code here }}
+```
+
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Application
-Specifies the server application to get.
+{{Fill Application Description}}
 
 ```yaml
 Type: ServerApplication
@@ -73,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroup
-Specifies the application group from which to get server applications.
+{{Fill ApplicationGroup Description}}
 
 ```yaml
 Type: ApplicationGroup
@@ -88,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroupIdentifier
-Specifies the ID of the application group from which to get server applications.
+{{Fill ApplicationGroupIdentifier Description}}
 
 ```yaml
 Type: String
@@ -103,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identifier
-Specifies an array of IDs of the application groups from which to get server applications.
+{{Fill Identifier Description}}
 
 ```yaml
 Type: String[]
@@ -118,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of the application groups from which to get server applications.
+{{Fill Name Description}}
 
 ```yaml
 Type: String[]
@@ -133,19 +126,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String[]
+Microsoft.IdentityServer.Management.Resources.ServerApplication
+Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Add-AdfsServerApplication](./Add-AdfsServerApplication.md)
-
-[Remove-AdfsServerApplication](./Remove-AdfsServerApplication.md)
-
-[Set-AdfsServerApplication](./Set-AdfsServerApplication.md)
 

@@ -1,26 +1,13 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 2016-12-20
-ms.prod: w10
-ms.technology: powershell-windows
-ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Get-AdfsNativeClientApplication
-ms.assetid: 528740AC-B18F-4201-8178-1C1FFD51994A
 ---
 
 # Get-AdfsNativeClientApplication
 
 ## SYNOPSIS
-Gets native client application roles from an application in AD FS.
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -50,15 +37,21 @@ Get-AdfsNativeClientApplication [-ApplicationGroup] <ApplicationGroup> [<CommonP
 ```
 
 ## DESCRIPTION
-The **Get-AdfsNativeClientApplication** cmdlet gets native client application roles from an application in Active Directory Federation Services (AD FS).
+{{Fill in the Description}}
 
 ## EXAMPLES
 
+### Example 1
+```
+PS C:\> {{ Add example code here }}
+```
+
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Application
-Specifies the native client application to get.
+{{Fill Application Description}}
 
 ```yaml
 Type: NativeClientApplication
@@ -73,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroup
-Specifies the application group from which to get native client applications.
+{{Fill ApplicationGroup Description}}
 
 ```yaml
 Type: ApplicationGroup
@@ -88,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroupIdentifier
-Specifies the ID of the application group from which to get native client applications.
+{{Fill ApplicationGroupIdentifier Description}}
 
 ```yaml
 Type: String
@@ -103,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identifier
-Specifies an array of IDs of native client applications get.
+{{Fill Identifier Description}}
 
 ```yaml
 Type: String[]
@@ -118,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of native client applications get.
+{{Fill Name Description}}
 
 ```yaml
 Type: String[]
@@ -133,19 +126,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String[]
+Microsoft.IdentityServer.Management.Resources.NativeClientApplication
+Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Add-AdfsNativeClientApplication](./Add-AdfsNativeClientApplication.md)
-
-[Remove-AdfsNativeClientApplication](./Remove-AdfsNativeClientApplication.md)
-
-[Set-AdfsNativeClientApplication](./Set-AdfsNativeClientApplication.md)
 

@@ -1,26 +1,13 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 2016-12-20
-ms.prod: w10
-ms.technology: powershell-windows
-ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Get-AdfsWebApiApplication
-ms.assetid: CC8998A0-12E0-4CBA-A56B-FBFC5F399AA2
 ---
 
 # Get-AdfsWebApiApplication
 
 ## SYNOPSIS
-Gets Web API application roles in AD FS.
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -55,15 +42,21 @@ Get-AdfsWebApiApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParamet
 ```
 
 ## DESCRIPTION
-The **Get-AdfsWebApiApplication** cmdlet gets Web API application roles in Active Directory Federation Services (AD FS).
+{{Fill in the Description}}
 
 ## EXAMPLES
 
+### Example 1
+```
+PS C:\> {{ Add example code here }}
+```
+
+{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Application
-Specifies a Web API application to get.
+{{Fill Application Description}}
 
 ```yaml
 Type: WebApiApplication
@@ -78,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroup
-Specifies an application group for which to get Web API applications.
+{{Fill ApplicationGroup Description}}
 
 ```yaml
 Type: ApplicationGroup
@@ -93,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationGroupIdentifier
-Specifies the ID of an application group for which to get Web API applications.
+{{Fill ApplicationGroupIdentifier Description}}
 
 ```yaml
 Type: String
@@ -108,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identifier
-Specifies an ID of a Web API application to get.
+{{Fill Identifier Description}}
 
 ```yaml
 Type: String[]
@@ -123,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies an array of names of Web API applications to get.
+{{Fill Name Description}}
 
 ```yaml
 Type: String[]
@@ -138,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrefixIdentifier
-Specifies the prefix identifier of Web API applications to get.
+{{Fill PrefixIdentifier Description}}
 
 ```yaml
 Type: String
@@ -153,19 +146,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+### System.String[]
+Microsoft.IdentityServer.Management.Resources.WebApiApplication
+System.String
+Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
 ## OUTPUTS
+
+### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Add-AdfsWebApiApplication](./Add-AdfsWebApiApplication.md)
-
-[Remove-AdfsWebApiApplication](./Remove-AdfsWebApiApplication.md)
-
-[Set-AdfsWebApiApplication](./Set-AdfsWebApiApplication.md)
 

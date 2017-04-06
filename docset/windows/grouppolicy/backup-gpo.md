@@ -268,16 +268,16 @@ This cmdlet returns an object that represents the file that holds the settings o
 * You can use the *Domain* parameter to explicitly specify the domain for this cmdlet.
 
   If you do not explicitly specify the domain, the cmdlet uses a default domain.
-The default domain is the domain that is used to access network resources by the security context under which the current session is running.
-This domain is typically the domain of the user that is running the session.
-For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
-However, computer startup and shutdown scripts run under the context of the LocalSystem account.
-The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
-Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
+  The default domain is the domain that is used to access network resources by the security context under which the current session is running.
+  This domain is typically the domain of the user that is running the session.
+  For instance, the domain of the user who started the session by opening Windows PowerShell from the Program Files menu, or the domain of a user that is specified in a runas command.
+  However, computer startup and shutdown scripts run under the context of the LocalSystem account.
+  The LocalSystem account is a built-in local account, and it accesses network resources under the context of the computer account.
+  Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
 
-[Import-GPO](./Import-GPO.md)
+[Import-GPO](./import-GPO.md)
 
-[Restore-GPO](./Restore-GPO.md)
+[Restore-GPO](./restore-GPO.md)
 

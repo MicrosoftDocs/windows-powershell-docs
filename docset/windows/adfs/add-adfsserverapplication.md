@@ -27,7 +27,7 @@ Adds a server application role to an application in AD FS.
 ### ApplicationGroupIdentifier (Default)
 ```
 Add-AdfsServerApplication [-ApplicationGroupIdentifier] <String> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <Uri[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-JWKSUri <Uri>] [-JWKSFile <String>] [-GenerateClientSecret] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -36,7 +36,7 @@ Add-AdfsServerApplication [-ApplicationGroupIdentifier] <String> [-Name] <String
 ### ApplicationGroupObject
 ```
 Add-AdfsServerApplication [-ApplicationGroup] <ApplicationGroup> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <Uri[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-JWKSUri <Uri>] [-JWKSFile <String>] [-GenerateClientSecret] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -276,7 +276,7 @@ If you are developing a Windows Store application, obtain the redirection URI fo
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

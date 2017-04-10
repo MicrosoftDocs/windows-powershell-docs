@@ -27,13 +27,13 @@ Adds a native client application role to an application in AD FS.
 ### ApplicationGroupIdentifier (Default)
 ```
 Add-AdfsNativeClientApplication [-ApplicationGroupIdentifier] <String> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <Uri[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationGroupObject
 ```
 Add-AdfsNativeClientApplication [-ApplicationGroup] <ApplicationGroup> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <Uri[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -168,7 +168,7 @@ If you are developing a Windows Store application, obtain the redirection URI fo
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

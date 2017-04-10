@@ -27,7 +27,7 @@ Modifies configuration settings for a server application role of an application 
 ### Identifier (Default)
 ```
 Set-AdfsServerApplication [-TargetIdentifier] <String> [-Identifier <String>] [-Name <String>]
- [-RedirectUri <Uri[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+ [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
  [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -35,7 +35,7 @@ Set-AdfsServerApplication [-TargetIdentifier] <String> [-Identifier <String>] [-
 
 ### Name
 ```
-Set-AdfsServerApplication [-TargetName] <String> [-Identifier <String>] [-Name <String>] [-RedirectUri <Uri[]>]
+Set-AdfsServerApplication [-TargetName] <String> [-Identifier <String>] [-Name <String>] [-RedirectUri <String[]>]
  [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
  [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-PassThru] [-WhatIf] [-Confirm]
@@ -45,7 +45,7 @@ Set-AdfsServerApplication [-TargetName] <String> [-Identifier <String>] [-Name <
 ### ApplicationObject
 ```
 Set-AdfsServerApplication [-TargetApplication] <ServerApplication> [-Identifier <String>] [-Name <String>]
- [-RedirectUri <Uri[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+ [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
  [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -255,7 +255,7 @@ If you are developing a Windows Store application, obtain the redirection URI fo
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

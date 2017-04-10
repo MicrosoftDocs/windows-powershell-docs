@@ -26,7 +26,7 @@ Modifies registration settings for an OAuth 2.0 client registered with AD FS.
 
 ### Name (Default)
 ```
-Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <Uri[]>]
+Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <String[]>]
  [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
  [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-PassThru] [-WhatIf] [-Confirm]
@@ -35,7 +35,7 @@ Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <Stri
 
 ### ClientId
 ```
-Set-AdfsClient [-Force] [-TargetClientId] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <Uri[]>]
+Set-AdfsClient [-Force] [-TargetClientId] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <String[]>]
  [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
  [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-PassThru] [-WhatIf] [-Confirm]
@@ -45,7 +45,7 @@ Set-AdfsClient [-Force] [-TargetClientId] <String> [-ClientId <String>] [-Name <
 ### InputObject
 ```
 Set-AdfsClient [-Force] [-TargetClient] <AdfsClient> [-ClientId <String>] [-Name <String>]
- [-RedirectUri <Uri[]>] [-Description <String>] [-ADUserPrincipalName <String>]
+ [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
  [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -288,7 +288,7 @@ If you are developing a Windows Store application, you can obtain the redirect U
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

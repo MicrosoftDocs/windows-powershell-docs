@@ -27,19 +27,19 @@ Modifies configuration settings for a server native client application role of a
 ### Identifier (Default)
 ```
 Set-AdfsNativeClientApplication [-TargetIdentifier] <String> [-Identifier <String>] [-Name <String>]
- [-RedirectUri <Uri[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RedirectUri <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Name
 ```
 Set-AdfsNativeClientApplication [-TargetName] <String> [-Identifier <String>] [-Name <String>]
- [-RedirectUri <Uri[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RedirectUri <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationObject
 ```
 Set-AdfsNativeClientApplication [-TargetApplication] <NativeClientApplication> [-Identifier <String>]
- [-Name <String>] [-RedirectUri <Uri[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm]
+ [-Name <String>] [-RedirectUri <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -145,7 +145,7 @@ If you are developing a Windows Store application, obtain the redirection URI fo
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

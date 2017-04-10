@@ -42,7 +42,7 @@ You can register a task to run any of the following application or file types: W
 ```
 PS C:\> $A = New-ScheduledTaskAction -Execute "Taskmgr.exe"
 PS C:\> $T = New-ScheduledTaskTrigger -AtLogon
-PS C:\> $P = "Contoso\Administrator"
+PS C:\> $P = New-ScheduledTaskPrincipal "Contoso\Administrator"
 PS C:\> $S = New-ScheduledTaskSettingsSet
 PS C:\> $D = New-ScheduledTask -Action $A -Principal $P -Trigger $T -Settings $S
 PS C:\> Register-ScheduledTask T1 -InputObject $D

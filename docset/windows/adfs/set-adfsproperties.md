@@ -31,8 +31,8 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-CertificateGenerationThreshold <Int32>] [-CertificatePromotionThreshold <Int32>]
  [-CertificateRolloverInterval <Int32>] [-CertificateThresholdMultiplier <Int32>]
  [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>]
- [-FederationPassiveAddress <String>] [-HostName <String>] [-HttpPort <Int32>] [-HttpsPort <Int32>]
- [-IntranetUseLocalClaimsProvider <Boolean>] [-TlsClientPort <Int32>] [-Identifier <Uri>]
+ [-EnableOAuthLogout <Boolean>] [-FederationPassiveAddress <String>] [-HostName <String>] [-HttpPort <Int32>]
+ [-HttpsPort <Int32>] [-IntranetUseLocalClaimsProvider <Boolean>] [-TlsClientPort <Int32>] [-Identifier <Uri>]
  [-LogLevel <String[]>] [-MonitoringInterval <Int32>] [-NetTcpPort <Int32>]
  [-NtlmOnlySupportedClientAtProxy <Boolean>] [-OrganizationInfo <Organization>]
  [-PreventTokenReplays <Boolean>] [-ExtendedProtectionTokenCheck <String>] [-ProxyTrustTokenLifetime <Int32>]
@@ -49,7 +49,7 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-EnableRelayStateForIdpInitiatedSignOn <Boolean>] [-DelegateServiceAdministration <String>]
  [-AllowSystemServiceAdministration <Boolean>] [-AllowLocalAdminsServiceAdministration <Boolean>]
  [-DeviceUsageWindowInDays <Int32>] [-EnableIdPInitiatedSignonPage <Boolean>] [-IgnoreTokenBinding <Boolean>]
- [-IdTokenIssuer <Uri>] [-Force] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IdTokenIssuer <Uri>] [-Force] [-PassThru] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
@@ -490,6 +490,21 @@ Accept wildcard characters: False
 Indicates whether to enable loop detection.
 Loops occur when a relying party continuously rejects a valid security token and redirects back to AD FS.
 The cycle terminates after 6 loops have been detected.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableOAuthLogout
+{{Fill EnableOAuthLogout Description}}
 
 ```yaml
 Type: Boolean

@@ -25,11 +25,14 @@ Registers an OAuth 2.0 client with AD FS.
 ## SYNTAX
 
 ```
-Add-AdfsClient [-ClientId] <String> [-Name] <String> [[-RedirectUri] <Uri[]>] [-Description <String>]
+Add-AdfsClient [-ClientId] <String> [-Name] <String> [[-RedirectUri] <String[]>] [-Description <String>]
  [-ClientType <ClientType>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-JWKSUri <Uri>] [-JWKSFile <String>]
  [-GenerateClientSecret] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
+
+
 
 ## DESCRIPTION
 The **Add-AdfsClient** cmdlet registers an OAuth client with Active Directory Federation Services (AD FS).
@@ -275,7 +278,7 @@ If you are developing a Windows Store application, you can obtain the redirect U
 `Uri redirectURI = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri();`
 
 ```yaml
-Type: Uri[]
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

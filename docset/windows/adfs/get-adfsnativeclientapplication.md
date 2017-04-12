@@ -143,7 +143,15 @@ System.Uri[]
 
 ## OUTPUTS
 
-### System.Object
+	Get-AdfsNativeClientApplication
+	Microsoft.IdentityServer.Management.Resources.NativeClientApplication
+	{get;}         ApplicationGroupIdentifier                        string
+	{get;set;}     Description                                       string
+	{get;}         Enabled                                           bool
+	{get;set;}     Identifier                                        string
+	{get;set;}     Name                                              string
+	{get;set;}     RedirectUri                                       string[]
+	---------------------------
 
 ## NOTES
 

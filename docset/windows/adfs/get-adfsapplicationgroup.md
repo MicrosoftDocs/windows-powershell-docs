@@ -102,7 +102,31 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 ## OUTPUTS
 
-### System.Object
+	Get-AdfsApplicationGroup
+	Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+	{get;set;}     ApplicationGroupIdentifier                        string
+	{get;}         Applications                                      Microsoft.IdentityServer.Management.Resources.IApplication[]
+	{get;set;}     Description                                       string
+	{get;set;}     Enabled                                           bool
+	{get;set;}     Name                                              string
+	---------------------------
+	
+	
+	
+	(Get-AdfsApplicationGroup | select Applications).Applications[0]
+	Microsoft.IdentityServer.Management.Resources.IApplication
+	{get;set;}     ADUserPrincipalName                               string
+	{get;}         ApplicationGroupIdentifier                        string
+	{get;}         ClientSecret                                      string
+	{get;set;}     Description                                       string
+	{get;}         Enabled                                           bool
+	{get;set;}     Identifier                                        string
+	{get;set;}     JWKSUri                                           uri
+	{get;set;}     JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+	{get;}         JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
+	{get;set;}     Name                                              string
+	{get;set;}     RedirectUri                                       string[]
+	---------------------------
 
 ## NOTES
 

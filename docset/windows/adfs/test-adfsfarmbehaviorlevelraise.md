@@ -45,7 +45,7 @@ To test raising the behavior level of a farm that uses SQL Server as the policy 
 
 ### Example 1: Test raising the farm behavior level
 ```
-PS C:\> Invoke-AdfsFarmBehaviorLevelRaise
+PS C:\> Test-AdfsFarmBehaviorLevelRaise
 ```
 
 This command tests whether you can raise the farm behavior level.

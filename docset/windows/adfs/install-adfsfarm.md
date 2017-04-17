@@ -163,9 +163,9 @@ The *ServiceAccountCredential* parameter specifies the credentials of the login 
 
 The *Credential* parameter specifies the credentials for the local administrator (a non-domain administrator) account used install AD FS.
 
-The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1https://go.microsoft.com/fwlink/?linkid=832923 script.
-For example, ` PS C:\\\>.\CreateNonDADkmContainer -AcctToAclDkmContainer "contoso\FsSvcAcct"`.
-The object represents the location and name of the DKM container created by the script.
+The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1 script, which represents the location and name of the DKM container created by the script. The script and additional guidance can be found [here](https://go.microsoft.com/fwlink/?linkid=832923).
+
+For example, `.\CreateNonDADkmContainer.ps1 -AcctToAclDkmContainer "contoso\FsSvcAcct"`.
 
 ### Example 6: Install AD FS without DA permission using gMSA as an AD FS account
 ```
@@ -184,7 +184,9 @@ The *Credential* parameter specifies the credentials for the local administrator
 The *GroupServiceAccountIdentifier* parameter specifies the name of the gMSA logon account for AD FS.
 The identifier must be terminated by a dollar sign ($).
 
-The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1https://go.microsoft.com/fwlink/?linkid=832923 script, which represents the location and name of the DKM container created by the script.
+The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1 script, which represents the location and name of the DKM container created by the script. The script and additional guidance can be found [here](https://go.microsoft.com/fwlink/?linkid=832923).
+
+For example, `.\CreateNonDADkmContainer.ps1 -AcctToAclDkmContainer "contoso\FsGmsaAcct$"`.
 
 ## PARAMETERS
 

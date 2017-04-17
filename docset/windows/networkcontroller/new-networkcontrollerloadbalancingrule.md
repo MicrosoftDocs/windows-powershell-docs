@@ -37,7 +37,11 @@ This load balancing rule defines how traffic that arrives at the front-end IP is
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a new load balancing rule associated with load balancer resource lb1.
+The example creates front end IP configuration resource, health probe resource, backend address pool resource and finally load balancing rule resource.
+
 ```
 //Retrieve the subnet for front end IP
 $subnet = Get-NetworkControllerSubnet -ConnectionUri https://networkcontroller -NetworkId ln1 -ResourceId subnet1
@@ -60,13 +64,6 @@ $probe.NumberofProbes=8
 $lbProbe=New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalance
 ```
 
-Description
-
------------
-
-This example creates a new load balancing rule associated with load balancer resource lb1.
-The example creates front end IP configuration resource, health probe resource, backend address pool resource and finally load balancing rule resource.
-
 ## PARAMETERS
 
 ### -CertificateThumbPrint
@@ -78,7 +75,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -93,7 +89,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -109,7 +104,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +120,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +134,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +148,6 @@ Specifies the load balancer resource where the load balancing rule belongs
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -171,7 +162,6 @@ Specifies the properties of the load balancing rule
 Type: LoadBalancingRuleProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -186,7 +176,6 @@ Specifies the unique identifier of the load balancing rule
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -201,7 +190,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -213,27 +201,19 @@ Accept wildcard characters: False
 
 ### 
 Following properties of a load balancing rule can be added/changed:
-1.
-Front end IP configuration
-2.
-Back end address pool
-3.
-Protocol
-4.
-Front end port
-5.
-Health probe for the rule
-6.
-Load distribution
-7.
-Back End port
-8.
-Whether floating IP is enabled
-9.
-Idle timeout (in minutes)
+- Front end IP configuration
+- Back end address pool
+- Protocol
+- Front end port
+- Health probe for the rule
+- Load distribution
+- Back End port
+- Whether floating IP is enabled
+- Idle timeout (in minutes)
 
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

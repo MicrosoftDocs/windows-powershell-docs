@@ -31,6 +31,9 @@ Get-NetworkControllerLoadBalancerConfiguration [-ConnectionUri <Uri>] [-Certific
 ## DESCRIPTION
 Retrieves the configuration of the load balancer from the Network Controller. This includes the load balancing service virtual IP (VIP) and the different VIP pools associated with the load balancer
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the load balancer configuration from Network Controller. In this example, The Network Controller is hosted at https://networkcontroller.
 
 ## PARAMETERS
@@ -99,6 +102,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for a load balancer configuration:
 1. Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
 2. Virtual IP pools associated with the load balancer. These should be existing IP pools as part of existing logical networks

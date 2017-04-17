@@ -35,14 +35,14 @@ This cmdlet removes load balancer configuration from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://networkcontroller
 ```
 
 Description
 
------------
+
 
 This cmdlet removes load balancer configuration from Network Controller whose REST endpoint is https://networkcontroller
 

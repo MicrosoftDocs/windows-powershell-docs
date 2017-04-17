@@ -35,7 +35,8 @@ This cmdlet dumps the current configuration and state of Network Controller serv
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
 ```
 $state=New-Object Microsoft.Windows.NetworkController.NetworkControllerStateProperties
 Invoke-NetworkControllerState -ConnectionUri https://networkcontroller -Properties $state
@@ -161,6 +162,12 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Tags
 @{Text=}
@@ -169,13 +176,6 @@ Aliases:
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 Required: False
 Position: Named

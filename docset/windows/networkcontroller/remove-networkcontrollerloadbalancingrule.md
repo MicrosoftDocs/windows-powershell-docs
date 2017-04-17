@@ -35,14 +35,14 @@ This cmdlet removes a load balancing rule from a load balancer resource
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancingRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Rule1
 ```
 
 Description
 
------------
+
 
 This example removes a load balancing rule named Rule1 from a load balancer resource named lb1
 

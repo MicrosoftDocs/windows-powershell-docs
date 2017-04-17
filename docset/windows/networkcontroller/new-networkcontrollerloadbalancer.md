@@ -21,6 +21,10 @@ ms.assetid: 4074B5D6-2308-4B7D-BFE9-169FCDA4AAA0
 
 ## SYNOPSIS
 
+This cmdlet adds/updates a load balancer resource.
+
+## SYNTAX
+
 ```
 New-NetworkControllerLoadBalancer -ConnectionUri <Uri> -Properties <LoadBalancerProperties>
  -ResourceId <string> [-CertificateThumbPrint <string>] [-Credential <PSCredential>] [-Etag <string>] [-Force]
@@ -28,8 +32,9 @@ New-NetworkControllerLoadBalancer -ConnectionUri <Uri> -Properties <LoadBalancer
 ```
 
 ## DESCRIPTION
-This cmdlet adds/updates a load balancer resource.
+
 The load balancer resource allows fine-grained configuration of how incoming traffic is distributed across VM instances in a virtual network.
+
 It contains the following:
 
 Front End IP configuration - This describes the exposed IP address of the load balancer.
@@ -47,7 +52,11 @@ Outbound NAT rules - This can be used to forward VM network traffic from the vir
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a public VIP for load balancing a pool of two VMs on a virtual network.
+This also adds a HTTP health probe to detect whether one of the pool members becomes non-responsive.
+
 ```
 //Prepare the load balancer object
 $lbresourceId = "LB2"
@@ -76,19 +85,13 @@ $lbproperties.frontendipconfigurations += $fe
 //Allocate backend address pool
 $backend = @{}
 $backend.resourceId = "BE1"
-$backend.resourceRef = "/loadBalancers/$lbresourceId/backendAddressPools/$($b
+$backend.resourceRef = "/loadBalancers/$lbresourceId/backendAddressPools/$($b)"
 ```
-
-Description
-
------------
-
-This example creates a public VIP for load balancing a pool of two VMs on a virtual network.
-This also adds a HTTP health probe to detect whether one of the pool members becomes non-responsive.
 
 ## PARAMETERS
 
 ### -CertificateThumbPrint
+
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
 This is the certificate thumbprint of the certificate.
 This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
@@ -97,7 +100,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,13 +108,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+
 Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -121,6 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies a user credential that has permission to perform this action.
 The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
 
@@ -128,7 +131,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
+
 Specifies the entity tag (ETag) parameter of the resource.
 An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
 The value of the header is an opaque string representing the state of the resource at the time the response was generated.
@@ -145,7 +148,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -154,13 +156,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -169,25 +171,20 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
+
 Following properties can be added/modified for a load balancer resource:
-1.
-Front end IP configuration
-2.
-Back end address pool
-3.
-Health probe
-4.
-Load balancing rule
-5.
-Outbound NAT rules
-6.
-Inbound NAT rules
+
+- Front end IP configuration
+- Back end address pool
+- Health probe
+- Load balancing rule
+- Outbound NAT rules
+- Inbound NAT rules
 
 ```yaml
 Type: LoadBalancerProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -196,13 +193,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
 Specifies the unique identifier of the load balancer resource
 
 ```yaml
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -217,7 +214,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -232,7 +228,6 @@ Accept wildcard characters: False
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -246,19 +241,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### 
+
 Following properties can be added/modified for a load balancer resource:
-1.
-Front end IP configuration
-2.
-Back end address pool
-3.
-Health probe
-4.
-Load balancing rule
-5.
-Outbound NAT rules
-6.
-Inbound NAT rules
+
+- Front end IP configuration
+- Back end address pool
+- Health probe
+- Load balancing rule
+- Outbound NAT rules
+- Inbound NAT rules
 
 ## OUTPUTS
 

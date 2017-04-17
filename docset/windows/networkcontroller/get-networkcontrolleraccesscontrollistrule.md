@@ -32,7 +32,11 @@ Get-NetworkControllerAccessControlListRule [-AccessControlListId] <String[]> [[-
 
 ## DESCRIPTION
 The **Get-NetworkControllerAccessControlListRule** cmdlet gets a rule from an access control list for a network controller.
+
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all rules belonging to an Access Control List named Subnet1Acl from the Network Controller.
 ```
 Get-NetworkControllerAccessControlListRule -ConnectionUri https://networkcontroller -AccessControlListId "Subnet1ACL"
@@ -138,6 +142,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Each rule has the following output:
 1. Name
 2. Protocol

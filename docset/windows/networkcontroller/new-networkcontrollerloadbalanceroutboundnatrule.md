@@ -37,7 +37,11 @@ This can be used to forward VM network traffic from the virtual network to exter
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a backend address pool from an existing network interface, and then creates a new outbound NAT rule with the backend address pool and an existing load balancer front end IP.
+The outbound NAT rule is named outRule1 and it is associated with an existing load balancer resource named lb1
+
 ```
 //Retrieve the backend IPs that will form the pool
 $backEndIp=Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
@@ -59,12 +63,6 @@ $outNat.BackEndAddressPool= $backEndIpPool
 $outNat.frontEndIPConfigur
 ```
 
-Description
-
------------
-
-This example creates a backend address pool from an existing network interface, and then creates a new outbound NAT rule with the backend address pool and an existing load balancer front end IP.
-The outbound NAT rule is named outRule1 and it is associated with an existing load balancer resource named lb1
 
 ## PARAMETERS
 

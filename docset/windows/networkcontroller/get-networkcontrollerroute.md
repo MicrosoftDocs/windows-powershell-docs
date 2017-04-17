@@ -32,6 +32,9 @@ Get-NetworkControllerRoute [-RouteTableId] <String[]> [[-ResourceId] <String[]>]
 This cmdlet retrieves a route from a particular route table in the Network Controller. If you want to route traffic to virtual appliances in your environment, you can specify routes and associate them to a virtual subnet. Subnets rely on system routes until a route table is associated to the subnet. After an association exists, priority is given to user defined routes. 
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all routes from the route table named Table1, in the Network Controller.
 ```
 Get-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1"
@@ -133,6 +136,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following route properties can be retrieved:
 1. Address prefix of the route
 2. Next hop type of the route

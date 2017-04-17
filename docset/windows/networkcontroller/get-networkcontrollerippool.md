@@ -34,6 +34,9 @@ Get-NetworkControllerIpPool [-NetworkId] <String[]> [-SubnetId] <String[]> [[-Re
 This cmdlet retrieves the settings of an IP pool from the Network Controller. Specifically, it retrieves the start and end address of the pool, IP addresses in the pool that are being used for VIPs and the usage of IP addresses in the pool
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all the IP pools that are present in a subnet called Subnet1. Subnet1 is present in a network called ln1.
 ```
 Get-NetworkControllerIpPool -ConnectionUri https://networkcontroller -NetworkId ln1 -SubnetId subnet1
@@ -149,6 +152,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
 Following properties are displayed by the cmdlet
 1. Start IP address of the pool
 2. End IP address of the pool

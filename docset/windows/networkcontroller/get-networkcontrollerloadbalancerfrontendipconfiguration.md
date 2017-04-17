@@ -32,6 +32,9 @@ Get-NetworkControllerLoadBalancerFrontendIpConfiguration [-LoadBalancerId] <Stri
 ## DESCRIPTION
 This cmdlet retrieves the front end IP configuration of a load balancer resource from the Network Controller. The front-end IP is commonly referred to as a Virtual IP (VIP). The VIP must be taken from an unused IP in one of the logical network IP Pool which has been previously given to the load balancer manager.
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all the front end IP resource associated with a load balancer resource named lb1
 
 ```
@@ -133,6 +136,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for front end IP configuration of load balancer resource:
 1. Private IP address (VIP)
 2. Private IP address allocation method: Static or dynamic

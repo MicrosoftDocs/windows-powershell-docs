@@ -33,14 +33,19 @@ Get-NetworkControllerInternalResourceInstances [[-ResourceId] <String[]>] -Conne
 This cmdlet provides mapping between the user generated resource ID and the internal instance ID in the Network Controller
 
 ## EXAMPLES
+
+### Example 1
+
 This example shows all the resources in the Network Controller with their corresponding instance IDs. The "Properties" field has the actual reference of the resource and the provisioning state.
 
 ```
 Get-NetworkControllerInternalResourceInstances -ConnectionUri https://networkcontroller
 ```
+
 ## PARAMETERS
 
 ### -CertificateThumbprint
+
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.This is the certificate thumbprint of the certificate.This thumbprint must also be provided in the *ClientCertificateThumbprint* parameter in the **Install-NetworkController** or **Set-NetworkController** cmdlet so that Network Controller can authorize this user.
 
 ```yaml
@@ -56,6 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+
 Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
 
 ```yaml
@@ -71,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies a user credential that has permission to perform this action.The default value is the current user.This user must be present in the security group provided in the *ClientSecurityGroup* parameter in the **Install-NetworkController** cmdlet.
 
 ```yaml
@@ -86,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -PassInnerException
+
+Passes an inner exception.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -99,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
 Specifies an array of one or more resources to retrieve. If ResourceID is not provided, all the resources in the Network Controller will be retrieved.
 
 ```yaml
@@ -114,11 +125,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 The resource has the following output:
 1. Resource ID
 2. Instance ID of the resource

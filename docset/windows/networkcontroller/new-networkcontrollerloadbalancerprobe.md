@@ -37,7 +37,15 @@ Health probes are used by the load balancer to determine the health state of the
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a new health probe named probe1 for a load balancer resource named lb1.
+This is a HTTP probe that queries to the RequestPath of "/health.htm".
+The query is performed every 5 seconds, as specified by the IntervalInSeconds property.
+The health probe must receive an HTTP response code of 200 for 8 consecutive queries for the probe to consider the backend IP to be healthy.
+If the backend IP is not healthy, the load balancer will not send traffic to the IP.
+
+
 ```
 $probe=New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
 $probe.protocol="HTTP"
@@ -47,16 +55,6 @@ $probe.IntervalInSeconds=5
 $probe.NumberofProbes=8
 New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Probe1 -Properties $probe
 ```
-
-Description
-
------------
-
-This example creates a new health probe named probe1 for a load balancer resource named lb1.
-This is a HTTP probe that queries to the RequestPath of "/health.htm".
-The query is performed every 5 seconds, as specified by the IntervalInSeconds property.
-The health probe must receive an HTTP response code of 200 for 8 consecutive queries for the probe to consider the backend IP to be healthy.
-If the backend IP is not healthy, the load balancer will not send traffic to the IP.
 
 ## PARAMETERS
 
@@ -69,7 +67,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +81,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -100,7 +96,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +112,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +126,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +140,6 @@ Specifies the load balancer where the health probe belongs
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -157,22 +149,16 @@ Accept wildcard characters: False
 
 ### -Properties
 Following properties can be added/changed for a load balancer probe:
-1.
-Protocol
-2.
-Port
-3.
-Request path that has to be probed
-4.
-Probe interval (in seconds)
-5.
-Number of retries after which a backend resource is deemed unhealthy
+- Protocol
+- Port
+- Request path that has to be probed
+- Probe interval (in seconds)
+- Number of retries after which a backend resource is deemed unhealthy
 
 ```yaml
 Type: LoadBalancerProbeProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -187,7 +173,6 @@ Specifies the unique ID of the health probe rule
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -202,7 +187,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -214,19 +198,15 @@ Accept wildcard characters: False
 
 ### 
 Following properties can be added/changed for a load balancer probe:
-1.
-Protocol
-2.
-Port
-3.
-Request path that has to be probed
-4.
-Probe interval (in seconds)
-5.
-Number of retries after which a backend resource is deemed unhealthy
+- Protocol
+- Port
+- Request path that has to be probed
+- Probe interval (in seconds)
+- Number of retries after which a backend resource is deemed unhealthy
 
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

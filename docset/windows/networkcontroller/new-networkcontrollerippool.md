@@ -36,21 +36,18 @@ The IP address pool must not conflict with any other IP address pool on the netw
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates an IP pool with start IP address of 10.0.0.5 and end IP address of 10.0.0.15.
+This IP pool is created in a subnet called subnet1.
+Subnet1 is part of a network called ln1.
+
 ```
 $poolProperties=New-Object Microsoft.Windows.NetworkController.IpPoolProperties
 $poolProperties.startIPAddress = "10.0.0.5"
 $poolProperties.endIPAddress = "10.0.0.15"
 New-NetworkControllerIpPool -ConnectionUri https://networkcontroller -ResourceId ln1pool1 -NetworkId ln1 -SubnetId subnet1 -Properties $poolProperties
 ```
-
-Description
-
------------
-
-The above cmdlet creates an IP pool with start IP address of 10.0.0.5 and end IP address of 10.0.0.15.
-This IP pool is created in a subnet called subnet1.
-Subnet1 is part of a network called ln1.
 
 ## PARAMETERS
 
@@ -63,7 +60,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +74,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +89,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +105,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +119,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -141,7 +133,6 @@ Network resource ID for which IP pool is being created
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -151,19 +142,12 @@ Accept wildcard characters: False
 
 ### -Properties
 Identifies the properties of the IP pool.
-This includes
-a.
-Start IP address
-b.
-End IP address
-c.
-IP addresses reserved for load balancer VIPs
+This includes the start IP address, the end IP address, and the IP addresses reserved for load balancer VIPs.
 
 ```yaml
 Type: IpPoolProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -178,7 +162,6 @@ Specifies the ID of the IP pool
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -193,7 +176,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -208,7 +190,6 @@ Network subnet resource ID for which IP pool is being created
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -222,17 +203,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### 
-Following properties are provided for each IP pool
-a.
-Start IP address
-b.
-End IP address
-c.
-IP addresses reserved for load balancer VIPs
+
+The following properties are provided for each IP pool
+
+- Start IP address
+- End IP address
+- IP addresses reserved for load balancer VIPs
 
 ## OUTPUTS
 
 ## NOTES
 
 ## RELATED LINKS
-

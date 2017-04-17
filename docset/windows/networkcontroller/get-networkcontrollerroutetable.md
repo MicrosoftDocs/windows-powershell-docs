@@ -34,6 +34,8 @@ This cmdlet retrieves the settings of a route table from the Network Controller.
 
 ## EXAMPLES
 
+### Example 1
+
 This example retrieves all route tables from the Network Controller. Network Controller is represented by the REST uri https://networkcontroller.
 ```
 Get-NetworkControllerRouteTable -ConnectionUri https://networkcontroller
@@ -120,6 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Each route table consists of one or more routes. Each route has the following properties
 1. Address Prefix
 2. Next hop type

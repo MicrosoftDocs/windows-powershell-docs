@@ -39,6 +39,9 @@ This cmdlet retrieves the configuration of a load balancer resource. The load ba
 6. Outbound NAT rules - This can be used to forward VM network traffic from the virtual network to external destinations using network address translation (NAT).
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the configuration of a load balancer resource named lb1 from the Network Controller
 ```
 Get-NetworkControllerLoadBalancer -ConnectionUri https://networkcontroller -ResourceId lb1
@@ -124,6 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
 Following properties can be retrieved for a load balancer resource:
 1. Front end IP configuration
 2. Back end address pools

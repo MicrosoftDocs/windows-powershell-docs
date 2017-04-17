@@ -34,6 +34,9 @@ Get-NetworkControllerLoadBalancerProbe [-LoadBalancerId] <String[]> [[-ResourceI
 This cmdlet retrieves the health probes associated with a load balancer resource. Health probes are used by the load balancer to determine the health state of the backend pool members.
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all the health probe rules associated with the load balancer resource named lb1
 ```
 Get-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1
@@ -134,6 +137,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
 Following properties can be retrieved for a load balancer probe:
 1. Protocol
 2. Port

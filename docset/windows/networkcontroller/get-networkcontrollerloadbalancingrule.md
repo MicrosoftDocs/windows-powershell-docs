@@ -34,6 +34,9 @@ Get-NetworkControllerLoadBalancingRule [-LoadBalancerId] <String[]> [[-ResourceI
 This cmdlet retrieves a load balancing rule associated with a load balancer. This load balancing rule defines how traffic that arrives at the front-end IP has to be sent to the backend IP
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all the load balancing rules associated with a load balancer resource named lb1
 ```
 Get-NetworkControllerLoadBalancingRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1
@@ -134,6 +137,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties of a load balancing rule can be retrieved:
 1. Front end IP configuration
 2. Back end address pool

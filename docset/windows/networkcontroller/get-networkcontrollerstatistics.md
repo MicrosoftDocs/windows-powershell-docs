@@ -33,15 +33,13 @@ Get-NetworkControllerStatistics [-ConnectionUri <Uri>] [-CertificateThumbprint <
 This cmdlet displays health and usage statistics of resources in Network Controller. You can view the count of total resources, healthy resources, unhealthy resources and resources with unknown health for virtual network, gateway and load balancer resources. You can also see the utilization of public IPs, backend IPs and MAC address pools.
 
 ## EXAMPLES
+
+### Example 1
+
 This example displays the health statistics of resources in Network Controller
 ```
 $stats=Get-NetworkControllerStatistics -ConnectionUri https://networkcontroller
 $stats.Properties.HealthStatistics
-```
-This example displays the usage statistics of resources in Network Controller
-```
-$stats=Get-NetworkControllerStatistics -ConnectionUri https://networkcontroller
-$stats.Properties.UsageStatistics
 ```
 
 ## PARAMETERS
@@ -110,6 +108,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties are displayed by the cmdlet:
 
 Resource health (for virtual networks, Gateways and Load balancers)    

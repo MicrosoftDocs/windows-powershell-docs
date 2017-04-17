@@ -35,14 +35,14 @@ This cmdlet removes an IP pool from a network
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerIpPool -ConnectionUri https://networkcontroller -NetworkId ln1 -SubnetId Subnet1 -ResourceId pool1
 ```
 
 Description
 
------------
+
 
 The above command removes an IP pool which is created for subnet named subnet1.
 The subnet is present in a network called ln1.

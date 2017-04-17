@@ -37,7 +37,11 @@ Multiple load balancer VMs can be deployed to load balance traffic to virtual ma
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example adds a new load balancer MUX named Mux1 to the Network Controller.
+The MUX configuration includes a connection resource to connect to the MUX, local ASN of the MUX and the BGP peer configuration for the MUX.
+
 ```
 $peer=New-Object Microsoft.Windows.NetworkController.PeerRouterConfiguration
 $peer.LocalIpAddress="10.0.0.1"
@@ -57,13 +61,6 @@ $muxproperties=New-Object Microsoft.Windows.NetworkController.LoadBalancerMuxPro
 $muxproperties.Connections = @([Microsoft.Windows.NetworkController.Connection]@{ManagementAddresses=@("192.168.0.12");Credential=$credential})
 $muxproperties.Rout
 ```
-
-Description
-
------------
-
-This example adds a new load balancer MUX named Mux1 to the Network Controller.
-The MUX configuration includes a connection resource to connect to the MUX, local ASN of the MUX and the BGP peer configuration for the MUX.
 
 ## PARAMETERS
 

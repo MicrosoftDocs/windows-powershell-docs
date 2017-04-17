@@ -33,6 +33,9 @@ Get-NetworkControllerLoadBalancerMux [[-ResourceId] <String[]>] -ConnectionUri <
 This cmdlet retrieves the configuration of a load balancer VM managed by the Network Controller. Multiple load balancer VMs can be deployed to load balance traffic to virtual machines in the virtual network.
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the configuration of a load balancer MUX named Mux1 from the Network Controller
 ```
 Get-NetworkControllerLoadBalancerMux -ConnectionUri https://networkcontroller -ResourceId Mux1
@@ -119,6 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for a load balancer MUX:
 1. Router configuration - This includes local ASN of the MUX router and peer router configuration (Name, local IP address, peer IP address, Peer ASN)
 2. Certificate of the MUX

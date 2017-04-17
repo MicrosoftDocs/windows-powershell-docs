@@ -34,14 +34,14 @@ Remove-NetworkControllerAccessControlListRule -AccessControlListId <string> -Con
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerAccessControlListRule -ConnectionUri https://networkcontroller -AccessControlListId "Subnet1ACL" -ResourceId "AllowAll"
 ```
 
 Description
 
------------
+
 
 The above example removes the "AllowAll" rule from the access control list named "Subnet1ACL"
 

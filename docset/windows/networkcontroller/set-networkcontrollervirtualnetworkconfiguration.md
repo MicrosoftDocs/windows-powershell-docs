@@ -33,28 +33,28 @@ Set-NetworkControllerVirtualNetworkConfiguration -ConnectionUri <Uri>
 ```
 
 ## DESCRIPTION
+
 This cmdlet sets the global configuration for virtual networking in the Network Controller.
 With this, you can set the network virtualization protocol of the virtual network to VXLAN or NVGRE.
 The default is VXLAN
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example set the network virtualization protocol of the virtual networks to NVGRE.
+
 ```
 $config=New-Object Microsoft.Windows.NetworkController.VirtualNetworkManagerProperties
 $config.NetworkVirtualizationProtocol="NVGRE"
 Set-NetworkControllerVirtualNetworkConfiguration -ConnectionUri https://networkcontroller -ResourceId vnetglobalconfig -Properties $config
 ```
 
-Description
-
------------
-
-This example set the network virtualization protocol of the virtual networks to NVGRE.
 
 ## PARAMETERS
 
 ### -CertificateThumbPrint
+
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
 This is the certificate thumbprint of the certificate.
 This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
@@ -63,7 +63,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -72,13 +71,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+
 Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies a user credential that has permission to perform this action.
 The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
 
@@ -94,7 +94,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
+
 Specifies the entity tag (ETag) parameter of the resource.
 An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
 The value of the header is an opaque string representing the state of the resource at the time the response was generated.
@@ -111,7 +111,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -120,13 +119,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -135,17 +134,16 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
+
 Following properties can be changed:
-1.
-Whether distributed router is enabled or disabled
-2.
-Network virtualization mode (NVGRE/VXLAN)
+
+- Whether distributed router is enabled or disabled
+- Network virtualization mode (NVGRE/VXLAN)
 
 ```yaml
 Type: VirtualNetworkManagerProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -154,13 +152,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
 Specifies the unique identifier for the virtual network configuration
 
 ```yaml
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -169,13 +167,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceMetadata
+
 This parameter contains metadata information for the client, such as the tenant ID, group ID, and resource name.
 
 ```yaml
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -190,7 +188,6 @@ Accept wildcard characters: False
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -202,13 +199,13 @@ Accept wildcard characters: False
 
 ### 
 Following properties can be changed:
-1.
-Whether distributed router is enabled or disabled
-2.
-Network virtualization mode (NVGRE/VXLAN)
+
+- Whether distributed router is enabled or disabled
+- Network virtualization mode (NVGRE/VXLAN)
 
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

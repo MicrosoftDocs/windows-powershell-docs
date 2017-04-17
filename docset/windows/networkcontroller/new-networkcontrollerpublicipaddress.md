@@ -37,20 +37,17 @@ This publicIpAddress resource is used by the virtualGateway resource and the loa
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a public IP address resource named PublicIP1 in the NetworkController.
+The IP address associated with this resource is 0.124.231.21 and the IP address allocation method is static.
+
 ```
 $IpAddress=New-Object Microsoft.Windows.NetworkController.PublicIpAddressProperties
 $IpAddress.IPAddress="10.124.231.21"
 $IpAddress.PublicIpAllocationMethod="Static"
 New-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller -ResourceId PublicIp1 -Properties $IpAddress
 ```
-
-Description
-
------------
-
-This example creates a public IP address resource named PublicIP1 in the NetworkController.
-The IP address associated with this resource is 0.124.231.21 and the IP address allocation method is static.
 
 ## PARAMETERS
 
@@ -63,7 +60,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -78,7 +74,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -94,7 +89,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -111,7 +105,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -126,7 +119,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -147,7 +139,6 @@ TCP idle timeout in minutes
 Type: PublicIpAddressProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -162,7 +153,6 @@ Specifies the unique ID of the IP Address resource
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -177,7 +167,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -192,7 +181,6 @@ Accept wildcard characters: False
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -214,5 +202,6 @@ TCP idle timeout in minutes
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

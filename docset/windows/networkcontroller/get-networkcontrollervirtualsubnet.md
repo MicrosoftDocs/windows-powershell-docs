@@ -34,6 +34,9 @@ Get-NetworkControllerVirtualSubnet [-VirtualNetworkId] <String[]> [[-ResourceId]
 This cmdlet retrieves a virtual subnet belonging to a virtual network
 
 ## EXAMPLES
+
+### Example 1
+
 This cmdlet retrieves all the virtual subnets belonging to the virtual network vnet1.
 ```
 Get-NetworkControllerVirtualSubnet -ConnectionUri https://networkcontroller -VirtualNetworkId vnet1
@@ -135,6 +138,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties of a virtual subnet are retrieved:
 1. Address prefix
 2. Access control list associated with the subnet

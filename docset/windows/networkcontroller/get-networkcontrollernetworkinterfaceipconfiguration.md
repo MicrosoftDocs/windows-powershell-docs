@@ -34,6 +34,9 @@ Get-NetworkControllerNetworkInterfaceIpConfiguration [-NetworkInterfaceId] <Stri
 This cmdlet retrieves the IP configuration of a network interface from the Network Controller
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the all the IP configurations of a network interface named nw1, from the Network Controller 
 ```
 Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
@@ -134,6 +137,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved from an IP interface IP Configuration resource:
 1. Private IP address
 2. Private IP address allocation method

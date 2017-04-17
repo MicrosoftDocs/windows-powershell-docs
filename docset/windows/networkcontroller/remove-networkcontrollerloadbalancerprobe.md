@@ -35,14 +35,14 @@ This cmdlet removes a health probe rule associated with a load balancer resource
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId probe1
 ```
 
 Description
 
------------
+
 
 This cmdlet removes a health probe rule named probe1 from a load balancer resource named lb1
 

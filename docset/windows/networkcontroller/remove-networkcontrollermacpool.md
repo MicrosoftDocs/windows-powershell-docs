@@ -35,14 +35,14 @@ This cmdlet removes a MAC pool from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerMacPool -ConnectionUri https://networkcontroller -ResourceId "MacPool1"
 ```
 
 Description
 
------------
+
 
 This example removes a MAC pool named MAcPool1 from the Network Controller
 

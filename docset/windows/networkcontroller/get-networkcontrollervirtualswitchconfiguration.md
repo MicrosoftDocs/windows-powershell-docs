@@ -33,6 +33,9 @@ Get-NetworkControllerVirtualSwitchConfiguration [-ConnectionUri <Uri>] [-Certifi
 This cmdlet retrieves the global settings of the virtual switch from the Network Controller. This primarily retrieves Quality of Service settings for all virtual switches managed by the Network Controller.
 
 ## EXAMPLES
+
+### Example 1
+
 This example provides the virtual switch configuration of Network Controller, with REST endpoint as https://networkcontroller. The details of the configuration is present in the Properties resource.
 ```
 Get-NetworkControllerVirtualSwitchConfiguration -ConnectionUri https://networkcontroller
@@ -103,6 +106,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for the virtual switch configuration:
 1. Number of interfaces that have Quality of Service (QoS) enabled
 2. Reservation mode for QoS: absolute or Weight

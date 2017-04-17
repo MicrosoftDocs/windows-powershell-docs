@@ -19,7 +19,9 @@ ms.assetid: 4A52B071-DDC5-4A47-BD49-BD70D059BB7A
 
 # Remove-NetworkControllerVirtualServer
 
-This cmdlet removes a virtual server resource from the Network Controller
+## SYNOPSIS
+
+This cmdlet removes a virtual server resource from the Network Controller.
 
 ## SYNTAX
 
@@ -29,24 +31,23 @@ Remove-NetworkControllerVirtualServer -ConnectionUri <Uri> -ResourceId <string>
 ```
 
 ## DESCRIPTION
+
 This cmdlet removes a virtual server resource from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example removes a virtual server with name contoso1 from the Network Controller.
+
 ```
 Remove-NetworkControllerVirtualServer -ConnectionUri https://networkcontroller -ResourceId contoso1
 ```
 
-Description
-
------------
-
-The above cmdlet removes a virtual server with name contoso1 from the Network Controller.
-
 ## PARAMETERS
 
 ### -CertificateThumbPrint
+
 Specifies the digital public key X.509 certificate of a user account that has permission to perform this action.
 This is the certificate thumbprint of the certificate.
 This thumbprint must also be provided in the ClientCertificateThumbprint parameter in the Install-NetworkController or Set-NetworkController cmdlet so that Network Controller can authorize this user.
@@ -55,7 +56,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -64,13 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionUri
+
 Specifies the Uniform Resource Identifier (URI) of the Network Controller, used by all Representational State Transfer (REST) clients to connect to Network Controller.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -79,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
 Specifies a user credential that has permission to perform this action.
 The default value is the current user.This user must be present in the security group provided in the ClientSecurityGroup parameter in the Install-NetworkController cmdlet.
 
@@ -86,7 +87,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -95,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
+
 Specifies the entity tag (ETag) parameter of the resource.
 An ETag (entity tag) is an HTTP response header returned by an HTTP-compliant web server used to determine change in the content of a resource at a given URL.
 The value of the header is an opaque string representing the state of the resource at the time the response was generated.
@@ -103,7 +104,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,13 +112,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
 Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -127,13 +127,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+
 Specifies the ID of the resource to be removed
 
 ```yaml
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -146,5 +146,6 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

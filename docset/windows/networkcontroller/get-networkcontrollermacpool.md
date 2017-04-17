@@ -33,6 +33,9 @@ Get-NetworkControllerMacPool [[-ResourceId] <String[]>] -ConnectionUri <Uri> [-C
 This cmdlet retrieves the properties of a MAC pool from the Network Controller
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves a particular MAC pool named macPool1 from the Network Controller.
 ```
 Get-NetworkControllerMacPool -ConnectionUri https://networkcontroller -ResourceId macPool1
@@ -118,6 +121,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties of a MAC pool can be retrieved:
 1. Start MAC address
 2. End MAC address

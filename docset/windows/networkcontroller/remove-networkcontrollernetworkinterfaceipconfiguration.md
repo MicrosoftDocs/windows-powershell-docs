@@ -35,14 +35,14 @@ This cmdlet removes an IP configuration resource pertaining to a network interfa
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerNEtworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1 -ResourceId IpConfig1
 ```
 
 Description
 
------------
+
 
 This example removes an IP configuration resource named IpConfig1 from a network interface called nw1.
 

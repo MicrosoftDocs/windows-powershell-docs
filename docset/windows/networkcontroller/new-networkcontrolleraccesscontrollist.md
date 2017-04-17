@@ -35,6 +35,9 @@ New-NetworkControllerAccessControlList [-ResourceId] <String> [[-Tags] <PSObject
 The **New-NetworkControllerAccessControlList** cmdlet creates a new access control list for allowing/denying traffic to/from a particular subnet or network interface. Each access control list can contain multiple rules.
 
 ## EXAMPLES
+
+### Example 1
+
 This example creates an access control list with two rules. The first rule allows all inbound network traffic. The second rule allows all outbound network traffic.
 ```
 $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
@@ -270,6 +273,9 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### 
+
 Each access control list contains multiple ACL rules. Each rule contains the following:
 1. Name
 2. Protocol

@@ -36,7 +36,10 @@ This cmdlet creates a new MAC pool in the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a new MAC pool with a given start MAC address and an end MAC address.
+
 ```
 $macpoolProperties = New-Object Microsoft.Windows.NetworkController.MacPoolProperties
 $macpoolProperties.StartMacAddress = "40-1D-D8-B7-1D-00"
@@ -44,11 +47,6 @@ $macpoolProperties.EndMacAddress = "40-1D-D8-F8-1D-FF"
 New-NetworkControllerMacPool -ConnectionUri https://networkcontroller -ResourceId "MacPool" -Properties $macpoolProperties
 ```
 
-Description
-
------------
-
-This example creates a new MAC pool with a given start MAC address and an end MAC address.
 
 ## PARAMETERS
 
@@ -61,7 +59,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +73,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -92,7 +88,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +104,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +118,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -134,16 +127,13 @@ Accept wildcard characters: False
 
 ### -Properties
 Following properties can be added/changed for a MAC pool:
-a.
-Start MAC address
-b.
-End MAC address
+- Start MAC address
+- End MAC address
 
 ```yaml
 Type: MacPoolProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -158,7 +148,6 @@ Specifies the ID of the MAC pool to be added/changed
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -173,7 +162,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -188,7 +176,6 @@ Accept wildcard characters: False
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -200,13 +187,12 @@ Accept wildcard characters: False
 
 ### 
 Following properties can be added/changed for a MAC pool:
-a.
-Start MAC address
-b.
-End MAC address
+- Start MAC address
+- End MAC address
 
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

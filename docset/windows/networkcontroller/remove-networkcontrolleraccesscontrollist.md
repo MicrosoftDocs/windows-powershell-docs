@@ -35,14 +35,14 @@ This cmdlet removes an access control list from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerAccessControlList -ConnectionUri https://networkcontroller -ResourceId "SubnetACL1"
 ```
 
 Description
 
------------
+
 
 The above cmdlet removes an access control list with the name "SubnetACL1" from the Network Controller.
 

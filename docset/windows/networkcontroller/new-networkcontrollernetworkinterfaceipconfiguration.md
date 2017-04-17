@@ -36,7 +36,11 @@ This cmdlet adds/updates an IP configuration to a network interface in the Netwo
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates an IP configuration resource named IP1 for a network interface named nw1.
+The private IP Address is 10.0.0.1 and the IP allocation method is static.
+
 ```
 $IpProp=New-Object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationPropertiesllocation
 $IpProp.PrivateIpAddress="10.0.0.1"
@@ -46,13 +50,6 @@ $IpProp.Subnet=$subnet
 
 New-NetworkControllerNetworkInterfaceIpconfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1 -ResourceId Ip1 -Properties $IpProp
 ```
-
-Description
-
------------
-
-This example creates an IP configuration resource named IP1 for a network interface named nw1.
-The private IP Address is 10.0.0.1 and the IP allocation method is static.
 
 ## PARAMETERS
 
@@ -65,7 +62,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +76,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -96,7 +91,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -113,7 +107,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +121,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -143,7 +135,6 @@ Specifies the network interface where the IP configuration resource belongs
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -164,7 +155,6 @@ Subnet associated with the IP configuration
 Type: NetworkInterfaceIpConfigurationProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -179,7 +169,6 @@ Specifies the unique identifier of the resource
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -194,7 +183,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -216,5 +204,6 @@ Subnet associated with the IP configuration
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

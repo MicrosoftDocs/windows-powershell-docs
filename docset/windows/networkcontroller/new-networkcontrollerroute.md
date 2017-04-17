@@ -41,7 +41,12 @@ If there is more than one route with the same LPM match, then the user defined r
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+The above cmdlet adds a new route to a route table named Table1.
+The next hop of this route is a virtual appliance.
+
+
 ```
 $route = new-object Microsoft.Windows.NetworkController.Route
 $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperties
@@ -50,13 +55,6 @@ $route.properties.nextHopType = "VirtualAppliance"
 $route.properties.nextHopIpAddress = "192.168.1.10"
 New-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1" -ResourceId "DefaultRoute"
 ```
-
-Description
-
------------
-
-The above cmdlet adds a new route to a route table named Table1.
-The next hop of this route is a virtual appliance.
 
 ## PARAMETERS
 
@@ -69,7 +67,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +81,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -100,7 +96,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -117,7 +112,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -132,7 +126,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -153,7 +146,6 @@ Next hop IP address
 Type: RouteProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -168,7 +160,6 @@ Specifies the unique ID of the route
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -183,7 +174,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -198,7 +188,6 @@ Specifies the route table where the route is being added
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -220,5 +209,6 @@ Next hop IP address
 ## OUTPUTS
 
 ## NOTES
+
 ## RELATED LINKS
 

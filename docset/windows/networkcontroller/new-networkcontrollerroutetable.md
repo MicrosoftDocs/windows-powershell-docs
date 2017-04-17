@@ -40,7 +40,7 @@ If there is more than one route with the same LPM match, then the user defined r
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 $route = new-object Microsoft.Windows.NetworkController.Route
 $route.ResourceID = "0_0_0_0_0"
@@ -54,7 +54,7 @@ New-NetworkControllerRouteTable -ConnectionUri https://networkcontroller -Resour
 
 Description
 
------------
+
 
 The above cmdlet creates a route table named Route1 with a single route named "0_0_0_0_0"
 

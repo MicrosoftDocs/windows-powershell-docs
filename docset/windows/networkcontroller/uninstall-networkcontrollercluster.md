@@ -36,13 +36,15 @@ If the network controller application is deployed on top of the cluster, that is
 ## EXAMPLES
 
 ### Example 1: Uninstall a network controller cluster by name
-```
-PS C:\> Uninstall-NetworkControllerCluster -ComputerName "Node1.Contoso.com"
-```
 
 This command uninstalls the network controller cluster node named.
 Node1.Contoso.com.
 If *ComputerName* is not specified, this cmdlet will remove the network controller cluster on the local computer.
+
+
+```
+PS C:\> Uninstall-NetworkControllerCluster -ComputerName "Node1.Contoso.com"
+```
 
 ## PARAMETERS
 

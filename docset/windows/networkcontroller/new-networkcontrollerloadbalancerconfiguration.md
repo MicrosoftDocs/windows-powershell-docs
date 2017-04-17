@@ -36,7 +36,11 @@ This includes the virtual IP of load balancer service in Network Controller, dif
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates load balancer configuration in Network Controller, with REST endpoint as https://networkcontroller.
+It specifies the load balancer service IP address and a VIP pool from an existing logical network and subnet.
+
 ```
 \\Retrieve the VIP pool
 $pool=Get-NetworkControllerIpPool -ConnectionUri https://networkcontroller -NetworkId ln1 -SubnetId subnet1
@@ -50,12 +54,6 @@ $lbconfig.VipPools = $pool
 New-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://networkcontroller -ResourceId lbconfig1 -Properties $lbconfig
 ```
 
-Description
-
------------
-
-This example creates load balancer configuration in Network Controller, with REST endpoint as https://networkcontroller.
-It specifies the load balancer service IP address and a VIP pool from an existing logical network and subnet.
 
 ## PARAMETERS
 

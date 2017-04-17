@@ -33,6 +33,9 @@ Get-NetworkControllerState [-ConnectionUri <Uri>] [-CertificateThumbprint <Strin
 This cmdlet retrieves the provisioning state of NetworkControllerState resource. To get the current configuration and state of the Network Controller services, you need to execute Invoke-NetworkControllerState. After executing Invoke-NetworkControllerState, you can use Get-NetworkControllerState to get the provisioning state of the resource (whether the configuration and state of the Network Controller services were successfully dumped on the Network Controller nodes)
 
 ## EXAMPLES
+
+### Example 1
+
 This example shows that the provisioning state of NetworkControllerState resource is succeeded. The state of all the Network Controller services has been dumped on the Network Controller nodes.
 ```
 $state=Get-NetworkControllerState -ConnectionUri https://networkcontroller
@@ -105,6 +108,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Provisioning state of the resource
 
 ## NOTES

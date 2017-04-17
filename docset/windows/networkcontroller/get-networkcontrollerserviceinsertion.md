@@ -33,6 +33,9 @@ Get-NetworkControllerServiceInsertion [[-ResourceId] <String[]>] -ConnectionUri 
 This cmdlet retrieves the properties of a service insertion resource from the Network Controller. Service insertion is useful for cases like port mirroring, so that traffic from one VM can be mirrored to another VM, say for inspection purposes.
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the properties of a service insertion resource named SI1, from the Network Controller.
 ```
 Get-NetworkControllerServiceInsertion -ConnectionUri https://networkcontroller -ResourceId SI1
@@ -119,6 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties for service insertion can be retrieved:
 For each service insertion rule, the following can be specified:    
 1. Description of rule    

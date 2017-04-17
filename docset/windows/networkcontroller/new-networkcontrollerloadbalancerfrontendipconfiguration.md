@@ -38,7 +38,10 @@ The VIP must be taken from an unused IP in one of the logical network IP Pool wh
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates a front end IP configuration resource named frontEnd1 for a load balancer resource named lb1
+
 ```
 //Retrieve the subnet for front end IP
 $subnet = Get-NetworkControllerSubnet -ConnectionUri https://networkcontroller -NetworkId ln1 -ResourceId subnet1
@@ -50,12 +53,6 @@ $frontEndIp.PrivateIPAllocationMethod="Static"
 
 New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
 ```
-
-Description
-
------------
-
-This example creates a front end IP configuration resource named frontEnd1 for a load balancer resource named lb1
 
 ## PARAMETERS
 

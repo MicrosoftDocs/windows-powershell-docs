@@ -34,6 +34,9 @@ Get-NetworkControllerLoadBalancerInboundNatRule [-LoadBalancerId] <String[]> [[-
 This cmdlet retrieves an inbound NAT rule associated with a load balancer resource. This can be used to forward external traffic to a specific VM in the virtual network
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves an inbound NAT rule named InNat1 from a load balancer resource named lb1
 ```
 Get-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId InNat1
@@ -135,6 +138,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for an inbound NAT rule:
 1. Front end port
 2. Back end port

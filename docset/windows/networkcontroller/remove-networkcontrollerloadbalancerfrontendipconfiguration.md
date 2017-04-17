@@ -35,14 +35,14 @@ This cmdlet removes a front end IP configuration resource from the Network Contr
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEdnd1
 ```
 
 Description
 
------------
+
 
 This example removes a front end IP configuration resource named frontEnd1 from a load balancer resource named lb1
 

@@ -37,7 +37,7 @@ When you create a Virtual Network for a tenant, it is placed within a unique rou
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 $vsubnet = new-object Microsoft.Windows.NetworkController.VirtualSubnet  
 $vsubnet.ResourceId = "Contoso_WebTier"  
@@ -56,7 +56,7 @@ New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri h
 
 Description
 
------------
+
 
 The above cmdlet creates a virtual network called Contoso_Vnet1 with one virtual subnet
 

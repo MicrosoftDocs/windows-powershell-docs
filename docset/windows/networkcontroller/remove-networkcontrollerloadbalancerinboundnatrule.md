@@ -36,14 +36,14 @@ This cmdlet removes an inbound NAT rule associated with a load balancer resource
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId InNat1
 ```
 
 Description
 
------------
+
 
 This example removes an inbound NAT Rule named InNat1 from a load balancer resource named lb1
 

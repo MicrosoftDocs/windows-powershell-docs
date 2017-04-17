@@ -33,6 +33,9 @@ Get-NetworkControllerPublicIpAddress [[-ResourceId] <String[]>] -ConnectionUri <
 This cmdlet retrieves a public IP address resource from the Network Controller. This publicIpAddress resource is used by the virtualGateway resource and the loadBalancer resource to indicate the IP Address that can be used to communicate with the virtual network from outside it.
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves all the public IP address resources from the Network Controller. Network Controller is represented by the REST uri https://networkcontroller.
 ```
 Get-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller
@@ -118,6 +121,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved from this cmdlet:
 1. The public IP Address of the resource
 2. Allocation method of the public IP address: Static or dynamic

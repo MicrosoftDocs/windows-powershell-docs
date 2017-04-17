@@ -36,20 +36,17 @@ This cmdlet adds a new network interface resource to the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example retrieves an existing network interface named nw1 from the Network Controller.
+Then, it updates the network interface to allow MAC spoofing.
+
 ```
 $nw=Get-NetworkControllerNetworkInterface -ConnectionUri https://networkcontroller -ResourceId nw1
 
 $nw.Properties.PortSettings.MacSpoofingEnabled="Enabled"
 New-NetworkControllerNetworkInterface -ConnectionUri https://networkcontroller -ResourceId nw1 -Properties $nw.Properties
 ```
-
-Description
-
------------
-
-This example retrieves an existing network interface named nw1 from the Network Controller.
-Then, it updates the network interface to allow MAC spoofing.
 
 ## PARAMETERS
 
@@ -62,7 +59,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -77,7 +73,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -93,7 +88,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -110,7 +104,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -125,7 +118,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -221,7 +213,6 @@ Specifies the unique ID of the network interface
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -236,7 +227,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -251,7 +241,6 @@ Accept wildcard characters: False
 Type: psobject
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None

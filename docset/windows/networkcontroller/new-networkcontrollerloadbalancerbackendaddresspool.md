@@ -17,6 +17,8 @@ title: New-NetworkControllerLoadBalancerBackendAddressPool
 ms.assetid: 2A3E3173-627F-4DC5-953F-6DA4DF5E1302
 ---
 
+# New-NetworkControllerLoadBalancerBackendAddressPool
+
 ## SYNOPSIS
 This cmdlet adds/updates the configuration of a backend address pool resource associated with a load balancer.
 
@@ -34,7 +36,8 @@ The backend address pool contains the Dynamic IPs (DIPs) that make up the member
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
 ```
 //Retrieve the backend IPs that will form the pool
 $backEndIp=Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
@@ -47,8 +50,6 @@ New-NetworkControllerLoadBalancerBackEndAddressPool -ConnectionUri https://netwo
 ```
 
 Description
-
------------
 
 This example creates a backend address pool named be1 for a load balancer resource named lb1.
 This address pool has the IP of network interface nw1 as the single member in the pool
@@ -198,6 +199,7 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### 
+
 This takes backend IP configuration of the pool members as input
 
 ## OUTPUTS

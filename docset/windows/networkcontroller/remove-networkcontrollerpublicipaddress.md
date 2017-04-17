@@ -35,14 +35,14 @@ This cmdlet removes a public IP address resource from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller -ResourceId publicIP1
 ```
 
 Description
 
------------
+
 
 This example removes a public IP address resource called publicIp1 from the Network Controller.
 

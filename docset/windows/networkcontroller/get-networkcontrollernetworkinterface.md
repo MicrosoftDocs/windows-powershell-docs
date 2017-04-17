@@ -33,6 +33,9 @@ Get-NetworkControllerNetworkInterface [[-ResourceId] <String[]>] -ConnectionUri 
 Retrieves the settings of a network interface from the Network Controller
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves the configuration of a network interface called nw1, from the Network Controller.
 ```
 Get-NetworkControllerNetworkInterface -ConnectionUri https://networkcontroller -ResourceId nw1
@@ -119,6 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following settings of a network interface can be retrieved:
 1. MAC address
 2. IP address

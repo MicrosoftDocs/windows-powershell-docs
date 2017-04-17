@@ -34,6 +34,9 @@ Get-NetworkControllerLoadBalancerOutboundNatRule [-LoadBalancerId] <String[]> [[
 Retrieves the outbound NAT rules associated with a load balancer resource. This can be used to forward VM network traffic from the virtual network to external destinations using network address translation (NAT). 
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves an outbound NAT rule called OutNat1 from a load balancer resource named lb1
 ```
 Get-NetworkControllerLoadBalancerOutboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId OutNat1
@@ -134,6 +137,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties of an outbound NAT rule can be retrieved:
 1. Protocol
 2. Backend address pool associated with the NAT rule

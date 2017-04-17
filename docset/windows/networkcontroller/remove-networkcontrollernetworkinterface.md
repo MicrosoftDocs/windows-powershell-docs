@@ -35,14 +35,14 @@ This cmdlet removes a network interface resource from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerNetworkInterface -ConnectionUri https://networkcontroller -ResourceId nw1
 ```
 
 Description
 
------------
+
 
 This example removes a Network Interface called nw1 from the Network Controller.
 

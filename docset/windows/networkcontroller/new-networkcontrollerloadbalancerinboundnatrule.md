@@ -37,7 +37,12 @@ This can be used to forward external traffic to a specific VM in the virtual net
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+This example creates an inbound NAT rule named natRule1 for a load balancer resource called lb1.
+The NAT rule specifies frontend and backend port as 3389 and protocol as TCP
+
+
 ```
 //Retrieve the load balancer frontend IP configured beforehand
 $frontEndIp=Get-NetworkControllerLoadBalancerFrontendIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1
@@ -55,13 +60,6 @@ $natRule.IdleTimeoutInMinutes=5
 $natRule.Protocol="TCP"
 New-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId natRule1 -Properties $natRule
 ```
-
-Description
-
------------
-
-This example creates an inbound NAT rule named natRule1 for a load balancer resource called lb1.
-The NAT rule specifies frontend and backend port as 3389 and protocol as TCP
 
 ## PARAMETERS
 

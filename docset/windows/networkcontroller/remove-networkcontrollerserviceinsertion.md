@@ -35,14 +35,14 @@ This cmdlet removes a service insertion resource from the Network Controller.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerServiceInsertion -ConnectionUri https://networkcontroller -ResourceId "SI1"
 ```
 
 Description
 
------------
+
 
 This example removes a service insertion resource named SI1 from the Network Controller.
 

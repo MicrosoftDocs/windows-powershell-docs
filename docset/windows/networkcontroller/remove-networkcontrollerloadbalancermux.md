@@ -35,14 +35,14 @@ This cmdlet removes a load balancer MUX from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerMux -ConnectionUri https://networkcontroller -ResourceId Mux1
 ```
 
 Description
 
------------
+
 
 This example removes a load balancer MUX with name Mux1 from the Network Controller.
 

@@ -37,7 +37,7 @@ This primarily sets Quality of Service settings for all virtual switches managed
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 $Qos=New-Object Microsoft.Windows.NetworkController.VirtualSwitchQosSettings
 $Qos.ReservationMode="Weight"
@@ -48,7 +48,7 @@ Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri https://networkco
 
 Description
 
------------
+
 
 This example first creates a resource for QoS settings and sets the reservation mode to "Weight".
 Then, it sets the virtual switch manager settings with the QoS settings.

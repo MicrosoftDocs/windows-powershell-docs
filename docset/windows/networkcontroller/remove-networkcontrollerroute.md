@@ -39,14 +39,14 @@ If there is more than one route with the same LPM match, then the user defined r
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1" -ResourceId "DefaultRoute"
 ```
 
 Description
 
------------
+
 
 The above cmdlet removes a route named "DefaultRoute" from a route table named Table1.
 

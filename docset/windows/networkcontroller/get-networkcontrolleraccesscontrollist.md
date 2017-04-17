@@ -33,6 +33,8 @@ Get-NetworkControllerAccessControlList [[-ResourceId] <String[]>] -ConnectionUri
 The **Get-NetworkControllerAccessControlList** cmdlet retrieves the contents of an access control list for a network controller.
 
 ## EXAMPLES
+
+### Example 1
 This example retrieves all the access control lists configured in the Network Controller. Network Controller is represented by the REST endpoint https://networkcontroller
 
 ```
@@ -126,6 +128,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
 Each access control list contains multiple ACL rules. Each rule contains the following:
 1. Name
 2. Protocol

@@ -39,7 +39,11 @@ Each rule consists of a name, protocol, source and destination port range, sourc
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
+
+The above example adds a new ACL rule to an ACL list named Subnet1ACL.
+This rule allows all inbound traffic.
+
 ```
 $ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
 $ruleproperties.Protocol = "All"  
@@ -54,13 +58,6 @@ $ruleproperties.Logging = "Enabled"
 New-NetworkControllerAccessControlListRule -ConnectionUri https://networkcontroller -ResourceId "AllowAllInbound" -AccessControlListId "Subnet1ACL"
 ```
 
-Description
-
------------
-
-The above example adds a new ACL rule to an ACL list named Subnet1ACL.
-This rule allows all inbound traffic.
-
 ## PARAMETERS
 
 ### -AccessControlListId
@@ -70,7 +67,6 @@ Specifies the ID of the ACL.
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +84,6 @@ This thumbprint must also be provided in the ClientCertificateThumbprint paramet
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -103,7 +98,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -119,7 +113,6 @@ The default value is the current user.This user must be present in the security 
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -136,7 +129,6 @@ The value of the header is an opaque string representing the state of the resour
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -151,7 +143,6 @@ Forces the command to run without asking for user confirmation.
 Type: switch
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -161,30 +152,20 @@ Accept wildcard characters: False
 
 ### -Properties
 Specifies the properties of an ACL rule
-1.
-Protocol
-2.
-Source port range
-3.
-Destination port range
-4.
-Action (Allow/Deny)
-5.
-Source Address prefix
-6.
-Destination address prefix
-7.
-Priority
-8.
-Type of rule (inbound/outbound)
-9.
-Whether logging is enabled or disabled
+- Protocol
+- Source port range
+- Destination port range
+- Action (Allow/Deny)
+- Source Address prefix
+- Destination address prefix
+- Priority
+- Type of rule (inbound/outbound)
+- Whether logging is enabled or disabled
 
 ```yaml
 Type: AclRuleProperties
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -199,7 +180,6 @@ Specifies the ID of the ACL resource
 Type: string
 Parameter Sets: (All)
 Aliases: 
-
 Required: True
 Position: Named
 Default value: None
@@ -214,7 +194,6 @@ This parameter contains metadata information for the client, such as the tenant 
 Type: ResourceMetadata
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -229,26 +208,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### 
 Following properties can be provided for each ACL rule:
-1.
-Name
-2.
-Protocol
-3.
-Source port range
-4.
-Destination port range
-5.
-Action (Allow/Deny)
-6.
-Source Address prefix
-7.
-Destination address prefix
-8.
-Priority
-9.
-Type of rule (inbound/outbound)
-10.
-Whether logging is enabled or disabled
+- Name
+- Protocol
+- Source port range
+- Destination port range
+- Action (Allow/Deny)
+- Source Address prefix
+- Destination address prefix
+- Priority
+- Type of rule (inbound/outbound)
+- Whether logging is enabled or disabled
 
 ## OUTPUTS
 

@@ -37,7 +37,7 @@ This is useful for cases like port mirroring, so that traffic from one VM can be
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 $dstNic = get-networkcontrollernetworkinterface -ConnectionUri https://networkcontroller -ResourceId "Appliance_Ethernet1"
 
@@ -59,7 +59,7 @@ $portmirr
 
 Description
 
------------
+
 
 The above example creates a service insertion object that mirrors the traffic to the destination NIC specified by "Appliance_Ethernet1".
 This objet can be applied to a network interface so that the traffic from that network interface is mirrored to "Appliance_Enternet1".

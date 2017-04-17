@@ -35,14 +35,14 @@ This cmdlet removes a virtual network from the Network Controller
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerVirtualNetwork -ConnectionUri https://networkcontroller -ResourceId vnet1
 ```
 
 Description
 
------------
+
 
 The above cmdlet removes a virtual network named vnet1 from the Network Controller.
 

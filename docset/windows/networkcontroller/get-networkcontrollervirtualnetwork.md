@@ -32,6 +32,9 @@ Get-NetworkControllerVirtualNetwork [[-ResourceId] <String[]>] -ConnectionUri <U
 This cmdlet retrieves the settings of a virtual network from the Network Controller
 
 ## EXAMPLES
+
+### Example 1
+
 This example retrieves a virtual network named vnet1 from the Network Controller.
 ```
 Get-NetworkControllerVirtualNetwork -ConnectionUri https://networkcontroller -ResourceId vnet1
@@ -119,6 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### 
+
 Following properties can be retrieved for a virtual network:
 1. Address space of the network
 2. DHCP options

@@ -35,14 +35,14 @@ This cmdlet removes a backend address pool from a load balancer resource
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 Remove-NetworkControllerLoadBalancerBackendAddressPool -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId be1
 ```
 
 Description
 
------------
+
 
 This example removes a backend address pool resource named be1 from a load balancer resource named lb1
 

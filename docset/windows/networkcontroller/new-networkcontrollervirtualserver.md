@@ -38,7 +38,7 @@ If already present, updates the properties of the virtual server
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1
 ```
 $credentialProperties = [Microsoft.Windows.NetworkController.CredentialProperties]@{Type="UsernamePassword";UserName="admin";Value="password"}
 New-NetworkControllerCredential -ResourceId cred1 -ConnectionUri https://restserver -Properties $credentialProperties
@@ -52,7 +52,7 @@ New-NetworkControllerVirtualServer -ConnectionUri https://restserver -ResourceId
 
 Description
 
------------
+
 
 The above cmdlet adds a virtual server with name VirtualServer1 to the Network Controller
 

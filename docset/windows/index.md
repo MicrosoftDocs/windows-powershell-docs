@@ -88,7 +88,7 @@ The table below also shows the latest published version of the Help for each mod
 | NetWNV | [Network Virtualization](netwnv/netwnv.md) |
 | NetworkConnectivityStatus | [Network connectivity status](networkconnectivitystatus/networkconnectivitystatus.md) |
 | NetworkController | [Network Controller](networkcontroller/networkcontroller.md) |
-| NetworkControllerDiagnostics | [Network Controller diagnostics](network-controller-diagnostics/index.md) |
+| NetworkControllerDiagnostics | [Network Controller diagnostics](networkcontrollerdiagnostics/networkcontrollerdiagnostics.md) |
 | NetworkLoadBalancingClusters | [Network Load Balancing Clusters](networkloadbalancingclusters/networkloadbalancingclusters.md) |
 | NetworkSwitchManager | [Network Switch Manager](networkswitchmanager/networkswitchmanager.md) |
 | NetSwitchTeam | [Network Switch Team](netswitchteam/netswitchteam.md) |

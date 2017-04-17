@@ -12029,6 +12029,36 @@
 "source_path": "docset/windows/network-controller/update-networkcontroller.md",
 "redirect_url": "/itpro/powershell/windows/networkcontroller/update-networkcontroller",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/networkcontrollerdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-networkcontrollerconfigurationstate.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-networkcontrollerconfigurationstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-servicefabricnodestatus.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-servicefabricnodestatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/get-networkcontrollerdeploymentinfo.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/get-networkcontrollerdeploymentinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/get-networkcontrollerreplica.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/get-networkcontrollerreplica",
+"redirect_document_id": true
 }
 ]
 }

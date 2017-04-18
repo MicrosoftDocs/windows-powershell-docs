@@ -1967,7 +1967,7 @@
 ### [Get-NCSIPolicyConfiguration](ncsi/get-ncsipolicyconfiguration.md)
 ### [Reset-NCSIPolicyConfiguration](ncsi/reset-ncsipolicyconfiguration.md)
 ### [Set-NCSIPolicyConfiguration](ncsi/set-ncsipolicyconfiguration.md)
-## [Network Controller](networkcontroller/index.md)
+## [Network Controller](networkcontroller/networkcontroller.md)
 ### [Add-NetworkControllerNode](networkcontroller/add-networkcontrollernode.md)
 ### [Clear-NetworkControllerNodeContent](networkcontroller/clear-networkcontrollernodecontent.md)
 ### [Disable-NetworkControllerNode](networkcontroller/disable-networkcontrollernode.md)

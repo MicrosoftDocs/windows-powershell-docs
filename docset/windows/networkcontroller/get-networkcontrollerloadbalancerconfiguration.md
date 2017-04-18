@@ -21,6 +21,7 @@ ms.assetid: 9A4BA797-325C-47D7-8298-28D1982D0853
 
 ## SYNOPSIS
 Retrieves the configuration of the load balancer from the Network Controller
+
 ## SYNTAX
 
 ```
@@ -29,12 +30,18 @@ Get-NetworkControllerLoadBalancerConfiguration [-ConnectionUri <Uri>] [-Certific
 ```
 
 ## DESCRIPTION
-Retrieves the configuration of the load balancer from the Network Controller. This includes the load balancing service virtual IP (VIP) and the different VIP pools associated with the load balancer
+
+Retrieves the configuration of the load balancer from the Network Controller. This includes the load balancing service virtual IP (VIP) and the different VIP pools associated with the load balancer.
+
 ## EXAMPLES
 
 ### Example 1
 
 This example retrieves the load balancer configuration from Network Controller. In this example, The Network Controller is hosted at https://networkcontroller.
+
+```
+Get-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://networkcontroller
+```
 
 ## PARAMETERS
 
@@ -45,7 +52,6 @@ Specifies the digital public key X.509 certificate of a user account that has pe
 Type: String
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -60,7 +66,6 @@ Specifies the Uniform Resource Identifier (URI) of the Network Controller, used 
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -75,7 +80,6 @@ Specifies a user credential that has permission to perform this action.The defau
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -88,7 +92,6 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,9 +109,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### 
 
 Following properties can be retrieved for a load balancer configuration:
-1. Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
-2. Virtual IP pools associated with the load balancer. These should be existing IP pools as part of existing logical networks
-3. IP address ranges to be excluded from outbound NAT
+
+- Load balancer manager virtual IP address (Load balancer manager is a service inside Network Controller)
+- Virtual IP pools associated with the load balancer. These should be existing IP pools as part of existing logical networks
+- IP address ranges to be excluded from outbound NAT
 
 ## NOTES
 

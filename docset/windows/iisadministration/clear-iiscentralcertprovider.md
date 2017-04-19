@@ -1,20 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.assetid: CE40617B-880D-4566-B0BC-CAFA0601BE89
+ms.author: brianlic
 ms.date: 2016-12-20
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Clear-IISCentralCertProvider
-ms.assetid: CE40617B-880D-4566-B0BC-CAFA0601BE89
 ---
 
 # Clear-IISCentralCertProvider
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,20 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.assetid: D7752E90-7913-4250-97CC-6178FDE9A955
+ms.author: brianlic
 ms.date: 2016-12-20
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-IISSite
-ms.assetid: D7752E90-7913-4250-97CC-6178FDE9A955
 ---
 
 # New-IISSite
@@ -25,7 +25,8 @@ Creates an IIS Web site.
 ## SYNTAX
 
 ```
-New-IISSite -Name <String> -PhysicalPath <String> -BindingInformation <String> [-Force] [-Passthru]
+New-IISSite -Name <String> -PhysicalPath <String> -BindingInformation <String> [-Protocol <String>]
+ [-CertificateThumbPrint <String>] [-SslFlag <SslFlags>] [-CertStoreLocation <String>] [-Force] [-Passthru]
  [<CommonParameters>]
 ```
 
@@ -64,6 +65,36 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertificateThumbPrint
+{{Fill CertificateThumbPrint Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertStoreLocation
+{{Fill CertStoreLocation Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -131,8 +162,38 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Protocol
+{{Fill Protocol Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SslFlag
+{{Fill SslFlag Description}}
+
+```yaml
+Type: SslFlags
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

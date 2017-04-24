@@ -111,131 +111,122 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-	Get-AdfsProperties
-	Microsoft.IdentityServer.Management.Resources.ServiceProperties
-	{get;}         AcceptableIdentifiers                             uri[]
-	{get;}         AddProxyAuthorizationRules                        string
-	{get;}         AllowLocalAdminsServiceAdministration             bool
-	{get;}         AllowSystemServiceAdministration                  bool
-	{get;}         ArtifactDbConnection                              string
-	{get;}         AuditLevel                                        string[]
-	{get;}         AuthenticationContextOrder                        uri[]
-	{get;}         AutoCertificateRollover                           bool
-	{get;}         BrowserSsoEnabled                                 bool
-	{get;}         BrowserSsoSupportedUserAgents                     string[]
-	{get;}         CertificateCriticalThreshold                      int
-	{get;}         CertificateDuration                               int
-	{get;}         CertificateGenerationThreshold                    int
-	{get;}         CertificatePromotionThreshold                     int
-	{get;}         CertificateRolloverInterval                       int
-	{get;}         CertificateSharingContainer                       string
-	{get;}         CertificateThresholdMultiplier                    int
-	{get;}         ClientCertRevocationCheck                         Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	{get;}         ContactPerson                                     Microsoft.IdentityServer.Management.Resources.ContactPerson
-	{get;}         CurrentFarmBehavior                               int
-	{get;}         DelegateServiceAdministration                     string
-	{get;}         DeviceUsageWindowInDays                           int
-	{get;}         DisplayName                                       string
-	{get;}         EnableIdpInitiatedSignonPage                      bool
-	{get;}         EnableOauthLogout                                 bool
-	{get;}         ExtendedProtectionTokenCheck                      Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting
-	{get;}         ExtranetLockoutEnabled                            bool
-	{get;}         ExtranetLockoutRequirePDC                         bool
-	{get;}         ExtranetLockoutThreshold                          int
-	{get;}         ExtranetObservationWindow                         timespan
-	{get;}         FederationPassiveAddress                          string
-	{get;}         GlobalRelyingPartyClaimsIssuancePolicy            string
-	{get;}         HostName                                          string
-	{get;}         HttpPort                                          int
-	{get;}         HttpsPort                                         int
-	{get;}         Identifier                                        uri
-	{get;}         IdTokenIssuer                                     uri
-	{get;}         IgnoreTokenBinding                                bool
-	{get;}         InstalledLanguage                                 string
-	{get;}         IntranetUseLocalClaimsProvider                    bool
-	{get;}         KmsiEnabled                                       bool
-	{get;}         KmsiLifetimeMins                                  int
-	{get;}         LocalAuthenticationTypesEnabled                   bool
-	{get;}         LogLevel                                          string[]
-	{get;}         LoopDetectionEnabled                              bool
-	{get;}         LoopDetectionMaximumTokensIssuedInInterval        int
-	{get;}         LoopDetectionTimeIntervalInSeconds                int
-	{get;}         MonitoringInterval                                int
-	{get;}         NetTcpPort                                        int
-	{get;}         NtlmOnlySupportedClientAtProxy                    bool
-	{get;}         OrganizationInfo                                  Microsoft.IdentityServer.Management.Resources.Organization
-	{get;}         PasswordValidationDelayInMinutes                  int
-	{get;}         PersistentSsoCutoffTime                           datetime
-	{get;}         PersistentSsoEnabled                              bool
-	{get;}         PersistentSsoLifetimeMins                         int
-	{get;}         PreventTokenReplays                               bool
-	{get;}         ProxyTrustTokenLifetime                           int
-	{get;}         RelayStateForIdpInitiatedSignOnEnabled            bool
-	{get;}         ReplayCacheExpirationInterval                     int
-	{get;}         SamlMessageDeliveryWindow                         int
-	{get;}         SendClientRequestIdAsQueryStringParameter         bool
-	{get;}         SignedSamlRequestsRequired                        bool
-	{get;}         SignSamlAuthnRequests                             bool
-	{get;}         SsoLifetime                                       int
-	{get;}         TlsClientPort                                     int
-	{get;}         WiaEvaluationMethod                               Microsoft.IdentityServer.WiaEvaluationMethodState
-	{get;}         WIASupportedUserAgents                            string[]
-	---------------------------
+**Microsoft.IdentityServer.Management.Resources.ServiceProperties**
+
+	AcceptableIdentifiers                       uri[]
+	AddProxyAuthorizationRules                  string
+	AllowLocalAdminsServiceAdministration       bool
+	AllowSystemServiceAdministration            bool
+	ArtifactDbConnection                        string
+	AuditLevel                                  string[]
+	AuthenticationContextOrder                  uri[]
+	AutoCertificateRollover                     bool
+	BrowserSsoEnabled                           bool
+	BrowserSsoSupportedUserAgents               string[]
+	CertificateCriticalThreshold                int
+	CertificateDuration                         int
+	CertificateGenerationThreshold              int
+	CertificatePromotionThreshold               int
+	CertificateRolloverInterval                 int
+	CertificateSharingContainer                 string
+	CertificateThresholdMultiplier              int
+	ClientCertRevocationCheck                   Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+	ContactPerson                               Microsoft.IdentityServer.Management.Resources.ContactPerson
+	CurrentFarmBehavior                         int
+	DelegateServiceAdministration               string
+	DeviceUsageWindowInDays                     int
+	DisplayName                                 string
+	EnableIdpInitiatedSignonPage                bool
+	EnableOauthLogout                           bool
+	ExtendedProtectionTokenCheck                Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting
+	ExtranetLockoutEnabled                      bool
+	ExtranetLockoutRequirePDC                   bool
+	ExtranetLockoutThreshold                    int
+	ExtranetObservationWindow                   timespan
+	FederationPassiveAddress                    string
+	GlobalRelyingPartyClaimsIssuancePolicy      string
+	HostName                                    string
+	HttpPort                                    int
+	HttpsPort                                   int
+	Identifier                                  uri
+	IdTokenIssuer                               uri
+	IgnoreTokenBinding                          bool
+	InstalledLanguage                           string
+	IntranetUseLocalClaimsProvider              bool
+	KmsiEnabled                                 bool
+	KmsiLifetimeMins                            int
+	LocalAuthenticationTypesEnabled             bool
+	LogLevel                                    string[]
+	LoopDetectionEnabled                        bool
+	LoopDetectionMaximumTokensIssuedInInterval  int
+	LoopDetectionTimeIntervalInSeconds          int
+	MonitoringInterval                          int
+	NetTcpPort                                  int
+	NtlmOnlySupportedClientAtProxy              bool
+	OrganizationInfo                            Microsoft.IdentityServer.Management.Resources.Organization
+	PasswordValidationDelayInMinutes            int
+	PersistentSsoCutoffTime                     datetime
+	PersistentSsoEnabled                        bool
+	PersistentSsoLifetimeMins                   int
+	PreventTokenReplays                         bool
+	ProxyTrustTokenLifetime                     int
+	RelayStateForIdpInitiatedSignOnEnabled      bool
+	ReplayCacheExpirationInterval               int
+	SamlMessageDeliveryWindow                   int
+	SendClientRequestIdAsQueryStringParameter   bool
+	SignedSamlRequestsRequired                  bool
+	SignSamlAuthnRequests                       bool
+	SsoLifetime                                 int
+	TlsClientPort                               int
+	WiaEvaluationMethod                         Microsoft.IdentityServer.WiaEvaluationMethodState
+	WIASupportedUserAgents                      string[]
+
+
+**Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting**
 	
+	RevocationSetting
+	{
+	  None = 0,
+	  CheckEndCert = 1,
+	  CheckEndCertCacheOnly = 2,
+	  CheckChain = 3,
+	  CheckChainCacheOnly = 4,
+	  CheckChainExcludeRoot = 5,
+	  CheckChainExcludeRootCacheOnly = 6,
+	}
+
+
+**Microsoft.IdentityServer.Management.Resources.ContactPerson**
+
+	ContactType     string
+	EmailAddresses  string[]
+	GivenName       string
+	PhoneNumbers    string[]
+	Surname         string
+
+
+
+**Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting**
+
+	Allow    string
+	Require  string
+	None     string
+
+
+**Microsoft.IdentityServer.Management.Resources.Organization**
+
+	DisplayName      string
+	Name             string
+	OrganizationUrl  string
+
+
+**Microsoft.IdentityServer.WiaEvaluationMethodState**
 	
-	
-	Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	public enum RevocationSetting
-	    {
-	        None = 0,
-	        CheckEndCert = 1,
-	        CheckEndCertCacheOnly = 2,
-	        CheckChain = 3,
-	        CheckChainCacheOnly = 4,
-	        CheckChainExcludeRoot = 5,
-	        CheckChainExcludeRootCacheOnly = 6,
-	    }
-	
-	---------------------------
-	
-	
-	
-	Microsoft.IdentityServer.Management.Resources.ContactPerson
-	{get;}       ContactType                       string
-	{get;}       EmailAddresses                    string[]
-	{get;}       GivenName                         string
-	{get;}       PhoneNumbers                      string[]
-	{get;}       Surname                           string
-	---------------------------
-	
-	
-	
-	(Get-AdfsProperties | select ExtendedProtectionTokenCheck)
-	public static class ProtectionPolicySetting
-	        {
-	            public const string Allow = "Allow";
-	            public const string Require = "Require";
-	            public const string None = "None";
-	        }
-	---------------------------
-	
-	
-	
-	Microsoft.IdentityServer.Management.Resources.Organization
-	{get;}       DisplayName                       string
-	{get;}       Name                              string
-	{get;}       OrganizationUrl                   string
-	---------------------------
-	
-	
-	
-	(Get-AdfsProperties | select WIASupportedUserAgents)
-	public enum WiaEvaluationMethodState
-	    {
-	        WiaCapabilityDetection,
-	        WiaUserAgentDetection
-	    }
-	---------------------------
+	WiaEvaluationMethodState
+	{
+	  WiaCapabilityDetection,
+	  WiaUserAgentDetection
+	}
 
 ## NOTES
 

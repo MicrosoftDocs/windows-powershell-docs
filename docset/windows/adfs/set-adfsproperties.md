@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOAuthLogout
-{{Fill EnableOAuthLogout Description}}
+Enables the OAuth logout endpoint publishing in the OAuth discovery document. The OAuth logout endpoint logs out the current user from the ADFS. It does not support logging out a federated user from the federated identity provider. This parameter is only available with the Windows Update KB4019472 installed.
 
 ```yaml
 Type: Boolean

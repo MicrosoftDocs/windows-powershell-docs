@@ -143,36 +143,33 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 ## OUTPUTS
 
-  
-	Get-AdfsServerApplication
-	Microsoft.IdentityServer.Management.Resources.ServerApplication
-	{get;set;}     ADUserPrincipalName                               string
-	{get;}         ApplicationGroupIdentifier                        string
-	{get;}         ClientSecret                                      string
-	{get;set;}     Description                                       string
-	{get;}         Enabled                                           bool
-	{get;set;}     Identifier                                        string
-	{get;set;}     JWKSUri                                           uri
-	{get;set;}     JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	{get;}         JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
-	{get;set;}     Name                                              string
-	{get;set;}     RedirectUri                                       string[]
-	---------------------------
+**Microsoft.IdentityServer.Management.Resources.ServerApplication**
+
+	ADUserPrincipalName                               string
+	ApplicationGroupIdentifier                        string
+	ClientSecret                                      string
+	Description                                       string
+	Enabled                                           bool
+	Identifier                                        string
+	JWKSUri                                           uri
+	JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+	JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
+	Name                                              string
+	RedirectUri                                       string[]
+
+
+**Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting**
 	
-	
-	
-	Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	public enum RevocationSetting
-	    {
-	        None = 0,
-	        CheckEndCert = 1,
-	        CheckEndCertCacheOnly = 2,
-	        CheckChain = 3,
-	        CheckChainCacheOnly = 4,
-	        CheckChainExcludeRoot = 5,
-	        CheckChainExcludeRootCacheOnly = 6,
-	    }
-	---------------------------
+	RevocationSetting
+	{
+	   None = 0,
+	   CheckEndCert = 1,
+	   CheckEndCertCacheOnly = 2,
+	   CheckChain = 3,
+	   CheckChainCacheOnly = 4,
+	   CheckChainExcludeRoot = 5,
+	   CheckChainExcludeRootCacheOnly = 6,
+	}
 
 
 ## NOTES

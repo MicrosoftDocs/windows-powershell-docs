@@ -101,28 +101,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-	(Get-AdfsApplicationPermission)[0]
-	Microsoft.IdentityServer.Management.Resources.OAuthPermission
-	{get;}         ClientRoleIdentifier                              string
-	{get;}         ConsentType                                       Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
-	{get;}         Description                                       string
-	{get;}         GrantedAt                                         datetime
-	{get;}         GrantedBy                                         string
-	{get;}         ObjectIdentifier                                  string
-	{get;}         ScopeNames                                        string[]
-	{get;}         ServerRoleIdentifier                              string
-	---------------------------
+**Microsoft.IdentityServer.Management.Resources.OAuthPermission**
+
+	ClientRoleIdentifier  string
+	ConsentType           Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
+	Description           string
+	GrantedAt             datetime
+	GrantedBy             string
+	ObjectIdentifier      string
+	ScopeNames            string[]
+	ServerRoleIdentifier  string
+
+
+**Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType**
 	
-	
-	
-	Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
-	public enum OAuthConsentType
-	    {
-	        Unknown = 0,
-	        Administrator = 1,
-	        User = 2,
-	    }
-	---------------------------
+	OAuthConsentType
+	{
+	  Unknown = 0,
+	  Administrator = 1,
+	  User = 2,
+	}
 
 
 ## NOTES

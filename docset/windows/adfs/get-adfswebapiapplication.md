@@ -164,64 +164,58 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 ## OUTPUTS
 
-	Get-AdfsWebApiApplication
-	Microsoft.IdentityServer.Management.Resources.WebApiApplication
-	{get;}         AccessControlPolicyName                           string
-	{get;}         AccessControlPolicyParameters                     System.Object
-	{get;}         AdditionalAuthenticationRules                     string
-	{get;}         AllowedAuthenticationClassReferences              string[]
-	{get;set;}     AllowedClientTypes                                Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-	{get;}         AlwaysRequireAuthentication                       bool
-	{get;}         ApplicationGroupId                                string
-	{get;}         ApplicationGroupIdentifier                        string
-	{get;}         ClaimsProviderName                                string[]
-	{get;set;}     DelegationAuthorizationRules                      string
-	{get;set;}     Description                                       string
-	{get;}         Enabled                                           bool
-	{get;}         Identifier                                        System.Collections.ObjectModel.ReadOnlyCollection[string]
-	{get;set;}     ImpersonationAuthorizationRules                   string
-	{get;set;}     IssuanceAuthorizationRules                        string
-	{get;set;}     IssuanceTransformRules                            string
-	{get;}         IssueOAuthRefreshTokensTo                         Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-	{get;set;}     Name                                              string
-	{get;}         NotBeforeSkew                                     int
-	{get;}         PublishedThroughProxy                             bool
-	{get;set;}     RefreshTokenProtectionEnabled                     bool
-	{get;}         RequestMFAFromClaimsProviders                     bool
-	{get;}         ResultantPolicy                                   Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	{get;}         TokenLifetime                                     int
-	---------------------------
+**Microsoft.IdentityServer.Management.Resources.WebApiApplication**
+
+	AccessControlPolicyName               string
+	AccessControlPolicyParameters         System.Object
+	AdditionalAuthenticationRules         string
+	AllowedAuthenticationClassReferences  string[]
+	AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
+	AlwaysRequireAuthentication           bool
+	ApplicationGroupId                    string
+	ApplicationGroupIdentifier            string
+	ClaimsProviderName                    string[]
+	DelegationAuthorizationRules          string
+	Description                           string
+	Enabled                               bool
+	Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
+	ImpersonationAuthorizationRules       string
+	IssuanceAuthorizationRules            string
+	IssuanceTransformRules                string
+	IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
+	Name                                  string
+	NotBeforeSkew                         int
+	PublishedThroughProxy                 bool
+	RefreshTokenProtectionEnabled         bool
+	RequestMFAFromClaimsProviders         bool
+	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
+	TokenLifetime                         int
+
+**Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes**
 	
+	AllowedClientTypes
+	{
+	  None = 0,
+	  Public = 2,
+	  Confidential=4,
+	}
+
+
+**Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes**
 	
+	RefreshTokenIssuanceDeviceTypes
+	{
+	  NoDevice = 0,
+	  WorkplaceJoinedDevices = 1,
+	  AllDevices = 2
+	}
 	
-	(Get-AdfsWebApiApplication | select AllowedClientTypes)
-	public enum AllowedClientTypes
-	    {
-	        None = 0,
-	        Public = 2,
-	        Confidential=4,
-	    }
-	---------------------------
-	
-	
-	
-	(Get-AdfsWebApiApplication | select IssueOAuthRefreshTokensTo)
-	public enum RefreshTokenIssuanceDeviceTypes
-	    {
-	        NoDevice = 0,
-	        WorkplaceJoinedDevices = 1,
-	        AllDevices = 2
-	    }
-	---------------------------
-	
-	
-	
-	(Get-AdfsWebApiApplication | select ResultantPolicy)
-	Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	{get;}         IsParameterized                                   bool
-	{get;}         Serialized                                        string
-	{get;}         Summary                                           string
-	---------------------------
+
+**Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata**
+
+	IsParameterized  bool
+	Summary          string
+	Serialized       string
 
 ## NOTES
 

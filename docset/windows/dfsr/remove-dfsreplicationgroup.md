@@ -50,7 +50,7 @@ This command removes the replication group named RG01 from the current domain.
 
 ### Example 2: Remove replication groups using a wildcard
 ```
-PS C:\> Remove-DfsReplicationGroup -GroupName "RG*" -RemoveReplicatedFolders -Domain "corp.contoso.com" -RemoveReplicatedFolders
+PS C:\> Remove-DfsReplicationGroup -GroupName "RG*" -RemoveReplicatedFolders -Domain "corp.contoso.com"
 Performing this operation will remove the replication group "RG01" and the subscriptions members have to this
 replication group. Are you sure you want to continue to remove this replication group? [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 

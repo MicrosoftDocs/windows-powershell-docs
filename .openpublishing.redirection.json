@@ -11350,6 +11350,715 @@
 "source_path": "docset/windows/wds/index.md",
 "redirect_url": "/itpro/powershell/windows/wds/wds",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/index.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/add-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/add-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/clear-networkcontrollernodecontent.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/clear-networkcontrollernodecontent",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/disable-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/disable-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/enable-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/enable-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrolleraccesscontrollist.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrolleraccesscontrollist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrolleraccesscontrollistrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrolleraccesscontrollistrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollercluster.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollercluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerconnectivitycheck.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerconnectivitycheck",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerconnectivitycheckresult.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerconnectivitycheckresult",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollercredential.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerdiagnostic.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerdiagnostic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerfabricroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerfabricroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollergateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollergateway",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollergatewaypool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollergatewaypool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerinternalresourceinstances.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerinternalresourceinstances",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerippool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerippool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancerbackendaddresspool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancerbackendaddresspool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancerconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancerconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancerfrontendipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancerfrontendipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancerinboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancerinboundnatrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancermux.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancermux",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalanceroutboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalanceroutboundnatrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancerprobe.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancerprobe",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerloadbalancingrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerloadbalancingrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerlogicalnetwork.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerlogicalnetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerlogicalsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerlogicalsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollermacpool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollermacpool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollernetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollernetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollernetworkinterfaceipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollernetworkinterfaceipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerpublicipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerpublicipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerroutetable.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerroutetable",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerserverinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerserverinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerserviceinsertion.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerserviceinsertion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerstate.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollerstatistics.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollerstatistics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualgateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualgateway",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualgatewaybgppeer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualgatewaybgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualgatewaybgprouter.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualgatewaybgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualgatewaynetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualgatewaynetworkconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualgatewaypolicymap.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualgatewaypolicymap",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualnetwork.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualnetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualnetworkconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualnetworkconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/get-networkcontrollervirtualswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/get-networkcontrollervirtualswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/install-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/install-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/install-networkcontrollercluster.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/install-networkcontrollercluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/invoke-networkcontrollerconnectivitycheck.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/invoke-networkcontrollerconnectivitycheck",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/invoke-networkcontrollerstate.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/invoke-networkcontrollerstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrolleraccesscontrollist.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrolleraccesscontrollist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrolleraccesscontrollistrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrolleraccesscontrollistrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollercredential.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerfabricroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerfabricroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollergateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollergateway",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollergatewaypool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollergatewaypool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerippool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerippool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancer",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancerbackendaddresspool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancerbackendaddresspool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancerconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancerconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancerfrontendipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancerfrontendipconfiguration",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancerinboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancerinboundnatrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancermux.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancermux",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalanceroutboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalanceroutboundnatrule",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancerprobe.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancerprobe",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerloadbalancingrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerloadbalancingrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-new-networkcontrollerlogicalnetwork/index.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerlogicalnetwork",
+"redirect_document_id": true
+},{
+"source_path": "docset/windows/network-controller/new-networkcontrollerlogicalsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerlogicalsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollermacpool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollermacpool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollernetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollernetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollernetworkinterfaceipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollernetworkinterfaceipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollernodeobject.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollernodeobject",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerpublicipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerpublicipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerroutetable.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerroutetable",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerserverinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerserverinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollerserviceinsertion.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollerserviceinsertion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualgateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualgateway",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualgatewaybgppeer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualgatewaybgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualgatewaybgprouter.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualgatewaybgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualgatewaynetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualgatewaynetworkconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualgatewaypolicymap.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualgatewaypolicymap",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualnetwork.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualnetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/new-networkcontrollervirtualsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/new-networkcontrollervirtualsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrolleraccesscontrollist.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrolleraccesscontrollist",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrolleraccesscontrollistrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrolleraccesscontrollistrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollercredential.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollercredential",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerfabricroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerfabricroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollergateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollergateway",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollergatewaypool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollergatewaypool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerippool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerippool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancerbackendaddresspool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancerbackendaddresspool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancerconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancerconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancerfrontendipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancerfrontendipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancerinboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancerinboundnatrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancermux.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancermux",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalanceroutboundnatrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalanceroutboundnatrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancerprobe.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancerprobe",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerloadbalancingrule.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerloadbalancingrule",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerlogicalnetwork.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerlogicalnetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerlogicalsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerlogicalsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollermacpool.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollermacpool",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollernetworkinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollernetworkinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollernetworkinterfaceipconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollernetworkinterfaceipconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerpublicipaddress.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerpublicipaddress",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerroute.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerroute",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerroutetable.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerroutetable",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerserverinterface.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerserverinterface",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollerserviceinsertion.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollerserviceinsertion",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualgateway.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualgateway",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualgatewaybgppeer.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualgatewaybgppeer",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualgatewaybgprouter.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualgatewaybgprouter",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualgatewaynetworkconnection.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualgatewaynetworkconnection",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualgatewaypolicymap.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualgatewaypolicymap",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualnetwork.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualnetwork",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualserver.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualserver",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/remove-networkcontrollervirtualsubnet.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/remove-networkcontrollervirtualsubnet",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/repair-networkcontrollercluster.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/repair-networkcontrollercluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontrollercluster.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontrollercluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontrollerdiagnostic.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontrollerdiagnostic",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontrollernode.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontrollernode",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontrollervirtualnetworkconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontrollervirtualnetworkconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/set-networkcontrollervirtualswitchconfiguration.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/set-networkcontrollervirtualswitchconfiguration",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/uninstall-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/uninstall-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/uninstall-networkcontrollercluster.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/uninstall-networkcontrollercluster",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller/update-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontroller/update-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/index.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/networkcontrollerdiagnostics",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-networkcontroller.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-networkcontroller",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-networkcontrollerconfigurationstate.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-networkcontrollerconfigurationstate",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/debug-servicefabricnodestatus.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/debug-servicefabricnodestatus",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/get-networkcontrollerdeploymentinfo.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/get-networkcontrollerdeploymentinfo",
+"redirect_document_id": true
+},
+{
+"source_path": "docset/windows/network-controller-diagnostics/get-networkcontrollerreplica.md",
+"redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/get-networkcontrollerreplica",
+"redirect_document_id": true
 }
 ]
 }

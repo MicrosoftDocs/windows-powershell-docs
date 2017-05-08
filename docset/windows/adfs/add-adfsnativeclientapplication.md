@@ -202,6 +202,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+**Microsoft.IdentityServer.Management.Resources.NativeClientApplication**
+
+	ApplicationGroupIdentifier  string
+	Description                 string
+	Enabled                     bool
+	Identifier                  string
+	Name                        string
+	RedirectUri                 string[]
+
 ## NOTES
 
 ## RELATED LINKS

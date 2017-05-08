@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-IISSiteBinding
 
 ## SYNOPSIS
-{{Gets the bindings on the specified IIS site.}}
+Gets the bindings on the specified IIS site.
 
 ## SYNTAX
 
@@ -16,16 +16,28 @@ Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-IISSiteBinding** cmdlet gets information about web site bindings and their current status and other key information. 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get Information about an IIS website binding
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:" 
 ```
 
-{{ Add example description here }}
+This command gets the binding information for the "*:80:" binding of the Default Web Site.
+
+## Example 2: Get information about all bindings of an IIS website
+```
+PS C:\> Get-IISSiteBinding "Default Web Site"
+
+protocol bindingInformation sslFlags
+-------- ------------------ --------
+http     *:80:                  None
+http     *:1234:                None
+```
+
+This command gets all configuration information about all bindings of the Default Web Site
 
 ## PARAMETERS
 

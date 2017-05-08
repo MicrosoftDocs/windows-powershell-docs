@@ -132,9 +132,6 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### System.String
-
-
 ## OUTPUTS
 
 ## NOTES

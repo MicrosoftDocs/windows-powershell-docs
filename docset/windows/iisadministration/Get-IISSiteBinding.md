@@ -96,7 +96,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Web.Administration.BindingCollection
 
 ## NOTES
 

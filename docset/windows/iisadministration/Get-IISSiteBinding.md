@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+{{Gets the bindings on the specified IIS site.}}
 
 ## SYNTAX
 

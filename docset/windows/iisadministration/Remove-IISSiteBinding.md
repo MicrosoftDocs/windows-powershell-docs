@@ -26,7 +26,7 @@ Removes a binding from an IIS Web site.
 PS C:\> Remove-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:"
 ```
 
-This command removes a binding configuration of "*:8080:" from a website named TestSite.
+This command removes a binding of "*:8080:" from a website named TestSite.
 
 ## PARAMETERS
 

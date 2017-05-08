@@ -524,6 +524,58 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+**Microsoft.IdentityServer.Management.Resources.WebApiApplication**
+
+	AccessControlPolicyName               string
+	AccessControlPolicyParameters         System.Object
+	AdditionalAuthenticationRules         string
+	AllowedAuthenticationClassReferences  string[]
+	AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
+	AlwaysRequireAuthentication           bool
+	ApplicationGroupId                    string
+	ApplicationGroupIdentifier            string
+	ClaimsProviderName                    string[]
+	DelegationAuthorizationRules          string
+	Description                           string
+	Enabled                               bool
+	Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
+	ImpersonationAuthorizationRules       string
+	IssuanceAuthorizationRules            string
+	IssuanceTransformRules                string
+	IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
+	Name                                  string
+	NotBeforeSkew                         int
+	PublishedThroughProxy                 bool
+	RefreshTokenProtectionEnabled         bool
+	RequestMFAFromClaimsProviders         bool
+	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
+	TokenLifetime                         int
+
+**Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes**
+	
+	AllowedClientTypes
+	{
+	  None = 0,
+	  Public = 2,
+	  Confidential=4,
+	}
+
+
+**Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes**
+	
+	RefreshTokenIssuanceDeviceTypes
+	{
+	  NoDevice = 0,
+	  WorkplaceJoinedDevices = 1,
+	  AllDevices = 2
+	}
+	
+
+**Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata**
+
+	IsParameterized  bool
+	Summary          string
+	Serialized       string
 
 ## NOTES
 

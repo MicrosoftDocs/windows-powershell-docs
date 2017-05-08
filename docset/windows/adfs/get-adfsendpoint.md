@@ -93,17 +93,16 @@ System.Uri[]
 
 ## OUTPUTS
 
-	(Get-AdfsEndpoint)[0]
-	Microsoft.IdentityServer.Management.Resources.Endpoint
-	{get;}         AddressPath                                       string
-	{get;}         ClientCredentialType                              string
-	{get;}         Enabled                                           bool
-	{get;}         FullUrl                                           uri
-	{get;}         Protocol                                          string
-	{get;}         Proxy                                             bool
-	{get;}         SecurityMode                                      string
-	{get;}         Version                                           string
-	---------------------------
+**Microsoft.IdentityServer.Management.Resources.Endpoint**
+
+	AddressPath           string
+	ClientCredentialType  string
+	Enabled               bool
+	FullUrl               uri
+	Protocol              string
+	Proxy                 bool
+	SecurityMode          string
+	Version               string
 
 ### Microsoft.IdentityServer.PowerShell.Resources.Endpoint
 This cmdlet returns class structure that represents the endpoints for the Federation Service.

@@ -42,7 +42,10 @@ This command gets all configuration information about all bindings of the Defaul
 ## PARAMETERS
 
 ### -BindingInformation
-{{Fill BindingInformation Description}}
+Specifies the binding information string to use for the new site. The binding information of the form 
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
+is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+addresses and all hostnames is indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -57,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the IIS website.
 
 ```yaml
 Type: String
@@ -72,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String

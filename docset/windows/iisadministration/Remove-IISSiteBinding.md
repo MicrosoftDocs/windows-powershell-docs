@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a binding from an IIS Web site.
 
 ## SYNTAX
 
@@ -17,13 +17,13 @@ Remove-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protoco
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes a binding from an IIS Web site.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:"
 ```
 
 {{ Add example description here }}
@@ -31,7 +31,10 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -BindingInformation
-{{Fill BindingInformation Description}}
+Specifies the binding information string to use for the new site. The binding information of the form 
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
+is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+addresses and all hostnames is indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the IIS website.
 
 ```yaml
 Type: String
@@ -61,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String
@@ -76,7 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConfigOnly
-{{Fill RemoveConfigOnly Description}}
+Indicates that this operation does not remove the HTTPS certificate binding information and only remove the IIS binding configuration information in the applicationhost.config.
+
+If you want to delete a binding of HTTPS and the HTTPS binding is sharing a certificate with other bindings, you should remove only IIS binding configuration with this parameter. 
+Otherwise, the other bindings which were using the same certficate will not work anymore.
+
+This parameter is ignored if you are removing a binding which does not have a certificate binding.
+
 
 ```yaml
 Type: SwitchParameter
@@ -127,8 +136,6 @@ Accept wildcard characters: False
 
 
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

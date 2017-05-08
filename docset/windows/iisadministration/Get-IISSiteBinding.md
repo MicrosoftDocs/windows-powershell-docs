@@ -27,7 +27,7 @@ PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:"
 
 This command gets the binding information for the "*:80:" binding of the Default Web Site.
 
-## Example 2: Get information about all bindings of an IIS website
+### Example 2: Get information about all bindings of an IIS website
 ```
 PS C:\> Get-IISSiteBinding "Default Web Site"
 

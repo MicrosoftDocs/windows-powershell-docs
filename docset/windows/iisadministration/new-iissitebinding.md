@@ -22,12 +22,19 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a new HTTP binding
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:" -Protocol http
 ```
 
-{{ Add example description here }}
+This command creates a new HTTP binding of "*:8080:" on to a web site named TestSite
+
+### Example 2: Create a new HTTPS binding
+```
+PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
+```
+
+This command creates a new HTTPS binding of "*:443:" on to a web site named TestSite with a certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is saved on the Cert:\LocalMachine\Webhosting certificate store
 
 ## PARAMETERS
 

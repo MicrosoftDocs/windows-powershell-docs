@@ -57,7 +57,7 @@ This command creates a website named TestSite with default application assigned 
 PS C:\> New-IISSite -Name "TestSite" -PhysicalPath "$env:systemdrive\inetpub\testsite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
 ```
 
-This command creates a website named TestSite of HTTPS binding
+This command creates a website named TestSite with HTTPS binding
 
 ## PARAMETERS
 
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbPrint
-Specifies a certificate thumbprint which is used to add a new HTTPS binding
+Specifies a certificate thumbprint, which is used to add a new HTTPS binding
 
 ```yaml
 Type: String
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreLocation
-Specifies the certificate store path of the certificate which is used to add a new HTTPS binding
+Specifies the certificate store path of the certificate, which is used to add a new HTTPS binding
 
 ```yaml
 Type: String
@@ -214,8 +214,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IISSiteBinding](./New-IISSiteBinding.md)
-
 [Get-IISSite](./Get-IISSite.md)
 
 [Remove-IISSite](./Remove-IISSite.md)
@@ -223,6 +221,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-IISSite](./Start-IISSite.md)
 
 [Stop-IISSite](./Stop-IISSite.md)
+
+[New-IISSiteBinding](./New-IISSiteBinding.md)
 
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 

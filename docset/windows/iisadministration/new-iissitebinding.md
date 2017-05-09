@@ -114,7 +114,11 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Indicates that this operation can overwrite existing certificate information. 
+
+If you want to create a new HTTPS site binding with a certificate and the HTTPS binding is already used by existing bindings, you need to overwrite the existing certificate to replace with a new one.
+
+This parameter is ignored if you are creating a binding which does not use a certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -174,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlag
-{{Fill SslFlag Description}}
+Specifies the SSL Flag of the new binding.
 
 ```yaml
 Type: SslFlags
@@ -191,13 +195,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### System.String
-Microsoft.Web.Administration.SslFlags
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 

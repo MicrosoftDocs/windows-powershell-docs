@@ -62,11 +62,17 @@ Gets IIS shared configuration status.
 ### [Get-IISSite](Get-IISSite.md)
 Gets configuration information for an IIS Web site.
 
+### [Get-IISSiteBinding](Get-IISSiteBinding.md)
+Gets configuration information for an IIS Web site binding.
+
 ### [New-IISConfigCollectionElement](New-IISConfigCollectionElement.md)
 Creates a new configuration element object in an IIS configuration collection.
 
 ### [New-IISSite](New-IISSite.md)
 Creates an IIS Web site.
+
+### [New-IISSiteBinding](New-IISSiteBinding.md)
+Creates an IIS Web site binding.
 
 ### [Remove-IISConfigAttribute](Remove-IISConfigAttribute.md)
 Removes a configuration attribute from an IIS configuration section or configuration element attribute.
@@ -79,6 +85,9 @@ Removes a specified configuration element.
 
 ### [Remove-IISSite](Remove-IISSite.md)
 Removes a web site from an IIS server.
+
+### [Remove-IISSiteBinding](Remove-IISSiteBinding.md)
+Removes a web site binding from a web site.
 
 ### [Reset-IISServerManager](Reset-IISServerManager.md)
 Resets the IISAdministration view of the IIS ServerManager.

@@ -191,9 +191,18 @@ Accept wildcard characters: False
 
 ## INPUTS
 
+### System.String
+
 ## OUTPUTS
+
+### Microsoft.Web.Administration.BindingCollection
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-IISSiteBinding](./Get-IISSiteBinding.md)
+
+[Remove-IISSiteBinding](./Remove-IISSiteBinding.md)
+
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)

@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-IISSiteBinding
 
 ## SYNOPSIS
-Adds a new binding to an existing Web site.
+Adds a new binding to an existing Website.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Web site.
+Adds a new binding to an existing Website.
 
 ## EXAMPLES
 
@@ -27,24 +27,25 @@ Adds a new binding to an existing Web site.
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:" -Protocol http
 ```
 
-This command creates a new HTTP binding of "*:8080:" on a web site named TestSite
+This command creates a new HTTP binding of "*:8080:" on a website named TestSite
 
 ### Example 2: Create a new HTTPS binding
 ```
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
 ```
 
-This command creates a new HTTPS binding of "*:443:" bindingInformation on a web site named TestSite with using an existing certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is placed at the Cert:\LocalMachine\Webhosting certificate store
+This command creates a new HTTPS binding of "*:443:" bindingInformation on a website named TestSite using an existing certificate which has a thumbprint of D043B153FCEFD5011B9C28E186A60B9F13103363 and 
+is placed at the Cert:\LocalMachine\Webhosting certificate store
 
-### Example 3: Create a new HTTPS binding with setting SslFlag with "Sni, CentralCertStore" 
+### Example 3: Create a new HTTPS binding and set it with Sni and CentralCertStore SSL flag settings
 ```
 PS C:\> New-IISSiteBinding -Name "TestSite" "*:443:foo.com" -Protocol https -SslFlag "Sni, CentralCertStore"
 ```
 
-This command creates a new HTTPS binding of "*:443:foo.com" on a web site named TestSite with enabling the SNI and CentralCertStore SSL flag settings
+This command creates a new HTTPS binding of "*:443:foo.com" on a website named TestSite setting the SNI and CentralCertStore SSL flag settings
 
 
-### Example 4: Create a new self signed certificate and used it for adding a new HTTPS binding for testing purpose
+### Example 4: Create a new self signed certificate and use it for adding a new HTTPS binding for testing purpose
 ```
 $password = "string1"  # put your password on string1
 $hostName = "localhost"
@@ -60,7 +61,8 @@ Import-PfxCertificate -FilePath "C:\temp\temp.pfx" -CertStoreLocation "Cert:\Loc
 New-IISSiteBinding -Name "TestSite" -BindingInformation $bindingInformation -CertificateThumbPrint $thumbPrint -CertStoreLocation $storeLocation -Protocol https
 ```
 
-This powershell script example shows how to create a self-signed certificate on Personal store, export the certificate to ROOT store to make the certificate considered as a trusted certificate in the local machine and add a new HTTPS binding on a web site named TestSite for testing purpose.
+This powershell script example shows how to create a self-signed certificate on Personal store. Export the certificate to ROOT store to make the certificate considered as a trusted certificate 
+in the local machine and add a new HTTPS binding on a website named TestSite for testing purposes.
 
 ## PARAMETERS
 
@@ -68,7 +70,7 @@ This powershell script example shows how to create a self-signed certificate on 
 Specifies the binding information string to use for the new site. The binding information of the form 
 IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
 is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
-addresses and all hostnames is indicated by leaving the corresponding field blank.
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -83,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbPrint
-Specifies a certificate thumbprint which is used to add a new HTTPS binding
+Specifies a certificate thumbprint, which is used to add a new HTTPS binding.
 
 ```yaml
 Type: String
@@ -98,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreLocation
-Specifies the certificate store path of the certificate which is used to add a new HTTPS binding
+Specifies the certificate store path of the certificate, which is used to add a new HTTPS binding.
 
 ```yaml
 Type: String
@@ -174,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlag
-Specifies the SSL Flag of the new binding.
+Specifies the SSL Flag(s) of the new binding.
 
 ```yaml
 Type: SslFlags

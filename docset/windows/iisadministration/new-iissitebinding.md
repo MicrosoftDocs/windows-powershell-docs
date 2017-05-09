@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a new binding to an existing Web site.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Adds a new binding to an existing Web site.
 
 ## EXAMPLES
 
@@ -27,14 +27,40 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:" -Protocol http
 ```
 
-This command creates a new HTTP binding of "*:8080:" on to a web site named TestSite
+This command creates a new HTTP binding of "*:8080:" on a web site named TestSite
 
 ### Example 2: Create a new HTTPS binding
 ```
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
 ```
 
-This command creates a new HTTPS binding of "*:443:" on to a web site named TestSite with a certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is saved on the Cert:\LocalMachine\Webhosting certificate store
+This command creates a new HTTPS binding of "*:443:" on a web site named TestSite with a certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is saved on the Cert:\LocalMachine\Webhosting certificate store
+
+### Example 3: Create a new HTTPS binding with setting SslFlag with "Sni, CentralCertStore" 
+```
+PS C:\> New-IISSiteBinding -Name "TestSite" "*:443:foo.com" -Protocol https -SslFlag "Sni, CentralCertStore"
+```
+
+This command creates a new HTTPS binding of "*:443:foo.com" on a web site named TestSite with enabling the SNI and CentralCertStore SSL flag settings
+
+
+### Example 4: Create a new self signed certificate and used it for adding a new HTTPS binding for testing purpose
+```
+$password = "string1"  # put your password on string1
+$hostName = "localhost"
+$port = "443"
+$storeLocation = "Cert:\LocalMachine\My"
+$certificate = New-SelfSignedCertificate -DnsName $hostName -CertStoreLocation $storeLocation
+$thumbPrint = $certificate.Thumbprint
+$bindingInformation = "*:" + $port + ":" + $hostName
+$certificatePath = ("cert:\localmachine\my\" + $certificate.Thumbprint)
+$securedString = ConvertTo-SecureString -String $password -Force -AsPlainText
+Export-PfxCertificate -FilePath "C:\temp\temp.pfx" -Cert $certificatePath -Password $securedString
+Import-PfxCertificate -FilePath "C:\temp\temp.pfx" -CertStoreLocation "Cert:\LocalMachine\Root" -Password $securedString
+New-IISSiteBinding -Name "TestSite" -BindingInformation $bindingInformation -CertificateThumbPrint $thumbPrint -CertStoreLocation $storeLocation -Protocol https
+```
+
+This powershell script example shows how to create a self-signed certificate on Personal store, export the certificate to ROOT store to make the certificate considered as a trusted certificate in the local machine and add a new HTTPS binding on a web site named TestSite for testing purpose.
 
 ## PARAMETERS
 

@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds a new binding to an existing Website.
 
 ## SYNTAX
 
@@ -18,21 +18,59 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Adds a new binding to an existing Website.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a new HTTP binding
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:" -Protocol http
 ```
 
-{{ Add example description here }}
+This command creates a new HTTP binding of "*:8080:" on a website named TestSite
+
+### Example 2: Create a new HTTPS binding
+```
+PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
+```
+
+This command creates a new HTTPS binding of "*:443:" bindingInformation on a website named TestSite using an existing certificate which has a thumbprint of D043B153FCEFD5011B9C28E186A60B9F13103363 and 
+is placed at the Cert:\LocalMachine\Webhosting certificate store
+
+### Example 3: Create a new HTTPS binding and set it with Sni and CentralCertStore SSL flag settings
+```
+PS C:\> New-IISSiteBinding -Name "TestSite" "*:443:foo.com" -Protocol https -SslFlag "Sni, CentralCertStore"
+```
+
+This command creates a new HTTPS binding of "*:443:foo.com" on a website named TestSite setting the SNI and CentralCertStore SSL flag settings
+
+
+### Example 4: Create a new self signed certificate and use it for adding a new HTTPS binding for testing purpose
+```
+$password = "string1"  # put your password on string1
+$hostName = "localhost"
+$port = "443"
+$storeLocation = "Cert:\LocalMachine\My"
+$certificate = New-SelfSignedCertificate -DnsName $hostName -CertStoreLocation $storeLocation
+$thumbPrint = $certificate.Thumbprint
+$bindingInformation = "*:" + $port + ":" + $hostName
+$certificatePath = ("cert:\localmachine\my\" + $certificate.Thumbprint)
+$securedString = ConvertTo-SecureString -String $password -Force -AsPlainText
+Export-PfxCertificate -FilePath "C:\temp\temp.pfx" -Cert $certificatePath -Password $securedString
+Import-PfxCertificate -FilePath "C:\temp\temp.pfx" -CertStoreLocation "Cert:\LocalMachine\Root" -Password $securedString
+New-IISSiteBinding -Name "TestSite" -BindingInformation $bindingInformation -CertificateThumbPrint $thumbPrint -CertStoreLocation $storeLocation -Protocol https
+```
+
+This powershell script example shows how to create a self-signed certificate on Personal store. Export the certificate to ROOT store to make the certificate considered as a trusted certificate 
+in the local machine and add a new HTTPS binding on a website named TestSite for testing purposes.
 
 ## PARAMETERS
 
 ### -BindingInformation
-{{Fill BindingInformation Description}}
+Specifies the binding information string to use for the new site. The binding information of the form 
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
+is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -47,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbPrint
-{{Fill CertificateThumbPrint Description}}
+Specifies a certificate thumbprint, which is used to add a new HTTPS binding.
 
 ```yaml
 Type: String
@@ -62,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreLocation
-{{Fill CertStoreLocation Description}}
+Specifies the certificate store path of the certificate, which is used to add a new HTTPS binding.
 
 ```yaml
 Type: String
@@ -78,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the IIS website.
 
 ```yaml
 Type: String
@@ -108,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
-{{Fill Passthru Description}}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String
@@ -138,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlag
-{{Fill SslFlag Description}}
+Specifies the SSL Flag(s) of the new binding.
 
 ```yaml
 Type: SslFlags
@@ -156,14 +194,19 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### System.String
-Microsoft.Web.Administration.SslFlags
-
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Web.Administration.BindingCollection
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-IISSiteBinding](./Get-IISSiteBinding.md)
+
+[Remove-IISSiteBinding](./Remove-IISSiteBinding.md)
+
+[New-IISSite](./New-IISSite.md)
+
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)

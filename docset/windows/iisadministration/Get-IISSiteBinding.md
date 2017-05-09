@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the bindings on the specified IIS site.
 
 ## SYNTAX
 
@@ -16,21 +16,36 @@ Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-IISSiteBinding** cmdlet gets information about website bindings and their current status and other key information. 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get Information about an IIS website binding
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:" 
 ```
 
-{{ Add example description here }}
+This command gets the binding information for the "*:80:" binding of the Default Web Site.
+
+### Example 2: Get information about all bindings of an IIS website
+```
+PS C:\> Get-IISSiteBinding "Default Web Site"
+
+protocol bindingInformation sslFlags
+-------- ------------------ --------
+http     *:80:                  None
+http     *:1234:                None
+```
+
+This command gets all configuration information about all bindings of the Default Web Site
 
 ## PARAMETERS
 
 ### -BindingInformation
-{{Fill BindingInformation Description}}
+Specifies the binding information string to use for the new site. The binding information of the form 
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
+is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -45,7 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the IIS website.
 
 ```yaml
 Type: String
@@ -60,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String
@@ -81,9 +96,14 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Web.Administration.BindingCollection
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-IISSiteBinding](./New-IISSiteBinding.md)
+
+[Remove-IISSiteBinding](./Remove-IISSiteBinding.md)
+
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)

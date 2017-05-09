@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-IISSiteBinding
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a binding from an IIS website.
 
 ## SYNTAX
 
@@ -17,21 +17,24 @@ Remove-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protoco
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes a binding from an IIS website.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:"
 ```
 
-{{ Add example description here }}
+This command removes a binding of "*:8080:" from a website named TestSite.
 
 ## PARAMETERS
 
 ### -BindingInformation
-{{Fill BindingInformation Description}}
+Specifies the binding information string to use for the new site. The binding information of the form 
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
+is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the IIS website.
 
 ```yaml
 Type: String
@@ -61,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String
@@ -76,7 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConfigOnly
-{{Fill RemoveConfigOnly Description}}
+Indicates that this operation does not remove the SSL certificate information and only removes the IIS binding configuration information in the applicationhost.config.
+
+If you want to delete a HTTPS binding configuration that shares a SSL certificate with other existing bindings, only the IIS binding configuration should be removed so that the SSL certificate information remains.
+This is to ensure that the other existing bindings will still have access to the certificate.
+
+This parameter is ignored if you are removing a binding which does not have a certificate.
+
 
 ```yaml
 Type: SwitchParameter
@@ -123,14 +132,14 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### System.String
-
-
 ## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-IISSiteBinding](./Get-IISSiteBinding.md)
+
+[New-IISSiteBinding](./New-IISSiteBinding.md)
+
+[IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)

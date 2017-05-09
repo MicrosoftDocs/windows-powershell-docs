@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-IISSiteBinding
 
 ## SYNOPSIS
-Removes a binding from an IIS Web site.
+Removes a binding from an IIS website.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Remove-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protoco
 ```
 
 ## DESCRIPTION
-Removes a binding from an IIS Web site.
+Removes a binding from an IIS website.
 
 ## EXAMPLES
 
@@ -26,7 +26,7 @@ Removes a binding from an IIS Web site.
 PS C:\> Remove-IISSiteBinding -Name "TestSite" -BindingInformation "*:8080:"
 ```
 
-This command removes a binding of "*:8080:" from a web site named TestSite.
+This command removes a binding of "*:8080:" from a website named TestSite.
 
 ## PARAMETERS
 
@@ -34,7 +34,7 @@ This command removes a binding of "*:8080:" from a web site named TestSite.
 Specifies the binding information string to use for the new site. The binding information of the form 
 IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
 is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
-addresses and all hostnames is indicated by leaving the corresponding field blank.
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -79,12 +79,12 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveConfigOnly
-Indicates that this operation does not remove the HTTPS certificate binding information and only remove the IIS binding configuration information in the applicationhost.config.
+Indicates that this operation does not remove the SSL certificate information and only removes the IIS binding configuration information in the applicationhost.config.
 
-If you want to delete a binding of HTTPS and the HTTPS binding is sharing a certificate with other bindings, you should remove only IIS binding configuration with this parameter. 
-Otherwise, the other bindings which were using the same certficate will not work anymore.
+If you want to delete a HTTPS binding configuration that shares a SSL certificate with other existing bindings, only the IIS binding configuration should be removed so that the SSL certificate information remains.
+This is to ensure that the other existing bindings will still have access to the certificate.
 
-This parameter is ignored if you are removing a binding which does not have a certificate binding.
+This parameter is ignored if you are removing a binding which does not have a certificate.
 
 
 ```yaml

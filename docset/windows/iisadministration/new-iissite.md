@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateThumbPrint
-{{Fill CertificateThumbPrint Description}}
+Specifies a certificate thumbprint which is used to add a new HTTPS binding
 
 ```yaml
 Type: String
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -CertStoreLocation
-{{Fill CertStoreLocation Description}}
+Specifies the certificate store path of the certificate which is used to add a new HTTPS binding
 
 ```yaml
 Type: String
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-{{Fill Protocol Description}}
+The protocol for which the binding is configured, usually http, https or ftp.
 
 ```yaml
 Type: String
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlag
-{{Fill SslFlag Description}}
+Specifies the SSL Flag of the new binding.
 
 ```yaml
 Type: SslFlags

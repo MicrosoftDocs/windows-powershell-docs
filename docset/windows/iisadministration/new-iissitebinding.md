@@ -34,7 +34,7 @@ This command creates a new HTTP binding of "*:8080:" on a web site named TestSit
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
 ```
 
-This command creates a new HTTPS binding of "*:443:" on a web site named TestSite with a certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is saved on the Cert:\LocalMachine\Webhosting certificate store
+This command creates a new HTTPS binding of "*:443:" bindingInformation on a web site named TestSite with using an existing certificate of which thumbprint is D043B153FCEFD5011B9C28E186A60B9F13103363 and is placed at the Cert:\LocalMachine\Webhosting certificate store
 
 ### Example 3: Create a new HTTPS binding with setting SslFlag with "Sni, CentralCertStore" 
 ```

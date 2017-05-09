@@ -60,19 +60,19 @@ Gets the IISAdministration view of IIS ServerManager.
 Gets IIS shared configuration status.
 
 ### [Get-IISSite](Get-IISSite.md)
-Gets configuration information for an IIS Web site.
+Gets configuration information for an IIS website.
 
 ### [Get-IISSiteBinding](Get-IISSiteBinding.md)
-Gets configuration information for an IIS Web site binding.
+Gets configuration information for an IIS Website binding.
 
 ### [New-IISConfigCollectionElement](New-IISConfigCollectionElement.md)
 Creates a new configuration element object in an IIS configuration collection.
 
 ### [New-IISSite](New-IISSite.md)
-Creates an IIS Web site.
+Creates an IIS website.
 
 ### [New-IISSiteBinding](New-IISSiteBinding.md)
-Creates an IIS Web site binding.
+Creates an IIS website binding.
 
 ### [Remove-IISConfigAttribute](Remove-IISConfigAttribute.md)
 Removes a configuration attribute from an IIS configuration section or configuration element attribute.
@@ -84,10 +84,10 @@ Removes a configuration element object from an IIS configuration collection.
 Removes a specified configuration element.
 
 ### [Remove-IISSite](Remove-IISSite.md)
-Removes a web site from an IIS server.
+Removes a website from an IIS server.
 
 ### [Remove-IISSiteBinding](Remove-IISSiteBinding.md)
-Removes a web site binding from a web site.
+Removes a website binding from a website.
 
 ### [Reset-IISServerManager](Reset-IISServerManager.md)
 Resets the IISAdministration view of the IIS ServerManager.
@@ -111,5 +111,5 @@ Starts an existing site on the IIS server.
 Instructs the IIS configuration system to resume the commitment of changes.
 
 ### [Stop-IISSite](Stop-IISSite.md)
-Stops an IIS Web site.
+Stops an IIS website.
 

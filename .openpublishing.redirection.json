@@ -12059,6 +12059,11 @@
 "source_path": "docset/windows/network-controller-diagnostics/get-networkcontrollerreplica.md",
 "redirect_url": "/itpro/powershell/windows/networkcontrollerdiagnostics/get-networkcontrollerreplica",
 "redirect_document_id": true
+},
+{
+"source_path": "docset/windows/provisioning/index.md",
+"redirect_url": "/itpro/powershell/windows/provisioning/provisioning",
+"redirect_document_id": true
 }
 ]
 }

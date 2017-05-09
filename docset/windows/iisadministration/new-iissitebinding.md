@@ -114,11 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Indicates that this operation can overwrite existing certificate information. 
-
-If you want to create a new HTTPS site binding with a certificate and the HTTPS binding is already used by existing bindings, you need to overwrite the existing certificate to replace with a new one.
-
-This parameter is ignored if you are creating a binding which does not use a certificate.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

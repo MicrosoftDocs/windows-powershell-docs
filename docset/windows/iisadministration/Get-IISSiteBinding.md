@@ -16,7 +16,7 @@ Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol
 ```
 
 ## DESCRIPTION
-The **Get-IISSiteBinding** cmdlet gets information about web site bindings and their current status and other key information. 
+The **Get-IISSiteBinding** cmdlet gets information about website bindings and their current status and other key information. 
 
 ## EXAMPLES
 
@@ -45,7 +45,7 @@ This command gets all configuration information about all bindings of the Defaul
 Specifies the binding information string to use for the new site. The binding information of the form 
 IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
 is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
-addresses and all hostnames is indicated by leaving the corresponding field blank.
+addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String

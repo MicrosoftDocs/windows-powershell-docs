@@ -20,7 +20,7 @@ title: New-IISSite
 # New-IISSite
 
 ## SYNOPSIS
-Creates an IIS Web site.
+Creates an IIS Website.
 
 ## SYNTAX
 
@@ -64,7 +64,7 @@ This command creates a website named TestSite of HTTPS binding
 ### -BindingInformation
 Specifies the binding information string to use for the new site.
 The binding information of the form IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which is equivalent to using a wildcard character such as *:443:.
-In this representation *  indicates all IP addresses and all hostnames is indicated by leaving the corresponding field blank.
+In this representation *  indicates all IP addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlag
-Specifies the SSL Flag of the new binding.
+Specifies the SSL flag settings of the new binding.
 
 ```yaml
 Type: SslFlags

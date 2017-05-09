@@ -207,4 +207,6 @@ Accept wildcard characters: False
 
 [Remove-IISSiteBinding](./Remove-IISSiteBinding.md)
 
+[New-IISSite](./New-IISSite.md)
+
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)

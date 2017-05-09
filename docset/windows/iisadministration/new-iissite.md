@@ -52,6 +52,13 @@ PS C:\> Stop-IISCommitDelay
 
 This command creates a website named TestSite with default application assigned to the TestSiteAppPool application pool.
 
+### Example 3: Add a new website of HTTPS binding
+```
+PS C:\> New-IISSite -Name "TestSite" -PhysicalPath "$env:systemdrive\inetpub\testsite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
+```
+
+This command creates a website named TestSite of HTTPS binding
+
 ## PARAMETERS
 
 ### -BindingInformation
@@ -206,6 +213,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-IISSiteBinding](./New-IISSiteBinding.md)
 
 [Get-IISSite](./Get-IISSite.md)
 

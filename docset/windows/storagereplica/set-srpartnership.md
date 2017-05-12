@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ### -AsyncRPO
 Specifies the maximum difference in time that data for an asynchronous partnership can be different between source and destination.
 This is a Recovery Point Objective.
-The default value is 5 minutes.
+The default value is 30 seconds.
 
 After this time is exceeded, the source server alerts the Health Service on clusters.
 It logs event 1239 in the Storage Replica Admin event log channel.
@@ -390,7 +390,7 @@ The synchronous mode requires all writes to commit on the destination server and
 The asynchronous mode writes to the source server without waiting for the server, which allows for replication over high latency, geographic networks. 
 
 The default value is synchronous. 
-The default asynchronous recovery point alert time is 5 minutes.
+The default asynchronous recovery point alert time is 30 seconds.
 You can modify it by using this cmdlet.
 The alert time has no effect on replication behavior, only on reporting.
 

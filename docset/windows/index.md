@@ -28,7 +28,7 @@ The table below also shows the latest published version of the Help for each mod
 | AppLocker | [AppLocker](applocker/applocker.md) |
 | AppvClient | [App-V Client](appvclient/appvclient.md) |
 | AppvSequencer | [App-V Sequencer](appvsequencer/appvsequencer.md) |
-| Appx | [Appx](appxcmdlets/appxcmdlets.md) |
+| Appx | [Appx](appx/appx.md) |
 | AssignedAccess | [Assigned Access](assignedaccess/assignedaccess.md) |
 | BestPractices | [Best Practices Analyser](bestpractices/bestpractices.md) |
 | BitLocker | [BitLocker](bitlocker/bitlocker.md) |
@@ -42,8 +42,8 @@ The table below also shows the latest published version of the Help for each mod
 | Deduplication | [Data Deduplication](deduplication/deduplication.md) |
 | Defender | [Windows Defender](defender/defender.md) |
 | DeviceHealthAttestion | [Device Health Attestation](devicehealthattestation/devicehealthattestation.md) |
-| Dfsn | [Distributed File System Namespace](dfsn/dfsn.md) |
-| Dfsn | [Distributed File System Replication](dfsr/dfsr.md) |
+| Dfsn | [Distributed File System (DFS) Namespaces](dfsn/dfsn.md) |
+| Dfsr | [DFS Replication](dfsr/dfsr.md) |
 | DHCPServer | [DHCP Server](dhcpserver/dhcpserver.md) |
 | DirectAccessClientComponent | [Direct Access client](directaccessclientcomponent/directaccessclientcomponent.md) |
 | DISM | [DISM](dism/dism.md) |
@@ -100,6 +100,7 @@ The table below also shows the latest published version of the Help for each mod
 | PlatformIdentifier | [Platform Identifier](platformidentifier/platformidentifier.md) |
 | PnpDevice | [Plug and Play](pnpdevice/pnpdevice.md) |
 | PrintManagement | [Print management](printmanagement/printmanagement.md) |
+| ProcessMitigations | [Process Mitigations](processmitigations/processmitigations.md) |
 | RemoteAccess | [Remote access](remoteaccess/remoteaccess.md) |
 | RemoteDesktop | [Remote Desktop](remotedesktop/remotedesktop.md) |
 | RemoteDesktopServices | [Remote Desktop Services](remotedesktopservices/remotedesktopservices.md) |

@@ -1,20 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
+ms.author: brianlic
 ms.date: 2016-12-20
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AppxLog
-ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
 ---
 
 # Get-AppxLog
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

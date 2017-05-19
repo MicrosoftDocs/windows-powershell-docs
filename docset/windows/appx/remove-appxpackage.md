@@ -1,20 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
+ms.author: brianlic
 ms.date: 2016-12-20
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-AppxPackage
-ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
 ---
 
 # Remove-AppxPackage
@@ -24,8 +24,19 @@ Removes an app package from a user account.
 
 ## SYNTAX
 
+### RemoveByPackageSet (Default)
 ```
 Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UserSet
+```
+Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AllUsersSet
+```
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,17 +54,17 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -AllUsers
+{{Fill AllUsers Description}}
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Parameter Sets: AllUsersSet
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -67,7 +78,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -79,12 +90,42 @@ The application data is available for later use.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: RemoveByPackageSet
 Aliases: 
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -User
+{{Fill User Description}}
+
+```yaml
+Type: String
+Parameter Sets: UserSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -106,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

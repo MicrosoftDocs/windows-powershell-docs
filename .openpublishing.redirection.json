@@ -1247,77 +1247,77 @@
 },
 {
 "source_path": "docset/windows/appx/index.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/appxcmdlets",
+"redirect_url": "/itpro/powershell/windows/appx/appx",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/add-appxpackage.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/add-appxpackage",
+"redirect_url": "/itpro/powershell/windows/appx/add-appxpackage",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/add-appxvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/add-appxvolume",
+"redirect_url": "/itpro/powershell/windows/appx/add-appxvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/dismount-appxvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/dismount-appxvolume",
+"redirect_url": "/itpro/powershell/windows/appx/dismount-appxvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxdefaultvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxdefaultvolume",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxdefaultvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxlasterror.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxlasterror",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxlasterror",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxlog.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxlog",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxlog",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxpackage.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxpackage",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxpackage",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxpackagemanifest.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxpackagemanifest",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxpackagemanifest",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/get-appxvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/get-appxvolume",
+"redirect_url": "/itpro/powershell/windows/appx/get-appxvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/mount-appxvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/mount-appxvolume",
+"redirect_url": "/itpro/powershell/windows/appx/mount-appxvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/move-appxpackage.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/move-appxpackage",
+"redirect_url": "/itpro/powershell/windows/appx/move-appxpackage",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/remove-appxpackage.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/remove-appxpackage",
+"redirect_url": "/itpro/powershell/windows/appx/remove-appxpackage",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/remove-appxvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/remove-appxvolume",
+"redirect_url": "/itpro/powershell/windows/appx/remove-appxvolume",
 "redirect_document_id": true
 },
 {
 "source_path": "docset/windows/appx/set-appxdefaultvolume.md",
-"redirect_url": "/itpro/powershell/windows/appxcmdlets/set-appxdefaultvolume",
+"redirect_url": "/itpro/powershell/windows/appx/set-appxdefaultvolume",
 "redirect_document_id": true
 },
 {

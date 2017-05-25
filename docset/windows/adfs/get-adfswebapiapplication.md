@@ -218,6 +218,22 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	Serialized       string
 
 ## NOTES
+Microsoft.IdentityServer.Management.Resources.WebApiApplication inherits from Microsoft.IdentityServer.Management.Resources.ClientApplication object and implements the Microsoft.IdentityServer.Management.Resources.IApplication interface.
+
+		Microsoft.IdentityServer.Management.Resources.ClientApplication
+		
+		ApplicationGroupIdentifier                        string
+		Description                                       string
+		Enabled                                           bool
+		Identifier                                        string
+		Name                                              string
+		RedirectUri                                       string[]
+		
+		Microsoft.IdentityServer.Management.Resources.IApplication
+		
+		ApplicationGroupIdentifier                        string
+		Enabled                                           bool
+		Name                                              string
 
 ## RELATED LINKS
 

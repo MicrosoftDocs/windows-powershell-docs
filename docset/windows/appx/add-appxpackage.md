@@ -1,20 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
+ms.author: brianlic
 ms.date: 2016-12-20
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-AppxPackage
-ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
 ---
 
 # Add-AppxPackage
@@ -26,9 +26,9 @@ Adds a signed app package to a user account.
 
 ### AddSet (Default)
 ```
-Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-ForceApplicationShutdown]
- [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Volume <AppxVolume>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Volume <AppxVolume>]
+ [-ExternalPackages <String[]>] [-OptionalPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RegisterSet
@@ -40,14 +40,22 @@ Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-Register] [-Disa
 
 ### UpdateSet
 ```
-Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-ForceApplicationShutdown]
- [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Update] [-WhatIf] [-Confirm] [<CommonParameters>]
+Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Update] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RegisterByPackageFullNameSet
 ```
 Add-AppxPackage [-Register] -MainPackage <String> [-DependencyPackages <String[]>] [-ForceApplicationShutdown]
  [-ForceTargetApplicationShutdown] [-InstallAllResources] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RegisterByPackageFamilyNameSet
+```
+Add-AppxPackage [-RegisterByFamilyName] -MainPackage <String> [-DependencyPackages <String[]>]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources]
+ [-OptionalPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -79,27 +87,12 @@ You can use *DisableDevelopmentMode* to register an application that is staged b
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DependencyPackages
 Specifies the dependency package full name or dependency package bundle full name to be registered.
 
 ```yaml
 Type: String[]
-Parameter Sets: RegisterByPackageFullNameSet
+Parameter Sets: RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
 Aliases: 
 
 Required: False
@@ -135,6 +128,21 @@ Use the *Register* parameter to specify the location of the app package manifest
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalPackages
+{{Fill ExternalPackages Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: AddSet
 Aliases: 
 
 Required: False
@@ -198,13 +206,28 @@ Specifies the main package full name or bundle full name to register.
 
 ```yaml
 Type: String
-Parameter Sets: RegisterByPackageFullNameSet
+Parameter Sets: RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
 Aliases: 
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -OptionalPackages
+{{Fill OptionalPackages Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: AddSet, RegisterByPackageFamilyNameSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -218,7 +241,7 @@ Parameter Sets: AddSet, RegisterSet, UpdateSet
 Aliases: PSPath
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
@@ -246,6 +269,36 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterByPackageFullNameSet
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RegisterByFamilyName
+{{Fill RegisterByFamilyName Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RegisterByPackageFamilyNameSet
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequiredContentGroupOnly
+{{Fill RequiredContentGroupOnly Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet, UpdateSet
 Aliases: 
 
 Required: False
@@ -289,6 +342,21 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -306,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

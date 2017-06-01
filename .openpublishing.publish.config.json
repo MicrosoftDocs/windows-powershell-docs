@@ -27,5 +27,6 @@
   "need_preview_pull_request": true,
   "enable_incremental_build": true,
   "dependent_repositories": [],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "resolve_user_profile_using_github": true
 }

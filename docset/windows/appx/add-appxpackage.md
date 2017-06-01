@@ -81,9 +81,22 @@ This command adds an app package that the package contains.
 PS C:\> $ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
 PS C:\> Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
 ```
-
 This command gets the full path of the package manifest file of an installed Windows Store app, and then registers that package.
 You can use *DisableDevelopmentMode* to register an application that is staged by the **StagePackageAsync** API, has been disabled, or has become corrupted during testing.
+
+### Example 3: Add an app along with its optional packages
+```
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.appx","C:\Users\user1\Desktop\optionalpackage2.appxbundle"
+
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
+```
+This command adds an app package along with its optional packages. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
+
+### Example 4: Install only the required section of a streaming app
+```
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -RequiredContentGroupOnly
+```
+This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml
 
 ## PARAMETERS
 
@@ -138,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalPackages
-{{Fill ExternalPackages Description}}
+Specifies an array of optional packages that must be installed along with the app package. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
 
 ```yaml
 Type: String[]
@@ -217,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptionalPackages
-{{Fill OptionalPackages Description}}
+Specifies the PackageFamilyName of the optional packages that are in a related set that need to be installed along with the app. Unlike the external packages flag, you do not need to pass in a path to the optional package(s). It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
 
 ```yaml
 Type: String[]
@@ -294,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredContentGroupOnly
-{{Fill RequiredContentGroupOnly Description}}
+Specifies that only the required content group that is specified in the AppxContentGroupMap.xml must be installed. At this point the app can be launched. Calling add-appxpackage specifying the path to the app, triggers the rest of the app to be installed in the order defined in the AppxContentGroupMap.xml.
 
 ```yaml
 Type: SwitchParameter

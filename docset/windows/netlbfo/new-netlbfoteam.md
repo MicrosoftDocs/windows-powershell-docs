@@ -1,4 +1,4 @@
----
+"---
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: brianlic
@@ -43,14 +43,14 @@ You must have administrator rights to use **New-NetLbfoTeam**.
 
 ### Example 1: Create a team
 ```
-PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1,NIC2"
+PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1","NIC2"
 ```
 
 This command creates a team named Team1 with two team members named NIC1 and NIC2.
 
 ### Example 2: Create a team with specified properties
 ```
-PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1,NIC2" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPorts
+PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1","NIC2" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPorts
 ```
 
 This command creates a team named Team1 that consists of two team members named NIC1 and NIC2.
@@ -59,7 +59,7 @@ The teaming mode is set to LACP and the load balancing algorithm is set to Hyper
 ### Example 3: Create a team in a virtual machine
 ```
 PS C:\> Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming On
-PS C:\> New-NetLbfoTeam -Name "Team2" -TeamMembers "NIC1,NIC2"
+PS C:\> New-NetLbfoTeam -Name "Team2" -TeamMembers "NIC1","NIC2"
 ```
 
 This set of commands allows teaming in virtual machines by using the *AllowTeaming* parameter of the Set-VMNetworkAdapter cmdlet and then creates a team named Team2 in the virtual machine specified by *VMName*.

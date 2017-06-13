@@ -521,7 +521,7 @@ The acceptable values for this parameter are:
 - CRLSign
 - DataEncipherment
 - DecipherOnly
-- DigitalSiganture
+- DigitalSignature
 - EncipherOnly
 - KeyAgreement
 - KeyEncipherment

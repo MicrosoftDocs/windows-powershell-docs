@@ -142,9 +142,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FsrmQuotaTemplate](./New-FsrmQuotaTemplate.md)
+[New-FsrmQuota](./New-FsrmQuota.md)
 
-[Remove-FsrmQuotaTemplate](./Remove-FsrmQuotaTemplate.md)
+[Remove-FsrmQuota](./Remove-FsrmQuota.md)
+
+[Reset-FsrmQuota](./Reset-FsrmQuota.md)
+
+[Set-FsrmQuota](./Set-FsrmQuota.md)
+
+[Update-FsrmQuota](./Update-FsrmQuota.md)
 
 [Set-FsrmQuotaTemplate](./Set-FsrmQuotaTemplate.md)
 

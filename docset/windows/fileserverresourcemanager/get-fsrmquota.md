@@ -152,5 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Update-FsrmQuota](./Update-FsrmQuota.md)
 
-[Set-FsrmQuotaTemplate](./Set-FsrmQuotaTemplate.md)
-

@@ -98,7 +98,7 @@ to a path.
 For example, C:\Share01\...
 indicates all of the quotas in C:\Share01 plus all the quotas in any and all subfolders of C:\Share01.
 To specify a wildcard in a path, you can add the asterisk (&ast;) and the question mark (?) to a path.
-For example, C:\Share01\&ast;A indicates all of the quotas in C:\Share01 plus all the quotas in subfolders of C:\Share01 that have a name that begins with the letter A.
+For example, C:\Share01\*A indicates all of the quotas in C:\Share01 plus all the quotas in subfolders of C:\Share01 that have a name that begins with the letter A.
 
 ```yaml
 Type: String

@@ -78,7 +78,7 @@ VMS1                          Contoso-FS                    I:\VMS
 
 This command retrieves the SMB shares on the computer named VMS1.
 
-### Example 3: Display information about SMB shares on a specific computer
+### Example 3: Display information about the SMB share named 'VMS1' on the local computer
 ```
 PS C:\>Get-SmbShare -Name "VMS1" | Format-List
 Name        : VMS1 
@@ -87,9 +87,9 @@ Path        : I:\VMS
 Description :
 ```
 
-This command displays the information about the SMB shares on the computer named VMS1 as a formatted list.
+This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### Example 3: Display all properties about SMB shares on a specific computer
+### Example 3: Display all properties about a specific SMB share on the local computer
 ```
 PS C:\>Get-SmbShare -Name "VMS1" | Format-List -Property *
 PresetPathAcl         : System.Security.AccessControl.DirectorySecurity 
@@ -120,9 +120,9 @@ CimInstanceProperties : {AvailabilityType, CachingMode, CATimeout, ConcurrentUse
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command displays all of the information about the SMB shares on the computer named VMS1 as a formatted list.
+This command displays all of the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### Example 5: Get shares on a computer that has scaled out availability
+### Example 5: Get shares on the local computer that have scaled out availability
 ```
 PS C:\>Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
 Name                          ScopeName                     Path                          Description 
@@ -132,7 +132,7 @@ VMS3                          Contoso-SO                    C:\ClusterStorage\Vo
 VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
 ```
 
-This command retrieves the SMB shares on the computer that has scaled out availability.
+This command retrieves the SMB shares on the computer that have scaled out availability.
 
 ### Example 6: Get shares that are connected to a specific server
 ```

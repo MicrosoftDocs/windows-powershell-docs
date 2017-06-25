@@ -27,26 +27,38 @@ Get-TlsEccCurve [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Gets the list of Elliptic Curve Cryptography (ECC) cipher suites for TLS for a computer.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Get all ECC curves
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-TlsEccCurve
+curve25519
+NistP256
+NistP384
 ```
 
-{{ Add example description here }}
+This command gets all ECC curves for the computer.
+
+### Example 2: Get the ECC curves that match a string
+```
+PS C:\> Get-TlsEccCurve -Name 'Nist'
+NistP256
+NistP384
+```
+
+This command gets all the ECC curves that have names that contain the string 'Nist' (case-sensitive).
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ECC curve to get. The cmdlet gets ECC curves that match the string that this cmdlet specifies, so you can specify a partial name. This parameter is case-sensitive. 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases: None
 
 Required: False
 Position: 0
@@ -54,6 +66,9 @@ Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -67,4 +82,8 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
+```
+Online Version: https://technet.microsoft.com/en-us/itpro/powershell/windows/tls/get-tlsecccurve
+Enable-TlsEccCurve
+Disable-TlsEccCurve
+```

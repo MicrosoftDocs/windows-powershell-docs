@@ -18,7 +18,7 @@ title: Get-TlsEccCurve
 # Get-TlsEccCurve
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
 
 ## SYNTAX
 
@@ -27,13 +27,18 @@ Get-TlsEccCurve [[-Name] <String>]
 ```
 
 ## DESCRIPTION
-Gets the list of Elliptic Curve Cryptography (ECC) cipher suites for TLS for a computer.
+Gets the list of Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
 
 ## EXAMPLES
 
 ### Example 1: Get all ECC curves
+```powershell
+Get-TlsEccCurve
 ```
-PS C:\> Get-TlsEccCurve
+
+This generates the following output:
+
+```
 curve25519
 NistP256
 NistP384
@@ -42,8 +47,13 @@ NistP384
 This command gets all ECC curves for the computer.
 
 ### Example 2: Get the ECC curves that match a string
+```powershell
+Get-TlsEccCurve -Name 'Nist'
 ```
-PS C:\> Get-TlsEccCurve -Name 'Nist'
+
+This generates the following output:
+
+```
 NistP256
 NistP384
 ```

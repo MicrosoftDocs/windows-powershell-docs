@@ -25,7 +25,7 @@ This cmdlet retrieves the provisioning state of NetworkControllerState resource.
 ## SYNTAX
 
 ```
-Get-NetworkControllerState [-ConnectionUri <Uri>] [-CertificateThumbprint <String>]
+Get-NetworkControllerState -ConnectionUri <Uri> [-CertificateThumbprint <String>]
  [-Credential <PSCredential>] [-PassInnerException] [<CommonParameters>]
 ```
 
@@ -67,7 +67,7 @@ Type: Uri
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -86,6 +86,34 @@ $lbproperties.frontendipconfigurations += $fe
 $backend = @{}
 $backend.resourceId = "BE1"
 $backend.resourceRef = "/loadBalancers/$lbresourceId/backendAddressPools/$($b)"
+$lbproperties.backendAddressPools += $backend
+
+//Define health probe
+$lbprobe = @{}
+$lbprobe.ResourceId = "Probe1"
+$lbprobe.resourceRef = "/loadBalancers/$lbresourceId/Probes/$($lbprobe.resourceId)"
+$lbprobe.properties = @{}
+$lbprobe.properties.protocol = "HTTP"
+$lbprobe.properties.port = "80"
+$lbprobe.properties.RequestPath = "/health.htm"
+$lbprobe.properties.IntervalInSeconds = 5
+$lbprobe.properties.NumberOfProbes = 11
+$lbproperties.probes += $lbprobe
+
+//Define load balancing rule
+$lbrule = @{}
+$lbrule.ResourceId = "webserver1"
+$lbrule.properties = @{}
+$lbrule.properties.FrontEndIPConfigurations = @()
+$lbrule.properties.FrontEndIPConfigurations += $fe
+$lbrule.properties.backendaddresspool = $backend 
+$lbrule.properties.protocol = "TCP"
+$lbrule.properties.frontendPort = 80
+$lbrule.properties.Probe = $lbprobe
+$lbproperties.loadbalancingRules += $lbrule
+
+//Add the load balancer to Network Controller
+New-NetworkControllerLoadBalancer -ConnectionUri https://networkcontroller -ResourceId $lbresourceId -Properties $lbproperties
 ```
 
 ## PARAMETERS

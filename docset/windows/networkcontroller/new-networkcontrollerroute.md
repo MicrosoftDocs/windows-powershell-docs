@@ -53,7 +53,7 @@ $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperti
 $route.properties.AddressPrefix = "0.0.0.0/0"
 $route.properties.nextHopType = "VirtualAppliance"
 $route.properties.nextHopIpAddress = "192.168.1.10"
-New-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1" -ResourceId "DefaultRoute"
+New-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTableId "Table1" -ResourceId "DefaultRoute" -Properties $route.properties
 ```
 
 ## PARAMETERS

@@ -129,6 +129,7 @@ The acceptable values for this parameter are:
 - Windows Server 2008 R2:  4 or Win2008R2
 - Windows Server 2012:  5 or Win2012
 - Windows Server 2012 R2:  6 or Win2012R2
+- Windows Server 2016: 7 or Windows2016Domain
 
 The domain functional level cannot be lower than the forest functional level, but it can be higher.
 The default is automatically computed and set.
@@ -212,6 +213,7 @@ The acceptable values for this parameter are:
 - Windows Server 2008 R2:  4 or Win2008R2
 - Windows Server 2012:  5 or Win2012
 - Windows Server 2012 R2:  6 or Win2012R2
+- Windows Server 2016: 7 or Windows2016Forest
 
 The default forest functional level in Windows Server is typically the same as the version you are running.
 However, the default forest functional level in Windows Server 2008 R2 when you create a new forest is Windows Server 2003 or 2.

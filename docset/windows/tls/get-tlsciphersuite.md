@@ -74,39 +74,39 @@ This command gets all TLS cipher suites for the computer.
 
 ### Example 2: Get the cipher suites that match a string
 ```
-PS C:\>Get-TlsCipherSuite -Name "SSL"
+PS C:\>Get-TlsCipherSuite -Name "AES"
 KeyType               : 0
-Certificate           : RSA
-MaximumExchangeLength : 16384
-MinimumExchangeLength : 512
-Exchange              : RSA
-HashLength            : 128
-Hash                  : MD5
-CipherBlockLength     : 1
-CipherLength          : 128
-BaseCipherSuite       : 65664
-CipherSuite           : 65664
-Cipher                : RC4
-Name                  : SSL_CK_RC4_128_WITH_MD5
-Protocols             : {2}
+Certificate           : ECDSA
+MaximumExchangeLength : 65536
+MinimumExchangeLength : 0
+Exchange              : ECDH
+HashLength            : 0
+Hash                  :
+CipherBlockLength     : 16
+CipherLength          : 256
+BaseCipherSuite       : 49196
+CipherSuite           : 49196
+Cipher                : AES
+Name                  : TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Protocols             : {771, 65277}
 
 KeyType               : 0
-Certificate           : 
-MaximumExchangeLength : 0
+Certificate           : ECDSA
+MaximumExchangeLength : 65536
 MinimumExchangeLength : 0
-Exchange              : 
+Exchange              : ECDH
 HashLength            : 0
-Hash                  : 
-CipherBlockLength     : 0
-CipherLength          : 0
-BaseCipherSuite       : 0
-CipherSuite           : 0
-Cipher                : 
-Name                  : SSL_CK_DES_192_EDE3_CBC_WITH_MD5
-Protocols             : {}
+Hash                  :
+CipherBlockLength     : 16
+CipherLength          : 128
+BaseCipherSuite       : 49195
+CipherSuite           : 49195
+Cipher                : AES
+Name                  : TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+Protocols             : {771, 65277}
 ```
 
-This command gets all the cipher suites that have names that contain the string SSL.
+This command gets all the cipher suites that have names that contain the string AES.
 
 ## PARAMETERS
 

@@ -11,7 +11,8 @@ ms.date: 2016-12-20
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: schema: 2.0.0
+online version: 
+schema: 2.0.0
 title: Add-AdfsLocalClaimsProviderTrust
 ms.assetid: F5EFCD8B-FF67-4F91-93A6-F38D54919324
 ---

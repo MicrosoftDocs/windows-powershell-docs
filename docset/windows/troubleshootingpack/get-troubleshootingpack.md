@@ -29,7 +29,7 @@ Get-TroubleshootingPack [-Path] <String> [-AnswerFile <String>] [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Get-TroubleshootingPack** cmdlet gets a **DiagPack** object that you can pass to the Invoke-TroubleshootingPack cmdlet.
+The **Get-TroubleshootingPack** cmdlet gets a **Microsoft.Windows.Diagnosis.DiagPack** object that you can pass to the Invoke-TroubleshootingPack cmdlet.
 
 The **Get-TroubleshootingPack** cmdlet also gets information about a troubleshooting pack and generates an answer file.
 
@@ -56,7 +56,16 @@ The second command displays a root cause.
 The $Audio object contains an array of root causes.
 This command uses conventional array notation to access the third member of the array.
 
-### Example 3: Get a resolution for a root cause
+### Example 3: Get all root causes
+```
+PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
+PS C:\> $Audio.Rootcauses
+```
+
+Tgus example dislays all the root casues this troubleshooting pack investigates.
+
+
+### Example 4: Get a resolution for a root cause
 ```
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> $Audio.RootCauses[2].Resolutions[0]
@@ -70,7 +79,7 @@ The second command displays a resolution for a root cause.
 The $Audio object contains an array of root causes, each of which contains an array of resolutions.
 This command uses conventional array notation to access the first resolution for the third root cause.
 
-### Example 4: Generate an answer file
+### Example 5: Generate an answer file
 ```
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -AnswerFile "AudioAnswerFile.xml"
 ```

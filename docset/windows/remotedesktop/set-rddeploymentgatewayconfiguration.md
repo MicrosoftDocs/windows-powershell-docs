@@ -33,7 +33,7 @@ Set-RDDeploymentGatewayConfiguration [-GatewayMode] <GatewayUsage> [[-GatewayExt
 ## DESCRIPTION
 The **Set-RDDeploymentGatewayConfiguration** cmdlet specifies settings for the Remote Desktop Gateway (RD Gateway) server for a Remote Desktop deployment.
 These settings include whether to use the RD Gateway server, user authentication methods, and other connection and authentication options.
-The RD Gateway role service enables authorized users to connect to virtual desktops, firstref_server_7 RemoteApp programs, and session-based desktops on an internal corporate network from any Internet-connected device.
+The RD Gateway role service enables authorized users to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network from any Internet-connected device.
 
 ## EXAMPLES
 

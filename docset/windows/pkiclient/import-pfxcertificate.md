@@ -39,11 +39,11 @@ Delegation may be required when using this cmdlet with Windows PowerShell® remo
 
 ### EXAMPLE 1
 ```
-PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
+PS C:\>$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
 
 
 
-PS C:\>Import-PfxCertificate -FilePath C:\mypfx.pfx cert:\localMachine\my -Password $mypwd
+PS C:\>Import-PfxCertificate -FilePath C:\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My -Password $mypwd.Password
 ```
 
 This example imports the PFX file my.pfx with a private non-exportable key into the My store for the machine account.

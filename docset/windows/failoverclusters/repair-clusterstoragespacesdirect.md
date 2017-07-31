@@ -20,7 +20,7 @@ ms.assetid: 360D41D6-49A6-4C22-8E0D-D22D4E96B2BA
 # Repair-ClusterStorageSpacesDirect
 
 ## SYNOPSIS
-Repairs S2D disks.
+Repairs disks in a Storage Spaces Direct (S2D) system.
 
 ## SYNTAX
 

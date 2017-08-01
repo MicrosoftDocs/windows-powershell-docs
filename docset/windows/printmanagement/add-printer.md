@@ -57,7 +57,7 @@ You can add both local printers and connections to network-based printers.
 You cannot use wildcard characters with **Add-Printer**.
 You can use **Add-Printer** in a Windows PowerShell remoting session.
 
-You do not need administrative credentials to run **Add-Printer**.
+You may need administrative credentials to run **Add-Printer**.
 
 ## EXAMPLES
 

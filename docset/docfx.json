@@ -28,6 +28,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {	
+		"uhfHeaderId": "MSDocsHeader-WindowsIT", 
 		"breadcrumb_path": "/itpro/powershell/breadcrumb/toc.json",
 	    "ms.technology": "powershell-windows",
 		"ms.topic": "reference",

@@ -10,7 +10,7 @@ external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: 8E4AAE3F-A70E-4DC2-98C1-639C8AB87C74
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

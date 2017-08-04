@@ -10,7 +10,7 @@ external help file: Microsoft.AppV.LegacyPackages.Module.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: 40230EE3-784C-4429-AAF0-D56ABDDF988B
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

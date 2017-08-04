@@ -11,7 +11,7 @@ ms.topic: reference
 author: jamiejdt
 ms.assetid: 04ec49fc-df2c-4191-8bf7-25692494d56b
 keywords: powershell, cmdlet
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 localizationpriority: high
 title: Microsoft Enterprise Desktop Virtualization
 ---

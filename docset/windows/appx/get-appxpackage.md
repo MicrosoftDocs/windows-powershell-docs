@@ -6,7 +6,7 @@ keywords: powershell, cmdlet
 manager: alanth
 ms.assetid: D656EADB-79C4-4057-B933-2F8019BA4681
 ms.author: brianlic
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library

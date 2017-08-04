@@ -12,7 +12,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 keywords: powershell, cmdlet
 author: brianlic-msft
 manager: alanth
-ms.date: 2016-12-21
+ms.date: 12/21/2016
 ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows

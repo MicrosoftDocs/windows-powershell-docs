@@ -214,9 +214,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-DNSClientServerAddress](../dns-client/Get-DnsClientServerAddress.md)
+[Get-DNSClientServerAddress](../dnsclient/Get-DnsClientServerAddress.md)
 
-[Get-NetAdapter](../network-adapter/Get-NetAdapter.md)
+[Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 
 [Get-NetIPAddress](./Get-NetIPAddress.md)
 

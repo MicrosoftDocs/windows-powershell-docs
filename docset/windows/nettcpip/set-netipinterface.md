@@ -877,7 +877,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-NetAdapter](../network-adapter/Get-NetAdapter.md)
+[Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 
 [Get-NetIPInterface](./Get-NetIPInterface.md)
 

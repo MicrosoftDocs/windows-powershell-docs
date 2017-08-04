@@ -10,7 +10,7 @@ external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: 044E611A-C54D-4B6E-9F90-45ED6F7D202D
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

@@ -14,7 +14,7 @@ description: Use this topic to help manage MDOP technologies with Windows PowerS
 keywords: powershell, cmdlet
 author: jamiejdt
 manager: alanth 
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 663AAEE6-FE1C-417A-9540-451E5D9271CE

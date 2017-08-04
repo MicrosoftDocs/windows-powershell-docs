@@ -10,7 +10,7 @@ external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: FD97AEC6-E1BC-4BC5-8B0A-505FE738F0F5
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

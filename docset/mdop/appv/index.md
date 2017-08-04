@@ -11,7 +11,7 @@ ms.topic: reference
 author: jamiejdt
 ms.assetid: ebd8a286-c587-4dd5-aba6-82474d9d6360
 keywords: powershell, cmdlet
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 localizationpriority: high
 title: Microsoft Application Virtualization
 ---

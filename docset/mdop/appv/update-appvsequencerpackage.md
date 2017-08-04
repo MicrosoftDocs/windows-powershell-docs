@@ -10,7 +10,7 @@ external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: 12DD2258-0DFA-46F3-9E9C-95E3BE973356
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

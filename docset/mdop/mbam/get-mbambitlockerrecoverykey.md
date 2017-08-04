@@ -10,7 +10,7 @@ external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth 
 ms.assetid: D8AE241E-B16A-47C7-A56E-2EC798EFC39E
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

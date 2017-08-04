@@ -27,7 +27,20 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {	
+		"breadcrumb_path": "/itpro/powershell/breadcrumb/toc.json",
+	    "ms.technology": "powershell-windows",
+		"ms.topic": "reference",
+		"ms.author": "brianlic",
+		"author": "brianlic-msft",
+		"ms.date": "04/05/2017",
+		"manager": "alanth",
+		"keywords": "powershell, cmdlet",
+		"ms.mktglfcycl": "manage",
+		"ms.sitesec": "library",
+		"description": "Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.",
+		"ms.prod": "w10"
+		},
     "fileMetadata": {},
     "template": [],
     "dest": "powershell"

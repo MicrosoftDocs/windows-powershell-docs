@@ -29,7 +29,7 @@ Enable-Appv [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Enable-Appv** cmdlet enables the Microsoft Application Virtualization (App-V) service on Windows 10 Anniversary Edition computers.
+The **Enable-Appv** cmdlet enables the Microsoft Application Virtualization (App-V) service on computers running at least Windows 10 Anniversary Edition (version 1607) .
 If this cmdlet succeeds, it returns a message.
 
 Before you enable the App-V service, configure App-V service settings by using Windows PowerShell or Group Policy.
@@ -46,7 +46,7 @@ This command enables the App-V service.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

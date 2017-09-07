@@ -78,6 +78,16 @@ PS C:\> Set-VMProcessor TestVM -CompatibilityForOlderOperatingSystemsEnabled $tr
 
 Configures virtual machine TestVM, enabling compatibility for running older operating systems.
 
+### Example 4
+```
+PS C:\> Set-VMProcessor TestVM ExposeVirtualizationExtensions $true
+```
+
+Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
+
+
+
+
 ## PARAMETERS
 
 ### -CimSession

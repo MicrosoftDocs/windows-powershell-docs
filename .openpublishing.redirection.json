@@ -446,11 +446,6 @@
         "redirect_document_id": false
         },
         {
-        "source_path": "docset/virtual-directory-module/server-migration/index.md",
-        "redirect_url": "/powershell/module/server-migration",
-        "redirect_document_id": false
-        },
-        {
         "source_path": "docset/virtual-directory-module/shieldedvmdatafile/shieldedvmdatafile.md",
         "redirect_url": "/powershell/module/shieldedvmdatafile",
         "redirect_document_id": false
@@ -621,13 +616,8 @@
         "redirect_document_id": false
         },
         {
-        "source_path": "docset/virtual-directory-module/agpm.md",
+        "source_path": "docset/virtual-directory-module/agpm/agpm.md",
         "redirect_url": "/powershell/module/agpm",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/index.md",
-        "redirect_url": "/powershell/module/appv",
         "redirect_document_id": false
         },
         {
@@ -910,17 +900,6 @@
         "redirect_url": "/powershell/module/appvserver/update-appvserverconnectiongroup",
         "redirect_document_id": false
         },
-        {
-        "source_path": "docset/virtual-directory-module/mbam.md",
-        "redirect_url": "/powershell/module/mbam",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/index.md",
-        "redirect_url": "/powershell/module/medv",
-        "redirect_document_id": false
-        },
-
         {
         "source_path": "docset/virtual-directory-module/medv/medv-cmdlets.md",
         "redirect_url": "/powershell/module/medv",

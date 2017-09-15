@@ -4,7 +4,7 @@ ms.mktglfcycl: manage
 ms.author: brianlic
 ms.prod: w10
 ms.sitesec: library
-Module Name: Microsoft.Medv.Administration.Commands.WorkspacePackager
+Module Name: medv
 Locale: en-US
 title: MEDVWorkspaceCmdlets
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.

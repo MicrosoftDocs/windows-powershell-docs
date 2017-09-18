@@ -15,6 +15,7 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: A86F98A7-9F03-4195-A182-4A99274A3482
+Module GUID: 
 ---
 
 # Microsoft.Medv.Administration.Commands.WorkspacePackager Module

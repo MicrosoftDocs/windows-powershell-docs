@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 12/20/2016
+ms.date: 09/19/2017
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -29,7 +29,7 @@ Modifies registration settings for an OAuth 2.0 client registered with AD FS.
 Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <String[]>]
  [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
- [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-PassThru] [-WhatIf] [-Confirm]
+ [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ Set-AdfsClient [-Force] [-TargetName] <String> [-ClientId <String>] [-Name <Stri
 Set-AdfsClient [-Force] [-TargetClientId] <String> [-ClientId <String>] [-Name <String>] [-RedirectUri <String[]>]
  [-Description <String>] [-ADUserPrincipalName <String>] [-JWTSigningCertificate <X509Certificate2[]>]
  [-JWTSigningCertificateRevocationCheck <RevocationSetting>] [-ChangeClientSecret] [-ResetClientSecret]
- [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-PassThru] [-WhatIf] [-Confirm]
+ [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ Set-AdfsClient [-Force] [-TargetClient] <AdfsClient> [-ClientId <String>] [-Name
  [-RedirectUri <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
  [-ChangeClientSecret] [-ResetClientSecret] [-JWKSUri <Uri>] [-ReloadJWTSigningKeys] [-JWKSFile <String>]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -233,6 +233,22 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -LogoutUri
+Specifies the logout URI for the OAuth 2.0 client to register with the AD FS. When AD FS initiates a logout it redirects the client's user-agent to this URI by rendering this URI in an iframe. The value of this parameter must be an absolute URI, may include a query component, and must not include a fragment component. This parameter is available with the Windows Update KB4038801 installed.
+
+```yaml
+Type:	String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position:	Named
+Default value:	None
+Accept pipeline input:	False
+Accept wildcard characters:	False
+
 ```
 
 ### -Name

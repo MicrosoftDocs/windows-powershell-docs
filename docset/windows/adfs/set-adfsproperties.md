@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 12/20/2016
+ms.date: 09/19/2017
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOAuthLogout
-Enables the OAuth logout endpoint publishing in the OAuth discovery document. The OAuth logout endpoint logs out the current user from the ADFS. It does not support logging out a federated user from the federated identity provider. This parameter is only available with the Windows Update KB4019472 installed.
+Enables the OAuth logout endpoint publishing in the OAuth discovery document. The OAuth logout endpoint logs out the current user from the AD FS. This parameter is available with the Windows Update KB4019472 installed. The AD FS does not support logging out a federated user from the federated identity provider when using the OAuth logout endpoint with Windows Update KB4019472 installed. The Windows Update KB4038801 makes this parameter obsolete and the value of this parameter to be always true. The Windows Update KB4038801 also adds support for logging our a federated user from the federated identity provider when using the OAuth logout endpoint.
 
 ```yaml
 Type: Boolean

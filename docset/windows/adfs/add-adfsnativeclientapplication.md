@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 12/20/2016
+ms.date: 09/19/2017
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -27,13 +27,13 @@ Adds a native client application role to an application in AD FS.
 ### ApplicationGroupIdentifier (Default)
 ```
 Add-AdfsNativeClientApplication [-ApplicationGroupIdentifier] <String> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationGroupObject
 ```
 Add-AdfsNativeClientApplication [-ApplicationGroup] <ApplicationGroup> [-Name] <String> [-Identifier] <String>
- [[-RedirectUri] <String[]>] [-Description <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [[-RedirectUri] <String[]>] [-Description <String>] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,6 +117,21 @@ Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
+```
+### -LogoutUri
+Specifies the logout URI for the OAuth 2.0 client to register with the AD FS. When AD FS initiates a logout it redirects the client's user-agent to this URI by rendering this URI in an iframe. The value of this parameter must be an absolute URI, may include a query component, and must not include a fragment component. This parameter is available with the Windows Update KB4038801 installed.
+
+```yaml
+Type:	String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position:	Named
+Default value:	None
+Accept pipeline input:	False
+Accept wildcard characters:	False
+
 ```
 
 ### -Name

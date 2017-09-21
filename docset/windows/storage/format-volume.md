@@ -89,7 +89,7 @@ This example performs a format of the D volume.
 
 ### Example 2: Full format using FAT32
 ```
-PS C:\>Format-Volume -DriveLetter C -FileSystem FAT32 -FullFormat -Force
+PS C:\>Format-Volume -DriveLetter D -FileSystem FAT32 -FullFormat -Force
 ```
 
 This example performs a full format of the D volume using the FAT32 file system.

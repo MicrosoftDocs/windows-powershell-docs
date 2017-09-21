@@ -68,7 +68,7 @@ The table below also shows the latest published version of the Help for each mod
 | Iscsi | [iSCSI](/powershell/module/iscsi) |
 | IscsiTarget | [iSCSI Target](/powershell/module/iscsitarget) |
 | KDS | [Key Distribution Server](/powershell/module/kds) |
-| Microsoft.Windows.ServerManager.Migration | [Server Migration](/powershell/module/server-migration) |
+| Microsoft.Windows.ServerManager.Migration | [Server Migration](/powershell/module/Microsoft.Windows.ServerManager.Migration) |
 | MMAgent | [Memory Management Agent](/powershell/module/mmagent) |
 | Mpio | [MPIO](/powershell/module/mpio) |
 | MSDTC | [Distributed Transaction Coordinator](/powershell/module/msdtc) |

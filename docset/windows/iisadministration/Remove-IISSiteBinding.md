@@ -2,6 +2,10 @@
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 online version: 
 schema: 2.0.0
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+title: Remove-IISSiteBinding
+online version: 
+keywords: powershell, cmdlet
 ---
 
 # Remove-IISSiteBinding

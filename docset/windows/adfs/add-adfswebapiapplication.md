@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -524,7 +524,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-**Microsoft.IdentityServer.Management.Resources.WebApiApplication**
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
 
 	AccessControlPolicyName               string
 	AccessControlPolicyParameters         System.Object
@@ -550,8 +550,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	RequestMFAFromClaimsProviders         bool
 	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
 	TokenLifetime                         int
-
-**Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes**
+### Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
 	
 	AllowedClientTypes
 	{
@@ -561,7 +560,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	}
 
 
-**Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes**
+### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
 	
 	RefreshTokenIssuanceDeviceTypes
 	{
@@ -571,7 +570,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	}
 	
 
-**Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata**
+### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
 
 	IsParameterized  bool
 	Summary          string

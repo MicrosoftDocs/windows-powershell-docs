@@ -3,6 +3,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: brianlic
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Module Name: Microsoft.Windows.ServerManager.Migration
 ms.topic: reference
 manager: alanth
 author: brianlic-msft

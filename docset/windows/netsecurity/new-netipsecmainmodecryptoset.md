@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: NetIPsecMainModeCryptoSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-27
+ms.date: 12/27/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -459,5 +459,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [New-NetIPsecMainModeCryptoProposal](./New-NetIPsecMainModeCryptoProposal.md)
 
-[New-GPO](../group-policy/New-GPO.md)
+[New-GPO](../grouppolicy/New-GPO.md)
 

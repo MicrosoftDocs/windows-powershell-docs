@@ -3,30 +3,65 @@
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "powershell",
+      "docset_name": "powershell-windows",
       "build_source_folder": "docset",
-      "build_output_subfolder": "powershell",
+      "build_output_subfolder": "powershell-windows",
       "locale": "en-us",
-      "version": 0,
+      "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "AzurePSModulePage": "Content"
       },
-      "build_entry_point": "op"
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      },
+        "monikerPath": ["mapping/monikerMapping.json"]
     }
   ],
-  "notification_subscribers": [
-    "brianlic@microsoft.com"
+  "dependent_packages": [
+  {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
   ],
+  "notification_subscribers": ["brianlic@microsoft.com"],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
   "git_repository_branch_open_to_public_contributors": "master",
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "enable_incremental_build": true,
-  "dependent_repositories": [],
+  "contribution_branch_mappings": {},
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
   "resolve_user_profile_using_github": true
 }

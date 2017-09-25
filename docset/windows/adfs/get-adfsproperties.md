@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -111,7 +111,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-**Microsoft.IdentityServer.Management.Resources.ServiceProperties**
+### Microsoft.IdentityServer.Management.Resources.ServiceProperties
 
 	AcceptableIdentifiers                       uri[]
 	AddProxyAuthorizationRules                  string
@@ -182,7 +182,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	WIASupportedUserAgents                      string[]
 
 
-**Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting**
+### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
 	
 	RevocationSetting
 	{
@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	}
 
 
-**Microsoft.IdentityServer.Management.Resources.ContactPerson**
+### Microsoft.IdentityServer.Management.Resources.ContactPerson
 
 	ContactType     string
 	EmailAddresses  string[]
@@ -206,21 +206,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 
 
-**Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting**
+### Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting
 
 	Allow    string
 	Require  string
 	None     string
 
 
-**Microsoft.IdentityServer.Management.Resources.Organization**
+### Microsoft.IdentityServer.Management.Resources.Organization
 
 	DisplayName      string
 	Name             string
 	OrganizationUrl  string
 
 
-**Microsoft.IdentityServer.WiaEvaluationMethodState**
+### Microsoft.IdentityServer.WiaEvaluationMethodState
 	
 	WiaEvaluationMethodState
 	{

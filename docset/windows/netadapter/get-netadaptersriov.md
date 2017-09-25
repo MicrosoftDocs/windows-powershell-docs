@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetAdapterSriov.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -87,7 +87,7 @@ This command displays the SR-IOV properties for network adapter named Ethernet 2
 
 ### Example 3: Display SR-IOV properties for the network adapter with the specified interface description
 ```
-PS C:\> Get-NetAdpaterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
+PS C:\> Get-NetAdapterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
 ```
 
 This command displays the SR-IOV properties for the network adapter with the interface description named Contoso 12345 Gigabit Network Device.

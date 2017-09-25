@@ -3,13 +3,9 @@ author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth
 ms.assetid: D59E7781-7C00-42E6-A7B1-42BE16ED5CD4
-ms.author: brianlic
-ms.date: 2016-12-20
-ms.mktglfcycl: manage
+ms.date: 12/20/2016
 ms.prod: w10
-ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 

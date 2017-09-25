@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: SmbShare.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -68,7 +68,7 @@ VMS5                          *                             D:\VMS
 
 This command retrieves the SMB shares on the computer.
 
-### Example 2: Get SMB shares on a specific computer
+### Example 2: Get a specific SMB share on a specific computer
 ```
 PS C:\>Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description 
@@ -78,7 +78,7 @@ VMS1                          Contoso-FS                    I:\VMS
 
 This command retrieves the SMB shares on the computer named VMS1.
 
-### Example 3: Display information about the SMB share named 'VMS1' on the local computer
+### Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list
 ```
 PS C:\>Get-SmbShare -Name "VMS1" | Format-List
 Name        : VMS1 
@@ -89,7 +89,7 @@ Description :
 
 This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### Example 3: Display all properties about a specific SMB share on the local computer
+### Example 3: Display all properties about a specific SMB share on the local computer in a list
 ```
 PS C:\>Get-SmbShare -Name "VMS1" | Format-List -Property *
 PresetPathAcl         : System.Security.AccessControl.DirectorySecurity 

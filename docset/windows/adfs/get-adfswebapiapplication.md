@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -164,7 +164,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 ## OUTPUTS
 
-**Microsoft.IdentityServer.Management.Resources.WebApiApplication**
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
 
 	AccessControlPolicyName               string
 	AccessControlPolicyParameters         System.Object
@@ -191,7 +191,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
 	TokenLifetime                         int
 
-**Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes**
+### Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
 	
 	AllowedClientTypes
 	{
@@ -201,7 +201,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	}
 
 
-**Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes**
+### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
 	
 	RefreshTokenIssuanceDeviceTypes
 	{
@@ -211,7 +211,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	}
 	
 
-**Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata**
+### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
 
 	IsParameterized  bool
 	Summary          string

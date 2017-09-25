@@ -1,20 +1,11 @@
 ---
 ms.technology: powershell-mdop
-ms.mktglfcycl: manage
-ms.author: brianlic
-ms.prod: w10
-ms.sitesec: library
 author: jamiejdt
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth 
-ms.assetid: 69e05c33-3b61-449d-88ad-757e73f6de19
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
-online version: 
-schema: 2.0.0
 title: Microsoft Desktop Optimization Pack Automation with Windows PowerShell
 ---
 
@@ -28,9 +19,8 @@ The table below shows the latest published version of the Help for each module. 
 
 | Product | Latest product version |
 | - | - |
-| [Advanced Group Policy Management](agpm/index.md) | 4.0 SP3 |
-| [Microsoft Application Virtualization](appv/index.md) | 5.1 |
-| [Microsoft Bitlocker Administration and Monitoring](mbam/index.md) | 2.5 |
-| [Microsoft Enterprise Desktop Virtualization](medv/index.md) | 2.0 |
-| [User Experience Virtualization](uev/index.md) | 2.1 SP1 |
-
+| [Advanced Group Policy Management](/powershell/module/agpm) | 4.0 SP3 |
+| [Microsoft Application Virtualization](/powershell/module/appv) | 5.1 |
+| [Microsoft Bitlocker Administration and Monitoring](/powershell/module/mbam) | 2.5 |
+| [Microsoft Enterprise Desktop Virtualization](/powershell/module/medv) | 2.0 |
+| [User Experience Virtualization](/powershell/module/uev) | 2.1 SP1 |

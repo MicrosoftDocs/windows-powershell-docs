@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -102,7 +102,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 ## OUTPUTS
 
-**Microsoft.IdentityServer.Management.Resources.ApplicationGroup**
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
 	ApplicationGroupIdentifier  string
 	Applications                Microsoft.IdentityServer.Management.Resources.IApplication[]
@@ -111,7 +111,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	Name                        string
 
 
-**Microsoft.IdentityServer.Management.Resources.IApplication**
+### Microsoft.IdentityServer.Management.Resources.IApplication
 
 	ADUserPrincipalName                   string
 	ApplicationGroupIdentifier            string
@@ -126,7 +126,7 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	RedirectUri                           string[]
 
 
-**Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting**
+### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
 	
 	RevocationSetting
 	{

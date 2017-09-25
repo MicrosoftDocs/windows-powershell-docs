@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -101,7 +101,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-**Microsoft.IdentityServer.Management.Resources.OAuthPermission**
+### Microsoft.IdentityServer.Management.Resources.OAuthPermission
 
 	ClientRoleIdentifier  string
 	ConsentType           Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
@@ -113,7 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	ServerRoleIdentifier  string
 
 
-**Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType**
+### Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
 	
 	OAuthConsentType
 	{

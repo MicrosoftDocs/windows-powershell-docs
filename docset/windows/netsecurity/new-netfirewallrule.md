@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-27
+ms.date: 12/27/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -323,6 +323,9 @@ The acceptable values for this parameter are:
 
 - True: Specifies the rule is currently enabled. 
 - False: Specifies the rule is currently disabled.
+
+Note, that the type of this parameter is not boolean, therefore `$true` and `$false` variables are not acceptable values here. Use "True" and "False" text strings instead.
+
 A disabled rule will not actively modify computer behavior, but the management construct still exists on the computer so it can be re-enabled.
 
 ```yaml
@@ -333,7 +336,7 @@ Accepted values: True, False
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetRoute.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -448,7 +448,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-NetAdapter](../network-adapter/Get-NetAdapter.md)
+[Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 
 [Find-NetRoute](./Find-NetRoute.md)
 

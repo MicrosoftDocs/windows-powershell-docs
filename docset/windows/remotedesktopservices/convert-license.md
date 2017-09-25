@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: TSPSCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-27
+ms.date: 12/27/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -139,9 +139,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RDLicenseConfiguration](../remote-desktop/Get-RDLicenseConfiguration.md)
+[Get-RDLicenseConfiguration](../remotedesktop/Get-RDLicenseConfiguration.md)
 
-[Get-RDSessionHost](../remote-desktop/Get-RDSessionHost.md)
+[Get-RDSessionHost](../remotedesktop/Get-RDSessionHost.md)
 
 [Get-WmiObject](http://go.microsoft.com/fwlink/?LinkId=821595)
 

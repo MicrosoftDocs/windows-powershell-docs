@@ -1,7 +1,6 @@
 ---
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: provcmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
 ms.author: brianlic

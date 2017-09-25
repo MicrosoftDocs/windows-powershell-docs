@@ -3,13 +3,82 @@
     "content": [
       {
         "files": [
+          "toc.yml"
+        ],
+        "src": "bread",
+        "dest": "windows/bread"
+
+      },
+      {
+        "files": [
           "**/*.md"
         ],
-        "exclude": [
-          "**/obj/**",
-          "powershell/**",
-          "**/includes/**"
-        ]
+        "src": "docs-conceptual/windows",
+        "version": "win10-ps",
+        "dest": "windows"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual/windows",
+        "version": "win10-ps",
+        "dest": "windows/win10-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "windows",
+        "version": "win10-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "windows",
+        "version": "win10-ps",
+        "dest": "module/win10-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "docs-conceptual/mdop",
+        "version": "win-mdop2-ps",
+        "dest": "mdop"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual/mdop",
+        "version": "win-mdop2-ps",
+        "dest": "mdop/win-mdop2-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "mdop",
+        "version": "win-mdop2-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "mdop",
+        "version": "win-mdop2-ps",
+        "dest": "module/win-mdop2-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-directory-module",
+        "dest": "module"
       }
     ],
     "resource": [
@@ -20,16 +89,37 @@
         ],
         "exclude": [
           "**/obj/**",
-          "powershell/**",
           "**/includes/**"
         ]
       }
     ],
+    "versions": {
+      "win10-ps": {
+        "dest": "win10-ps"
+      },
+      "win-mdop2-ps": {
+        "dest": "win-mdop2-ps"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "ms.devlang": "powershell",
+      "ROBOTS": "INDEX, FOLLOW",
+      "breadcrumb_path": "/powershell/windows/bread/toc.json",
+      "ms.prod": "w10",
+      "ms.technology": "powershell",
+      "ms.topic": "reference",
+      "ms.author": "brianlic",
+      "author": "brianlic-msft",
+      "ms.date": "04/05/2017",
+      "manager": "alanth",
+      "keywords": "powershell, cmdlet",
+		  "ms.mktglfcycl": "manage",
+		  "ms.sitesec": "library"
+    },
     "fileMetadata": {},
     "template": [],
-    "dest": "powershell"
+    "dest": "powershell-windows"
   }
 }

@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -77,6 +77,16 @@ PS C:\> Set-VMProcessor TestVM -CompatibilityForOlderOperatingSystemsEnabled $tr
 ```
 
 Configures virtual machine TestVM, enabling compatibility for running older operating systems.
+
+### Example 4
+```
+PS C:\> Set-VMProcessor TestVM ExposeVirtualizationExtensions $true
+```
+
+Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
+
+
+
 
 ## PARAMETERS
 

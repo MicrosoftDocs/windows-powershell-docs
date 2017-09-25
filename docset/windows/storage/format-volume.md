@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Volume.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -89,7 +89,7 @@ This example performs a format of the D volume.
 
 ### Example 2: Full format using FAT32
 ```
-PS C:\>Format-Volume -DriveLetter C -FileSystem FAT32 -FullFormat -Force
+PS C:\>Format-Volume -DriveLetter D -FileSystem FAT32 -FullFormat -Force
 ```
 
 This example performs a full format of the D volume using the FAT32 file system.

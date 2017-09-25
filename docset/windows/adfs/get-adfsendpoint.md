@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -93,7 +93,7 @@ System.Uri[]
 
 ## OUTPUTS
 
-**Microsoft.IdentityServer.Management.Resources.Endpoint**
+### Microsoft.IdentityServer.Management.Resources.Endpoint
 
 	AddressPath           string
 	ClientCredentialType  string

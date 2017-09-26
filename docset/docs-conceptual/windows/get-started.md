@@ -6,6 +6,7 @@ title: Windows 10 and Windows Server 2016
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.Windows 10 and Windows Server 2016
 author: brianlic-msft
 ms.assetid: f16d306b-a30a-45b3-a585-c450ad7ba93b
+ms.date: 09/26/2017
 ---
 
 
@@ -140,3 +141,5 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsServerBackup | [Windows Server Backup](/powershell/module/windowsserverbackup) |
 | WSUS | [Windows Server Update Services](/powershell/module/wsus) |
 | WindowsUpdate | [Windows Update](/powershell/module/windowsupdate) |
+
+You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

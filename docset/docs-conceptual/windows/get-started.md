@@ -140,3 +140,5 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsServerBackup | [Windows Server Backup](/powershell/module/windowsserverbackup) |
 | WSUS | [Windows Server Update Services](/powershell/module/wsus) |
 | WindowsUpdate | [Windows Update](/powershell/module/windowsupdate) |
+
+You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

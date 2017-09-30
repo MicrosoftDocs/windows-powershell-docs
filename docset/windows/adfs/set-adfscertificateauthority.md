@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: 97505016-00E4-45C2-B566-EE3454FF54E3
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-AdfsCertificateAuthority
-ms.assetid: 97505016-00E4-45C2-B566-EE3454FF54E3
 ---
 
 # Set-AdfsCertificateAuthority
@@ -38,8 +39,10 @@ Set-AdfsCertificateAuthority [-RolloverSigningCertificate] [-ForcePromotion] [-P
 ### EnrollmentAgentConfiguration
 ```
 Set-AdfsCertificateAuthority [-EnrollmentAgent] [-CertificateAuthority <String>]
- [-LogonCertificateTemplate <String>] [-EnrollmentAgentCertificateTemplate <String>] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-LogonCertificateTemplate <String>] [-WindowsHelloCertificateTemplate <String>]
+ [-EnrollmentAgentCertificateTemplate <String>] [-AutoEnrollEnabled <Boolean>]
+ [-CertificateGenerationThresholdDays <Int32>] [-WindowsHelloCertificateProxyEnabled <Boolean>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,8 +50,22 @@ The **Set-AdfsCertificateAuthority** cmdlet modifies a certificate authority in 
 
 ## EXAMPLES
 
-
 ## PARAMETERS
+
+### -AutoEnrollEnabled
+{{Fill AutoEnrollEnabled Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: EnrollmentAgentConfiguration
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CertificateAuthority
 Specifies a certificate authority.
@@ -65,17 +82,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
+### -CertificateGenerationThresholdDays
+{{Fill CertificateGenerationThresholdDays Description}}
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
+Type: Int32
+Parameter Sets: EnrollmentAgentConfiguration
+Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -176,6 +193,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WindowsHelloCertificateProxyEnabled
+{{Fill WindowsHelloCertificateProxyEnabled Description}}
+
+```yaml
+Type: Boolean
+Parameter Sets: EnrollmentAgentConfiguration
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WindowsHelloCertificateTemplate
+{{Fill WindowsHelloCertificateTemplate Description}}
+
+```yaml
+Type: String
+Parameter Sets: EnrollmentAgentConfiguration
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -193,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

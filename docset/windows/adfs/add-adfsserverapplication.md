@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: 31366E9B-F409-499A-AA87-70FA7157DFCB
+ms.author: brianlic
 ms.date: 09/19/2017
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-AdfsServerApplication
-ms.assetid: 31366E9B-F409-499A-AA87-70FA7157DFCB
 ---
 
 # Add-AdfsServerApplication
@@ -29,8 +30,8 @@ Adds a server application role to an application in AD FS.
 Add-AdfsServerApplication [-ApplicationGroupIdentifier] <String> [-Name] <String> [-Identifier] <String>
  [[-RedirectUri] <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
- [-JWKSUri <Uri>] [-JWKSFile <String>] [-GenerateClientSecret] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-JWKSUri <Uri>] [-LogoutUri <String>] [-JWKSFile <String>] [-GenerateClientSecret] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationGroupObject
@@ -38,15 +39,14 @@ Add-AdfsServerApplication [-ApplicationGroupIdentifier] <String> [-Name] <String
 Add-AdfsServerApplication [-ApplicationGroup] <ApplicationGroup> [-Name] <String> [-Identifier] <String>
  [[-RedirectUri] <String[]>] [-Description <String>] [-ADUserPrincipalName <String>]
  [-JWTSigningCertificate <X509Certificate2[]>] [-JWTSigningCertificateRevocationCheck <RevocationSetting>]
- [-JWKSUri <Uri>] [-JWKSFile <String>] [-GenerateClientSecret] [-LogoutUri] [-PassThru] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-JWKSUri <Uri>] [-LogoutUri <String>] [-JWKSFile <String>] [-GenerateClientSecret] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Add-AdfsServerApplication** cmdlet adds a server application role to an application in Active Directory Federation Services (AD FS).
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 
@@ -93,21 +93,6 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -231,16 +216,15 @@ Accept wildcard characters: False
 Specifies the logout URI for the OAuth 2.0 client to register with the AD FS. When AD FS initiates a logout it redirects the client's user-agent to this URI by rendering this URI in an iframe. The value of this parameter must be an absolute URI, may include a query component, and must not include a fragment component. This parameter is available with the Windows Update KB4038801 installed.
 
 ```yaml
-Type:	String
+Type: String
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position:	Named
-Default value:	None
-Accept pipeline input:	False
-Accept wildcard characters:	False
-
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -Name
@@ -303,6 +287,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -320,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

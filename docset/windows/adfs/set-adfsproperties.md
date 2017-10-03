@@ -962,6 +962,7 @@ Accept wildcard characters: False
 ```
 
 ### -PromptLoginFallbackAuthenticationType
+
 Specifies a fallback authentication type for a prompt login request.
 
 ```yaml
@@ -980,10 +981,10 @@ Accept wildcard characters: False
 
 The acceptable values for this parameter are:
 
-•	None. Do not federate prompt=login request and error instead. 
-•	FallbackToProtocolSpecificParameters. Translate prompt=login to wfresh=0 and Wauth=forms during federation. If wauth is present in the original request, it will be preserved. 
-•	ForwardPromptAndHintsOverWsFederation. Forward prompt, login_hint, and domain_hint parameters during federation.
-•	Disabled: Discard prompt parameter from the request during federation.
+-	None. Do not federate prompt=login request and error instead. 
+-	FallbackToProtocolSpecificParameters. Translate prompt=login to wfresh=0 and Wauth=forms during federation. If wauth is present in the original request, it will be preserved. 
+-	ForwardPromptAndHintsOverWsFederation. Forward prompt, login_hint, and domain_hint parameters during federation.
+-	Disabled. Discard prompt parameter from the request during federation.
 
 ```yaml
 Type: PromptLoginFederation

@@ -7,7 +7,7 @@ manager: alanth
 Module Name: ADFS
 ms.assetid: 194346C5-785D-42E1-AD5F-22B1CD263967
 ms.author: brianlic
-ms.date: 09/19/2017
+ms.date: 10/02/2017
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library

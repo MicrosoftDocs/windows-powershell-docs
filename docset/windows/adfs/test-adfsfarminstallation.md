@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: D8E7446F-C295-4652-8503-C0877549BD4F
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-AdfsFarmInstallation
-ms.assetid: D8E7446F-C295-4652-8503-C0877549BD4F
 ---
 
 # Test-AdfsFarmInstallation
@@ -241,37 +242,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SQLConnectionString
-Specifies the Microsoft SQL Server database that stores the AD FS configuration settings.
-If you do not specify this parameter, the AD FS installer uses the Windows Internal Database to store configuration settings.
-
-```yaml
-Type: String
-Parameter Sets: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover, AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa, ADFSFarmCreateSharedDatabase, AdfsFarmCreateSharedDatabaseGmsa
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SSLPort
-Specifies the value of the port number of the SSL binding that the AD FS website uses.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ServiceAccountCredential
 Specifies a **PSCredential** object based on a user name and password for the service account in Active Directory® Domain Services under which the AD FS service runs.
 To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
@@ -306,6 +276,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SQLConnectionString
+Specifies the Microsoft SQL Server database that stores the AD FS configuration settings.
+If you do not specify this parameter, the AD FS installer uses the Windows Internal Database to store configuration settings.
+
+```yaml
+Type: String
+Parameter Sets: ADFSFarmCreateSharedDatabaseDisableAutoCertRollover, AdfsFarmCreateSharedDatabaseDisableAutoCertRolloverGmsa, ADFSFarmCreateSharedDatabase, AdfsFarmCreateSharedDatabaseGmsa
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SSLPort
+Specifies the value of the port number of the SSL binding that the AD FS website uses.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TlsClientPort
 Specifies the port number that the AD FS service uses for Transport Layer Security (TLS) authentication for the user certificate client.
 The default value is 49443.
@@ -323,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

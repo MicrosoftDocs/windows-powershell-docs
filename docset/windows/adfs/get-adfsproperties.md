@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: E9015DB1-D7C5-456C-87E6-18A9448F1AC7
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AdfsProperties
-ms.assetid: E9015DB1-D7C5-456C-87E6-18A9448F1AC7
 ---
 
 # Get-AdfsProperties
@@ -103,7 +104,7 @@ This command retrieves the associated properties from AD FS.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -112,7 +113,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.ServiceProperties
-
 	AcceptableIdentifiers                       uri[]
 	AddProxyAuthorizationRules                  string
 	AllowLocalAdminsServiceAdministration       bool
@@ -181,7 +181,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	WiaEvaluationMethod                         Microsoft.IdentityServer.WiaEvaluationMethodState
 	WIASupportedUserAgents                      string[]
 
-
 ### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
 	
 	RevocationSetting
@@ -195,30 +194,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	  CheckChainExcludeRootCacheOnly = 6,
 	}
 
-
 ### Microsoft.IdentityServer.Management.Resources.ContactPerson
-
 	ContactType     string
 	EmailAddresses  string[]
 	GivenName       string
 	PhoneNumbers    string[]
 	Surname         string
 
-
-
 ### Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting
-
 	Allow    string
 	Require  string
 	None     string
 
-
 ### Microsoft.IdentityServer.Management.Resources.Organization
-
 	DisplayName      string
 	Name             string
 	OrganizationUrl  string
-
 
 ### Microsoft.IdentityServer.WiaEvaluationMethodState
 	

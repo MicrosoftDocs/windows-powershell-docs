@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: 368AA5D3-5523-47EE-8A0A-049CB8D7AB37
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AdfsServerApplication
-ms.assetid: 368AA5D3-5523-47EE-8A0A-049CB8D7AB37
 ---
 
 # Get-AdfsServerApplication
@@ -53,7 +54,6 @@ Get-AdfsServerApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParamet
 The **Get-AdfsServerApplication** cmdlet gets configuration settings for a server application role for an application in Active Directory Federation Services (AD FS).
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,7 +144,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.ServerApplication
-
 	ADUserPrincipalName                               string
 	ApplicationGroupIdentifier                        string
 	ClientSecret                                      string
@@ -156,7 +155,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
 	Name                                              string
 	RedirectUri                                       string[]
-
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
 	
@@ -170,7 +168,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	   CheckChainExcludeRoot = 5,
 	   CheckChainExcludeRootCacheOnly = 6,
 	}
-
 
 ## NOTES
 Microsoft.IdentityServer.Management.Resources.ServerApplication inherits from Microsoft.IdentityServer.Management.Resources.ClientApplication object and implements the Microsoft.IdentityServer.Management.Resources.IApplication interface.

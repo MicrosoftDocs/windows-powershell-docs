@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: CC8998A0-12E0-4CBA-A56B-FBFC5F399AA2
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AdfsWebApiApplication
-ms.assetid: CC8998A0-12E0-4CBA-A56B-FBFC5F399AA2
 ---
 
 # Get-AdfsWebApiApplication
@@ -58,7 +59,6 @@ Get-AdfsWebApiApplication [-ApplicationGroup] <ApplicationGroup> [<CommonParamet
 The **Get-AdfsWebApiApplication** cmdlet gets Web API application roles in Active Directory Federation Services (AD FS).
 
 ## EXAMPLES
-
 
 ## PARAMETERS
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -165,7 +165,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.WebApiApplication
-
 	AccessControlPolicyName               string
 	AccessControlPolicyParameters         System.Object
 	AdditionalAuthenticationRules         string
@@ -200,7 +199,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	  Confidential=4,
 	}
 
-
 ### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
 	
 	RefreshTokenIssuanceDeviceTypes
@@ -212,7 +210,6 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 	
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-
 	IsParameterized  bool
 	Summary          string
 	Serialized       string

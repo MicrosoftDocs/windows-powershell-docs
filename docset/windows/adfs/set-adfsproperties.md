@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 09/19/2017
+Module Name: ADFS
+ms.assetid: 194346C5-785D-42E1-AD5F-22B1CD263967
+ms.author: brianlic
+ms.date: 10/02/2017
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-AdfsProperties
-ms.assetid: 194346C5-785D-42E1-AD5F-22B1CD263967
 ---
 
 # Set-AdfsProperties
@@ -49,7 +50,9 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-EnableRelayStateForIdpInitiatedSignOn <Boolean>] [-DelegateServiceAdministration <String>]
  [-AllowSystemServiceAdministration <Boolean>] [-AllowLocalAdminsServiceAdministration <Boolean>]
  [-DeviceUsageWindowInDays <Int32>] [-EnableIdPInitiatedSignonPage <Boolean>] [-IgnoreTokenBinding <Boolean>]
- [-IdTokenIssuer <Uri>] [-Force] [-PassThru] [-WhatIf] [-Confirm]
+ [-IdTokenIssuer <Uri>] [-PromptLoginFederation <PromptLoginFederation>]
+ [-PromptLoginFallbackAuthenticationType <String>] [-Force] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -339,21 +342,6 @@ Accepted values: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckCh
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -716,8 +704,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IdTokenIssuer
-Specifies the URI of the token issuer.
+### -Identifier
+Specifies the URI that uniquely identifies the Federation Service.
 
 ```yaml
 Type: Uri
@@ -731,8 +719,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identifier
-Specifies the URI that uniquely identifies the Federation Service.
+### -IdTokenIssuer
+Specifies the URI of the token issuer.
 
 ```yaml
 Type: Uri
@@ -973,6 +961,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PromptLoginFallbackAuthenticationType
+
+Specifies a fallback authentication type for a prompt login request.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PromptLoginFederation
+
+The acceptable values for this parameter are:
+
+-	None. Do not federate prompt=login request and error instead. 
+-	FallbackToProtocolSpecificParameters. Translate prompt=login to wfresh=0 and Wauth=forms during federation. If wauth is present in the original request, it will be preserved. 
+-	ForwardPromptAndHintsOverWsFederation. Forward prompt, login_hint, and domain_hint parameters during federation.
+-	Disabled. Discard prompt parameter from the request during federation.
+
+```yaml
+Type: PromptLoginFederation
+Parameter Sets: (All)
+Aliases: 
+Accepted values: None, FallbackToProtocolSpecificParameters, ForwardPromptAndHintsOverWsFederation, Disabled
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ProxyTrustTokenLifetime
 Specifies the valid token lifetime, in minutes, for proxy trust tokens.
 This value is used by the federation server proxy to authenticate with its associated federation server.
@@ -1039,8 +1065,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SignSamlAuthnRequests
-Indicates whether the Federation Service signs SAML protocol authentication requests to claims providers.
+### -SignedSamlRequestsRequired
+Indicates whether the Federation Service requires signed SAML protocol requests from the relying party.
+If you specify a value of $True, the Federation Service rejects unsigned SAML protocol requests.
 
 ```yaml
 Type: Boolean
@@ -1054,9 +1081,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SignedSamlRequestsRequired
-Indicates whether the Federation Service requires signed SAML protocol requests from the relying party.
-If you specify a value of $True, the Federation Service rejects unsigned SAML protocol requests.
+### -SignSamlAuthnRequests
+Indicates whether the Federation Service signs SAML protocol authentication requests to claims providers.
 
 ```yaml
 Type: Boolean
@@ -1133,6 +1159,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1150,7 +1191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

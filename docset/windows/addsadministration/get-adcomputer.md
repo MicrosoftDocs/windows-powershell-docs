@@ -75,8 +75,7 @@ AccountNotDelegated                : False
 AllowReversiblePasswordEncryption  : False
 BadLogonCount                      : 
 CannotChangePassword               : False
-CanonicalName                      : 
-User01.com/Computers/ User01-srv1
+CanonicalName                      : User01.com/Computers/ User01-srv1
 Certificates                       : {}
 CN                                 : User01-srv1
 codePage                           : 0
@@ -87,8 +86,7 @@ Deleted                            :
 Description                        : DisplayName                        : 
 DistinguishedName                  : CN= User01-srv1,CN=Computers,DC= User01, DC=com
 DNSHostName                        : DoesNotRequirePreAuth              : False
-dSCorePropagationData              : {3/16/2009 4:21:51 PM, 12/31/1600 4:00:01
-PM}
+dSCorePropagationData              : {3/16/2009 4:21:51 PM, 12/31/1600 4:00:01 PM}
 Enabled                            : True
 HomedirRequired                    : False
 HomePage                           : instanceType                       : 0
@@ -101,22 +99,18 @@ LastLogonDate                      :
 localPolicyFlags                   : 0
 Location                           : NA/HQ/Building A
 LockedOut                          : False
-ManagedBy                          : CN=SQL Administrator 01,OU=UserAccounts,OU
-=Managed,DC= User01,DC=com
+ManagedBy                          : CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=User01,DC=com
 MemberOf                           : {}
 MNSLogonAccount                    : False
 Modified                           : 3/16/2009 4:23:01 PM
 modifyTimeStamp                    : 3/16/2009 4:23:01 PM
 msDS-User-Account-Control-Computed : 0
 Name                               : User01-srv1
-nTSecurityDescriptor               : System.DirectoryServices.ActiveDirectorySe
-curity
-ObjectCategory                     : CN=Computer,CN=Schema,CN=Configuration,DC=
-Fabrikam,DC=com
+nTSecurityDescriptor               : System.DirectoryServices.ActiveDirectorySecurity
+ObjectCategory                     : CN=Computer,CN=Schema,CN=Configuration,DC=Fabrikam,DC=com
 ObjectClass                        : computer
 ObjectGUID                         : 828306a3-8ccd-410e-9537-e6616662c0b0
-objectSid                          : S-1-5-21-41432690-3719764436-1984117282-11
-30
+objectSid                          : S-1-5-21-41432690-3719764436-1984117282-1130
 OperatingSystem                    : 
 OperatingSystemHotfix              : 
 OperatingSystemServicePack         : 
@@ -125,8 +119,7 @@ PasswordExpired                    : False
 PasswordLastSet                    : 
 PasswordNeverExpires               : False
 PasswordNotRequired                : False
-PrimaryGroup                       : CN=Domain Computers,CN=Users,DC= User01,D
-C=com
+PrimaryGroup                       : CN=Domain Computers,CN=Users,DC=User01,DC=com
 primaryGroupID                     : 515
 ProtectedFromAccidentalDeletion    : False
 pwdLastSet                         : 0
@@ -134,21 +127,17 @@ SamAccountName                     : User01-srv1$
 sAMAccountType                     : 805306369
 sDRightsEffective                  : 0
 ServiceAccount                     : {}
-servicePrincipalName               : {MSOLAPSVC.3/ User01-SRV1. User01.COM:an
-alyze, MSSQLSVC/ User01-SRV1. User01.COM
-:1456}
-ServicePrincipalNames              : {MSOLAPSVC.3/User01-SRV1.User01.COM:an
-alyze, MSSQLSVC/User01-SRV1.User01.COM
-:1456}
-SID                                : S-1-5-21-41432690-3719764436-1984117282-11
-30
+servicePrincipalName               : {MSOLAPSVC.3/User01-SRV1.User01.COM:analyze, MSSQLSVC/User01-SRV1.User01.COM:1456}
+ServicePrincipalNames              : {MSOLAPSVC.3/User01-SRV1.User01.COM:analyze, MSSQLSVC/User01-SRV1.User01.COM:1456}
+SID                                : S-1-5-21-41432690-3719764436-1984117282-1130
 SIDHistory                         : {}
 TrustedForDelegation               : False
 TrustedToAuthForDelegation         : False
 UseDESKeyOnly                      : False
 userAccountControl                 : 4096
 userCertificate                    : {}
-UserPrincipalName                  : uSNChanged                         : 36024
+UserPrincipalName                  : 
+uSNChanged                         : 36024
 uSNCreated                         : 35966
 whenChanged                        : 3/16/2009 4:23:01 PM
 whenCreated                        : 3/16/2009 4:15:00 PM
@@ -159,10 +148,10 @@ This command gets a specific computer showing all the properties.
 ### Example 2: Get all computers with a name starting with a particular string
 ```
 PS C:\> Get-ADComputer -Filter 'Name -like "User01*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
-name          dnshostname                ipv4address
-----          -----------                -----------
-User01-SRV1 User01-SRV1. User01.com 10.194.99.181
-User01-SRV2 User01-SRV2. User01.com 10.194.100.3
+name        dnshostname            ipv4address
+----        -----------            -----------
+User01-SRV1 User01-SRV1.User01.com 10.194.99.181
+User01-SRV2 User01-SRV2.User01.com 10.194.100.3
 ```
 
 This command gets all the computers with a name starting with a particular string and shows the name, dns hostname, and IPv4 address.
@@ -171,8 +160,8 @@ This command gets all the computers with a name starting with a particular strin
 ```
 PS C:\> $Date = [DateTime]::Today.AddDays(-90) 
 PS C:\> Get-ADComputer -Filter 'PasswordLastSet -ge $Date' -Properties PasswordLastSet | FT Name,PasswordLastSet
-Name                                                        PasswordLastSet
-----                                                        ---------------
+Name                                                      PasswordLastSet
+----                                                      ---------------
 USER01-SRV4                                               3/12/2009 6:40:37 PM
 USER01-SRV5                                               3/12/2009 7:05:45 PM
 ```

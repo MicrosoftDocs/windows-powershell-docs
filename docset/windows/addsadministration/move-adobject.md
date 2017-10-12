@@ -35,10 +35,7 @@ The **Move-ADObject** cmdlet moves an object or a container of objects from one 
 
 When an object is moved between domains, both the source DC and the target DC need to be the Rid Master of their domains. If a different DC is being used, you will receive the following error:
 
-```
 move-adobject : The requested operation could not be performed because the directory service is not the master for that type of operation
-At line:1 char:1
-```
 
 The *Identity* parameter specifies the Active Directory object or container to move.
 You can identify an object or container by its distinguished name or GUID.

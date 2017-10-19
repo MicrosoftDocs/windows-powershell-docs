@@ -1,12 +1,9 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth
+ms.assetid: D7752E90-7913-4250-97CC-6178FDE9A955
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
@@ -14,18 +11,18 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-IISSite
-ms.assetid: D7752E90-7913-4250-97CC-6178FDE9A955
 ---
 
 # New-IISSite
 
 ## SYNOPSIS
-Creates an IIS Web site.
+Creates an IIS Website.
 
 ## SYNTAX
 
 ```
-New-IISSite -Name <String> -PhysicalPath <String> -BindingInformation <String> [-Force] [-Passthru]
+New-IISSite -Name <String> -PhysicalPath <String> -BindingInformation <String> [-Protocol <String>]
+ [-CertificateThumbPrint <String>] [-SslFlag <SslFlags>] [-CertStoreLocation <String>] [-Force] [-Passthru]
  [<CommonParameters>]
 ```
 
@@ -51,12 +48,19 @@ PS C:\> Stop-IISCommitDelay
 
 This command creates a website named TestSite with default application assigned to the TestSiteAppPool application pool.
 
+### Example 3: Add a new website of HTTPS binding
+```
+PS C:\> New-IISSite -Name "TestSite" -PhysicalPath "$env:systemdrive\inetpub\testsite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
+```
+
+This command creates a website named TestSite with HTTPS binding
+
 ## PARAMETERS
 
 ### -BindingInformation
 Specifies the binding information string to use for the new site.
 The binding information of the form IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which is equivalent to using a wildcard character such as *:443:.
-In this representation *  indicates all IP addresses and all hostnames is indicated by leaving the corresponding field blank.
+In this representation *  indicates all IP addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
@@ -64,6 +68,36 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertificateThumbPrint
+Specifies a certificate thumbprint, which is used to add a new HTTPS binding
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CertStoreLocation
+Specifies the certificate store path of the certificate, which is used to add a new HTTPS binding
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -131,8 +165,38 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Protocol
+The protocol for which the binding is configured, usually http, https or ftp.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SslFlag
+Specifies the SSL flag settings of the new binding.
+
+```yaml
+Type: SslFlags
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -153,6 +217,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-IISSite](./Start-IISSite.md)
 
 [Stop-IISSite](./Stop-IISSite.md)
+
+[New-IISSiteBinding](./New-IISSiteBinding.md)
 
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 

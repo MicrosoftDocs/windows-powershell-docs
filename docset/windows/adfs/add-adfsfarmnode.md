@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ADFS
+ms.assetid: 8F40B69A-8090-4AC7-AC8E-ED8A5C55ACA8
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-AdfsFarmNode
-ms.assetid: 8F40B69A-8090-4AC7-AC8E-ED8A5C55ACA8
 ---
 
 # Add-AdfsFarmNode
@@ -93,21 +94,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Credential
 Specifies a **PSCredential** object.
 
@@ -124,8 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -FarmBehavior
-
-
 ```yaml
 Type: Int32
 Parameter Sets: ADFSFarmJoinSqlSvcAcct, AdfsFarmJoinSqlGmsa
@@ -202,6 +186,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ServiceAccountCredential
+Specifies the Active Directory account under which the AD FS service runs.
+All nodes in the farm must use the same service account.
+
+```yaml
+Type: PSCredential
+Parameter Sets: ADFSFarmJoinWidSvcAcct, ADFSFarmJoinSqlSvcAcct
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SQLConnectionString
 Specifies the SQL Server database that will store the AD FS configuration settings.
 If not specified, AD FS uses Windows Internal Database to store configuration settings.
@@ -218,18 +218,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ServiceAccountCredential
-Specifies the Active Directory account under which the AD FS service runs.
-All nodes in the farm must use the same service account.
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: PSCredential
-Parameter Sets: ADFSFarmJoinWidSvcAcct, ADFSFarmJoinSqlSvcAcct
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
-Required: True
+Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -251,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

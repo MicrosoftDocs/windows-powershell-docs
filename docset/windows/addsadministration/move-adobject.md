@@ -33,7 +33,7 @@ Move-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ## DESCRIPTION
 The **Move-ADObject** cmdlet moves an object or a container of objects from one container to another or from one domain to another.
 
-When an object is moved between domains, both the source DC and the target DC need to be the Rid Master of their domains. If a different DC is being used, you will receive the following error:
+When an object is moved between domains, both the source DC and the target DC need to be the RID Master of their domains. If a different DC is being used, you will receive the following error:
 
 move-adobject : The requested operation could not be performed because the directory service is not the master for that type of operation
 
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ### -TargetServer
 Specifies the Active Directory instance to use by providing the following value for a corresponding domain name or directory server.
 
-Note: A cross-domain move requires a fully qualified server name and the use of the Rid Master in both domains.
+Note: A cross-domain move requires a fully qualified server name and the use of the RID Master in both domains.
 
 Domain name values:
 

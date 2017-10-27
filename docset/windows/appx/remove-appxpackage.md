@@ -86,7 +86,9 @@ Accept wildcard characters: False
 
 ### -PreserveApplicationData
 Specifies that the cmdlet preserves the application data during the package removal.
-The application data is available for later use.
+The application data is available for later use. Note that this is only applicable
+for apps that are under development so this option can only be specified for apps 
+that are registered from file layout (Loose file registered).
 
 ```yaml
 Type: SwitchParameter

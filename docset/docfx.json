@@ -104,6 +104,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-WindowsIT",
       "ms.devlang": "powershell",
       "apiPlatform": "powershell",
       "ROBOTS": "INDEX, FOLLOW",

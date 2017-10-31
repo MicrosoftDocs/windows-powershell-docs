@@ -37,7 +37,7 @@ New-SmbMultichannelConstraint [-ServerName] <String> [-Force] [-InterfaceAlias] 
 ```
 
 ## DESCRIPTION
-The **New-SmbMultichannelConstraint** cmdlet creates a Server Message Block (SMB) multi-channel constraint for the specified server.
+The **New-SmbMultichannelConstraint** cmdlet creates a Server Message Block (SMB) multi-channel constraint for the specified server. This constraint applies to the Default instance of SMB used for normal sharing. It does not apply to SMB-using application instances like Storage Replica, Storage Spaces Direct SBL, or CSV.
 
 ## EXAMPLES
 

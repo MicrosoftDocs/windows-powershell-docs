@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ShieldedVMTemplate
+ms.assetid: 3BAA8C14-FAC3-423C-A95D-60BDDD4E1A15
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Protect-TemplateDisk
-ms.assetid: 3BAA8C14-FAC3-423C-A95D-60BDDD4E1A15
 ---
 
 # Protect-TemplateDisk
@@ -27,13 +28,14 @@ Prepares a signed template disk (.VHDX) which can be used to provision new shiel
 ### SpecifyVolumeNameAndVersion (Default)
 ```
 Protect-TemplateDisk -Path <String> -TemplateName <String> -Version <Version> -Certificate <X509Certificate2>
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ProtectedTemplateTargetDiskType <ProtectedTemplateTargetDiskType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PopulateFrom
 ```
 Protect-TemplateDisk -Path <String> -PopulateFrom <String> [-TemplateName <String>] [-Version <Version>]
- -Certificate <X509Certificate2> [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Certificate <X509Certificate2> [-ProtectedTemplateTargetDiskType <ProtectedTemplateTargetDiskType>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SpecializedDiskParameterSet
@@ -83,21 +85,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DiskIsAlreadySpecialized
 Indicates the disk has already been prepared as a signed template disk, but its contents have since changed.
 
@@ -138,6 +125,22 @@ Parameter Sets: PopulateFrom
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProtectedTemplateTargetDiskType
+{{Fill ProtectedTemplateTargetDiskType Description}}
+
+```yaml
+Type: ProtectedTemplateTargetDiskType
+Parameter Sets: SpecifyVolumeNameAndVersion, PopulateFrom
+Aliases: 
+Accepted values: MicrosoftWindows, PreprocessedLinux
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -199,6 +202,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -216,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

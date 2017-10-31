@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectedTemplateTargetDiskType
-{{Fill ProtectedTemplateTargetDiskType Description}}
+Specifies the type of OS installed on the VHDX.
 
 ```yaml
 Type: ProtectedTemplateTargetDiskType

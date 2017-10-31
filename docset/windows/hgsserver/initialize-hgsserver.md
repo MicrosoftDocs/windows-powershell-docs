@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: HgsServer
+ms.assetid: CE3CDF61-13DB-4BD8-B688-20219AAD6756
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Initialize-HgsServer
-ms.assetid: CE3CDF61-13DB-4BD8-B688-20219AAD6756
 ---
 
 # Initialize-HgsServer
@@ -28,10 +29,11 @@ Initializes the Host Guardian Service server.
 ```
 Initialize-HgsServer [-HgsServiceName] <String> [-UseHgsDomain] [-LogDirectory <String>] [-Http] [-Https]
  [-HttpPort <UInt16>] [-HttpsPort <UInt16>] [-HttpsCertificatePath <String>]
- [-HttpsCertificatePassword <SecureString>] [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory | -TrustTpm] [-EncryptionCertificateThumbprint <String>] [-EncryptionCertificatePath <String>]
+ [-HttpsCertificatePassword <SecureString>] [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory]
+ [-TrustTpm] [-EncryptionCertificateThumbprint <String>] [-EncryptionCertificatePath <String>]
  [-EncryptionCertificatePassword <SecureString>] [-SigningCertificateThumbprint <String>]
- [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-HgsVersion <HgsVersion>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PrimaryServer_SecureDomain
@@ -40,11 +42,11 @@ Initialize-HgsServer [-HgsServiceName] <String> [-UseExistingDomain] [-LogDirect
  -JeaAdministratorsGroup <ADGroup> -JeaReviewersGroup <ADGroup> -ServiceAccount <ADServiceAccount>
  [-ClusterName <String>] [-Http] [-Https] [-HttpPort <UInt16>] [-HttpsPort <UInt16>]
  [-HttpsCertificatePath <String>] [-HttpsCertificatePassword <SecureString>]
- [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory | -TrustTpm]
+ [-HttpsCertificateThumbprint <String>] [-TrustActiveDirectory] [-TrustTpm]
  [-EncryptionCertificateThumbprint <String>] [-EncryptionCertificatePath <String>]
  [-EncryptionCertificatePassword <SecureString>] [-SigningCertificateThumbprint <String>]
- [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-Force] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SigningCertificatePath <String>] [-SigningCertificatePassword <SecureString>] [-HgsVersion <HgsVersion>]
+ [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AdditionalServer
@@ -120,47 +122,77 @@ The specified certificates are used by the Key Protection service.
 
 ## PARAMETERS
 
-### -HgsServiceName
-Specifies the HGS name.
+### -ClusterName
+Specifies a cluster name.
+
+```yaml
+Type: String
+Parameter Sets: PrimaryServer_SecureDomain
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionCertificatePassword
+Specifies the password for the certificate file specified in **EncryptionCertificatePath**.
+
+```yaml
+Type: SecureString
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EncryptionCertificatePath
+Specifies the path to the encryption certificate used by the Key Protection service.
 
 ```yaml
 Type: String
 Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
 Aliases: 
 
-Required: True
-Position: 1
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseHgsDomain
-Indicates that HGS was set up with its own dedicated Active Directory forest using the Install-HgsServer cmdlet.
+### -EncryptionCertificateThumbprint
+Specifies the thumbprint of the encryption certificate used by the Key Protection service.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: PrimaryServer_HgsDomain
+Type: String
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
 Aliases: 
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UseExistingDomain
-Indicates that HGS was joined to an existing domain and did not establish its own domain (with Install-HgsServer). HGS must already be joined to the existing domain to continue.
+### -Force
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: PrimaryServer_SecureDomain
+Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -180,11 +212,132 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LogDirectory
-Specifies the directory for the output log.
+### -HgsServiceName
+Specifies the HGS name.
 
 ```yaml
 Type: String
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HgsVersion
+{{Fill HgsVersion Description}}
+
+```yaml
+Type: HgsVersion
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
+Aliases: 
+Accepted values: HgsVersion1503, HgsVersion1704
+
+Required: False
+Position: Named
+Default value: $script:HgsSupportedLevels[0]
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Http
+Indicates that the HGS server is accessible over HTTP.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpPort
+Specifies the HTTP port of the HGS server.
+
+```yaml
+Type: UInt16
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Https
+Indicates that the HGS server is accessible over HTTPS.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsCertificatePassword
+Specifies the password to the certificate file identified by **HttpsCertificatePath**.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsCertificatePath
+Specifies the path to the HTTPS certificate file (.pfx).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsCertificateThumbprint
+Indicates the thumbprint of the HTTPS certificate.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HttpsPort
+Specifies the HTTPS port of the HGS server.
+
+```yaml
+Type: UInt16
 Parameter Sets: (All)
 Aliases: 
 
@@ -225,6 +378,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LogDirectory
+Specifies the directory for the output log.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ServiceAccount
 Identifies the Group Managed Service Account that will be used for the Key Protection Service. The specified account must already be installed and configured for use on this machine.
 
@@ -240,206 +408,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ClusterName
-Specifies a cluster name.
-
-```yaml
-Type: String
-Parameter Sets: PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Http
-Indicates that the HGS server is accessible over HTTP.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Https
-Indicates that the HGS server is accessible over HTTPS.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpPort
-Specifies the HTTP port of the HGS server.
-
-```yaml
-Type: UInt16
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpsPort
-Specifies the HTTPS port of the HGS server.
-
-```yaml
-Type: UInt16
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpsCertificatePath
-Specifies the path to the HTTPS certificate file (.pfx).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpsCertificatePassword
-Specifies the password to the certificate file identified by **HttpsCertificatePath**.
+### -SigningCertificatePassword
+Specifies the password for the certificate file identified by **SigningCertificatePath**.
 
 ```yaml
 Type: SecureString
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HttpsCertificateThumbprint
-Indicates the thumbprint of the HTTPS certificate.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TrustActiveDirectory
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -TrustTpm
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EncryptionCertificateThumbprint
-Specifies the thumbprint of the encryption certificate used by the Key Protection service.
-
-```yaml
-Type: String
-Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EncryptionCertificatePath
-Specifies the path to the encryption certificate used by the Key Protection service.
-
-```yaml
-Type: String
-Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EncryptionCertificatePassword
-Specifies the password for the certificate file specified in **EncryptionCertificatePath**.
-
-```yaml
-Type: SecureString
-Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SigningCertificateThumbprint
-Specifies the thumbprint of the signing certificate for use by the Key Protection service.
-
-```yaml
-Type: String
 Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
 Aliases: 
 
@@ -465,11 +438,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SigningCertificatePassword
-Specifies the password for the certificate file identified by **SigningCertificatePath**.
+### -SigningCertificateThumbprint
+Specifies the thumbprint of the signing certificate for use by the Key Protection service.
 
 ```yaml
-Type: SecureString
+Type: String
 Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
 Aliases: 
 
@@ -480,12 +453,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Forces the command to run without asking for user confirmation.
-
+### -TrustActiveDirectory
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
 Aliases: 
 
 Required: False
@@ -495,14 +466,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+### -TrustTpm
+```yaml
+Type: SwitchParameter
+Parameter Sets: PrimaryServer_HgsDomain, PrimaryServer_SecureDomain
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseExistingDomain
+Indicates that HGS was joined to an existing domain and did not establish its own domain (with Install-HgsServer). HGS must already be joined to the existing domain to continue.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
+Parameter Sets: PrimaryServer_SecureDomain
+Aliases: 
+
+Required: True
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseHgsDomain
+Indicates that HGS was set up with its own dedicated Active Directory forest using the Install-HgsServer cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PrimaryServer_HgsDomain
+Aliases: 
 
 Required: False
 Position: Named
@@ -526,8 +524,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

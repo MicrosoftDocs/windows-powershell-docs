@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackAttestationServerUrl
-{{Fill FallbackAttestationServerUrl Description}}
+Specifies the URL of an attestation server to use if the primary attestation server cannot be reached.
 
 ```yaml
 Type: String
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -FallbackKeyProtectionServerUrl
-{{Fill FallbackKeyProtectionServerUrl Description}}
+Specifies the URL of a key protection server to use if the primary attestation server cannot be reached.
 
 ```yaml
 Type: String
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyProtectionServerUrl
-Specifies the URL of a key protection server server.
+Specifies the URL of a key protection server.
 A Host Guardian Service client in Secure Hosting Service mode uses the server that this parameter specifies.
 
 ```yaml
@@ -185,8 +185,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### CimInstance#MSFT_HgsClientConfiguration
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+An HGS client configuration object containing information about the operating mode, configured URLs, and result of the most recent attestation attempt, if applicable.
 
 ## NOTES
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Test-HgsClientConfiguration
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Forces the HGS client to attest against the configured attestation servers.
 
 ## SYNTAX
 
@@ -23,21 +23,38 @@ Test-HgsClientConfiguration [-UseFallback]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Test-HgsClientConfiguration** cmdlet forces the HGS client to attest against an HGS server and report back on the attestation attempt.
+Any cached attestation health certificates from recent attestation attempts will be ignored.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Test-HgsClientConfiguration
 ```
 
-{{ Add example description here }}
+Performs an attestation attempt using the primary HGS server.
+If the primary HGS server cannot be reached and fallback URLs are configured, the fallback HGS server will be used.
+
+### Example 2
+```
+PS C:\> Test-HgsClientConfiguration -UsePrimary
+```
+
+Performs an attestation attempt using the primary HGS server.
+If the primary HGS server cannot be reached, the cmdlet will fail.
+
+### Example 3
+```
+PS C:\> Test-HgsClientConfiguration -UseFallback
+```
+
+Performs an attestation attempt using the fallback HGS server.
 
 ## PARAMETERS
 
 ### -UseFallback
-{{Fill UseFallback Description}}
+Specifies that the HGS client should only attest against the fallback attestation server.
 
 ```yaml
 Type: SwitchParameter
@@ -52,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsePrimary
-{{Fill UsePrimary Description}}
+Specifies that the HGS client should only attest against the primary attestation server.
 
 ```yaml
 Type: SwitchParameter
@@ -74,7 +91,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance
-
+An object containing the attestation server URL used and the results of the attestation attempt.
 
 ## NOTES
 

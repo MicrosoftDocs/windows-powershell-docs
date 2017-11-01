@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-HgsAttestationCIPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Authorizes a trusted code integrity policy to be used by hosts attesting against HGS.
 
 ## SYNTAX
 
@@ -25,21 +25,26 @@ Add-HgsAttestationCIPolicy [-Path] <String> [-Name <String>] [-PolicyVersion <Po
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-HgsAttestationCIPolicy** cmdlet adds an attestation policy based on a trusted code integrity policy to HGS.
+When HGS is configured to use TPM attestation, hosts will need to use one of the code integrity policies registered with HGS to successfully pass attestation.
+Use the **New-CIPolicy** and **ConvertFrom-CIPolicy** cmdlets to create a binary code integrity policy that can be passed to this cmdlet.
+
+HGS will not know which software is allowed or disallowed by your policy, nor will it know which policy rules (e.g. enforced CI, reboot actions) are configured in the policy.
+You should choose a descriptive name for your policy to ensure you know what your policy covers for future reference when reviewing authorized policies.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Add-HgsAttestationCIPolicy -Path C:\temp\WS2016-Enforced.p7b -Name "Windows Server 2016 Enforced CI Policy"
 ```
 
-{{ Add example description here }}
+Adds the binary code integrity policy file to HGS and names the policy "Windows Server 2016 Enforced CI Policy"
 
 ## PARAMETERS
 
 ### -InputObject
-{{Fill InputObject Description}}
+Byte array containing the contents of a binary code integrity policy file.
 
 ```yaml
 Type: Byte[]
@@ -54,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Friendly name for the code integrity policy.
 
 ```yaml
 Type: String
@@ -81,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+Specifies the path of a file that contains the code integrity policy, in binary form.
+The file typically has a .p7b or .bin extension.
 
 ```yaml
 Type: String
@@ -96,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyVersion
-{{Fill PolicyVersion Description}}
+Reserved for future use.
 
 ```yaml
 Type: PolicyVersion
@@ -112,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stage
-{{Fill Stage Description}}
+Reserved for future use.
 
 ```yaml
 Type: SwitchParameter
@@ -159,12 +165,13 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### System.String
-
+### Byte[], System.String
+This cmdlet accepts a code integrity policy as a **Byte** array or filename.
 
 ## OUTPUTS
 
-### System.Object
+### AttestationPolicyInfo
+This cmdlet returns attestation policy information.
 
 ## NOTES
 

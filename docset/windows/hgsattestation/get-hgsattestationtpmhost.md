@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyVersion
-{{Fill PolicyVersion Description}}
+Reserved for future use.
 
 ```yaml
 Type: PolicyVersion
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stage
-{{Fill Stage Description}}
+Reserved for future use.
 
 ```yaml
 Type: SwitchParameter

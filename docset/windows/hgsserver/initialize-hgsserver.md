@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -HgsVersion
-{{Fill HgsVersion Description}}
+Reserved for future use.
 
 ```yaml
 Type: HgsVersion

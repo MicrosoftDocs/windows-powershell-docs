@@ -50,7 +50,7 @@ This command removes the guardian named Guardian11 from the local store.
 ## PARAMETERS
 
 ### -InputObject
-{{Fill InputObject Description}}
+The HGS guardian object to remove.
 
 ```yaml
 Type: CimInstance

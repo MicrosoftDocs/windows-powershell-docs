@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-HgsAttestationDumpPolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an authorized dump encryption key to HGS.
 
 ## SYNTAX
 
@@ -25,21 +25,29 @@ Add-HgsAttestationDumpPolicy [-Path] <String> [-Name <String>] [-PolicyVersion <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Add-HgsAttestationDumpPolicy** cmdlet authorizes the specified key to be used to encrypt memory dumps on a Hyper-V host.
+Only hosts that encrypt dumps using an authorized key and hosts that do not allow any memory dumps will be able to successfully attest.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Add-HgsAttestationDumpPolicy -PublicKeyHash 'e91c254ad58860a02c788dfb5c1a65d6a8846ab1dc649631c7db16fef4af2dec' -Name 'Contoso Dump Encryption'
 ```
 
-{{ Add example description here }}
+Adds the dump encryption key with the specified SHA256 public key hash to HGS.
+
+### Example 2
+```
+PS C:\> Add-HgsAttestationDumpPolicy -Path 'C:\temp\TpmBaselineWithDumpEncryption.tcglog' -Name 'Contoso Dump Encryption'
+```
+
+Adds the dump encryption key to HGS using a TCG log (TPM baseline) obtained after a host was configured to use dump encryption.
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Friendly name for the dump policy.
 
 ```yaml
 Type: String
@@ -66,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+Specifies the path of a TPM baseline file (TCG log) that contains the public key hash of a dump encryption certificate.
+The TPM baseline specified should be obtained after configuring a Hyper-V host to use dump encryption.
 
 ```yaml
 Type: String
@@ -81,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyVersion
-{{Fill PolicyVersion Description}}
+Reserved for future use.
 
 ```yaml
 Type: PolicyVersion
@@ -97,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublicKeyHash
-{{Fill PublicKeyHash Description}}
+SHA256 hash of the public key of the certificate used for dump encryption.
 
 ```yaml
 Type: String
@@ -112,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stage
-{{Fill Stage Description}}
+Reserved for future use.
 
 ```yaml
 Type: SwitchParameter

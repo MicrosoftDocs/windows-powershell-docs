@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-ShieldingDataFile
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a shielding data file.
 
 ## SYNTAX
 
@@ -27,21 +27,29 @@ New-ShieldingDataFile [-ShieldingDataFilePath] <String> [-Owner] <Guardian> [[-O
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **New-ShieldingDataFile** cmdlet creates a shielding data file for use in provisioning a shielded virtual machine.
+The shielding data file contains information about which fabrics the VM can run on, which template disks can be used, the security policy, and files such as the specialization answer file.
+
+The specialization answer file and any additional files you add to the shielding data file will be encrypted until a shielded VM is provisioned.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $owner = Get-HgsGuardian -Name Owner
+PS C:\> $hoster = Get-HgsGuardian -Name MyHostingProvider
+PS C:\> $viq = New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\trustedtemplate.vsc' -VersionRule Equals
+PS C:\> New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\shieldingdata.pdk' -Owner $owner -Guardian $hoster -VolumeIDQualifier $viq -AnswerFile 'C:\temp\unattend.xml'
 ```
 
-{{ Add example description here }}
+Creates a shielding data file using the "Owner" and "MyHostingProvider" guardians and a single volume ID qualifier representing the trusted template disk.
 
 ## PARAMETERS
 
 ### -AnswerFile
-{{Fill AnswerFile Description}}
+Path to an XML file containing specialization information needed to automatically set up the OS in a shielded VM.
+For Windows VMs, this file is typically the unattend.xml file.
+The file varies for Linux distributions based on the specialization agent installed in the template disk.
 
 ```yaml
 Type: NamedFileContent
@@ -56,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Guardian
-{{Fill Guardian Description}}
+One or more HGS guardian objects representing fabrics trusted to run your virtual machine.
 
 ```yaml
 Type: Guardian[]
@@ -71,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -OtherFile
-{{Fill OtherFile Description}}
+Additional files (limited to 384KB) that should be encrypted at rest and copied to a provisioned virtual machine.
 
 ```yaml
 Type: NamedFileContent[]
@@ -86,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-{{Fill Owner Description}}
+The guardian object containing the certificates of the VM owner.
+Only the VM owner can modify the shielding data file in the future.
 
 ```yaml
 Type: Guardian
@@ -101,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Policy
-{{Fill Policy Description}}
+Specifies the security policy for the resulting VM.
+The EncryptionSupported policy allows all normal VM devices, while the shielded policy adds additional protections to the VM, prevents basic console access and requires live migration traffic to be encrypted.
 
 ```yaml
 Type: FabricPolicyValue
@@ -117,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShieldingDataFilePath
-{{Fill ShieldingDataFilePath Description}}
+Specifies the path where the newly created shielding data file should be saved.
 
 ```yaml
 Type: String
@@ -132,7 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeIDQualifier
-{{Fill VolumeIDQualifier Description}}
+One or more **VolumeIDQualifier** objects representing template disks trusted for shielded VM deployment.
 
 ```yaml
 Type: VolumeIDQualifier[]

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Save-VolumeSignatureCatalog
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Extracts and saves a volume signature catalog file from a given shielded VM template disk.
 
 ## SYNTAX
 
@@ -17,21 +17,22 @@ Save-VolumeSignatureCatalog [-TemplateDiskPath] <String> [-VolumeSignatureCatalo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Save-VolumeSignatureCatalog** cmdlet extracts the volume signature catalog containing the disk signer, name, and version number of a shielded VM template disk and persists it to a file.
+This file can be given to VM owners who wish to deploy a VM using this template disk for use in the Shielding Data File Wizard.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\mydisk.vhdx' -VolumeSignatureCatalogPath 'C:\temp\mydiskcatalog.vsc'
 ```
 
-{{ Add example description here }}
+Saves the volume signature from the template disk to a file.
 
 ## PARAMETERS
 
 ### -TemplateDiskPath
-{{Fill TemplateDiskPath Description}}
+Specifies the path to a VHDX file that has been templatized in preparation for deploying shielded VMs.
 
 ```yaml
 Type: String
@@ -46,7 +47,8 @@ Accept wildcard characters: False
 ```
 
 ### -VolumeSignatureCatalogPath
-{{Fill VolumeSignatureCatalogPath Description}}
+Specifies the desired path for the volume signature catalog file.
+The path should use a .vsc extension.
 
 ```yaml
 Type: String
@@ -67,7 +69,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 

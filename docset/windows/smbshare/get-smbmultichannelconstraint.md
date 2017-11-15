@@ -30,7 +30,7 @@ Get-SmbMultichannelConstraint [[-ServerName] <String[]>] [-CimSession <CimSessio
 ```
 
 ## DESCRIPTION
-The **Get-SmbMultichannelConstraint** cmdlet retrieves the constraints that define how the Server Message Block (SMB) client uses network interfaces to connect to the servers.
+The **Get-SmbMultichannelConstraint** cmdlet retrieves the constraints that define how the Server Message Block (SMB) client uses network interfaces to connect to the servers. This constraint applies to the Default instance of SMB used for normal sharing. It does not apply to SMB-using application instances like Storage Replica, Storage Spaces Direct SBL, or CSV.
 
 ## EXAMPLES
 

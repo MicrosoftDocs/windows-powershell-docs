@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: HgsServer
+ms.assetid: 6DEAAEEF-E52C-49D7-9FBB-8C7E996D4E9B
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-HgsServer
-ms.assetid: 6DEAAEEF-E52C-49D7-9FBB-8C7E996D4E9B
 ---
 
 # Test-HgsServer
@@ -74,8 +75,8 @@ This command tests whether the local computer can be used as an additional HGS n
 
 ## PARAMETERS
 
-### -HgsDomainName
-Specifies the name of the Active Directory domain for the HGS server.
+### -DatabasePath
+Specifies a database path.
 
 ```yaml
 Type: String
@@ -83,7 +84,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -104,6 +105,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HgsDomainName
+Specifies the name of the Active Directory domain for the HGS server.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HgsServerIPAddress
 Specifies the network IP address for the HGS server.
 
@@ -114,21 +130,6 @@ Aliases:
 
 Required: True
 Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SafeModeAdministratorPassword
-Specifies the password for the administrator account when the computer is started in Safe Mode or a variant of Safe Mode, such as Directory Services Restore Mode.
-
-```yaml
-Type: SecureString
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -149,11 +150,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DatabasePath
-Specifies a database path.
+### -SafeModeAdministratorPassword
+Specifies the password for the administrator account when the computer is started in Safe Mode or a variant of Safe Mode, such as Directory Services Restore Mode.
 
 ```yaml
-Type: String
+Type: SecureString
 Parameter Sets: (All)
 Aliases: 
 
@@ -165,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

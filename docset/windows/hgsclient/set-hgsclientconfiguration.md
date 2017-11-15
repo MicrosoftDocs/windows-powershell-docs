@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsClient-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: HgsClient
+ms.assetid: 0C150F6E-C13B-49D7-8FE5-AE197AB49038
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-HgsClientConfiguration
-ms.assetid: 0C150F6E-C13B-49D7-8FE5-AE197AB49038
 ---
 
 # Set-HgsClientConfiguration
@@ -27,6 +28,13 @@ Modifies the configuration of a Host Guardian Service client.
 ### ChangeToLocalMode
 ```
 Set-HgsClientConfiguration [-EnableLocalMode] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### FullSecureHostingServiceMode
+```
+Set-HgsClientConfiguration -KeyProtectionServerUrl <String> -AttestationServerUrl <String>
+ -FallbackKeyProtectionServerUrl <String> -FallbackAttestationServerUrl <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### SecureHostingServiceMode
@@ -66,7 +74,69 @@ A Host Guardian Service client in Secure Hosting Service mode uses the server th
 
 ```yaml
 Type: String
-Parameter Sets: SecureHostingServiceMode
+Parameter Sets: FullSecureHostingServiceMode, SecureHostingServiceMode
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableLocalMode
+Indicates that this cmdlet changes the mode of client from Host Guardian Service to Local mode.
+A change in mode to Local resets the attestation server and key protection server URLs.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ChangeToLocalMode
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FallbackAttestationServerUrl
+Specifies the URL of an attestation server to use if the primary attestation server cannot be reached.
+
+```yaml
+Type: String
+Parameter Sets: FullSecureHostingServiceMode
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FallbackKeyProtectionServerUrl
+Specifies the URL of a key protection server to use if the primary attestation server cannot be reached.
+
+```yaml
+Type: String
+Parameter Sets: FullSecureHostingServiceMode
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -KeyProtectionServerUrl
+Specifies the URL of a key protection server.
+A Host Guardian Service client in Secure Hosting Service mode uses the server that this parameter specifies.
+
+```yaml
+Type: String
+Parameter Sets: FullSecureHostingServiceMode, SecureHostingServiceMode
 Aliases: 
 
 Required: True
@@ -91,38 +161,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableLocalMode
-Indicates that this cmdlet changes the mode of client from Host Guardian Service to Local mode.
-A change in mode to Local resets the attestation server and key protection server URLs.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ChangeToLocalMode
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -KeyProtectionServerUrl
-Specifies the URL of a key protection server server.
-A Host Guardian Service client in Secure Hosting Service mode uses the server that this parameter specifies.
-
-```yaml
-Type: String
-Parameter Sets: SecureHostingServiceMode
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -140,15 +178,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
 ### CimInstance#MSFT_HgsClientConfiguration
-The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
-The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+An HGS client configuration object containing information about the operating mode, configured URLs, and result of the most recent attestation attempt, if applicable.
 
 ## NOTES
 

@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ShieldedVmCmdlets-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: ShieldedVMProvisioning
+ms.assetid: D9667F1A-FD59-4B14-A612-61C99BE0D4EB
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ShieldedVMProvisioningStatus
-ms.assetid: D9667F1A-FD59-4B14-A612-61C99BE0D4EB
 ---
 
 # Get-ShieldedVMProvisioningStatus
@@ -73,16 +74,16 @@ The second command calls **Get-ShieldedVMProvisioningStatus** again using the pr
 
 ## PARAMETERS
 
-### -VMName
-Specifies the name of the virtual machine that this cmdlet provisions.
+### -ProvisioningJob
+Specifies a **CimInstance** object returned from either the Initialize-ShieldedVM cmdlet or a prior call to the Get-ShieldedVMProvisioningStatus cmdlet.
 
 ```yaml
-Type: String
-Parameter Sets: ByName
+Type: CimInstance
+Parameter Sets: ByInstance
 Aliases: 
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -103,23 +104,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProvisioningJob
-Specifies a **CimInstance** object returned from either the Initialize-ShieldedVM cmdlet or a prior call to the Get-ShieldedVMProvisioningStatus cmdlet.
+### -VMName
+Specifies the name of the virtual machine that this cmdlet provisions.
 
 ```yaml
-Type: CimInstance
-Parameter Sets: ByInstance
+Type: String
+Parameter Sets: ByName
 Aliases: 
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -1,20 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
 author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
 manager: alanth
+Module Name: HgsServer
+ms.assetid: 73AD3A36-0BED-4BD0-A315-A6178C596A00
+ms.author: brianlic
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Import-HgsServerState
-ms.assetid: 73AD3A36-0BED-4BD0-A315-A6178C596A00
 ---
 
 # Import-HgsServerState
@@ -70,45 +71,15 @@ Use ConvertTo-SecureString to generate a secure string that represents the passw
 
 ## PARAMETERS
 
-### -XML
-Specifies the state that this cmdlet imports as an XML document.
+### -ImportActiveDirectoryModeState
+Indicates that this cmdlet imports and updates Attestation service configuration state relevant to the Active Directory operational mode.
 
 ```yaml
-Type: XmlDocument
-Parameter Sets: XML
-Aliases: InputObject
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Path
-Specifies the path of the file that this cmdlet imports.
-
-```yaml
-Type: String
-Parameter Sets: File
-Aliases: FilePath
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Password
-Specifies the password that the **Export-HgsServerState** cmdlet used to encrypt the keys.
-
-```yaml
-Type: SecureString
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -130,17 +101,62 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImportActiveDirectoryModeState
-Indicates that this cmdlet imports and updates Attestation service configuration state relevant to the Active Directory operational mode.
+### -Password
+Specifies the password that the **Export-HgsServerState** cmdlet used to encrypt the keys.
+
+```yaml
+Type: SecureString
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Path
+Specifies the path of the file that this cmdlet imports.
+
+```yaml
+Type: String
+Parameter Sets: File
+Aliases: FilePath
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -XML
+Specifies the state that this cmdlet imports as an XML document.
+
+```yaml
+Type: XmlDocument
+Parameter Sets: XML
+Aliases: InputObject
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -161,23 +177,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

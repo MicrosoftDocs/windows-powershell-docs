@@ -47,3 +47,6 @@ Revokes access for a guardian to a key protector.
 ### [Set-HgsClientConfiguration](Set-HgsClientConfiguration.md)
 Modifies the configuration of a Host Guardian Service client.
 
+### [Test-HgsClientConfiguration](Test-HgsClientConfiguration.md)
+Forces the HGS client to attest against the configured attestation servers.
+

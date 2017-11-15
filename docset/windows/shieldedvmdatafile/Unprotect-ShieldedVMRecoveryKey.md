@@ -168,4 +168,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md)
+[Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md)

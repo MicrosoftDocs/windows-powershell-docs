@@ -8,7 +8,7 @@ schema: 2.0.0
 # Save-ShieldedVMRecoveryKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Extracts the encrypted BitLocker recovery key from a shielded virtual machine's operating system disk.
 
 ## SYNTAX
 
@@ -23,21 +23,32 @@ Save-ShieldedVMRecoveryKey -DiskNumber <Int32> -Path <String> [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The *Save-ShieldedVMRecoveryKey* cmdlet is used to extract the encrypted BitLocker recovery key from a shielded virtual machine's operaing system disk.
+The key can be obtained from an offline VHDX or an online, mounted disk.
+The encrypted recovery key can be passed to the [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md) cmdlet to decrypt the recovery key.
+
+This cmdlet only works with Windows shielded VMs created with a shielding data file created on Windows Server, version 1709 or newer.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Save-ShieldedVMRecoveryKey -VHDPath 'C:\temp\MyShieldedVM.vhdx' -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
 ```
 
-{{ Add example description here }}
+Extracts the encrypted recovery key from the "MyShieldedVM.vhdx" file and saves it to the temp directory.
+
+### Example 1
+```
+PS C:\> Save-ShieldedVMRecoveryKey -DiskNumber 1 -Path 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek'
+```
+
+Extracts the encrypted recovery key from the second disk (disk number 1) mounted on the system, and saves the recovery key to the temp directory.
 
 ## PARAMETERS
 
 ### -DiskNumber
-{{Fill DiskNumber Description}}
+Identifier for the mounted disk containing the OS partition of a Windows shielded VM
 
 ```yaml
 Type: Int32
@@ -52,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Overwrites the encrypted recovery key file located at the specified path
 
 ```yaml
 Type: SwitchParameter
@@ -67,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
+Location to save the encrypted recovery key
 
 ```yaml
 Type: String
@@ -82,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -VHDPath
-{{Fill VHDPath Description}}
+Location of the VHDX file for a Windows shielded VM to be searched for an encrypted recovery key
 
 ```yaml
 Type: String
@@ -134,9 +145,10 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+- [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md)

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Unprotect-ShieldedVMRecoveryKey
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Decrypts an encrypted recovery key for a Windows shielded VM obtained from the [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md) cmdlet.
 
 ## SYNTAX
 
@@ -25,21 +25,32 @@ Unprotect-ShieldedVMRecoveryKey -ShieldingDataFileSearchPath <String[]> [-Recurs
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The *Unprotect-ShieldedVMRecoveryKey* cmdlet decrypts an encrypted BitLocker recovery key file obtained from a Windows shielded VM.
+To run the cmdlet, you must have the shielding data file that was used to deploy the shielded VM and have the private key for the owner guardian installed on your computer.
+
+The resulting recovery key can be provided to `manage-bde.exe`, `Unlock-BitLocker`, or the BitLocker Recovery pre-boot environment to access the contents of your shielded VM OS volume.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataFilePath 'C:\temp\ShieldingDataFile.pdk' -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
 ```
 
-{{ Add example description here }}
+Decrypts the provided encrypted BitLocker recovery key using the shielding data file and owner guardian private keys, and saves it to the temp directory.
+
+### Example 2
+```
+PS C:\> Unprotect-ShieldedVMRecoveryKey -ShieldingDataSearchPath 'C:\temp\AllShieldingDataFiles\' -Recurse -EncryptedBitLockerKeyPath 'C:\temp\MyShieldedVMEncryptedRecoveryKey.ebek' -DecryptedBitLockerKeyPath 'C:\temp\DecryptedRecoveryKey.bek'
+```
+
+Searches the 'AllShieldingDataFiles' directory and all subdirectories for shielding data files that can be used to decrypt the provided encrypted BitLocker recovery key.
+If a suitable shielding data file is found and the private key for its owner guardian is available on the local computer, the decrypted BitLocker encryption key will be saved to the temp directory.
 
 ## PARAMETERS
 
 ### -DecryptedBitLockerKeyPath
-{{Fill DecryptedBitLockerKeyPath Description}}
+Location to save the decrypted BitLocker encryption key (.bek)
 
 ```yaml
 Type: String
@@ -54,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedBitLockerKeyPath
-{{Fill EncryptedBitLockerKeyPath Description}}
+Location of the encrypted BitLocker encryption key
 
 ```yaml
 Type: String
@@ -69,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-{{Fill Recurse Description}}
+Specifies the cmdlet should search subdirectories of the shielding data file search path for compatible PDK files.
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShieldingDataFilePath
-{{Fill ShieldingDataFilePath Description}}
+Location of the shielding data file (.pdk) used to deploy the shielded VM.
 
 ```yaml
 Type: String
@@ -99,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShieldingDataFileSearchPath
-{{Fill ShieldingDataFileSearchPath Description}}
+Location of one or more directories to search for a shielding data file that can be used to decrypt the provided encrypted BitLocker encryption key.
 
 ```yaml
 Type: String[]
@@ -151,9 +162,10 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+- [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md)

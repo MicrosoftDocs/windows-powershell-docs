@@ -151,4 +151,4 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-- [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md)
+[Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md)

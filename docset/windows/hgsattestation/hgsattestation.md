@@ -11,7 +11,14 @@ Locale: en-US
 This reference provides cmdlet descriptions and syntax for the Host Guardian Service (HGS) Attestation. These cmdlets belong to the HgsAttestation module.
 
 ## HgsAttestation Cmdlets
-### [Add-HgsAttestationHostGroup](Add-HgsAttestationHostGroup.md)
+
+### [Add-HgsAttestationCIPolicy](Add-HgsAttestationCIPolicy.md)
+Authorizes a trusted code integrity policy to be used by hosts attesting against HGS.
+
+### [Add-HgsAttestationDumpPolicy](Add-HgsAttestationDumpPolicy.md)
+Adds an authorized dump encryption key to HGS.
+
+### [Add-HgsAttestationHostGroup](add-hgsattestationhostgroup.md)
 Adds an attestation policy for an Active Directory host group configuration.
 
 ### [Add-HgsAttestationTpmHost](Add-HgsAttestationTpmHost.md)

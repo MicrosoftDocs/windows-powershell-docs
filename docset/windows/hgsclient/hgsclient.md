@@ -2,7 +2,7 @@
 Module Name: HgsClient
 Module Guid: DE3E9B0F-0845-4B05-8CB1-65669405130C
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519076
-Help Version: 5.0.0.1
+Help Version: 5.0.0.2
 Locale: en-US
 ---
 
@@ -49,4 +49,5 @@ Modifies the configuration of a Host Guardian Service client.
 
 ### [Test-HgsClientConfiguration](Test-HgsClientConfiguration.md)
 Forces the HGS client to attest against the configured attestation servers.
+
 

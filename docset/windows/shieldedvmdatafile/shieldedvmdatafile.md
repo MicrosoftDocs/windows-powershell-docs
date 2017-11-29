@@ -2,7 +2,7 @@
 Module Name: ShieldedVMDataFile
 Module Guid: 9E8B69B3-2CC7-4060-8D66-6F86BE39FEBF
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524081
-Help Version: 5.0.0.1
+Help Version: 5.0.0.2
 Locale: en-US
 ---
 
@@ -28,4 +28,5 @@ Extracts and saves a volume signature catalog file from a given shielded VM temp
 
 ### [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md)
 Decrypts an encrypted recovery key for a Windows shielded VM obtained from the [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md) cmdlet.
+
 

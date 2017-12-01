@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationStoragePath
-Specifies a destination storage path to which all virtual machine storage is to be moved.
+Specifies a destination path to which all virtual machine data is to be moved.
 
 ```yaml
 Type: String

@@ -920,8 +920,8 @@ Accept wildcard characters: False
 
 ### -SignatureDisableUpdateOnStartupWithoutEngine
 Indicates whether to initiate definition updates even if no antimalware engine is present.
-If you specify a value of $True or do not specify a value, Windows Defender initiates definition updates on startup.
-If you specify a value of $False, and if no antimalware engine is present, Windows Defender does not initiate definition updates on startup.
+If you specify a value of $True or do not specify a value, Windows Defender does not initiate definition updates on startup.
+If you specify a value of $False, and if no antimalware engine is present, Windows Defender initiates definition updates on startup.
 
 ```yaml
 Type: Boolean
@@ -930,7 +930,7 @@ Aliases: sigduoswo
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

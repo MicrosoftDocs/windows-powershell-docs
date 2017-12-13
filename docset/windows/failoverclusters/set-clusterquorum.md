@@ -68,6 +68,11 @@ cluster1              File Share Witness     NodeAndFileShareMajority
 
 This example changes the quorum configuration to Node and File Share Majority on the local cluster, using the disk resource at \\\\fileserver\fsw for the file share witness.
 
+### Example 4
+```
+PS C:\> Set-ClusterQuorum -CloudWitness -AccountName <AzureStorageAccountName> -AccessKey <AzureStorageAccountAccessKey>
+```
+
 ## PARAMETERS
 
 ### -AccessKey

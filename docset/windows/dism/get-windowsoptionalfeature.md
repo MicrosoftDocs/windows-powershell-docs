@@ -51,32 +51,39 @@ Use the *Online* parameter to specify the running operating system on your local
 ## EXAMPLES
 
 ### Example 1: Lists optional features in the running operating system
-```
+```powershell
 PS C:\> Get-WindowsOptionalFeature -Online
 ```
 
 This command lists all of the optional features in the running Windows operating system.
 
 ### Example 2: Lists optional features in a package in a mounted image
-```
+```powershell
 PS C:\> Get-WindowsOptionalFeature -Path "c:\offline" -PackageName "Microsoft-Windows-Backup-Package~31bf3856ad364e35~x86~~6.1.7601.16525"
 ```
 
 This command displays lists all of the optional features in the specified package in the Windows image mounted to c:\offline.
 
 ### Example 3: Get details about a feature in a mounted image
-```
+```powershell
 PS C:\> Get-WindowsOptionalFeature -Path "c:\offline" -FeatureName Hearts
 ```
 
 This command displays detailed information about the feature, Hearts, in the Windows Foundation Package in the Windows image mounted to c:\offline.
 
 ### Example 4: Gets details about a feature in a specified package in a mounted image
-```
+```powershell
 PS C:\> Get-WindowsOptionalFeature -Path "c:\offline" -FeatureName "MyFeature" -PackagePath "c:\packages\package.cab"
 ```
 
 This command displays detailed information about the feature, MyFeature, in the package at c:\package\package.cab in the Windows image mounted to c:\offline.
+
+### Example 5: Gets details about features using a wildcard
+```powershell
+PS C:\> Get-WindowsOptionalFeature -Online -FeatureName *Hyper-V* 
+```
+
+This command returns details about the Hyper-V optional features in the running operating system by use of a wild card feature name.
 
 ## PARAMETERS
 
@@ -93,7 +100,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -LogLevel

@@ -527,7 +527,8 @@ The acceptable values for this parameter are:
 - KeyEncipherment
 - None (default) 
 - NonRepudiation
-The default value, None, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
+
+The default value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
 
 ```yaml
 Type: KeyUsage[]
@@ -552,7 +553,7 @@ The acceptable values for this parameter are:
 - None (default) 
 - Sign
 
-The default value, None, indicates that this cmdlet uses the default value from the underlying KSP.
+The default value, **None**, indicates that this cmdlet uses the default value from the underlying KSP.
 
 ```yaml
 Type: KeyUsageProperty[]

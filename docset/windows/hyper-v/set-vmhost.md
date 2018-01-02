@@ -462,7 +462,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
-None by default; **Microsoft.HyperV.PowerShell.Host** if *PassThru* is specified.
+None by default; **Microsoft.HyperV.PowerShell.VMHost** if *PassThru* is specified.
 
 ## NOTES
 

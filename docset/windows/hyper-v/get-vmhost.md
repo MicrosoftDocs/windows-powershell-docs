@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.Host
+### Microsoft.HyperV.PowerShell.VMHost
 
 ## NOTES
 

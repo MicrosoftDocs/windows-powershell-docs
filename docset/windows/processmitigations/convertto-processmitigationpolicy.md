@@ -34,7 +34,7 @@ Converts an EMET policy file or pinning rule file to a new Windows 10 format.
 
 ### Example 1
 ```
-PS C:\> ConvertTo-ProcessMitigationPolicy -EMETFile policy.xml -Output result.xml
+PS C:\> ConvertTo-ProcessMitigationPolicy -EMETFilePath policy.xml -OutputFilePath result.xml
 ```
 
 Converts EMET file policy.xml to result.xml, may also generate a CI file CI-result.xml if necessary.

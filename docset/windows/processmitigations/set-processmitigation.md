@@ -41,10 +41,10 @@ Can also apply an XML file to apply settings for many processes at once.
 
 ### Example 1
 ```
-PS C:\>  set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable MandatoryASLR
+PS C:\>  set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
 ```
 
-Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables MandatoryASLR.
+Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables ForceRelocateImages.
 
 ### Example 2
 ```
@@ -64,7 +64,7 @@ If specified in both, it will be disabled.
 Type: String[]
 Parameter Sets: ProcessPolicy
 Aliases: d
-Accepted values: DEP, DisableATL, SEHOP, ForceRelocate, BottomUpASLR, CFG, HighEntropyASLR, StrictHandleCheck, AllowThreadOptOut, SystemCallDisable, ExtensionPointDisable, ProhibitDynamicCode, MicrosoftSignedOnly, StoreSignOnly, FontDisable, AuditNonSystemFonts, NoRemoteImages, NoLowLabel, PreferSystem32
+Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ If specified in both, it will be disabled.
 Type: String[]
 Parameter Sets: ProcessPolicy
 Aliases: e
-Accepted values: DEP, DisableATL, SEHOP, MandatoryASLR, BottomUpASLR, CFG, HighEntropyASLR, StrictHandleCheck, AllowThreadOptOut, SystemCallDisable, ExtensionPointDisable, ProhibitDynamicCode, MicrosoftSignedOnly, StoreSignOnly, FontDisable, AuditNonSystemFonts, NoRemoteImages, NoLowLabel, PreferSystem32
+Accepted values: DEP, EmulateAtlThunks, SEHOP, ForceRelocateImages, RequireInfo, BottomUp, HighEntropy, StrictHandle, DisableWin32kSystemCalls, AuditSystemCall, DisableExtensionPoints, BlockDynamicCode, AllowThreadsToOptOut, AuditDynamicCode, CFG, SuppressExports, StrictCFG, MicrosoftSignedOnly, AllowStoreSignedBinaries, AuditMicrosoftSigned, AuditStoreSigned, EnforceModuleDependencySigning, DisableNonSystemFonts, AuditFont, BlockRemoteImageLoads, BlockLowLabelImageLoads, PreferSystem32, AuditRemoteImageLoads, AuditLowLabelImageLoads, AuditPreferSystem32, EnableExportAddressFilter, AuditEnableExportAddressFilter, EnableExportAddressFilterPlus, AuditEnableExportAddressFilterPlus, EnableImportAddressFilter, AuditEnableImportAddressFilter, EnableRopStackPivot, AuditEnableRopStackPivot, EnableRopCallerCheck, AuditEnableRopCallerCheck, EnableRopSimExec, AuditEnableRopSimExec, SEHOP, AuditSEHOP, SEHOPTelemetry, TerminateOnError, DisallowChildProcessCreation, AuditChildProcess
 
 Required: False
 Position: Named

@@ -1,0 +1,325 @@
+---
+external help file: Dedup_Cmdlets.xml
+online version: 
+schema: 2.0.0
+ms.assetid: 0B685E39-EB13-4047-AB85-1442AB2BED01
+---
+
+# Set-DedupVolume
+
+## SYNOPSIS
+Changes data deduplication settings on one or more volumes.
+
+## SYNTAX
+
+### UNNAMED_PARAMETER_SET_1
+```
+Set-DedupVolume [-Volume] <String[]> [-AsJob] [-ChunkRedundancyThreshold <UInt32>] [-CimSession <CimSession[]>]
+ [-ExcludeFileType <String[]>] [-ExcludeFolder <String[]>] [-MinimumFileAgeDays <UInt32>]
+ [-MinimumFileSize <UInt32>] [-NoCompress <Boolean>] [-NoCompressionFileType <String[]>] [-PassThru]
+ [-ThrottleLimit <Int32>] [-Verify <Boolean>]
+```
+
+### UNNAMED_PARAMETER_SET_2
+```
+Set-DedupVolume [-AsJob] [-ChunkRedundancyThreshold <UInt32>] [-CimSession <CimSession[]>]
+ [-ExcludeFileType <String[]>] [-ExcludeFolder <String[]>] [-MinimumFileAgeDays <UInt32>]
+ [-MinimumFileSize <UInt32>] [-NoCompress <Boolean>] [-NoCompressionFileType <String[]>] [-PassThru]
+ [-ThrottleLimit <Int32>] [-Verify <Boolean>] -InputObject <CimInstance[]>
+```
+
+## DESCRIPTION
+The **Set-DedupVolume** cmdlet changes data deduplication settings on one or more volumes.
+
+## EXAMPLES
+
+### Example 1: Set the exclude folders on a volume
+```
+PS C:\>Set-DedupVolume -Volume F: -ExcludeFolder F:\temp,F:\SQL
+```
+
+This command sets the root folders under which all files are skipped during data deduplication.
+The **ExcludeFolder** parameter specifies that the data deduplication engine processes the files in all of the folders on volume F: except for files in the Temp folder and the SQL folder.
+
+### Example 2: Set the minimum file age on a volume
+```
+PS C:\>Set-DedupVolume -Volume E: -MinimumFileAgeDays 10
+```
+
+This command sets the number of days since users have accessed a file before the deduplication engine optimizes the file.
+The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were not accessed in the last 10 days.
+
+### Example 3: Set the chunk redundancy threshold on a volume
+```
+PS C:\>Set-DedupVolume -Volume D: -MinimumFileAgeDays 15 -ChunkRedundancyThreshold 50
+```
+
+This command sets the number of identical chunks of data that the deduplication engine encounters during deduplication before the server creates a redundant copy of the data chunk.
+The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were not accessed in the last 15 days.
+The **ChunkRedundancyThreshold** parameter specifies that if the data deduplication engine discovers 50 chunks of identical data, it makes one redundant copy as a safeguard.
+
+## PARAMETERS
+
+### -AsJob
+ps_cimcommon_asjob
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChunkRedundancyThreshold
+Specifies the number of identical chunks of data that the deduplication engine encounters before the server creates a redundant copy of the data chunk.
+This increases the reliability of the server by adding redundancy to the most referenced chunks of data.
+
+Deduplication detects corruptions and the deduplication scrubbing job restores the corrupted chunks from a redundant copy, if it is available.
+The default value is 100.
+The minimum value that you can set is 20.
+A low value for the **ChunkRedundancyThreshold** parameter reduces the effectiveness of data deduplication by creating more redundant copies of a chunk, and consumes more memory and disk space.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CimSession
+Runs the cmdlet in a remote session or on a remote computer.
+Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+The default is the current session on the local computer.
+
+```yaml
+Type: CimSession[]
+Parameter Sets: (All)
+Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFileType
+Specifies an array of extension types that the deduplication engine excludes from data deduplication and optimization.
+Specify comma-separated values that are not preceded with a period (.).
+When you change this setting, you override the existing values.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeFolder
+Specifies an array of names of root folders under which the deduplication engine excludes files from data deduplication and optimization.
+Full paths are accepted, however mount points are ignored since the mount point can change after configuration.
+When you change this setting, you override the existing values.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: UNNAMED_PARAMETER_SET_2
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -MinimumFileAgeDays
+Specifies a number of days.
+The deduplication engine optimizes files that users have not accessed in the number of days that you specify.
+If the last access time is not available, then the deduplication engine uses the last modified time.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: MinimumFileAge
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinimumFileSize
+Specifies the minimum size threshold, in bytes, for files that are optimized.
+The deduplication engine does not optimize files that do not meet the minimum threshold.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoCompress
+Indicates whether or not the server compresses data after deduplication.
+Compression uses more processor cycles but provides additional space savings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoCompressionFileType
+Specifies an array of file types that the deduplication engine excludes from compression.
+These file types are deduplicated but not compressed, typically because the file format is already compressed.
+Specify comma-separated values that are not preceded with a period (.).
+When you change this setting, you override the existing values.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Video files, previously compressed files, all Microsoft Office 2007 files. These include, but are not limited to: aac|aif|aiff|asf|asx|au|avi|flac|jpeg|m3u|mid|midi|mov|mp1|mp2|mp3|mp4|mpa|mpe|mpeg|mpeg2|mpeg3|mpg|ogg|qt|qtw|ram|rm|rmi|rmvb|snd|swf|vob|wav|wax|wma|wmv|wvx|accdb|accde|accdr|accdt|docm|docx|dotm|dotx|pptm|potm|potx|ppam|ppsx|pptx|sldx|sldm|thmx|xlsx|xlsm|xltx|xltm|xlsb|xlam|xll|ace|arc|arj|bhx|b2|cab|gz|gzip|hpk|hqx|jar|lha|lzh|lzx|pak|pit|rar|sea|sit|sqz|tgz|uu|uue|z|zip|zoo
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassThru
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ThrottleLimit
+Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Verify
+Indicates whether or not the deduplication engine performs a byte-for-byte verification for each duplicate chunk that optimization creates, rather than relying on a cryptographically strong hash.
+We do not recommend that you use this parameter.
+Setting this parameter to $True can degrade optimization performance.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Volume
+Specifies an array of system volumes.
+Specify one or more volume IDs, drive letters (such as D:), or volume GUID pathnames (using the form \\\\?\Volume{{GUID}}\\).
+Separate multiple volumes with a comma.
+
+```yaml
+Type: String[]
+Parameter Sets: UNNAMED_PARAMETER_SET_1
+Aliases: Path,Name
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+## INPUTS
+
+### System.String[]
+
+### Microsoft.Management.Infrastructure.CimInstance#
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+## OUTPUTS
+
+### Microsoft.Management.Infrastructure.CimInstance
+The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
+The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Deduplication/MSFT_DedupVolume
+
+## NOTES
+
+## RELATED LINKS
+
+[Disable-DedupVolume](./Disable-DedupVolume.md)
+
+[Enable-DedupVolume](./Enable-DedupVolume.md)
+
+[Get-DedupVolume](./Get-DedupVolume.md)
+

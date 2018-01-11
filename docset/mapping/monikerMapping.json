@@ -6,6 +6,18 @@
         "packageRoot": "windows"
 
     },
+      "winserver2012r2-ps": {
+        "conceptualToc": "docs-conceptual/winserver2012r2-ps/toc.yml",
+        "conceptualTocUrl": "/powershell/winserver2012r2-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/winserver2012r2-ps/toc.json",
+        "packageRoot": "winserver2012r2-ps"
+    },
+        "winserver2012-ps": {
+          "conceptualToc": "docs-conceptual/winserver2012-ps/toc.yml",
+          "conceptualTocUrl": "/powershell/winserver2012-ps/toc.json",
+          "referenceTocUrl": "/powershell/module/wwinserver2012-ps/toc.json",
+          "packageRoot": "winserver2012-ps"
+    },
     "win-mdop2-ps": {
             "conceptualToc": "docs-conceptual/mdop/toc.yml",
             "conceptualTocUrl": "/powershell/mdop/win-mdop2-ps/toc.json",

@@ -45,6 +45,70 @@
         "files": [
           "**/*.md"
         ],
+        "src": "docs-conceptual/winserver2012-ps",
+        "version": "winserver2012-ps",
+        "dest": "winserver2012-ps"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual/winserver2012-ps",
+        "version": "winserver2012-ps",
+        "dest": "winserver2012-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "winserver2012-ps",
+        "version": "winserver2012-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "winserver2012-ps",
+        "version": "winserver2012-ps",
+        "dest": "module/winserver2012-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "docs-conceptual/winserver2012r2-ps",
+        "version": "winserver2012r2-ps",
+        "dest": "winserver2012r2-ps"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-conceptual/winserver2012r2-ps",
+        "version": "winserver2012r2-ps",
+        "dest": "winserver2012r2-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "winserver2012r2-ps",
+        "version": "winserver2012r2-ps",
+        "dest": "module"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "winserver2012r2-ps",
+        "version": "winserver2012r2-ps",
+        "dest": "module/winserver2012r2-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
         "src": "docs-conceptual/mdop",
         "version": "win-mdop2-ps",
         "dest": "mdop"
@@ -96,6 +160,12 @@
     "versions": {
       "win10-ps": {
         "dest": "win10-ps"
+},
+        "winserver2012r2-ps": {
+          "dest": "winserver2012r2-ps"
+},
+          "winserver2012-ps": {
+            "dest": "winserver2012-ps"
       },
       "win-mdop2-ps": {
         "dest": "win-mdop2-ps"

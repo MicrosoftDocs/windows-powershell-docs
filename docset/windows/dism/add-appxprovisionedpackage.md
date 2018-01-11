@@ -27,7 +27,7 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 ### Offline
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
+ [-LicensePath <String>] [-Region <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
@@ -35,7 +35,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ### Online
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
- [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
+ [-LicensePath <String>] [-Region <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
@@ -57,6 +57,8 @@ Use these parameters to provision line-of-business apps.
 
 Use the *FolderPath* parameter to specify the location of a folder of unpacked app package (.appx) files that includes any dependency packages and a license file.
 
+Use the *Region* parameter to specify for what regions the app will be provisioned. The region argument can either be “all”, indicating that the app should be provisioned on all devices, or it can be a semi-colon delimited list of regions. The regions will be in the form of ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 codes. (https://en.wikipedia.org/wiki/ISO_3166-1). For example, the United States can be specified as either “US” or “USA” (case-insensitive). See below for examples of how to specify regions:  
+
 To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
 For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020) and [How to develop an OEM app that uses a custom file](http://go.microsoft.com/fwlink/?LinkID=279989) in the TechNet Library..
@@ -71,9 +73,17 @@ PS C:\> Add-AppxProvisionedPackage -Online -FolderPath "c:\Appx"
 This command adds the app package, dependency packages, and license file from the c:\Appx folder to the running Windows operating system.
 The package will be installed for the current user and any new user account created on the computer.
 
-### Example 2: Add an app package an operating system image
+### Example 2: Add an app package to an operating system image
 ```
 PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
+```
+
+This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.
+
+### Example 3: Add an app package to an operating system image for particular regions
+```
+PS C:\> Add-ProvisionedAppxPackage -PackagePath c:\Appx\myPackage.appx -Region="all"
+PS C:\> Add-ProvisionedAppxPackage -PackagePath c:\Appx\myPackage.appx -Region=“US;GB”
 ```
 
 This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.
@@ -114,6 +124,21 @@ Accept wildcard characters: False
 ### -FolderPath
 Specifies a folder of unpacked app package files containing a main package and any dependency packages.
 This folder must also contain your application license.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Region
+Specifies for what regions the app will be provisioned.
 
 ```yaml
 Type: String

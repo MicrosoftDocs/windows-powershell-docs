@@ -82,8 +82,8 @@ This command adds the app package, myPackage.appx, to the Windows image mounted 
 
 ### Example 3: Add an app package to an operating system image for particular regions
 ```
-PS C:\> Add-ProvisionedAppxPackage -PackagePath c:\Appx\myPackage.appx -Region="all"
-PS C:\> Add-ProvisionedAppxPackage -PackagePath c:\Appx\myPackage.appx -Region=“US;GB”
+PS C:\> Add-ProvisionedAppxPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -Region="all"
+PS C:\> Add-ProvisionedAppxPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -Region=“US;GB”
 ```
 
 This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.

@@ -59,7 +59,7 @@ This command gets all the **BitsJob** objects that are owned by the current user
 
 ### Example 2: Get the BitsJob object identified by job ID
 ```
-PS C:\> Get-BitsTransfer -JobId C0DD3D8C-C3A2-4562-80B19224879C
+PS C:\> Get-BitsTransfer -JobId C0DD3D8C-C3A2-4562-8324-80B19224879C
 
 JobId                   DisplayName             TransferType            JobState                OwnerAccount
 -----                   -----------             ------------            --------                ------------

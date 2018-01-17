@@ -352,7 +352,7 @@ Accepted values: Foreground, High, Normal, Low
 
 Required: False
 Position: Named
-Default value: None
+Default value: Foreground
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

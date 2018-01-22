@@ -51,10 +51,10 @@ This command specifies that virtual machine stored in the $VM1 variable is to us
 
 ### Example 2: Set a key protector for a virtual machine by using its name
 ```
-PS C:\> Set-VMKeyProtector -VName "VM10" -NewLocalKeyProtector
+PS C:\> Set-VMKeyProtector -VMName "VM10" -NewLocalKeyProtector
 ```
 
-This command specifies that the virtual machine named VM01 is to use a new local key protector.
+This command specifies that the virtual machine named VM10 is to use a new local key protector.
 
 ## PARAMETERS
 

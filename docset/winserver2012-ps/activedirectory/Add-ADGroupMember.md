@@ -86,8 +86,8 @@ Gets a group from the Organizational Unit "OU=AccountDeptOU,DC=AppNC" in the AD 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```
 C:\PS>$user = Get-ADUser "CN=Glen John,OU=UserAccounts,DC=NORTHAMERICA,DC=FABRIKAM,DC=COM" -Server "northamerica.fabrikam.com";
-$group = Get-ADGroup "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM -Server "europe.fabrikam.com";
-Add-ADGroupMember $group -Member $user -Server "europe.fabrikam.com"
+$group = Get-ADGroup "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM" -Server "europe.fabrikam.com";
+Add-ADGroupMember $group -Members $user -Server "europe.fabrikam.com"
 ```
 
 Description

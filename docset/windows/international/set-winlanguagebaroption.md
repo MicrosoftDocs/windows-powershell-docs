@@ -37,14 +37,14 @@ The default value for each setting is false.
 
 ### Example 1: Set language bar options
 ```
-PS C:\> Set-WinLanguageBarOptions -UseLegacySwitchMode -UseLegacyLanguageBar
+PS C:\> Set-WinLanguageBarOption -UseLegacySwitchMode -UseLegacyLanguageBar
 ```
 
 This command sets the language bar mode to the legacy setting and the language bar type to the per-thread setting.
 
 ### Example 2: Set language bar options to default values
 ```
-PS C:\> Set-WinLanguageBarOptions
+PS C:\> Set-WinLanguageBarOption
 ```
 
 This command sets the language bar mode and the language bar type to the default setting.

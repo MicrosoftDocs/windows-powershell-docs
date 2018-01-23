@@ -32,7 +32,7 @@ Grant-DfsnAccess [-Path] <String> [-AccountName] <String[]> [-CimSession <CimSes
 ## DESCRIPTION
 The **Grant-DfsnAccess** cmdlet grants permissions to users and groups for a Distributed File System (DFS) namespace folder.
 This cmdlet grants permissions to access a folder and to enumerate its contents.
-You can use the **Get-DfsnAccess** cmdlet to see the current permissions, and you can use the **Revoke-DfsnAccesscmdlet** cmdlet to revoke permissions.
+You can use the **Get-DfsnAccess** cmdlet to see the current permissions, and you can use the **Revoke-DfsnAccess** cmdlet to revoke permissions.
 
 For a DFS namespace which has Access-based enumeration enabled, users can see only the folders that they can access.
 

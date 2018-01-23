@@ -101,7 +101,7 @@ PS C:\>$o = New-Object -TypeName PSObject | Add-Member -Type NoteProperty -Name 
 
 
 
-PS C:\>$o | Add-PswaAuthorizationRule -UserName contoso\user1 -ConfigurationName Microsoft.PowerShell
+PS C:\>$o | Add-PswaAuthorizationRule
 ```
 
 This example illustrates how all parameters take values from pipeline by property name.

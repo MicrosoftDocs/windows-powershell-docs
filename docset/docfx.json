@@ -7,7 +7,6 @@
         ],
         "src": "bread",
         "dest": "windows/bread"
-
       },
       {
         "files": [
@@ -47,7 +46,7 @@
         ],
         "src": "docs-conceptual/winserver2012-ps",
         "version": "winserver2012-ps",
-        "dest": "winserver2012-ps"
+        "dest": "windows"
       },
       {
         "files": [
@@ -79,7 +78,7 @@
         ],
         "src": "docs-conceptual/winserver2012r2-ps",
         "version": "winserver2012r2-ps",
-        "dest": "winserver2012r2-ps"
+        "dest": "windows"
       },
       {
         "files": [
@@ -160,12 +159,12 @@
     "versions": {
       "win10-ps": {
         "dest": "win10-ps"
-},
-        "winserver2012r2-ps": {
-          "dest": "winserver2012r2-ps"
-},
-          "winserver2012-ps": {
-            "dest": "winserver2012-ps"
+      },
+      "winserver2012r2-ps": {
+        "dest": "winserver2012r2-ps"
+      },
+      "winserver2012-ps": {
+        "dest": "winserver2012-ps"
       },
       "win-mdop2-ps": {
         "dest": "win-mdop2-ps"
@@ -187,8 +186,8 @@
       "ms.date": "04/05/2017",
       "manager": "alanth",
       "keywords": "powershell, cmdlet",
-		  "ms.mktglfcycl": "manage",
-		  "ms.sitesec": "library"
+      "ms.mktglfcycl": "manage",
+      "ms.sitesec": "library"
     },
     "fileMetadata": {},
     "template": [],

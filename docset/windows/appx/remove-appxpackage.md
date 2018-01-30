@@ -55,7 +55,7 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 ## PARAMETERS
 
 ### -AllUsers
-{{Fill AllUsers Description}}
+This cmdlet removes the app package for all user accounts on the computer. This cmdlet works off the parent package type. If it is a bundle, use -PackageTypeFilter and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
 
 ```yaml
 Type: SwitchParameter
@@ -103,7 +103,11 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{Fill User Description}}
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. The user name can be in one of these formats: 
+	- domain\user_name
+	- user_name@fqn.domain.tld
+	- user_name
+    - SID-string
 
 ```yaml
 Type: String

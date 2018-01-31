@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Test-NetConnection
 ms.assetid: F76921D4-3657-40BF-A99F-2E83609EA048
@@ -109,7 +109,7 @@ NameResolutionResults   : 2a01:111:2003::52
 
                           13.107.4.52
 
-MatchingIPsecRules      : Ipsec/Domain-TrafficFromInternet-v6 
+MatchingIPsecRules      : Ipsec/Domain-TrafficFromInternet-v6
 
 NetworkIsolationContext : Internet
 
@@ -165,12 +165,12 @@ OutgoingInterfaceIndex : 4
 
 SelectedNetRoute : DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202
 
-RouteSelectionEvents : IP: Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 4 InterfaceMetric: 10 RouteMetric: 256] is preferred over 
+RouteSelectionEvents : IP: Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 4 InterfaceMetric: 10 RouteMetric: 256] is preferred over
 
 Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 5 InterfaceMetric: 10 RouteMetric: 256] for
-Destination: 2001:428:3805:187::2768 in Compartment: 1, Reason: RouteOrder. 
+Destination: 2001:428:3805:187::2768 in Compartment: 1, Reason: RouteOrder.
 
-SourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:f17c:d212:8743:43c2 is preferred over fe80::f17c:d212:8743:43c2 for destination 2001:428:3805:187::2768 Rule = 2.0. 
+SourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:f17c:d212:8743:43c2 is preferred over fe80::f17c:d212:8743:43c2 for destination 2001:428:3805:187::2768 Rule = 2.0.
 
 RouteDiagnosticsSucceeded : True
 ```
@@ -196,11 +196,11 @@ NextHop: fe80::200:5eff:fe00:202
 
 RouteSelectionEvents : IP: Route [DestinationPrefix: ::/0 NextHop: fe80::200:5eff:fe00:202 InterfaceIndex: 4
 
-RouteMetric: 256] is blocked for Destination: 2600:1409:a:185::2768 ConstrainInterfaceIndex: 5 ConstrainScopeZone: 1 in Compartment: 1, Reason: InterfaceConstraint. 
+RouteMetric: 256] is blocked for Destination: 2600:1409:a:185::2768 ConstrainInterfaceIndex: 5 ConstrainScopeZone: 1 in Compartment: 1, Reason: InterfaceConstraint.
 
-SourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0. 
+SourceAddressSelectionEvents : IP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0.
 
-IP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0. 
+IP: Source address 2001:4898:e0:79:75dd:64cf:d9ff:f86 is preferred over fe80::75dd:64cf:d9ff:f86 for destination 2600:1409:a:185::2768 Rule = 2.0.
 
 RouteDiagnosticsSucceeded : True
 ```
@@ -213,15 +213,15 @@ This command performs route diagnostics to reach a remote host named www.contoso
 Specifies the common service TCP port number.
 The acceptable values for this parameter are:
 
-- SMB 
-- HTTP 
+- SMB
+- HTTP
 - RDP
 - WINRM
 
 ```yaml
 Type: String
 Parameter Sets: CommonTCPPort
-Aliases: 
+Aliases:
 Accepted values: HTTP, RDP, SMB, WINRM
 
 Required: True
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies the Domain Name System (DNS) name or IP address of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+Specifies the Domain Name System (DNS) name or IP address of the target computer.
 
 ```yaml
 Type: String
@@ -252,7 +252,7 @@ Specifies the interface constraint to use for route diagnostics.
 ```yaml
 Type: UInt32
 Parameter Sets: NetRouteDiagnostics
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,7 +267,7 @@ Specifies the source address constraint to use for route diagnostics.
 ```yaml
 Type: String
 Parameter Sets: NetRouteDiagnostics
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ Indicates that route diagnostics runs to output the route and source address sel
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NetRouteDiagnostics
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -297,7 +297,7 @@ Specifies the number of hops to traverse in a trace route command.
 ```yaml
 Type: Int32
 Parameter Sets: ICMP
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ Specifies the information level.
 The acceptable values for this parameter are:
 
 - Detailed
-- Quiet 
+- Quiet
 
 If you set this parameter to Quiet, the cmdlet returns basic information.
 For example, for a ping test, this cmdlet returns a Boolean value that indicates whether the attempt to ping a host or port is successful.
@@ -319,7 +319,7 @@ For example, for a ping test, this cmdlet returns a Boolean value that indicates
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Quiet, Detailed
 
 Required: False
@@ -351,7 +351,7 @@ Indicates that Tracert runs to test connectivity to the remote host.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ICMP
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

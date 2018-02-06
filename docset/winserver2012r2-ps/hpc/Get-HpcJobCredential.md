@@ -1,6 +1,4 @@
 ---
-author:
-description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
@@ -10,7 +8,7 @@ ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217205
 schema: 2.0.0
-title: Get-HpcJobCredential
+module name: hpc
 ms.assetid:
 ---
 

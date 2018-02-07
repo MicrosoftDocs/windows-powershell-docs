@@ -1,17 +1,19 @@
 ---
-author:
+external help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
 description:
-external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182874
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
-title: Stop-HpcTestResult
-ms.assetid: 9F1C6289-461C-4A62-A0A8-41119258C682
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # Stop-HpcTestResult

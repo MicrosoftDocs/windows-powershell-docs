@@ -1,9 +1,11 @@
 ---
-author:
+external help file: 
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
 description:
-external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell

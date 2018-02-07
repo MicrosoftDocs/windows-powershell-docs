@@ -1,17 +1,19 @@
 ---
-author:
-description: 
-external help file: CCPPSH.dll-Help.xml
+external help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
+description:
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=217209
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
-title: Set-HpcPool
-ms.assetid: 412CB991-A3EE-4C7A-B379-73D31A425981
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # Set-HpcPool
@@ -55,7 +57,7 @@ You cannot specify both the *Name* and the *Pool* parameters.
 ```yaml
 Type: String
 Parameter Sets: name
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -71,7 +73,7 @@ You cannot specify both the *Name* and the *Pool* parameters.
 ```yaml
 Type: HpcPool
 Parameter Sets: pool
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -91,7 +93,7 @@ To set this environment variable, run the following cmdlet:
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +108,7 @@ Specifies the pool weight.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +128,7 @@ To set this environment variable, run the following cmdlet: `Set-Content Env: CC
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

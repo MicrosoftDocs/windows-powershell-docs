@@ -1,17 +1,19 @@
 ---
-author:
-description: 
-external help file: CCPPSH.dll-Help.xml
+external help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
+description:
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=185166
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
-title: Set-HpcSoaCredential
-ms.assetid: 49A52A04-AEE2-43DB-B239-DD2BF8E6E0CE
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # Set-HpcSoaCredential
@@ -22,7 +24,7 @@ Sets the credentials for creating SOA sessions.
 ## SYNTAX
 
 ```
-Set-HpcSoaCredential -Credential <PSCredential> [-Azure] 
+Set-HpcSoaCredential -Credential <PSCredential> [-Azure]
  [-Scheduler <String[]>] [<CommonParameters>]
 ```
 
@@ -62,7 +64,7 @@ It is not available in previous versions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +83,7 @@ Save that object in a variable, and then use that variable with this parameter.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -101,7 +103,7 @@ To set this environment variable, run the following cmdlet:
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +123,7 @@ To set this environment variable, run the following cmdlet: `Set-Content Env: CC
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

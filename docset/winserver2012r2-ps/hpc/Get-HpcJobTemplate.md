@@ -1,17 +1,19 @@
 ---
-author:
+external help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
 description:
-external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182812
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
-title: Get-HpcJobTemplate
-ms.assetid: 41D8D98B-2676-44DB-AC41-B5445DBA9781
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # Get-HpcJobTemplate

@@ -11,7 +11,21 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217207
 schema: 2.0.0
 title: New-HpcSoftCard
-ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CE
+ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CEexternal help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
+description:
+keywords: powershell, cmdlet
+ms.date: 2016-12-20
+ms.prod: powershell
+ms.technology: powershell
+ms.topic: reference
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
+schema: 2.0.0
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # New-HpcSoftCard

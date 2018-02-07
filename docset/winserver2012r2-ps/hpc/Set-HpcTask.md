@@ -1,17 +1,19 @@
 ---
-author:
-description: 
-external help file: CCPPSH.dll-Help.xml
+external help file:
+Module Name: hpc
+online version:
+schema: 2.0.0
+title:
+description:
 keywords: powershell, cmdlet
-manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182868
+online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
-title: Set-HpcTask
-ms.assetid: E557121D-4E20-4DA3-A658-9DEE047C2683
+title: Add-HpcDriver
+ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 ---
 
 # Set-HpcTask
@@ -94,7 +96,7 @@ To run a command that uses an asterisk, you can include the caret (^) as an esca
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +116,7 @@ It is not available in previous versions.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +132,7 @@ The new task does not start until all the tasks in the list finish running.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +151,7 @@ When the current index exceeds the ending index, the task stops running the comm
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +169,7 @@ For example, "variable_to_unset_name=".
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +189,7 @@ A value of 0 or $False indicates that this task can share compute nodes with oth
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +214,7 @@ It is not supported in previous versions.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +237,7 @@ It is not supported in previous versions.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +256,7 @@ When the current index exceeds the index that the *End* parameter specifies, the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -271,7 +273,7 @@ You can use the *JobId* and *TaskId* parameters to specify a task, or you can us
 ```yaml
 Type: Int32
 Parameter Sets: id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -287,7 +289,7 @@ The maximum length for the name is 80 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +311,7 @@ You cannot specify the *NumCores* parameter if you also specify the *NumNodes* o
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +333,7 @@ You cannot specify the *NumNodes* parameter if you also specify the *NumCores* o
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +355,7 @@ You cannot specify the *NumSockets* parameter if you also specify the *NumCores*
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -370,7 +372,7 @@ If you specify this parameter, you should also specify values for the Start, End
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -386,7 +388,7 @@ The job scheduler exclusively allocates all of the nodes in this list to run the
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -407,7 +409,7 @@ The cluster administrator can configure the number of times that the job schedul
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -434,7 +436,7 @@ The maximum value for each part is 2,147,483,647.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -454,7 +456,7 @@ To set this environment variable, run the following cmdlet:
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -473,7 +475,7 @@ When the current index exceeds the ending index that the *End* parameter specifi
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -494,7 +496,7 @@ The maximum length of value for this parameter is 160 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -513,7 +515,7 @@ The maximum length of value for this parameter is 160 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -535,7 +537,7 @@ The maximum length of value for this parameter is 160 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,7 +554,7 @@ You can use the *Task* parameter to specify a task, or you can use the *TaskId* 
 ```yaml
 Type: HpcTask
 Parameter Sets: task
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -569,7 +571,7 @@ You can use the *TaskId* and *JobId* parameters to specify a task, or you can us
 ```yaml
 Type: Int32
 Parameter Sets: id
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -580,7 +582,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies a type for the task, which defines how to run the command for the task.
-Valid values are: 
+Valid values are:
 
 - Basic
 - ParametricSweep
@@ -594,7 +596,7 @@ It is not supported in previous versions.
 ```yaml
 Type: TaskType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Basic, ParametricSweep, NodePrep, NodeRelease, Service
 
 Required: False
@@ -617,7 +619,7 @@ It is not available in previous versions.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -634,7 +636,7 @@ The maximum length of value for this parameter is 160 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -654,7 +656,7 @@ To set this environment variable, run the following cmdlet: `Set-Content Env: CC
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

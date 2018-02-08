@@ -271,7 +271,7 @@ This command adds a pointer record named host77.contoso.com for the IP address 1
 
 ### Example 6: Add an MX resource record
 ```
-PS C:\> Add-DnsServerResourceRecord -Name ".-MX -ZoneName "contoso.com" -MailExchange "mail.contoso.com" -Preference 10
+PS C:\> Add-DnsServerResourceRecord -Name "." -MX -ZoneName "contoso.com" -MailExchange "mail.contoso.com" -Preference 10
 ```
 
 This command adds an MX resource record for the contoso.com zone with a preference of 10.

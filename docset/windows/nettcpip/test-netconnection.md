@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies the Domain Name System (DNS) name or IP address of the target computer that runs the Dynamic Host Configuration Protocol (DHCP) server service.
+Specifies the Domain Name System (DNS) name or IP address of the target computer.
 
 ```yaml
 Type: String

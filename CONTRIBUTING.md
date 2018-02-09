@@ -18,13 +18,13 @@ We've tried to make editing an existing, public file as simple as possible.
 
 **To edit a topic**
 
-1.	Go to the page on TechNet that you want to update, and then click **Contribute**.
+1.	Go to the page on Docs that you want to update, and then click **Edit**.
 
 2. Log into (or sign up for) a GitHub account.
     
     You must have a GitHub account to get to the page that lets you edit a topic.
 
-3. Click the **Pencil** icon (in the red box) to edit the content.
+3. Click the **Pencil** icon (by the boxes for **Raw** **Blame** **History**) to edit the content.
 
 4.	Using Markdown language, make your changes to the topic. For info about how to edit content using Markdown, see:
     - **If you're linked to the Microsoft organization in GitHub:** [Windows Open Publishing Guide Home](http://aka.ms/windows-op-guide)

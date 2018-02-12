@@ -34,7 +34,7 @@ Adds one or more service accounts to an Active Directory computer.
 Adds users, computers, and groups to the allowed or denied list of a read-only domain controller password replication policy.
 
 ### [Add-ADFineGrainedPasswordPolicySubject](./Add-ADFineGrainedPasswordPolicySubject.md)
-Applies a fine-grained password policy to one more users and groups.
+Applies a fine-grained password policy to one or more users and groups.
 
 ### [Add-ADGroupMember](./Add-ADGroupMember.md)
 Adds one or more members to an Active Directory group.

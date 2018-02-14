@@ -134,7 +134,7 @@ Accept wildcard characters: False
 
 ### -BpaXPath
 Specifies one or more BPA XPaths where BPA scan results are available.
-Specify the BPA XPath in the the following format: BpaModelId:BpaFilepath:BpaXPath.
+Specify the BPA XPath in the following format: BpaModelId:BpaFilepath:BpaXPath.
 
 To get the names for BPA models that are installed on the target server, run the cmdlet [Get-BpaModel](http://technet.microsoft.com/library/hh868082.aspx).
 There is no file path available for results for a BPA model on a server until at least one set of scan results is available; that is, at least one scan has been run on the role or feature that is represented by the model.

@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ### -NewName
 Specifies the name to use for the new job template.
 The maximum length for the name is 50 characters.
-The name can be any alphanumeric string that is less than the maximum length, except Default, which is reserved for the default template.
+The name can be any alphanumeric string that is less than the maximum length, except **Default**, which is reserved for the default template.
 The name can include spaces.
 To specify a name that includes spaces, enclose the name in double quotation marks (").
 

@@ -1,16 +1,7 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterPowerManagement.cmdletDefinition.cdxml-help.xml
-keywords: powershell, cmdlet
-manager: alanth
-ms.date: 12/20/2016
-ms.prod: w10
-ms.technology: powershell-windows
-ms.topic: reference
+ms.date: 2/14/2018
 online version: 
 schema: 2.0.0
 title: Disable-NetAdapterPowerManagement
@@ -49,7 +40,7 @@ Disable-NetAdapterPowerManagement -InputObject <CimInstance[]> [-ArpOffload] [-D
 ```
 
 ## DESCRIPTION
-The **Disable-NetAdapterPowerMangement** cmdlet disables specific power management features on a network adapter.
+The **Disable-NetAdapterPowerManagement** cmdlet disables specific power management features on a network adapter.
 If no power parameters are specified then all power management features are disabled.
 
 ## EXAMPLES
@@ -64,7 +55,7 @@ This command disables power management on the network adapter named Ethernet 1 a
 ### Example 2: Disable power management on a specified network adapter using InputObject
 ```
 PS C:\> $NetAdapter1 = Get-NetAdapter -Name "Ethernet 3"
-PS C:\> Disable-NetAdapterPowerMangement -InputObject $NetAdapter1
+PS C:\> Disable-NetAdapterPowerManagement -InputObject $NetAdapter1
 ```
 
 This first command gets the network adapter named Ethernet 3 and stores the result in the variable named $NetAdapter1.

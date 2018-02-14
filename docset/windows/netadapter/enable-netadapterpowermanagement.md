@@ -26,7 +26,9 @@ Enables specific power management features on the network adapter.
 
 ### ByName (Default)
 ```
-Enable-NetAdapterPowerManagement [-Name] <String[]> [-IncludeHidden] [-ArpOffload] [-D0PacketCoalescing]
+Enable-
+
+agement [-Name] <String[]> [-IncludeHidden] [-ArpOffload] [-D0PacketCoalescing]
  [-DeviceSleepOnDisconnect] [-NSOffload] [-RsnRekeyOffload] [-SelectiveSuspend] [-WakeOnMagicPacket]
  [-WakeOnPattern] [-NoRestart] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -49,7 +51,7 @@ Enable-NetAdapterPowerManagement -InputObject <CimInstance[]> [-ArpOffload] [-D0
 ```
 
 ## DESCRIPTION
-The **Enable-NetAdapterPowerMangement** cmdlet enables specific power management features on the network adapter.
+The **Enable-NetAdapterPowerManagement** cmdlet enables specific power management features on the network adapter.
 If no power options are specified, then all supported power management features are enabled.
 
 ## EXAMPLES
@@ -65,10 +67,10 @@ This command enables power management on the network adapter named Ethernet 1 an
 ```
 The first command gets the network adapter named Ethernet 2 and stores the result in the variable named $NetAdapter2. The second command and enables power management for the network adapter stored in the $NetAdapter variable. 
 PS C:\> $NetAdapter2 = Get-NetAdapter -Name "Ethernet 2"
-PS C:\> Enable-NetAdapterPowerMangement -InputObject $NetAdapter2
+PS C:\> Enable-NetAdapterPowerManagement -InputObject $NetAdapter2
 
 This command is a version of the cmdlet that uses the pipeline to select the network adapter named Ethernet 3 and pipes that object into this cmdlet.
-PS C:\> Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerMangement
+PS C:\> Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerManagement
 ```
 
 ## PARAMETERS

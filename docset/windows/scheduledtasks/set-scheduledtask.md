@@ -79,7 +79,7 @@ In this example, the set of commands uses cmdlets and variables to modify a sche
 
 In this example, the first command uses the New-ScheduledTaskAction cmdlet to define an action, to which the $A1 variable is assigned.
 
-The second command uses the **New-ScheduledTaskAction** cmdlet to define a second action, to which the the $A2 variable is assigned.
+The second command uses the **New-ScheduledTaskAction** cmdlet to define a second action, to which the $A2 variable is assigned.
 
 The third command adds the two actions to the scheduled task DeployTools.
 

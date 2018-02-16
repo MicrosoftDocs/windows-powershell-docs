@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies an Active Directory input object.
-This parameter can accept one of the the following object types:
+This parameter can accept one of the following object types:
 
 - ADForest
 - ADDomain

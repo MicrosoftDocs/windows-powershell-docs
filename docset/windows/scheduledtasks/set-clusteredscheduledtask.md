@@ -67,7 +67,7 @@ The first command uses the New-ScheduledTaskAction cmdlet to create a task actio
 
 The second command uses the **New-ScheduledTaskAction** cmdlet to create a task action and stores that action in the $Action02 variable.
 
-The final command changes the action assigned to the task named Task03 to the the two actions stored in $Action01 and $Action02.
+The final command changes the action assigned to the task named Task03 to the two actions stored in $Action01 and $Action02.
 The cluster runs more than one action in sequence.
 
 ## PARAMETERS

@@ -38,7 +38,7 @@ You can specify which Provider Addresses to modify by using address state, inter
 PS C:\> Set-NetVirtualizationProviderAddress -ProviderAddress "192.168.2.3" -InterfaceIndex 17 -VlanID 201
 ```
 
-This command changes the virtual LAN ID for the Provider Address 192.168.2.3 on the the interface that has the Index 17.
+This command changes the virtual LAN ID for the Provider Address 192.168.2.3 on the interface that has the Index 17.
 
 ### Example 2: Change a virtual LAN ID for specified Provider Addresses
 ```

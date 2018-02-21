@@ -144,28 +144,8 @@ The contents of the filelist.txt file resemble the following information:
 - `http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt`
 - `http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
 
-### Example 7: Create a BITS transfer job that downloads multiple files
-```
-PS C:\> Start-BitsTransfer -Source "http://server01/servertestdir/*.*" -Destination "c:\clienttestdir\"
-```
 
-This command creates a BITS transfer job that downloads multiple files from a server.
-
-The **Start-BitsTransfer** command creates a new BITS transfer job.
-All the files are added to a single job and then transferred sequentially to the client.
-
-The following command shows another variation of a file transfer command that uses a wildcard character:
-
-`Start-BitsTransfer -Source "http://server01/servertestdir/*.txt" -Destination "c:\clienttestdir\"`
-
-The destination path cannot use wildcard characters.
-The destination path supports only a relative directory, a rooted path, or an implicit directory (the current directory).
-Additionally, the destination files cannot be renamed by using a wildcard character.
-For instance, the following command does not work:
-
-`c:\clienttestdir\*.BAK`
-
-### Example 8: Create BITS transfer jobs that upload multiple files
+### Example 7: Create BITS transfer jobs that upload multiple files
 ```
 PS C:\> Import-CSV filelist.txt | Start-BitsTransfer -TransferType Upload
 ```
@@ -183,7 +163,7 @@ The contents of the filelist.txt file resemble the following information:
 - `c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt`
 - `c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt`
 
-### Example 9: Download a file from a server on a network to a client on a different network that are connected by a proxy server
+### Example 8: Download a file from a server on a network to a client on a different network that are connected by a proxy server
 ```
 PS C:\> Start-BitsTransfer -Source .\Patch0416.msu -Destination $env:temp\Patch0416.msu -ProxyUsage Override -ProxyList BitsProxy:8080 -ProxyCredential Server01\Admin01
 ```

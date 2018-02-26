@@ -145,7 +145,17 @@ The contents of the filelist.txt file resemble the following information:
 - `http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
 
 
-### Example 7: Create BITS transfer jobs that upload multiple files
+### Example 7: Create a BITS transfer job that downloads multiple files 
+```
+PS C:\> Start-BitsTransfer -Source C:\clientsourcedir\*.txt -Destination c:\clientdir\ -TransferType Download
+```
+
+In the preceding example, the **Start-BitsTransfer** command creates a new BITS transfer job. All of the files are added to this job and transferred sequentially to the client.
+
+> [!NOTE]
+> The destination path cannot use wildcard characters. The destination path supports relative directories, root paths, or implicit directories (that is, the current directory). Destination files cannot be renamed by using a wildcard character. Additionally, HTTP and HTTPS URLs do not work with wildcards. Wildcards are only valid for UNC paths and local directories.
+
+### Example 8: Create BITS transfer jobs that upload multiple files
 ```
 PS C:\> Import-CSV filelist.txt | Start-BitsTransfer -TransferType Upload
 ```
@@ -163,7 +173,7 @@ The contents of the filelist.txt file resemble the following information:
 - `c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt`
 - `c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt`
 
-### Example 8: Download a file from a server on a network to a client on a different network that are connected by a proxy server
+### Example 9: Download a file from a server on a network to a client on a different network that are connected by a proxy server
 ```
 PS C:\> Start-BitsTransfer -Source .\Patch0416.msu -Destination $env:temp\Patch0416.msu -ProxyUsage Override -ProxyList BitsProxy:8080 -ProxyCredential Server01\Admin01
 ```

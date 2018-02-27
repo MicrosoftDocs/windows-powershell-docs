@@ -66,7 +66,7 @@ If the cmdlet displays an error while it creates a virtual disk, check the follo
 
 ### Example 1: Create a fixed VHDX
 ```
-PS C:\> New-IscsiVirtualDisk -Path "E:\temp\test.vhdx" -Size 10GB
+PS C:\> New-IscsiVirtualDisk -UseFixed -Path "E:\temp\test.vhdx" -Size 10GB
 ```
 
 This example creates a fixed VHDX that is 10GB in size.
@@ -78,12 +78,12 @@ PS C:\> New-IscsiVirtualDisk -ParentPath "E:\temp\test.vhdx" -Path "E:\temp\chil
 
 This example creates a differencing VHDX, with the parent path E:\temp\test.vhdx and the differencing VHDX path is E:\temp\child\diff.vhdx.
 
-### Example 3: Create a fixed VHDX on a remote computer
+### Example 3: Create a dynamic VHDX on a remote computer
 ```
 PS C:\> New-IscsiVirtualDisk -Path "E:\temp\test.vhdx" -Size 10GB -ComputerName "iscsisvr"
 ```
 
-This example creates a fixed VHDX with the size 10GB at E:\temp\test.vhdx on the computer named iscsisvr.
+This example creates a dynamic VHDX with the size 10GB at E:\temp\test.vhdx on the computer named iscsisvr.
 
 ### Example 4: Create a VHDX
 ```

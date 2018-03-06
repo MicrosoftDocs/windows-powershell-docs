@@ -1,4 +1,6 @@
 ---
+author:
+description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
@@ -8,22 +10,8 @@ ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217205
 schema: 2.0.0
-module name: hpc
-ms.assetid:external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
-description:
-keywords: powershell, cmdlet
-ms.date: 2016-12-20
-ms.prod: powershell
-ms.technology: powershell
-ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
-schema: 2.0.0
-title: Add-HpcDriver
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+title: Get-HpcJobCredential
+ms.assetid:
 ---
 
 # Get-HpcJobCredential
@@ -58,9 +46,6 @@ This command gets a list of all certificates that are currently being used by th
 Specifies the host name or IP address of the head node that contains the credentials.
 The value must be a valid computer name or IP address.
 If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
-To set this environment variable, run the following cmdlet:
-
-`Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
 
 ```yaml
 Type: String[]
@@ -74,9 +59,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-`Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -85,7 +67,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
-* This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is not supported in previous versions.
+This cmdlet was introduced in HPC Pack 2008 R2 with Service Pack 2 (SP2). It is not supported in previous versions.
 
 ## RELATED LINKS
 

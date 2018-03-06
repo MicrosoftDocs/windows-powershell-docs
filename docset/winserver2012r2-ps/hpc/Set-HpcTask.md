@@ -1,19 +1,17 @@
 ---
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
+author:
 description:
+external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
+manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
+online version: http://go.microsoft.com/fwlink/?LinkId=182868
 schema: 2.0.0
-title: Add-HpcDriver
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+title: Set-HpcTask
+ms.assetid: E557121D-4E20-4DA3-A658-9DEE047C2683
 ---
 
 # Set-HpcTask
@@ -85,7 +83,7 @@ This command sets the third task of job 156 to be a critical parametric sweep ta
 ### -CommandLine
 Specifies the command line for the task, including the command or application name and any necessary arguments.
 
-In tasks that include subtasks, you can use the asterisk (*) character as a placeholder for the parametric sweep index in Parametric Sweep tasks or for the subtask identifier in Service, Node Preparation, and Node Release tasks.
+In tasks that include subtasks, you can use the asterisk character as a placeholder for the parametric sweep index in Parametric Sweep tasks or for the subtask identifier in Service, Node Preparation, and Node Release tasks.
 You can include more than one asterisk to indicate the minimum number of positions to use when expressing the number of the index or subtask.
 This does not limit numbers that require more positions.
 This placeholder can be useful when defining the command or the input and output files for the task.
@@ -144,7 +142,7 @@ Accept wildcard characters: False
 ### -End
 Specifies the ending index for a parametric task.
 The ending index must be larger than the starting index.
-A parametric task runs the command multiple times, substituting the current index value for any asterisks (*) in the command line.
+A parametric task runs the command multiple times, substituting the current index value for any asterisks in the command line.
 The current index starts at the index that the *Start* parameter specifies, and increases by the value that the *Increment* parameter specifies each subsequent time the command runs.
 When the current index exceeds the ending index, the task stops running the command.
 
@@ -366,7 +364,7 @@ Accept wildcard characters: False
 
 ### -Parametric
 Indicates whether the new task is a parametric task.
-A parametric task runs the command multiple times, substituting the current index value for any asterisks (*) in the command line.
+A parametric task runs the command multiple times, substituting the current index value for any asterisks in the command line.
 If you specify this parameter, you should also specify values for the Start, End, and Increment values if you do not want to use the default values that define the index values for the parametric task.
 
 ```yaml
@@ -468,7 +466,7 @@ Accept wildcard characters: False
 ### -Start
 Specifies the starting index for a parametric task.
 The starting index must be less than the ending index.
-A parametric task runs the command multiple times, substituting the current index value for any asterisks (*) in the command line.
+A parametric task runs the command multiple times, substituting the current index value for any asterisks in the command line.
 The current index starts at the starting index, and it increases by the value that the Increment parameter specifies each subsequent time the command runs.
 When the current index exceeds the ending index that the *End* parameter specifies, the task stops running the command.
 
@@ -644,14 +642,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-Specifies an array of cluster connection strings for the cluster to which you want to add the device drivers.
-The value format is host1,host2,host3.
-If you do not specify the *ClusterConnectionString* parameter, this cmdlet uses the connection string on the head node that the CCP_CONNECTIONSTRING environment variable specifies.
-To set this environment variable, run the following cmdlet: `Set-Content Env: CCP_CONNECTIONSTRING \<head_node_name\>`.
-
-
 
 ```yaml
 Type: String[]

@@ -1,20 +1,17 @@
 ---
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
+author:
 description:
+external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
+manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
+online version: http://go.microsoft.com/fwlink/?LinkId=182867
 schema: 2.0.0
-title: Add-HpcDriver
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
-
+title: Set-HpcNodeState
+ms.assetid: 7DC6022D-942F-43EB-846F-609EE83B6F23
 ---
 
 # Set-HpcNodeState
@@ -142,9 +139,6 @@ Accept wildcard characters: False
 Specifies the host name or IP address of the head node for the cluster that includes the nodes.
 The value must be a valid computer name or IP address.
 If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
-To set this environment variable, run the following cmdlet:
-
-`Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
 
 ```yaml
 Type: String[]
@@ -209,13 +203,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-Specifies an array of cluster connection strings for the cluster to which you want to add the device drivers.
-The value format is host1,host2,host3.
-If you do not specify the *ClusterConnectionString* parameter, this cmdlet uses the connection string on the head node that the CCP_CONNECTIONSTRING environment variable specifies.
-To set this environment variable, run the following cmdlet: `Set-Content Env: CCP_CONNECTIONSTRING \<head_node_name\>`.
-
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -228,9 +215,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### HpcNode[]
 
 ## NOTES
-* If you set the state of a node to offline, the node can take a long time to go offline if jobs are running on the node. If any of the jobs have the Run until canceled property set, the operation to take the node offline does not return. Cancel such jobs before you set the state of the node to Offline.
-* The built-in ConfirmImpact setting for this cmdlet is Medium. If this ConfirmImpact setting is equal to or higher than the value of the $ConfirmPreference variable for your environment, the cmdlet prompts for confirmation unless you specify `-Confirm:$False`. If this ConfirmImpact setting is lower than the value of the $ConfirmPreference variable for your environment, the cmdlet does not prompt for confirmation unless you specify `-Confirm` or `-Confirm:$True`.
-* You must be a cluster administrator to run this cmdlet successfully.
+If you set the state of a node to offline, the node can take a long time to go offline if jobs are running on the node. If any of the jobs have the Run until canceled property set, the operation to take the node offline does not return. Cancel such jobs before you set the state of the node to Offline.
+The built-in ConfirmImpact setting for this cmdlet is Medium. If this ConfirmImpact setting is equal to or higher than the value of the $ConfirmPreference variable for your environment, the cmdlet prompts for confirmation unless you specify *Confirm:$False*. If this ConfirmImpact setting is lower than the value of the $ConfirmPreference variable for your environment, the cmdlet does not prompt for confirmation unless you specify *Confirm* or *Confirm:$True*.
+You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS
 

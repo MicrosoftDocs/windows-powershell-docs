@@ -1,19 +1,17 @@
 ---
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
+author:
 description:
+external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
+manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
+online version: http://go.microsoft.com/fwlink/?LinkId=182870
 schema: 2.0.0
-title: Add-HpcDriver
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+title: Shutdown-HpcNode
+ms.assetid: 1E9A957F-FB31-4316-B1A3-E923567C4D85
 ---
 
 # Shutdown-HpcNode
@@ -156,13 +154,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
-Specifies an array of cluster connection strings for the cluster to which you want to add the device drivers.
-The value format is host1,host2,host3.
-If you do not specify the *ClusterConnectionString* parameter, this cmdlet uses the connection string on the head node that the CCP_CONNECTIONSTRING environment variable specifies.
-To set this environment variable, run the following cmdlet: `Set-Content Env: CCP_CONNECTIONSTRING \<head_node_name\>`.
-
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).

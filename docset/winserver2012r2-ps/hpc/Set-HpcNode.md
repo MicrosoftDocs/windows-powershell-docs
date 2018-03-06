@@ -1,19 +1,17 @@
 ---
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
+author:
 description:
+external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
+manager:
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
+online version: http://go.microsoft.com/fwlink/?LinkId=182866
 schema: 2.0.0
-title: Add-HpcDriver
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+title: Set-HpcNode
+ms.assetid: 66FED634-CA0F-40CD-8447-2375F9764FA7
 ---
 
 # Set-HpcNode
@@ -23,7 +21,6 @@ Changes the properties for a node.
 
 ## SYNTAX
 
-### Name (Default)
 ```
 Set-HpcNode [-Description <String>] [-Chassis <String>] [-DataCenter <String>] [-Role <NodeRole[]>]
  [-ManagementIpAddress <String>] [-Rack <String>] [-ProductKey <String>] [-Location <String>]
@@ -31,7 +28,6 @@ Set-HpcNode [-Description <String>] [-Chassis <String>] [-DataCenter <String>] [
   [-Scheduler <String[]>] [<CommonParameters>]
 ```
 
-### Node
 ```
 Set-HpcNode [-Description <String>] [-Chassis <String>] [-DataCenter <String>] [-Role <NodeRole[]>]
  [-ManagementIpAddress <String>] [-Rack <String>] [-ProductKey <String>] [-Location <String>]
@@ -76,9 +72,7 @@ This command gets the **HpcNode** objects for all nodes in the node group named 
 
 ### -Chassis
 Specifies the chassis in which the node is located.
-If you specify the *Chassis* parameter, you must also specify the *DataCenter* and *Rack* parameters.
-
-This parameter is deprecated as of Microsoft® HPC Pack 2012.
+If you specify the *Chassis* parameter, you must also specify the *DataCenter* and *Rack* parameters. This parameter is deprecated as of Microsoft® HPC Pack 2012.
 Use the *Location* parameter instead.
 
 ```yaml
@@ -94,10 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -DataCenter
-Specifies the data center in which the node is located.
-
-This parameter is deprecated as of Microsoft® HPC Pack 2012.
-Use the *Location* parameter instead.
+Specifies the data center in which the node is located. This parameter is deprecated as of Microsoft® HPC Pack 2012. Use the *Location* parameter instead.
 
 ```yaml
 Type: String
@@ -127,17 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-Specifies the location of the node as a string with a format of \\\<DataCenter\>\[\\\<Rack\>\[\\\<Chassis\>\]\].
-
-The location must begin with a backslash (\\).
-If you specify the \<Rack\> part of the string, you must also specify the \<DataCenter\> part.
-If you specify the \<Chassis\> part of the string, you must also specify the \<Rack\> and \<DataCenter\> parts.
-Each part of the string has a maximum length of 256 characters.
-
-If you specify a location string with more than three parts, such as \center1\rack3\chassis5\location7\sublocation9, no error occurs and the location is truncated after the third part of the string.
-So, the value of \center1\rack3\chassis5\location7\sublocation9 becomes \center1\rack3\chassis5.
-
-This parameter was introduced in HPC Pack 2008 R2.
+Specifies the location of the node as a string with a format. This parameter was introduced in HPC Pack 2008 R2.
 
 ```yaml
 Type: String
@@ -263,9 +244,7 @@ Accept wildcard characters: False
 Specifies the host name or IP address of the head node for the cluster that includes the nodes.
 The value must be a valid computer name or IP address.
 If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.
-To set this environment variable, run the following cmdlet:
-
-`Set-Content Env:CCP_SCHEDULER \<head_node_name\>`
+To set this environment variable, run the following cmdlet: **Set-Content Env: CCP_CONNECTIONSTRING \<head_node_name\>**.
 
 ```yaml
 Type: String[]
@@ -350,26 +329,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-Specifies an array of cluster connection strings for the cluster to which you want to add the device drivers.
-The value format is host1,host2,host3.
-If you do not specify the *ClusterConnectionString* parameter, this cmdlet uses the connection string on the head node that the CCP_CONNECTIONSTRING environment variable specifies.
-To set this environment variable, run the following cmdlet: `Set-Content Env: CCP_CONNECTIONSTRING \<head_node_name\>`.
-
-
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -382,9 +341,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### HpcNode[]
 
 ## NOTES
-* This *DataCenter*, *Rack*, and *Chassis* parameters are deprecated as of HPC Pack 2012. Use the *Location* parameter instead.
-* If you specify the *Location* parameter for a node when you run **Set-HpcNode**, the *DataCenter*, *Rack*, and *Chassis* properties of the **HpcNode** object for the node do not get set. If you specify the *DataCenter*, *Rack*, or *Chassis* parameter when you run **Set-HpcNode**, the *Location* property of the **HpcNode** object for the node is set to the equivalent location string.
-* You must be a cluster administrator to run this cmdlet successfully.
+This *DataCenter*, *Rack*, and *Chassis* parameters are deprecated as of HPC Pack 2012. Use the *Location* parameter instead.
+If you specify the *Location* parameter for a node when you run **Set-HpcNode**, the *DataCenter*, *Rack*, and *Chassis* properties of the **HpcNode** object for the node do not get set. If you specify the *DataCenter*, *Rack*, or *Chassis* parameter when you run **Set-HpcNode**, the *Location* property of the **HpcNode** object for the node is set to the equivalent location string.
+You must be a cluster administrator to run this cmdlet successfully.
 
 ## RELATED LINKS
 

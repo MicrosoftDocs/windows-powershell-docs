@@ -48,7 +48,8 @@ The table below also shows the latest published version of the Help for each mod
 | FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fsrm) |
 | GroupPolicy | [Group Policy Cmdlets](/powershell/module/grouppolicy) |
 <!-- | Hardware Certification | [Hardware Certification Cmdlets]("https://technet.microsoft.com/library/dn296620(v=wps.630).aspx") | -->
-| HCS | [StorSimple Hybrid Cloud Storage (HCS) Cmdlets](/powershell/module/hcs) |
+| HCS | [High Performance Computing Pack](/powershell/module/hpc) |
+| HPC | [StorSimple Hybrid Cloud Storage (HCS) Cmdlets](/powershell/module/hcs) |
 | Hyper-V | [Hyper-V Cmdlets](/powershell/module/hyper-v) |
 | International | [International Settings Cmdlets](/powershell/module/international_cmdlets) |
 | IpamServer | [IPAM Cmdlets](/powershell/module/ipamserver) |

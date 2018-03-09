@@ -42,7 +42,7 @@ This command starts the application pool named DefaultAppPool.
 
 ### Example 2: Start stopped application pools
 ```
-IIS:\> Get-ChildItem IIS:\AppPools | where {$_.state -eq "Started"} | Start-WebAppPool
+IIS:\> Get-ChildItem IIS:\AppPools | where {$_.state -ne "Started"} | Start-WebAppPool
 ```
 
 This command starts the application pools that are currently stopped.

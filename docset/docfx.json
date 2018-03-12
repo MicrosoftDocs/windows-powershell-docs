@@ -187,7 +187,10 @@
       "manager": "alanth",
       "keywords": "powershell, cmdlet",
       "ms.mktglfcycl": "manage",
-      "ms.sitesec": "library"
+      "ms.sitesec": "library",
+	  "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/windows-powershell-docs",
+      "feedback_product_url": "https://windowsserver.uservoice.com/forums/301869-powershell"
     },
     "fileMetadata": {},
     "template": [],

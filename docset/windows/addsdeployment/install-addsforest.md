@@ -242,7 +242,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: NULL
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

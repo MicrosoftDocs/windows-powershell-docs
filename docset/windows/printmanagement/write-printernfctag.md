@@ -48,7 +48,7 @@ Specify the printer connection data for this cmdlet by specifying the paths of s
 
 ### Example 1: Write printer connection data to an NFC tag
 ```
-PS C:\>Write- PrinterNfcTag -SharePath "\\ServerName\PrinterName01","\\AlternateServerName\PrinterName02" -WsdAddress "PrinterHost01"
+PS C:\>Write-PrinterNfcTag -SharePath "\\ServerName\PrinterName01","\\AlternateServerName\PrinterName02" -WsdAddress "PrinterHost01"
 ```
 
 This command writes printer connection data to an NFC tag for the specified shared printers and the WSD printer that has the host name PrinterHost01.

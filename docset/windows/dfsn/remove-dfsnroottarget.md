@@ -46,7 +46,7 @@ For more information about DFS namespaces, see [Overview of DFS Namespaces](http
 PS C:\> Remove-DfsnRootTarget -TargetPath "\\Contoso-FS\AccountingSoftware" -Path "\\Contoso\AccountingSoftware"
 ```
 
-This command removes a DFS root target path \\\\Contoso-FS\AccountingSoftware from the DFS namespace that has the path \\\\Contoso\AccountingSoftware.
+This command removes the DFS root target path \\\\Contoso-FS\AccountingSoftware from the DFS namespace that has the path \\\\Contoso\AccountingSoftware.
 
 ## PARAMETERS
 

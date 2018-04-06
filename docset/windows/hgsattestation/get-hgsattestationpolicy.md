@@ -51,7 +51,7 @@ This command gets the policy named BaselineTpmPolicy16.
 
 ### Example 3: Get policies by type
 ```
-PS C:\> Get-HgsAttestationPolicy -PolicyType Tpm
+PS C:\> Get-HgsAttestationPolicy -PolicyType SecureBootSettings
 ```
 
 This command gets policies that have the type Tpm.

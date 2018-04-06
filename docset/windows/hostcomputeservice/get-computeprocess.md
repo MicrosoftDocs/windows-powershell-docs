@@ -89,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of compute systems that this cmdlet gets.
-The acceptable values for this parameter are: Virtual Machine and Container.
+The acceptable values for this parameter are: VirtualMachine and Container.
 
 ```yaml
 Type: ComputeProcessType[]

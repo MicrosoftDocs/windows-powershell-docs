@@ -44,7 +44,7 @@ For more information about DFS namespaces, see Overview of DFS Namespaceshttp://
 
 ## EXAMPLES
 
-### Example 1: Create a Windows Server 2008 mode DomainV2 DFS  namespaceWindows Server 2008 mode
+### Example 1: Create a Windows Server 2008 mode domain DFS namespace
 ```
 PS C:\> New-DfsnRoot -TargetPath "\\Contoso-FS\AccountingResources" -Type DomainV2 -Path "\\Contoso\AccountingResources"
 ```
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ### -EnableTargetFailback
 Indicates whether a DFS namespace uses target failback.
 If a client attempts to access a target on a server and that server is not available, the client fails over to another referral.
-If this value is $True, once the first server becomes available again, the client fails back to the first  server.
+If this value is $True, once the first server becomes available again, the client fails back to the first server.
 If this value is $False, the DFS namespace server does not require the client to fail back to the preferred server.
 
 ```yaml
@@ -212,7 +212,8 @@ Accept wildcard characters: False
 
 ### -GrantAdminAccounts
 Specifies an array of accounts.
-This cmdlet grants management permissions for the DFS namespace to the users and user groups specifies.Users can add, remove, and modify namespace folders and folder targets.
+This cmdlet grants management permissions for the DFS namespace to the users and user groups specified.
+Users can add, remove, and modify namespace folders and folder targets.
 
 ```yaml
 Type: String[]

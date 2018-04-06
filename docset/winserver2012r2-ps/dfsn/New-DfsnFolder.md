@@ -183,15 +183,19 @@ Target priority offers you the ability to classify and rank in-site targets.
 You can specify targets to receive the highest or lowest preference, and you can divide the remaining targets based on their site cost for a DFS client to connect to them.
 The acceptable values for this parameter are:
 
-- GlobalHigh: The highest priority class for a DFS target.
+- GlobalHigh.
+The highest priority class for a DFS target.
 Targets assigned this class receive global preference. 
-- SiteCostHigh: The highest site cost priority class for a DFS target.
+- SiteCostHigh.
+The highest site cost priority class for a DFS target.
 Targets assigned this class receive the most preference among targets of the same site cost for a given DFS client.
--SiteCostNormal: The middle or normal site cost priority class for a DFS target.
- 
-- SiteCostLow: The lowest site cost priority class for a DFS target.
+- SiteCostNormal.
+The middle or normal site cost priority class for a DFS target.
+- SiteCostLow.
+The lowest site cost priority class for a DFS target.
 Targets assigned this class receive the least preference among targets of the same site cost for a given DFS client.
-- GlobalLow: The lowest level of priority class for a DFS target.
+- GlobalLow.
+The lowest level of priority class for a DFS target.
 Targets assigned this class receive the least preference globally.
 
 ```yaml

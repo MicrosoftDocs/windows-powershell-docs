@@ -59,9 +59,9 @@ node3               Stopped             vlan-3              3
 ```
 
 This example stops the local cluster node.
-Before this cmdlet stops the cluster, this cmdlet drains all existing connections for up to 10 minutes.
+Before this cmdlet stops the cluster, this cmdlet drains all existing connections for up to 10 seconds.
 During that time, new connections will not be established on this node.
-Any remaining connections after the 10 minutes will be forcefully terminated.
+Any remaining connections after the 10 seconds will be forcefully terminated.
 
 ## PARAMETERS
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-Specifies the number of minutes to wait for the drain operation before stopping the cluster node.
+Specifies the number of seconds to wait for the drain operation before stopping the cluster node.
 After the time expires, the existing connections will be dropped.
 
 ```yaml

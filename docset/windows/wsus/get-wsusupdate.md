@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -UpdateId
 Specifies the update by its GUID.
-The GUID uniquely identifies the Group Policy Object (GPO).
+The GUID uniquely identifies the Windows Update package.
 
 ```yaml
 Type: Guid
@@ -208,4 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Deny-WsusUpdate](./Deny-WsusUpdate.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

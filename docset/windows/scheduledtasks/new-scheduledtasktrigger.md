@@ -89,7 +89,7 @@ The second command creates a scheduled task trigger that starts every day at 3:0
 PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -At 3am
 
 The third command registers the scheduled task Task01 to run the task action named Cmd every day at 3:00 A.M.
-PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stt
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
 This example registers a scheduled task that starts every day.
@@ -104,7 +104,7 @@ The second command creates a scheduled task trigger that starts every 3 days at 
 PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -DaysInterval 3 -At 3am
 
 The third command registers the scheduled task Task01 to run the task action named cmd every 3 days at 3:00 A.M.
-PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stt
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
 This example registers a scheduled task that starts every 3 days.
@@ -119,7 +119,7 @@ The second command creates a scheduled task trigger that starts every other Sund
 PS C:\>$Stt = New-ScheduledTaskTrigger -Weekly -WeeksInterval 2 -DaysOfWeek Sunday -At 3am
 
 The third command registers the scheduled task Task01 to run the task action named Cmd every other Sunday at 3:00 A.M.
-PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stt
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
 This example registers a scheduled task that starts every other week.
@@ -134,7 +134,7 @@ The second command creates a scheduled task trigger that starts when a user logs
 PS C:\>$Stt = New-ScheduledTaskTrigger -AtLogon
 
 The third command registers the scheduled task Task01 to run the task action named Cmd when a user logs on.
-PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stt
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
 This example registers a scheduled task that starts when a user logs on.

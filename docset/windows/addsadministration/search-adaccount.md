@@ -139,7 +139,7 @@ Patti Fuller   user
 
 This command returns all users, computers, and service accounts that will expire in the next 6 days.
 
-### Example 5: Get all accounts that have expire
+### Example 5: Get all accounts that have expired
 ```
 PS C:\> Search-ADAccount -PasswordExpired | FT Name,ObjectClass -A
 Name                        ObjectClass

@@ -56,7 +56,7 @@ For more information about DFS namespaces, see [Overview of DFS Namespaces](http
 
 ## EXAMPLES
 
-### Example 1: Create a Windows Server 2008 mode DFS namespace
+### Example 1: Create a Windows Server 2008 mode domain DFS namespace
 ```
 PS C:\> New-DfsnRoot -TargetPath "\\Contoso-FS\AccountingResources" -Type DomainV2 -Path "\\Contoso\AccountingResources"
 ```
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -GrantAdminAccounts
 Specifies an array of accounts.
-This cmdlet grants management permissions for the DFS namespace to the users and user groups specifies.
+This cmdlet grants management permissions for the DFS namespace to the users and user groups specified.
 Users can add, remove, and modify namespace folders and folder targets.
 
 ```yaml

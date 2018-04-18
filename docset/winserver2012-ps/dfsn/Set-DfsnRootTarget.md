@@ -35,7 +35,7 @@ For more information about DFS namespaces, see Overview of DFS Namespaceshttp://
 PS C:\> Set-DfsnRootTarget -Path "\\contoso.com\dfsroot" -TargetPath "\\Contoso-fs\dfsroot" -ReferralPriorityClass GlobalLow
 ```
 
-This command sets the referral priority class to a value of global low for the DFS namespace root target that has the path \\\\Contoso\AccountingSoftware and the target path \\\\Contoso-FS\AccountingSoftware.
+This command sets the referral priority class to a value of GlobalLow for the DFS namespace root target that has the path \\\\Contoso\AccountingSoftware and the target path \\\\Contoso-FS\AccountingSoftware.
 
 ## PARAMETERS
 

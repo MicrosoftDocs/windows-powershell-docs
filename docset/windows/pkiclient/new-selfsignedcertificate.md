@@ -690,7 +690,7 @@ Accept wildcard characters: False
 ```
 
 ### -Signer
-Specifies a **Certifcate** object with which this cmdlet signs the new certificate.
+Specifies a **Certificate** object with which this cmdlet signs the new certificate.
 This value must be in the Personal certificate store of the user or device.
 This cmdlet must have read access to the private key of the certificate.
 

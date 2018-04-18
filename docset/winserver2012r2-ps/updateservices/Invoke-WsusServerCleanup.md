@@ -44,7 +44,7 @@ This example runs this cmdlet on the local WSUS Server specifying the option to 
 
 ### EXAMPLE 2
 ```
-PS C:\> Get-WsusServer consoso | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
+PS C:\> Get-WsusServer contoso | Invoke-WsusServerCleanup -CleanupObsoleteComputers -CleanupObsoleteUpdates
 Obsolete Updates Deleted: 62 
 Obsolete Computers Deleted: 0
 ```

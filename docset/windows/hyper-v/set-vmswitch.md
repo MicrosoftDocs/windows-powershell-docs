@@ -98,6 +98,13 @@ This example converts a virtual switch named WA to an Internal switch.
 
 ### Example 2
 ```
+PS C:\> Set-VMSwitch VMNetwork -NetAdapterName "Ethernet 2"
+```
+
+This example attaches a virtual switch named VMNetwork to a physical ethernet adapter named Ethernet 2. This will also implicitly convert the VMNetwork switch to an external switch.
+
+### Example 3
+```
 PS C:\> Set-VMSwitch CA -DefaultFlowMinimumBandwidthAbsolute 500000000
 ```
 

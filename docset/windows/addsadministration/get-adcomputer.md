@@ -89,9 +89,11 @@ DNSHostName                        : DoesNotRequirePreAuth              : False
 dSCorePropagationData              : {3/16/2009 4:21:51 PM, 12/31/1600 4:00:01 PM}
 Enabled                            : True
 HomedirRequired                    : False
-HomePage                           : instanceType                       : 0
+HomePage                           : 
+instanceType                       : 0
 IPv4Address                        : 
-IPv6Address                        : isCriticalSystemObject             : False
+IPv6Address                        : 
+isCriticalSystemObject             : False
 isDeleted                          : 
 LastBadPasswordAttempt             : 
 LastKnownParent                    : 

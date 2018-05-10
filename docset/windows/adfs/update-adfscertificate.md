@@ -49,7 +49,7 @@ This command updates the token-signing certificate.
 Specifies the type of certificate to rollover.
 The acceptable values for this parameter are:
 
-- Token-Encryption
+- Token-Decrypting
 - Token-Signing
 
 ```yaml

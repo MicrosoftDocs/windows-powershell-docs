@@ -36,7 +36,6 @@ The table below also shows the latest published version of the Help for each mod
 | BitsTransfer | [Background Intelligent Transfer Service](/powershell/module/bitstransfer) |
 | BootEventCollector | [Boot Event Collector](/powershell/module/booteventcollector) |
 | BranchCahe | [Branch Cache](/powershell/module/branchcache) |
-| CIM | [Common Information Model](/powershell/module/cimcmdlets) |
 | ClusterAwareUpdating | [Cluster Aware Updating](/powershell/module/clusterawareupdating) |
 | ConfigCI | [Code Integrity](/powershell/module/configci) |
 | DcbQos | [Data Center Bridging Quality of Service](/powershell/module/dcbqos) |

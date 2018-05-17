@@ -30,7 +30,6 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker Cmdlets](/powershell/module/bitlocker) |
 <!-- | BitsTransfer | [BITS Cmdlets]("https://technet.microsoft.com/library/jj590836(v=wps.620).aspx") | -->
 | BranchCache | [BranchCache Cmdlets](/powershell/module/branchcache) |
-| CimCmdlets | ([CIM Cmdlets](/powershell/module/cim-cmdlets) |
 | ClusterAwareUpdating | [Cluster-Aware Updating Cmdlets](/powershell/module/clusterawareupdating) |
 | DcbQoS | [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets](/powershell/module/dcbqos) |
 | Deduplication | [Deduplication Cmdlets](/powershell/module/deduplication) |

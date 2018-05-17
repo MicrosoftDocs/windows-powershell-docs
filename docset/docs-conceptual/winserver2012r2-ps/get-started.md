@@ -31,7 +31,6 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker Cmdlets](/powershell/module/bitlocker) |
 | BitsTransfer | [Background Intelligent Transfer Service (BITS) Cmdlets](/powershell/module/bitstransfer) |
 | BranchCache | [BranchCache Cmdlets](/powershell/module/branchcache) |
-| CimCmdlets | ([CIM Cmdlets](/powershell/module/cim-cmdlets) |
 <!-- | CisAgent | [StorSimple Microsoft Azure management agent (CisAgent) Cmdlets]("https://technet.microsoft.com/library/dn715784(v=wps.630).aspx") | -->
 | ClusterAwareUpdating | [Cluster-Aware Updating Cmdlets](/powershell/module/clusterawareupdating) |
 | DcbQoS | [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets](/powershell/module/dcbqos) |

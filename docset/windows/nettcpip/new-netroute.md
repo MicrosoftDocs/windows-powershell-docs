@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetRoute.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 12/20/2016
+ms.date: 05/30/2018
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

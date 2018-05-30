@@ -67,7 +67,8 @@ PS C:\> Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
-OwnerAuth          : OwnerClearDisabled : True
+OwnerAuth          :
+OwnerClearDisabled : True
 AutoProvisioning   : Disabled
 LockedOut          : False
 SelfTest           : {191, 191, 245, 191...}

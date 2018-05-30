@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -DateTime
-Species the expiration time for the account by using a **DateTime** value.
+Specifies the expiration time for the account by using a **DateTime** value.
 Time is assumed to be local time unless otherwise specified.
 When a time value is not specified, the time is assumed to 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.

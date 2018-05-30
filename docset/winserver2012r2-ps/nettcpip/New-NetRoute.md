@@ -49,13 +49,14 @@ To determine where to forward a packet, the host or router consults a routing ta
 When TCP/IP starts, it creates entries in the routing table.
 You can add entries either manually or automatically.
 
-For more information about routing, see Chapter 5 - IP Routinghttp://technet.microsoft.com/library/bb727001.aspx (http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.
+For more information about routing, see Chapter 5 - [IP Routing](http://technet.microsoft.com/library/bb727001.aspx) in the TechNet library.
 
 ## EXAMPLES
 
 ### Example 1: Add an IP route to the routing table
 ```
-PS C:\>New-NetRoute -DestinationPrefix "10.0.0.0/24" -InterfaceIndex 12 -NextHop 192.168.0.1 PS C:\>Get-NetRoute | Format-List -Property *
+PS C:\>New-NetRoute -DestinationPrefix "10.0.0.0/24" -InterfaceIndex 12 -NextHop 192.168.0.1
+PS C:\>Get-NetRoute | Format-List -Property *
 ```
 
 This example adds a routing table entry, and then displays the properties of all the entries in the routing table.
@@ -109,7 +110,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -298,12 +299,12 @@ The cmdlet assigns the publish setting that you specify to the IP route.
 The acceptable values for this parameter are:
 
 - No.
-Do not publish or advertise IP route information in router advertisements. 
+Do not publish or advertise IP route information in router advertisements.
 - Yes.
-Publish and advertise IP route information with an infinite valid lifetime in router advertisements. 
+Publish and advertise IP route information with an infinite valid lifetime in router advertisements.
 - Age.
 Publish and advertise IP route information with a finite valid lifetime in router advertisements.
-Specify a valid lifetime by using the **ValidLifetime** parameter. 
+Specify a valid lifetime by using the **ValidLifetime** parameter.
 
 The default value is No.
 
@@ -392,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

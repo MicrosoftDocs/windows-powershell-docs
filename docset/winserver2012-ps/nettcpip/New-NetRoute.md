@@ -40,7 +40,7 @@ To make these decisions, the IP layer consults a routing table stored in memory.
 Routing table entries are created by default when TCP/IP initializes, and entries can be added either manually or automatically.
 When the computer is routing, the RouteMetric property is added to the InterfaceMetric property, described as a part of NetIPInterface.
 This total value is used to decide the pass-through interface to send the forwarded packets.
-For more information, see IP Routing on TechNethttp://technet.microsoft.com/library/bb727001.aspx.
+For more information, see [IP Routing](http://technet.microsoft.com/library/bb727001.aspx) on TechNet.
 
 Note: A gateway is a routing concept covered by the NetRoute cmdlets.
 For IP endpoints, the gateway specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable.
@@ -65,7 +65,7 @@ This example adds an IP routing table entry.
 Specifies the IP address family for the IP routing table entry.
 The acceptable values for this parameter are:
 
- -- IPv4: IPv4 route information. 
+ -- IPv4: IPv4 route information.
 
  -- IPv6: IPv6 route information.
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -183,10 +183,10 @@ Accept wildcard characters: False
 Specifies the PolicyStore value.
 The acceptable values for this parameter are:
 
- -- ActiveStore: The IP address information is currently valid. 
+ -- ActiveStore: The IP address information is currently valid.
 
  -- PersistentStore: The IP address information is persistent across reboots.
-When the computer starts, the PersistentStore settings are copied to the ActiveStore. 
+When the computer starts, the PersistentStore settings are copied to the ActiveStore.
 
 The default value is ActiveStore.
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ### -PreferredLifetime
 Specifies a preferred lifetime for the IP routing table entry.
 When not specified this parameter is set as infinite.
-This parameter uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+This parameter uses time as defined by the [TimeSpan] structure.
 
 ```yaml
 Type: TimeSpan
@@ -224,9 +224,9 @@ Specifies the Publish setting for the IP routing table entry.
 The acceptable values for this parameter are:
 
  -- No: The IP Route information is published and advertised in router advertisements with an infinite ValidLifetime.
-This is the default. 
+This is the default.
 
- -- Yes: The IP Route information is published and advertised in router advertisements with an infinite ValidLifetime. 
+ -- Yes: The IP Route information is published and advertised in router advertisements with an infinite ValidLifetime.
 
  -- Age: The IP Route information is published and advertised in router advertisements with a finite ValidLifetime.
 
@@ -280,7 +280,7 @@ Accept wildcard characters: False
 ### -ValidLifetime
 Specifies a ValidLifetime for the IP routing table entry.
 When not specified the ValidLifetime is set as infinite.
-ValidLifetime uses time as defined by the TimeSpanhttp://msdn.microsoft.com/library/system.timespan.aspx structure.
+ValidLifetime uses time as defined by the [TimeSpan] structure.
 
 ```yaml
 Type: TimeSpan
@@ -347,3 +347,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetRoute](./Set-NetRoute.md)
 
+[TimeSpan]: http://msdn.microsoft.com/library/system.timespan.aspx

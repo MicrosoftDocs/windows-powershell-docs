@@ -854,7 +854,7 @@ Accept wildcard characters: False
 ```
 
 ### -TokenLifetime
-Specifies the duration, in minutes, for which the claims that are issued to the relying party are valid.
+Specifies the duration, in minutes, for which the claims that are issued to the relying party are valid. The default TokenLifetime is 60 minutes.
 
 ```yaml
 Type: Int32

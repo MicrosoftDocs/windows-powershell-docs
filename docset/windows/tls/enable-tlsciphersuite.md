@@ -41,7 +41,7 @@ Other settings under HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Securit
 These settings can impact whether a cipher suite can be used.
 For example, disabling of SHA hashes supported by TLS disables the corresponding cipher suites.
 Additionally, applications can limit the algorithms using SSPI.
-For more information about TLS settings, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](http://support.microsoft.com/kb/KbView/245030).
+For more information about TLS settings, see [How to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](https://support.microsoft.com/kb/245030).
 
 ## EXAMPLES
 

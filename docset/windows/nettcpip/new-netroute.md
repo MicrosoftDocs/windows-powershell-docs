@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_NetRoute.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: alanth
-ms.date: 12/20/2016
+ms.date: 05/30/2018
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -58,7 +58,7 @@ For more information about routing, see Chapter 5 - [IP Routing](http://technet.
 ### Example 1: Add an IP route to the routing table
 ```
 PS C:\>New-NetRoute -DestinationPrefix "10.0.0.0/24" -InterfaceIndex 12 -NextHop 192.168.0.1
-PS C:\> Get-NetRoute | Format-List -Property *
+PS C:\>Get-NetRoute | Format-List -Property *
 ```
 
 This example adds a routing table entry, and then displays the properties of all the entries in the routing table.
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/New-CimSession) or [Get-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/Get-CimSession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -238,7 +238,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredLifetime
-Specifies a preferred lifetime, as a **TimeSpan** object, of an IP route.The cmdlet assigns the lifetime that you specify to the IP route.
+Specifies a preferred lifetime, as a **TimeSpan** object, of an IP route.
+The cmdlet assigns the lifetime that you specify to the IP route.
 To obtain a **TimeSpan** object, use the New-TimeSpan cmdlet.
 For more information, type `Get-Help New-TimeSpan`.
 The default value for a lifetime is infinite.

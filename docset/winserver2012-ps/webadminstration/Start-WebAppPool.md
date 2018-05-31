@@ -30,7 +30,7 @@ Starts the application pool named DefaultAppPool.
 
 ### -------------- EXAMPLE 2: Starting stopped Application Pools --------------
 ```
-IIS:\>Get-ChildItem IIS:\AppPools | where {$_.state -eq "Started"} | Start-WebAppPool
+IIS:\>Get-ChildItem IIS:\AppPools | where {$_.state -eq "Stopped"} | Start-WebAppPool
 ```
 
 Starts the application pools that are currently stopped.

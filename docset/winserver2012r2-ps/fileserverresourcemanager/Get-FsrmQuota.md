@@ -32,19 +32,19 @@ The **Get-FsrmQuota** cmdlet gets a File Server Resource Manager (FSRM) quota or
 
 ## EXAMPLES
 
-### Example 1: Get all quotas
+### Example 1: Get all quotas on the server
 ```
-PS C:\>Get-FsrmQuotaTemplate
+PS C:\>Get-FsrmQuota
 ```
 
-This command gets all quotas on the server.
+This command gets all quotas applied to folders on the server.
 
 ### Example 2: Get quotas by using a path
 ```
-PS C:\>Get-FsrmQuotaTemplate -Path "C:\Shares\..."
+PS C:\>Get-FsrmQuota -Path "C:\Shares\*"
 ```
 
-This command gets all of the quotas in C:\Share01 plus all of the quotas in all subfolders of C:\Share01.
+This command gets the quota on C:\Shares plus all of the quotas in all subfolders of C:\Shares.
 
 ## PARAMETERS
 
@@ -84,12 +84,10 @@ Accept wildcard characters: False
 Specifies the local folder that contains the quota.
 
 This parameter supports recursive and wildcard paths.
-To specify a recursive path, add \...
-to a path.
-For example, C:\ Share01\...
-indicates all of the quotas in C:\ Share1 plus all the quotas in any and all subfolders of C:\ Share01.
+To specify a recursive path one level deep, add an asterisk (*) to a path.
+For example, C:\Share\* indicates the quota in C:\Share plus all the quotas in any and all subfolders of C:\Share\ .
 To specify a wildcard in a path, you can add the asterisk (*) and the question mark (?) to a path.
-For example, C:\ Share01\*A indicates all of the quotas in C:\ Share01 plus all the quotas in subfolders of C:\ Share01 that have a name that begins with the letter A.
+For example, C:\Share01\A* indicates the quota in C:\Share plus all the quotas in subfolders of C:\Share\ that have a name that begins with the letter A.
 
 ```yaml
 Type: String

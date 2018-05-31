@@ -83,7 +83,7 @@ This command gets a group from the organizational unit OU=AccountDeptOU,DC=AppNC
 ### Example 4: Add a user from a domain to a group in another domain
 ```
 PS C:\> $User = Get-ADUser -Identity "CN=Chew David,OU=UserAccounts,DC=NORTHAMERICA,DC=FABRIKAM,DC=COM" -Server "northamerica.fabrikam.com"
-PS C:\> $Group = Get-ADGroup -Identity "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM -Server "europe.fabrikam.com"
+PS C:\> $Group = Get-ADGroup -Identity "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM" -Server "europe.fabrikam.com"
 PS C:\> Add-ADGroupMember -Identity $Group -Member $User -Server "europe.fabrikam.com"
 ```
 

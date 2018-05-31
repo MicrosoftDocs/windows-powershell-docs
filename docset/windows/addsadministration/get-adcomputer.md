@@ -75,7 +75,7 @@ AccountNotDelegated                : False
 AllowReversiblePasswordEncryption  : False
 BadLogonCount                      : 
 CannotChangePassword               : False
-CanonicalName                      : User01.com/Computers/ User01-srv1
+CanonicalName                      : fabrikam.com/Computers/User01-srv1
 Certificates                       : {}
 CN                                 : User01-srv1
 codePage                           : 0
@@ -84,14 +84,17 @@ Created                            : 3/16/2009 4:15:00 PM
 createTimeStamp                    : 3/16/2009 4:15:00 PM
 Deleted                            : 
 Description                        : DisplayName                        : 
-DistinguishedName                  : CN= User01-srv1,CN=Computers,DC= User01, DC=com
-DNSHostName                        : DoesNotRequirePreAuth              : False
+DistinguishedName                  : CN= User01-srv1,CN=Computers,DC=fabrikam,DC=com
+DNSHostName                        : User01-srv1
+DoesNotRequirePreAuth              : False
 dSCorePropagationData              : {3/16/2009 4:21:51 PM, 12/31/1600 4:00:01 PM}
 Enabled                            : True
 HomedirRequired                    : False
-HomePage                           : instanceType                       : 0
+HomePage                           : 
+instanceType                       : 0
 IPv4Address                        : 
-IPv6Address                        : isCriticalSystemObject             : False
+IPv6Address                        : 
+isCriticalSystemObject             : False
 isDeleted                          : 
 LastBadPasswordAttempt             : 
 LastKnownParent                    : 
@@ -99,7 +102,7 @@ LastLogonDate                      :
 localPolicyFlags                   : 0
 Location                           : NA/HQ/Building A
 LockedOut                          : False
-ManagedBy                          : CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=User01,DC=com
+ManagedBy                          : CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=fabrikam,DC=com
 MemberOf                           : {}
 MNSLogonAccount                    : False
 Modified                           : 3/16/2009 4:23:01 PM
@@ -107,7 +110,7 @@ modifyTimeStamp                    : 3/16/2009 4:23:01 PM
 msDS-User-Account-Control-Computed : 0
 Name                               : User01-srv1
 nTSecurityDescriptor               : System.DirectoryServices.ActiveDirectorySecurity
-ObjectCategory                     : CN=Computer,CN=Schema,CN=Configuration,DC=Fabrikam,DC=com
+ObjectCategory                     : CN=Computer,CN=Schema,CN=Configuration,DC=fabrikam,DC=com
 ObjectClass                        : computer
 ObjectGUID                         : 828306a3-8ccd-410e-9537-e6616662c0b0
 objectSid                          : S-1-5-21-41432690-3719764436-1984117282-1130
@@ -119,7 +122,7 @@ PasswordExpired                    : False
 PasswordLastSet                    : 
 PasswordNeverExpires               : False
 PasswordNotRequired                : False
-PrimaryGroup                       : CN=Domain Computers,CN=Users,DC=User01,DC=com
+PrimaryGroup                       : CN=Domain Computers,CN=Users,DC=fabrikam,DC=com
 primaryGroupID                     : 515
 ProtectedFromAccidentalDeletion    : False
 pwdLastSet                         : 0
@@ -127,8 +130,8 @@ SamAccountName                     : User01-srv1$
 sAMAccountType                     : 805306369
 sDRightsEffective                  : 0
 ServiceAccount                     : {}
-servicePrincipalName               : {MSOLAPSVC.3/User01-SRV1.User01.COM:analyze, MSSQLSVC/User01-SRV1.User01.COM:1456}
-ServicePrincipalNames              : {MSOLAPSVC.3/User01-SRV1.User01.COM:analyze, MSSQLSVC/User01-SRV1.User01.COM:1456}
+servicePrincipalName               : {MSOLAPSVC.3/User01-SRV1.fabrikam.com:analyze, MSSQLSVC/User01-SRV1.fabrikam.com:1456}
+ServicePrincipalNames              : {MSOLAPSVC.3/User01-SRV1.fabrikam.com:analyze, MSSQLSVC/User01-SRV1.fabrikam.com:1456}
 SID                                : S-1-5-21-41432690-3719764436-1984117282-1130
 SIDHistory                         : {}
 TrustedForDelegation               : False

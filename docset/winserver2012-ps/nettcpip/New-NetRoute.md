@@ -205,7 +205,8 @@ Accept wildcard characters: False
 ### -PreferredLifetime
 Specifies a preferred lifetime for the IP routing table entry.
 When not specified this parameter is set as infinite.
-This parameter uses time as defined by the [TimeSpan] structure.
+This parameter uses time as defined by the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure.
+
 
 ```yaml
 Type: TimeSpan
@@ -280,7 +281,7 @@ Accept wildcard characters: False
 ### -ValidLifetime
 Specifies a ValidLifetime for the IP routing table entry.
 When not specified the ValidLifetime is set as infinite.
-ValidLifetime uses time as defined by the [TimeSpan] structure.
+ValidLifetime uses time as defined by the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure.
 
 ```yaml
 Type: TimeSpan
@@ -347,4 +348,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetRoute](./Set-NetRoute.md)
 
-[TimeSpan]: http://msdn.microsoft.com/library/system.timespan.aspx
+[TimeSpan](http://msdn.microsoft.com/library/system.timespan.aspx)

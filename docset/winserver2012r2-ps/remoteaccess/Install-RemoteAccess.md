@@ -7,7 +7,7 @@ description:
 keywords: powershell, cmdlet
 author: brianlic
 manager: alanth
-ms.date: 2017-12-05
+ms.date: 2018-05-31
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -18,6 +18,8 @@ ms.assetid: 7E7DDD35-D252-4E9D-9399-B5D1AD1107D9
 
 ## SYNOPSIS
 Performs prerequisite checks for DirectAccess (DA) to ensure that it can be installed, installs DA for remote access (RA) (includes management of remote clients) or for management of remote clients only, and installs VPN (both Remote Access VPN and site-to-site VPN).
+
+The RemoteAccess Windows PowerShell module is a role administration tool for the Routing feature. You can install the Routing feature with management tools (Install-WindowsFeature -Name Routing -IncludeManagementTools) to make the Install-RemoteAccess cmdlet available.
 
 ## SYNTAX
 

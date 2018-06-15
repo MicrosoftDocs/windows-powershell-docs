@@ -214,16 +214,12 @@ Specifies the **PolicyStore** value.
 The cmdlet assigns the **PolicyStore** value that you specify to the IP route.
 The acceptable values for this parameter are:
 
-- ActiveStore.
-The IP address information is valid. 
-- PersistentStore.
-The computer saves IP address information across restarts.
-When the computer restarts, it copies the saved settings to the ActiveStore. 
+- ActiveStore. Current routing information, used by the OS.
+When a computer reboots, information in this store is lost.
+- PersistentStore. Routing information in this store preserved across reboots.
+When a computer starts, it copies the saved settings from this store to the ActiveStore. 
 
-The default value is ActiveStore.
-Specify ActiveStore only.
-
-If you do not specify this parameter, the default entries are created in both the ActiveStore and the PersistentStore.
+By default, a route is saved in both stores. Use this parameter only when you need to create a route in just the ActiveStore.
 
 ```yaml
 Type: String

@@ -105,18 +105,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-### System.String
 **Microsoft.SystemInsights.Management.PowerShell.Capability**
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
-### System.Object
+
+## OUTPUTS
 **Microsoft.SystemInsights.Management.PowerShell.CapabilitySchedule**
 
 The cmdlet returns one or more objects that represent the specified capbility schedules.
-
-## OUTPUTS
-**None**
 
 ## RELATED LINKS
 [Get-InsightsCapability](get-insightscapability.md)<br>

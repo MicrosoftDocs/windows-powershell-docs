@@ -54,7 +54,7 @@ This example uses the **Get-InsightsCapability** and the pipeline operator to ge
 
 ### Example 3
 ```powershell
-PS C:\> Get-InsightsCapability -Name "CPU capacity forecasting" -History
+PS C:\> Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
 ```
 
 This example uses the **History** parameter to get the most last 30 results for the **CPU capacity forecasting** capability.

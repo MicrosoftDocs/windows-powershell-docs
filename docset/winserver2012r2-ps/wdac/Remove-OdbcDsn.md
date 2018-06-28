@@ -37,7 +37,7 @@ Remove-OdbcDsn [-PassThru] [-Name] <String> [-DriverName <String>] [-Platform <S
 ## DESCRIPTION
 The **Remove-OdbcDsn** cmdlet removes Open Database Connectivity (ODBC) data source names (DSNs) from the computer.
 
-For more information about ODBC, data source names, and drivers, see Microsoft Open Database Connectivity (ODBC)http://msdn.microsoft.com/en-us/library/ms710252.aspx (http://msdn.microsoft.com/en-us/library/ms710252.aspx), Data Sourceshttp://msdn.microsoft.com/en-us/library/ms711688.aspx (http://msdn.microsoft.com/en-us/library/ms711688.aspx), and Drivershttp://msdn.microsoft.com/en-us/library/ms715383.aspx (http://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
+For more information about ODBC, data source names, and drivers, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx), [Data Sources](http://msdn.microsoft.com/en-us/library/ms711688.aspx), and [Drivers](http://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -254,7 +254,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShellï¿½ calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

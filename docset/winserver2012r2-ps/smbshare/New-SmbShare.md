@@ -352,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityDescriptor
-{{Fill SecurityDescriptor Description}}
+Specifies the security descriptor for the SMB share in string format.
 
 ```yaml
 Type: String

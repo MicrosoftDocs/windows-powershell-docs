@@ -49,6 +49,13 @@ PS C:\> Unregister-ScheduledTask -TaskName "HardwareInventory"
 This command unregisters a task named HardwareInventory in the root folder.
 You must confirm the action before the command performs it.
 
+### Example 2: Unregister a task in the Event Viewer Tasks
+```
+PS C:\> Unregister-ScheduledTask -TaskPath '\Event Viewer Tasks\' -TaskName 'ForwardedEvents' -Confirm:$false
+```
+This command unregisters a task named ForwardedEvents in the Event Viewer Tasks folder.
+You won't have to confirm on this action.
+
 ## PARAMETERS
 
 ### -AsJob

@@ -80,7 +80,7 @@ Configures virtual machine TestVM, enabling compatibility for running older oper
 
 ### Example 4
 ```
-PS C:\> Set-VMProcessor TestVM ExposeVirtualizationExtensions $true
+PS C:\> Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
 ```
 
 Configures virtual machine TestVM, enabling embedded Hyper-V.Uu

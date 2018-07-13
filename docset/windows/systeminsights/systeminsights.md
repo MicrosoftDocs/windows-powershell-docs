@@ -25,7 +25,7 @@ ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
 >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Description
-The System Insights module contains the PowerShell cmdlets for [System Insights](https://aka.ms/SystemInsights). 
+The System Insights module contains the PowerShell cmdlets for [System Insights](https://aka.ms/SystemInsights), a predictive analytics feature for Windows Server 2019. 
 
 ## systeminsights Cmdlets
 ### [Add-InsightsCapability](Add-InsightsCapability.md)

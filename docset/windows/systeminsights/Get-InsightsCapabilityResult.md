@@ -54,7 +54,7 @@ This example uses the **Get-InsightsCapability** and the pipeline operator to ge
 
 ### Example 3
 ```powershell
-PS C:\> Get-InsightsCapability -Name "CPU capacity forecasting" -History
+PS C:\> Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
 ```
 
 This example uses the **History** parameter to get the most last 30 results for the **CPU capacity forecasting** capability.
@@ -127,18 +127,15 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-### System.String
 **Microsoft.SystemInsights.Management.PowerShell.Capability**
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
-### System.Object
+
+## OUTPUTS
 **Microsoft.SystemInsights.Management.PowerShell.CapabilityResult**
 
 The cmdlet returns one or more objects that represent the specified capbility results.
-
-## OUTPUTS
-**None**
 
 ## RELATED LINKS
 [Get-InsightsCapability](get-insightscapability.md)<br>

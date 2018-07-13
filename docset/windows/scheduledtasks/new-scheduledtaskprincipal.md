@@ -56,7 +56,7 @@ The second command creates a scheduled task principal. The **New-ScheduledTaskPr
 PS C:\>$STPrin = New-ScheduledTaskPrincipal -UserId "LOCALSERVICE" -LogonType ServiceAccount
 
 The third command registers the scheduled task Task01 to run the task action named Cmd. The **Principal** parameter specifies that the Task Scheduler uses the Local Service account to run the task. 
-PS C:\>Register-ScheduledTask Task01 -Action $a -Principal $p
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Principal $STPrin
 ```
 
 This example registers a scheduled task that will run as the Local Service account.

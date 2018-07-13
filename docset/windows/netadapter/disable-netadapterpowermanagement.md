@@ -64,7 +64,7 @@ The second command disables the network adapter that is in the $NetAdapter1 vari
 
 ### Example 3: Disable power management on the specified network adapter and do not restart it
 ```
-PS C:\> Disable-NetAdapterManagement -Name "Ethernet 4" -NoRestart
+PS C:\> Disable-NetAdapterPowerManagement -Name "Ethernet 4" -NoRestart
 ```
 
 This command disables power management on the network adapter named Ethernet 4 and specifies that the network adapter is not restarted.

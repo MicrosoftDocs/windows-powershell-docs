@@ -277,6 +277,8 @@ If you are installing roles or features on an offline VHD, you must use a mounte
 It is not necessary to mount the WIM file for installing on a running physical computer, because a WIM is mounted internally for deployments to a physical computer.
 Specify the path by using a local relative path, or by using built-in environment variables that are prefixed with the `$env` tag as shown in the following examples.
 
+If this parameter is used in combination with the -ComputerName parameter, the source path must be accessible by the target computer (e.g. local devices/drives/paths on the client system will cause the installation to fail).
+
 The path specified in this parameter is only used if the command cannot find feature files in the local side-by-side store of the specified target computer or VHD.
 The command searches for feature files in the following order:
 

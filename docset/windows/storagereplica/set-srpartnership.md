@@ -56,7 +56,7 @@ You can also change the direction of replication which makes a source volume int
 
 ### Example 1: Reverse replication direction
 ```
-PS C:\>Set-SRPartnership -NewSourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup" -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01"
+PS C:\>Set-SRPartnership -NewSourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01"
 Confirm
 Are you sure you want to perform this action? 
 Performing operation "Set Source Replication Group" to replication group ReplicationGroup02. This may

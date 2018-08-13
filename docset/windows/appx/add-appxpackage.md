@@ -117,8 +117,8 @@ Accept wildcard characters: False
 
 ### -DependencyPath
 Specifies an array of file paths of dependency packages that  are required for the installation of the app package.
-The app package has an .appx or .appxbundle file name extension.
-You can specify the paths to more than one dependency package.
+The app package has an .appx or .appxbundle file name extension. You can specify the paths to more than one dependency package.
+If a package is already installed for a user, you can skip adding it to the DependencyPath.
 
 ```yaml
 Type: String[]

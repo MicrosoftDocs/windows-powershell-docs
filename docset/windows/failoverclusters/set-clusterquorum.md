@@ -50,7 +50,7 @@ This example changes the quorum configuration to Node Majority on the local clus
 
 ### Example 2
 ```
-PS C:\> Set-ClusterQuorum -NodeAndDiskMajority "Cluster Disk 7"
+PS C:\> Set-ClusterQuorum -DiskWitness "Cluster Disk 7"
 Cluster                    QuorumResource                  QuorumType 
 -------                    --------------                  ---------- 
 cluster1                   Cluster Disk 7         NodeAndDiskMajority

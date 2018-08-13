@@ -28,7 +28,7 @@ The table below also shows the latest published version of the Help for each mod
 | AppBackgroundTask | [App Background Task](/powershell/module/appbackgroundtask) |
 | AppLocker | [AppLocker](/powershell/module/applocker) |
 | AppvClient | [App-V Client](/powershell/module/appvclient) |
-| AppvSequencer | [App-V Sequencer](/powershell/module//powershell/module/appvsequencer) |
+| AppvSequencer | [App-V Sequencer](/powershell/module/appvsequencer) |
 | Appx | [Appx](/powershell/module/appx) |
 | AssignedAccess | [Assigned Access](/powershell/module/assignedaccess) |
 | BestPractices | [Best Practices Analyser](/powershell/module/bestpractices) |

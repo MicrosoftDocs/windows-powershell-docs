@@ -68,14 +68,14 @@ This command sets the teaming mode of the team named Team1 to LACP.
 
 ### Example 2: Set the load balancing algorithm
 ```
-PS C:\> Set-NetLbfoTeam -Name "Team1" -LoadBalancingAlgorithm HyperVPorts
+PS C:\> Set-NetLbfoTeam -Name "Team1" -LoadBalancingAlgorithm HyperVPort
 ```
 
 This command sets the load balancing algorithm of the team named Team1 to HyperVPorts.
 
 ### Example 3: Set the teaming mode and load balancing algorithm
 ```
-PS C:\> Set-NetLbfoTeam -Name "Team1" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPorts
+PS C:\> Set-NetLbfoTeam -Name "Team1" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPort
 ```
 
 This command sets the teaming mode and load balancing algorithm of the team named Team1 at the same time.

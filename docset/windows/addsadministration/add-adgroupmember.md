@@ -84,7 +84,7 @@ This command gets a group from the organizational unit OU=AccountDeptOU,DC=AppNC
 ```
 PS C:\> $User = Get-ADUser -Identity "CN=Chew David,OU=UserAccounts,DC=NORTHAMERICA,DC=FABRIKAM,DC=COM" -Server "northamerica.fabrikam.com"
 PS C:\> $Group = Get-ADGroup -Identity "CN=AccountLeads,OU=UserAccounts,DC=EUROPE,DC=FABRIKAM,DC=COM" -Server "europe.fabrikam.com"
-PS C:\> Add-ADGroupMember -Identity $Group -Member $User -Server "europe.fabrikam.com"
+PS C:\> Add-ADGroupMember -Identity $Group -Members $User -Server "europe.fabrikam.com"
 ```
 
 This command adds the user CN=Chew David,OU=UserAccounts from the North America domain to the group CN=AccountLeads,OU=UserAccounts in the Europe domain.

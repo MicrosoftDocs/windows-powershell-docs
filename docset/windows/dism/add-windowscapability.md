@@ -26,15 +26,14 @@ Installs a Windows capability package on the specified operating system image.
 
 ### Online
 ```
-Add-WindowsCapability -Name <String> [-LimitAccess] [-Source <String[]>] [-Online] [-WindowsDirectory <String>]
+Add-WindowsCapability -Online -Name <String> [-LimitAccess] [-Source <String[]>] [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
 ### Offline
 ```
-Add-WindowsCapability -Name <String> [-LimitAccess] [-Source <String[]>] -Path <String>
- [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
+Add-WindowsCapability -Path <String> -Name <String> [-Source <String[]>] [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
  [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
 
@@ -191,8 +190,7 @@ You can specify the Windows directory of a mounted image or a running Windows in
 If you specify multiple *Source* arguments, the files are gathered from the first location where they are found and the rest of the locations are ignored.
 Separate source locations with a comma.
 
-If you do not specify a *Source*, the default location set by Group Policy is used.
-Windows Update is also used for online images.
+If you do not specify a *Source*, the default location set by Group Policy is used. If that fails, Windows Update is also used for online images, if *LimitAccess* is not specified. When all fail, the cmdlet fails silently; no exceptions are thrown.
 
 *Source* can only be used when servicing images that are running at least Windows® 8 or Windows Server® 2012.
 

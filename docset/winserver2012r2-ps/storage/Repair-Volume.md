@@ -69,21 +69,34 @@ SpotFix: Takes the volume briefly offline and then fixes only issues that are lo
 PS C:\>Repair-Volume -DriveLetter H -Scan
 ```
 
-This example scans drive H and reports errors only.
+This example scans the volume H: and reports errors only. It uses the `-DriveLetter` switch to designate the volume by its drive letter and `-Scan` to indicate the scanning action.
 
 ### EXAMPLE 2
 ```
-PS C:\>Repair-Volume -DriveLetter H -OfflineScanAndFix
+PS C:\>Repair-Volume -DriveLetter GHI -SpotFix
 ```
 
-This example takes drive H offline, and fixes all issues.
+This example uses the spot verifier functionality to quickly fix volumes designation G:, H: and I:. It uses the `-DriveLetter` switch to designate multiple volumes by their drive letters and `SpotFix` to indicate the quick fixing action.
 
 ### EXAMPLE 3
 ```
-PS C:\>Repair-Volume -DriveLetter H -SpotFix
+PS C:\> Get-Volume
+
+DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------             -------------- --------- ------------ ----------------- -------------      ----
+            System Reserved          NTFS           Fixed     Healthy      OK                    178.47 MB    550 MB
+C           Contoso - C              NTFS           Fixed     Healthy      OK                     41.28 GB  98.89 GB
+                                     NTFS           Fixed     Healthy      OK                     89.03 MB    481 MB
+                                     FAT32          Fixed     Healthy      OK                      70.8 MB     96 MB
+D           Contoso - D              NTFS           Fixed     Healthy      OK                     29.13 GB  67.68 GB
+E           Contoso - E              NTFS           Fixed     Healthy      OK                    148.44 GB 465.76 GB
+F           Archives                 NTFS           Fixed     Healthy      OK                    324.13 GB 465.76 GB
+
+
+PS C:\> Repair-Volume -FileSystemLabel "System Reserved" -OfflineScanAndFix
 ```
 
-This example uses the spot verifier functionality to quickly fix drive H.
+This example takes the System Reserved volume offline, and fixes all issues. This volume has no drive letters assigned to it. The first command, `Get-Volume` gives an overview of the volumes on the local computer. As the output indicates, the volume bearing the "System Reserved" label has no drive letters. Next, the `Repair-Volume` cmdlet uses the `-FileSystemLabel` switch to designate the "System Reserved" volume and the `-OfflineScanAndFix` switch indicates the volume should be taken offline and scanned in full.
 
 ## PARAMETERS
 

@@ -142,8 +142,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedAuthenticationClassReferences
-{{Fill AllowedAuthenticationClassReferences Description}}
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -157,7 +155,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedClientTypes
-{{Fill AllowedClientTypes Description}}
+Specifies allowed client types. The acceptable values for this parameter are:
+* None
+* Public
+* Confidential
 
 ```yaml
 Type: AllowedClientTypes
@@ -173,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlwaysRequireAuthentication
-{{Fill AlwaysRequireAuthentication Description}}
+Indicates to always require authentication.
 
 ```yaml
 Type: SwitchParameter
@@ -221,8 +222,6 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimsProviderName
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -360,13 +359,14 @@ Accept wildcard characters: False
 ### -EncryptionCertificateRevocationCheck
 Specifies the type of validation that should occur for the encryption certificate it is used for encrypting claims to the relying party. 
 The acceptable values for this parameter are:
---None
---CheckEndCert 
---CheckEndCertCacheOnly
---CheckChain
---CheckChainCacheOnly
---CheckChainExcludingRoot
---CheckChainExcludingRootCacheOnly
+
+- None
+- CheckEndCert 
+- CheckEndCertCacheOnly
+- CheckChain
+- CheckChainCacheOnly
+- CheckChainExcludingRoot
+- CheckChainExcludingRootCacheOnly
 
 ```yaml
 Type: String
@@ -489,7 +489,12 @@ Accept wildcard characters: False
 ```
 
 ### -IssueOAuthRefreshTokensTo
-{{Fill IssueOAuthRefreshTokensTo Description}}
+Specifies the refresh token issuance device types.
+The acceptable values for this parameter are:
+
+- NoDevice
+- WorkplaceJoinedDevices
+- AllDevices
 
 ```yaml
 Type: RefreshTokenIssuanceDeviceTypes
@@ -684,9 +689,8 @@ Accept wildcard characters: False
 Specifies the signature algorithm that the relying party uses for signing and verification.
 The acceptable values for this parameter are:
 
-http://www.w3.org/2000/09/xmldsig#rsa-sha1
-
-http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
+- http://www.w3.org/2000/09/xmldsig#rsa-sha1
+- http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 
 ```yaml
 Type: String

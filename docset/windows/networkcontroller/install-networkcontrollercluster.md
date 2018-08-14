@@ -51,8 +51,8 @@ The next step uses these node objects.
 ### Example 1: Install a Network Controller cluster in a test deployment
 ```
 PS C:\> $NodeObject = New-NetworkControllerNodeObject -Name "Node1" -Server "NCNode1" -FaultDomain "fd:/rack1/host1" -RestInterface "Ethernet"
-PS C:\> Install-NetworkControllerCluster -Node $NodeObject -ClusterAuthentication 
-NoneVersion                     : 10.0.0
+PS C:\> Install-NetworkControllerCluster -Node $NodeObject -ClusterAuthentication None 
+Version                         : 10.0.0
 Node                            : {Node1}
 ClusterAuthentication           : None
 ManagementSecurityGroup         : 
@@ -102,7 +102,7 @@ PS C:\> $Node3Certificate = Get-Item Cert:\LocalMachine\My | Get-ChildItem | whe
 PS C:\> $NodeObject1 = New-NetworkControllerNodeObject -Name "Node1" -Server "NCNode1" -FaultDomain "fd:/rack1/host1" -RestInterface "Ethernet" -Certificate $Node1Certificate
 PS C:\> $NodeObject2 = New-NetworkControllerNodeObject -Name "Node2" -Server "NCNode2" -FaultDomain "fd:/rack1/host2" -RestInterface "Ethernet" -Certificate $Node2Certificate
 PS C:\> $NodeObject3 = New-NetworkControllerNodeObject -Name "Node3" -Server "NCNode3" -FaultDomain "fd:/rack2/host3" -RestInterface "Ethernet" -Certificate $Node3Certificate
-PS C:\> $Cert = Get-Item Cert:\LocalMachine\My |  Get-ChildItem | where {$_.Subject -imatch "NCEncryption
+PS C:\> $Cert = Get-Item Cert:\LocalMachine\My |  Get-ChildItem | where {$_.Subject -imatch "NCEncryption"}
 PS C:\> Install-NetworkControllerCluster -Node @($ NodeObject1,$ NodeObject2,$ NodeObject3) -ClusterAuthentication x509-LogLocation "\\share\diagnostics" -StoreAccessCredential $Cred -CredentialEncryptionCertificate $Cert
 Version                        : 10.0.0
 Node                           : {Node1, Node2, Node3}

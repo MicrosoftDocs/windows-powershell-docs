@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: VAMT
 Module Guid: C04E5406-950F-4CB4-9C5D-3E8C952214E6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390841
@@ -10,8 +10,8 @@ Locale: en-US
 title: VAMT
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

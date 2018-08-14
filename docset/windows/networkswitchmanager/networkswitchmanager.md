@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: NetworkSwitchManager
 Module Guid: 53B60D16-69AD-4453-BF41-83EFA5AC35B8
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216365
@@ -10,8 +10,8 @@ Locale: en-US
 title: NetworkSwitchManager
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

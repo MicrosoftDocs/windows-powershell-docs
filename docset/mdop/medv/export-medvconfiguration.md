@@ -1,7 +1,7 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: brianlic
+ms.author: coreyp
 ms.prod: w10
 ms.sitesec: library
 external help file: Microsoft.Medv.Administration.Commands.Configuration.dll-Help.xml
@@ -11,7 +11,7 @@ title: Export-MedvConfiguration
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: jamiejdt
-manager: alanth 
+manager: jasgro 
 ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell

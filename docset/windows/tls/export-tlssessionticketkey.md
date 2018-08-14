@@ -1,11 +1,11 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth
+manager: jasgro
 ms.assetid: E560AA28-2179-4899-B429-727D9AB17FD1
-ms.author: brianlic
+ms.author: coreyp
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

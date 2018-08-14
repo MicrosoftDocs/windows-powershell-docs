@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: NFS
 Module Guid: 108AE179-3094-4223-91E4-B9099069017A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390807
@@ -10,8 +10,8 @@ Locale: en-US
 title: NFS
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

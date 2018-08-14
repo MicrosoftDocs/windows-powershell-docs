@@ -8,7 +8,7 @@ title: ServerMigration
 description: 
 keywords: powershell, cmdlet
 author: biranlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell

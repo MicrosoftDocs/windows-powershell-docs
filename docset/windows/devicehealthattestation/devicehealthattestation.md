@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: DeviceHealthAttestation
 Module Guid: 246C5657-1A3F-4DDA-8C64-26A0E583BBBC
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=808425
@@ -10,8 +10,8 @@ Locale: en-US
 title: DeviceHealthAttestation
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

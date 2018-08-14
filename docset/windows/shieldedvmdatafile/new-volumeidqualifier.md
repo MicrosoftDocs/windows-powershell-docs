@@ -1,12 +1,12 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth
+manager: jasgro
 Module Name: ShieldedVMDataFile
 ms.assetid: A11F462D-7241-49AA-B4F3-A5AE62B62799
-ms.author: brianlic
+ms.author: coreyp
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

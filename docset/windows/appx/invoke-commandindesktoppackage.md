@@ -1,10 +1,10 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
-manager: alanth
-ms.author: brianlic
+manager: jasgro
+ms.author: coreyp
 ms.date: 2017-05-19
 ms.prod: w10
 ms.technology: powershell-windows

@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: MPIO
 Module Guid: 2FBFFABE-343D-4DB8-AD9E-A8943F50D096
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285760
@@ -10,8 +10,8 @@ Locale: en-US
 title: MPIO
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
 ms.prod: w10

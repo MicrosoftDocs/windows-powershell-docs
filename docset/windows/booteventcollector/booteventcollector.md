@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: BootEventCollector
 Module Guid: 7E4C6113-1789-4C2D-ABAA-BEA1EF5C62E8
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=518772
@@ -10,8 +10,8 @@ Locale: en-US
 title: BootEventCollector
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

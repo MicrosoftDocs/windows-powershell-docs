@@ -1,14 +1,14 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: brianlic
+ms.author: coreyp
 ms.prod: w10
 ms.sitesec: library
 author: jamiejdt
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth 
+manager: jasgro 
 ms.assetid: 2C747213-D020-4EED-BA43-CF2AA4271BBE
 ms.date: 12/05/2016
 ms.devlang: powershell

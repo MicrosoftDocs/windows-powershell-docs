@@ -1,12 +1,12 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ShieldedVmCmdlets-help.xml
 keywords: powershell, cmdlet
-manager: alanth
+manager: jasgro
 Module Name: ShieldedVMProvisioning
 ms.assetid: B9082BC5-6746-468E-BEA4-887DCDE27F5B
-ms.author: brianlic
+ms.author: coreyp
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

@@ -1,9 +1,9 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-manager: alanth
-ms.author: brianlic
+manager: jasgro
+ms.author: coreyp
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10

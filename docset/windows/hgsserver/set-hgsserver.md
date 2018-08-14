@@ -1,12 +1,12 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
-manager: alanth
+manager: jasgro
 Module Name: HgsServer
 ms.assetid: E321F4F1-ED04-47A4-BF57-5BDA93121D5D
-ms.author: brianlic
+ms.author: coreyp
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

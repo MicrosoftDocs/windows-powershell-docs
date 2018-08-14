@@ -7,7 +7,7 @@ title: Install-WindowsFeature
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
@@ -168,13 +168,13 @@ If the parameter is not added, or no value is specified, the default value of th
 Enter a user name in one of the following formats.
 Quotation marks are optional.
 
-‚óè  "UserName"
+‚ó?  "UserName"
 
-‚óè  "Domain\User"
+‚ó?  "Domain\User"
 
-‚óè  "User@Domain.com"
+‚ó?  "User@Domain.com"
 
-‚óè   A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
+‚ó?   A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 

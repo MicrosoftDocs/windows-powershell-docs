@@ -7,7 +7,7 @@ title: New-ScheduledTaskSettingsSet
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell

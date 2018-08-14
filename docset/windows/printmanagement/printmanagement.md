@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: PrintManagement
 Module Guid: 8466AE97-2C03-4385-A501-7E74CF6BB1DF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390813
@@ -10,8 +10,8 @@ Locale: en-US
 title: PrintManagement
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: Hyper-V
 Module Guid: AF4BDDD0-8583-4FF2-84B2-A33F5C8DE8A7
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=390775
@@ -10,8 +10,8 @@ Locale: en-US
 title: Hyper-V
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

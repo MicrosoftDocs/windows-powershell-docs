@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: DirectAccessClientComponent
 Module Guid: 244F8FC0-A410-4B87-8237-7496F557E6D4
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285546
@@ -10,8 +10,8 @@ Locale: en-US
 title: DirectAccessClientComponent
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

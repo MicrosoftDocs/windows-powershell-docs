@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: ServerManager
 Module Guid: D8E0CAE9-8E9B-45BC-BFED-0AAD50938AF0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390825
@@ -10,8 +10,8 @@ Locale: en-US
 title: ServerManager
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

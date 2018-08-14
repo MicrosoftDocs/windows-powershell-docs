@@ -1,10 +1,10 @@
 ---
-author: brianlic-msft
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ProcessMitigations.dll-Help.xml
 keywords: powershell, cmdlet
-manager: alanth
-ms.author: brianlic
+manager: jasgro
+ms.author: coreyp
 ms.date: 2017-03-29
 ms.mktglfcycl: manage
 ms.prod: w10

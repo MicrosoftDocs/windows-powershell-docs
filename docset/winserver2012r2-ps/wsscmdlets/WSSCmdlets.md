@@ -8,7 +8,7 @@ title: WSSCmdlets
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell

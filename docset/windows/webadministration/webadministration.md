@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: WebAdministration
 Module Guid: 13C15630-959C-49E4-A977-758C5CC93408
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285576
@@ -10,8 +10,8 @@ Locale: en-US
 title: WebAdministration
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
 ms.prod: w10

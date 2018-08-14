@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: TroubleshootingPack
 Module Guid: D6FDB0D8-2B0F-406B-AFC6-68F60569EBDF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390837
@@ -10,8 +10,8 @@ Locale: en-US
 title: TroubleshootingPack
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

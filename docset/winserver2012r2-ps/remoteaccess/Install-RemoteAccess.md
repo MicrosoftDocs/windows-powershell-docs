@@ -6,7 +6,7 @@ title: Install-RemoteAccess
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2018-05-31
 ms.topic: reference
 ms.prod: powershell

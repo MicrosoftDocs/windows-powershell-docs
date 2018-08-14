@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: NetConnection
 Module Guid: CE4FF86E-9416-4F2D-A869-C860AC543B5E
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390795
@@ -10,8 +10,8 @@ Locale: en-US
 title: NetConnection
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

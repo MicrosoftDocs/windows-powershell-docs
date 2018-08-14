@@ -1,12 +1,12 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
-author: brianlic-msft
+ms.author: coreyp
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetQosDcbxSetting.cdxml-help.xml
 keywords: powershell, cmdlet
-manager: alanth
+manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
 ms.technology: powershell-windows

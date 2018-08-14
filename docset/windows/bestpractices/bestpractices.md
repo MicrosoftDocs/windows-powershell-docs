@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: BestPractices
 Module Guid: 5551EA86-919D-499B-948F-87305E4F2344
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285737
@@ -10,8 +10,8 @@ Locale: en-US
 title: BestPractices
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
 ms.prod: w10

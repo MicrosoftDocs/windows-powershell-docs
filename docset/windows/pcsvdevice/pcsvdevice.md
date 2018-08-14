@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: PCSVDevice
 Module Guid: 576FF287-7D01-46A3-8A88-94DF7581A2B0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390809
@@ -10,8 +10,8 @@ Locale: en-US
 title: PCSVDevice
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

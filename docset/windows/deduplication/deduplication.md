@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: Deduplication
 Module Guid: 1395ECA7-7EAF-4958-A114-FB8AB76B86CC
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390761
@@ -10,8 +10,8 @@ Locale: en-US
 title: Deduplication
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

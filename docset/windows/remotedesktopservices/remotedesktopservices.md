@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: RemoteDesktopServices
 Module Guid: 9FDB63CA-68AE-4034-A9FA-78529396C689
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=294194
@@ -10,8 +10,8 @@ Locale: en-US
 title: RemoteDesktopServices
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
 ms.prod: w10

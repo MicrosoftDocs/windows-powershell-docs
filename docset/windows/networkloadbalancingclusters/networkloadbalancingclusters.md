@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: NetworkLoadBalancingClusters
 Module Guid: 52832D3A-17D8-48FF-A5BC-F5078492ECBE
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285558
@@ -10,8 +10,8 @@ Locale: en-US
 title: NetworkLoadBalancingClusters
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
 ms.prod: w10

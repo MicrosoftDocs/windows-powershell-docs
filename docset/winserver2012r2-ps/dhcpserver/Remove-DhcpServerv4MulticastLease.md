@@ -7,7 +7,7 @@ title: Remove-DhcpServerv4MulticastLease
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell

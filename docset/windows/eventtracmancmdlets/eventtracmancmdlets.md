@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: EventTracManCmdlets
 Module Guid: 80CB11CF-96B5-4D48-84BD-F85F65DE78AE
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=524348
@@ -10,8 +10,8 @@ Locale: en-US
 title: EventTracManCmdlets
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 2017-01-05
 ms.topic: reference
 ms.prod: w10

@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: brianlic
+ms.author: coreyp
 Module Name: RemoteAccess
 Module Guid: D9D222A9-756C-41F8-B23A-2A596093216B
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390819
@@ -10,8 +10,8 @@ Locale: en-US
 title: RemoteAccess
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: brianlic-msft
-manager: alanth
+author: coreyp-at-msft
+manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
 ms.prod: w10

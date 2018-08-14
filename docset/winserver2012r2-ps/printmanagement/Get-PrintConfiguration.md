@@ -7,7 +7,7 @@ title: Get-PrintConfiguration
 description: 
 keywords: powershell, cmdlet
 author: brianlic
-manager: alanth
+manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
@@ -38,15 +38,15 @@ Get-PrintConfiguration [-PrinterObject] <CimInstance> [-CimSession <CimSession[]
 The **Get-PrintConfiguration** cmdlet gets the configuration information of the specified printer. 
 Using **Get-PrintConfiguration** cmdlet, you can manage the configuration of the following features: 
 
-â— Collate
+â—? Collate
 
-â— Color
+â—? Color
 
-â— Duplexing Mode
+â—? Duplexing Mode
 
-â— N-Up
+â—? N-Up
 
-â— Paper Size
+â—? Paper Size
 
 You cannot use wildcard characters with **Get-PrintConfiguration**.
 You can use **Get-PrintConfiguration** in a Windows PowerShell remoting session.

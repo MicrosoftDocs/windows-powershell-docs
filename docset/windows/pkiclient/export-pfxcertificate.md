@@ -83,7 +83,7 @@ This example exports a certificate from the current user store with no chain and
 ### EXAMPLE 4
 ```
 PS C:\>$a = Get-ChildItem -Path cert:\localMachine\my 
-Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99, contoso\johnj99"
+Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99"
 ```
 
 This example exports a certificate from the current machine store.
@@ -100,7 +100,7 @@ PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
 
 
 
-PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99, contoso\johnj99" -Password $mypwd
+PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99" -Password $mypwd
 ```
 
 This example exports a certificate from the current machine store.

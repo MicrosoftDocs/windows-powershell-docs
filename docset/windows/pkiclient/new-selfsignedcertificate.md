@@ -71,7 +71,7 @@ PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.c
 This example creates a self-signed S/MIME certificate in the user MY store.
 The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
 The certificate uses an RSA asymmetric key with a key size of 2048 bits.
-This certificate has the subject alternative names of patti.fuller@contosol.com and pattifuller@contoso.com.
+This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com.
 
 This command does not specify the **NotAfter** parameter.
 Therefore, the certificate expires in one year.

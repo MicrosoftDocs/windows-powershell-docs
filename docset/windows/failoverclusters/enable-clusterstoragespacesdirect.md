@@ -3,7 +3,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: coreyp
 author: coreyp-at-msft
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+description: Use this topic to help manage Storage Spaces Direct with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
@@ -20,7 +20,7 @@ ms.assetid: 0C201BC8-18B3-4AA7-BA4F-C470A24DF37C
 # Enable-ClusterStorageSpacesDirect
 
 ## SYNOPSIS
-Enables S2D.
+Enables Storage Spaces Direct on a Fail-Over Cluster.
 
 ## SYNTAX
 
@@ -54,20 +54,27 @@ The **Enable-ClusterStorageSpacesDirect** cmdlet enables highly available Storag
 ## EXAMPLES
 
 ### Example 1: Enable Storage Spaces Direct
-```
+```powershell
 PS C:\> Enable-ClusterStorageSpacesDirect -Cluster "Contoso19-C2.production.contoso.com"
 ```
 
 This command enables S2D on the cluster named Contoso19-C2.production.contoso.com.
 
 ### Example 2: Enable Storage Spaces Direct by using the pipeline
-```
+```powershell
 PS C:\> Get-Cluster -Cluster "Contoso19-C2.production.contoso.com" | Enable-ClusterStorageSpacesDirect
 ```
 
 This command gets the cluster named Contoso19-C2.production.contoso.com by using the **Get-Cluster** cmdlet.
 The command passes that cluster to the current cmdlet by using the pipeline operator.
-That cmdlet enables S2D on the cluster.
+That cmdlet enables Storage Spaces Direct on the cluster.
+
+### Example 3: Enable Storage Spaces Direct and avoid being prompted
+```powershell
+PS C:\> Enable-ClusterStorageSpacesDirect -Cluster 'Contoso19-C3.production.contoso.com -PoolFriendlyName 'Sales'
+```
+
+This command enables S3d on the cluster named Contoso19-C3.production.contoso.com and avoids being prompted. The command also sets a friendly name for the Storage Spaces Direct pool. 
 
 ## PARAMETERS
 
@@ -95,7 +102,7 @@ Accept wildcard characters: False
 
 ### -Autoconfig
 Indicates that this cmdlet that the pool should be automatically created and configured.
-When a pool already exists before S2D is enabled the *AutoConfig* parameter becomes a no-op.
+When a pool already exists before Storage Spaces Direct is enabled the *AutoConfig* parameter becomes a no-op.
 *AutoConfig* is set to true by default.
 If you do not want the pool to be automatically created, but created manually, you should set *AutoConfig* to false.
 
@@ -112,8 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -CacheDeviceModel
-Specifies a list of disk models that should be used by S2D cache.
-When this parameter is omitted the system will automatically determine which disks to use for the operation.
+Specifies a list of disk models that should be used by Storage Spaces Direct cache.
+When this parameter is omitted the system automatically determines which disks to use for the operation.
 
 ```yaml
 Type: String[]
@@ -143,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -CachePageSizeKBytes
-Specifies the page size used by S2D cache.
+Specifies the page size used by Storage Spaces Direct cache.
 This parameter is useful to control the memory footprint used to manage the pages.
 To reduce the memory overhead on systems with considerably large amounts of storage the page size can be increased to 32 kilobytes (KB) or even 64 KB.
 The default value is 16 KB, which represents a good tradeoff on most systems.
@@ -162,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -CacheState
-Specifies the S2D cache state.
+Specifies the Storage Spaces Direct cache state.
 The acceptable values for this parameter are: Enabled or Disabled.
 The default value is Enabled.
 
@@ -212,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolFriendlyName
-Specifies the friendly name of the S2D pool when it is created.
+Specifies the friendly name of the Storage Spaces Direct pool when it is created.
 
 ```yaml
 Type: String

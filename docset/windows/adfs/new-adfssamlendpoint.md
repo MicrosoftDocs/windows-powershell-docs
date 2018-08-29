@@ -38,7 +38,7 @@ The **New-AdfsSamlEndpoint** cmdlet creates a Security Assertion Markup Language
 ### Example 1: Create a SAML endpoint and assign it to a relying party
 ```
 PS C:\> $EP = New-AdfsSamlEndpoint -Binding "POST" -Protocol "SAMLAssertionConsumer" -Uri "https://fabrikam.com/saml/ac"
-PS C:\> Set-AdfsRelyingPartyTrust -Name "My application" -SamlEndpoint $EP
+PS C:\> Set-AdfsRelyingPartyTrust -TargetName "My application" -SamlEndpoint $EP
 ```
 
 The first command creates a SAML endpoint, and then stores it in the $EP variable.

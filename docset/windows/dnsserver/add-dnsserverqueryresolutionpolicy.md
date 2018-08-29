@@ -160,7 +160,7 @@ ZoneScope      : EuropeZoneScope
 PSComputerName : 
 
 The next two commands add resource records for the zone Contoso.com by using the **Add-DnsServerResourceRecord** cmdlet. The name for both records is the same, career, but the two records point to different addresses. The records also have different scopes. 
-PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "career" -IPv4Address "172.17.97.97" -ZoneScope "EuropeZoneScope -PassThru
+PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "career" -IPv4Address "172.17.97.97" -ZoneScope "EuropeZoneScope" -PassThru
 PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "career" -IPv4Address "172.21.21.21" -ZoneScope "NorthAmericaZoneScope" -PassThru
 DistinguishedName : career
 HostName          : career

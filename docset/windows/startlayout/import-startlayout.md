@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
+ms.date: 09/13/2018
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -37,12 +37,13 @@ Import-StartLayout -LayoutLiteralPath <String> -MountLiteralPath <String> [-What
 
 ## DESCRIPTION
 The **Import-StartLayout** cmdlet imports the specified layout of Start into a mounted Windows image.
-When you import a layout, it replaces the existing layout of Start.
+When you import a layout, it replaces the existing layout of Start for the default user profile. When the Windows image is booted, new users will receive the imported layout at sign-in. New users will be able to customize their default layout, but not the layout for the default user profile.
+
 Before you use this cmdlet, mount the Windows image file to import the layout into.
 
 You must have administrator rights to import a layout.
 
-The Export-StartLayout cmdlet exports layouts as .xml files, and the **Import-StartLayout** cmdlet imports only .xml files.
+In Windows 10, the Export-StartLayout cmdlet exports layouts as .xml files, and the **Import-StartLayout** cmdlet imports only .xml files.
 
 ## EXAMPLES
 

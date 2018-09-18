@@ -907,12 +907,12 @@
         },
         {
         "source_path": "docset/virtual-directory-module/medv/export-medvconfiguration.md",
-        "redirect_url": "/powershell/module/medv/export-medvconfiguration",
+        "redirect_url": "/powershell/module/medv/export-medvconfiguration?view=win-mdop2-ps",
         "redirect_document_id": false
         },
         {
         "source_path": "docset/virtual-directory-module/medv/new-medvconfiguration.md",
-        "redirect_url": "/powershell/module/medv/new-medvconfiguration",
+        "redirect_url": "/powershell/module/medv/new-medvconfiguration?view=win-mdop2-ps",
         "redirect_document_id": false
         },
         {

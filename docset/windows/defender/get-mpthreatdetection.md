@@ -48,7 +48,7 @@ PS C:\> Get-MpThreatDetection
 
 This command returns the list of past malware detections for the local computer.
 
-### Error codes
+**Error codes**
 
 The following table lists the error codes for this cmdlet in both decimal and hexadecimal format. Each hexadecimal error code has a 0x8050 prefix. Therefore, an ERROR_MP_BAD_SCANID error corresponds to error code 0x80508012. Additionally, an ERR_MP_REMOVE_FAILED error corresponds to error code 0x80508017. 
 

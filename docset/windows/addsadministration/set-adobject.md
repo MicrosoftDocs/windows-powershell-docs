@@ -493,7 +493,7 @@ To modify an object property, you must use the LDAP display name.
 You can modify more than one property by specifying a comma-separated list.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value[],   Attribute2LDAPDisplayName=value[]}`
+`-Replace @{Attribute1LDAPDisplayName=value[]; Attribute2LDAPDisplayName=value[]}`
 
 For example, if you want to replace the value 555-222-2222 with the values 555-222-1111 for Phone-Office-Other attribute (LDAP display name otherTelephone) set the *Replace* parameter as follows:
 

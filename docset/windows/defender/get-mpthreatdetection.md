@@ -50,48 +50,48 @@ This command returns the list of past malware detections for the local computer.
 
 **Error codes**
 
-The following table lists the error codes for this cmdlet in both decimal and hexadecimal format. Each hexadecimal error code has a 0x8050 prefix. Therefore, an ERROR_MP_BAD_SCANID error corresponds to error code 0x80508012. Additionally, an ERR_MP_REMOVE_FAILED error corresponds to error code 0x80508017. 
+The following table lists the error codes for this cmdlet. Each error code has a 0x8050 prefix. Therefore, an ERROR_MP_BAD_SCANID error corresponds to error code 0x80508012. Additionally, an ERR_MP_REMOVE_FAILED error corresponds to error code 0x80508017. 
 
 For a list of error codes, along with possible reasons and resolutions, see [Windows Defender Antivirus client error codes](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes) in the topic [Review event logs and error codes to troubleshoot issues with Windows Defender Antivirus](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus#windows-defender-antivirus-client-error-codes).
 
-|Symbolic Name                       | Error Number (Decimal) | Error Number (Hexadecimal) |
-|------------------------------------|------------------------|----------------------------|
-|ERROR_MP_UI_CONSOLIDATION_BASE    	 | 2152730624	          | 0x80501000                 |
-|ERROR_MP_ACTIONS_FAILED           	 | 2152730625	          | 0x80501001                 |
-|ERROR_MP_BAD_INIT_MODULES         	 | 2152759297	          | 0x80508001                 |
-|ERROR_MP_BAD_DATABASE             	 | 2152759298	          | 0x80508002                 |
-|ERROR_MP_BAD_UFS                  	 | 2152759300	          | 0x80508004                 |
-|ERROR_MP_NO_MEMORY                	 | 2152759303	          | 0x80508007                 |
-|ERROR_MP_BAD_INPUT_DATA           	 | 2152759308	          | 0x8050800C                 |
-|ERROR_MP_BAD_GLOBAL_STORAGE       	 | 2152759309	          | 0x8050800D                 |
-|ERROR_MP_OBSOLETE                 	 | 2152759310	          | 0x8050800E                 |
-|ERROR_MP_NOT_SUPPORTED            	 | 2152759311	          | 0x8050800F                 |
-|ERROR_MP_NO_MORE_ITEMS            	 | 2152759312	          | 0x80508010                 |
-|ERROR_MP_DUPLICATE_SCANID         	 | 2152759313	          | 0x80508011                 |
-|ERROR_MP_BAD_SCANID               	 | 2152759314	          | 0x80508012                 |
-|ERROR_MP_BAD_USERDB_VERSION       	 | 2152759315	          | 0x80508013                 |
-|ERROR_MP_RESTORE_FAILED           	 | 2152759316	          | 0x80508014                 |
-|ERROR_MP_FAILED_TO_SPYNET         	 | 2152759317	          | 0x80508015                 |
-|ERROR_MP_BAD_ACTION               	 | 2152759318	          | 0x80508016                 |
-|ERROR_MP_REMOVE_FAILED            	 | 2152759319	          | 0x80508017                 |
-|ERROR_MP_SCAN_ABORTED             	 | 2152759320	          | 0x80508018                 |
-|ERROR_MP_NOT_FOUND                	 | 2152759321	          | 0x80508019                 |
-|ERROR_MP_BAD_CONFIGURATION        	 | 2152759328	          | 0x80508020                 |
-|ERROR_MP_QUARANTINE_FAILED        	 | 2152759329	          | 0x80508021                 |
-|ERROR_MP_REBOOT_REQUIRED          	 | 2152759330	          | 0x80508022                 |
-|ERROR_MP_THREAT_NOT_FOUND         	 | 2152759331	          | 0x80508023                 |
-|ERROR_MP_FULL_SCAN_REQUIRED       	 | 2152759332	          | 0x80508024                 |
-|ERROR_MP_MANUAL_STEPS_REQUIRED    	 | 2152759333	          | 0x80508025                 |
-|ERROR_MP_REMOVE_NOT_SUPPORTED     	 | 2152759334	          | 0x80508026                 |
-|ERROR_MP_REMOVE_LOW_MEDIUM_DISABLED | 2152759335	          | 0x80508027                 |
-|ERR_MP_RESCAN_REQUIRED      	     | 2152759337	          | 0x80508029                 |
-|ERROR_RELO_BAD_EHANDLE            	 | 2152763393	          | 0x80509001                 |
-|ERROR_RELO_KERNEL_NOT_LOADED      	 | 2152763395	          | 0x80509003                 |
-|ERROR_MP_BADDB_OPEN               	 | 2152767489	          | 0x8050A001                 |
-|ERROR_MP_BADDB_HEADER             	 | 2152767490	          | 0x8050A002                 |
-|ERROR_MP_BADDB_OLDENGINE          	 | 2152767491	          | 0x8050A003                 |
-|ERROR_MP_BADDB_CONTENT            	 | 2152767492	          | 0x8050A004                 |
-|ERROR_MP_BADDB_NOTSIGNED          	 | 2152767493	          | 0x8050A005                 |
+|Symbolic Name                       | Error Number |
+|------------------------------------|--------------|
+|ERROR_MP_UI_CONSOLIDATION_BASE    	 | 0x80501000   |
+|ERROR_MP_ACTIONS_FAILED           	 | 0x80501001   |
+|ERROR_MP_BAD_INIT_MODULES         	 | 0x80508001   |
+|ERROR_MP_BAD_DATABASE             	 | 0x80508002   |
+|ERROR_MP_BAD_UFS                  	 | 0x80508004   |
+|ERROR_MP_NO_MEMORY                	 | 0x80508007   |
+|ERROR_MP_BAD_INPUT_DATA           	 | 0x8050800C   |
+|ERROR_MP_BAD_GLOBAL_STORAGE       	 | 0x8050800D   |
+|ERROR_MP_OBSOLETE                 	 | 0x8050800E   |
+|ERROR_MP_NOT_SUPPORTED            	 | 0x8050800F   |
+|ERROR_MP_NO_MORE_ITEMS            	 | 0x80508010   |
+|ERROR_MP_DUPLICATE_SCANID         	 | 0x80508011   |
+|ERROR_MP_BAD_SCANID               	 | 0x80508012   |
+|ERROR_MP_BAD_USERDB_VERSION       	 | 0x80508013   |
+|ERROR_MP_RESTORE_FAILED           	 | 0x80508014   |
+|ERROR_MP_FAILED_TO_SPYNET         	 | 0x80508015   |
+|ERROR_MP_BAD_ACTION               	 | 0x80508016   |
+|ERROR_MP_REMOVE_FAILED            	 | 0x80508017   |
+|ERROR_MP_SCAN_ABORTED             	 | 0x80508018   |
+|ERROR_MP_NOT_FOUND                	 | 0x80508019   |
+|ERROR_MP_BAD_CONFIGURATION        	 | 0x80508020   |
+|ERROR_MP_QUARANTINE_FAILED        	 | 0x80508021   |
+|ERROR_MP_REBOOT_REQUIRED          	 | 0x80508022   |
+|ERROR_MP_THREAT_NOT_FOUND         	 | 0x80508023   |
+|ERROR_MP_FULL_SCAN_REQUIRED       	 | 0x80508024   |
+|ERROR_MP_MANUAL_STEPS_REQUIRED    	 | 0x80508025   |
+|ERROR_MP_REMOVE_NOT_SUPPORTED     	 | 0x80508026   |
+|ERROR_MP_REMOVE_LOW_MEDIUM_DISABLED | 0x80508027   |
+|ERR_MP_RESCAN_REQUIRED      	     | 0x80508029   |
+|ERROR_RELO_BAD_EHANDLE            	 | 0x80509001   |
+|ERROR_RELO_KERNEL_NOT_LOADED      	 | 0x80509003   |
+|ERROR_MP_BADDB_OPEN               	 | 0x8050A001   |
+|ERROR_MP_BADDB_HEADER             	 | 0x8050A002   |
+|ERROR_MP_BADDB_OLDENGINE          	 | 0x8050A003   |
+|ERROR_MP_BADDB_CONTENT            	 | 0x8050A004   |
+|ERROR_MP_BADDB_NOTSIGNED          	 | 0x8050A005   |
 
 ## PARAMETERS
 

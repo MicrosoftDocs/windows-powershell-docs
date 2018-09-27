@@ -1,4 +1,7 @@
 ---
+Module Name: remotedesktop
+online version:
+schema: 2.0.0
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: coreyp
@@ -7,76 +10,86 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: 
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
-schema: 2.0.0
 title: Set-RDCertificate
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
 ---
 
 # Set-RDCertificate
 
-## SYNOPSIS
-Imports and secures a certificate to use with an RDS role.
+## Synopsis
+Imports or applies a certificate to use with an RDS role.
 
-## SYNTAX
+## Syntax
 
-### Reapply (Default)
-```
+### Reapply (default)
+```PowerShell
 Set-RDCertificate [-Role] <RDCertificateRole> [-Password <SecureString>] [-ConnectionBroker <String>] [-Force]
  [<CommonParameters>]
 ```
 
 ### Import
-```
+```PowerShell
 Set-RDCertificate [-Role] <RDCertificateRole> [-ImportPath <String>] [-Password <SecureString>]
  [-ConnectionBroker <String>] [-Force] [<CommonParameters>]
 ```
 
-## DESCRIPTION
-The **Set-RDCertificate** cmdlet imports a certificate to use with a Remote Desktop Services (RDS) role.
-The cmldet helps secure a certificate by using a secure string supplied by the user.
-You can use this cmdlet to apply a new secure string for an existing certificate.
-
-## EXAMPLES
-
-### Example 1: Import a certificate to use with RDS
+### Thumbprint
+```PowerShell
+Set-RDCertificate [-Role] <RDCertificateRole> [-Thumbprint <String>] [-ConnectionBroker <String>] [-Force]
+ [<CommonParameters>]
 ```
+
+## Description
+
+The **Set-RDCertificate** cmdlet imports a certificate or applies an installed certificate to use with a Remote Desktop Services (RDS) role. You can use this cmdlet to secure an existing certificate by using a secure string supplied by the user.
+
+## Examples
+
+### Example 1: import a certificate to use with RDS
+
+The following example imports a certificate to use with an RDS role.
+```PowerShell
 PS C:\> $Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
-This example imports a certificate to use with an RDS role.
+The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
 
-The first command uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies, and stores it in the **$Password** variable.
-For more information, type `Get-Help ConvertTo-SecureString`.
+The second part of the example specifies the file name of the certificate to use for the redirector role for the RD Connection Broker named RDCB.Contoso.com. The cmdlet uses the secure string stored in the **$Password** variable to help secure the certificate.
 
-The second command specifies the file name of the certificate to use for the redirector role for the RD Connection Broker named RDCB.Contoso.com.
-The command uses the secure string stored in the **$Password** variable to help secure the certificate.
+### Example 2: apply a secure string to a certificate
 
-### Example 2: Apply a secure string to a certificate
-```
+The following example cmdlet applies a new secure string to an RDS role certificate.
+```PowerShell
 PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
-This example applies a new secure string to a certificate used for an RDS role.
+The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable.
 
-The first command uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies, and stores it in the **$Password** variable.
+The second part of the example uses the secure string stored in the **$Password** variable to secure the certificate used for the redirector role for the RD Connection Broker named RDCB.Contoso.com.
 
-The second command uses the secure string stored in the **$Password** variable to secure the certificate used for the redirector role for the RD Connection Broker named RDCB.Contoso.com.
+### Example 3: apply an installed certificate to use with RDS
 
-## PARAMETERS
+The following example applies an existing certificate to use with an RDS role.
+```PowerShell
+PS C:\> Set-RDCertificate -Role RDRedirector -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b -ConnectionBroker "RDCB.Contoso.com"
+```
+
+The first part of the example specifies the thumbprint of the certificate to use for the RD Connection Broker's redirector role, which in this example is named "RDCB.Contoso.com." The certificate must be installed in the "localmachine\my" store on each server running the specified RDS role.
+
+## Parameters
 
 ### -ConnectionBroker
-Specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
-If you do not specify a value, the cmdlet uses the fully qualified domain name (FQDN) of the local computer.
+This parameter specifies the Remote Desktop Connection Broker (RD Connection Broker) server for a Remote Desktop deployment.
+
+If you don't specify a value, the cmdlet uses the local computer's fully qualified domain name (FQDN).
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,12 +99,12 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Performs the action without a confirmation message.
+This parameter performs the action without a confirmation message.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,12 +114,12 @@ Accept wildcard characters: False
 ```
 
 ### -ImportPath
-Specifies the location of a certificate as a file that has a .pfx extension.
+This parameter specifies the location of a certificate as a file that has a .pfx extension.
 
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,13 +129,14 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies a secure string used to help secure the certificate.
+This parameter specifies a secure string used to help secure the certificate.
+
 See the Examples section.
 
 ```yaml
 Type: SecureString
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: Reapply, Import
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies a certificate type associated with an RDS server role.
+This parameter specifies a certificate type associated with an RDS server role.
+
 The acceptable values for this parameter are:
 
 - RDGateway
@@ -143,7 +158,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RDCertificateRole
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDGateway, RDWebAccess, RDRedirector, RDPublishing
 
 Required: True
@@ -153,20 +168,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Thumbprint
+This parameter specifies the thumbprint of the certificate to use.
+
+```yaml
+Type: String
+Parameter Sets: Thumbprint
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the following common parameters: *-Debug*, *-ErrorAction*, *-ErrorVariable*, *-InformationAction*, *-InformationVariable*, *-OutVariable*, *-OutBuffer*, *-PipelineVariable*, *-Verbose*, *-WarningAction*, and *-WarningVariable*.
 
-## INPUTS
+For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-6).
 
-## OUTPUTS
+## Inputs
 
-### Null
+### None
 
-## NOTES
+## Outputs
 
-## RELATED LINKS
+### System.Object
+
+## Notes
+
+## Related links
 
 [Get-RDCertificate](./Get-RDCertificate.md)
 
 [New-RDCertificate](./New-RDCertificate.md)
 
+[about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-6)

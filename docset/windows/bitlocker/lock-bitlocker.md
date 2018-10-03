@@ -42,7 +42,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 
 ### Example 1: Lock a volume
 ```
-PS C:\> Lock-Volume -MountPoint "E:" -ForceDismount
+PS C:\> Lock-BitLocker -MountPoint "E:" -ForceDismount
 ```
 
 This command locks the BitLocker volume specified with the *MountPoint* parameter.

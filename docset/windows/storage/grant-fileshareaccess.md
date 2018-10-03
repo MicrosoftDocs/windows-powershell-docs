@@ -52,7 +52,7 @@ The **Grant-FileShareAccess** cmdlet grants access to a file share for the speci
 
 ### Example 1: Grant full access to a user
 ```
-PS C:\>Grant-FileShare -Name "SalesFiles" -AccessRight "Full" -AccountName "Contoso\Jack"
+PS C:\>Grant-FileShareAccess -Name "SalesFiles" -AccessRight "Full" -AccountName "Contoso\Jack"
 ```
 
 This command grants Jack full access to the SalesFiles file share.

@@ -617,8 +617,8 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. 
-Some acceptable values for this parameter are:
+Specifies the name of the KSP or CSP that this cmdlet uses to create the certificate. See [Cryptographic Providers](https://docs.microsoft.com/en-us/windows/desktop/SecCertEnroll/understanding-cryptographic-providers) for more information.
+Some acceptable values include:
 
 - Microsoft Software Key Storage Provider
 - Microsoft Smart Card Key Storage Provider

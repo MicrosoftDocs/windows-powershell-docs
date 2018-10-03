@@ -77,7 +77,7 @@ Gets the virtual hard drives from IDE controller 1 of virtual machine TestVM loc
 
 ### Example 4
 ```
-PS C:\> Get-VMSnapshot -VMName Test -Name 'Before applying updates' | Get-VMHardDrive
+PS C:\> Get-VMSnapshot -VMName Test -Name 'Before applying updates' | Get-VMHardDiskDrive
 ```
 
 Gets the virtual hard drives from snapshot Before applying updates of virtual machine TestVM.

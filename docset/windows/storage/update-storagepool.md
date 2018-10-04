@@ -49,9 +49,8 @@ Update-StoragePool -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-T
 ```
 
 ## DESCRIPTION
-The **Update-StoragePool** cmdlet updates the metadata of a Windows Server® 2012 storage pool to a Windows Server® 2012 R2 storage pool.
-If you upgrade Windows Server 2012 to Windows Server 2012 R2, storage pools hosted on that server continue to work, but new Storage Spaces functionality, such as storage tiers, is not available.
-This cmdlet enables new Storage Spaces functionality for a storage pool on a server that runs Windows Server 2012 R2.
+The **Update-StoragePool** cmdlet updates the metadata of a previous Windows Server® storage pool to a new Windows Server® storage pool. This is a required step for upgrading from Windows Server 2012 to either Windows Server 2012 R2, or Windows Server 2016, and from Windows Server 2012 R2 to Windows Server 2016.
+If you upgrade Windows Server without running this command, storage pools hosted on that server continue to work, but new Storage Spaces functionality, such as storage tiers, is not available. Some other functions and commands may not behave as expected, as well.
 
 ## EXAMPLES
 

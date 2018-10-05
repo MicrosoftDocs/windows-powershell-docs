@@ -30,7 +30,7 @@ Reset-NfsStatistics [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJo
 ```
 
 ## DESCRIPTION
-The **Reset-NfsStatistics** cmdlet resets (to zero) all remote procedure call (RPC) statistics that a Network File System (NFS) sever maintains.
+The **Reset-NfsStatistics** cmdlet resets (to zero) all remote procedure call (RPC) statistics that a Network File System (NFS) server maintains.
 The NFS server maintains call statistics for all RPC requests that it services.
 
 ## EXAMPLES

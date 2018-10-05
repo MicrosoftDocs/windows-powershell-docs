@@ -18,7 +18,7 @@ Get-NfsStatistics [-AsJob] [-CimSession <CimSession[]>] [-Name <String[]>] [-Pro
 ```
 
 ## DESCRIPTION
-The **Get-NfsStatistics** cmdlet gets remote procedure call (RPC) statistics that a Network File System (NFS) sever maintains for requests served over the following protocols:
+The **Get-NfsStatistics** cmdlet gets remote procedure call (RPC) statistics that a Network File System (NFS) server maintains for requests served over the following protocols:
 
 - Mount v1 protocol
 - Mount v3 protocol

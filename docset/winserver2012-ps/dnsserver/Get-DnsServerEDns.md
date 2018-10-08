@@ -8,7 +8,7 @@ ms.assetid: 64D5384C-D67A-459E-8DAF-20C426CAFC09
 # Get-DnsServerEDns
 
 ## SYNOPSIS
-Gets EDNS configuration settings on a DNS sever.
+Gets EDNS configuration settings on a DNS server.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ This cmdlet gets the EDNS settings for CacheTimeout, EnableProbes, and EnableRec
 PS C:\> Get-DnsServerEDns
 ```
 
-This command gets the EDNS settings on a local DNS sever.
+This command gets the EDNS settings on a local DNS server.
 
 ## PARAMETERS
 

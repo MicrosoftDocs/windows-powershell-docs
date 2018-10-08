@@ -118,7 +118,7 @@ Gets DNSSEC settings for a zone.
 Retrieves DNS Server Active Directory settings
 
 ### [Get-DnsServerEDns](./Get-DnsServerEDns.md)
-Gets EDNS configuration settings on a DNS sever.
+Gets EDNS configuration settings on a DNS server.
 
 ### [Get-DnsServerForwarder](./Get-DnsServerForwarder.md)
 Gets forwarder configuration settings on a DNS server.

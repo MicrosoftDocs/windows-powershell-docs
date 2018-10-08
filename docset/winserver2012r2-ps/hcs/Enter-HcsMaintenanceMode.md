@@ -38,7 +38,7 @@ Updates to disk firmware require you to disable I/O.
 PS C:\> Enter-HcsMaintenanceMode
 
 
-Maintenance mode will disrupt all IOs and sever the connection to the 
+Maintenance mode will disrupt all IOs and server the connection to the 
 azure_1 Management Portal. Entering maintenance mode will reboot both 
 controllers, which takes a few minutes to complete. Are you sure you want to enter 
 maintenance mode? 

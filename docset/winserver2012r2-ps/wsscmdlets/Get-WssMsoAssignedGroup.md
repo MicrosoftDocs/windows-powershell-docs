@@ -63,7 +63,7 @@ PrincipleName  :
 DisplayName    : Administrators
 ```
 
-This command gets the security group assigned to the user group named named Admins.
+This command gets the security group assigned to the user group named Admins.
 
 ### 1:
 ```

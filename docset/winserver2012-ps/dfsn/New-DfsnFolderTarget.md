@@ -31,7 +31,7 @@ For more information about DFS namespaces, see Overview of DFS Namespaceshttp://
 
 ## EXAMPLES
 
-### Example 1: Add a target folder target target
+### Example 1: Add a target folder target
 ```
 PS C:\> New-DfsnFolderTarget -Path "\\Contoso\AccountingResources\LegacySoftware" -TargetPath "\\Contoso-FS\Software" -ReferralPriorityClass GlobalLow
 ```

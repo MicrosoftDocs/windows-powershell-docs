@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Specifies an array of of network types for the addresses to add.
+Specifies an array of network types for the addresses to add.
 The acceptable values for this parameter are:
 
 - Provider

@@ -35,7 +35,7 @@ Get-NetAdapterVmq -InterfaceDescription <String[]> [-IncludeHidden] [-CimSession
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterVmq** cmdlet gets the virtual machine queue (VMQ) properties of of VMQ-capable network adapters.
+The **Get-NetAdapterVmq** cmdlet gets the virtual machine queue (VMQ) properties of VMQ-capable network adapters.
 VMQ is a scaling networking technology for vmswitch that hashes incoming packets based on the destination MAC address.
 
 ## EXAMPLES

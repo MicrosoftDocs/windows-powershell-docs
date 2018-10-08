@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Specifies an array of of network types for the addresses to remove.
+Specifies an array of network types for the addresses to remove.
 
 The acceptable values for this parameter are:
 

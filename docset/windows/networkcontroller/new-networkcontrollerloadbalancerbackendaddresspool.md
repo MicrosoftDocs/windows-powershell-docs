@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer with with the backend address pool is associated
+Specifies the load balancer with which the backend address pool is associated
 
 ```yaml
 Type: string

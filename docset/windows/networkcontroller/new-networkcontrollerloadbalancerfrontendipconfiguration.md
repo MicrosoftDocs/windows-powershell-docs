@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer with with the resource is associated
+Specifies the load balancer with which the resource is associated
 
 ```yaml
 Type: string

@@ -502,7 +502,7 @@ The acceptable values for this parameter are:
  -- Always: IPv6 protocol configuration that contains the UseTemporaryAddresses set to Always. 
 
  -- Counter: IPv6 protocol configuration that contains the UseTemporaryAddresses set to Counter.
-Typically used for for test purposes.
+Typically used for test purposes.
 
 ```yaml
 Type: UseTemporaryAddresses[]

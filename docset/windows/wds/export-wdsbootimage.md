@@ -54,7 +54,7 @@ The *Force* parameter specifies that the cmdlet overwrites a file that has the s
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to make sure that you export the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that that you export the correct image.
 The acceptable values for this parameter are:
 
 - ARM

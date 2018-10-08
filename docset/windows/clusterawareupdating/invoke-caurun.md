@@ -431,7 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -SeparateReboots
-Indicates that that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an Updating Run.
+Indicates that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an Updating Run.
 By default, during an updating run, all plug-ins complete the installation of updates on a cluster node before the node restarts one time.
 
 The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.

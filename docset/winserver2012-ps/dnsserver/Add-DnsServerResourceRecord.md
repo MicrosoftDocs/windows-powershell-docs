@@ -652,7 +652,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostNameAlias
-Specifies a a canonical name target for a CNAME record.
+Specifies a canonical name target for a CNAME record.
 This must be a fully qualified domain name (FQDN).
 
 ```yaml

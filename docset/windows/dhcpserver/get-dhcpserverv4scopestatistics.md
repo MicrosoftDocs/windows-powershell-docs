@@ -37,35 +37,35 @@ If you do not specify the *ScopeId* parameter, this cmdlet gets the statistics f
 
 ### Example 1: Get scope statistics for scopes on a DHCP server service
 ```
-PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpSever.contoso.com"
+PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpServer.contoso.com"
 ```
 
 This example gets the scope statistics for the scopes on the specified DHCP server service.
 
 ### Example 2: Get scope statistics for a scope on a DHCP server service
 ```
-PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpSever.contoso.com" -ScopeId 10.10.10.0
+PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpServer.contoso.com" -ScopeId 10.10.10.0
 ```
 
 This example gets the scope statistics for the specified scope on the specified DHCP server service.
 
 ### Example 3: Get scope statistics for a scope on a DHCP server service including failover
 ```
-PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpSever.contoso.com" -ScopeId 10.10.10.0 -Failover
+PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpServer.contoso.com" -ScopeId 10.10.10.0 -Failover
 ```
 
 This example gets the scope statistics including those related to failover, if the scope is part of a failover relationship, for the specified scope on the specified DHCP server service.
 
 ### Example 4: Get scope statistics for scopes on a DHCP server service including failover
 ```
-PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpSever.contoso.com" -Failover
+PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpServer.contoso.com" -Failover
 ```
 
 This example gets the scope statistics including those related to failover, if the scope is part of a failover relationship, for all of the scopes on the specified DHCP server service.
 
 ### Example 5: Get statistics for scopes on a DHCP server service which have a portion of their IP address range exhausted
 ```
-PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpSever.contoso.com" | Where-Object -FilterScript { $_.PercentageInUse -Gt 80 }
+PS C:\> Get-DhcpServerv4ScopeStatistics -ComputerName "dhcpServer.contoso.com" | Where-Object -FilterScript { $_.PercentageInUse -Gt 80 }
 ```
 
 This example gets the scope statistics for the scopes on the specified DHCP server service which have more than 80% of their IP address range exhausted.

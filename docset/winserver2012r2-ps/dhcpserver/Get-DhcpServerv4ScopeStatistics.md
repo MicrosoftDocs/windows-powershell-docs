@@ -35,35 +35,35 @@ If the **ScopeId** parameter is not specified, then this cmdlet gets the statist
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpSever.contoso.com
+PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpServer.contoso.com
 ```
 
 This example gets the scope statistics for all the scopes present on the specified DHCP server service.
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpSever.contoso.com -ScopeId 10.10.10.0
+PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpServer.contoso.com -ScopeId 10.10.10.0
 ```
 
 This example gets the scope statistics for the specified scope on the specified DHCP server service.
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpSever.contoso.com -ScopeId 10.10.10.0 -Failover
+PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpServer.contoso.com -ScopeId 10.10.10.0 -Failover
 ```
 
 This example gets the scope statistics including those related to failover, if the scope is part of a failover relationship, for the specified scope on the specified DHCP server service.
 
 ### EXAMPLE 4
 ```
-PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpSever.contoso.com -Failover
+PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpServer.contoso.com -Failover
 ```
 
 This example gets the scope statistics including those related to failover, if the scope is part of a failover relationship, for all of the scopes present on the specified DHCP server service.
 
 ### EXAMPLE 5
 ```
-PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpSever.contoso.com | Where-Object -FilterScript { $_.PercentageInUse -Gt 80 }
+PS C:\>Get-DhcpServerv4ScopeStatistics -ComputerName dhcpServer.contoso.com | Where-Object -FilterScript { $_.PercentageInUse -Gt 80 }
 ```
 
 This example gets the scope statistics for the scopes present on the specified DHCP server service, which have more than 80% of their IP address range exhausted.

@@ -473,7 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunPluginsSerially
-Indicates that that CAU scans each cluster node for applicable updates and stage the updates for each plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are used during an updating run.
+Indicates that CAU scans each cluster node for applicable updates and stage the updates for each plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are used during an updating run.
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
 Regardless of the configuration of this parameter, CAU installs the applicable updates for each plug-in sequentially.

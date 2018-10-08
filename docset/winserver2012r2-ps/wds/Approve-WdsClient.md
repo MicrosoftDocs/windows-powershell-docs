@@ -258,7 +258,7 @@ Accept wildcard characters: False
 
 ### -RequestId
 Specifies the request ID that the server that runs Windows Deployment Services allocates to a device in the Pending Device database.
-If you do not specify this parameter, the cmdlet approves all all clients in the Pending Device database.
+If you do not specify this parameter, the cmdlet approves all clients in the Pending Device database.
 
 ```yaml
 Type: UInt32

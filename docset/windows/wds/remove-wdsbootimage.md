@@ -51,7 +51,7 @@ This command removes the boot image named Fabrikam LOB setup (x86) for the x86 a
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to make sure that you remove the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that you remove the correct image.
 The acceptable values for this parameter are:
 
 - ARM

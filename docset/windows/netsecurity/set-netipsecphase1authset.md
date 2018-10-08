@@ -62,7 +62,7 @@ Set-NetIPsecPhase1AuthSet -InputObject <CimInstance[]> [-NewDisplayName <String>
 ## DESCRIPTION
 The **Set-NetIPsecPhase2AuthSet** cmdlet modifies cryptographic set properties of existing main mode cryptographic sets.
 
-This cmdlet returns one or more phase 1 authentication sets to be modified with the *Name* (default), *DisplayName* or or by association using the *DisplayGroup*, or *Group* cmdlet.
+This cmdlet returns one or more phase 1 authentication sets to be modified with the *Name* (default), *DisplayName* or by association using the *DisplayGroup*, or *Group* cmdlet.
 The sets cannot be queried by property in this cmdlet.
 The Get-NetIPsecPhase1AuthSet cmdlet returns queried rules and pipes the rules into this cmdlet.
 The remaining parameters specify the properties of this cmdlet to be modified.

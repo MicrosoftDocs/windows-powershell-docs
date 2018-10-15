@@ -31,7 +31,7 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-AutoCertificateRollover <Boolean>] [-CertificateCriticalThreshold <Int32>] [-CertificateDuration <Int32>]
  [-CertificateGenerationThreshold <Int32>] [-CertificatePromotionThreshold <Int32>]
  [-CertificateRolloverInterval <Int32>] [-CertificateThresholdMultiplier <Int32>]
- [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>]
+ [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>][-EnableOAuthDeviceFlow <Boolean>]
  [-EnableOAuthLogout <Boolean>] [-FederationPassiveAddress <String>] [-HostName <String>] [-HttpPort <Int32>]
  [-HttpsPort <Int32>] [-IntranetUseLocalClaimsProvider <Boolean>] [-TlsClientPort <Int32>] [-Identifier <Uri>]
  [-LogLevel <String[]>] [-MonitoringInterval <Int32>] [-NetTcpPort <Int32>]
@@ -490,6 +490,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -EnableOAuthDeviceFlow
+The value of $true enables the OAuth Device Flow and the $false disables it. If the value is $false then the /adfs/oauth2/devicecode and /adfs/oauth2/deviceauth endpoints will return an error response. This parameter is available in Windows Server 2019 and the default value is $true. This parameter is also available in Server 2016 with the KB 4457127 installed and the default value is $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -EnableOAuthLogout
 Enables the OAuth logout endpoint publishing in the OAuth discovery document. The OAuth logout endpoint logs out the current user from the AD FS. This parameter is available with the Windows Update KB4019472 installed. The AD FS does not support logging out a federated user from the federated identity provider when using the OAuth logout endpoint with Windows Update KB4019472 installed. The Windows Update KB4038801 makes this parameter obsolete and the value of this parameter to be always true. The Windows Update KB4038801 also adds support for logging our a federated user from the federated identity provider when using the OAuth logout endpoint.

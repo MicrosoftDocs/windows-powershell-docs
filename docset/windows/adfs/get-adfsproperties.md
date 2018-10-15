@@ -137,6 +137,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 	DeviceUsageWindowInDays                     int
 	DisplayName                                 string
 	EnableIdpInitiatedSignonPage                bool
+    EnableOauthDeviceFlow                       bool
 	EnableOauthLogout                           bool
 	ExtendedProtectionTokenCheck                Microsoft.IdentityServer.PolicyModel.Configuration.ProtectionPolicySetting
 	ExtranetLockoutEnabled                      bool

@@ -46,6 +46,12 @@ Access was denied.`
 
 This cmdlet requires that Windows PowerShell be run in administrator mode.
 
+These links may come handy :
+
+https://www.eightforums.com/threads/windows-powershell-open-elevated-in-windows-8.12626/
+
+https://www.tenforums.com/tutorials/25721-open-elevated-windows-powershell-windows-10-a.html
+
 ## EXAMPLES
 
 ### Example 1: Confirm Secure Boot

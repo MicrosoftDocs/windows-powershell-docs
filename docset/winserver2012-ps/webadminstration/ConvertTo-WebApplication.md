@@ -22,9 +22,11 @@ Converts an IIS virtual directory to an IIS Web application.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Convert a Virtual Directory to a Web Application --------------
+### EXAMPLE 1: Convert a Virtual Directory to a Web Application
 ```
-IIS:\>md $env:systemdrive\inetpub\Contoso New-WebVirtualDirectory -Site "Default Web Site" -Name ContosoVDir -physicalPath $env:systemdrive\inetpub\Contoso ConvertTo-WebApplication "IIS:\Sites\Default Web Site\ContosoVDir"
+md $env:systemdrive\inetpub\Contoso
+New-WebVirtualDirectory -Site "Default Web Site" -Name ContosoVDir -physicalPath $env:systemdrive\inetpub\Contoso 
+ConvertTo-WebApplication "IIS:\Sites\Default Web Site\ContosoVDir"
 ```
 
 This example creates a physical directory named "Contoso." It then creates a virtual directory in IIS that uses that physical directory.

@@ -72,7 +72,7 @@ This example creates a hot standby, or active-passive, failover relationship bet
 These scopes will be created on the partner DHCP server service that runs on the computer named dhcpserver2.contoso.com as part of the failover relationship creation.
 The DHCP server service that runs on the computer named dhcpserver.contoso.com will be the standby DHCP server service and the DHCP server service that runs on the computer named dhcpserver2.contoso.com will be the active DHCP server service in the failover relationship.
 
-### Example 3: Create an active-active failover relationship with specified load balacne amount
+### Example 3: Create an active-active failover relationship with specified load balance amount
 ```
 PS C:\> Add-DhcpServerv4Failover -ComputerName "dhcpserver.contoso.com" -Name "SFO-SIN-Failover" -PartnerServer "dhcpserver2.contoso.com" -ScopeId 10.10.10.0,10.20.20.0 -LoadBalancePercent 70 -MaxClientLeadTime 2:00:00 -AutoStateTransition $True -StateSwitchInterval 2:00:00
 ```

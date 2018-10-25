@@ -37,7 +37,7 @@ You can also use the cmdlet to enable an external provider in the global policy.
 
 ### Example 1: Set the primary extranet authentication policy
 ```
-PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthenticaton')
+PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthentication')
 ```
 
 This command sets the primary extranet authentication policy to forms-based or certificate-based authentication.

@@ -23,7 +23,7 @@ The Export-AdfsDeploymentSQLScript cmdlet generates the SQL scripts that can be 
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Export-AdfsDeploymentSQLScript -ScriptDestinationFolder ".\scriptfolder" -ServiceAccountName DOMAIN\adfsUser
+C:\PS>Export-AdfsDeploymentSQLScript -DestinationFolder ".\scriptfolder" -ServiceAccountName DOMAIN\adfsUser
 ```
 
 Description

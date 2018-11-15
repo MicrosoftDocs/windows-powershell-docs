@@ -28,7 +28,7 @@ Get-DnsServerCache [-ComputerName <String>] [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: MaxTTL, MaxNegativeTTL, MaxKBSize, EnablePollutionProtection, LockingPercent, StoreEmptyAuthenticationReponse.
+The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: MaxTTL, MaxNegativeTTL, MaxKBSize, EnablePollutionProtection, LockingPercent, StoreEmptyAuthenticationResponse.
 
 ## EXAMPLES
 

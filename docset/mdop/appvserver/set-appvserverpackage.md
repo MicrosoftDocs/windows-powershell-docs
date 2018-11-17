@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicDeploymentConfigurationPath
-pecifies the path to a dynamic deployment configuration file for the specified Microsoft Application Virtualization (App-V) package.
+Specifies the path to a dynamic deployment configuration file for the specified Microsoft Application Virtualization (App-V) package.
 The cmdlet uses the dynamic deployment configuration file to override the default behavior provided in the package's manifest.
 
 If you do not specify this parameter, the App-V agent assign the Default Machine Policy to the App-V package to be added.

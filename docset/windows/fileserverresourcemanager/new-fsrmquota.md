@@ -33,7 +33,7 @@ New-FsrmQuota [-Path] <String> [-Description <String>] [-Template <String>] [-Si
 ## DESCRIPTION
 The **New-FsrmQuota** cmdlet creates a File Server Resource Manager (FSRM) quota on the server.
 The quota applies to the directory and all its subdirectories (recursively).
-Quotas that you specify on folders higher in the heirarchy further restrict the quota specified on a folder.
+Quotas that you specify on folders higher in the hierarchy further restrict the quota specified on a folder.
 
 ## EXAMPLES
 

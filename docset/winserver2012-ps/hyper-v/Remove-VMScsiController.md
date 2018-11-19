@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ## OUTPUTS
 
 ### 
-None by default; **VMScsiController** if **-PassThru** is specfied.
+None by default; **VMScsiController** if **-PassThru** is specified.
 
 ## NOTES
 

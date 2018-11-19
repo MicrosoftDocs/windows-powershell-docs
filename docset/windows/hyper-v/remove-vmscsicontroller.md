@@ -202,7 +202,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ###  
-None by default; **VMScsiController** if **-PassThru** is specfied.
+None by default; **VMScsiController** if **-PassThru** is specified.
 
 ## NOTES
 

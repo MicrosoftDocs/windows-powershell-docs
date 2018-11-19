@@ -69,11 +69,13 @@ If a task has multiple triggers, Task Scheduler starts the task when any of the 
 ### Example 1: Register a scheduled task that starts a task once
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-
+```
 The second command creates a scheduled task trigger that starts the task once at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+```
 PS C:\>$Stt = New-ScheduledTaskTrigger -Once -At 3am
-
+```
 The third command registers the scheduled task Task01 to run the task action named Cmd once at 3:00 A.M.
+```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
@@ -84,11 +86,13 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ### Example 2: Register a scheduled task that starts every day
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-
+```
 The second command creates a scheduled task trigger that starts every day at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+```
 PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -At 3am
-
+```
 The third command registers the scheduled task Task01 to run the task action named Cmd every day at 3:00 A.M.
+```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
@@ -99,11 +103,13 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ### Example 3: Register a scheduled task that starts every 3 days
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-
+```
 The second command creates a scheduled task trigger that starts every 3 days at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+```
 PS C:\>$Stt = New-ScheduledTaskTrigger -Daily -DaysInterval 3 -At 3am
-
+```
 The third command registers the scheduled task Task01 to run the task action named cmd every 3 days at 3:00 A.M.
+```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
@@ -114,11 +120,13 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ### Example 4: Register a scheduled task that starts every-other week
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-
+```
 The second command creates a scheduled task trigger that starts every other Sunday at 3:00 A.M and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+```
 PS C:\>$Stt = New-ScheduledTaskTrigger -Weekly -WeeksInterval 2 -DaysOfWeek Sunday -At 3am
-
+```
 The third command registers the scheduled task Task01 to run the task action named Cmd every other Sunday at 3:00 A.M.
+```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
@@ -129,11 +137,13 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ### Example 5: Register a scheduled task that starts when a user logs on
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-
+```
 The second command creates a scheduled task trigger that starts when a user logs on, and assigns the **ScheduledTaskTrigger** object to the $Stt variable.
+```
 PS C:\>$Stt = New-ScheduledTaskTrigger -AtLogon
-
+```
 The third command registers the scheduled task Task01 to run the task action named Cmd when a user logs on.
+```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Trigger $Stt
 ```
 
@@ -160,7 +170,7 @@ Accept wildcard characters: False
 
 ### -At
 Specifies a date and time to trigger the task.
-This paramater is valid for calendar-based triggers (Once, Daily, Weekly).
+This parameter is valid for calendar-based triggers (Once, Daily, Weekly).
 
 ```yaml
 Type: DateTime

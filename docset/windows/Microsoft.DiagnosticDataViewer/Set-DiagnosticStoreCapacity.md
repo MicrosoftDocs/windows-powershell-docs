@@ -91,5 +91,6 @@ Set time capacity of the diagnostic store.
 
 ### System.String
 ## NOTES
+Requires Windows 10 version 17134 (1803) or higher
 
 ## RELATED LINKS

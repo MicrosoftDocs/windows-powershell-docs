@@ -10,6 +10,9 @@ Locale: en-US
 ## Description
 The Microsoft.DiagnosticDataViewer module provides commands for viewing and analyzing the Diagnostic Data sent by a Windows device.
 
+## Minimum Requirements
+The module requires Windows 10 version 17134 (1803) or higher.  
+
 ## Microsoft.DiagnosticDataViewer Cmdlets
 ### [Disable-DiagnosticDataViewing](Disable-DiagnosticDataViewing.md)
 Disables diagnostic data viewing.
@@ -35,4 +38,7 @@ The default time capacity is 30 days.
 
 ### [Set-DiagnosticStoreCapacity](Set-DiagnosticStoreCapacity.md)
 Sets the diagnostic store time and size capacity.
+
+## Related Links
+[Microsoft Privacy Policy](https://privacy.microsoft.com/en-us/privacy)
 

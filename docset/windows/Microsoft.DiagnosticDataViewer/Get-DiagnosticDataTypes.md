@@ -43,8 +43,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 Diagnostic data type information.
 
 ## NOTES
+Requires Windows 10 version 17134 (1803) or higher
 
 ## RELATED LINKS
 
-[https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data]()
+[About Windows Diagnostic Data](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data)
 

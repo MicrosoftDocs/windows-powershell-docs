@@ -88,5 +88,6 @@ Get configured time capacity (hours) of the Diagnostic store.
 
 ### System.String
 ## NOTES
+Requires Windows 10 version 17134 (1803) or higher
 
 ## RELATED LINKS

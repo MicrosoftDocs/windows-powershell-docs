@@ -62,7 +62,7 @@ This example resets the state of a specific physical disk.
 
 ### EXAMPLE 2
 ```powershell
-$BadDisks = (Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
+$BadDisks = Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
 Foreach ($BadDisk in $BadDisks) 
 {
   Reset-PhysicalDisk -UniqueId $BadDisk.UniqueId

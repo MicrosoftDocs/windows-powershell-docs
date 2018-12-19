@@ -20,7 +20,7 @@ ms.assetid: 92D42F54-D6E9-422B-8174-A53F8FE86017
 # Install-ADDSDomainController
 
 ## SYNOPSIS
-Installs a domain controller in Active Directory.
+Installs a new domain controller in an Active Directory domain.
 
 ## SYNTAX
 

@@ -20,7 +20,7 @@ ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
 # Install-ADDSDomain
 
 ## SYNOPSIS
-Installs an Active Directory domain configuration.
+Creates a new domain in an existing Active Directory forest.
 
 ## SYNTAX
 

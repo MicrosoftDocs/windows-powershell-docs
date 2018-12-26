@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 ### -PhysicalDisk
 Specifies physical disk.
-To obtain a **PhysicalDisk** obje3t, use the Get-PhysicalDisk cmdlet.
+To obtain a **PhysicalDisk** object, use the Get-PhysicalDisk cmdlet.
 
 ```yaml
 Type: CimInstance

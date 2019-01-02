@@ -216,7 +216,7 @@ The acceptable values for this parameter are:
 
 - ActiveStore. Current routing information, used by the OS.
 When a computer reboots, information in this store is lost.
-- PersistentStore. Routing information in this store preserved across reboots.
+- PersistentStore. Cannot be used. Routing information in this store preserved across reboots.
 When a computer starts, it copies the saved settings from this store to the ActiveStore. 
 
 By default, a route is saved in both stores. Use this parameter only when you need to create a route in just the ActiveStore.

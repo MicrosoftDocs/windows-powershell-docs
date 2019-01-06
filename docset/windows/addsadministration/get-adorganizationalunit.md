@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an Active Directory group object by providing one of the following values.
+Specifies an Active Directory organizational unit object by providing one of the following values.
 The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 

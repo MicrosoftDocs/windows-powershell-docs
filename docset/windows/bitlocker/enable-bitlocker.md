@@ -176,14 +176,14 @@ The command also specifies that this volume uses a combination of the TPM and th
 The command also specifies to encrypt the used space data on the disk, instead of the entire volume.
 When the system writes data to the volume in the future, that data is encrypted.
 
-### Example 2: Enable BitLocker with a specified recovery key
+### Example 2: Enable BitLocker with a recovery key
 ```
 PS C:\> Get-BitLockerVolume | Enable-BitLocker -EncryptionMethod Aes128 -RecoveryKeyPath "E:\Recovery\" -RecoveryKeyProtector
 ```
 
 This command gets all the BitLocker volumes for the current computer and passes pipes them to the **Enable-BitLocker** cmdlet by using the pipe operator.
 This cmdlet specifies an encryption algorithm for the volume or volumes.
-This command also specifies a path to a recovery key and indicates that these volumes use a recovery key as a key protector.
+This command also specifies a path to where the recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
 
 ### Example 3: Enable BitLocker with a specified user account
 ```

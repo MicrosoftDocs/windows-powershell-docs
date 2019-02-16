@@ -51,7 +51,7 @@ The cmdlet updates claims, endpoints, and certificates.
 
 ### Example 1: Update a relying party trust
 ```
-PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FarikamApp"
+PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FabrikamApp"
 ```
 
 This command updates the relying party trust named FabrikamApp.

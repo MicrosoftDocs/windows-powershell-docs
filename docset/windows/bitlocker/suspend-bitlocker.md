@@ -94,7 +94,7 @@ The acceptable values for this parameter are: integers from 0 to 15.
 
 Specify zero to suspend protection indefinitely until you resume it by using the **Resume-BitLocker** cmdlet.
 
-If you do not inclue this parameter, the cmdlet uses a value of one.
+If you do not include this parameter, the cmdlet uses a value of one.
 
 ```yaml
 Type: Int32

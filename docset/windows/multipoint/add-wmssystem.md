@@ -95,7 +95,7 @@ The input is an array of fully qualified host names of the computers that should
 ## OUTPUTS
 
 ### WmsSystem
-For each computer added a **WmsSystem** object is returned which contains specific infromation about the configuration and state of the MultiPoint system on that computer.
+For each computer added a **WmsSystem** object is returned which contains specific information about the configuration and state of the MultiPoint system on that computer.
 
 ## NOTES
 

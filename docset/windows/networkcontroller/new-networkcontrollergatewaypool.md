@@ -42,7 +42,7 @@ If the specified gateway pool configuration already exists with Network Controll
 PS C:\> New-NetworkControllerGatewayPool -ConnectionUri "https://networkcontroller"
 -ResourceId "GreGWPool" -Properties $greGwPoolProperties
 Confirm
-Performing the operation 'New-NetworkControllerGatewayPool' on entities of type 'Microsoft.Windows.NetworkController.GatewayPool' via 'https://networkcontroller/networking/v1/gatewaypools/GreGWPool'. Are you sure youv want to continue? 
+Performing the operation 'New-NetworkControllerGatewayPool' on entities of type 'Microsoft.Windows.NetworkController.GatewayPool' via 'https://networkcontroller/networking/v1/gatewaypools/GreGWPool'. Are you sure you want to continue? 
  [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): yes
 
 Tags             : 

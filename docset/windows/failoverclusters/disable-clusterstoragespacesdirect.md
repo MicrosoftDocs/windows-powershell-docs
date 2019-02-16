@@ -48,7 +48,7 @@ PS C:\> Get-Cluster -Cluster "Contoso19-C2.production.contoso.com" | Disable-Clu
 
 This command gets the cluster named Contoso19-C2.production.contoso.com by using the **Get-Cluster** cmdlet.
 The command passes that cluster to the current cmdlet by using the pipeline operator.
-That cmdlet rnables Storage Spaces Direct on the cluster.
+That cmdlet enables Storage Spaces Direct on the cluster.
 
 ## PARAMETERS
 

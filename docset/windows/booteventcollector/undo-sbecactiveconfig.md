@@ -42,7 +42,7 @@ You can use the *OldTimestamp* parameter to modify the configuration atomically.
 
 The restored configuration is re-checked for validity, and refused if it has become corrupted.
 
-You must have the Builtin Adminstrator privilege to run this command.
+You must have the Builtin Administrator privilege to run this command.
 
 ## EXAMPLES
 

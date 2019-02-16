@@ -106,7 +106,7 @@ If there is no certificate configured for VPN, then the cmdlet looks for an appr
 Infrastructure Server configuration. 
 - If the NLS location is not specified in the cmdlet, then it is deployed on the DA server by default.
 The cmdlet looks for a certificate for which the subject name matches the internal interface of the DA server.
-If an appropriate certificiate cannot be found, then a self-signed certificate is generated. 
+If an appropriate certificate cannot be found, then a self-signed certificate is generated. 
 - Health checks are not enabled during installation. 
 - Application servers are not configured during installation. 
 - If an IPv4 address is detected on the internal interface of the DA server, then the DNS64 or NAT64 configuration is enabled on the DA server which enables DA clients to access corporate network resources that have IPv4 address only by allotting v6 addresses to these hosts. 

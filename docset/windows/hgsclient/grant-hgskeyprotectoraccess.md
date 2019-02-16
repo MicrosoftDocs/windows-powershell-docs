@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -GuardianFriendlyName
-Specifies a freindly name for the guardian.
+Specifies a friendly name for the guardian.
 
 ```yaml
 Type: String

@@ -72,7 +72,7 @@ PS C:\>Set-NetFirewallAddressFilter -InputObject $nfwAddressFilterLS6 -RemoteAdd
 
 
 This task can be alternatively done with the following cmdlet.
-PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -Property { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewalllRule -RemoteAddress LocalSubnet4
+PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -Property { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewallRule -RemoteAddress LocalSubnet4
 ```
 
 This example gets the filter objects associated with the firewall rules with a particular remote, or second, end point belonging to the Core Networking group and modifies the second endpoint of those rules.

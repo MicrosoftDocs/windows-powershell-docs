@@ -55,7 +55,7 @@ Therefore, for this example, you would type the following:
 
 You can also set the parameter to a directory server object variable, such as `$<localDirectoryServerObject>`.
 
-The **Move-ADDirectoryServerOperationMasteRole** cmdlet provides two options for moving operation master roles:
+The **Move-ADDirectoryServerOperationMasterRole** cmdlet provides two options for moving operation master roles:
 
 **Role transfer**, which involves transferring roles to be moved by running the cmdlet using the *Identity* parameter to specify the current role holder and the *OperationMasterRole* parameter to specify the roles for transfer.
 This is the recommended option.
@@ -67,7 +67,7 @@ To specify more than one role, use a comma-separated list.
 The *Force* parameter must be used as a switch to indicate that seizure, instead of transfer, of operation master roles is being performed.
 This operation still attempts graceful transfer first, then seizes if transfer is not possible.
 
-Unlike using Ntdsutil.exe to move operation master roles, the **Move-ADDirectoryServerOperationMasteRole** cmdlet can be remotely executed from any domain joined computer where the Active Directory module for Windows PowerShell administration module is installed and available for use.
+Unlike using Ntdsutil.exe to move operation master roles, the **Move-ADDirectoryServerOperationMasterRole** cmdlet can be remotely executed from any domain joined computer where the Active Directory module for Windows PowerShell administration module is installed and available for use.
 This can make the process of moving roles simpler and easier to centrally administer as each of the two command operations required can be run remotely and do not have to be locally executed at each of the corresponding role holders involved in the movement of the roles, for instance, role transfer only allowed at the old role holder, role seizure only allowed at the new role holder.
 
 ## EXAMPLES

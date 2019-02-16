@@ -128,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### MSFT_StorageNodeToPhysicalDisk
-Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the phycial disk object and Storage node object.
+Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the physical disk object and Storage node object.
 
 ## NOTES
 

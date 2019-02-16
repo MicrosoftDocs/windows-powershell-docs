@@ -37,7 +37,7 @@ This cmdlet provides information about how the SMB multi-channel pairs the clien
 
 ### Example 1: Get connections
 ```
-PS C:\>Get-SmbMulitchannelConnection
+PS C:\>Get-SmbMultichannelConnection
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA 
                                                             Interface      Interface      Capable        Capable 
                                                             Index          Index 

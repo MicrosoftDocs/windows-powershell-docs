@@ -64,7 +64,7 @@ PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreMa
 
 
 The concise version of the same example.
-PS C:\>Set-ACertificateutoEnrollmentPolicy -EnableAll -Context User
+PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
 ```
 
 This example performs the same task in two ways.

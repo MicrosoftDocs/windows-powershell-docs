@@ -15,7 +15,7 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Convertto-HgsKeyProtector
+title: ConvertTo-HgsKeyProtector
 ---
 
 # ConvertTo-HgsKeyProtector
@@ -31,7 +31,7 @@ ConvertTo-HgsKeyProtector [-Bytes] <Byte[]> [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Convertto-HgsKeyProtector** cmdlet converts an existing key protector into a Host Guardian Service key protector object.
+The **ConvertTo-HgsKeyProtector** cmdlet converts an existing key protector into a Host Guardian Service key protector object.
 Specify the existing key protector as a byte array.
 You might use this cmdlet to import a key protector from a virtual machine configuration file.
 

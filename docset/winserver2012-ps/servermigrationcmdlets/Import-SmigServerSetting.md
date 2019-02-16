@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to decrypt the migration store.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-Securestring.
 Because the Password parameter is required, if it is not added to your command, you are prompted to specify a password after entering your command.
 
 ```yaml

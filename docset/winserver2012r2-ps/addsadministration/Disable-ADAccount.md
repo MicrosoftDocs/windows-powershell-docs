@@ -40,7 +40,7 @@ For Active Directory Lightweight Directory Services (AD LDS) environments, the *
 
 - The cmdlet is run from an Active Directory provider drive.
 - A default naming context or partition is defined for the AD LDS environment.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNaminIontext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 
 ## EXAMPLES
 

@@ -38,7 +38,7 @@ The persistent storage can be Active Directory® Domain Services or a file.
 PS C:\> Sync-DnsServerZone -Name "west02.contoso.com" -PassThru -Verbose
 ```
 
-This command synchronizes the contents of the zone named west02.conotoso.com.
+This command synchronizes the contents of the zone named west02.contoso.com.
 
 ## PARAMETERS
 

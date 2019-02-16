@@ -123,7 +123,7 @@ Accept wildcard characters: False
 
 ### -Node
 Specifies a node on which the cmdlet performs the operation.
-If you do not specifiy a value, all nodes are used.
+If you do not specify a value, all nodes are used.
 
 ```yaml
 Type: String

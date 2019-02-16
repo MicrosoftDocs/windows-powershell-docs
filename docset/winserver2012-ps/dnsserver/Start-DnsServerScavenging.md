@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Notifies the DNS server to attempt an scavange without prompting you for confirmation.
+Notifies the DNS server to attempt an scavenge without prompting you for confirmation.
 By default, the cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml

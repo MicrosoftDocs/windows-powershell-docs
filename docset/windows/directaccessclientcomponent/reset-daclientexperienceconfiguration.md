@@ -385,7 +385,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperianceConfiguration
+### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperienceConfiguration
 This cmdlet accepts as input a CIM object that contains a DA client experience configuration.
 
 ## OUTPUTS

@@ -32,7 +32,7 @@ The snapshot will not be accessible after dismount.
 
 ### Example 1
 ```
-PS C:\>Get-IscsiVirtualDiskSnasphot | Dismount-IscsiVirtualDiskSnasphot
+PS C:\>Get-IscsiVirtualDiskSnapshot | Dismount-IscsiVirtualDiskSnapshot
 ```
 
 This example gets all of the snapshot and dismounts them.

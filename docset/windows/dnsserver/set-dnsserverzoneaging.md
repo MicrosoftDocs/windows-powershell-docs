@@ -43,7 +43,7 @@ Aging settings determine when a record can be removed, or scavenged, as a stale 
 PS C:\> Set-DnsServerZoneAging west01.contoso.com -Aging $True -ScavengeServers 172.18.1.1 -PassThru -Verbose
 ```
 
-This command enables aging for a domain named west01.contoso.com and specifies a scavaging server.
+This command enables aging for a domain named west01.contoso.com and specifies a scavenging server.
 
 ## PARAMETERS
 

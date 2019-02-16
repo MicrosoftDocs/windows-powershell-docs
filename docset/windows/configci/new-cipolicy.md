@@ -54,7 +54,7 @@ If you specify the **Audit** parameter, this cmdlet scans the Code Integrity Aud
 
 ### Example 1: Create a policy
 ```
-The first command scans for driver information and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameterso that it gets information for only PE files.
+The first command scans for driver information and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
 PS C:\> New-CIPolicy -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript -FilePath '.\Policy.xml' -Level Publisher
 Scan completed successfully
 

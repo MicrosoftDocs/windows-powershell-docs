@@ -106,7 +106,7 @@ Signers      : {}
 
 This command scans the specified folder, just like the previous example.
 This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder.
-The command specifies the **NoScript** parameterso that it gets information for only PE files.
+The command specifies the **NoScript** parameter so that it gets information for only PE files.
 
 ## PARAMETERS
 

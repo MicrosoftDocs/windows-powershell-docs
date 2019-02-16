@@ -98,7 +98,7 @@ Additionally, a GPO is created with default name DirectAccess Application Server
 
 ### EXAMPLE 2
 ```
-PS C:\>Add-DAAppServer -Name da-test-0807 -SecuirtyGroupName daAppServerGrp
+PS C:\>Add-DAAppServer -Name da-test-0807 -SecurityGroupName daAppServerGrp
 SecurityGroupNameList: {corp.contoso.com\daappservergrp} 
 GpoName              : {corp.contoso.com\DirectAccess Application Server Settings} 
 ConnectionType       : E2EAuthOnlyToAppServer 

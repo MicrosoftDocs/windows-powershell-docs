@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer where the inbount NAT rule belongs
+Specifies the load balancer where the inbound NAT rule belongs
 
 ```yaml
 Type: String[]

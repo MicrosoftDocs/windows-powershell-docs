@@ -113,7 +113,7 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 ## OUTPUTS
 **Microsoft.SystemInsights.Management.PowerShell.CapabilitySchedule**
 
-The cmdlet returns one or more objects that represent the specified capbility schedules.
+The cmdlet returns one or more objects that represent the specified capability schedules.
 
 ## RELATED LINKS
 [Get-InsightsCapability](get-insightscapability.md)<br>

@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifes a secure string that contains a password.
+Specifies a secure string that contains a password.
 The password specified acts as a protector for the volume encryption key.
 
 ```yaml

@@ -22,7 +22,7 @@ Add-VMRemoteFx3dVideoAdapter [-VM] <VirtualMachine[]> [-Passthru]
 ```
 
 ## DESCRIPTION
-The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemovteFX video adapter in a virtual machine.
+The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemoteFX video adapter in a virtual machine.
 
 ## EXAMPLES
 

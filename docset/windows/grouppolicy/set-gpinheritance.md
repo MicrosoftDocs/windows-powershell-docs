@@ -42,7 +42,7 @@ You use the *Target* parameter to specify the Lightweight Directory Access Proto
 
 ### Example 1: Block inheritance for a OU in a domain
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
 Name                  : myou 
 ContainerType         : OU 
 Path                  : ou=myou,dc=contoso,dc=com 
@@ -58,7 +58,7 @@ Because inheritance is blocked, only GPOs that are linked directly to the MyOU, 
 
 ### Example 2: Unblock inheritance for a domain
 ```
-PS C:\> Set-GPinheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
+PS C:\> Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
 ```
 
 This command unblocks inheritance for the northwest.contoso.com domain.
@@ -66,7 +66,7 @@ GPOs linked to higher-level sites or domains are applied to this domain when Gro
 
 ### Example 3: Block inheritance for an OU in a domain
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
 
 Name                  : myou 
 ContainerType         : OU 

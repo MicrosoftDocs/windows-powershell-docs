@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specifies a logical operator for combining multiple values of the **ClientSubnet**, **Fdqn** and **ServerIp** parameters.
+Specifies a logical operator for combining multiple values of the **ClientSubnet**, **Fqdn** and **ServerIp** parameters.
 The values for the parameters are combined together using the *Condition* parameter as a logical operator.
 The same operator is also used for combining EQ and NE expressions within a value.
 The default value is AND.

@@ -95,7 +95,7 @@ This cmdlet is useful for removing any policy that conflicts with the domain GPO
 PS C:\>Remove-NetIPsecPhase1AuthSet -DisplayName "(DA Client) - Phase 1 Auth Set"
 ```
 
-This example deletes a set based on theee localized name.
+This example deletes a set based on the localized name.
 
 ### EXAMPLE 3
 ```

@@ -1807,7 +1807,7 @@ Accept wildcard characters: False
 Specifies the amount of time in seconds that the HPC Node Manager Service should allow applications to use to exit gracefully.
 
 In Microsoft HPC Pack, the HPC Node Manager Service stops a running task by sending a CTRL+BREAK signal to the application.
-To make use of the grace period for task cancelation, the application must include code to handle the CTRL+BREAK event.
+To make use of the grace period for task cancellation, the application must include code to handle the CTRL+BREAK event.
 If the application does not respond to the CTRL+BREAK event, it exits immediately.
 For an SOA service to use the grace period, it must respond to the ServiceContext.OnExiting event.
 

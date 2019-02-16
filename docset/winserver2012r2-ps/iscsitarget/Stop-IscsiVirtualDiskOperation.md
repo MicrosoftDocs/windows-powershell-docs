@@ -36,7 +36,7 @@ Stop-IscsiVirtualDiskOperation -InputObject <IscsiVirtualDisk> [-ComputerName <S
 
 ## DESCRIPTION
 The **Stop-IscsiVirtualDiskOperation** cmdlet stops a long-running operation in progress on an iSCSI virtual disk.
-If you cancel an operation, it is possible that the operation completes before the cancelation takes effect.
+If you cancel an operation, it is possible that the operation completes before the cancellation takes effect.
 Always re-enumerate or recheck objects affected by an operation after this cmdlet finishes.
 
 Stopping a create operation can remove a created file, or can leave the file intact but not completely zero it out.

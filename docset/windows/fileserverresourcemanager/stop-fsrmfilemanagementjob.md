@@ -48,7 +48,7 @@ This cmdlet returns a success status in the following conditions:
 
 - The server is not running the job. 
 - The server is currently canceling the job. 
-- The server is running the job and has started cancelation of the job. 
+- The server is running the job and has started cancellation of the job. 
 - The job is queued on the server and has removed the job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a file management job that is running or is queued.

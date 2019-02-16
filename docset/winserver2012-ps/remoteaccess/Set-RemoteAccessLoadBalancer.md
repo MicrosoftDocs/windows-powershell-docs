@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyLoadBalancer
-Specifie the enabled state of a third-party external load balancer.
+Specifies the enabled state of a third-party external load balancer.
 The acceptable values for this parameter are:
 
  -- Enabled. 

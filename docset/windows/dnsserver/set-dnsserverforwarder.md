@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReordering
-Specifies wheter to enable the DNS server to reorder forwarders dynamically.
+Specifies whether to enable the DNS server to reorder forwarders dynamically.
 
 ```yaml
 Type: Boolean

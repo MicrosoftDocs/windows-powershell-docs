@@ -18,7 +18,7 @@ Get-RDFileTypeAssociation [[-CollectionName] <String>] [-AppAlias <String>] [-Ap
 ```
 
 ## DESCRIPTION
-The **Get-RDFileTypeAssocation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
+The **Get-RDFileTypeAssociation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
 
 ## EXAMPLES
 

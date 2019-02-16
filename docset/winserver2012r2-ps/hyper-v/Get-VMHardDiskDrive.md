@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-Specifies the drive controller from which the virtual hard disk drives are to be retreived.
+Specifies the drive controller from which the virtual hard disk drives are to be retrieved.
 
 ```yaml
 Type: VMDriveController[]

@@ -536,7 +536,7 @@ The policy treats values that follow the EQ operator as multiple assertions whic
 The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
 The criterion is satisfied if the FQDN of the request matches one of the EQ values and does not match any of the NE values.
 You can include the asterisk (*) as the wildcard character.
-For example, `EQ,*.contoso.com,NE,*.fabricam.com`.
+For example, `EQ,*.contoso.com,NE,*.fabrikam.com`.
 
 ```yaml
 Type: String

@@ -37,7 +37,7 @@ Get-StorageHealthAction [-InputObject <CimInstance>] [-CimSession <CimSession>] 
 ```
 
 ## DESCRIPTION
-The **Get-StorageHealthAction** cmdlet gets health-related system activities for Storage subystems, file shares, and volumes.
+The **Get-StorageHealthAction** cmdlet gets health-related system activities for Storage subsystems, file shares, and volumes.
 
 ## EXAMPLES
 

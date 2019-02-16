@@ -33,7 +33,7 @@ Export-IpamAddress -AddressFamily <AddressFamily> [-NetworkType <VirtualizationT
 The **Export-IpamAddress** cmdlet exports all of the IP addresses from an address family in IP Address Management (IPAM).
 The cmdlet exports the IP addresses as a comma-separated value (CSV) file.
 
-The field header names and the enumurated values of IP address objects that this cmdlet exports have English names that are culture-independent (invariant) and are not in the localized language that the server uses.
+The field header names and the enumerated values of IP address objects that this cmdlet exports have English names that are culture-independent (invariant) and are not in the localized language that the server uses.
 The field header names follow the Windows PowerShell property naming conventions.
 The format of date and time values of the exported objects are in the localized format of the computer that runs the IPAM server and not in Coordinated Universal Time (UTC).
 

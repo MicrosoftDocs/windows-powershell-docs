@@ -69,7 +69,7 @@ PS C:\> Add-DnsServerStubZone -Name "west02.contoso.com" -MasterServers "172.23.
 This command adds west02.contoso.com as a file-backed stub zone.
 The command specifies a master server and uses the *PassThru* parameter to produce output.
 
-### Example 2: Add an Active Directory-integerated stub zone
+### Example 2: Add an Active Directory-integrated stub zone
 ```
 PS C:\> Add-DnsServerStubZone -Name "west03.contoso.com" -MasterServers 172.23.90.124 -PassThru -ReplicationScope "Forest"
 ```

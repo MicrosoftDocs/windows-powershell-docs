@@ -458,7 +458,7 @@ Accept wildcard characters: False
 
 ### -MaxSynRetransmissions
 Specifies the maximum number of times the computers sends SYN packets without receiving a response.
-The cmdlet gets settings that have the maxium values that you specify.
+The cmdlet gets settings that have the maximum values that you specify.
 
 ```yaml
 Type: Byte[]

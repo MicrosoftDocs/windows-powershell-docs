@@ -37,7 +37,7 @@ It differs from using the **-WhatIf** parameter with the Add-ADDSReadOnlyDomainC
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccuntName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
+PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
 ```
 
 Description

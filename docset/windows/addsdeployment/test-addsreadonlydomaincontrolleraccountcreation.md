@@ -39,7 +39,7 @@ It differs from using the *WhatIf* parameter with the **Add-ADDSReadOnlyDomainCo
 
 ### Example 1: Test adding an RODC account to confirm it is possible
 ```
-PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccuntName RODC1 -DomainName "corp.contoso.com" -SiteName "NorthAmerica"
+PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName RODC1 -DomainName "corp.contoso.com" -SiteName "NorthAmerica"
 ```
 
 This command runs the prerequisites for adding an RODC account to the corp.contoso.com domain that would use the North America site as the source site for the replication source domain controller.

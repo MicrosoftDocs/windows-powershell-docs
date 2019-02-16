@@ -57,7 +57,7 @@ This command gets the power management properties of the network adapter named E
 
 ### Example 3: Get all power management properties for the specified network adapter and format the list
 ```
-PS C:\> Get-NetAdapterPowerManagment -Name "Ethernet" | Format-List -Property "*"
+PS C:\> Get-NetAdapterPowerManagement -Name "Ethernet" | Format-List -Property "*"
 ```
 
 This command displays all power management properties of the network adapter named Ethernet.

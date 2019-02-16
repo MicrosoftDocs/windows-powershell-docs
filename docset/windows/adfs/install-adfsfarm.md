@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Specfies a **PSCredential** object.
+Specifies a **PSCredential** object.
 
 ```yaml
 Type: PSCredential
@@ -375,7 +375,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsClientPort
-Specfies a TLS client port.
+Specifies a TLS client port.
 
 ```yaml
 Type: Int32

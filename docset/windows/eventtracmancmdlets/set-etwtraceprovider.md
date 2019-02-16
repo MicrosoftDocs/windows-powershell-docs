@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchAnyKeyword
-Specfies a bitmask of keywords an event must match in order to be logged to the session.
+Specifies a bitmask of keywords an event must match in order to be logged to the session.
 
 An event must match at least one keyword set by this parameter.
 

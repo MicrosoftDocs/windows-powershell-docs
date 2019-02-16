@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamlAuthenticationRequestParameters
-Specifies which of the following parameters  to use in SAML authentication requests to the claims provider: **AssertionConsumerServiceIndex**, **AssertitionConsumerServiceUrl**, and **ProtocolBinding**.
+Specifies which of the following parameters  to use in SAML authentication requests to the claims provider: **AssertionConsumerServiceIndex**, **AssertionConsumerServiceUrl**, and **ProtocolBinding**.
 The acceptable values for this parameter are:None, Index, Url, ProtocolBinding, and UrlWithProtocolBinding.
 
 ```yaml

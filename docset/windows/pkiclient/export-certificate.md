@@ -69,7 +69,7 @@ PS C:\>$cert = ( Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538B
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
 ```
 
-This example exports a certificate to the file system as a PKCS#7-fomatted .p7b file without its private key.
+This example exports a certificate to the file system as a PKCS#7-formatted .p7b file without its private key.
 
 ### EXAMPLE 4
 ```

@@ -319,7 +319,7 @@ The server level configuration includes of (both v4 and v6):
 - Option values. 
 - Server level Policies (DHCPv4). 
 - MAC address filters (DHCPv4). 
-- Other Server Properties (ConflicDetectionAttempts, DHCPv6 stateless store).
+- Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
 
 ```yaml
 Type: SwitchParameter

@@ -318,7 +318,7 @@ The server level configuration comprises of (both v4 and v6):
                          
  -- MAC address filters (DHCPv4). 
                          
- -- Other Server Properties (ConflicDetectionAttempts, DHCPv6 stateless store).
+ -- Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
 
 ```yaml
 Type: SwitchParameter

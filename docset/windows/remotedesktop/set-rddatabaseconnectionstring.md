@@ -90,7 +90,7 @@ Specifies the database connection string.
 The database connection string supports both high availability configurations: 
 
 - Dedicated database server.
-Uses Windows Authentication to connect to the databse.
+Uses Windows Authentication to connect to the database.
 - Shared database server.
 Uses database authentication (such as SQL authentication) with a user name and password to connect to the database.
 

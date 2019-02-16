@@ -51,7 +51,7 @@ The second command tests the specified virtual network connection.
 ### Example 2: Test a virtual network connection by receiving
 ```
 PS C:\> $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
+PS C:\> $cred = New-Object PSCredential -ArgumentList (".\administrator", $password) 
 PS C:\> Test-VirtualNetworkConnection -OperationId "27" -HostName "host2.corp.com" -MgmtIP "192.10.10.12" -Creds $cred -VMName "TennantVM2" -VMNetworkAdapterName "Tennant1VMAdapter2" -SenderCAIP "10.123.176.108" -SenderVSID 6001 -ListenerCAIP "10.123.176.109" -ListenerVSID 6001
 ```
 

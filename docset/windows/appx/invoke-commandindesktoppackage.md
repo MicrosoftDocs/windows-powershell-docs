@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-Switch that causes the entire process tree to stay in the pacakge context.
+Switch that causes the entire process tree to stay in the package context.
 
 ```yaml
 Type: SwitchParameter

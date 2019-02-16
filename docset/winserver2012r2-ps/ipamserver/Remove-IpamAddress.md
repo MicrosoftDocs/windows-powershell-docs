@@ -41,7 +41,7 @@ The cmdlet removes the specified IP address records permanently from the IPAM da
 Specify the IP addresses to remove or use the **InputObject** parameter to specify an **IpamAddress** object to remove.
 
 The cmdlet does not remove any reservations on the Dynamic Host Configuration Protocol (DHCP) server or Domain Name System (DNS) records.
-You can use Windows PowerShell for DHCP Server to remove a reservation from the DCHP server.
+You can use Windows PowerShell for DHCP Server to remove a reservation from the DHCP server.
 You can use Windows PowerShell for DNS to remove the DNS records associated with the IP addresses that you remove.
 
 ## EXAMPLES

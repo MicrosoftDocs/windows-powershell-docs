@@ -568,7 +568,7 @@ Accept wildcard characters: False
 
 ### -UserMatchCondition
 Specifies the user or group name in Active Directory, such as `contoso\johnj99`.
-This parameter is usually specified with other filtering parameter such as the **AppPathNameMatchCondtion** parameter.
+This parameter is usually specified with other filtering parameter such as the **AppPathNameMatchCondition** parameter.
 
 ```yaml
 Type: String

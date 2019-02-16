@@ -91,7 +91,7 @@ PS C:\> Get-PCSVDevice -TargetAddress 10.0.0.30 -ManagementProtocol WSMan -Port 
 This example connects with a WS-Management using HTTP.
 Since the traffic is unencrypted, additional configuration on the management client is required.
 
-The first two commands create the configuration that the WS-Management client on Windows requires to enable unecrypted WSMAN traffic.
+The first two commands create the configuration that the WS-Management client on Windows requires to enable unencrypted WSMAN traffic.
 This is a one-time only configuration.
 
 The third command uses the **Get-Credential** cmdlet to create a credential, and then stores it in the **$Credential** variable.

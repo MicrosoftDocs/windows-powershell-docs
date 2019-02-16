@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 
 ```yaml
 Type: String

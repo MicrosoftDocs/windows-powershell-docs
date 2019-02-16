@@ -26,9 +26,7 @@ Enables specific power management features on the network adapter.
 
 ### ByName (Default)
 ```
-Enable-
-
-agement [-Name] <String[]> [-IncludeHidden] [-ArpOffload] [-D0PacketCoalescing]
+Enable-NetAdapterPowerManagement [-Name] <String[]> [-IncludeHidden] [-ArpOffload] [-D0PacketCoalescing]
  [-DeviceSleepOnDisconnect] [-NSOffload] [-RsnRekeyOffload] [-SelectiveSuspend] [-WakeOnMagicPacket]
  [-WakeOnPattern] [-NoRestart] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]

@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveData
-Enabes the removal of all of the data on the disk.
+Enables the removal of all of the data on the disk.
 
 ```yaml
 Type: SwitchParameter

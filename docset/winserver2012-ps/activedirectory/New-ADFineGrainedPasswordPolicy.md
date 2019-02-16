@@ -54,7 +54,7 @@ Description
 
 -----------
 
-Create a new Fine Grained Password Policy object named 'DomainUsersPSO' and set the Precedence, ComplexityEnabled, Description, DisplayName, LockoutDuration, LockoutObservationWindw, and LockoutThreshold properties on the object.
+Create a new Fine Grained Password Policy object named 'DomainUsersPSO' and set the Precedence, ComplexityEnabled, Description, DisplayName, LockoutDuration, LockoutObservationWindow, and LockoutThreshold properties on the object.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

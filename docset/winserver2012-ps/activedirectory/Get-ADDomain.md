@@ -35,7 +35,7 @@ You can also set the parameter to a domain object variable, such as $\<localDoma
 To get the domain of the local computer or current logged on user (CLU) set the Current parameter to LocalComputer or LoggedOnUser. 
 When you set the Current parameter, you do not need to set the Identity parameter.
 
-When the Current parameter is set to LocalComputer or LogedOnUser, the cmdlet uses the Server and Credential parameters according to the following rules.
+When the Current parameter is set to LocalComputer or LoggedOnUser, the cmdlet uses the Server and Credential parameters according to the following rules.
 
 -If both the Server and Credential parameters are not specified:
 

@@ -31,8 +31,7 @@ Set-AdfsSslCertificate -Thumbprint <String> [-Member <String[]>] [-Force <Boolea
 
 ## DESCRIPTION
 The **Set-AdfsSslCertificate** cmdlet sets an SSL certificate for HTTPS bindings for Active Directory Federation Services (AD FS).
-Use this cmdlet to change the SSL certificate associated with the AD FS service.
-You must run this cmdlet on each AD FS server in the AD FS farm.
+Use this cmdlet to change the SSL certificate associated with the AD FS service.  On Server 2016, this is a multi-node commandlet, meaning it only has to run on the primary and all nodes in the farm will be updated. On Server 2012R2, run the command on each ADFS server in the ADFS farm.
 
 Use this cmdlet to change the deployment from one in which both user certificate authentication and device certificate authentication use port 443, to one in which user certificate authentication uses a non-standard port.
 Specify a new certificate that does not contain a Subject Alternative Name (SAN) for `certauth`.\<federation service name\>, as in `certauth.contoso.com`.

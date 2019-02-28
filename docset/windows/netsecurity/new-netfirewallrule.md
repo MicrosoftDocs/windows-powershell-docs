@@ -79,7 +79,7 @@ This example creates a firewall rule that allows inbound Windows Messenger netwo
 
 ### EXAMPLE 5
 ```
-PS C:\> New-NetFirewallRule -DisplayName "Allow Only Specific Computers and Users" -Direction Inbound -RemoteMachine "D:(A;;CC;;;SIDforMachineGroupAccount)"  -RemoteUser "D:(A;;CC;;;SIDforUserGroupAccount)"  -Action AllowBypass -Authentication Required
+PS C:\> New-NetFirewallRule -DisplayName "Allow Only Specific Computers and Users" -Direction Inbound -RemoteMachine "D:(A;;CC;;;SIDforMachineGroupAccount)"  -RemoteUser "D:(A;;CC;;;SIDforUserGroupAccount)"  -Action Allow -Authentication Required
 ```
 
 This example creates a firewall rule that allows all of the network traffic from computers that are members of a specific computer group, and only from users that are members of a specific user group.

@@ -38,7 +38,7 @@ This cmdlet does not change previously claimed SAN disks.
 
 ### Example 1: Disable automatic claim for iSCSI
 ```
-PS C:\> Disable-MSDSMAutomaticClaimSettings -BusType "iSCSI"
+PS C:\> Disable-MSDSMAutomaticClaim -BusType "iSCSI"
 ```
 
 This command stops MSDSM from automatically claiming SAN disks for MPIO for iSCSI bus types.

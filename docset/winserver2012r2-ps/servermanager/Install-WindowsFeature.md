@@ -45,7 +45,7 @@ Install-WindowsFeature -ConfigurationFilePath <String> [-Vhd <String>] [-Restart
 ```
 
 ## DESCRIPTION
-The `Install-WindowsFeature` cmdlet installs the specified feature on a computer that is running Windows Server 2012 R2, or on an offline virtual hard disk (VHD) on which Windows Server 2012 R2 is installed.
+The `Install-WindowsFeature` cmdlet installs the specified features on a computer that is running Windows Server 2012 R2, or on an offline virtual hard disk (VHD) on which Windows Server 2012 R2 is installed.
 This cmdlet works similarly to the installation of roles and features in Server Manager, with an important exception:  the cmdlet does not install management tools for the features by default.
 To install management tools such as snap-ins on a target server, you must add the `IncludeManagementTools` parameter to your command.
 

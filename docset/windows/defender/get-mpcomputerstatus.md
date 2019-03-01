@@ -133,10 +133,12 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
+
 ## INPUTS
 
 ## OUTPUTS
-
+For More information on the properties, See [Get-MpComputerStatus Properties](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/defender/msft-mpcomputerstatus#properties). 
 ## NOTES
 
 ## RELATED LINKS

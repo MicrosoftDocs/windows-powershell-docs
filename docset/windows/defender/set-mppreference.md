@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
-If you specify a value of $True or do not specify a value, Windows Defender scans archive files.
+If you specify a value of $False or do not specify a value, Windows Defender scans archive files.
 
 ```yaml
 Type: Boolean
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -DisableBehaviorMonitoring
 Indicates whether to enable behavior monitoring.
-If you specify a value of $True or do not specify a value, Windows Defender enables behavior monitoring.
+If you specify a value of $False or do not specify a value, Windows Defender enables behavior monitoring.
 
 ```yaml
 Type: Boolean
@@ -195,8 +195,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $True, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer.
-If you specify a value of $False or do not specify a value, the computer does not run catch-up scans for scheduled full scans.
+If you specify a value of $False or do not specify a value, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -213,8 +212,7 @@ Accept wildcard characters: False
 ### -DisableCatchupQuickScan
 Indicates whether Windows Defender runs catch-up scans for scheduled quick scans.
 A computer can miss a scheduled scan, usually because the computer is off at the scheduled time.
-If you specify a value of $True, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer.
-If you specify a value of $False or do not specify a value, the computer does not run catch-up scans for scheduled quick scans.
+If you specify a value of $False or do not specify a value, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: Boolean
@@ -231,8 +229,7 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $True, Windows Defender performs email scanning.
-If you specify a value of $False or do not specify a value, Windows Defender does not perform email scanning.
+If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True or do not specify a value, Windows Defender does not perform email scanning.
 
 ```yaml
 Type: Boolean
@@ -248,7 +245,7 @@ Accept wildcard characters: False
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
-If you specify a value of $True or do not specify a value, scanning downloaded files and attachments is enabled.
+If you specify a value of $False or do not specify a value, scanning downloaded files and attachments is enabled.
 
 ```yaml
 Type: Boolean
@@ -264,7 +261,7 @@ Accept wildcard characters: False
 
 ### -DisableIntrusionPreventionSystem
 Indicates whether to configure network protection against exploitation of known vulnerabilities.
-If you specify a value of $True or do not specify a value, network protection is enabled.
+If you specify a value of $False or do not specify a value, network protection is enabled.
 
 ```yaml
 Type: Boolean
@@ -296,7 +293,7 @@ Accept wildcard characters: False
 
 ### -DisableRealtimeMonitoring
 Indicates whether to use real-time protection.
-If you specify a value of $True or do not specify a value, Windows Defender uses real-time protection.
+If you specify a value of $False or do not specify a value, Windows Defender uses real-time protection.
 We recommend that you enable Windows Defender to use real-time protection.
 
 ```yaml
@@ -313,9 +310,7 @@ Accept wildcard characters: False
 
 ### -DisableRemovableDriveScanning
 Indicates whether to scan for malicious and unwanted software in removable drives, such as flash drives, during a full scan.
-If you specify a value of $True, Windows Defender scans removable drives during any type of scan.
-If you specify a value of $False or do not specify a value, Windows Defender does not scan removable drives during a full scan.
-Windows Defender can still scan removable drives during quick scans or custom scans.
+If you specify a value of $False or do not specify a value, Windows Defender scans removable drives during any type of scan. If you specify a value of $True, Windows Defender does not scan removable drives during a full scan. Windows Defender can still scan removable drives during quick scans or custom scans.
 
 ```yaml
 Type: Boolean
@@ -342,12 +337,18 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```False
+Aliases: dsnf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives.
-If you specify a value of $True, Windows Defender scans mapped network drives.
-If you specify a value of $False or do not specify a value, Windows Defender does not scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives.If you specify a value of $True, Windows Defender does not scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -362,10 +363,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files.
-If you specify a value of $True, Windows Defender scans network files.
-If you specify a value of $False or do not specify a value, Windows Defender does not scan network files.
-We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True or do not specify a value, Windows Defender does not scan network files. We do not recommend that you scan network files.
 
 ```yaml
 Type: Boolean

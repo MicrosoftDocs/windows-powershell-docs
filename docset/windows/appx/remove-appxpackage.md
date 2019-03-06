@@ -38,7 +38,7 @@ Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<Com
 ```
 Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-> [!NOTE] AllUsers Parameter Required Windows 10 Build 1709 Or Later 
+> [!NOTE] AllUsers Parameter required Windows 10 Build 1709 or Later.
 
 
 ## DESCRIPTION

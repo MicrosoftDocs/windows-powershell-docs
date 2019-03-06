@@ -48,7 +48,7 @@ This command retrieves the SMB client directory mappings created for the SMB ser
 
 ### Example 2: Get SMB client directory mapping for a directory
 ```
-PS C:\>Get-SmbMapping -LocalPath X: | Select-Object - Property *
+PS C:\>Get-SmbMapping -LocalPath X: | Select-Object -Property *
 Status                : OK 
 LocalPath             : X: 
 RemotePath            : \\Contoso-SO\VMFiles 

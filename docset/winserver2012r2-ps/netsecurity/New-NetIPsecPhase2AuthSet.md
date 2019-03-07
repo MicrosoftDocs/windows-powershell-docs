@@ -29,7 +29,7 @@ New-NetIPsecPhase2AuthSet [-PolicyStore <String>] [-GPOSession <String>] [-Name 
 ```
 
 ## DESCRIPTION
-The **New-NetIPsecPhase1AuthSet** cmdlet creates a set that specifies the computerof authentication methods, usually for computer, to use during IPsec negotiations.
+The **New-NetIPsecPhase1AuthSet** cmdlet creates a set that specifies the computer authentication methods, usually for the computer to use during IPsec negotiations.
 The first phase of authentication is typically a computer authentication method such as Kerberos v5, certificate, or pre-shared key (PSK) authentication.
 
 A phase 1 authentication set is contains an ordered list of computer authentication proposals.

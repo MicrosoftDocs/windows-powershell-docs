@@ -481,7 +481,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStoreSourceType
-Specifies that the main mode cryptographic sets that match the indicated policy store source type are removied. 
+Specifies that the main mode cryptographic sets that match the indicated policy store source type are removed. 
 This parameter describes the type of policy store where the rule originated if the object is retrieved from the ActiveStore with the TracePolicyStoreSource option set.
 This parameter value is automatically generated and should not be modified. 
 The acceptable values for this parameter are:

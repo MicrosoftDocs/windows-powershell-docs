@@ -49,7 +49,7 @@ The **StructuredBootString** property of the returned instance lists the valid b
 ### Example 1 Modify the device boot configuration to use PXE boot
 ```
 PS C:\> $MyCred = Get-Credential
-PS C:\> Set-PCSVDeviceBootConfiguration -TargetAdress 10.1.12.43 -ManagementProtocol WSMan -Credential $MyCred -UseSSL -OneTimeBootSource "CIM:Network:1"
+PS C:\> Set-PCSVDeviceBootConfiguration -TargetAddress 10.1.12.43 -ManagementProtocol WSMan -Credential $MyCred -UseSSL -OneTimeBootSource "CIM:Network:1"
 ```
 
 This example configures the boot source to use Pre-Boot Execution Environment (PXE) boot the next time the system boots.

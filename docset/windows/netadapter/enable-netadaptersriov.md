@@ -67,7 +67,7 @@ This command enables SR-IOV for the network adapter with the description Contoso
 ### Example 3: Enable SRI-OV for the specified network adapter using the InputObject parameter
 ```
 The first command gets the network adapter named Ethernet 2 and stores the result in the variable named $NetAdapter.The second command enables SRI-OV on the network adapter stored in the $NetAdapter variable.
-PS C:\> $NetApapter = Get-NetAdapter -Name "Ethernet 2"
+PS C:\> $NetAdapter = Get-NetAdapter -Name "Ethernet 2"
 PS C:\> Enable-NetAdapterSriov -InputObject $NetAdapter
 
 This command is a version of the above cmdlet that selects the network adapter and pipes the network adapter object into this cmdlet.

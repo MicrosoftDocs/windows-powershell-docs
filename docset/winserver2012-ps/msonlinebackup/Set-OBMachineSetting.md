@@ -225,7 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUsername
-Specifies the username to be used for proxy server authenication.
+Specifies the username to be used for proxy server authentication.
 
 ```yaml
 Type: String

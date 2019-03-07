@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase1AuthSet
-Gets the IPsec rules that are associated with the given phase 1 authenication set to be renamed. 
+Gets the IPsec rules that are associated with the given phase 1 authentication set to be renamed. 
 A **NetIPsecPhase1AuthSet** object represents the phase 1 authorization set conditions associated with an IPsec or main mode rule.
 This parameter sets the methods for main mode negotiation by describing the proposals for computer authentication.
 See the Get-NetIPsecPhase1AuthSet cmdlet for more information. 

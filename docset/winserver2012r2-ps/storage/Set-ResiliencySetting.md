@@ -84,7 +84,7 @@ The value ranges are:
 
 - Mirror.
 The minimum is two for two-way mirror or three for three-way mirror.
-The maxmium is eight times the number of data copies. 
+The maximum is eight times the number of data copies. 
 - Parity.
 The minimum is three for single parity and seven for dual parity.
 The maximum is eight for single parity and 17 for dual parity. 

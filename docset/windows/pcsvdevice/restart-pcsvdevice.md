@@ -276,7 +276,7 @@ Indicates that the certificate common name of the server does not need to match 
 
 Specify this parameter only for managing devices by using WS-Management over HTTPS.
 Be sure to specify this parameter only for trusted computers.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 
 ### -SkipRevocationCheck
 Indicates that the cmdlet skips the revocation check of server certificates.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Be sure to specify this parameter only for trusted computers.
 

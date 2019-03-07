@@ -278,7 +278,7 @@ Accept wildcard characters: False
 
 ### -PersonalManaged
 Indicates that the server creates a new managed personal virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -PersonalUnmanaged
 Indicates that the server creates a new unmanaged personal virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 
 ### -PooledManaged
 Indicates that the server creates a new managed pooled virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 
 ### -PooledUnmanaged
 Indicates that the server creates a new unmanaged pooled virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter

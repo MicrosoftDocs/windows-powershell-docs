@@ -42,7 +42,7 @@ This cmdlet allows you to specify settings such as the upstream server name, the
 
 ## EXAMPLES
 
-### Example 1: Synchonize from a specified server
+### Example 1: Synchronize from a specified server
 ```
 PS C:\> Set-WsusServerSynchronization -UssServerName "Test" -PortNumber 42 -UseSSL
 ```

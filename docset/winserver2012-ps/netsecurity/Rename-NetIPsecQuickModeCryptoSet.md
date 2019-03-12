@@ -69,7 +69,7 @@ Each name must be unique within a given policy store.
 If the rules in multiple GPOs have the same name, then one will overwrite the other based upon GPO precedence.
 If a rule from a GPO has the same name as a rule from the PersistentStore, then the rule from the GPO will overwrite the local rule.
 
-To specify a new default quick mode cryptographic set, run this cmdlet to specify the default set with the **Name** parameter value set to {E5A5D32A-4BCE-4e4d-B07F-4AB1BA7E5FE1}.
+To specify a new default quick mode cryptographic set, run this cmdlet to specify the default set with the **Name** parameter value set to {E5A5D32A-4BCE-4e4d-B07F-4AB1BA7E5FE2}.
 
 ## EXAMPLES
 

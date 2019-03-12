@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 The name of the target storage pool that contains the virtual disk to be snapshot.
 
 ```yaml

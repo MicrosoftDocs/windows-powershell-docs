@@ -39,7 +39,7 @@ A logical network is a collection of logical subnets.
 
 ### Example 1: Remove a logical network
 ```
-PS C:\> Remove-NetworkControllerLogicalNetwork -ConnectionUri "https://networkcontroller" -ResouceId "Network13"
+PS C:\> Remove-NetworkControllerLogicalNetwork -ConnectionUri "https://networkcontroller" -ResourceId "Network13"
 ```
 
 This command removes a logical network that has the resource ID logicalnw1 from the Network Controller at the specified URI.

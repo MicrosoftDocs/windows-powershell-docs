@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a name for the XML file in which you want to save the information about the DHCP reservations for the nodes, including the full or relative path to the file, if the **Export-HpcDCHPReservations** cmdlet should not save the file in the current directory.
+Specifies a name for the XML file in which you want to save the information about the DHCP reservations for the nodes, including the full or relative path to the file, if the **Export-HpcDHCPReservations** cmdlet should not save the file in the current directory.
 
 ```yaml
 Type: String

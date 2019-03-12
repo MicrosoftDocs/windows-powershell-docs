@@ -58,8 +58,8 @@ The **Set-IpamAddress** cmdlet modifies an IP address in IP Address Management (
 Specify the IP addresses to modify or use the **InputObject** parameter to specify an **IpamAddress** object to modify.
 
 You can use the cmdlet to associate the Dynamic Host Configuration Protocol (DHCP) reservation properties with the IP address.
-The cmdlet does not create a reservation on the DCHP server.
-You can use Windows PowerShell for DHCP Server to create a reservation on the DCHP server.
+The cmdlet does not create a reservation on the DHCP server.
+You can use Windows PowerShell for DHCP Server to create a reservation on the DHCP server.
 
 ## EXAMPLES
 
@@ -686,7 +686,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReservationDescription
-Specifies a description for the DCHP reservation.
+Specifies a description for the DHCP reservation.
 
 ```yaml
 Type: String

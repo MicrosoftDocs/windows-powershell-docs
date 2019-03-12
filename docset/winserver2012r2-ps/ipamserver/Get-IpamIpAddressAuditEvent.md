@@ -50,7 +50,7 @@ Get-IpamIpAddressAuditEvent -HostName <String> -StartDate <DateTime> -EndDate <D
 The **Get-IpamIpAddressAuditEvent** cmdlet gets all IP address audit events from an IP Address management (IPAM) server over a time interval.
 IPAM enables IP address tracking through correlation of DHCP lease events on managed DHCP servers with user and machine authentication events on managed domain controllers and Network Policy Server (NPS) servers.
 You can search correlated events by IP address, client ID, hostname, or username.
-Use DCHP events between a start date and an end date to correlate data.
+Use DHCP events between a start date and an end date to correlate data.
 The data returned includes data for both the start date and the end date.
 
 The cmdlet returns only the top 10,000 rows if the query results exceed more than 10,000 rows.

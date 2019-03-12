@@ -62,7 +62,7 @@ PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Au
 PS C:\> $Audio.Rootcauses
 ```
 
-Tgus example dislays all the root casues this troubleshooting pack investigates.
+This example displays all the root causes this troubleshooting pack investigates.
 
 
 ### Example 4: Get a resolution for a root cause

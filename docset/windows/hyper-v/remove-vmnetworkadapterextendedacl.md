@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies an array of virtual machines as **VirutalMachine** objects.
+Specifies an array of virtual machines as **VirtualMachine** objects.
 The cmdlet removes an ACL for network adapters that belong to the virtual machines that you specify.
 To obtain a virtual machine object, use the **Get-VM** cmdlet.
 

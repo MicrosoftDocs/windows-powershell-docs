@@ -42,7 +42,7 @@ The **Export-WindowsDriver** cmdlet exports all third-party drivers from a Windo
 
 ## EXAMPLES
 
-### Example 1: Export drivers from the running operationg system
+### Example 1: Export drivers from the running operating system
 ```
 PS C:\> Export-WindowsDriver -Online -Destination d:\drivers
 ```

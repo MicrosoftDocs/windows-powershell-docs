@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Sepcifies the unqiue identifier for the virtual subnet
+Sepcifies the unique identifier for the virtual subnet
 
 ```yaml
 Type: String[]

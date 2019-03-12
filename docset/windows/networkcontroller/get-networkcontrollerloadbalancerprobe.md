@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer where the halth probe belongs
+Specifies the load balancer where the health probe belongs
 
 ```yaml
 Type: String[]

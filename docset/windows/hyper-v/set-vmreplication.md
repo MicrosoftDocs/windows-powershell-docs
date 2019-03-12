@@ -505,7 +505,7 @@ Accept wildcard characters: False
 
 ### -ReplicatedDisks
 Specifies all virtual hard disks to include for replication.
-This parameter can include all the VHDs attached to the virtual mahine or a subset.
+This parameter can include all the VHDs attached to the virtual machine or a subset.
 Be sure to include virtual hard disks that are critical to the ability of the virtual machine to start, such as the guest operating system disk.
 Excluding a critical disk from this list could prevent the replica virtual machine from starting properly.
 

@@ -39,7 +39,7 @@ Set-RDFileTypeAssociation [-CollectionName] <String> -AppAlias <String> -FileExt
 ```
 
 ## DESCRIPTION
-The **Set-RDFileTypeAssocation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
+The **Set-RDFileTypeAssociation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
 
 ## EXAMPLES
 

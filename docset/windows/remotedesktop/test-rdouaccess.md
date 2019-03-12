@@ -37,7 +37,7 @@ The RD Connection Broker must have Read access to an OU to query user account in
 
 ### Example 1: Verify access to an OU
 ```
-PS C:\> Test-RDOUaccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
 ```
 
 This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.

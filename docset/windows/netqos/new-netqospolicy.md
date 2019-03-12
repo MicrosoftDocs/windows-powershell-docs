@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cluster
-Specifies the Microsoft cluster service, which uses the default cluster network driver UDP port 3343.
+Specifies the Microsoft cluster service, which uses the default SQL server TCP/UDP port 3343.
 
 ```yaml
 Type: SwitchParameter
@@ -772,7 +772,7 @@ Accept wildcard characters: False
 
 ### -UserMatchCondition
 Specifies the user or group name in Active Directory, such as `contoso\DavidChew`.
-This parameter is usually specified with another filtering parameter such as the *AppPathNameMatchCondtion* parameter.
+This parameter is usually specified with another filtering parameter such as the *AppPathNameMatchCondition* parameter.
 
 ```yaml
 Type: String

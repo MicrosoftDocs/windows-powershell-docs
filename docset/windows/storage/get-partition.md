@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystem
-Specifies the storage subsystem from which to get paritions.
+Specifies the storage subsystem from which to get partitions.
 To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
 
 ```yaml

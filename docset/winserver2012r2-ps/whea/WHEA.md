@@ -18,7 +18,7 @@ ms.assetid: 9a8817c8-fb3e-4214-8e51-a2004cb59e37
 
 # WHEA Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Windows Hardware Error Architecuture (WHEA) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Windows Hardware Error Architecture (WHEA) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## WHEA Cmdlets
 ### [Get-WheaMemoryPolicy](./Get-WheaMemoryPolicy.md)

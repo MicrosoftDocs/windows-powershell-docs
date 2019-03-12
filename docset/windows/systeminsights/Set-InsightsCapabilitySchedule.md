@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -DaysInterval
-Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capabiility every other day.
+Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capability every other day.
 
 ```yaml
 Type: UInt16

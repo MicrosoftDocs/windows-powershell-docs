@@ -39,7 +39,7 @@ You can use this process to determine whether any new computers are present in t
 
 ### Example 1: Get a computer by computer name
 ```
-PS C:\>Find-VamtManagedMachine -QqueryType Manual -QueryValue "MachineName"
+PS C:\>Find-VamtManagedMachine -QueryType Manual -QueryValue "MachineName"
 ```
 
 This command finds a computer by looking for the specified computer name.

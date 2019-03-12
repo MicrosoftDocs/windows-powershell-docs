@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Specifies that the cmdlet should output an object representing the masking setto which it added an initiator ID.
+Specifies that the cmdlet should output an object representing the masking set to which it added an initiator ID.
 By default, this cmdlet does not generate any output.
 
 ```yaml

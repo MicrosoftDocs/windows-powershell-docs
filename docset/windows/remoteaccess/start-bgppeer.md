@@ -44,7 +44,7 @@ PS C:\> Start-BgpPeer -Name "Site17"
 
 This command starts a BGP routing session for the BGP router named Site17.
 
-### Example 2: Start a routing session in a multitenant evironment
+### Example 2: Start a routing session in a multitenant environment
 ```
 PS C:\> Start-BgpPeer -Name "Tenant22" -RoutingDomain "Rd001"
 ```

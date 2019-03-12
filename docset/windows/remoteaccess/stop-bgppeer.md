@@ -56,7 +56,7 @@ This command gets all the peers by using the Get-BgpPeer cmdlet, and then passes
 The command stops the sessions for all the peers.
 This command does not specify the **Force** parameter, so it prompts the user for confirmation of each session to stop.
 
-### Example 3: Stop a routing session in a multitenant evironment
+### Example 3: Stop a routing session in a multitenant environment
 ```
 PS C:\> Stop-BgpPeer -Name "TenantSite22" -RoutingDomain "Rd001"
 Confirm

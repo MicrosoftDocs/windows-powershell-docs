@@ -36,7 +36,7 @@ For more information, see [Enable your device for development](https://msdn.micr
 
 ## EXAMPLES
 
-### Example 1: Check the status of Ddeveloper Mmode DM
+### Example 1: Check the status of Developer Mode DM
 ```
 PS C:\> Get-WindowsDeveloperLicense
 ```

@@ -194,7 +194,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ProtocolPrefernce
+### Microsoft.Management.Infrastructure.CimInstance#ProtocolPreference
 
 ## NOTES
 

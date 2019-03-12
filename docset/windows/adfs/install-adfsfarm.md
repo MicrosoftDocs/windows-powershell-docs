@@ -151,47 +151,11 @@ Overwrites an existing AD FS configuration database and creates the first node i
 
 In this example, certificate thumbprint values are specified for the token signing certificate and for the token encryption certificate using the *SigningCertificateThumbprint* and *DecryptionCertificateThumbprint* parameters respectively.
 
-### Example 5: Install AD FS without DA permission
-```
-PS C:\> Install-AdfsFarm -CertificateThumbprint <thumbprint> -FederationServiceName "fs.contoso.com" ServiceAccountCredential $svcCred -Credential $localAdminCred [-OverwriteConfiguration] -AdminConfiguration $adminConfig
-```
 
-In this example, the *CertificateThumbprint* parameter specifies the thumbprint of the SSL certificate in the local machine My store that is used for AD FS and the Web Application Proxy.
-
-The *FederationServiceName* parameter specifies the DNS name of the federation service.
-
-The *ServiceAccountCredential* parameter specifies the credentials of the login account for AD FS.
-
-The *Credential* parameter specifies the credentials for the local administrator (a non-domain administrator) account used install AD FS.
-
-The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1 script, which represents the location and name of the DKM container created by the script. The script and additional guidance can be found [here](https://go.microsoft.com/fwlink/?linkid=832923).
-
-For example, `.\CreateNonDADkmContainer.ps1 -AcctToAclDkmContainer "contoso\FsSvcAcct"`.
-
-### Example 6: Install AD FS without DA permission using gMSA as an AD FS account
-```
-PS C:\> Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToDelegateToAccount "<localadmin>"
-PS C:\> Install-AdfsFarm -CertificateThumbprint <thumbprint> -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\gmsaacct$" [-OverwriteConfiguration] -AdminConfiguration $adminConfig
-```
-
-In the first command, the *PrincipalsAllowedToDelegateToAccount* parameter specifies the name of the non-domain administrator account used to install AD FS.
-
-In the second command, the *CertificateThumbprint* parameter specifies the thumbprint of the SSL certificate in the local machine My store that is used for AD FS and the Web Application Proxy.
-
-The *FederationServiceName* parameter specifies the DNS name of the federation service.
-
-The *Credential* parameter specifies the credentials for the local administrator (a non-domain administrator) account used install AD FS.
-
-The *GroupServiceAccountIdentifier* parameter specifies the name of the gMSA logon account for AD FS.
-The identifier must be terminated by a dollar sign ($).
-
-The *AdminConfiguration* parameter specifies the object returned from the CreateNonDADkmContainer.ps1 script, which represents the location and name of the DKM container created by the script. The script and additional guidance can be found [here](https://go.microsoft.com/fwlink/?linkid=832923).
-
-For example, `.\CreateNonDADkmContainer.ps1 -AcctToAclDkmContainer "contoso\FsGmsaAcct$"`.
 
 ## PARAMETERS
 
-### -AdminConfiguration
+### -AdminConfiguration (Currently not supported)
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)

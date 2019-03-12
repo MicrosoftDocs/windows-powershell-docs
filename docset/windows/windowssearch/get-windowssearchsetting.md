@@ -67,14 +67,14 @@ The value of SafeSearch that Windows Search uses for queries.
 
 **SearchExperienceSetting** has the following possible values: 
 
-- PersonlizedAndLocation.
+- PersonalizedAndLocation.
 Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user. 
 - Personalized.
 Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user. 
 - NotPersonalized.
 Do not personalize Windows Search and other Microsoft experiences or use specific location of the user.
 
-******WindowsSafeSearchSetting** has the following possible values: 
+**WindowsSafeSearchSetting** has the following possible values: 
 
 - Off.
 Windows Search does not remove adult content from results. 

@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidateVirtualDisksHealthy
-Indicates whether this cmdlet validates that all vitural disks in the fault domain to be placed in maintenance mode are healthy before it proceeds.
+Indicates whether this cmdlet validates that all virtual disks in the fault domain to be placed in maintenance mode are healthy before it proceeds.
 
 ```yaml
 Type: Boolean

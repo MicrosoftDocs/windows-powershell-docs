@@ -30,7 +30,7 @@ Debug-SlbDatapath [[-OperationId] <String>] [-SourceIP] <String> [-TargetVIP] <S
 ```
 
 ## DESCRIPTION
-The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Muliplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
+The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Multiplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
 
 ## EXAMPLES
 

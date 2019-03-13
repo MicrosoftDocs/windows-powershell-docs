@@ -36,7 +36,7 @@ Not all TPMs support all features.
 
 ### Example 1: Verify support for key attestation
 ```
-PS C:\> Get-TpmSupportedFeatures -FeatureList "Key Attestation"
+PS C:\> Get-TpmSupportedFeature -FeatureList "Key Attestation"
 key attestation
 ```
 

@@ -66,7 +66,7 @@ Accept wildcard characters: False
 
 ### -ConfigCollection
 Specifies the **ConfigurationCollection** object for which the collection elements will be returned.
-If a ConfigurationCollection is previously obtained and assigned to a varible, you cannot pass it to this cmdlet through the pipeline because the pipeline engine will try to enumerate, passing ConfigurationElement objects instead.
+If a ConfigurationCollection is previously obtained and assigned to a variable, you cannot pass it to this cmdlet through the pipeline because the pipeline engine will try to enumerate, passing ConfigurationElement objects instead.
 Try either passing the whole Get-IISConfigCollection cmdlet into the pipeline or use it as a parameter for correct results.
 
 ```yaml

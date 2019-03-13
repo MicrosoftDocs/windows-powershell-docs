@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptionId
-Speciifes the numeric identifier (ID) of the option definition being modified.
+Specifies the numeric identifier (ID) of the option definition being modified.
 
 ```yaml
 Type: UInt32

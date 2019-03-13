@@ -32,6 +32,7 @@ Set-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSC
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
+ [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
  [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -44,6 +45,7 @@ Set-VM [-VM] <VirtualMachine[]> [-GuestControlledCacheTypes <Boolean>] [-LowMemo
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
+ [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
  [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -76,6 +78,21 @@ This parameter is applicable to clustered virtual machines.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutomaticCheckpointsEnabled
+Specifies whether automatic checkpoints are enabled.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 

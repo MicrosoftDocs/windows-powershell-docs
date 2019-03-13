@@ -40,7 +40,7 @@ The Key Protection Service rejects health certificates signed by the specified a
 ### Example 1: Modify the date on all attestation signer certificates
 ```
 PS C:\> $DenyTime = Get-Date
-PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificateIssuedBefore $DenyTime
+PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificatesIssuedBefore $DenyTime
 ```
 
 The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the **$DenyTime** variable.

@@ -83,7 +83,7 @@ Accept wildcard characters: False
 
 ### -ConfigFilePath
 Specifies the location of a configuration file that lists exclusions for image capture and compress commands.
-For more information, see DISM Configuration List and WimScrit.ini Files, http://go.microsoft.com/fwlink/?LinkID=313768.
+For more information, see DISM Configuration List and WimScript.ini Files, http://go.microsoft.com/fwlink/?LinkID=313768.
 
 ```yaml
 Type: String

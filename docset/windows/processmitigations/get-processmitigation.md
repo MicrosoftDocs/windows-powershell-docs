@@ -204,7 +204,7 @@ System.Int32\[\]
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Samples.PowerShell.Commands.AppMitigations
 
 ## NOTES
 

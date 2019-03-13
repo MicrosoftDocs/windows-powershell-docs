@@ -27,7 +27,7 @@ PS C:\>Install-Dtc -LogPath "C:\log" -StartType "AutoStart"
 ```
 
 This command installs local DTC.
-The command specfies AutoStart as the start type.
+The command specifies AutoStart as the start type.
 
 ## PARAMETERS
 

@@ -201,7 +201,7 @@ The acceptable values for this parameter are:
 - PrivateLogger
 - AddHeader
 - UseKilobytesForSize
-- UseGobalSequence
+- UseGlobalSequence
 - Relog
 - PrivateInProc
 - BufferInterface
@@ -229,7 +229,7 @@ The acceptable values for this parameter are:
 Type: LoggingMode
 Parameter Sets: (All)
 Aliases: 
-Accepted values: None, FileNone, FileSequential, FileCircular, FileAppend, FileNewFile, Reserved0x00000010, FilePreallocate, Nonstoppable, Secure, RealTime, DelayOpenFile, Buffering, PrivateLogger, AddHeader, UseKilobytesForSize, UseGobalSequence, UseLocalSequence, Relog, PrivateInProc, BufferInterface, KdFilter, RealtimeRelog, LostEventsDebug, StopOnHybridShutdown, PersistOnHybridShutdown, UsePagedMemory, SystemLogger, Compressed, IndependentSession, NoPerProcessorBuffering, Blocking, Reserved0x40000000, AddToTriageDump
+Accepted values: None, FileNone, FileSequential, FileCircular, FileAppend, FileNewFile, Reserved0x00000010, FilePreallocate, Nonstoppable, Secure, RealTime, DelayOpenFile, Buffering, PrivateLogger, AddHeader, UseKilobytesForSize, UseGlobalSequence, UseLocalSequence, Relog, PrivateInProc, BufferInterface, KdFilter, RealtimeRelog, LostEventsDebug, StopOnHybridShutdown, PersistOnHybridShutdown, UsePagedMemory, SystemLogger, Compressed, IndependentSession, NoPerProcessorBuffering, Blocking, Reserved0x40000000, AddToTriageDump
 
 Required: False
 Position: 10

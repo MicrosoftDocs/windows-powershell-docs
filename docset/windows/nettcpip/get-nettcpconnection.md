@@ -231,6 +231,7 @@ Specifies an array of TCP states.
 The cmdlet gets connections that match the states that you specify.
 The acceptable values for this parameter are:
 
+- Bound
 - Closed
 - CloseWait
 - Closing

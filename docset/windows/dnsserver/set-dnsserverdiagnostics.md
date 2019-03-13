@@ -122,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Answers
-Specifies wheter to enable the logging of DNS responses.
+Specifies whether to enable the logging of DNS responses.
 
 ```yaml
 Type: Boolean

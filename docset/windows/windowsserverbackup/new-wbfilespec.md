@@ -30,7 +30,7 @@ New-WBFileSpec [-FileSpec] <String[]> [-NonRecursive] [-Exclude] [<CommonParamet
 
 ## DESCRIPTION
 The **New-WBFileSpec** cmdlet creates a **WBFileSpec** object that contains a backup file specification.
-A **WBFileSpec** object defines the items the items that a backup includes or excludes.
+A **WBFileSpec** object defines the items that a backup includes or excludes.
 You can add a backup file specification to a **WBPolicy** object as a source for backup.
 
 You can use this cmdlet to include multiple files, folders, or volumes.

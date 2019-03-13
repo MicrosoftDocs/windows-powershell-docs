@@ -7,7 +7,6 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -233,6 +232,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+Shielded virtual machines do not support debugging or nonmaskable interrupts.
+**Debug-VM** will return an error if you try to debug a shielded VM.
 
 ## RELATED LINKS
 

@@ -54,7 +54,7 @@ PS C:\> Get-ADComputer -Filter 'Name -like "NewComputer*"' | Set-ADAccountAuthen
 ```
 
 This example first uses the **Get-ADComputer** cmdlet to get all computer accounts that match the filter specified by the Filter parameter.
-The output of this command is passed to **Set-ADAccountAuthenticatinPolicySilo** to assign the authentication policy silo named AuthenticationPolicySilo02 and the authentication policy named AuthenticationPolicy02 to them.
+The output of this command is passed to **Set-ADAccountAuthenticationPolicySilo** to assign the authentication policy silo named AuthenticationPolicySilo02 and the authentication policy named AuthenticationPolicy02 to them.
 
 ## PARAMETERS
 

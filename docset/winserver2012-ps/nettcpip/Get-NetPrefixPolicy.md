@@ -151,5 +151,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Source and Destination Address Selection for IPv6 on TechNet](http://technet.microsoft.comlibrary/bb877985.aspx)
+[Source and Destination Address Selection for IPv6 on TechNet](http://technet.microsoft.com/library/bb877985.aspx)
 

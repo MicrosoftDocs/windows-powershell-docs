@@ -173,7 +173,7 @@ Random password is set and the account is enabled unless it is requested to be d
 Password is set and the account is enabled unless it is requested to be disabled, unless the password you provided does not meet password policy or was not set for other reasons, at which point the account is disabled.
 
 The new **ADServiceAccount** object will always either be disabled or have a user-requested or randomly-generated password.
-There is no way to create an enabled service account account object with a password that violates domain password policy, such as an empty password.
+There is no way to create an enabled service account object with a password that violates domain password policy, such as an empty password.
 
 ```yaml
 Type: SecureString

@@ -54,18 +54,20 @@ If you run **Reset-PhysicalDisk** on a disk that is not a part of a Storage pool
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```powershell
 PS C:\> Reset-PhysicalDisk -FriendlyName "PhysicalDisk5"
 ```
 
 This example resets the state of a specific physical disk.
 
 ### EXAMPLE 2
+```powershell
+$BadDisks = Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
+Foreach ($BadDisk in $BadDisks) 
+{
+  Reset-PhysicalDisk -UniqueId $BadDisk.UniqueId
+}
 ```
-PS C:\> $phydisk = (Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
-PS C:\> Reset-PhysicalDisk -FriendlyName $phydisk.FriendlyName
-```
-
 This example resets all of the unhealthy physical disks.
 
 ## PARAMETERS

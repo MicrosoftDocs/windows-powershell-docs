@@ -20,7 +20,7 @@ ms.assetid: 6042BDE7-2175-4DB2-BF21-B86B8E94F60E
 # Install-ADDSForest
 
 ## SYNOPSIS
-Installs an Active Directory forest configuration.
+Creates a new Active Directory forest.
 
 ## SYNTAX
 

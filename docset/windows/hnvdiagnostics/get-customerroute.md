@@ -40,7 +40,7 @@ IP prefix for the virtual subnet.
 Length (or subnet mask) of the CA IP Prefix. 
 - CA IP Next Hop.
 The next hop required to reach the specified CA IP Prefix, usually the default gateway assigned to the HNV distributed router. 
-- Routing Doman ID.
+- Routing Domain ID.
 
 ## EXAMPLES
 

@@ -313,7 +313,7 @@ DnsServerDnsSecZoneSetting
 - DateTime DnsKeyRecordSetTtl 
 - DateTime SignatureInceptionOffset 
 - DateTime SecureDelegationPollingPeriod 
-- DateTime PropogationTime 
+- DateTime PropagationTime 
 - Bool IsKeyMasterServer 
 - String KeyMasterServer 
 - String KeyMasterStatus 

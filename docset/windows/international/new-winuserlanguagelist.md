@@ -36,9 +36,9 @@ For more information, see [CultureInfo Class](http://go.microsoft.com/fwlink/?Li
 ## EXAMPLES
 
 ### Example 1: Create and set a language list
-```
+```powershell
 PS C:\> $UserLanguageList = New-WinUserLanguageList -Language "en-US"
-PS C:\> $UserLanguageList1.Add("fr-FR")
+PS C:\> $UserLanguageList.Add("fr-FR")
 PS C:\> Set-WinUserLanguageList -LanguageList $UserLanguageList
 ```
 

@@ -7,7 +7,6 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/04/2018
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference

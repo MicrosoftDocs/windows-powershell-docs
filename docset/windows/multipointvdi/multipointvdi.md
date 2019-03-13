@@ -21,7 +21,7 @@ ms.assetid: 93D214CA-DED9-4651-9171-72A50E01B6A4
 
 # MultipointVdi Module
 ## Description
-The MultiPoint VDI cmdlets in this module are used to manage MultiPoint VDI virtual destkops.
+The MultiPoint VDI cmdlets in this module are used to manage MultiPoint VDI virtual desktops.
 
 ## MultipointVdi Cmdlets
 ### [Disable-WmsVirtualDesktopRole](./Disable-WmsVirtualDesktopRole.md)

@@ -59,7 +59,7 @@ This example returns a list of available and installed features that have a comm
 PS C:\> Get-WindowsFeature -ComputerName Server01 | Where Installed
 ```
 
-This example returns a list of features that is installed on a specified server, Server01.
+This example returns a list of features installed on a specified server, Server01.
 
 ### EXAMPLE 5
 ```

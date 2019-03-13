@@ -31,7 +31,7 @@ The **Set-IscsiVirtualDiskSnapshot** cmdlet sets the description for a snapshot.
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-IscsiVirtualDiskSnasphot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
+PS C:\> Set-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
 ```
 
 This example sets a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} to have the description before upgrade.

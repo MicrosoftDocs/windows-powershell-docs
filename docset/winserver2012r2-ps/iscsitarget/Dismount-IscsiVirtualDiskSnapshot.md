@@ -46,7 +46,7 @@ This cmdlet operates on snapshots in the virtual disk 1.0 (VHD) format only.
 
 ### Example 1
 ```
-PS C:\>Get-IscsiVirtualDiskSnasphot | Dismount-IscsiVirtualDiskSnasphot
+PS C:\>Get-IscsiVirtualDiskSnapshot | Dismount-IscsiVirtualDiskSnapshot
 ```
 
 This example gets all of the snapshot and dismounts them.

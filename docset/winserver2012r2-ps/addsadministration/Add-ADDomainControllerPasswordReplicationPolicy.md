@@ -57,7 +57,7 @@ If a specified user, computer, or group is not on the allowed or denied list, th
 
 ## EXAMPLES
 
-### Example 1: Add user accounts with specified SamAcountNames to the allowed list
+### Example 1: Add user accounts with specified SamAccountNames to the allowed list
 ```
 PS C:\> Add-ADDomainControllerPasswordReplicationPolicy -Identity "USER01-RODC1" -AllowedList "PattiFuller", "DavidChew"
 ```

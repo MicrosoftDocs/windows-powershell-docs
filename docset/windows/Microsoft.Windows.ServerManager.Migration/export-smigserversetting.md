@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the migration store encryption password as a secure string.
-The secure string can be obtained by entering the command `Read-Host -AsSecureString` or `Convertto-Securestring`.
+The secure string can be obtained by entering the command `Read-Host -AsSecureString` or `ConvertTo-Securestring`.
 Because the *Password* parameter is required, if it is not added to your command, you are prompted to create a password after entering your command.
 The password length must be a minimum of six characters and a maximum of 260 characters.
 

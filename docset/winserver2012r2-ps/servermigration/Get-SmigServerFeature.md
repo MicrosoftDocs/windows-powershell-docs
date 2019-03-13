@@ -102,7 +102,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### -Password
 Specifies the password, as a secure string, to decrypt the migration store.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-Securestring.
 
 ```yaml
 Type: SecureString

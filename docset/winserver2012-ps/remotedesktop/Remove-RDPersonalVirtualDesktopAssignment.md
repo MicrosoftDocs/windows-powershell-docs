@@ -32,7 +32,7 @@ This removal makes the virtual desktop available for another user.
 
 ### 1: Remove a personal virtual desktop assignment
 ```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -PersonalVirtualDesktop "PVD-12"
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
 ```
 
 This command removes a personal virtual desktop assignment.

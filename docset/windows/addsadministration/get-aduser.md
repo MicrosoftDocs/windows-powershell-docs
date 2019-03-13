@@ -186,6 +186,9 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
+Note: As type of the parameter is "String", PowerShell will cast the filter to a string while processing this command. It means, that in case of using variable as a value in filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example,
+if filter expression is quoted, variable should also be quoted: **Get-ADUser -Filter "Name -like '$UserName'"**. Otherwise, if curly braces are used to enclose the filter, variable shouldn't be quoted: **Get-ADUser -Filter {Name -like $UserName}**.
+
 Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.

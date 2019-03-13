@@ -27,13 +27,13 @@ Gets Windows capabilities for an image or a running operating system.
 ### Offline
 ```
 Get-WindowsCapability [-Name <String>] -Path <String> [-WindowsDirectory <String>] [-SystemDrive <String>]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-LimitAccess <String>] [-Source <String>] [-Verbose <String>] [<CommonParameters>]
 ```
 
 ### Online
 ```
 Get-WindowsCapability [-Name <String>] [-Online] [-WindowsDirectory <String>] [-SystemDrive <String>]
- [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [<CommonParameters>]
+ [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>] [-LimitAccess <String>] [-Source <String>] [-Verbose <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

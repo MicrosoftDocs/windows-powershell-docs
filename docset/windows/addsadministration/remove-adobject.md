@@ -153,7 +153,7 @@ If you specify a user name for this parameter, the cmdlet prompts for a password
 You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
 You can then set the *Credential* parameter to the **PSCredential** object.
 
-If the acting credentials do not have directory-level permission to perform the task, the Active Directory module for Windows PowerShelll returns a terminating error.
+If the acting credentials do not have directory-level permission to perform the task, the Active Directory module for Windows PowerShell returns a terminating error.
 
 ```yaml
 Type: PSCredential

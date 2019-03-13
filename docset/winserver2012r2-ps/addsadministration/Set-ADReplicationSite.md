@@ -545,7 +545,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyMinimumHopsEnabled
-Indicates whether the cmdlet enables topology minimium hops.
+Indicates whether the cmdlet enables topology minimum hops.
 When enabled, this parameter prevents the Kerberos consistency checker (KCC) from generating optimizing connections in the ring topology of intrasite replication.
 Optimizing connections reduce the replication latency in the site and disabling them is not recommended.
 

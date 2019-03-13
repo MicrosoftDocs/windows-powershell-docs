@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Groups
-Specifies an array of strings containing the names of Active Direcotry groups.
+Specifies an array of strings containing the names of Active Directory groups.
 
 ```yaml
 Type: String[]

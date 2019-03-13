@@ -51,7 +51,7 @@ The **Set-AppvServerPackage** cmdlet applies a dynamic deployment or user config
 
 Only one deployment configuration can be entitled to a package.
 
-Multiple user configuration files can be applied to a package to specific Active Direcotry group entitlements.
+Multiple user configuration files can be applied to a package to specific Active Directory group entitlements.
 
 ## EXAMPLES
 

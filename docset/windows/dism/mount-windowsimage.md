@@ -77,7 +77,7 @@ This command mounts the Windows image contained in the install.vhd file to the c
 PS C:\> Mount-WindowsImage -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -ReadOnly
 ```
 
-This command mounts the Windows image at index 2 of the install.wim file to the c:\offline ddirectory with read-only privileges.
+This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with read-only privileges.
 
 ### Example 3: Mount an image at an index of a file
 ```

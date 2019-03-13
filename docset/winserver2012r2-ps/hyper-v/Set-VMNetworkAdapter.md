@@ -518,7 +518,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticMacAddress
-Assigns a specific a MAC addresss to the virtual network adapter.
+Assigns a specific a MAC address to the virtual network adapter.
 
 ```yaml
 Type: String

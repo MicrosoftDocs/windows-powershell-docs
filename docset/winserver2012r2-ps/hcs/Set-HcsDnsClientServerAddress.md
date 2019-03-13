@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryIPv6
-Specifes an array of secondary IPv6 server addresses for a DNS client.
+Specifies an array of secondary IPv6 server addresses for a DNS client.
 If the client cannot resolve the primary server, it uses a secondary server address.
 
 ```yaml

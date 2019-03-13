@@ -53,7 +53,7 @@ IsCloudEnabled         : False
 IsiSCSIEnabled         : False
 ```
 
-This command specifes the **InterfaceAlias** parameter to enable the Data2 network interface.
+This command specifies the **InterfaceAlias** parameter to enable the Data2 network interface.
 
 ## PARAMETERS
 

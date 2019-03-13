@@ -23,7 +23,7 @@ The table below also shows the latest published version of the Help for each mod
 | ADCSDeployment | [Active Directory Certificate Services Deployment](/powershell/module/adcsdeployment) |
 | ADDSDeployment | [Active Directory Domain Services Deployment](/powershell/module/addsdeployment) |
 | ADFS | [Active Directory Federation Services](/powershell/module/adfs) |
-| ADRMSAdmin | [Active Directory Rights Management Services Admininistration](/powershell/module/adrmsadmin) |
+| ADRMSAdmin | [Active Directory Rights Management Services Administration](/powershell/module/adrmsadmin) |
 | ADRMS | [Active Directory Rights Management Services Deployment](/powershell/module/adrms) |
 | AppBackgroundTask | [App Background Task](/powershell/module/appbackgroundtask) |
 | AppLocker | [AppLocker](/powershell/module/applocker) |
@@ -35,7 +35,7 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker](/powershell/module/bitlocker) |
 | BitsTransfer | [Background Intelligent Transfer Service](/powershell/module/bitstransfer) |
 | BootEventCollector | [Boot Event Collector](/powershell/module/booteventcollector) |
-| BranchCahe | [Branch Cache](/powershell/module/branchcache) |
+| BranchCache | [Branch Cache](/powershell/module/branchcache) |
 | ClusterAwareUpdating | [Cluster Aware Updating](/powershell/module/clusterawareupdating) |
 | ConfigCI | [Code Integrity](/powershell/module/configci) |
 | DcbQos | [Data Center Bridging Quality of Service](/powershell/module/dcbqos) |

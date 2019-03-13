@@ -404,7 +404,7 @@ The format for this parameter is:
 
 `-Remove @{Attribute1LDAPDisplayName=value[];   Attribute2LDAPDisplayName=value[]}`
 
-When you use the *Add*, *Replace*, *Clear*, and *Remove* parameters together, the operations wilol be performed in the following order:
+When you use the *Add*, *Replace*, *Clear*, and *Remove* parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**

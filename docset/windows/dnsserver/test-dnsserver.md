@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a DNSserver.
+Specifies a DNS server.
 The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
 
 ```yaml

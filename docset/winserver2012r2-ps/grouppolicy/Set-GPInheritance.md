@@ -40,7 +40,7 @@ You use the Target parameter to specify the LDAP distinguished name of the domai
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
 
 Name                  : myou 
 ContainerType         : OU 
@@ -61,7 +61,7 @@ Because inheritance is blocked, only GPOs that are linked directly to the "MyOU"
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-PS C:\> Set-GPinheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
+PS C:\> Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
 ```
 
 Description
@@ -73,7 +73,7 @@ GPOs linked to higher-level sites or domains are applied to this domain when Gro
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
 
 Name                  : myou 
 ContainerType         : OU 

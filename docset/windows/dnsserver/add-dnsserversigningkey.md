@@ -296,7 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreKeysInAD
-Specifies whetehr to store the keys in Active Directory Domain Services (AD DS).
+Specifies whether to store the keys in Active Directory Domain Services (AD DS).
 This setting applies only to Active Directory-integrated zones when the vendor of KeyStorageProvider is Microsoft.
 
 ```yaml

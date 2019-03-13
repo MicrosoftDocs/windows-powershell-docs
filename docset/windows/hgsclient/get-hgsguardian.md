@@ -49,7 +49,7 @@ This command gets all guardians configured for this computer.
 PS C:\> Get-HgsGuardian -Name "Guardian11"
 ```
 
-This command gets a guardian named Guaridan11.
+This command gets a guardian named Guardian11.
 
 ## PARAMETERS
 

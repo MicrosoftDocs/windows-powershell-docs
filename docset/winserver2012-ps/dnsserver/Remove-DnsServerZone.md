@@ -19,7 +19,7 @@ Remove-DnsServerZone [-Name] <String> [-AsJob] [-CimSession <CimSession[]>] [-Co
 
 ## DESCRIPTION
 The **Remove-DnsServerZone** removes a zone from a Domain Name System (DNS) server.
-You can use this cmdlet to remove any type of zone, primary, seconday, stub, or conditional forwarder.
+You can use this cmdlet to remove any type of zone, primary, secondary, stub, or conditional forwarder.
 
 ## EXAMPLES
 

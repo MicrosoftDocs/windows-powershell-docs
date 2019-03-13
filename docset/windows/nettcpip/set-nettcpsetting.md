@@ -57,13 +57,16 @@ The **Set-NetTCPSetting** cmdlet modifies a TCP setting.
 TCP settings are optimized for different network conditions including latency and congestion.
 To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
 
-You can only modify the Custom TCP setting.
+> [!IMPORTANT] 
+>1) You can modify Custom and Non-Custom settings on windows server 2016 and 2019.
+>2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
+>3) You cannot modify the NetTCPsetting on Client Operating systems(Windows 7, 8.1 and 10) as they are Read-Only.
 
 ## EXAMPLES
 
 ### Example 1: Change the custom TCP setting
 ```
-PS C:\>Set-NetTCPSetting -SettingName "Custom" -CongestionProvider CTCP -InitialCongestionWindowMss 6
+PS C:\>Set-NetTCPSetting -SettingName "InternetCustom" -CongestionProvider CTCP -InitialCongestionWindowMss 6
 ```
 
 This command changes the custom TCP setting to have a value of 6 for the initial congestion window and use compound TCP.

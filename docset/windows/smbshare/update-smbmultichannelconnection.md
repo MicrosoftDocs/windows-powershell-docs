@@ -39,7 +39,7 @@ If no parameter is specified, the SMB client communicates with all of the server
 
 ### Example 1: Update multi-channel-related information
 ```
-PS C:\>Update-SmbMulitchannelConnection
+PS C:\>Update-SmbMultichannelConnection
 ```
 
 This command forces the SMB client to update the multi-channel-related information.

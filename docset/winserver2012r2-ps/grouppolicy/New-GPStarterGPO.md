@@ -49,7 +49,7 @@ The Starter GPO is annotated with the specified comment.
 
 ### -Comment
 Includes a comment for the new Starter GPO.
-The comment string must be enclosed in double-quoatation marks or single-quotation marks and can contain 2,047 characters.
+The comment string must be enclosed in double-quotation marks or single-quotation marks and can contain 2,047 characters.
 
 ```yaml
 Type: String

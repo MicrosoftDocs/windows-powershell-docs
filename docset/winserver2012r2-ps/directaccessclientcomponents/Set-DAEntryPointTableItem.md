@@ -48,7 +48,7 @@ Set-DAEntryPointTableItem -InputObject <CimInstance[]> [-ADSite <String>] [-Entr
 
 ## DESCRIPTION
 **Set-DAEntryPointTableItem** modifies an entry point configuration that is stored in a Group Policy object (GPO).
-You must specifiy the name of the GPO in which the DirectAccess entry point configuration is stored.
+You must specify the name of the GPO in which the DirectAccess entry point configuration is stored.
 
 ## EXAMPLES
 

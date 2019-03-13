@@ -19,7 +19,7 @@ title: Enable-TlcEccCurve
 # Enable-TlsEccCurve
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables Elliptic Curve Cryptography (ECC) cipher suites available for TLS.
 
 ## SYNTAX
 
@@ -28,21 +28,21 @@ Enable-TlsEccCurve [[-Position] <UInt32>] [-Name] <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Enables Elliptic Curve Cryptography (ECC) cipher suites available for TLS for a computer.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Enable-TlsEccCurve "NistP384" -Position 0
 ```
 
-{{ Add example description here }}
+This command enables Elliptic Curve Cryptography cipher suite named "NistP384"  at position 0, which is the highest priority.
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ECC cipher suite to enable.
 
 ```yaml
 Type: String
@@ -57,7 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -Position
-{{Fill Position Description}}
+Specifies the position at which to insert the cipher suite in the ordered list of ECC cipher suites. The cmdlet inserts the cipher suite at the position that this parameter specifies, ahead of any existing cipher suites.
+
+Specify a value of 0 or CRYPT_PRIORITY_TOP to insert the function at the top of the list. Specify a value of 4294967295 or 0xFFFFFFFF or CRYPT_PRIORITY_BOTTOM to insert the function at the end of the list.
 
 ```yaml
 Type: UInt32

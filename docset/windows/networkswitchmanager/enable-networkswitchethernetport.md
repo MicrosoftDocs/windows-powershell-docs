@@ -47,7 +47,7 @@ The **Enable-NetworkSwitchEthernetPort** cmdlet enables an Ethernet port on a ne
 
 ## EXAMPLES
 
-### Example 1: Enable a ports by using a device IDthe pipelinesa device ID
+### Example 1: Enable a port by using a device ID
 ```
 PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
 PS C:\> Enable-NetworkSwitchEthernetPort -DeviceID "Ethernet17" -CimSession $Session

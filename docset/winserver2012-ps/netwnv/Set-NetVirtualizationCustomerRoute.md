@@ -52,7 +52,7 @@ PS C:\>Set-NetVirtualizationCustomerRoute -DestinationPrefix "172.16.0.0/16" -Me
 
 This command changes the metric value to 3 for a Customer Route that has the specified destination prefix.
 
-### Example 2: Change a metric value for mulitple Customer Routes
+### Example 2: Change a metric value for multiple Customer Routes
 ```
 PS C:\>Get-NetVirtualizationCustomerRoute -NextHop "172.16.0.1" | Set-NetVirtualizationCustomerRoute -Metric 3
 ```

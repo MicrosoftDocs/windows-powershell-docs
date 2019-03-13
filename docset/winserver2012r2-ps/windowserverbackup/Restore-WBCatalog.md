@@ -86,7 +86,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, SwitchParamter
+### WBBackupTarget, SwitchParameter
 Specifies a backup target object from which to restore the catalog.
 Use the **Force** parameter to suppress the confirmation message.
 

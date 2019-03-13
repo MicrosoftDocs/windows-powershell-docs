@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the unique identifier for the health probe reource.
+Specifies the unique identifier for the health probe resource.
 
 ```yaml
 Type: String[]

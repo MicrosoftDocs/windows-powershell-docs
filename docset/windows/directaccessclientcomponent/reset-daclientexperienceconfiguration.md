@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomCommands
-Reseets the CustomCommands property of the specified configuration to a non-configured state.
+Resets the CustomCommands property of the specified configuration to a non-configured state.
 
 ```yaml
 Type: SwitchParameter

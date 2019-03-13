@@ -138,8 +138,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-For More information on the properties, See [Get-MpComputerStatus Properties](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/defender/msft-mpcomputerstatus#properties). 
+
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-MpComputerStatus Properties](https://docs.microsoft.com/previous-versions/windows/desktop/defender/msft-mpcomputerstatus#properties). 

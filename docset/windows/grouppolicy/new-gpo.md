@@ -99,7 +99,7 @@ WmiFilter        :
 This command creates a GPO named TestGPO, links it to the Marketing OU in the contoso.com domain, and grants the Marketing Admins security group permissions to edit the GPO.
 
 A GPO object is returned by the command, so you could continue to configure the new GPO by piping the output to other cmdlets.
-For example, you could set Registry preference items or registry-based policy settings by piping the output to Set-GPPrefRegistryValueor to Set-GPRegistryValue.
+For example, you could set Registry preference items or registry-based policy settings by piping the output to Set-GPPrefRegistryValue or to Set-GPRegistryValue.
 
 ## PARAMETERS
 

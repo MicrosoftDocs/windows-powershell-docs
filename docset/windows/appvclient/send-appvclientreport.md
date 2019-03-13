@@ -52,7 +52,7 @@ If there is no valid location specified, the cmdlet fails.
 ### Example 1: Send data to previously configured location
 ```
 PS C:\> Send-AppVClientReport
-The Application Virtualization Client Report was sent sucessfully
+The Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location that is configured in the client and does not delete the data after it is sent.
@@ -60,7 +60,7 @@ This command sends the data to the location that is configured in the client and
 ### Example 2: Send data to previously configured location and delete data
 ```
 PS C:\> Send-AppVClientReport -DeleteOnSuccess
-Tee Application Virtualization Client Report was sent sucessfully
+Tee Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location that is configured in the client and deletes the data after it is sent.
@@ -68,7 +68,7 @@ This command sends the data to the location that is configured in the client and
 ### Example 3: Send data to specified location and delete data
 ```
 PS C:\> Send-AppVClientReport -URL "http://myreportingserver:port" -DeleteOnSuccess
-The Application Virtualization Client Report was sent sucessfully
+The Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location specified by the URL parameter and deletes the data after it is sent.

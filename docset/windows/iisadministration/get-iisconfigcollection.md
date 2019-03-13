@@ -30,7 +30,7 @@ Get-IISConfigCollection [-ConfigElement] <ConfigurationElement> [[-CollectionNam
 The **Get-IISConfigCollection** cmdlet gets a **ConfigurationCollection** object from either a ConfigurationSection or a ConfigurationElement. 
 
 It is advisable to not to assign this value to a parameter and pass it in the pipeline to the next cmdlet since Windows PowerShell cannot interpret this object.
-This is due to the fact that **ConfigurationCollection** implements IEnumarable and the pipeline processor enumrates each single element when used this way.
+This is due to the fact that **ConfigurationCollection** implements IEnumerable and the pipeline processor enumerates each single element when used this way.
 Instead either pass the whole **Get-IISConfigCollection** cmdlet in the pipeline or pass it as a parameter.
 
 ## EXAMPLES

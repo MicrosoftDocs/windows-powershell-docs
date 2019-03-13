@@ -37,7 +37,7 @@ The **Export-AdfsDeploymentSQLScript** cmdlet generates the SQL scripts that you
 
 ### Example 1: Export SQL deployment scripts
 ```
-PS C:\> Export-AdfsDeploymentSQLScript -ScriptDestinationFolder ".\ScriptFolder" -ServiceAccountName "ContosoDomain\PattiFuller"
+PS C:\> Export-AdfsDeploymentSQLScript -DestinationFolder ".\ScriptFolder" -ServiceAccountName "ContosoDomain\PattiFuller"
 ```
 
 This command exports SQL deployment scripts for AD FS installation on behalf of the specified AD FS service account.

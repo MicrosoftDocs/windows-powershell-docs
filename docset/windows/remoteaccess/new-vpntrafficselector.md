@@ -183,7 +183,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#VpnTrafficSelecor
+### Microsoft.Management.Infrastructure.CimInstance#VpnTrafficSelector
 
 ## NOTES
 

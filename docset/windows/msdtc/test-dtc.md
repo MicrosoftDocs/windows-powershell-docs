@@ -47,7 +47,7 @@ For more information, see [The Netsh Command-Line Utility](https://technet.micro
 
 ## EXAMPLES
 
-### Example 1: Test MSDTC on the local comptuter
+### Example 1: Test MSDTC on the local computer
 ```
 PS C:\> Test-Dtc -LocalComputerName "$env:COMPUTERNAME" -Verbose
 VERBOSE: ": Firewall rule for "RPC Endpoint Mapper" is enabled."

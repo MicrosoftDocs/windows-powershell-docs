@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 ### -VersionId
 Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a completely different lineage.
-If you do not specify this paramater, the cmdlet operates on the latest version of the package.
+If you do not specify this parameter, the cmdlet operates on the latest version of the package.
 
 ```yaml
 Type: Guid

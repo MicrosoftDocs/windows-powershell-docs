@@ -68,7 +68,7 @@ The Enforced and Order properties are not changed.
 
 ### Example 2: Enable the link between a GPO and two domains
 ```
-PS C:\> Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabeled Yes -Enforced Yes -Order 1
+PS C:\> Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabled Yes -Enforced Yes -Order 1
 ```
 
 This command enables the link between the GPO named TestGPO in the north.contoso.com domain and the south.contoso.com domain.

@@ -61,7 +61,7 @@ The Enforced and Order properties are not changed.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabeled Yes -Enforced Yes -Order 1
+C:\PS>Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabled Yes -Enforced Yes -Order 1
 ```
 
 Description

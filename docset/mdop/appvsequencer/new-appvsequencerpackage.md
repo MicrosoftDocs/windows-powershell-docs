@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstalledFilesPath
-Speicife the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
+Specifies the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
 
 ```yaml
 Type: String

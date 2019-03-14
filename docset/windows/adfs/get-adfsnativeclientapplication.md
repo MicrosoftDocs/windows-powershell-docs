@@ -144,12 +144,12 @@ System.Uri[]
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.NativeClientApplication
-	ApplicationGroupIdentifier  string
-	Description                 string
-	Enabled                     bool
-	Identifier                  string
-	Name                        string
-	RedirectUri                 string[]
+ApplicationGroupIdentifier  string
+Description                 string
+Enabled                     bool
+Identifier                  string
+Name                        string
+RedirectUri                 string[]
 
 ## NOTES
 

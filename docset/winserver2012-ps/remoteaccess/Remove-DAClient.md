@@ -71,7 +71,7 @@ The use of the cmdlet to restrict users and laptops in DirectAccessMobileClients
 PS C:\>Remove-DAClient -DomainName "child.corp.contoso.com"
 ```
 
-This example displays the deployment that contains two domains viz.corp.contoso.com and child.corp.contoso.com and the cmdlet removes the DA client GPO in child.corp.cotoso.com domain.
+This example displays the deployment that contains two domains viz.corp.contoso.com and child.corp.contoso.com and the cmdlet removes the DA client GPO in child.corp.contoso.com domain.
 This cmdlet automatically locates the client GPO in the domain and removes it.
 
 ### EXAMPLE 3

@@ -85,7 +85,7 @@ To specify a new default quick mode cryptographic set, run this cmdlet to specif
 
 ### EXAMPLE 1
 ```
-PS C:\>Rename-NetIPsecQuickModeCryptoSet -Name "{ed8384a9-a78b-4d0d-8f3d-eb5615edb4a0}" -NewName "Exchange HIPPA Server, Any <-> 80 - Phase 2 Crypto Set"
+PS C:\>Rename-NetIPsecQuickModeCryptoSet -Name "{ed8384a9-a78b-4d0d-8f3d-eb5615edb4a0}" -NewName "Exchange HIPAA Server, Any <-> 80 - Phase 2 Crypto Set"
 ```
 
 This example renames a quick mode cryptographic set so that the unique identifier is descriptive and user friendly.

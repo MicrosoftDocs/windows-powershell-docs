@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -Version
 Specifies the version of an App-V package in one specific lineage.
-If you do not specify a version, the cmdlet acts on all versions saved oncomputer.
+If you do not specify a version, the cmdlet acts on all versions saved on the computer.
 
 ```yaml
 Type: String

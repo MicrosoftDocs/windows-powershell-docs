@@ -33,7 +33,7 @@ The **Export-HcsSupportPackage** cmdlet bundles the logs of each controller devi
 This cmdlet creates one .zip file per controller.
 Microsoft Customer Service and Support uses these logs to help troubleshoot the device.
 
-This cmldet uses an encryption passphrase to encrypt the package.
+This cmdlet uses an encryption passphrase to encrypt the package.
 Share this passphrase with Customer Service and Support.
 
 ## EXAMPLES

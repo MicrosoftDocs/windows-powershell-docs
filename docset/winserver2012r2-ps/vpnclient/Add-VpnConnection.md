@@ -161,7 +161,7 @@ For more information about custom EAP authentication methods, see the New-EapCon
 ## PARAMETERS
 
 ### -AllUserConnection
-Indicates that the cmldet adds the VPN connection to the global phone book entries.
+Indicates that the cmdlet adds the VPN connection to the global phone book entries.
 
 ```yaml
 Type: SwitchParameter

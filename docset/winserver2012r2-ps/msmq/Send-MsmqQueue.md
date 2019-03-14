@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Transactional
-Indicates that this cmldet sends the message as a transactional message.
+Indicates that this cmdlet sends the message as a transactional message.
 
 ```yaml
 Type: SwitchParameter

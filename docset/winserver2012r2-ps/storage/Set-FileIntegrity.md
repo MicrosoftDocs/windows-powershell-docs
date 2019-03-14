@@ -139,7 +139,7 @@ Accept wildcard characters: False
 ### -Enforce
 Indicates whether to enable blocking access to a file if integrity streams do not match the data.
 
-If you specify a value of $True for this parameter, the cmldet also enables integrity for the file.
+If you specify a value of $True for this parameter, the cmdlet also enables integrity for the file.
 
 ```yaml
 Type: Boolean

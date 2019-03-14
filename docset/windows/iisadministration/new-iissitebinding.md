@@ -73,7 +73,7 @@ in the local machine and add a new HTTPS binding on a website named TestSite for
 ### -BindingInformation
 Specifies the binding information string to use for the new site. The binding information of the form
 IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
-is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP
+is equivalent to using a wildcard character such as \*:443:. In this representation \*  indicates all IP
 addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml

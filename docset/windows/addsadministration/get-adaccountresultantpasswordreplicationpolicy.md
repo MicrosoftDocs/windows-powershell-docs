@@ -48,7 +48,7 @@ For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount, o
 The **DomainController** parameter specifies the read-only domain controller.
 You can identify a domain controller by its IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the distinguished name of the NT Directory Services (NTDS) settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name, SamAccountName, GUID, SID of the computer object that represents the domain controller.
-You can also set the *DomainController* parameter to a domain controller object variable, such as `$<localDomainControllerobject>`.
+You can also set the *DomainController* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`.
 
 ## EXAMPLES
 

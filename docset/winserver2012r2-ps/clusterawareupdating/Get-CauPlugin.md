@@ -27,7 +27,7 @@ Get-CauPlugin [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-Cauplugin** cmdlet retrieves information about one or more software updating plug-ins that are registered on the local computer.
+The **Get-CauPlugin** cmdlet retrieves information about one or more software updating plug-ins that are registered on the local computer.
 A plug-in can be specified or information can be retrieved about all registered plug-ins. 
 
 CAU always uses a plug-in when performing updates.

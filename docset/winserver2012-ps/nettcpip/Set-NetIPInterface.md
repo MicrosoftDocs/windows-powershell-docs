@@ -514,7 +514,7 @@ Accept wildcard characters: False
 ```
 
 ### -NeighborUnreachabilityDetection
-Modifies the neighbor unreachablility netection (NUD) property.
+Modifies the neighbor unreachablility detection (NUD) property.
 NUD is how nodes determine that a neighbor is no longer reachable.
 Default depends on type of interface.
 This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.

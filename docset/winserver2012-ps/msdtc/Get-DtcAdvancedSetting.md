@@ -19,7 +19,7 @@ Get-DtcAdvancedSetting [-CimSession <CimSession[]>] [-DtcName <String>] [-Subkey
 
 ## DESCRIPTION
 The **Get-DtcAdvancedSetting** cmdlet gets the advanced setting for Microsoft Distributed Transaction Coordinator (MSDTC).
-Use this cmdlet to queury the advanced setting information stored in the registry.
+Use this cmdlet to query the advanced setting information stored in the registry.
 You can query only one registry value at one time.
 Specify a DTC instance by using the **DtcName** parameter.
 If you do not specify an instance, the default value is Local.

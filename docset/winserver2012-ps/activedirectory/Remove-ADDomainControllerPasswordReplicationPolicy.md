@@ -54,7 +54,7 @@ Description
 
 -----------
 
-Remove the users with samAccountNames 'JesperAaberg' and'AdrianaAdams' from the Allowed list on the RODC 'FABRIKAM-RODC1'.
+Remove the users with samAccountNames 'JesperAaberg' and 'AdrianaAdams' from the Allowed list on the RODC 'FABRIKAM-RODC1'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

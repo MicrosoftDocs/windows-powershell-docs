@@ -141,7 +141,7 @@ The identifier in parentheses is the LDAP display name for the attribute.
 
 Distinguished Name
 
-Example: CN=fabikam.com,DC=corp,DC=contoso,DC=com
+Example: CN=fabrikam.com,DC=corp,DC=contoso,DC=com
 
 GUID (objectGUID)
 

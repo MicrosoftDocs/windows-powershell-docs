@@ -51,7 +51,7 @@ This command removes AIA for the specified URI named `http://www.contoso.com/pki
 
 ### Example 2: Remove OCSP for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOCSP
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
 This command removes the OCSP for the specified URI named `http://www.cpandl.com/ocsp`.

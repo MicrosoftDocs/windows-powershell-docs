@@ -43,7 +43,7 @@ The policy is one of the following values:
 
 The *Identity* parameter specifies the account.
 You can identify a user, computer, or service account object by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the *Identity* parameter to an account object variable, such as `$<localAccountobject>`, or pass an account object through the pipeline to the *Identity* parameter.
+You can also set the *Identity* parameter to an account object variable, such as `$<localAccountObject>`, or pass an account object through the pipeline to the *Identity* parameter.
 For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount, or Search-ADAccount cmdlets to retrieve an account object and then pass the object through the pipeline to the Get-ADAccountResultantPasswordReplicationPolicy cmdlet.
 
 The **DomainController** parameter specifies the read-only domain controller.

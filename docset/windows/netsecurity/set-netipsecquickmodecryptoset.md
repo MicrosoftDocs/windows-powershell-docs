@@ -87,14 +87,14 @@ PS C:\>$crypto2 = New-NetIPsecQuickModeCryptoProposal -Encryption DES -ESPHash M
 
 
 
-PS C:\>Set-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPPA Server, 80 <-> Any - Phase 2 Crypto Set" -Proposals $crypto1,$crypto2
+PS C:\>Set-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPAA Server, 80 <-> Any - Phase 2 Crypto Set" -Proposals $crypto1,$crypto2
 ```
 
 This example replaces the proposals of an existing quick mode cryptographic set.
 
 ### EXAMPLE 2
 ```
-PS C:\>Set-NetIPsecMainModeCryptoSet -DisplayGroup "Exchange HIPPA Server" -PerfectForwardSecrecyGroup DH14
+PS C:\>Set-NetIPsecMainModeCryptoSet -DisplayGroup "Exchange HIPAA Server" -PerfectForwardSecrecyGroup DH14
 ```
 
 This example modifies the perfect forward secrecy group for a group of quick mode cryptographic sets.

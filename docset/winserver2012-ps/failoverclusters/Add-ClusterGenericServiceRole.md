@@ -175,8 +175,8 @@ Accept wildcard characters: False
 
 ### -Wait
 Specifies the time in seconds to wait for the cmdlet.
-If the \<maml:system\>Wait\</maml:system\> parameter is not specified, then the cmdlet waits for completion.
-If \<maml:codeInline\>-Wait 0\</maml:codeInline\> is specified, then the call is initiated and the cmdlet returns without waiting.
+If the `Wait` parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

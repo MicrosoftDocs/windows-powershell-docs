@@ -174,7 +174,7 @@ Description
 -----------
 
 This command copies all Registry preference items that configure (first-level) values under the registry key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" from User Configuration in a source GPO (TestGPO) to Computer Configuration in destination GPO (TestGPO-1).
-A copy of the destination GPO (TestGPO-1) is returned for each Registration preference item set (in this examlpe, 2).
+A copy of the destination GPO (TestGPO-1) is returned for each Registration preference item set (in this example, 2).
 
 The Get-GPPrefRegistryValue command gets all the Registry preference items that configure values under User Configuration in the source GPO.
 This command also returns all first level subkeys that have values configured (though not the Registry preference items for the values themselves).

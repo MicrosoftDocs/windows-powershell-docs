@@ -32,7 +32,7 @@ The **Get-WebConfiguration** cmdlet gets the Internet Information Services (IIS)
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Querying authentication settings --------------
+### Example-------------- Example 1: Querying authentication settings --------------
 ```
 IIS:\>Get-WebConfiguration -Filter "System.WebServer/Security/Authentication/* /*" -Recurse | where {$_.enabled -eq $True} | Format-List
 ```

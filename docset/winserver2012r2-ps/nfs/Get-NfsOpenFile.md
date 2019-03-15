@@ -47,7 +47,7 @@ PS C:\> Get-NfsOpenFile -ClientId 101
 
 This command gets all open files on an NFS server for a client computer that has the ID 101.
 
-### Example 3: Get all open files on an NFS server by path and file name by using a wildcarda
+### Example 3: Get all open files on an NFS server by path and file name by using a wildcard
 ```
 PS C:\> Get-NfsOpenFile -Path "C:\Windows\Setup*"
 ```

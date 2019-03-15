@@ -34,7 +34,7 @@ Globbing is supported.
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Adding a Default default Document document --------------default document
+### Example-------------- Example 1: Adding a Default default Document document --------------default document
 ```
 IIS:\>Add-WebConfigurationProperty -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Name "Collection" -Value "new-index.html"
 ```

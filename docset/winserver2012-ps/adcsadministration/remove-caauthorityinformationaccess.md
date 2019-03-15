@@ -42,7 +42,7 @@ Removes Authority Information Access (AIA) for the specified uniform resource id
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.cpandl.com/ocsp/" -AddToCertificateOCSP
+C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
 Description

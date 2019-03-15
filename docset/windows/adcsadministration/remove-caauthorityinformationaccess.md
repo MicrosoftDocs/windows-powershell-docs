@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-CAAuthorityInformationAccess
+ms.reviewer:
 ms.assetid: 8A3ABA4F-7422-48DD-AA60-A943E8D31474
 ---
 
@@ -50,7 +51,7 @@ This command removes AIA for the specified URI named `http://www.contoso.com/pki
 
 ### Example 2: Remove OCSP for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOCSP
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
 This command removes the OCSP for the specified URI named `http://www.cpandl.com/ocsp`.

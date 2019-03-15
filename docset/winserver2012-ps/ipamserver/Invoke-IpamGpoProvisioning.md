@@ -64,7 +64,7 @@ PS C:\>Invoke-IpamGpoProvisioning -Domain child.contoso.com -GpoPrefixName IPAM1
 This example creates the universal group IPAMUG in the domain child.contoso.com, if not already present, and adds the computer account of the local computer running the IPAM server to the group.
 This cmdlet also creates and links the following IPAM GPOs: IPAM1_DHCP, IPAM1_DNS, and IPAM1_DC_NPS in the domain child.contoso.com to enable access for the group IPAMUG.
 This cmdlet enables DNS read access for IPAMUG using domain-wide DNS ACL.
-This cmdelet uses the dc1.child.contoso.com as the DC to complete the GPO operations.
+This cmdlet uses the dc1.child.contoso.com as the DC to complete the GPO operations.
 This cmdlet suppresses the default confirmation text.
 
 ### EXAMPLE 3

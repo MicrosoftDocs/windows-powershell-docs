@@ -30,7 +30,7 @@ Stop-DedupJob [-AsJob] [-CimSession <CimSession[]>] [-Id <String[]>] [-PassThru]
 ```
 
 ## DESCRIPTION
-The **Stop-DedupJob** cmdlet cancels ojne or more specified data deduplication jobs.
+The **Stop-DedupJob** cmdlet cancels one or more specified data deduplication jobs.
 
 To run this cmdlet, you must start Windows PowerShell® with the **Run as administrator** option.
 

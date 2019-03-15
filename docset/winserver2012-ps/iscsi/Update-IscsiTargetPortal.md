@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 

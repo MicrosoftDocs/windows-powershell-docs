@@ -32,7 +32,7 @@ The **Set-WebGlobalModule** cmdlet specifies configuration settings for an Inter
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Changeing a property of a global module --------------e
+### Example-------------- Example 1: Changeing a property of a global module --------------e
 ```
 IIS:\>Set-WebGlobalModule -Name "UriCacheModule" -Image "c:\test.dll"
 ```

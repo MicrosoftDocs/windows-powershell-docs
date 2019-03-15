@@ -31,7 +31,7 @@ The **Restore-WebConfiguration** cmdlet restores an Internet Information Service
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Restoreing a backup --------------e
+### Example-------------- Example 1: Restoreing a backup --------------e
 ```
 IIS:\>Restore-WebConfiguration -Name "MyBackup"
 ```

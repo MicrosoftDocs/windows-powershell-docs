@@ -53,7 +53,7 @@ Uri: String
 
 AddToCertificateAia: Boolean
 
-AddtoCertificateOCSP: Boolean
+AddToCertificateOcsp: Boolean
 
 ## NOTES
 

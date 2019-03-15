@@ -25,7 +25,7 @@ You can use this cmdlet to change the domain name of the server and configure th
 
 ### Example 1: Change the domain name configuration of the server
 ```
-PS C:\>$SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force PS C:\> Set-WssDomainNameConfiguration -CertificateFilePassword $SecureString_pwd -CertificatePath "c:\cert.pfx" -DomainName "Contoso.com" -NoCertificateVerification
+PS C:\>$SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force PS C:\> Set-WssDomainNameConfiguration -CertificateFilePassword $SecureString_pwd -CertificatePath "c:\cert.pfx" -DomainName "Contoso.com" -NoCertificateVerification
 ```
 
 The first command converts the plain text string "P@ssW0rD!" into a secure string and stores the result in the **$SecureString_pwd** variable.

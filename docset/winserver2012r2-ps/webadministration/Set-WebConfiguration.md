@@ -40,7 +40,7 @@ Specify an element as a configuration section or an XPath query.
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Setting new Bindings bindings on an existing Web site --------------bindings
+### Example-------------- Example 1: Setting new Bindings bindings on an existing Web site --------------bindings
 ```
 IIS:\>Set-WebConfiguration -Filter '/system.applicationHost/sites/site[@name=" DemoSite"]/bindings' -PSPath "IIS:\" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```

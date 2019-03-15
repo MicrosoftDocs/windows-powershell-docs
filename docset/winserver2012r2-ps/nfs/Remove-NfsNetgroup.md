@@ -45,7 +45,7 @@ PS C:\> Remove-NfsNetgroup -NetGroupName "AppServers" -LdapInstanceName "Contoso
 
 This command removes an NFS netgroup that is named AppServers from a netgroup store in Contoso.com.
 
-### Example 2: Remove an NFS netgroup from aconfigured store
+### Example 2: Remove an NFS netgroup from a configured store
 ```
 PS C:\>Remove-NfsNetgroup -NetGroupName "AppServers"
 ```

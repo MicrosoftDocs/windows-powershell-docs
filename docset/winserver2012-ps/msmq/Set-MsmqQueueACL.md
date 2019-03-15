@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifeis an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
+Specifies an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
 This parameter accepts pipelined input.
 
 ```yaml
@@ -119,7 +119,7 @@ The acceptable values for this parameter are:
 - FullControl: Full control of the specified queue. 
 - GetPermissions: Get the permissions of the specified queue. 
 - GetProperties: Get the properties of the specified queue. 
-- JournalReceive: Receive a message from the specified queueâ€™s journal queue. 
+- JournalReceive: Receive a message from the specified queue's journal queue. 
 - Peek: Peek a message from the specified queue. 
 - Receive: Receive a message from the specified queue. 
 - Send: Send a message to the specified queue. 

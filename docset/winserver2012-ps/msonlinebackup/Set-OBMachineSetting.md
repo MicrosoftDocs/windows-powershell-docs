@@ -63,7 +63,7 @@ This example sets encryption passphrase for a computer.
 
 ### EXAMPLE 2
 ```
-PS C:\>$spwd = ConvertTo-SecureString -String Notag00pa55word -AsplainText -Force
+PS C:\>$spwd = ConvertTo-SecureString -String Notag00pa55word -AsPlainText -Force
 
 
 

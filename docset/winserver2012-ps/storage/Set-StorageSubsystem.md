@@ -37,7 +37,7 @@ Set-StorageSubsystem [-AsJob] [-CimSession <CimSession[]>] [-Description <String
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
+The **Set-StorageSubsystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
 
 ## EXAMPLES
 

@@ -31,7 +31,7 @@ The **Remove-WebGlobalModule** cmdlet removes an Internet Information Services (
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Removeing a module --------------e
+### Example-------------- Example 1: Removeing a module --------------e
 ```
 IIS:\>Remove-WebGlobalModule -Name "testGlobalModule" -PSPath "IIS:\Sites\Default Web Site"
 ```

@@ -64,7 +64,7 @@ When the password is entered, the value is passed to the command as a SecureStri
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-PS C:\> $pass = ConvertTo-SecureString -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -string "password" -AsPlainText -force
 
 C:\PS> Receive-SmigServerData -Password $pass
 ```

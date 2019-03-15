@@ -61,7 +61,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 2
 ```
-PS C:\> $pass = ConvertTo-SecureString -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -string "password" -AsPlainText -force
 PS C:\> Send-SmigServerData -include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
 ```
 

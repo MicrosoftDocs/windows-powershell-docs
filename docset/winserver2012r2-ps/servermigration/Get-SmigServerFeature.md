@@ -85,7 +85,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 5
 ```
-PS C:\> $pass = ConvertTo-SecureString -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -string "password" -AsPlainText -force
 PS C:\> Get-SmigServerFeature -Path "c:\temp\store" -Password $pass |Import-SmigServerSetting -Path "c:\temp\store" -Password $pass -Verbose
 ```
 

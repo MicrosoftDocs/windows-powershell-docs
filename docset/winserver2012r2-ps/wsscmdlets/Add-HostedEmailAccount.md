@@ -34,7 +34,7 @@ A hosted email service provides a hosted email account.
 
 ### Example 1: Create a hosted email account
 ```
-PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Add-HostedEmailAccount -LocalAccountName "PattiFuller" -EmailAddresses "PattiFuller@Constoso.com" -Password $SecureString_pwd
 ```
 

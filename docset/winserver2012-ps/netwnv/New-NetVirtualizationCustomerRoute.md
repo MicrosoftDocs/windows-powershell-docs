@@ -30,7 +30,7 @@ To create a virtual network route, specify the following values:
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.

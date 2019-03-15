@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: ActiveDirectory
 Module Guid: 43C15630-959C-49E4-A977-758C5CC93408
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
@@ -10,7 +10,7 @@ Locale: en-US
 title: ActiveDirectory
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

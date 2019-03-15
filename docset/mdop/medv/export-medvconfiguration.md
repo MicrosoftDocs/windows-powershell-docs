@@ -54,7 +54,7 @@ The command exports the configuration object to a file.
 ## PARAMETERS
 
 ### -Append
-Indicates that this cmdlet appends the settings in the **MedvConfiguration** object to an exsiting registry file.
+Indicates that this cmdlet appends the settings in the **MedvConfiguration** object to an existing registry file.
 The existing registry file must contain a registry file header.
 If you specify this parameter but the specified registry file does not exist, the cmdlet creates a new registry file.
 
@@ -195,7 +195,7 @@ A **MedvConfiguration** object contains MED-V settings to set for a particular s
 ## OUTPUTS
 
 ### FileInfo
-This cmdlet genterates **FileInfo** object.
+This cmdlet generates **FileInfo** object.
 
 ## NOTES
 

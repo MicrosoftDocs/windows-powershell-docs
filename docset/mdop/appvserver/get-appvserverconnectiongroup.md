@@ -36,7 +36,7 @@ Get-AppvServerConnectionGroup [-GroupID] <Guid> [[-VersionID] <Guid>] [<CommonPa
 ```
 
 ## DESCRIPTION
-The **Get-AppvServerConnectionGroup** cmdet returns a list of specified connection group objects.
+The **Get-AppvServerConnectionGroup** cmdlet returns a list of specified connection group objects.
 
 ## EXAMPLES
 

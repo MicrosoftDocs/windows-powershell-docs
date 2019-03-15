@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be renamed. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be renamed. 
 A **NetIPsecPhase1AuthSet** object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 
 Alternatively, the *Phase2AuthSet* parameter can be used for the same purpose, but does not allow the authentication set to be piped into the cmdlet and the set must be specified with the *IPsecRuleName* parameter.

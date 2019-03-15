@@ -31,7 +31,7 @@ Description
 
 -----------
 
-Removes all URIs for all distribition points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
+Removes all URIs for all distribution points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

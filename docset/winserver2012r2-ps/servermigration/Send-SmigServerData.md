@@ -61,7 +61,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 2
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -string "password" -asplaintext -force
 PS C:\> Send-SmigServerData -include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
 ```
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to encrypt the data transfer by using the 256-bit advanced encryption standard (AES).
-The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 
 You must specify a password to protect your data because transferred data is broadcast over a network.
 If the Password parameter is not added to your command, you are prompted to specify a password after entering your command.

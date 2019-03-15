@@ -115,7 +115,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### -------------------------- EXAMPLE 5 --------------------------
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -string "password" -asplaintext -force
 
 C:\PS>Import-SmigServerSetting -User All -Password $pass -Path "c:\store" -Verbose
 ```
@@ -234,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to decrypt the migration store.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 Because the Password parameter is required, if it is not added to your command, you are prompted to specify a password after entering your command.
 
 ```yaml

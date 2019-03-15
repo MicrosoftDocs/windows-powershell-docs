@@ -33,7 +33,7 @@ After you enable the office_365_2 Integration Module, you can manage office_365_
 
 ### Example 1: Enable the Office 365 Integration Module
 ```
-PS C:\> $SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -Asplaintext -Force
 PS C:\> Enable-O365Integration -O365AccountUPN "Admin@Contoso.onmicrosoft.com" -Password $SecureString_pwd
 Office 365 is now integrated with the server.
 ```

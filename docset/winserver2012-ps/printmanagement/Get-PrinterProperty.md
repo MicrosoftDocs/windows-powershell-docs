@@ -27,7 +27,7 @@ You need administrator privileges to use **Get-PrinterProperty**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Get printer properties-------------------------- 
+### -------------------------- Example 1: Get printer properties-------------------------- 
 xample:Get printer properties
 ```
 PS C:\> Get-PrinterProperty -PrinterName "Printer name"

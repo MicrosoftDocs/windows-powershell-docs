@@ -47,7 +47,7 @@ You do not need administrator privileges to use **Add-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Add a printer to a local machinecomputer by specifying Driver name and Port name-------------------------- xample:Add a printer to a local computer
+### -------------------------- Example 1: Add a printer to a local machinecomputer by specifying Driver name and Port name-------------------------- xample:Add a printer to a local computer
 ```
 PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
@@ -57,7 +57,7 @@ The "mxdw" printer uses the "Microsoft XPS Document Writer v4" driver and the "p
 
 The "portprompt:" port prompts for a file name to save the XPS document when printing to the XPS printer.
 
-### -------------------------- ExampleXAMPLE 2: Add a new network printer connection-------------------------- xample:Add a new network printer connection
+### -------------------------- Example 2: Add a new network printer connection-------------------------- xample:Add a new network printer connection
 ```
 PS C:\> Add-Printer -ConnectionName \\printServer\printerName
 ```

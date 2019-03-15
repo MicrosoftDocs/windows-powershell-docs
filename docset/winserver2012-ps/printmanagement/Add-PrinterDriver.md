@@ -27,7 +27,7 @@ You need administrator privileges to use **Add-PrinterDriver**.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLEExample 1: Add a printer driver with specified Driver Name -------------------------- 
+### -------------------------- Example 1: Add a printer driver with specified Driver Name -------------------------- 
 Example: Add a printer driver
 ```
 PS C:\> Add-PrinterDriver -Name "Driver Name"
@@ -35,7 +35,7 @@ PS C:\> Add-PrinterDriver -Name "Driver Name"
 
 This command installs the printer driver specified by **Name** on the local computer.
 
-### -------------------------- ExampleXAMPLE 2: Add a printer driver with specified Driver Name on remote computer -------------------------- 
+### -------------------------- Example 2: Add a printer driver with specified Driver Name on remote computer -------------------------- 
 xample: Add a printer driver on remote computer
 ```
 PS C:\> Add-PrinterDriver -Name "Driver Name" -ComputerName "printServer"

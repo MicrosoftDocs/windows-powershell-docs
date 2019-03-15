@@ -49,14 +49,14 @@ You do not need administrator privileges to use **Add-PrinterPort**.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLExample 1: Creates a local printer port -------------------------- xample: Create a local printer port
+### -------------------------- Example 1: Creates a local printer port -------------------------- xample: Create a local printer port
 ```
 PS C:\> Add-PrinterPort -Name "LocalPort:"
 ```
 
 This command creates a local printer port named LocalPort on the local computer.
 
-### -------------------------- EXAMPLExample 2: Creates a TCP  printer port  -------------------------- xample: Create a TCP printer port
+### -------------------------- Example 2: Creates a TCP  printer port  -------------------------- xample: Create a TCP printer port
 ```
 PS C:\> Add-PrinterPort -Name "TCPPort:" -PrinterHostAddress "192.168.100.100"
 ```

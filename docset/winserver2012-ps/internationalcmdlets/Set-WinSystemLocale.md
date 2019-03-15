@@ -17,7 +17,7 @@ Set-WinSystemLocale [-SystemLocale] <CultureInfo> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-WinSysemLocale** cmdlet sets the code pages (ANSI, DOS, and Macintosh) that the system uses by default.
+The **Set-WinSystemLocale** cmdlet sets the code pages (ANSI, DOS, and Macintosh) that the system uses by default.
 If you change the system-locale setting, the necessary bitmap font files are installed to support legacy applications in the selected language.
 Note that because this is a system setting, this can only be changed by a user with Administrator permissions, and changes do not take effect until the computer is restarted.
 

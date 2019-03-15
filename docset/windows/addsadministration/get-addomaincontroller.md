@@ -51,7 +51,7 @@ You can get domain controllers by setting the *Identity*, *Filter* or *Discover*
 The *Identity* parameter specifies the domain controller to get.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller. 
-You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerobject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
 
 To search for and retrieve more than one domain controller, use the *Filter* parameter.
 The *Filter* parameter uses the Windows PowerShell Expression Language to write query strings for Active Directory.

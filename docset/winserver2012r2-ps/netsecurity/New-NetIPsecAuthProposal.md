@@ -497,7 +497,7 @@ Accept wildcard characters: False
 
 ### -User
 Specifies that the computer should authenticate as the user account, rather than the computer.
-This parameter is valid with NLTM, Kerberos, Cert, or Proxy.
+This parameter is valid with NTLM, Kerberos, Cert, or Proxy.
 
 ```yaml
 Type: SwitchParameter

@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the unique ID of an empty virtual machine group that this cmldet removes.
+Specifies the unique ID of an empty virtual machine group that this cmdlet removes.
 
 ```yaml
 Type: Guid

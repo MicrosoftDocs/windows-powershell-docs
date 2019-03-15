@@ -46,7 +46,7 @@ Set-AppvServerConnectionGroup [[-AppvServerPackage] <PackageVersion[]>] [-Priori
 
 ## DESCRIPTION
 The **Set-AppvServerConnectionGroup** cmdlet sets the packages within the Microsoft Application Virtualization (App-V) specified package group.
-The cmldet modifies the packages in the group, as well as the order of those packages.
+The cmdlet modifies the packages in the group, as well as the order of those packages.
 
 The cmdlet returns an **AppvServerConnectionGroup** object.
 

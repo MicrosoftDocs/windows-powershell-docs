@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies an array of names.
-The cmldet upgrades the storage pools that you specify by name.
+The cmdlet upgrades the storage pools that you specify by name.
 This human-readable name is not necessarily unique.
 
 ```yaml

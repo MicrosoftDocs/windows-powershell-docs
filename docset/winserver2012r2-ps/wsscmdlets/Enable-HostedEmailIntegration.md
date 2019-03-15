@@ -35,7 +35,7 @@ The third-party hosted email provider builds the hosted email add-in on the Host
 
 ### Example 1: Enable the hosted email integration module
 ```
-PS C:\> $SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Enable-HostedEmailIntegration -AddId 26a21bda-a627-11d7-9931-806e6f6e6963 -AdminAccount "HEadmin01" -Password $SecureString_pwd -EnablePasswordSync
 ```
 

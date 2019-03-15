@@ -78,7 +78,7 @@ By using the *Verbose* parameter, the command also displays detailed information
 
 ### Example 3: Send files and include subfolders
 ```
-PS C:\> Send-SmigServerData -include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
+PS C:\> Send-SmigServerData -Include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
 ```
 
 In this example, the command migrates all migration data in the folder C:\users on the local server to the folder D:\shares\users on a remote server, Server2.

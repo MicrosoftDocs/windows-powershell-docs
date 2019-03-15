@@ -31,7 +31,7 @@ The Remove-CAAuthorityInformationAccess cmdlet removes the Authority Information
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAIA
+C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
 ```
 
 Description

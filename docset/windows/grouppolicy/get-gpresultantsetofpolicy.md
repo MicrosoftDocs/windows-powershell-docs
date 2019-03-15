@@ -30,7 +30,7 @@ Get-GPResultantSetOfPolicy [-Computer <String>] [-User <String>] -ReportType <Re
 ```
 
 ## DESCRIPTION
-The **Get-GPResultantSetofPolicy** cmdlet gets and writes the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
+The **Get-GPResultantSetOfPolicy** cmdlet gets and writes the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
 
 ## EXAMPLES
 
@@ -63,7 +63,7 @@ The report is generated in XML format, and is written to the specified file.
 
 ### Example 3: Generate a report for the specified user in HTML format and save it to the specified file
 ```
-PS C:\> Get-GPResultantSetofPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
+PS C:\> Get-GPResultantSetOfPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62 
 LoggingComputer : COMPUTER-02 

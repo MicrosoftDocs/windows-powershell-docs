@@ -1,10 +1,10 @@
 ---
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 title: Get-IISSiteBinding
-online version: 
+online version:
 keywords: powershell, cmdlet
 ---
 
@@ -20,13 +20,13 @@ Get-IISSiteBinding [-Name] <String> [[-BindingInformation] <String>] [[-Protocol
 ```
 
 ## DESCRIPTION
-The **Get-IISSiteBinding** cmdlet gets information about website bindings and their current status and other key information. 
+The **Get-IISSiteBinding** cmdlet gets information about website bindings and their current status and other key information.
 
 ## EXAMPLES
 
 ### Example 1: Get Information about an IIS website binding
 ```
-PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:" 
+PS C:\> Get-IISSiteBinding "Default Web Site" "*:80:"
 ```
 
 This command gets the binding information for the "*:80:" binding of the Default Web Site.
@@ -46,15 +46,15 @@ This command gets all configuration information about all bindings of the Defaul
 ## PARAMETERS
 
 ### -BindingInformation
-Specifies the binding information string to use for the new site. The binding information of the form 
-IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
-is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+Specifies the binding information string to use for the new site. The binding information of the form
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
+is equivalent to using a wildcard character such as \*:443:. In this representation \* indicates all IP
 addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -69,7 +69,7 @@ Specifies the name of the IIS website.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -84,7 +84,7 @@ The protocol for which the binding is configured, usually http, https or ftp.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2

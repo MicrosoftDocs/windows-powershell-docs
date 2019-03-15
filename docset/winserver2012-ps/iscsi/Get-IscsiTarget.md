@@ -183,25 +183,25 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_InitiatorPort
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_InitiatorPort
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiConnection
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiConnection
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiSession
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTarget
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTarget
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 

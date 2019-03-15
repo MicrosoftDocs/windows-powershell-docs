@@ -71,7 +71,7 @@ Set-StorageSubSystem -Name <String> [-AutomaticClusteringEnabled <Boolean>] [-Ci
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
+The **Set-StorageSubsystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
 
 ## EXAMPLES
 

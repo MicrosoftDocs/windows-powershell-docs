@@ -33,7 +33,7 @@ The **New-Website** cmdlet creates an Internet Information Services (IIS) websit
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: CreateAdd a New Wweb Ssite --------------Createws
+### Example-------------- Example 1: CreateAdd a New Wweb Ssite --------------Createws
 ```
 IIS:\>New-WebSite -Name "TestSite" -Port 80 -HostHeader "TestSite" -PhysicalPath "$Env:systemdrive\inetpub\testsite"
 ```

@@ -31,7 +31,7 @@ The **Stop-Website** cmdlet stops the specified Internet Information Services (I
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Stopping a wWeb Ssite --------------ws
+### Example-------------- Example 1: Stopping a wWeb Ssite --------------ws
 ```
 IIS:\>Stop-WebSite -Name "Default Web Site"
 ```

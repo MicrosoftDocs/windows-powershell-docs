@@ -31,7 +31,7 @@ The **Get-WebConfigurationBackup** cmdlet gets a list of available Internet Info
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Get a list of the available IIS configuration backups --------------
+### Example-------------- Example 1: Get a list of the available IIS configuration backups --------------
 ```
 IIS:\>Get-WebConfigurationBackup
 Name          Creation Date

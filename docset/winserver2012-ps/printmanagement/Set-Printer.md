@@ -45,7 +45,7 @@ You need administrator privileges to use **Set-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Set printer to keep printed jobs -------------------------- 
+### -------------------------- Example 1: Set printer to keep printed jobs -------------------------- 
 xample: Set printer to keep printed jobs
 ```
 PS C:\> Set-Printer -Name "Microsoft XPS Document Writer" -KeepPrintedJobs $true

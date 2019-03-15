@@ -33,7 +33,7 @@ This cmdlet is similar to the Get-WebConfiguration cmdlet, but the current cmdle
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Return the Ddefault Ddocuments for the dDefault Wweb Ssite --------------dddws
+### Example-------------- Example 1: Return the Ddefault Ddocuments for the dDefault Wweb Ssite --------------dddws
 ```
 C:\PS>Get-WebConfigurationProperty -Filter "//defaultDocument/files/add" -PSPath 'IIS:\Sites\Default Web Site' -Name "value" | select value
 Default.htm

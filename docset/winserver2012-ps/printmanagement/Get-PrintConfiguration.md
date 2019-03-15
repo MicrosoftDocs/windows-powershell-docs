@@ -45,7 +45,7 @@ You do not need administrator privileges to use **Get-PrintConfiguration**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Get the printer  configuration-------------------------- 
+### -------------------------- Example 1: Get the printer  configuration-------------------------- 
 xample:Get the printer configuration
 ```
 PS C:\> Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"

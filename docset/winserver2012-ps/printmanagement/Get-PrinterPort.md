@@ -27,7 +27,7 @@ You do not need administrator privileges to use **Get-PrinterPort**.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLExample 1: GetRetrieves the a list of printer ports installed -------------------------- xample: Get a list of printer ports
+### -------------------------- Example 1: GetRetrieves the a list of printer ports installed -------------------------- xample: Get a list of printer ports
 ```
 PS C:\> Get-PrinterPort
 ```

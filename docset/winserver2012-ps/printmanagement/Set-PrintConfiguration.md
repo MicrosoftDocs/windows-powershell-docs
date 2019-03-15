@@ -55,7 +55,7 @@ You need administrator privileges to use **Set-PrintConfiguration**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Set the default paper size -------------------------- xample:Set the default paper size
+### -------------------------- Example 1: Set the default paper size -------------------------- xample:Set the default paper size
 ```
 PS C:\> Set-PrintConfiguration -PrinterName "Microsoft XPS Document Writer" -PaperSize A4
 ```

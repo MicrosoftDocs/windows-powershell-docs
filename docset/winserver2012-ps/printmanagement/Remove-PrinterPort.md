@@ -36,7 +36,7 @@ You do not need administrator privileges to use **Remove-PrinterPort**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1:  -------------------------- RemoveDelete a specificspecified printer port on a computer
+### -------------------------- Example 1:  -------------------------- RemoveDelete a specificspecified printer port on a computer
 xample: Remove a specified printer port
 ```
 PS C:\> Remove-PrinterPort -Name "LocalPort:"

@@ -42,7 +42,7 @@ You do not need administrator privileges to use **Restart-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Restart a selected print job  -------------------------- xample: Restart a selected print job
+### -------------------------- Example 1: Restart a selected print job  -------------------------- xample: Restart a selected print job
 ```
 PS C:\> Restart-PrintJob -PrinterName "PrinterName" -ID 1
 ```

@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifeis an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
+Specifies an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
 This parameter accepts pipelined input.
 
 ```yaml

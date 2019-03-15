@@ -84,7 +84,7 @@ This example gets a phase 1 authentication set and displays the parameters speci
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-NetIPsecQuickModeCryptoSet -DiplayGroup "DirectAccess-Traffic"
+PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayGroup "DirectAccess-Traffic"
 ```
 
 This example gets all the quick mode cryptographic sets associated to a specified group.

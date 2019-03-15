@@ -203,16 +203,16 @@ Accept wildcard characters: False
 Specifies filtering behavior for TCP connections.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named
@@ -258,16 +258,16 @@ Accept wildcard characters: False
 Specifies filtering behavior for UDP sessions.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named

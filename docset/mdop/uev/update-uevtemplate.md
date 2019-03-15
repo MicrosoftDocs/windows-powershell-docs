@@ -37,7 +37,7 @@ Update-UevTemplate -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParamete
 
 ## DESCRIPTION
 The **Update-UevTemplate** cmdlet updates settings location templates in uev_1.
-In order for the cmdlet to update a template, the new template must have a higher value for template verison.
+In order for the cmdlet to update a template, the new template must have a higher value for template version.
 
 You must have administrative credentials to run this cmdlet.
 

@@ -75,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Group
-Specifies the name of the Active Diretory group.
+Specifies the name of the Active Directory group.
 
 ```yaml
 Type: String

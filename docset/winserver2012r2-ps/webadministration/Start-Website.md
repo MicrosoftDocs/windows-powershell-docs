@@ -31,7 +31,7 @@ The **Start-Website** cmdlet starts an existing site on the Internet Information
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Starting a wWeb site --------------w
+### Example-------------- Example 1: Starting a wWeb site --------------w
 ```
 IIS:\>Start-WebSite -Name "Default Web Site"
 ```

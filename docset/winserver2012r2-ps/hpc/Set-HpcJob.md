@@ -183,7 +183,7 @@ Specifies the email address to which the HPC job scheduler service should send n
 The maximum length for the email address that you specify is 256 characters.
 
 When you specify an email address for receiving notifications about a job, the notifications are not turned on automatically.
-You still must use the NotifyOnStart and/or *NotifyOnCompletion* parameter of the New-HpcJob or Set-HpcJob cmldet to specify when you want to receive notifications about the job.
+You still must use the NotifyOnStart and/or *NotifyOnCompletion* parameter of the New-HpcJob or Set-HpcJob cmdlet to specify when you want to receive notifications about the job.
 
 This parameter was introduced in HPC Pack 2008 R2 with Service Pack 1 (SP1).
 It is not supported in previous versions.

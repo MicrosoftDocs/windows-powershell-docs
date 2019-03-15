@@ -639,7 +639,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMaximumSize
-Creates a virtual disk with the maximimum size possible given the available storage pool space and specified parameters.
+Creates a virtual disk with the maximum size possible given the available storage pool space and specified parameters.
 
 ```yaml
 Type: SwitchParameter

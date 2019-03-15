@@ -19,7 +19,7 @@ Get-WinHomeLocation [<CommonParameters>]
 ## DESCRIPTION
 The **Get-WinHomeLocation** cmdlet gets the value of the user GeoID setting and returns a .NET GeoID object.
 The Windows GeoID setting is a user setting that describes the home location (that is, the country or region) of the current user account.
-Applications that require the current user accountâ€™s home location, such as a driver for a television tuner application, can use this setting.
+Applications that require the current user account's home location, such as a driver for a television tuner application, can use this setting.
 
 A table of GeoIDs is available at Table of Geographical Locationshttp://go.microsoft.com/fwlink/?LinkID=242308 (http://go.microsoft.com/fwlink/?LinkID=242308).
 

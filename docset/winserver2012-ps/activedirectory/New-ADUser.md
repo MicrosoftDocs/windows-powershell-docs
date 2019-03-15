@@ -75,7 +75,7 @@ Description
 
 -----------
 
-Create a new user named 'GlenJohn' with a certicate imported from the file "export.cer".
+Create a new user named 'GlenJohn' with a certificate imported from the file "export.cer".
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

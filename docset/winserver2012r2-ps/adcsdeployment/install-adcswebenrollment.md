@@ -58,7 +58,7 @@ Description
 
 -----------
 
-This command isntalls the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
+This command installs the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
 Replace the computer name of the certification authority (CA) for \<CAComputerName\> and replace the CA common name for \<CACommonName\> when running the command.
 
 ## PARAMETERS

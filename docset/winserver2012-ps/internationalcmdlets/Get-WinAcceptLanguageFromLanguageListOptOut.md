@@ -18,7 +18,7 @@ Get-WinAcceptLanguageFromLanguageListOptOut [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-WinAcceptLanguageFromLanguageListOptOut** cmdlet gets the **HTTP Accept Language from Language List opt-out** setting for the current user account.
-By default, the **HTTP Accept Language List** is automatically generated from the current user accountâ€™s language list.
+By default, the **HTTP Accept Language List** is automatically generated from the current user account's language list.
 
 When set to $True, this setting deletes the current content of the HTTP Accept Language registry key and prevents changes to the language list from reestablishing the key.
 When set to $False, this setting reestablishes the **HTTP Accept Language List** that is based on the language list for the current user account.

@@ -168,7 +168,7 @@ Accept wildcard characters: False
 
 ### -Target
 Specifies the domain or the OU for which to block or unblock inheritance by its LDAP distinguished name.
-For instnace, the MyOU organizational unit in the contoso.com domain is specified as "ou=MyOU,dc=contoso,dc=com".
+For instance, the MyOU organizational unit in the contoso.com domain is specified as "ou=MyOU,dc=contoso,dc=com".
 
 You can also refer to the *Target* parameter by its built-in alias, path.
 

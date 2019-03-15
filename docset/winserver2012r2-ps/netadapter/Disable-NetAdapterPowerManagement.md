@@ -47,7 +47,7 @@ Disable-NetAdapterPowerManagement -InputObject <CimInstance[]> [-ArpOffload] [-D
 ```
 
 ## DESCRIPTION
-The **Disable-NetAdapterPowerMangement** cmdlet disables specific power management features on the network adapter.
+The **Disable-NetAdapterPowerManagement** cmdlet disables specific power management features on the network adapter.
 If no power parameters are specified then all power management features are disabled.
 
 ## EXAMPLES
@@ -62,10 +62,10 @@ This example disables power management on the network adapter named Ethernet 1 a
 ### EXAMPLE 2
 ```
 PS C:\> $netAdapter1 = Get-NetAdapter -Name "Ethernet 3"
-PS C:\> Disable-NetAdapterPowerMangement -InputObject $netAdapter1
+PS C:\> Disable-NetAdapterPowerManagement -InputObject $netAdapter1
 
 This cmdlet uses the pipeline to select the network adapter named Ethernet 3 and then pipe that object into this cmdlet.
-PS C:\> Get-NetAdapter -Name "Ethernet 3" | Disable-NetAdapterPowerMangement
+PS C:\> Get-NetAdapter -Name "Ethernet 3" | Disable-NetAdapterPowerManagement
 ```
 
 This example assigns a variable to the network adapter named Ethernet 3 and then inputs that variable into this cmdlet.

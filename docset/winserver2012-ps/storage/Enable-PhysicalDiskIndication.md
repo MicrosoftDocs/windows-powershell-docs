@@ -43,7 +43,7 @@ PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacePool")
 
 
 
-PS C:\> Enable-PhsicalDiskIndication -StoragePool $stpool
+PS C:\> Enable-PhysicalDiskIndication -StoragePool $stpool
 ```
 
 This example enables the identification LED on all physical disks associated with the Storage Pool SpacePool.

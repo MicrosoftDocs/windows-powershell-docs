@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShellï¿½ calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
@@ -329,29 +329,29 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_DISK
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_DISK
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_InitiatorPort
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_InitiatorPort
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiSession
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTarget
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTarget
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_iSCSIConnection
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_iSCSIConnection
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
@@ -359,7 +359,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 

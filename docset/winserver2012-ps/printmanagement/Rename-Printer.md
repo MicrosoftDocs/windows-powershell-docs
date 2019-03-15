@@ -35,7 +35,7 @@ You need administrator privileges to use **Rename-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Rename a printer -------------------------- 
+### -------------------------- Example 1: Rename a printer -------------------------- 
 xample: Rename a printer
 ```
 PS C:\> Rename-Printer -Name "Microsoft XPS Document Writer" -NewName "MXDW"

@@ -40,7 +40,7 @@ You cannot use wildcard characters with **Resume-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Resumes a suspendedelected print job -------------------------- xample: Resume a suspended print job
+### -------------------------- Example 1: Resumes a suspendedelected print job -------------------------- xample: Resume a suspended print job
 ```
 PS C:\> Resume-PrintJob - PrinterName "PrinterName" -ID 1
 ```

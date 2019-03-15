@@ -33,7 +33,7 @@ The **Add-WebConfiguration** cmdlet adds a collection element to an existing Int
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Add a new Default default Ddocument --------------default d
+### Example-------------- Example 1: Add a new Default default Ddocument --------------default d
 ```
 IIS:\>Add-WebConfiguration -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Value @{value="new-index.html"}
 ```

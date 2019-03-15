@@ -67,7 +67,7 @@ Description
 
 -----------
 
-Rename the object with the DistinguisehdName 'OU=ManagedGroups,OU=Managed,DC=Fabrikam,DC=Com' to 'Groups'.
+Rename the object with the DistinguishedName 'OU=ManagedGroups,OU=Managed,DC=Fabrikam,DC=Com' to 'Groups'.
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```

@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose resychronization is to be stopped.
+Specifies the virtual machine whose resynchronization is to be stopped.
 
 ```yaml
 Type: VirtualMachine[]

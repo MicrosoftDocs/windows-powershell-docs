@@ -61,9 +61,9 @@ Name: Type
 
 Uri: String
 
-AddtoCertificateAIA: Boolean
+AddToCertificateAia: Boolean
 
-AddtoCertificateOCSP: Boolean
+AddToCertificateOcsp: Boolean
 
 ## NOTES
 

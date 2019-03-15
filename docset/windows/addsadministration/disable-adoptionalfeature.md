@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-ADOptionalFeature
+ms.reviewer:
 ms.assetid: 3CF6B1D8-DA88-45F2-9520-34B11CAA3928
 ---
 

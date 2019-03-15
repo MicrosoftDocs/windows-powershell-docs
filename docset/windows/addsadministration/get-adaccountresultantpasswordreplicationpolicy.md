@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADAccountResultantPasswordReplicationPolicy
+ms.reviewer:
 ms.assetid: 5E4878E5-A5BF-4F6A-86DF-1E573F8EB799
 ---
 

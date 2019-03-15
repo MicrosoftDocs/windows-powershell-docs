@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADResourceProperty
+ms.reviewer:
 ms.assetid: 27DDEF74-6483-490C-8C02-5782737694C2
 ---
 

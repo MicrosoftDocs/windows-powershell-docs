@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADTrust
+ms.reviewer:
 ms.assetid: E0C0AA95-1854-4AAD-8657-259BB8B4F693
 ---
 

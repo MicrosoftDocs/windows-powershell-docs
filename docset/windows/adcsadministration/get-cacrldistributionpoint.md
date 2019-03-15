@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-CACrlDistributionPoint
+ms.reviewer:
 ms.assetid: 64E481BE-BDD5-4E27-95AD-5DC930E55453
 ---
 

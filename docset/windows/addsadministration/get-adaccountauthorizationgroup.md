@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADAccountAuthorizationGroup
+ms.reviewer:
 ms.assetid: A66D8C6A-4DBC-4FF4-A20D-BCC4ADDAF232
 ---
 

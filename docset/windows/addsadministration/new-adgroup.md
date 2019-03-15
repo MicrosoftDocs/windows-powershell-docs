@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADGroup
+ms.reviewer:
 ms.assetid: 71BF7C87-0E10-4C3A-A281-84E42AA1A44D
 ---
 

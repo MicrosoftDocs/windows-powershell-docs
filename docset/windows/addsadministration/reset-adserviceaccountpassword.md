@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Reset-ADServiceAccountPassword
+ms.reviewer:
 ms.assetid: 6A163BB0-D459-4304-86BA-698960B0191F
 ---
 

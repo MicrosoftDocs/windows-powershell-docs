@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADClaimTransformPolicy
+ms.reviewer:
 ms.assetid: C6BEB202-1DFB-4A76-A8CE-DCF173D50812
 ---
 

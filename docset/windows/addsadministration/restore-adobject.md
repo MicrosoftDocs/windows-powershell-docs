@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Restore-ADObject
+ms.reviewer:
 ms.assetid: E2A4F2E6-DABB-4277-9FB6-A1579687F08E
 ---
 

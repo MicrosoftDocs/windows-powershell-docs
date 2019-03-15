@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADClaimType
+ms.reviewer:
 ms.assetid: 134D2FEE-ACB5-4C5B-A618-C88F53B8CC98
 ---
 

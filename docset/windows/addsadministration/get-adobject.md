@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADObject
+ms.reviewer:
 ms.assetid: FBC1D06F-C845-4B26-8AE2-DCA1B8E53107
 ---
 

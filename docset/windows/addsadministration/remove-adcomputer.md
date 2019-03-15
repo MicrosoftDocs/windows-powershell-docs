@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADComputer
+ms.reviewer:
 ms.assetid: DD4457AA-A27C-42DA-BCB0-F0BDBBB0C0E7
 ---
 

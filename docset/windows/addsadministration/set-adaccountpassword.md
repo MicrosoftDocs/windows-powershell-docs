@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADAccountPassword
+ms.reviewer:
 ms.assetid: 3FB5BEE8-B432-4FB1-B5DD-3FC2209D7191
 ---
 

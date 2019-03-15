@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADUser
+ms.reviewer:
 ms.assetid: 4B247B2D-FB03-48D2-BAC7-ACD366A7CC8E
 ---
 

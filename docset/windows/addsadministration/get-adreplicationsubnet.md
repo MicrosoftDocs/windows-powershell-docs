@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADReplicationSubnet
+ms.reviewer:
 ms.assetid: 60A07BDD-785C-45CB-A556-2F74B549DEEA
 ---
 

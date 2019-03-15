@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADUserResultantPasswordPolicy
+ms.reviewer:
 ms.assetid: D46999F5-C859-46D8-8496-A75C561CC78A
 ---
 

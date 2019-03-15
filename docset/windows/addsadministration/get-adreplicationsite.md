@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADReplicationSite
+ms.reviewer:
 ms.assetid: 7EC42317-3C7A-4F7E-BE4E-950BEBFD1F47
 ---
 

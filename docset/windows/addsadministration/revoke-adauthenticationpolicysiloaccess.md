@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Revoke-ADAuthenticationPolicySiloAccess
+ms.reviewer:
 ms.assetid: 75A6E9C8-F2B1-4C04-86AC-9FECAADDFA8B
 ---
 

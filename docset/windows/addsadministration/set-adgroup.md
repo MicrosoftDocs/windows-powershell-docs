@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADGroup
+ms.reviewer:
 ms.assetid: 96C6614D-C050-4706-B727-D61D43B115B8
 ---
 

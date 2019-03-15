@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADResourcePropertyListMember
+ms.reviewer:
 ms.assetid: 69322FF4-5744-40B2-8A80-FAA5458FBF59
 ---
 

@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADAuthenticationPolicy
+ms.reviewer:
 ms.assetid: 084EA6E7-025A-4890-99E0-9DD8384C730C
 ---
 

@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADReplicationUpToDatenessVectorTable
+ms.reviewer:
 ms.assetid: EDD7A403-DDE3-4E61-AAC3-CC39F24ABEB3
 ---
 

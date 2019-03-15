@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADUser
+ms.reviewer:
 ms.assetid: A01E908C-F344-4072-B720-4A0F523018B2
 ---
 

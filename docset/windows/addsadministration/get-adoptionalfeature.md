@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADOptionalFeature
+ms.reviewer:
 ms.assetid: 29766DE2-066A-4880-839A-E8862099A9AC
 ---
 

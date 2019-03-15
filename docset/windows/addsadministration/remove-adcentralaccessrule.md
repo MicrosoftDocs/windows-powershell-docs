@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADCentralAccessRule
+ms.reviewer:
 ms.assetid: 8B9AA43E-240E-43DA-AFCF-80D79A79CD5F
 ---
 

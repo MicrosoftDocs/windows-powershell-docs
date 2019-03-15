@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADReplicationAttributeMetadata
+ms.reviewer:
 ms.assetid: 276B5CA1-081E-4FC5-91EE-A458D2E05720
 ---
 

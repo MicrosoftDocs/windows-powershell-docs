@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADGroup
+ms.reviewer:
 ms.assetid: 65C49328-C60F-4D05-8507-09CF56091982
 ---
 

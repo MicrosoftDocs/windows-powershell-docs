@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Rename-ADObject
+ms.reviewer:
 ms.assetid: E332857A-35C9-4C90-85F7-8B8099BB8A56
 ---
 

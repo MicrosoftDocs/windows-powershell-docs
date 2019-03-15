@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADObject
+ms.reviewer:
 ms.assetid: A228EAE3-D689-4D7C-A883-75CBA844BE17
 ---
 

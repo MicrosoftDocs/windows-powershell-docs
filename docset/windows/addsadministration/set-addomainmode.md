@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADDomainMode
+ms.reviewer:
 ms.assetid: 92758097-3F16-45CF-9434-3046C50BD5AF
 ---
 

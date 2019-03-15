@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADFineGrainedPasswordPolicySubject
+ms.reviewer:
 ms.assetid: 7373D156-E02D-4108-80FA-24B675081075
 ---
 

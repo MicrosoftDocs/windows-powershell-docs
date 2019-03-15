@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Confirm-CAEndorsementKeyInfo
+ms.reviewer:
 ms.assetid: CCC599DA-19B6-4AC9-87E5-8283B35A6EF5
 ---
 

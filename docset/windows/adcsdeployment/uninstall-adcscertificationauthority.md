@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Uninstall-AdcsCertificationAuthority
+ms.reviewer:
 ms.assetid: 714B6C69-4B88-4CB4-8477-AF36325663A3
 ---
 

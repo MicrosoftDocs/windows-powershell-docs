@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-CAAuthorityInformationAccess
+ms.reviewer:
 ms.assetid: 8A3ABA4F-7422-48DD-AA60-A943E8D31474
 ---
 

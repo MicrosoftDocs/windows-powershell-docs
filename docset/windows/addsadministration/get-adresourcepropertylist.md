@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADResourcePropertyList
+ms.reviewer:
 ms.assetid: 680FC1A0-D374-47BD-A1E1-407B16E35F8E
 ---
 

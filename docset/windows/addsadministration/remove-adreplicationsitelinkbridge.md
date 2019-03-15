@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADReplicationSiteLinkBridge
+ms.reviewer:
 ms.assetid: F357B82E-6003-45CE-A554-71CBE67F3736
 ---
 

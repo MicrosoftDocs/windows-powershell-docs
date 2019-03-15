@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Install-ADServiceAccount
+ms.reviewer:
 ms.assetid: 0B1E30A3-7E02-477C-ACA3-9F2A7C3C7552
 ---
 

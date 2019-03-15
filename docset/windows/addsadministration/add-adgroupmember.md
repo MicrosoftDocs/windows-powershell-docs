@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-ADGroupMember
+ms.reviewer:
 ms.assetid: F924F18F-19B8-471F-8CB3-210A2F782831
 ---
 

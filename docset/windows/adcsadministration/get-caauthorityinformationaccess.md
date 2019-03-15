@@ -58,7 +58,7 @@ Each object will contain URI and different Boolean properties as follows:
 Name | Type
 -----|------
 Uri | String
-AddtoCertificateAIA | Boolean
+AddToCertificateAia | Boolean
 AddtoCertificateOCSP | Boolean
 
 ## NOTES

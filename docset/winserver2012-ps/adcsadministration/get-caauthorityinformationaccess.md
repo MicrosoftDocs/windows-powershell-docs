@@ -51,7 +51,7 @@ Name: Type
 
 Uri: String
 
-AddtoCertificateAIA: Boolean
+AddToCertificateAia: Boolean
 
 AddtoCertificateOCSP: Boolean
 

@@ -43,7 +43,7 @@ The **Remove-CAAuthorityInformationAccess** cmdlet removes the Authority Informa
 
 ### Example 1: Remove AIA for a specified URI
 ```
-PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAIA
+PS C:\> Remove-CAAuthorityInformationAccess -Uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
 ```
 
 This command removes AIA for the specified URI named `http://www.contoso.com/pki/orca1.crt`.

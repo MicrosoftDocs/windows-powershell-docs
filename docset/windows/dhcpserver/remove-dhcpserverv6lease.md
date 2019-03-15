@@ -57,7 +57,7 @@ PS C:\> Remove-DhcpServerv6Lease -ComputerName "dhcpserver.contoso.com" -IPAddre
 
 This example deletes the IP address leases for 2001:4898:7020:1020::10 and 2001:4898:7020:1030::20 from the DHCP server service that runs on the computer named dhcpserver.contoso.com.
 
-### Example 3: Delete leases for a scope byusing the pipeline
+### Example 3: Delete leases for a scope by using the pipeline
 ```
 PS C:\> Get-DhcpServerv6Lease -ComputerName "dhcpserver.contoso.com" -Prefix 2001:4898:7020:1020:: | Remove-DhcpServerv6Lease -ComputerName "dhcpserver.contoso.com"
 ```

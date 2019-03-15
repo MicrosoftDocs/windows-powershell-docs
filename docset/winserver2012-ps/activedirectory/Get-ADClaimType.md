@@ -32,7 +32,7 @@ Get-ADClaimType [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilte
 ```
 
 ## DESCRIPTION
-The Get-ADClaimType cmdlet returns a claim type defined in Active Drectory.
+The Get-ADClaimType cmdlet returns a claim type defined in Active Directory.
 
 ## EXAMPLES
 

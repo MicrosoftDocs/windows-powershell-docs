@@ -25,7 +25,7 @@ If errors occur when you create the VPN profile, the error information is return
 
 ## EXAMPLES
 
-### Example 1: Add a VPN connectionxample: Add a VPN connection
+### Example 1: Add a VPN connection
 ```
 PS C:\> Add-VpnConnection -Name "Test1" -ServerAddress "10.1.1.1" -PassThru
 Name                  : Test1

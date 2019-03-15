@@ -43,7 +43,7 @@ You do not need administrator privileges to use **Suspend-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- Example 1: Suspends a specificlected print job in a print queue  -------------------------- xample: Suspend a specific print job
+### -------------------------- Example 1: Suspend a specific print job
 ```
 PS C:\> Suspend-PrintJob -PrinterName "PrinterName" -ID 1
 ```

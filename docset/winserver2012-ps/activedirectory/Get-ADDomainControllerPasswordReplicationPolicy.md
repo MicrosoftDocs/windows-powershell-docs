@@ -67,7 +67,7 @@ Description
 
 -----------
 
-Get the password replcation policy allowed lists from all RODCs in the domain.
+Get the password replication policy allowed lists from all RODCs in the domain.
 
 ## PARAMETERS
 

@@ -37,7 +37,7 @@ Enable-NetAdapterPowerManagement [-ArpOffload] [-AsJob] [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-The **Enable-NetAdapterPowerMangement** cmdlet enables specific power management features on the network adapter.
+The **Enable-NetAdapterPowerManagement** cmdlet enables specific power management features on the network adapter.
 If no power options are specified, then all supported power management features are enabled.
 
 ## EXAMPLES
@@ -55,11 +55,11 @@ PS C:\>$netAdapter3 = Get-NetAdapter -Name "Ethernet 3"
 
 
 
-PS C:\>Enable-NetAdapterPowerMangement -InputObject $netAdapter3
+PS C:\>Enable-NetAdapterPowerManagement -InputObject $netAdapter3
 
 
 This is a version of the cmdlet that uses the pipeline to select the network adapter named Ethernet 3 and pipes that object into this cmdlet.
-PS C:\>Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerMangement
+PS C:\>Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerManagement
 ```
 
 This example uses the gets the network adapter named Ethernet 3 and enables power management, then restarts the network adapter.

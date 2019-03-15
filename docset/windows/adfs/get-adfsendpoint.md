@@ -95,14 +95,14 @@ System.Uri[]
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.Endpoint
-	AddressPath           string
-	ClientCredentialType  string
-	Enabled               bool
-	FullUrl               uri
-	Protocol              string
-	Proxy                 bool
-	SecurityMode          string
-	Version               string
+AddressPath           string
+ClientCredentialType  string
+Enabled               bool
+FullUrl               uri
+Protocol              string
+Proxy                 bool
+SecurityMode          string
+Version               string
 
 ### Microsoft.IdentityServer.PowerShell.Resources.Endpoint
 This cmdlet returns class structure that represents the endpoints for the Federation Service.

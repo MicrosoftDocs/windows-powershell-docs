@@ -297,9 +297,9 @@ This parameter value determines if an IP interface is configured to wake up a co
 By default, IP interface properties have this parameter value set to Disabled.
 The acceptable values for this parameter are:
 
- -- Enabled: IP Interface properties for interfaces that have DirecteMacWolPattern enabled. 
+ -- Enabled: IP Interface properties for interfaces that have DirectedMacWolPattern enabled. 
 
- -- Disabled: IP Interface properties for interfaces that have DirecteMacWolPattern disabled.
+ -- Disabled: IP Interface properties for interfaces that have DirectedMacWolPattern disabled.
 
 ```yaml
 Type: DirectedMacWolPattern

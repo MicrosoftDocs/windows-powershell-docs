@@ -59,7 +59,7 @@ Name | Type
 -----|------
 Uri | String
 AddtoCertificateAIA | Boolean
-AddtoCertificateOCSP | Boolean
+AddToCertificateOcsp | Boolean
 
 ## NOTES
 

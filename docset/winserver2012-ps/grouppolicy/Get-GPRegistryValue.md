@@ -2,6 +2,9 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 6F526B5E-8887-4612-9CF4-C45DF9DBC546
 ---
 

@@ -2,6 +2,9 @@
 external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A963DBC6-1005-4514-BA59-FDBE82F7E441
 ---
 

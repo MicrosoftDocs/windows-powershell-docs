@@ -3,6 +3,9 @@ external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: 44F4BF59-24B8-4D6C-BC04-357CF210CAEC
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WinLanguageBarOption

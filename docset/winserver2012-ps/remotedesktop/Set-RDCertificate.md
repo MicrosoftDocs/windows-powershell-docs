@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-RDCertificate

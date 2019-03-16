@@ -3,6 +3,9 @@ external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 ms.assetid: 9B800C29-0588-45C8-8980-70FA80FC3840
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Format-SecureBootUEFI

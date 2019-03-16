@@ -3,6 +3,9 @@ external help file: ServerCore-help.xml
 ms.assetid: 8CB75672-CF46-4A73-BAD2-B65A6A02D54B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DisplayResolution

@@ -3,6 +3,9 @@ external help file:
 ms.assetid: E77214D7-17EF-4BA4-B4EE-4CC7E741C4BE
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDLicenseConfiguration

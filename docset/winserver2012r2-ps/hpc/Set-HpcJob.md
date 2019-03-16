@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object for the credentials that you want to use to run the job.
-Use the Get-Credential cmdlet to get a **PSCrendential** object.
+Use the Get-Credential cmdlet to get a **PSCredential** object.
 If you do not specify this parameter, the cmdlet runs the jobs with the credentials that were used to submit the job.
 
 ```yaml

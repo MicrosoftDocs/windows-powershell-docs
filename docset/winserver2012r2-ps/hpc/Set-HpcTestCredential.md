@@ -42,7 +42,7 @@ These credentials are used to run the clusrun commands that run each phase of th
 
 ### Example 1: Set test credentials for a cluster
 ```
-PS C:\>Set-HpcTestCrendential
+PS C:\>Set-HpcTestCredential
 ```
 
 This command sets the credentials for running diagnostic tests on the cluster.
@@ -52,7 +52,7 @@ After you enter this information, the **Set-HpcTestCredential** cmdlet sets the 
 ### Example 2: Get a credential object to use for test credentials
 ```
 PS C:\>$Credential = Get-Credential
-PS C:\> Set-HpcTestCrendential -Credential $Credential
+PS C:\> Set-HpcTestCredential -Credential $Credential
 ```
 
 This command gets a **PSCredential** object, and then sets the credentials for running diagnostics tests on the cluster to the credentials that the **PSCredential** object represents.

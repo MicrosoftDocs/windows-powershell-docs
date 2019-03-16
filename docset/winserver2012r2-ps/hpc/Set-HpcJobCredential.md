@@ -49,7 +49,7 @@ The cmdlet stores these credentials in the credential cache of the user who ran 
 
 ### Example 1: Set credentials to submit jobs
 ```
-PS C:\>Set-HpcJobCrendential
+PS C:\>Set-HpcJobCredential
 ```
 
 This command sets the credentials for submitting jobs on the cluster.
@@ -59,7 +59,7 @@ After you enter this information, the **Set-HpcJobCredential** cmdlet sets the c
 ### Example 2: Get credentials and set them to submit jobs
 ```
 PS C:\>$Credential = Get-Credential
-PS C:\> Set-HpcJobCrendential -Credential $Credential
+PS C:\> Set-HpcJobCredential -Credential $Credential
 ```
 
 This command gets a **PSCredential** object, and then sets the credentials for submitting jobs on the cluster to the credentials that the **PSCredential** object represents.

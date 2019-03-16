@@ -2,6 +2,9 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BC4274F1-F6DC-4344-9A1B-DC68163248B0
 ---
 

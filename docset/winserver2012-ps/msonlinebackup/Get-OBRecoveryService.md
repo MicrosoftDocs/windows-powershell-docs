@@ -2,6 +2,9 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EA301285-F439-438D-986D-1F12D79BD4ED
 ---
 

@@ -2,6 +2,9 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: ECBBCA96-A4FB-434F-A8AB-3C10C81329BE
 ---
 

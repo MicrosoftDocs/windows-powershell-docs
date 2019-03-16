@@ -3,6 +3,9 @@ external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 ms.assetid: 30A7D679-081F-467E-AAFE-54F31EABBC4C
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-NetConnectionProfile

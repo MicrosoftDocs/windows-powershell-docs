@@ -2,6 +2,9 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0CA395BC-362B-4A18-810C-BBB32FF60118
 ---
 

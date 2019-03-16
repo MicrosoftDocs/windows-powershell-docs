@@ -289,7 +289,7 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
  Domain name values:
 
--  Fully qualified domain name
+- Fully qualified domain name
 - NetBIOS name
 
  Directory server values: 

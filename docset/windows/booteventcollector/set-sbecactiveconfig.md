@@ -37,12 +37,10 @@ The previous configuration is saved in a backup file, which enables you to undo 
 
 You can use Get-SbecActiveConfig and **Set-SbecActiveConfig** to modify the configuration atomically, as follows: 
 
-1.
-Get the old configuration text and timestamp with **Get-SbecActiveConfig**. 
-2.
-Modify the configuration text. 
-3.
-Pass the text and timestamp (using the *OldTimestamp* parameter) to **Set-SbecActiveConfig**.
+1. Get the old configuration text and timestamp with **Get-SbecActiveConfig**. 
+2. Modify the configuration text. 
+3. Pass the text and timestamp (using the *OldTimestamp* parameter) to **Set-SbecActiveConfig**.
+
 If the *OldTimestamp* parameter is specified, the Collector checks whether the active configuration was changed in between.
 
 If this check succeeds, the new configuration is applied; otherwise, an error is returned.

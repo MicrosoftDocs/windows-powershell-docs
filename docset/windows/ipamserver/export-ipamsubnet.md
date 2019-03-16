@@ -74,7 +74,7 @@ Specifies an address family of IP address range objects that this cmdlet gets.
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 ```yaml
 Type: AddressFamily

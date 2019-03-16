@@ -62,7 +62,7 @@ Specifies an address family of IP address range objects to import.
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 You can specify only one address family at a time using this cmdlet and the records in the file should match the address family you specify with this parameter.
 

@@ -72,7 +72,7 @@ Specifies an address family of IP address range objects to retrieve.
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 ```yaml
 Type: AddressFamily

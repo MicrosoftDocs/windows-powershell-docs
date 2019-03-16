@@ -180,7 +180,7 @@ Specifies an array of address families of IP address range objects that this cmd
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 ```yaml
 Type: AddressFamily[]

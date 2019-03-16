@@ -83,9 +83,9 @@ Accept wildcard characters: False
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
 
--  A distinguished name
+- A distinguished name
 - GUID
--  Name
+- Name
 
 This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
 

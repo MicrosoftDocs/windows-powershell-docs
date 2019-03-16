@@ -22,9 +22,9 @@ The **Start-OBRecovery** cmdlet recovers the array of OBRecoverableItem objects 
 In case of Alternate Server Recovery, the credential and encryption passphrase object would be required to do the recovery.
 
 If no recovery option is specified, the following default options will be used. 
- 1)   Restore to original location. 
- 2)   Create copies in case of conflict. 
- 3)   Restore ACLs of the files.
+1) Restore to original location. 
+2) Create copies in case of conflict. 
+3) Restore ACLs of the files.
 
 When recovering data to an alternate server restore flow the cmdlet will display an error message if the OBRecoverableOptions object is not specified because there is no default original location in a recovery from another server.
 

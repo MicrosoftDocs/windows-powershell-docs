@@ -3,6 +3,7 @@ external help file: BranchCacheNetworkSettingData.cdxml-help.xml
 ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-BCNetworkConfiguration

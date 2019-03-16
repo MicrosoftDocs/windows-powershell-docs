@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A308681E-8EA3-42EE-9241-11101F6962C3
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADGroupMember

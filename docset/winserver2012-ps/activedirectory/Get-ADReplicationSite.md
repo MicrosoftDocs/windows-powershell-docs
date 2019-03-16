@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 7EC42317-3C7A-4F7E-BE4E-950BEBFD1F47
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADReplicationSite

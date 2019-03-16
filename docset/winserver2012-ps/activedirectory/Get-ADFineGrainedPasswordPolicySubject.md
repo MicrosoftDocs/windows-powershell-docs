@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 7373D156-E02D-4108-80FA-24B675081075
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADFineGrainedPasswordPolicySubject

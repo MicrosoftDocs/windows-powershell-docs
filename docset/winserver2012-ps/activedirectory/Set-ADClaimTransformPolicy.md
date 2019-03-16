@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: F6AF9543-D62D-4954-81A0-9AE7EF57A856
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Set-ADClaimTransformPolicy

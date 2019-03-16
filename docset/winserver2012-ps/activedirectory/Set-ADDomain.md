@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 877E4715-5573-49A9-98D6-04B1444B0273
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Set-ADDomain

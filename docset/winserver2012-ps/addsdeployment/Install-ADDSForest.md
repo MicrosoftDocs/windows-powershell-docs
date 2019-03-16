@@ -3,6 +3,7 @@ external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: 6042BDE7-2175-4DB2-BF21-B86B8E94F60E
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Install-ADDSForest

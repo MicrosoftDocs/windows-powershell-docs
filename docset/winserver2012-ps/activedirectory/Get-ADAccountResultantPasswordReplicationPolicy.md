@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 5E4878E5-A5BF-4F6A-86DF-1E573F8EB799
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADAccountResultantPasswordReplicationPolicy

@@ -3,6 +3,7 @@ external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
 ms.assetid: FB989A10-413D-4360-88D6-727EF8F299A5
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Invoke-BpaModel

@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 5EE1FCCD-DC7A-4C50-ABB5-7C0D240D851A
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADResourcePropertyValueType

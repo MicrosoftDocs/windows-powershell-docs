@@ -3,6 +3,7 @@ external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: 0E60DBB0-CC4A-4D2E-832E-970657361CA3
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-RmsEncryptedIL

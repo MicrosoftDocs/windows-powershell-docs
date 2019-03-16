@@ -3,6 +3,7 @@ external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 ms.assetid: 9F4A31F1-9110-4A66-BF20-961CC447DFC8
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-AppxPackageManifest

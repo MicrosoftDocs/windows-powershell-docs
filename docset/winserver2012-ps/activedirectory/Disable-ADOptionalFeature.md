@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 3CF6B1D8-DA88-45F2-9520-34B11CAA3928
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Disable-ADOptionalFeature

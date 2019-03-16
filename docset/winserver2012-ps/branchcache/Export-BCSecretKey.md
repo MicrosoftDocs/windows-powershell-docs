@@ -3,6 +3,7 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 94140170-8217-4C25-A899-82B5BE694E17
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Export-BCSecretKey

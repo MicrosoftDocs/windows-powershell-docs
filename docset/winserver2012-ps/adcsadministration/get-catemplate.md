@@ -3,6 +3,7 @@ external help file: Microsoft.CertificateServices.Administration.Commands.dll-He
 ms.assetid: 26067498-C23B-4EAB-97D1-932508F43FCE
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-CATemplate

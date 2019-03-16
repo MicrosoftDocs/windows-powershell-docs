@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: B24B3FC8-5293-41C6-A388-8FC0FBEFB3DE
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Remove-ADReplicationSite

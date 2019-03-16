@@ -3,6 +3,7 @@ external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dl
 ms.assetid: CCD62AF9-1B1B-4057-A89A-43AA6BEFBE4D
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Test-AppLockerPolicy

@@ -3,6 +3,7 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 8BA52D68-6406-43B7-B3AE-D2F8FC4A0E5B
 online version: 
 schema: 2.0.0
+ms.reviewer:
 ---
 
 # Get-ADPrincipalGroupMembership

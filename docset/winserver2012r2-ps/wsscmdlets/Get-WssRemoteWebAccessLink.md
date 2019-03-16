@@ -50,7 +50,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Collections.Generic.Dictionary<System.String, Microsoft.WindowsServerSolutions.Web.Admin.RemoteAccessLinkItem>
-This cmdlet generates a dictionary object where each value represents a link in Eemote Web Access.
+This cmdlet generates a dictionary object where each value represents a link in Remote Web Access.
 
 ## NOTES
 

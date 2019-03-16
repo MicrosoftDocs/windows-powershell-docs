@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Import-StartLayout
+ms.reviewer:
 ms.assetid: F5C1A068-96E5-4A35-AE11-C447ADAAF4EC
 ---
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DiskImage.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-DiskImage
+ms.reviewer:
 ms.assetid: 70223CAA-40F9-44B3-B0C4-A0CA2CEC7B61
 ---
 

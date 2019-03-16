@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-SmbServerConfiguration
+ms.reviewer:
 ms.assetid: 8B5FF5C0-5D2F-4030-8F8E-C2C3B3E8906E
 ---
 

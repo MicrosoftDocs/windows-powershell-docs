@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_RemoteAccess_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Install-RemoteAccess
+ms.reviewer:
 ms.assetid: 7E7DDD35-D252-4E9D-9399-B5D1AD1107D9
 ---
 

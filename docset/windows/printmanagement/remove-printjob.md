@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_PrintJob_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-PrintJob
+ms.reviewer:
 ms.assetid: B439E3E1-29A5-4B94-9A6A-07639FBE28A2
 ---
 

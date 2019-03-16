@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: F4D7A3B4-8F8E-4B26-9586-16E56473BF85
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Remove-ADUser

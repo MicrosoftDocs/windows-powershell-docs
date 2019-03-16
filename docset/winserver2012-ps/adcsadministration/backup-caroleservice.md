@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: coreyp
+author: coreyp-at-msft
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,7 +14,6 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Backup-CARoleService
-ms.reviewer:
 ms.assetid: AD8E8F01-F47A-4C1B-923B-7358415A279A
 ---
 

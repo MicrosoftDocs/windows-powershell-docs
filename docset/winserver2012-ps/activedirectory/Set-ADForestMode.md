@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 51EE4E28-C6FF-4AF9-856C-6B517B3353BF
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Set-ADForestMode

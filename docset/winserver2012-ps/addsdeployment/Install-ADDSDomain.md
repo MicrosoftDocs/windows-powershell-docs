@@ -3,7 +3,6 @@ external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Install-ADDSDomain

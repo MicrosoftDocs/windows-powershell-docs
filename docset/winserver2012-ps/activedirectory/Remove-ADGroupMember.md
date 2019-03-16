@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 39B45E28-2934-416F-8D44-E23CCED252C4
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Remove-ADGroupMember

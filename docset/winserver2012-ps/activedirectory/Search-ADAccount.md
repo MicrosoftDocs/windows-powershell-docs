@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A53BA207-2E14-4155-AEE0-F606D699EB46
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Search-ADAccount

@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: DD4457AA-A27C-42DA-BCB0-F0BDBBB0C0E7
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Remove-ADComputer

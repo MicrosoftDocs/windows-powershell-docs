@@ -3,7 +3,6 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 6AECF575-B539-4A32-A894-72F21D098DF1
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-ADFSAttributeStore

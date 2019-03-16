@@ -3,7 +3,6 @@ external help file: BranchCachePrimaryPublicationCacheFile.cdxml-help.xml
 ms.assetid: 41A89F25-054F-45C4-B809-78199412E837
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-BCHashCache

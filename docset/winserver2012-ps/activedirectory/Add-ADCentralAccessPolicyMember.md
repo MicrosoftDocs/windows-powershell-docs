@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 72AD83FF-965F-4303-85A1-9D97F8482DBA
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Add-ADCentralAccessPolicyMember

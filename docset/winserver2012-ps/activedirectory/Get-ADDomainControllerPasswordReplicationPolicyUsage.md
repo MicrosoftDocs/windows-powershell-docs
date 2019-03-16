@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 06AF4146-74B1-4F1D-A4A8-7B626C3535E2
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-ADDomainControllerPasswordReplicationPolicyUsage

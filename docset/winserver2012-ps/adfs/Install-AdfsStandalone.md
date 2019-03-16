@@ -3,7 +3,6 @@ external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
 ms.assetid: D81A2A78-2210-43AC-BC5A-5541EBCC639D
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Install-AdfsStandalone

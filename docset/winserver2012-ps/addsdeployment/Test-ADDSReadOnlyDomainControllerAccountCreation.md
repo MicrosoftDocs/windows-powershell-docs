@@ -3,7 +3,6 @@ external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Test-ADDSReadOnlyDomainControllerAccountCreation

@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 81E76D95-63B3-4BCF-B16D-051CB53B6185
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-ADDefaultDomainPasswordPolicy

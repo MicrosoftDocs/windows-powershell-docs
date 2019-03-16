@@ -3,7 +3,6 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: E582C1C6-9F85-4666-BB58-72D831E10899
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Update-ADFSCertificate

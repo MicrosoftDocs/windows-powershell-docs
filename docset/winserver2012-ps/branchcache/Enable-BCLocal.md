@@ -3,7 +3,6 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 37869BE1-F2D1-4C2D-BCC0-106DE7ADE2C4
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Enable-BCLocal

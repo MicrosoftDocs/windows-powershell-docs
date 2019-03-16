@@ -3,7 +3,6 @@ external help file: Microsoft.CertificateServices.Administration.Commands.dll-He
 ms.assetid: 6545F6DF-6593-4DD4-9391-98DBDCE63F64
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Remove-CATemplate

@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: EE61D495-9BC6-4DD6-8FCA-172E4F72E712
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Remove-ADClaimTransformPolicy

@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 4F35B658-C749-4EB6-B080-52CA6877377F
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-ADReplicationConnection

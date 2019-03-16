@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # New-ADServiceAccount

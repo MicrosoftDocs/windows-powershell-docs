@@ -3,7 +3,6 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: CC60A897-EF69-40DD-9016-C0C3EF457DD8
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # New-ADFSContactPerson

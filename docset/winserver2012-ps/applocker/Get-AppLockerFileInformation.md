@@ -3,7 +3,6 @@ external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dl
 ms.assetid: 32575D8C-9F70-4090-BAB9-2486C30186FB
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Get-AppLockerFileInformation

@@ -3,7 +3,6 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 9330C84C-D416-4536-A845-5239DD5AA33A
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Set-BCCache

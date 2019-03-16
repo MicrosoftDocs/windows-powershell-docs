@@ -3,7 +3,6 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 7A1A175E-C05F-4931-ABB2-2CAB46F8CC32
 online version: 
 schema: 2.0.0
-ms.reviewer:
 ---
 
 # Set-ADComputer

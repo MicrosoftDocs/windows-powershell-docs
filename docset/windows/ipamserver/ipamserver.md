@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: IpamServer
 Module Guid: 69775F93-9317-4234-A558-13B6655FC41B
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390777
 Help Version: 5.0.2.1
 Locale: en-US
 title: IpamServer
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

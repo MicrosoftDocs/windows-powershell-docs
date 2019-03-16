@@ -23,12 +23,12 @@ This cmdlet is deprecated and was removed in HPC Pack 2012. Removes the Windows 
 
 ## SYNTAX
 
-###ID
+### ID
 ```
 Remove-HpcSoaSessionTrace [-Id] <Int32> [-Scheduler <String> ] [-Confirm] [-WhatIf] [ <CommonParameters>]
 ```
 
-###Job
+### Job
 ```
 Remove-HpcSoaSessionTrace -Job <HpcJob> [-Scheduler <String> ] [-Confirm] [-WhatIf] [ <CommonParameters>]
 ```
@@ -143,7 +143,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###HpcJob
+### HpcJob
 
 ### None
 

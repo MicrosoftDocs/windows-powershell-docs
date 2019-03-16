@@ -32,7 +32,7 @@ The **Remove-WebVirtualDirectory** cmdlet removes an Internet Information Servic
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Removing Remove a virtual directory --------------Remove
+### Example 1: Removing a virtual directory
 ```
 IIS:\>Remove-WebVirtualDirectory -Site "Default Web Site" -Application "TestApp" -Name "TestVirtualDir"
 ```

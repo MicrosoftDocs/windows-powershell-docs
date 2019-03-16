@@ -31,7 +31,7 @@ The **Remove-Website** cmdlet removes a website from an Internet Information Ser
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Removeing a wWeb Ssite --------------ews
+### Example 1: Removing a web site
 ```
 IIS:\>Remove-WebSite -Name "TestSite"
 ```

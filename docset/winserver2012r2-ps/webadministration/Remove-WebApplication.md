@@ -31,7 +31,7 @@ The **Remove-WebApplication** cmdlet removes a web application from an Internet 
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Adding a Web web application and then removinge it --------------web then e
+### Example 1: Adding a web application and then removing it
 ```
 IIS:\>New-WebApplication -Name "TestApp" -Site "Default Web Site" -PhysicalPath "$Env:systemdrive\inetpub\TestApp" "Sleep for 5 seconds before Web App is removed"; Sleep 5 
 IIS:\> Remove-WebApplication -Name "TestApp" -Site "Default Web Site"

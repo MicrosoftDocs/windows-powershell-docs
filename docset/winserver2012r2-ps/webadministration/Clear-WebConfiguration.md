@@ -32,7 +32,7 @@ The **Clear-WebConfiguration** cmdlet removes configuration settings from the sp
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Removeing ASP configuration on the root node --------------e
+### Example 1: Removing ASP configuration on the root node
 ```
 C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath 'IIS:\'
 ```
@@ -46,7 +46,7 @@ C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp/@lcid" -PSPath 'IIS:
 
 This command removes the **lcid** property from the IIS configuration root node.
 
-### Example-------------- Example 3: Removeing configuration from the site node --------------e
+### Example 3: Removing configuration from the site node
 ```
 IIS:\>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath 'IIS:\sites\Default Web Site'
 ```

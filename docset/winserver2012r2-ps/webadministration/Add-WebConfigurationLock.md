@@ -32,7 +32,7 @@ The **Add-WebConfigurationLock** cmdlet locks an Internet Information Services (
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Adding and removeing configuration locks --------------e
+### Example 1: Adding and removing configuration locks
 ```
 IIS:\>Add-WebConfigurationLock -Type "general" -Filter "//asp" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp" 

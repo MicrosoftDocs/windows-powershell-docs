@@ -32,7 +32,7 @@ The cmdlet creates a folder with the name specified by the **Name** parameter fo
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Backing up an IIS configuration --------------
+### Example 1: Backing up an IIS configuration
 ```
 IIS:\>Backup-WebConfiguration -Name "MyIISBackup"
 

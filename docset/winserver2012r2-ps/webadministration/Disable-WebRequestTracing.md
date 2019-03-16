@@ -31,7 +31,7 @@ The **Disable-WebRequestTracing** cmdlet disables request tracing for the specif
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Disableling Request request Tracing tracing for the "Default default Web webSitesite" --------------lerequest tracing default website
+### Example 1: Disabling request tracing for the "Default Web Site"
 ```
 IIS:\>Disable-WebRequestTracing -Name "Default Web Site"
 ```

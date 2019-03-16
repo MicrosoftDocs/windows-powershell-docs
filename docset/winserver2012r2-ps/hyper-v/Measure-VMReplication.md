@@ -169,18 +169,18 @@ Accept wildcard characters: False
 Specifies the replication state of the virtual machines for which you want to get replication statistics.
 Valid values are:
 
---Error
---FailOverWaitingCompletion
---FailedOver
---NotApplicable
---ReadyForInitialReplication
---Replicating
---Resynchronizing
---ResynchronizeSuspended
---Suspended
---SyncedReplicationComplete
---WaitingForInitialReplication
---WaitingForStartResynchronize
+- Error
+- FailOverWaitingCompletion
+- FailedOver
+- NotApplicable
+- ReadyForInitialReplication
+- Replicating
+- Resynchronizing
+- ResynchronizeSuspended
+- Suspended
+- SyncedReplicationComplete
+- WaitingForInitialReplication
+- WaitingForStartResynchronize
 
 ```yaml
 Type: VMReplicationState

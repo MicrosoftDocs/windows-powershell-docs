@@ -39,15 +39,15 @@ When the Current parameter is set to LocalComputer or LoggedOnUser, the cmdlet u
 
 -If both the Server and Credential parameters are not specified:
 
---The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. The credentials of the current logged on user are used to get the domain.
+- The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. The credentials of the current logged on user are used to get the domain.
 
 -If the Server parameter is specified and the Credential parameter is not specified:
 
---The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser. Then the credentials of the current logged on user are used to get the domain. An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
+- The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser. Then the credentials of the current logged on user are used to get the domain. An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
 
 -If the Server parameter is not specified and the Credential parameter is specified:
 
---The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. Then the credentials specified by the Credential parameter are used to get the domain.
+- The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. Then the credentials specified by the Credential parameter are used to get the domain.
 
 If the Server and Credential parameters are specified:
 

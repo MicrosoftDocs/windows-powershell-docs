@@ -350,13 +350,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerTrustAnchor
 The DnsServerTrustAnchor object contains the following fields:
 
---EnteredStateTime
---KeyTag
---NextStateTime
---TrustAnchorData
---TrustAnchorName
---TrustAnchorState
---TrustAnchorType
+- EnteredStateTime
+- KeyTag
+- NextStateTime
+- TrustAnchorData
+- TrustAnchorName
+- TrustAnchorState
+- TrustAnchorType
 
 ## NOTES
 

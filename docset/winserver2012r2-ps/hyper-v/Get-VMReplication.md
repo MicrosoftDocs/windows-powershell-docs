@@ -188,18 +188,18 @@ Accept wildcard characters: False
 Gets replication settings for virtual machines with the specified replication state.
 Valid values are:
 
---Error
---FailOverWaitingCompletion
---FailedOver
---NotApplicable
---ReadyForInitialReplication
---Replicating
---Resynchronizing
---ResynchronizeSuspended
---Suspended
---SyncedReplicationComplete
---WaitingForInitialReplication
---WaitingForStartResynchronize
+- Error
+- FailOverWaitingCompletion
+- FailedOver
+- NotApplicable
+- ReadyForInitialReplication
+- Replicating
+- Resynchronizing
+- ResynchronizeSuspended
+- Suspended
+- SyncedReplicationComplete
+- WaitingForInitialReplication
+- WaitingForStartResynchronize
 
 ```yaml
 Type: VMReplicationState

@@ -139,8 +139,8 @@ Accept wildcard characters: False
 Specifies the type of protocol for which to get NFS statistics.
 Valid values are: 
 
---NFS
---Mount
+- NFS
+- Mount
 
 ```yaml
 Type: String[]

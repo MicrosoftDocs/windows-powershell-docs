@@ -32,7 +32,7 @@ The commitment of changes is delayed until the Stop-WebCommitDelay cmdlet is run
 
 ## EXAMPLES
 
-### Example 1: Delay the commitment of changesment
+### Example 1: Delay the commitment of changes
 ```
 PS C:\>Start-WebCommitDelay
 ```

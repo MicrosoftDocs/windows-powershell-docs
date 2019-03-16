@@ -3,6 +3,9 @@ external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-AppxPackage

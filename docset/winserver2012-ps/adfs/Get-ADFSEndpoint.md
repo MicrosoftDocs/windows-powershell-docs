@@ -3,6 +3,9 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 07F2D040-9ADD-434F-AE0B-FAACE7134C15
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ADFSEndpoint

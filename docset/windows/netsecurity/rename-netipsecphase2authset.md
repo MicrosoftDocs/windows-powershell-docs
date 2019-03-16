@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ### -PrimaryStatus
 Indicates that phase 2 authentication sets that match the indicated primary status are renamed. 
 This parameter describes the overall status of the rule. 
- - OK: Indicates that the rule will work as specified. 
+- OK: Indicates that the rule will work as specified. 
 - Degraded: Indicates that one or more parts of the rule will not be enforced. 
 - Error: Indicates that the computer is unable to use the rule at all. 
 See the Status and StatusCode fields of the object for more detailed status information.

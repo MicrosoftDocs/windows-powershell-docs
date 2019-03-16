@@ -212,13 +212,13 @@ Indicates the status of the DNS registration of the lease.
 The acceptable values for this parameter are:
 
 - Complete.
- - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is complete. 
- - For an expired lease, deletion of the required records is complete. 
+  - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is complete. 
+  - For an expired lease, deletion of the required records is complete. 
 - Pending. 
- - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is pending. 
- - For an expired lease, deletion of the required records is pending. 
+  - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is pending. 
+  - For an expired lease, deletion of the required records is pending. 
 - Not applicable. 
- - If the *DnsRR* parameter is set to NoRegistration, such as when no dynamic DNS registration is to be performed by the DHCP server service, this parameter is set to Not applicable.
+  - If the *DnsRR* parameter is set to NoRegistration, such as when no dynamic DNS registration is to be performed by the DHCP server service, this parameter is set to Not applicable.
 
 ```yaml
 Type: String

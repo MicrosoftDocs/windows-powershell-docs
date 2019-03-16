@@ -3,6 +3,9 @@ external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: E3026A42-359B-4BEE-BC2F-8DF3B9DC5329
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WebCentralCertProvider

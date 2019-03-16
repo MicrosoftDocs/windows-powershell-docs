@@ -32,7 +32,7 @@ Specify a script block to run and a trigger for the action.
 
 ## EXAMPLES
 
-### Example 1: Create an ICMP trigger actionn
+### Example 1: Create an ICMP trigger action
 ```
 PS C:\> $T = New-PefKeyDownTrigger -CtrlC
 PS C:\> $Sb = { $Host.UI.WriteErrorLine("ICMP found") }

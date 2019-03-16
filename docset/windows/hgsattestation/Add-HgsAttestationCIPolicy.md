@@ -3,6 +3,9 @@ external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-He
 Module Name: HgsAttestation
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-HgsAttestationCIPolicy

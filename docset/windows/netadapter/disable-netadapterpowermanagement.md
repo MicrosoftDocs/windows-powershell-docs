@@ -5,6 +5,8 @@ ms.date: 2/14/2018
 online version: 
 schema: 2.0.0
 title: Disable-NetAdapterPowerManagement
+ms.author: kenwith
+author: kenwith
 ms.reviewer:
 ms.assetid: 34CA425A-4EED-42E9-8614-BBFF6C792393
 ---

@@ -11,6 +11,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-IISConfigCollectionElement
+ms.author: kenwith
 ms.reviewer:
 ---
 

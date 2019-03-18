@@ -269,7 +269,7 @@ Specify the path by using a local relative path, or by using built-in environmen
 The path specified in this parameter is only used if the command cannot find feature files in the local side-by-side store of the specified target computer or VHD.
 The command searches for feature files in the following order:
 
-1)   On the target computer or offline VHD. 
+1) On the target computer or offline VHD. 
 
 2)   Path specified as the value of this parameter.
 If you add a UNC path, verify that the computer account of the target server has Read permissions on the share.

@@ -135,8 +135,8 @@ Specifies an array of types of data deduplication job schedules for which to ret
 The acceptable values for this parameter are:
 
 - Optimization
--   GarbageCollection
--  Scrubbing
+- GarbageCollection
+- Scrubbing
 - Unoptimization
 
 ```yaml

@@ -21,9 +21,9 @@ The **New-OBRecoveryOption** specifies the recovery options that will apply to a
 These include the Destination Path, Overwrite flag (for use in case if the object already exists), and Security settings for the object
 
 If no Recovery Option is specified, the following default options will be used during recovery. 
-  1)  Restore to original location. 
-  2)  Create copies in case of conflict. 
-  3)  Restore ACLs of the files.
+1) Restore to original location. 
+2) Create copies in case of conflict. 
+3) Restore ACLs of the files.
 
 ps_mob_user_group_remark
 

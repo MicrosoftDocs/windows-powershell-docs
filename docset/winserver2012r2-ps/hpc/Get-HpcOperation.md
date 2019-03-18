@@ -257,7 +257,7 @@ Valid values are:
 - Committed
 - Executing
 - Failed
--  Reverted
+- Reverted
 - Editable
 - Reverting
 - FailedToExecute

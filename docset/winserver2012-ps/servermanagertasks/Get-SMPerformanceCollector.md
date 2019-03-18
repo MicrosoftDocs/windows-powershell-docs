@@ -103,8 +103,8 @@ Accept wildcard characters: False
 ### System.Byte
 The output values and names are: 
 
---Value=0 Name="Stopped"
---Value=1 Name="Running"
+- Value=0 Name="Stopped"
+- Value=1 Name="Running"
 
 ## NOTES
 

@@ -159,10 +159,10 @@ Specifies the location of the package to add to the image.
 
 Valid values are:
 
---A single .cab or .msu file.
---A folder that contains a single expanded .cab file.
---A folder that contains a single .msu file.
---A folder that contains multiple .cab or .msu files.
+- A single .cab or .msu file.
+- A folder that contains a single expanded .cab file.
+- A folder that contains a single .msu file.
+- A folder that contains multiple .cab or .msu files.
 
 If -PackagePath is a folder that contains a .cab or .msu files at its root, any subfolders will also be recursively checked for .cab and .msu files.
 

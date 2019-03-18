@@ -261,9 +261,9 @@ Specifies the address assignment type from this range.
 The acceptable values for this parameter are:
 
 - Static 
--  Dynamic 
--  Auto 
--  VIP 
+- Dynamic 
+- Auto 
+- VIP 
 - Reserved
 
 ```yaml
@@ -474,8 +474,8 @@ Specifies an array of network types for the addresses to modify.
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
 If you do not specify a value, the cmdlet modifies all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
 

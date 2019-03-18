@@ -199,14 +199,14 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
  Domain name values: 
 
--  Fully qualified domain name
--  NetBIOS name
+- Fully qualified domain name
+- NetBIOS name
 
  Directory server values:  
 
--  Fully qualified directory server name
--  NetBIOS name
--  Fully qualified directory server name and port
+- Fully qualified directory server name
+- NetBIOS name
+- Fully qualified directory server name and port
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 

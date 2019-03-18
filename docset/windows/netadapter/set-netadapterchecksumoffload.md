@@ -180,9 +180,9 @@ Specifies the direction of the IP traffic for IPv4.
 The acceptable values for this parameter are:
 
 - Disabled
---RxTxEnabled
---RxEnabled
---TxEnabled.
+- RxTxEnabled
+- RxEnabled
+- TxEnabled.
 
 If RxEnabled or TxEnabled is selected, then the opposite direction (transmit or receive, respectively) is disabled.
 Such as if the state is RxEnabled, then checksum calculations for receive traffic is enabled and for transmit traffic is Disabled.

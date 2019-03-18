@@ -132,10 +132,10 @@ Specifies the file system to use for the volume.
 The cmdlet formats the volume with the file system you specify.
 The acceptable values for this parameter are:
 
--  NTFS 
--  ReFS 
--  CSVFS_NTFS 
--  CSVFS_ReFS
+- NTFS 
+- ReFS 
+- CSVFS_NTFS 
+- CSVFS_ReFS
 
 ```yaml
 Type: FileSystem

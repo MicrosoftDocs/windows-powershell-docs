@@ -100,9 +100,9 @@ For information about the Generic.List object, see List(Of T) Classhttp://go.mic
 
 The generic list object supports the following methods:
 
---Add("BCP-47")
---Insert(index, "BCP-47")
---Remove(Index)
+- Add("BCP-47")
+- Insert(index, "BCP-47")
+- Remove(Index)
 
 The output language object contains the following properties:
 

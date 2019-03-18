@@ -254,7 +254,7 @@ The acceptable values for this parameter are:
 
 - Any
 - RPC
--  RPC-EPMap
+- RPC-EPMap
 - IPHTTPS. 
 
 IPHTTPS is supported only on Windows Server 2012.

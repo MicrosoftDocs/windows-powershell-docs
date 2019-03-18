@@ -467,14 +467,14 @@ Accept wildcard characters: False
 Specifies the operator for the NodeGroups list.
 Valid operators are:
 
--   Intersect (the default).
-Creates a list of nodes that belong to all of the specified node groups
+- Intersect (the default).
+  Creates a list of nodes that belong to all of the specified node groups
 - Uniform.
-Creates a list of nodes that belong to only one of the specified node groups.
-The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
-If enough resources are not found in a single group, the job remains queued.
+  Creates a list of nodes that belong to only one of the specified node groups.
+  The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
+  If enough resources are not found in a single group, the job remains queued.
 - Union.
-Creates a list of nodes that belong to any of the specified node groups
+  Creates a list of nodes that belong to any of the specified node groups
 
 This parameter was introduced in HPC Pack 2012.
 It is not supported in previous versions.

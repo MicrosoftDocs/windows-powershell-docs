@@ -126,19 +126,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### 
 
 Following properties for service insertion can be retrieved:
-For each service insertion rule, the following can be specified:    
-1. Description of rule    
-2. Protocol    
-3. Starting source port    
-4. Ending source port    
-5. Starting destination port    
-6. Ending destination port    
-7. Source subnet(s)    
+For each service insertion rule, the following can be specified: 
+1. Description of rule 
+2. Protocol 
+3. Starting source port 
+4. Ending source port 
+5. Starting destination port 
+6. Ending destination port 
+7. Source subnet(s) 
 8. Destination subnet(s)
 
-For each destination element where service insertion has to be applied:    
-1. Description    
-2. Destination network interface    
+For each destination element where service insertion has to be applied: 
+1. Description 
+2. Destination network interface 
 3. Order of the element
 
 ## NOTES

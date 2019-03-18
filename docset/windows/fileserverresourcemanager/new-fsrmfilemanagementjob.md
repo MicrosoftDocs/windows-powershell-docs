@@ -393,7 +393,7 @@ Specifies an array of report types that the file management job generates.
 The acceptable values for this parameter are:
 
 - Information
--  Error
+- Error
 - Audit
 
 ```yaml

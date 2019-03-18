@@ -176,10 +176,10 @@ The acceptable values for this parameter are:
 
 - SHA256128
 - MD596
--  SHA196
+- SHA196
 - GCMAES128
--  GCMAES192
--  GCMAES256
+- GCMAES192
+- GCMAES256
 
 ```yaml
 Type: AuthenticationTransformConstants

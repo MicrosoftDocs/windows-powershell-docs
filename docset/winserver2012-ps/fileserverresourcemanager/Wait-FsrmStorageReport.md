@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 38A80B87-8C0C-46A9-A964-7DC7D62CA6E0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Wait-FsrmStorageReport

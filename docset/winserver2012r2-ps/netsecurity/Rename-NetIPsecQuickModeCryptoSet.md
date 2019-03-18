@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Rename-NetIPsecQuickModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FF3485CE-29A1-4A8B-AFFF-1B9FA0B15898
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Rename-NetIPsecQuickModeCryptoSet

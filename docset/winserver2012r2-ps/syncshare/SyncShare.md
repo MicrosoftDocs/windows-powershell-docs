@@ -7,13 +7,15 @@ Locale: en-US
 title: SyncShare
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 056f244d-563f-4fbd-8ac3-1b625c5848da
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # SyncShare Module

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-SpacesPoolPhysicalDiskHWCounter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 39692E4F-D318-4369-A72A-D0C6290D402D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SpacesPoolPhysicalDiskHWCounter

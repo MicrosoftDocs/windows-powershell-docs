@@ -3,6 +3,9 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: E0EE50C8-85C4-403D-9679-0667C6732BC6
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-BCServeOnBattery

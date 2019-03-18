@@ -2,6 +2,9 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
 ---
 

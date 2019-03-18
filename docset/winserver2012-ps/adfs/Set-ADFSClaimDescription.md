@@ -3,6 +3,9 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 95FBA0C6-1218-48EB-A1B5-EEFB2AF5E7A9
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADFSClaimDescription

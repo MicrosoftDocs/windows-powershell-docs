@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.x
 ms.assetid: 9B86553F-FBAF-4F0C-89EB-C0571FCEEAD3
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Install-AdcsWebEnrollment

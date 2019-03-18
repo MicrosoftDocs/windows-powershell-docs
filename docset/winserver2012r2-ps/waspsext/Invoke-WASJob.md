@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Invoke-WASJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 389103BD-8C47-4A21-BE1B-21361B2AEDC8
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Invoke-WASJob

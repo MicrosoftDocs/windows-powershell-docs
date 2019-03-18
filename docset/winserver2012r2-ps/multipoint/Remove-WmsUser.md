@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D633D175-85E6-4ECA-8BFB-65FBBA9240C4
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Remove-WmsUser

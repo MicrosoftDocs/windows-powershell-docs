@@ -6,6 +6,7 @@ Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Get-InsightsCapabilityAction
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: JasonGerend

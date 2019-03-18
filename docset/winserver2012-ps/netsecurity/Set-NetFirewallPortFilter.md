@@ -2,6 +2,9 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 06B03DB5-6CFC-4C1A-B9BE-142AB14E0413
 ---
 

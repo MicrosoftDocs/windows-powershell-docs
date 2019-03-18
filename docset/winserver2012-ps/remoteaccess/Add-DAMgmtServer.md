@@ -2,6 +2,9 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 584564D6-D49F-4497-94A1-3AB4B90C795B
 ---
 

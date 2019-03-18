@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 5C117FBB-2D76-4F8D-A434-E6539E28C25D
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Invoke-RDUserLogoff

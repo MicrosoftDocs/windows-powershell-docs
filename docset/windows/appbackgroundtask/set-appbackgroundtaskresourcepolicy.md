@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: microsoft.windows.appbackgroundtask.commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-AppBackgroundTaskResourcePolicy
+ms.reviewer:
 ms.assetid: 82B0732A-B6CD-46C8-9D83-212A05EFB3D6
 ---
 

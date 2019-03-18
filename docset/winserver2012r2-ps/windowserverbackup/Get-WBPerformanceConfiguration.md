@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WBPerformanceConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7046A80C-3AF8-4F11-9551-40D8D617DA77
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WBPerformanceConfiguration

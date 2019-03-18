@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-SmbBandwidthLimit
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5C948486-EA2D-4F61-A5AA-CC55390E2FCC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-SmbBandwidthLimit

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-WssMsoSharePointPermission
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4D913B95-2B5A-44C1-9738-3C632521FA3D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WssMsoSharePointPermission

@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: NetQoS
 Module Guid: 743692B7-A227-4389-B082-2B47DE1D0D2D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390799
 Help Version: 5.0.0.1
 Locale: en-US
 title: NetQoS
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

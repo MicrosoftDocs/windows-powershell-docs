@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Update-O365AccountName
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E58562C-9D16-4092-91F6-3139E96A2318
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Update-O365AccountName

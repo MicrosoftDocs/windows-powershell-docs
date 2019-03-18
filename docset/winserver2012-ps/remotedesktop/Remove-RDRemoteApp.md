@@ -3,6 +3,9 @@ external help file:
 ms.assetid: D11BFD30-01D9-4D2A-B92F-801712DAC13D
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-RDRemoteApp

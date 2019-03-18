@@ -7,13 +7,15 @@ Locale: en-US
 title: SmbShare
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6677aaa5-5508-46c0-9b81-a067ecde5d08
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # SmbShare Module

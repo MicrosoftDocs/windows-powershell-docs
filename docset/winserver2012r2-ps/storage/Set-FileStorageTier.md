@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-FileStorageTier
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B1331750-6AF9-4763-8B97-BE764C4E0696
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-FileStorageTier

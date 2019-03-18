@@ -3,6 +3,9 @@ external help file:
 ms.assetid: B59F93B4-115B-44BB-A349-8D915D281FC7
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-RDSessionCollection

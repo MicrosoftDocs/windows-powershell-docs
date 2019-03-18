@@ -3,6 +3,9 @@ external help file: MsftUal_Admin.cdxml-help.xml
 ms.assetid: DA0D5341-D9DB-4D04-AF50-BF16C4041BB0
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-Ual

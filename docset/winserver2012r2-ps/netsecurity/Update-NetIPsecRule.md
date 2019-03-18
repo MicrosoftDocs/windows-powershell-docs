@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Update-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F303B0A3-1070-45CB-8AB4-2BF4E4B26623
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Update-NetIPsecRule

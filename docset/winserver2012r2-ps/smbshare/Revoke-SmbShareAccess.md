@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Revoke-SmbShareAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8FA4EB50-F97F-4B69-A582-005B103E3A3E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Revoke-SmbShareAccess

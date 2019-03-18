@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-RemoteAccessIpFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2B6D1DD-478D-41E4-9CC5-2460BDAB700C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-RemoteAccessIpFilter

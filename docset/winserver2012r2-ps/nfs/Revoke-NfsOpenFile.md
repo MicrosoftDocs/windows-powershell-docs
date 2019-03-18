@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Revoke-NfsOpenFile
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CD95798C-1629-417F-A9B6-288353919199
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Revoke-NfsOpenFile

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcAdvancedSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 88A96F40-774D-4B01-8F7E-39186348A8C5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DtcAdvancedSetting

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssMsoSharePointSite
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B3DB77FC-0361-43A4-9AAB-BA8B5828F9CF
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssMsoSharePointSite

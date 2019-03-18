@@ -3,6 +3,9 @@ external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 5B51AA64-93FE-4DC8-AE6A-24C96EBDD954
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-WebManagedModule

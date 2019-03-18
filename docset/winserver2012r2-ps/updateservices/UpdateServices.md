@@ -7,13 +7,15 @@ Locale: en-US
 title: UpdateServices
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 206f4838-e9e5-4c57-a385-0110ecc9dcb9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # UpdateServices Module

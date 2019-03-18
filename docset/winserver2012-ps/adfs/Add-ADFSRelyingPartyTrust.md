@@ -3,6 +3,9 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: E4F5B238-AC35-4A1E-B90D-1779D062D92A
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ADFSRelyingPartyTrust

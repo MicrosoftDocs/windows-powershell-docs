@@ -3,6 +3,9 @@ external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 70B6FEA0-E95A-42FA-9699-7B665FF42FC8
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Stop-Website

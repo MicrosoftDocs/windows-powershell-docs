@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Stop-WASJobInstance
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 61BEFC93-70F6-487C-9505-B34DDFCCEE79
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Stop-WASJobInstance

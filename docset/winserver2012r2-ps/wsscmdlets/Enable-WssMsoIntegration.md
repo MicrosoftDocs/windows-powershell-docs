@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-WssMsoIntegration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 86072D37-042A-4E30-9B14-00C5AF1F50CE
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-WssMsoIntegration

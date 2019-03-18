@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WebApplicationProxySslCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 47E4876B-2FC2-4D2A-8C5C-66DA678B3B19
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WebApplicationProxySslCertificate

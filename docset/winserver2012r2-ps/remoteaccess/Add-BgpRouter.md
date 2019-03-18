@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-BgpRouter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 82045B7C-A2DB-4ADB-800F-C8FFFE9AAB26
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-BgpRouter

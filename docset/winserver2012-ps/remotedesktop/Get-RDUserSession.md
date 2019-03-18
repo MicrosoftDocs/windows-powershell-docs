@@ -3,6 +3,9 @@ external help file:
 ms.assetid: D25A387A-2DF6-417E-9BCB-CA33895F5087
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDUserSession

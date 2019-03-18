@@ -3,6 +3,9 @@ external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 7B2EC10B-FA75-4444-852D-27D3A37F9EE4
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-IscsiVirtualDiskSnapshot

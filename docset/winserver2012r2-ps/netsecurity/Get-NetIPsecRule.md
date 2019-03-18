@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2478FCB2-D015-45EC-B03A-4DB972CD5675
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPsecRule

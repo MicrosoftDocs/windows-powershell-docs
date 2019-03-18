@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-PefTraceSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F660BC92-C104-4173-909A-4133AC71ADC2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-PefTraceSession

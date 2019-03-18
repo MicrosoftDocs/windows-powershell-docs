@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WBDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 89601806-F13E-4C1E-AECC-ECC0CA7758F5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WBDisk

@@ -3,6 +3,9 @@ external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: D64F31FE-AAE2-4364-8DF4-88065DFFEE40
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-WinUserLanguageList

@@ -3,6 +3,9 @@ external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: B7A73A74-B4FF-4858-A081-7DD547D5E0DD
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-WebAppPool

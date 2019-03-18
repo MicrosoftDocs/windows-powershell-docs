@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 37D54E2D-3003-4889-B8A6-78BFA3798342
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-CertificateAutoEnrollmentPolicy

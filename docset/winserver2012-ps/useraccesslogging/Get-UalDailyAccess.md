@@ -3,6 +3,9 @@ external help file: MsftUal_DailyAccess.cdxml-help.xml
 ms.assetid: 5679E7DE-A76C-4BFE-884F-00B12D45BD92
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-UalDailyAccess

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Block-SmbShareAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D3E968CD-FE13-47B9-AB3C-A9CA0DFBADD8
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Block-SmbShareAccess

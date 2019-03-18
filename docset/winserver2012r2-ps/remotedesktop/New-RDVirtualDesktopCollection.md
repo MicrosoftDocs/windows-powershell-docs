@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-RDVirtualDesktopCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 231B2762-17FD-4607-B4ED-53B949AEEC38
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-RDVirtualDesktopCollection

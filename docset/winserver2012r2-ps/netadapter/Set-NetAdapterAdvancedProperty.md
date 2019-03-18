@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetAdapterAdvancedProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78FD4A08-1D00-4D41-85AA-ABD1EAC6E46D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-NetAdapterAdvancedProperty

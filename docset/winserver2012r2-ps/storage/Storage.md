@@ -7,13 +7,15 @@ Locale: en-US
 title: Storage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8156049d-614d-434a-85df-d55a8c96653e
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Storage Module

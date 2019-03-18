@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Complete-DtcDiagnosticTransaction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBF5A008-9FAC-491B-9580-0E98369B2CE4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Complete-DtcDiagnosticTransaction

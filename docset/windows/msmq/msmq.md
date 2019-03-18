@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: MSMQ
 Module Guid: 33CA09B1-A7FE-42E0-8AA1-E7203746CA94
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285552
 Help Version: 4.0.5.1
 Locale: en-US
 title: MSMQ
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

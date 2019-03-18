@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A01E908C-F344-4072-B720-4A0F523018B2
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADUser

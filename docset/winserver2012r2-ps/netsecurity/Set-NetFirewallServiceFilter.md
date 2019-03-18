@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetFirewallServiceFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 01DB4962-EAEA-40A9-A223-615E0A893728
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-NetFirewallServiceFilter

@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Stop-FsrmStorageReport
@@ -34,7 +37,7 @@ This cmdlet returns one of the following values for the running status of the fi
 This cmdlet returns a success status in the following conditions: 
 - The server is not running the report job. 
 - The server is currently canceling the report job. 
-- The server is running the report job and has started cancelation of the report job. 
+- The server is running the report job and has started cancellation of the report job. 
 - The server has removed the report job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a storage report job that the server is running or has queued.

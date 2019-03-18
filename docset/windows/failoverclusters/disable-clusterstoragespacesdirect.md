@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-ClusterStorageSpacesDirect
+ms.reviewer:
 ms.assetid: 5D847187-2CA7-48C4-9D76-7F32D6D27773
 ---
 
@@ -48,7 +49,7 @@ PS C:\> Get-Cluster -Cluster "Contoso19-C2.production.contoso.com" | Disable-Clu
 
 This command gets the cluster named Contoso19-C2.production.contoso.com by using the **Get-Cluster** cmdlet.
 The command passes that cluster to the current cmdlet by using the pipeline operator.
-That cmdlet rnables Storage Spaces Direct on the cluster.
+That cmdlet enables Storage Spaces Direct on the cluster.
 
 ## PARAMETERS
 

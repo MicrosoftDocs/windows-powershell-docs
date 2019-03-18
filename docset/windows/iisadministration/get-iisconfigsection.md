@@ -1,5 +1,5 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -8,9 +8,11 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-IISConfigSection
+ms.author: kenwith
+ms.reviewer:
 ---
 
 # Get-IISConfigSection
@@ -28,7 +30,7 @@ Get-IISConfigSection [[-SectionPath] <String>] [[-CommitPath] <String>] [[-Locat
 ## DESCRIPTION
 The **Get-IISConfigSection** cmdlet gets a configuration section (Microsoft.Web.Administration.ConfigurationSection) object to work further with the Internet Information Services (IIS) Configuration Store.
 It is generally the first cmdlet to use if configuration is to be read or updated.
-The output of this cmdlet can be passed to other cmdlets in the pipeline where ConfigurationElement objects are expected, since ConfigurationSection inherits from ConfigurationElement. 
+The output of this cmdlet can be passed to other cmdlets in the pipeline where ConfigurationElement objects are expected, since ConfigurationSection inherits from ConfigurationElement.
 
 If the *SectionPath* parameter is not used, the cmdlet lists all the available sections.
 The sections that can be used are either defined in the applicationHost.config (IIS Configuration) or root web.config (.NET Framework).
@@ -73,7 +75,7 @@ PS C:\> $collection = Get-IISConfigSection -SectionPath "appSettings" -Clr 2.0
 ```
 
 This command creates a new collection element using the *SectionPath* "appSettings"; that element is stored in a variable named $collection.
-In addition, the * Clr* parameter is used to set the Common Language Runtime to version 2.0.
+In addition, the *Clr* parameter is used to set the Common Language Runtime to version 2.0.
 
 ## PARAMETERS
 
@@ -85,7 +87,7 @@ Note, however, that if the *CommitPath* parameter is included in the command the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -101,7 +103,7 @@ If CommitPath is omitted, applicationHost.config or root .NET configuration (roo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -117,7 +119,7 @@ This corresponds to the \<location\> tag in configuration files.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -132,7 +134,7 @@ Specifies the name of the IIS configuration section for which a configuration ob
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

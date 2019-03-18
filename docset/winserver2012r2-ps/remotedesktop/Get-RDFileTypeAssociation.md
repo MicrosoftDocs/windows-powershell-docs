@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDFileTypeAssociation
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 529941C3-ED92-44D1-9A08-A2426D99652A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RDFileTypeAssociation
@@ -28,7 +30,7 @@ Get-RDFileTypeAssociation [[-CollectionName] <String>] [-AppAlias <String>] [-Ap
 ```
 
 ## DESCRIPTION
-The **Get-RDFileTypeAssocation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
+The **Get-RDFileTypeAssociation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
 
 ## EXAMPLES
 

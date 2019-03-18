@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-Ual
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA0D5341-D9DB-4D04-AF50-BF16C4041BB0
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-Ual

@@ -2,6 +2,9 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BB678E72-FCDF-48EF-8D92-AF8FB42EAE20
 ---
 
@@ -46,7 +49,7 @@ PS C:\>$initid = (Get-InitiatorID)
 PS C:\>Remove-InitiatorIDFromMaskingSet -InitiatorIDs $initid -MaskingSetFriendlyName "Server1A-MaskingSet"
 ```
 
-This example removes an initator ID from a masking set.
+This example removes an initiator ID from a masking set.
 This cmdlet prevents the specified initiator ID from accessing any of the resources defined in the masking set
 
 ## PARAMETERS

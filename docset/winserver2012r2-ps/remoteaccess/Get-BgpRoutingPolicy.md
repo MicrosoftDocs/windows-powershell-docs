@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-BgpRoutingPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C134122-526C-4319-8152-51E4CCF97399
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-BgpRoutingPolicy

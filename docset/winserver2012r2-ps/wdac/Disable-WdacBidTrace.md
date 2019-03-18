@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-WdacBidTrace
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EF357356-FDCE-4016-AB5E-34F841B412CB
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-WdacBidTrace

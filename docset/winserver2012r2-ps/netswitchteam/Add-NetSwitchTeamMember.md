@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-NetSwitchTeamMember
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED76A9C8-B2F3-4F12-9615-0BD8F067307E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-NetSwitchTeamMember

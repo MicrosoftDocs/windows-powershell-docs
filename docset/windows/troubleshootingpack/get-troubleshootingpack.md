@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-TroubleshootingPack
+ms.reviewer:
 ms.assetid: 9ED46ACE-1590-4CCA-97A8-C494DD1162BE
 ---
 
@@ -62,7 +63,7 @@ PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Au
 PS C:\> $Audio.Rootcauses
 ```
 
-Tgus example dislays all the root casues this troubleshooting pack investigates.
+This example displays all the root causes this troubleshooting pack investigates.
 
 
 ### Example 4: Get a resolution for a root cause
@@ -85,7 +86,7 @@ PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -Ans
 ```
 
 This command uses the **Get-TroubleshootingPack** cmdlet to generate an answer file.
-The Areo troubleshooting pack provides a series of questions for the user to describe the troubleshooting situation and saves that information in the specified XML file.
+The Audio troubleshooting pack provides a series of questions for the user to describe the troubleshooting situation and saves that information in the specified XML file.
 
 ## PARAMETERS
 

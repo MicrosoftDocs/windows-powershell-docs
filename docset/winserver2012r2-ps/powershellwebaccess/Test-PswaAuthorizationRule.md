@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Test-PswaAuthorizationRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36205D8E-3832-423D-A094-BEFC7172A6B7
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Test-PswaAuthorizationRule

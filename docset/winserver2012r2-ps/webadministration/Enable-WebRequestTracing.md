@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-WebRequestTracing
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 56F8DEDD-69B2-42D9-B55C-C83208EBBA8E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-WebRequestTracing
@@ -32,7 +34,7 @@ The **Enable-WebRequestTracing** cmdlet enables request tracing, and automatical
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Enabling Enable Request request Tracing tracing for the "Default default Web webSitesite" --------------Enable request tracing default website
+### Example 1: Enabling request tracing for the "Default Web Site"
 ```
 IIS:\>Enable-WebRequestTracing -Name "Default Web Site"
 ```

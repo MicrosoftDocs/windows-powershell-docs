@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-SecurityPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D17D0A2F-8C3E-4298-9926-F6D4B65ED1D1
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-SecurityPolicy

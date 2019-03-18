@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-ADServiceAccount
@@ -214,7 +217,7 @@ No password is specified - Random password is set and the account is enabled unl
 User password is specified - Password is set and the account is enabled unless it is requested to be disabled, unless the password you provided does not meet password policy or was not set for other reasons, at which point the account is disabled
 
 The new ADServiceAccount object will always either be disabled or have a user-requested or randomly-generated password.
-There is no way to create an enabled service account account object with a password that violates domain password policy, such as an empty password.
+There is no way to create an enabled service account object with a password that violates domain password policy, such as an empty password.
 
 The following example shows how to set this parameter.
 This command will prompt you to enter the password.

@@ -1,5 +1,5 @@
 ---
-author:
+author: kenwith
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182872
 schema: 2.0.0
 title: Stop-HpcJob
 ms.assetid: 1C71E2EF-0A23-42EC-86F1-9549FE3FF42A
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Stop-HpcJob
@@ -36,7 +38,7 @@ Stop-HpcJob -Job <HpcJob[]> [-Message <String>] [-State <String>] [-Force] [-Gra
 ## DESCRIPTION
 The **Stop-HpcJob** cmdlet cancels one or more specified jobs.
 You can specify the job by using its ID or by using the **HpcJob** object for the job.
-You can specify that you want to cancel the job immediately, without using the grace period for task cancelation and without running the node release task.
+You can specify that you want to cancel the job immediately, without using the grace period for task cancellation and without running the node release task.
 You can also specify that the state of the job after it is canceled should be Finished instead of Canceled, and you can specify an error message to explain why you canceled the jobs.
 
 When you cancel a job, the job scheduler removes the job from the job queue if the job is waiting to run.
@@ -58,7 +60,7 @@ This command cancels the job with an ID of 45 and provides the user with a cance
 PS C:\>Stop-HpcJob -Id 39 -Force
 ```
 
-This command cancels the job with an ID of 39 immediately, without using the grace period for task cancelation and without running the node release task.
+This command cancels the job with an ID of 39 immediately, without using the grace period for task cancellation and without running the node release task.
 
 ### Example 3: Create a job, add a task to it, submit it, and then stop it
 ```
@@ -79,7 +81,7 @@ This command cancels the job with an ID of 27 gracefully, by allowing running ta
 ## PARAMETERS
 
 ### -Force
-Stops the job immediately, without using the grace period for task cancelation and without running the node release task, if the job contains one.
+Stops the job immediately, without using the grace period for task cancellation and without running the node release task, if the job contains one.
 
 This parameter was introduced in HPC Pack 2008 R2.
 It is not supported in previous versions.

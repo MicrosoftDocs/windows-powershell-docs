@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADAccountAuthenticationPolicySilo
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -52,7 +54,7 @@ PS C:\>Get-ADComputer -Filter 'Name -like "NewComputer*"' | Set-ADAccountAuthent
 ```
 
 This example first uses the Get-ADComputer cmdlet to get all computer accounts that match the filter specified by the Filter parameter.
-The output of this command is passed to **Set-ADAccountAuthenticatinPolicySilo** to assign the authentication policy silo named AuthenticationPolicySilo02 and the authentication policy named AuthenticationPolicy02 to them.
+The output of this command is passed to **Set-ADAccountAuthenticationPolicySilo** to assign the authentication policy silo named AuthenticationPolicySilo02 and the authentication policy named AuthenticationPolicy02 to them.
 
 ## PARAMETERS
 
@@ -83,9 +85,9 @@ Accept wildcard characters: False
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
 
--  A distinguished name
+- A distinguished name
 - GUID
--  Name
+- Name
 
 This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
 

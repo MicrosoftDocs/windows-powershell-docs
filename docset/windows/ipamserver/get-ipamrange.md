@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamRange.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IpamRange
+ms.reviewer:
 ms.assetid: 52BD483A-4B3B-4CC6-BE97-A439E3399CC1
 ---
 
@@ -180,7 +181,7 @@ Specifies an array of address families of IP address range objects that this cmd
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 ```yaml
 Type: AddressFamily[]

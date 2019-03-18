@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-TpmSupportedFeature
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6D522831-D48C-48C5-A2A3-AA7E7C2F0693
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-TpmSupportedFeature
@@ -34,7 +36,7 @@ Not all TPMs support all features.
 
 ### Example 1: Verify support for key attestation
 ```
-PS C:\> Get-TpmSupportedFeatures -FeatureList "Key Attestation"
+PS C:\> Get-TpmSupportedFeature -FeatureList "Key Attestation"
 key attestation
 ```
 

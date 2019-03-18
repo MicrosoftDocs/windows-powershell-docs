@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Copy-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F89D88FF-6E47-41CF-BF03-BE5AE61F27BD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Copy-NetFirewallRule

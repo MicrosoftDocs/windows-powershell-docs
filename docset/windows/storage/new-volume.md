@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-Volume
+ms.reviewer:
 ms.assetid: 038D0DAD-E00B-479C-BEE8-6D163BBA7C1C
 ---
 
@@ -103,18 +104,26 @@ The cmdlet manages the creation of the virtual disk with the specified size and 
 ## EXAMPLES
 
 ### Example 1: Create a volume on a mirror space
-```
+```powershell
 PS C:\> New-Volume -StoragePoolName "CompanyData" -FriendlyName "TestVolume" -Size 10GB -ResiliencySettingName "Mirror" -FileSystem NTFS -AccessPath "M: "-ProvisioningType Fixed
 ```
 
 This command creates a new storage space in the CompanyData pool using the Mirror resiliency setting and fixed provisioning, and then formats the volume with the NTFS file system and assigns drive letter M.
 
 ### Example 2: Create a volume on a new tiered storage space
-```
+```powershell
 PS C:\>New-Volume -StoragePoolFriendlyName "CompanyData" -FriendlyName "UserData" -AccessPath "M:" -ResiliencySettingName "Mirror" -ProvisioningType "Fixed" -StorageTiers (Get-StorageTier -FriendlyName "*SSD*"), (Get-StorageTier -FriendlyName "*HDD*") -StorageTierSizes 20GB, 80GB -FileSystem NTFS
 ```
-
 This command creates new storage space in the CompanyData pool using the Mirror resiliency setting, fixed provisioning, a 20 GB SSD storage tier, and an 80 GB HDD storage tier, and then formats the volume with the NTFS file system and assigns drive letter M.
+
+
+### Example 3: Create a volume on disk
+```powershell
+PS C:\>Get-Disk | Where-Object OperationalStatus -eq 'Offline'| 
+         Initialize-Disk -PartitionStyle GPT -PassThru |
+            New-Volume -FileSystem NTFS -DriveLetter F -FriendlyName 'New-Volume'
+````
+This command initializes a new disk added to a host then creates a new volume on each new disk.
 
 ## PARAMETERS
 

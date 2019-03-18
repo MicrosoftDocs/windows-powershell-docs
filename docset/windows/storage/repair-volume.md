@@ -1,20 +1,20 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: kenwith
+author: kenwith
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Volume.cdxml-help.xml
 Module Name: Storage
-online version: 
+online version:
 schema: 2.0.0
 title: Repair-Volume
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
 manager: jasgro
-ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: coreyp
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
 ---
 

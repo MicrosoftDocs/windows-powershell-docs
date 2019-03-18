@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Grant-SmbShareAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Grant-SmbShareAccess

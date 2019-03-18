@@ -2,6 +2,9 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
 ---
 
@@ -66,7 +69,7 @@ Specifies the number of computer restarts before BitLocker restores protection.
 The acceptable values for this parameter are:integers from 0 to 15.
 Specify zero to suspend protection indefinitely until you resume it by using the Resume-BitLocker cmdlet.
 
-If you do not inclue this parameter, the cmdlet uses a value of one.
+If you do not include this parameter, the cmdlet uses a value of one.
 
 ```yaml
 Type: Int32

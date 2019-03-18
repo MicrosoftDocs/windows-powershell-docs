@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerDiagnostics_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-DnsServerDiagnostics
+ms.reviewer:
 ms.assetid: 90D337A9-9489-4D50-9F27-A154ABBBADBF
 ---
 
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Answers
-Specifies wheter to enable the logging of DNS responses.
+Specifies whether to enable the logging of DNS responses.
 
 ```yaml
 Type: Boolean

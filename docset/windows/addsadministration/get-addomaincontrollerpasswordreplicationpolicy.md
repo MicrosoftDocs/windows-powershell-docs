@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADDomainControllerPasswordReplicationPolicy
+ms.reviewer:
 ms.assetid: 7974AE6F-264B-498C-893F-4069DF974E8D
 ---
 
@@ -45,7 +46,7 @@ The *Identity* parameter specifies the RODC that uses the allowed and denied lis
 You can identify a domain controller by its GUID, IPV4Address, IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
 
-You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerobject>`, or pass a domain controller object through the pipeline operator to the *Identity* parameter.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline operator to the *Identity* parameter.
 For example, you can use the **Get-ADDomainController** cmdlet to retrieve a domain controller object and then pass the object through the pipeline operator to the **Get-ADDomainControllerPasswordReplicationPolicy** cmdlet.
 
 If you specify a writeable domain controller for this cmdlet, the cmdlet returns a non-terminating error.

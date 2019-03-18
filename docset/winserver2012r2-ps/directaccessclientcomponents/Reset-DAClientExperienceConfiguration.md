@@ -4,9 +4,11 @@ Module Name: DirectAccessClientComponents
 online version: 
 schema: 2.0.0
 title: Reset-DAClientExperienceConfiguration
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -117,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomCommands
-Reseets the CustomCommands property of the specified configuration to a non-configured state.
+Resets the CustomCommands property of the specified configuration to a non-configured state.
 
 ```yaml
 Type: SwitchParameter
@@ -376,7 +378,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperianceConfiguration
+### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperienceConfiguration
 This cmdlet accepts as input a CIM object that contains a DA client experience configuration.
 
 ## OUTPUTS

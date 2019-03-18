@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 52F2EFB0-0067-4EDD-B73F-3480ADC76AB8
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Update-AdfsRelyingPartyTrust
+ms.reviewer:
 ---
 
 # Update-AdfsRelyingPartyTrust
@@ -51,7 +52,7 @@ The cmdlet updates claims, endpoints, and certificates.
 
 ### Example 1: Update a relying party trust
 ```
-PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FarikamApp"
+PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FabrikamApp"
 ```
 
 This command updates the relying party trust named FabrikamApp.

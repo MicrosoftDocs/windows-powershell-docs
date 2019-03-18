@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-StorageSetting
+ms.reviewer:
 ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
 ---
 
@@ -30,34 +31,34 @@ Set-StorageSetting [-NewDiskPolicy <NewDiskPolicy>] [-ScrubPolicy <ScrubPolicy>]
 ```
 
 ## DESCRIPTION
-The **Set-StorageSettings** cmdlet adjusts or configures current storage settings of the StorageSetting object.
+The **Set-StorageSetting** cmdlet adjusts or configures current storage settings of the StorageSetting object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineAll
 ```
 
 This example changes the new disk policy so that all newly attached disks remain offline.
 
 ### EXAMPLE 2
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineInternal
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineInternal
 ```
 
 This example changes the new disk policy so that all newly attached disks on a local bus remain offline.
 
 ### EXAMPLE 3
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineShared
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineShared
 ```
 
 This example changes the new disk policy so that all new shared bus disks remain offline and all new local bus disks remain online.
 
 ### EXAMPLE 4
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OnlineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OnlineAll
 ```
 
 This example changes the new disk policy so that all new disks are brought online, regardless of whether the disk are on a local or shared bus.

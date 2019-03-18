@@ -2,6 +2,9 @@
 external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A0BF19F2-ABD9-47E3-B833-4C09D9B76F83
 ---
 

@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 74C7E387-42CF-4632-95AD-24820F6453C4
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Move-ClusterGroup

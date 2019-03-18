@@ -2,6 +2,9 @@
 external help file: IpamServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A1EF39D0-A8D3-4104-B7DA-FDF64A5FFA94
 ---
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FSRMFileManagementJob.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-FsrmFileManagementJob
+ms.reviewer:
 ms.assetid: C4D3D777-7C98-4B3D-942C-088A7F11F5BD
 ---
 
@@ -48,7 +49,7 @@ This cmdlet returns a success status in the following conditions:
 
 - The server is not running the job. 
 - The server is currently canceling the job. 
-- The server is running the job and has started cancelation of the job. 
+- The server is running the job and has started cancellation of the job. 
 - The job is queued on the server and has removed the job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a file management job that is running or is queued.

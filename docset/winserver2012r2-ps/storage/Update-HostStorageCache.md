@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Update-HostStorageCache
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E8D3BC14-4851-4E1A-9855-99BFB38A1CB6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Update-HostStorageCache

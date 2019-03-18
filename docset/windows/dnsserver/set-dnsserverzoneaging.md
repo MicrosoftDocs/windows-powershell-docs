@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZoneAging_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-DnsServerZoneAging
+ms.reviewer:
 ms.assetid: EF02C0C6-10AA-449F-A6D8-98A08D309DCA
 ---
 
@@ -43,7 +44,7 @@ Aging settings determine when a record can be removed, or scavenged, as a stale 
 PS C:\> Set-DnsServerZoneAging west01.contoso.com -Aging $True -ScavengeServers 172.18.1.1 -PassThru -Verbose
 ```
 
-This command enables aging for a domain named west01.contoso.com and specifies a scavaging server.
+This command enables aging for a domain named west01.contoso.com and specifies a scavenging server.
 
 ## PARAMETERS
 

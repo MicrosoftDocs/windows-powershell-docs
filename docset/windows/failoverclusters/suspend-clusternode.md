@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Suspend-ClusterNode
+ms.reviewer:
 ms.assetid: 6BE0D49E-A27C-4640-AE0D-0B1E47B2999E
 ---
 
@@ -70,7 +71,7 @@ This example pauses the node named node1 and moves the workloads from it to the 
 
 ### Example 4: Preview a pause operation
 ```
-PS C:\> Suspend-ClusterNode node1 -Drain -Whatif
+PS C:\> Suspend-ClusterNode node1 -Drain -WhatIf
 What if: Performing operation "Suspend-ClusterNode" on Target "node1".
 ```
 

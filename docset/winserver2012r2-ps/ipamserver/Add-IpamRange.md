@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Add-IpamRange
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -212,9 +214,9 @@ Specifies how IPAM assigns the addresses.
 The acceptable values for this parameter are:
 
 - Static 
--  Dynamic 
--  Auto 
--  VIP 
+- Dynamic 
+- Auto 
+- VIP 
 - Reserved
 
 ```yaml
@@ -425,8 +427,8 @@ Specifies an array of network types for the addresses to be added.
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
  If the value of the **AddressSpace** parameter is Default, then this parameter can take the value Provider or NonVirtualized.
 If the value of the **AddressSpace** parameter is Provider, then the value of this parameter, if specified, must be Provider.

@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsDeviceRegistration
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -72,7 +74,7 @@ PS C:\> $Cred = Get-Credential
 PS C:\> Set-AdfsDeviceRegistration -ServiceAccountIdentifier "CONTOSO\Svc_adfs" -Credential $Cred
 ```
 
-The first command uses the **Get-Credential** cmlet to create a credential object for the Active Directory account under which the AD FS service runs.
+The first command uses the **Get-Credential** cmdlet to create a credential object for the Active Directory account under which the AD FS service runs.
 The command stores the credential object in the **$Cred** variable.
 
 The second command sets the service account that has the ID Svc_adfs.

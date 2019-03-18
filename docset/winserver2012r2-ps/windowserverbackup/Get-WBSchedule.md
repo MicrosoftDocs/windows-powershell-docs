@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WBSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0C09CB71-DADA-4DF6-AF95-F7E6D5045AAA
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WBSchedule

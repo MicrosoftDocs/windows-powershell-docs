@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-VpnAuthType
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8B4AA1E7-D102-4304-A987-91F99AFA9A1B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-VpnAuthType

@@ -7,13 +7,15 @@ Locale: en-US
 title: NetTCPIP
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9869ee45-0d94-495c-8193-5c391aa7c5e5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # NetTCPIP Module

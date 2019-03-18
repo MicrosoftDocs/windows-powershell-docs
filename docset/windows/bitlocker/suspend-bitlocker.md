@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Suspend-BitLocker
+ms.reviewer:
 ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
 ---
 
@@ -94,7 +95,7 @@ The acceptable values for this parameter are: integers from 0 to 15.
 
 Specify zero to suspend protection indefinitely until you resume it by using the **Resume-BitLocker** cmdlet.
 
-If you do not inclue this parameter, the cmdlet uses a value of one.
+If you do not include this parameter, the cmdlet uses a value of one.
 
 ```yaml
 Type: Int32

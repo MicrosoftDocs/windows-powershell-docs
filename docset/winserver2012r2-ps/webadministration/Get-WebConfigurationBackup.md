@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebConfigurationBackup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A959FA4-63F7-4DA7-A39B-20076FD83F99
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WebConfigurationBackup
@@ -31,7 +33,7 @@ The **Get-WebConfigurationBackup** cmdlet gets a list of available Internet Info
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Get a list of the available IIS configuration backups --------------
+### Example 1: Get a list of the available IIS configuration backups
 ```
 IIS:\>Get-WebConfigurationBackup
 Name          Creation Date

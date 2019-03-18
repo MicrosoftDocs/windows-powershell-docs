@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: BDC2B8C2-898F-4CB7-86AB-55E304D829B9
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ClusterResource

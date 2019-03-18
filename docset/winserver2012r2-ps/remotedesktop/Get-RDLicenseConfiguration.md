@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDLicenseConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E77214D7-17EF-4BA4-B4EE-4CC7E741C4BE
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RDLicenseConfiguration

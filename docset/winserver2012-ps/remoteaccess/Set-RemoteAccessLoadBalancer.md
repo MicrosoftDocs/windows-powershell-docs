@@ -2,6 +2,9 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D30C2588-A8E4-4A42-9885-5C450C84426E
 ---
 
@@ -298,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyLoadBalancer
-Specifie the enabled state of a third-party external load balancer.
+Specifies the enabled state of a third-party external load balancer.
 The acceptable values for this parameter are:
 
  -- Enabled. 

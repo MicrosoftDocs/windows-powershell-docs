@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADFineGrainedPasswordPolicy
+ms.reviewer:
 ms.assetid: 43249562-90DC-4535-9160-4E38621B5DA7
 ---
 
@@ -62,7 +63,7 @@ Then pass these objects through the pipeline operator to the **New-ADFineGrained
 PS C:\> New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
 ```
 
-This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindw**, and **LockoutThreshold** properties on the object.
+This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindow**, and **LockoutThreshold** properties on the object.
 
 ### Example 2: Create fine-grained password policies using a template object
 ```

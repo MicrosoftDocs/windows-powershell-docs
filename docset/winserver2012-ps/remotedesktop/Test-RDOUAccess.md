@@ -3,6 +3,9 @@ external help file:
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-RDOUAccess
@@ -25,7 +28,7 @@ The RD Connection Broker must have Read access to an OU to query user account in
 
 ### Example 1: Verify access to an OU
 ```
-PS C:\> Test-RDOUaccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
 ```
 
 This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.

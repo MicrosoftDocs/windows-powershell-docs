@@ -12,6 +12,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Send-SmigServerData
@@ -47,7 +49,7 @@ For online Help about the Windows Server Migration Tools cmdlets, see http://go.
 
 ### EXAMPLE 1
 ```
-PS C:\> Send-SmigServerData -include Data -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Verbose
+PS C:\> Send-SmigServerData -Include Data -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Verbose
 ```
 
 This sample command migrates all files from the folder c:\users on the local (source) computer to the folder d:\shares\users on the destination computer.
@@ -61,8 +63,8 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 2
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
-PS C:\> Send-SmigServerData -include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
+PS C:\> Send-SmigServerData -Include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
 ```
 
 In this example, the first line of the command instructs the migration utilities to convert the data encryption password, represented by "password," to a secure string, and store it in the variable $pass.
@@ -76,7 +78,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 3
 ```
-PS C:\> Send-SmigServerData -include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
+PS C:\> Send-SmigServerData -Include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
 ```
 
 In this example, the command migrates all migration data in the folder C:\users on the local server to the folder D:\shares\users on a remote server, Server2.
@@ -166,7 +168,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to encrypt the data transfer by using the 256-bit advanced encryption standard (AES).
-The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 
 You must specify a password to protect your data because transferred data is broadcast over a network.
 If the Password parameter is not added to your command, you are prompted to specify a password after entering your command.

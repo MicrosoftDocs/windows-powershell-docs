@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Firewall.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetIPsecAuthProposal
+ms.reviewer:
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
 ---
 
@@ -488,7 +489,7 @@ Accept wildcard characters: False
 
 ### -User
 Specifies that the computer should authenticate as the user account, rather than the computer.
-This parameter is valid with NLTM, Kerberos, Cert, or Proxy.
+This parameter is valid with NTLM, Kerberos, Cert, or Proxy.
 
 ```yaml
 Type: SwitchParameter

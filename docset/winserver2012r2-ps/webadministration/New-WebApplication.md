@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WebApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A316977C-3685-40E1-A011-EE069E456263
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WebApplication
@@ -32,7 +34,7 @@ The **New-WebApplication** cmdlet creates an Internet Information Services (IIS)
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Creating Create a new web application --------------Create
+### Example 1: Creating a new web application
 ```
 IIS:\>New-WebApplication -Name "TestApp" -Site 'Default Web Site' -PhysicalPath "C:\Test" -ApplicationPool "DefaultAppPool"
 ```

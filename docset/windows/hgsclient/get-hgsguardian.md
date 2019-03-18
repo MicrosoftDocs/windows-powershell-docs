@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_HgsGuardian_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
 ms.assetid: 0A549A9B-AC99-4F5F-8FD7-AA958D7E84AD
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-HgsGuardian
+ms.reviewer:
 ---
 
 # Get-HgsGuardian
@@ -49,7 +50,7 @@ This command gets all guardians configured for this computer.
 PS C:\> Get-HgsGuardian -Name "Guardian11"
 ```
 
-This command gets a guardian named Guaridan11.
+This command gets a guardian named Guardian11.
 
 ## PARAMETERS
 

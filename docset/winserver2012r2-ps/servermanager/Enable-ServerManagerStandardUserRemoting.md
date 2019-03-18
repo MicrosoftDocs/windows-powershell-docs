@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-ServerManagerStandardUserRemoting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A7072A86-E337-4DC5-A699-CE80CFE85FEF
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-ServerManagerStandardUserRemoting
@@ -31,11 +33,11 @@ Provides one or more standard, non-Administrator users access to event, service,
 The cmdlet must be run locally on the server that you are managing by using Server Manager.
 The cmdlet works by performing the following actions:
 
-â—? Adds access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+ï¿½? Adds access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
 
-â—? Adds specified standard users to required user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the managed server.
+ï¿½? Adds specified standard users to required user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the managed server.
 
-â—? Changes access rights in the Service Control Manager to allow specified standard users remote access to the status of services on the managed server.
+ï¿½? Changes access rights in the Service Control Manager to allow specified standard users remote access to the status of services on the managed server.
 
 This cmdlet does not provide standard users access to bpa (BPA) results, or allow standard users to run BPA scans.
 Aside from the preceding list of changes, this cmdlet provides no additional access that a standard user does not already have, by default, on managed servers.

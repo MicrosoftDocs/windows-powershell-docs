@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 7B652875-587E-4E6E-838C-BDA9BFC67FC8
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-CertificateNotificationTask

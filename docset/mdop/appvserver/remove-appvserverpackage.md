@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: kenwith
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: kenwith
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 
 ### -VersionID
 Specifies a GUID that differentiates a package version from other versions, whether older, newer, or of a completely different lineage.
-If you do not specify this paramter, the cmdlet operates on all versions of the package.
+If you do not specify this parameter, the cmdlet operates on all versions of the package.
 
 ```yaml
 Type: Guid

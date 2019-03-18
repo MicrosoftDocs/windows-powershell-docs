@@ -14,6 +14,9 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-HpcTask
@@ -244,7 +247,7 @@ If you specify a value for the *FailJobOnFailureCount* parameter, and do not spe
 To specify that a job and its tasks should stop running and that job should be marked as failed when any of the tasks in the job fail, use the *FailOnTaskFailure* parameter of the New-HpcJob or Set-HpcJob cmdlet.
 
 This parameter was introduced in HPC Pack 2008 R2 with Service Pack 1 (SP1).
-Itis not supported in previous versions.
+It is not supported in previous versions.
 
 ```yaml
 Type: Boolean

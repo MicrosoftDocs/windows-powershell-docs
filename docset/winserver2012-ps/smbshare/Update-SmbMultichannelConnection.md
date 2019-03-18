@@ -2,6 +2,9 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 42A5CB1C-50F8-4AB1-B699-9B51A54B02D4
 ---
 
@@ -18,7 +21,7 @@ Update-SmbMultichannelConnection [[-ServerName] <String>] [-AsJob] [-CimSession 
 ```
 
 ## DESCRIPTION
-The **Update-SmbMulitchannelConnection** cmdlet forces the Server Message Block (SMB) client to update the multi-channel-related information.
+The **Update-SmbMultichannelConnection** cmdlet forces the Server Message Block (SMB) client to update the multi-channel-related information.
 To do this the SMB client will communicate with one or more servers to which it is connected, to get the latest information on the network interfaces that is shared.
 If a server name is provided, then the SMB client will communicate with only that server to get the information.
 If no parameter is provided, then the SMB client will communicate with all of the servers to which it is connected.
@@ -27,7 +30,7 @@ If no parameter is provided, then the SMB client will communicate with all of th
 
 ### EXAMPLE 1
 ```
-PS C:\>Update-SmbMulitchannelConnection
+PS C:\>Update-SmbMultichannelConnection
 ```
 
 This example forces the SMB client to update the multi-channel-related information.

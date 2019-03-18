@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecMainModeRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetIPsecMainModeRule
+ms.reviewer:
 ms.assetid: 30C0E331-8926-48D7-9169-EB0EEC09369B
 ---
 
@@ -69,7 +70,7 @@ Set-NetIPsecMainModeRule -InputObject <CimInstance[]> [-NewDisplayName <String>]
 ```
 
 ## DESCRIPTION
-The **Set-NetIPsecMainModeRule** cmdlet modifies firewall properties of exsisting main mode rules.
+The **Set-NetIPsecMainModeRule** cmdlet modifies firewall properties of existing main mode rules.
 This cmdlet gets one or more main mode rules to be modified with the *Name* parameter (default), the *DisplayName* parameter, or by group association using the *DisplayGroup* or *Group* parameters.
 The rules cannot be queried by property in this cmdlet.
 The Get-NetIPsecMainModeRule cmdlet returns the queried objects and pipes the objects into this cmdlet.

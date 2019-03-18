@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 00E203F4-D1F7-49CF-AC07-2630E820DC3E
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Import-DhcpServer
@@ -292,7 +295,7 @@ The server level configuration comprises of (both v4 and v6):
 
  -- MAC address filters (DHCPv4). 
 
- -- Other Server Properties (ConflicDetectionAttempts, DHCPv6 stateless store).
+ -- Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
 
 ```yaml
 Type: SwitchParameter

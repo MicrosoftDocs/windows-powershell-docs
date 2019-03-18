@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-FileStorageTier
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED9B2860-8E82-4E35-8B05-4CDCA8025532
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Clear-FileStorageTier

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: wsbcmdlet.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-WBFileSpec
+ms.reviewer:
 ms.assetid: B88533EF-4FCA-4EBE-98E9-C05D8AA2235F
 ---
 
@@ -30,7 +31,7 @@ New-WBFileSpec [-FileSpec] <String[]> [-NonRecursive] [-Exclude] [<CommonParamet
 
 ## DESCRIPTION
 The **New-WBFileSpec** cmdlet creates a **WBFileSpec** object that contains a backup file specification.
-A **WBFileSpec** object defines the items the items that a backup includes or excludes.
+A **WBFileSpec** object defines the items that a backup includes or excludes.
 You can add a backup file specification to a **WBPolicy** object as a source for backup.
 
 You can use this cmdlet to include multiple files, folders, or volumes.

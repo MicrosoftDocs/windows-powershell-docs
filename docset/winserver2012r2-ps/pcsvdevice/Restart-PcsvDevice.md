@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restart-PcsvDevice
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2371F425-650C-4AAE-AA00-3FE6947C3D77
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Restart-PcsvDevice
@@ -269,7 +271,7 @@ Indicates that the certificate common name of the server does not need to match 
 
 Specify this parameter only for managing devices by using WS-Management over HTTPS.
 Be sure to specify this parameter only for trusted computers.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -285,7 +287,7 @@ Accept wildcard characters: False
 
 ### -SkipRevocationCheck
 Indicates that the cmdlet skips the revocation check of server certificates.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Be sure to specify this parameter only for trusted computers.
 

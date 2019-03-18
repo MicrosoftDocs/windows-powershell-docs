@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDVirtualDesktopIdleCount
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8336BA2-8B4C-4724-8C6B-B74CD9F92B60
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-RDVirtualDesktopIdleCount

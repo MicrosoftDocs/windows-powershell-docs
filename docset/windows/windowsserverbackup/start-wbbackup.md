@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: wsbcmdlet.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Start-WBBackup
+ms.reviewer:
 ms.assetid: CC220AF8-1BFE-4D6D-B64E-C712831A213E
 ---
 
@@ -25,7 +26,7 @@ Starts a one-time backup operation.
 ## SYNTAX
 
 ```
-Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DonotVerifyMedia]
+Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DoNotVerifyMedia]
  [<CommonParameters>]
 ```
 
@@ -134,7 +135,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DonotVerifyMedia
+### -DoNotVerifyMedia
 Do not use.
 This parameter is not implemented in this version of the module.
 

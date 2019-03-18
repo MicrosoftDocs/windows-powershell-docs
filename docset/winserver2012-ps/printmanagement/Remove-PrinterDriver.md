@@ -2,6 +2,9 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1CBF356C-E2C6-4D56-AA74-99DF5A6B170A
 ---
 

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-RoutingProtocolPreference
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42166F8B-9554-42F2-8B4F-7DCFBFEB8A60
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-RoutingProtocolPreference
@@ -191,7 +193,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ProtocolPrefernce
+### Microsoft.Management.Infrastructure.CimInstance#ProtocolPreference
 
 ## NOTES
 

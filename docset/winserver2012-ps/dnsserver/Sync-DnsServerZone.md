@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 4CD15454-796D-4250-B830-73150342D1BE
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Sync-DnsServerZone
@@ -28,7 +31,7 @@ The persistent storage can be Active Directory® Domain Services or a file.
 PS C:\> Sync-DnsServerZone -Name "west02.contoso.com" -PassThru -Verbose
 ```
 
-This command synchronizes the contents of the zone named west02.conotoso.com.
+This command synchronizes the contents of the zone named west02.contoso.com.
 
 ## PARAMETERS
 

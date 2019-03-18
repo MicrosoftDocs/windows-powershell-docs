@@ -2,6 +2,9 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: C5ECB381-3631-4AB3-A0FD-DE20FC412E7B
 ---
 
@@ -118,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 The name of the target storage pool that contains the virtual disk to be snapshot.
 
 ```yaml

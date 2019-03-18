@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetVirtualizationCustomerRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECDE0317-9F91-4D9C-AA0D-3C99A86FB925
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetVirtualizationCustomerRoute
@@ -40,7 +42,7 @@ You can use any combination of the following values to specify which routes to g
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.

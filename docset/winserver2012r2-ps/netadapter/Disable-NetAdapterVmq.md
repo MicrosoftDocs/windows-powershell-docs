@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-NetAdapterVmq
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7684C7AF-DFCE-409F-B8D4-7E62D1F90780
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-NetAdapterVmq

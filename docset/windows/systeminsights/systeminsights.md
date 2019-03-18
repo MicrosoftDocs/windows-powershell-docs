@@ -8,6 +8,7 @@ Download Help Link: http://go.microsoft.com
 Help Version: 5.0.0.1
 Locale: en-US
 title: Add-InsightsCapability
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: JasonGerend

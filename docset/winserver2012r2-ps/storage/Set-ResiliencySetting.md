@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-ResiliencySetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 96270725-4A06-4893-9D86-036C7345F78F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-ResiliencySetting
@@ -84,7 +86,7 @@ The value ranges are:
 
 - Mirror.
 The minimum is two for two-way mirror or three for three-way mirror.
-The maxmium is eight times the number of data copies. 
+The maximum is eight times the number of data copies. 
 - Parity.
 The minimum is three for single parity and seven for dual parity.
 The maximum is eight for single parity and 17 for dual parity. 

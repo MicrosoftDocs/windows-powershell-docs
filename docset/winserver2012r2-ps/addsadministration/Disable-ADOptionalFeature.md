@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Disable-ADOptionalFeature
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -61,7 +63,7 @@ This operation should be performed against the domain controller that holds the 
 
 ### Example 3: Disable a feature by GUID
 ```
-PS C:\>Disable-ADOptionaFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
+PS C:\>Disable-ADOptionalFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
 ```
 
 This command disables the optional feature that has the GUID 54ec6e43-75a8-445b-aa7b-346a1e096659 for the domain with the distinguished name DC=ntdev,DC=fabrikam,DC=com.

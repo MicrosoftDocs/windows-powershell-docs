@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Measure-VM
+ms.reviewer:
 ms.assetid: 1E88B99A-9B5E-43CE-929F-7608EE7A7620
 ---
 
@@ -85,7 +86,7 @@ Notes:
 
  -- Resource utilization is not reported for disks attached through a virtual Fiber Channel connection or network adapters configured to use single-root I/O virtualization (SR-IOV). 
 
- -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaxiumumMemoryUsage metrics equals the memory amount configured for the virtual machine.
+ -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaximumMemoryUsage metrics equals the memory amount configured for the virtual machine.
 
 The default display of a resource pool resource utilization report includes the following columns: 
 

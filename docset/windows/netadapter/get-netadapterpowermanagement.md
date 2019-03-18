@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterPowerManagement.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetAdapterPowerManagement
+ms.reviewer:
 ms.assetid: 85E56DA8-8A5A-4BFF-BF13-30A923379E1A
 ---
 
@@ -57,7 +58,7 @@ This command gets the power management properties of the network adapter named E
 
 ### Example 3: Get all power management properties for the specified network adapter and format the list
 ```
-PS C:\> Get-NetAdapterPowerManagment -Name "Ethernet" | Format-List -Property "*"
+PS C:\> Get-NetAdapterPowerManagement -Name "Ethernet" | Format-List -Property "*"
 ```
 
 This command displays all power management properties of the network adapter named Ethernet.

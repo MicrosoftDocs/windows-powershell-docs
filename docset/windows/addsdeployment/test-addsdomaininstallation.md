@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-ADDSDomainInstallation
+ms.reviewer:
 ms.assetid: 1DD02CBB-CE03-49A3-AE33-8BC1A7DD3830
 ---
 
@@ -249,7 +250,7 @@ Accept wildcard characters: False
 ### -NewDomainName
 Specifies the new name of the domain.
 If the value set for *DomainType* is set to TreeDomain, this parameter can be used to specify the fully qualified domain name (FQDN) for the new domain tree (for example, contoso.com).
-If the value set for *DomainType* is set to ChildDomain, this parameter can be used to specify a single label domain name for the child domain (for example, specify corp to make a new doman corp.contoso.com if the new domain is in the contoso.com domain tree).
+If the value set for *DomainType* is set to ChildDomain, this parameter can be used to specify a single label domain name for the child domain (for example, specify corp to make a new domain corp.contoso.com if the new domain is in the contoso.com domain tree).
 
 ```yaml
 Type: String

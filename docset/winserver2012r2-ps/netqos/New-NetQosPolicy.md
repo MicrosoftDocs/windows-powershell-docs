@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetQosPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7ED74C03-8727-4956-86D3-E389EDCE72CF
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-NetQosPolicy
@@ -775,7 +777,7 @@ Accept wildcard characters: False
 
 ### -UserMatchCondition
 Specifies the user or group name in Active Directory, such as `contoso\User1`.
-This parameter is usually specified with another filtering parameter such as the **AppPathNameMatchCondtion** cmdlet.
+This parameter is usually specified with another filtering parameter such as the **AppPathNameMatchCondition** cmdlet.
 
 ```yaml
 Type: String

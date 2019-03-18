@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 9272C202-13CA-4248-AC58-D2D38A9F1608
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ADDomainControllerPasswordReplicationPolicy
@@ -32,7 +35,7 @@ The Add-ADDomainControllerPasswordReplicationPolicy cmdlet adds one or more user
 The Identity parameter specifies the RODC that uses the allowed and denied lists to apply the password replication policy.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the Distinguished Name (DN) of the NTDS settings object of the server object, the GUID of the NTDS settings object of the server object under the configuration partition, or the DN of the computer object that represents the domain controller.
-You can also set the Identity parameter to a domain controller object variable, such as $\<localDomainControllerobject\>, or pass a domain controller object through the pipeline to the Identity parameter.
+You can also set the Identity parameter to a domain controller object variable, such as $\<localDomainControllerObject\>, or pass a domain controller object through the pipeline to the Identity parameter.
 For example, you can use the Get-ADDomainController cmdlet to get a domain controller object and then pass the object through the pipeline to the Add-ADDomainControllerPasswordReplicationPolicy cmdlet.
 You must specify a read-only domain controller.
 If you specify a writeable domain controller for this parameter, the cmdlet returns a non-terminating error.

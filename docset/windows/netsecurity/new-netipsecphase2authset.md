@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecPhase2AuthSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetIPsecPhase2AuthSet
+ms.reviewer:
 ms.assetid: 3E4461BA-053A-4321-B39B-D49BBE8412BB
 ---
 
@@ -31,7 +32,7 @@ New-NetIPsecPhase2AuthSet [-PolicyStore <String>] [-GPOSession <String>] [-Name 
 ```
 
 ## DESCRIPTION
-The **New-NetIPsecPhase1AuthSet** cmdlet creates a set that specifies the computerof authentication methods, usually for computer, to use during IPsec negotiations.
+The **New-NetIPsecPhase1AuthSet** cmdlet creates a set that specifies the computer authentication methods, usually for the computer to use during IPsec negotiations.
 The first phase of authentication is typically a computer authentication method such as Kerberos v5, certificate, or pre-shared key (PSK) authentication.
 
 A phase 1 authentication set is contains an ordered list of computer authentication proposals.

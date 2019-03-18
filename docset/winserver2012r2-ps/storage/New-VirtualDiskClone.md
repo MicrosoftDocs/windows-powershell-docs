@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-VirtualDiskClone
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C5ECB381-3631-4AB3-A0FD-DE20FC412E7B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-VirtualDiskClone
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 The name of the target storage pool that contains the virtual disk to be snapshot.
 
 ```yaml

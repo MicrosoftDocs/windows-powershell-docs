@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamAddress.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-IpamAddress
+ms.reviewer:
 ms.assetid: 03CCA380-FFC0-4F4F-9B28-05089DC754AB
 ---
 
@@ -60,8 +61,8 @@ The **Set-IpamAddress** cmdlet modifies an IP address in IP Address Management (
 Specify the IP addresses to modify or use the *InputObject* parameter to specify an *IpamAddress* object to modify.
 
 You can use the cmdlet to associate the Dynamic Host Configuration Protocol (DHCP) reservation properties with the IP address.
-The cmdlet does not create a reservation on the DCHP server.
-You can use Windows PowerShell for DHCP Server to create a reservation on the DCHP server.
+The cmdlet does not create a reservation on the DHCP server.
+You can use Windows PowerShell for DHCP Server to create a reservation on the DHCP server.
 
 ## EXAMPLES
 
@@ -696,7 +697,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReservationDescription
-Specifies a description for the DCHP reservation.
+Specifies a description for the DHCP reservation.
 
 ```yaml
 Type: String

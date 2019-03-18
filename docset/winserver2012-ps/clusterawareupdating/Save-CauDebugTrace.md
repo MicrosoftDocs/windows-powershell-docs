@@ -2,6 +2,9 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 77C136BB-1608-4A0D-B125-271136354DDD
 ---
 

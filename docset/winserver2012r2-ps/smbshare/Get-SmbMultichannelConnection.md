@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SmbMultichannelConnection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8BD99095-AB93-4A86-9BCE-9CFE31C2AFAB
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SmbMultichannelConnection
@@ -28,14 +30,14 @@ Get-SmbMultichannelConnection [[-ServerName] <String[]>] [-IncludeNotSelected] [
 ```
 
 ## DESCRIPTION
-The **Get-SmbMulitchannelConnection** cmdlet retrieves the Server Message Block (SMB) connections made between the SMB client network interfaces and the SMB server network interfaces.
+The **Get-SmbMultichannelConnection** cmdlet retrieves the Server Message Block (SMB) connections made between the SMB client network interfaces and the SMB server network interfaces.
 This cmdlet provides information about how the SMB multi-channel pairs the client and the server network interfaces and which pairs are selected to use for the SMB connections.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-SmbMulitchannelConnection
+PS C:\>Get-SmbMultichannelConnection
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA 
                                                             Interface      Interface      Capable        Capable 
                                                             Index          Index 

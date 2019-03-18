@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Stop-WebItem
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A1F6463-6928-4713-A70E-A5DCA331E37B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Stop-WebItem
@@ -31,7 +33,7 @@ The **Stop-WebItem** cmdlet stops a site or an application pool.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Stop a Web web site --------------web
+### Example 1: Stop a web site
 ```
 IIS:\>Stop-WebItem -PSPath 'IIS:\Sites\Default Web Site'
 ```
@@ -39,7 +41,7 @@ IIS:\>Stop-WebItem -PSPath 'IIS:\Sites\Default Web Site'
 This command stops the site named Default Web Site.
 No output is returned.
 
-### Example -------------- EXAMPLE Example 2: Stopping a Web website with feedback --------------web
+### Example 2: Stopping a web site with feedback
 ```
 IIS:\>Stop-WebItem -PSPath 'IIS:\Sites\Default Web Site' -Passthru
 

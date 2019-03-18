@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADServiceAccount
+ms.reviewer:
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
 ---
 
@@ -175,7 +176,7 @@ Random password is set and the account is enabled unless it is requested to be d
 Password is set and the account is enabled unless it is requested to be disabled, unless the password you provided does not meet password policy or was not set for other reasons, at which point the account is disabled.
 
 The new **ADServiceAccount** object will always either be disabled or have a user-requested or randomly-generated password.
-There is no way to create an enabled service account account object with a password that violates domain password policy, such as an empty password.
+There is no way to create an enabled service account object with a password that violates domain password policy, such as an empty password.
 
 ```yaml
 Type: SecureString

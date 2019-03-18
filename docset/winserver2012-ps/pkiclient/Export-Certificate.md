@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-Certificate
@@ -57,7 +60,7 @@ PS C:\>$cert = ( Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538B
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
 ```
 
-This example exports a certificate to the file system as a PKCS#7-fomatted .p7b file without its private key.
+This example exports a certificate to the file system as a PKCS#7-formatted .p7b file without its private key.
 
 ### EXAMPLE 4
 ```

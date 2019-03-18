@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADReplicationConnection
+ms.reviewer:
 ms.assetid: BB77517D-2A1A-42B6-8D5E-CB99D5D463FE
 ---
 
@@ -339,24 +340,21 @@ For more information on how replication topology works, see [How Active Director
 
 To specify the replication schedule:
 
-1.
-Create a new Active Directory schedule object.
-For example: 
+1. Create a new Active Directory schedule object.
+    For example: 
 
-`$Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule; `
+    `$Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule; `
 
-2.
-Edit the schedule on the Active Directory schedule object.
-For example:
+2. Edit the schedule on the Active Directory schedule object.
+    For example:
 
-`$Schedule.ResetSchedule();`
+    `$Schedule.ResetSchedule();`
 
 `$Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");`
 
-3.
-Using the Active Directory schedule object, set the replication schedule of the connection.
+3. Using the Active Directory schedule object, set the replication schedule of the connection.
 
-`Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $Schedule.`
+    `Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $Schedule.`
 
 For more information on the **ActiveDirectorySchedule** class, see [ActiveDirectorySchedule Class](http://go.microsoft.com/fwlink/?LinkId=223933) on the Microsoft Developer Network.
 

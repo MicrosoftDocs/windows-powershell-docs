@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-BgpRoutingPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 65E4CF9D-D0F2-4DB5-8E45-4250AAD16784
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-BgpRoutingPolicy

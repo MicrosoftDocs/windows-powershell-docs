@@ -3,6 +3,9 @@ external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 ms.assetid: 1F49032F-B5CD-4AAD-BAF4-2992F97C3B97
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-KdsConfiguration

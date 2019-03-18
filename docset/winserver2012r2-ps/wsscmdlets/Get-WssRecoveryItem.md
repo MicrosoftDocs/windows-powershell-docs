@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssRecoveryItem
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D6C1F900-9AB6-4864-9DDC-82A8670D5C5B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssRecoveryItem

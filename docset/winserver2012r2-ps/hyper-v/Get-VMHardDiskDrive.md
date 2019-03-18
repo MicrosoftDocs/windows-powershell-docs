@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Get-VMHardDiskDrive
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -163,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-Specifies the drive controller from which the virtual hard disk drives are to be retreived.
+Specifies the drive controller from which the virtual hard disk drives are to be retrieved.
 
 ```yaml
 Type: VMDriveController[]

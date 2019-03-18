@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetFirewallRule
+ms.reviewer:
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
 ---
 
@@ -79,7 +80,7 @@ This example creates a firewall rule that allows inbound Windows Messenger netwo
 
 ### EXAMPLE 5
 ```
-PS C:\> New-NetFirewallRule -DisplayName "Allow Only Specific Computers and Users" -Direction Inbound -RemoteMachine "D:(A;;CC;;;SIDforMachineGroupAccount)"  -RemoteUser "D:(A;;CC;;;SIDforUserGroupAccount)"  -Action AllowBypass -Authentication Required
+PS C:\> New-NetFirewallRule -DisplayName "Allow Only Specific Computers and Users" -Direction Inbound -RemoteMachine "D:(A;;CC;;;SIDforMachineGroupAccount)"  -RemoteUser "D:(A;;CC;;;SIDforUserGroupAccount)"  -Action Allow -Authentication Required
 ```
 
 This example creates a firewall rule that allows all of the network traffic from computers that are members of a specific computer group, and only from users that are members of a specific user group.
@@ -807,7 +808,7 @@ Accept wildcard characters: False
 ### -RemoteAddress
 Specifies that network packets with matching IP addresses match this rule. 
 This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
-This parameter value is an IPv4 or IPv6 address, hostname, subnet, range, or the following keyword: Any. 
+This parameter value is an IPv4 or IPv6 address, hostname, subnet, range or keyword. 
 The acceptable formats for this parameter are: 
 
 - Single IPv4 Address: 1.2.3.4 
@@ -817,6 +818,8 @@ The acceptable formats for this parameter are:
 - IPv4 Subnet (by network mask):  1.2.3.4/255.255.255.0 
 - IPv4 Range: 1.2.3.4 through 1.2.3.7 
 - IPv6 Range: fe80::1 through fe80::9 
+- Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice. NOTE: Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword "LocalSubnet4" means that all local IPv4 addresses are matching this rule).
+
 Querying for rules with this parameter can only be performed using filter objects.
 See the Get-NetFirewallAddressFilter cmdlet for more information.
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-PhysicalExtent
+ms.reviewer:
 ms.assetid: 65DD9798-9AF5-4E64-AA66-421AA98F8704
 ---
 
@@ -73,7 +74,7 @@ Accept wildcard characters: False
 
 ### -PhysicalDisk
 Specifies physical disk.
-To obtain a **PhysicalDisk** obje3t, use the Get-PhysicalDisk cmdlet.
+To obtain a **PhysicalDisk** object, use the Get-PhysicalDisk cmdlet.
 
 ```yaml
 Type: CimInstance

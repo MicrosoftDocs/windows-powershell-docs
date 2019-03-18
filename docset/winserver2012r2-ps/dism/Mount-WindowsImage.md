@@ -4,9 +4,11 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Mount-WindowsImage
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -75,7 +77,7 @@ This command mounts the Windows image contained in the install.vhd file to the c
 PS C:\>Mount-WindowsImage -ImagePath c:\imagestore\install.wim -Index 2 -Path c:\offline -ReadOnly
 ```
 
-This command mounts the Windows image at index 2 of the install.wim file to the c:\offline derictory with read-only privileges.
+This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with read-only privileges.
 
 ### Example 3
 ```

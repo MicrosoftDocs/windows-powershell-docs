@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: D8196A22-2B5E-4466-81EF-8C78B93955DC
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Invoke-DnsServerSigningKeyRollover

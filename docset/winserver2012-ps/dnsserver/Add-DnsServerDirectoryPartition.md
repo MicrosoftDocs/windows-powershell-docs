@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: FA848EE6-7482-4B9D-9701-3BC578CC8BC4
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-DnsServerDirectoryPartition

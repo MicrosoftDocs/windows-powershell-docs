@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 48C34EAD-30C7-4F3D-A696-3FAF11F83004
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DhcpServerv4OptionValue

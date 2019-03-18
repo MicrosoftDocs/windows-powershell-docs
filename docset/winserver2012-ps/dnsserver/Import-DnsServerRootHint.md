@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 1477CCAB-A813-469E-955A-4FB094985CED
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Import-DnsServerRootHint

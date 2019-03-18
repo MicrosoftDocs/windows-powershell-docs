@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 4C216DE1-CFA0-4918-AD0F-0F5AA776C489
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DhcpServerv4Binding

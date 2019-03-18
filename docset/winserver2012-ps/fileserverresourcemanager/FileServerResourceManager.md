@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=206734
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: CD5BB115-897D-406C-B649-5B5F75E4FC84
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # FileServerResourceManager Module

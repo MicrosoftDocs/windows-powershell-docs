@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 6ACBC5B5-5A70-4461-81F2-BF759998A1C6
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ClusterQuorum

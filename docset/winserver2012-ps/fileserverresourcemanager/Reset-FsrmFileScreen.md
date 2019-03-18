@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: BE308EA5-23A1-4FA8-B179-2EDC065C0428
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Reset-FsrmFileScreen

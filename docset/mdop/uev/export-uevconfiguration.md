@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-UevConfiguration
+ms.reviewer:
 ---
 
 # Export-UevConfiguration

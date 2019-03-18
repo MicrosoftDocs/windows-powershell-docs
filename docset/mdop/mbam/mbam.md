@@ -10,6 +10,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=615114
 Help Version: 4.0.2.0
 Locale: en-US
 title: MBAM
+ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: kenwith

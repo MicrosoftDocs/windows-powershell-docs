@@ -10,6 +10,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301255
 Help Version: 4.0.100.0
 Locale: en-US
 title: UEV
+ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: kenwith

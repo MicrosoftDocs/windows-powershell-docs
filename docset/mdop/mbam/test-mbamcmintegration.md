@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-MbamCMIntegration
+ms.reviewer:
 ---
 
 # Test-MbamCMIntegration

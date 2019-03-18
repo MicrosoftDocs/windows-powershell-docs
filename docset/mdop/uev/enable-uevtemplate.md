@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-UevTemplate
+ms.reviewer:
 ---
 
 # Enable-UevTemplate

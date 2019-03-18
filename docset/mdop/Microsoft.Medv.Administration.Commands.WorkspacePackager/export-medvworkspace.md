@@ -8,6 +8,7 @@ external help file: Microsoft.Medv.Administration.Commands.WorkspacePackager.dll
 online version: 
 schema: 2.0.0
 title: Export-MedvWorkspace
+ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: kenwith

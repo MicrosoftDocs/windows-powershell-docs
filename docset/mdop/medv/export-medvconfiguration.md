@@ -8,6 +8,7 @@ external help file: Microsoft.Medv.Administration.Commands.Configuration.dll-Hel
 online version: 
 schema: 2.0.0
 title: Export-MedvConfiguration
+ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: kenwith

@@ -132,7 +132,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 ### Example 1: Add key protector
 ```
 PS C:\>$SecureString = ConvertTo-SecureString "1234" -AsPlainText -Force
-PS C:\>Add-BitLockerProtector -MountPoint "C:" -Pin $SecureString -TPMandPinProtector
+PS C:\>Add-BitLockerKeyProtector -MountPoint "C:" -Pin $SecureString -TPMandPinProtector
 ```
 
 This example adds a combination of the TPM and a PIN as key protector for the BitLocker volume identified with the drive letter C:.

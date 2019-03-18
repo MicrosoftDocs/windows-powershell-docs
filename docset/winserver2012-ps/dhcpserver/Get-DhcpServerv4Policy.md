@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: FDB720CC-4DC2-45E2-AB48-A04F069FCF76
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DhcpServerv4Policy

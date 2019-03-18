@@ -113,16 +113,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 Following properties are displayed by the cmdlet:
 
-Resource health (for virtual networks, Gateways and Load balancers)    
-1. Count of total resources    
-2. Count of healthy resources    
-3. Count of unhealthy resources    
-4. Count of resources in warning state    
+Resource health (for virtual networks, Gateways and Load balancers) 
+1. Count of total resources 
+2. Count of healthy resources 
+3. Count of unhealthy resources 
+4. Count of resources in warning state 
 5. Count of resources with unknown health state
 
-Usage statistics    
-1. Public IP utilization - Total resource count and count of resources in use    
-2. Backend IP utilization - Total resource count and count of resources in use    
+Usage statistics 
+1. Public IP utilization - Total resource count and count of resources in use 
+2. Backend IP utilization - Total resource count and count of resources in use 
 3. MAC pool utilization - Total resource count and count of resources in use
 
 ## NOTES

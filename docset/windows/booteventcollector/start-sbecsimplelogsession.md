@@ -62,12 +62,12 @@ Specifies the type of clock used for the events collected by this session: The a
 
 - Default.
 - QueryPerformanceCounter.
-The high-resolution (period of 100 nanoseconds) clock that is typically used for performance measurement. 
--  SystemTime.
-The lower-resolution system time similar to FILETIME (period of 10 milliseconds).
-This value is most typical for the data collection through SBEC. 
--  CpuCycleCounter.
-The highest-resolution, with the frequency of the CPU, but may be unreliable depending on the CPU model and the thermal and power modes.
+  The high-resolution (period of 100 nanoseconds) clock that is typically used for performance measurement. 
+- SystemTime.
+  The lower-resolution system time similar to FILETIME (period of 10 milliseconds).
+  This value is most typical for the data collection through SBEC. 
+- CpuCycleCounter.
+  The highest-resolution, with the frequency of the CPU, but may be unreliable depending on the CPU model and the thermal and power modes.
 
 ```yaml
 Type: ClientContext

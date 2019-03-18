@@ -121,7 +121,7 @@ The acceptable values for this parameter are:
 - MemoryHardFaults
 - VirtualAlloc
 - NetworkTCPIP
--  Registry
+- Registry
 - Alpc
 - SplitIO
 - Driver

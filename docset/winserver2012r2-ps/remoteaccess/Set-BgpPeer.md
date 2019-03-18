@@ -39,7 +39,7 @@ You can modify the following configuration settings:
 - Maximum number of network prefixes that the local router instance can learn from this peer, or you can remove limit 
 - Preference assigned to routes received from this peer 
 - Operation mode and peering mode 
--  Hold time, in seconds
+- Hold time, in seconds
 
 ## EXAMPLES
 

@@ -137,10 +137,10 @@ This command tests a network connection to a remote host named www.contoso.com.
 Specifies the common service TCP port number.
 The acceptable values for this parameter are:
 
--  SMB 
--  HTTP 
--  RDP
--  PING
+- SMB 
+- HTTP 
+- RDP
+- PING
 
 ```yaml
 Type: String

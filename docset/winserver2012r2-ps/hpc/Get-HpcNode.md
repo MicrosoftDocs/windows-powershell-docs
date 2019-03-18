@@ -104,7 +104,7 @@ Valid values are:
 - Unreachable
 - OngoingOperation
 - DiagnosticFailed
--  ProvisioningFailed
+- ProvisioningFailed
 
 ```yaml
 Type: NodeHealth[]

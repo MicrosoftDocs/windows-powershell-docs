@@ -107,8 +107,8 @@ The acceptable values for this parameter are:
 
 - Optimization 
 - GarbageCollection 
--  Scrubbing 
--  Unoptimization
+- Scrubbing 
+- Unoptimization
 
 ```yaml
 Type: Type[]

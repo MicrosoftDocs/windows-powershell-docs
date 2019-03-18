@@ -49,17 +49,15 @@ You can also set the parameter to a directory server object variable, such as $\
 
 The Move-ADDirectoryServerOperationMasterRole cmdlet provides two options for moving operation master roles:
 
-1.
-Role transfer, which involves transferring roles to be moved by running the cmdlet using the Identity parameter to specify the current role holder and the OperationMasterRole parameter to specify the roles for transfer.
-This is the recommended option.
+1. Role transfer, which involves transferring roles to be moved by running the cmdlet using the Identity parameter to specify the current role holder and the OperationMasterRole parameter to specify the roles for transfer.
+   This is the recommended option.
 
-Operation roles include PDCEmulator, RIDMaster, InfrastructureMaster, SchemaMaster, or DomainNamingMaster.
-To specify more than one role, use a comma-separated list.
+   Operation roles include PDCEmulator, RIDMaster, InfrastructureMaster, SchemaMaster, or DomainNamingMaster.
+   To specify more than one role, use a comma-separated list.
 
-2. 
-Role seizure, which involves seizing roles you previously attempted to transfer by running the cmdlet a second time using the same parameters as the transfer operation, and adding the Force parameter.
-The Force parameter must be used as a switch to indicate that seizure (instead of transfer) of operation master roles is being performed.
-This operation still attempts graceful transfer first, then seizes if transfer is not possible.
+2. Role seizure, which involves seizing roles you previously attempted to transfer by running the cmdlet a second time using the same parameters as the transfer operation, and adding the Force parameter.
+   The Force parameter must be used as a switch to indicate that seizure (instead of transfer) of operation master roles is being performed.
+   This operation still attempts graceful transfer first, then seizes if transfer is not possible.
 
 Unlike using Ntdsutil.exe to move operation master roles, the Move-ADDirectoryServerOperationMasterRole cmdlet can be remotely executed from any domain joined computer where the Active Directory PowerShell administration module is installed and available for use.
 This can make the process of moving roles simpler and easier to centrally administer as each of the two command operations required can be run remotely and do not have to be locally executed at each of the corresponding role holders involved in the movement of the roles (i.e.

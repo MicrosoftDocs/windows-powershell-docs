@@ -226,8 +226,8 @@ Specifies an array of network types for the addresses to remove.
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
 If you do not specify a value, the cmdlet deletes all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
 

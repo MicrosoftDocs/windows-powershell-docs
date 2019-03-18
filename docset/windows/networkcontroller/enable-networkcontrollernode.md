@@ -190,8 +190,8 @@ The output for this cmdlet contains the following fields:
 - Name of the node
 - Hostname, fully qualified domain name (FQDN), or IP address of the node
 - Fault domain of the node
--  Name of interface to be used for representational state transfer (REST) operations on the node
--  Node certificate
+- Name of interface to be used for representational state transfer (REST) operations on the node
+- Node certificate
 - Status of the node
 
 ## NOTES

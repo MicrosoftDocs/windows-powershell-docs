@@ -150,7 +150,7 @@ Specifies the manageability status of a server.
 The acceptable values for this parameter are:
 
 - Unspecified
--  Managed
+- Managed
 - Unmanaged 
 
 IPAM gathers data from the server if this parameter is set to Managed.
@@ -220,8 +220,8 @@ The acceptable values for this parameter are:
 
 - DC 
 - DHCP 
--  DNS 
--  NPS
+- DNS 
+- NPS
 
 ```yaml
 Type: ServerRole[]

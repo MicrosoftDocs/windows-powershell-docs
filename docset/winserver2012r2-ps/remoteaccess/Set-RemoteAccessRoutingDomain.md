@@ -106,11 +106,11 @@ Specifies a transform constant.
 The acceptable values for this parameter are:
 
 - MD596
--  SHA196
+- SHA196
 - SHA256128
 - GCMAES128
--  GCMAES192
--  GCMAES256
+- GCMAES192
+- GCMAES256
 - None
 
 ```yaml

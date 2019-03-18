@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 85584AA5-C688-4C96-A70F-88B5074AE6A6
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-RDPersonalVirtualDesktopPatchSchedule

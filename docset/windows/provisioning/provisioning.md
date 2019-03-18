@@ -1,9 +1,9 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -13,6 +13,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Install-TrustedProvisioningCertificate
+ms.reviewer:
 Module Name: provisioning
 Module Guid: 1323f046-a4bd-47df-a8bc-8253eabc49b2
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=525624

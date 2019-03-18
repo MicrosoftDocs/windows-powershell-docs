@@ -1,21 +1,22 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 194346C5-785D-42E1-AD5F-22B1CD263967
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 10/02/2017
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-AdfsProperties
+ms.reviewer:
 ---
 
 # Set-AdfsProperties
@@ -31,7 +32,8 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-AutoCertificateRollover <Boolean>] [-CertificateCriticalThreshold <Int32>] [-CertificateDuration <Int32>]
  [-CertificateGenerationThreshold <Int32>] [-CertificatePromotionThreshold <Int32>]
  [-CertificateRolloverInterval <Int32>] [-CertificateThresholdMultiplier <Int32>]
- [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>][-EnableOAuthDeviceFlow <Boolean>]
+ [-ClientCertRevocationCheck <String>] [-ContactPerson <ContactPerson>] [-DisplayName <String>]
+ [-EnableEnableOAuthDeviceFlow M\]
  [-EnableOAuthLogout <Boolean>] [-FederationPassiveAddress <String>] [-HostName <String>] [-HttpPort <Int32>]
  [-HttpsPort <Int32>] [-IntranetUseLocalClaimsProvider <Boolean>] [-TlsClientPort <Int32>] [-Identifier <Uri>]
  [-LogLevel <String[]>] [-MonitoringInterval <Int32>] [-NetTcpPort <Int32>]
@@ -79,7 +81,7 @@ Specifies an array of identifiers that are acceptable names for the Federation S
 ```yaml
 Type: Uri[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +96,7 @@ This parameter is deprecated.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +111,7 @@ Indicates that local administrator service administration is allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +126,7 @@ Indicates that system service administration is allowed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +141,7 @@ Specifies the connection string to use for the database that maintains the artif
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,14 +154,14 @@ Accept wildcard characters: False
 Specifies an array of audit levels.
 The acceptable values for this parameter are:
 
-- None 
-- Basic 
+- None
+- Basic
 - Verbose
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Basic, Verbose
 
 Required: False
@@ -176,7 +178,7 @@ Specify each authentication context as a URI.
 ```yaml
 Type: Uri[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +194,7 @@ By default, this setting is enabled for a new instance of AD FS.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,7 +209,7 @@ Indicates that browser single sign-on (SSO) is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +224,7 @@ Specifies an array of user agents that are supported for browser SSO.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +242,7 @@ Specify a short period of time that is used only in extreme conditions when the 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -255,7 +257,7 @@ Specifies the period of time, in days, that any certificates that the Federation
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -272,7 +274,7 @@ This rollover process occurs so that federation partners can consume this metada
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +289,7 @@ Specifies the period of time, in days, during which a newly generated certificat
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +305,7 @@ This value determines the frequency at which the Federation Service initiates th
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +322,7 @@ Change this value only if you want to use a more finely detailed measure of time
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +338,7 @@ Instead, use the `netsh http` command to configure certificate settings.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: CheckChain, CheckChainCacheOnly, CheckChainExcludeRoot, CheckChainExcludeRootCacheOnly, CheckEndCert, CheckEndCertCacheOnly, None
 
 Required: False
@@ -352,7 +354,7 @@ Specifies the contact information for support issues.
 ```yaml
 Type: ContactPerson
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -367,7 +369,7 @@ Specifies the delegate service administration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +384,7 @@ Specifies the length of the device usage window in days.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -397,7 +399,7 @@ Specifies a friendly name for the Federation Service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,7 +420,7 @@ When this feature is enabled AD FS must be able to contact the Primary Domain Co
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -433,7 +435,7 @@ Specifies whether to enable the **EnableIdPInitiatedSignonPage** property.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -450,7 +452,7 @@ Note that a workplace joined device gets 7 days of SSO by default and does not n
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -465,7 +467,7 @@ Indicates that local authentication types are enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -482,7 +484,7 @@ The cycle terminates after 6 loops have been detected.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -490,21 +492,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -EnableOAuthDeviceFlow
-The value of $true enables the OAuth Device Flow and the $false disables it. If the value is $false then the /adfs/oauth2/devicecode and /adfs/oauth2/deviceauth endpoints will return an error response. This parameter is available in Windows Server 2019 and the default value is $true. This parameter is also available in Server 2016 with the KB 4457127 installed and the default value is $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -EnableOAuthLogout
 Enables the OAuth logout endpoint publishing in the OAuth discovery document. The OAuth logout endpoint logs out the current user from the AD FS. This parameter is available with the Windows Update KB4019472 installed. The AD FS does not support logging out a federated user from the federated identity provider when using the OAuth logout endpoint with Windows Update KB4019472 installed. The Windows Update KB4038801 makes this parameter obsolete and the value of this parameter to be always true. The Windows Update KB4038801 also adds support for logging our a federated user from the federated identity provider when using the OAuth logout endpoint.
@@ -512,7 +499,7 @@ Enables the OAuth logout endpoint publishing in the OAuth discovery document. Th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -527,7 +514,7 @@ Indicates whether to store the SSO token in persistent cookies for devices joine
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -542,7 +529,7 @@ Indicates that relay state for issuing distribution point (IDP) initiated sign-o
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -563,14 +550,14 @@ Server is fully hardened, extended protection is enforced
 - Allow.
 Server is partially hardened, extended protection is enforced where systems involved have been patched to support it
 - None.
-Server is vulnerable, extended protection is not enforced 
+Server is vulnerable, extended protection is not enforced
 
 The default setting is Allow.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Allow, Require, None
 
 Required: False
@@ -586,7 +573,7 @@ Specifies whether extranet lockout requires a primary domain controller (PDC).
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -602,7 +589,7 @@ If you use Active Directory® Domain Services account lockout policies, it is st
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -612,7 +599,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtranetObservationWindow
-Specifies the timespan of the lockout observation window. 
+Specifies the timespan of the lockout observation window.
 AD FS will reset a throttled state of an account when more than one observation window has expired since the last bad password attempt, as reported by Active Directory Domain Services.
 It is also possible that the last bad password field in AD DS is cleared by AD DS based on its own observation windows.
 In this case, AD FS will allow the request to be passed onto AD DS for validation.
@@ -620,7 +607,7 @@ In this case, AD FS will allow the request to be passed onto AD DS for validatio
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -635,7 +622,7 @@ Do not use this parameter.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -650,7 +637,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -665,7 +652,7 @@ Specifies a global relying party claims issuance policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -680,7 +667,7 @@ Specifies the network addressable host name of the Federation Service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -695,7 +682,7 @@ Specifies the HTTP port for the server.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -710,7 +697,7 @@ Specifies the HTTPS port for the server.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -725,7 +712,7 @@ Specifies the URI that uniquely identifies the Federation Service.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -740,7 +727,7 @@ Specifies the URI of the token issuer.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -755,7 +742,7 @@ Specifies whether to ignore token binding.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -771,7 +758,7 @@ Use this parameter only when there is more than one claims provider trust in AD 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -786,7 +773,7 @@ Specifies the lifetime of the sign on status for KMSI.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -809,7 +796,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Errors, FailureAudits, Information, Verbose, None, SuccessAudits, Warnings
 
 Required: False
@@ -826,7 +813,7 @@ Use in conjunction with the **LoopDetectionMaximumTokensIssuedInInterval** param
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -842,7 +829,7 @@ Use in conjunction with the *LoopDetectionMaximumTokensIssuedInInterval* paramet
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -857,7 +844,7 @@ Specifies the frequency, in minutes, with which the Federation Service monitors 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -872,7 +859,7 @@ Specifies the TCP port number for the server.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -889,7 +876,7 @@ If this value is changed, the federation server proxy needs to be restarted.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -904,7 +891,7 @@ Specifies information about the organization as published in the federation meta
 ```yaml
 Type: Organization
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -920,7 +907,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -937,7 +924,7 @@ Use this only to reject all prior SSO state across all users and force users to 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -952,7 +939,7 @@ Specifies the duration, in minutes, of the persistent SSO experience.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -967,7 +954,7 @@ Indicates whether the Federation Service prevents the replay of security tokens.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -983,7 +970,7 @@ Specifies a fallback authentication type for a prompt login request.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -996,15 +983,15 @@ Accept wildcard characters: False
 
 The acceptable values for this parameter are:
 
--	None. Do not federate prompt=login request and error instead. 
--	FallbackToProtocolSpecificParameters. Translate prompt=login to wfresh=0 and Wauth=forms during federation. If wauth is present in the original request, it will be preserved. 
--	ForwardPromptAndHintsOverWsFederation. Forward prompt, login_hint, and domain_hint parameters during federation.
--	Disabled. Discard prompt parameter from the request during federation.
+- None. Do not federate prompt=login request and error instead.
+- FallbackToProtocolSpecificParameters. Translate prompt=login to wfresh=0 and Wauth=forms during federation. If wauth is present in the original request, it will be preserved.
+- ForwardPromptAndHintsOverWsFederation. Forward prompt, login_hint, and domain_hint parameters during federation.
+- Disabled. Discard prompt parameter from the request during federation.
 
 ```yaml
 Type: PromptLoginFederation
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, FallbackToProtocolSpecificParameters, ForwardPromptAndHintsOverWsFederation, Disabled
 
 Required: False
@@ -1021,7 +1008,7 @@ This value is used by the federation server proxy to authenticate with its assoc
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1038,7 +1025,7 @@ When the age of a cached token exceeds this interval, the Federation Service det
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1053,7 +1040,7 @@ Specifies the duration, in minutes, for which the Security Assertion Markup Lang
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1071,7 +1058,7 @@ The default value is $True.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1087,7 +1074,7 @@ If you specify a value of $True, the Federation Service rejects unsigned SAML pr
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1102,7 +1089,7 @@ Indicates whether the Federation Service signs SAML protocol authentication requ
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1117,7 +1104,7 @@ This parameter is deprecated.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1132,7 +1119,7 @@ Specifies the duration, in minutes, of the single sign-on (SSO) experience for W
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1148,7 +1135,7 @@ Use this only when user certificate authentication is used in AD FS.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1165,7 +1152,7 @@ When the user agent for the incoming request is not in this list, AD FS falls ba
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1219,4 +1206,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-AdfsProperties](./Get-AdfsProperties.md)
-

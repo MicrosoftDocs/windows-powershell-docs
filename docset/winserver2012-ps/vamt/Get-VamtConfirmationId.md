@@ -2,6 +2,9 @@
 external help file: VAMT_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BE17A551-4DE8-4660-826B-5E53C1503551
 ---
 

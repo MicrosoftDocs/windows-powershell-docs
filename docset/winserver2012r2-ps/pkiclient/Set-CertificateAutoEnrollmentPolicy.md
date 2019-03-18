@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-CertificateAutoEnrollmentPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 37D54E2D-3003-4889-B8A6-78BFA3798342
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-CertificateAutoEnrollmentPolicy
@@ -74,7 +76,7 @@ PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreMa
 
 
 The concise version of the same example.
-PS C:\>Set-ACertificateutoEnrollmentPolicy -EnableAll -Context User
+PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
 ```
 
 This example performs the same task in two ways.

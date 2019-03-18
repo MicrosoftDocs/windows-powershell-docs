@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADComputer
+ms.reviewer:
 ms.assetid: 7A1A175E-C05F-4931-ABB2-2CAB46F8CC32
 ---
 
@@ -598,7 +599,7 @@ The acceptable values for this parameter are:
 
 None will remove all encryption types from the account which may result in the Key Distribution Center (KDC) being unable to issue service tickets for services using the account.
 
-Data Encyption Standard (DES) is a weak encryption type which is not supported by default since Windows 7 and Windows Server 2008 R2.
+Data Encryption Standard (DES) is a weak encryption type which is not supported by default since Windows 7 and Windows Server 2008 R2.
 
 Warning: Domain-joined Windows systems and services such as clustering manage their own **msDS-SupportedEncryptionTypes** attribute.
 Therefore any changes to the flag on the **msDS-SupportedEncryptionTypes** attribute is overwritten by the service or system which manages the setting.

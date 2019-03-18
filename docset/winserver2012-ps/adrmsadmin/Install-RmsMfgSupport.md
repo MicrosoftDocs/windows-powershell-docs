@@ -3,6 +3,9 @@ external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: CE19107A-D9E3-4919-B4D7-26F1506E213E
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Install-RmsMfgSupport

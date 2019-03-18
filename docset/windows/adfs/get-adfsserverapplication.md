@@ -1,21 +1,22 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 368AA5D3-5523-47EE-8A0A-049CB8D7AB37
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AdfsServerApplication
+ms.reviewer:
 ---
 
 # Get-AdfsServerApplication
@@ -63,7 +64,7 @@ Specifies the server application to get.
 ```yaml
 Type: ServerApplication
 Parameter Sets: ApplicationObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -78,7 +79,7 @@ Specifies the application group from which to get server applications.
 ```yaml
 Type: ApplicationGroup
 Parameter Sets: ApplicationGroupObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -93,7 +94,7 @@ Specifies the ID of the application group from which to get server applications.
 ```yaml
 Type: String
 Parameter Sets: ApplicationGroupIdentifier
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -108,7 +109,7 @@ Specifies an array of IDs of the application groups from which to get server app
 ```yaml
 Type: String[]
 Parameter Sets: Identifier
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -123,7 +124,7 @@ Specifies an array of names of the application groups from which to get server a
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -144,48 +145,48 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.ServerApplication
-	ADUserPrincipalName                               string
-	ApplicationGroupIdentifier                        string
-	ClientSecret                                      string
-	Description                                       string
-	Enabled                                           bool
-	Identifier                                        string
-	JWKSUri                                           uri
-	JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
-	Name                                              string
-	RedirectUri                                       string[]
+ADUserPrincipalName                               string
+ApplicationGroupIdentifier                        string
+ClientSecret                                      string
+Description                                       string
+Enabled                                           bool
+Identifier                                        string
+JWKSUri                                           uri
+JWTSigningCertificateRevocationCheck              Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+JWTSigningKeys                                    System.Collections.Generic.IDictionary[string,System.Object]
+Name                                              string
+RedirectUri                                       string[]
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	
-	RevocationSetting
-	{
-	   None = 0,
-	   CheckEndCert = 1,
-	   CheckEndCertCacheOnly = 2,
-	   CheckChain = 3,
-	   CheckChainCacheOnly = 4,
-	   CheckChainExcludeRoot = 5,
-	   CheckChainExcludeRootCacheOnly = 6,
-	}
+
+RevocationSetting
+{
+   None = 0,
+   CheckEndCert = 1,
+   CheckEndCertCacheOnly = 2,
+   CheckChain = 3,
+   CheckChainCacheOnly = 4,
+   CheckChainExcludeRoot = 5,
+   CheckChainExcludeRootCacheOnly = 6,
+}
 
 ## NOTES
 Microsoft.IdentityServer.Management.Resources.ServerApplication inherits from Microsoft.IdentityServer.Management.Resources.ClientApplication object and implements the Microsoft.IdentityServer.Management.Resources.IApplication interface.
 
-	Microsoft.IdentityServer.Management.Resources.ClientApplication
-	
-	ApplicationGroupIdentifier                        string
-	Description                                       string
-	Enabled                                           bool
-	Identifier                                        string
-	Name                                              string
-	RedirectUri                                       string[]
-	
-	Microsoft.IdentityServer.Management.Resources.IApplication
-	
-	ApplicationGroupIdentifier                        string
-	Enabled                                           bool
-	Name                                              string
+Microsoft.IdentityServer.Management.Resources.ClientApplication
+
+ApplicationGroupIdentifier                        string
+Description                                       string
+Enabled                                           bool
+Identifier                                        string
+Name                                              string
+RedirectUri                                       string[]
+
+Microsoft.IdentityServer.Management.Resources.IApplication
+
+ApplicationGroupIdentifier                        string
+Enabled                                           bool
+Name                                              string
 
 ## RELATED LINKS
 
@@ -194,4 +195,3 @@ Microsoft.IdentityServer.Management.Resources.ServerApplication inherits from Mi
 [Remove-AdfsServerApplication](./Remove-AdfsServerApplication.md)
 
 [Set-AdfsServerApplication](./Set-AdfsServerApplication.md)
-

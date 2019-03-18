@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-VMReplication
+ms.reviewer:
 ms.assetid: 9F4CF788-D26A-432C-90BC-312FCA5331AC
 ---
 
@@ -505,7 +506,7 @@ Accept wildcard characters: False
 
 ### -ReplicatedDisks
 Specifies all virtual hard disks to include for replication.
-This parameter can include all the VHDs attached to the virtual mahine or a subset.
+This parameter can include all the VHDs attached to the virtual machine or a subset.
 Be sure to include virtual hard disks that are critical to the ability of the virtual machine to start, such as the guest operating system disk.
 Excluding a critical disk from this list could prevent the replica virtual machine from starting properly.
 

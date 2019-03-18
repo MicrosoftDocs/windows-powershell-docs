@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StoragePool.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-VirtualDisk
+ms.reviewer:
 ms.assetid: 0A351B38-1E4B-451C-A66B-EF97683646F4
 ---
 
@@ -639,7 +640,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMaximumSize
-Creates a virtual disk with the maximimum size possible given the available storage pool space and specified parameters.
+Creates a virtual disk with the maximum size possible given the available storage pool space and specified parameters.
 
 ```yaml
 Type: SwitchParameter

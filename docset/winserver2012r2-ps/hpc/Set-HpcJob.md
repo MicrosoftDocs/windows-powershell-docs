@@ -14,6 +14,9 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-HpcJob
@@ -142,7 +145,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object for the credentials that you want to use to run the job.
-Use the Get-Credential cmdlet to get a **PSCrendential** object.
+Use the Get-Credential cmdlet to get a **PSCredential** object.
 If you do not specify this parameter, the cmdlet runs the jobs with the credentials that were used to submit the job.
 
 ```yaml
@@ -183,7 +186,7 @@ Specifies the email address to which the HPC job scheduler service should send n
 The maximum length for the email address that you specify is 256 characters.
 
 When you specify an email address for receiving notifications about a job, the notifications are not turned on automatically.
-You still must use the NotifyOnStart and/or *NotifyOnCompletion* parameter of the New-HpcJob or Set-HpcJob cmldet to specify when you want to receive notifications about the job.
+You still must use the NotifyOnStart and/or *NotifyOnCompletion* parameter of the New-HpcJob or Set-HpcJob cmdlet to specify when you want to receive notifications about the job.
 
 This parameter was introduced in HPC Pack 2008 R2 with Service Pack 1 (SP1).
 It is not supported in previous versions.
@@ -467,14 +470,14 @@ Accept wildcard characters: False
 Specifies the operator for the NodeGroups list.
 Valid operators are:
 
--   Intersect (the default).
-Creates a list of nodes that belong to all of the specified node groups
+- Intersect (the default).
+  Creates a list of nodes that belong to all of the specified node groups
 - Uniform.
-Creates a list of nodes that belong to only one of the specified node groups.
-The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
-If enough resources are not found in a single group, the job remains queued.
+  Creates a list of nodes that belong to only one of the specified node groups.
+  The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
+  If enough resources are not found in a single group, the job remains queued.
 - Union.
-Creates a list of nodes that belong to any of the specified node groups
+  Creates a list of nodes that belong to any of the specified node groups
 
 This parameter was introduced in HPC Pack 2012.
 It is not supported in previous versions.
@@ -1015,7 +1018,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - RemoveExcludedNodes
 - NotifyOnCompletion
 - Progress
-- ProgessMessage
+- ProgressMessage
 - JobEnv
 
 

@@ -4,9 +4,11 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: New-FsrmFileManagementJob
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -382,7 +384,7 @@ Accept wildcard characters: False
 Specifies an array of report types that the file management job generates.
 The acceptable values for this parameter are:
 - Information
--  Error
+- Error
 - Audit
 
 ```yaml

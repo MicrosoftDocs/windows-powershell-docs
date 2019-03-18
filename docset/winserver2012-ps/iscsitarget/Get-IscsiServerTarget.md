@@ -3,6 +3,9 @@ external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 7986B201-F96E-4822-9C5E-380E933ABF60
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-IscsiServerTarget

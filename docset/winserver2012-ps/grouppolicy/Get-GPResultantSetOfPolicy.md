@@ -2,6 +2,9 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 32368411-0B0C-4CE5-A00C-2296728308D9
 ---
 
@@ -17,13 +20,13 @@ Get-GPResultantSetOfPolicy [-Computer <String>] [-User <String>] -Path <String> 
 ```
 
 ## DESCRIPTION
-The Get-GPResultantSetofPolicy cmdlet outputs the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
+The Get-GPResultantSetOfPolicy cmdlet outputs the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>get-gpresultantsetofpolicy -reporttype xml -path c:\reports\LocalUserAndComputerReport.xml 
+C:\PS>get-GPResultantSetOfPolicy -reporttype xml -path c:\reports\LocalUserAndComputerReport.xml 
 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02-PC\Root\Rsop\NS2BBE3F29_794F_4EAE_B9DB_0A2310622534 
@@ -60,7 +63,7 @@ The report is generated in XML format, and is written to the specified file.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-GPResultantSetofPolicy -user contoso\someuser -reporttype html -path c:\reports\UserReport.html 
+C:\PS>Get-GPResultantSetOfPolicy -user contoso\someuser -reporttype html -path c:\reports\UserReport.html 
 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62 
@@ -188,7 +191,7 @@ This cmdlet does not take any object as input.
 Get-GPResultantSetOfPolicy returns an RSoP object.
 
 ## NOTES
-* The Get-GPResultantSetofPolicy cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
+* The Get-GPResultantSetOfPolicy cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
 
 ## RELATED LINKS
 

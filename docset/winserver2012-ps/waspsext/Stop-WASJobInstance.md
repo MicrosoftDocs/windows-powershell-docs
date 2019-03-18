@@ -2,6 +2,9 @@
 external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 61BEFC93-70F6-487C-9505-B34DDFCCEE79
 ---
 

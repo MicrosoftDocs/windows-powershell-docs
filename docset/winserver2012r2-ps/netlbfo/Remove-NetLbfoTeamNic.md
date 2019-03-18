@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetLbfoTeamNic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A7C1AB76-C6E0-4C3E-AAA7-031B3475236A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetLbfoTeamNic

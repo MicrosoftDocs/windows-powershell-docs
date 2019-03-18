@@ -2,6 +2,9 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: FAEC0104-D0B0-4CD5-BAF2-E1027C63D3C8
 ---
 
@@ -185,9 +188,9 @@ Any of these hives can be specified for Registry preference items in both Comput
 
 The Key parameter can be specified with or without the ValueName parameter:
 
---If the ValueName parameter is specified, all Registry preference items that configure the registry value are retrieved.
+- If the ValueName parameter is specified, all Registry preference items that configure the registry value are retrieved.
 
---If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are retrieved.
+- If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are retrieved.
 
 You can also refer to the Key parameter by its built-in alias, "FullKeyPath".
 For more information, see about_Aliases.

@@ -2,6 +2,9 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0AEE3792-7D5C-49D8-A151-743375234451
 ---
 
@@ -30,18 +33,18 @@ You can specify the GPO by its display name or by its GUID.
 
 You can specify either a key or a value:
 
---If you specify a key, registry-based policy settings that configure any of its (first-level) values are removed.
+- If you specify a key, registry-based policy settings that configure any of its (first-level) values are removed.
 However, if there are registry-based policy settings that configure any subkeys or their values, an error occurs and no policy settings are removed (including those for first-level values of the key).
 For a key, specify the Key parameter without the ValueName parameter.
 
---If you specify a value, the registry-based policy setting that configures that registry value is removed.
+- If you specify a value, the registry-based policy setting that configures that registry value is removed.
 For a value, specify the Key parameter without the ValueName parameter.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to remove a specified registry-based policy setting from one or more GPOs.
+- You can pipe GPO objects to this cmdlet to remove a specified registry-based policy setting from one or more GPOs.
 
---You can pipe PolicyRegistrySetting objects to this cmdlet to remove one or more registry-based policy settings from a specified GPO.
+- You can pipe PolicyRegistrySetting objects to this cmdlet to remove one or more registry-based policy settings from a specified GPO.
 
 ## EXAMPLES
 
@@ -141,9 +144,9 @@ The key must be in one of the two following registry hives:
 
 The Key parameter can be specified with or without the ValueName parameter:
 
---If the ValueName parameter is specified, the registry-based policy setting that configures that registry value is removed.
+- If the ValueName parameter is specified, the registry-based policy setting that configures that registry value is removed.
 
---If the ValueName parameter is not specified, all registry-based policy settings that configure any of the (first-level) values of the registry key are removed.
+- If the ValueName parameter is not specified, all registry-based policy settings that configure any of the (first-level) values of the registry key are removed.
 If there are registry-based policy settings that configure any subkeys or their values, an error occurs.
 
 You can also refer to the Key parameter by its built-in alias, "FullKeyPath".

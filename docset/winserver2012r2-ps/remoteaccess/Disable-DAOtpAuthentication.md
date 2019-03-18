@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-DAOtpAuthentication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4A46FE32-3ECC-4A7B-9EFB-37AF40AB4D3C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-DAOtpAuthentication

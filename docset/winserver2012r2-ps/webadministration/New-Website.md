@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-Website
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B942502D-1A80-4980-A8BA-5868A73F35E8
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-Website
@@ -33,7 +35,7 @@ The **New-Website** cmdlet creates an Internet Information Services (IIS) websit
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: CreateAdd a New Wweb Ssite --------------Createws
+### Example 1: Create a new web site
 ```
 IIS:\>New-WebSite -Name "TestSite" -Port 80 -HostHeader "TestSite" -PhysicalPath "$Env:systemdrive\inetpub\testsite"
 ```

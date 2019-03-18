@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetVirtualizationCustomerRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B6372E82-9666-4E79-984A-65B9138D8477
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-NetVirtualizationCustomerRoute
@@ -40,7 +42,7 @@ To create a virtual network route, specify the following values:
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.

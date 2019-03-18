@@ -3,6 +3,9 @@ external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
 ms.assetid: AF54274E-AB48-4A85-8839-CE11B5D6C2E3
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Show-WindowsDeveloperLicenseRegistration

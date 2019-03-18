@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-GPResultantSetOfPolicy
+ms.reviewer:
 ms.assetid: 32368411-0B0C-4CE5-A00C-2296728308D9
 ---
 
@@ -30,7 +31,7 @@ Get-GPResultantSetOfPolicy [-Computer <String>] [-User <String>] -ReportType <Re
 ```
 
 ## DESCRIPTION
-The **Get-GPResultantSetofPolicy** cmdlet gets and writes the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
+The **Get-GPResultantSetOfPolicy** cmdlet gets and writes the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
 
 ## EXAMPLES
 
@@ -63,7 +64,7 @@ The report is generated in XML format, and is written to the specified file.
 
 ### Example 3: Generate a report for the specified user in HTML format and save it to the specified file
 ```
-PS C:\> Get-GPResultantSetofPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
+PS C:\> Get-GPResultantSetOfPolicy -User "Contoso\PattiFul" -ReportType Html -Path "c:\reports\UserReport.html" 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62 
 LoggingComputer : COMPUTER-02 

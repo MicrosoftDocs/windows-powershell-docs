@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-PhysicalDiskStorageNodeView
+ms.reviewer:
 ms.assetid: 4CA35E6D-662C-42CC-B877-82014B5D24B3
 ---
 
@@ -128,7 +129,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### MSFT_StorageNodeToPhysicalDisk
-Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the phycial disk object and Storage node object.
+Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the physical disk object and Storage node object.
 
 ## NOTES
 

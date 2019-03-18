@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-Certificate
+ms.reviewer:
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
 ---
 
@@ -69,7 +70,7 @@ PS C:\>$cert = ( Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538B
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
 ```
 
-This example exports a certificate to the file system as a PKCS#7-fomatted .p7b file without its private key.
+This example exports a certificate to the file system as a PKCS#7-formatted .p7b file without its private key.
 
 ### EXAMPLE 4
 ```

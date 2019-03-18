@@ -2,6 +2,9 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 9798E2C3-2CB1-403F-8FF0-82DAE207D842
 ---
 

@@ -2,6 +2,9 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B6372E82-9666-4E79-984A-65B9138D8477
 ---
 
@@ -30,7 +33,7 @@ To create a virtual network route, specify the following values:
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.

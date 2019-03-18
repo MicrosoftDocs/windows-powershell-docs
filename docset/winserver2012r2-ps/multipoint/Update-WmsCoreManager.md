@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6AA79EA1-36AB-471B-BA21-F97C845FDED3
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Update-WmsCoreManager

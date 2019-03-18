@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Revoke-NfsClientLock
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3E674637-CC4D-43AF-B051-71728F09F909
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Revoke-NfsClientLock

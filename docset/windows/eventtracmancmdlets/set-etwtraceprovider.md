@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_EtwTraceProvider_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-EtwTraceProvider
+ms.reviewer:
 ms.assetid: F7CB0121-FE42-439D-B907-2630EF18B121
 ---
 
@@ -207,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchAnyKeyword
-Specfies a bitmask of keywords an event must match in order to be logged to the session.
+Specifies a bitmask of keywords an event must match in order to be logged to the session.
 
 An event must match at least one keyword set by this parameter.
 

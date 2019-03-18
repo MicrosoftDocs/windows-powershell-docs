@@ -4,9 +4,11 @@ Module Name: BitsTransfer
 online version: 
 schema: 2.0.0
 title: Set-BitsTransfer
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -436,9 +438,9 @@ Valid values for this parameter are:
 
 - **None**: Use only credentials provided by the **Credential** or **ProxyCredential** parameters. This is the default behavior if the parameter is not specified.
 
- - **Proxy**: Credentials stored in the Windows Credential Manager are used for authentication for any proxy server that requires authentication. If no credentials in the Windows Credential Manager match the proxy server needing authentication, then you must specify credentials by using the **ProxyCredential** parameter.
+- **Proxy**: Credentials stored in the Windows Credential Manager are used for authentication for any proxy server that requires authentication. If no credentials in the Windows Credential Manager match the proxy server needing authentication, then you must specify credentials by using the **ProxyCredential** parameter.
 
- - **Server**: This value is not supported and generates an error if specified.
+- **Server**: This value is not supported and generates an error if specified.
 
 ```yaml
 Type: AuthenticationTargetValue

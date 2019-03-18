@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterIPsecOffload
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3AE20759-18A2-49EC-9CF4-71B59B7DC9F6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterIPsecOffload

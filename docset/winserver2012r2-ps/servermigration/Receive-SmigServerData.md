@@ -12,6 +12,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8AD4455-C5F4-4EEB-9C81-6F6B5E3A2DC3
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Receive-SmigServerData
@@ -65,7 +67,7 @@ When the password is entered, the value is passed to the command as a SecureStri
 
 ### EXAMPLE 3
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> Receive-SmigServerData -Password $pass
 ```
 
@@ -78,7 +80,7 @@ The second command also sets the value of the variable $pass, specified in the f
 
 ### -Password
 Use this parameter to specify the password, as a secure string, to decrypt the data transfer by using 256-bit advanced encryption standard (AES).
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 
 You must specify a password to protect your data because migrated data is broadcast over a network.
 If the Password parameter is not added to your command, you are prompted to specify a password after entering your command.

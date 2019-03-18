@@ -4,9 +4,11 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: New-WindowsCustomImage
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -82,7 +84,7 @@ Accept wildcard characters: False
 
 ### -ConfigFilePath
 Specifies the location of a configuration file that lists exclusions for image capture and compress commands.
-For more information, see DISM Configuration List and WimScrit.ini Files, http://go.microsoft.com/fwlink/?LinkID=313768.
+For more information, see DISM Configuration List and WimScript.ini Files, http://go.microsoft.com/fwlink/?LinkID=313768.
 
 ```yaml
 Type: String

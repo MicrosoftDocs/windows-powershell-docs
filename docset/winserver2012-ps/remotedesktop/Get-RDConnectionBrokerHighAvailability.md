@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 4B896F36-CE23-4AE9-B887-F155EB316E6B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDConnectionBrokerHighAvailability

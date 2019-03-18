@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RDSessionHost
+ms.reviewer:
 ms.assetid: 9447CF73-4CD4-495F-8757-DA8156325BCC
 ---
 
@@ -38,7 +39,7 @@ Users can connect to a RD Session Host server to run programs, save files, and u
 
 ### Example 1: Set values for an RD  Session Host server
 ```
-PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed $True -ConnectionBroker "rdcb.contoso.com"
+PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed Yes -ConnectionBroker "rdcb.contoso.com"
 ```
 
 This command specifies values for an RD Session Host server named rdsh.contoso.com.

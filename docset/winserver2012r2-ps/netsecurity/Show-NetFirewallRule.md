@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Show-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF255861-15F4-4F28-A3C0-8A9E2C129BF6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Show-NetFirewallRule

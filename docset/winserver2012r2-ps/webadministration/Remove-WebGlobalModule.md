@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebGlobalModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 54025C94-825F-4597-810C-415F63EA9D1D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WebGlobalModule
@@ -31,7 +33,7 @@ The **Remove-WebGlobalModule** cmdlet removes an Internet Information Services (
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Removeing a module --------------e
+### Example 1: Removing a module
 ```
 IIS:\>Remove-WebGlobalModule -Name "testGlobalModule" -PSPath "IIS:\Sites\Default Web Site"
 ```

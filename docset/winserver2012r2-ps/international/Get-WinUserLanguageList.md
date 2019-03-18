@@ -4,9 +4,11 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Get-WinUserLanguageList
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -100,9 +102,9 @@ For information about the Generic.List object, see List(Of T) Classhttp://go.mic
 
 The generic list object supports the following methods:
 
---Add("BCP-47")
---Insert(index, "BCP-47")
---Remove(Index)
+- Add("BCP-47")
+- Insert(index, "BCP-47")
+- Remove(Index)
 
 The output language object contains the following properties:
 

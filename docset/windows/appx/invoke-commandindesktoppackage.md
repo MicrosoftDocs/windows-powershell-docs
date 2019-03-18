@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 2017-05-19
 ms.prod: w10
 ms.technology: powershell-windows
@@ -12,6 +12,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Invoke-CommandInDesktopPackage
+ms.reviewer:
 ---
 
 # Invoke-CommandInDesktopPackage
@@ -103,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-Switch that causes the entire process tree to stay in the pacakge context.
+Switch that causes the entire process tree to stay in the package context.
 
 ```yaml
 Type: SwitchParameter

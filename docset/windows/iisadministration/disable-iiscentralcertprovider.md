@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 3E8534D7-0D92-42EB-BFDE-BB430C0C9CD0
-ms.author: coreyp
+ms.author: kenwith
 ms.mktglfcycl: manage
 ms.date: 12/20/2016
 ms.prod: w10
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-IISCentralCertProvider
+ms.reviewer:
 ---
 
 # Disable-IISCentralCertProvider

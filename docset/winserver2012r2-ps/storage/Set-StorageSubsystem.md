@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-StorageSubsystem
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-StorageSubSystem
@@ -71,7 +73,7 @@ Set-StorageSubSystem -Name <String> [-AutomaticClusteringEnabled <Boolean>] [-Ci
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
+The **Set-StorageSubsystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
 
 ## EXAMPLES
 

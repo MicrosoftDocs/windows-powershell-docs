@@ -3,6 +3,9 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 301D92EF-B235-4298-80B7-8B2F8CC818C0
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Enable-BCDistributed

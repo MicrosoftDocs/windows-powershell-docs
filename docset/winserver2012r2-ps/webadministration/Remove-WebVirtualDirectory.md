@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2A4DB4A4-BE0B-4371-A625-C9D27492AF3F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WebVirtualDirectory
@@ -32,7 +34,7 @@ The **Remove-WebVirtualDirectory** cmdlet removes an Internet Information Servic
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Removing Remove a virtual directory --------------Remove
+### Example 1: Removing a virtual directory
 ```
 IIS:\>Remove-WebVirtualDirectory -Site "Default Web Site" -Application "TestApp" -Name "TestVirtualDir"
 ```

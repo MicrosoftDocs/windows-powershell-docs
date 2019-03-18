@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.Administration.Commands.dll-He
 ms.assetid: 8E46D7F9-433C-4196-BF9C-4E1EC7A37210
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-CAAuthorityInformationAccess

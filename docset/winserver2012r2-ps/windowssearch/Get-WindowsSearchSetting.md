@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WindowsSearchSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 16F4C925-AD39-46EF-88B0-913988DDC35C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WindowsSearchSetting
@@ -67,7 +69,7 @@ Returns the values of properties that control Windows Search:
 
 **SearchExperienceSetting** has the following possible values: 
 
-- PersonlizedAndLocation.
+- PersonalizedAndLocation.
 Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user. 
 - Personalized.
 Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user. 

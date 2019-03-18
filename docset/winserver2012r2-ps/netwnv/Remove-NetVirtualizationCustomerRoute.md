@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetVirtualizationCustomerRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B3F7199E-ABD2-4D9C-BACD-30582E312C32
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetVirtualizationCustomerRoute
@@ -47,7 +49,7 @@ You can use the Get-NetVirtualizationCustomerRoute cmdlet to get routes to remov
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.

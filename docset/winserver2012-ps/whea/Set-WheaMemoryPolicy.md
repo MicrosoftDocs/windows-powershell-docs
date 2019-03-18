@@ -3,6 +3,9 @@ external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
 ms.assetid: AEDADF61-840D-4F98-B949-D95779ED2B40
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WheaMemoryPolicy

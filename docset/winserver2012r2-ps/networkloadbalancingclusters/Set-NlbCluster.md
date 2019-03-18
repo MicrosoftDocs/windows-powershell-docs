@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NlbCluster
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 57ACC3ED-7420-4EFE-A21A-474837243932
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-NlbCluster
@@ -36,7 +38,7 @@ Set-NlbCluster -InputObject <Cluster[]> [-ClusterPrimaryIP <IPAddress>] [-Name <
 
 ## DESCRIPTION
 The **Set-NlbCluster** cmdlet edits the configuration of a Network Load Balancing (NLB) cluster.
-The configuration changes you can make include the cluster operation mode (MULITCAST or UNICAST), the cluster name, and the cluster primary IP address.
+The configuration changes you can make include the cluster operation mode (MULTICAST or UNICAST), the cluster name, and the cluster primary IP address.
 
 This operation changes the configuration on all cluster nodes.
 As a result, the NLB cluster will have to restart the convergence process on all nodes to guarantee that configuration changes have been applied on all nodes and that a consistent state is reached.

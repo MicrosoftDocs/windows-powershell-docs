@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetVirtualizationProviderAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 784ACEC9-9596-4ED3-AE21-6D0B4FF72D76
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-NetVirtualizationProviderAddress

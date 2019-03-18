@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,13 +14,14 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Install-ADDSDomain
+ms.reviewer:
 ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
 ---
 
 # Install-ADDSDomain
 
 ## SYNOPSIS
-Installs an Active Directory domain configuration.
+Creates a new domain in an existing Active Directory forest.
 
 ## SYNTAX
 

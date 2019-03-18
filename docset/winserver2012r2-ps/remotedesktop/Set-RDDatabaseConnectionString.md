@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDDatabaseConnectionString
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-RDDatabaseConnectionString

@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 4EAAD44F-74D9-4714-989B-7D694BDCEEDF
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-RDFileTypeAssociation
@@ -27,7 +30,7 @@ Set-RDFileTypeAssociation [-CollectionName] <String> -AppAlias <String> -FileExt
 ```
 
 ## DESCRIPTION
-The **Set-RDFileTypeAssocation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
+The **Set-RDFileTypeAssociation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
 
 ## EXAMPLES
 

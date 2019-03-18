@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CB0CD2FE-BA64-4D28-9877-E23B2610DA0B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetIPsecRule
@@ -354,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be removed. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be removed. 
                          
 A NetIPsecPhase1AuthSet object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 

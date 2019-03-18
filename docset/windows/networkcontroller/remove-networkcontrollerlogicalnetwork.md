@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-NetworkControllerLogicalNetwork
+ms.reviewer:
 ms.assetid: C6EEEFDF-0550-4A4E-9485-587416A10382
 ---
 
@@ -39,7 +40,7 @@ A logical network is a collection of logical subnets.
 
 ### Example 1: Remove a logical network
 ```
-PS C:\> Remove-NetworkControllerLogicalNetwork -ConnectionUri "https://networkcontroller" -ResouceId "Network13"
+PS C:\> Remove-NetworkControllerLogicalNetwork -ConnectionUri "https://networkcontroller" -ResourceId "Network13"
 ```
 
 This command removes a logical network that has the resource ID logicalnw1 from the Network Controller at the specified URI.

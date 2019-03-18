@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-VM
+ms.reviewer:
 ms.assetid: CD0F5EB8-995B-40DE-BBC5-689CCA827ABE
 ---
 
@@ -32,6 +33,7 @@ Set-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSC
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
+ [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
  [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -44,6 +46,7 @@ Set-VM [-VM] <VirtualMachine[]> [-GuestControlledCacheTypes <Boolean>] [-LowMemo
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
+ [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
  [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -76,6 +79,21 @@ This parameter is applicable to clustered virtual machines.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutomaticCheckpointsEnabled
+Specifies whether automatic checkpoints are enabled.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 

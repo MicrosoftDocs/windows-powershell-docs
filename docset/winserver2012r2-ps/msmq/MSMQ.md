@@ -7,13 +7,15 @@ Locale: en-US
 title: MSMQ
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ac33def1-39eb-4169-adec-aa1ecf646c97
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # MSMQ Module

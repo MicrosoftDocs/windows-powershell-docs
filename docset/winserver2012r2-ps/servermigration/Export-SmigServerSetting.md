@@ -12,6 +12,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ACDA05AE-6AD0-4F38-8448-DDC2D7D3025F
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Export-SmigServerSetting
@@ -80,7 +82,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 4
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> Export-SmigServerSetting -User All -Password $pass -Path "c:\store" -Verbose
 ```
 
@@ -161,7 +163,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the migration store encryption password as a secure string.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 Because the Password parameter is required, if it is not added to your command, you are prompted to create a password after entering your command.
 The password length must be a minimum of 6 characters and a maximum of 260 characters.
 

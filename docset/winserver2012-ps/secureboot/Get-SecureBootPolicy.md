@@ -3,6 +3,9 @@ external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 ms.assetid: 5825E1DE-2EBE-4063-8BCA-68B770468D1B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-SecureBootPolicy

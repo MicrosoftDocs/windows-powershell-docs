@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Receive-DtcDiagnosticTransaction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A30D5B35-CD96-4633-B4C0-A75EC7C602D5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Receive-DtcDiagnosticTransaction

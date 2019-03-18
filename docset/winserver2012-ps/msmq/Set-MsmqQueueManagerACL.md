@@ -2,6 +2,9 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B0D7C113-9A7F-4C83-93BE-06BF8795F19E
 ---
 
@@ -47,10 +50,10 @@ The acceptable values for this parameter are:
 - GetPermissions: Get the permissions of the specified queue manager. 
 - GetProperties: Get the properties of the specified queue manager. 
 ListContent: List content stored in the queues of the specified queue manager. 
-- PeekDeadLetter: Peek a message from the specified queue managerâ€™s system dead letter queue and transactional dead letter queue. 
-- PeekJournal: Peek a message from the specified queue managerâ€™s system journal queue. 
+- PeekDeadLetter: Peek a message from the specified queue manager's system dead letter queue and transactional dead letter queue. 
+- PeekJournal: Peek a message from the specified queue manager's system journal queue. 
 - ReceiveDeadLetter: Receive a message from the specified queue manager's system dead letter queue and transactional dead letter queue. 
-- ReceiveJournal: Receive a message from the specified queue managerâ€™s system journal queue. 
+- ReceiveJournal: Receive a message from the specified queue manager's system journal queue. 
 - SetPermissions: Set the permissions of the specified queue manager. 
 - SetProperties: Set the properties of the specified queue manager. 
 - TakeOwnership: Assign a queue of the specified queue manager to the specified user.
@@ -77,13 +80,13 @@ The acceptable values for this parameter are:
 - CreateQueue: Create a queue with the specified queue manager. 
 - Delete: Delete queues of the specified queue manager. 
 - DeleteChildObjects: Delete child objects from the specified queue manager. 
---FullControl: Full control of the specified queue manager. 
+- FullControl: Full control of the specified queue manager. 
 - GetPermissions: Get the permissions of the specified queue manager. 
 - GetProperties: Get the properties of the specified queue manager. 
 - ListContent: List content stored in the queues of the specified queue manager. 
-- PeekDeadLetter: Peek a message from the specified queue managerâ€™s system dead letter queue and transactional dead letter queue. 
-- PeekJournal: Peek a message from the specified queue managerâ€™s system journal queue. 
-- ReceiveDeadLetter: Receive a message from the specified queue managerâ€™s system dead letter queue and transactional dead letter queue. 
+- PeekDeadLetter: Peek a message from the specified queue manager's system dead letter queue and transactional dead letter queue. 
+- PeekJournal: Peek a message from the specified queue manager's system journal queue. 
+- ReceiveDeadLetter: Receive a message from the specified queue manager's system dead letter queue and transactional dead letter queue. 
 - ReceiveJournal: Receive a message from the specified queue manager's system journal queue. 
 - SetPermissions: Set the permissions of the specified queue manager. 
 - SetProperties: Set the properties of the specified queue manager. 

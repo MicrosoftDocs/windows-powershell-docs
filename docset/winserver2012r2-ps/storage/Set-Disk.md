@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-Disk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1F2E55DF-73AF-40F5-A09B-05945A504510
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-Disk

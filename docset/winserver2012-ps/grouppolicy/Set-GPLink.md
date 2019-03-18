@@ -2,6 +2,9 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CB973A78-814B-4094-A412-E2E52DA21A48
 ---
 
@@ -61,7 +64,7 @@ The Enforced and Order properties are not changed.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabeled Yes -Enforced Yes -Order 1
+C:\PS>Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabled Yes -Enforced Yes -Order 1
 ```
 
 Description

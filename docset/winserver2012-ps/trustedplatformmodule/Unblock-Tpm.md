@@ -3,6 +3,9 @@ external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 36DA2C6D-E2FC-416B-9C5D-F91BCE059CA3
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Unblock-Tpm

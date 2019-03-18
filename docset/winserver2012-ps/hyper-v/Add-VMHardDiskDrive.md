@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-VMHardDiskDrive
@@ -63,7 +66,7 @@ Adds a virtual hard disk to SCSI controller number 0 on virtual machine Test.
 PS C:\>Get-VMScsiController -VMName Test -Number 0 | Add-VMHardDiskDrive -DiskNumber 2
 ```
 
-This example gets a SSCI controller on a virtual machine named Test and then adds physical disk 2 to that controller.
+This example gets a SCSI controller on a virtual machine named Test and then adds physical disk 2 to that controller.
 
 ### Example 4
 ```

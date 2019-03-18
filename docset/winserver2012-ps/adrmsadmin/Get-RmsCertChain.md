@@ -3,6 +3,9 @@ external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: A62ECA60-C9C0-4A12-B621-23A5CEE60F96
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RmsCertChain

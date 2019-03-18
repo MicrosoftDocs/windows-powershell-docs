@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Copy-NetIPsecMainModeRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18A92629-1EB1-494B-A000-564951F3B736
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Copy-NetIPsecMainModeRule

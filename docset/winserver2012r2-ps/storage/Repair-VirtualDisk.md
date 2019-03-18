@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Repair-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A4087758-148D-4404-9414-987812E52991
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Repair-VirtualDisk

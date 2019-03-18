@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADAccountAuthorizationGroup
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -34,7 +36,7 @@ If the forest that contains the account does not have a global catalog, the cmdl
 
 The **Identity** parameter specifies the user, computer, or service account.
 You can identify a user, computer, or service account object by its distinguished name, GUID, security identifier (SID), Security Account Manager (SAM) account name or user principal name.
-You can also set the **Identity** parameter to an account object variable, such as **$\<localAccountobject\>**, or pass an account object through the pipeline to the **Identity** parameter.
+You can also set the **Identity** parameter to an account object variable, such as **$\<localAccountObject\>**, or pass an account object through the pipeline to the **Identity** parameter.
 For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount or Search-ADAccount cmdlets to retrieve an account object and then pass the object through the pipeline to the Get-ADAccountAuthorizationGroup cmdlet.
 
 ## EXAMPLES

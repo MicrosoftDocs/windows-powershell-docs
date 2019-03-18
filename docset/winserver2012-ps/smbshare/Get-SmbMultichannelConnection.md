@@ -2,6 +2,9 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8BD99095-AB93-4A86-9BCE-9CFE31C2AFAB
 ---
 
@@ -18,14 +21,14 @@ Get-SmbMultichannelConnection [[-ServerName] <String[]>] [-AsJob] [-CimSession <
 ```
 
 ## DESCRIPTION
-The **Get-SmbMulitchannelConnection** cmdlet retrieves the Server Message Block (SMB) connections made between the SMB client network interfaces and the SMB server network interfaces.
+The **Get-SmbMultichannelConnection** cmdlet retrieves the Server Message Block (SMB) connections made between the SMB client network interfaces and the SMB server network interfaces.
 This cmdlet provides information about how the SMB multi-channel pairs the client and the server network interfaces and which pairs are selected to use for the SMB connections.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-SmbMulitchannelConnection
+PS C:\>Get-SmbMultichannelConnection
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA 
                                                             Interface      Interface      Capable        Capable 
                                                             Index          Index 

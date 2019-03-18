@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetNat.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetNat
+ms.reviewer:
 ms.assetid: 43F71E6B-EC90-487A-94B4-4456B81A2F44
 ---
 
@@ -203,16 +204,16 @@ Accept wildcard characters: False
 Specifies filtering behavior for TCP connections.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named
@@ -258,16 +259,16 @@ Accept wildcard characters: False
 Specifies filtering behavior for UDP sessions.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named

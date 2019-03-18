@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B16EA1C8-ADC3-4B7C-A1B8-FAE17279B268
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-NetIPsecRule
@@ -350,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be disabled. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be disabled. 
                          
 A NetIPsecPhase1AuthSet object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 

@@ -13,7 +13,7 @@ Starts a one-time backup operation.
 ## SYNTAX
 
 ```
-Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DonotVerifyMedia]
+Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DoNotVerifyMedia]
 ```
 
 ## DESCRIPTION
@@ -124,7 +124,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DonotVerifyMedia
+### -DoNotVerifyMedia
 Do not use.
 This parameter is not implemented in this version of the module.
 

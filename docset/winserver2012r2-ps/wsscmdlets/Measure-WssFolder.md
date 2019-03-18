@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Measure-WssFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7DD5811-3C65-4CE4-AECC-E5D6B3324D24
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Measure-WssFolder

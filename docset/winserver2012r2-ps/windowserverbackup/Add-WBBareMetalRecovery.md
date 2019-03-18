@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WBBareMetalRecovery
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A67A3E90-8591-415C-8610-C3B55B38AE1D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WBBareMetalRecovery

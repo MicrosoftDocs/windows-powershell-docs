@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WebBinding
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 741FF2B8-A6E2-4A39-8470-2F7CA6CC7808
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WebBinding

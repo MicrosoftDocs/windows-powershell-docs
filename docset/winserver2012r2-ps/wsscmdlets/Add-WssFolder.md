@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 40676510-8371-4728-8667-670E301CC593
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WssFolder

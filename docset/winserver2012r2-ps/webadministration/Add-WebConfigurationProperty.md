@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WebConfigurationProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4FD9596E-88F3-4A3F-A341-11B6BEEDF013
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WebConfigurationProperty

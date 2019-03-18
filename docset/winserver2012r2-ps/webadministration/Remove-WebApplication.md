@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 59096265-31B1-4338-BBBD-D998D1F0435C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WebApplication

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WBBackupTarget
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D4D0C006-575E-4F0D-87AB-FD4E9E727D27
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WBBackupTarget

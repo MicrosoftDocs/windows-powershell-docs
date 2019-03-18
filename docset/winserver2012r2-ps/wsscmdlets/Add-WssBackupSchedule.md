@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssBackupSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6793DDC0-107D-4975-AC28-4632FAD9D401
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WssBackupSchedule

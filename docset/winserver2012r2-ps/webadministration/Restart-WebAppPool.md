@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restart-WebAppPool
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DF86D4F3-5727-4E04-9A4C-474D8A1F66CC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Restart-WebAppPool

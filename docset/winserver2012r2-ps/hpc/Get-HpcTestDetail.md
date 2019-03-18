@@ -149,8 +149,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### HpcTestCaseDetail, HpcTestCase<Type>Parameter, HpcVariable, HpcTestCaseStep
-This cmdlet returns an **HpcTestCaseDetail** object, zero or more **HpcTestCase\<Type\>Parameter** objects, zero or more **HpcVariable** objects, and one to three **HpcTestCaseStep** objects.
+### HpcTestCaseDetail
+
+### HpcTestCase
+Zero or more **HpcTestCase** objects.
+
+### HpcVariable
+Zero or more **HpcVariable** objects.
+
+### HpcTestCaseStep
+One to three **HpcTestCaseStep** objects.
 
 ## NOTES
 * You must be a cluster administrator to run this cmdlet successfully.

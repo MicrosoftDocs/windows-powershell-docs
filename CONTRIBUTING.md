@@ -13,8 +13,9 @@ You've already completed this step.
 
 We've tried to make editing an existing, public file as simple as possible.
 
->**Note**<br>
->At this time, only the English (en-us) content is available for editing.
+> **Note**
+>
+> At this time, only the English (en-us) content is available for editing.
 
 **To edit a topic**
 

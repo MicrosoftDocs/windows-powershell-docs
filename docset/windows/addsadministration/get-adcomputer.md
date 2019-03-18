@@ -252,7 +252,7 @@ Syntax:
 
 The following syntax uses Backus-Naur form to show how to use the Windows PowerShell Expression Language for this parameter.
 
-\<filter\>  ::= "{" \<FilterComponentList\> "}"
+\<filter\>  ::= \<FilterComponentList\>
 
 \<FilterComponentList\> ::= \<FilterComponent\> | \<FilterComponent\> \<JoinOperator\> \<FilterComponent\> | \<NotOperator\>  \<FilterComponent\>
 

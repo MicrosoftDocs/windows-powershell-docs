@@ -343,7 +343,7 @@ To specify the replication schedule:
 1. Create a new Active Directory schedule object.
     For example: 
 
-    `$Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule; `
+    `$Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule;`
 
 2. Edit the schedule on the Active Directory schedule object.
     For example:

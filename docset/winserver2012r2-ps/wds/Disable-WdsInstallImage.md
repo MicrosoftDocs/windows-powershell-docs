@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-WdsInstallImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FF0D73F5-53BB-479B-A58C-FA94E653CDA5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-WdsInstallImage

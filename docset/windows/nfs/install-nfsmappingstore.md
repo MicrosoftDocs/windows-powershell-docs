@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Install-NfsMappingStore
+ms.reviewer:
 ms.assetid: C627F113-DEC4-4AA1-9DA5-0A0BD1AF0209
 ---
 
@@ -29,7 +30,7 @@ Install-NfsMappingStore [-InstanceName <String>] [-LdapPort <Int32>] [<CommonPar
 ```
 
 ## DESCRIPTION
-The **Install-NfaMppingStore** cmdlet installs the Active Directory Lightweight Directory Services (AD LDS) role on a local computer.
+The **Install-NfaMappingStore** cmdlet installs the Active Directory Lightweight Directory Services (AD LDS) role on a local computer.
 It then initializes an AD LDS instance as an identity mapping store.
 
 ## EXAMPLES

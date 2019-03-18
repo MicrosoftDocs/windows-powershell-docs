@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Import-WdsInstallImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E0AD370F-BD3C-43DD-B5FC-137A11B3D6D9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Import-WdsInstallImage

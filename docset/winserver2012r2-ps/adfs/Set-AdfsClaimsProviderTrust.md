@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsClaimsProviderTrust
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -407,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamlAuthenticationRequestParameters
-Specifies which of the following parameters  to use in SAML authentication requests to the claims provider: **AssertionConsumerServiceIndex**, **AssertitionConsumerServiceUrl**, and **ProtocolBinding**.
+Specifies which of the following parameters  to use in SAML authentication requests to the claims provider: **AssertionConsumerServiceIndex**, **AssertionConsumerServiceUrl**, and **ProtocolBinding**.
 The acceptable values for this parameter are:None, Index, Url, ProtocolBinding, and UrlWithProtocolBinding.
 
 ```yaml

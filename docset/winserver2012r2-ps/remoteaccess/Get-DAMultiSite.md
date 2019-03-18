@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-DAMultiSite
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36B7594B-0FB5-43D6-B1A4-FD0A492622D1
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-DAMultiSite

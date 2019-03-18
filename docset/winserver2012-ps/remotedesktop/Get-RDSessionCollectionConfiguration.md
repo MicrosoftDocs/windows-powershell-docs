@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 7AAB8E9E-6BAC-4C06-BCD9-3CB1D94D014B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDSessionCollectionConfiguration

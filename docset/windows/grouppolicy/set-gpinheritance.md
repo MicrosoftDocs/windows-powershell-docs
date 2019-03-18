@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-GPInheritance
+ms.reviewer:
 ms.assetid: A418C62A-AA27-4828-B126-73C334420AFB
 ---
 
@@ -42,7 +43,7 @@ You use the *Target* parameter to specify the Lightweight Directory Access Proto
 
 ### Example 1: Block inheritance for a OU in a domain
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked Yes 
 Name                  : myou 
 ContainerType         : OU 
 Path                  : ou=myou,dc=contoso,dc=com 
@@ -58,7 +59,7 @@ Because inheritance is blocked, only GPOs that are linked directly to the MyOU, 
 
 ### Example 2: Unblock inheritance for a domain
 ```
-PS C:\> Set-GPinheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
+PS C:\> Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked No
 ```
 
 This command unblocks inheritance for the northwest.contoso.com domain.
@@ -66,7 +67,7 @@ GPOs linked to higher-level sites or domains are applied to this domain when Gro
 
 ### Example 3: Block inheritance for an OU in a domain
 ```
-PS C:\> Set-GPinheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
+PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
 
 Name                  : myou 
 ContainerType         : OU 
@@ -168,7 +169,7 @@ Accept wildcard characters: False
 
 ### -Target
 Specifies the domain or the OU for which to block or unblock inheritance by its LDAP distinguished name.
-For instnace, the MyOU organizational unit in the contoso.com domain is specified as "ou=MyOU,dc=contoso,dc=com".
+For instance, the MyOU organizational unit in the contoso.com domain is specified as "ou=MyOU,dc=contoso,dc=com".
 
 You can also refer to the *Target* parameter by its built-in alias, path.
 

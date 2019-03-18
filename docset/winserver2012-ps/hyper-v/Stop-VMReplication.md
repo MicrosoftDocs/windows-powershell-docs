@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Stop-VMReplication
@@ -73,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose resychronization is to be stopped.
+Specifies the virtual machine whose resynchronization is to be stopped.
 
 ```yaml
 Type: VirtualMachine[]

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NfsStatistics.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NfsStatistics
+ms.reviewer:
 ms.assetid: E1C01056-F069-4160-8AF9-F25046671F31
 ---
 
@@ -139,8 +140,8 @@ Accept wildcard characters: False
 Specifies the type of protocol for which to get NFS statistics.
 Valid values are: 
 
---NFS
---Mount
+- NFS
+- Mount
 
 ```yaml
 Type: String[]

@@ -2,6 +2,9 @@
 external help file: MPIO_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: C61A8B24-45B5-48D0-B2B5-563EE695CA82
 ---
 

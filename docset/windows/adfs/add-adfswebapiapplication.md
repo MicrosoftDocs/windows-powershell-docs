@@ -1,21 +1,22 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: C55B0698-D72C-46CC-B7AB-C86842F9D692
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-AdfsWebApiApplication
+ms.reviewer:
 ---
 
 # Add-AdfsWebApiApplication
@@ -70,7 +71,7 @@ Specifies the name of an access control policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +86,7 @@ Specifies the parameters of an access control policy.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +101,7 @@ Specifies additional authentication rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +116,7 @@ Specifies a file that contains all the rules for additional authentication for t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +131,7 @@ Specifies an array of allow authentication class references.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,14 +144,14 @@ Accept wildcard characters: False
 Specifies allowed client types.
 The acceptable values for this parameter are:
 
-- None 
-- Public 
+- None
+- Public
 - Confidential
 
 ```yaml
 Type: AllowedClientTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Public, Confidential
 
 Required: False
@@ -167,7 +168,7 @@ Specify this parameter to require users to always supply credentials to access s
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +183,7 @@ Specifies an application group.
 ```yaml
 Type: ApplicationGroup
 Parameter Sets: ApplicationGroupObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -197,7 +198,7 @@ Specifies the ID of an application group.
 ```yaml
 Type: String
 Parameter Sets: ApplicationGroupIdentifier
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -216,7 +217,7 @@ The user is redirected to this claims provider for authentication.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +232,7 @@ Specifies delegation authorization rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +247,7 @@ Specifies a file that contains all the rules for delegation authentication for t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +262,7 @@ Specifies a description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +277,7 @@ Specifies an array of identifiers.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -291,7 +292,7 @@ Specifies the impersonation authorization rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -306,7 +307,7 @@ Specifies a file that contains all the rules for impersonation authentication fo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +322,7 @@ Specifies the issuance authorization rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -336,7 +337,7 @@ Specifies a file that contains all the rules for issuance authentication for thi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -351,7 +352,7 @@ Specifies the issuance transform rules.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -366,7 +367,7 @@ Specifies a file that contains all the rules for issuance transform for this rel
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -379,14 +380,14 @@ Accept wildcard characters: False
 Specifies the refresh token issuance device types.
 The acceptable values for this parameter are:
 
-- NoDevice 
-- WorkplaceJoinedDevices 
+- NoDevice
+- WorkplaceJoinedDevices
 - AllDevices
 
 ```yaml
 Type: RefreshTokenIssuanceDeviceTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NoDevice, WorkplaceJoinedDevices, AllDevices
 
 Required: False
@@ -402,7 +403,7 @@ Specifies a name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -417,7 +418,7 @@ Specifies the not before skew value.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -433,7 +434,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,7 +449,7 @@ Indicates whether refresh token protection is enabled.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -463,7 +464,7 @@ Indicates that the request MFA from claims providers option is used.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -478,7 +479,7 @@ Specifies the token lifetime.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -526,54 +527,54 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.WebApiApplication
-	AccessControlPolicyName               string
-	AccessControlPolicyParameters         System.Object
-	AdditionalAuthenticationRules         string
-	AllowedAuthenticationClassReferences  string[]
-	AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-	AlwaysRequireAuthentication           bool
-	ApplicationGroupId                    string
-	ApplicationGroupIdentifier            string
-	ClaimsProviderName                    string[]
-	DelegationAuthorizationRules          string
-	Description                           string
-	Enabled                               bool
-	Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
-	ImpersonationAuthorizationRules       string
-	IssuanceAuthorizationRules            string
-	IssuanceTransformRules                string
-	IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-	Name                                  string
-	NotBeforeSkew                         int
-	PublishedThroughProxy                 bool
-	RefreshTokenProtectionEnabled         bool
-	RequestMFAFromClaimsProviders         bool
-	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	TokenLifetime                         int
+AccessControlPolicyName               string
+AccessControlPolicyParameters         System.Object
+AdditionalAuthenticationRules         string
+AllowedAuthenticationClassReferences  string[]
+AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
+AlwaysRequireAuthentication           bool
+ApplicationGroupId                    string
+ApplicationGroupIdentifier            string
+ClaimsProviderName                    string[]
+DelegationAuthorizationRules          string
+Description                           string
+Enabled                               bool
+Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
+ImpersonationAuthorizationRules       string
+IssuanceAuthorizationRules            string
+IssuanceTransformRules                string
+IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
+Name                                  string
+NotBeforeSkew                         int
+PublishedThroughProxy                 bool
+RefreshTokenProtectionEnabled         bool
+RequestMFAFromClaimsProviders         bool
+ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
+TokenLifetime                         int
 
 ### Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-	
-	AllowedClientTypes
-	{
-	  None = 0,
-	  Public = 2,
-	  Confidential=4,
-	}
+
+AllowedClientTypes
+{
+  None = 0,
+  Public = 2,
+  Confidential=4,
+}
 
 ### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-	
-	RefreshTokenIssuanceDeviceTypes
-	{
-	  NoDevice = 0,
-	  WorkplaceJoinedDevices = 1,
-	  AllDevices = 2
-	}
-	
+
+RefreshTokenIssuanceDeviceTypes
+{
+  NoDevice = 0,
+  WorkplaceJoinedDevices = 1,
+  AllDevices = 2
+}
+
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	IsParameterized  bool
-	Summary          string
-	Serialized       string
+IsParameterized  bool
+Summary          string
+Serialized       string
 
 ## NOTES
 
@@ -584,4 +585,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsWebApiApplication](./Remove-AdfsWebApiApplication.md)
 
 [Set-AdfsWebApiApplication](./Set-AdfsWebApiApplication.md)
-

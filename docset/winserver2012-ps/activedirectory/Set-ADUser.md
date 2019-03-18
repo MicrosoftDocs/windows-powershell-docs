@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A01E908C-F344-4072-B720-4A0F523018B2
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADUser
@@ -113,7 +116,7 @@ Description
 -----------
 
 Get all the users in the directory that are located underneath the OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM organizationalUnit. 
-Set the DisplayName property on these user objects to the concatentation of the Surname property and the GivenName property.
+Set the DisplayName property on these user objects to the concatenation of the Surname property and the GivenName property.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```

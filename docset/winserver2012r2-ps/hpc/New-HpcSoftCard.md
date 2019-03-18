@@ -11,7 +11,8 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217207
 schema: 2.0.0
 title: New-HpcSoftCard
-ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CEexternal help file:
+ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CE
+external help file:
 Module Name: hpc
 online version:
 schema: 2.0.0

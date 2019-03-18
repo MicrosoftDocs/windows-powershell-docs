@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Stop-ScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DABA0624-AC0F-4718-9271-89DCF9D2F300
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Stop-ScheduledTask

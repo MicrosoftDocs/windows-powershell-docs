@@ -2,6 +2,9 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 9B460E62-2F2F-43F9-89F3-D296D6F1F0D2
 ---
 
@@ -35,7 +38,7 @@ You need administrator privileges to use **Rename-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Rename a printer -------------------------- 
+### -------------------------- Example 1: Rename a printer -------------------------- 
 xample: Rename a printer
 ```
 PS C:\> Rename-Printer -Name "Microsoft XPS Document Writer" -NewName "MXDW"

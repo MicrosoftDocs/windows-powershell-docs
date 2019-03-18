@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterChecksumOffload.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetAdapterChecksumOffload
+ms.reviewer:
 ms.assetid: A6F87E59-4776-4353-8EDB-2E02E7CE96A4
 ---
 
@@ -180,9 +181,9 @@ Specifies the direction of the IP traffic for IPv4.
 The acceptable values for this parameter are:
 
 - Disabled
---RxTxEnabled
---RxEnabled
---TxEnabled.
+- RxTxEnabled
+- RxEnabled
+- TxEnabled.
 
 If RxEnabled or TxEnabled is selected, then the opposite direction (transmit or receive, respectively) is disabled.
 Such as if the state is RxEnabled, then checksum calculations for receive traffic is enabled and for transmit traffic is Disabled.

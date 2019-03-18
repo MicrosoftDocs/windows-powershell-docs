@@ -2,6 +2,9 @@
 external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CB5682DE-A40F-4987-BC5B-C4B57F15D352
 ---
 
@@ -103,8 +106,8 @@ Accept wildcard characters: False
 ### System.Byte
 The output values and names are: 
 
---Value=0 Name="Stopped"
---Value=1 Name="Running"
+- Value=0 Name="Stopped"
+- Value=1 Name="Running"
 
 ## NOTES
 

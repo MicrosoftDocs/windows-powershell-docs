@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsClientLock
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8C029D0B-7CC0-4C84-B3B0-57AFE0153F56
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NfsClientLock

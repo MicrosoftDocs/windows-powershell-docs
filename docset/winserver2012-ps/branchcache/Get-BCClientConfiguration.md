@@ -3,6 +3,9 @@ external help file: BranchCacheClientSettingData.cdxml-help.xml
 ms.assetid: 7E93378E-58C5-4548-B827-B03DB745AC26
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-BCClientConfiguration

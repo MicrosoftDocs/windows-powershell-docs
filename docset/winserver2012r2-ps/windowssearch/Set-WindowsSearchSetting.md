@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WindowsSearchSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 97D00349-0E6B-4326-817E-EC401505F2F3
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WindowsSearchSetting
@@ -44,11 +46,11 @@ This command allows Windows Search to use search history, but not specific locat
 
 ### Example 2: Modify Windows Search settings
 ```
-PS C:\>Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonlizedAndLocation"
+PS C:\>Set-WindowsSearchSetting -EnableWebResultsSetting $True -SafeSearchSetting "Strict" -SearchExperienceSetting "PersonalizedAndLocation"
 ```
 
 This command modifies Windows Search settings.
-The command enables the use of search history and specific location of the user by specifying a value of PersonlizedAndLocation for the **SearchExperienceSetting** parameter.
+The command enables the use of search history and specific location of the user by specifying a value of PersonalizedAndLocation for the **SearchExperienceSetting** parameter.
 The command enables web results and sets SafeSearch to a value of Strict.
 
 ## PARAMETERS
@@ -115,7 +117,7 @@ Accept wildcard characters: False
 Specifies a Windows Search experience setting.
 The acceptable values for this parameter are:
 
-- PersonlizedAndLocation.
+- PersonalizedAndLocation.
 Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user. 
 - Personalized.
 Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user. 

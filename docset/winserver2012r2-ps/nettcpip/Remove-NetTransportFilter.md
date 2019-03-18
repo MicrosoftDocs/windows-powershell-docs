@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetTransportFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 54CBC60C-5295-4FCC-8F7C-2FC73E26DACC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetTransportFilter

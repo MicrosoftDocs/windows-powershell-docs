@@ -4,9 +4,11 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Stop-FsrmFileManagementJob
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -44,7 +46,7 @@ This cmdlet returns one of the following values for the running status of the fi
 This cmdlet returns a success status in the following conditions: 
 - The server is not running the job. 
 - The server is currently canceling the job. 
-- The server is running the job and has started cancelation of the job. 
+- The server is running the job and has started cancellation of the job. 
 - The job is queued on the server and has removed the job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a file management job that is running or is queued.

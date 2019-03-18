@@ -2,6 +2,9 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 207632BA-A5A0-4D2E-B3FA-7CEBFE61E9E2
 ---
 
@@ -40,7 +43,7 @@ You cannot use wildcard characters with **Resume-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Resumes a suspendedelected print job -------------------------- xample: Resume a suspended print job
+### -------------------------- Example 1: Resumes a suspendedelected print job -------------------------- xample: Resume a suspended print job
 ```
 PS C:\> Resume-PrintJob - PrinterName "PrinterName" -ID 1
 ```

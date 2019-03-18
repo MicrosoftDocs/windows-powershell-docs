@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-RDVirtualDesktopCollection
+ms.reviewer:
 ms.assetid: 231B2762-17FD-4607-B4ED-53B949AEEC38
 ---
 
@@ -278,7 +279,7 @@ Accept wildcard characters: False
 
 ### -PersonalManaged
 Indicates that the server creates a new managed personal virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +295,7 @@ Accept wildcard characters: False
 
 ### -PersonalUnmanaged
 Indicates that the server creates a new unmanaged personal virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -310,7 +311,7 @@ Accept wildcard characters: False
 
 ### -PooledManaged
 Indicates that the server creates a new managed pooled virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -326,7 +327,7 @@ Accept wildcard characters: False
 
 ### -PooledUnmanaged
 Indicates that the server creates a new unmanaged pooled virtual desktop collection.
-New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTempalteName** parameter.
+New virtual desktops that you add to this collection are based on the template that you specify in the **VirtualDesktopTemplateName** parameter.
 
 ```yaml
 Type: SwitchParameter

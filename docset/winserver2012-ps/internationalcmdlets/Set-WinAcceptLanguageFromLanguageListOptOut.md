@@ -3,6 +3,9 @@ external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: EA54CF2E-14C7-47C2-9DD9-8D495A08222F
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WinAcceptLanguageFromLanguageListOptOut

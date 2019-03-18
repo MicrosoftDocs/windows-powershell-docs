@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_HgsKeyProtector_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
 ms.assetid: 3F1EB445-2B71-43EA-85FA-FB84CC2FA261
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -15,7 +15,8 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Convertto-HgsKeyProtector
+title: ConvertTo-HgsKeyProtector
+ms.reviewer:
 ---
 
 # ConvertTo-HgsKeyProtector
@@ -31,7 +32,7 @@ ConvertTo-HgsKeyProtector [-Bytes] <Byte[]> [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Convertto-HgsKeyProtector** cmdlet converts an existing key protector into a Host Guardian Service key protector object.
+The **ConvertTo-HgsKeyProtector** cmdlet converts an existing key protector into a Host Guardian Service key protector object.
 Specify the existing key protector as a byte array.
 You might use this cmdlet to import a key protector from a virtual machine configuration file.
 

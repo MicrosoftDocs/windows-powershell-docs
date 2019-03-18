@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssBackupConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B449B4C8-177D-453C-A395-C145BDBED3E6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WssBackupConfiguration

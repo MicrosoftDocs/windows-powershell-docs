@@ -5,13 +5,15 @@ schema: 2.0.0
 title: New-SpacesPool
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A0531FC-C604-4CC2-B8F5-29C794260507
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-SpacesPool
@@ -23,7 +25,7 @@ Creates a storage pool on the Storage Spaces subsystem.
 
 ### UNNAMED_PARAMETER_SET_1
 ```
-New-SpacesPool [-FriendlyName] <String> [-NumberofPhysicalDiskstoUse] <Int32>
+New-SpacesPool [-FriendlyName] <String> [-NumberOfPhysicalDisksToUse] <Int32>
  [[-NumberOfHotsparesToUse] <Int32>]
 ```
 
@@ -54,7 +56,7 @@ This example creates a storage pool named MyPool using the specified array of Ph
 
 ### Example 3 - Create a storage pool with two hot spares
 ```
-PS C:\>New-SpacesPool -FriendlyName MyPool -NumberofPhysicalDisksToUse 8 -NumberOfHotsparesToUse 2
+PS C:\>New-SpacesPool -FriendlyName MyPool -NumberOfPhysicalDisksToUse 8 -NumberOfHotsparesToUse 2
 ```
 
 This example creates a storage pool named MyPool using eight physical disks and assigns two physical disks to the pool for use as hot-spares in the event of a physical disk failure.
@@ -91,7 +93,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -NumberofPhysicalDiskstoUse
+### -NumberOfPhysicalDisksToUse
 Specifies how many physical disks to use to create the storage pool.
 
 ```yaml

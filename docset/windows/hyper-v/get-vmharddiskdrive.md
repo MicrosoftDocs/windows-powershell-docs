@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VMHardDiskDrive
+ms.reviewer:
 ms.assetid: 62372650-2974-4050-A470-50EA1E8FA623
 ---
 
@@ -200,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-Specifies the drive controller from which the virtual hard disk drives are to be retreived.
+Specifies the drive controller from which the virtual hard disk drives are to be retrieved.
 
 ```yaml
 Type: VMDriveController[]

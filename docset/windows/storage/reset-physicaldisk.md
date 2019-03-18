@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Reset-PhysicalDisk
+ms.reviewer:
 ms.assetid: 3ACC02DE-C41B-4730-A286-C15E0CCA1CB7
 ---
 
@@ -54,18 +55,20 @@ If you run **Reset-PhysicalDisk** on a disk that is not a part of a Storage pool
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```powershell
 PS C:\> Reset-PhysicalDisk -FriendlyName "PhysicalDisk5"
 ```
 
 This example resets the state of a specific physical disk.
 
 ### EXAMPLE 2
+```powershell
+$BadDisks = Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
+Foreach ($BadDisk in $BadDisks) 
+{
+  Reset-PhysicalDisk -UniqueId $BadDisk.UniqueId
+}
 ```
-PS C:\> $phydisk = (Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
-PS C:\> Reset-PhysicalDisk -FriendlyName $phydisk.FriendlyName
-```
-
 This example resets all of the unhealthy physical disks.
 
 ## PARAMETERS

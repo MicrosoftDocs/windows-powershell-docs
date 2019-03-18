@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 8ECE0D0C-1463-409D-BDE2-4325447FEC46
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AdfsEndpoint
+ms.reviewer:
 ---
 
 # Get-AdfsEndpoint
@@ -95,14 +96,14 @@ System.Uri[]
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.Endpoint
-	AddressPath           string
-	ClientCredentialType  string
-	Enabled               bool
-	FullUrl               uri
-	Protocol              string
-	Proxy                 bool
-	SecurityMode          string
-	Version               string
+AddressPath           string
+ClientCredentialType  string
+Enabled               bool
+FullUrl               uri
+Protocol              string
+Proxy                 bool
+SecurityMode          string
+Version               string
 
 ### Microsoft.IdentityServer.PowerShell.Resources.Endpoint
 This cmdlet returns class structure that represents the endpoints for the Federation Service.

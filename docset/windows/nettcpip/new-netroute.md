@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetRoute.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetRoute
+ms.reviewer:
 ms.assetid: DF770A5C-F4DF-46B6-A756-1C27EEF542DC
 ---
 
@@ -216,7 +217,7 @@ The acceptable values for this parameter are:
 
 - ActiveStore. Current routing information, used by the OS.
 When a computer reboots, information in this store is lost.
-- PersistentStore. Routing information in this store preserved across reboots.
+- PersistentStore. Cannot be used. Routing information in this store preserved across reboots.
 When a computer starts, it copies the saved settings from this store to the ActiveStore. 
 
 By default, a route is saved in both stores. Use this parameter only when you need to create a route in just the ActiveStore.

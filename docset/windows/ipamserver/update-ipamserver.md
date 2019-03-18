@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamServer.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Update-IpamServer
+ms.reviewer:
 ms.assetid: C40F44B0-433B-4A5A-AF5D-73219BEE3B58
 ---
 
@@ -36,13 +37,13 @@ An error occurs if there is no update available.
 
 As part of an IPAM server update, this cmdlet performs the following steps:
 
--  Applies IPAM schema updates.
-The cmdlet performs data and schema validation of the existing IPAM database, and returns an error if the validation fails.
-A log is generated on the server in the %SystemDrive%\Windows\System32\IPAM\logs folder.
-If you specify the *DeleteSystemCheckFailureRows* parameter, the cmdlet proceeds to automatically delete the error rows.
+- Applies IPAM schema updates.
+  The cmdlet performs data and schema validation of the existing IPAM database, and returns an error if the validation fails.
+  A log is generated on the server in the %SystemDrive%\Windows\System32\IPAM\logs folder.
+  If you specify the *DeleteSystemCheckFailureRows* parameter, the cmdlet proceeds to automatically delete the error rows.
 
 - Completes any required data format transformation.
-This will not result in any loss of existing data.
+  This will not result in any loss of existing data.
 
 - Applies changes in security groups and roles.
 

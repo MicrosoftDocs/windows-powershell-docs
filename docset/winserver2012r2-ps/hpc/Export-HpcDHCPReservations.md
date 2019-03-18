@@ -14,6 +14,9 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-HpcDHCPReservations
@@ -121,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies a name for the XML file in which you want to save the information about the DHCP reservations for the nodes, including the full or relative path to the file, if the **Export-HpcDCHPReservations** cmdlet should not save the file in the current directory.
+Specifies a name for the XML file in which you want to save the information about the DHCP reservations for the nodes, including the full or relative path to the file, if the **Export-HpcDHCPReservations** cmdlet should not save the file in the current directory.
 
 ```yaml
 Type: String

@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Set-VMNetworkAdapter
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -518,7 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticMacAddress
-Assigns a specific a MAC addresss to the virtual network adapter.
+Assigns a specific a MAC address to the virtual network adapter.
 
 ```yaml
 Type: String

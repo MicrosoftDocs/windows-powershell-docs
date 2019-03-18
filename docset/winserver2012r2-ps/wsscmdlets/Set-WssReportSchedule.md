@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssReportSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E8BFF5BE-36DF-4DDF-91A7-58EC2DB5B2FA
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssReportSchedule

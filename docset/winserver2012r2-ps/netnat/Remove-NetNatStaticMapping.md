@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetNatStaticMapping
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF312668-8260-4108-92E6-05F109666CE2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetNatStaticMapping

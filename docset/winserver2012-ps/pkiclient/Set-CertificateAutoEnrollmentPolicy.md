@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 37D54E2D-3003-4889-B8A6-78BFA3798342
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-CertificateAutoEnrollmentPolicy
@@ -64,7 +67,7 @@ PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreMa
 
 
 The concise version of the same example.
-PS C:\>Set-ACertificateutoEnrollmentPolicy -EnableAll -Context User
+PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
 ```
 
 This example performs the same task in two ways.

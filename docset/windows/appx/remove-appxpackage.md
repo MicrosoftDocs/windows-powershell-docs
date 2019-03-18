@@ -1,20 +1,21 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Remove-AppxPackage
+ms.reviewer:
 ---
 
 # Remove-AppxPackage
@@ -38,6 +39,8 @@ Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<Com
 ```
 Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+> [!NOTE] The `AllUsers` parameter requires Windows 10 Build 1709 or later.
+
 
 ## DESCRIPTION
 The **Remove-AppxPackage** cmdlet removes an app package from a user account.
@@ -60,7 +63,7 @@ This cmdlet removes the app package for all user accounts on the computer. This 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllUsersSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,7 +78,7 @@ Specifies an **AppxPackage** object or the full name of a package.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -87,13 +90,13 @@ Accept wildcard characters: False
 ### -PreserveApplicationData
 Specifies that the cmdlet preserves the application data during the package removal.
 The application data is available for later use. Note that this is only applicable
-for apps that are under development so this option can only be specified for apps 
+for apps that are under development so this option can only be specified for apps
 that are registered from file layout (Loose file registered).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveByPackageSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,16 +106,16 @@ Accept wildcard characters: False
 ```
 
 ### -User
-If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. The user name can be in one of these formats: 
-	- domain\user_name
-	- user_name@fqn.domain.tld
-	- user_name
-    - SID-string
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. The user name can be in one of these formats:
+- domain\user_name
+- user_name@fqn.domain.tld
+- user_name
+- SID-string
 
 ```yaml
 Type: String
 Parameter Sets: UserSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -185,4 +188,3 @@ An **AppxPackage** object that contain information, including the full name of t
 [Get-AppxLog](./Get-AppxLog.md)
 
 [Get-AppxLastError](./Get-AppxLastError.md)
-

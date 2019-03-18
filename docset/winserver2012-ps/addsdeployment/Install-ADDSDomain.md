@@ -3,6 +3,9 @@ external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Install-ADDSDomain
@@ -243,7 +246,7 @@ Accept wildcard characters: False
 
 ### -NewDomainName
 If the value set for **-DomainType** is set to "TreeDomain", this parameter can be used to specify the fully qualified domain name (FQDN) for the new domain tree (for example, "contoso.com").
-If the value set for **-DomainType** is set to "ChildDomain", this parameter can be used to specify a single label domain name for the child domain (for example, specify "corp" to make a new doman "corp.contoso.com" if the new domain is in the contoso.com domain tree).
+If the value set for **-DomainType** is set to "ChildDomain", this parameter can be used to specify a single label domain name for the child domain (for example, specify "corp" to make a new domain "corp.contoso.com" if the new domain is in the contoso.com domain tree).
 
 ```yaml
 Type: String

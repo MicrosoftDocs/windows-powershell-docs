@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 2017-05-19
 ms.prod: w10
 ms.technology: powershell-windows
@@ -12,12 +12,13 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Invoke-CommandInDesktopPackage
+ms.reviewer:
 ---
 
 # Invoke-CommandInDesktopPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Runs a command in the context of a specified app package. 
 
 ## SYNTAX
 
@@ -27,21 +28,23 @@ Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [-AppId] <String> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+**Invoke-CommandInDesktopPackage** will have a package token and identity. It's primarily designed to be used as a debugging utility. 
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Invoke an executable from app package
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Invoke-CommandInDesktopPackage -AppId "AppPackage1" -PackageFamilyName "29270sandstorm.AppPackage1_gah1vdar1nn7a" -Command "demo.exe"
 ```
 
-{{ Add example description here }}
+This command invokes the demo.exe that can be found in '29270sandstorm.AppPackage1_gah1vdar1nn7a' app package under the 'AppPackage1' Application element. 
 
 ## PARAMETERS
 
 ### -AppId
-{{Fill AppId Description}}
+AppId is the Application ID from the package manifest.
+    <Application Id="blah" ... />
+    </Application>
 
 ```yaml
 Type: String
@@ -56,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -Args
-{{Fill Args Description}}
+Optional arguments that should be passed to the Command (e.g. "/od")
 
 ```yaml
 Type: String
@@ -71,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Command
-{{Fill Command Description}}
+An executable to invoke (e.g. "cmd.exe")
 
 ```yaml
 Type: String
@@ -86,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageFamilyName
-{{Fill PackageFamilyName Description}}
+Family Name of the package. You can retrieve this by calling [Get-AppxPackage](./Get-AppxPackage.md).
 
 ```yaml
 Type: String
@@ -101,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-{{Fill PreventBreakaway Description}}
+Switch that causes the entire process tree to stay in the package context.
 
 ```yaml
 Type: SwitchParameter
@@ -128,4 +131,6 @@ System.Management.Automation.SwitchParameter
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-AppxPackage](./Get-AppxPackage.md)
 

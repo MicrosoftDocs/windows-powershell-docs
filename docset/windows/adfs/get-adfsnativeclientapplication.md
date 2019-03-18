@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 528740AC-B18F-4201-8178-1C1FFD51994A
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-AdfsNativeClientApplication
+ms.reviewer:
 ---
 
 # Get-AdfsNativeClientApplication
@@ -144,12 +145,12 @@ System.Uri[]
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.NativeClientApplication
-	ApplicationGroupIdentifier  string
-	Description                 string
-	Enabled                     bool
-	Identifier                  string
-	Name                        string
-	RedirectUri                 string[]
+ApplicationGroupIdentifier  string
+Description                 string
+Enabled                     bool
+Identifier                  string
+Name                        string
+RedirectUri                 string[]
 
 ## NOTES
 

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Unblock-SmbShareAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 38B5521D-45D2-4A23-92BF-86B5CF6D0A75
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Unblock-SmbShareAccess

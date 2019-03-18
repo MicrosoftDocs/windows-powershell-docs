@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SilComputerIdentity
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6D009E40-457B-4C6A-8572-8A9CC691B411
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SilComputerIdentity

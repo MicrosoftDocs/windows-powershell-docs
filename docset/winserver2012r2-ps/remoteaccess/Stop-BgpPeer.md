@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Stop-BgpPeer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66F31195-7E41-4594-9B57-A00C827CABBD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Stop-BgpPeer
@@ -53,7 +55,7 @@ This command gets all the peers by using the Get-BgpPeer cmdlet, and then passes
 The command stops the sessions for all the peers.
 This command does not specify the **Force** parameter, so it prompts the user for confirmation of each session to stop.
 
-### Example 3: Stop a routing session in a multitenant evironment
+### Example 3: Stop a routing session in a multitenant environment
 ```
 PS C:\> Stop-BgpPeer -Name "TenantSite22" -RoutingDomain "Rd001"
 Confirm

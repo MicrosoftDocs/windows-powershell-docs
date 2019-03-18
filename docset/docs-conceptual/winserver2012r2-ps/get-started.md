@@ -90,7 +90,7 @@ The table below also shows the latest published version of the Help for each mod
 | ServerMigration | [Server Migration Cmdlets](/powershell/module/servermigration) |
 | SMBShare | [SMB Share Cmdlets](/powershell/module/smbshare) |
 | SMBWitness | [SMB Witness Cmdlets](/powershell/module/smbwitness) |
-| SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfigura
+| SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfig) |
 | SoftwareInventoryLogging | [Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging) |
 | StartScreen | [Start Screen Configuration Cmdlets](/powershell/module/startscreen) |
 | Storage | [Storage Cmdlets](/powershell/module/stroage) |

@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 4B247B2D-FB03-48D2-BAC7-ACD366A7CC8E
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-ADUser
@@ -75,7 +78,7 @@ Description
 
 -----------
 
-Create a new user named 'GlenJohn' with a certicate imported from the file "export.cer".
+Create a new user named 'GlenJohn' with a certificate imported from the file "export.cer".
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
@@ -1257,7 +1260,7 @@ In AD DS environments, a default value for Path will be set in the following cas
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
 - If the cmdlet has a default path, this will be used.  For example: in New-ADUser, the Path parameter would default to the Users container.
--  If none of the previous cases apply, the default value of Path will be set to the default partition or naming context of the target domain.
+- If none of the previous cases apply, the default value of Path will be set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for Path will be set in the following cases:
 

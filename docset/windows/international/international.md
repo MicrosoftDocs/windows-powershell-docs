@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: International
 Module Guid: 561544E6-3A83-4D24-B140-78AD771EAF10
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390776
 Help Version: 5.0.0.1
 Locale: en-US
 title: International
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

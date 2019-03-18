@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-GPO
+ms.reviewer:
 ms.assetid: BFF99644-7AC6-40A0-97A0-48E161363338
 ---
 
@@ -99,7 +100,7 @@ WmiFilter        :
 This command creates a GPO named TestGPO, links it to the Marketing OU in the contoso.com domain, and grants the Marketing Admins security group permissions to edit the GPO.
 
 A GPO object is returned by the command, so you could continue to configure the new GPO by piping the output to other cmdlets.
-For example, you could set Registry preference items or registry-based policy settings by piping the output to Set-GPPrefRegistryValueor to Set-GPRegistryValue.
+For example, you could set Registry preference items or registry-based policy settings by piping the output to Set-GPPrefRegistryValue or to Set-GPRegistryValue.
 
 ## PARAMETERS
 

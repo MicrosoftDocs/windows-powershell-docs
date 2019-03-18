@@ -3,6 +3,9 @@ external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 00BC67FE-0042-4424-AC02-DD8843D82D96
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Initialize-Tpm

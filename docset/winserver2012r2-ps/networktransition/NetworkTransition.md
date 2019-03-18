@@ -7,13 +7,15 @@ Locale: en-US
 title: NetworkTransition
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: dc6139c2-39af-4426-b6b2-8e502cfccdef
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # NetworkTransition Module

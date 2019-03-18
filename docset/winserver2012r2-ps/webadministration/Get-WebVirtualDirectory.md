@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D5A72EDB-4E58-49A2-9EAE-4A3544B5FCB2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WebVirtualDirectory
@@ -31,7 +33,7 @@ The **Get-WebVirtualDirectory** cmdlet gets a list of the virtual directories on
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Getting a virtual directory --------------
+### Example 1: Getting a virtual directory
 ```
 IIS:\>Get-WebVirtualDirectory -Site 'Default Web Site' -Application "TestApp"
 ```

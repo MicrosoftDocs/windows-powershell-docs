@@ -6,6 +6,7 @@ Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Set-InsightsCapabilitySchedule
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: JasonGerend
@@ -172,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -DaysInterval
-Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capabiility every other day.
+Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capability every other day.
 
 ```yaml
 Type: UInt16

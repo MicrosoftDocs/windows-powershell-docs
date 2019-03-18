@@ -3,6 +3,9 @@ external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
 ms.assetid: CC4D5797-49C2-4842-94CE-7509EE977374
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-BpaModel

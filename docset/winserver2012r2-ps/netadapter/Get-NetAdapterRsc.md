@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterRsc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 61A489ED-2CCD-4155-9180-12EA10B3DB8F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterRsc

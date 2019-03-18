@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-RDPersonalVirtualDesktopAssignment
+ms.reviewer:
 ms.assetid: E1FDA538-4A2A-4B25-99D2-4846977505E5
 ---
 
@@ -44,7 +45,7 @@ This removal makes the virtual desktop available for another user.
 
 ### 1: Remove a personal virtual desktop assignment
 ```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -PersonalVirtualDesktop "PVD-12"
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
 ```
 
 This command removes a personal virtual desktop assignment.

@@ -2,6 +2,9 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 24F71EF7-BA39-4434-A1EE-E43FFFCB1319
 ---
 

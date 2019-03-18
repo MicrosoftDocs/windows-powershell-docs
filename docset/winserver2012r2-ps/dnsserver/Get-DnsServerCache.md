@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Get-DnsServerCache
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -28,7 +30,7 @@ Get-DnsServerCache [-ComputerName <String>] [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: MaxTTL, MaxNegativeTTL, MaxKBSize, EnablePollutionProtection, LockingPercent, StoreEmptyAuthenticationReponse.
+The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: MaxTTL, MaxNegativeTTL, MaxKBSize, EnablePollutionProtection, LockingPercent, StoreEmptyAuthenticationResponse.
 
 ## EXAMPLES
 

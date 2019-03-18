@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WBFileSpec
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B88533EF-4FCA-4EBE-98E9-C05D8AA2235F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WBFileSpec

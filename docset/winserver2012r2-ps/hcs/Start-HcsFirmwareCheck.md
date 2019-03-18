@@ -3,9 +3,11 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Start-HcsFirmwareCheck
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
@@ -149,10 +151,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.HCS.Management.Patching.HcsFirmwareCheckResult
 The HcsFirmwareCheckResult object has the following properties:
 
-- FirmwareStaus FirmwareStatus 
+- FirmwareStatus FirmwareStatus 
 - IEnumerable\<String\> MismatchComponents
 
-The FirmwareStaus enumeration has the following values:
+The FirmwareStatus enumeration has the following values:
 
 - UpToDate
 - SupportRequired

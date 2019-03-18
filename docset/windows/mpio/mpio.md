@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: MPIO
 Module Guid: 2FBFFABE-343D-4DB8-AD9E-A8943F50D096
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285760
 Help Version: 4.0.3.1
 Locale: en-US
 title: MPIO
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
@@ -21,7 +22,7 @@ ms.assetid: 1B4E2CDA-BA8A-47CE-8DA3-8D349D12DC38
 
 # MPIO Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Mulitpath I/O (MPIO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Multipath I/O (MPIO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## MPIO Cmdlets
 ### [Clear-MSDSMSupportedHW](./Clear-MSDSMSupportedHW.md)

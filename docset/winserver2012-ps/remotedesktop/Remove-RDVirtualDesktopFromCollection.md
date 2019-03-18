@@ -3,6 +3,9 @@ external help file:
 ms.assetid: FCB82045-2029-4874-BEEA-F0653C4B46B0
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-RDVirtualDesktopFromCollection

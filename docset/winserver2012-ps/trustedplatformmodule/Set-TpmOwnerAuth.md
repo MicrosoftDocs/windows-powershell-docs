@@ -3,6 +3,9 @@ external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 68D1BE7D-FA60-47F9-9D3F-FB123CA4944B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-TpmOwnerAuth

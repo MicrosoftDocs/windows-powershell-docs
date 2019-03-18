@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssClientBmrMediaGenerationJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 217AB508-9EF0-417F-8342-26619569F4C1
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssClientBmrMediaGenerationJob

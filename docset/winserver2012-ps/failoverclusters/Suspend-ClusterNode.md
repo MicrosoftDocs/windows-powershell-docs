@@ -58,7 +58,7 @@ This example pauses the node named node1 and moves the workloads from it to the 
 
 ### EXAMPLE 4
 ```
-PS C:\>Suspend-ClusterNode node1 -Drain -Whatif
+PS C:\>Suspend-ClusterNode node1 -Drain -WhatIf
 What if: Performing operation "Suspend-ClusterNode" on Target "node1".
 ```
 

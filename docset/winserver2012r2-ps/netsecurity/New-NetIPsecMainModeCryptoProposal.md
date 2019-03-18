@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetIPsecMainModeCryptoProposal
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BA2DC739-6357-41C1-8F85-6A1E488DBE6A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-NetIPsecMainModeCryptoProposal

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_BgpRouter_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-BgpRouter
+ms.reviewer:
 ms.assetid: D182CD2E-D27E-43BB-A451-5CE72554B0A9
 ---
 
@@ -34,7 +35,7 @@ The **Remove-BgpRouter** cmdlet removes BGP router routers.
 In a multitenant deployment, the cmdlet removes a BGP router for the routing domain or a tenant.
 In a non-multitenant deployment, the cmdlet removes the BGP router for the local computer.
 When you remove a BGP router, the BGP router can no longer read and distribute routing information between autonomous systems (AS).
-In addition, the other routers that added the router as a peer delete all the information learned from the router and reacalculate their routes accordingly.
+In addition, the other routers that added the router as a peer delete all the information learned from the router and recalculate their routes accordingly.
 
 ## EXAMPLES
 

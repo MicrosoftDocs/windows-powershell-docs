@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: kenwith
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: kenwith
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Groups
-Specifies an array of strings containing the names of Active Direcotry groups.
+Specifies an array of strings containing the names of Active Directory groups.
 
 ```yaml
 Type: String[]

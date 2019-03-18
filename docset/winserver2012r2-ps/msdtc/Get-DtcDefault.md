@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-DtcDefault
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52539594-92A8-4E49-B96D-C0FD19BC165D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-DtcDefault

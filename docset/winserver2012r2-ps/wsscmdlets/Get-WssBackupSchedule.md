@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssBackupSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72B9E0E4-F92B-419F-93C3-1B1FBD595E4D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssBackupSchedule

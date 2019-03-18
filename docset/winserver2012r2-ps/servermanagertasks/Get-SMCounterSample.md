@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SMCounterSample
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D508AE13-7584-402A-9F99-3EDD1F77EA95
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SMCounterSample

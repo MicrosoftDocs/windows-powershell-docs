@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADObject
+ms.reviewer:
 ms.assetid: F3677B16-138B-4BB7-A814-3F5789B8CA8C
 ---
 
@@ -316,8 +317,8 @@ This parameter can also get this object through the pipeline or you can set this
 Derived types, such as the following, are also accepted:
 
 - **Microsoft.ActiveDirectory.Management.ADGroup**
--  **Microsoft.ActiveDirectory.Management.ADUser**
--  **Microsoft.ActiveDirectory.Management.ADComputer**
+- **Microsoft.ActiveDirectory.Management.ADUser**
+- **Microsoft.ActiveDirectory.Management.ADComputer**
 - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
 - **Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy**
 - **Microsoft.ActiveDirectory.Management.ADDomain**
@@ -502,7 +503,7 @@ For example, if you want to replace the value 555-222-2222 with the values 555-2
 When you use the *Add*, *Replace*, *Clear*, and *Remove* parameters together, the operations are performed in the following order:
 
 - **Remove**
--  **Add**
+- **Add**
 - **Replace**
 - **Clear**
 

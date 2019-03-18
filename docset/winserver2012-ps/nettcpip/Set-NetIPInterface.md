@@ -2,6 +2,9 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3268460C-920A-4E06-9A45-4A2BFFD63E3C
 ---
 
@@ -297,9 +300,9 @@ This parameter value determines if an IP interface is configured to wake up a co
 By default, IP interface properties have this parameter value set to Disabled.
 The acceptable values for this parameter are:
 
- -- Enabled: IP Interface properties for interfaces that have DirecteMacWolPattern enabled. 
+ -- Enabled: IP Interface properties for interfaces that have DirectedMacWolPattern enabled. 
 
- -- Disabled: IP Interface properties for interfaces that have DirecteMacWolPattern disabled.
+ -- Disabled: IP Interface properties for interfaces that have DirectedMacWolPattern disabled.
 
 ```yaml
 Type: DirectedMacWolPattern
@@ -514,7 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -NeighborUnreachabilityDetection
-Modifies the neighbor unreachablility netection (NUD) property.
+Modifies the neighbor unreachablility detection (NUD) property.
 NUD is how nodes determine that a neighbor is no longer reachable.
 Default depends on type of interface.
 This parameter is described in RFC 2461http://go.microsoft.com/fwlink/p/?LinkId=84044.

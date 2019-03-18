@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetEventPacketCaptureProvider
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BF94EADD-2770-42F2-A28B-C03D1406A712
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetEventPacketCaptureProvider

@@ -3,6 +3,9 @@ external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 57CA5EDD-80DF-4FDD-AC2E-7BEA137969A4
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-IscsiVirtualDiskSnapshot
@@ -31,7 +34,7 @@ The **Set-IscsiVirtualDiskSnapshot** cmdlet sets the description for a snapshot.
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-IscsiVirtualDiskSnasphot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
+PS C:\> Set-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
 ```
 
 This example sets a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} to have the description before upgrade.

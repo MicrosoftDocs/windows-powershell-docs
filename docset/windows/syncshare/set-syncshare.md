@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-SyncShare
+ms.reviewer:
 ms.assetid: CB08AA46-CB10-40BF-976A-B930C2E98658
 ---
 

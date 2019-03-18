@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WebConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 96B02A59-C5B0-4E1E-B24E-2FF7098EBFCF
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WebConfiguration
@@ -40,7 +42,7 @@ Specify an element as a configuration section or an XPath query.
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Setting new Bindings bindings on an existing Web site --------------bindings
+### Example 1: Setting new bindings on an existing web site
 ```
 IIS:\>Set-WebConfiguration -Filter '/system.applicationHost/sites/site[@name=" DemoSite"]/bindings' -PSPath "IIS:\" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```

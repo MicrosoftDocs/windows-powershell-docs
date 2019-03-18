@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Sync-DnsServerZone
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -38,7 +40,7 @@ The persistent storage can be Active Directory® Domain Services or a file.
 PS C:\> Sync-DnsServerZone -Name "west02.contoso.com" -PassThru -Verbose
 ```
 
-This command synchronizes the contents of the zone named west02.conotoso.com.
+This command synchronizes the contents of the zone named west02.contoso.com.
 
 ## PARAMETERS
 

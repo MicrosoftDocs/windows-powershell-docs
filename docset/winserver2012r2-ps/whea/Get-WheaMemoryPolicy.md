@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WheaMemoryPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A9175E75-42E5-4E39-9DD5-8C37F7761214
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WheaMemoryPolicy

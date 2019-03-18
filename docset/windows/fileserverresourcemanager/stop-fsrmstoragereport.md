@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FsrmStorageReport.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-FsrmStorageReport
+ms.reviewer:
 ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
 ---
 
@@ -48,7 +49,7 @@ This cmdlet returns a success status in the following conditions:
 - The server is not running the report job. 
 
 - The server is currently canceling the report job. 
-- The server is running the report job and has started cancelation of the report job. 
+- The server is running the report job and has started cancellation of the report job. 
 - The server has removed the report job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a storage report job that the server is running or has queued.

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsClientConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BBF808FA-C081-4213-83BA-15FBEBF60A4C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NfsClientConfiguration

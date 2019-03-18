@@ -2,13 +2,16 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 6B0CD195-2EB7-4A54-B356-590E6ECAF2FE
 ---
 
 # Remove-OBPolicy
 
 ## SYNOPSIS
-Removes the currently set backup policy (OBPolicy object).
+Removes or pauses the currently set backup policy (OBPolicy object).
 
 ## SYNTAX
 
@@ -17,10 +20,9 @@ Remove-OBPolicy [-Policy] <CBPolicy> [-DeleteBackup] [-Confirm] [-WhatIf]
 ```
 
 ## DESCRIPTION
-The **Remove-OBPolicy** cmdlet removes the currently set backup policy (OBPolicy object).
-This stops the existing scheduled daily backups.
-If the **DeleteBackup** parameter is specified, then any data backed up according to this policy on the mob_name_1 server is deleted.
-If the **DeleteBackup** parameter is not specified, the existing backups are retained in accordance with the retention policy in effect when the backup was created.
+The **Remove-OBPolicy** cmdlet removes or pauses the currently set backup policy (OBPolicy object). 
+If the **DeleteBackup** parameter is specified, then any data backed up according to this policy on the mob_name_1 server is deleted and any existing schedule for backups is deleted as well. 
+If the **DeleteBackup** parameter is not specified, the existing backups are retained in accordance with the retention policy in effect when the backup was created, and the existing schedule for backups is paused. 
 
 This cmdlet supports the *WhatIf* and the *Confirm* parameters.
 The cmdlet prompts the user for confirmation by default.

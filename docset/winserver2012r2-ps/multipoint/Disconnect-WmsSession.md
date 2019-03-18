@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Disconnect-WmsSession

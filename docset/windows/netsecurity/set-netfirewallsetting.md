@@ -237,7 +237,7 @@ A typical firewall on the FTP server would block this new incoming data connecti
 When this parameter is True, the firewall examines the PORT and PASV requests for these other port numbers and then allows the corresponding data connection to the port number that was requested. 
 - True: The firewall tracks the port numbers specified in PORT command requests and in the responses to PASV requests, and then allows the incoming FTP data traffic entering on the requested port number. 
 - False: The firewall does not track outgoing PORT commands or PASV responses, and so incoming data connections on the PORT or PASV requested port is blocked as an unsolicited incoming connection. 
- - NotConfigured: Valid only when configuring a GPO.
+- NotConfigured: Valid only when configuring a GPO.
 Removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 The default value is False. 
 The default value when managing a computer running firstref_vista or firstref_client_7 is True. 

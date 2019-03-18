@@ -162,22 +162,22 @@ This cmdlet returns object(s) that contains the following fields:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a virtual/tenant gateway's network connection). 
- - Network connection type (IPSec, GRE, L3).
- - Outbound bandwidth capacity. 
- - Inbound bandwidth capacity. 
- - Network connection (IPSec/GRE/L3) specific configuration details. 
- - Array of local IP addresses.
- - Array of remote peer IP addresses.
- - Array of customer routes, both static and dynamically learned. 
- - Connection status (enabled/disabled). 
- - Connection state (connected/disconnected). 
- - Connection up-time. 
- - Connection statistics.
- - Connection error reason.
- - Connection unreachability reason.
- - Source IP address. 
- - Remote destination IP address.
- - Reference to the gateway virtual machine where the connection is configured.
+  - Network connection type (IPSec, GRE, L3).
+  - Outbound bandwidth capacity. 
+  - Inbound bandwidth capacity. 
+  - Network connection (IPSec/GRE/L3) specific configuration details. 
+  - Array of local IP addresses.
+  - Array of remote peer IP addresses.
+  - Array of customer routes, both static and dynamically learned. 
+  - Connection status (enabled/disabled). 
+  - Connection state (connected/disconnected). 
+  - Connection up-time. 
+  - Connection statistics.
+  - Connection error reason.
+  - Connection unreachability reason.
+  - Source IP address. 
+  - Remote destination IP address.
+  - Reference to the gateway virtual machine where the connection is configured.
 
 ## NOTES
 

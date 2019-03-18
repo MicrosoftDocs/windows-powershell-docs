@@ -180,13 +180,13 @@ This cmdlet returns object(s) that contain the following fields:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a virtual/tenant gateway's BGP router): 
- - Provisioning state.
- - BGP router identifier.
- - BGP router's local IP address(es). 
- - BGP router's extended AS number.
- - Router connection state. 
- - Whether the BGP peer is automatically generated. 
- - Array of BGP peers configured on this router.
+  - Provisioning state.
+  - BGP router identifier.
+  - BGP router's local IP address(es). 
+  - BGP router's extended AS number.
+  - Router connection state. 
+  - Whether the BGP peer is automatically generated. 
+  - Array of BGP peers configured on this router.
 
 ## NOTES
 

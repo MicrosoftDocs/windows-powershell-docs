@@ -169,18 +169,18 @@ This cmdlet returns one or more objects that contain the following fields:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a gateway virtual machine): 
- - Gateway virtual machine type.
- - Health state.
- - Gateway virtual machine role/state (active/redundant). 
- - Total capacity.
- - Available capacity.
- - Array of external source IP addresses.
- - Reference to the corresponding virtual server.
- - References to the associated internal and external network interfaces. 
- - Reference to the corresponding gateway pool.
- - Array of references to the virtual gateways configured on the gateway virtual machine.
- - PA space Border Gateway Protocol (BGP) configuration of the gateway virtual machine.
- - Array of connections.
+  - Gateway virtual machine type.
+  - Health state.
+  - Gateway virtual machine role/state (active/redundant). 
+  - Total capacity.
+  - Available capacity.
+  - Array of external source IP addresses.
+  - Reference to the corresponding virtual server.
+  - References to the associated internal and external network interfaces. 
+  - Reference to the corresponding gateway pool.
+  - Array of references to the virtual gateways configured on the gateway virtual machine.
+  - PA space Border Gateway Protocol (BGP) configuration of the gateway virtual machine.
+  - Array of connections.
 
 ## NOTES
 

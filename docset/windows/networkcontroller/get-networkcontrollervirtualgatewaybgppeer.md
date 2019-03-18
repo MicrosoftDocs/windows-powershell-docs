@@ -195,14 +195,14 @@ This cmdlet returns object(s) that contain the following fields:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a virtual/tenant gateway's BGP peer): 
- - Provisioning state.
- - Peer BGP router IP address.
- - Peer BGP router autonomous system (AS) number.
- - Peer BGP router extended AS number.
- - Peer connection state.
- - Connectivity statistics.
- - Whether the BGP peer is automatically generated. 
- - Array of BGP routing policy maps applied to the peers in ingress/egress direction.
+  - Provisioning state.
+  - Peer BGP router IP address.
+  - Peer BGP router autonomous system (AS) number.
+  - Peer BGP router extended AS number.
+  - Peer connection state.
+  - Connectivity statistics.
+  - Whether the BGP peer is automatically generated. 
+  - Array of BGP routing policy maps applied to the peers in ingress/egress direction.
 
 ## NOTES
 

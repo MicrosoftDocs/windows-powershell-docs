@@ -175,13 +175,13 @@ This cmdlet gets the following gateway pool parameters:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a gateway pool): 
- - Gateway pool type (for example, All, S2sIpSec, S2sGre). 
- - Reference to the public IP addresses for IPSec connections.
- - Reference to the Generic Routing Encapsulation (GRE) VIP logical subnet. 
- - Array of references to the gateway virtual machines in the pool.
- - Count of redundant gateway virtual machines.
- - Gateway virtual machine capacity in the pool.
- - Array of references to the virtual gateways configured in the pool.
+  - Gateway pool type (for example, All, S2sIpSec, S2sGre). 
+  - Reference to the public IP addresses for IPSec connections.
+  - Reference to the Generic Routing Encapsulation (GRE) VIP logical subnet. 
+  - Array of references to the gateway virtual machines in the pool.
+  - Count of redundant gateway virtual machines.
+  - Gateway virtual machine capacity in the pool.
+  - Array of references to the virtual gateways configured in the pool.
 
 ## NOTES
 

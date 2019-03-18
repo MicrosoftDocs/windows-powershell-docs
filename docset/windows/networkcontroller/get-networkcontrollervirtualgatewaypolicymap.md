@@ -163,11 +163,11 @@ This cmdlet returns object(s) that contain the following fields:
 - Resource metadata.
 - Resource ID. 
 - Properties of the resource (a virtual/tenant gateway's BGP router):
- - Provisioning state. 
- - List of policy map entries.
+  - Provisioning state. 
+  - List of policy map entries.
 Each entry has the policy type, list of match criteria, and list of set actions.
- - List of resource references to the BGP peers that have this policy map applied in ingress.
- - List of resource references to the BGP peers that have this policy map applied in egress.
+- List of resource references to the BGP peers that have this policy map applied in ingress.
+- List of resource references to the BGP peers that have this policy map applied in egress.
 
 ## NOTES
 

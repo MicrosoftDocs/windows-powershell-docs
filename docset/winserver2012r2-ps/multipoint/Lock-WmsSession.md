@@ -33,18 +33,15 @@ You can specify a message to be displayed on the user's screen.
 
 ## EXAMPLES
 
-### Example
+### Example 1:
 ```
-PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("Your station is locked")) | Write-OutputWQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=PS C:\> Lock-WmsSession -SessionId 3 -LockMessage WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
+PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("Your station is locked")) | Write-Output WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
+
+PS C:\> Lock-WmsSession -SessionId 3 -LockMessage WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
 No output.
 ```
 
 The station is locked, and the screen shows the message, "Your station is locked".
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 

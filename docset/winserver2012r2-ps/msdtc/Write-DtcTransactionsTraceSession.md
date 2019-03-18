@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Write-DtcTransactionsTraceSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1238FF18-E57F-4156-8432-FA2CFE5BA5A9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Write-DtcTransactionsTraceSession

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-MSMQCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 02BEFEEE-443C-4A15-AA58-4497B9C344A2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-MsmqCertificate

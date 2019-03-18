@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 7172BC57-F26A-4132-AB0D-87DBCBAADAA9
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Update-ClusterIPResource

@@ -1,6 +1,9 @@
 ---
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 ms.assetid: CC431359-C693-42CB-9D09-49D886FA8255
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 online version: 
 schema: 2.0.0
 ---

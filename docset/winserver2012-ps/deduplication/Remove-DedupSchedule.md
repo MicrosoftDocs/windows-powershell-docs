@@ -3,6 +3,9 @@ external help file: Dedup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: ED2C90F6-5605-4041-93CD-CF179D010631
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DedupSchedule

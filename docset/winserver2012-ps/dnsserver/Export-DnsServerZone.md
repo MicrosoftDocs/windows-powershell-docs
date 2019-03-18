@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: F50E80E8-B275-484D-895E-7ADB02A9C15B
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-DnsServerZone

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsStatistics
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E1C01056-F069-4160-8AF9-F25046671F31
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NfsStatistics

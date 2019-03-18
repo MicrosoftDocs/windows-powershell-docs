@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NpsRadiusClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DA52B73-64A9-42E7-9316-371E09E2348A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NpsRadiusClient

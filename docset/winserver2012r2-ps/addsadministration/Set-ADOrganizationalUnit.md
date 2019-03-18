@@ -119,7 +119,7 @@ To modify an object property, you must use the Lightweight Directory Access Prot
 You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...} `
+`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
 When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the operations are performed in the following order:
 

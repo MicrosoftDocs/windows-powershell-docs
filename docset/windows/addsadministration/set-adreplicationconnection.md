@@ -350,7 +350,7 @@ To specify the replication schedule:
 
     `$Schedule.ResetSchedule();`
 
-`$Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");`
+    `$Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");`
 
 3. Using the Active Directory schedule object, set the replication schedule of the connection.
 

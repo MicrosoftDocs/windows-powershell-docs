@@ -84,7 +84,7 @@ This example displays the SR-IOV properties for network adapter named Ethernet 2
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-NetAdpaterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
+PS C:\>Get-NetAdapterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
 ```
 
 This example displays the SR-IOV properties for the network adapter with the interface description Contoso 12345 Gigabit Network Device.

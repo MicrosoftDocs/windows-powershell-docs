@@ -1183,7 +1183,7 @@ Accept wildcard characters: False
 Specifies the number of heartbeats a compute node can miss before the job scheduler declares the node unreachable.
 A compute node misses a heartbeat if there is no reply from the health probes.
 
-Before HPC Pack 2012 with Service Pack 1 (SP1), the *InactivtyCount* parameter applies to both on-premises compute nodes and Azure nodes.
+Before HPC Pack 2012 with Service Pack 1 (SP1), the *InactivityCount* parameter applies to both on-premises compute nodes and Azure nodes.
 Starting with HPC Pack 2012 with SP1, the *InactivityCount* parameter applies only to on-premises compute nodes.
 The *InactivityCountAzure* parameter is introduced to configure Azure nodes separately.
 

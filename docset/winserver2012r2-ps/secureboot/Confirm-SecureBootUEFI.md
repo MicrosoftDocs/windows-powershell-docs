@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Confirm-SecureBootUEFI
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 32BF5E0D-3213-4479-9C55-76C94E6051C4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Confirm-SecureBootUEFI

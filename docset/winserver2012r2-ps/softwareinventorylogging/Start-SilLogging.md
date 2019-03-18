@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-SilLogging
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A8C11D91-7344-4B5C-BA21-01E41D9B859E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-SilLogging

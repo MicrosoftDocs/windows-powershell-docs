@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0EEBA53F-6468-485F-A680-49260B4C83F0
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-VirtualDisk

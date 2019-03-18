@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Initialize-Disk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E5369347-7EE0-4CB7-A063-CF1F355D095E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Initialize-Disk

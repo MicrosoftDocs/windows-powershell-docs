@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Move-SmbWitnessClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0BC19C0C-F17B-4C1D-AC3F-B4EAF5AF61A3
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Move-SmbWitnessClient

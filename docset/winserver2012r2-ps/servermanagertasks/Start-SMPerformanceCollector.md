@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-SMPerformanceCollector
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9B5F34FA-7DE4-427B-AC32-EA0EF142CAF1
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-SMPerformanceCollector

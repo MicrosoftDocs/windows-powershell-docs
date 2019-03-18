@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SmbMultichannelConnection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8BD99095-AB93-4A86-9BCE-9CFE31C2AFAB
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SmbMultichannelConnection

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Mount-DiskImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E10B4E05-1D98-4EAA-A6BE-2D3F4A885746
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Mount-DiskImage
@@ -43,8 +45,8 @@ If the file is already mounted, then the cmdlet will display the following error
  -- `"The process cannot access the file because it is being used by another process."`
 
 To mount a VHD file, administrator privileges is required.
-Administrator privileges are not needed to mount an ISO file on Windows® 8.
-On Windows Server® 2012, only an administrator is allowed to mount or eject an ISO file.
+Administrator privileges are not needed to mount an ISO file on Windowsï¿½ 8.
+On Windows Serverï¿½ 2012, only an administrator is allowed to mount or eject an ISO file.
 
 To create and mount a VHD on a computer running Hyper-V, use the New-VHD and Mount-VHD cmdlets in the Hyper-V module (which is included in Windows 8 and Windows Server 2012 but not enabled by default).
 Alternatively, open Disk Management and then choose Create VHD from the Action menu.
@@ -207,7 +209,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShellï¿½ calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

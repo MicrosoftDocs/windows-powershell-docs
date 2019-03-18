@@ -149,10 +149,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.HCS.Management.Patching.HcsFirmwareCheckResult
 The HcsFirmwareCheckResult object has the following properties:
 
-- FirmwareStaus FirmwareStatus 
+- FirmwareStatus FirmwareStatus 
 - IEnumerable\<String\> MismatchComponents
 
-The FirmwareStaus enumeration has the following values:
+The FirmwareStatus enumeration has the following values:
 
 - UpToDate
 - SupportRequired

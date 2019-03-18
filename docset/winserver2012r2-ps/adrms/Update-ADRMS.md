@@ -4,6 +4,7 @@ Module Name: ADRMS
 online version: 
 schema: 2.0.0
 title: Update-ADRMS
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

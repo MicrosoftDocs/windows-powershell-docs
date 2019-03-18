@@ -4,6 +4,7 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Restore-CARoleService
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -4,6 +4,7 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Update-AdfsRelyingPartyTrust
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

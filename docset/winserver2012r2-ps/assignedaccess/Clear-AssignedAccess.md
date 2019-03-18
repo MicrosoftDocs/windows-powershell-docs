@@ -4,6 +4,7 @@ Module Name: AssignedAccess
 online version: 
 schema: 2.0.0
 title: Clear-AssignedAccess
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

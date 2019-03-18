@@ -4,6 +4,7 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Install-ADDSDomain
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -4,6 +4,7 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Get-CATemplate
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -4,6 +4,7 @@ Module Name: AppBackgroundTask
 online version: 
 schema: 2.0.0
 title: Set-AppBackgroundTaskResourcePolicy
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

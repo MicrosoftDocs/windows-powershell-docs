@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=286813
 Help Version: 4.0.3.0
 Locale: en-US
 title: AppBackgroundTask
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

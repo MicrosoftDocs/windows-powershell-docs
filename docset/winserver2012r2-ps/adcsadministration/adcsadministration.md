@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285732
 Help Version: 4.0.3.0
 Locale: en-US
 title: ADCSAdministration
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

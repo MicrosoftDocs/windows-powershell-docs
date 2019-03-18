@@ -4,6 +4,7 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Get-RmsEncryptedIL
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

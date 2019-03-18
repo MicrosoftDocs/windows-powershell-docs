@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285736
 Help Version: 4.0.4.0
 Locale: en-US
 title: AppX
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285540
 Help Version: 4.0.2.0
 Locale: en-US
 title: AppLocker
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
 Help Version: 4.0.3.0
 Locale: en-US
 title: ADDSDeployment
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -4,6 +4,7 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADComputer
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

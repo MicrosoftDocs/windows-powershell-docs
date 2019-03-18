@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
 Help Version: 4.0.7.0
 Locale: en-US
 title: ActiveDirectory
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

@@ -4,6 +4,7 @@ Module Name: Appx
 online version: 
 schema: 2.0.0
 title: Remove-AppxPackage
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
 author: brianlic

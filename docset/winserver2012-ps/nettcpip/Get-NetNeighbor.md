@@ -2,6 +2,9 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: DD4AE4F7-667A-4F10-ACC5-086B7B1D9E3B
 ---
 

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-StorageSpacesMpioSupport
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5298113-A139-4CFB-85BC-91038FF74E7B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-StorageSpacesMpioSupport

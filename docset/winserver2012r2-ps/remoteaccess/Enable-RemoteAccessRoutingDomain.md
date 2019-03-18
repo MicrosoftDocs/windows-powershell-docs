@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-RemoteAccessRoutingDomain
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 45A60B09-63C0-4170-8DB2-11A2B6024F69
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-RemoteAccessRoutingDomain

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssBackupSystemRecovery
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5043B28-1212-4C0F-802C-E26EBECD8576
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WssBackupSystemRecovery

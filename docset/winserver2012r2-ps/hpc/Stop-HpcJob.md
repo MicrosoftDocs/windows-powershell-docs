@@ -1,5 +1,5 @@
 ---
-author:
+author: kenwith
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182872
 schema: 2.0.0
 title: Stop-HpcJob
 ms.assetid: 1C71E2EF-0A23-42EC-86F1-9549FE3FF42A
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Stop-HpcJob

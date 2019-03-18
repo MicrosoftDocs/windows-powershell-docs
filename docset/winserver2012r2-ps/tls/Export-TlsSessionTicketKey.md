@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Export-TlsSessionTicketKey
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E560AA28-2179-4899-B429-727D9AB17FD1
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Export-TlsSessionTicketKey

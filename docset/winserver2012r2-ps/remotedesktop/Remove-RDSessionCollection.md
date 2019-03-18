@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-RDSessionCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68EB435A-53DA-4A71-B6CC-C6F8BDC80658
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-RDSessionCollection

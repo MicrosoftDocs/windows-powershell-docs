@@ -7,13 +7,15 @@ Locale: en-US
 title: PKIClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: de298728-d0ea-41e7-adff-7be820241f67
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # PKIClient Module

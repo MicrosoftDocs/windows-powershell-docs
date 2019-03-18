@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-TpmAutoProvisioning
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 20939446-FC0F-44A7-901E-365868E7BDA9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-TpmAutoProvisioning

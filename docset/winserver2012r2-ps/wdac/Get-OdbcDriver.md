@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-OdbcDriver
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 00890D77-4875-4EA6-A243-D78479DE8541
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-OdbcDriver

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Join-DtcDiagnosticResourceManager
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68A0664C-705E-48D4-8A80-F036FA000ECE
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Join-DtcDiagnosticResourceManager

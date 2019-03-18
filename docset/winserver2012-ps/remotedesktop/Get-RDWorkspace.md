@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 90CAD965-2E03-4472-B5CE-CA541312882A
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDWorkspace

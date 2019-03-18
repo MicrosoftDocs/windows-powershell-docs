@@ -2,6 +2,9 @@
 external help file: ServerMig_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D8AD4455-C5F4-4EEB-9C81-6F6B5E3A2DC3
 ---
 

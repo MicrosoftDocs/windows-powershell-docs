@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restart-NetAdapter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5308BB55-9BF4-4A3F-A948-D4BCECD6860A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Restart-NetAdapter

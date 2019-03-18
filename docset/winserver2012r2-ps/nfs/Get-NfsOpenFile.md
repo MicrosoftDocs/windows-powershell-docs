@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsOpenFile
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8B6D787-7615-4DF0-A7E9-90311AA2BAAD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NfsOpenFile

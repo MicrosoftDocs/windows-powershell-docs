@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 36DA4B9D-062C-4A8B-8B05-64E17F8EFC72
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Grant-RDOUAccess

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssMediaStreamingVideoQuality
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1939D04F-DA24-4122-AAFC-0A060B8B76D5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssMediaStreamingVideoQuality

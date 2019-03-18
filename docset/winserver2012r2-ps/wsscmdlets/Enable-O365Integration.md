@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-O365Integration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 61898A41-878C-4297-86C3-84CDE7A098C4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-O365Integration

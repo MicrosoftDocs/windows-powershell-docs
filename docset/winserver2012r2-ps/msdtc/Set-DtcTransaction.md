@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcTransaction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BA7E24DE-F643-43A0-8F61-60AA7ACF6A1E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DtcTransaction

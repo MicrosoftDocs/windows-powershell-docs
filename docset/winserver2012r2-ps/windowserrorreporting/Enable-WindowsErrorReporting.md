@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-WindowsErrorReporting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9A65367-A3AC-4220-BCE2-F5F5A49E6324
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-WindowsErrorReporting

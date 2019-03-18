@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 156B1FE2-0A43-4198-8412-1D5D56CD689B
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-RDVirtualDesktopADMachineAccountReuse

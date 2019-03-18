@@ -2,6 +2,9 @@
 external help file: NetConnect_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: AD6DD8E8-6C58-456B-8C05-43F59567141F
 ---
 

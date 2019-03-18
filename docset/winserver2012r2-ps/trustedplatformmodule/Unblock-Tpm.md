@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Unblock-Tpm
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36DA2C6D-E2FC-416B-9C5D-F91BCE059CA3
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Unblock-Tpm

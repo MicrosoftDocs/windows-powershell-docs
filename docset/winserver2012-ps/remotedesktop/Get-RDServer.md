@@ -3,6 +3,9 @@ external help file:
 ms.assetid: F059BDC6-53C4-487E-AD84-63DA0E26489D
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDServer

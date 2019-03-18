@@ -3,6 +3,9 @@ external help file:
 ms.assetid: AF2621F0-E490-45AE-A89C-481B1920C166
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDCertificate

@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285744
 Help Version: 4.0.9.0
 Locale: en-US
 title: DnsServer
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

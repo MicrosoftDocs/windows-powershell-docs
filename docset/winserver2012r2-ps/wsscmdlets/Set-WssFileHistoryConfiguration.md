@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssFileHistoryConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 58E1F391-05C4-44EC-9872-27A9EE15DBAD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssFileHistoryConfiguration

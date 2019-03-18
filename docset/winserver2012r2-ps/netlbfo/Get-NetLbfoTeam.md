@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetLbfoTeam
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D6846F54-4E3C-491D-8144-33EDFBB0389B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetLbfoTeam

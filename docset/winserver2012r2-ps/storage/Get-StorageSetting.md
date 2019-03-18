@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-StorageSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-StorageSetting

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssMsoSharePointLibrary
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD3E7662-A7E9-470D-A4C6-5B1D4383D7C2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssMsoSharePointLibrary

@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 7FF9BC8D-6EF3-478F-8C74-92329A29C46D
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-RDPersonalVirtualDesktopAssignment

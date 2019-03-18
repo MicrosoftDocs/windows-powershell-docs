@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsClient-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
 ms.assetid: 0C3CC6DA-B610-4F5A-A88C-B0322B4814DE
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Grant-HgsKeyProtectorAccess
+ms.reviewer:
 ---
 
 # Grant-HgsKeyProtectorAccess

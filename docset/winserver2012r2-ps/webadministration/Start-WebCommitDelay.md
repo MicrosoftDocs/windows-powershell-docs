@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-WebCommitDelay
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C584F5BD-B461-4210-B4B0-99B7F2EA2E90
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-WebCommitDelay

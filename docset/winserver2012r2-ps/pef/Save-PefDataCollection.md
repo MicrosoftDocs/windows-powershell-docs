@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Save-PefDataCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB24050B-F2FE-49E4-8E83-888D0E9D4A6F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Save-PefDataCollection

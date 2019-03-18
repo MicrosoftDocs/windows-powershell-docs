@@ -3,6 +3,9 @@ external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 76012F58-0AE8-4FFD-9201-45B4FF6214C9
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-BCCachePackage

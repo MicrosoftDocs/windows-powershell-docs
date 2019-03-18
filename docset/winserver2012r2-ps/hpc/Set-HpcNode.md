@@ -225,7 +225,7 @@ Valid values are:
 - BrokerNode
 - WorkstationNode
 
-You muset take a node offline before you can change the role of the node.
+You must take a node offline before you can change the role of the node.
 Use the Set-HpcNodeState cmdlet to take nodes offline.
 
 ```yaml

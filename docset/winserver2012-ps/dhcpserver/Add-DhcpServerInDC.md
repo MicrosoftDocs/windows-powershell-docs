@@ -36,22 +36,19 @@ The trigger for authorization check will be done even if the addition of compute
 The following warning will be displayed if the computer running the DHCP server service is already authorized and the trigger for the server authorization check succeeded: 
 
  - `The DHCP server is already authorized in Active Directory.
-The authorization check on the DHCP server has been initiated.
-`
+The authorization check on the DHCP server has been initiated.`
 
 The following warning will be displayed if the computer running the DHCP server service is already authorized, but the trigger for the server authorization check failed: 
 
  - `The DHCP server is already authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
 The following warning will be displayed if the addition of the computer running the DHCP server service in AD succeeded, but the trigger for the server authorization check failed: 
 
  - `The DHCP server has been successfully authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
 If the addition of computer running the DHCP server service to AD fails with an error other than object_already_exists_error, then an error is returned and authorization check on the server is not triggered.
 

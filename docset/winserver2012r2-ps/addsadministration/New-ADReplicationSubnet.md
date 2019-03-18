@@ -205,7 +205,7 @@ To specify a single value for an attribute:
 
 To specify multiple values for an attribute:
 
-`-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...} `
+`-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}`
 
 You can specify values for more than one attribute by using semicolons to separate attributes.
 The following syntax shows how to set values for multiple attributes:

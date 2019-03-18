@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 925ABE4D-DB6B-40C2-8AA1-0DCCAA0D6CE3
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DnsServerGlobalQueryBlockList

@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 623236C1-00B9-4F14-B98C-3751126CC688
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-DnsServerPrimaryZone

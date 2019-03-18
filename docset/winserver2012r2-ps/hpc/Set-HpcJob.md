@@ -1015,7 +1015,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - RemoveExcludedNodes
 - NotifyOnCompletion
 - Progress
-- ProgessMessage
+- ProgressMessage
 - JobEnv
 
 

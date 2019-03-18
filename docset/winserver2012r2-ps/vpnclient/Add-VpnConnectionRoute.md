@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-VpnConnectionRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8452B3A-29FD-4775-97BE-A53210E7AF48
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-VpnConnectionRoute

@@ -127,12 +127,9 @@ Accept wildcard characters: False
 Specifies the policy for the files that the automatic data integrity scanner scrubs.
 The acceptable values for this parameter are:
 
-- 0.
-Off: No files are scrubbed.
-- 1.
-Integrity Streams: Only files with integrity streams are scrubbed.
-- 2.
-All: All files are scrubbed.
+- Off: No files are scrubbed.
+- Integrity Streams: Only files with integrity streams are scrubbed.
+- All: All files are scrubbed.
 
 ```yaml
 Type: ScrubPolicy

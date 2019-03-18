@@ -46,9 +46,9 @@ It does not modify existing Registry preference items.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
+- You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
 
---You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
+- You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
 
 ## EXAMPLES
 

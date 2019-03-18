@@ -526,25 +526,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerDnsSecZoneSetting
 The DnsServerDnsSecZoneSetting object contains the following fields:
 
---DenialOfExistence
---DistributeTrustAnchor
---DnsKeyRecordSetTtl
---DSRecordGenerationAlgorithm
---DSRecordSetTtl
---EnableRfc5011KeyRollover
---IsKeyMasterServer
---KeyMasterServer
---KeyMasterStatus
---NSec3HashAlgorithm
---NSec3Iterations
---NSec3OptOut
---NSec3RandomSaltLength
---NSec3UserSalt
---ParentHasSecureDelegation
---PropagationTime
---SecureDelegationPollingPeriod
---SignatureInceptionOffset
---ZoneName
+- DenialOfExistence
+- DistributeTrustAnchor
+- DnsKeyRecordSetTtl
+- DSRecordGenerationAlgorithm
+- DSRecordSetTtl
+- EnableRfc5011KeyRollover
+- IsKeyMasterServer
+- KeyMasterServer
+- KeyMasterStatus
+- NSec3HashAlgorithm
+- NSec3Iterations
+- NSec3OptOut
+- NSec3RandomSaltLength
+- NSec3UserSalt
+- ParentHasSecureDelegation
+- PropagationTime
+- SecureDelegationPollingPeriod
+- SignatureInceptionOffset
+- ZoneName
 
 ## NOTES
 

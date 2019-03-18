@@ -79,7 +79,7 @@ PS C:\> $A = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
 This command creates a customized EAP configuration object and stores it in the variable named **$A**.
 The EAP configuration object is customized by specifying the following parameters: 
 
---The **Tls** parameter, which indicates that this configuration object uses EAP-TLS
+- The **Tls** parameter, which indicates that this configuration object uses EAP-TLS
 - The **VerifyServerIdentity** parameter, which indicates that the identity of the server to which the client connects is validated
 - The **UserCertificate** parameter, which indicates that the EAP-TLS authentication method uses a user certificate.
 

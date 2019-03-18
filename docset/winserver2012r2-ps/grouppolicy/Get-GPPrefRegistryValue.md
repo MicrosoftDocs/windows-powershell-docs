@@ -196,9 +196,9 @@ Any of these hives can be specified for Registry preference items in both Comput
 
 The Key parameter can be specified with or without the ValueName parameter:
 
---If the ValueName parameter is specified, all Registry preference items that configure the registry value are retrieved.
+- If the ValueName parameter is specified, all Registry preference items that configure the registry value are retrieved.
 
---If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are retrieved.
+- If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are retrieved.
 
 You can also refer to the Key parameter by its built-in alias, "FullKeyPath".
 For more information, see about_Aliases.

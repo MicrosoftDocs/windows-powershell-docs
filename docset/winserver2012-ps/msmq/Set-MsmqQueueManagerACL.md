@@ -77,7 +77,7 @@ The acceptable values for this parameter are:
 - CreateQueue: Create a queue with the specified queue manager. 
 - Delete: Delete queues of the specified queue manager. 
 - DeleteChildObjects: Delete child objects from the specified queue manager. 
---FullControl: Full control of the specified queue manager. 
+- FullControl: Full control of the specified queue manager. 
 - GetPermissions: Get the permissions of the specified queue manager. 
 - GetProperties: Get the properties of the specified queue manager. 
 - ListContent: List content stored in the queues of the specified queue manager. 

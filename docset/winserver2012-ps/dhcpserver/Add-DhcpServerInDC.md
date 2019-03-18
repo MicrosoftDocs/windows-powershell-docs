@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: AC82E069-C63B-47A7-BDC3-35589830C119
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-DhcpServerInDC

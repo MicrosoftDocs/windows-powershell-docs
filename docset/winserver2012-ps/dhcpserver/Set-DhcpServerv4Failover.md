@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: E7BD1B54-7B45-4AD7-8944-ECCBB7043AD3
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DhcpServerv4Failover

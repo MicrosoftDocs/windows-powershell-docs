@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 0129D051-B0A4-4ED2-B096-DFFFFEEB2D71
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-FsrmClassificationPropertyDefinition

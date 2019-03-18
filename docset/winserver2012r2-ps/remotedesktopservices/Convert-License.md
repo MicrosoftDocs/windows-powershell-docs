@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Convert-License
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AF891764-E427-4256-AB2F-B2FCB4E640F3
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Convert-License

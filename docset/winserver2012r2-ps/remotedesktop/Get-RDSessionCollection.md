@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDSessionCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 35443D32-EFDE-4F01-8028-D30B281120B0
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RDSessionCollection

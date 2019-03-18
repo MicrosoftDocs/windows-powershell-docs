@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-DAClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E8A3CC4E-45FD-49F6-A79B-D1DF25CB8B05
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-DAClient

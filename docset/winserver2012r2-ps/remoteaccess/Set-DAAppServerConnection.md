@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-DAAppServerConnection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE8D051D-1BF2-4E04-A963-2572AD303DF5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DAAppServerConnection

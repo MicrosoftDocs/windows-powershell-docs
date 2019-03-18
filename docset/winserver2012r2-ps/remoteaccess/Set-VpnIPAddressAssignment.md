@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-VpnIPAddressAssignment
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DB27F5A1-52BF-4F0B-93B4-99D0CDF40C26
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-VpnIPAddressAssignment

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-PhysicalDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D6192DDC-C09D-4CB3-B406-A1AD801D3DED
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-PhysicalDisk

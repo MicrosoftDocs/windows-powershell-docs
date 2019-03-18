@@ -3,6 +3,9 @@ external help file: BranchCacheHostedCacheServerSettingData.cdxml-help.xml
 ms.assetid: 64B1F603-57F4-476D-AB00-DF0554402944
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-BCHostedCacheServerConfiguration

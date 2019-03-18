@@ -3,6 +3,9 @@ external help file: DDVCmdlets.dll-Help.xml
 Module Name: Microsoft.DiagnosticDataViewer
 online version:
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DiagnosticStoreCapacity

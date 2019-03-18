@@ -14,6 +14,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B6B0222C-CEA1-425E-86FE-EC9F67683011
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Microsoft HPC Pack 2012 R2

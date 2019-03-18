@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-OdbcDriver
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8131A60-6186-44F4-B6B2-003E438CCA8D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-OdbcDriver

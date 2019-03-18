@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-RemoteAccessRadius
 description:
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C1529F8C-0C72-4A73-90E6-66F4278E7825
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-RemoteAccessRadius

@@ -3,6 +3,9 @@ external help file:
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-RDOUAccess

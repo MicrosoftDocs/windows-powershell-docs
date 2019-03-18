@@ -7,13 +7,15 @@ Locale: en-US
 title: WHEA
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9a8817c8-fb3e-4214-8e51-a2004cb59e37
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # WHEA Module

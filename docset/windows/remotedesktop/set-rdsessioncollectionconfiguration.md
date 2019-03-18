@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RDSessionCollectionConfiguration
+ms.reviewer:
 ms.assetid: 12AFAB28-DFFC-4E61-A0BD-637C517A71FD
 ---
 
@@ -373,14 +374,10 @@ Accept wildcard characters: False
 Specifies the level of data encryption used for a Remote Desktop session.
 The acceptable values for this parameter are:
 
-- 0.
-Low. 
-- 1.
-ClientCompatible. 
-- 2.
-High. 
-- 3.
-FipsCompliant.
+- 0 - Low. 
+- 1 - ClientCompatible. 
+- 2 - High. 
+- 3 - FipsCompliant.
 
 The default value is ClientCompatible.
 
@@ -545,12 +542,9 @@ Accept wildcard characters: False
 Specifies which security protocol to use.
 The acceptable values for this parameter are:
 
-- 0.
-RDP. 
-- 1.
-Negotiate. 
-- 2.
-SSL.
+- 0 - RDP. 
+- 1 - Negotiate. 
+- 2 - SSL.
 
 The default value is Negotiate.
 

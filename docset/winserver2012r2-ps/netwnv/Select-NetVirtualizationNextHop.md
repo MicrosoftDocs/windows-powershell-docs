@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Select-NetVirtualizationNextHop
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 508CB567-F354-4AB9-805C-DCB62CDB9033
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Select-NetVirtualizationNextHop

@@ -3,6 +3,9 @@ external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 ms.assetid: 3373D50D-96D2-4184-AB37-013EFFF0F0CF
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Clear-KdsCache

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetNatTransitionConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D762C819-2100-4D2B-9BFD-58C49D9D15AC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-NetNatTransitionConfiguration

@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: A8EB04E2-0323-4A81-922A-4ED227A5450D
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Move-ClusterVirtualMachineRole

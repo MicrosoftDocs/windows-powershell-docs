@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetIPAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7BA1290-44FA-49D6-900F-2198B0564ECB
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-NetIPAddress

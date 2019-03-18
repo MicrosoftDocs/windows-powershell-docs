@@ -1,5 +1,5 @@
 ---
-author:
+author: kenwith
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=510997
 schema: 2.0.0
 title: Start-HpcAzureNode
 ms.assetid: CE0FD152-B4EE-4F13-923C-70EEF031CBC3
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Start-HpcAzureNode

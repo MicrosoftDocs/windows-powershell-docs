@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssAddIn
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9CC442EE-64AC-4E7D-8D17-79CDCA9980FC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssAddIn

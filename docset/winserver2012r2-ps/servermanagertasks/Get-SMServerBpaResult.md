@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SMServerBpaResult
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF4ACB47-4167-415D-85FF-D2D107539188
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SMServerBpaResult

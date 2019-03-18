@@ -3,6 +3,9 @@ external help file:
 ms.assetid: F98C4DF8-F841-41F4-AD23-450D017BC0A4
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDDeploymentGatewayConfiguration

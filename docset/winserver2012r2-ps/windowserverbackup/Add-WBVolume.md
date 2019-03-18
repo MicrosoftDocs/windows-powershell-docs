@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WBVolume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DB178BEF-D267-4546-9A2F-138E6F48A960
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WBVolume

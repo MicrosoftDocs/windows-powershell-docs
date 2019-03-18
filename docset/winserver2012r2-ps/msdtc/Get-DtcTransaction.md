@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-DtcTransaction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4935A981-4E66-4BCE-9882-F9CE00BBA810
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-DtcTransaction

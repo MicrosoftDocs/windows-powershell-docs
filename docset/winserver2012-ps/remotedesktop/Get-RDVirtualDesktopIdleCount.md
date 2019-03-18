@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 2EFC4536-C23C-45A3-B7C8-767C83715F86
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDVirtualDesktopIdleCount

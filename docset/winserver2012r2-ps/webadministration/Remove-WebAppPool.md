@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebAppPool
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B7A73A74-B4FF-4858-A081-7DD547D5E0DD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WebAppPool

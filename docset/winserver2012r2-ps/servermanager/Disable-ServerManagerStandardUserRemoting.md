@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-ServerManagerStandardUserRemoting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-ServerManagerStandardUserRemoting
@@ -32,11 +34,11 @@ Disables access for one or more standard, non-Administrator users to event, serv
 The cmdlet restores the default, administrator-only access to this data, and must be run locally on the server that is being managed by using Server Manager.
 The cmdlet works by performing the following actions:
 
-â—? Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+ï¿½? Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
 
-â—? Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
+ï¿½? Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
 
-â—? Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
+ï¿½? Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
 
 ## EXAMPLES
 

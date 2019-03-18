@@ -3,6 +3,9 @@ external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: C58C14B2-CA4A-481D-AFC7-7D63BF33BF73
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WinHomeLocation

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
@@ -13,6 +13,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Send-SmigServerData
+ms.reviewer:
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
 ---
 

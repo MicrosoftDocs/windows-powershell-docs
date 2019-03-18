@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Start-WssServerFileRestore
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B78CAA86-4CC1-4F07-81E6-141C857FCAF0
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-WssServerFileRestore

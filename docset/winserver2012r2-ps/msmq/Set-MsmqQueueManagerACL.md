@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-MsmqQueueManagerACL
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B0D7C113-9A7F-4C83-93BE-06BF8795F19E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-MsmqQueueManagerACL

@@ -2,6 +2,9 @@
 external help file: VpnClient_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 61959313-33E4-4933-9083-A8F7A079F057
 ---
 

@@ -3,6 +3,9 @@ external help file:
 ms.assetid: BD487319-E090-4729-96CC-5DB8630B0424
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDVirtualDesktop

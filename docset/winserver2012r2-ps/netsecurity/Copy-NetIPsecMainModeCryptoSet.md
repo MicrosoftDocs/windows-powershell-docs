@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Copy-NetIPsecMainModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 981F01BD-59C3-4837-9D09-FEFBEB8B0E5B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Copy-NetIPsecMainModeCryptoSet

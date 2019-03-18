@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-PcsvDevice
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0F8A89F2-AEC0-48E3-BAFA-C658AF41E753
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-PcsvDevice

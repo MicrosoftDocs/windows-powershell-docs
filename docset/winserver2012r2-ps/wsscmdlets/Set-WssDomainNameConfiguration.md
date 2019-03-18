@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssDomainNameConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1B305387-3816-427A-AD8D-A00B18BFE742
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssDomainNameConfiguration

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-HostedEmailAccount
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 47819332-D41D-44CA-9A1C-50247066ADA9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-HostedEmailAccount

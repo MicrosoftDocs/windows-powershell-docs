@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: kenwith
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: kenwith
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Register-UevTemplate
+ms.reviewer:
 ---
 
 # Register-UevTemplate

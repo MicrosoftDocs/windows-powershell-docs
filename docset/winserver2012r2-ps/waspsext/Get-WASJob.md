@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WASJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3BF3937D-CBD9-4051-B7CA-4F95A5E30A49
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WASJob

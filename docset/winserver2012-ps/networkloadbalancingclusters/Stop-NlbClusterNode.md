@@ -2,6 +2,9 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: C7659763-21A6-48A8-9A65-86D22E5200C5
 ---
 

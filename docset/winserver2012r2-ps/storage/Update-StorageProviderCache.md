@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Update-StorageProviderCache
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5314BD55-B77B-43F0-8680-DC3012F87440
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Update-StorageProviderCache

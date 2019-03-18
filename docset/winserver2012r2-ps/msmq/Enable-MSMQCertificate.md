@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-MSMQCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3A1265A7-FDE8-469E-87B8-9E0EC72E8BBA
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-MsmqCertificate

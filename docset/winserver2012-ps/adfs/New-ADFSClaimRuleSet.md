@@ -3,6 +3,9 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 97366B7B-1099-48C3-B895-F46C61DB6EE1
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-ADFSClaimRuleSet

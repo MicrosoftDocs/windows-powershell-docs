@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetNat
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 56612B89-2F6B-49C2-BC42-E46D2624741B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetNat

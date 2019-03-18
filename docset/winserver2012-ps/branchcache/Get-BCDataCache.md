@@ -3,6 +3,9 @@ external help file: BranchCachePrimaryRepublicationCacheFile.cdxml-help.xml
 ms.assetid: 091A4DD5-B207-4553-A934-E8A285310D4A
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-BCDataCache

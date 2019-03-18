@@ -2,6 +2,9 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A8231A90-0A08-46D7-A01F-FC691605B16D
 ---
 

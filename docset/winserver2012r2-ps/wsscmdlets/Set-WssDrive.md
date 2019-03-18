@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssDrive
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C64C5B46-86B8-4A6F-AC54-A9F3621B988E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssDrive

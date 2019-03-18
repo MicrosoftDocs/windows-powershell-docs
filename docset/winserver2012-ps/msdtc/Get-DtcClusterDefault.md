@@ -2,6 +2,9 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: C622343F-7AD7-4C90-834E-EE6CAB942C4B
 ---
 

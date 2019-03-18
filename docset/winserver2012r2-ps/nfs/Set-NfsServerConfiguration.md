@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NfsServerConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C897EB1C-04F1-4CDF-8891-9B2C13F7151D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-NfsServerConfiguration

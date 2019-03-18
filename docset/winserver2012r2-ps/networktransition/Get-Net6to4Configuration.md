@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-Net6to4Configuration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 842E2785-8569-442C-A586-CCFD5B69CA60
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-Net6to4Configuration

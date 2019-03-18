@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetFirewallProfile
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D16B99D0-29BC-4A04-A644-0AE63D8FEF58
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetFirewallProfile

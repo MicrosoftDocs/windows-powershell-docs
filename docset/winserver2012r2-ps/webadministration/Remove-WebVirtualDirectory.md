@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2A4DB4A4-BE0B-4371-A625-C9D27492AF3F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WebVirtualDirectory

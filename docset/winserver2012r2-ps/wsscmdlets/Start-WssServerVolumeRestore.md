@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Start-WssServerVolumeRestore
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C87E8B65-3310-41FF-898C-7B678AB9B611
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-WssServerVolumeRestore

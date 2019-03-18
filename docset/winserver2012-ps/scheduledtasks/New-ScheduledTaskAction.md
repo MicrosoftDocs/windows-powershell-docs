@@ -2,6 +2,9 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 919F1F91-CD15-4C0E-80F5-76E54531120E
 ---
 

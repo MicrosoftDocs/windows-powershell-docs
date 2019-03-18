@@ -7,13 +7,15 @@ Locale: en-US
 title: StartScreen
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: aebac44f-7eb4-4b1b-89b1-82d2ee8e75f0
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # StartScreen Module

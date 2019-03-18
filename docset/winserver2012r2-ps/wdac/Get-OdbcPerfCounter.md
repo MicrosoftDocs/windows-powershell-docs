@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-OdbcPerfCounter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3EE28C63-5790-490B-8BFD-1A895C014C90
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-OdbcPerfCounter

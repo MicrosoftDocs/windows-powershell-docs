@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopCollectionJobStatus
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA5EDA09-8096-4751-9E37-5C848703B4FC
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RDVirtualDesktopCollectionJobStatus

@@ -3,6 +3,9 @@ external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 6D39C130-7F07-435E-8395-839667FA09FC
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Enable-ADFSClaimsProviderTrust

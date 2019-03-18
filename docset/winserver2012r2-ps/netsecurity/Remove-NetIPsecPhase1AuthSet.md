@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetIPsecPhase1AuthSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A6061FD-6EA3-4B49-9F59-79109E54BD5C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetIPsecPhase1AuthSet

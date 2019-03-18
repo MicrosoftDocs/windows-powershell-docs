@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-WssUserGroupMembership
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D3ADA2A8-7E39-4144-B599-C7B0C7986B1D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-WssUserGroupMembership

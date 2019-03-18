@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Unregister-ScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A57ABC4-35A8-43B2-81C2-193EB5E1FDA7
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Unregister-ScheduledTask

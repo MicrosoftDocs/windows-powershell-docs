@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Rename-NetAdapter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2908AB37-D587-494A-B1A4-D57D594927B4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Rename-NetAdapter

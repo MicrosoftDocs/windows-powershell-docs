@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: EDD7A403-DDE3-4E61-AAC3-CC39F24ABEB3
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ADReplicationUpToDatenessVectorTable

@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: WHEA
 Module Guid: B7BF4D74-F837-430E-810F-234F26021253
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390848
 Help Version: 5.0.0.1
 Locale: en-US
 title: WHEA
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

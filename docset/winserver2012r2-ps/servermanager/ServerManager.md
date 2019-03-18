@@ -7,13 +7,15 @@ Locale: en-US
 title: ServerManager
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f9cbd6d5-42e5-4d80-a2d8-ceef3ef1d6fe
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # ServerManager Module

@@ -3,6 +3,9 @@ external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: AC422DFB-2D9E-4C1E-810E-20642482982C
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WebBinding

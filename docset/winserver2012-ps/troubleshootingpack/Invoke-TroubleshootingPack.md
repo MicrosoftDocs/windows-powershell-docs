@@ -3,6 +3,9 @@ external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
 ms.assetid: 25FC6F1B-B88E-457B-8AC2-95A35E63FF63
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Invoke-TroubleshootingPack

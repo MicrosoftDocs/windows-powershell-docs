@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A66D8C6A-4DBC-4FF4-A20D-BCC4ADDAF232
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ADAccountAuthorizationGroup

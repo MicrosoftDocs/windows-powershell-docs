@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: MultiPoint
 Module Guid: EF349263-9FC1-4B71-8DA7-F74E0E18A151
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=216322
 Help Version: 5.0.0.1
 Locale: en-US
 title: MultiPoint
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

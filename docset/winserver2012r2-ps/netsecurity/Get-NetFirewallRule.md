@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B905211-BBB2-40C8-8BA9-DF9FB90CA27D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NetFirewallRule

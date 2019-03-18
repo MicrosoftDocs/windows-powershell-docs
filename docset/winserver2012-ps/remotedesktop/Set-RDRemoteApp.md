@@ -3,6 +3,9 @@ external help file:
 ms.assetid: D10DC087-CD53-4671-9010-11BE95E2B846
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-RDRemoteApp

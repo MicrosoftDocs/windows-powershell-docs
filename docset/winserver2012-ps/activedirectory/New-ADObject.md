@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 0E825263-03D9-4720-B943-99624FBB94BC
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-ADObject

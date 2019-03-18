@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-RemoteAccessHealth
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FDBB76F2-7449-4426-B39D-D83AD6B29E08
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RemoteAccessHealth

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-StorageProvider
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 27E50FF5-3305-4BFE-86A2-733616E2BC7E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-StorageProvider

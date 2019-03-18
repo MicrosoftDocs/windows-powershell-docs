@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-MSDSMAutomaticClaim
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8F71F9B3-68C3-4D0A-9D49-A6209B469015
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-MSDSMAutomaticClaim

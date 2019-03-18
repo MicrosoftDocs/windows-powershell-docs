@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Install-Dtc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 859C5378-7EED-4F4F-94DF-F418DA0369B6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Install-Dtc

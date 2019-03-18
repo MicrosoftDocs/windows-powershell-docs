@@ -3,6 +3,9 @@ external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: 34DC413D-3EA7-4404-942F-CB7CF8CCBA03
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RmsRequestInfo

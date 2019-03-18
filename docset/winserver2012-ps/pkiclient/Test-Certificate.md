@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: D0E2D004-0EA9-45E4-B520-F14FCA21516D
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-Certificate

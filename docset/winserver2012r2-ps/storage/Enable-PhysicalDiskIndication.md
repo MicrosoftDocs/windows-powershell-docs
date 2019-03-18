@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-PhysicalDiskIndication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 53CD2A50-15FB-4ACE-991C-87F2E102E653
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Enable-PhysicalDiskIndication

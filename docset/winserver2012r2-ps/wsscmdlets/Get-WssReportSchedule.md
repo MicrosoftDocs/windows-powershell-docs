@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssReportSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 23D94495-40F1-40BB-A5F9-79F75076013F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WssReportSchedule

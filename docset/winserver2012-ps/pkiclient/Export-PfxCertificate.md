@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 7E97BC6B-B6E0-4BCA-98CE-E83D307FA3A6
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Export-PfxCertificate

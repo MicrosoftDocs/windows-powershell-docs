@@ -3,6 +3,9 @@ external help file:
 ms.assetid: 68EB435A-53DA-4A71-B6CC-C6F8BDC80658
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-RDSessionCollection

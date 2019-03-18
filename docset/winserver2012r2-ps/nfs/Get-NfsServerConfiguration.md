@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsServerConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C20856F1-CD39-40CF-84F0-B24080390119
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NfsServerConfiguration

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-RDPersonalVirtualDesktopPatchSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 85584AA5-C688-4C96-A70F-88B5074AE6A6
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-RDPersonalVirtualDesktopPatchSchedule

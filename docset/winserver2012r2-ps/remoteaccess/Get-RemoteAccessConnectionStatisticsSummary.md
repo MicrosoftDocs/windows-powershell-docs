@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-RemoteAccessConnectionStatisticsSummary
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 49D6356B-B46D-4781-8C55-0E33A3060AB8
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-RemoteAccessConnectionStatisticsSummary

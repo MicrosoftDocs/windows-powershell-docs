@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetVirtualizationCustomerRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B6372E82-9666-4E79-984A-65B9138D8477
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-NetVirtualizationCustomerRoute

@@ -274,10 +274,8 @@ Specifies an array of values.
 Each value represents an operating system platform.
 The acceptable values for this parameter are:
 
-- 1.
-An unsupported Windows system.
-- 2.
-A supported Windows system.
+- 1 - An unsupported Windows system.
+- 2 - A supported Windows system.
 
 ```yaml
 Type: UInt32[]
@@ -296,10 +294,8 @@ Specifies an array of values.
 Each value represents an operating system product type.
 The acceptable values for this parameter are:
 
-- 1.
-Standard Edition of a server product. 
-- 2.
-Enterprise Edition of a server product.
+- 1 - Standard Edition of a server product. 
+- 2 - Enterprise Edition of a server product.
 
 ```yaml
 Type: UInt32[]

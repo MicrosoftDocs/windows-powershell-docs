@@ -241,17 +241,13 @@ For resource properties to be considered identical across forests, their ID must
 
 To specify the ID, the ID string must conform to the following format:
 
-1. 
-Start with a prefix string of 1 to 15 characters in length.
+1. Start with a prefix string of 1 to 15 characters in length.
 
-2. 
-The prefix string must be followed by an underscore.
+2. The prefix string must be followed by an underscore.
 
-3. 
-The prefix string and underscore must be followed by a suffix string of 1 to 16 characters in length.
+3. The prefix string and underscore must be followed by a suffix string of 1 to 16 characters in length.
 
-4. 
-All characters contained in either prefix or suffix strings must contain only valid filename characters.
+4. All characters contained in either prefix or suffix strings must contain only valid filename characters.
 
 ```yaml
 Type: String

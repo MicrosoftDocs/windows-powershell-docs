@@ -32,7 +32,7 @@ The **Enable-WebRequestTracing** cmdlet enables request tracing, and automatical
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Enabling Enable Request request Tracing tracing for the "Default default Web webSitesite" --------------Enable request tracing default website
+### Example 1: Enabling request tracing for the "Default Web Site"
 ```
 IIS:\>Enable-WebRequestTracing -Name "Default Web Site"
 ```

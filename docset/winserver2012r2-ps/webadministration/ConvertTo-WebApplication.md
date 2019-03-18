@@ -32,7 +32,7 @@ The **ConvertTo-WebApplication** cmdlet converts an Internet Information Service
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Convert a Virtual virtual Directory directory to a Web web Application application --------------virtual directory web application
+### Example 1: Convert a virtual directory to a web application
 ```
 IIS:\> Md $Env:systemdrive\inetpub\Contoso 
 IIS:\> New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "$Env:systemdrive\inetpub\Contoso" 

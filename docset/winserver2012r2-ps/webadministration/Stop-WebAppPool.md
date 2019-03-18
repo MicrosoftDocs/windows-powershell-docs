@@ -31,7 +31,7 @@ The **Stop-WebAppPool** cmdlet stops the specified application pool.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Stopping an Application application Pool pool --------------application pool
+### Example 1: Stopping an application pool
 ```
 IIS:\>Stop-WebAppPool -Name "DefaultAppPool"
 ```

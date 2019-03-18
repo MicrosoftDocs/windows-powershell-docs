@@ -31,7 +31,7 @@ The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) app
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Create new an IIS Application application Pool pool --------------an application pool
+### Example 1: Create new an IIS application pool
 ```
 IIS:\>New-WebAppPool -Name "NewAppPool"
 ```

@@ -31,7 +31,7 @@ The **Get-Website** cmdlet gets configuration information for an Internet Inform
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Get information about the Ddefault wWeb Ssite --------------dws
+### Example 1: Get information about the default web site
 ```
 IIS:\>Get-Website -Name "Default Web Site"
 Name             ID State   Physical Path                 Bindings

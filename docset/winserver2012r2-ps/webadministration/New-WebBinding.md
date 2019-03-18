@@ -32,7 +32,7 @@ The **New-WebBinding** cmdlet adds a new binding to an existing website.
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Adding a new Site site Binding binding --------------site binding
+### Example 1: Adding a new site binding
 ```
 IIS:\>New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
 ```

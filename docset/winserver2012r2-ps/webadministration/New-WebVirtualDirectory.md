@@ -32,7 +32,7 @@ The **New-WebVirtualDirectory** cmdlet creates a virtual directory in Internet I
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Creating Create a Virtual virtual Directory directory --------------Create virtual directory
+### Example 1: Creating a virtual directory
 ```
 IIS:\>New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "c:\inetpub\contoso"
 ```

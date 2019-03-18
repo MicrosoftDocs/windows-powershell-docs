@@ -31,7 +31,7 @@ The **Get-WebVirtualDirectory** cmdlet gets a list of the virtual directories on
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Getting a virtual directory --------------
+### Example 1: Getting a virtual directory
 ```
 IIS:\>Get-WebVirtualDirectory -Site 'Default Web Site' -Application "TestApp"
 ```

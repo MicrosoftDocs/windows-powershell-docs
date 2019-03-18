@@ -31,14 +31,14 @@ The **Start-WebAppPool** cmdlet starts the specified application pool.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Starting an Application application Pool pool --------------application pool
+### Example 1: Starting an application pool
 ```
 IIS:\>Start-WebAppPool -Name "DefaultAppPool"
 ```
 
 This command starts the application pool named DefaultAppPool.
 
-### Example -------------- EXAMPLE Example 2: Starting stopped Application application Pools pools --------------application pools
+### Example 2: Starting stopped application pools
 ```
 IIS:\>Get-ChildItem IIS:\AppPools | where {$_.state -eq "Started"} | Start-WebAppPool
 ```

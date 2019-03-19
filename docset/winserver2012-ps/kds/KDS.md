@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216899
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 0205E61B-2D3B-474B-B549-4F81AD7ABE65
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # KDS Module

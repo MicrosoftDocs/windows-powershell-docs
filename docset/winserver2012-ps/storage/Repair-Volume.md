@@ -16,7 +16,7 @@ ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
 # Repair-Volume
 
 ## SYNOPSIS
-Performs repairs on a volume.
+Performs repairs on a volume. 
 
 ## SYNTAX
 

@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: F5AD1594-6D98-42E2-8C37-3860912ED276
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DnsServerResourceRecordAging

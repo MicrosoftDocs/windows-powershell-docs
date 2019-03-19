@@ -48,7 +48,7 @@ The HPC job scheduler service must be configured to use the unmanaged resources.
 
 ## PARAMETERS
 
-### -Group<HpcGroup>
+### -Group
 Specifies the **HpcGroup** object for the node group to which the node is added.
 You cannot specify both the *Group* and *GroupName* parameters.
 
@@ -110,7 +110,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Scheduler<String>
+### -Scheduler
 Specifies the host name or IP address of the head node for the cluster to which you add the node.
 The value must be a valid computer name or IP address.
 If you do not specify the *Scheduler* parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies.

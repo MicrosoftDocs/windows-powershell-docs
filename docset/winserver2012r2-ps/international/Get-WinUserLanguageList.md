@@ -96,7 +96,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### List<WinUserLanguage>
+### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
 A list of WinUserLanguage objects that contain one or more languages and associated properties from the current user account's language list.
 For information about the Generic.List object, see List(Of T) Classhttp://go.microsoft.com/fwlink/?LinkID=243342.
 

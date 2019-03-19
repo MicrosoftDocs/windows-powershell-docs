@@ -107,6 +107,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 **None**
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)
+
 [Set-InsightsCapabilitySchedule](set-insightscapabilityschedule.md)

@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: CAD88AE9-A1B9-431E-9284-A10598C3AAF5
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ClusterResourceDependencyReport

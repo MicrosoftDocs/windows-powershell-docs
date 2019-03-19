@@ -116,6 +116,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The cmdlet returns one or more objects that represent the specified capability actions.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Set-InsightsCapabilityAction](set-insightscapabilityaction.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Set-InsightsCapabilityAction](set-insightscapabilityaction.md)
+
 [Remove-InsightsCapabilityAction](remove-insightscapabilityaction.md)

@@ -374,14 +374,10 @@ Accept wildcard characters: False
 Specifies the level of data encryption used for a Remote Desktop session.
 The acceptable values for this parameter are:
 
-- 0.
-Low. 
-- 1.
-ClientCompatible. 
-- 2.
-High. 
-- 3.
-FipsCompliant.
+- 0 - Low. 
+- 1 - ClientCompatible. 
+- 2 - High. 
+- 3 - FipsCompliant.
 
 The default value is ClientCompatible.
 
@@ -546,12 +542,9 @@ Accept wildcard characters: False
 Specifies which security protocol to use.
 The acceptable values for this parameter are:
 
-- 0.
-RDP. 
-- 1.
-Negotiate. 
-- 2.
-SSL.
+- 0 - RDP. 
+- 1 - Negotiate. 
+- 2 - SSL.
 
 The default value is Negotiate.
 

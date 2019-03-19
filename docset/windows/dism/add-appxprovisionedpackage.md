@@ -74,7 +74,7 @@ The package will be installed for the current user and any new user account crea
 
 ### Example 2: Add an app package an operating system image
 ```
-PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
+PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```
 
 This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.

@@ -7,13 +7,15 @@ Locale: en-US
 title: VpnClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9d8b83fc-121a-40f1-9aa3-6916920b1929
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # VpnClient Module

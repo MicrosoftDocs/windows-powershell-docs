@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcClusterDefault
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E3AB0237-DE07-409C-A23F-2DDC2B4B042D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DtcClusterDefault

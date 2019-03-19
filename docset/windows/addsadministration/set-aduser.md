@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADUser
+ms.reviewer:
 ms.assetid: A01E908C-F344-4072-B720-4A0F523018B2
 ---
 
@@ -201,7 +202,7 @@ To modify an object property, you must use the LDAP display name.
 You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...} `
+`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
 When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
@@ -346,15 +347,15 @@ The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName
 
 To add values:
 
-`-Certificates @{Add=value1,value2,...} `
+`-Certificates @{Add=value1,value2,...}`
 
 To remove values:
 
-`-Certificates @{Remove=value3,value4,...} `
+`-Certificates @{Remove=value3,value4,...}`
 
 To replace values:
 
-`-Certificates @{Replace=value1,value2,...} `
+`-Certificates @{Replace=value1,value2,...}`
 
 To clear all values:
 
@@ -363,7 +364,7 @@ To clear all values:
 You can specify more than one operation by using a list separated by semicolons.
 For example, use the following syntax to add and remove **Certificates** values:
 
-`-Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...} `
+`-Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators are applied in the following sequence: 
 

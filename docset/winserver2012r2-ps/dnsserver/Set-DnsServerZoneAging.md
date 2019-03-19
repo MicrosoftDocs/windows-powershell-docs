@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerZoneAging
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -41,7 +43,7 @@ Aging settings determine when a record can be removed, or scavenged, as a stale 
 PS C:\> Set-DnsServerZoneAging west01.contoso.com -Aging $true -ScavengeServers 172.18.1.1 -PassThru -Verbose
 ```
 
-This command enables aging for a domain named west01.contoso.com and specifies a scavaging server.
+This command enables aging for a domain named west01.contoso.com and specifies a scavenging server.
 
 ## PARAMETERS
 

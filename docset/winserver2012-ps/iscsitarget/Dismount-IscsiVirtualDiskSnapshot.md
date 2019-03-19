@@ -3,6 +3,9 @@ external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: DD9E2F24-B4CE-46DD-834F-22B80C76EDC4
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Dismount-IscsiVirtualDiskSnapshot
@@ -32,7 +35,7 @@ The snapshot will not be accessible after dismount.
 
 ### Example 1
 ```
-PS C:\>Get-IscsiVirtualDiskSnasphot | Dismount-IscsiVirtualDiskSnasphot
+PS C:\>Get-IscsiVirtualDiskSnapshot | Dismount-IscsiVirtualDiskSnapshot
 ```
 
 This example gets all of the snapshot and dismounts them.

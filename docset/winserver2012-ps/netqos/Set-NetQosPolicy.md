@@ -2,6 +2,9 @@
 external help file: NetQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: F946186B-3E5C-4918-A176-266FEFC4EEAB
 ---
 
@@ -568,7 +571,7 @@ Accept wildcard characters: False
 
 ### -UserMatchCondition
 Specifies the user or group name in Active Directory, such as `contoso\johnj99`.
-This parameter is usually specified with other filtering parameter such as the **AppPathNameMatchCondtion** parameter.
+This parameter is usually specified with other filtering parameter such as the **AppPathNameMatchCondition** parameter.
 
 ```yaml
 Type: String

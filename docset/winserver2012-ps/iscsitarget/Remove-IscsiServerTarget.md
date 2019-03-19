@@ -3,6 +3,9 @@ external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 623064A6-E1A2-40C9-9A44-2EF6D22518CD
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-IscsiServerTarget

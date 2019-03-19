@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WebConfigurationLock
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78A09E46-FAC1-4CBC-BE30-B17148D7CA14
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WebConfigurationLock
@@ -32,7 +34,7 @@ The **Add-WebConfigurationLock** cmdlet locks an Internet Information Services (
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Adding and removeing configuration locks --------------e
+### Example 1: Adding and removing configuration locks
 ```
 IIS:\>Add-WebConfigurationLock -Type "general" -Filter "//asp" 
 IIS:\> Remove-WebConfigurationLock -Filter "//asp" 

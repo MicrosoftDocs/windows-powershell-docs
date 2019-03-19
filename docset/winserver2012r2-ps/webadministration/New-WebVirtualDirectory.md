@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7BC49A0B-D4DE-4351-8FC8-FB93946E98E4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WebVirtualDirectory
@@ -32,7 +34,7 @@ The **New-WebVirtualDirectory** cmdlet creates a virtual directory in Internet I
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Creating Create a Virtual virtual Directory directory --------------Create virtual directory
+### Example 1: Creating a virtual directory
 ```
 IIS:\>New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "c:\inetpub\contoso"
 ```

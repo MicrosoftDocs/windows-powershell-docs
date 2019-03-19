@@ -2,6 +2,9 @@
 external help file: WDAC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 59C94EFA-A8D5-4695-833B-DA6075C4C549
 ---
 

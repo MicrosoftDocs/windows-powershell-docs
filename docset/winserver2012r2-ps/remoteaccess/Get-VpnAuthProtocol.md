@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-VpnAuthProtocol
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FD187EA6-C72B-477C-AE92-44A1FBBD9FFD
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-VpnAuthProtocol

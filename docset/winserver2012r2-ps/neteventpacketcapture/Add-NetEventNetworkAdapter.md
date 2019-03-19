@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-NetEventNetworkAdapter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCA7B92C-32F9-432D-B6C3-158011A2E835
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-NetEventNetworkAdapter

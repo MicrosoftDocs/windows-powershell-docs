@@ -7,13 +7,15 @@ Locale: en-US
 title: NetSecurity
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78a769c2-b9f2-4426-8368-bec9f6cc263b
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # NetSecurity Module

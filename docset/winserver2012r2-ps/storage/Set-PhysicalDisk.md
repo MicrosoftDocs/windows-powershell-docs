@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-PhysicalDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 259134E3-B7CD-4550-9EA1-A84A1D571FB2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-PhysicalDisk

@@ -3,6 +3,9 @@ external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xm
 ms.assetid: F44B9525-0E1E-43EA-8FC0-CE9514EEF950
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Install-ADRMS

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetworkControllerGatewayPool
+ms.reviewer:
 ms.assetid: 140778A1-B623-4524-9313-A67C8C010AFE
 ---
 
@@ -42,7 +43,7 @@ If the specified gateway pool configuration already exists with Network Controll
 PS C:\> New-NetworkControllerGatewayPool -ConnectionUri "https://networkcontroller"
 -ResourceId "GreGWPool" -Properties $greGwPoolProperties
 Confirm
-Performing the operation 'New-NetworkControllerGatewayPool' on entities of type 'Microsoft.Windows.NetworkController.GatewayPool' via 'https://networkcontroller/networking/v1/gatewaypools/GreGWPool'. Are you sure youv want to continue? 
+Performing the operation 'New-NetworkControllerGatewayPool' on entities of type 'Microsoft.Windows.NetworkController.GatewayPool' via 'https://networkcontroller/networking/v1/gatewaypools/GreGWPool'. Are you sure you want to continue? 
  [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): yes
 
 Tags             : 

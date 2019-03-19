@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WBPerformanceConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 688E0317-208D-4F51-8ED4-BF1091BE1A13
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WBPerformanceConfiguration

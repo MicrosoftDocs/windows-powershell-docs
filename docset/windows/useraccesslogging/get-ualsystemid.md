@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MsftUal_SystemId.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-UalSystemId
+ms.reviewer:
 ms.assetid: 6595F712-6714-497D-A95D-18C7043EA8E8
 ---
 
@@ -273,10 +274,8 @@ Specifies an array of values.
 Each value represents an operating system platform.
 The acceptable values for this parameter are:
 
-- 1.
-An unsupported Windows system.
-- 2.
-A supported Windows system.
+- 1 - An unsupported Windows system.
+- 2 - A supported Windows system.
 
 ```yaml
 Type: UInt32[]
@@ -295,10 +294,8 @@ Specifies an array of values.
 Each value represents an operating system product type.
 The acceptable values for this parameter are:
 
-- 1.
-Standard Edition of a server product. 
-- 2.
-Enterprise Edition of a server product.
+- 1 - Standard Edition of a server product. 
+- 2 - Enterprise Edition of a server product.
 
 ```yaml
 Type: UInt32[]

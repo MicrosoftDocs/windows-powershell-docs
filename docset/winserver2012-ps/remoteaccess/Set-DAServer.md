@@ -2,6 +2,9 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 00980E48-5937-40BD-BA8C-65B0053D53B7
 ---
 
@@ -269,7 +272,7 @@ If none of the computers has a proper SSL certificate, then a self-signed certif
 If one or more computers are down, then the certificate is updated only on the other computers.
 But the DA server GPO is updated to ensure that when these computers come up load balancing is in stopped state on them due to a certificate mismatch.
 For the certificate change, and as a result the ConnectTo address change, to take effect the administrator needs to install a similar certificate with the same name on the computers and re-run this cmdlet.
-If a self-signed certificate is being used, then the user just needs to re-run the cmdet and it automatically creates a self-signed certificate. 
+If a self-signed certificate is being used, then the user just needs to re-run the cmdlet and it automatically creates a self-signed certificate. 
 
  -- In a multi-site scenario, this cmdlet does not create a self-signed certificate and always expects a proper certificate to be present on the computer itself. 
 

@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 1CA7A62E-7DC1-44DB-867A-A66E6F8A55A2
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DnsServerCache

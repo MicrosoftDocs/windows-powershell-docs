@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZone_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-DnsServerZone
+ms.reviewer:
 ms.assetid: 1FA4F5A8-2AF5-4909-A58B-CC667A288E89
 ---
 
@@ -32,7 +33,7 @@ Remove-DnsServerZone [-Name] <String> [-ComputerName <String>] [-PassThru] [-For
 
 ## DESCRIPTION
 The **Remove-DnsServerZone** cmdlet removes a zone from a Domain Name System (DNS) server.
-You can use this cmdlet to remove any type of zone, primary, seconday, stub, or conditional forwarder.
+You can use this cmdlet to remove any type of zone, primary, secondary, stub, or conditional forwarder.
 
 ## EXAMPLES
 

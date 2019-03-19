@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssDomainNameConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1B305387-3816-427A-AD8D-A00B18BFE742
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssDomainNameConfiguration
@@ -34,7 +36,7 @@ You can use this cmdlet to change the domain name of the server and configure th
 
 ### Example 1: Change the domain name configuration of the server
 ```
-PS C:\> $SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Set-WssDomainNameConfiguration -CertificateFilePassword $SecureString_pwd -CertificatePath "c:\cert.pfx" -DomainName "Contoso.com" -NoCertificateVerification
 ```
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADOrganizationalUnit
+ms.reviewer:
 ms.assetid: B85DA4BE-E1CA-4D29-A2D9-1987D258F8EB
 ---
 
@@ -209,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an Active Directory group object by providing one of the following values.
+Specifies an Active Directory organizational unit object by providing one of the following values.
 The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 

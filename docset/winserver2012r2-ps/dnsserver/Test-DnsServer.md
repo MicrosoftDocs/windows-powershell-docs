@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Test-DnsServer
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a DNSserver.
+Specifies a DNS server.
 The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
 
 ```yaml

@@ -2,6 +2,9 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
 ---
 
@@ -43,7 +46,7 @@ You do not need administrator privileges to use **Suspend-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Suspends a specificlected print job in a print queue  -------------------------- xample: Suspend a specific print job
+### -------------------------- Example 1: Suspend a specific print job
 ```
 PS C:\> Suspend-PrintJob -PrinterName "PrinterName" -ID 1
 ```

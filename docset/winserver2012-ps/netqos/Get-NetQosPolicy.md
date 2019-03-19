@@ -2,6 +2,9 @@
 external help file: NetQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 7E4D1383-2439-4F10-A86D-AA2BD4EC54E6
 ---
 

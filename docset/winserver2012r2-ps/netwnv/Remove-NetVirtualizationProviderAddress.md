@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetVirtualizationProviderAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4F575423-EADD-46EA-BE65-8D10FE47C957
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-NetVirtualizationProviderAddress

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-VolumeCorruptionCount
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B02DEFF-732B-4CBB-9D29-905E08F4CAC7
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-VolumeCorruptionCount

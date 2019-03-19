@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285742
 Help Version: 4.0.3.0
 Locale: en-US
 title: DhcpServer
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

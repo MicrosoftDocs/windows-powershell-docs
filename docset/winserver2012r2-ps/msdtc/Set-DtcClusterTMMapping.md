@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcClusterTMMapping
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2D041197-FE10-4FFD-B97B-7EBA7081574C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DtcClusterTMMapping

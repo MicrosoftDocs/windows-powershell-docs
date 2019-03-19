@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: kenwith
 Module Name: ClusterAwareUpdating
 Module Guid: 4E804861-1DCE-46C1-868D-C8F2AB9D220A
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390759
 Help Version: 5.0.0.1
 Locale: en-US
 title: ClusterAwareUpdating
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: kenwith
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

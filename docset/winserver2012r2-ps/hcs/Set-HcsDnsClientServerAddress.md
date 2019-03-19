@@ -3,9 +3,11 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Set-HcsDnsClientServerAddress
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
@@ -119,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryIPv6
-Specifes an array of secondary IPv6 server addresses for a DNS client.
+Specifies an array of secondary IPv6 server addresses for a DNS client.
 If the client cannot resolve the primary server, it uses a secondary server address.
 
 ```yaml

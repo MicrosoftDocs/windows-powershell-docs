@@ -3,6 +3,9 @@ external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.x
 ms.assetid: 9B86553F-FBAF-4F0C-89EB-C0571FCEEAD3
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Install-AdcsWebEnrollment
@@ -48,7 +51,7 @@ Description
 
 -----------
 
-This command isntalls the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
+This command installs the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
 Replace the computer name of the certification authority (CA) for \<CAComputerName\> and replace the CA common name for \<CACommonName\> when running the command.
 
 ## PARAMETERS

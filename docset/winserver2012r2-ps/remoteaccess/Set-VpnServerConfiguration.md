@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-VpnServerConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B3270D2C-2E5A-490C-9176-292B1586BD4E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-VpnServerConfiguration

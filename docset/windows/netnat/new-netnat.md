@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetNat.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetNat
+ms.reviewer:
 ms.assetid: B64A451E-9D59-46A5-86B6-07DF85C6228E
 ---
 
@@ -40,7 +41,7 @@ You can modify some settings by using the **Set-NetNat** cmdlet.
 
 ### Example 1: Create a NAT object for a routing domain
 ```
-PS C:\> New-NetNat -Name "TSQATenant" -ExternalIPInterfaceAddress "a.b.c.0/24" -InternalRoutingDomainId "{bb47986c-f134-4a29-ad87-24010bf2c92f}"
+PS C:\> New-NetNat -Name "TSQATenant" -ExternalIPInterfaceAddressPrefix "a.b.c.0/24" -InternalRoutingDomainId "{bb47986c-f134-4a29-ad87-24010bf2c92f}"
 ```
 
 This command creates a NAT object named TSQATenant.
@@ -49,7 +50,7 @@ This example uses the placeholder a.b.c.0/24 to represent a public Internet addr
 
 ### Example 2: Create a NAT object for all the computers on a subnet
 ```
-PS C:\> New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddress "a.b.c.0/24"
+PS C:\> New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddressPrefix "a.b.c.0/24"
 ```
 
 This command creates a NAT object named AllTenants for all the computers in the specified subnet.

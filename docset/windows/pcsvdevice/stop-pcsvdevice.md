@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: CIM_PhysicalComputerSystemView.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-PcsvDevice
+ms.reviewer:
 ms.assetid: AFA589C0-5DD6-4599-A3FD-1640AACCC415
 ---
 
@@ -255,7 +256,7 @@ Accept wildcard characters: False
 
 ### -SkipCACheck
 Indicates that the client connects by using HTTPS without validating that a trusted CA signed the server certificate.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Do not specify this parameter unless you can establish trust in another way, such as if the remote computer is part of a network that is physically secure and isolated, or if the remote computer is a trusted host in a Windows Remote Management (WinRM) configuration.
 
@@ -273,7 +274,7 @@ Accept wildcard characters: False
 
 ### -SkipCNCheck
 Indicates that the certificate CN of the server does not need to match the host name of the server.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Specify this parameter only for managing devices by using WS-Management over HTTPS.
 Be sure to specify this parameter only for trusted computers.
@@ -292,7 +293,7 @@ Accept wildcard characters: False
 
 ### -SkipRevocationCheck
 Indicates that the cmdlet skips the revocation check of server certificates.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Be sure to specify this parameter only for trusted computers.
 

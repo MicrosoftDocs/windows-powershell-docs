@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-VMReplication
+ms.reviewer:
 ms.assetid: E9A22187-E371-4CCA-8EDC-506354BDCC74
 ---
 
@@ -158,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies the virtual machine whose resychronization is to be stopped.
+Specifies the virtual machine whose resynchronization is to be stopped.
 
 ```yaml
 Type: VirtualMachine[]

@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: C4D3D777-7C98-4B3D-942C-088A7F11F5BD
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Stop-FsrmFileManagementJob
@@ -34,7 +37,7 @@ This cmdlet returns one of the following values for the running status of the fi
 This cmdlet returns a success status in the following conditions: 
 - The server is not running the job. 
 - The server is currently canceling the job. 
-- The server is running the job and has started cancelation of the job. 
+- The server is running the job and has started cancellation of the job. 
 - The job is queued on the server and has removed the job from the queue.
 
 This cmdlet returns a failure status if the server cannot stop a file management job that is running or is queued.

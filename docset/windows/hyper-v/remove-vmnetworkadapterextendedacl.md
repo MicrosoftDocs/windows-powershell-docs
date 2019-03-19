@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-VMNetworkAdapterExtendedAcl
+ms.reviewer:
 ms.assetid: B5D0B3C0-9E2D-44F8-A6F2-B5FDCD6D5949
 ---
 
@@ -213,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies an array of virtual machines as **VirutalMachine** objects.
+Specifies an array of virtual machines as **VirtualMachine** objects.
 The cmdlet removes an ACL for network adapters that belong to the virtual machines that you specify.
 To obtain a virtual machine object, use the **Get-VM** cmdlet.
 

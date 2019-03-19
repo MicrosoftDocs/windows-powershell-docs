@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MultiPoint.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-WmsSystem
+ms.reviewer:
 ms.assetid: 9C987F88-6FC7-4D3E-A7D6-CEA04679EBC0
 ---
 
@@ -95,7 +96,7 @@ The input is an array of fully qualified host names of the computers that should
 ## OUTPUTS
 
 ### WmsSystem
-For each computer added a **WmsSystem** object is returned which contains specific infromation about the configuration and state of the MultiPoint system on that computer.
+For each computer added a **WmsSystem** object is returned which contains specific information about the configuration and state of the MultiPoint system on that computer.
 
 ## NOTES
 

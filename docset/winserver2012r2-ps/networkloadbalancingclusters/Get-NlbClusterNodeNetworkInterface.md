@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NlbClusterNodeNetworkInterface
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C35EB814-5C83-490B-9BF8-4437F7975E3C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-NlbClusterNodeNetworkInterface

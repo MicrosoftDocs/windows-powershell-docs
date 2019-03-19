@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-InitiatorIdFromMaskingSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BB678E72-FCDF-48EF-8D92-AF8FB42EAE20
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-InitiatorIdFromMaskingSet
@@ -56,7 +58,7 @@ PS C:\> $initid = (Get-InitiatorID)
 PS C:\> Remove-InitiatorIDFromMaskingSet -InitiatorIDs $initid -MaskingSetFriendlyName "Server1A-MaskingSet"
 ```
 
-This example removes an initator ID from a masking set.
+This example removes an initiator ID from a masking set.
 This cmdlet prevents the specified initiator ID from accessing any of the resources defined in the masking set
 
 ## PARAMETERS

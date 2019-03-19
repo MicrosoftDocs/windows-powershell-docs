@@ -2,6 +2,9 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 85E56DA8-8A5A-4BFF-BF13-30A923379E1A
 ---
 
@@ -46,7 +49,7 @@ This example gets the power management properties of the network adapter named E
 
 ### EXAMPLE 3
 ```
-PS C:\> Get-NetAdapterPowerManagment -Name Ethernet | Format-List -Property *
+PS C:\> Get-NetAdapterPowerManagement -Name Ethernet | Format-List -Property *
 ```
 
 This example displays all of the power management properties of the network adapter named Ethernet.

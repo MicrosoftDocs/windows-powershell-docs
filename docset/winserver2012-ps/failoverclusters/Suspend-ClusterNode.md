@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 6BE0D49E-A27C-4640-AE0D-0B1E47B2999E
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Suspend-ClusterNode
@@ -58,7 +61,7 @@ This example pauses the node named node1 and moves the workloads from it to the 
 
 ### EXAMPLE 4
 ```
-PS C:\>Suspend-ClusterNode node1 -Drain -Whatif
+PS C:\>Suspend-ClusterNode node1 -Drain -WhatIf
 What if: Performing operation "Suspend-ClusterNode" on Target "node1".
 ```
 

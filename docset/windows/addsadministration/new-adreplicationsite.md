@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ADReplicationSite
+ms.reviewer:
 ms.assetid: 9E040A49-F662-4B5D-9CF3-C8614D3AF5A3
 ---
 
@@ -449,7 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyMinimumHopsEnabled
-Indicates whether the cmdlet enables topology minimium hops.
+Indicates whether the cmdlet enables topology minimum hops.
 When enabled, prevents the KCC from generating optimizing connections in the ring topology of intrasite replication.
 Optimizing connections reduce the replication latency in the site and disabling them is not recommended.
 

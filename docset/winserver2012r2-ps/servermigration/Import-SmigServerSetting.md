@@ -12,6 +12,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Import-SmigServerSetting
@@ -107,7 +109,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 5
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> Import-SmigServerSetting -User All -Password $pass -Path "c:\store" -Verbose
 ```
 
@@ -221,7 +223,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to decrypt the migration store.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 Because the Password parameter is required, if it is not added to your command, you are prompted to specify a password after entering your command.
 
 ```yaml

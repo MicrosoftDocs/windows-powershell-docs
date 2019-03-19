@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WebHandler
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D19B6A87-8932-4C22-8B3B-14353A243018
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-WebHandler
@@ -33,7 +35,7 @@ The **New-WebHandler** cmdlet creates an Internet Information Services (IIS) req
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Add a new handler --------------
+### Example 1: Add a new handler
 ```
 IIS:\>New-WebHandler -Name "TestHandler" -Path "*.test" -Verb 'GET,POST' -Modules "IsapiModule" -PSPath "IIS:\sites\Default Web Site"
 ```

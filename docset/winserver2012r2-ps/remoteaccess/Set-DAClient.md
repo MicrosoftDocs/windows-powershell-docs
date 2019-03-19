@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-DAClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E232C383-76AF-4C75-89ED-F4E72BDD2B7D
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-DAClient

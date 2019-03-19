@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-VMRemoteFx3dVideoAdapter
@@ -22,7 +25,7 @@ Add-VMRemoteFx3dVideoAdapter [-VM] <VirtualMachine[]> [-Passthru]
 ```
 
 ## DESCRIPTION
-The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemovteFX video adapter in a virtual machine.
+The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemoteFX video adapter in a virtual machine.
 
 ## EXAMPLES
 

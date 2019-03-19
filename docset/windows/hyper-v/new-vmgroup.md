@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-VMGroup
+ms.reviewer:
 ms.assetid: DE25B3FF-9D3D-4A1D-B209-EFD5F56F5FD1
 ---
 
@@ -22,9 +23,15 @@ ms.assetid: DE25B3FF-9D3D-4A1D-B209-EFD5F56F5FD1
 ## SYNOPSIS
 Creates a virtual machine group.
 
+With Hyper-V, there are two types of VMGroups: a VMCollectionTpe and a ManagementCollectionType. 
+A VMCollectionType VMGroup contains VMs while the ManagementCollectionType VMGroup contains VMCollectionType VMGroups.
+For example, you could have two VMCollectionType VMGroups VMG1 (containing VMs VM1 and VM2) and a second VMG2 (containing VMs VM3 and VM4). 
+You could then create a ManagementCollectionType VMGroup VM-All containing the two VMCollectionType VMGroups.
+You use the [Add-VMGroupMember](./Add-VMGroupMember.md) cmdlet to add VMs to VMCollectionType VMGroups and to add VMCollectionType groups to ManagementCollectionType VMGroups.
+
 ## SYNTAX
 
-```
+```powershell
 New-VMGroup [-Name] <String> [-GroupType] <GroupType> [[-Id] <Guid>] [-CimSession <CimSession[]>]
  [-ComputerName <String[]>] [-Credential <PSCredential[]>] [<CommonParameters>]
 ```
@@ -35,16 +42,16 @@ The **New-VMGroup** cmdlet creates a virtual machine group.
 ## EXAMPLES
 
 ### Example 1: Create a group to contain virtual machines
-```
-PS C:\> New-VMGroup -Name "CollectionGroup07" -GroupType VMCollectionType
+```powershell
+PS C:\> New-VMGroup -Name 'CollectionGroup07' -GroupType VMCollectionType
 ```
 
 This command creates a virtual machine group named CollectionGroup07 of type VMCollectionType.
 This group can contain collections of virtual machines.
 
 ### Example 2: Create a group to contain groups of virtual machines
-```
-PS C:\> New-VMGroup -Name "ManagementCollectionGroup03" -GroupType ManagementCollectionType
+```powershell
+PS C:\> New-VMGroup -Name 'ManagementCollectionGroup03' -GroupType ManagementCollectionType
 ```
 
 This command creates a virtual machine group named ManagementCollectionGroup03 of type ManagementCollectionType.
@@ -168,4 +175,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-VMGroup](./Remove-VMGroup.md)
 
 [Rename-VMGroup](./Rename-VMGroup.md)
+
+[Add-VMGroupMember](./Add-VMGroupMember.md)
+
+
 

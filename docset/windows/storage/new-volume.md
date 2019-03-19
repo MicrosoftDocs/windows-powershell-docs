@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-Volume
+ms.reviewer:
 ms.assetid: 038D0DAD-E00B-479C-BEE8-6D163BBA7C1C
 ---
 
@@ -103,18 +104,26 @@ The cmdlet manages the creation of the virtual disk with the specified size and 
 ## EXAMPLES
 
 ### Example 1: Create a volume on a mirror space
-```
+```powershell
 PS C:\> New-Volume -StoragePoolName "CompanyData" -FriendlyName "TestVolume" -Size 10GB -ResiliencySettingName "Mirror" -FileSystem NTFS -AccessPath "M: "-ProvisioningType Fixed
 ```
 
 This command creates a new storage space in the CompanyData pool using the Mirror resiliency setting and fixed provisioning, and then formats the volume with the NTFS file system and assigns drive letter M.
 
 ### Example 2: Create a volume on a new tiered storage space
-```
+```powershell
 PS C:\>New-Volume -StoragePoolFriendlyName "CompanyData" -FriendlyName "UserData" -AccessPath "M:" -ResiliencySettingName "Mirror" -ProvisioningType "Fixed" -StorageTiers (Get-StorageTier -FriendlyName "*SSD*"), (Get-StorageTier -FriendlyName "*HDD*") -StorageTierSizes 20GB, 80GB -FileSystem NTFS
 ```
-
 This command creates new storage space in the CompanyData pool using the Mirror resiliency setting, fixed provisioning, a 20 GB SSD storage tier, and an 80 GB HDD storage tier, and then formats the volume with the NTFS file system and assigns drive letter M.
+
+
+### Example 3: Create a volume on disk
+```powershell
+PS C:\>Get-Disk | Where-Object OperationalStatus -eq 'Offline'| 
+         Initialize-Disk -PartitionStyle GPT -PassThru |
+            New-Volume -FileSystem NTFS -DriveLetter F -FriendlyName 'New-Volume'
+````
+This command initializes a new disk added to a host then creates a new volume on each new disk.
 
 ## PARAMETERS
 
@@ -583,28 +592,19 @@ The cmdlet creates the write-back cache of the size that you specify when the cm
 
 The following describes the behavior of this parameter based on the value that you specify: 
 
-- 1.
-If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool. 
-- 2.
-The default setting of **WriteCacheSizeDefault** for a storage pool is Auto, which specifies that Windows Server automatically selects the optimal write-back cache size for your configuration.
+1. If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool. 
+1. The default setting of **WriteCacheSizeDefault** for a storage pool is Auto, which specifies that Windows Server automatically selects the optimal write-back cache size for your configuration.
 You can change the value of **WriteCacheSizeDefault** to a concrete value at any time. 
-- 3.
-The Auto setting for *WriteCacheSize* operates as follows: 
----- a.
-If any of the following is true, Auto is set to 1 GB: 
------- i.
-The storage pool contains at least N drives with enough capacity and you set the Usage parameter to Journal.
-N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity. 
------- ii.
-The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD.
-N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity. 
----- b.
-Otherwise, Auto is set to 0 (no log) for simple and mirror spaces, and 32 MB for parity spaces. 
-- 4.
-If you specify Auto or 0 (zero) for this parameter and the storage space is not a parity space, the cmdlet verifies that either 3.a.i or 3.a.ii is true.
+1. The Auto setting for *WriteCacheSize* operates as follows: 
+    1. If any of the following is true, Auto is set to 1 GB: 
+        1. The storage pool contains at least N drives with enough capacity and you set the Usage parameter to Journal.
+        N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity. 
+        1. The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD.
+        N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity. 
+    1. Otherwise, Auto is set to 0 (no log) for simple and mirror spaces, and 32 MB for parity spaces. 
+1. If you specify Auto or 0 (zero) for this parameter and the storage space is not a parity space, the cmdlet verifies that either 3.a.i or 3.a.ii is true.
 If either 3.a.i or 3.a.ii is not true, you cannot set *WriteCacheSize* to Auto or 0. 
----- a.
-The objective of these conditions is to help you avoid scenarios in which you force the creation of a write-back cache in situations that result in slower performance.
+    1. The objective of these conditions is to help you avoid scenarios in which you force the creation of a write-back cache in situations that result in slower performance.
 
 ```yaml
 Type: UInt64

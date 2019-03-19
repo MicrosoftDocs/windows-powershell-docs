@@ -2,6 +2,9 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: FF3485CE-29A1-4A8B-AFFF-1B9FA0B15898
 ---
 
@@ -69,13 +72,13 @@ Each name must be unique within a given policy store.
 If the rules in multiple GPOs have the same name, then one will overwrite the other based upon GPO precedence.
 If a rule from a GPO has the same name as a rule from the PersistentStore, then the rule from the GPO will overwrite the local rule.
 
-To specify a new default quick mode cryptographic set, run this cmdlet to specify the default set with the **Name** parameter value set to {E5A5D32A-4BCE-4e4d-B07F-4AB1BA7E5FE1}.
+To specify a new default quick mode cryptographic set, run this cmdlet to specify the default set with the **Name** parameter value set to {E5A5D32A-4BCE-4e4d-B07F-4AB1BA7E5FE2}.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Rename-NetIPsecQuickModeCryptoSet -Name "{ed8384a9-a78b-4d0d-8f3d-eb5615edb4a0}" -NewName "Exchange HIPPA Server, Any <-> 80 - Phase 2 Crypto Set"
+PS C:\>Rename-NetIPsecQuickModeCryptoSet -Name "{ed8384a9-a78b-4d0d-8f3d-eb5615edb4a0}" -NewName "Exchange HIPAA Server, Any <-> 80 - Phase 2 Crypto Set"
 ```
 
 This example renames a quick mode cryptographic set so that the unique identifier is descriptive and user friendly.

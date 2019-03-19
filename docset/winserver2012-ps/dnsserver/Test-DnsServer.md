@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: B93531FB-2130-428B-8DAA-66027AA2488B
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-DnsServer
@@ -109,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a DNSserver.
+Specifies a DNS server.
 The acceptable values for this parameter are: an IP V4 address; an IP V6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
 
 ```yaml

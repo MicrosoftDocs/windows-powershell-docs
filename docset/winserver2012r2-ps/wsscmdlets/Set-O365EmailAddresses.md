@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-O365EmailAddresses
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7D1E1ADA-73E9-460D-AB0C-D9D696497EC9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-O365EmailAddresses
@@ -82,13 +84,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String,System.Collections.Generic.List<System.String>
+### System.String
 LocalAccountName
 Type: System.String
 Description: local user name
 
+### System.Collections.Generic.List<System.String>
 EmailAddresses
-Type: System.Collections.Generic.List\<System.String\>
+Type: System.Collections.Generic.List<System.String>
 Description: email addresses of the user
 
 ## OUTPUTS

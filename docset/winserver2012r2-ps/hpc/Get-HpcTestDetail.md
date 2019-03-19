@@ -14,6 +14,9 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-HpcTestDetail
@@ -146,8 +149,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### HpcTestCaseDetail, HpcTestCase<Type>Parameter, HpcVariable, HpcTestCaseStep
-This cmdlet returns an **HpcTestCaseDetail** object, zero or more **HpcTestCase\<Type\>Parameter** objects, zero or more **HpcVariable** objects, and one to three **HpcTestCaseStep** objects.
+### HpcTestCaseDetail
+
+### HpcTestCase
+Zero or more **HpcTestCase** objects.
+
+### HpcVariable
+Zero or more **HpcVariable** objects.
+
+### HpcTestCaseStep
+One to three **HpcTestCaseStep** objects.
 
 ## NOTES
 * You must be a cluster administrator to run this cmdlet successfully.

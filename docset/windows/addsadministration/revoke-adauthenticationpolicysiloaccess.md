@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Revoke-ADAuthenticationPolicySiloAccess
+ms.reviewer:
 ms.assetid: 75A6E9C8-F2B1-4C04-86AC-9FECAADDFA8B
 ---
 
@@ -201,14 +202,14 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
 Domain name values: 
 
--  Fully qualified domain name
--  NetBIOS name
+- Fully qualified domain name
+- NetBIOS name
 
 Directory server values:  
 
--  Fully qualified directory server name
--  NetBIOS name
--  Fully qualified directory server name and port
+- Fully qualified directory server name
+- NetBIOS name
+- Fully qualified directory server name and port
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 

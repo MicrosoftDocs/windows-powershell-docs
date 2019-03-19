@@ -2,6 +2,9 @@
 external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 7AA84241-05D6-41CF-8B3C-68C5B81F213C
 ---
 

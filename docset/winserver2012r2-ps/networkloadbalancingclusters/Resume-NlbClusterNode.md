@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Resume-NlbClusterNode
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36421B96-99FA-4188-9B1E-D44F0A503258
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Resume-NlbClusterNode

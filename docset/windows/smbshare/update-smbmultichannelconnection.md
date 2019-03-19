@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbMultichannelConnection.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Update-SmbMultichannelConnection
+ms.reviewer:
 ms.assetid: 42A5CB1C-50F8-4AB1-B699-9B51A54B02D4
 ---
 
@@ -39,7 +40,7 @@ If no parameter is specified, the SMB client communicates with all of the server
 
 ### Example 1: Update multi-channel-related information
 ```
-PS C:\>Update-SmbMulitchannelConnection
+PS C:\>Update-SmbMultichannelConnection
 ```
 
 This command forces the SMB client to update the multi-channel-related information.

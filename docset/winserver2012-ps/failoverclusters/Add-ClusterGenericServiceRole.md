@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 188158B2-1000-46CE-BBF0-13D0A8191AD4
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ClusterGenericServiceRole
@@ -175,8 +178,8 @@ Accept wildcard characters: False
 
 ### -Wait
 Specifies the time in seconds to wait for the cmdlet.
-If the \<maml:system\>Wait\</maml:system\> parameter is not specified, then the cmdlet waits for completion.
-If \<maml:codeInline\>-Wait 0\</maml:codeInline\> is specified, then the call is initiated and the cmdlet returns without waiting.
+If the `Wait` parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

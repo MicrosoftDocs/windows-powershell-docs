@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerLoadBalancerProbe
+ms.reviewer:
 ms.assetid: 3DE80088-3F0E-4BBA-8A9C-C6259BBF5CBD
 ---
 
@@ -89,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer where the halth probe belongs
+Specifies the load balancer where the health probe belongs
 
 ```yaml
 Type: String[]
@@ -117,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Specifies the unique identifier for the health probe reource.
+Specifies the unique identifier for the health probe resource.
 
 ```yaml
 Type: String[]

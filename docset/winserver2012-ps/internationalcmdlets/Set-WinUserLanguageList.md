@@ -3,6 +3,9 @@ external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: D857E0BA-B523-493E-B463-67F84A8BEB73
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WinUserLanguageList
@@ -111,8 +114,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### List<WinUserLanguage>
-*List\<WinUserLanguage\>* is a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user accountâ€™s language list. 
+### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
+A list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list. 
 The language object contains the following properties:
 
 - BCP-47 (READ). A standard language tag that is used to identify languages. For more information, see the Internet Engineering Task Force (IETF) BCP 47 RFChttp://go.microsoft.com/fwlink/?LinkID=242207. 

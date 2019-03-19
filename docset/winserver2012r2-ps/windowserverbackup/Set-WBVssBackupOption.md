@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WBVssBackupOption
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3EC835B-2CD6-4B2E-B840-DB3C977FBA89
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WBVssBackupOption

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerScavenging_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Start-DnsServerScavenging
+ms.reviewer:
 ms.assetid: 9BB36BDF-2405-420E-BCC5-DDC79A675567
 ---
 
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Notifies the DNS server to attempt an scavange without prompting you for confirmation.
+Notifies the DNS server to attempt an scavenge without prompting you for confirmation.
 By default, the cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml

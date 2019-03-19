@@ -2,6 +2,9 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1213FFEC-6B21-4134-9997-8A9C3EADB9EE
 ---
 

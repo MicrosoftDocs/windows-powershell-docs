@@ -2,6 +2,9 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 18BE9A1F-283D-448F-A68F-D0450FCAB515
 ---
 

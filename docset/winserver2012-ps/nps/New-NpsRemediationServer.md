@@ -2,6 +2,9 @@
 external help file: NPS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 15428631-C8D6-4BA6-A9B4-7795384C3015
 ---
 

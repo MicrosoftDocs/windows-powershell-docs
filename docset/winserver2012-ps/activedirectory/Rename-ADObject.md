@@ -3,6 +3,9 @@ external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: E332857A-35C9-4C90-85F7-8B8099BB8A56
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Rename-ADObject
@@ -67,7 +70,7 @@ Description
 
 -----------
 
-Rename the object with the DistinguisehdName 'OU=ManagedGroups,OU=Managed,DC=Fabrikam,DC=Com' to 'Groups'.
+Rename the object with the DistinguishedName 'OU=ManagedGroups,OU=Managed,DC=Fabrikam,DC=Com' to 'Groups'.
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```

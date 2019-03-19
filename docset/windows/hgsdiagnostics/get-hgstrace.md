@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsDiagnostics
 ms.assetid: 0DF92D7E-04C7-4050-A522-F4B224EB67A2
-ms.author: coreyp
+ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-HgsTrace
+ms.reviewer:
 ---
 
 # Get-HgsTrace

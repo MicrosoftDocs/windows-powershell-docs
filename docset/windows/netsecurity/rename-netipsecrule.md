@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Rename-NetIPsecRule
+ms.reviewer:
 ms.assetid: 4A8F1048-9AF8-4195-BB1E-E161CB9E805C
 ---
 
@@ -310,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase1AuthSet
-Gets the IPsec rules that are associated with the given phase 1 authenication set to be renamed. 
+Gets the IPsec rules that are associated with the given phase 1 authentication set to be renamed. 
 A **NetIPsecPhase1AuthSet** object represents the phase 1 authorization set conditions associated with an IPsec or main mode rule.
 This parameter sets the methods for main mode negotiation by describing the proposals for computer authentication.
 See the Get-NetIPsecPhase1AuthSet cmdlet for more information. 
@@ -329,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be renamed. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be renamed. 
 A **NetIPsecPhase1AuthSet** object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 
 Alternatively, the *Phase2AuthSet* parameter can be used for the same purpose, but does not allow the authentication set to be piped into the cmdlet and the set must be specified with the *IPsecRuleName* parameter.

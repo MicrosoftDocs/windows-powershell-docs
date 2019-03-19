@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerQueryResolutionPolicy_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-DnsServerQueryResolutionPolicy
+ms.reviewer:
 ms.assetid: EBB1B841-A943-405E-8853-4BDEEF8EC8D7
 ---
 
@@ -536,7 +537,7 @@ The policy treats values that follow the EQ operator as multiple assertions whic
 The policy treats values that follow the NE operator as multiple assertions which are logically differenced (AND'd).
 The criterion is satisfied if the FQDN of the request matches one of the EQ values and does not match any of the NE values.
 You can include the asterisk (*) as the wildcard character.
-For example, `EQ,*.contoso.com,NE,*.fabricam.com`.
+For example, `EQ,*.contoso.com,NE,*.fabrikam.com`.
 
 ```yaml
 Type: String

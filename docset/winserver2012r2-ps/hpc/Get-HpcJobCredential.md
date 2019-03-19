@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=217205
 schema: 2.0.0
 title: Get-HpcJobCredential
 ms.assetid:
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Get-HpcJobCredential

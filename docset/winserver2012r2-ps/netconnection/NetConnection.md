@@ -7,13 +7,15 @@ Locale: en-US
 title: NetConnection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: c8b0fd32-1442-4822-b3a5-8182f95d3729
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # NetConnection Module

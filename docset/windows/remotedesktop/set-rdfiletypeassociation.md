@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RDFileTypeAssociation
+ms.reviewer:
 ms.assetid: 4EAAD44F-74D9-4714-989B-7D694BDCEEDF
 ---
 
@@ -39,7 +40,7 @@ Set-RDFileTypeAssociation [-CollectionName] <String> -AppAlias <String> -FileExt
 ```
 
 ## DESCRIPTION
-The **Set-RDFileTypeAssocation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
+The **Set-RDFileTypeAssociation** cmdlet modifies the file type association of a firstref_server_7 RemoteApp program in a Remote Desktop deployment.
 
 ## EXAMPLES
 

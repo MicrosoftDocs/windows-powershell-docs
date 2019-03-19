@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetVirtualizationCustomerRouteSettingData.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetVirtualizationCustomerRoute
+ms.reviewer:
 ms.assetid: DBD70482-0849-404E-825C-A848EC84D2D4
 ---
 
@@ -64,7 +65,7 @@ PS C:\>Set-NetVirtualizationCustomerRoute -DestinationPrefix "172.16.0.0/16" -Me
 
 This command changes the metric value to 3 for a Customer Route that has the specified destination prefix.
 
-### Example 2: Change a metric value for mulitple Customer Routes
+### Example 2: Change a metric value for multiple Customer Routes
 ```
 PS C:\>Get-NetVirtualizationCustomerRoute -NextHop "172.16.0.1" | Set-NetVirtualizationCustomerRoute -Metric 3
 ```

@@ -2,6 +2,9 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0A351B38-1E4B-451C-A66B-EF97683646F4
 ---
 
@@ -407,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseMaximumSize
-Creates a virtual disk with the maximimum size possible given the available storage pool space and specified parameters.
+Creates a virtual disk with the maximum size possible given the available storage pool space and specified parameters.
 
 ```yaml
 Type: SwitchParameter

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-ADOptionalFeature
+ms.reviewer:
 ms.assetid: 3CF6B1D8-DA88-45F2-9520-34B11CAA3928
 ---
 
@@ -63,7 +64,7 @@ This operation should be performed against the domain controller that holds the 
 
 ### Example 3: Disable a feature by GUID
 ```
-PS C:\> Disable-ADOptionaFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
+PS C:\> Disable-ADOptionalFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
 ```
 
 This command disables the optional feature that has the GUID 54ec6e43-75a8-445b-aa7b-346a1e096659 for the domain with the distinguished name DC=ntdev,DC=fabrikam,DC=com.

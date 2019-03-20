@@ -1,6 +1,9 @@
 ---
 Module Name: ADFS
 Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390747
 Help Version: 5.0.0.1
 Locale: en-US

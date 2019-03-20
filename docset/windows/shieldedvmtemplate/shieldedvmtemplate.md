@@ -1,6 +1,9 @@
 ---
 Module Name: ShieldedVMTemplate
 Module Guid: AFB7D213-3F7E-4A0D-86EB-02D57AD7B858
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524080
 Help Version: 5.0.2.2
 Locale: en-US

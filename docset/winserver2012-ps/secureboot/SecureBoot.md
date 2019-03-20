@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216896
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 5069B711-43A1-412B-B7CC-249C39814FD4
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # SecureBoot Module

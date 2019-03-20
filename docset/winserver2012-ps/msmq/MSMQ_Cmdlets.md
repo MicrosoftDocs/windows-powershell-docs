@@ -5,6 +5,9 @@ Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ms.assetid: 85AAA420-97F3-423E-AE94-080BC32A8A27
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # MSMQ_Cmdlets Module

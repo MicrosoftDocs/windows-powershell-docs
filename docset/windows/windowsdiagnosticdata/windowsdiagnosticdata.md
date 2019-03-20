@@ -1,6 +1,9 @@
 ---
 Module Name: WindowsDiagnosticData
 Module Guid: 11888dc4-4830-4138-b422-e8bc2209ffb9
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=2028917
 Help Version: 1.0.0.0
 Locale: en-US

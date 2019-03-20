@@ -1,6 +1,9 @@
 ---
 Module Name: ShieldedVMDataFile
 Module Guid: 9E8B69B3-2CC7-4060-8D66-6F86BE39FEBF
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524081
 Help Version: 5.0.0.2
 Locale: en-US

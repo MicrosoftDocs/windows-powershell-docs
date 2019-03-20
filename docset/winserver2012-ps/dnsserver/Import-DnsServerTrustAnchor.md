@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: B1ECC72F-7AAE-417E-A14E-D86E04A41C64
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Import-DnsServerTrustAnchor

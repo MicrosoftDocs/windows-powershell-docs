@@ -3,6 +3,9 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 4061CDEE-7A4D-49F6-AC15-6C3E833C7E5D
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-ClusterNode

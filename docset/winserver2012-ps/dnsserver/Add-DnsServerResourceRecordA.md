@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 118DBE0D-E0D2-45C5-A99B-B272EE6494AD
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-DnsServerResourceRecordA

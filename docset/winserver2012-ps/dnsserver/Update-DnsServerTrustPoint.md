@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 2DD41C46-24BC-44D1-BE23-FE43E7F75749
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Update-DnsServerTrustPoint

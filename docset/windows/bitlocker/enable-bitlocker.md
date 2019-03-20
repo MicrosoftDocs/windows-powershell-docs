@@ -184,7 +184,7 @@ PS C:\> Get-BitLockerVolume | Enable-BitLocker -EncryptionMethod Aes128 -Recover
 
 This command gets all the BitLocker volumes for the current computer and passes pipes them to the **Enable-BitLocker** cmdlet by using the pipe operator.
 This cmdlet specifies an encryption algorithm for the volume or volumes.
-This command also specifies a path to where the recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
+This cmdlet specifies a path to a folder where the randomly generated recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
 
 ### Example 3: Enable BitLocker with a specified user account
 ```
@@ -346,8 +346,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies a path to a recovery key.
-The key stored in the specified path acts as a protector for the volume encryption key.
+Specifies a path to a folder.
+This cmdlet adds a randomly generated recovery key as a protector for the volume encryption key and stores it in the specified path.
 
 ```yaml
 Type: String

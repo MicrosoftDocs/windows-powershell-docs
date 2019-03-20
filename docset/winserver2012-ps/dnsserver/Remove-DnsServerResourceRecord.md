@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 544BB23C-3448-41ED-B098-823B74D0FFF7
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DnsServerResourceRecord

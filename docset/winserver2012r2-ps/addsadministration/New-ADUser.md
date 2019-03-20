@@ -1213,15 +1213,15 @@ This parameter uses the following syntax to add remove, replace or clear service
 
 To add values:
 
-`-ServicePrincipalNames @{Add=value1,value2,...} `
+`-ServicePrincipalNames @{Add=value1,value2,...}`
 
 To remove values:
 
-`-ServicePrincipalNames @{Remove=value3,value4,...} `
+`-ServicePrincipalNames @{Remove=value3,value4,...}`
 
 To replace values:
 
-`-ServicePrincipalNames @{Replace=value1,value2,...} `
+`-ServicePrincipalNames @{Replace=value1,value2,...}`
 
 To clear all values:
 
@@ -1230,7 +1230,7 @@ To clear all values:
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
 
-`@{Add=value1,value2,...};@{Remove=value3,value4,...} `
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators are applied in the following sequence: 
 

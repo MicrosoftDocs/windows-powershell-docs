@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 1FA4F5A8-2AF5-4909-A58B-CC667A288E89
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DnsServerZone

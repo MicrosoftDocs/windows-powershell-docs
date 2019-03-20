@@ -1,6 +1,9 @@
 ---
 Module Name: ProcessMitigations
 Module Guid: 1e8f5a4c-f11b-41a5-bdbd-4695ca4a503e
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=845399
 Help Version: 5.0.0.1
 Locale: en-US

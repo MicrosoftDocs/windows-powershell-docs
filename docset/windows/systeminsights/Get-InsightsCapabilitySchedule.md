@@ -117,8 +117,11 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The cmdlet returns one or more objects that represent the specified capability schedules.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Set-InsightsCapabilitySchedule](set-insightscapabilityschedule.md)<br>
-[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Set-InsightsCapabilitySchedule](set-insightscapabilityschedule.md)
+
+[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)
+
 [Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)
 

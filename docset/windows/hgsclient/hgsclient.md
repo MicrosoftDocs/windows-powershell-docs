@@ -1,6 +1,9 @@
 ---
 Module Name: HgsClient
 Module Guid: DE3E9B0F-0845-4B05-8CB1-65669405130C
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519076
 Help Version: 5.0.0.2
 Locale: en-US

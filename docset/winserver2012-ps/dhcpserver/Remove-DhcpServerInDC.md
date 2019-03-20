@@ -3,6 +3,9 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 06B5393E-D9BB-4B52-AAA8-A72CD3669436
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DhcpServerInDC
@@ -35,22 +38,19 @@ The trigger for authorization check will be done even if the removal of computer
 The following warning will be displayed if the computer running the DHCP server service does not exist in AD and the trigger for the server authorization check succeeded: 
 
  - `The DHCP server is already de-authorized in Active Directory.
-The authorization check on the DHCP server has been initiated.
-`
+The authorization check on the DHCP server has been initiated.`
 
 The following warning will be displayed if the computer running the DHCP server service does not exist in AD, but the trigger for the server authorization check failed: 
 
  - `The DHCP server is already de-authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
 The following warning will be displayed if the deletion of the computer running the DHCP server service in AD succeeded, but the trigger for the server authorization check failed: 
 
  - `The DHCP server has been successfully de-authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
 If the deletion of computer running the DHCP server service to AD fails with an error other than object_does not already_exists_error, then an error is returned and authorization check on the server is not triggered.
 

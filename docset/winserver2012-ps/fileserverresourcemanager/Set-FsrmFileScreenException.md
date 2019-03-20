@@ -3,6 +3,9 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 0B5C284E-3570-488F-8624-C459AF9C5B27
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-FsrmFileScreenException

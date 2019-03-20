@@ -7,7 +7,7 @@ Module Guid: 46F598E5-9907-42B2-AFBB-68EAF7E34604
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=808419
 Help Version: 5.0.1.1
 Locale: en-US
-title: NetLdpAgent
+title: NetLldpAgent
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -20,11 +20,11 @@ ms.technology: powershell-windows
 ms.assetid: 29C55F63-4B4F-4E08-919C-E23079F69F7C
 ---
 
-# NetLdpAgent Module
+# NetLldpAgent Module
 ## Description
 This reference provides cmdlet descriptions and syntax for the following Network Logical Link Discovery Protocol (LLDP) Agent cmdlets:
 
-## NetLdpAgent Cmdlets
+## NetLldpAgent Cmdlets
 ### [Disable-NetLldpAgent](./Disable-NetLldpAgent.md)
 Disables LLDP on a network interface on a computer.
 

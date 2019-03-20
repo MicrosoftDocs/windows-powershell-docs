@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 9BB36BDF-2405-420E-BCC5-DDC79A675567
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Start-DnsServerScavenging

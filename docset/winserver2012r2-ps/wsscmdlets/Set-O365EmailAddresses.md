@@ -84,13 +84,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String,System.Collections.Generic.List<System.String>
+### System.String
 LocalAccountName
 Type: System.String
 Description: local user name
 
+### System.Collections.Generic.List<System.String>
 EmailAddresses
-Type: System.Collections.Generic.List\<System.String\>
+Type: System.Collections.Generic.List<System.String>
 Description: email addresses of the user
 
 ## OUTPUTS

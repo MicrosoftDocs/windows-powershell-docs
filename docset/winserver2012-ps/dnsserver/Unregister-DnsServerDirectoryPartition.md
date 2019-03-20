@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 28F4646E-A4E7-4C9B-A195-69E733F55D7E
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Unregister-DnsServerDirectoryPartition

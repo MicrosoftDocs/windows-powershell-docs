@@ -38,6 +38,8 @@ Get-ComputeProcess [-Id] <String[]> [<CommonParameters>]
 ## DESCRIPTION
 The **Get-ComputeProcess** cmdlet gets a list of running compute systems from the Hyper-V Host Compute Service, including virtual machines and containers.
 
+You must run this cmdlet from an elevated PowerShell session.
+
 ## EXAMPLES
 
 

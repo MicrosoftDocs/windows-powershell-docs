@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### List<WinUserLanguage>
+### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
 You can pipe a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
 The language object contains the following properties: 
 

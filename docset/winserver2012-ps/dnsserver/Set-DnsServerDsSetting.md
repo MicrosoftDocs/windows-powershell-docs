@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 5CFABE53-1D6E-416B-9220-D493B43728D5
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DnsServerDsSetting

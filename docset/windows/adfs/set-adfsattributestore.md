@@ -45,7 +45,7 @@ The **Set-AdfsAttributeStore** cmdlet modifies properties of an attribute store 
 
 ### Example 1: Modify the configuration of an attribute store
 ```
-PS C:\> Set-AdfsAttributeStore -TargetName "ContosoAttributeStore01" -Configuration @("runmode" = "verbose"; configParaName2 = configParaValueNew)
+PS C:\> Set-AdfsAttributeStore -TargetName "ContosoAttributeStore01" -Configuration @{"runmode" = "verbose"; configParaName2 = configParaValueNew}
 ```
 
 This command modifies the configuration for the custom attribute store named ContosoAttributeStore01.

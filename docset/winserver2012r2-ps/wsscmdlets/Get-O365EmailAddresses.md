@@ -74,7 +74,7 @@ Description: local user name
 
 ## OUTPUTS
 
-### System.Collections.Generic.List<string>
+### System.Collections.Generic.List<System.String>
 This cmdlet returns a list of email addresses for a user.
 
 ## NOTES

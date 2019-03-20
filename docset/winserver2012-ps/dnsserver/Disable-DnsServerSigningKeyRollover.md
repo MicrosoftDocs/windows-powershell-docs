@@ -3,6 +3,9 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 858E028F-F608-48EE-9AF6-04A51C410808
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-DnsServerSigningKeyRollover

@@ -142,7 +142,10 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The **Invoke-InsightsCapability** won't return until the specified capabilities have finished running.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Get-InsightsCapabilityResult](get-insightscapabilityresult.md)<br>
-[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Get-InsightsCapabilityResult](get-insightscapabilityresult.md)
+
+[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)
+
 [Set-InsightsCapabilitySchedule](set-insightscapabilityschedule.md)

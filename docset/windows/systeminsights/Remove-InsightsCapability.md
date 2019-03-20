@@ -141,6 +141,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The **Remove-InsightsCapability** can't remove the default System Insights capabilities.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Add-InsightsCapability](add-insightscapability.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Add-InsightsCapability](add-insightscapability.md)
+
 [Update-InsightsCapability](update-insightscapability.md)

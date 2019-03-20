@@ -1,5 +1,6 @@
 ---
-author:
+author: kenwith
+ms.author: kenwith
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -27,6 +28,7 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
 ---
 
 # New-HpcSoftCard

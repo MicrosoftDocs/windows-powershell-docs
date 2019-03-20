@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216863
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: D4DCA601-168D-4943-9778-1975F870BAA9
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # SmbShare Module

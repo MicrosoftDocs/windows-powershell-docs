@@ -263,15 +263,15 @@ The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName
 
 To add values:
 
-`-Certificates @{Add=value1,value2,...} `
+`-Certificates @{Add=value1,value2,...}`
 
 To remove values:
 
-`-Certificates @{Remove=value3,value4,...} `
+`-Certificates @{Remove=value3,value4,...}`
 
 To replace values:
 
-`-Certificates @{Replace=value1,value2,...} `
+`-Certificates @{Replace=value1,value2,...}`
 
 To clear all values:
 
@@ -280,7 +280,7 @@ To clear all values:
 You can specify more than one operation by using a list separated by semicolons.
 For example, use the following syntax to add and remove **Certificates** values:
 
-`-Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...} `
+`-Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators are applied in the following sequence: 
 

@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285574
 Help Version: 4.0.1.0
 Locale: en-US
 ms.assetid: 38E37D22-F0CF-4EBC-8E1D-8F75A0376C6A
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # VAMT Module

@@ -1,6 +1,9 @@
 ---
 external help file: DfsNamespaceFolder.cdxml-help.xml
 ms.assetid: E7AC0201-4475-401E-B192-FD8E41EAB0FE
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 online version: 
 schema: 2.0.0
 ---

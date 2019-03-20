@@ -5,6 +5,9 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=230535
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 195E80D5-EC10-425B-B7D9-F5322AE491A7
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # NetSwitchTeam Module

@@ -121,7 +121,7 @@ Specifies the backup ID of a GPO backup.
 The backup ID is a globally unique identifier (GUID) that uniquely identifies the backup.
 You can use this parameter to specify a particular version of a backed-up GPO in the backup directory.
 
-The backup ID is different from the ID of the GPO that was backed up (specified by the *Guid* parameter).
+The backup ID is different from the ID of the GPO that was backed up (specified by the *Guid* parameter), you can find the backup ID in the backup directory.
 
 ```yaml
 Type: Guid

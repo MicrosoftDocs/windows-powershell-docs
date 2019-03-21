@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{Fill CimSession Description}}
+Specifies Common Information Model (CIM) session object that represents a connection to a local computer or a remote computer.
 
 ```yaml
 Type: CimSession[]

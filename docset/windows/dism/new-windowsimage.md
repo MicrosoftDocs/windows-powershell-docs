@@ -163,7 +163,7 @@ The accepted values are as follows:
 Type: LogLevel
 Parameter Sets: (All)
 Aliases: LL
-Accepted values: Errors, Warnings, WarningsInfo
+Accepted values: 1,2,3,4
 
 Required: False
 Position: Named

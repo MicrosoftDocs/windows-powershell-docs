@@ -240,8 +240,7 @@ You cannot pipe objects to Set-WmsStation.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 Throws SecurityException if the specified autologon user is an administrative user.
 This exception is not thrown if the OverrideAdminWarning option is specified for administrative users.
 

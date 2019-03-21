@@ -120,8 +120,7 @@ You cannot pipe objects to Show-WmsSystem.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

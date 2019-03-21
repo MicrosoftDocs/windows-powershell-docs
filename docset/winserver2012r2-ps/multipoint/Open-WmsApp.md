@@ -150,8 +150,7 @@ You cannot pipe objects to Open-WmsApp.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

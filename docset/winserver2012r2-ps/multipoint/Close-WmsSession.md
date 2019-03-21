@@ -114,8 +114,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Close-WmsSession.
+### None
 
 ## OUTPUTS
 

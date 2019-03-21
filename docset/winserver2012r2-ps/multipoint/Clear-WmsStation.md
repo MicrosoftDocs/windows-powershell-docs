@@ -103,8 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Clear-WmsStation.
+### None
 
 ## OUTPUTS
 

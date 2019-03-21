@@ -137,13 +137,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-**Enable-IISCentralCertProvider** does not accept pipelined input.
+### None
 
 ## OUTPUTS
 
-###  
-**Enable-IISCentralCertProvider** does not return any objects.
+### None
 
 ## NOTES
 

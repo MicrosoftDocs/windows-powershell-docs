@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2376CFA-E000-4C47-97F7-DC45C19775E9
+ms.manager: dansimp
 ---
 
 # Disable-VMRemoteFXPhysicalVideoAdapter

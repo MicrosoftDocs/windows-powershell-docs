@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 009BCBE9-C869-41ED-A822-20C40A8E16B6
+ms.manager: dansimp
 ---
 
 # Uninstall-ADDSDomainController

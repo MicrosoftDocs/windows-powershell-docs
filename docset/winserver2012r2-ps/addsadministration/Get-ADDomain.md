@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09E773E8-6F39-409D-9113-AF501C421755
+ms.manager: dansimp
 ---
 
 # Get-ADDomain

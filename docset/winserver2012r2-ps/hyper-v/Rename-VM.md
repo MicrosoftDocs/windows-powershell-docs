@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 280A95A4-B3D8-4BB7-BE45-A66BE7905688
+ms.manager: dansimp
 ---
 
 # Rename-VM

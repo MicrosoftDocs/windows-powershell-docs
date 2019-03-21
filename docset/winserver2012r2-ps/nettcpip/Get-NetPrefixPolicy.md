@@ -13,6 +13,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
+ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---
@@ -165,7 +166,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## NOTES
 
-## RELATED LINKS
+## RELATED LINKS 
 
 [Source and Destination Address Selection for IPv6 on TechNet](http://technet.microsoft.com/library/bb877985.aspx)
 

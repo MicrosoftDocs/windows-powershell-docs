@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF2A8410-EE45-4493-872B-E5F82E478601
+ms.manager: dansimp
 ---
 
 # Remove-ClusterResourceDependency

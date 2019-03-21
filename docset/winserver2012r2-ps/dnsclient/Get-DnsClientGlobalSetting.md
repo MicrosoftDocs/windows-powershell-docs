@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 388CDBFB-6DC1-452F-AF28-3FF59FD3317F
+ms.manager: dansimp
 ---
 
 # Get-DnsClientGlobalSetting

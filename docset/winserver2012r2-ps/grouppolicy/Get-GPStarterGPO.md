@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 47397B2B-49DA-4329-A2AE-6AB87CC1EE1E
+ms.manager: dansimp
 ---
 
 # Get-GPStarterGPO

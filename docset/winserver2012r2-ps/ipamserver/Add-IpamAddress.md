@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7887EDA6-0CD3-4DF7-81C1-1C1268F4764F
+ms.manager: dansimp
 ---
 
 # Add-IpamAddress

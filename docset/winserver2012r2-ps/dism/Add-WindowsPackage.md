@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D1871FB1-D599-4997-A992-8F5F7BC84A82
+ms.manager: dansimp
 ---
 
 # Add-WindowsPackage

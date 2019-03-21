@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8AD66898-56D9-4CDB-B2CC-AC0B8B8CFD8B
+ms.manager: dansimp
 ---
 
 # Get-DAClientExperienceConfiguration

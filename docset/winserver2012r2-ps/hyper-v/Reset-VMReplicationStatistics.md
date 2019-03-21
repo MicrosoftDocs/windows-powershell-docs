@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E78A3A2E-0E18-480E-84CB-448CE9DF2DB3
+ms.manager: dansimp
 ---
 
 # Reset-VMReplicationStatistics

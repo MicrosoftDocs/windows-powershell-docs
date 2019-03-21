@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 63F83180-AE7C-47ED-9099-9D46D00E2650
+ms.manager: dansimp
 ---
 
 # Get-WinHomeLocation

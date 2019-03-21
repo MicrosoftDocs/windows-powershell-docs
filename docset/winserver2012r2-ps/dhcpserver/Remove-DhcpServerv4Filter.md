@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6FE59188-0DB2-4E87-B14B-C17385B9535E
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Filter

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E11F0F60-D968-489B-B537-33E62B16E371
+ms.manager: dansimp
 ---
 
 # Measure-VMReplication

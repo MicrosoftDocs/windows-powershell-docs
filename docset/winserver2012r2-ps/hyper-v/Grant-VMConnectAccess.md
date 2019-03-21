@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD2A75F1-9544-4A10-90EB-9337E2308A3B
+ms.manager: dansimp
 ---
 
 # Grant-VMConnectAccess

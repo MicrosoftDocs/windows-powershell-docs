@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C87EF4C2-589F-4779-AC7F-F510D30A50F5
+ms.manager: dansimp
 ---
 
 # Get-DnsClientNrptPolicy

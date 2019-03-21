@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
+ms.manager: dansimp
 ---
 
 # Add-ClusterVMMonitoredItem

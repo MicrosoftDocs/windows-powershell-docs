@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8A5B4E2A-6173-4C94-8020-A8A0DA8B73AB
+ms.manager: dansimp
 ---
 
 # Update-FsrmQuota

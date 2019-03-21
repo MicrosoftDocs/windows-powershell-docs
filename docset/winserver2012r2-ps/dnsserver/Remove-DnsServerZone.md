@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1FA4F5A8-2AF5-4909-A58B-CC667A288E89
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerZone

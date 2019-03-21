@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 10DD6225-F667-4D45-A9CB-6C6E5C7D236F
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerDatabase

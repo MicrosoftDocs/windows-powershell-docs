@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0550DC8B-73FE-4758-9B62-6342880F43BD
+ms.manager: dansimp
 ---
 
 # Remove-GPLink

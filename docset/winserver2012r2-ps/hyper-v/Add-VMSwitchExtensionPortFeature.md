@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 490BF9E5-9BC0-4CCD-B83C-E0B958E716FC
+ms.manager: dansimp
 ---
 
 # Add-VMSwitchExtensionPortFeature

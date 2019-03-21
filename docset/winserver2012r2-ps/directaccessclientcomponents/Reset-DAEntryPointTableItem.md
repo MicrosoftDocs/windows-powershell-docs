@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCA241CE-76A9-4937-A37E-CAD0B0622E78
+ms.manager: dansimp
 ---
 
 # Reset-DAEntryPointTableItem

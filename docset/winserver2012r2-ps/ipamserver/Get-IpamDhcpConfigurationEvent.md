@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 67993370-D070-497A-B7B8-FA2ABF865552
+ms.manager: dansimp
 ---
 
 # Get-IpamDhcpConfigurationEvent

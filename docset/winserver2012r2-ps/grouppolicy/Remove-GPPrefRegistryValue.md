@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD6541F4-5EAD-4360-A26E-FCADCBB6DADF
+ms.manager: dansimp
 ---
 
 # Remove-GPPrefRegistryValue

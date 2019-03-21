@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AF35742B-ABBA-4D0F-8366-5F8010F2091C
+ms.manager: dansimp
 ---
 
 # Set-IpamSubnet

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B6C31CF-08A3-4699-9E53-FC4808BE56BB
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4PolicyIPRange

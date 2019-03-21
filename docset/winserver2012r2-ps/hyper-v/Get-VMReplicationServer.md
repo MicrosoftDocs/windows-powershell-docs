@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 93652B26-419B-4FC6-81C6-0AC9C35460EF
+ms.manager: dansimp
 ---
 
 # Get-VMReplicationServer

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 47D35358-3126-44F4-97FD-781CEE03EEA3
+ms.manager: dansimp
 ---
 
 # Remove-AppxProvisionedPackage

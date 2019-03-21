@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8FF835CF-D722-436D-955A-2094C68BE7AA
+ms.manager: dansimp
 ---
 
 # Set-AdfsGlobalAuthenticationPolicy

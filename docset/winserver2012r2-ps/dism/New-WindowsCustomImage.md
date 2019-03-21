@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 052253A0-39BD-48C8-ADD6-8ADDC6ACEE4D
+ms.manager: dansimp
 ---
 
 # New-WindowsCustomImage

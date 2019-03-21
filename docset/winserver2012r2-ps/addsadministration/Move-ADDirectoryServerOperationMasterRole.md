@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C779A4F5-0BB8-4E7B-B91C-FC44E2DBE160
+ms.manager: dansimp
 ---
 
 # Move-ADDirectoryServerOperationMasterRole

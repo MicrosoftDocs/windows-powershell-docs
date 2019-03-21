@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 20A2D825-D7F7-411F-9A8C-4AB459B40161
+ms.manager: dansimp
 ---
 
 # Reset-DfsrCloneState

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F6AF9543-D62D-4954-81A0-9AE7EF57A856
+ms.manager: dansimp
 ---
 
 # Set-ADClaimTransformPolicy

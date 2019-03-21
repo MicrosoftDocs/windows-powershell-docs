@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B263282-CFAF-4BCC-84DB-A68D320B55B2
+ms.manager: dansimp
 ---
 
 # Export-IpamSubnet

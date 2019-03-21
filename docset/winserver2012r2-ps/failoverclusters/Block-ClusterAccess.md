@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 497979FE-F7A1-49A7-B1BB-000D83D54E84
+ms.manager: dansimp
 ---
 
 # Block-ClusterAccess

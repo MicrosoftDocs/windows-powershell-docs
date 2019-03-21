@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6BE78483-633F-43B1-96B5-C1123CC1F21A
+ms.manager: dansimp
 ---
 
 # Set-RmsSvcAccount

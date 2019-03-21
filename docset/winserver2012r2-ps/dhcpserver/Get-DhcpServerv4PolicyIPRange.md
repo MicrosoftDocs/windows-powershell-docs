@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 81CA127C-1913-44B0-9934-C027D797867D
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4PolicyIPRange

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90D337A9-9489-4D50-9F27-A154ABBBADBF
+ms.manager: dansimp
 ---
 
 # Set-DnsServerDiagnostics

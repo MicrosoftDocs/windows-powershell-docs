@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0331434C-B2E3-4CAD-969B-3B6F9665CF67
+ms.manager: dansimp
 ---
 
 # Set-IpamDiscoveryDomain

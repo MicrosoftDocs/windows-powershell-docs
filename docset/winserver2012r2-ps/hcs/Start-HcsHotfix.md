@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4EB82928-D161-4E13-BFDC-8761ADC76411
+ms.manager: dansimp
 ---
 
 # Start-HcsHotfix

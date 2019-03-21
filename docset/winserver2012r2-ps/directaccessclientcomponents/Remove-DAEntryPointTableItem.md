@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D72C061A-C5BE-4BEE-B4AE-4CC157E94E88
+ms.manager: dansimp
 ---
 
 # Remove-DAEntryPointTableItem

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A963DBC6-1005-4514-BA59-FDBE82F7E441
+ms.manager: dansimp
 ---
 
 # Update-IscsiTargetPortal

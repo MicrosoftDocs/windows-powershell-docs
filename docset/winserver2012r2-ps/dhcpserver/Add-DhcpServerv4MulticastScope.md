@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 32CB3D9D-A41C-490B-9776-4AE37BBFD8FE
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4MulticastScope

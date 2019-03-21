@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4A752894-524D-4A64-8483-F06A73AB0ED0
+ms.manager: dansimp
 ---
 
 # Enable-DedupVolume

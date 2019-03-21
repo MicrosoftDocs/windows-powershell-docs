@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6E389AE4-80D4-474B-988B-A31A4F06C9D4
+ms.manager: dansimp
 ---
 
 # Disable-AdfsClient

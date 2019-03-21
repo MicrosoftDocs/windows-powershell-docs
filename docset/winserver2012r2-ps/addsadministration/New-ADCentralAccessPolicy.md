@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A2C372C1-D7A9-4DC7-AB84-C496CEA32C1D
+ms.manager: dansimp
 ---
 
 # New-ADCentralAccessPolicy

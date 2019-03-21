@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3B23158-65C7-483E-98CD-44B1C53145DA
+ms.manager: dansimp
 ---
 
 # Rename-VMSnapshot

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42a05332-4d83-4db3-9021-44a5f0f36b24
+ms.manager: dansimp
 ---
 
 # ADRMSAdmin Module

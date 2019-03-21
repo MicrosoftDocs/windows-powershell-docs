@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5695D079-D582-4CF5-9821-0E7AFE5ACFA1
+ms.manager: dansimp
 ---
 
 # Connect-VMNetworkAdapter

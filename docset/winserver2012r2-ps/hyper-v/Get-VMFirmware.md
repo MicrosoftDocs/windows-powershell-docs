@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C54AB7B1-0AAE-4493-8E51-166CC40E1AAB
+ms.manager: dansimp
 ---
 
 # Get-VMFirmware

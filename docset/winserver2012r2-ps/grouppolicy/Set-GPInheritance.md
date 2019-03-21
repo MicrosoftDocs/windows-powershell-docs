@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A418C62A-AA27-4828-B126-73C334420AFB
+ms.manager: dansimp
 ---
 
 # Set-GPInheritance

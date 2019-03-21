@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 04AA0089-AD47-46ED-9B16-370F5B785196
+ms.manager: dansimp
 ---
 
 # Set-NetQosFlowControl

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EBFCFBE1-C2DD-4A34-88A3-E72F5A94A997
+ms.manager: dansimp
 ---
 
 # Remove-VMMigrationNetwork

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AF90C99F-3CBF-4FE8-A29D-11BCA157DAA9
+ms.manager: dansimp
 ---
 
 # Remove-IpamCustomValue

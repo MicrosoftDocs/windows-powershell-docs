@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 29FEDBDE-E566-4CCB-B5B0-3AC1B9FCAD1B
+ms.manager: dansimp
 ---
 
 # Get-ClusterResourceType

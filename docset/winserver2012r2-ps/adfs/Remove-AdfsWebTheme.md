@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4ABFCA5A-253A-44F6-87EE-C9C3CFDA772A
+ms.manager: dansimp
 ---
 
 # Remove-AdfsWebTheme

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 25803094-3789-4545-AF77-0D46652D3FCD
+ms.manager: dansimp
 ---
 
 # Set-ClusterOwnerNode

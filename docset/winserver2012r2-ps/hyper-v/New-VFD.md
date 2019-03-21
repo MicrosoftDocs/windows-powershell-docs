@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90B7A7BD-BD9B-4D66-91A4-344E424EFF60
+ms.manager: dansimp
 ---
 
 # New-VFD

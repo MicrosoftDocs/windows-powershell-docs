@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A7764644-9683-4D79-8C2C-447EADA1DE24
+ms.manager: dansimp
 ---
 
 # Add-ClusterGenericScriptRole

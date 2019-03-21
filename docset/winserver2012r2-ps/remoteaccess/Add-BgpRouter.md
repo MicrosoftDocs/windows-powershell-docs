@@ -12,6 +12,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 82045B7C-A2DB-4ADB-800F-C8FFFE9AAB26
+ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---

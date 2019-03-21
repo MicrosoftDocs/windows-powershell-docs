@@ -13,6 +13,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 54A4B6A4-24FE-4CA9-8F57-CB50B11FAD67
+ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---

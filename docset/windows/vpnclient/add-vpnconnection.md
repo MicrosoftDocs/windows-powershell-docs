@@ -201,6 +201,7 @@ The acceptable values for this parameter are:
 - CHAP
 - MSCHAPv2
 - EAP
+- MachineCertificate
 
 ```yaml
 Type: String[]
@@ -300,6 +301,7 @@ The acceptable values for this parameter are:
 - Optional 
 - Required 
 - Maximum
+- Custom
 
 ```yaml
 Type: String

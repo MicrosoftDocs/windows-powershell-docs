@@ -4,7 +4,6 @@ ms.sitesec: library
 ms.author: kenwith
 Module Name: PKIClient
 Module Guid: CMDLETS
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390811
 Help Version: 5.0.0.1
 Locale: en-US
 title: PKIClient

@@ -154,6 +154,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 **None**
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Update-InsightsCapability](update-insightscapability.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Update-InsightsCapability](update-insightscapability.md)
+
 [Remove-InsightsCapability](remove-insightscapability.md)

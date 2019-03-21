@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 556C0842-0115-4183-AF00-9420A1AB2B8F
+ms.manager: dansimp
 ---
 
 # Get-DnsServerRootHint

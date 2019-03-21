@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4C0134CE-11AB-454C-848D-992D3259231D
+ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterRoutingDomainMapping

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 06B5393E-D9BB-4B52-AAA8-A72CD3669436
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerInDC

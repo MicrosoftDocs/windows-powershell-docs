@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 91A2E11C-4810-4162-81D1-3A7DED92D2BA
+ms.manager: dansimp
 ---
 
 # Get-ADReplicationPartnerMetadata

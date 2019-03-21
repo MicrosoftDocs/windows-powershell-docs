@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 62372650-2974-4050-A470-50EA1E8FA623
+ms.manager: dansimp
 ---
 
 # Get-VMHardDiskDrive

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 159252B7-C9B1-4976-A6CF-50E2EBF18BC2
+ms.manager: dansimp
 ---
 
 # Add-VMSwitchExtensionSwitchFeature

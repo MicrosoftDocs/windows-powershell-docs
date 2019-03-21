@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE85BFD9-0EE1-44A2-B856-BC1B2A959C79
+ms.manager: dansimp
 ---
 
 # Disable-HcsNetInterface

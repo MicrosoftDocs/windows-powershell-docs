@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4A04E8AB-1697-43C5-A936-8061F1B98EEB
+ms.manager: dansimp
 ---
 
 # Add-BCDataCacheExtension

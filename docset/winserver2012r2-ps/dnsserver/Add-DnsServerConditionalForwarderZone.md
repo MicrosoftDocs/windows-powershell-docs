@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 19A98182-1FEF-4524-A204-677D41A78D19
+ms.manager: dansimp
 ---
 
 # Add-DnsServerConditionalForwarderZone

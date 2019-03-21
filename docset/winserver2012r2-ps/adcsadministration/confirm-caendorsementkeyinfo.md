@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CCC599DA-19B6-4AC9-87E5-8283B35A6EF5
+ms.manager: dansimp
 ---
 
 # Confirm-CAEndorsementKeyInfo

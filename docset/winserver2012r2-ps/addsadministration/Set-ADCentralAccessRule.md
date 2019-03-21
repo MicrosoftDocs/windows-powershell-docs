@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 342C58AF-2F20-433B-BB2D-2299DB7D7BA7
+ms.manager: dansimp
 ---
 
 # Set-ADCentralAccessRule

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8DBB8DF0-FE98-470D-BA25-9EFCEDD54E21
+ms.manager: dansimp
 ---
 
 # Remove-DfsReplicatedFolder

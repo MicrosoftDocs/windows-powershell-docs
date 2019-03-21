@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3E0988F5-D2A3-4DEF-BFBB-149FFCA6F3FF
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Reservation

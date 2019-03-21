@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f505fbc5-031f-4480-8446-121defda6f16
+ms.manager: dansimp
 ---
 
 # DcbQoS Module

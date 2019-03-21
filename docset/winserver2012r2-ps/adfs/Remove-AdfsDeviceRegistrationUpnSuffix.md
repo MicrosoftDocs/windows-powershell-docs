@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6DA91F9C-EB04-440A-83EA-382F6DA2CF07
+ms.manager: dansimp
 ---
 
 # Remove-AdfsDeviceRegistrationUpnSuffix

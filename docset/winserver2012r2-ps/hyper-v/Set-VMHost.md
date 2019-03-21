@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 866A8586-BCBE-4C91-B50C-5017C1965942
+ms.manager: dansimp
 ---
 
 # Set-VMHost

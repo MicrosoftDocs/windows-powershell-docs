@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 62e0ebe3-243c-40b5-8797-e82888103ee3
+ms.manager: dansimp
 ---
 
 # FailoverClusters Module

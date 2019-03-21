@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8E7DC352-0414-444D-811B-FFAEBBEBEE13
+ms.manager: dansimp
 ---
 
 # Get-VmNetworkAdapterIsolation

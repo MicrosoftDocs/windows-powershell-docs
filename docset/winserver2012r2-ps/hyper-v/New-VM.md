@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 99205277-D2BB-4879-ABC2-9FD1CA5BD2A5
+ms.manager: dansimp
 ---
 
 # New-VM

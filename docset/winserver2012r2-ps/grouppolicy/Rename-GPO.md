@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8EF1A25-FEC1-48C5-882E-48DBE777698F
+ms.manager: dansimp
 ---
 
 # Rename-GPO

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: e519608d-d9d7-4204-beb4-093916c833e6
+ms.manager: dansimp
 ---
 
 # International Module

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: df713894-ec5d-404b-8ef9-7d583365993e
+ms.manager: dansimp
 ---
 
 # IpamServer Module

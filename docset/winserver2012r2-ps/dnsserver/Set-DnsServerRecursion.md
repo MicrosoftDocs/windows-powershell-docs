@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3F349BD3-9CC3-459D-A7DF-6E600C209A44
+ms.manager: dansimp
 ---
 
 # Set-DnsServerRecursion

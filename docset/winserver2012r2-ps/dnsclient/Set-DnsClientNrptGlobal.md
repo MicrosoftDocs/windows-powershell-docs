@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3B2243A2-20A8-4A89-BAF8-DE972758EB54
+ms.manager: dansimp
 ---
 
 # Set-DnsClientNrptGlobal

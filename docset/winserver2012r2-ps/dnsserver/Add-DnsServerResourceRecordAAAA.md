@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E9733443-E45A-42AE-88D3-327F7EF59F87
+ms.manager: dansimp
 ---
 
 # Add-DnsServerResourceRecordAAAA

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA939FFD-1903-4612-8035-D8E24F04A7DA
+ms.manager: dansimp
 ---
 
 # New-ADDCCloneConfigFile

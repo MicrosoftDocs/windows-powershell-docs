@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42FB7C23-BB1C-4AD9-8172-5B8DDB9BA8EA
+ms.manager: dansimp
 ---
 
 # Restore-GPO

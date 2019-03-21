@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FDE89254-D071-42C1-A593-585529696720
+ms.manager: dansimp
 ---
 
 # Update-WIMBootEntry

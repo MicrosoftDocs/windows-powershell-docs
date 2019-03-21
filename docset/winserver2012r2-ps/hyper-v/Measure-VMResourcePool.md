@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 692DF375-67A3-4945-8590-3CCCAB788F35
+ms.manager: dansimp
 ---
 
 # Measure-VMResourcePool

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8b85e860-a3b4-4fb0-8eda-bf8ebe55b5a7
+ms.manager: dansimp
 ---
 
 # BranchCache Module

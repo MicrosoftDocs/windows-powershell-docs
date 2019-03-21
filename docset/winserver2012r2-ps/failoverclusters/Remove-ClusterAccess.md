@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A86B6D12-3F22-4124-A654-AA0EF4F28ED0
+ms.manager: dansimp
 ---
 
 # Remove-ClusterAccess

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AC8FD481-A2CC-43E8-AB48-2721F48B4D9A
+ms.manager: dansimp
 ---
 
 # Get-WinSystemLocale

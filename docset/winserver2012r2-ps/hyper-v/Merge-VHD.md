@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D41AD686-7543-4FDF-AC76-97B6E7F64E0E
+ms.manager: dansimp
 ---
 
 # Merge-VHD

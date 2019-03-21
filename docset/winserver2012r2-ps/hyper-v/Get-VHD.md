@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F7C23CF5-FF0B-4D31-B4FA-967409F153D9
+ms.manager: dansimp
 ---
 
 # Get-VHD

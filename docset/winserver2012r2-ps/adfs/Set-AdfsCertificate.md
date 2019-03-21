@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D9E57A68-5525-4728-85EE-823355901670
+ms.manager: dansimp
 ---
 
 # Set-AdfsCertificate

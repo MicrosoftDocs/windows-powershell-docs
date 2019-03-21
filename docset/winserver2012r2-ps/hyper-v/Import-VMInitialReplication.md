@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DFCA9ECE-DCD3-4184-BBA1-F6A7457EE408
+ms.manager: dansimp
 ---
 
 # Import-VMInitialReplication

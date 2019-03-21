@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 82A1E141-1494-46C5-B1AC-A772943BF1E4
+ms.manager: dansimp
 ---
 
 # Start-HcsUpdate

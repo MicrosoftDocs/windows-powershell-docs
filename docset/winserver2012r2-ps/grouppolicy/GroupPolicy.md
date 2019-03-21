@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: b9732fda-e344-4d14-8946-791fab93fbaf
+ms.manager: dansimp
 ---
 
 # GroupPolicy Module

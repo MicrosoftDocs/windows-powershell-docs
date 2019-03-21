@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A61F713B-BA0C-461E-B9F8-A2D49A2FF357
+ms.manager: dansimp
 ---
 
 # Add-WindowsImage

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70E8876D-3CC0-4FD1-92FF-6DC3DDC4A9E0
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerTrustAnchor

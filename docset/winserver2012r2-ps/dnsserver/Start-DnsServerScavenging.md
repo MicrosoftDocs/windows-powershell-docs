@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9BB36BDF-2405-420E-BCC5-DDC79A675567
+ms.manager: dansimp
 ---
 
 # Start-DnsServerScavenging

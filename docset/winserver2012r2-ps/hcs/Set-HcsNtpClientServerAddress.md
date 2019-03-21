@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5646FED8-7205-446C-8B53-E72E4ACDA1A9
+ms.manager: dansimp
 ---
 
 # Set-HcsNtpClientServerAddress

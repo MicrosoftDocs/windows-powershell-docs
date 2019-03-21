@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 71BF7C87-0E10-4C3A-A281-84E42AA1A44D
+ms.manager: dansimp
 ---
 
 # New-ADGroup

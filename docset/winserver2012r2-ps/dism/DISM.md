@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 05584e32-4e39-43bf-973b-afa4e1fb9c9b
+ms.manager: dansimp
 ---
 
 # DISM Module

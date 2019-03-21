@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DB59FAF-A0A6-4D74-9190-20CC734B4B77
+ms.manager: dansimp
 ---
 
 # Remove-VMSwitchExtensionSwitchFeature

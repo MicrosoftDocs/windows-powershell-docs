@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64D8530E-2A66-4866-A719-5269F3B859CF
+ms.manager: dansimp
 ---
 
 # Clear-BCCache

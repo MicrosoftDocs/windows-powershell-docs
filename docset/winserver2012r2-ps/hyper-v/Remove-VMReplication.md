@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90883CF7-704F-469B-AD34-2212FDD75E52
+ms.manager: dansimp
 ---
 
 # Remove-VMReplication

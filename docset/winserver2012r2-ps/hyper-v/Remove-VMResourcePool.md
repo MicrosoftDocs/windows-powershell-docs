@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DADB9AEE-C328-4D1C-B311-CF6B52C3C275
+ms.manager: dansimp
 ---
 
 # Remove-VMResourcePool

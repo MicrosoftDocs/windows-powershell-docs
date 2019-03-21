@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
+ms.manager: dansimp
 ---
 
 # Stop-FsrmStorageReport

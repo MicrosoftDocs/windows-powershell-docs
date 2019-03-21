@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3946BA04-13FB-482D-9824-89F8994FBF03
+ms.manager: dansimp
 ---
 
 # Add-ADDSReadOnlyDomainControllerAccount

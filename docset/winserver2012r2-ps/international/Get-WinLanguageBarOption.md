@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9BF4040E-693C-4780-9F38-040A12ED979B
+ms.manager: dansimp
 ---
 
 # Get-WinLanguageBarOption

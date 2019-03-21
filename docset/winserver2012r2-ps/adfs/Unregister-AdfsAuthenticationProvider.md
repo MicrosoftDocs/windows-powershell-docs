@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 38DA24A1-6AF2-4E4A-80D1-7D15DFEE871A
+ms.manager: dansimp
 ---
 
 # Unregister-AdfsAuthenticationProvider

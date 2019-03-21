@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7CB57CD8-6033-47D5-808E-39051CDD6BAC
+ms.manager: dansimp
 ---
 
 # Remove-AdfsGlobalWebContent

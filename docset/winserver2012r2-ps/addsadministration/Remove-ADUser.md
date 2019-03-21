@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F4D7A3B4-8F8E-4B26-9586-16E56473BF85
+ms.manager: dansimp
 ---
 
 # Remove-ADUser

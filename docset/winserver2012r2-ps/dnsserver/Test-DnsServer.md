@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B93531FB-2130-428B-8DAA-66027AA2488B
+ms.manager: dansimp
 ---
 
 # Test-DnsServer

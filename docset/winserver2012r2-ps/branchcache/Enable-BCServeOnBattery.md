@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FAECFBF2-DDBC-4EE9-A2F9-FA248F30881B
+ms.manager: dansimp
 ---
 
 # Enable-BCServeOnBattery

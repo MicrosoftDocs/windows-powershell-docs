@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 841B0143-884A-4E5A-BA85-300A9C86E6EF
+ms.manager: dansimp
 ---
 
 # Remove-VMReplicationAuthorizationEntry

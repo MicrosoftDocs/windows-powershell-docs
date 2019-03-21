@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2D9D58B8-793B-4731-B0EA-C42E57DCBF88
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Class

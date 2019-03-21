@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0E21A42F-AE8E-404A-9567-98ACBF536DA1
+ms.manager: dansimp
 ---
 
 # Set-DfsnFolderTarget

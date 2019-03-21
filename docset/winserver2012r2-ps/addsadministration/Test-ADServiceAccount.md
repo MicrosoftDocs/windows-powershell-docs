@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 19072094-9595-4A07-894D-EA3B28EF8BA4
+ms.manager: dansimp
 ---
 
 # Test-ADServiceAccount

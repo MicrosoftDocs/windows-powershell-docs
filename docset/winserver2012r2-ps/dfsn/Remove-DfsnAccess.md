@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC3AC5F8-70B1-47A6-B087-766605A9F972
+ms.manager: dansimp
 ---
 
 # Remove-DfsnAccess

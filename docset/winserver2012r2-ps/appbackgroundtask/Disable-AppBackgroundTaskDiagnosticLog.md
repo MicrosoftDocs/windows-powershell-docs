@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68CCA324-C329-44B5-BC42-E2FEE9256C9E
+ms.manager: dansimp
 ---
 
 # Disable-AppBackgroundTaskDiagnosticLog

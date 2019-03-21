@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D1733367-426F-429F-86A7-1C4BE47B03D2
+ms.manager: dansimp
 ---
 
 # Test-VHD

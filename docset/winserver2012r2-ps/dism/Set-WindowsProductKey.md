@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1B795A4D-53BF-4DCD-9C8D-BBAB52B0F5B4
+ms.manager: dansimp
 ---
 
 # Set-WindowsProductKey

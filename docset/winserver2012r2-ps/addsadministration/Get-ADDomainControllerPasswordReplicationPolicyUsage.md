@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 06AF4146-74B1-4F1D-A4A8-7B626C3535E2
+ms.manager: dansimp
 ---
 
 # Get-ADDomainControllerPasswordReplicationPolicyUsage

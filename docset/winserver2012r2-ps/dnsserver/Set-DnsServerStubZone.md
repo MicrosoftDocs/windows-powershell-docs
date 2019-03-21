@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CE29854D-A353-4DEC-AE0B-57AA79472CE1
+ms.manager: dansimp
 ---
 
 # Set-DnsServerStubZone

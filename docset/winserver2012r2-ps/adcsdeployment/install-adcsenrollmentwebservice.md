@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72EB4383-EFFA-4EDF-84AC-29AA7F092B86
+ms.manager: dansimp
 ---
 
 # Install-AdcsEnrollmentWebService

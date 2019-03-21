@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: c51c7f98-8cc5-46ef-aa0f-9f65764b94dd
+ms.manager: dansimp
 ---
 
 # ADCSAdministration Module

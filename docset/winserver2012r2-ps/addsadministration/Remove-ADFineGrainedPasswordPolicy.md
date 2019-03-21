@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 001397B0-87B2-49BC-8CCB-658B29CD6703
+ms.manager: dansimp
 ---
 
 # Remove-ADFineGrainedPasswordPolicy

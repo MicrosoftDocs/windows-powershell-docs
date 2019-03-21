@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 152D5F59-D246-422B-9EC4-EAD28E0C7E4B
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6StatelessStatistics

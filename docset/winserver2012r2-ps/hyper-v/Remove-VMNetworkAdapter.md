@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C367BE9C-42CD-4B44-90C4-E73125F68EEE
+ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapter

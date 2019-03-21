@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 50464AFE-68F2-48D9-9C40-2CE9F61A5543
+ms.manager: dansimp
 ---
 
 # Import-VM

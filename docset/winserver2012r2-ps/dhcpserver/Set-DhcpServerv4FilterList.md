@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26BF0A1F-E587-4C47-B2B3-9CB58FEC2204
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4FilterList

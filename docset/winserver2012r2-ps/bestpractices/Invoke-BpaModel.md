@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB989A10-413D-4360-88D6-727EF8F299A5
+ms.manager: dansimp
 ---
 
 # Invoke-BpaModel

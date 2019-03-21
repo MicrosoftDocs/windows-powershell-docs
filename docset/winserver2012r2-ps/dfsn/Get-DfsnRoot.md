@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 84D5BCCD-62CA-4469-87DE-179EE26A8B76
+ms.manager: dansimp
 ---
 
 # Get-DfsnRoot

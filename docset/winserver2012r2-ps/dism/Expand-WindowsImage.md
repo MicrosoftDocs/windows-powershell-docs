@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1C4C9FC7-A8BB-48AD-ADE7-6DEC61280838
+ms.manager: dansimp
 ---
 
 # Expand-WindowsImage

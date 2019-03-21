@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3454c4c0-c216-477b-99ee-2e879c3ae018
+ms.manager: dansimp
 ---
 
 # ADCSDeployment Module

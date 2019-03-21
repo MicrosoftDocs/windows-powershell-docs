@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A99C3621-A137-4EB1-9AC1-A05115BDDFD3
+ms.manager: dansimp
 ---
 
 # Clear-ClusterDiskReservation

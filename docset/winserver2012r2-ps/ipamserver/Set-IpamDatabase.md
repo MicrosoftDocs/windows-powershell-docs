@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FD58B36E-7689-4DD4-AFAD-A3CCA18D70DC
+ms.manager: dansimp
 ---
 
 # Set-IpamDatabase

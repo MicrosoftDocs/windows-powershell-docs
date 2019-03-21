@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 540A8005-6F06-46B8-A97D-1EFF34CE7B6C
+ms.manager: dansimp
 ---
 
 # Test-CauSetup

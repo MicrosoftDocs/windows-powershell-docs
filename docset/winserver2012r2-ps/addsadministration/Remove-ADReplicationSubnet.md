@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9D4DDEA-D332-4601-BE77-D7164AB41CBD
+ms.manager: dansimp
 ---
 
 # Remove-ADReplicationSubnet

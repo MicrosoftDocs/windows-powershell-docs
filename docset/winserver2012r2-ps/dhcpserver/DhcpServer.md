@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9e6d983a-3172-499b-a3ce-468c62134af7
+ms.manager: dansimp
 ---
 
 # DhcpServer Module

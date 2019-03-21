@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E26F3B1F-75A9-47C1-A175-DC5A77AEE7B7
+ms.manager: dansimp
 ---
 
 # Install-RmsMfgEnrollment

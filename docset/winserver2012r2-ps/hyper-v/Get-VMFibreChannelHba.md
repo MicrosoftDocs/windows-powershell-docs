@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD45F67F-8EE7-455C-ACF2-E1D45F39AFB9
+ms.manager: dansimp
 ---
 
 # Get-VMFibreChannelHba

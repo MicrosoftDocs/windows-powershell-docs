@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0041C33A-E929-41DD-833A-7623CF6E0538
+ms.manager: dansimp
 ---
 
 # Get-AppxProvisionedPackage

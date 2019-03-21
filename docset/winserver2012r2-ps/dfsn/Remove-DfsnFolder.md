@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AFC9D1DC-CF6E-42FB-A173-A7BE0C04DE71
+ms.manager: dansimp
 ---
 
 # Remove-DfsnFolder

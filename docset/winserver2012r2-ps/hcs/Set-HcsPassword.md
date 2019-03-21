@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6AE90E8A-F16B-4010-AA62-FC87E15406C7
+ms.manager: dansimp
 ---
 
 # Set-HcsPassword

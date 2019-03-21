@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2477E914-4CF4-4A90-9268-DF440FB6ADD5
+ms.manager: dansimp
 ---
 
 # Remove-VMRemoteFx3dVideoAdapter

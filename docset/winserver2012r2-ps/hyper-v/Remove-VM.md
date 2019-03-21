@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 43E9854F-F085-4991-991A-89F8363CB4C0
+ms.manager: dansimp
 ---
 
 # Remove-VM

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F25087A9-A048-4577-B4FE-85338E7A19CD
+ms.manager: dansimp
 ---
 
 # Update-FsrmClassificationPropertyDefinition

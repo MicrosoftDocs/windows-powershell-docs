@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A12DBDB-7266-4F38-B9B4-230FC8BDE587
+ms.manager: dansimp
 ---
 
 # Get-FsrmStorageReport

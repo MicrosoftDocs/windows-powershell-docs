@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2CCE78AD-E5BD-4A56-944C-2832323ACF26
+ms.manager: dansimp
 ---
 
 # Get-VM

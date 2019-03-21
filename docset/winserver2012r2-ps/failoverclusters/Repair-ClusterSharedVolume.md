@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7DDE6081-9975-47F0-8E56-93E636261F6C
+ms.manager: dansimp
 ---
 
 # Repair-ClusterSharedVolume

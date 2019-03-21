@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1CA7A62E-7DC1-44DB-867A-A66E6F8A55A2
+ms.manager: dansimp
 ---
 
 # Set-DnsServerCache

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 251AA5E1-8D5D-4EDA-82B5-F0092B44EC3F
+ms.manager: dansimp
 ---
 
 # Get-ADUser

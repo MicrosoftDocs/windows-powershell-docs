@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 92D42F54-D6E9-422B-8174-A53F8FE86017
+ms.manager: dansimp
 ---
 
 # Install-ADDSDomainController

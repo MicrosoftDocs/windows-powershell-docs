@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 206E881B-091C-442E-9E30-3DBA3A3320A5
+ms.manager: dansimp
 ---
 
 # Enable-IpamCapability

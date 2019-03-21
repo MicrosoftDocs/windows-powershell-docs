@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 896407a5-7e36-404c-bfc1-79e247c9b396
+ms.manager: dansimp
 ---
 
 # AssignedAccess Module

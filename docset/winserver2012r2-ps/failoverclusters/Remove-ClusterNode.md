@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4061CDEE-7A4D-49F6-AC15-6C3E833C7E5D
+ms.manager: dansimp
 ---
 
 # Remove-ClusterNode

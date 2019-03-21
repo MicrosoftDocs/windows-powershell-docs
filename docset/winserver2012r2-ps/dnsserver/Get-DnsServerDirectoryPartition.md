@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 59D81384-63E8-4CAE-BD91-5ECCFA1BCC00
+ms.manager: dansimp
 ---
 
 # Get-DnsServerDirectoryPartition

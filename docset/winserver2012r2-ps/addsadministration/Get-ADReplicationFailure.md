@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 76AD661A-59E0-467C-A2DB-8D70729EFD5F
+ms.manager: dansimp
 ---
 
 # Get-ADReplicationFailure

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5936eef3-8e31-44d7-b070-eb716de98d4a
+ms.manager: dansimp
 ---
 
 # DirectAccessClientFIX Module

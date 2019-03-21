@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DF466680-1E07-427F-8105-B6DD6E2B4500
+ms.manager: dansimp
 ---
 
 # Save-VM

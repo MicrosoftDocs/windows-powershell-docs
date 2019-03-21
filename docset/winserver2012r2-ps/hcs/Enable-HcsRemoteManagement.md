@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A83E0E4C-C592-4CF1-96EA-57F6E72FEA56
+ms.manager: dansimp
 ---
 
 # Enable-HcsRemoteManagement

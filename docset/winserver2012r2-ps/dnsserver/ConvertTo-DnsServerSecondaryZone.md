@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9EB56481-7D34-4087-811D-7C6BC30499DA
+ms.manager: dansimp
 ---
 
 # ConvertTo-DnsServerSecondaryZone

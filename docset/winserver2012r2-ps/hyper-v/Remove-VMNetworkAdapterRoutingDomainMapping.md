@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D97174BE-9438-4DBD-8820-9C8F87E00047
+ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterRoutingDomainMapping

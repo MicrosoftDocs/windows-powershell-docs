@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5127BBE7-39FA-4169-B93C-E567032F6894
+ms.manager: dansimp
 ---
 
 # Grant-ADAuthenticationPolicySiloAccess

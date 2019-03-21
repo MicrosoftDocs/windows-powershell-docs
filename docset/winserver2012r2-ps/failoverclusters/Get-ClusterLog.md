@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E69E9553-284E-4A7E-8C05-08B7B8760F73
+ms.manager: dansimp
 ---
 
 # Get-ClusterLog

@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: cb17fcb8-cff7-4d03-b9d4-bd7c299876aa
+ms.manager: dansimp
 ---
 
 # FileServerResourceManager Module

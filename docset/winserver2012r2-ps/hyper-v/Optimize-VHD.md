@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0568E918-63D5-4A71-B729-D4208DCE3A42
+ms.manager: dansimp
 ---
 
 # Optimize-VHD

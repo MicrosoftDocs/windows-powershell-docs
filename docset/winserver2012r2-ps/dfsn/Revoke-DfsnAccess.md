@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E04C0A9-1EFB-4E37-BD6C-7121E41BC668
+ms.manager: dansimp
 ---
 
 # Revoke-DfsnAccess

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A8E928D5-822F-42A3-B47F-D76E00FF592F
+ms.manager: dansimp
 ---
 
 # New-ADReplicationSiteLinkBridge

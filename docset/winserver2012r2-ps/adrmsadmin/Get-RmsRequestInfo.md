@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 34DC413D-3EA7-4404-942F-CB7CF8CCBA03
+ms.manager: dansimp
 ---
 
 # Get-RmsRequestInfo

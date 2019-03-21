@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 27577641-B453-4243-947C-076386E2AF1B
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4OptionValue

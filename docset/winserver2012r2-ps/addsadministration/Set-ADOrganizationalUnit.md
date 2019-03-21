@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4AA04E68-9393-49C1-ACB3-AA1FA9C41A22
+ms.manager: dansimp
 ---
 
 # Set-ADOrganizationalUnit

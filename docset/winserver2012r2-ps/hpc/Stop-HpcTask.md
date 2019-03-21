@@ -12,6 +12,7 @@ online version: http://go.microsoft.com/fwlink/?LinkId=185208
 schema: 2.0.0
 title: Stop-HpcTask
 ms.assetid: 57671188-D973-4EB2-84AE-79688779E2DF
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

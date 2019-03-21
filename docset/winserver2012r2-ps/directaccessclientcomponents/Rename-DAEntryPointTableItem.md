@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F68C0ECF-F064-4C50-B164-15224780EB90
+ms.manager: dansimp
 ---
 
 # Rename-DAEntryPointTableItem

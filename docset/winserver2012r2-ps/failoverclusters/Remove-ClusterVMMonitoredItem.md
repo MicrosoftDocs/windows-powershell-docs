@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AF287F10-AB05-4217-9C72-AC4D2A851DCA
+ms.manager: dansimp
 ---
 
 # Remove-ClusterVMMonitoredItem

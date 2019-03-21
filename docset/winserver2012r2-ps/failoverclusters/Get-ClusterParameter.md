@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F654DA9C-80CF-4FC1-A21B-486A541FBC41
+ms.manager: dansimp
 ---
 
 # Get-ClusterParameter

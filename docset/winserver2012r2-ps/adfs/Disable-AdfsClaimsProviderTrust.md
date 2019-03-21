@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F32D70A4-D7D1-481F-A59C-92194E6D5772
+ms.manager: dansimp
 ---
 
 # Disable-AdfsClaimsProviderTrust

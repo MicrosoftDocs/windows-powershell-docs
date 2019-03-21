@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7986B201-F96E-4822-9C5E-380E933ABF60
+ms.manager: dansimp
 ---
 
 # Get-IscsiServerTarget

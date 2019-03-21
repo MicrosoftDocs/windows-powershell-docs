@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BE2A758A-26EB-491A-BF89-A4F2D70845E4
+ms.manager: dansimp
 ---
 
 # Set-VHD

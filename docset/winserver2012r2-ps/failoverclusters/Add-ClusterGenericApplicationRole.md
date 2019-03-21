@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 06C356B1-8331-4D37-A1F7-A1EC9ACF24CC
+ms.manager: dansimp
 ---
 
 # Add-ClusterGenericApplicationRole

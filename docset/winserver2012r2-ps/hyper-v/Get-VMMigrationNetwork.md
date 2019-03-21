@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DFE512DF-4AC2-427C-9081-C403476C255A
+ms.manager: dansimp
 ---
 
 # Get-VMMigrationNetwork

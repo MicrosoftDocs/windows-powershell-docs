@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52A981E1-F159-4D93-BF63-ACD0F26E74B4
+ms.manager: dansimp
 ---
 
 # Set-FsrmMgmtProperty

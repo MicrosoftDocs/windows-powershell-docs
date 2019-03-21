@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A5B91C2A-73C3-417C-84B1-D430B42860A3
+ms.manager: dansimp
 ---
 
 # Set-AppLockerPolicy

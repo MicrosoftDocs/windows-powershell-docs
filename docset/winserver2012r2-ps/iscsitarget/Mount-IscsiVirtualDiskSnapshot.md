@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 001DF751-A6A3-4983-AC00-A6C3AAF46522
+ms.manager: dansimp
 ---
 
 # Mount-IscsiVirtualDiskSnapshot

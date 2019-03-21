@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 223F5254-6831-4816-A681-047BD75C9E32
+ms.manager: dansimp
 ---
 
 # Set-DnsClientNrptRule

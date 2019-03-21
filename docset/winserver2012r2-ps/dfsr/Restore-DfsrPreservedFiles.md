@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8FADA0A8-B3DE-41CB-80FD-184D02753FF4
+ms.manager: dansimp
 ---
 
 # Restore-DfsrPreservedFiles

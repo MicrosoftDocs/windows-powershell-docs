@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 49F53B97-6213-44AE-A4E5-DF520DCBAB3F
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6OptionValue

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AA20DD94-653B-428D-BDD5-6756830B9C49
+ms.manager: dansimp
 ---
 
 # Start-VMFailover

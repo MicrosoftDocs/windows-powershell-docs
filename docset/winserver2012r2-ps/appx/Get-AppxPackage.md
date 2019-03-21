@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D656EADB-79C4-4057-B933-2F8019BA4681
+ms.manager: dansimp
 ---
 
 # Get-AppxPackage

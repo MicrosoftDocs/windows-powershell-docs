@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4729B6BA-5A6B-4509-A908-B1531C49BA76
+ms.manager: dansimp
 ---
 
 # Remove-BitsTransfer

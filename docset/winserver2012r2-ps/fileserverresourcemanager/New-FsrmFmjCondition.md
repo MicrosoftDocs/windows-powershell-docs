@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC36DC38-518C-430A-9A23-45B7049854E8
+ms.manager: dansimp
 ---
 
 # New-FsrmFmjCondition

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 33797D2F-9126-4AE2-9A52-0E293EA02710
+ms.manager: dansimp
 ---
 
 # Enable-BCDowngrading

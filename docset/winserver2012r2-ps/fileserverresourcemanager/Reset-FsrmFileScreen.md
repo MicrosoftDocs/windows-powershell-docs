@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BE308EA5-23A1-4FA8-B179-2EDC065C0428
+ms.manager: dansimp
 ---
 
 # Reset-FsrmFileScreen

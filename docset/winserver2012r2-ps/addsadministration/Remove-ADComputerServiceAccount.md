@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 28AE4F8D-8D1F-4569-B3A2-F2A4446877F8
+ms.manager: dansimp
 ---
 
 # Remove-ADComputerServiceAccount

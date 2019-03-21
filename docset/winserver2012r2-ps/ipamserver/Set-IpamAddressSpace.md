@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBA61EE0-1F11-4F79-A50D-65052C929B5E
+ms.manager: dansimp
 ---
 
 # Set-IpamAddressSpace

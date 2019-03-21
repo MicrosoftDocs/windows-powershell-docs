@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5C473200-9364-4C8E-AC45-5600F1CBF343
+ms.manager: dansimp
 ---
 
 # New-GPLink

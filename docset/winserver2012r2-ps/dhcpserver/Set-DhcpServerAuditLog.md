@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B106E9C9-1BD8-48F7-A820-60D7E77225CA
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerAuditLog

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D659EAE1-E7FB-4CA3-820B-37CE3A79C6A9
+ms.manager: dansimp
 ---
 
 # Remove-DfsrMember

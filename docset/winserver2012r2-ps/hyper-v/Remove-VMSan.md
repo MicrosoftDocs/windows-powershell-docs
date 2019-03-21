@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 921570C5-850F-45CA-A32F-4019AAD2EFB7
+ms.manager: dansimp
 ---
 
 # Remove-VMSan

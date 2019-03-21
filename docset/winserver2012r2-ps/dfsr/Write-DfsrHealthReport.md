@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 57DCC624-72D2-4363-ACE5-398113AFA952
+ms.manager: dansimp
 ---
 
 # Write-DfsrHealthReport

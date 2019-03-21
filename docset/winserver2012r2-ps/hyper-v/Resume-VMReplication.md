@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6A875733-47A2-4480-8A88-05D2516599BC
+ms.manager: dansimp
 ---
 
 # Resume-VMReplication

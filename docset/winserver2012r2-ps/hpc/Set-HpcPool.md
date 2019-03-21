@@ -12,6 +12,7 @@ online version: http://go.microsoft.com/fwlink/?LinkId=217209
 schema: 2.0.0
 title: Set-HpcPool
 ms.assetid: 412CB991-A3EE-4C7A-B379-73D31A425981
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

@@ -122,8 +122,7 @@ You cannot pipe objects to Unlock-WmsSession.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

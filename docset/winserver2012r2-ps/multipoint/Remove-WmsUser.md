@@ -89,8 +89,7 @@ You cannot pipe objects to Remove-WmsUser.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -202,8 +202,7 @@ This cmdlet accepts one printer object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

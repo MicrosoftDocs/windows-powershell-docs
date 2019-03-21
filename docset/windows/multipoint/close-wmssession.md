@@ -134,13 +134,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-None.
+### None
 This cmdlet returns an **ItemNotFoundException** if the specified session ID is not found.
 
 ## NOTES

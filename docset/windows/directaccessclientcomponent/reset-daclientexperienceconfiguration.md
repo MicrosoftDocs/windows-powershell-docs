@@ -392,8 +392,7 @@ This cmdlet accepts as input a CIM object that contains a DA client experience c
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

@@ -105,8 +105,7 @@ You cannot pipe objects to Stop-WmsSystem.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

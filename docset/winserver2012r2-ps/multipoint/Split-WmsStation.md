@@ -135,8 +135,7 @@ You cannot pipe objects to Split-WmsStation.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -108,8 +108,7 @@ You cannot pipe objects to Clear-WmsStation.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

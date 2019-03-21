@@ -156,8 +156,7 @@ You cannot pipe objects to Close-WmsApp.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

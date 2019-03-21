@@ -104,8 +104,7 @@ You cannot pipe objects to Switch-WmsSystem.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

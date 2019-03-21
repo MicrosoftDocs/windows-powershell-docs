@@ -242,13 +242,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-None.
+### None
 Throws SecurityException if the specified autologon user is an administrative user.
 This exception is not thrown if the *OverrideAdminWarning* parameter is specified for administrative users.
 

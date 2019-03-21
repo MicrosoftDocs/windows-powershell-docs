@@ -142,8 +142,7 @@ You cannot pipe objects to Show-WmsIdentifier.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -119,8 +119,7 @@ You cannot pipe objects to Disconnect-WmsSession.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

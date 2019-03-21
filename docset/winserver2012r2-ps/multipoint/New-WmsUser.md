@@ -157,8 +157,7 @@ You cannot pipe objects to Set-WmsUser.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

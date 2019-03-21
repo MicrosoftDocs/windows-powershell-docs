@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 687C539D-F7DE-4B92-A8D0-2BF3220CA98D
+ms.manager: dansimp
 ---
 
 # Disable-NetIPHttpsProfile

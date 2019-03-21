@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Revoke-SRDelegation
 ms.reviewer:
 ms.assetid: 821D993C-1B50-48EB-A329-2F486B17A42B
+ms.manager: dansimp
 ---
 
 # Revoke-SRDelegation

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-VpnServerAddress
 ms.reviewer:
 ms.assetid: 0C804810-353B-48E0-9F00-D88126FD0902
+ms.manager: dansimp
 ---
 
 # New-VpnServerAddress

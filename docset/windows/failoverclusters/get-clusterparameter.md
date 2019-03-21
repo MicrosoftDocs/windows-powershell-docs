@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ClusterParameter
 ms.reviewer:
 ms.assetid: F654DA9C-80CF-4FC1-A21B-486A541FBC41
+ms.manager: dansimp
 ---
 
 # Get-ClusterParameter

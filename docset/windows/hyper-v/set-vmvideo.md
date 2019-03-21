@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMVideo
 ms.reviewer:
 ms.assetid: 8B83F5E7-F2C7-44B2-885F-FC62145F8CAD
+ms.manager: dansimp
 ---
 
 # Set-VMVideo

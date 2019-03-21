@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsrBacklog
 ms.reviewer:
 ms.assetid: 933DF783-4CB6-4E94-87E4-D7E4EB1D3E59
+ms.manager: dansimp
 ---
 
 # Get-DfsrBacklog

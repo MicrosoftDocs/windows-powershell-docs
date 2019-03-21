@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-LogicalNetworkConnection
 ms.reviewer:
 ms.assetid: 23EA7919-8EC5-4F12-A087-52386DBE8F59
+ms.manager: dansimp
 ---
 
 # Test-LogicalNetworkConnection

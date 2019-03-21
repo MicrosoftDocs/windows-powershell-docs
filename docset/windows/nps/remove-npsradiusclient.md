@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NpsRadiusClient
 ms.reviewer:
 ms.assetid: 575A8489-73DB-4C77-BB77-15971D5D159B
+ms.manager: dansimp
 ---
 
 # Remove-NpsRadiusClient

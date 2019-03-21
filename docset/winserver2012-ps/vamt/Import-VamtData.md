@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2A87B32C-7ADC-4CB7-A7C3-05DD42F099AB
+ms.manager: dansimp
 ---
 
 # Import-VamtData

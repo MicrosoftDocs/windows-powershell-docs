@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerLoadBalancerBackendAddressPool
 ms.reviewer:
 ms.assetid: 2A3E3173-627F-4DC5-953F-6DA4DF5E1302
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerLoadBalancerBackendAddressPool

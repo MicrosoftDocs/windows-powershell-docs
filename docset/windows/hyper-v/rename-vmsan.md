@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-VMSan
 ms.reviewer:
 ms.assetid: 24EC3299-8740-49CF-98EE-DBED8EE8BC97
+ms.manager: dansimp
 ---
 
 # Rename-VMSan

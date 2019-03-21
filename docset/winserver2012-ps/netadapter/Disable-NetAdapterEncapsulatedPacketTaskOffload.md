@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F4ECCCD6-AC57-4EE4-BD8A-7436885A1265
+ms.manager: dansimp
 ---
 
 # Disable-NetAdapterEncapsulatedPacketTaskOffload

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DfsrConnection
 ms.reviewer:
 ms.assetid: 564482D2-F72A-404A-B4E0-419D5F5B648A
+ms.manager: dansimp
 ---
 
 # Add-DfsrConnection

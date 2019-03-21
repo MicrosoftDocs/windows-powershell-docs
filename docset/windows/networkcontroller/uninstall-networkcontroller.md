@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Uninstall-NetworkController
 ms.reviewer:
 ms.assetid: 4DE1B6EF-934F-473B-9DF2-D54CD99F9DFD
+ms.manager: dansimp
 ---
 
 # Uninstall-NetworkController

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Receive-DtcDiagnosticTransaction
 ms.reviewer:
 ms.assetid: A30D5B35-CD96-4633-B4C0-A75EC7C602D5
+ms.manager: dansimp
 ---
 
 # Receive-DtcDiagnosticTransaction

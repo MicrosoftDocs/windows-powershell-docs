@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WebHandler
 ms.reviewer:
 ms.assetid: D19B6A87-8932-4C22-8B3B-14353A243018
+ms.manager: dansimp
 ---
 
 # New-WebHandler

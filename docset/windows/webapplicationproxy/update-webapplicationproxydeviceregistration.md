@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-WebApplicationProxyDeviceRegistration
 ms.reviewer:
 ms.assetid: 966F0141-96E7-40D2-AEFD-31F568867464
+ms.manager: dansimp
 ---
 
 # Update-WebApplicationProxyDeviceRegistration

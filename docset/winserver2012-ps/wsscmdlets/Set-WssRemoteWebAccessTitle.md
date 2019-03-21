@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 61B1BBAC-9B38-439F-AADF-63832296BFE7
+ms.manager: dansimp
 ---
 
 # Set-WssRemoteWebAccessTitle

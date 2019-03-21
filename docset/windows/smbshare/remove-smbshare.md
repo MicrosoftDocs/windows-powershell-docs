@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-SmbShare
 ms.reviewer:
 ms.assetid: C898693C-2EBD-4288-ADCD-40A6F52C5D33
+ms.manager: dansimp
 ---
 
 # Remove-SmbShare

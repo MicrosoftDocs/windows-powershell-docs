@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerVirtualGatewayBgpPeer
 ms.reviewer:
 ms.assetid: 2AB8F3D6-ABC9-4168-BB8C-12BA3E4970DE
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVirtualGatewayBgpPeer

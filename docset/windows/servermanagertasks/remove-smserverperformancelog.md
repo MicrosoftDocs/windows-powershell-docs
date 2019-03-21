@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-SMServerPerformanceLog
 ms.reviewer:
 ms.assetid: E51A8BAD-CD34-4423-9274-466A52A86B0D
+ms.manager: dansimp
 ---
 
 # Remove-SMServerPerformanceLog

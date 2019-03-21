@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerCredential
 ms.reviewer:
 ms.assetid: 4C3B674B-49B2-41FA-9022-D3E7654DF3AA
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerCredential

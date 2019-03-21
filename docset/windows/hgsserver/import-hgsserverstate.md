@@ -6,6 +6,7 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsServer
 ms.assetid: 73AD3A36-0BED-4BD0-A315-A6178C596A00
+ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

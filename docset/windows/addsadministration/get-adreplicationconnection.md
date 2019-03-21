@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADReplicationConnection
 ms.reviewer:
 ms.assetid: 4F35B658-C749-4EB6-B080-52CA6877377F
+ms.manager: dansimp
 ---
 
 # Get-ADReplicationConnection

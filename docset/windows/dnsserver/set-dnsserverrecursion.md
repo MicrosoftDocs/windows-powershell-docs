@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerRecursion
 ms.reviewer:
 ms.assetid: 3F349BD3-9CC3-459D-A7DF-6E600C209A44
+ms.manager: dansimp
 ---
 
 # Set-DnsServerRecursion

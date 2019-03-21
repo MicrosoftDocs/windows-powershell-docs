@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetEventVmSwitch
 ms.reviewer:
 ms.assetid: 9B5A4174-1056-4C09-8C47-09127D434EE7
+ms.manager: dansimp
 ---
 
 # Get-NetEventVmSwitch

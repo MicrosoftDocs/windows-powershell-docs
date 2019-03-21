@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8B410DD8-9F6C-4077-A087-40771E19E468
+ms.manager: dansimp
 ---
 
 # Get-MPIOSetting

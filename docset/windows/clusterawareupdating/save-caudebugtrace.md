@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Save-CauDebugTrace
 ms.reviewer:
 ms.assetid: 77C136BB-1608-4A0D-B125-271136354DDD
+ms.manager: dansimp
 ---
 
 # Save-CauDebugTrace

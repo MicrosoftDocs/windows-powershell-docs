@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 71B470A7-DC58-4A30-9F5E-AB0B25A64625
+ms.manager: dansimp
 ---
 
 # VpnClient Module

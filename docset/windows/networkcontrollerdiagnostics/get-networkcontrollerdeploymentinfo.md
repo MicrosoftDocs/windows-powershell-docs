@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerDeploymentInfo
 ms.reviewer:
 ms.assetid: D5C76D7D-7D31-473E-B001-F7E73F79FC4E
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerDeploymentInfo

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8C7A190F-CE1C-43D5-8C33-C9CE0EDA73D0
+ms.manager: dansimp
 ---
 
 # Add-NlbClusterVip

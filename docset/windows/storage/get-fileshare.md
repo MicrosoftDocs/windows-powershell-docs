@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FileShare
 ms.reviewer:
 ms.assetid: 071F86B2-6CF9-45F9-BE87-966B4A62162C
+ms.manager: dansimp
 ---
 
 # Get-FileShare

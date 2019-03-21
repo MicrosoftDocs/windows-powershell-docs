@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9CE1E093-BC06-4F23-8ECE-535C443DC0A3
+ms.manager: dansimp
 ---
 
 # Get-WssRemoteWebAccessStatus

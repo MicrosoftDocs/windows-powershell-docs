@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-OdbcDriver
 ms.reviewer:
 ms.assetid: 00890D77-4875-4EA6-A243-D78479DE8541
+ms.manager: dansimp
 ---
 
 # Get-OdbcDriver

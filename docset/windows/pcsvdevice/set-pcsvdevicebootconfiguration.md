@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-PcsvDeviceBootConfiguration
 ms.reviewer:
 ms.assetid: EB00236F-A1CF-4937-AF76-8538DF2A7476
+ms.manager: dansimp
 ---
 
 # Set-PcsvDeviceBootConfiguration

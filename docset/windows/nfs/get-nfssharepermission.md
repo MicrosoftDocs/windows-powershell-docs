@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NfsSharePermission
 ms.reviewer:
 ms.assetid: 0092F253-EE7B-4908-BD7F-60BF9DF5BE4A
+ms.manager: dansimp
 ---
 
 # Get-NfsSharePermission

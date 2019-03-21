@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Step-DnsServerSigningKeyRollover
 ms.reviewer:
 ms.assetid: 1E53204C-91CD-470D-91E1-2B232875F014
+ms.manager: dansimp
 ---
 
 # Step-DnsServerSigningKeyRollover

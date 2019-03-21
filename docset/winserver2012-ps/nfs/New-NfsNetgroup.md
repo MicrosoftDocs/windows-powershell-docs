@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9F7475B3-86F8-4FCB-A9E2-747FA4FC5FF2
+ms.manager: dansimp
 ---
 
 # New-NfsNetgroup

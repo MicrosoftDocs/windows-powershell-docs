@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Send-EtwTraceSession
 ms.reviewer:
 ms.assetid: FC9D5AA3-6568-4090-A3EE-1567CE2565EA
+ms.manager: dansimp
 ---
 
 # Send-EtwTraceSession

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4MulticastLease
 ms.reviewer:
 ms.assetid: 9940077C-2556-4834-984A-019D74018CB7
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4MulticastLease

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-DHASConfiguration
 ms.reviewer:
 ms.assetid: 94B5D485-3053-4464-AA16-C29B8B6E204A
+ms.manager: dansimp
 ---
 
 # Restore-DHASConfiguration

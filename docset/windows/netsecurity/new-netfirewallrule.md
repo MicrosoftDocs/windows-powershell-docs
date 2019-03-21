@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetFirewallRule
 ms.reviewer:
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
+ms.manager: dansimp
 ---
 
 # New-NetFirewallRule

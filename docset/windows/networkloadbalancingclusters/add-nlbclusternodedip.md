@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-NlbClusterNodeDip
 ms.reviewer:
 ms.assetid: CD840706-D3BD-4FC3-B5C6-6EB10E860CD8
+ms.manager: dansimp
 ---
 
 # Add-NlbClusterNodeDip

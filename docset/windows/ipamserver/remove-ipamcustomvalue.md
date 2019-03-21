@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IpamCustomValue
 ms.reviewer:
 ms.assetid: AF90C99F-3CBF-4FE8-A29D-11BCA157DAA9
+ms.manager: dansimp
 ---
 
 # Remove-IpamCustomValue

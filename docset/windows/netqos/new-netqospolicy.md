@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetQosPolicy
 ms.reviewer:
 ms.assetid: 7ED74C03-8727-4956-86D3-E389EDCE72CF
+ms.manager: dansimp
 ---
 
 # New-NetQosPolicy

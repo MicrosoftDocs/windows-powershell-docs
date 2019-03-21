@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WmsSystem
 ms.reviewer:
 ms.assetid: 9C987F88-6FC7-4D3E-A7D6-CEA04679EBC0
+ms.manager: dansimp
 ---
 
 # Add-WmsSystem

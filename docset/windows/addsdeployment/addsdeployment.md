@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 7F1FAA42-ECF3-4C09-B95D-961C5E18453A
+ms.manager: dansimp
 ---
 
 # ADDSDeployment Module

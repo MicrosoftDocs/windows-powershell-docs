@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetTransportFilter
 ms.reviewer:
 ms.assetid: 0161539F-3282-4E58-AD56-972C7F411C2E
+ms.manager: dansimp
 ---
 
 # New-NetTransportFilter

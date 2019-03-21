@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerv6Class
 ms.reviewer:
 ms.assetid: 0D2B4570-DB8C-4A43-B513-65AFB91AE578
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv6Class

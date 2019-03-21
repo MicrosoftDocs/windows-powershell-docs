@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4OptionValue
 ms.reviewer:
 ms.assetid: 387170C5-037D-4C73-B0E7-A01D5F2CEE93
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4OptionValue

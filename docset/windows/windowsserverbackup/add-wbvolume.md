@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WBVolume
 ms.reviewer:
 ms.assetid: DB178BEF-D267-4546-9A2F-138E6F48A960
+ms.manager: dansimp
 ---
 
 # Add-WBVolume

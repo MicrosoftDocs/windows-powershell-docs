@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 44986B77-C8F3-49AB-952B-D0C18B737288
+ms.manager: dansimp
 ---
 
 # Stop-DtcTransactionsTraceSession

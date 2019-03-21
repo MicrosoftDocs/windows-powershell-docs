@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Find-IpamFreeAddress
 ms.reviewer:
 ms.assetid: BF613F55-6428-4948-A47D-AB900CDDB69B
+ms.manager: dansimp
 ---
 
 # Find-IpamFreeAddress

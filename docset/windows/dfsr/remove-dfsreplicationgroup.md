@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsReplicationGroup
 ms.reviewer:
 ms.assetid: 1F44314E-D3CE-4C61-88CF-C60671CD235C
+ms.manager: dansimp
 ---
 
 # Remove-DfsReplicationGroup

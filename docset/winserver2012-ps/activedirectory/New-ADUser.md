@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 4B247B2D-FB03-48D2-BAC7-ACD366A7CC8E
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

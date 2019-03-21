@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-UevConfiguration
 ms.reviewer:
 ms.assetid: 1751DAFC-06EE-4AB3-B975-841940BFEC04
+ms.manager: dansimp
 ---
 
 # Import-UevConfiguration

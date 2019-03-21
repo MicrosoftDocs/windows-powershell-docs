@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsnFolder
 ms.reviewer:
 ms.assetid: AFC9D1DC-CF6E-42FB-A173-A7BE0C04DE71
+ms.manager: dansimp
 ---
 
 # Remove-DfsnFolder

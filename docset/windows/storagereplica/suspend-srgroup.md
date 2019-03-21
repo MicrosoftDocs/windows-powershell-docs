@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-SRGroup
 ms.reviewer:
 ms.assetid: 45DE106D-DD26-476E-A366-E8B2EE98E9F5
+ms.manager: dansimp
 ---
 
 # Suspend-SRGroup

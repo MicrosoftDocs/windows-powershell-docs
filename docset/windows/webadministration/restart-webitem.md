@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restart-WebItem
 ms.reviewer:
 ms.assetid: 7FC110AC-BFF2-4303-B579-CA891840AE3D
+ms.manager: dansimp
 ---
 
 # Restart-WebItem

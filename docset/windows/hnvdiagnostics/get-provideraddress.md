@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ProviderAddress
 ms.reviewer:
 ms.assetid: 86BBA0AA-2D7A-4E05-A141-86B3E403DA73
+ms.manager: dansimp
 ---
 
 # Get-ProviderAddress

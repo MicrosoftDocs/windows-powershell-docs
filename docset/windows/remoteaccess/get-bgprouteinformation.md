@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-BgpRouteInformation
 ms.reviewer:
 ms.assetid: 80CC2EA1-1FEC-48DF-9819-7076ED8F578E
+ms.manager: dansimp
 ---
 
 # Get-BgpRouteInformation

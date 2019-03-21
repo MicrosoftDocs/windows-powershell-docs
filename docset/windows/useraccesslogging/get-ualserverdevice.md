@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-UalServerDevice
 ms.reviewer:
 ms.assetid: 72F77C6E-41D5-4305-BC19-7C8C8FB2965F
+ms.manager: dansimp
 ---
 
 # Get-UalServerDevice

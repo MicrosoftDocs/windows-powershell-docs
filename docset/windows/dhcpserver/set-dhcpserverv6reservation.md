@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DhcpServerv6Reservation
 ms.reviewer:
 ms.assetid: 7CE35C9A-9612-4604-9733-46383836D525
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv6Reservation

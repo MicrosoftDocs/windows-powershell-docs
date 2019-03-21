@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-IpamDatabase
 ms.reviewer:
 ms.assetid: 886AD7F9-AB1E-4250-B13C-A06DF476A74A
+ms.manager: dansimp
 ---
 
 # Move-IpamDatabase

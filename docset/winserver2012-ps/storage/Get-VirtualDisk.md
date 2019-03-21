@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0EEBA53F-6468-485F-A680-49260B4C83F0
+ms.manager: dansimp
 ---
 
 # Get-VirtualDisk

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 2585CFDF-A05F-44CF-9788-72EB2E0731B7
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

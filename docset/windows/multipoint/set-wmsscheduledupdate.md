@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WmsScheduledUpdate
 ms.reviewer:
 ms.assetid: C867D455-D830-4C1C-A0C8-40A9C2912674
+ms.manager: dansimp
 ---
 
 # Set-WmsScheduledUpdate

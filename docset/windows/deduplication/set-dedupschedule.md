@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DedupSchedule
 ms.reviewer:
 ms.assetid: B5B6E091-C062-4A50-9E61-05F2AD282221
+ms.manager: dansimp
 ---
 
 # Set-DedupSchedule

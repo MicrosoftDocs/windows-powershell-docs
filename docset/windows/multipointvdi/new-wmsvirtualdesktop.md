@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WmsVirtualDesktop
 ms.reviewer:
 ms.assetid: 23779998-CE07-479F-A394-BF4C313C39E1
+ms.manager: dansimp
 ---
 
 # New-WmsVirtualDesktop

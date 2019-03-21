@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetIPsecMainModeSA
 ms.reviewer:
 ms.assetid: C1F415CF-8EA9-4477-B30E-395621A83317
+ms.manager: dansimp
 ---
 
 # Remove-NetIPsecMainModeSA

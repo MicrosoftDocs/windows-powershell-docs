@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-Ual
 ms.reviewer:
 ms.assetid: 2238EB3C-700E-4DDD-9550-FFF15924C4DA
+ms.manager: dansimp
 ---
 
 # Get-Ual

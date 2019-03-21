@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-AppvSequencerPackage
 ms.reviewer:
 ms.assetid: ABB1DF6D-228A-442D-8A18-9366D0E6182E
+ms.manager: dansimp
 ---
 
 # New-AppvSequencerPackage

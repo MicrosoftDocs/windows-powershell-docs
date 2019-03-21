@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-AppvClientPackage
 ms.reviewer:
 ms.assetid: 050A82D2-261A-4567-8793-A3D0E78AEABA
+ms.manager: dansimp
 ---
 
 # Repair-AppvClientPackage

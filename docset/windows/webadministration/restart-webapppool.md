@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restart-WebAppPool
 ms.reviewer:
 ms.assetid: DF86D4F3-5727-4E04-9A4C-474D8A1F66CC
+ms.manager: dansimp
 ---
 
 # Restart-WebAppPool

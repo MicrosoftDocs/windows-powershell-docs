@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Uninstall-RemoteAccess
 ms.reviewer:
 ms.assetid: 514EA24C-98AE-4DDD-8927-3A6648376DB3
+ms.manager: dansimp
 ---
 
 # Uninstall-RemoteAccess

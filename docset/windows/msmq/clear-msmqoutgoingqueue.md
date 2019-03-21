@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-MSMQOutgoingQueue
 ms.reviewer:
 ms.assetid: 67BE94A0-781F-4AA1-8CAC-43E03BC71C4A
+ms.manager: dansimp
 ---
 
 # Clear-MsmqOutgoingQueue

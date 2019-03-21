@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerv4Reservation
 ms.reviewer:
 ms.assetid: 3E0988F5-D2A3-4DEF-BFBB-149FFCA6F3FF
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Reservation

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VolumeCorruptionCount
 ms.reviewer:
 ms.assetid: 2B02DEFF-732B-4CBB-9D29-905E08F4CAC7
+ms.manager: dansimp
 ---
 
 # Get-VolumeCorruptionCount

@@ -6,6 +6,7 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
 ms.assetid: BBB61EA6-74AB-4DE2-A51C-6C74C8E8958D
+ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

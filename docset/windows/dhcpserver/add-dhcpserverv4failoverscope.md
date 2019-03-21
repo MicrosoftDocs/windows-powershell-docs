@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerv4FailoverScope
 ms.reviewer:
 ms.assetid: D62B04A2-C28C-482B-82B0-2C6240500859
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4FailoverScope

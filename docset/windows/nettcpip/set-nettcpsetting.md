@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetTCPSetting
 ms.reviewer:
 ms.assetid: 686DF988-37EE-46A5-9D83-96AE147D53B7
+ms.manager: dansimp
 ---
 
 # Set-NetTCPSetting

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unregister-CauPlugin
 ms.reviewer:
 ms.assetid: F0EEF063-A47F-4D06-8BC4-332540CB3877
+ms.manager: dansimp
 ---
 
 # Unregister-CauPlugin

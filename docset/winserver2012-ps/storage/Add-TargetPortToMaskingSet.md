@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 196E0BF1-8FE2-452C-8D7A-258443DCEDA1
+ms.manager: dansimp
 ---
 
 # Add-TargetPortToMaskingSet

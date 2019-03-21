@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RDFileTypeAssociation
 ms.reviewer:
 ms.assetid: 4EAAD44F-74D9-4714-989B-7D694BDCEEDF
+ms.manager: dansimp
 ---
 
 # Set-RDFileTypeAssociation

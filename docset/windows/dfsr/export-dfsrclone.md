@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-DfsrClone
 ms.reviewer:
 ms.assetid: 7DEBE629-16E0-4B47-B17C-3E43062006D3
+ms.manager: dansimp
 ---
 
 # Export-DfsrClone

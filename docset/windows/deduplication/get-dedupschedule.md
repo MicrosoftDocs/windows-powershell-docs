@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DedupSchedule
 ms.reviewer:
 ms.assetid: AF82B937-D34A-4F57-B281-3C3E570FCCCF
+ms.manager: dansimp
 ---
 
 # Get-DedupSchedule

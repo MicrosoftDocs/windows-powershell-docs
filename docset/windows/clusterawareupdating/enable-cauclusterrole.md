@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-CauClusterRole
 ms.reviewer:
 ms.assetid: C9CFEB42-ED01-4197-937F-BEAFE0C236A7
+ms.manager: dansimp
 ---
 
 # Enable-CauClusterRole

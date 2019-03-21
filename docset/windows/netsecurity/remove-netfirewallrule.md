@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetFirewallRule
 ms.reviewer:
 ms.assetid: B8BFD366-3112-4415-B235-2B7B45D5C9E3
+ms.manager: dansimp
 ---
 
 # Remove-NetFirewallRule

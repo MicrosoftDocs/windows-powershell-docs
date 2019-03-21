@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-ClusterResource
 ms.reviewer:
 ms.assetid: C4326170-FF50-4A3F-A4E6-994F598D4C25
+ms.manager: dansimp
 ---
 
 # Stop-ClusterResource

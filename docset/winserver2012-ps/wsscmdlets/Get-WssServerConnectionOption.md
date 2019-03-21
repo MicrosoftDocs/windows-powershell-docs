@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8074EFD6-5235-46CA-97F9-3D63EE09AD6D
+ms.manager: dansimp
 ---
 
 # Get-WssServerConnectionOption

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VMNetworkAdapterAcl
 ms.reviewer:
 ms.assetid: 63D68D2A-6C40-4C26-B457-CBEE37075ADE
+ms.manager: dansimp
 ---
 
 # Add-VMNetworkAdapterAcl

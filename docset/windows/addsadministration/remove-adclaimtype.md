@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ADClaimType
 ms.reviewer:
 ms.assetid: F262EFCB-0878-45E3-AD7E-C77823B8FECD
+ms.manager: dansimp
 ---
 
 # Remove-ADClaimType

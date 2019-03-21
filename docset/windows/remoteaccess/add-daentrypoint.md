@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DAEntryPoint
 ms.reviewer:
 ms.assetid: 60DA8775-E477-45FB-9F25-A2B42EA4A97C
+ms.manager: dansimp
 ---
 
 # Add-DAEntryPoint

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WdsClient
 ms.reviewer:
 ms.assetid: 73D08805-2054-49C7-AD6D-37662A094044
+ms.manager: dansimp
 ---
 
 # Remove-WdsClient

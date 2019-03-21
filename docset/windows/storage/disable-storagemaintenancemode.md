@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-StorageMaintenanceMode
 ms.reviewer:
 ms.assetid: F65A87E5-14E3-4323-B261-98AA687F6EF1
+ms.manager: dansimp
 ---
 
 # Disable-StorageMaintenanceMode

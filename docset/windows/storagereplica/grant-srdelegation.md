@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Grant-SRDelegation
 ms.reviewer:
 ms.assetid: A0E2B462-EACB-49FC-B12C-0814F5DAAF76
+ms.manager: dansimp
 ---
 
 # Grant-SRDelegation

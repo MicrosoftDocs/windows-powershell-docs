@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetQosTrafficClass
 ms.reviewer:
 ms.assetid: 2E6A3602-4064-47B5-B326-20BC5D3393D0
+ms.manager: dansimp
 ---
 
 # Get-NetQosTrafficClass

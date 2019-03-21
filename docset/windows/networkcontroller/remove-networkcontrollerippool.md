@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerIpPool
 ms.reviewer:
 ms.assetid: 184820FE-544B-4EC6-AF5B-A7B1613435E8
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerIpPool

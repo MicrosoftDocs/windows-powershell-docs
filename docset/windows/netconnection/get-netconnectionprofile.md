@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetConnectionProfile
 ms.reviewer:
 ms.assetid: 526AB39C-AC87-4484-BFC8-48D3FCA7648A
+ms.manager: dansimp
 ---
 
 # Get-NetConnectionProfile

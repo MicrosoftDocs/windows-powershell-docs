@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-PhysicalDisk
 ms.reviewer:
 ms.assetid: 3ACC02DE-C41B-4730-A286-C15E0CCA1CB7
+ms.manager: dansimp
 ---
 
 # Reset-PhysicalDisk

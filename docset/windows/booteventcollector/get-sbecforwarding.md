@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SbecForwarding
 ms.reviewer:
 ms.assetid: FD2C7DBB-584B-4C25-AD85-88940C7A421D
+ms.manager: dansimp
 ---
 
 # Get-SbecForwarding

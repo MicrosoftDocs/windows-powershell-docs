@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EC058249-902C-4DCE-A252-6BE4077D537C
+ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationGlobal

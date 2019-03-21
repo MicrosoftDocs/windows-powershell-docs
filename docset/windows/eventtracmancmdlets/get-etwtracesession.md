@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-EtwTraceSession
 ms.reviewer:
 ms.assetid: 0D4283BF-95A8-4276-AE2D-1D42465CB7AE
+ms.manager: dansimp
 ---
 
 # Get-EtwTraceSession

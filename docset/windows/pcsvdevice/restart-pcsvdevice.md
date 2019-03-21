@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restart-PcsvDevice
 ms.reviewer:
 ms.assetid: 2371F425-650C-4AAE-AA00-3FE6947C3D77
+ms.manager: dansimp
 ---
 
 # Restart-PcsvDevice

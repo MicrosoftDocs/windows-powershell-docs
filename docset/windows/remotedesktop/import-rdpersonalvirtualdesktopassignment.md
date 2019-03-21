@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-RDPersonalVirtualDesktopAssignment
 ms.reviewer:
 ms.assetid: FB66E4F3-2B4A-4717-B674-59238F0C5A34
+ms.manager: dansimp
 ---
 
 # Import-RDPersonalVirtualDesktopAssignment

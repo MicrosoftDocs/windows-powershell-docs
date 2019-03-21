@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-WmsDiskProtection
 ms.reviewer:
 ms.assetid: 68C493E6-8F48-497D-A648-0E74ABDB4048
+ms.manager: dansimp
 ---
 
 # Disable-WmsDiskProtection

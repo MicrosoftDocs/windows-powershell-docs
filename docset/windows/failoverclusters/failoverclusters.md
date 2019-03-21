@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 1149AB0F-CE0C-4F56-8352-15D29814411F
+ms.manager: dansimp
 ---
 
 # FailoverClusters Module

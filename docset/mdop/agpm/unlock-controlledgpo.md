@@ -10,6 +10,7 @@ external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: 2202E5F2-71C6-4420-AB47-E9D14A1F636B
+ms.manager: dansimp
 ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference

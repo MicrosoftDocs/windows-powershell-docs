@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DfsrServiceConfiguration
 ms.reviewer:
 ms.assetid: A2A4D28D-3775-46C9-A7B9-2F95DCC0B5C4
+ms.manager: dansimp
 ---
 
 # Set-DfsrServiceConfiguration

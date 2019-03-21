@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-SbecBackupConfig
 ms.reviewer:
 ms.assetid: F55984C6-FBEE-4855-9F68-3D2AB94F6DA6
+ms.manager: dansimp
 ---
 
 # Restore-SbecBackupConfig

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-UevTemplate
 ms.reviewer:
 ms.assetid: 22E59215-C1F7-43CF-A99F-62384EF85B76
+ms.manager: dansimp
 ---
 
 # Disable-UevTemplate

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8D843BB8-8F79-4E1E-A6F9-5AD9615CB526
+ms.manager: dansimp
 ---
 
 # Set-NetIPsecPhase1AuthSet

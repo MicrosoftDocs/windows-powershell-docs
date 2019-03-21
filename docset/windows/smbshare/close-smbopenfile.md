@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Close-SmbOpenFile
 ms.reviewer:
 ms.assetid: EE0F1C10-6128-461A-B74D-878821DED8F1
+ms.manager: dansimp
 ---
 
 # Close-SmbOpenFile

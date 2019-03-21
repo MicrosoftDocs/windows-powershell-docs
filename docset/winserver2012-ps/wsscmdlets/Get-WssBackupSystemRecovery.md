@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CB510903-AAE1-4B1E-B16A-95EEA8F684AF
+ms.manager: dansimp
 ---
 
 # Get-WssBackupSystemRecovery

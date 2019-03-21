@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RoutingProtocolPreference
 ms.reviewer:
 ms.assetid: C3CE59A3-464C-4715-A289-2A2B35C6FAEC
+ms.manager: dansimp
 ---
 
 # Get-RoutingProtocolPreference

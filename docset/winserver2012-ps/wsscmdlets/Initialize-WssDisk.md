@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 84DC101B-2CEF-4B35-B792-B677A2C467A6
+ms.manager: dansimp
 ---
 
 # Initialize-WssDisk

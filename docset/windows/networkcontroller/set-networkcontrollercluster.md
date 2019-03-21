@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetworkControllerCluster
 ms.reviewer:
 ms.assetid: E7E92CB2-DF8B-47EF-8C12-0D11F77A65D4
+ms.manager: dansimp
 ---
 
 # Set-NetworkControllerCluster

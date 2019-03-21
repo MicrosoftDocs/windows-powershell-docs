@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMScsiController
 ms.reviewer:
 ms.assetid: AF092B6E-5F46-42E0-8A34-4A27E31608A3
+ms.manager: dansimp
 ---
 
 # Get-VMScsiController

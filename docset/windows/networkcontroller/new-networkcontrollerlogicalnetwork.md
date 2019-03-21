@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerLogicalNetwork
 ms.reviewer:
 ms.assetid: 9E24F6F8-E582-46AF-BF61-4CB6C8977826
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerLogicalNetwork

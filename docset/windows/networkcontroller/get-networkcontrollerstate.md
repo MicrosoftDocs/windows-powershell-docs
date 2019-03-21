@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerState
 ms.reviewer:
 ms.assetid: 09F402C6-4773-47F7-B7BB-A85A1D42A26A
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerState

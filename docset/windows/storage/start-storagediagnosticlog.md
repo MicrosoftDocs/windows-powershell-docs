@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-StorageDiagnosticLog
 ms.reviewer:
 ms.assetid: D5F311FB-F28C-4978-AA16-32F2715C9670
+ms.manager: dansimp
 ---
 
 # Start-StorageDiagnosticLog

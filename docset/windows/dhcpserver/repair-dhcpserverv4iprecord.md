@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-DhcpServerv4IPRecord
 ms.reviewer:
 ms.assetid: 299EE3F8-FB20-493F-BCE9-2D80798F0D34
+ms.manager: dansimp
 ---
 
 # Repair-DhcpServerv4IPRecord

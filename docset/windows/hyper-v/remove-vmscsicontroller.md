@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMScsiController
 ms.reviewer:
 ms.assetid: 8C311C2D-2885-4C2B-8500-F4C0F119D061
+ms.manager: dansimp
 ---
 
 # Remove-VMScsiController

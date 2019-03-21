@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMMemory
 ms.reviewer:
 ms.assetid: CA2FBBA5-63F8-4FE2-8E05-BF9884C79A04
+ms.manager: dansimp
 ---
 
 # Set-VMMemory

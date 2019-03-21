@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Superscope
 ms.reviewer:
 ms.assetid: 10E77FD9-6A10-40EC-8634-5C1DA2D7BB50
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Superscope

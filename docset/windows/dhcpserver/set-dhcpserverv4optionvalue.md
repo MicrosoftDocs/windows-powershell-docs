@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DhcpServerv4OptionValue
 ms.reviewer:
 ms.assetid: 27577641-B453-4243-947C-076386E2AF1B
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4OptionValue

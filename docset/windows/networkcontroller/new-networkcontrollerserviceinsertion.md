@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerServiceInsertion
 ms.reviewer:
 ms.assetid: 3D9A62FA-1E11-49AD-9135-5F3738D76E9F
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerServiceInsertion

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-AppvClientPackage
 ms.reviewer:
 ms.assetid: BADD0A08-E71A-46F6-90DA-BACE065B5CBD
+ms.manager: dansimp
 ---
 
 # Stop-AppvClientPackage

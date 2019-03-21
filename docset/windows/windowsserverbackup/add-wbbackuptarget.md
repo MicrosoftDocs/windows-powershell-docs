@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WBBackupTarget
 ms.reviewer:
 ms.assetid: 392718F6-704D-4C0E-9599-EF4D7F441118
+ms.manager: dansimp
 ---
 
 # Add-WBBackupTarget

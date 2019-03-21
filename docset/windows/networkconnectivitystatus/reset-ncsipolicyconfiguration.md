@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-NCSIPolicyConfiguration
 ms.reviewer:
 ms.assetid: E8ADD910-FF91-4A2F-98CD-8F814F4A7DD6
+ms.manager: dansimp
 ---
 
 # Reset-NCSIPolicyConfiguration

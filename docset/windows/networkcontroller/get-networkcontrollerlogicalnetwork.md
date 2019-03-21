@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerLogicalNetwork
 ms.reviewer:
 ms.assetid: 5A2DB42D-0C3A-4B9D-AA96-48614F790A8F
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLogicalNetwork

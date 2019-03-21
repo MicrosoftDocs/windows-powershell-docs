@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetAdapterAdvancedProperty
 ms.reviewer:
 ms.assetid: 78FD4A08-1D00-4D41-85AA-ABD1EAC6E46D
+ms.manager: dansimp
 ---
 
 # Set-NetAdapterAdvancedProperty

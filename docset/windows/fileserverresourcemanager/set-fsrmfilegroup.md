@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FsrmFileGroup
 ms.reviewer:
 ms.assetid: 656160DA-EE18-40B4-BC25-2EB76F5E0740
+ms.manager: dansimp
 ---
 
 # Set-FsrmFileGroup

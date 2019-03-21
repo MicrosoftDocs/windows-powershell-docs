@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-Partition
 ms.reviewer:
 ms.assetid: FF22B6AD-BC44-41C2-9E32-5603800FB71A
+ms.manager: dansimp
 ---
 
 # Remove-Partition

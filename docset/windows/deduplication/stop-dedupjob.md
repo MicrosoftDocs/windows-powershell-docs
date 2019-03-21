@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-DedupJob
 ms.reviewer:
 ms.assetid: 0E612593-0BB2-4977-9D90-8F98E1D042D2
+ms.manager: dansimp
 ---
 
 # Stop-DedupJob

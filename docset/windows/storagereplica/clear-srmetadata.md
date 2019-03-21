@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-SRMetadata
 ms.reviewer:
 ms.assetid: E27DDA10-F489-4D44-B36A-BF0423CC6107
+ms.manager: dansimp
 ---
 
 # Clear-SRMetadata

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-AppLockerPolicy
 ms.reviewer:
 ms.assetid: CCD62AF9-1B1B-4057-A89A-43AA6BEFBE4D
+ms.manager: dansimp
 ---
 
 # Test-AppLockerPolicy

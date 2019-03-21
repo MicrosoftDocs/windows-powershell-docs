@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-UevUserSetting
 ms.reviewer:
 ms.assetid: 94A7CDAA-B1FB-46DA-8C8C-548A27A36C6C
+ms.manager: dansimp
 ---
 
 # Restore-UevUserSetting

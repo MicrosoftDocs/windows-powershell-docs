@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 82ADFB6B-5090-4228-B7CA-B716E446D121
+ms.manager: dansimp
 ---
 
 # Test-WssAlertEmail

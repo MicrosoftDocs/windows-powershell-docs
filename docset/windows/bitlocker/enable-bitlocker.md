@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-BitLocker
 ms.reviewer:
 ms.assetid: 736C312A-623F-482E-9B87-340E5B4614BC
+ms.manager: dansimp
 ---
 
 # Enable-BitLocker

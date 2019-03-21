@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-InitiatorIdFromMaskingSet
 ms.reviewer:
 ms.assetid: BB678E72-FCDF-48EF-8D92-AF8FB42EAE20
+ms.manager: dansimp
 ---
 
 # Remove-InitiatorIdFromMaskingSet

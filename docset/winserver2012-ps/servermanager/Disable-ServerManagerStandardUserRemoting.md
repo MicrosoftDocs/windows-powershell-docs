@@ -1,6 +1,7 @@
 ---
 external help file: ServerManager-help.xml
 ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

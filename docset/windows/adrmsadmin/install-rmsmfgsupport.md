@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-RmsMfgSupport
 ms.reviewer:
 ms.assetid: CE19107A-D9E3-4919-B4D7-26F1506E213E
+ms.manager: dansimp
 ---
 
 # Install-RmsMfgSupport

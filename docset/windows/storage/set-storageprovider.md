@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-StorageProvider
 ms.reviewer:
 ms.assetid: A21E382D-B98C-416F-98D0-116229E27106
+ms.manager: dansimp
 ---
 
 # Set-StorageProvider

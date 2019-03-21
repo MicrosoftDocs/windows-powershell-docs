@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-NetIPHttpsCertBinding
 ms.reviewer:
 ms.assetid: 2F79CD8C-FF12-4BBB-ACC4-5600BF8318BF
+ms.manager: dansimp
 ---
 
 # Add-NetIPHttpsCertBinding

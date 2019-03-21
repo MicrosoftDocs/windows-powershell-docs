@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IscsiVirtualDiskSnapshot
 ms.reviewer:
 ms.assetid: D66A76E7-28E7-4231-91A4-03183871F4A0
+ms.manager: dansimp
 ---
 
 # Remove-IscsiVirtualDiskSnapshot

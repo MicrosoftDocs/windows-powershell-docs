@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerEDns
 ms.reviewer:
 ms.assetid: EA5012C8-2C10-4E44-BD05-122954970183
+ms.manager: dansimp
 ---
 
 # Set-DnsServerEDns

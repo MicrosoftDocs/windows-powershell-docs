@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VipHostMapping
 ms.reviewer:
 ms.assetid: 0A4F1A7A-CA27-4B3D-8F21-9408944D9520
+ms.manager: dansimp
 ---
 
 # Get-VipHostMapping

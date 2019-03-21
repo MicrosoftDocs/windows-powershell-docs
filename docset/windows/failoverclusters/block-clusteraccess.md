@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Block-ClusterAccess
 ms.reviewer:
 ms.assetid: 497979FE-F7A1-49A7-B1BB-000D83D54E84
+ms.manager: dansimp
 ---
 
 # Block-ClusterAccess

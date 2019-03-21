@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-Uev
 ms.reviewer:
 ms.assetid: 4A60238F-BEF8-4EEB-A997-B33D60CF702A
+ms.manager: dansimp
 ---
 
 # Enable-Uev

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SystemDriver
 ms.reviewer:
 ms.assetid: 04B442D9-0968-48A5-85CD-00F7687C256A
+ms.manager: dansimp
 ---
 
 # Get-SystemDriver

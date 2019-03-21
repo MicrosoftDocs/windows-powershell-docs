@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADRootDSE
 ms.reviewer:
 ms.assetid: 8F702492-B23B-4855-B9AE-BB976306CDD0
+ms.manager: dansimp
 ---
 
 # Get-ADRootDSE

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-VM
 ms.reviewer:
 ms.assetid: 86D6A675-C51E-419F-8E39-6D26EE26D2F7
+ms.manager: dansimp
 ---
 
 # Resume-VM

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VpnConnectionTriggerDnsConfiguration
 ms.reviewer:
 ms.assetid: EEC4627A-3CB1-4B40-93A2-4B0A14298DA6
+ms.manager: dansimp
 ---
 
 # Remove-VpnConnectionTriggerDnsConfiguration

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-BgpRouteAggregate
 ms.reviewer:
 ms.assetid: C08A0E42-73D1-4724-A2EB-89965F804174
+ms.manager: dansimp
 ---
 
 # Add-BgpRouteAggregate

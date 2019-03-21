@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-TargetPort
 ms.reviewer:
 ms.assetid: 4C139739-CDA3-4379-B87B-60B1B4DB8CD2
+ms.manager: dansimp
 ---
 
 # Get-TargetPort

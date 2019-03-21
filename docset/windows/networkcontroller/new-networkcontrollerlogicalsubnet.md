@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerLogicalSubnet
 ms.reviewer:
 ms.assetid: E6001A58-5DFA-4193-93D0-482167ABB3F0
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerLogicalSubnet

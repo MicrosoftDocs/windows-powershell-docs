@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IpamSubnet
 ms.reviewer:
 ms.assetid: AF35742B-ABBA-4D0F-8366-5F8010F2091C
+ms.manager: dansimp
 ---
 
 # Set-IpamSubnet

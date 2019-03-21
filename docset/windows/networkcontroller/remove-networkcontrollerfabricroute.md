@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerFabricRoute
 ms.reviewer:
 ms.assetid: A930C921-B1DD-469B-8CBB-2337C62AF1FF
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerFabricRoute

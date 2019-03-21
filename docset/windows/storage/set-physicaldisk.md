@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-PhysicalDisk
 ms.reviewer:
 ms.assetid: 259134E3-B7CD-4550-9EA1-A84A1D571FB2
+ms.manager: dansimp
 ---
 
 # Set-PhysicalDisk

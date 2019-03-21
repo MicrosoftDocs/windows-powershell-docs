@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WebAppPool
 ms.reviewer:
 ms.assetid: B7A73A74-B4FF-4858-A081-7DD547D5E0DD
+ms.manager: dansimp
 ---
 
 # Remove-WebAppPool

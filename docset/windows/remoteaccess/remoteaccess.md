@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 6A012DA3-8BD5-4EC5-8CF6-75A3F1C00430
+ms.manager: dansimp
 ---
 
 # RemoteAccess Module

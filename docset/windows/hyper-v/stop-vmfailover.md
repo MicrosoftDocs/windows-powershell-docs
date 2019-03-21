@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-VMFailover
 ms.reviewer:
 ms.assetid: CE4E23BE-53CB-432D-9681-94A0A5BCE91D
+ms.manager: dansimp
 ---
 
 # Stop-VMFailover

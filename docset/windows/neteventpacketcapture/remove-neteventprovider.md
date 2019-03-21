@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetEventProvider
 ms.reviewer:
 ms.assetid: 8710B2E4-2127-45F8-8D8E-BE3CDF185D7F
+ms.manager: dansimp
 ---
 
 # Remove-NetEventProvider

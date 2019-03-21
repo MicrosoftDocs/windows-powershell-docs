@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NfsClientLock
 ms.reviewer:
 ms.assetid: 8C029D0B-7CC0-4C84-B3B0-57AFE0153F56
+ms.manager: dansimp
 ---
 
 # Get-NfsClientLock

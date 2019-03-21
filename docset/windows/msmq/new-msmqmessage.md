@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-MsmqMessage
 ms.reviewer:
 ms.assetid: 261EF2F0-A0F8-4398-8A42-FD9A9F53AF59
+ms.manager: dansimp
 ---
 
 # New-MsmqMessage

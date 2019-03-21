@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6CFD1224-CEC5-47D9-93F7-89B236146FF6
+ms.manager: dansimp
 ---
 
 # Add-WsusComputer

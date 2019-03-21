@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageDiagnosticInfo
 ms.reviewer:
 ms.assetid: 00C361F0-A0A5-4F3B-96C9-43948AFA9073
+ms.manager: dansimp
 ---
 
 # Get-StorageDiagnosticInfo

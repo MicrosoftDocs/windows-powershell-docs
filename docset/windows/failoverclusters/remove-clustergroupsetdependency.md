@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ClusterGroupSetDependency
 ms.reviewer:
 ms.assetid: BA397FB0-D104-4275-B043-2C16E288B846
+ms.manager: dansimp
 ---
 
 # Remove-ClusterGroupSetDependency

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Block-SmbShareAccess
 ms.reviewer:
 ms.assetid: D3E968CD-FE13-47B9-AB3C-A9CA0DFBADD8
+ms.manager: dansimp
 ---
 
 # Block-SmbShareAccess

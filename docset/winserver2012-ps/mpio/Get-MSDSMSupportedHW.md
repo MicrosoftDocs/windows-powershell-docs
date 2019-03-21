@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 93241A3A-A0AD-414A-A8F5-1A633F39C6C3
+ms.manager: dansimp
 ---
 
 # Get-MSDSMSupportedHW

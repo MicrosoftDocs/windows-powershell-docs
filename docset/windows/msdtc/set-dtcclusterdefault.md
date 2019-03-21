@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DtcClusterDefault
 ms.reviewer:
 ms.assetid: E3AB0237-DE07-409C-A23F-2DDC2B4B042D
+ms.manager: dansimp
 ---
 
 # Set-DtcClusterDefault

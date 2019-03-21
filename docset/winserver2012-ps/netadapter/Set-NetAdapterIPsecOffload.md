@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 433AD139-902C-46C5-9EEA-98E39ADA5C66
+ms.manager: dansimp
 ---
 
 # Set-NetAdapterIPsecOffload

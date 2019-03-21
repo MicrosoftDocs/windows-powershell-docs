@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetNeighbor
 ms.reviewer:
 ms.assetid: 5AB2C464-1746-4874-8B07-156D743D0B6F
+ms.manager: dansimp
 ---
 
 # Set-NetNeighbor

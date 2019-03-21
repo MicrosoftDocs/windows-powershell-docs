@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-Printer
 ms.reviewer:
 ms.assetid: 33B5D1BD-674C-4F36-BF92-8EFF864ACD63
+ms.manager: dansimp
 ---
 
 # Add-Printer

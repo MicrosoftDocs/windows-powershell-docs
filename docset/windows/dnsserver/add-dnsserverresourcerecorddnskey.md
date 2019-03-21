@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerResourceRecordDnsKey
 ms.reviewer:
 ms.assetid: EC24BA06-03D9-48A9-8FEA-830DCE8E4B34
+ms.manager: dansimp
 ---
 
 # Add-DnsServerResourceRecordDnsKey

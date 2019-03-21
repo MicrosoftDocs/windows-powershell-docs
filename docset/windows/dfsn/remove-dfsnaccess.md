@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsnAccess
 ms.reviewer:
 ms.assetid: EC3AC5F8-70B1-47A6-B087-766605A9F972
+ms.manager: dansimp
 ---
 
 # Remove-DfsnAccess

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetFirewallInterfaceTypeFilter
 ms.reviewer:
 ms.assetid: 474E8416-0B17-4360-8BDF-AAF17BCA4036
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallInterfaceTypeFilter

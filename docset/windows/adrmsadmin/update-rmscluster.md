@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-RmsCluster
 ms.reviewer:
 ms.assetid: ABF90FFB-2235-4D85-AE24-57462FDC5B8C
+ms.manager: dansimp
 ---
 
 # Update-RmsCluster

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerRootHint
 ms.reviewer:
 ms.assetid: 965DC972-9B2E-48BA-90BA-214198AA2B4C
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerRootHint

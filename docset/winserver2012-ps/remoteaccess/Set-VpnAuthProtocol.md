@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 32219089-2BF8-40D6-93C2-67303F34D8A0
+ms.manager: dansimp
 ---
 
 # Set-VpnAuthProtocol

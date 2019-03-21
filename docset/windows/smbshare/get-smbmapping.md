@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SmbMapping
 ms.reviewer:
 ms.assetid: F7E6F380-A274-4326-B121-49128FF2A37B
+ms.manager: dansimp
 ---
 
 # Get-SmbMapping

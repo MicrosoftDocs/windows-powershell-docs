@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-ADDSReadOnlyDomainControllerAccountCreation
 ms.reviewer:
 ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
+ms.manager: dansimp
 ---
 
 # Test-ADDSReadOnlyDomainControllerAccountCreation

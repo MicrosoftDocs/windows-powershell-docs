@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Invoke-DnsServerSigningKeyRollover
 ms.reviewer:
 ms.assetid: D8196A22-2B5E-4466-81EF-8C78B93955DC
+ms.manager: dansimp
 ---
 
 # Invoke-DnsServerSigningKeyRollover

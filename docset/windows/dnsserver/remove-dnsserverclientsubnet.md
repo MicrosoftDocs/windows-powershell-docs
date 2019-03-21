@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerClientSubnet
 ms.reviewer:
 ms.assetid: 424D7472-D2D4-4FFA-B131-86BA71C763CE
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerClientSubnet

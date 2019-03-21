@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerResponseRateLimitingExceptionlist
 ms.reviewer:
 ms.assetid: EAE25BF8-F023-47DB-967E-738CF0E9FC41
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerResponseRateLimitingExceptionlist

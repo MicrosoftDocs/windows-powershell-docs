@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WebFtpSite
 ms.reviewer:
 ms.assetid: 39D2484E-0D39-40CB-B348-94BE0088156B
+ms.manager: dansimp
 ---
 
 # New-WebFtpSite

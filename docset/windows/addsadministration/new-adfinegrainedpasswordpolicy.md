@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-ADFineGrainedPasswordPolicy
 ms.reviewer:
 ms.assetid: 43249562-90DC-4535-9160-4E38621B5DA7
+ms.manager: dansimp
 ---
 
 # New-ADFineGrainedPasswordPolicy

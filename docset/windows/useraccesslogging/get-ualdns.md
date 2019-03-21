@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-UalDns
 ms.reviewer:
 ms.assetid: 58BBBEF8-9F1C-4568-B9B3-422EABF1D6B2
+ms.manager: dansimp
 ---
 
 # Get-UalDns

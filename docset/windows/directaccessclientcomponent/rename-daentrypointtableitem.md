@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-DAEntryPointTableItem
 ms.reviewer:
 ms.assetid: F68C0ECF-F064-4C50-B164-15224780EB90
+ms.manager: dansimp
 ---
 
 # Rename-DAEntryPointTableItem

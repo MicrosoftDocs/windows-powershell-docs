@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NpsSharedSecretTemplate
 ms.reviewer:
 ms.assetid: 70DFEF1B-FA97-4700-92A9-C4A698551DE6
+ms.manager: dansimp
 ---
 
 # Get-NpsSharedSecretTemplate

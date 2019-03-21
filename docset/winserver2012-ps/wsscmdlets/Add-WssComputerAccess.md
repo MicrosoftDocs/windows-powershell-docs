@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CC660DCC-301B-434F-AB10-BD4203A38FC7
+ms.manager: dansimp
 ---
 
 # Add-WssComputerAccess

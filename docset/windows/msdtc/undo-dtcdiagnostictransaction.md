@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Undo-DtcDiagnosticTransaction
 ms.reviewer:
 ms.assetid: F93A43CE-6DBD-4CBA-B8EE-970858959D7E
+ms.manager: dansimp
 ---
 
 # Undo-DtcDiagnosticTransaction

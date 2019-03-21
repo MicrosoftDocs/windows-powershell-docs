@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetVirtualizationCustomerRoute
 ms.reviewer:
 ms.assetid: B3F7199E-ABD2-4D9C-BACD-30582E312C32
+ms.manager: dansimp
 ---
 
 # Remove-NetVirtualizationCustomerRoute

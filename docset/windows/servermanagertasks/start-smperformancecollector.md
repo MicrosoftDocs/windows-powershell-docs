@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-SMPerformanceCollector
 ms.reviewer:
 ms.assetid: 9B5F34FA-7DE4-427B-AC32-EA0EF142CAF1
+ms.manager: dansimp
 ---
 
 # Start-SMPerformanceCollector

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VamtProduct
 ms.reviewer:
 ms.assetid: 7962B7C4-B722-428A-AB8C-5050975EDBAF
+ms.manager: dansimp
 ---
 
 # Get-VamtProduct

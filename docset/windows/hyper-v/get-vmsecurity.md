@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMSecurity
 ms.reviewer:
 ms.assetid: D318B463-CA60-4DFC-A3F8-904BDBC8D2DF
+ms.manager: dansimp
 ---
 
 # Get-VMSecurity

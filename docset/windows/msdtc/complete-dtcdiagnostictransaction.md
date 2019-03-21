@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Complete-DtcDiagnosticTransaction
 ms.reviewer:
 ms.assetid: CBF5A008-9FAC-491B-9580-0E98369B2CE4
+ms.manager: dansimp
 ---
 
 # Complete-DtcDiagnosticTransaction

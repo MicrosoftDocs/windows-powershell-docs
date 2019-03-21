@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-InitiatorId
 ms.reviewer:
 ms.assetid: 56C96B69-33C0-402B-8813-D64A4434011D
+ms.manager: dansimp
 ---
 
 # Get-InitiatorId

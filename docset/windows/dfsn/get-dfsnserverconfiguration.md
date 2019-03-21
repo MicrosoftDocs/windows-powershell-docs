@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsnServerConfiguration
 ms.reviewer:
 ms.assetid: 6D47E67A-A9DF-4E0B-95AD-CACC3D5C2DCA
+ms.manager: dansimp
 ---
 
 # Get-DfsnServerConfiguration

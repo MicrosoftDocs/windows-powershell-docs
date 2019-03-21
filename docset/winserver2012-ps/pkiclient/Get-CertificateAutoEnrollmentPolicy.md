@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 20C1505A-014C-40B9-9C0F-F6C67C8282EE
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

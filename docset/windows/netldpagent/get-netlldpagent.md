@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetLldpAgent
 ms.reviewer:
 ms.assetid: 0CE124BA-BEBA-4676-AD3C-6FD3F0F30939
+ms.manager: dansimp
 ---
 
 # Get-NetLldpAgent

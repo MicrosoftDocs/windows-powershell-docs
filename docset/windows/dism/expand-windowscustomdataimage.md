@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Expand-WindowsCustomDataImage
 ms.reviewer:
 ms.assetid: 30EC7E2B-C605-4D24-BDA2-77890054BE0C
+ms.manager: dansimp
 ---
 
 # Expand-WindowsCustomDataImage

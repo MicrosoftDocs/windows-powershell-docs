@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetEventProvider
 ms.reviewer:
 ms.assetid: 6D812150-725A-44C6-873F-FCF3EE6E3003
+ms.manager: dansimp
 ---
 
 # Set-NetEventProvider

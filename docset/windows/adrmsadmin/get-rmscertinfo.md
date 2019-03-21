@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RmsCertInfo
 ms.reviewer:
 ms.assetid: 5D7E8EAA-0816-4D68-8660-1B0D52DD7ED9
+ms.manager: dansimp
 ---
 
 # Get-RmsCertInfo

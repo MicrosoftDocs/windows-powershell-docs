@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Grant-DfsrDelegation
 ms.reviewer:
 ms.assetid: 4D5FE537-8315-4148-979B-77068E4237F0
+ms.manager: dansimp
 ---
 
 # Grant-DfsrDelegation

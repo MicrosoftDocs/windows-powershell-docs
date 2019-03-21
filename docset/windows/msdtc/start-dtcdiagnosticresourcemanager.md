@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-DtcDiagnosticResourceManager
 ms.reviewer:
 ms.assetid: 4EA71110-A579-4C1F-A91B-F24FB99B8BBD
+ms.manager: dansimp
 ---
 
 # Start-DtcDiagnosticResourceManager

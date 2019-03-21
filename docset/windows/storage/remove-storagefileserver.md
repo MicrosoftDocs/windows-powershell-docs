@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-StorageFileServer
 ms.reviewer:
 ms.assetid: C93553DE-CCB2-4D23-93C7-589F8FCBB3F7
+ms.manager: dansimp
 ---
 
 # Remove-StorageFileServer

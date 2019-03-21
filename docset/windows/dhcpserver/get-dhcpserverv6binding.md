@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6Binding
 ms.reviewer:
 ms.assetid: FF7A07D1-467C-4E4C-BEFE-83F034C43CD3
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Binding

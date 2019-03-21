@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerForwarder
 ms.reviewer:
 ms.assetid: 3F7031C7-9D8A-4E7B-94D9-F6D18B0B516F
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerForwarder

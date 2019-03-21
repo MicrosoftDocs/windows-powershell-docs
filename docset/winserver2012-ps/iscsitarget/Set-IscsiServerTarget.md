@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 957B9B1F-D7E2-4FDE-8F7D-25FC27293F6A
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

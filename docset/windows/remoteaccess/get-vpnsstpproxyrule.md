@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VpnSstpProxyRule
 ms.reviewer:
 ms.assetid: 8F433066-58EC-45F2-B979-F88B654CC516
+ms.manager: dansimp
 ---
 
 # Get-VpnSstpProxyRule

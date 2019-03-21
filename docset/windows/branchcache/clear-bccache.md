@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-BCCache
 ms.reviewer:
 ms.assetid: 64D8530E-2A66-4866-A719-5269F3B859CF
+ms.manager: dansimp
 ---
 
 # Clear-BCCache

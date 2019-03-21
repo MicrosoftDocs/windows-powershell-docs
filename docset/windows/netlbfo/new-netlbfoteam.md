@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetLbfoTeam
 ms.reviewer:
 ms.assetid: 7FB6DF2E-5E77-4118-AB5F-D09E6C57D763
+ms.manager: dansimp
 ---
 
 # New-NetLbfoTeam

@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C1D9BE44-72F2-443E-B550-D6D9AA7B213E
+ms.manager: dansimp
 ---
 
 # NetAdapter Module

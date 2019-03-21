@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 6E108A49-889B-47B0-8537-FEC153F66809
+ms.manager: dansimp
 ---
 
 # DirectAccessClientComponent Module

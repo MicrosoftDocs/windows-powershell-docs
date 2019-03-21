@@ -18,6 +18,7 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 663AAEE6-FE1C-417A-9540-451E5D9271CE
+ms.manager: dansimp
 ---
 
 # AppVSequencer Module

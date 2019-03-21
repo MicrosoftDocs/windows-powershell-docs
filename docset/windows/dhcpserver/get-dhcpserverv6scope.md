@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6Scope
 ms.reviewer:
 ms.assetid: 95EE0821-02C0-4110-9514-062C0AC8C9EE
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Scope

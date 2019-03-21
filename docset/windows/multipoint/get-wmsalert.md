@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsAlert
 ms.reviewer:
 ms.assetid: D5646741-42DF-4681-8CBD-0D3FF6A80986
+ms.manager: dansimp
 ---
 
 # Get-WmsAlert

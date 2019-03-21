@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetAdapterRsc
 ms.reviewer:
 ms.assetid: 62969473-C923-4459-84AA-BEC1BF11E075
+ms.manager: dansimp
 ---
 
 # Enable-NetAdapterRsc

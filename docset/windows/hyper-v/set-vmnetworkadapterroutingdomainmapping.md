@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VmNetworkAdapterRoutingDomainMapping
 ms.reviewer:
 ms.assetid: 407B7033-AF0A-4219-A118-4793E99069D3
+ms.manager: dansimp
 ---
 
 # Set-VMNetworkAdapterRoutingDomainMapping

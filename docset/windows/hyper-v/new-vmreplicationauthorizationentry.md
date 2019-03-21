@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-VMReplicationAuthorizationEntry
 ms.reviewer:
 ms.assetid: EA339689-B8DF-4ABF-957B-DD143E46C3DB
+ms.manager: dansimp
 ---
 
 # New-VMReplicationAuthorizationEntry

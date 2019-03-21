@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Sync-SRGroup
 ms.reviewer:
 ms.assetid: DF0E8026-00E2-4A27-92F2-31D2949289A4
+ms.manager: dansimp
 ---
 
 # Sync-SRGroup

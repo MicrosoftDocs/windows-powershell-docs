@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E717BE8B-A991-4033-A986-D6CF660FDDAB
+ms.manager: dansimp
 ---
 
 # Get-DtcTransactionsTraceSetting

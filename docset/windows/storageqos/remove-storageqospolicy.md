@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-StorageQosPolicy
 ms.reviewer:
 ms.assetid: 382BAEAD-8B9E-4064-A048-C1CA4F132734
+ms.manager: dansimp
 ---
 
 # Remove-StorageQosPolicy

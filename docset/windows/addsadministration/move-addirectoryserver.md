@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-ADDirectoryServer
 ms.reviewer:
 ms.assetid: 1BA3C61F-DEEB-42F2-A141-923AECE7A824
+ms.manager: dansimp
 ---
 
 # Move-ADDirectoryServer

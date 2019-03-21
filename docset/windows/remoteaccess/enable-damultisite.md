@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-DAMultiSite
 ms.reviewer:
 ms.assetid: 40F47897-44A5-40C0-A435-E12FBA190238
+ms.manager: dansimp
 ---
 
 # Enable-DAMultiSite

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9E730A08-ADD3-4539-B638-3B18757F88AE
+ms.manager: dansimp
 ---
 
 # Disable-NetAdapterChecksumOffload

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 66EB6CDE-BE53-4CEC-BCBA-20A4CDE91411
+ms.manager: dansimp
 ---
 
 # Set-WssFolder

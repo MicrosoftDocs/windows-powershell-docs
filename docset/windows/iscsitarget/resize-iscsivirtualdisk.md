@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resize-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 67564801-F38C-4E86-B4FA-900883CE4F9C
+ms.manager: dansimp
 ---
 
 # Resize-IscsiVirtualDisk

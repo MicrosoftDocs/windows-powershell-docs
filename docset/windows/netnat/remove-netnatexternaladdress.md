@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetNatExternalAddress
 ms.reviewer:
 ms.assetid: D045ACB3-08E5-4B78-9FCC-D599725E7281
+ms.manager: dansimp
 ---
 
 # Remove-NetNatExternalAddress

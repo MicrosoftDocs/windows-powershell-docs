@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsnRoot
 ms.reviewer:
 ms.assetid: 14D4A623-C595-4DEC-A8AF-AFE74AB71D2E
+ms.manager: dansimp
 ---
 
 # Remove-DfsnRoot

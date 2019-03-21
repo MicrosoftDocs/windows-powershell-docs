@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-SelfSignedCertificate
 ms.reviewer:
 ms.assetid: 72FCDAEA-BB33-40C6-AFCE-E7C33CF622D0
+ms.manager: dansimp
 ---
 
 # New-SelfSignedCertificate

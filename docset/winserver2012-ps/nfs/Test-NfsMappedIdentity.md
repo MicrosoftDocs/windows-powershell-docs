@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 59A2473C-C672-403A-9DF1-A831247D6022
+ms.manager: dansimp
 ---
 
 # Test-NfsMappedIdentity

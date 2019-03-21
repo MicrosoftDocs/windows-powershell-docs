@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerDnsSecZoneSetting
 ms.reviewer:
 ms.assetid: 3EC04CE3-FEBF-4DE6-83A3-5DFC5091029B
+ms.manager: dansimp
 ---
 
 # Get-DnsServerDnsSecZoneSetting

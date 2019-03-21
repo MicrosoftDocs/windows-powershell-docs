@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-NetTeredoConfiguration
 ms.reviewer:
 ms.assetid: 122D37C5-678E-4190-A1FB-9E4E37BBA4A9
+ms.manager: dansimp
 ---
 
 # Reset-NetTeredoConfiguration

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-SmbDelegation
 ms.reviewer:
 ms.assetid: AEC9CAB2-CC32-4BC6-AE25-B35897A5426B
+ms.manager: dansimp
 ---
 
 # Disable-SmbDelegation

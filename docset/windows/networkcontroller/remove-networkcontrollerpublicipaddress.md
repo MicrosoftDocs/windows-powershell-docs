@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerPublicIpAddress
 ms.reviewer:
 ms.assetid: 6CD332D7-B883-4C4E-B82A-7D9CA43CDFB2
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerPublicIpAddress

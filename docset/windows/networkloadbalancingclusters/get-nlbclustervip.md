@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NlbClusterVip
 ms.reviewer:
 ms.assetid: 89BF641C-ED3A-4FEF-AA25-23AD3BE7003F
+ms.manager: dansimp
 ---
 
 # Get-NlbClusterVip

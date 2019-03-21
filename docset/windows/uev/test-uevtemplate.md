@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-UevTemplate
 ms.reviewer:
 ms.assetid: D132E13D-2340-4322-BCBA-59689966C096
+ms.manager: dansimp
 ---
 
 # Test-UevTemplate

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-EtwTraceProvider
 ms.reviewer:
 ms.assetid: F7CB0121-FE42-439D-B907-2630EF18B121
+ms.manager: dansimp
 ---
 
 # Set-EtwTraceProvider

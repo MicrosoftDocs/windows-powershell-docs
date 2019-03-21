@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-SRPartnership
 ms.reviewer:
 ms.assetid: B1B24BC7-E773-4F68-A6FF-097ABE77F3BE
+ms.manager: dansimp
 ---
 
 # Set-SRPartnership

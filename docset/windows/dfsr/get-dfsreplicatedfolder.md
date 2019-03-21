@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsReplicatedFolder
 ms.reviewer:
 ms.assetid: FE1F2A4D-7419-455B-9A8C-7809031AF9ED
+ms.manager: dansimp
 ---
 
 # Get-DfsReplicatedFolder

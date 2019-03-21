@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 2843AED7-DCF9-4E2E-A520-A205A4743FFE
+ms.manager: dansimp
 ---
 
 # HNVDiagnostics Module

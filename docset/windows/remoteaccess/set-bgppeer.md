@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-BgpPeer
 ms.reviewer:
 ms.assetid: 970F23CA-3FDD-4698-A428-A88FE32E2092
+ms.manager: dansimp
 ---
 
 # Set-BgpPeer

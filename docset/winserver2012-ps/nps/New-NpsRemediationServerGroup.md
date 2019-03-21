@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AF773889-1D6B-493E-BFB3-2BBCA083BFAB
+ms.manager: dansimp
 ---
 
 # New-NpsRemediationServerGroup

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsrMembership
 ms.reviewer:
 ms.assetid: AD0A548E-99FA-4D2F-810C-0F071116DA79
+ms.manager: dansimp
 ---
 
 # Get-DfsrMembership

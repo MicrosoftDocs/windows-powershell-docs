@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BD405858-44E3-4186-B586-B5308DEFF011
+ms.manager: dansimp
 ---
 
 # Enable-NetDnsTransitionConfiguration

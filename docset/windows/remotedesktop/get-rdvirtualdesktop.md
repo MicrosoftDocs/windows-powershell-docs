@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RDVirtualDesktop
 ms.reviewer:
 ms.assetid: BD487319-E090-4729-96CC-5DB8630B0424
+ms.manager: dansimp
 ---
 
 # Get-RDVirtualDesktop

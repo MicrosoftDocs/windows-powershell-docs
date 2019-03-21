@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unlock-WmsSession
 ms.reviewer:
 ms.assetid: A8D291D9-4EE4-4EE9-965F-D06D0C02BFAC
+ms.manager: dansimp
 ---
 
 # Unlock-WmsSession

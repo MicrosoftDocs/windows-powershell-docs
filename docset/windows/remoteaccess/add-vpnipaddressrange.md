@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnIPAddressRange
 ms.reviewer:
 ms.assetid: 5FB50005-2B96-4D3D-BE43-0AE72AB0E85F
+ms.manager: dansimp
 ---
 
 # Add-VpnIPAddressRange

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsReplicatedFolder
 ms.reviewer:
 ms.assetid: 8DBB8DF0-FE98-470D-BA25-9EFCEDD54E21
+ms.manager: dansimp
 ---
 
 # Remove-DfsReplicatedFolder

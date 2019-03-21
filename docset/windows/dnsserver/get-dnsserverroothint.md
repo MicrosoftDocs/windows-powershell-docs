@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerRootHint
 ms.reviewer:
 ms.assetid: 556C0842-0115-4183-AF00-9420A1AB2B8F
+ms.manager: dansimp
 ---
 
 # Get-DnsServerRootHint

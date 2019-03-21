@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerCredential
 ms.reviewer:
 ms.assetid: C49F6B25-5D6B-4A59-B558-4D1AEFCD7099
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerCredential

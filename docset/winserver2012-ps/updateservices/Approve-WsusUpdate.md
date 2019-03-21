@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AF8E8258-D82E-43C1-BF9F-96DBA22E8B7F
+ms.manager: dansimp
 ---
 
 # Approve-WsusUpdate

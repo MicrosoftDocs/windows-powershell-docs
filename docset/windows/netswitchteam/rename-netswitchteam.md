@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-NetSwitchTeam
 ms.reviewer:
 ms.assetid: B9FBA921-657C-4C28-89D2-FD728591B470
+ms.manager: dansimp
 ---
 
 # Rename-NetSwitchTeam

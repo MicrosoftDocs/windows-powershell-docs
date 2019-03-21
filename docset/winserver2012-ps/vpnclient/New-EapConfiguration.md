@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7AC7839A-38B7-46F9-AC6D-55E522C4F112
+ms.manager: dansimp
 ---
 
 # New-EapConfiguration

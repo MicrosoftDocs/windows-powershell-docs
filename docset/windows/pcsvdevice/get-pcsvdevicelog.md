@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PcsvDeviceLog
 ms.reviewer:
 ms.assetid: 427B2709-7C42-4988-8171-BBCD6F18D2C6
+ms.manager: dansimp
 ---
 
 # Get-PcsvDeviceLog

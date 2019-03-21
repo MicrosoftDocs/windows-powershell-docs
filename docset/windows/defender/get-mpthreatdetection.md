@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-MpThreatDetection
 ms.reviewer:
 ms.assetid: F8A11A2D-8E09-4C0C-93A5-8B8097CFDF75
+ms.manager: dansimp
 ---
 
 # Get-MpThreatDetection

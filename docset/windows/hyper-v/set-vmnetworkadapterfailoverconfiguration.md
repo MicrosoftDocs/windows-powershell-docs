@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMNetworkAdapterFailoverConfiguration
 ms.reviewer:
 ms.assetid: 13B6E5DA-9EB8-4B05-AEB5-C905334712EA
+ms.manager: dansimp
 ---
 
 # Set-VMNetworkAdapterFailoverConfiguration

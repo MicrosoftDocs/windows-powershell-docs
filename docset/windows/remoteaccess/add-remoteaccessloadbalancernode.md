@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-RemoteAccessLoadBalancerNode
 ms.reviewer:
 ms.assetid: 90AA4EC8-09C9-4B77-BFB2-0E68AF04B3E5
+ms.manager: dansimp
 ---
 
 # Add-RemoteAccessLoadBalancerNode

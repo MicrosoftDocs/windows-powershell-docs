@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DtcTransactionsTraceSetting
 ms.reviewer:
 ms.assetid: E717BE8B-A991-4033-A986-D6CF660FDDAB
+ms.manager: dansimp
 ---
 
 # Get-DtcTransactionsTraceSetting

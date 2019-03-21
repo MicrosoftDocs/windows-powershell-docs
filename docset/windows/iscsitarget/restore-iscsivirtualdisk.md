@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 790D41BC-782A-4917-8BA5-BD978556479D
+ms.manager: dansimp
 ---
 
 # Restore-IscsiVirtualDisk

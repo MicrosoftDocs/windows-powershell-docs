@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RDPersonalVirtualDesktopAssignment
 ms.reviewer:
 ms.assetid: B8909D98-EB9D-4A18-91BF-E31C6C8D03DB
+ms.manager: dansimp
 ---
 
 # Set-RDPersonalVirtualDesktopAssignment

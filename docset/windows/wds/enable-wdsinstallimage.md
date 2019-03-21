@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WdsInstallImage
 ms.reviewer:
 ms.assetid: D7000FD7-5ADC-4326-99C6-BCE1DBBE924B
+ms.manager: dansimp
 ---
 
 # Enable-WdsInstallImage

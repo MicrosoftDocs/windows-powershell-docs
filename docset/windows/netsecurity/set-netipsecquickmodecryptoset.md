@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetIPsecQuickModeCryptoSet
 ms.reviewer:
 ms.assetid: ECF6A155-17EE-481B-9EC9-766D329F104D
+ms.manager: dansimp
 ---
 
 # Set-NetIPsecQuickModeCryptoSet

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-WebApplicationProxy
 ms.reviewer:
 ms.assetid: FDEC245A-F5E7-496A-A302-638E2E2000A4
+ms.manager: dansimp
 ---
 
 # Install-WebApplicationProxy

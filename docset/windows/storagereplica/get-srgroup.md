@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SRGroup
 ms.reviewer:
 ms.assetid: CA875666-6448-4791-AD82-5E33D7FBE3B0
+ms.manager: dansimp
 ---
 
 # Get-SRGroup

@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 6F49F904-E04D-4B90-AFBC-84BC45D4D30D
+ms.manager: dansimp
 ---
 
 # BitLocker Module

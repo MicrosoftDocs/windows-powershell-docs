@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamDnsConditionalForwarder
 ms.reviewer:
 ms.assetid: A6F969E9-2A47-4BD3-BCAF-51EA6926BBC6
+ms.manager: dansimp
 ---
 
 # Get-IpamDnsConditionalForwarder

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-DnsClientCache
 ms.reviewer:
 ms.assetid: 0511A109-5A9D-4EC6-B315-F5DB1EB2F512
+ms.manager: dansimp
 ---
 
 # Clear-DnsClientCache

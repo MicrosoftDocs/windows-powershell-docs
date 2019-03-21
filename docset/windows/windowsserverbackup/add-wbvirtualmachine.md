@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WBVirtualMachine
 ms.reviewer:
 ms.assetid: 4F9AFA05-30C3-481C-9820-023C325F4C0D
+ms.manager: dansimp
 ---
 
 # Add-WBVirtualMachine

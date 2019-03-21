@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-WBApplicationRecovery
 ms.reviewer:
 ms.assetid: A103C75B-F0D3-4E9C-978A-D1897460FC01
+ms.manager: dansimp
 ---
 
 # Start-WBApplicationRecovery

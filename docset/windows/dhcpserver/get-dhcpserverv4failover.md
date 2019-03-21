@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4Failover
 ms.reviewer:
 ms.assetid: B7898336-3532-422D-A1F5-C8360D554F8D
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4Failover

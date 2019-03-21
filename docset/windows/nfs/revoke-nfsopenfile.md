@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Revoke-NfsOpenFile
 ms.reviewer:
 ms.assetid: CD95798C-1629-417F-A9B6-288353919199
+ms.manager: dansimp
 ---
 
 # Revoke-NfsOpenFile

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-Printer
 ms.reviewer:
 ms.assetid: FED049DD-C64A-4A46-8A4C-37DFF8458DD7
+ms.manager: dansimp
 ---
 
 # Set-Printer

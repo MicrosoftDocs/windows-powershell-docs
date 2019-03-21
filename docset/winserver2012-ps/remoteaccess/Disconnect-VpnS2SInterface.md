@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BBC9FA01-8BCD-4254-80BF-70F5BA0E4F9A
+ms.manager: dansimp
 ---
 
 # Disconnect-VpnS2SInterface

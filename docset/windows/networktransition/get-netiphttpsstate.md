@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPHttpsState
 ms.reviewer:
 ms.assetid: 344375BD-BD16-43AF-BA74-BC1134B1A8C5
+ms.manager: dansimp
 ---
 
 # Get-NetIPHttpsState

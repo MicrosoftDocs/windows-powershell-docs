@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-VMMigration
 ms.reviewer:
 ms.assetid: 9FB8F7AC-AF6E-433A-93CB-9CE5CFDBC852
+ms.manager: dansimp
 ---
 
 # Enable-VMMigration

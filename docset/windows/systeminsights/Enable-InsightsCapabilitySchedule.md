@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 38D4C234-40FB-4E35-943F-5AC56EEB55A7
+ms.manager: dansimp
 schema: 2.0.0
 ---
 

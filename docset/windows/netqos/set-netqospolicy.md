@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetQosPolicy
 ms.reviewer:
 ms.assetid: F946186B-3E5C-4918-A176-266FEFC4EEAB
+ms.manager: dansimp
 ---
 
 # Set-NetQosPolicy

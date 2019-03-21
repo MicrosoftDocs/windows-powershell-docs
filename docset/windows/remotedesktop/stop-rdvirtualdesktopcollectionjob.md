@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-RDVirtualDesktopCollectionJob
 ms.reviewer:
 ms.assetid: C9EE4406-DD1B-40DB-B39E-A98B65F3C891
+ms.manager: dansimp
 ---
 
 # Stop-RDVirtualDesktopCollectionJob

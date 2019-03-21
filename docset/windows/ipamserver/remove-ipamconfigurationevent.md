@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IpamConfigurationEvent
 ms.reviewer:
 ms.assetid: 8FC2CF6E-E2B1-4365-81E5-CC23AE552DC7
+ms.manager: dansimp
 ---
 
 # Remove-IpamConfigurationEvent

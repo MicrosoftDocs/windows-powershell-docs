@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Measure-DedupFileMetadata
 ms.reviewer:
 ms.assetid: E39F7A3B-2E8E-4038-B8E5-45CC4279898D
+ms.manager: dansimp
 ---
 
 # Measure-DedupFileMetadata

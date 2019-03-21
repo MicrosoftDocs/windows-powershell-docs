@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-ADResourcePropertyList
 ms.reviewer:
 ms.assetid: 72EF5EDC-5AF2-423C-9DA5-536E7CA7A7AF
+ms.manager: dansimp
 ---
 
 # New-ADResourcePropertyList

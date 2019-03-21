@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADGroupMember
 ms.reviewer:
 ms.assetid: A308681E-8EA3-42EE-9241-11101F6962C3
+ms.manager: dansimp
 ---
 
 # Get-ADGroupMember

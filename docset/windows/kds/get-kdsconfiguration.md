@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-KdsConfiguration
 ms.reviewer:
 ms.assetid: 7ED02CD3-B127-4EA4-9625-8D6FF3141E54
+ms.manager: dansimp
 ---
 
 # Get-KdsConfiguration

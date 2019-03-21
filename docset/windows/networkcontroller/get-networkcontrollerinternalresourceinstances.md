@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerInternalResourceInstances
 ms.reviewer:
 ms.assetid: 3437FA3E-56B3-45FC-BA32-5CAC219BFAF6
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerInternalResourceInstances

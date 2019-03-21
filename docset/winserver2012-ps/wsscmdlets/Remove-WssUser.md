@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5ED73E5D-95B5-40AD-848A-68E95D4F5F67
+ms.manager: dansimp
 ---
 
 # Remove-WssUser

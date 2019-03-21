@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9C4607C0-4DFD-408D-AA76-E40F914CC7B5
+ms.manager: dansimp
 ---
 
 # Get-WssDriveInUse

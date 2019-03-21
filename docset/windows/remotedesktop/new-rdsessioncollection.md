@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-RDSessionCollection
 ms.reviewer:
 ms.assetid: B59F93B4-115B-44BB-A349-8D915D281FC7
+ms.manager: dansimp
 ---
 
 # New-RDSessionCollection

@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: FABEBB69-AEC2-4F06-8F23-872169149054
+ms.manager: dansimp
 ---
 
 # AssignedAccess Module

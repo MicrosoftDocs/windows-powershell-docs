@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Publish-WmsDesktop
 ms.reviewer:
 ms.assetid: E5148179-052D-471D-929D-C52C1E61B300
+ms.manager: dansimp
 ---
 
 # Publish-WmsDesktop

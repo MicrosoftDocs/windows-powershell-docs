@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VpnConnectionTriggerApplication
 ms.reviewer:
 ms.assetid: C5D31872-B56B-4E13-8CAC-E1F83042F2CF
+ms.manager: dansimp
 ---
 
 # Remove-VpnConnectionTriggerApplication

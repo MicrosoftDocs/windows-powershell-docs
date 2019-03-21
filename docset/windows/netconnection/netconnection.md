@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: DAAD0289-056C-4259-ADA4-2245C2EEE4AA
+ms.manager: dansimp
 ---
 
 # NetConnection Module

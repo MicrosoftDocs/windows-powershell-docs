@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-VM
 ms.reviewer:
 ms.assetid: 4B7BB1C1-7B99-4100-B164-785A038F7A61
+ms.manager: dansimp
 ---
 
 # Export-VM

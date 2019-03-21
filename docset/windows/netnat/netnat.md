@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 0ABD4E3E-8A9B-4AF3-9197-675EB828DD25
+ms.manager: dansimp
 ---
 
 # NetNat Module

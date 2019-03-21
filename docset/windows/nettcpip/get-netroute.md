@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetRoute
 ms.reviewer:
 ms.assetid: 3FFBE8B0-365B-45AD-9237-6FA5FA01438A
+ms.manager: dansimp
 ---
 
 # Get-NetRoute

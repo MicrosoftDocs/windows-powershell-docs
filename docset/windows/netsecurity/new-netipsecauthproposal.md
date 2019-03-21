@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetIPsecAuthProposal
 ms.reviewer:
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
+ms.manager: dansimp
 ---
 
 # New-NetIPsecAuthProposal

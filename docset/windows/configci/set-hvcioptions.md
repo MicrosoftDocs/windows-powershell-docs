@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-HVCIOptions
 ms.reviewer:
 ms.assetid: 8F9CF270-A5A4-4F86-A18C-2BB591D8445E
+ms.manager: dansimp
 ---
 
 # Set-HVCIOptions

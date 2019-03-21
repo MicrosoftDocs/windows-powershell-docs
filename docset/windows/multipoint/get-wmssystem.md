@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsSystem
 ms.reviewer:
 ms.assetid: 15AFB3B5-F1B5-4AD6-84A2-BA793DAA2CBB
+ms.manager: dansimp
 ---
 
 # Get-WmsSystem

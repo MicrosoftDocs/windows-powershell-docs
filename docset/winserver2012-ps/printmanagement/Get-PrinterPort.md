@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B6173813-10C8-4649-B116-FC2AD2C63059
+ms.manager: dansimp
 ---
 
 # Get-PrinterPort

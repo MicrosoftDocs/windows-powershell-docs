@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FsrmAutoQuota
 ms.reviewer:
 ms.assetid: 42A7295C-D673-4ED6-9F8B-71234A980F54
+ms.manager: dansimp
 ---
 
 # Set-FsrmAutoQuota

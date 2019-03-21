@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMDvdDrive
 ms.reviewer:
 ms.assetid: 5C07D5B5-4D31-4109-BDCF-42E74E09A59B
+ms.manager: dansimp
 ---
 
 # Get-VMDvdDrive

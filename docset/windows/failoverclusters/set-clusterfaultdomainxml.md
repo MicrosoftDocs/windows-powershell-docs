@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ClusterFaultDomainXML
 ms.reviewer:
 ms.assetid: C5269D6A-8D07-4601-997C-F517E3D26DC4
+ms.manager: dansimp
 ---
 
 # Set-ClusterFaultDomainXML

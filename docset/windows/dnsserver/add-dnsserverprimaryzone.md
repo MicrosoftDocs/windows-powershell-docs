@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerPrimaryZone
 ms.reviewer:
 ms.assetid: 623236C1-00B9-4F14-B98C-3751126CC688
+ms.manager: dansimp
 ---
 
 # Add-DnsServerPrimaryZone

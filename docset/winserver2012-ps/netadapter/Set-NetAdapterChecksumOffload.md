@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A6F87E59-4776-4353-8EDB-2E02E7CE96A4
+ms.manager: dansimp
 ---
 
 # Set-NetAdapterChecksumOffload

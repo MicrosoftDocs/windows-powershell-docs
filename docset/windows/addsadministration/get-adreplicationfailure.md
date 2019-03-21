@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADReplicationFailure
 ms.reviewer:
 ms.assetid: 76AD661A-59E0-467C-A2DB-8D70729EFD5F
+ms.manager: dansimp
 ---
 
 # Get-ADReplicationFailure

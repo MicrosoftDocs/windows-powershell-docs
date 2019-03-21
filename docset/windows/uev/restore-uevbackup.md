@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-UevBackup
 ms.reviewer:
 ms.assetid: 95C9497A-684C-42F8-8592-833774522F94
+ms.manager: dansimp
 ---
 
 # Restore-UevBackup

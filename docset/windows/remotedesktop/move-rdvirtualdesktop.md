@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-RDVirtualDesktop
 ms.reviewer:
 ms.assetid: C87A1EFA-63A6-4EBD-91D5-23CB0C6EDA73
+ms.manager: dansimp
 ---
 
 # Move-RDVirtualDesktop

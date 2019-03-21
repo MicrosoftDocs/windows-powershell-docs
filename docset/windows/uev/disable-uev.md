@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-Uev
 ms.reviewer:
 ms.assetid: 94F7B3CE-A7DB-4709-BF35-DB1395C54D32
+ms.manager: dansimp
 ---
 
 # Disable-Uev

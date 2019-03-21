@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-WmsStation
 ms.reviewer:
 ms.assetid: F419E2CC-5493-448B-BCD4-32E85A5B0550
+ms.manager: dansimp
 ---
 
 # Update-WmsStation

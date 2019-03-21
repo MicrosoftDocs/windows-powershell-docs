@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualSubnet
 ms.reviewer:
 ms.assetid: A277417B-3863-4E80-A630-9B0903B9308A
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualSubnet

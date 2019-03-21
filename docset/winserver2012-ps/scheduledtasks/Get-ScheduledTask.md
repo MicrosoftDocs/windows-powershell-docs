@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2B7F5F72-48E5-480B-913F-E8AEF0B2B13C
+ms.manager: dansimp
 ---
 
 # Get-ScheduledTask

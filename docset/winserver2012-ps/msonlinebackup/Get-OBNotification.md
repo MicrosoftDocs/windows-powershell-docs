@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 647F4668-4E36-47EA-BC59-BAC6F01DACE3
+ms.manager: dansimp
 ---
 
 # Get-OBNotification

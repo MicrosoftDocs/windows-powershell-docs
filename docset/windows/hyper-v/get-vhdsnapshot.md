@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VHDSnapshot
 ms.reviewer:
 ms.assetid: 8DCD0053-C244-46EC-97D0-6FF13D54F44D
+ms.manager: dansimp
 ---
 
 # Get-VHDSnapshot

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-SRPartnership
 ms.reviewer:
 ms.assetid: D1DE4389-5DA5-4FE6-9596-86E51E8FB444
+ms.manager: dansimp
 ---
 
 # New-SRPartnership

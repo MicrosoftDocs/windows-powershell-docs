@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9161E619-5D1F-4880-9F4C-7F78F411491C
+ms.manager: dansimp
 ---
 
 # New-OBPagingContext

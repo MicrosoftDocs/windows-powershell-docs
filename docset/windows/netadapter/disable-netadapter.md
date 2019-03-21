@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-NetAdapter
 ms.reviewer:
 ms.assetid: 9F68FAF7-254B-4C01-8222-96DDDD0C9D37
+ms.manager: dansimp
 ---
 
 # Disable-NetAdapter

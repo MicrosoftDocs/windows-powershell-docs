@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerReplica
 ms.reviewer:
 ms.assetid: DAE30A55-2942-49AA-9F3A-2C00EA9F5D46
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerReplica

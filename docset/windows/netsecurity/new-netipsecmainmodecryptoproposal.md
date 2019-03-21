@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetIPsecMainModeCryptoProposal
 ms.reviewer:
 ms.assetid: BA2DC739-6357-41C1-8F85-6A1E488DBE6A
+ms.manager: dansimp
 ---
 
 # New-NetIPsecMainModeCryptoProposal

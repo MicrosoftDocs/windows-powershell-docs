@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-SyncShare
 ms.reviewer:
 ms.assetid: C3EAE945-28A4-4D9F-A529-BA9F8430A2B5
+ms.manager: dansimp
 ---
 
 # Remove-SyncShare

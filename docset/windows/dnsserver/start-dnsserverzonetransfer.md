@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-DnsServerZoneTransfer
 ms.reviewer:
 ms.assetid: C63BA3B9-2BBB-43C8-90A5-7C95CE0DB67A
+ms.manager: dansimp
 ---
 
 # Start-DnsServerZoneTransfer

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMKeyProtector
 ms.reviewer:
 ms.assetid: E82E4F3A-186C-4E70-9E7B-2A3655A089B9
+ms.manager: dansimp
 ---
 
 # Set-VMKeyProtector

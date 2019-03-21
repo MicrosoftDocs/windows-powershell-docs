@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Backup-BitLockerKeyProtector
 ms.reviewer:
 ms.assetid: 9D570405-6330-40F7-B755-6A77EED3E7DB
+ms.manager: dansimp
 ---
 
 # Backup-BitLockerKeyProtector

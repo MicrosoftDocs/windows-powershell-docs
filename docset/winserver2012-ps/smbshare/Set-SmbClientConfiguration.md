@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B239F11D-1F32-4D2E-8663-965AF7FED24A
+ms.manager: dansimp
 ---
 
 # Set-SmbClientConfiguration

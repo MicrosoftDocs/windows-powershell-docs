@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageQosPolicyStore
 ms.reviewer:
 ms.assetid: 0C78D48F-3D07-4E73-85FC-11CF50E749DE
+ms.manager: dansimp
 ---
 
 # Get-StorageQosPolicyStore

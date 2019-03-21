@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: CD5BB115-897D-406C-B649-5B5F75E4FC84
+ms.manager: dansimp
 ---
 
 # FileServerResourceManager Module

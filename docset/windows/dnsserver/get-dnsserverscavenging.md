@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerScavenging
 ms.reviewer:
 ms.assetid: 17A614B2-13DC-44AA-95CB-194BC6C93F21
+ms.manager: dansimp
 ---
 
 # Get-DnsServerScavenging

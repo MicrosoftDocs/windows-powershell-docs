@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerResourceRecordDS
 ms.reviewer:
 ms.assetid: 10F38AF7-3851-4FBC-AEC3-6021A3F998BE
+ms.manager: dansimp
 ---
 
 # Add-DnsServerResourceRecordDS

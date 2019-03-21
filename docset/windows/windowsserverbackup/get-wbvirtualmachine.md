@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WBVirtualMachine
 ms.reviewer:
 ms.assetid: 861E1FC3-13D5-4D49-ABE3-0769B0C688FB
+ms.manager: dansimp
 ---
 
 # Get-WBVirtualMachine

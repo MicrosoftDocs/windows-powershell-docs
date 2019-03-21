@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-ClusterStorageSpacesDirect
 ms.reviewer:
 ms.assetid: 5D847187-2CA7-48C4-9D76-7F32D6D27773
+ms.manager: dansimp
 ---
 
 # Disable-ClusterStorageSpacesDirect

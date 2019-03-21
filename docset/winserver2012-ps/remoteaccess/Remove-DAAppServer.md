@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 44B5D5FB-1FA8-445F-81BA-DB10C95938BB
+ms.manager: dansimp
 ---
 
 # Remove-DAAppServer

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-WdsInstallImage
 ms.reviewer:
 ms.assetid: FF0D73F5-53BB-479B-A58C-FA94E653CDA5
+ms.manager: dansimp
 ---
 
 # Disable-WdsInstallImage

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Measure-VM
 ms.reviewer:
 ms.assetid: 1E88B99A-9B5E-43CE-929F-7608EE7A7620
+ms.manager: dansimp
 ---
 
 # Measure-VM

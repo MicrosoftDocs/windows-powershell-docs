@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-KdsCache
 ms.reviewer:
 ms.assetid: 3373D50D-96D2-4184-AB37-013EFFF0F0CF
+ms.manager: dansimp
 ---
 
 # Clear-KdsCache

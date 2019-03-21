@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageHealthAction
 ms.reviewer:
 ms.assetid: 949CF731-2B08-4770-9167-5CA69A7DD4CD
+ms.manager: dansimp
 ---
 
 # Get-StorageHealthAction

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SmbServerNetworkInterface
 ms.reviewer:
 ms.assetid: D0052C35-1789-4FF7-A349-AE9D98A13946
+ms.manager: dansimp
 ---
 
 # Get-SmbServerNetworkInterface

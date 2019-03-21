@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetAdapterSriovVf
 ms.reviewer:
 ms.assetid: DF76ED0C-3811-4C2B-9783-0DE952EC5841
+ms.manager: dansimp
 ---
 
 # Get-NetAdapterSriovVf

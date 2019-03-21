@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-IpamAddress
 ms.reviewer:
 ms.assetid: 889E294A-FDD4-4F27-A256-BF45CB215D7C
+ms.manager: dansimp
 ---
 
 # Import-IpamAddress

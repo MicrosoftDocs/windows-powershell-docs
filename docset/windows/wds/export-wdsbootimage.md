@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-WdsBootImage
 ms.reviewer:
 ms.assetid: 0EFEE34D-E0BC-46C6-9AB5-A20157ACB821
+ms.manager: dansimp
 ---
 
 # Export-WdsBootImage

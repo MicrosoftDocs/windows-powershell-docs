@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsnRootTarget
 ms.reviewer:
 ms.assetid: E84B8448-420D-4784-B444-EFFDAFFB5069
+ms.manager: dansimp
 ---
 
 # Remove-DfsnRootTarget

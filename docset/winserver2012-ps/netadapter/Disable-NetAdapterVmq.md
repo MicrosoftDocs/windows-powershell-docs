@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7684C7AF-DFCE-409F-B8D4-7E62D1F90780
+ms.manager: dansimp
 ---
 
 # Disable-NetAdapterVmq

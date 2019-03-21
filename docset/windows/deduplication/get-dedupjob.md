@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DedupJob
 ms.reviewer:
 ms.assetid: F4920CDE-BC31-4C73-9859-32547D8EFD16
+ms.manager: dansimp
 ---
 
 # Get-DedupJob

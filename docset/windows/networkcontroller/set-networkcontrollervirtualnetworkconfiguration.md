@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetworkControllerVirtualNetworkConfiguration
 ms.reviewer:
 ms.assetid: 7EAB93B7-9CA4-496C-B6C7-62896FC3273D
+ms.manager: dansimp
 ---
 
 # Set-NetworkControllerVirtualNetworkConfiguration

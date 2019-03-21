@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-NetNatStaticMapping
 ms.reviewer:
 ms.assetid: 5F23D113-1365-4592-B1BF-AD4D4DD12B1B
+ms.manager: dansimp
 ---
 
 # Add-NetNatStaticMapping

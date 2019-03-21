@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageSubsystem
 ms.reviewer:
 ms.assetid: EA364A0B-06D6-4653-B41C-BE69B8038B54
+ms.manager: dansimp
 ---
 
 # Get-StorageSubSystem

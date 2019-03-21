@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-NetIPsecMainModeCryptoSet
 ms.reviewer:
 ms.assetid: B50BA2D8-C0E1-4816-A96E-DDA1058C4553
+ms.manager: dansimp
 ---
 
 # Rename-NetIPsecMainModeCryptoSet

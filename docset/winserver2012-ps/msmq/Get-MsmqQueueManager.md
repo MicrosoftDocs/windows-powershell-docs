@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DCEC1518-0933-451A-96F6-9BC71FE74A3A
+ms.manager: dansimp
 ---
 
 # Get-MsmqQueueManager

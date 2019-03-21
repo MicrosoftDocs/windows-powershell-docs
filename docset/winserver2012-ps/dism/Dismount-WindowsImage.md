@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 ms.assetid: ED90878C-C306-4BBE-902D-EDF4BE37E8BC
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

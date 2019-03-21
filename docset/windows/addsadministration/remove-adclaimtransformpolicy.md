@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ADClaimTransformPolicy
 ms.reviewer:
 ms.assetid: EE61D495-9BC6-4DD6-8FCA-172E4F72E712
+ms.manager: dansimp
 ---
 
 # Remove-ADClaimTransformPolicy

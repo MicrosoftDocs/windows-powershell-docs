@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-MsmqOutgoingQueue
 ms.reviewer:
 ms.assetid: FEBE380E-6798-417D-A3BC-79CD6BB13D64
+ms.manager: dansimp
 ---
 
 # Resume-MsmqOutgoingQueue

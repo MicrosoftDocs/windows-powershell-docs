@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ClusterFaultDomain
 ms.reviewer:
 ms.assetid: 731AC930-E887-47E7-89AA-066D790DD8B6
+ms.manager: dansimp
 ---
 
 # Get-ClusterFaultDomain

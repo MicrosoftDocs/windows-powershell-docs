@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Compare-VM
 ms.reviewer:
 ms.assetid: F8093DA2-0AC9-4244-9206-B1B9E48A2769
+ms.manager: dansimp
 ---
 
 # Compare-VM

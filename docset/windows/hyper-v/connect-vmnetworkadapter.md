@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Connect-VMNetworkAdapter
 ms.reviewer:
 ms.assetid: 5695D079-D582-4CF5-9821-0E7AFE5ACFA1
+ms.manager: dansimp
 ---
 
 # Connect-VMNetworkAdapter

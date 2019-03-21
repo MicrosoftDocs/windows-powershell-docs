@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerLoadBalancerMux
 ms.reviewer:
 ms.assetid: 14A99CB6-2655-4E26-8F6C-97B7C8F9BE31
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLoadBalancerMux

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsrPreservedFiles
 ms.reviewer:
 ms.assetid: 9895C6D0-D346-494A-90AB-1E960975D3E4
+ms.manager: dansimp
 ---
 
 # Get-DfsrPreservedFiles

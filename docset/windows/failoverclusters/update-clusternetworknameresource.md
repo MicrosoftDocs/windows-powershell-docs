@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-ClusterNetworkNameResource
 ms.reviewer:
 ms.assetid: 6B45F79C-1AAE-423B-A522-1FD8FD3B05B1
+ms.manager: dansimp
 ---
 
 # Update-ClusterNetworkNameResource

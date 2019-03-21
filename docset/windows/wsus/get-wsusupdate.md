@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WsusUpdate
 ms.reviewer:
 ms.assetid: 045A4D3E-67C8-4AD9-8C5A-94AA8F9300BB
+ms.manager: dansimp
 ---
 
 # Get-WsusUpdate

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-WindowsDriver
 ms.reviewer:
 ms.assetid: 91DDC66F-4BAA-4C71-B280-1C0D22C8D579
+ms.manager: dansimp
 ---
 
 # Export-WindowsDriver

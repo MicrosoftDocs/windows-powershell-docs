@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-VirtualNetworkConnection
 ms.reviewer:
 ms.assetid: D646963C-057A-416D-8B76-154EEDD17929
+ms.manager: dansimp
 ---
 
 # Test-VirtualNetworkConnection

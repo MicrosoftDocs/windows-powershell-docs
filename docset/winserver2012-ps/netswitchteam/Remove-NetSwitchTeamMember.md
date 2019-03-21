@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4EB6E1D3-0A83-4610-A4BF-041F16ED11DB
+ms.manager: dansimp
 ---
 
 # Remove-NetSwitchTeamMember

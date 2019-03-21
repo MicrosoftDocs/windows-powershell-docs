@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 1848DCF8-9EA3-4E54-9DFC-C40A6CC14BB6
+ms.manager: dansimp
 ---
 
 # Appx Module

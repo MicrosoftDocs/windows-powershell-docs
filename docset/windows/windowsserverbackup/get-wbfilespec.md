@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WBFileSpec
 ms.reviewer:
 ms.assetid: EDDDC881-58AF-4C99-A629-2899C048BA04
+ms.manager: dansimp
 ---
 
 # Get-WBFileSpec

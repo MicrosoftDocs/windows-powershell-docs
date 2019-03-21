@@ -15,6 +15,7 @@ schema: 2.0.0
 title: Receive-SmigServerData
 ms.reviewer:
 ms.assetid: D8AD4455-C5F4-4EEB-9C81-6F6B5E3A2DC3
+ms.manager: dansimp
 ---
 
 # Receive-SmigServerData

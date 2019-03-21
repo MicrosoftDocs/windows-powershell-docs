@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VpnSstpProxyRule
 ms.reviewer:
 ms.assetid: 1D8B1E37-BA83-4393-A6B7-07B8CB42E9F8
+ms.manager: dansimp
 ---
 
 # Remove-VpnSstpProxyRule

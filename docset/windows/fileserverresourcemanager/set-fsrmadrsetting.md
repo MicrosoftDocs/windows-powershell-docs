@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FsrmAdrSetting
 ms.reviewer:
 ms.assetid: 6251E38E-ECB1-451F-BA9C-5DC494549898
+ms.manager: dansimp
 ---
 
 # Set-FsrmAdrSetting

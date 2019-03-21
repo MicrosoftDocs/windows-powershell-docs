@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-TpmAutoProvisioning
 ms.reviewer:
 ms.assetid: 1D4F82DB-0AF0-4DE5-8587-46037ED3BCDE
+ms.manager: dansimp
 ---
 
 # Disable-TpmAutoProvisioning

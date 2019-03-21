@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ClusteredScheduledTask
 ms.reviewer:
 ms.assetid: 393366D5-4123-42FC-BC28-B015002280A6
+ms.manager: dansimp
 ---
 
 # Get-ClusteredScheduledTask

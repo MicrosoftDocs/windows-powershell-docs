@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8CAA8567-4F79-45B4-A49B-9707973D830B
+ms.manager: dansimp
 ---
 
 # Get-Printer

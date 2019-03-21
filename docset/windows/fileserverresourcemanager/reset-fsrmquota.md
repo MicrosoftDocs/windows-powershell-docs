@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-FsrmQuota
 ms.reviewer:
 ms.assetid: 16FC6506-C379-44F7-BBA5-D98E743EDE94
+ms.manager: dansimp
 ---
 
 # Reset-FsrmQuota

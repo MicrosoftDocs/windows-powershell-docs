@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Revoke-FileShareAccess
 ms.reviewer:
 ms.assetid: AD542854-FC73-4C83-B267-40124D002892
+ms.manager: dansimp
 ---
 
 # Revoke-FileShareAccess

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WBSummary
 ms.reviewer:
 ms.assetid: E84ED988-6EFD-4B9B-BFD2-0C4A3D214BB0
+ms.manager: dansimp
 ---
 
 # Get-WBSummary

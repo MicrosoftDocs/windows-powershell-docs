@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WinHomeLocation
 ms.reviewer:
 ms.assetid: E7591CA9-5CA9-4B71-AE35-801433BDABD1
+ms.manager: dansimp
 ---
 
 # Set-WinHomeLocation

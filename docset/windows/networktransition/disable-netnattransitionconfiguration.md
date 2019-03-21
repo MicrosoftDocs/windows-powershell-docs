@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-NetNatTransitionConfiguration
 ms.reviewer:
 ms.assetid: FFDA0575-BC77-4953-B73F-16C0B19F6570
+ms.manager: dansimp
 ---
 
 # Disable-NetNatTransitionConfiguration

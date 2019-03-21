@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-RmsReportDefinitionLanguage
 ms.reviewer:
 ms.assetid: 4ED8DED4-AF0B-416E-A815-A2AF00AFD6F0
+ms.manager: dansimp
 ---
 
 # Export-RmsReportDefinitionLanguage

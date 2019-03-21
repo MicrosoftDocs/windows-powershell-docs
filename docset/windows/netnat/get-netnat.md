@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetNat
 ms.reviewer:
 ms.assetid: 23CBE431-3C83-4104-BEE7-C5BEEAB418EF
+ms.manager: dansimp
 ---
 
 # Get-NetNat

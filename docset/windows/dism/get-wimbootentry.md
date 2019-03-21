@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WIMBootEntry
 ms.reviewer:
 ms.assetid: 5DC4C230-A2BE-451B-99C7-48DDE8DC5F36
+ms.manager: dansimp
 ---
 
 # Get-WIMBootEntry

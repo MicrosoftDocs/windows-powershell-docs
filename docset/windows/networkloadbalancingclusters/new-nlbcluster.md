@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NlbCluster
 ms.reviewer:
 ms.assetid: 46FF081F-B532-4CAE-92BA-789872928D0E
+ms.manager: dansimp
 ---
 
 # New-NlbCluster

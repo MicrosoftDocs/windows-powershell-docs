@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-BitLocker
 ms.reviewer:
 ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
+ms.manager: dansimp
 ---
 
 # Suspend-BitLocker

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8BA1C866-6A0C-4569-B922-27BB5CDCA0CF
+ms.manager: dansimp
 ---
 
 # Get-NetIPAddress

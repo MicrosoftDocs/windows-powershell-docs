@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 896C4B21-95AA-4BE0-B8FA-F727222C47AC
+ms.manager: dansimp
 ---
 
 # Set-WssFileHistoryManagementStatus

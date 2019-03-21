@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Select-WebConfiguration
 ms.reviewer:
 ms.assetid: BF044083-1E9F-49E7-8CBE-E44B43DC57E7
+ms.manager: dansimp
 ---
 
 # Select-WebConfiguration

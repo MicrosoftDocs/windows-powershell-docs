@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-ADOptionalFeature
 ms.reviewer:
 ms.assetid: 67C45D4A-2D6A-4AB9-A96E-B425558FAD11
+ms.manager: dansimp
 ---
 
 # Enable-ADOptionalFeature

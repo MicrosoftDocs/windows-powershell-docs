@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AB5738D5-E393-4C34-835F-2BBDB97CB4D1
+ms.manager: dansimp
 ---
 
 # New-NfsShare

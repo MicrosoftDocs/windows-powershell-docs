@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-GPStarterGPO
 ms.reviewer:
 ms.assetid: FDF68866-CC12-4637-A83C-C13F8B6E243F
+ms.manager: dansimp
 ---
 
 # New-GPStarterGPO

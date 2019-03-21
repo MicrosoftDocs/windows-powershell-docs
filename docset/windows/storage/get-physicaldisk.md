@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PhysicalDisk
 ms.reviewer:
 ms.assetid: A204DCDE-BFAC-43AC-9B79-D81384F255BE
+ms.manager: dansimp
 ---
 
 # Get-PhysicalDisk

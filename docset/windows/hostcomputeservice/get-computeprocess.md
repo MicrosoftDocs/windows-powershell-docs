@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ComputeProcess
 ms.reviewer:
 ms.assetid: 58A45E50-7BD0-4F5E-80E9-0BE0447A18F9
+ms.manager: dansimp
 ---
 
 # Get-ComputeProcess

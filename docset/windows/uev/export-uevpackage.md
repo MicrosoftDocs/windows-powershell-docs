@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-UevPackage
 ms.reviewer:
 ms.assetid: 850003A8-3078-4ADD-A870-86A5F392CF84
+ms.manager: dansimp
 ---
 
 # Export-UevPackage

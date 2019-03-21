@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Search-SmisProvider
 ms.reviewer:
 ms.assetid: 48F983FE-A8EA-4A2E-9CAF-A6B41B990EB9
+ms.manager: dansimp
 ---
 
 # Search-SmisProvider

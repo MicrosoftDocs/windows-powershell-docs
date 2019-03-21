@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unpublish-WmsDesktop
 ms.reviewer:
 ms.assetid: A68E5031-A7D9-43BC-90E5-5ACD5714E7C7
+ms.manager: dansimp
 ---
 
 # Unpublish-WmsDesktop

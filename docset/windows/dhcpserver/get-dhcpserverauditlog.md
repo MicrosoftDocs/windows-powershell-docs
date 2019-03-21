@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerAuditLog
 ms.reviewer:
 ms.assetid: B8414A11-3D51-438A-9EA6-CC3A7ABD08EA
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerAuditLog

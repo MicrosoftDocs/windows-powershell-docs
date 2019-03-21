@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerLoadBalancerProbe
 ms.reviewer:
 ms.assetid: 6E2CA717-0440-42E1-987D-831A2C0DA73A
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerLoadBalancerProbe

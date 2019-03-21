@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WinUserLanguageList
 ms.reviewer:
 ms.assetid: 58651E0A-B9DE-4895-9655-1117CF3D29C9
+ms.manager: dansimp
 ---
 
 # New-WinUserLanguageList

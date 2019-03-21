@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADForestMode
 ms.reviewer:
 ms.assetid: 51EE4E28-C6FF-4AF9-856C-6B517B3353BF
+ms.manager: dansimp
 ---
 
 # Set-ADForestMode

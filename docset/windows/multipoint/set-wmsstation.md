@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WmsStation
 ms.reviewer:
 ms.assetid: 0389557C-29E2-4592-BB5C-59E56C2DCB6E
+ms.manager: dansimp
 ---
 
 # Set-WmsStation

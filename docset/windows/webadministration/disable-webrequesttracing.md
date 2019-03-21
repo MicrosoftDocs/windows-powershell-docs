@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-WebRequestTracing
 ms.reviewer:
 ms.assetid: 7DA8AEFC-8965-437B-8720-4DC6B702A825
+ms.manager: dansimp
 ---
 
 # Disable-WebRequestTracing

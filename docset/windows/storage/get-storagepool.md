@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StoragePool
 ms.reviewer:
 ms.assetid: 288ACAD9-7678-45C2-B7B4-3A0522FEA499
+ms.manager: dansimp
 ---
 
 # Get-StoragePool

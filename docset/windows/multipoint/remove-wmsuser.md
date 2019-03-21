@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WmsUser
 ms.reviewer:
 ms.assetid: D633D175-85E6-4ECA-8BFB-65FBBA9240C4
+ms.manager: dansimp
 ---
 
 # Remove-WmsUser

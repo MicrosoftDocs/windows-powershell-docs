@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-Partition
 ms.reviewer:
 ms.assetid: 85BB3C53-536E-408F-B159-28E91AFEB1A1
+ms.manager: dansimp
 ---
 
 # Get-Partition

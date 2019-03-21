@@ -10,6 +10,7 @@ external help file: Microsoft.AppV.LegacyPackages.Module.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: 17DC65DC-3B04-43C3-94BA-21D049641D8E
+ms.manager: dansimp
 ms.date: 2016-12-05
 ms.devlang: powershell
 ms.topic: reference

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-StorageSubsystemVirtualDisk
 ms.reviewer:
 ms.assetid: 6D5C5FFD-47E0-4B8C-8366-149D8D36B456
+ms.manager: dansimp
 ---
 
 # New-StorageSubsystemVirtualDisk

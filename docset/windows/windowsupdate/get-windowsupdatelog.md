@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WindowsUpdateLog
 ms.reviewer:
 ms.assetid: E6F01AE3-43FD-40D0-B843-7F3780B1C2F2
+ms.manager: dansimp
 ---
 
 # Get-WindowsUpdateLog

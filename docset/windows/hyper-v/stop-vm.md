@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-VM
 ms.reviewer:
 ms.assetid: 1A05B05B-DAAE-4982-9D27-21ED2714DD20
+ms.manager: dansimp
 ---
 
 # Stop-VM

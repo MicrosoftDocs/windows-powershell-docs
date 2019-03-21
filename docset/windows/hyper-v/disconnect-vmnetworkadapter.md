@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disconnect-VMNetworkAdapter
 ms.reviewer:
 ms.assetid: 9553E8B3-3565-48FE-9A7F-9DB88E156EAA
+ms.manager: dansimp
 ---
 
 # Disconnect-VMNetworkAdapter

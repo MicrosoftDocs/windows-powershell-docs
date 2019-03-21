@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-SmbShare
 ms.reviewer:
 ms.assetid: AF285369-0A7A-429E-8A56-862891C37939
+ms.manager: dansimp
 ---
 
 # New-SmbShare

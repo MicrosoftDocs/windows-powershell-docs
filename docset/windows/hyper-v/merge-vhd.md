@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Merge-VHD
 ms.reviewer:
 ms.assetid: D41AD686-7543-4FDF-AC76-97B6E7F64E0E
+ms.manager: dansimp
 ---
 
 # Merge-VHD

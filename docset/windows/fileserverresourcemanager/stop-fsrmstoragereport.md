@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-FsrmStorageReport
 ms.reviewer:
 ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
+ms.manager: dansimp
 ---
 
 # Stop-FsrmStorageReport

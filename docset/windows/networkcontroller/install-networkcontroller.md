@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-NetworkController
 ms.reviewer:
 ms.assetid: 21D6AE3B-5335-4636-823D-041358166304
+ms.manager: dansimp
 ---
 
 # Install-NetworkController

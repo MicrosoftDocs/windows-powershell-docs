@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VHDSet
 ms.reviewer:
 ms.assetid: 92B73AA7-A40E-4072-A55D-47C597958AE1
+ms.manager: dansimp
 ---
 
 # Get-VHDSet

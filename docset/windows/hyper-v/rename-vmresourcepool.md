@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-VMResourcePool
 ms.reviewer:
 ms.assetid: C7A1B012-C75D-49FD-B054-A975C7710BA2
+ms.manager: dansimp
 ---
 
 # Rename-VMResourcePool

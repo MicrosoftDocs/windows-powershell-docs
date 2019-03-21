@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-Certificate
 ms.reviewer:
 ms.assetid: 6DA3EEBC-7B3F-4130-B266-9B2AD6DF4318
+ms.manager: dansimp
 ---
 
 # Get-Certificate

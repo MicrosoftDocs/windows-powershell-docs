@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 51726743-8DE3-4CD4-B462-66F26FD92D50
+ms.manager: dansimp
 ---
 
 # NetworkSwitchManager Module

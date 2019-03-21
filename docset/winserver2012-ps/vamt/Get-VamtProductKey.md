@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9A625320-4C23-45B8-87B6-FE02B5E99EE3
+ms.manager: dansimp
 ---
 
 # Get-VamtProductKey

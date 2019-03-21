@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-ClusterSharedVolume
 ms.reviewer:
 ms.assetid: 848467EE-2F72-4680-8540-08A86DB12916
+ms.manager: dansimp
 ---
 
 # Move-ClusterSharedVolume

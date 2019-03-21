@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnSstpProxyRule
 ms.reviewer:
 ms.assetid: 7324D116-EDDA-404A-9B12-807ADBC5222C
+ms.manager: dansimp
 ---
 
 # Add-VpnSstpProxyRule

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-NetIPsecMainModeCryptoSet
 ms.reviewer:
 ms.assetid: 981F01BD-59C3-4837-9D09-FEFBEB8B0E5B
+ms.manager: dansimp
 ---
 
 # Copy-NetIPsecMainModeCryptoSet

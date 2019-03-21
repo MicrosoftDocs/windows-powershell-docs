@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsScheduledUpdate
 ms.reviewer:
 ms.assetid: 2E21030B-CE4F-41D5-AB0A-B16AC7EFAC49
+ms.manager: dansimp
 ---
 
 # Get-WmsScheduledUpdate

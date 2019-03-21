@@ -16,6 +16,7 @@ schema: 2.0.0
 title: ConvertFrom-CIPolicy
 ms.reviewer:
 ms.assetid: B01DEF04-E6F7-4DBE-89DE-1185BAC326A0
+ms.manager: dansimp
 ---
 
 # ConvertFrom-CIPolicy

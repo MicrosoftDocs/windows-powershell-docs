@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMMemory
 ms.reviewer:
 ms.assetid: E3B88D90-4168-40E6-A57E-FE69F4490A48
+ms.manager: dansimp
 ---
 
 # Get-VMMemory

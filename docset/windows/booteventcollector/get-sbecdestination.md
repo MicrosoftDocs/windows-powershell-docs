@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SbecDestination
 ms.reviewer:
 ms.assetid: 9FA6FEFA-DC1B-4610-AE8B-3D7DAA3083AF
+ms.manager: dansimp
 ---
 
 # Get-SbecDestination

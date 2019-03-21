@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ClusterOwnerNode
 ms.reviewer:
 ms.assetid: 25803094-3789-4545-AF77-0D46652D3FCD
+ms.manager: dansimp
 ---
 
 # Set-ClusterOwnerNode

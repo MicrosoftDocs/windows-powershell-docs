@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2B02DEFF-732B-4CBB-9D29-905E08F4CAC7
+ms.manager: dansimp
 ---
 
 # Get-VolumeCorruptionCount

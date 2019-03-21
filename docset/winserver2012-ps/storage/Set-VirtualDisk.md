@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ECE6EC80-B77D-4087-9BE7-A38FC05FBE73
+ms.manager: dansimp
 ---
 
 # Set-VirtualDisk

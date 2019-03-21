@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285761
 Help Version: 4.0.4.0
 Locale: en-US
 ms.assetid: C362E2E9-6D95-4A7F-A526-C553D116023B
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

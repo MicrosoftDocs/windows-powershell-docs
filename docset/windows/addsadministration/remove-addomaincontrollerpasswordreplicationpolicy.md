@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ADDomainControllerPasswordReplicationPolicy
 ms.reviewer:
 ms.assetid: DAE1C8E0-DCB8-4E66-856E-4647DA065B22
+ms.manager: dansimp
 ---
 
 # Remove-ADDomainControllerPasswordReplicationPolicy

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WinDefaultInputMethodOverride
 ms.reviewer:
 ms.assetid: 1AD0FD7D-D466-400A-AD3D-196B714B8330
+ms.manager: dansimp
 ---
 
 # Set-WinDefaultInputMethodOverride

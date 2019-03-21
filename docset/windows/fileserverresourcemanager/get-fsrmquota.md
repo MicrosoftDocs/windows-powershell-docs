@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FsrmQuota
 ms.reviewer:
 ms.assetid: 4362C85B-0053-45C5-830A-4E6E1227868A
+ms.manager: dansimp
 ---
 
 # Get-FsrmQuota

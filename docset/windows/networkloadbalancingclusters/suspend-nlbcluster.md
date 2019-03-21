@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-NlbCluster
 ms.reviewer:
 ms.assetid: B67E9CB4-15B0-4BB2-8DDC-8946AB42C757
+ms.manager: dansimp
 ---
 
 # Suspend-NlbCluster

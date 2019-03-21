@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VmNetworkAdapterIsolation
 ms.reviewer:
 ms.assetid: 8E7DC352-0414-444D-811B-FFAEBBEBEE13
+ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterIsolation

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADClaimTransformLink
 ms.reviewer:
 ms.assetid: 4516CC61-1A65-4BF6-A1E3-0707ADE8E107
+ms.manager: dansimp
 ---
 
 # Set-ADClaimTransformLink

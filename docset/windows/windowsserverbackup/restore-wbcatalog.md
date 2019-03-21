@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-WBCatalog
 ms.reviewer:
 ms.assetid: 577E6C4C-DE75-444F-B3A0-0BAD00620895
+ms.manager: dansimp
 ---
 
 # Restore-WBCatalog

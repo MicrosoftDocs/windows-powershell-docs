@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 969AF3A6-0C60-4790-94D9-9E4920052551
+ms.manager: dansimp
 ---
 
 # ScheduledTasks Module

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADAuthenticationPolicySilo
 ms.reviewer:
 ms.assetid: 272BCE0B-0757-44A0-AC7D-CFFA9AE12FC4
+ms.manager: dansimp
 ---
 
 # Get-ADAuthenticationPolicySilo

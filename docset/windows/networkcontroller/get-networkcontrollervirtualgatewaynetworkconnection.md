@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerVirtualGatewayNetworkConnection
 ms.reviewer:
 ms.assetid: 06D7BF46-F156-46C5-8278-CABE6655C5D8
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVirtualGatewayNetworkConnection

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Grant-SmbShareAccess
 ms.reviewer:
 ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
+ms.manager: dansimp
 ---
 
 # Grant-SmbShareAccess

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Register-StorageSubsystem
 ms.reviewer:
 ms.assetid: BF813E63-D66D-4B04-9CEB-2B8B6D6E2980
+ms.manager: dansimp
 ---
 
 # Register-StorageSubsystem

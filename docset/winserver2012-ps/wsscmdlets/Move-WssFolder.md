@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3835B800-FC6F-4DE5-9008-24698615C552
+ms.manager: dansimp
 ---
 
 # Move-WssFolder

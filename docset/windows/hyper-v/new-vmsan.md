@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-VMSan
 ms.reviewer:
 ms.assetid: 696D66E7-6489-4DCB-A3CA-52BB9E13F8EB
+ms.manager: dansimp
 ---
 
 # New-VMSan

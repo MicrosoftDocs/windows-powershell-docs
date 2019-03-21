@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-IpamCapability
 ms.reviewer:
 ms.assetid: D736CD7F-D5E4-4F12-BFEF-0DB552038DB3
+ms.manager: dansimp
 ---
 
 # Disable-IpamCapability

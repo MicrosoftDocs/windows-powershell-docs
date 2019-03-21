@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4B6EA375-5560-438C-B952-AD09AEE59068
+ms.manager: dansimp
 ---
 
 # Rename-NetIPHttpsConfiguration

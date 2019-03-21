@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerZone
 ms.reviewer:
 ms.assetid: 2B1D1228-1329-4421-A4FA-36BDE0F331C8
+ms.manager: dansimp
 ---
 
 # Get-DnsServerZone

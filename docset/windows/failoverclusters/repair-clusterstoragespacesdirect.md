@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-ClusterStorageSpacesDirect
 ms.reviewer:
 ms.assetid: 360D41D6-49A6-4C22-8E0D-D22D4E96B2BA
+ms.manager: dansimp
 ---
 
 # Repair-ClusterStorageSpacesDirect

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-WindowsFeature
 ms.reviewer:
 ms.assetid: 9801D051-0445-4245-BCEA-1805848AF9AA
+ms.manager: dansimp
 ---
 
 # Install-WindowsFeature

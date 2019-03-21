@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-SyncShare
 ms.reviewer:
 ms.assetid: 55E06BE3-0B8D-4D3B-9BC9-093B73315228
+ms.manager: dansimp
 ---
 
 # Disable-SyncShare

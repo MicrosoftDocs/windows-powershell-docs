@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IpamAddressSpace
 ms.reviewer:
 ms.assetid: 65EF88C6-B006-4E2F-8D52-D4233DAA3C09
+ms.manager: dansimp
 ---
 
 # Remove-IpamAddressSpace

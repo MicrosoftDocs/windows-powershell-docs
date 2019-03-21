@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C9C572CE-DFD4-41D8-8F26-968A2931F477
+ms.manager: dansimp
 ---
 
 # AppvClient Module

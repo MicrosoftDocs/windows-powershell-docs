@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-Printer
 ms.reviewer:
 ms.assetid: 9B460E62-2F2F-43F9-89F3-D296D6F1F0D2
+ms.manager: dansimp
 ---
 
 # Rename-Printer

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WebApplication
 ms.reviewer:
 ms.assetid: 59096265-31B1-4338-BBBD-D998D1F0435C
+ms.manager: dansimp
 ---
 
 # Remove-WebApplication

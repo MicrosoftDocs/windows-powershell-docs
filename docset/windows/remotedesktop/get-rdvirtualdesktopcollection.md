@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopCollection
 ms.reviewer:
 ms.assetid: E3466976-DD21-435B-AA98-7DB9817FC946
+ms.manager: dansimp
 ---
 
 # Get-RDVirtualDesktopCollection

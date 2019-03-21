@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D4FFA9BB-16B1-44B5-83C7-E95E32DCB451
+ms.manager: dansimp
 ---
 
 # Remove-DtcClusterTMMapping

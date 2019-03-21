@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Lease
 ms.reviewer:
 ms.assetid: AAC6BD13-2DF9-4DC8-826C-D9EEEDAD2C50
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Lease

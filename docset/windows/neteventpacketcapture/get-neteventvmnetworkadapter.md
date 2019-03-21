@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetEventVmNetworkAdapter
 ms.reviewer:
 ms.assetid: 300189C3-AB27-410D-BB09-067020F8E6D3
+ms.manager: dansimp
 ---
 
 # Get-NetEventVmNetworkAdapter

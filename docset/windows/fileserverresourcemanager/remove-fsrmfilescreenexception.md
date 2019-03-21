@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-FsrmFileScreenException
 ms.reviewer:
 ms.assetid: 29E11826-0613-4D83-B512-816E1D13942F
+ms.manager: dansimp
 ---
 
 # Remove-FsrmFileScreenException

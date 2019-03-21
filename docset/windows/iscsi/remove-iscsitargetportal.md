@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IscsiTargetPortal
 ms.reviewer:
 ms.assetid: 327E8EC6-3B56-4B4E-B8D3-2A65FF8DD9EA
+ms.manager: dansimp
 ---
 
 # Remove-IscsiTargetPortal

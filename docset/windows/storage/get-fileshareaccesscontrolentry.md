@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FileShareAccessControlEntry
 ms.reviewer:
 ms.assetid: 4535B084-05F5-4DFD-A905-58AC14ACF626
+ms.manager: dansimp
 ---
 
 # Get-FileShareAccessControlEntry

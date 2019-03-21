@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsSession
 ms.reviewer:
 ms.assetid: 38AAFF5F-109C-4834-9D9E-53931EECC2CB
+ms.manager: dansimp
 ---
 
 # Get-WmsSession

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-UalDailyAccess
 ms.reviewer:
 ms.assetid: 5679E7DE-A76C-4BFE-884F-00B12D45BD92
+ms.manager: dansimp
 ---
 
 # Get-UalDailyAccess

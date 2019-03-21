@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualGatewayNetworkConnection
 ms.reviewer:
 ms.assetid: F322599D-F668-4B24-A389-D63F2573450D
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualGatewayNetworkConnection

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VMHardDiskDrive
 ms.reviewer:
 ms.assetid: 1DB93A4B-5C27-4594-84AD-43938A440C95
+ms.manager: dansimp
 ---
 
 # Add-VMHardDiskDrive

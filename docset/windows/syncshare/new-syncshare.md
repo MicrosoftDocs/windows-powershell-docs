@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-SyncShare
 ms.reviewer:
 ms.assetid: 2E1F761F-D922-4C65-BEFF-15034F0F964D
+ms.manager: dansimp
 ---
 
 # New-SyncShare

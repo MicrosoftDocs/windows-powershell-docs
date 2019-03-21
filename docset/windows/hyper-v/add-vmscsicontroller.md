@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VMScsiController
 ms.reviewer:
 ms.assetid: 00020DE6-5DEA-4F43-8693-1249ECB8EDCF
+ms.manager: dansimp
 ---
 
 # Add-VMScsiController

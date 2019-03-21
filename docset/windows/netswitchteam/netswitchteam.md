@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 195E80D5-EC10-425B-B7D9-F5322AE491A7
+ms.manager: dansimp
 ---
 
 # NetSwitchTeam Module

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WindowsPackage
 ms.reviewer:
 ms.assetid: A7D915B2-0AE9-4315-95DF-4E74958CF947
+ms.manager: dansimp
 ---
 
 # Get-WindowsPackage

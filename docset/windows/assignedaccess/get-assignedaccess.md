@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AssignedAccess
 ms.reviewer:
 ms.assetid: 9BCF8CA4-5B35-48F5-AF23-D4BD83B2BB0B
+ms.manager: dansimp
 ---
 
 # Get-AssignedAccess

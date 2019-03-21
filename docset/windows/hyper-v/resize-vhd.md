@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resize-VHD
 ms.reviewer:
 ms.assetid: 958902EA-0FBB-474D-82BD-4FA8B44017F2
+ms.manager: dansimp
 ---
 
 # Resize-VHD

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-VMTPM
 ms.reviewer:
 ms.assetid: 9A0A1281-742B-46FA-A172-CF79AED42831
+ms.manager: dansimp
 ---
 
 # Disable-VMTPM

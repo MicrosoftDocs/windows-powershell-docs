@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkSwitchGlobalData
 ms.reviewer:
 ms.assetid: EC6B335F-5E2E-463F-AC76-C2A17FF4F0E7
+ms.manager: dansimp
 ---
 
 # Get-NetworkSwitchGlobalData

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: 9FA2A618-4D54-427F-994B-FE71A0E26D2C
+ms.manager: dansimp
 ---
 
 # Get-AppvClientConnectionGroup

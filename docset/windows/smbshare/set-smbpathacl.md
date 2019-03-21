@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-SmbPathAcl
 ms.reviewer:
 ms.assetid: BE131641-01DD-4AB7-A72F-D313B9FBDD12
+ms.manager: dansimp
 ---
 
 # Set-SmbPathAcl

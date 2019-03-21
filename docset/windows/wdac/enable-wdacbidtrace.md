@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WdacBidTrace
 ms.reviewer:
 ms.assetid: 3A39F5C4-6AC1-4B3E-A4CB-4D6C876BA4B4
+ms.manager: dansimp
 ---
 
 # Enable-WdacBidTrace

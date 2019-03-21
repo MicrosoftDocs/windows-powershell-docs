@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkController
 ms.reviewer:
 ms.assetid: BE484BBF-F39F-4EA6-A0FC-30A0511C9510
+ms.manager: dansimp
 ---
 
 # Get-NetworkController

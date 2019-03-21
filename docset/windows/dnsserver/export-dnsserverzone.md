@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-DnsServerZone
 ms.reviewer:
 ms.assetid: F50E80E8-B275-484D-895E-7ADB02A9C15B
+ms.manager: dansimp
 ---
 
 # Export-DnsServerZone

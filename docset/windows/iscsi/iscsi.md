@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 186C3096-479F-4044-A9E8-43C964056B04
+ms.manager: dansimp
 ---
 
 # iSCSI Module

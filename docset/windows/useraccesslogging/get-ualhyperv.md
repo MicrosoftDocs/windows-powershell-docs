@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-UalHyperV
 ms.reviewer:
 ms.assetid: 6E40728A-94B7-4F1E-B1DC-CDF87656B190
+ms.manager: dansimp
 ---
 
 # Get-UalHyperV

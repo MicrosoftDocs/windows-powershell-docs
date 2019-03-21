@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WdsInstallImageGroup
 ms.reviewer:
 ms.assetid: 0DC17B7E-F2E2-4626-B70D-BBD054EEB92B
+ms.manager: dansimp
 ---
 
 # Set-WdsInstallImageGroup

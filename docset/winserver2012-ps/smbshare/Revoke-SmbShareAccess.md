@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8FA4EB50-F97F-4B69-A582-005B103E3A3E
+ms.manager: dansimp
 ---
 
 # Revoke-SmbShareAccess

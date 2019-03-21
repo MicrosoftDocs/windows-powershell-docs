@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Close-WmsSession
 ms.reviewer:
 ms.assetid: 299D02FC-4C37-44F9-863D-E2880EA533A3
+ms.manager: dansimp
 ---
 
 # Close-WmsSession

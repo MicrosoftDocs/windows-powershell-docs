@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-NlbClusterNode
 ms.reviewer:
 ms.assetid: C7659763-21A6-48A8-9A65-86D22E5200C5
+ms.manager: dansimp
 ---
 
 # Stop-NlbClusterNode

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-RDServer
 ms.reviewer:
 ms.assetid: F36CC27A-AE6B-4017-A1FC-6253B607566E
+ms.manager: dansimp
 ---
 
 # Remove-RDServer

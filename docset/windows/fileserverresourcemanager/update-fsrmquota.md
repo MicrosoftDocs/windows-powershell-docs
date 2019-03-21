@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-FsrmQuota
 ms.reviewer:
 ms.assetid: 8A5B4E2A-6173-4C94-8020-A8A0DA8B73AB
+ms.manager: dansimp
 ---
 
 # Update-FsrmQuota

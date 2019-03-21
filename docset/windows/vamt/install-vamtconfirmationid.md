@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-VamtConfirmationId
 ms.reviewer:
 ms.assetid: AA1552D8-C032-4343-96F7-DF498D9F0E36
+ms.manager: dansimp
 ---
 
 # Install-VamtConfirmationId

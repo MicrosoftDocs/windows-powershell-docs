@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-DnsServerZone
 ms.reviewer:
 ms.assetid: F68C96E1-F45A-47E4-BE82-735B682DE42A
+ms.manager: dansimp
 ---
 
 # Resume-DnsServerZone

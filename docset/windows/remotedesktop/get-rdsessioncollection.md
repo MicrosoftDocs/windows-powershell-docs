@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RDSessionCollection
 ms.reviewer:
 ms.assetid: 35443D32-EFDE-4F01-8028-D30B281120B0
+ms.manager: dansimp
 ---
 
 # Get-RDSessionCollection

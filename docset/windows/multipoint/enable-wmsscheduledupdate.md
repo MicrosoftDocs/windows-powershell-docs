@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WmsScheduledUpdate
 ms.reviewer:
 ms.assetid: 7CB2803E-8BA5-4142-A04B-90EF6021BC95
+ms.manager: dansimp
 ---
 
 # Enable-WmsScheduledUpdate

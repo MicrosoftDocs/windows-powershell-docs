@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-VMResourceMetering
 ms.reviewer:
 ms.assetid: BAA23771-DFD7-4015-BC2F-B387DDE0683D
+ms.manager: dansimp
 ---
 
 # Reset-VMResourceMetering

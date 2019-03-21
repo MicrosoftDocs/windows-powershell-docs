@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SMCounterSample
 ms.reviewer:
 ms.assetid: D508AE13-7584-402A-9F99-3EDD1F77EA95
+ms.manager: dansimp
 ---
 
 # Get-SMCounterSample

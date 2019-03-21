@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AppvStatus
 ms.reviewer:
 ms.assetid: 7CA31DC5-62A4-4522-A065-BEDDC958BC6C
+ms.manager: dansimp
 ---
 
 # Get-AppvStatus

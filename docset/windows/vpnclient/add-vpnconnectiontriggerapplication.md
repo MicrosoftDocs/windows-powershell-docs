@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnConnectionTriggerApplication
 ms.reviewer:
 ms.assetid: CFA95D4F-E6F7-4D78-AE37-6399DF5B9F9A
+ms.manager: dansimp
 ---
 
 # Add-VpnConnectionTriggerApplication

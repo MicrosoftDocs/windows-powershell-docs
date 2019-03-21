@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-ClusterVirtualMachineRole
 ms.reviewer:
 ms.assetid: A8EB04E2-0323-4A81-922A-4ED227A5450D
+ms.manager: dansimp
 ---
 
 # Move-ClusterVirtualMachineRole

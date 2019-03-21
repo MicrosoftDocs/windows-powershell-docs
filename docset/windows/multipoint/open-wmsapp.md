@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Open-WmsApp
 ms.reviewer:
 ms.assetid: D02A1DD8-9D7D-4586-9655-6C3D566B6C4B
+ms.manager: dansimp
 ---
 
 # Open-WmsApp

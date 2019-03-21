@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-BCDataCacheEntryMaxAge
 ms.reviewer:
 ms.assetid: D0F100E8-FE3C-4718-B8D6-3F1A1597F22E
+ms.manager: dansimp
 ---
 
 # Set-BCDataCacheEntryMaxAge

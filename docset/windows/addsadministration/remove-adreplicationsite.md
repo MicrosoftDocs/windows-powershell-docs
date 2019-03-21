@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ADReplicationSite
 ms.reviewer:
 ms.assetid: B24B3FC8-5293-41C6-A388-8FC0FBEFB3DE
+ms.manager: dansimp
 ---
 
 # Remove-ADReplicationSite

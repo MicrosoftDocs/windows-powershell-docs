@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PrintConfiguration
 ms.reviewer:
 ms.assetid: 30CB719D-EA8F-436E-BFB2-33CE458EA63B
+ms.manager: dansimp
 ---
 
 # Get-PrintConfiguration

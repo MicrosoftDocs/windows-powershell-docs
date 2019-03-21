@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CB313464-2C56-422B-91B7-9C8B47636B1E
+ms.manager: dansimp
 ---
 
 # Get-TargetPortal

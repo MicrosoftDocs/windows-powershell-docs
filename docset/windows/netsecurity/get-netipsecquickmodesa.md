@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPsecQuickModeSA
 ms.reviewer:
 ms.assetid: E0AFADA5-E203-4170-9AA2-AF5F7D9E2458
+ms.manager: dansimp
 ---
 
 # Get-NetIPsecQuickModeSA

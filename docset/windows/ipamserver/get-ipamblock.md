@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamBlock
 ms.reviewer:
 ms.assetid: 3BB8E21C-EDCA-4621-BEDC-72CFE239601B
+ms.manager: dansimp
 ---
 
 # Get-IpamBlock

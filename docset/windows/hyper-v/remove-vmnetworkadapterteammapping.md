@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMNetworkAdapterTeamMapping
 ms.reviewer:
 ms.assetid: C6871771-CDF5-41AB-A94D-E54CE7972CF8
+ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterTeamMapping

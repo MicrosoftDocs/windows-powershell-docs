@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-ADReplicationSite
 ms.reviewer:
 ms.assetid: 9E040A49-F662-4B5D-9CF3-C8614D3AF5A3
+ms.manager: dansimp
 ---
 
 # New-ADReplicationSite

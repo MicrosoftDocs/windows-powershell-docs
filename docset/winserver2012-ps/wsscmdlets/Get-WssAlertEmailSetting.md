@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 06900AEB-EADA-4684-94CE-F5A778FBB29B
+ms.manager: dansimp
 ---
 
 # Get-WssAlertEmailSetting

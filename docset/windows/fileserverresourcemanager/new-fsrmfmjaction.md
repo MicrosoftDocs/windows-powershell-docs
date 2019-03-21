@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmFmjAction
 ms.reviewer:
 ms.assetid: 85A9B446-FDD3-48A8-83E7-74941AAE5CE6
+ms.manager: dansimp
 ---
 
 # New-FsrmFmjAction

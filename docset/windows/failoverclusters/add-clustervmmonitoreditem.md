@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-ClusterVMMonitoredItem
 ms.reviewer:
 ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
+ms.manager: dansimp
 ---
 
 # Add-ClusterVMMonitoredItem

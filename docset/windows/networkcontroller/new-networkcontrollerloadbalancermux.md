@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerLoadBalancerMux
 ms.reviewer:
 ms.assetid: FB232FEB-C415-466C-A530-870CFE486F33
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerLoadBalancerMux

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerRecursion
 ms.reviewer:
 ms.assetid: 81593AB8-6828-4334-B711-4D9B20FECB31
+ms.manager: dansimp
 ---
 
 # Get-DnsServerRecursion

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WebConfigurationLocation
 ms.reviewer:
 ms.assetid: 859BCA01-DD47-4DD2-A8A9-E32D648C648E
+ms.manager: dansimp
 ---
 
 # Remove-WebConfigurationLocation

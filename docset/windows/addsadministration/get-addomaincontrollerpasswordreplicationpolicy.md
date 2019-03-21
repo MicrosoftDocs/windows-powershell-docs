@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADDomainControllerPasswordReplicationPolicy
 ms.reviewer:
 ms.assetid: 7974AE6F-264B-498C-893F-4069DF974E8D
+ms.manager: dansimp
 ---
 
 # Get-ADDomainControllerPasswordReplicationPolicy

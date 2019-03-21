@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-UevAppxPackage
 ms.reviewer:
 ms.assetid: 08E32063-898E-4EF4-8395-C974A5E6D4C2
+ms.manager: dansimp
 ---
 
 # Enable-UevAppxPackage

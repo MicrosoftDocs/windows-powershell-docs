@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADAccountExpiration
 ms.reviewer:
 ms.assetid: 83D4628E-A07E-4461-9B49-193B6CBFD289
+ms.manager: dansimp
 ---
 
 # Set-ADAccountExpiration

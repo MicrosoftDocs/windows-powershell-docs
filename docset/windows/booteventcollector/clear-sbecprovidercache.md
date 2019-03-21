@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-SbecProviderCache
 ms.reviewer:
 ms.assetid: 874EA74D-7B1A-4454-9865-1802D5AEF5C9
+ms.manager: dansimp
 ---
 
 # Clear-SbecProviderCache

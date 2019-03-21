@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D508AE13-7584-402A-9F99-3EDD1F77EA95
+ms.manager: dansimp
 ---
 
 # Get-SMCounterSample

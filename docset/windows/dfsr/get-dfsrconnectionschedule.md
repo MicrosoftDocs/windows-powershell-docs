@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsrConnectionSchedule
 ms.reviewer:
 ms.assetid: BF13E026-9450-4B10-8A69-0CB198623BE3
+ms.manager: dansimp
 ---
 
 # Get-DfsrConnectionSchedule

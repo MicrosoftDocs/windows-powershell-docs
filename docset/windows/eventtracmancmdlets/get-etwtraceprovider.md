@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-EtwTraceProvider
 ms.reviewer:
 ms.assetid: 989C3942-9A73-48DF-8553-647ADFE4D7B1
+ms.manager: dansimp
 ---
 
 # Get-EtwTraceProvider

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsClientServerAddress
 ms.reviewer:
 ms.assetid: D5978C27-2D47-4827-8146-F96F546B9362
+ms.manager: dansimp
 ---
 
 # Get-DnsClientServerAddress

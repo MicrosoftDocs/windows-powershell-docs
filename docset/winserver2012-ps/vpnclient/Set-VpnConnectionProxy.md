@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 642D266F-03EC-4C92-AC30-DDA6B27EF2AA
+ms.manager: dansimp
 ---
 
 # Set-VpnConnectionProxy

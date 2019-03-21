@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerResponseRateLimitingExceptionlist
 ms.reviewer:
 ms.assetid: F5576612-4CB5-4F90-B480-335CC0AE0208
+ms.manager: dansimp
 ---
 
 # Add-DnsServerResponseRateLimitingExceptionlist

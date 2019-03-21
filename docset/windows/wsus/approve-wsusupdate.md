@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Approve-WsusUpdate
 ms.reviewer:
 ms.assetid: AF8E8258-D82E-43C1-BF9F-96DBA22E8B7F
+ms.manager: dansimp
 ---
 
 # Approve-WsusUpdate

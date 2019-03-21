@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-MsmqOutgoingQueue
 ms.reviewer:
 ms.assetid: 9798E2C3-2CB1-403F-8FF0-82DAE207D842
+ms.manager: dansimp
 ---
 
 # Suspend-MsmqOutgoingQueue

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-RDCertificate
 ms.reviewer:
 ms.assetid: 844EBBCB-9448-458F-B29D-197E1B1DB9A3
+ms.manager: dansimp
 ---
 
 # New-RDCertificate

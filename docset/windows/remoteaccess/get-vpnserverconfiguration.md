@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VpnServerConfiguration
 ms.reviewer:
 ms.assetid: 49FC8834-CD8F-4AD9-8117-245F2254A92F
+ms.manager: dansimp
 ---
 
 # Get-VpnServerConfiguration

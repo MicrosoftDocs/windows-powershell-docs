@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 38D3C333-40AB-4E35-943F-6AC57DEB55A7
+ms.manager: dansimp
 ---
 
 # ADCSAdministration Module

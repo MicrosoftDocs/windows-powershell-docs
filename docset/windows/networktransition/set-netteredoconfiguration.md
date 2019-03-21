@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetTeredoConfiguration
 ms.reviewer:
 ms.assetid: BF2B5AFD-D762-4325-BE81-45A88E1CE398
+ms.manager: dansimp
 ---
 
 # Set-NetTeredoConfiguration

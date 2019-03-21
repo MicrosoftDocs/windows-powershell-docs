@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: DF86D4F3-5727-4E04-9A4C-474D8A1F66CC
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

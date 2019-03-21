@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: 40463418-5B82-42E6-86E0-396B31E01EA8
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

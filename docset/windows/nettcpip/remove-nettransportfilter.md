@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetTransportFilter
 ms.reviewer:
 ms.assetid: 54CBC60C-5295-4FCC-8F7C-2FC73E26DACC
+ms.manager: dansimp
 ---
 
 # Remove-NetTransportFilter

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 ms.assetid: 254A50F5-D51F-4432-AAAD-83A14E273B79
+ms.manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

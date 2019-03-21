@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerv4MulticastScope
 ms.reviewer:
 ms.assetid: 32CB3D9D-A41C-490B-9776-4AE37BBFD8FE
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4MulticastScope

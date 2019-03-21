@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FDF635B0-3F62-48AE-BDE6-1DAC120DD52D
+ms.manager: dansimp
 ---
 
 # Get-NetTCPConnection

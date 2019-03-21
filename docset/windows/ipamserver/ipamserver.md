@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: E3FDBFD8-19FB-42FE-B426-B83DAC1CCC08
+ms.manager: dansimp
 ---
 
 # IpamServer Module

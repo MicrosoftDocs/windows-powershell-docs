@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-OdbcPerfCounter
 ms.reviewer:
 ms.assetid: 631FD972-CCC6-4D8D-AACF-B5D16AB968DB
+ms.manager: dansimp
 ---
 
 # Disable-OdbcPerfCounter

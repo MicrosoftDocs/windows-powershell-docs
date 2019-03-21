@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-SbecWdsBcd
 ms.reviewer:
 ms.assetid: B8DF7B66-C35A-47D3-83DE-4B506F45009D
+ms.manager: dansimp
 ---
 
 # Enable-SbecWdsBcd

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6DC5AA3F-2D0A-4F9C-BCE0-B3F53F77A1C0
+ms.manager: dansimp
 ---
 
 # Get-NetAdapterStatistics

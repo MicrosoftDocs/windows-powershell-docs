@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-StorageHighAvailability
 ms.reviewer:
 ms.assetid: 896B97D2-3A67-41F2-88FB-75CBF77EDA02
+ms.manager: dansimp
 ---
 
 # Disable-StorageHighAvailability

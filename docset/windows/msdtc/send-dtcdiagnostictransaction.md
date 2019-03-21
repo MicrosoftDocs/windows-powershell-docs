@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Send-DtcDiagnosticTransaction
 ms.reviewer:
 ms.assetid: EF593C1C-5927-4E90-982D-35C9F9F386F8
+ms.manager: dansimp
 ---
 
 # Send-DtcDiagnosticTransaction

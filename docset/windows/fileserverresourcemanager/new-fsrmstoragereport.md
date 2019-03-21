@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmStorageReport
 ms.reviewer:
 ms.assetid: 3C59457D-F193-4FA3-8332-B70051EC4270
+ms.manager: dansimp
 ---
 
 # New-FsrmStorageReport

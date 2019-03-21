@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WBBackupTarget
 ms.reviewer:
 ms.assetid: D4D0C006-575E-4F0D-87AB-FD4E9E727D27
+ms.manager: dansimp
 ---
 
 # New-WBBackupTarget

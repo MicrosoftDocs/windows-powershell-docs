@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetNatExternalAddress
 ms.reviewer:
 ms.assetid: CAD0A15A-F929-4568-9808-9D203B215EFA
+ms.manager: dansimp
 ---
 
 # Get-NetNatExternalAddress

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetNat
 ms.reviewer:
 ms.assetid: 43F71E6B-EC90-487A-94B4-4456B81A2F44
+ms.manager: dansimp
 ---
 
 # Set-NetNat

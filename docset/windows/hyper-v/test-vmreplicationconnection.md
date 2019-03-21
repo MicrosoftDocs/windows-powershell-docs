@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-VMReplicationConnection
 ms.reviewer:
 ms.assetid: C3C7A689-F1EE-4F53-B5D0-E831AEBD5838
+ms.manager: dansimp
 ---
 
 # Test-VMReplicationConnection

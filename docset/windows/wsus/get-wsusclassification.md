@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WsusClassification
 ms.reviewer:
 ms.assetid: B2379176-301C-490D-8FE1-75C2B71C05B5
+ms.manager: dansimp
 ---
 
 # Get-WsusClassification

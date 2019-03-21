@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1F5CF3A5-D324-4FD4-B2F9-57FD4D059AF4
+ms.manager: dansimp
 ---
 
 # Repair-WssRouterConfiguration

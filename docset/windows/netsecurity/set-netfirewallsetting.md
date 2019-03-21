@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetFirewallSetting
 ms.reviewer:
 ms.assetid: 7633DD5F-7D1F-4773-B39B-7DC647D606CF
+ms.manager: dansimp
 ---
 
 # Set-NetFirewallSetting

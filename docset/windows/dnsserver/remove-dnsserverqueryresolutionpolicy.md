@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerQueryResolutionPolicy
 ms.reviewer:
 ms.assetid: A7353E3F-F98E-43A5-8F94-E5188C71AE29
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerQueryResolutionPolicy

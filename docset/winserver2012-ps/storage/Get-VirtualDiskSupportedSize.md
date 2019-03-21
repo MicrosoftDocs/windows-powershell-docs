@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B0046458-D023-444D-A17D-4A4BCB10AC5D
+ms.manager: dansimp
 ---
 
 # Get-VirtualDiskSupportedSize

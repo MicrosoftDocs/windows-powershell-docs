@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-WBSystemStateRecovery
 ms.reviewer:
 ms.assetid: 9C76B714-7FCD-4DF4-A988-F4E27113EB02
+ms.manager: dansimp
 ---
 
 # Start-WBSystemStateRecovery

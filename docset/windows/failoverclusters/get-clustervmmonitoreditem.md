@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ClusterVMMonitoredItem
 ms.reviewer:
 ms.assetid: B2157CE4-2A94-4536-BA4A-22A79B2D7C6E
+ms.manager: dansimp
 ---
 
 # Get-ClusterVMMonitoredItem

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMComPort
 ms.reviewer:
 ms.assetid: FC88D1CB-36AC-4B0D-B86E-199C2B8DF894
+ms.manager: dansimp
 ---
 
 # Set-VMComPort

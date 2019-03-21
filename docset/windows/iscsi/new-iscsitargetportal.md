@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-IscsiTargetPortal
 ms.reviewer:
 ms.assetid: 8740AFC8-89A6-404C-967D-F7C0D3877BC5
+ms.manager: dansimp
 ---
 
 # New-IscsiTargetPortal

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Show-ADAuthenticationPolicyExpression
 ms.reviewer:
 ms.assetid: CFFE634B-0984-4BFD-9F72-0D9419F7B064
+ms.manager: dansimp
 ---
 
 # Show-ADAuthenticationPolicyExpression

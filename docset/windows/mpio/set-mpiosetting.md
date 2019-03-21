@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-MPIOSetting
 ms.reviewer:
 ms.assetid: D72F57C7-F3A5-4D38-A658-BFA8B0A4B0FE
+ms.manager: dansimp
 ---
 
 # Set-MPIOSetting

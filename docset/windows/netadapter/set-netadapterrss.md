@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetAdapterRss
 ms.reviewer:
 ms.assetid: 178058E6-A1EC-4285-8D04-5C6569D7F323
+ms.manager: dansimp
 ---
 
 # Set-NetAdapterRss

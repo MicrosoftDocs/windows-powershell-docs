@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WBBackupTarget
 ms.reviewer:
 ms.assetid: ACA6C36A-26F7-4C71-A7DC-ED5AB30BBBBD
+ms.manager: dansimp
 ---
 
 # Remove-WBBackupTarget

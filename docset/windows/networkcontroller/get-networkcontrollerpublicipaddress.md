@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerPublicIpAddress
 ms.reviewer:
 ms.assetid: 1D52D036-BA61-4F79-BF29-F3B5B4986B16
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerPublicIpAddress

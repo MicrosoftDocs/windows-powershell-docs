@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WBDisk
 ms.reviewer:
 ms.assetid: 89601806-F13E-4C1E-AECC-ECC0CA7758F5
+ms.manager: dansimp
 ---
 
 # Get-WBDisk

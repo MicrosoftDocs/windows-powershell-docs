@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-GPRegistryValue
 ms.reviewer:
 ms.assetid: 0AEE3792-7D5C-49D8-A151-743375234451
+ms.manager: dansimp
 ---
 
 # Remove-GPRegistryValue

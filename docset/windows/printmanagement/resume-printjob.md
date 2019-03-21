@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-PrintJob
 ms.reviewer:
 ms.assetid: 207632BA-A5A0-4D2E-B3FA-7CEBFE61E9E2
+ms.manager: dansimp
 ---
 
 # Resume-PrintJob

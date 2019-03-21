@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetIPv6Protocol
 ms.reviewer:
 ms.assetid: C245B3BC-7471-4BBD-88AD-B87E916FB0B3
+ms.manager: dansimp
 ---
 
 # Set-NetIPv6Protocol

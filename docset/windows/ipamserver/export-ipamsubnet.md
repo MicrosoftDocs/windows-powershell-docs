@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-IpamSubnet
 ms.reviewer:
 ms.assetid: 0B263282-CFAF-4BCC-84DB-A68D320B55B2
+ms.manager: dansimp
 ---
 
 # Export-IpamSubnet

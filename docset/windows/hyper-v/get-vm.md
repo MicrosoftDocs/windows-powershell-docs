@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VM
 ms.reviewer:
 ms.assetid: 2CCE78AD-E5BD-4A56-944C-2832323ACF26
+ms.manager: dansimp
 ---
 
 # Get-VM

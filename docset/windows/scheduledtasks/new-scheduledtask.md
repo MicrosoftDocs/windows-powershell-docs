@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-ScheduledTask
 ms.reviewer:
 ms.assetid: 49421DA2-18F2-43E5-BA8A-DB589BCEF699
+ms.manager: dansimp
 ---
 
 # New-ScheduledTask

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DAClient
 ms.reviewer:
 ms.assetid: C6D362B5-98D3-408D-8415-A34CB6B22DBD
+ms.manager: dansimp
 ---
 
 # Get-DAClient

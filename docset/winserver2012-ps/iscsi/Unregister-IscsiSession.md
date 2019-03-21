@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BD05B373-4201-4531-BBAE-89C400F95573
+ms.manager: dansimp
 ---
 
 # Unregister-IscsiSession

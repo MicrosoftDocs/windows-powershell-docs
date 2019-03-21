@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-DnsServerPrimaryZone
 ms.reviewer:
 ms.assetid: 5ED1B1F1-4C26-4B46-ACE1-0F38779ACCC2
+ms.manager: dansimp
 ---
 
 # Restore-DnsServerPrimaryZone

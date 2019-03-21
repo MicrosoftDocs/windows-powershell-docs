@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetIPAddress
 ms.reviewer:
 ms.assetid: C3A0B677-F2F9-40C3-9A6B-B72AA292B721
+ms.manager: dansimp
 ---
 
 # Remove-NetIPAddress

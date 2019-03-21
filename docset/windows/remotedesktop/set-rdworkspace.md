@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RDWorkspace
 ms.reviewer:
 ms.assetid: EA0B41A7-7083-4F56-B752-70AEAC0D117D
+ms.manager: dansimp
 ---
 
 # Set-RDWorkspace

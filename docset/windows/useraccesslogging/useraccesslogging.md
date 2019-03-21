@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 40047A3B-9473-49D1-B164-84FA6CCC9AFA
+ms.manager: dansimp
 ---
 
 # UserAccessLogging Module

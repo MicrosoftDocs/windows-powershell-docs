@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A8231A90-0A08-46D7-A01F-FC691605B16D
+ms.manager: dansimp
 ---
 
 # Get-WssBackupPolicy

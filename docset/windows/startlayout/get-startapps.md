@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StartApps
 ms.reviewer:
 ms.assetid: 7A77209F-6FCD-42D2-B2D0-F953FD69129D
+ms.manager: dansimp
 ---
 
 # Get-StartApps

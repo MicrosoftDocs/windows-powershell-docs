@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A4145239-080D-48A1-81E1-F574440CCB67
+ms.manager: dansimp
 ---
 
 # Get-OBFileSpec

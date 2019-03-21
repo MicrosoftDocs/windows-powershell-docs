@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-IpamRange
 ms.reviewer:
 ms.assetid: 7D4A8A52-DB0E-46D1-BD49-16FF6042D02C
+ms.manager: dansimp
 ---
 
 # Import-IpamRange

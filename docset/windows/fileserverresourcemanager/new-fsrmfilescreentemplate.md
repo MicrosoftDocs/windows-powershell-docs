@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmFileScreenTemplate
 ms.reviewer:
 ms.assetid: 0D09322F-EFBF-4194-9F2E-A72CE464BEF4
+ms.manager: dansimp
 ---
 
 # New-FsrmFileScreenTemplate

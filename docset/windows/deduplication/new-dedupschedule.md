@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-DedupSchedule
 ms.reviewer:
 ms.assetid: A28A368B-2C90-46EE-BF1A-5361455E72DC
+ms.manager: dansimp
 ---
 
 # New-DedupSchedule

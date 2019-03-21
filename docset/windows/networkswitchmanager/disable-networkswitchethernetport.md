@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-NetworkSwitchEthernetPort
 ms.reviewer:
 ms.assetid: 493748F1-A9D7-4FEE-A853-CDAB9A89636E
+ms.manager: dansimp
 ---
 
 # Disable-NetworkSwitchEthernetPort

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-VMNetworkAdapter
 ms.reviewer:
 ms.assetid: 779A53A8-2BC2-40DE-8A4E-3C482752F7F5
+ms.manager: dansimp
 ---
 
 # Rename-VMNetworkAdapter

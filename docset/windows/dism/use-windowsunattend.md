@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Use-WindowsUnattend
 ms.reviewer:
 ms.assetid: 5FA0CD9C-088A-4296-9B8B-A9529BAD7489
+ms.manager: dansimp
 ---
 
 # Use-WindowsUnattend

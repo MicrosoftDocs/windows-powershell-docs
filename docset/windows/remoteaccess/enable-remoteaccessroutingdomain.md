@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-RemoteAccessRoutingDomain
 ms.reviewer:
 ms.assetid: 45A60B09-63C0-4170-8DB2-11A2B6024F69
+ms.manager: dansimp
 ---
 
 # Enable-RemoteAccessRoutingDomain

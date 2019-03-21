@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WindowsDriver
 ms.reviewer:
 ms.assetid: 3C1B5AE3-0C56-47DF-914B-1A50133683DA
+ms.manager: dansimp
 ---
 
 # Remove-WindowsDriver

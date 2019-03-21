@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 4F9928C1-F895-4015-8C58-BB0DA8A99EF7
+ms.manager: dansimp
 ---
 
 # TroubleshootingPack Module

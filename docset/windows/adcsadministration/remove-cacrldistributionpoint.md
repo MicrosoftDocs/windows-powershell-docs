@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-CACrlDistributionPoint
 ms.reviewer:
 ms.assetid: 459FC3FA-77AD-47BD-9F02-B113A87FD347
+ms.manager: dansimp
 ---
 
 # Remove-CACrlDistributionPoint

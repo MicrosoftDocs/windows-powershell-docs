@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-WdsInstallImage
 ms.reviewer:
 ms.assetid: FE138C3E-325B-4554-950B-3E725B98592D
+ms.manager: dansimp
 ---
 
 # Export-WdsInstallImage

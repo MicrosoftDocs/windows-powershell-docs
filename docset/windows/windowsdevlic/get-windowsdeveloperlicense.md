@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WindowsDeveloperLicense
 ms.reviewer:
 ms.assetid: 73687EB6-DAF8-4003-BDB3-5599E543F67E
+ms.manager: dansimp
 ---
 
 # Get-WindowsDeveloperLicense

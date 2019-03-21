@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4ExclusionRange
 ms.reviewer:
 ms.assetid: 762D3047-3B2A-474B-9E8E-69850DBEFDAE
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4ExclusionRange

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AppxProvisionedPackage
 ms.reviewer:
 ms.assetid: 0041C33A-E929-41DD-833A-7623CF6E0538
+ms.manager: dansimp
 ---
 
 # Get-AppxProvisionedPackage

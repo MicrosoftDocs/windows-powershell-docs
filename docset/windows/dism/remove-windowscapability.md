@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WindowsCapability
 ms.reviewer:
 ms.assetid: 1655A17D-736E-4AC6-9B75-11D31C3C0C2B
+ms.manager: dansimp
 ---
 
 # Remove-WindowsCapability

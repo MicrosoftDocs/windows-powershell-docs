@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnS2SInterface
 ms.reviewer:
 ms.assetid: 685B66B6-4381-407C-A033-BFCF00CB18CA
+ms.manager: dansimp
 ---
 
 # Add-VpnS2SInterface

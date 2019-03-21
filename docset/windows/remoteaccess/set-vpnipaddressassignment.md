@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VpnIPAddressAssignment
 ms.reviewer:
 ms.assetid: DB27F5A1-52BF-4F0B-93B4-99D0CDF40C26
+ms.manager: dansimp
 ---
 
 # Set-VpnIPAddressAssignment

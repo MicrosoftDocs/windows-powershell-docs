@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Mount-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: 637D6557-DDC9-441A-A14C-87A3C03AAEB5
+ms.manager: dansimp
 ---
 
 # Mount-AppvClientConnectionGroup

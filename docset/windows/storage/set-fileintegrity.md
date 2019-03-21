@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FileIntegrity
 ms.reviewer:
 ms.assetid: CDC219C7-0117-4923-8720-E9F3332588A5
+ms.manager: dansimp
 ---
 
 # Set-FileIntegrity

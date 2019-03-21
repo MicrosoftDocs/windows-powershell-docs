@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8C029D0B-7CC0-4C84-B3B0-57AFE0153F56
+ms.manager: dansimp
 ---
 
 # Get-NfsClientLock

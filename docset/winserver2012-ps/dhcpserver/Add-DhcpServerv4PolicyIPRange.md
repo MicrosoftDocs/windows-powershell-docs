@@ -3,6 +3,7 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: E8F48571-4187-48A3-BEB6-60BA65616757
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

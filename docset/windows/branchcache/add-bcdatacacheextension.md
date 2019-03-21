@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-BCDataCacheExtension
 ms.reviewer:
 ms.assetid: 4A04E8AB-1697-43C5-A936-8061F1B98EEB
+ms.manager: dansimp
 ---
 
 # Add-BCDataCacheExtension

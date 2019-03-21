@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WinUserLanguageList
 ms.reviewer:
 ms.assetid: 91713C56-E6B0-42A4-BD43-61DF61C4FC3F
+ms.manager: dansimp
 ---
 
 # Set-WinUserLanguageList

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerConnectivityCheck
 ms.reviewer:
 ms.assetid: 2591182C-7C57-4671-A1B5-32CEDCBC8937
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerConnectivityCheck

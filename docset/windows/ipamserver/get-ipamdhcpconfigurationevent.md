@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamDhcpConfigurationEvent
 ms.reviewer:
 ms.assetid: 67993370-D070-497A-B7B8-FA2ABF865552
+ms.manager: dansimp
 ---
 
 # Get-IpamDhcpConfigurationEvent

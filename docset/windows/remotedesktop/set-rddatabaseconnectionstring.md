@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RDDatabaseConnectionString
 ms.reviewer:
 ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
+ms.manager: dansimp
 ---
 
 # Set-RDDatabaseConnectionString

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-WindowsOptionalFeature
 ms.reviewer:
 ms.assetid: D52352EC-49DD-4FD7-B83A-1060EE80A089
+ms.manager: dansimp
 ---
 
 # Disable-WindowsOptionalFeature

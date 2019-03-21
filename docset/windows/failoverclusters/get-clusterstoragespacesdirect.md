@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ClusterStorageSpacesDirect
 ms.reviewer:
 ms.assetid: 673957AC-F14D-4DD3-9D16-81BDF98A6CCD
+ms.manager: dansimp
 ---
 
 # Get-ClusterStorageSpacesDirect

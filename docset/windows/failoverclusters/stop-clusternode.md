@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-ClusterNode
 ms.reviewer:
 ms.assetid: D9E13DE4-9792-4015-B3F4-87CD1FFC06F0
+ms.manager: dansimp
 ---
 
 # Stop-ClusterNode

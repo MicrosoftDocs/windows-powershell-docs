@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-ClusterStorageSpacesDirect
 ms.reviewer:
 ms.assetid: 0C201BC8-18B3-4AA7-BA4F-C470A24DF37C
+ms.manager: dansimp
 ---
 
 # Enable-ClusterStorageSpacesDirect

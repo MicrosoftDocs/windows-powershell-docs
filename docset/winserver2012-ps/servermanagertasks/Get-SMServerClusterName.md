@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2C57BC34-F9B7-419A-80E6-563465BCCF2A
+ms.manager: dansimp
 ---
 
 # Get-SMServerClusterName

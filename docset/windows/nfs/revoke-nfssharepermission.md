@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Revoke-NfsSharePermission
 ms.reviewer:
 ms.assetid: 13FD01AB-B3C0-45A6-AB65-41ED6AEDDEFE
+ms.manager: dansimp
 ---
 
 # Revoke-NfsSharePermission

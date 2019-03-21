@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4Statistics
 ms.reviewer:
 ms.assetid: 0824B93B-35BC-403C-9646-358D4831B058
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4Statistics

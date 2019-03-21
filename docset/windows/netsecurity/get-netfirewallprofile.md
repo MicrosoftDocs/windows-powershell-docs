@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetFirewallProfile
 ms.reviewer:
 ms.assetid: D16B99D0-29BC-4A04-A644-0AE63D8FEF58
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallProfile

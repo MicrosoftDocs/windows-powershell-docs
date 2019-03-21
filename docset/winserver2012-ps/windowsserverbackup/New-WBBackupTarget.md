@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D4D0C006-575E-4F0D-87AB-FD4E9E727D27
+ms.manager: dansimp
 ---
 
 # New-WBBackupTarget

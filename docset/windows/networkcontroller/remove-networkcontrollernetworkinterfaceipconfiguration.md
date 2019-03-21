@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerNetworkInterfaceIpConfiguration
 ms.reviewer:
 ms.assetid: B7BAB151-B329-40FA-8C95-21B3ACB03E10
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerNetworkInterfaceIpConfiguration

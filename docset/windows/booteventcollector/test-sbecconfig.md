@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-SbecConfig
 ms.reviewer:
 ms.assetid: 69A2C9E8-4FAD-4C40-883E-0EAE358175E8
+ms.manager: dansimp
 ---
 
 # Test-SbecConfig

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 77ADE910-15EE-4438-94D2-9789B90A5BF4
+ms.manager: dansimp
 ---
 
 # Remove-VpnIPAddressRange

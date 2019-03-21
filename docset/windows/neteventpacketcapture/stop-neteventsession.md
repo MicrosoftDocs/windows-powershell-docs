@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-NetEventSession
 ms.reviewer:
 ms.assetid: E63065A4-3A7C-447D-82A3-0B480D1FEE65
+ms.manager: dansimp
 ---
 
 # Stop-NetEventSession

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Policy
 ms.reviewer:
 ms.assetid: 1EE9D372-1497-4C29-A08F-DF4502F6FC8B
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Policy

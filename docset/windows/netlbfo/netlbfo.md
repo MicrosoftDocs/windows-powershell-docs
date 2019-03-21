@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 7C63E721-88B9-415B-953C-77FCEDA47F90
+ms.manager: dansimp
 ---
 
 # NetLbfo Module

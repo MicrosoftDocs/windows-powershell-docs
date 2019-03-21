@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Checkpoint-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 6854D819-70B6-488B-A2C6-6001BBCBD344
+ms.manager: dansimp
 ---
 
 # Checkpoint-IscsiVirtualDisk

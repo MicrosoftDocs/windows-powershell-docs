@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetFirewallSecurityFilter
 ms.reviewer:
 ms.assetid: B2D4E04A-1B8A-4083-BF4C-85BB12B74B26
+ms.manager: dansimp
 ---
 
 # Set-NetFirewallSecurityFilter

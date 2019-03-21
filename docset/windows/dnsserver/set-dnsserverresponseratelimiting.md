@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerResponseRateLimiting
 ms.reviewer:
 ms.assetid: 6793AE4B-CDAA-40E2-B359-FFF76F436CF9
+ms.manager: dansimp
 ---
 
 # Set-DnsServerResponseRateLimiting

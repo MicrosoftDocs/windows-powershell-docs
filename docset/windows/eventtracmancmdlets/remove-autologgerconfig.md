@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-AutologgerConfig
 ms.reviewer:
 ms.assetid: 0354505D-FE72-4914-9986-EE022428DC17
+ms.manager: dansimp
 ---
 
 # Remove-AutologgerConfig

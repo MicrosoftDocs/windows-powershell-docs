@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WebVirtualDirectory
 ms.reviewer:
 ms.assetid: D5A72EDB-4E58-49A2-9EAE-4A3544B5FCB2
+ms.manager: dansimp
 ---
 
 # Get-WebVirtualDirectory

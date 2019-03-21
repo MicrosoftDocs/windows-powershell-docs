@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsClientNrptRule
 ms.reviewer:
 ms.assetid: C770FE83-76FA-4124-B543-94EA0B1F5C08
+ms.manager: dansimp
 ---
 
 # Add-DnsClientNrptRule

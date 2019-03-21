@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerLoadBalancingRule
 ms.reviewer:
 ms.assetid: 14B8D7E0-560B-4BFB-ACEF-338E8BAE0FF5
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLoadBalancingRule

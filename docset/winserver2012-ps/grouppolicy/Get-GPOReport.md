@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 76DFAAB3-FCF4-4707-9E74-3F38D457B68F
+ms.manager: dansimp
 ---
 
 # Get-GPOReport

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerRouteTable
 ms.reviewer:
 ms.assetid: 13053D87-97E7-4769-B1DF-154F78190360
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerRouteTable

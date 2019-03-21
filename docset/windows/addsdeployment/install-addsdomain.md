@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-ADDSDomain
 ms.reviewer:
 ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
+ms.manager: dansimp
 ---
 
 # Install-ADDSDomain

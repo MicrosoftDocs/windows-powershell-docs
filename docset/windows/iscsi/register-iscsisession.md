@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Register-IscsiSession
 ms.reviewer:
 ms.assetid: 1DA7D3BB-FB1A-475E-B64D-1614E67AD941
+ms.manager: dansimp
 ---
 
 # Register-IscsiSession

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Register-ScheduledTask
 ms.reviewer:
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
+ms.manager: dansimp
 ---
 
 # Register-ScheduledTask

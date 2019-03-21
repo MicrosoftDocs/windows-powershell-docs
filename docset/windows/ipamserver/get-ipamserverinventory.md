@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamServerInventory
 ms.reviewer:
 ms.assetid: 79DFE776-5CA2-43C5-BAFC-ADC6596C5F66
+ms.manager: dansimp
 ---
 
 # Get-IpamServerInventory

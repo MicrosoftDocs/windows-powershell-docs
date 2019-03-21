@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Debug-ServiceFabricNodeStatus
 ms.reviewer:
 ms.assetid: 9519481B-276C-49C5-AB86-220B7925D828
+ms.manager: dansimp
 ---
 
 # Debug-ServiceFabricNodeStatus

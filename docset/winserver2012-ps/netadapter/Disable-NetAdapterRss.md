@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7226812F-0BF6-4315-83F8-294CFF4F85D2
+ms.manager: dansimp
 ---
 
 # Disable-NetAdapterRss

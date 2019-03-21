@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-DfsrClone
 ms.reviewer:
 ms.assetid: 7543CFD5-B780-4090-AC1C-33FF4AA95E5B
+ms.manager: dansimp
 ---
 
 # Import-DfsrClone

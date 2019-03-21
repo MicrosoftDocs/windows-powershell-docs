@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerLoadBalancerBackendAddressPool
 ms.reviewer:
 ms.assetid: 396B5BF4-2E42-48C0-AA36-17D9B2955D26
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLoadBalancerBackendAddressPool

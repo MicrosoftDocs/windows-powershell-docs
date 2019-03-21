@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADAccountAuthenticationPolicySilo
 ms.reviewer:
 ms.assetid: BFB98125-9725-424C-A4D5-C27AC948C38C
+ms.manager: dansimp
 ---
 
 # Set-ADAccountAuthenticationPolicySilo

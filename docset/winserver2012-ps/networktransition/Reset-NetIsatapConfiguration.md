@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E3DD318C-D385-403B-B029-E65EEB275579
+ms.manager: dansimp
 ---
 
 # Reset-NetIsatapConfiguration

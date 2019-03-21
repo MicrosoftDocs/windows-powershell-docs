@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-VamtData
 ms.reviewer:
 ms.assetid: B6D1DE3E-076B-4BCB-99E3-31FFE6282141
+ms.manager: dansimp
 ---
 
 # Export-VamtData

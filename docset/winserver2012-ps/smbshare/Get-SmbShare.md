@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3EC4687D-4FCB-4C2A-A221-8D5320DE24B2
+ms.manager: dansimp
 ---
 
 # Get-SmbShare

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetEventWFPCaptureProvider
 ms.reviewer:
 ms.assetid: 28F9E92A-6858-4FEE-93DF-5CCF1B2C7062
+ms.manager: dansimp
 ---
 
 # Get-NetEventWFPCaptureProvider

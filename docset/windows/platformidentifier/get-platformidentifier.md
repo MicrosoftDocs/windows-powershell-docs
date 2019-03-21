@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PlatformIdentifier
 ms.reviewer:
 ms.assetid: 301339D3-87F6-4B55-B412-C293D5482738
+ms.manager: dansimp
 ---
 
 # Get-PlatformIdentifier

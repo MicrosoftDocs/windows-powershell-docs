@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WindowsImage
 ms.reviewer:
 ms.assetid: A61F713B-BA0C-461E-B9F8-A2D49A2FF357
+ms.manager: dansimp
 ---
 
 # Add-WindowsImage

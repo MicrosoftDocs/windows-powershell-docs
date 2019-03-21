@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WebCentralCertProvider
 ms.reviewer:
 ms.assetid: B7B5E253-C341-4F24-81FE-A024D7CBC8A7
+ms.manager: dansimp
 ---
 
 # Set-WebCentralCertProvider

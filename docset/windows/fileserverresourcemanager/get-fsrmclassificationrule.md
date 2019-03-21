@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FsrmClassificationRule
 ms.reviewer:
 ms.assetid: EE3FEEC6-B7AF-46C9-A5EF-C9190D498AB4
+ms.manager: dansimp
 ---
 
 # Get-FsrmClassificationRule

@@ -3,6 +3,7 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 556C0842-0115-4183-AF00-9420A1AB2B8F
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Show-WmsDesktop
 ms.reviewer:
 ms.assetid: 23E82E68-2DA1-43E5-A615-9187B600E03A
+ms.manager: dansimp
 ---
 
 # Show-WmsDesktop

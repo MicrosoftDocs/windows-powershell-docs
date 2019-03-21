@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-ClusterGroup
 ms.reviewer:
 ms.assetid: BE89DFE6-70CF-4A30-BE4F-DC8679C8776E
+ms.manager: dansimp
 ---
 
 # Stop-ClusterGroup

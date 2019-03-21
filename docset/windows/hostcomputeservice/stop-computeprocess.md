@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-ComputeProcess
 ms.reviewer:
 ms.assetid: 230B4863-04DB-4406-B975-EE8B0532869A
+ms.manager: dansimp
 ---
 
 # Stop-ComputeProcess

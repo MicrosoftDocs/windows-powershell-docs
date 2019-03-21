@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetQosDcbxSetting
 ms.reviewer:
 ms.assetid: 922F1C02-895E-42C1-B1CE-30667A6CEA07
+ms.manager: dansimp
 ---
 
 # Get-NetQosDcbxSetting

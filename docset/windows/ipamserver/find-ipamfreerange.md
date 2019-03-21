@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Find-IpamFreeRange
 ms.reviewer:
 ms.assetid: 1C04AE5F-128B-4C48-8C6C-FA38B98C34D4
+ms.manager: dansimp
 ---
 
 # Find-IpamFreeRange

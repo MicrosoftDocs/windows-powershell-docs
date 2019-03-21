@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMFibreChannelHba
 ms.reviewer:
 ms.assetid: 6AB1A0E9-56F6-4330-A27D-C33C6FF4CA62
+ms.manager: dansimp
 ---
 
 # Remove-VMFibreChannelHba

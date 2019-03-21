@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 198BE1E9-4CB6-464D-9A5A-8A5F9E9A9127
+ms.manager: dansimp
 ---
 
 # Remove-DAClientDnsConfiguration

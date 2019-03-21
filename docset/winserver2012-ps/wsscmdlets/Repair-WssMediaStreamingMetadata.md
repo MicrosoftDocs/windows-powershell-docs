@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C94D8EAA-BE45-469B-84C6-3C4E94299458
+ms.manager: dansimp
 ---
 
 # Repair-WssMediaStreamingMetadata

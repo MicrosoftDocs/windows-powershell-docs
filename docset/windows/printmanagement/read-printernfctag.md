@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Read-PrinterNfcTag
 ms.reviewer:
 ms.assetid: 8CCCE06D-8B66-4AB3-8EF9-A5D44D93E2CD
+ms.manager: dansimp
 ---
 
 # Read-PrinterNfcTag

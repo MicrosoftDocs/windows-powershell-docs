@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-BgpRouter
 ms.reviewer:
 ms.assetid: 63AC9E9F-C0A5-438B-B763-83D384EBA85A
+ms.manager: dansimp
 ---
 
 # Get-BgpRouter

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-GPPrefRegistryValue
 ms.reviewer:
 ms.assetid: FAEC0104-D0B0-4CD5-BAF2-E1027C63D3C8
+ms.manager: dansimp
 ---
 
 # Get-GPPrefRegistryValue

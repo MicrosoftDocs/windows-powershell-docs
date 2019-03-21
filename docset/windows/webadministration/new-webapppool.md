@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WebAppPool
 ms.reviewer:
 ms.assetid: CBFB45D2-3658-41FA-BDEB-13920DF3908F
+ms.manager: dansimp
 ---
 
 # New-WebAppPool

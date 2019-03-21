@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-MsmqQueueManager
 ms.reviewer:
 ms.assetid: A327DEB3-B1F6-43F4-93B8-A73B5A78DF13
+ms.manager: dansimp
 ---
 
 # Set-MsmqQueueManager

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetQosFlowControl
 ms.reviewer:
 ms.assetid: 82DC3326-DE1C-49DA-AA2C-737582231D8B
+ms.manager: dansimp
 ---
 
 # Enable-NetQosFlowControl

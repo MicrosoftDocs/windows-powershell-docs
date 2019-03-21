@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageTier
 ms.reviewer:
 ms.assetid: 620540D9-1E94-4E25-954D-A9B21E83C60E
+ms.manager: dansimp
 ---
 
 # Get-StorageTier

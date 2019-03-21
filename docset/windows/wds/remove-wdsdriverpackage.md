@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WdsDriverPackage
 ms.reviewer:
 ms.assetid: AF37FA78-C711-4798-BEAA-B2775F5C0BFC
+ms.manager: dansimp
 ---
 
 # Remove-WdsDriverPackage

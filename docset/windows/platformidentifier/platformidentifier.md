@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: BD6D6930-6F47-48CF-AD35-AD04E1C1FCBB
+ms.manager: dansimp
 ---
 
 # PlatformIdentifier Module

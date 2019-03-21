@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-VipReachability
 ms.reviewer:
 ms.assetid: 20476815-45CE-410E-B712-FE2F2BE38618
+ms.manager: dansimp
 ---
 
 # Test-VipReachability

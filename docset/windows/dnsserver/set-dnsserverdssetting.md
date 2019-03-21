@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerDsSetting
 ms.reviewer:
 ms.assetid: 5CFABE53-1D6E-416B-9220-D493B43728D5
+ms.manager: dansimp
 ---
 
 # Set-DnsServerDsSetting

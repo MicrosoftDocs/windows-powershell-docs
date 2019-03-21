@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E4F5B4D8-B6B7-4EF0-9A70-DF830000D0BD
+ms.manager: dansimp
 ---
 
 # Test-NfsMappingStore

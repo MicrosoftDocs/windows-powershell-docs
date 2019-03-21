@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerResourceRecord
 ms.reviewer:
 ms.assetid: 544BB23C-3448-41ED-B098-823B74D0FFF7
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerResourceRecord

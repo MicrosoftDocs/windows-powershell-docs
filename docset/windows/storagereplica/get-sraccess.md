@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SRAccess
 ms.reviewer:
 ms.assetid: 955163F2-BD98-47DC-9387-04FBB3BBD920
+ms.manager: dansimp
 ---
 
 # Get-SRAccess

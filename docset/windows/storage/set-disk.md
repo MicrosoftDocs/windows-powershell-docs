@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-Disk
 ms.reviewer:
 ms.assetid: 1F2E55DF-73AF-40F5-A09B-05945A504510
+ms.manager: dansimp
 ---
 
 # Set-Disk

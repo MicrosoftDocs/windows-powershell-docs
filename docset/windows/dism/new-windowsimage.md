@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WindowsImage
 ms.reviewer:
 ms.assetid: 48C44DEE-EE4C-4040-9B42-297EAAD5E4E4
+ms.manager: dansimp
 ---
 
 # New-WindowsImage

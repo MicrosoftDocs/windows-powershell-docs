@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnConnectionTriggerDnsConfiguration
 ms.reviewer:
 ms.assetid: 5ED7B601-B0E5-4130-B32B-F45A891BF80C
+ms.manager: dansimp
 ---
 
 # Add-VpnConnectionTriggerDnsConfiguration

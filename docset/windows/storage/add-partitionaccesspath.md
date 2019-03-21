@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-PartitionAccessPath
 ms.reviewer:
 ms.assetid: DA859E65-3EFD-4C3D-95F0-9C0F4687D302
+ms.manager: dansimp
 ---
 
 # Add-PartitionAccessPath

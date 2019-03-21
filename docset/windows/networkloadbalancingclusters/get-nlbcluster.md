@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NlbCluster
 ms.reviewer:
 ms.assetid: F5362DCF-C01B-437E-866D-29D63C540F16
+ms.manager: dansimp
 ---
 
 # Get-NlbCluster

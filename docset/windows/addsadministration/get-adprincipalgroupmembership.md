@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADPrincipalGroupMembership
 ms.reviewer:
 ms.assetid: 8BA52D68-6406-43B7-B3AE-D2F8FC4A0E5B
+ms.manager: dansimp
 ---
 
 # Get-ADPrincipalGroupMembership

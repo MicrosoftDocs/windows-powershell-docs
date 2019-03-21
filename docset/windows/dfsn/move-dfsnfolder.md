@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Move-DfsnFolder
 ms.reviewer:
 ms.assetid: EC97581D-B896-492F-94A5-1A214FD409CC
+ms.manager: dansimp
 ---
 
 # Move-DfsnFolder

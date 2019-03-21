@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADDefaultDomainPasswordPolicy
 ms.reviewer:
 ms.assetid: 0F0075C0-2945-448A-84E3-F0475A91AF25
+ms.manager: dansimp
 ---
 
 # Set-ADDefaultDomainPasswordPolicy

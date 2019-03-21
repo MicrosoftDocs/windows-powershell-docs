@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkSwitchEthernetPort
 ms.reviewer:
 ms.assetid: D60F59CB-B44F-4DAE-9363-CAA972A4512D
+ms.manager: dansimp
 ---
 
 # Get-NetworkSwitchEthernetPort

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerZone
 ms.reviewer:
 ms.assetid: 1FA4F5A8-2AF5-4909-A58B-CC667A288E89
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerZone

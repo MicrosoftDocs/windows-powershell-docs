@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6BE59916-1E80-42A2-9B6E-6DD95E616A04
+ms.manager: dansimp
 ---
 
 # Get-DAAppServer

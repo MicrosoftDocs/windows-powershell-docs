@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WinCultureFromLanguageListOptOut
 ms.reviewer:
 ms.assetid: 3383B8A3-16DF-45A9-848F-B6A76FFAB900
+ms.manager: dansimp
 ---
 
 # Set-WinCultureFromLanguageListOptOut

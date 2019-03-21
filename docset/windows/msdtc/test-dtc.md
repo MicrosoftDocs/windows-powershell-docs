@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-Dtc
 ms.reviewer:
 ms.assetid: 170C623D-6B36-4297-8235-DD65A594871C
+ms.manager: dansimp
 ---
 
 # Test-Dtc

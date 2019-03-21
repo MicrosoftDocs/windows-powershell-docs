@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4Filter
 ms.reviewer:
 ms.assetid: 25E6A9FE-9B42-49D6-AEC4-66562806B17E
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4Filter

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1B305387-3816-427A-AD8D-A00B18BFE742
+ms.manager: dansimp
 ---
 
 # Set-WssDomainNameConfiguration

@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 5069B711-43A1-412B-B7CC-249C39814FD4
+ms.manager: dansimp
 ---
 
 # SecureBoot Module

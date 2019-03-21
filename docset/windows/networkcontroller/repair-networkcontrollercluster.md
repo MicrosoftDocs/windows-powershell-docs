@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-NetworkControllerCluster
 ms.reviewer:
 ms.assetid: 2AB48CE0-646E-4819-9ED4-807FCD248550
+ms.manager: dansimp
 ---
 
 # Repair-NetworkControllerCluster

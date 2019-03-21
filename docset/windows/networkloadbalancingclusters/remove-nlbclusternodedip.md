@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NlbClusterNodeDip
 ms.reviewer:
 ms.assetid: B5CB8186-4D53-43D6-8B47-4ECA99F7E550
+ms.manager: dansimp
 ---
 
 # Remove-NlbClusterNodeDip

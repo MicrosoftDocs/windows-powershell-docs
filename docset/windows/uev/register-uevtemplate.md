@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Register-UevTemplate
 ms.reviewer:
 ms.assetid: 360A3D4B-73F2-41E7-AA13-5F1D979FCDDA
+ms.manager: dansimp
 ---
 
 # Register-UevTemplate

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-SbecLogSession
 ms.reviewer:
 ms.assetid: 94CAD99C-49C6-4728-8706-E04C0B34B8A0
+ms.manager: dansimp
 ---
 
 # Stop-SbecLogSession

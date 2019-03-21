@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NfsClientgroup
 ms.reviewer:
 ms.assetid: AE9F7C4F-D326-4DD5-B6FF-7EE2E14AD002
+ms.manager: dansimp
 ---
 
 # New-NfsClientgroup

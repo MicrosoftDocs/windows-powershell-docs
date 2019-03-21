@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-UevConfiguration
 ms.reviewer:
 ms.assetid: A5918C68-BCF6-4D65-8941-CD6DE3301971
+ms.manager: dansimp
 ---
 
 # Set-UevConfiguration

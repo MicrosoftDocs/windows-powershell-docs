@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-AppvClientPackage
 ms.reviewer:
 ms.assetid: 10BAD42C-0C99-428B-9D31-62C9D42C9799
+ms.manager: dansimp
 ---
 
 # Add-AppvClientPackage

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DedupProperties
 ms.reviewer:
 ms.assetid: C6F9086E-7DF5-4A0F-9BA9-BEF95E0A9040
+ms.manager: dansimp
 ---
 
 # Get-DedupProperties

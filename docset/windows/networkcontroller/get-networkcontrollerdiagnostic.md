@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerDiagnostic
 ms.reviewer:
 ms.assetid: 98F849AE-30D2-4304-A69C-BED9C1267686
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerDiagnostic

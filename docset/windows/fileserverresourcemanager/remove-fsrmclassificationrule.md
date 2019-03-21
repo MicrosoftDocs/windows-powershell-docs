@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-FsrmClassificationRule
 ms.reviewer:
 ms.assetid: E2DF055D-40B8-4DB1-9DE6-2CDF8004A146
+ms.manager: dansimp
 ---
 
 # Remove-FsrmClassificationRule

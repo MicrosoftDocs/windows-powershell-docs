@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-NetEventNetworkAdapter
 ms.reviewer:
 ms.assetid: FCA7B92C-32F9-432D-B6C3-158011A2E835
+ms.manager: dansimp
 ---
 
 # Add-NetEventNetworkAdapter

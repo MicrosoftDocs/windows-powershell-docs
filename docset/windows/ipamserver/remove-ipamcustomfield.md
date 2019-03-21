@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-IpamCustomField
 ms.reviewer:
 ms.assetid: 4C86BA14-B8BA-4417-BAD2-AC5DD4A6D6E3
+ms.manager: dansimp
 ---
 
 # Remove-IpamCustomField

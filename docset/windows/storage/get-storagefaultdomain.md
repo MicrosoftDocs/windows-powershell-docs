@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageFaultDomain
 ms.reviewer:
 ms.assetid: ACBD294F-3324-41E5-9BEB-62461E1825CC
+ms.manager: dansimp
 ---
 
 # Get-StorageFaultDomain

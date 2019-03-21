@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMMigrationNetwork
 ms.reviewer:
 ms.assetid: DFE512DF-4AC2-427C-9081-C403476C255A
+ms.manager: dansimp
 ---
 
 # Get-VMMigrationNetwork

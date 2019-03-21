@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: E202D545-2B83-4532-B016-BD96727B4DBE
+ms.manager: dansimp
 ---
 
 # WebAdministration Module

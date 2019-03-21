@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-EapConfiguration
 ms.reviewer:
 ms.assetid: 7AC7839A-38B7-46F9-AC6D-55E522C4F112
+ms.manager: dansimp
 ---
 
 # New-EapConfiguration

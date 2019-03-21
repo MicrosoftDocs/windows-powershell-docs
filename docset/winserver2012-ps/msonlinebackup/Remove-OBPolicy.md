@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6B0CD195-2EB7-4A54-B356-590E6ECAF2FE
+ms.manager: dansimp
 ---
 
 # Remove-OBPolicy

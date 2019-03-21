@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-BgpRouteFlapDampening
 ms.reviewer:
 ms.assetid: 94833F9A-9A01-4816-851D-71D152B290DE
+ms.manager: dansimp
 ---
 
 # Get-BgpRouteFlapDampening

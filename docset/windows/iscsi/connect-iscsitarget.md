@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Connect-IscsiTarget
 ms.reviewer:
 ms.assetid: 111BFAA7-332B-472F-A8F7-90DCF181AF1C
+ms.manager: dansimp
 ---
 
 # Connect-IscsiTarget

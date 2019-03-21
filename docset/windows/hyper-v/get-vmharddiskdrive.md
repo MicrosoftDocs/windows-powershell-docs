@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMHardDiskDrive
 ms.reviewer:
 ms.assetid: 62372650-2974-4050-A470-50EA1E8FA623
+ms.manager: dansimp
 ---
 
 # Get-VMHardDiskDrive

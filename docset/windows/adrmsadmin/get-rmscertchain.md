@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RmsCertChain
 ms.reviewer:
 ms.assetid: A62ECA60-C9C0-4A12-B621-23A5CEE60F96
+ms.manager: dansimp
 ---
 
 # Get-RmsCertChain

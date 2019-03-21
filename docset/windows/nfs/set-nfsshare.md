@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NfsShare
 ms.reviewer:
 ms.assetid: A695E090-A2C0-40D0-8DDB-FAEF254FB1F9
+ms.manager: dansimp
 ---
 
 # Set-NfsShare

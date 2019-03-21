@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FC0DA9FC-5947-4F5E-9138-683D28E55361
+ms.manager: dansimp
 ---
 
 # Set-NetAdapterVmq

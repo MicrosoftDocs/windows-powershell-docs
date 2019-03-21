@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IpamAddress
 ms.reviewer:
 ms.assetid: 03CCA380-FFC0-4F4F-9B28-05089DC754AB
+ms.manager: dansimp
 ---
 
 # Set-IpamAddress

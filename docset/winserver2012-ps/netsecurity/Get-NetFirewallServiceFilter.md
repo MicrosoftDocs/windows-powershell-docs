@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BC5E5AED-6B66-4E0A-921A-7E831954F54B
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallServiceFilter

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv4MulticastLease
 ms.reviewer:
 ms.assetid: 52C0346B-7A4A-4557-9F3F-E7AB5475F436
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4MulticastLease

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Mount-WindowsImage
 ms.reviewer:
 ms.assetid: D58BC86F-AAC1-4BCF-A1B7-13152A50ECB4
+ms.manager: dansimp
 ---
 
 # Mount-WindowsImage

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADReplicationSubnet
 ms.reviewer:
 ms.assetid: 0AA5D022-51D8-45C4-A5C5-112973CD11D2
+ms.manager: dansimp
 ---
 
 # Set-ADReplicationSubnet

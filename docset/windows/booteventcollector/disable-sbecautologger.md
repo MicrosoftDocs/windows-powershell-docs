@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-SbecAutologger
 ms.reviewer:
 ms.assetid: D53AB19A-6979-4572-A737-007C54DEC85C
+ms.manager: dansimp
 ---
 
 # Disable-SbecAutologger

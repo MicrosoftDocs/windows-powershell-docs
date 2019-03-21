@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-GPRegistryValue
 ms.reviewer:
 ms.assetid: 5E59DF66-59BF-4CBA-BBCF-9D1C7AEED414
+ms.manager: dansimp
 ---
 
 # Set-GPRegistryValue

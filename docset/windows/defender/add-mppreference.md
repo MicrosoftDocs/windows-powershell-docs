@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-MpPreference
 ms.reviewer:
 ms.assetid: 0E8BFEF8-4BCB-4BC1-9210-6E77C1153A86
+ms.manager: dansimp
 ---
 
 # Add-MpPreference

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-StoragePool
 ms.reviewer:
 ms.assetid: 5B3F6CD1-E97E-4AB6-921C-3FE55C0821EB
+ms.manager: dansimp
 ---
 
 # Set-StoragePool

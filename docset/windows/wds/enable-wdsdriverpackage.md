@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WdsDriverPackage
 ms.reviewer:
 ms.assetid: 8B8B9CBC-9FBF-43EC-8CE7-31BFA34DCAB2
+ms.manager: dansimp
 ---
 
 # Enable-WdsDriverPackage

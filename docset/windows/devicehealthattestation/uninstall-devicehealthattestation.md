@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Uninstall-DeviceHealthAttestation
 ms.reviewer:
 ms.assetid: D84D2048-B990-47B6-B237-51084039D42A
+ms.manager: dansimp
 ---
 
 # Uninstall-DeviceHealthAttestation

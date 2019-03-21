@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9DEE7DCE-FB0D-4F98-A390-EA66BC151976
+ms.manager: dansimp
 ---
 
 # Get-WBBackupVolumeBrowsePath

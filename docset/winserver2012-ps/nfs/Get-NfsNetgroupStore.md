@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7550B515-D26D-49CE-A09A-579817C138C7
+ms.manager: dansimp
 ---
 
 # Get-NfsNetgroupStore

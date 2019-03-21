@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-BitsTransfer
 ms.reviewer:
 ms.assetid: C83A2E91-B3CD-4E4F-8276-2B95769E3443
+ms.manager: dansimp
 ---
 
 # Resume-BitsTransfer

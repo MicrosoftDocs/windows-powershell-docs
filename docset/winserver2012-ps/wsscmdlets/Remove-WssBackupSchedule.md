@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E37DC420-8460-405A-8F7C-F34D49F8C3E4
+ms.manager: dansimp
 ---
 
 # Remove-WssBackupSchedule

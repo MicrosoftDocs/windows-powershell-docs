@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerForwarder
 ms.reviewer:
 ms.assetid: 84E01CE5-F695-4982-8131-F21FC8ACCD7F
+ms.manager: dansimp
 ---
 
 # Set-DnsServerForwarder

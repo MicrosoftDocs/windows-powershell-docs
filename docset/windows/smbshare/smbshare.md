@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: D4DCA601-168D-4943-9778-1975F870BAA9
+ms.manager: dansimp
 ---
 
 # SmbShare Module

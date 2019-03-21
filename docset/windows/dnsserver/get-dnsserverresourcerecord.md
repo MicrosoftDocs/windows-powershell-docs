@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerResourceRecord
 ms.reviewer:
 ms.assetid: 3A5072BD-150F-4CA3-AB96-6EF007B4F49E
+ms.manager: dansimp
 ---
 
 # Get-DnsServerResourceRecord

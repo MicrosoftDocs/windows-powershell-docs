@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6Lease
 ms.reviewer:
 ms.assetid: C4C02532-1232-4C10-A56B-01E0CC6F6FA0
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Lease

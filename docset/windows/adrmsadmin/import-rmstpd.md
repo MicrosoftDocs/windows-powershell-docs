@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-RmsTPD
 ms.reviewer:
 ms.assetid: 40463418-5B82-42E6-86E0-396B31E01EA8
+ms.manager: dansimp
 ---
 
 # Import-RmsTPD

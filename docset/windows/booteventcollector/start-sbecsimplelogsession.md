@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-SbecSimpleLogSession
 ms.reviewer:
 ms.assetid: 959432EF-07FF-489E-AA76-C8BF329E421E
+ms.manager: dansimp
 ---
 
 # Start-SbecSimpleLogSession

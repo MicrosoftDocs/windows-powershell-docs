@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetNatTransitionMonitoring
 ms.reviewer:
 ms.assetid: 54A4B6A4-24FE-4CA9-8F57-CB50B11FAD67
+ms.manager: dansimp
 ---
 
 # Get-NetNatTransitionMonitoring

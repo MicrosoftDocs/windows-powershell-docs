@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Send-AppvClientReport
 ms.reviewer:
 ms.assetid: BD6C1D47-24C2-453C-859F-9FA27B5AB241
+ms.manager: dansimp
 ---
 
 # Send-AppvClientReport

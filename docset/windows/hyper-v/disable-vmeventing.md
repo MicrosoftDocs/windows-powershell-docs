@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-VMEventing
 ms.reviewer:
 ms.assetid: C9A49BDA-8BA0-41AC-A479-E7469E9DE0F1
+ms.manager: dansimp
 ---
 
 # Disable-VMEventing

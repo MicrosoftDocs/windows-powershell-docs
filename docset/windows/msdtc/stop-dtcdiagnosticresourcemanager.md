@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-DtcDiagnosticResourceManager
 ms.reviewer:
 ms.assetid: 5ACAD949-DA35-4E3B-97AF-3AA9FB44A307
+ms.manager: dansimp
 ---
 
 # Stop-DtcDiagnosticResourceManager

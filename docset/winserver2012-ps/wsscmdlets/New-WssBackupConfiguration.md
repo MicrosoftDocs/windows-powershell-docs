@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7A6570E7-2AB6-4F51-BE12-276FE5C80E19
+ms.manager: dansimp
 ---
 
 # New-WssBackupConfiguration

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-NetIPsecPhase2AuthSet
 ms.reviewer:
 ms.assetid: FCBED665-C210-423C-BF7B-C38E3EF47725
+ms.manager: dansimp
 ---
 
 # Copy-NetIPsecPhase2AuthSet

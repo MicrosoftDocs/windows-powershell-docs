@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-Net6to4Configuration
 ms.reviewer:
 ms.assetid: 24F71EF7-BA39-4434-A1EE-E43FFFCB1319
+ms.manager: dansimp
 ---
 
 # Reset-Net6to4Configuration

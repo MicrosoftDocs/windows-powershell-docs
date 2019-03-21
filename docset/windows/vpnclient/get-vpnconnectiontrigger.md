@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VpnConnectionTrigger
 ms.reviewer:
 ms.assetid: 3892FC6B-6E54-4626-BD02-910A766FE9E0
+ms.manager: dansimp
 ---
 
 # Get-VpnConnectionTrigger

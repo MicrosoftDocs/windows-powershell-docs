@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: DF62E18F-255B-4AD9-A6B8-05DA00853242
+ms.manager: dansimp
 ---
 
 # Storage Module

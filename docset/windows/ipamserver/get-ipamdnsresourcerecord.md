@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamDnsResourceRecord
 ms.reviewer:
 ms.assetid: 333A1C9A-B840-48D1-AB1C-44125482216C
+ms.manager: dansimp
 ---
 
 # Get-IpamDnsResourceRecord

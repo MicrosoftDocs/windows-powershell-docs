@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-SmbMapping
 ms.reviewer:
 ms.assetid: 9980E6FF-D0C2-449A-8143-DA1D7700C770
+ms.manager: dansimp
 ---
 
 # Remove-SmbMapping

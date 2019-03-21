@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Filter
 ms.reviewer:
 ms.assetid: 6FE59188-0DB2-4E87-B14B-C17385B9535E
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Filter

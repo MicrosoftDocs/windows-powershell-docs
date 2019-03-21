@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-MpScan
 ms.reviewer:
 ms.assetid: E7E4F606-E420-424C-B080-30D08E5A9845
+ms.manager: dansimp
 ---
 
 # Start-MpScan

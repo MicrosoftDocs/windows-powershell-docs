@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsrPropagationTestFile
 ms.reviewer:
 ms.assetid: 1FF7DE4D-08D3-4CC7-88FC-308AE8D7B449
+ms.manager: dansimp
 ---
 
 # Remove-DfsrPropagationTestFile

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-BgpRouter
 ms.reviewer:
 ms.assetid: 1C5A412E-984C-4930-BFEA-80BB65D46E0E
+ms.manager: dansimp
 ---
 
 # Set-BgpRouter

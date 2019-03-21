@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-ClusterVirtualMachineConfiguration
 ms.reviewer:
 ms.assetid: CC4C1119-2255-4E52-85B0-DDF5270C2180
+ms.manager: dansimp
 ---
 
 # Update-ClusterVirtualMachineConfiguration

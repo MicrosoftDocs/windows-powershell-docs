@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PhysicalExtentAssociation
 ms.reviewer:
 ms.assetid: 7E63F10C-7D79-46AC-B1A8-41D71D9D43E1
+ms.manager: dansimp
 ---
 
 # Get-PhysicalExtentAssociation

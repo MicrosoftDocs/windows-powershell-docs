@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-InitiatorPort
 ms.reviewer:
 ms.assetid: 580A19CF-26D1-45BB-AD34-A6265E2EFACF
+ms.manager: dansimp
 ---
 
 # Get-InitiatorPort

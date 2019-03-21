@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPAddress
 ms.reviewer:
 ms.assetid: 8BA1C866-6A0C-4569-B922-27BB5CDCA0CF
+ms.manager: dansimp
 ---
 
 # Get-NetIPAddress

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unblock-Tpm
 ms.reviewer:
 ms.assetid: 36DA2C6D-E2FC-416B-9C5D-F91BCE059CA3
+ms.manager: dansimp
 ---
 
 # Unblock-Tpm

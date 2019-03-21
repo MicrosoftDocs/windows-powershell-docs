@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Hide-VirtualDisk
 ms.reviewer:
 ms.assetid: 11E13130-4BD0-4991-BCC9-1B10D1B69D84
+ms.manager: dansimp
 ---
 
 # Hide-VirtualDisk

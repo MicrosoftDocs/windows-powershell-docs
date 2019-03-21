@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 52420F30-6CDF-4123-A5F6-DA377A7C386A
+ms.manager: dansimp
 ---
 
 # MMAgent Module

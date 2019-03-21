@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E7DD5811-3C65-4CE4-AECC-E5D6B3324D24
+ms.manager: dansimp
 ---
 
 # Measure-WssFolder

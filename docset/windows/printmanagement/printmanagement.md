@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 8C40FD13-5AE8-4410-850F-839841C1B9DB
+ms.manager: dansimp
 ---
 
 # PrintManagement Module

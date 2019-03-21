@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Save-WindowsImage
 ms.reviewer:
 ms.assetid: 65DA4CC2-7DCB-4AA4-9132-8365B8E628BE
+ms.manager: dansimp
 ---
 
 # Save-WindowsImage

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 685B66B6-4381-407C-A033-BFCF00CB18CA
+ms.manager: dansimp
 ---
 
 # Add-VpnS2SInterface

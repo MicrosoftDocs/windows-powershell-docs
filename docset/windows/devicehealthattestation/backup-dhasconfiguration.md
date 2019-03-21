@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Backup-DHASConfiguration
 ms.reviewer:
 ms.assetid: EE22DE86-88C2-4B94-8A49-27CDC9A91555
+ms.manager: dansimp
 ---
 
 # Backup-DHASConfiguration

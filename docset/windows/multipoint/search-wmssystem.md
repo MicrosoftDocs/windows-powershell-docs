@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Search-WmsSystem
 ms.reviewer:
 ms.assetid: 8954DC2F-5DEF-4B55-A9E7-9BBCD01D5435
+ms.manager: dansimp
 ---
 
 # Search-WmsSystem

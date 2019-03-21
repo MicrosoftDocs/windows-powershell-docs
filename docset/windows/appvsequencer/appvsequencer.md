@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: DFDD1425-A91A-4F29-99D9-B267ABCAB242
+ms.manager: dansimp
 ---
 
 # AppvSequencer Module

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerBackendAddressPool
 ms.reviewer:
 ms.assetid: 30F10EFE-4F83-4C28-AAF3-751BC2D5D90F
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLoadBalancerBackendAddressPool

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-PcsvDeviceLog
 ms.reviewer:
 ms.assetid: EE657C58-0C8D-4DA0-8394-2132E9EAEF3F
+ms.manager: dansimp
 ---
 
 # Clear-PcsvDeviceLog

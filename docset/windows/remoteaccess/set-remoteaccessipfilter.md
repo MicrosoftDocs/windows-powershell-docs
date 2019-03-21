@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RemoteAccessIpFilter
 ms.reviewer:
 ms.assetid: 8EAA8FAB-229B-4F3F-8E38-44B4D5566379
+ms.manager: dansimp
 ---
 
 # Set-RemoteAccessIpFilter

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-Appv
 ms.reviewer:
 ms.assetid: 6BF54948-0212-42EC-8704-754AD93EB2B7
+ms.manager: dansimp
 ---
 
 # Enable-Appv

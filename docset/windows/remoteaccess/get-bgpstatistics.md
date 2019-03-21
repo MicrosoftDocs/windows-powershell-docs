@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-BgpStatistics
 ms.reviewer:
 ms.assetid: FBB7D88E-F379-4884-BFEE-653C8C61D4FA
+ms.manager: dansimp
 ---
 
 # Get-BgpStatistics

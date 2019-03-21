@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-WindowsImage
 ms.reviewer:
 ms.assetid: 75607231-B3B6-4BE8-A7E2-40AADAE54C94
+ms.manager: dansimp
 ---
 
 # Export-WindowsImage

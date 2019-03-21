@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-MsmqCertificate
 ms.reviewer:
 ms.assetid: 43423EEE-4176-4736-A3B6-874A31BA0D15
+ms.manager: dansimp
 ---
 
 # Remove-MsmqCertificate

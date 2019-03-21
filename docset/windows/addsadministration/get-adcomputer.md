@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADComputer
 ms.reviewer:
 ms.assetid: F3EECD4C-C26D-4423-B699-6F369AB8FFF6
+ms.manager: dansimp
 ---
 
 # Get-ADComputer

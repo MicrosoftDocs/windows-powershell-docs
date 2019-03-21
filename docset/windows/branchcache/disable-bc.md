@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-BC
 ms.reviewer:
 ms.assetid: 6B3BBE29-2BE9-45B8-97E0-05E10C29F5ED
+ms.manager: dansimp
 ---
 
 # Disable-BC

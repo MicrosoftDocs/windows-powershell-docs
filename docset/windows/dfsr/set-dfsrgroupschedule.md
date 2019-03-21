@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DfsrGroupSchedule
 ms.reviewer:
 ms.assetid: 2A1E565B-2090-4713-83E2-70F3F98C7055
+ms.manager: dansimp
 ---
 
 # Set-DfsrGroupSchedule

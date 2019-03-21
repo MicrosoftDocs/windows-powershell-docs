@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetVirtualizationGlobal
 ms.reviewer:
 ms.assetid: 887FB74B-DC18-4183-A3E1-72E41F61072D
+ms.manager: dansimp
 ---
 
 # Set-NetVirtualizationGlobal

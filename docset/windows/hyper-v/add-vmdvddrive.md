@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VMDvdDrive
 ms.reviewer:
 ms.assetid: CD561A26-E7EA-4B6D-A458-2404CB6B7C91
+ms.manager: dansimp
 ---
 
 # Add-VMDvdDrive

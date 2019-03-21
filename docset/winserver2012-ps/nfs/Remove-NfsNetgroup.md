@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6693227A-DACA-4F56-B8E1-3FE684DB06AC
+ms.manager: dansimp
 ---
 
 # Remove-NfsNetgroup

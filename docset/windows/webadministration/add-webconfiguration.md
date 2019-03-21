@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WebConfiguration
 ms.reviewer:
 ms.assetid: 8C6EE72C-E8B3-43DB-B1FA-EE6675086980
+ms.manager: dansimp
 ---
 
 # Add-WebConfiguration

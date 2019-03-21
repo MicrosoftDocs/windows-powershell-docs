@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMFibreChannelHba
 ms.reviewer:
 ms.assetid: 3C7580C6-2224-4AE1-BF66-9906999C03B1
+ms.manager: dansimp
 ---
 
 # Set-VMFibreChannelHba

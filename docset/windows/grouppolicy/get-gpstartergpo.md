@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-GPStarterGPO
 ms.reviewer:
 ms.assetid: 47397B2B-49DA-4329-A2AE-6AB87CC1EE1E
+ms.manager: dansimp
 ---
 
 # Get-GPStarterGPO

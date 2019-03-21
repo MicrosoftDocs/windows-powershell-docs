@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-Partition
 ms.reviewer:
 ms.assetid: EA0F915C-DBBA-48FA-8138-BC5C05BFBBC2
+ms.manager: dansimp
 ---
 
 # Set-Partition

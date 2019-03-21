@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerVirtualServer
 ms.reviewer:
 ms.assetid: 31841723-2544-4573-9266-34AEB16D4021
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerVirtualServer

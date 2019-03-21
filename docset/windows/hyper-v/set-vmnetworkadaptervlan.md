@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMNetworkAdapterVlan
 ms.reviewer:
 ms.assetid: 25A465A6-E001-46EC-8184-8AA8938DDAA0
+ms.manager: dansimp
 ---
 
 # Set-VMNetworkAdapterVlan

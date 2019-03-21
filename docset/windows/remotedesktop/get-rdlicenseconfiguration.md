@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RDLicenseConfiguration
 ms.reviewer:
 ms.assetid: E77214D7-17EF-4BA4-B4EE-4CC7E741C4BE
+ms.manager: dansimp
 ---
 
 # Get-RDLicenseConfiguration

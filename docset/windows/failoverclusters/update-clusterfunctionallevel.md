@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-ClusterFunctionalLevel
 ms.reviewer:
 ms.assetid: F2BEC6C1-7DCE-44B4-9E3D-16D5983A4F12
+ms.manager: dansimp
 ---
 
 # Update-ClusterFunctionalLevel

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 523F6F80-A2A1-4934-886B-140E126792D4
+ms.manager: dansimp
 ---
 
 # Remove-NfsClientgroup

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-WebCentralCertProvider
 ms.reviewer:
 ms.assetid: CA1E32A8-6037-4828-984C-0C3A73ED4F3B
+ms.manager: dansimp
 ---
 
 # Clear-WebCentralCertProvider

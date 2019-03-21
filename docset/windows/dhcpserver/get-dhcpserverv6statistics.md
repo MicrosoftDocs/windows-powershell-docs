@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6Statistics
 ms.reviewer:
 ms.assetid: A85AAD1E-A992-46B1-B836-9B9E3FA52F14
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Statistics

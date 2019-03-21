@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NfsMountedClient
 ms.reviewer:
 ms.assetid: E1F71CF4-D149-4CA2-B8A6-BFF510B546D1
+ms.manager: dansimp
 ---
 
 # Get-NfsMountedClient

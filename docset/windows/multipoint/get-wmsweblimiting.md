@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsWebLimiting
 ms.reviewer:
 ms.assetid: D7BCF686-38C9-47B0-B108-BEFAA9678E3B
+ms.manager: dansimp
 ---
 
 # Get-WmsWebLimiting

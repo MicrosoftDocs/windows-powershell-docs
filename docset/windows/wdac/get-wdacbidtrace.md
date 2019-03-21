@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WdacBidTrace
 ms.reviewer:
 ms.assetid: 4814CE74-7218-4396-935E-25F3C483A081
+ms.manager: dansimp
 ---
 
 # Get-WdacBidTrace

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A4087758-148D-4404-9414-987812E52991
+ms.manager: dansimp
 ---
 
 # Repair-VirtualDisk

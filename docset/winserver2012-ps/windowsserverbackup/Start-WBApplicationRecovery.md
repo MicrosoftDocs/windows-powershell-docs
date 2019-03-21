@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A103C75B-F0D3-4E9C-978A-D1897460FC01
+ms.manager: dansimp
 ---
 
 # Start-WBApplicationRecovery

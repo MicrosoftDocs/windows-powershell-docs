@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerResourceRecordPtr
 ms.reviewer:
 ms.assetid: B75110F1-585A-4A07-BA06-2894D861F311
+ms.manager: dansimp
 ---
 
 # Add-DnsServerResourceRecordPtr

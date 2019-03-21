@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-VM
 ms.reviewer:
 ms.assetid: 280A95A4-B3D8-4BB7-BE45-A66BE7905688
+ms.manager: dansimp
 ---
 
 # Rename-VM

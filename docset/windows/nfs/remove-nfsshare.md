@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NfsShare
 ms.reviewer:
 ms.assetid: 0E41943E-B77B-4EE1-87C7-01DB5F81B8E0
+ms.manager: dansimp
 ---
 
 # Remove-NfsShare

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7C45BC61-6CEB-4F27-903D-837BCAC4709A
+ms.manager: dansimp
 ---
 
 # Set-NetFirewallAddressFilter

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 01DB4962-EAEA-40A9-A223-615E0A893728
+ms.manager: dansimp
 ---
 
 # Set-NetFirewallServiceFilter

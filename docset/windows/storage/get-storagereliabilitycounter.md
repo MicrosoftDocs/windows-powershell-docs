@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageReliabilityCounter
 ms.reviewer:
 ms.assetid: A2A63CBE-B973-469C-BC23-82A0E3763C7C
+ms.manager: dansimp
 ---
 
 # Get-StorageReliabilityCounter

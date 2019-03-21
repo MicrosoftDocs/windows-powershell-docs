@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WebGlobalModule
 ms.reviewer:
 ms.assetid: 5745A29B-5B07-4ACC-BD4D-D0DB0EF94C75
+ms.manager: dansimp
 ---
 
 # New-WebGlobalModule

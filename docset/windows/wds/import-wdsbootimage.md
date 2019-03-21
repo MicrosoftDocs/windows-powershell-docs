@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-WdsBootImage
 ms.reviewer:
 ms.assetid: E0C73A87-062B-477C-8020-76386400867C
+ms.manager: dansimp
 ---
 
 # Import-WdsBootImage

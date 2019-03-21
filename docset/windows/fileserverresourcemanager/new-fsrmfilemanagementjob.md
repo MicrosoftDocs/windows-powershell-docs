@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmFileManagementJob
 ms.reviewer:
 ms.assetid: CEFD566C-075D-4363-B341-B0D95FB35F09
+ms.manager: dansimp
 ---
 
 # New-FsrmFileManagementJob

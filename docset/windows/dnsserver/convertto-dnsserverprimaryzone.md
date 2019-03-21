@@ -16,6 +16,7 @@ schema: 2.0.0
 title: ConvertTo-DnsServerPrimaryZone
 ms.reviewer:
 ms.assetid: 06DEA79B-2082-4698-9E8E-7053DF252CF4
+ms.manager: dansimp
 ---
 
 # ConvertTo-DnsServerPrimaryZone

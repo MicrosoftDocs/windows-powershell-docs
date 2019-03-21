@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PrinterPort
 ms.reviewer:
 ms.assetid: B6173813-10C8-4649-B116-FC2AD2C63059
+ms.manager: dansimp
 ---
 
 # Get-PrinterPort

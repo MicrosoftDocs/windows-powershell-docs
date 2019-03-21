@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-StorageFileServer
 ms.reviewer:
 ms.assetid: C7426B47-EC5E-4419-9548-029678ADCE8C
+ms.manager: dansimp
 ---
 
 # Set-StorageFileServer

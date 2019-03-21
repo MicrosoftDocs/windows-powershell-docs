@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C9F83CE2-82E8-4492-9879-717128970A4A
+ms.manager: dansimp
 ---
 
 # Remove-WBBareMetalRecovery

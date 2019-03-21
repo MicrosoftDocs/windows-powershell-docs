@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-VMReplication
 ms.reviewer:
 ms.assetid: E9A22187-E371-4CCA-8EDC-506354BDCC74
+ms.manager: dansimp
 ---
 
 # Stop-VMReplication

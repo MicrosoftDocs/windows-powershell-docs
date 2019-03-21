@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-AssignedAccess
 ms.reviewer:
 ms.assetid: DDA49653-B37F-4CB6-90DC-B5B4BB9E6886
+ms.manager: dansimp
 ---
 
 # Clear-AssignedAccess

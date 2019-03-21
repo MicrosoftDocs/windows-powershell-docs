@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-StoragePool
 ms.reviewer:
 ms.assetid: CCE72FC8-4072-4E29-B317-E66990F23124
+ms.manager: dansimp
 ---
 
 # Update-StoragePool

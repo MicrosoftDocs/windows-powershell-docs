@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NlbClusterIpv6Address
 ms.reviewer:
 ms.assetid: 3A379E5D-C44B-44FF-A609-C6DF837AE844
+ms.manager: dansimp
 ---
 
 # New-NlbClusterIpv6Address

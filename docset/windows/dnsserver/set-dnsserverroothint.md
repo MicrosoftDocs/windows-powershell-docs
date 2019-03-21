@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerRootHint
 ms.reviewer:
 ms.assetid: 67E8F936-780C-426C-B4AA-C6387C2F8E02
+ms.manager: dansimp
 ---
 
 # Set-DnsServerRootHint

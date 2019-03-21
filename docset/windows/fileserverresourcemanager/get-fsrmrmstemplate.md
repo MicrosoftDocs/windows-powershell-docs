@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FsrmRmsTemplate
 ms.reviewer:
 ms.assetid: 919AEB8B-F74E-4D96-9EFE-DA1DB123BC5E
+ms.manager: dansimp
 ---
 
 # Get-FsrmRmsTemplate

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VpnConnection
 ms.reviewer:
 ms.assetid: 61959313-33E4-4933-9083-A8F7A079F057
+ms.manager: dansimp
 ---
 
 # Get-VpnConnection

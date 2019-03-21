@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Debug-NetworkControllerConfigurationState
 ms.reviewer:
 ms.assetid: 7C57F4E3-3DED-4CC7-AB85-D8308803D953
+ms.manager: dansimp
 ---
 
 # Debug-NetworkControllerConfigurationState

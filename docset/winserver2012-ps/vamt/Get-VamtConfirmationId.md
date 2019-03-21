@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BE17A551-4DE8-4660-826B-5E53C1503551
+ms.manager: dansimp
 ---
 
 # Get-VamtConfirmationId

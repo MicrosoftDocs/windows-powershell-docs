@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Uninstall-WindowsFeature
 ms.reviewer:
 ms.assetid: FF3743EB-D209-44B9-93EC-7118ABE14EDE
+ms.manager: dansimp
 ---
 
 # Uninstall-WindowsFeature

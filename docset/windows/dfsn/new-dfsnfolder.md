@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-DfsnFolder
 ms.reviewer:
 ms.assetid: A66E433F-6431-4DE3-8202-EAA9ACA21B1E
+ms.manager: dansimp
 ---
 
 # New-DfsnFolder

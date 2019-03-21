@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 1B4E2CDA-BA8A-47CE-8DA3-8D349D12DC38
+ms.manager: dansimp
 ---
 
 # MPIO Module

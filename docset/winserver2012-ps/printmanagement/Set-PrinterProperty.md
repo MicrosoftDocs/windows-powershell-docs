@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 28E76B8B-6F8F-4554-A8F7-B0375A1D8D9D
+ms.manager: dansimp
 ---
 
 # Set-PrinterProperty

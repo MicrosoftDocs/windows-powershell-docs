@@ -16,6 +16,7 @@ ms.topic: reference
 title: Set-RDCertificate
 ms.reviewer:
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
+ms.manager: dansimp
 ---
 
 # Set-RDCertificate

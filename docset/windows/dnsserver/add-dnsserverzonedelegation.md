@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerZoneDelegation
 ms.reviewer:
 ms.assetid: D232F81C-D5F8-48B3-9F16-F6FA321C874E
+ms.manager: dansimp
 ---
 
 # Add-DnsServerZoneDelegation

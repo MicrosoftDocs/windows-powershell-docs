@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageQoSFlow
 ms.reviewer:
 ms.assetid: 9B861C50-1E79-466D-BEE3-6171D44DD458
+ms.manager: dansimp
 ---
 
 # Get-StorageQoSFlow

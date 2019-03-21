@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6E7980F4-55A8-4013-8BE7-BB0A16F49DB9
+ms.manager: dansimp
 ---
 
 # Remove-VpnS2SInterface

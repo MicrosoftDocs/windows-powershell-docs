@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 68C7868F-B038-4DBC-8EC0-744F671B3BA7
+ms.manager: dansimp
 ---
 
 # NFS Module

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-GPO
 ms.reviewer:
 ms.assetid: DAFF749E-E1A0-47A2-B468-FDEA347F6335
+ms.manager: dansimp
 ---
 
 # Copy-GPO

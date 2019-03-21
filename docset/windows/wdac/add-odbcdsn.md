@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-OdbcDsn
 ms.reviewer:
 ms.assetid: 9666B815-41BC-4944-B19D-53DF84407B86
+ms.manager: dansimp
 ---
 
 # Add-OdbcDsn

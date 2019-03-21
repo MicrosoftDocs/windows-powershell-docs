@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AppLockerPolicy
 ms.reviewer:
 ms.assetid: EE3463D6-A81F-4C97-900B-E6C0F400D40F
+ms.manager: dansimp
 ---
 
 # Get-AppLockerPolicy

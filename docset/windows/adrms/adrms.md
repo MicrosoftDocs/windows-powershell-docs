@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 1CC7729F-B905-4461-A895-3E6A612953AA
+ms.manager: dansimp
 ---
 
 # ADRMS Module

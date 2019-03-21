@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageFirmwareInformation
 ms.reviewer:
 ms.assetid: 9E2D4518-CD9C-4795-8188-CB8965D245B8
+ms.manager: dansimp
 ---
 
 # Get-StorageFirmwareInformation

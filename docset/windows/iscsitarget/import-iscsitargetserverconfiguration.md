@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-IscsiTargetServerConfiguration
 ms.reviewer:
 ms.assetid: F7680658-A547-4087-AF94-D9250E48B524
+ms.manager: dansimp
 ---
 
 # Import-IscsiTargetServerConfiguration

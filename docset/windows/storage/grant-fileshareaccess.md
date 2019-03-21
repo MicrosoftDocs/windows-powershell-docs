@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Grant-FileShareAccess
 ms.reviewer:
 ms.assetid: 1C77845B-D09E-476A-AB8C-0D4875D2778E
+ms.manager: dansimp
 ---
 
 # Grant-FileShareAccess

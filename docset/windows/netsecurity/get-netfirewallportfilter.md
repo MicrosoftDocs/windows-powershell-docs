@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetFirewallPortFilter
 ms.reviewer:
 ms.assetid: CF33FD25-A3D5-4503-AF42-63C69DD048AD
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallPortFilter

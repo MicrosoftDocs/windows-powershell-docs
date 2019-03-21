@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PhysicalExtent
 ms.reviewer:
 ms.assetid: 65DD9798-9AF5-4E64-AA66-421AA98F8704
+ms.manager: dansimp
 ---
 
 # Get-PhysicalExtent

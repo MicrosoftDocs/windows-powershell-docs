@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-MpThreat
 ms.reviewer:
 ms.assetid: 75E415E7-5494-4FB1-B12B-B615231C4A20
+ms.manager: dansimp
 ---
 
 # Remove-MpThreat

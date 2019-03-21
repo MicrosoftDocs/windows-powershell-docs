@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-GPLink
 ms.reviewer:
 ms.assetid: CB973A78-814B-4094-A412-E2E52DA21A48
+ms.manager: dansimp
 ---
 
 # Set-GPLink

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMSecurity
 ms.reviewer:
 ms.assetid: CDC850F0-C4CC-4923-A24A-4020E867189D
+ms.manager: dansimp
 ---
 
 # Set-VMSecurity

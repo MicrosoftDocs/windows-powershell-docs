@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DhcpServerv6Binding
 ms.reviewer:
 ms.assetid: B91738B3-CB53-4159-8D31-3E75B06B29EE
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv6Binding

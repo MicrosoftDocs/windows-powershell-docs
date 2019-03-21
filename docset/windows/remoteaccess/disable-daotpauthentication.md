@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-DAOtpAuthentication
 ms.reviewer:
 ms.assetid: 4A46FE32-3ECC-4A7B-9EFB-37AF40AB4D3C
+ms.manager: dansimp
 ---
 
 # Disable-DAOtpAuthentication

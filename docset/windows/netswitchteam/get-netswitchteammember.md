@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetSwitchTeamMember
 ms.reviewer:
 ms.assetid: 4CB4D629-BE9A-43EA-B4CF-54E7F7595B40
+ms.manager: dansimp
 ---
 
 # Get-NetSwitchTeamMember

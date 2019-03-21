@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-PhysicalDiskIdentification
 ms.reviewer:
 ms.assetid: 0BA4723E-C564-429C-8F57-6B3A782F4813
+ms.manager: dansimp
 ---
 
 # Enable-PhysicalDiskIdentification

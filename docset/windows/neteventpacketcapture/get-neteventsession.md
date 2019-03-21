@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetEventSession
 ms.reviewer:
 ms.assetid: 21847568-6EC1-43F9-98C1-D0B5CC44CB53
+ms.manager: dansimp
 ---
 
 # Get-NetEventSession

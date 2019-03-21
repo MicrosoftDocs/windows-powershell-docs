@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-NfsMappedIdentity
 ms.reviewer:
 ms.assetid: 59A2473C-C672-403A-9DF1-A831247D6022
+ms.manager: dansimp
 ---
 
 # Test-NfsMappedIdentity

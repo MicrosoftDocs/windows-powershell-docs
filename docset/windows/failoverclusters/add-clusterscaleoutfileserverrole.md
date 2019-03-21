@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-ClusterScaleOutFileServerRole
 ms.reviewer:
 ms.assetid: 8DAC6B1C-D6DF-4F00-85F4-ABADA50E78A1
+ms.manager: dansimp
 ---
 
 # Add-ClusterScaleOutFileServerRole

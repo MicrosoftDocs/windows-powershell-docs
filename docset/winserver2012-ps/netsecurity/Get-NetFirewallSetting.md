@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 58853456-35AA-4F6C-84E2-461BB7F6374A
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallSetting

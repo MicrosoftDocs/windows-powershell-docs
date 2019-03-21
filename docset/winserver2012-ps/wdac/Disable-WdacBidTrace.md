@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EF357356-FDCE-4016-AB5E-34F841B412CB
+ms.manager: dansimp
 ---
 
 # Disable-WdacBidTrace

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerSecurityGroup
 ms.reviewer:
 ms.assetid: D04A1710-36A1-4732-AE1B-B698CAB5C065
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerSecurityGroup

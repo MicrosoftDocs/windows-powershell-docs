@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-NetIPHttpsConfiguration
 ms.reviewer:
 ms.assetid: 4B6EA375-5560-438C-B952-AD09AEE59068
+ms.manager: dansimp
 ---
 
 # Rename-NetIPHttpsConfiguration

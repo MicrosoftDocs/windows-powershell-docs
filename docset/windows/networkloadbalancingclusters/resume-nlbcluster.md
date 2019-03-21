@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-NlbCluster
 ms.reviewer:
 ms.assetid: B7C6FDBD-6F81-48C1-8057-FD769A7CEAB6
+ms.manager: dansimp
 ---
 
 # Resume-NlbCluster

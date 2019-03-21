@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-ClusterResource
 ms.reviewer:
 ms.assetid: 798F7B26-5EB8-4B1D-BBD2-DD529E722BD8
+ms.manager: dansimp
 ---
 
 # Suspend-ClusterResource

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 27E50FF5-3305-4BFE-86A2-733616E2BC7E
+ms.manager: dansimp
 ---
 
 # Get-StorageProvider

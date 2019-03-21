@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: 0CB8C66D-75E0-4EB9-9912-29BF2C4545C0
+ms.manager: dansimp
 ---
 
 # Repair-AppvClientConnectionGroup

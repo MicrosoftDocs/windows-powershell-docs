@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8073FF01-373F-4E3B-99AA-74A9143732E4
+ms.manager: dansimp
 ---
 
 # New-NetIPsecMainModeCryptoSet

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-IscsiServerTarget
 ms.reviewer:
 ms.assetid: D4BE91EF-0071-41C1-8452-AC2FFEB5B62E
+ms.manager: dansimp
 ---
 
 # New-IscsiServerTarget

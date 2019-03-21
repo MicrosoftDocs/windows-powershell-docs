@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WebConfigurationLock
 ms.reviewer:
 ms.assetid: 78A09E46-FAC1-4CBC-BE30-B17148D7CA14
+ms.manager: dansimp
 ---
 
 # Add-WebConfigurationLock

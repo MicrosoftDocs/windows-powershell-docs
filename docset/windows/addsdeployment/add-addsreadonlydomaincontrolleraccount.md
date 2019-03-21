@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-ADDSReadOnlyDomainControllerAccount
 ms.reviewer:
 ms.assetid: 3946BA04-13FB-482D-9824-89F8994FBF03
+ms.manager: dansimp
 ---
 
 # Add-ADDSReadOnlyDomainControllerAccount

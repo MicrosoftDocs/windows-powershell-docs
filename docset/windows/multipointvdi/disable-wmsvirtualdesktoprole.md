@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-WmsVirtualDesktopRole
 ms.reviewer:
 ms.assetid: 11A337BF-F411-4502-AF18-B2AC32880838
+ms.manager: dansimp
 ---
 
 # Disable-WmsVirtualDesktopRole

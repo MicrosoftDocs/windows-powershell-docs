@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: B75B2770-4CC0-424F-97F5-7B5C1078BB98
+ms.manager: dansimp
 ---
 
 # DFSR Module

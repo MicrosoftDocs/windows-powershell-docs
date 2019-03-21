@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8DE21BE5-0DFD-485D-B001-AB483A80DB8C
+ms.manager: dansimp
 ---
 
 # Remove-WssFolder

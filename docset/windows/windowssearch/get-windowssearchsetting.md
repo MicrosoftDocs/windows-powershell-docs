@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WindowsSearchSetting
 ms.reviewer:
 ms.assetid: 78952B7B-4460-4213-9194-A5D9A26AE654
+ms.manager: dansimp
 ---
 
 # Get-WindowsSearchSetting

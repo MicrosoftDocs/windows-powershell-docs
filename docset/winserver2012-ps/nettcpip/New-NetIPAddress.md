@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E7BA1290-44FA-49D6-900F-2198B0564ECB
+ms.manager: dansimp
 ---
 
 # New-NetIPAddress

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disconnect-NfsSession
 ms.reviewer:
 ms.assetid: 68FBCC1F-6623-48AF-BF3A-BCB86311EEF1
+ms.manager: dansimp
 ---
 
 # Disconnect-NfsSession

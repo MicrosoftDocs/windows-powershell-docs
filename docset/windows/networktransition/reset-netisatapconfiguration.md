@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Reset-NetIsatapConfiguration
 ms.reviewer:
 ms.assetid: E3DD318C-D385-403B-B029-E65EEB275579
+ms.manager: dansimp
 ---
 
 # Reset-NetIsatapConfiguration

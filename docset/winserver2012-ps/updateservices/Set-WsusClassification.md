@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6207A305-EFCA-40EE-B997-2A939DD9BE7A
+ms.manager: dansimp
 ---
 
 # Set-WsusClassification

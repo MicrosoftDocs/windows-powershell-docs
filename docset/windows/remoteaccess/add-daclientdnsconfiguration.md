@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DAClientDnsConfiguration
 ms.reviewer:
 ms.assetid: F087B662-BC9C-4772-8648-9B49FD3C9C21
+ms.manager: dansimp
 ---
 
 # Add-DAClientDnsConfiguration

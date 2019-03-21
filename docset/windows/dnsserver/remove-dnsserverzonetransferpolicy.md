@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DnsServerZoneTransferPolicy
 ms.reviewer:
 ms.assetid: A7927BB4-228E-4966-A990-CB62CB0A9B12
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerZoneTransferPolicy

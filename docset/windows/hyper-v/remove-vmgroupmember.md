@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMGroupMember
 ms.reviewer:
 ms.assetid: CB20A97B-F80E-4E34-94A2-B25F1CC253CD
+ms.manager: dansimp
 ---
 
 # Remove-VMGroupMember

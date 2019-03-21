@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Convert-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 506C14DF-DD28-4EEE-AB81-8594777E12B9
+ms.manager: dansimp
 ---
 
 # Convert-IscsiVirtualDisk

@@ -16,6 +16,7 @@ schema: 2.0.0
 ms.reviewer:
 title: Restore-CARoleService
 ms.assetid: 6AB4E278-DA57-44BD-AC5E-6E0BECE6A574
+ms.manager: dansimp
 ---
 
 # Restore-CARoleService

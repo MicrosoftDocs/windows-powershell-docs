@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerOutboundNatRule
 ms.reviewer:
 ms.assetid: BA8FBDD8-640F-47F0-A7A1-8FEE99BCBF1F
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLoadBalancerOutboundNatRule

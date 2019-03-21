@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Split-WindowsImage
 ms.reviewer:
 ms.assetid: 7000153A-08BA-4781-B9BE-2CD9EAC6FE19
+ms.manager: dansimp
 ---
 
 # Split-WindowsImage

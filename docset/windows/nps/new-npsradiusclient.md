@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NpsRadiusClient
 ms.reviewer:
 ms.assetid: 1BE74D0B-12D7-4E3C-99B3-F0F3764F658F
+ms.manager: dansimp
 ---
 
 # New-NpsRadiusClient

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-GPO
 ms.reviewer:
 ms.assetid: D8EF1A25-FEC1-48C5-882E-48DBE777698F
+ms.manager: dansimp
 ---
 
 # Rename-GPO

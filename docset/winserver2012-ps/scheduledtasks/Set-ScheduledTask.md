@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7426C09E-EA80-4C42-8F3A-0DEBB5C2B655
+ms.manager: dansimp
 ---
 
 # Set-ScheduledTask

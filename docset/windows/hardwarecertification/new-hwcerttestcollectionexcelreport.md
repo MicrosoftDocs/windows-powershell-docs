@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-HwCertTestCollectionExcelReport
 ms.reviewer:
 ms.assetid: 97ED6030-8FE2-49A3-998B-4F1E82910712
+ms.manager: dansimp
 ---
 
 # New-HwCertTestCollectionExcelReport

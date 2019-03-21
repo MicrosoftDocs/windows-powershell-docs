@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-StorageFileServer
 ms.reviewer:
 ms.assetid: 9611DF77-35A9-42BB-8711-166967EF26C5
+ms.manager: dansimp
 ---
 
 # New-StorageFileServer

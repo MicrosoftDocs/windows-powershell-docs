@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Expand-DedupFile
 ms.reviewer:
 ms.assetid: 9B4B3EAB-DDC6-45C4-B183-8AEF0D07260E
+ms.manager: dansimp
 ---
 
 # Expand-DedupFile

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Split-WmsStation
 ms.reviewer:
 ms.assetid: 8943916B-321A-404E-B004-130EAD0FB89F
+ms.manager: dansimp
 ---
 
 # Split-WmsStation

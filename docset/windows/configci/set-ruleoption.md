@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-RuleOption
 ms.reviewer:
 ms.assetid: 621F2DC2-6173-4487-A176-FE19EF1C717F
+ms.manager: dansimp
 ---
 
 # Set-RuleOption

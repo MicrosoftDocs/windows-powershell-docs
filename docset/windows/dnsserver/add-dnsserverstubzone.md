@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerStubZone
 ms.reviewer:
 ms.assetid: 91911E6C-6CEF-4B83-8712-E9F551B652F6
+ms.manager: dansimp
 ---
 
 # Add-DnsServerStubZone

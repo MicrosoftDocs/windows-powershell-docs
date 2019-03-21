@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 26FEDD30-5883-40FF-9383-082E38113C67
+ms.manager: dansimp
 ---
 
 # Remove-WssComputerAccess

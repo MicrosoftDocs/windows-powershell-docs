@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DAClient
 ms.reviewer:
 ms.assetid: E8A3CC4E-45FD-49F6-A79B-D1DF25CB8B05
+ms.manager: dansimp
 ---
 
 # Add-DAClient

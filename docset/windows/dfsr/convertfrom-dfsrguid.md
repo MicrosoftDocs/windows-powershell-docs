@@ -16,6 +16,7 @@ schema: 2.0.0
 title: ConvertFrom-DfsrGuid
 ms.reviewer:
 ms.assetid: A33AC53F-2662-478F-9F40-7306FC6980E4
+ms.manager: dansimp
 ---
 
 # ConvertFrom-DfsrGuid

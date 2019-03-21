@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Send-MsmqQueue
 ms.reviewer:
 ms.assetid: 2E58878E-A50D-4CB5-8F94-522BD77EBBC3
+ms.manager: dansimp
 ---
 
 # Send-MsmqQueue

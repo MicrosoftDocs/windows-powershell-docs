@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-ClusterResource
 ms.reviewer:
 ms.assetid: 18DB4B43-DD14-431D-93E4-27AF88CB1780
+ms.manager: dansimp
 ---
 
 # Start-ClusterResource

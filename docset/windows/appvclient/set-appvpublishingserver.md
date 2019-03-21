@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-AppvPublishingServer
 ms.reviewer:
 ms.assetid: 5DFD6641-68E8-466A-94F5-B0BA9B5E08A8
+ms.manager: dansimp
 ---
 
 # Set-AppvPublishingServer

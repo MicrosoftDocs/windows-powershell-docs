@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IscsiServerTarget
 ms.reviewer:
 ms.assetid: 957B9B1F-D7E2-4FDE-8F7D-25FC27293F6A
+ms.manager: dansimp
 ---
 
 # Set-IscsiServerTarget

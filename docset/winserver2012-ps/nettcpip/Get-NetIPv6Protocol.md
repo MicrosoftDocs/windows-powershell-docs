@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2CE776E1-DC7B-4030-AE84-07D8BB97AFFD
+ms.manager: dansimp
 ---
 
 # Get-NetIPv6Protocol

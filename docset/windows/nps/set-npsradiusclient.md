@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NpsRadiusClient
 ms.reviewer:
 ms.assetid: 7F1A33E9-8C0A-4A20-9A13-C6A7AF157236
+ms.manager: dansimp
 ---
 
 # Set-NpsRadiusClient

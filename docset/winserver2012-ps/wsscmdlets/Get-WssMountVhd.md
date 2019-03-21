@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 07D67763-DB64-47D6-ADA2-BADD3714A4F8
+ms.manager: dansimp
 ---
 
 # Get-WssMountVhd

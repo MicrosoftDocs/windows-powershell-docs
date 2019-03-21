@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-WdsInstallImage
 ms.reviewer:
 ms.assetid: 600994B2-F6D9-42AF-9691-0ED76208FF5C
+ms.manager: dansimp
 ---
 
 # Copy-WdsInstallImage

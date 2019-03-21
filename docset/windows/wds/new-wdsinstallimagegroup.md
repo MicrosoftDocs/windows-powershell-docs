@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WdsInstallImageGroup
 ms.reviewer:
 ms.assetid: FFCF19C4-2450-4821-86AD-D52170D7D1B2
+ms.manager: dansimp
 ---
 
 # New-WdsInstallImageGroup

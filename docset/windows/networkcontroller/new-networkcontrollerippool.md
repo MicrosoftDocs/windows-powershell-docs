@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerIpPool
 ms.reviewer:
 ms.assetid: 7EBEDFF6-76A3-4882-B37D-06D7BFC078B2
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerIpPool

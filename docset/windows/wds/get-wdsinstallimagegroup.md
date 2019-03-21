@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WdsInstallImageGroup
 ms.reviewer:
 ms.assetid: 338E586F-0F15-47C7-B344-1C0C2481965F
+ms.manager: dansimp
 ---
 
 # Get-WdsInstallImageGroup

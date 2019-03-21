@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DiskImage
 ms.reviewer:
 ms.assetid: 70223CAA-40F9-44B3-B0C4-A0CA2CEC7B61
+ms.manager: dansimp
 ---
 
 # Get-DiskImage

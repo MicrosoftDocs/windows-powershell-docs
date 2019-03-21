@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerRouteTable
 ms.reviewer:
 ms.assetid: 585FF5EF-10B8-4F53-826D-8DCFA51695DF
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerRouteTable

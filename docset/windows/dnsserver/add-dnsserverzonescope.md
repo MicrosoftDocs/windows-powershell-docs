@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DnsServerZoneScope
 ms.reviewer:
 ms.assetid: B0EF9CBA-CFC4-4CEA-A022-AB3B7BED8191
+ms.manager: dansimp
 ---
 
 # Add-DnsServerZoneScope

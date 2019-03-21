@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerForwarder
 ms.reviewer:
 ms.assetid: 7810E61D-C125-4D31-8FAD-86416784AEEF
+ms.manager: dansimp
 ---
 
 # Get-DnsServerForwarder

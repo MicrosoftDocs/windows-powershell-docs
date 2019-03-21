@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CD840706-D3BD-4FC3-B5C6-6EB10E860CD8
+ms.manager: dansimp
 ---
 
 # Add-NlbClusterNodeDip

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-RDPersonalSessionDesktopAssignment
 ms.reviewer:
 ms.assetid: 6C68F4A4-4348-494A-82D8-94DC1A191011
+ms.manager: dansimp
 ---
 
 # Export-RDPersonalSessionDesktopAssignment

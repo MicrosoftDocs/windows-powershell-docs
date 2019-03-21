@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-MpPreference
 ms.reviewer:
 ms.assetid: 4ED9ED1F-0769-41DE-8D06-20AAD8F09B3E
+ms.manager: dansimp
 ---
 
 # Remove-MpPreference

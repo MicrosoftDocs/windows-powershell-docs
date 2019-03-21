@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D2D0AA6A-7B24-4D1D-BEE2-ED13B039B2B2
+ms.manager: dansimp
 ---
 
 # Reset-DtcLog

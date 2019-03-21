@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Uninstall-RmsMfgSupport
 ms.reviewer:
 ms.assetid: 559C4856-F2A2-411C-A41F-B1B079DA1486
+ms.manager: dansimp
 ---
 
 # Uninstall-RmsMfgSupport

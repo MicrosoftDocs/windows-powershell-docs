@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WBVirtualMachine
 ms.reviewer:
 ms.assetid: 2543A3EF-3DC4-4783-80A4-B960FAF3DFA6
+ms.manager: dansimp
 ---
 
 # Remove-WBVirtualMachine

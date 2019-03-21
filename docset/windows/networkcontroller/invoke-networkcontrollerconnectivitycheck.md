@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Invoke-NetworkControllerConnectivityCheck
 ms.reviewer:
 ms.assetid: F84DB758-DC2A-4C76-8850-349C2195C7BD
+ms.manager: dansimp
 ---
 
 # Invoke-NetworkControllerConnectivityCheck

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-StorageFirmware
 ms.reviewer:
 ms.assetid: 785F3EDD-2C16-458B-BF63-277A9FEB1B8A
+ms.manager: dansimp
 ---
 
 # Update-StorageFirmware

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WmsWebLimiting
 ms.reviewer:
 ms.assetid: F5B5855A-E3B1-4BFD-9D49-28B061C8BED8
+ms.manager: dansimp
 ---
 
 # Enable-WmsWebLimiting

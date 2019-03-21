@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetIPsecMainModeRule
 ms.reviewer:
 ms.assetid: B4C26C3E-2F65-4710-A63A-DB7782DEC672
+ms.manager: dansimp
 ---
 
 # Enable-NetIPsecMainModeRule

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerStubZone
 ms.reviewer:
 ms.assetid: CE29854D-A353-4DEC-AE0B-57AA79472CE1
+ms.manager: dansimp
 ---
 
 # Set-DnsServerStubZone

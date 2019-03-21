@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WdsInstallImage
 ms.reviewer:
 ms.assetid: E22D2704-E945-4772-B023-069D35F786D5
+ms.manager: dansimp
 ---
 
 # Set-WdsInstallImage

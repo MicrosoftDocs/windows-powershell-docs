@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WBSystemState
 ms.reviewer:
 ms.assetid: B07897FC-4CAF-4F23-AD01-6D960775C421
+ms.manager: dansimp
 ---
 
 # Remove-WBSystemState

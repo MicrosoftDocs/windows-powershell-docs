@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-WdsClient
 ms.reviewer:
 ms.assetid: 72818B2B-8F4D-4436-8985-A78D3D30E32B
+ms.manager: dansimp
 ---
 
 # New-WdsClient

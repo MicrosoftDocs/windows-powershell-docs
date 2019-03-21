@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WindowsImage
 ms.reviewer:
 ms.assetid: E29F252E-C9BB-4DED-A058-87022FB2B3D7
+ms.manager: dansimp
 ---
 
 # Get-WindowsImage

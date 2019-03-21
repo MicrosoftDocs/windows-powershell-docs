@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetAdapterAdvancedProperty
 ms.reviewer:
 ms.assetid: BB8B1B16-6946-4BF6-97F8-25265B7E0A20
+ms.manager: dansimp
 ---
 
 # Remove-NetAdapterAdvancedProperty

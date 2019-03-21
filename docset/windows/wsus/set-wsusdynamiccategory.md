@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WsusDynamicCategory
 ms.reviewer:
 ms.assetid: CA6CF451-9939-4A71-8F27-184FA916918C
+ms.manager: dansimp
 ---
 
 # Set-WsusDynamicCategory

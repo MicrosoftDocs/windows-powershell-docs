@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetVirtualizationProviderAddress
 ms.reviewer:
 ms.assetid: 53931D5D-5833-40A4-AF39-ABD24BA69FF1
+ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationProviderAddress

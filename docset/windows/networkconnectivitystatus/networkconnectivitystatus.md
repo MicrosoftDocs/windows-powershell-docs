@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 639DAD91-9062-4005-A4B9-A9BCD71FD1D4
+ms.manager: dansimp
 ---
 
 # NetworkConnectivityStatus Module

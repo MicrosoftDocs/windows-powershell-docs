@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WindowsEdition
 ms.reviewer:
 ms.assetid: B3873C21-D66E-4EC1-A5F9-BEB62256930F
+ms.manager: dansimp
 ---
 
 # Set-WindowsEdition

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-PrintJob
 ms.reviewer:
 ms.assetid: 88790E6D-ABEE-4B77-9FD0-E177ACFBE608
+ms.manager: dansimp
 ---
 
 # Get-PrintJob

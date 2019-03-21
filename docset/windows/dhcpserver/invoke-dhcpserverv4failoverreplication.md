@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Invoke-DhcpServerv4FailoverReplication
 ms.reviewer:
 ms.assetid: E042C485-C67A-4386-8EF5-11D23B798B5B
+ms.manager: dansimp
 ---
 
 # Invoke-DhcpServerv4FailoverReplication

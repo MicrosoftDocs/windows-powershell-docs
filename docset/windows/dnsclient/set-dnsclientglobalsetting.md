@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsClientGlobalSetting
 ms.reviewer:
 ms.assetid: 73E5376E-DD75-4771-8F03-C91E1C736DB5
+ms.manager: dansimp
 ---
 
 # Set-DnsClientGlobalSetting

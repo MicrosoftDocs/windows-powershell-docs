@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 0F41B8F3-2E3E-4B6E-B3D6-018C8C4C07FD
+ms.manager: dansimp
 ---
 
 # StartLayout Module

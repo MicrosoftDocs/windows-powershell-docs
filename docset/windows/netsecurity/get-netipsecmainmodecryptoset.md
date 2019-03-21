@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPsecMainModeCryptoSet
 ms.reviewer:
 ms.assetid: 07360F88-D6FE-4421-8642-292DB9879574
+ms.manager: dansimp
 ---
 
 # Get-NetIPsecMainModeCryptoSet

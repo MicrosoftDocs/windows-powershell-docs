@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-TpmEndorsementKeyInfo
 ms.reviewer:
 ms.assetid: 8D577517-4B3A-4AD1-B427-1A443C3F35CD
+ms.manager: dansimp
 ---
 
 # Get-TpmEndorsementKeyInfo

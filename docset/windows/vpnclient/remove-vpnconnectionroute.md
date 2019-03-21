@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VpnConnectionRoute
 ms.reviewer:
 ms.assetid: D1492AE3-97D6-4D06-9846-49E842F50DF9
+ms.manager: dansimp
 ---
 
 # Remove-VpnConnectionRoute

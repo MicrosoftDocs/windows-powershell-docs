@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMReplicationServer
 ms.reviewer:
 ms.assetid: 93652B26-419B-4FC6-81C6-0AC9C35460EF
+ms.manager: dansimp
 ---
 
 # Get-VMReplicationServer

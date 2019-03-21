@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-SyncShare
 ms.reviewer:
 ms.assetid: 9F510D55-7336-4852-9D41-5DF56FEAF6F8
+ms.manager: dansimp
 ---
 
 # Enable-SyncShare

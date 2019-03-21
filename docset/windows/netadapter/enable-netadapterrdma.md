@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetAdapterRdma
 ms.reviewer:
 ms.assetid: C7EE08C5-60D3-4CC3-AFE8-08E590148B5C
+ms.manager: dansimp
 ---
 
 # Enable-NetAdapterRdma

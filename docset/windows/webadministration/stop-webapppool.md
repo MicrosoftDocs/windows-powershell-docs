@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-WebAppPool
 ms.reviewer:
 ms.assetid: 2B77C48E-AEEA-486D-9B67-88A3B6BB8996
+ms.manager: dansimp
 ---
 
 # Stop-WebAppPool

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-IpamCustomValue
 ms.reviewer:
 ms.assetid: A471DAFC-FCA6-4EE7-BC2C-7E61DC2C49A2
+ms.manager: dansimp
 ---
 
 # Rename-IpamCustomValue

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RDSessionHost
 ms.reviewer:
 ms.assetid: 7F8BD30F-62B9-49C0-984A-59D735A181FC
+ms.manager: dansimp
 ---
 
 # Get-RDSessionHost

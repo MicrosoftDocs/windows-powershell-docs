@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-WindowsCapability
 ms.reviewer:
 ms.assetid: 64CA40D3-F695-4E1D-8F4B-9543FD5C1A8A
+ms.manager: dansimp
 ---
 
 # Add-WindowsCapability

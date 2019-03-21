@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RemoteAccessUserActivity
 ms.reviewer:
 ms.assetid: 7D4B7537-C100-425D-BBAA-4EE7586803B5
+ms.manager: dansimp
 ---
 
 # Get-RemoteAccessUserActivity

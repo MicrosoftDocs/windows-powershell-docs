@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Search-ADAccount
 ms.reviewer:
 ms.assetid: A53BA207-2E14-4155-AEE0-F606D699EB46
+ms.manager: dansimp
 ---
 
 # Search-ADAccount

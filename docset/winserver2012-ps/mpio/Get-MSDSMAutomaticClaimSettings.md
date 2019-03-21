@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9860F832-453D-47AD-A396-294463818B72
+ms.manager: dansimp
 ---
 
 # Get-MSDSMAutomaticClaimSettings

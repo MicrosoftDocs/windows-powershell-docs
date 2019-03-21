@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetFirewallAddressFilter
 ms.reviewer:
 ms.assetid: F4FD0A59-8C76-41FD-AA4B-8C19CF03D213
+ms.manager: dansimp
 ---
 
 # Get-NetFirewallAddressFilter

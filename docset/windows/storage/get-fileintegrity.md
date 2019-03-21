@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FileIntegrity
 ms.reviewer:
 ms.assetid: C6163BC8-F560-48B2-893E-4A840C64B2C3
+ms.manager: dansimp
 ---
 
 # Get-FileIntegrity

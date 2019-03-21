@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-BgpPeer
 ms.reviewer:
 ms.assetid: A5329BB7-AC40-4BF8-9F38-F861051A4375
+ms.manager: dansimp
 ---
 
 # Remove-BgpPeer

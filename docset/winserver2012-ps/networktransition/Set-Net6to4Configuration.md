@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1DDC482E-D30A-4684-85DE-DBC421803C3C
+ms.manager: dansimp
 ---
 
 # Set-Net6to4Configuration

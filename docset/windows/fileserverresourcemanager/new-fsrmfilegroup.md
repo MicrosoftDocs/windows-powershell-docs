@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmFileGroup
 ms.reviewer:
 ms.assetid: 37258538-9859-42F9-921A-4FA172705C4A
+ms.manager: dansimp
 ---
 
 # New-FsrmFileGroup

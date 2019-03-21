@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resolve-NfsMappedIdentity
 ms.reviewer:
 ms.assetid: F6A9C8A9-6899-45F1-8CD6-B0B50BC5CBBD
+ms.manager: dansimp
 ---
 
 # Resolve-NfsMappedIdentity

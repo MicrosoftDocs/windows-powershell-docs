@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Select-NetVirtualizationNextHop
 ms.reviewer:
 ms.assetid: 508CB567-F354-4AB9-805C-DCB62CDB9033
+ms.manager: dansimp
 ---
 
 # Select-NetVirtualizationNextHop

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetIPHttpsCertBinding
 ms.reviewer:
 ms.assetid: A0B842F3-74DA-404A-A1CB-92F278813694
+ms.manager: dansimp
 ---
 
 # Remove-NetIPHttpsCertBinding

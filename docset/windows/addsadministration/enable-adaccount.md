@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-ADAccount
 ms.reviewer:
 ms.assetid: 82DB3C7E-6CC4-468C-94EB-B2E146FC980F
+ms.manager: dansimp
 ---
 
 # Enable-ADAccount

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WdsBootImage
 ms.reviewer:
 ms.assetid: F3C0BC03-FC91-4DF9-B258-CE95FF25548E
+ms.manager: dansimp
 ---
 
 # Get-WdsBootImage

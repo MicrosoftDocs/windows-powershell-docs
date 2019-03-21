@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Repair-UevTemplateIndex
 ms.reviewer:
 ms.assetid: 829ECF52-A31A-4BD4-8CBF-0A77B92A40E2
+ms.manager: dansimp
 ---
 
 # Repair-UevTemplateIndex

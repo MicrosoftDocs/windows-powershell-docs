@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A695E090-A2C0-40D0-8DDB-FAEF254FB1F9
+ms.manager: dansimp
 ---
 
 # Set-NfsShare

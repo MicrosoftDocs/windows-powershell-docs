@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-FsrmMacro
 ms.reviewer:
 ms.assetid: DFF2B870-70FE-4708-A513-C28E3BA64CD1
+ms.manager: dansimp
 ---
 
 # Get-FsrmMacro

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disconnect-IscsiTarget
 ms.reviewer:
 ms.assetid: C6D1C713-F3D8-4BC2-9DDC-B2FD87E0C025
+ms.manager: dansimp
 ---
 
 # Disconnect-IscsiTarget

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-NetworkController
 ms.reviewer:
 ms.assetid: E98F7AF1-2D8E-4438-91B1-3E6AD959133D
+ms.manager: dansimp
 ---
 
 # Update-NetworkController

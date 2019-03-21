@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-IpamServerInventory
 ms.reviewer:
 ms.assetid: AF009726-6606-406E-AA06-85754D59F724
+ms.manager: dansimp
 ---
 
 # Add-IpamServerInventory

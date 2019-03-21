@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-ClusterGroupSet
 ms.reviewer:
 ms.assetid: 9DEDCC90-63ED-4BD3-B33F-2088B1030353
+ms.manager: dansimp
 ---
 
 # Remove-ClusterGroupSet

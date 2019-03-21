@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SmbDelegation
 ms.reviewer:
 ms.assetid: F4CC0E63-9712-42D2-9D46-63AE5975A23A
+ms.manager: dansimp
 ---
 
 # Get-SmbDelegation

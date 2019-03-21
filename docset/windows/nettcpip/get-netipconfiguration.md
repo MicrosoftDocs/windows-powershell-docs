@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPConfiguration
 ms.reviewer:
 ms.assetid: 54C9B3A3-77CF-428B-8005-0A416A4AB277
+ms.manager: dansimp
 ---
 
 # Get-NetIPConfiguration

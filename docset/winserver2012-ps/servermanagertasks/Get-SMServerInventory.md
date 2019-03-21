@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5A41B2D7-EBF8-4D3D-94C8-2996716E10FC
+ms.manager: dansimp
 ---
 
 # Get-SMServerInventory

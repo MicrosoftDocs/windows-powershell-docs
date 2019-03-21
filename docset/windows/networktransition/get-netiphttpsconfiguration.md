@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetIPHttpsConfiguration
 ms.reviewer:
 ms.assetid: E3DB6861-8AC4-43D7-96A7-E832280B9A10
+ms.manager: dansimp
 ---
 
 # Get-NetIPHttpsConfiguration

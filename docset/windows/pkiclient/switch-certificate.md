@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Switch-Certificate
 ms.reviewer:
 ms.assetid: FEC58154-D4DF-4F65-9FF5-D26ADE2AA7B7
+ms.manager: dansimp
 ---
 
 # Switch-Certificate

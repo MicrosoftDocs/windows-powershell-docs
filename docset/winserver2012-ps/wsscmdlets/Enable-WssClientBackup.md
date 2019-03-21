@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9E85484C-1429-49EC-A276-D7267AB35D3E
+ms.manager: dansimp
 ---
 
 # Enable-WssClientBackup

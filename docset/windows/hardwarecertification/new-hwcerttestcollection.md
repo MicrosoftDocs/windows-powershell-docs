@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-HwCertTestCollection
 ms.reviewer:
 ms.assetid: 7D47FD19-168B-4FB8-AFE3-D6DE1EB9EED0
+ms.manager: dansimp
 ---
 
 # New-HwCertTestCollection

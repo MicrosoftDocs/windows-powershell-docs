@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VpnConnectionIPsecConfiguration
 ms.reviewer:
 ms.assetid: 5A33F332-7F50-46CA-8FFD-26B7C0B4CB27
+ms.manager: dansimp
 ---
 
 # Set-VpnConnectionIPsecConfiguration

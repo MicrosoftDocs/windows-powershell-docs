@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WmsSystem
 ms.reviewer:
 ms.assetid: 17BC819F-5550-4290-BCF7-07CBC205C054
+ms.manager: dansimp
 ---
 
 # Set-WmsSystem

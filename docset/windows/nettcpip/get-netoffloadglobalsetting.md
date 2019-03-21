@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetOffloadGlobalSetting
 ms.reviewer:
 ms.assetid: 68E1CC66-8A5C-4BD3-B7A5-3ED958FC4A3C
+ms.manager: dansimp
 ---
 
 # Get-NetOffloadGlobalSetting

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-BpaResult
 ms.reviewer:
 ms.assetid: 655110C9-DFD4-4285-8E68-C70333896F9A
+ms.manager: dansimp
 ---
 
 # Set-BpaResult

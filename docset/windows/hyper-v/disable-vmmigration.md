@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-VMMigration
 ms.reviewer:
 ms.assetid: D146191E-3861-4683-ADBA-4B4AD3002AA5
+ms.manager: dansimp
 ---
 
 # Disable-VMMigration

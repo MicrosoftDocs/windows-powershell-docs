@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-BCSecretKey
 ms.reviewer:
 ms.assetid: 94140170-8217-4C25-A899-82B5BE694E17
+ms.manager: dansimp
 ---
 
 # Export-BCSecretKey

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-MSDSMSupportedHW
 ms.reviewer:
 ms.assetid: B5C4D790-55E1-45DB-9DA0-4B2371E6576A
+ms.manager: dansimp
 ---
 
 # Clear-MSDSMSupportedHW

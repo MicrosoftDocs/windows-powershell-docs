@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-WBJob
 ms.reviewer:
 ms.assetid: 22F61413-2EC2-40A9-A26F-9474673318AC
+ms.manager: dansimp
 ---
 
 # Stop-WBJob

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-MpComputerStatus
 ms.reviewer:
 ms.assetid: F70A664F-CAAC-40AC-8A12-5ADBA649E66E
+ms.manager: dansimp
 ---
 
 # Get-MpComputerStatus

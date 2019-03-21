@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F727BBC2-04C3-4845-8946-DE1B0064D963
+ms.manager: dansimp
 ---
 
 # Get-OBAlternateBackupServer

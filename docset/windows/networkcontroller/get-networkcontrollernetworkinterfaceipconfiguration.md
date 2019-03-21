@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerNetworkInterfaceIpConfiguration
 ms.reviewer:
 ms.assetid: 1D4A9FF1-6962-471B-AFCF-B2B0BC8BF828
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerNetworkInterfaceIpConfiguration

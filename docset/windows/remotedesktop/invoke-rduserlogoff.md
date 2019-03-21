@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Invoke-RDUserLogoff
 ms.reviewer:
 ms.assetid: 5C117FBB-2D76-4F8D-A434-E6539E28C25D
+ms.manager: dansimp
 ---
 
 # Invoke-RDUserLogoff

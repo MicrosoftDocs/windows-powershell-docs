@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-AppvVirtualProcess
 ms.reviewer:
 ms.assetid: 89CFCD2D-311D-4E11-8650-EF2728271213
+ms.manager: dansimp
 ---
 
 # Get-AppvVirtualProcess

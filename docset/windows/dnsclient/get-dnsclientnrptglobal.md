@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsClientNrptGlobal
 ms.reviewer:
 ms.assetid: AE7B2DEE-7132-4CCA-90D0-8BA1A1D885AB
+ms.manager: dansimp
 ---
 
 # Get-DnsClientNrptGlobal

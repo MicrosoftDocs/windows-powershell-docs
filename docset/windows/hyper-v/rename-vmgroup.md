@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-VMGroup
 ms.reviewer:
 ms.assetid: 11033056-4B9B-4D59-9CA1-FB45F8CB3EDE
+ms.manager: dansimp
 ---
 
 # Rename-VMGroup

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-BgpPeer
 ms.reviewer:
 ms.assetid: FB290508-E519-4E02-9460-519926FE0205
+ms.manager: dansimp
 ---
 
 # Add-BgpPeer

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DfsrDelegation
 ms.reviewer:
 ms.assetid: 5BDB002B-9B9B-4DAC-8217-9A8CA7705D92
+ms.manager: dansimp
 ---
 
 # Get-DfsrDelegation

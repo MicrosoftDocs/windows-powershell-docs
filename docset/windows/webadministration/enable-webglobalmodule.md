@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-WebGlobalModule
 ms.reviewer:
 ms.assetid: 59C27F43-7D72-4D8C-8D4F-42ED6E220E03
+ms.manager: dansimp
 ---
 
 # Enable-WebGlobalModule

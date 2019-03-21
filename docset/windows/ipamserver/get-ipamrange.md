@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamRange
 ms.reviewer:
 ms.assetid: 52BD483A-4B3B-4CC6-BE97-A439E3399CC1
+ms.manager: dansimp
 ---
 
 # Get-IpamRange

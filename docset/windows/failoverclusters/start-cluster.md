@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-Cluster
 ms.reviewer:
 ms.assetid: A4A95DD7-4744-4BC5-8197-375971B2F599
+ms.manager: dansimp
 ---
 
 # Start-Cluster

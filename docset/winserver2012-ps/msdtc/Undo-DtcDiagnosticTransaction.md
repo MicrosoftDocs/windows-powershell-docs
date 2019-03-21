@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F93A43CE-6DBD-4CBA-B8EE-970858959D7E
+ms.manager: dansimp
 ---
 
 # Undo-DtcDiagnosticTransaction

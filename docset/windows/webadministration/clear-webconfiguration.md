@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-WebConfiguration
 ms.reviewer:
 ms.assetid: 00539C2C-98C6-4E16-A1D9-4DB348332895
+ms.manager: dansimp
 ---
 
 # Clear-WebConfiguration

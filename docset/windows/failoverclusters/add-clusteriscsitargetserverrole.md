@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-ClusteriSCSITargetServerRole
 ms.reviewer:
 ms.assetid: 4590635E-C5D5-4696-B149-1D87ABB340E9
+ms.manager: dansimp
 ---
 
 # Add-ClusteriSCSITargetServerRole

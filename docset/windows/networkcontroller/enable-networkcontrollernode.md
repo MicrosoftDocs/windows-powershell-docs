@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetworkControllerNode
 ms.reviewer:
 ms.assetid: 84D99E59-64D1-4BBA-9343-997723493C34
+ms.manager: dansimp
 ---
 
 # Enable-NetworkControllerNode

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-CATemplate
 ms.reviewer:
 ms.assetid: C8A5382D-23F3-4DDE-9661-EAF69E65B2AB
+ms.manager: dansimp
 ---
 
 # Add-CATemplate

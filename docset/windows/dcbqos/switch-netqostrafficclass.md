@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Switch-NetQosTrafficClass
 ms.reviewer:
 ms.assetid: FC7D81FE-CD4B-4ED9-9CC2-3DA4A83CA9CB
+ms.manager: dansimp
 ---
 
 # Switch-NetQosTrafficClass

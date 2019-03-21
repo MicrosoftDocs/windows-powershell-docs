@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WdsMulticastClient
 ms.reviewer:
 ms.assetid: AD96ED00-C439-4709-8213-22B6E2720B9D
+ms.manager: dansimp
 ---
 
 # Get-WdsMulticastClient

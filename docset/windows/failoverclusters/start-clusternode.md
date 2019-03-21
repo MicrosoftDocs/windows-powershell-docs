@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-ClusterNode
 ms.reviewer:
 ms.assetid: ADACDEA4-7613-4B44-A621-88025367C41D
+ms.manager: dansimp
 ---
 
 # Start-ClusterNode

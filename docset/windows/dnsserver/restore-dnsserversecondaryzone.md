@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Restore-DnsServerSecondaryZone
 ms.reviewer:
 ms.assetid: C68C6B38-79C5-4225-8458-4F391B63C44F
+ms.manager: dansimp
 ---
 
 # Restore-DnsServerSecondaryZone

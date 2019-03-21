@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 00980E48-5937-40BD-BA8C-65B0053D53B7
+ms.manager: dansimp
 ---
 
 # Set-DAServer

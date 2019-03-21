@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-BgpRouter
 ms.reviewer:
 ms.assetid: D182CD2E-D27E-43BB-A451-5CE72554B0A9
+ms.manager: dansimp
 ---
 
 # Remove-BgpRouter

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IscsiConnection
 ms.reviewer:
 ms.assetid: E566D297-76AD-48D0-B5AF-11674F23B080
+ms.manager: dansimp
 ---
 
 # Get-IscsiConnection

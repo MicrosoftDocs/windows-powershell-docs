@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetworkSwitchVlanProperty
 ms.reviewer:
 ms.assetid: 931EB3F7-EF49-4948-BE12-18DB3668DC2E
+ms.manager: dansimp
 ---
 
 # Set-NetworkSwitchVlanProperty

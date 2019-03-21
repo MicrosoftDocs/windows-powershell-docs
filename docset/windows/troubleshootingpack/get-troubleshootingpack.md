@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-TroubleshootingPack
 ms.reviewer:
 ms.assetid: 9ED46ACE-1590-4CCA-97A8-C494DD1162BE
+ms.manager: dansimp
 ---
 
 # Get-TroubleshootingPack

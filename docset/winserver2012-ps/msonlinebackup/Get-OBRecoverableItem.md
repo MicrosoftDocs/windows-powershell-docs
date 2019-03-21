@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0CC1B932-074B-4C46-AFA7-0AD6CB31246B
+ms.manager: dansimp
 ---
 
 # Get-OBRecoverableItem

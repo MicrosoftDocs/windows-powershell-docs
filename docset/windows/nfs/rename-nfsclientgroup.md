@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-NfsClientgroup
 ms.reviewer:
 ms.assetid: 0CA395BC-362B-4A18-810C-BBB32FF60118
+ms.manager: dansimp
 ---
 
 # Rename-NfsClientgroup

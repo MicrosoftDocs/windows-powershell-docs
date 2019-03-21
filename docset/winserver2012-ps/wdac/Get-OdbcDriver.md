@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 00890D77-4875-4EA6-A243-D78479DE8541
+ms.manager: dansimp
 ---
 
 # Get-OdbcDriver

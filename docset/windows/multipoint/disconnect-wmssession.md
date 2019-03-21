@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disconnect-WmsSession
 ms.reviewer:
 ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
+ms.manager: dansimp
 ---
 
 # Disconnect-WmsSession

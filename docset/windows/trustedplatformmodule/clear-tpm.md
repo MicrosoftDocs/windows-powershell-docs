@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Clear-Tpm
 ms.reviewer:
 ms.assetid: F9F98617-959C-4C4F-9ED2-4CD25662A493
+ms.manager: dansimp
 ---
 
 # Clear-Tpm

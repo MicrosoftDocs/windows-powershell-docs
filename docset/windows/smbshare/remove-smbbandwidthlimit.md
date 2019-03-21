@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-SmbBandwidthLimit
 ms.reviewer:
 ms.assetid: 7DB7C9BC-85AD-4084-BDDD-7FBAF98578FE
+ms.manager: dansimp
 ---
 
 # Remove-SmbBandwidthLimit

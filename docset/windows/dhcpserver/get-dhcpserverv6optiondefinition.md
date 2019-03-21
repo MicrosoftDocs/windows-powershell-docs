@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6OptionDefinition
 ms.reviewer:
 ms.assetid: 3087D2C8-5321-4D00-A55F-7F569DBB8940
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6OptionDefinition

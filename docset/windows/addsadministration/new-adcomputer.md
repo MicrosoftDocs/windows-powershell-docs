@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-ADComputer
 ms.reviewer:
 ms.assetid: 6F61C2CC-6821-4F0F-B6AB-805A1B8C0FD9
+ms.manager: dansimp
 ---
 
 # New-ADComputer

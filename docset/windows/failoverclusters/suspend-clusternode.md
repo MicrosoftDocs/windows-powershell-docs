@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Suspend-ClusterNode
 ms.reviewer:
 ms.assetid: 6BE0D49E-A27C-4640-AE0D-0B1E47B2999E
+ms.manager: dansimp
 ---
 
 # Suspend-ClusterNode

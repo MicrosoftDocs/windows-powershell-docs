@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DHASCertificateChainPolicy
 ms.reviewer:
 ms.assetid: 37C36EA7-9B95-42AA-B422-91D490ECC555
+ms.manager: dansimp
 ---
 
 # Set-DHASCertificateChainPolicy

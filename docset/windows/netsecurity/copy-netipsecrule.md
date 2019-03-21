@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-NetIPsecRule
 ms.reviewer:
 ms.assetid: 0FAB7846-3E4F-4F22-9060-597A3EE680CB
+ms.manager: dansimp
 ---
 
 # Copy-NetIPsecRule

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-IpamCustomFieldAssociation
 ms.reviewer:
 ms.assetid: 81BD475F-0724-4AC9-B648-E9B705BB0EEA
+ms.manager: dansimp
 ---
 
 # Add-IpamCustomFieldAssociation

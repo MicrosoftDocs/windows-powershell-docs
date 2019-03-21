@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-BgpRouteAggregate
 ms.reviewer:
 ms.assetid: 9049EFD0-FB50-41AD-9324-A37773B1E633
+ms.manager: dansimp
 ---
 
 # Remove-BgpRouteAggregate

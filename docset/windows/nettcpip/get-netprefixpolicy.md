@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetPrefixPolicy
 ms.reviewer:
 ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
+ms.manager: dansimp
 ---
 
 # Get-NetPrefixPolicy

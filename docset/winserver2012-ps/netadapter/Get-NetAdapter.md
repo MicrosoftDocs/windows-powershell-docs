@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 265FB18B-0065-469F-88C4-55D6C7CF54D3
+ms.manager: dansimp
 ---
 
 # Get-NetAdapter

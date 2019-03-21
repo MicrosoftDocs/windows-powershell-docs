@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerGlobalQueryBlockList
 ms.reviewer:
 ms.assetid: 21FC15F6-CFE9-44FE-9F00-1FB4B50D0632
+ms.manager: dansimp
 ---
 
 # Set-DnsServerGlobalQueryBlockList

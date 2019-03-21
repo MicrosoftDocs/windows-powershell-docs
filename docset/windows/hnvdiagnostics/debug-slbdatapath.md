@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Debug-SlbDatapath
 ms.reviewer:
 ms.assetid: EB7D701C-4687-4FBB-B622-DA7B8FBBF95C
+ms.manager: dansimp
 ---
 
 # Debug-SlbDatapath

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Import-RDPersonalSessionDesktopAssignment
 ms.reviewer:
 ms.assetid: 9D7F86ED-3611-4CF5-BAFB-2338701EBE8C
+ms.manager: dansimp
 ---
 
 # Import-RDPersonalSessionDesktopAssignment

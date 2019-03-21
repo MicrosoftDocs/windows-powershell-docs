@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Debug-NetworkController
 ms.reviewer:
 ms.assetid: 9A1D7CE0-77AC-4E62-BAA7-B24021EA0C73
+ms.manager: dansimp
 ---
 
 # Debug-NetworkController

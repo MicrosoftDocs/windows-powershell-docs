@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerZoneDelegation
 ms.reviewer:
 ms.assetid: 775D3DB5-F7E7-4954-B2DA-9CC2E73009EE
+ms.manager: dansimp
 ---
 
 # Set-DnsServerZoneDelegation

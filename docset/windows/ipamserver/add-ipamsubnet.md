@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-IpamSubnet
 ms.reviewer:
 ms.assetid: AFA2EB0B-3E4D-477F-8883-4C19CF40EF95
+ms.manager: dansimp
 ---
 
 # Add-IpamSubnet

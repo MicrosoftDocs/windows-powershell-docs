@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-BpaModel
 ms.reviewer:
 ms.assetid: CC4D5797-49C2-4842-94CE-7509EE977374
+ms.manager: dansimp
 ---
 
 # Get-BpaModel

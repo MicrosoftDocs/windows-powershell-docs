@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-ServerManagerStandardUserRemoting
 ms.reviewer:
 ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
+ms.manager: dansimp
 ---
 
 # Disable-ServerManagerStandardUserRemoting

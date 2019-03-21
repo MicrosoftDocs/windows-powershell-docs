@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SmbShareAccess
 ms.reviewer:
 ms.assetid: 8497A950-E4D1-4E5D-B0C8-C4B860DE1A7F
+ms.manager: dansimp
 ---
 
 # Get-SmbShareAccess

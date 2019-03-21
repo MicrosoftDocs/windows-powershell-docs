@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 14DEA680-C4B6-43FD-B49B-CECD615A08E2
+ms.manager: dansimp
 ---
 
 # Uninstall-WssAddIn

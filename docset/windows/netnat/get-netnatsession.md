@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetNatSession
 ms.reviewer:
 ms.assetid: 368F5A0E-2F50-45EC-A17F-A1710E40CEF9
+ms.manager: dansimp
 ---
 
 # Get-NetNatSession

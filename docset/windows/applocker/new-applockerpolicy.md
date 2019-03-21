@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-AppLockerPolicy
 ms.reviewer:
 ms.assetid: 8C524ED2-3CDD-445F-AAC5-762EF9364F44
+ms.manager: dansimp
 ---
 
 # New-AppLockerPolicy

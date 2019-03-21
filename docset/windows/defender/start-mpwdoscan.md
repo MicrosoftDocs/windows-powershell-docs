@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-MpWDOScan
 ms.reviewer:
 ms.assetid: 6DDD7E0D-244E-42E1-B4CD-81250E6B7059
+ms.manager: dansimp
 ---
 
 # Start-MpWDOScan

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamDnsServer
 ms.reviewer:
 ms.assetid: 3D875893-1AF8-43F9-8034-60A8783D67F4
+ms.manager: dansimp
 ---
 
 # Get-IpamDnsServer

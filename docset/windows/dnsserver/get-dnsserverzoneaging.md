@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DnsServerZoneAging
 ms.reviewer:
 ms.assetid: 5577F641-EC20-4F17-AAF9-601CE33C522C
+ms.manager: dansimp
 ---
 
 # Get-DnsServerZoneAging

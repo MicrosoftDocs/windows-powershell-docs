@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9FB0B515-DE34-4B43-A8FA-A4E970C3F895
+ms.manager: dansimp
 ---
 
 # Set-OBPolicyState

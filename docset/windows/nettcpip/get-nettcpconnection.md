@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetTCPConnection
 ms.reviewer:
 ms.assetid: FDF635B0-3F62-48AE-BDE6-1DAC120DD52D
+ms.manager: dansimp
 ---
 
 # Get-NetTCPConnection

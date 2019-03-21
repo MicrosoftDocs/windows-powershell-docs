@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 18DC4007-1043-48D5-B6A1-68D74F97C0E6
+ms.manager: dansimp
 ---
 
 # Enable-WssAlert

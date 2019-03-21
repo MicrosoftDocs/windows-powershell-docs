@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMReplicationAuthorizationEntry
 ms.reviewer:
 ms.assetid: 595A0328-221D-419D-A8BC-5E55CC4B91F1
+ms.manager: dansimp
 ---
 
 # Set-VMReplicationAuthorizationEntry

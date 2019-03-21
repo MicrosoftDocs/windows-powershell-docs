@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 43423EEE-4176-4736-A3B6-874A31BA0D15
+ms.manager: dansimp
 ---
 
 # Remove-MsmqCertificate

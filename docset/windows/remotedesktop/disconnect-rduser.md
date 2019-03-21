@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disconnect-RDUser
 ms.reviewer:
 ms.assetid: 2D60E839-014C-4D8D-9BF9-C6ABEA237B6E
+ms.manager: dansimp
 ---
 
 # Disconnect-RDUser

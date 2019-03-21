@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMStoragePath
 ms.reviewer:
 ms.assetid: 6EC679AD-A16B-4078-A68A-3CF76717C713
+ms.manager: dansimp
 ---
 
 # Remove-VMStoragePath

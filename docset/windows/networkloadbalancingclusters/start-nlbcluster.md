@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-NlbCluster
 ms.reviewer:
 ms.assetid: FE64476E-7845-4FA3-B234-9C727F683B5E
+ms.manager: dansimp
 ---
 
 # Start-NlbCluster

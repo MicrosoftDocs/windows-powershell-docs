@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5B3F6CD1-E97E-4AB6-921C-3FE55C0821EB
+ms.manager: dansimp
 ---
 
 # Set-StoragePool

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Confirm-SecureBootUEFI
 ms.reviewer:
 ms.assetid: 32BF5E0D-3213-4479-9C55-76C94E6051C4
+ms.manager: dansimp
 ---
 
 # Confirm-SecureBootUEFI

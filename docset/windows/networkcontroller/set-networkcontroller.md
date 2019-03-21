@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetworkController
 ms.reviewer:
 ms.assetid: 73FF296C-8457-49D3-B109-F224441A9969
+ms.manager: dansimp
 ---
 
 # Set-NetworkController

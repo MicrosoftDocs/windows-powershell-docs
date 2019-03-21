@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Backup-GPO
 ms.reviewer:
 ms.assetid: FEF0777A-CC17-4B94-8F81-4564CE511E74
+ms.manager: dansimp
 ---
 
 # Backup-GPO

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualNetwork
 ms.reviewer:
 ms.assetid: F284F7B6-DB85-48D8-9E4D-6EC8229A9A7C
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualNetwork

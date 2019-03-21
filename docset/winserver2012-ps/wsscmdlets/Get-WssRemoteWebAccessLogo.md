@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7DBE5E22-F552-401B-96E2-DB0E40EAFCB8
+ms.manager: dansimp
 ---
 
 # Get-WssRemoteWebAccessLogo

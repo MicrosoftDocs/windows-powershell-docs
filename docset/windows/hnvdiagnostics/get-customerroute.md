@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-CustomerRoute
 ms.reviewer:
 ms.assetid: 2A3B00FC-EF81-4DF7-B1DA-6852D94D5EBA
+ms.manager: dansimp
 ---
 
 # Get-CustomerRoute

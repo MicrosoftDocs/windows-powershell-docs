@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-BCDowngrading
 ms.reviewer:
 ms.assetid: 33797D2F-9126-4AE2-9A52-0E293EA02710
+ms.manager: dansimp
 ---
 
 # Enable-BCDowngrading

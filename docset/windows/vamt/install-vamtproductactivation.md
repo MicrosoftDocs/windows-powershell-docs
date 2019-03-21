@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-VamtProductActivation
 ms.reviewer:
 ms.assetid: 5B87C8DB-4B08-4C82-BBB9-E17C75EFB79D
+ms.manager: dansimp
 ---
 
 # Install-VamtProductActivation

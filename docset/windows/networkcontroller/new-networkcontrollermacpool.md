@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-NetworkControllerMacPool
 ms.reviewer:
 ms.assetid: EEA08909-FCAD-4B6E-B6B2-3B9F3BD41487
+ms.manager: dansimp
 ---
 
 # New-NetworkControllerMacPool

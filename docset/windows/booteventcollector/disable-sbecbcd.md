@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-SbecBcd
 ms.reviewer:
 ms.assetid: C01C2EC1-2D03-4D79-BEFA-D4C32ADBEBCC
+ms.manager: dansimp
 ---
 
 # Disable-SbecBcd

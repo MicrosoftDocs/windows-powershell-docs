@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-RDDatabaseConnectionString
 ms.reviewer:
 ms.assetid: 3EE6029A-4C7B-40A8-BBB3-77388E8A2AC4
+ms.manager: dansimp
 ---
 
 # Remove-RDDatabaseConnectionString

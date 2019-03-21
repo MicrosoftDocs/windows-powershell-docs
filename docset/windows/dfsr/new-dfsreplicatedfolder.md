@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-DfsReplicatedFolder
 ms.reviewer:
 ms.assetid: EAE5EBC2-27A1-4C60-8894-FBFB8A428559
+ms.manager: dansimp
 ---
 
 # New-DfsReplicatedFolder

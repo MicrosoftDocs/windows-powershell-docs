@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-VMRemoteFXPhysicalVideoAdapter
 ms.reviewer:
 ms.assetid: 64538FA6-1EEE-4BA3-A15F-90380DB3B1CD
+ms.manager: dansimp
 ---
 
 # Enable-VMRemoteFXPhysicalVideoAdapter

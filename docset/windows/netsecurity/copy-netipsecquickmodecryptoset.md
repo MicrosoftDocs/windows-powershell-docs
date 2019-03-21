@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-NetIPsecQuickModeCryptoSet
 ms.reviewer:
 ms.assetid: 420A5F38-71C8-49A8-97B0-3F87C7F3424E
+ms.manager: dansimp
 ---
 
 # Copy-NetIPsecQuickModeCryptoSet

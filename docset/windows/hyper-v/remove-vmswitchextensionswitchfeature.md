@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VMSwitchExtensionSwitchFeature
 ms.reviewer:
 ms.assetid: 1DB59FAF-A0A6-4D74-9190-20CC734B4B77
+ms.manager: dansimp
 ---
 
 # Remove-VMSwitchExtensionSwitchFeature

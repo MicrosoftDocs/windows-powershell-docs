@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WdsClient
 ms.reviewer:
 ms.assetid: E694C93B-F4A5-4E83-A1D4-88FCE5D4435C
+ms.manager: dansimp
 ---
 
 # Set-WdsClient

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NlbCluster
 ms.reviewer:
 ms.assetid: 57ACC3ED-7420-4EFE-A21A-474837243932
+ms.manager: dansimp
 ---
 
 # Set-NlbCluster

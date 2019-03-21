@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetIsatapConfiguration
 ms.reviewer:
 ms.assetid: BA799DEA-5F13-4831-BA31-16D8C2F5A5ED
+ms.manager: dansimp
 ---
 
 # Set-NetIsatapConfiguration

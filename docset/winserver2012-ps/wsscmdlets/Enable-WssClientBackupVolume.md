@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 22317BC1-28CC-4081-85E0-33FA4E8C7E05
+ms.manager: dansimp
 ---
 
 # Enable-WssClientBackupVolume

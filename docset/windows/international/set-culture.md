@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-Culture
 ms.reviewer:
 ms.assetid: D46BF01E-B43B-49DD-89EB-388C8F3CCB41
+ms.manager: dansimp
 ---
 
 # Set-Culture

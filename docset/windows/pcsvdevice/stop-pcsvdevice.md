@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-PcsvDevice
 ms.reviewer:
 ms.assetid: AFA589C0-5DD6-4599-A3FD-1640AACCC415
+ms.manager: dansimp
 ---
 
 # Stop-PcsvDevice

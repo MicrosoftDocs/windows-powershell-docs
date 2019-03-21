@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerServerInterface
 ms.reviewer:
 ms.assetid: 00F21F75-BE10-4F0C-921D-0DF55D11524D
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerServerInterface

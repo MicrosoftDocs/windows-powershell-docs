@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0BFDB18C-49EA-4D2D-B810-BB2B5B3D34F8
+ms.manager: dansimp
 ---
 
 # Get-WsusProduct

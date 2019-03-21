@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A5FB0F31-C3E6-4A3C-881A-86591D914406
+ms.manager: dansimp
 ---
 
 # Add-VirtualDiskToMaskingSet

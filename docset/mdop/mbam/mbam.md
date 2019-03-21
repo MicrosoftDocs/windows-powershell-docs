@@ -19,6 +19,7 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 9373C97E-6191-45B5-8305-0D503E1A6F12
+ms.manager: dansimp
 ---
 
 # MBAM Module

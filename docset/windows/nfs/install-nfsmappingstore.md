@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-NfsMappingStore
 ms.reviewer:
 ms.assetid: C627F113-DEC4-4AA1-9DA5-0A0BD1AF0209
+ms.manager: dansimp
 ---
 
 # Install-NfsMappingStore

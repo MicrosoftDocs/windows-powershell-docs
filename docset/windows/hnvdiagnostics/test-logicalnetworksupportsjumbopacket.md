@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Test-LogicalNetworkSupportsJumboPacket
 ms.reviewer:
 ms.assetid: B402E566-55FB-4C7E-89B6-7F5C344FD544
+ms.manager: dansimp
 ---
 
 # Test-LogicalNetworkSupportsJumboPacket

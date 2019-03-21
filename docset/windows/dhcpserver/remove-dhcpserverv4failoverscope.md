@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerv4FailoverScope
 ms.reviewer:
 ms.assetid: CA0843CE-8334-40B8-BC03-049AD4B61929
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4FailoverScope

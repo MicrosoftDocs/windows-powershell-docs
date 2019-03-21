@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetworkControllerRoute
 ms.reviewer:
 ms.assetid: B12297B2-FBA9-4251-8534-0DCE3AFF5CBB
+ms.manager: dansimp
 ---
 
 # Get-NetworkControllerRoute

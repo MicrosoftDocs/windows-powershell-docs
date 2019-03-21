@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMFloppyDiskDrive
 ms.reviewer:
 ms.assetid: E12B0A47-7B67-4DCA-BA16-3B581421E1AD
+ms.manager: dansimp
 ---
 
 # Set-VMFloppyDiskDrive

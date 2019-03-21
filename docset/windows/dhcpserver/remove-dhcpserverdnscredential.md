@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DhcpServerDnsCredential
 ms.reviewer:
 ms.assetid: 860F0679-DAB1-491C-8A40-CF1A93333332
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerDnsCredential

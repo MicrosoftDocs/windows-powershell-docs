@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
+ms.manager: dansimp
 ---
 
 # New-NetIPsecAuthProposal

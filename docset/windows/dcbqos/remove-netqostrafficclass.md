@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetQosTrafficClass
 ms.reviewer:
 ms.assetid: 4CFFA115-7B8C-4C21-BA63-6DC4751A98E0
+ms.manager: dansimp
 ---
 
 # Remove-NetQosTrafficClass

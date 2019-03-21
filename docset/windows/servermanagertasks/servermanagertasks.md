@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: A97F254E-658B-4B70-9B0D-6BEC29434DA3
+ms.manager: dansimp
 ---
 
 # ServerManagerTasks Module

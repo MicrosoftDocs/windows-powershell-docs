@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMSecurityPolicy
 ms.reviewer:
 ms.assetid: 2CD6AB6E-E402-4AC2-9174-43A3407CF501
+ms.manager: dansimp
 ---
 
 # Set-VMSecurityPolicy

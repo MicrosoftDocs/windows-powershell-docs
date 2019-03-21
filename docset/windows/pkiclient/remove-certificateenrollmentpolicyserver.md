@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-CertificateEnrollmentPolicyServer
 ms.reviewer:
 ms.assetid: 048D5F06-8277-4CC7-A827-84C2FA4D3904
+ms.manager: dansimp
 ---
 
 # Remove-CertificateEnrollmentPolicyServer

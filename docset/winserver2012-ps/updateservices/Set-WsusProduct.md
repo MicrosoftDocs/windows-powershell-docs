@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7C1A016A-A56E-44A2-9046-005490F13D82
+ms.manager: dansimp
 ---
 
 # Set-WsusProduct

@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
+ms.manager: dansimp
 ---
 
 # GroupPolicy Module

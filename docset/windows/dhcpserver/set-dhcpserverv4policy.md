@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DhcpServerv4Policy
 ms.reviewer:
 ms.assetid: 23918546-7541-451E-B5D2-AFF758880BC0
+ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4Policy

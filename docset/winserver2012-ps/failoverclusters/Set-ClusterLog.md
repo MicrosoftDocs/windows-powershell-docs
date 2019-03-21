@@ -3,6 +3,7 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: EF07AF65-FB1F-4777-AA29-9213E52AB423
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

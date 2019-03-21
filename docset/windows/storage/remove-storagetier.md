@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-StorageTier
 ms.reviewer:
 ms.assetid: BDD970F2-4741-4B7D-AA83-4AA1BB3FF5F8
+ms.manager: dansimp
 ---
 
 # Remove-StorageTier

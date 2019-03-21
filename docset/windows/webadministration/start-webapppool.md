@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Start-WebAppPool
 ms.reviewer:
 ms.assetid: EA40251C-40A4-4AA8-B7D7-728775713F9E
+ms.manager: dansimp
 ---
 
 # Start-WebAppPool

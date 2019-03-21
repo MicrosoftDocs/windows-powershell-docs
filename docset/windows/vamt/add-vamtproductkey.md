@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VamtProductKey
 ms.reviewer:
 ms.assetid: 3868B8D4-2230-4A70-B4FD-CCA4F53DC0A1
+ms.manager: dansimp
 ---
 
 # Add-VamtProductKey

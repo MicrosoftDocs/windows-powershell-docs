@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Mount-AppvClientPackage
 ms.reviewer:
 ms.assetid: 1B7CC572-9D1E-4AF7-BD49-49FAD84B5266
+ms.manager: dansimp
 ---
 
 # Mount-AppvClientPackage

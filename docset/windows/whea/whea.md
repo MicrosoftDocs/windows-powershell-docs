@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 5881494F-DCEB-422C-8009-80D0630946B2
+ms.manager: dansimp
 ---
 
 # WHEA Module

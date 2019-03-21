@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetAdapterVPort
 ms.reviewer:
 ms.assetid: 8D323C9D-EE85-4390-A4D9-D10D69FA3486
+ms.manager: dansimp
 ---
 
 # Get-NetAdapterVPort

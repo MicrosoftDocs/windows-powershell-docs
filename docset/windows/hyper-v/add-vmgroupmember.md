@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VMGroupMember
 ms.reviewer:
 ms.assetid: 1C27EEFF-8CF3-40B0-9EA1-859E1532D277
+ms.manager: dansimp
 ---
 
 # Add-VMGroupMember

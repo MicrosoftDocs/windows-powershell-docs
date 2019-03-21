@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Block-FileShareAccess
 ms.reviewer:
 ms.assetid: 3E4C78F9-1F7F-41AB-BD3B-8D0ED0AB678B
+ms.manager: dansimp
 ---
 
 # Block-FileShareAccess

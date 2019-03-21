@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-Dtc
 ms.reviewer:
 ms.assetid: 19FC93CC-753E-463A-BE43-738B6A31EE95
+ms.manager: dansimp
 ---
 
 # Get-Dtc

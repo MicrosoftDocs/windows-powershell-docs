@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 320D8BC5-D906-4FB4-9713-75CECABDBAA4
+ms.manager: dansimp
 ---
 
 # NPS Module

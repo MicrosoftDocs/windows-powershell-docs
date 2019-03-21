@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NetUDPSetting
 ms.reviewer:
 ms.assetid: 8BA3F61D-C548-46FA-9083-92124842800B
+ms.manager: dansimp
 ---
 
 # Get-NetUDPSetting

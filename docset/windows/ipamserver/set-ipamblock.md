@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IpamBlock
 ms.reviewer:
 ms.assetid: C19EF624-8026-4E59-9097-842EE8858C73
+ms.manager: dansimp
 ---
 
 # Set-IpamBlock

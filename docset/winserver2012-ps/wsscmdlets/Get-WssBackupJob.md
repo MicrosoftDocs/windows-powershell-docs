@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3A529C3E-3335-4C8E-B2E7-7D2AFEDDBA95
+ms.manager: dansimp
 ---
 
 # Get-WssBackupJob

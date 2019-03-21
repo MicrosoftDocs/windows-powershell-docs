@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VolumeScrubPolicy
 ms.reviewer:
 ms.assetid: A7EAF6F1-18A0-4A62-889D-5EA5973EA12C
+ms.manager: dansimp
 ---
 
 # Set-VolumeScrubPolicy

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-PfxCertificate
 ms.reviewer:
 ms.assetid: 7E97BC6B-B6E0-4BCA-98CE-E83D307FA3A6
+ms.manager: dansimp
 ---
 
 # Export-PfxCertificate

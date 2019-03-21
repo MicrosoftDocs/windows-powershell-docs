@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-CertificateNotificationTask
 ms.reviewer:
 ms.assetid: 51E52DB2-3187-4EB5-9AC6-319EAF7AE11A
+ms.manager: dansimp
 ---
 
 # New-CertificateNotificationTask

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unregister-SmisProvider
 ms.reviewer:
 ms.assetid: 82D7C783-EE46-46A1-AC2C-A6FD93FD1184
+ms.manager: dansimp
 ---
 
 # Unregister-SmisProvider

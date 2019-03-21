@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerInDC
 ms.reviewer:
 ms.assetid: D92DBC65-9B8B-460F-9497-67299F86D43D
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerInDC

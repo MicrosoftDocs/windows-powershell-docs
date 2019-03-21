@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-MuxEchoResponder
 ms.reviewer:
 ms.assetid: 76E1FFE7-C816-49FD-BCA7-6DCC662CBCD8
+ms.manager: dansimp
 ---
 
 # Enable-MuxEchoResponder

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Copy-NetIPsecMainModeRule
 ms.reviewer:
 ms.assetid: 18A92629-1EB1-494B-A000-564951F3B736
+ms.manager: dansimp
 ---
 
 # Copy-NetIPsecMainModeRule

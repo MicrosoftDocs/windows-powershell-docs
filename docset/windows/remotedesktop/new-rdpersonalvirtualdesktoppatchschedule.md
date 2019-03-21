@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-RDPersonalVirtualDesktopPatchSchedule
 ms.reviewer:
 ms.assetid: ECE5D121-F6DD-4EB5-B630-61C9A64A08A2
+ms.manager: dansimp
 ---
 
 # New-RDPersonalVirtualDesktopPatchSchedule

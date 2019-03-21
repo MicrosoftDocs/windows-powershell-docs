@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 27076FF9-23E4-4B91-93DC-1E9A759BA2EB
+ms.manager: dansimp
 ---
 
 # Get-OdbcDsn

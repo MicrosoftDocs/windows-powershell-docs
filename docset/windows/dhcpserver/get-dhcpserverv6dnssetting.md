@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DhcpServerv6DnsSetting
 ms.reviewer:
 ms.assetid: C5CF1300-03F7-45B8-9E08-8E7756C583BB
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6DnsSetting

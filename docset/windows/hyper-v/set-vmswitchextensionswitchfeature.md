@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMSwitchExtensionSwitchFeature
 ms.reviewer:
 ms.assetid: 4CA92606-3CA4-4197-B5DA-3E609D5F4851
+ms.manager: dansimp
 ---
 
 # Set-VMSwitchExtensionSwitchFeature

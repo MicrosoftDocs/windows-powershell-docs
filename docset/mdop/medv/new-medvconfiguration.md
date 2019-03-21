@@ -17,6 +17,7 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: FB9572BA-4C7F-4725-BC1B-363DA46E6417
+ms.manager: dansimp
 ---
 
 # New-MedvConfiguration

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NfsNetgroup
 ms.reviewer:
 ms.assetid: 21EF01B6-7129-4F10-87CE-FBA1F5B0D960
+ms.manager: dansimp
 ---
 
 # Get-NfsNetgroup

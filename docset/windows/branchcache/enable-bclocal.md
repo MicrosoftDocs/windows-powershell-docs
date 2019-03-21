@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-BCLocal
 ms.reviewer:
 ms.assetid: 37869BE1-F2D1-4C2D-BCC0-106DE7ADE2C4
+ms.manager: dansimp
 ---
 
 # Enable-BCLocal

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetAdapter
 ms.reviewer:
 ms.assetid: 38EC2D89-53B1-4709-B776-9ACE2C64CAF8
+ms.manager: dansimp
 ---
 
 # Enable-NetAdapter

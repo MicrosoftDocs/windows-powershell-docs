@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Redo-SbecActiveConfig
 ms.reviewer:
 ms.assetid: 3D3BDB1C-C020-4BB6-9F0F-580C7C8CB082
+ms.manager: dansimp
 ---
 
 # Redo-SbecActiveConfig

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Sync-DfsReplicationGroup
 ms.reviewer:
 ms.assetid: A0BE23C9-B790-470F-A405-B9795F33EBC5
+ms.manager: dansimp
 ---
 
 # Sync-DfsReplicationGroup

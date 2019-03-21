@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IpamDatabase
 ms.reviewer:
 ms.assetid: FD58B36E-7689-4DD4-AFAD-A3CCA18D70DC
+ms.manager: dansimp
 ---
 
 # Set-IpamDatabase

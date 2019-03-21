@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetworkSwitchVlan
 ms.reviewer:
 ms.assetid: F2139731-0D5E-4926-9204-E4070EBFDF3D
+ms.manager: dansimp
 ---
 
 # Enable-NetworkSwitchVlan

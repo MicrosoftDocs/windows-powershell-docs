@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageEnclosureVendorData
 ms.reviewer:
 ms.assetid: 3520523A-5EFA-4D71-ADDA-F6F3DFB88271
+ms.manager: dansimp
 ---
 
 # Get-StorageEnclosureVendorData

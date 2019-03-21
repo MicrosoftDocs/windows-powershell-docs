@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Grant-ClusterAccess
 ms.reviewer:
 ms.assetid: 3D6FE616-2674-444A-BA26-832FC93B3CBD
+ms.manager: dansimp
 ---
 
 # Grant-ClusterAccess

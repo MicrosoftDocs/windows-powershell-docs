@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-DfsnFolderTarget
 ms.reviewer:
 ms.assetid: 23FF6F79-DEE0-4531-9221-88C71580B901
+ms.manager: dansimp
 ---
 
 # Remove-DfsnFolderTarget

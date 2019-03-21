@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-DhcpServerv4Class
 ms.reviewer:
 ms.assetid: 1019D435-7A01-4B34-8043-8D6A7B3DD392
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Class

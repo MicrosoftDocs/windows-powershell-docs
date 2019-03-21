@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Unregister-UevTemplate
 ms.reviewer:
 ms.assetid: 7ABF3329-D602-4A79-8A83-DBBD3A9CECA3
+ms.manager: dansimp
 ---
 
 # Unregister-UevTemplate

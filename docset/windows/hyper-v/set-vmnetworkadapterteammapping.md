@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-VMNetworkAdapterTeamMapping
 ms.reviewer:
 ms.assetid: 1BC6E93E-C907-43C1-9663-D36DC308C4C5
+ms.manager: dansimp
 ---
 
 # Set-VMNetworkAdapterTeamMapping

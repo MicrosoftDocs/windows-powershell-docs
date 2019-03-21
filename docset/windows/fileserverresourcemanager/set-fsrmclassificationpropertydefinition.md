@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FsrmClassificationPropertyDefinition
 ms.reviewer:
 ms.assetid: 9C0BD933-2281-4057-9E60-42931A8647AC
+ms.manager: dansimp
 ---
 
 # Set-FsrmClassificationPropertyDefinition

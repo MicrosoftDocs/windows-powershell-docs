@@ -18,6 +18,7 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 2C062DCE-24E0-441D-AB3B-695702329DB0
+ms.manager: dansimp
 ---
 
 # AppVClient Module

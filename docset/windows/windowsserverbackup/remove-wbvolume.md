@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WBVolume
 ms.reviewer:
 ms.assetid: 456F2FAD-E865-4499-A5AB-01DAF49DDACD
+ms.manager: dansimp
 ---
 
 # Remove-WBVolume

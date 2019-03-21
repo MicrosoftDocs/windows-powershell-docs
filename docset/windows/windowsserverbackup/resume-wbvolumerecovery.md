@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Resume-WBVolumeRecovery
 ms.reviewer:
 ms.assetid: F4AF6DD5-285C-41E2-9B4A-CC5AEFF0CDE6
+ms.manager: dansimp
 ---
 
 # Resume-WBVolumeRecovery

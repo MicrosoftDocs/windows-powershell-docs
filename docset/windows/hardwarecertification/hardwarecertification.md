@@ -18,6 +18,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 86F7C9A7-92BA-48A0-BE1A-BE6D933DB8C2
+ms.manager: dansimp
 ---
 
 # HardwareCertification Module

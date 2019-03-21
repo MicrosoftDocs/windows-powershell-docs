@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-ADForest
 ms.reviewer:
 ms.assetid: 9982B2C1-685B-4039-9E5C-C00F93FB928D
+ms.manager: dansimp
 ---
 
 # Set-ADForest

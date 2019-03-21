@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4BE1B70E-BB79-40CE-B68B-63D9F3106EED
+ms.manager: dansimp
 ---
 
 # Set-MMAgent

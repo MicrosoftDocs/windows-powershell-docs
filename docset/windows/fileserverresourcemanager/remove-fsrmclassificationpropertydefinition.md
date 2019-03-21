@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-FsrmClassificationPropertyDefinition
 ms.reviewer:
 ms.assetid: 0129D051-B0A4-4ED2-B096-DFFFFEEB2D71
+ms.manager: dansimp
 ---
 
 # Remove-FsrmClassificationPropertyDefinition

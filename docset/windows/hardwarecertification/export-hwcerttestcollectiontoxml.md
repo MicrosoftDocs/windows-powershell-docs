@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-HwCertTestCollectionToXml
 ms.reviewer:
 ms.assetid: 7D4100BC-9F83-4172-9D4A-118A67CB31F7
+ms.manager: dansimp
 ---
 
 # Export-HwCertTestCollectionToXml

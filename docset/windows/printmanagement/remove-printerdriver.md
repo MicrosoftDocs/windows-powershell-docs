@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-PrinterDriver
 ms.reviewer:
 ms.assetid: 1CBF356C-E2C6-4D56-AA74-99DF5A6B170A
+ms.manager: dansimp
 ---
 
 # Remove-PrinterDriver

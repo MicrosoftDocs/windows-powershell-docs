@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetworkControllerAccessControlList
 ms.reviewer:
 ms.assetid: DAB8E555-BC9D-4787-B420-6F63106710C8
+ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerAccessControlList

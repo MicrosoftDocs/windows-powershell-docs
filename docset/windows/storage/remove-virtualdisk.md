@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-VirtualDisk
 ms.reviewer:
 ms.assetid: 42EAD0A2-60B2-4ACC-8836-5D815BCF3D2D
+ms.manager: dansimp
 ---
 
 # Remove-VirtualDisk

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-VMTPM
 ms.reviewer:
 ms.assetid: 6CE62BE1-9BD9-490B-9D2D-6F32572D626C
+ms.manager: dansimp
 ---
 
 # Enable-VMTPM

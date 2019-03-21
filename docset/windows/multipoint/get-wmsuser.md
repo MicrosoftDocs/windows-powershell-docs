@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsUser
 ms.reviewer:
 ms.assetid: EA8744D5-B53A-4C3E-AE80-5D4A9252E6FB
+ms.manager: dansimp
 ---
 
 # Get-WmsUser

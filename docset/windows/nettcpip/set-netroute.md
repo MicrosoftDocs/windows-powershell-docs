@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-NetRoute
 ms.reviewer:
 ms.assetid: 4A9A1254-7BEE-45F5-810D-118D7A94F850
+ms.manager: dansimp
 ---
 
 # Set-NetRoute

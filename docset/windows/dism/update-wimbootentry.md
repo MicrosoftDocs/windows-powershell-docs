@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Update-WIMBootEntry
 ms.reviewer:
 ms.assetid: FDE89254-D071-42C1-A593-585529696720
+ms.manager: dansimp
 ---
 
 # Update-WIMBootEntry

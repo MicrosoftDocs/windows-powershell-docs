@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-NetworkSwitchEthernetPort
 ms.reviewer:
 ms.assetid: 45423D8F-EB62-41F7-A09F-49584C273C23
+ms.manager: dansimp
 ---
 
 # Enable-NetworkSwitchEthernetPort

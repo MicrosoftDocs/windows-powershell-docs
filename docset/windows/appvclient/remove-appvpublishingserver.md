@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-AppvPublishingServer
 ms.reviewer:
 ms.assetid: 92B70AF1-E4B7-440E-A823-A823BB3E1E8D
+ms.manager: dansimp
 ---
 
 # Remove-AppvPublishingServer

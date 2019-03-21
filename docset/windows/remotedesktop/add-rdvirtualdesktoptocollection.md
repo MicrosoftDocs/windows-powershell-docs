@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-RDVirtualDesktopToCollection
 ms.reviewer:
 ms.assetid: 9780A261-DF3C-4FC4-8A02-3A2110094EA5
+ms.manager: dansimp
 ---
 
 # Add-RDVirtualDesktopToCollection

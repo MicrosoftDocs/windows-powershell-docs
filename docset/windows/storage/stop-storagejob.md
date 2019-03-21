@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-StorageJob
 ms.reviewer:
 ms.assetid: 027DCED4-B61F-4125-BFF4-625996910FD6
+ms.manager: dansimp
 ---
 
 # Stop-StorageJob

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2543A3EF-3DC4-4783-80A4-B960FAF3DFA6
+ms.manager: dansimp
 ---
 
 # Remove-WBVirtualMachine

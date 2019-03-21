@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-SyncShare
 ms.reviewer:
 ms.assetid: 696CBD26-2DF1-4FC5-8C8B-B43E5FC0AFB2
+ms.manager: dansimp
 ---
 
 # Get-SyncShare

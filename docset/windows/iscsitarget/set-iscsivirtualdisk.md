@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 8591CC9C-AEFF-47B0-B51F-EE2C85572688
+ms.manager: dansimp
 ---
 
 # Set-IscsiVirtualDisk

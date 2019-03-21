@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 38EC2D89-53B1-4709-B776-9ACE2C64CAF8
+ms.manager: dansimp
 ---
 
 # Enable-NetAdapter

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-AppBackgroundTaskDiagnosticLog
 ms.reviewer:
 ms.assetid: 68CCA324-C329-44B5-BC42-E2FEE9256C9E
+ms.manager: dansimp
 ---
 
 # Disable-AppBackgroundTaskDiagnosticLog

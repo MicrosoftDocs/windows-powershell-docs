@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Enable-BCDistributed
 ms.reviewer:
 ms.assetid: 301D92EF-B235-4298-80B7-8B2F8CC818C0
+ms.manager: dansimp
 ---
 
 # Enable-BCDistributed

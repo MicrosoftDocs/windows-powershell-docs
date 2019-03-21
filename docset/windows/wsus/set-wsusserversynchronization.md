@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-WsusServerSynchronization
 ms.reviewer:
 ms.assetid: A0BF19F2-ABD9-47E3-B833-4C09D9B76F83
+ms.manager: dansimp
 ---
 
 # Set-WsusServerSynchronization

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DnsServerPrimaryZone
 ms.reviewer:
 ms.assetid: 3C26B80A-DBEB-45CE-8644-4D2EBAD9408E
+ms.manager: dansimp
 ---
 
 # Set-DnsServerPrimaryZone

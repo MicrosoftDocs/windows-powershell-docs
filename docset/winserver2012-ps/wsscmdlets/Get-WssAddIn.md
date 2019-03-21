@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9CC442EE-64AC-4E7D-8D17-79CDCA9980FC
+ms.manager: dansimp
 ---
 
 # Get-WssAddIn

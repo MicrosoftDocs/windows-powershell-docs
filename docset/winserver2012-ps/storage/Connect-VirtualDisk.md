@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 04D4A72C-44A3-41DC-B346-869C4123FFA5
+ms.manager: dansimp
 ---
 
 # Connect-VirtualDisk

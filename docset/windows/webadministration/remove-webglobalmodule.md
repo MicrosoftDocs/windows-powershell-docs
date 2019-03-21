@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WebGlobalModule
 ms.reviewer:
 ms.assetid: 54025C94-825F-4597-810C-415F63EA9D1D
+ms.manager: dansimp
 ---
 
 # Remove-WebGlobalModule

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-RemoteAccessIpFilter
 ms.reviewer:
 ms.assetid: C3BBFF05-2B03-4F5A-96C5-664D3C8C2B53
+ms.manager: dansimp
 ---
 
 # Get-RemoteAccessIpFilter

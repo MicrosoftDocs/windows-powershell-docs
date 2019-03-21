@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Debug-FileShare
 ms.reviewer:
 ms.assetid: D88F2309-7C77-4E9C-84D0-EE9AC3F0D1DA
+ms.manager: dansimp
 ---
 
 # Debug-FileShare

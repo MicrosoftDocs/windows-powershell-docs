@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-VpnConnectionRoute
 ms.reviewer:
 ms.assetid: F8452B3A-29FD-4775-97BE-A53210E7AF48
+ms.manager: dansimp
 ---
 
 # Add-VpnConnectionRoute

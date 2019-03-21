@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-DAPolicyChange
 ms.reviewer:
 ms.assetid: 5A75228C-5B7E-4E55-A3D1-E82EBD6DE2ED
+ms.manager: dansimp
 ---
 
 # Get-DAPolicyChange

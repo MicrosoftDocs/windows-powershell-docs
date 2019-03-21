@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Add-ClusterGroup
 ms.reviewer:
 ms.assetid: 558598BD-965C-4FFD-A3C3-BF862221C5CB
+ms.manager: dansimp
 ---
 
 # Add-ClusterGroup

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VMGroup
 ms.reviewer:
 ms.assetid: 5A050B25-F271-4D9A-9018-9519224F2871
+ms.manager: dansimp
 ---
 
 # Get-VMGroup

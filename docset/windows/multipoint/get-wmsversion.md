@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-WmsVersion
 ms.reviewer:
 ms.assetid: 7D06B35A-0D4F-4226-8B09-5225D92CFEA7
+ms.manager: dansimp
 ---
 
 # Get-WmsVersion

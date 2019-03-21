@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-FsrmQuotaTemplate
 ms.reviewer:
 ms.assetid: 1517E303-B084-4BE8-BF3B-89808FA98777
+ms.manager: dansimp
 ---
 
 # Set-FsrmQuotaTemplate

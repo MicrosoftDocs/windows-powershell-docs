@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-NetIPsecQuickModeSA
 ms.reviewer:
 ms.assetid: 1727469C-6634-4165-AFD1-CA0916C828FC
+ms.manager: dansimp
 ---
 
 # Remove-NetIPsecQuickModeSA

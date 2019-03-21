@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B579FEB7-574E-4039-8F0C-F713BC160B9B
+ms.manager: dansimp
 ---
 
 # Invoke-CauScan

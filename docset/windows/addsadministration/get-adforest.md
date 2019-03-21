@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-ADForest
 ms.reviewer:
 ms.assetid: 01CB287E-8C9C-4ED9-8571-52CB27230512
+ms.manager: dansimp
 ---
 
 # Get-ADForest

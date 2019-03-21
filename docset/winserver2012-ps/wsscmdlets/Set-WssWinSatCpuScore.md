@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7A13CE3C-D9E3-4E2F-B09D-815634A55511
+ms.manager: dansimp
 ---
 
 # Set-WssWinSatCpuScore

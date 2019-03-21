@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-VolumeScrubPolicy
 ms.reviewer:
 ms.assetid: EC70E560-3E22-4F13-99BD-7028F13E9FF6
+ms.manager: dansimp
 ---
 
 # Get-VolumeScrubPolicy

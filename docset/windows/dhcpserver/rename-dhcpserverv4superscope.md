@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Rename-DhcpServerv4Superscope
 ms.reviewer:
 ms.assetid: 83FAAF33-35BC-43BD-B72A-39E540DD952F
+ms.manager: dansimp
 ---
 
 # Rename-DhcpServerv4Superscope

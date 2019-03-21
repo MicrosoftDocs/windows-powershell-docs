@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-IpamAddressSpace
 ms.reviewer:
 ms.assetid: CBA61EE0-1F11-4F79-A50D-65052C929B5E
+ms.manager: dansimp
 ---
 
 # Set-IpamAddressSpace

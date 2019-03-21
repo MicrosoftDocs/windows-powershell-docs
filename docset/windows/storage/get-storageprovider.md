@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-StorageProvider
 ms.reviewer:
 ms.assetid: 27E50FF5-3305-4BFE-86A2-733616E2BC7E
+ms.manager: dansimp
 ---
 
 # Get-StorageProvider

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Stop-EtwTraceSession
 ms.reviewer:
 ms.assetid: 076EB02C-52A2-4917-9265-4EC41EC79703
+ms.manager: dansimp
 ---
 
 # Stop-EtwTraceSession

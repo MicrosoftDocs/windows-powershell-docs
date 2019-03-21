@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Export-Certificate
 ms.reviewer:
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
+ms.manager: dansimp
 ---
 
 # Export-Certificate

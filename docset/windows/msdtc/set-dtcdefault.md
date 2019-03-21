@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-DtcDefault
 ms.reviewer:
 ms.assetid: 3FA71004-D5B6-41AA-8EF4-618A55A41DDB
+ms.manager: dansimp
 ---
 
 # Set-DtcDefault

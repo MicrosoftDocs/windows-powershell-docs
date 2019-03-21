@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Disable-NetDnsTransitionConfiguration
 ms.reviewer:
 ms.assetid: F40D3E8B-F286-4D27-BFA9-E7D58C95E5A4
+ms.manager: dansimp
 ---
 
 # Disable-NetDnsTransitionConfiguration

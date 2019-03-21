@@ -16,6 +16,7 @@ schema: 2.0.0
 title: New-FsrmAction
 ms.reviewer:
 ms.assetid: 0B4B9F8D-D43E-4054-88B4-0E16B9058762
+ms.manager: dansimp
 ---
 
 # New-FsrmAction

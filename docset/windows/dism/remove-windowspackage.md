@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Remove-WindowsPackage
 ms.reviewer:
 ms.assetid: A584AF83-A2B0-4200-97B7-63C762946A49
+ms.manager: dansimp
 ---
 
 # Remove-WindowsPackage

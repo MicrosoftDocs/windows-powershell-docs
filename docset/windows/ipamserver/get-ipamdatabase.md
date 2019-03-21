@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-IpamDatabase
 ms.reviewer:
 ms.assetid: D72E86F0-F758-46CF-878A-C88D3FCBCA87
+ms.manager: dansimp
 ---
 
 # Get-IpamDatabase

@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Set-PcsvDeviceNetworkConfiguration
 ms.reviewer:
 ms.assetid: 14067764-EE6F-474A-BA17-A95A8DC737B2
+ms.manager: dansimp
 ---
 
 # Set-PcsvDeviceNetworkConfiguration

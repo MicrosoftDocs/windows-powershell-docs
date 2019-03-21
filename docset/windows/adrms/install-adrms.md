@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Install-ADRMS
 ms.reviewer:
 ms.assetid: F44B9525-0E1E-43EA-8FC0-CE9514EEF950
+ms.manager: dansimp
 ---
 
 # Install-ADRMS

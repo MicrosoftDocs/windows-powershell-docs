@@ -16,6 +16,7 @@ schema: 2.0.0
 title: Get-NfsClientgroup
 ms.reviewer:
 ms.assetid: A1D81FC8-CCD1-4003-8EAA-135CED48B62D
+ms.manager: dansimp
 ---
 
 # Get-NfsClientgroup

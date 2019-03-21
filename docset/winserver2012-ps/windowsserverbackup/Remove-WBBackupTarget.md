@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ACA6C36A-26F7-4C71-A7DC-ED5AB30BBBBD
+ms.manager: dansimp
 ---
 
 # Remove-WBBackupTarget

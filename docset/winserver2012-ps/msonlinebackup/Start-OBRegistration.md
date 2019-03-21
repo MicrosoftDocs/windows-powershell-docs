@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 066EB53D-003C-4AF4-B5C1-51D5BAEBFE81
+ms.manager: dansimp
 ---
 
 # Start-OBRegistration

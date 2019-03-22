@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 634CE6BB-B9E6-4B1F-B358-C07698E8AA5F
-ms.manager: dansimp
 ---
 
 # Restart-HcsController

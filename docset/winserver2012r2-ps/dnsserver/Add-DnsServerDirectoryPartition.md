@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FA848EE6-7482-4B9D-9701-3BC578CC8BC4
-ms.manager: dansimp
 ---
 
 # Add-DnsServerDirectoryPartition

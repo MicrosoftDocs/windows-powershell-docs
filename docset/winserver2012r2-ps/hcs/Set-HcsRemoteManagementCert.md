@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6D701AD0-5AA0-4A6E-811C-839CA6E44C7B
-ms.manager: dansimp
 ---
 
 # Set-HcsRemoteManagementCert

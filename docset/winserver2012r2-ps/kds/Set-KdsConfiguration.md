@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1F49032F-B5CD-4AAD-BAF4-2992F97C3B97
-ms.manager: dansimp
 ---
 
 # Set-KdsConfiguration

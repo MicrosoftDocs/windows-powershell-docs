@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 33683F3F-BA13-4320-ACB9-ECFBF956426F
-ms.manager: dansimp
 ---
 
 # Get-VMResourcePool

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A66E433F-6431-4DE3-8202-EAA9ACA21B1E
-ms.manager: dansimp
 ---
 
 # New-DfsnFolder

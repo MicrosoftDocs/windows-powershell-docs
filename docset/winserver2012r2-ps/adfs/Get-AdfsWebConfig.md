@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 130209C7-E07A-4926-B58B-E0AF7F027B32
-ms.manager: dansimp
 ---
 
 # Get-AdfsWebConfig

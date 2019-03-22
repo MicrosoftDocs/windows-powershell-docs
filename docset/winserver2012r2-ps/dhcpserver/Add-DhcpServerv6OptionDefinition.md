@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18605C7A-EFE8-4C59-B819-F94015E39E84
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv6OptionDefinition

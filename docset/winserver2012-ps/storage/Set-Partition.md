@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EA0F915C-DBBA-48FA-8138-BC5C05BFBBC2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-Partition

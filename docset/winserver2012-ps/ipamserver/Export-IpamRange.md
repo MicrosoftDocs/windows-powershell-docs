@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 543BE520-530C-4DD4-8403-659CF05826AD
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Export-IpamRange

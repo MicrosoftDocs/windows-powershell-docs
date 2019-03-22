@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3C7C5EE3-8FF9-4A7B-AF75-F0EAAFE6FD08
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WASAssessment

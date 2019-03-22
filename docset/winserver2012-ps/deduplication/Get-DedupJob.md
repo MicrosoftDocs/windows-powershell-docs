@@ -3,7 +3,7 @@ external help file: Dedup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: F4920CDE-BC31-4C73-9859-32547D8EFD16
-ms.manager: dansimp
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

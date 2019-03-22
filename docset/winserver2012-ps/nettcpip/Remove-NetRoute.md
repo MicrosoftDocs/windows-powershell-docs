@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3252B6F3-7908-47F2-BEAB-BFE265B7C985
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetRoute

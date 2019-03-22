@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7F1A33E9-8C0A-4A20-9A13-C6A7AF157236
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NpsRadiusClient

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5E59DF66-59BF-4CBA-BBCF-9D1C7AEED414
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-GPRegistryValue

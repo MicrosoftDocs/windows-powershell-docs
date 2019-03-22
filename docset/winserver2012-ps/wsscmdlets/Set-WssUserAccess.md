@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F8994BB4-0248-4B58-9FB7-F85BD7A53672
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-WssUserAccess

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A63421F6-0F69-4D67-8BAA-34B5736C659F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SmbClientNetworkInterface

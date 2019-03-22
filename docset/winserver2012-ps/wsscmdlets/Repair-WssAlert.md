@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EB85F576-0780-4BA6-A1C8-E738BC032732
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Repair-WssAlert

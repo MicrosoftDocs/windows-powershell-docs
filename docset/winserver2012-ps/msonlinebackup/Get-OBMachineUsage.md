@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5A36C2B9-10C3-459A-9B45-A7DE75FAEC3C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-OBMachineUsage

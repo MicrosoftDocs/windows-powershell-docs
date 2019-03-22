@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 203318BF-AC77-4F70-A074-250CF9389C51
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetIPsecPhase2AuthSet

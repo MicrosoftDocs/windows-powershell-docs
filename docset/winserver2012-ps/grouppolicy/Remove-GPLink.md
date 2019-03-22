@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0550DC8B-73FE-4758-9B62-6342880F43BD
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-GPLink

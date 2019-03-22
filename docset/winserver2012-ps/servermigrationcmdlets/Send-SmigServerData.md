@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Send-SmigServerData

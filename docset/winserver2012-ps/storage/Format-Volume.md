@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4E32B0ED-FAA5-4DED-A96C-AE4C5A49CF8D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Format-Volume

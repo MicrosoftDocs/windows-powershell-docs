@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9B460E62-2F2F-43F9-89F3-D296D6F1F0D2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-Printer

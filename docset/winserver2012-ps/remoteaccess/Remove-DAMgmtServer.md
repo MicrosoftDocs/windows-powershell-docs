@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 538962B5-D9D9-4031-9688-20A6B62CE244
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-DAMgmtServer

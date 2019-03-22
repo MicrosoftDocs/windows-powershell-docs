@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 899D9201-3001-4885-AAA3-EFCC2AF766C2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WBBackupTarget

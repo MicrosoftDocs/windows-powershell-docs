@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 96270725-4A06-4893-9D86-036C7345F78F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-ResiliencySetting

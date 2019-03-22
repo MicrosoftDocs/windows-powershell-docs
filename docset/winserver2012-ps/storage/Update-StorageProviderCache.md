@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5314BD55-B77B-43F0-8680-DC3012F87440
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Update-StorageProviderCache

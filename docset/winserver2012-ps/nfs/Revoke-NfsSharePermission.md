@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 13FD01AB-B3C0-45A6-AB65-41ED6AEDDEFE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Revoke-NfsSharePermission

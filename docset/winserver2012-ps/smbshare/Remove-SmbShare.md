@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C898693C-2EBD-4288-ADCD-40A6F52C5D33
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-SmbShare

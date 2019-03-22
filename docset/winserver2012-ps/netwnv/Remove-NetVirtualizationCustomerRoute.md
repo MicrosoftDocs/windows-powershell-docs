@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B3F7199E-ABD2-4D9C-BACD-30582E312C32
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetVirtualizationCustomerRoute

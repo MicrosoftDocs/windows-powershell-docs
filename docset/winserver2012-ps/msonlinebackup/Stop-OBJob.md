@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 81E2B06C-0E1E-4637-A893-4D3913FB850B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Stop-OBJob

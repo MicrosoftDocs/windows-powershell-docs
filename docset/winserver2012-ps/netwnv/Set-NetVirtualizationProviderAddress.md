@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 784ACEC9-9596-4ED3-AE21-6D0B4FF72D76
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetVirtualizationProviderAddress

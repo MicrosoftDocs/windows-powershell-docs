@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 736C312A-623F-482E-9B87-340E5B4614BC
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-BitLocker

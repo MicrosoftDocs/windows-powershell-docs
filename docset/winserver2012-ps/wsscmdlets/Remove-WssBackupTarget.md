@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 717C6443-5DD2-4126-A895-FCF31EEEA627
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-WssBackupTarget

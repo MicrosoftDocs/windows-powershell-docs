@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 15428631-C8D6-4BA6-A9B4-7795384C3015
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NpsRemediationServer

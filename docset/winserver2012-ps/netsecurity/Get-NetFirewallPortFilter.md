@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CF33FD25-A3D5-4503-AF42-63C69DD048AD
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetFirewallPortFilter

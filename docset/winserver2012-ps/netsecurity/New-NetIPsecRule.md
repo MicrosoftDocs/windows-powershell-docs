@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AF68BBAE-B01E-49A0-A9A6-10600E6FD9F6
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetIPsecRule

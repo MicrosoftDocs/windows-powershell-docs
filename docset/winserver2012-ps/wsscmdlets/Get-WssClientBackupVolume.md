@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 73476D36-C62C-484B-B674-9D549686C92C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssClientBackupVolume

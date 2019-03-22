@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 713DDC03-630D-4965-AF0F-B3B340025437
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetUDPSetting

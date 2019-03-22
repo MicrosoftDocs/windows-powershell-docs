@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C897EB1C-04F1-4CDF-8891-9B2C13F7151D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NfsServerConfiguration

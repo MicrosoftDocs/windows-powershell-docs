@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 32991B3D-41BF-4DB9-8096-8D5847C7F75A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetIPHttpsConfiguration

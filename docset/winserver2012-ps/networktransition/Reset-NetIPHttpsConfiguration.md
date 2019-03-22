@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7B6E7F84-4021-445C-A976-797351F7AC1A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Reset-NetIPHttpsConfiguration

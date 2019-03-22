@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B49B434A-027E-4AB5-9717-AD930B15AA5A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-DAMgmtServer

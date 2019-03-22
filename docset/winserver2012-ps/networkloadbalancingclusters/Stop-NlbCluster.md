@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4ACF3C94-5AA5-45A5-9E0F-A57EDA1AA5E7
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Stop-NlbCluster

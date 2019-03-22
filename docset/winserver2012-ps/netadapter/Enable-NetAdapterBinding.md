@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CAE842A4-D3F2-4001-A768-892822EADB2B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-NetAdapterBinding

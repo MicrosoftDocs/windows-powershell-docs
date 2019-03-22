@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 18BE9A1F-283D-448F-A68F-D0450FCAB515
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Resume-BitLocker

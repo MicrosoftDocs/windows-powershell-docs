@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5B87C8DB-4B08-4C82-BBB9-E17C75EFB79D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Install-VamtProductActivation

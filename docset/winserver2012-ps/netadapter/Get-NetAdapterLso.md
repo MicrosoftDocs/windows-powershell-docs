@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ECBBCA96-A4FB-434F-A8AB-3C10C81329BE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetAdapterLso

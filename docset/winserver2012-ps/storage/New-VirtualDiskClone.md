@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C5ECB381-3631-4AB3-A0FD-DE20FC412E7B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-VirtualDiskClone

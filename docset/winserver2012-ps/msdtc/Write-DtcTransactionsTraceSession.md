@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1238FF18-E57F-4156-8432-FA2CFE5BA5A9
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Write-DtcTransactionsTraceSession

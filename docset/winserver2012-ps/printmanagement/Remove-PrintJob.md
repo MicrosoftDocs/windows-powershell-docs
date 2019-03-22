@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B439E3E1-29A5-4B94-9A6A-07639FBE28A2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-PrintJob

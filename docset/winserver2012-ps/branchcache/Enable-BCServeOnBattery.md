@@ -1,7 +1,7 @@
 ---
 external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: FAECFBF2-DDBC-4EE9-A2F9-FA248F30881B
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

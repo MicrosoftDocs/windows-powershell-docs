@@ -1,7 +1,7 @@
 ---
 external help file: 
 ms.assetid: FD860ADB-81AC-45A9-95EC-BF16FDE70D7C
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B449B4C8-177D-453C-A395-C145BDBED3E6
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-WssBackupConfiguration

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D6C1F900-9AB6-4864-9DDC-82A8670D5C5B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssRecoveryItem

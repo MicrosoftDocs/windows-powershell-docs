@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A963DBC6-1005-4514-BA59-FDBE82F7E441
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Update-IscsiTargetPortal

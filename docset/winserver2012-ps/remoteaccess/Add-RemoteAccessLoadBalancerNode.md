@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 90AA4EC8-09C9-4B77-BFB2-0E68AF04B3E5
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-RemoteAccessLoadBalancerNode

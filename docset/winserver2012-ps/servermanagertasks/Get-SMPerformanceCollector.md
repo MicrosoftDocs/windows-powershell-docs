@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CB5682DE-A40F-4987-BC5B-C4B57F15D352
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SMPerformanceCollector

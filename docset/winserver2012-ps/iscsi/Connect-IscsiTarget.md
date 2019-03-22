@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 111BFAA7-332B-472F-A8F7-90DCF181AF1C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Connect-IscsiTarget

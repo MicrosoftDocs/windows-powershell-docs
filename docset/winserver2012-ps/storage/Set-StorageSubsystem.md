@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-StorageSubsystem

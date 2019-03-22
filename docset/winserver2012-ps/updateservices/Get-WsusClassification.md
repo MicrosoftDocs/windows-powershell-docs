@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B2379176-301C-490D-8FE1-75C2B71C05B5
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WsusClassification

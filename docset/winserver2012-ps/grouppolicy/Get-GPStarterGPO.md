@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 47397B2B-49DA-4329-A2AE-6AB87CC1EE1E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-GPStarterGPO

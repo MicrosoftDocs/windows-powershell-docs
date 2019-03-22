@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B9BB4764-9CDC-4220-BC2A-67C7789567A8
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-MSDSMSupportedHW

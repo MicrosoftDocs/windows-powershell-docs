@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1F2E55DF-73AF-40F5-A09B-05945A504510
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-Disk

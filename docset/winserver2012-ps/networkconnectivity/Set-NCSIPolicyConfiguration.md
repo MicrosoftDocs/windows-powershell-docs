@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0CC56EDD-6D58-4221-954D-232A896ED0C9
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NCSIPolicyConfiguration

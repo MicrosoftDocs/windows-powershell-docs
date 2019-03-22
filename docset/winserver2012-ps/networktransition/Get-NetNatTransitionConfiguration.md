@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 070968CD-C569-4A16-956F-6908AA1F318F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetNatTransitionConfiguration

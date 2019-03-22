@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8DD6475E-6FCE-4DCB-B9BF-44BDCFEDE2CE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Import-WssUser

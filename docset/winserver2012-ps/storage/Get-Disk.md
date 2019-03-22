@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-Disk

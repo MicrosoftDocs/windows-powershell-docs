@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 22F90AA6-B29F-453D-A8A9-F683886C2895
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetIPsecQuickModeCryptoSet

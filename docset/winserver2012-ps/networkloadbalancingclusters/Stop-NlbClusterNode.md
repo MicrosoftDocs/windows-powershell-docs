@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C7659763-21A6-48A8-9A65-86D22E5200C5
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Stop-NlbClusterNode

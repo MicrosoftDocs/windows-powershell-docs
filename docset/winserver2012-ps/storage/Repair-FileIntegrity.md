@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9F95D964-20B5-484D-8EF8-E205E8DC3BBE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Repair-FileIntegrity

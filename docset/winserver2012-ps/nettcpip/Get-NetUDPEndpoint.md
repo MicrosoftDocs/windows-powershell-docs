@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4408599B-F19A-4CF3-86C3-BDBEEE191999
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetUDPEndpoint

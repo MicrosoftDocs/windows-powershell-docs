@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9BCC66AB-9EA9-4616-A9CD-AB97B41573F4
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-IpamCustomField

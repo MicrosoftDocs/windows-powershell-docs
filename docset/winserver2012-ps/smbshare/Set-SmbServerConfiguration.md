@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8B5FF5C0-5D2F-4030-8F8E-C2C3B3E8906E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-SmbServerConfiguration

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F0EEF063-A47F-4D06-8BC4-332540CB3877
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Unregister-CauPlugin

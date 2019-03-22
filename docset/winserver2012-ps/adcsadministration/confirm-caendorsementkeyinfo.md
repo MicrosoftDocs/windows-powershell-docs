@@ -16,7 +16,6 @@ schema: 2.0.0
 ms.reviewer:
 title: Confirm-CAEndorsementKeyInfo
 ms.assetid: CCC599DA-19B6-4AC9-87E5-8283B35A6EF5
-ms.manager: dansimp
 ---
 
 # Confirm-CAEndorsementKeyInfo

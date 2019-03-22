@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetPrefixPolicy

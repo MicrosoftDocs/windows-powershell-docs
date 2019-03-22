@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 12C3BB17-8513-458E-AC0E-ED9776F2CD32
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-VpnConnection

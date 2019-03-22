@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B6D1DE3E-076B-4BCB-99E3-31FFE6282141
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Export-VamtData

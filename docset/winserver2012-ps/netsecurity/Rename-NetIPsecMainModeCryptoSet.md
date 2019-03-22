@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B50BA2D8-C0E1-4816-A96E-DDA1058C4553
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-NetIPsecMainModeCryptoSet

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ACDA05AE-6AD0-4F38-8448-DDC2D7D3025F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Export-SmigServerSetting

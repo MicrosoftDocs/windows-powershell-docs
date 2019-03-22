@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 88E64DC6-0DA0-4ABA-B686-B7EA5F6B0BF4
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-WBCatalog

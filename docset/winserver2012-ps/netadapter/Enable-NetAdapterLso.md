@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FB5FC63F-7BAD-409B-9FB3-8B7FE5D9B52C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-NetAdapterLso

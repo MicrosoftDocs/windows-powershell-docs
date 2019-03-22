@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3D5D931D-901C-4A70-B548-92C86FC62FEA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetVirtualizationProviderRoute

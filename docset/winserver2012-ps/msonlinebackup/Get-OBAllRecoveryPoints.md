@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 854F08E2-CAB0-4565-B7CF-D811A26E7954
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-OBAllRecoveryPoints

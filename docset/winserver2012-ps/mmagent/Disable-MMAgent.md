@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A6142E5E-104A-4A91-B3A5-55E9F3078DBA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-MMAgent

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1DA7D3BB-FB1A-475E-B64D-1614E67AD941
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Register-IscsiSession

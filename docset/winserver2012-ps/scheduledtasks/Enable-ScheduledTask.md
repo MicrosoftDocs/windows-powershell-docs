@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AD79DF6E-F302-4CEE-8FDE-BCDD224A5A25
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-ScheduledTask

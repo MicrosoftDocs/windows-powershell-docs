@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2036A78E-8DA7-4781-8A85-5EF8314E0981
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetAdapterVmqQueue

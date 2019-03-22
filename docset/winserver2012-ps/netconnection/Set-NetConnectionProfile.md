@@ -1,7 +1,7 @@
 ---
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 ms.assetid: 30A7D679-081F-467E-AAFE-54F31EABBC4C
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

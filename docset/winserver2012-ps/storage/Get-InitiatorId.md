@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 56C96B69-33C0-402B-8813-D64A4434011D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-InitiatorId

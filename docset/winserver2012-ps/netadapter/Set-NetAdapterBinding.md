@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A2360AAE-2FCF-4C8A-8063-923162B47F90
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetAdapterBinding

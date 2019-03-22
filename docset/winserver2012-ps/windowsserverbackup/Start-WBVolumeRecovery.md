@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E953CA49-06F9-454F-85CC-7B00686E969A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Start-WBVolumeRecovery

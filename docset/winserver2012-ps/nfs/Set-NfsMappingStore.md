@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 97B6FB6C-D855-49B2-970E-D0AEEBEE85C4
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NfsMappingStore

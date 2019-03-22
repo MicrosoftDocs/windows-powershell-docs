@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FE64476E-7845-4FA3-B234-9C727F683B5E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Start-NlbCluster

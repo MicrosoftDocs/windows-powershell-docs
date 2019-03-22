@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 15F492BB-A750-4FF5-8BF2-23B7728D7CB2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Reset-NetAdapterAdvancedProperty

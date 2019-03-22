@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1E5CAB93-9961-42FC-A689-676847C41FC8
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-DtcAdvancedHostSetting

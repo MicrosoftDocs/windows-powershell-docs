@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A7C1AB76-C6E0-4C3E-AAA7-031B3475236A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetLbfoTeamNic

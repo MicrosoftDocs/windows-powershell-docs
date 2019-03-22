@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DCA02082-993D-45C4-88FF-82319C552C8A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Start-NlbClusterNode

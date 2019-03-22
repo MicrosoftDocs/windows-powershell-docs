@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6EB7B0F5-F3FF-40EB-8189-EEC2FDC940C8
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-NetAdapterLso

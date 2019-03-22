@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CF8BA4DF-3B15-436C-AFD3-97A2B69764BB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Export-NpsConfiguration

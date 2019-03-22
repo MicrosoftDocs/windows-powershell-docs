@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B7FB3B05-39C8-44BC-8107-AF26E0FB3528
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-DAMultiSite

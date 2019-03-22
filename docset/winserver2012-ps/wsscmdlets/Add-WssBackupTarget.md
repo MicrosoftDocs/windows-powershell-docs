@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5049969E-A8AE-433F-A1F0-31EDCC3B2213
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-WssBackupTarget

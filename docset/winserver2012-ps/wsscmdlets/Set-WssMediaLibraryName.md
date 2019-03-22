@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9B539128-39E2-479D-9255-916BE6CE0392
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-WssMediaLibraryName

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 49D6356B-B46D-4781-8C55-0E33A3060AB8
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-RemoteAccessConnectionStatisticsSummary

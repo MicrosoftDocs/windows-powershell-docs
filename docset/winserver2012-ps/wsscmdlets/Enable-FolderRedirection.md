@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 23F24EA9-D61B-4DC7-8C28-2853AF4B2E2D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-FolderRedirection

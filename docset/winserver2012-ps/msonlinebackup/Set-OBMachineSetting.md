@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4484E174-9C4B-40AF-AA2B-134B0E2D0B80
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-OBMachineSetting

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4A8F1048-9AF8-4195-BB1E-E161CB9E805C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-NetIPsecRule

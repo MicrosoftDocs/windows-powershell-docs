@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ABCF968F-F925-47B0-844B-C6E05EB996C9
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetLbfoTeamMember

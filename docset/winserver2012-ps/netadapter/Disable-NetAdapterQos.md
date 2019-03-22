@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9ABCED53-7C6A-4600-A7E2-805701A6AE79
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-NetAdapterQos

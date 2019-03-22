@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8ACC3C62-9C15-4433-A5D0-41C338CDB4FB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-DAEntryPoint

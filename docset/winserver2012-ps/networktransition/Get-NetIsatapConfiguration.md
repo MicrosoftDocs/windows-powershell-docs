@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 074377D0-848E-48B0-AF94-D1E9A7A75BDA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetIsatapConfiguration

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 045A4D3E-67C8-4AD9-8C5A-94AA8F9300BB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WsusUpdate

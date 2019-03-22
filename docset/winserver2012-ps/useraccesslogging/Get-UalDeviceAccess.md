@@ -1,7 +1,7 @@
 ---
 external help file: MsftUal_DeviceAccess.cdxml-help.xml
 ms.assetid: 7E8FA628-D4F8-44B1-BFEE-AAD7891A8BBC
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

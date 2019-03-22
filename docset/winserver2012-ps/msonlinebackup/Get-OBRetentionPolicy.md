@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EB5C55D0-F158-4BAD-8363-7C7CDA8E882C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-OBRetentionPolicy

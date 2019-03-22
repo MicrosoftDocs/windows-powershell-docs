@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 527473BA-7372-41F3-A75B-93211FBCC8DE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssMediaServerEnabled

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9980E6FF-D0C2-449A-8143-DA1D7700C770
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-SmbMapping

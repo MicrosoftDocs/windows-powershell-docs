@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AC1D03CA-DAF1-4617-A22B-4A8B9A7A6CF2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-MaskingSet

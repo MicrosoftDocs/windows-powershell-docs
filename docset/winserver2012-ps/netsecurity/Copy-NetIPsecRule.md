@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0FAB7846-3E4F-4F22-9060-597A3EE680CB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Copy-NetIPsecRule

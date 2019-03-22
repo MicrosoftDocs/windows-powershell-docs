@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5F4D478E-F86B-4558-A41C-8C2B2A629B69
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Stop-WssBackupJob

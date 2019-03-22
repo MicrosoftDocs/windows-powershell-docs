@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D9B971D9-2C10-424A-A277-704C156C8F18
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetAdapterSriov

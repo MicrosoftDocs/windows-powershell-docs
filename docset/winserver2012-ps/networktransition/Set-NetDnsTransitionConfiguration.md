@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F02B991B-500F-48E8-B6FC-2B05848B593E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetDnsTransitionConfiguration

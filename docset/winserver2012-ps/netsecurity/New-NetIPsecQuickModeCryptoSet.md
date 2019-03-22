@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B87E3ACD-8BDD-471A-AC43-D444F2A0C3D5
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetIPsecQuickModeCryptoSet

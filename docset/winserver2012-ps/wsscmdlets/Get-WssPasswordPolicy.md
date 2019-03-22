@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 702FCE34-362A-4187-882B-1281D91384D0
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssPasswordPolicy

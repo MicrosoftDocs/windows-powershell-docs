@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Grant-SmbShareAccess

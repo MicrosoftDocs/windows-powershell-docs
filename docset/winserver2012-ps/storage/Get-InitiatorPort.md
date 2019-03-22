@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 580A19CF-26D1-45BB-AD34-A6265E2EFACF
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-InitiatorPort

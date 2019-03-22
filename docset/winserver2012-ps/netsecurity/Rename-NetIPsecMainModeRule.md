@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 72FA6C6C-0597-4C8C-BEA6-84198727B6BA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-NetIPsecMainModeRule

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1F14280F-2E37-4AEB-A08C-70BC1C7731F3
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NfsMappedIdentity

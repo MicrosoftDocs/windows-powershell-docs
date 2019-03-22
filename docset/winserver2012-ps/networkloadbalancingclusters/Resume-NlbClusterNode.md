@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 36421B96-99FA-4188-9B1E-D44F0A503258
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Resume-NlbClusterNode

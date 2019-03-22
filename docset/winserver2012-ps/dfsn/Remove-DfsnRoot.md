@@ -1,7 +1,7 @@
 ---
 external help file: DfsNamespace.cdxml-help.xml
 ms.assetid: 14D4A623-C595-4DEC-A8AF-AFE74AB71D2E
-ms.manager: dansimp
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

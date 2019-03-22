@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 485624A7-B40A-47DF-AF78-B12EC35B90DA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssDrive

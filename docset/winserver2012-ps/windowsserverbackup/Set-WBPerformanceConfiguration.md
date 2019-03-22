@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 688E0317-208D-4F51-8ED4-BF1091BE1A13
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-WBPerformanceConfiguration

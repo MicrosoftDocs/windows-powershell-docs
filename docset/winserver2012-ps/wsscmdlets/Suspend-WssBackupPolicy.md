@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C1A93E15-CFC5-4E18-995E-A9715C52DC60
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Suspend-WssBackupPolicy

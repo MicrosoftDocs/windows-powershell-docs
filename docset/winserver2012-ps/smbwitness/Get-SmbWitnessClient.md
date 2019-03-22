@@ -1,7 +1,7 @@
 ---
 external help file: SmbWitnessWmiClient.cdxml-help.xml
 ms.assetid: 3E363C82-B492-486D-B964-7253E467F3E3
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

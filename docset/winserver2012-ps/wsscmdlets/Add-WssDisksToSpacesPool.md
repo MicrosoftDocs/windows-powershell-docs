@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 12BCAEC2-0F98-4EC1-ACC0-68A62763F3BB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-WssDisksToSpacesPool

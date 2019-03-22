@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 ms.assetid: 7ED02CD3-B127-4EA4-9625-8D6FF3141E54
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

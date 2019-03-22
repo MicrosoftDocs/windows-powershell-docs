@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6984A546-5FE3-48C5-8E16-1CBFE7DADC70
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-RemoteAccessLoadBalancerNode

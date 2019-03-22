@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9C35AF5F-3291-43E0-93AE-CCBB1B74931C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetAdapterAdvancedProperty

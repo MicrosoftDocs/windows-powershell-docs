@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E209B8C9-9715-4B37-AD0A-2120DF79F72C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NfsNetgroupStore

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8BD99095-AB93-4A86-9BCE-9CFE31C2AFAB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SmbMultichannelConnection

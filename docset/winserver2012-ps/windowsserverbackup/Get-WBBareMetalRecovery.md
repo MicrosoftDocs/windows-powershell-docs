@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D13531F1-43DE-4CDD-95B8-D93961005D4E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WBBareMetalRecovery

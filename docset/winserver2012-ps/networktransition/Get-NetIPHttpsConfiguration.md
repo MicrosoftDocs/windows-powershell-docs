@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E3DB6861-8AC4-43D7-96A7-E832280B9A10
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetIPHttpsConfiguration

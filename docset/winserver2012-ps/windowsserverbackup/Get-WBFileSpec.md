@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EDDDC881-58AF-4C99-A629-2899C048BA04
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WBFileSpec

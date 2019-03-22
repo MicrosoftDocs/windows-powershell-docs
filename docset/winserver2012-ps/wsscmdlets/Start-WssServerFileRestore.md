@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B78CAA86-4CC1-4F07-81E6-141C857FCAF0
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Start-WssServerFileRestore

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 38BA9F98-BA31-4B71-A5F3-19AB8782BA06
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NlbClusterDriverInfo

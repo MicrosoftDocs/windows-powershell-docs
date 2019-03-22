@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3F5386E3-4AD6-43DF-BE21-9837265355C3
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-OBSchedule

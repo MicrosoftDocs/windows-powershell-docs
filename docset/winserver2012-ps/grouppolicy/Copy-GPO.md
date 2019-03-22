@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DAFF749E-E1A0-47A2-B468-FDEA347F6335
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Copy-GPO

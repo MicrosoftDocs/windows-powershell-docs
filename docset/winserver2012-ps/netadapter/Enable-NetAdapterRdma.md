@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C7EE08C5-60D3-4CC3-AFE8-08E590148B5C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-NetAdapterRdma

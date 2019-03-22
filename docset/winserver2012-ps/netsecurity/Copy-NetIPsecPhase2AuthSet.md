@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FCBED665-C210-423C-BF7B-C38E3EF47725
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Copy-NetIPsecPhase2AuthSet

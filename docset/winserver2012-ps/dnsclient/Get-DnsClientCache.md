@@ -1,7 +1,7 @@
 ---
 external help file: MSFT_DnsClientCache.cdxml-help.xml
 ms.assetid: 50AA93EA-4AE7-4DB1-B210-F0EF080F95BD
-ms.manager: dansimp
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

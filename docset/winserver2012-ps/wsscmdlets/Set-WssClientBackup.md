@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B477E586-4070-412C-BF43-9169964E610B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-WssClientBackup

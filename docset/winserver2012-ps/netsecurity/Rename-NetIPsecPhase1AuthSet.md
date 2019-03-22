@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DA21DD9F-68C6-492A-94DA-3A58ED35DADC
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-NetIPsecPhase1AuthSet

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F6A9C8A9-6899-45F1-8CD6-B0B50BC5CBBD
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Resolve-NfsMappedIdentity

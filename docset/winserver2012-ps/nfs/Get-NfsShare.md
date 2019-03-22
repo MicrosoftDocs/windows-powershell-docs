@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EB994263-DF61-4AE0-AC8B-F4F6C8EB90FF
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NfsShare

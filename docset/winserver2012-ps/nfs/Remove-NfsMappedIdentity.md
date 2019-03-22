@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D9CE0518-6C59-4834-9D7C-F6388ABAD7E9
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NfsMappedIdentity

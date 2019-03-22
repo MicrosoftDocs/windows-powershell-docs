@@ -1,7 +1,7 @@
 ---
 external help file: BranchCacheSecondaryRepublicationCacheFile.cdxml-help.xml
 ms.assetid: C1A8FD1E-6416-4071-844B-744DAD59DD76
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

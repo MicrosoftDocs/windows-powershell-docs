@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
 ms.assetid: A5B91C2A-73C3-417C-84B1-D430B42860A3
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

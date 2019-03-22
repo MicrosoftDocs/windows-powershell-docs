@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E10B4E05-1D98-4EAA-A6BE-2D3F4A885746
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Mount-DiskImage

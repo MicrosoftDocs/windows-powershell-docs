@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FFC11F6E-7DDA-4C46-AA49-8A3C7B8C2F89
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Rename-NetFirewallRule

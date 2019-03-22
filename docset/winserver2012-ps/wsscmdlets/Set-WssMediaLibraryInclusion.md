@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E938807F-DD38-4CE8-A446-97A272E71A92
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-WssMediaLibraryInclusion

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EFB4B84F-A21E-41B8-956D-5FC700220CB3
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-WssBackupPolicy

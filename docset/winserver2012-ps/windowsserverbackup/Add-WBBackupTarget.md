@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 392718F6-704D-4C0E-9599-EF4D7F441118
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-WBBackupTarget

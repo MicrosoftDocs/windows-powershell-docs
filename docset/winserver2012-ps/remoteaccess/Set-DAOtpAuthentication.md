@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DCFB9D5A-C24B-4192-9FF2-63C6A2DA2C89
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-DAOtpAuthentication

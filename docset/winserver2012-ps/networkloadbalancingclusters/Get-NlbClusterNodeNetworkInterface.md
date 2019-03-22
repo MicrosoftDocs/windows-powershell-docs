@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C35EB814-5C83-490B-9BF8-4437F7975E3C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NlbClusterNodeNetworkInterface

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 ms.assetid: E659A9D5-6E7F-49FE-80DE-9E91ACA2BA4A
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

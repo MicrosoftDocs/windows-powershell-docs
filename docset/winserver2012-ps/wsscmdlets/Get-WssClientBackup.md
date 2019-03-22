@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A1356554-499C-45F6-9DE6-479D8ACA716D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssClientBackup

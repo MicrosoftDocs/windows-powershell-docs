@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DD55D534-9E4C-42E1-B950-054DB4B0A777
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-WssClientBackup

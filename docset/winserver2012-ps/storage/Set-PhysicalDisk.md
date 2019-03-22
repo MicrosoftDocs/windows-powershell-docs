@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 259134E3-B7CD-4550-9EA1-A84A1D571FB2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-PhysicalDisk

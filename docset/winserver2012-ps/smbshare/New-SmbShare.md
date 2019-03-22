@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AF285369-0A7A-429E-8A56-862891C37939
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-SmbShare

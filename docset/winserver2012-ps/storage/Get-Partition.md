@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 85BB3C53-536E-408F-B159-28E91AFEB1A1
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-Partition

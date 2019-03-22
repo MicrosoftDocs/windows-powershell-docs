@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C07A0E06-13F1-4CF5-95CB-6894459E75FA
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-SecurityPolicy

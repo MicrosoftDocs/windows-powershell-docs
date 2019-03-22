@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6A50420C-39D1-4090-BB9E-80E36A80247F
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WBPolicy

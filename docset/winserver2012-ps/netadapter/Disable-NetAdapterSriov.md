@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CC6BD443-FDEB-4B8A-B897-725FE316B809
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Disable-NetAdapterSriov

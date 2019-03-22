@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5422C3D5-5FDF-4A2A-A56E-F16991399747
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-OBRecoverableSource

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D07120D5-2D09-439C-B265-3FA1B5387302
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-WBSystemState

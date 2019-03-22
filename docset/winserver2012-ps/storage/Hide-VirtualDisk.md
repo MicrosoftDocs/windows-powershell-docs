@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 11E13130-4BD0-4991-BCC9-1B10D1B69D84
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Hide-VirtualDisk

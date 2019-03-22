@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 066B34B3-0B16-427E-B437-D6F3BD8A0AB7
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Show-VirtualDisk

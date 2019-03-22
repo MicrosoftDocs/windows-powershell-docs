@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
 ms.assetid: 74E8A514-C0CF-4AFD-ABF7-40377A5D4F6C
-ms.manager: dansimp
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

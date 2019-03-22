@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 81FAD8F5-E1C1-4179-ACB8-0E3A23F1DAEE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssComputer

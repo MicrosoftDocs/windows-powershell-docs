@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9B034F66-76F5-4FB7-BC70-B641B354C734
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-VpnConnection

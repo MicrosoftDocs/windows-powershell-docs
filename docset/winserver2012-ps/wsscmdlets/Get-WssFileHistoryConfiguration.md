@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DF17DA81-3EE4-4F0D-AA2D-17B0328E628C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WssFileHistoryConfiguration

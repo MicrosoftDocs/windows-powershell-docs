@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2D041197-FE10-4FFD-B97B-7EBA7081574C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-DtcClusterTMMapping

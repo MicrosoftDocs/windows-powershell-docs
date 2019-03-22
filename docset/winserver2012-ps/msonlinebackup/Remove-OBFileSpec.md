@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5828A2EA-5947-40E5-AB51-33BD36F8CC29
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-OBFileSpec

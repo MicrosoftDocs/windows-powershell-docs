@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 695E1A58-E77F-46C8-85BF-7127443ED598
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Deny-WsusUpdate

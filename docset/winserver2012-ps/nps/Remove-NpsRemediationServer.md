@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FD3EB5BB-759E-4503-A901-F23998B41DC0
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NpsRemediationServer

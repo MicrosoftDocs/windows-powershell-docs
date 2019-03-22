@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7C118C1F-7616-48DA-AE69-4E7B80CAE748
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-WBVolume

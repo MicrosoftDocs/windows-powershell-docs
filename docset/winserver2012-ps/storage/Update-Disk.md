@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5F231C6A-F9F8-41A9-A427-D577A6E4BD1C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Update-Disk

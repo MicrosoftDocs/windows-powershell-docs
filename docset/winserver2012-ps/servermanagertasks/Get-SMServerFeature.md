@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E23F771C-BC12-4F3D-849A-7926203F8566
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SMServerFeature

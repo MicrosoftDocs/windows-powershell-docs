@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F89D88FF-6E47-41CF-BF03-BE5AE61F27BD
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Copy-NetFirewallRule

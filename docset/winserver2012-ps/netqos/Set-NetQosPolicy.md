@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F946186B-3E5C-4918-A176-266FEFC4EEAB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetQosPolicy

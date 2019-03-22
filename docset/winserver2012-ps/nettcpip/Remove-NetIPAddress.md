@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C3A0B677-F2F9-40C3-9A6B-B72AA292B721
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetIPAddress

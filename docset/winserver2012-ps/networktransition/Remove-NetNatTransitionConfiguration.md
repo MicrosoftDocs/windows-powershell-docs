@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 23E1821E-E8CD-4F71-B672-968D83192FD3
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetNatTransitionConfiguration

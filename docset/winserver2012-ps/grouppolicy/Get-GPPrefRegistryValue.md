@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FAEC0104-D0B0-4CD5-BAF2-E1027C63D3C8
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-GPPrefRegistryValue

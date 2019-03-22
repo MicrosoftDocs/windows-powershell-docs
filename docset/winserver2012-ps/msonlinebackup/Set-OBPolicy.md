@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A136D91A-7BAA-405F-B5C3-89C65180D56E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-OBPolicy

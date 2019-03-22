@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 20AA3A6F-38D3-4692-98E5-4F510B9BE782
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SmbOpenFile

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 15D7041C-D5BD-4F55-833F-0F25B1E5445A
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetLbfoTeam

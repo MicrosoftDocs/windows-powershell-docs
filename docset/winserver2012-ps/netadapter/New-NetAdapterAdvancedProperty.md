@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 560F5230-ED7F-4E59-A480-E4B04E3DB328
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetAdapterAdvancedProperty

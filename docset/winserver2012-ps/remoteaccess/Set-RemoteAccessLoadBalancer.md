@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D30C2588-A8E4-4A42-9885-5C450C84426E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-RemoteAccessLoadBalancer

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 53CD2A50-15FB-4ACE-991C-87F2E102E653
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Enable-PhysicalDiskIndication

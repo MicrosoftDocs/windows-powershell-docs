@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FE9179A0-8B60-41C2-89C5-7A71ACA3E9D9
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetVirtualizationProviderRoute

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AA1552D8-C032-4343-96F7-DF498D9F0E36
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Install-VamtConfirmationId

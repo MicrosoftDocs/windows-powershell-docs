@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F7E6F380-A274-4326-B121-49128FF2A37B
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-SmbMapping

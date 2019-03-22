@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 33B5D1BD-674C-4F36-BF92-8EFF864ACD63
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Add-Printer

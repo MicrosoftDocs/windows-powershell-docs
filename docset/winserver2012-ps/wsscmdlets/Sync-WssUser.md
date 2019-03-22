@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7EE3BBDD-E9F6-4DE2-B6DB-7CF2816E2494
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Sync-WssUser

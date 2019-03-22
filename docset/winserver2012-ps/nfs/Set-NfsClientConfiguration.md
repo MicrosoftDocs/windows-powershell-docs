@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EDA0D84A-B35E-4CB8-9EE3-17EBE0B3A875
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NfsClientConfiguration

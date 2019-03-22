@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DD6541F4-5EAD-4360-A26E-FCADCBB6DADF
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-GPPrefRegistryValue

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B8BFD366-3112-4415-B235-2B7B45D5C9E3
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-NetFirewallRule

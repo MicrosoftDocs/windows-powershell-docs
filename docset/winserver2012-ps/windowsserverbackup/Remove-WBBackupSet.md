@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E057BEDD-F281-4463-9E4A-29DA9D8E171C
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Remove-WBBackupSet

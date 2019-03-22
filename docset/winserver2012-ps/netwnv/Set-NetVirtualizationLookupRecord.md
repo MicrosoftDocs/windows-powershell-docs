@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 096DB5D2-9A22-4EBA-B9FC-DC7DC6C97D97
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetVirtualizationLookupRecord

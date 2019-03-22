@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9C46C907-6F14-4C50-92EC-00FEB36A56D5
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Reset-NfsStatistics

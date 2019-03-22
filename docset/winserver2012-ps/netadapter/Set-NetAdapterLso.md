@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 12525D08-FBCD-4A5F-BAD0-0203648DACB2
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Set-NetAdapterLso

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetFirewallRule

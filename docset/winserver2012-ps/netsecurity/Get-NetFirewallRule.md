@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2B905211-BBB2-40C8-8BA9-DF9FB90CA27D
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Get-NetFirewallRule

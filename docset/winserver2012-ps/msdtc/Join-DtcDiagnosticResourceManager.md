@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 68A0664C-705E-48D4-8A80-F036FA000ECE
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Join-DtcDiagnosticResourceManager

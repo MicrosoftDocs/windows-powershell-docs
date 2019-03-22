@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5ACAD949-DA35-4E3B-97AF-3AA9FB44A307
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Stop-DtcDiagnosticResourceManager

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1AA5F8EB-9D0C-4A8B-AD80-790FAE3ED651
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Start-OBRecovery

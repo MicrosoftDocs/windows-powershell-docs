@@ -6,7 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0161539F-3282-4E58-AD56-972C7F411C2E
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # New-NetTransportFilter

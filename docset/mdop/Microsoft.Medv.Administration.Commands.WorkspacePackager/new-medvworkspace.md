@@ -17,7 +17,6 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 2B8498E7-38E2-4A78-84B7-541E6364F810
-ms.manager: dansimp
 ---
 
 # New-MedvWorkspace

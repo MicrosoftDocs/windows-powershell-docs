@@ -16,7 +16,6 @@ ms.date: 12/05/2016
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: A86F98A7-9F03-4195-A182-4A99274A3482
-ms.manager: dansimp
 Module Guid:
 ---
 

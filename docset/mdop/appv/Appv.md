@@ -18,7 +18,6 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: F74DDFAA-BB6F-41B8-8D27-C1F9CAFBC0CD
-ms.manager: dansimp
 ---
 
 # AppV Module

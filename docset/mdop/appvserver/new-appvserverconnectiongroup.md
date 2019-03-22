@@ -10,7 +10,6 @@ external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: FB289AC8-ABA3-489C-90D5-7A1EA0702AA5
-ms.manager: dansimp
 ms.date: 2016-12-05
 ms.devlang: powershell
 ms.topic: reference

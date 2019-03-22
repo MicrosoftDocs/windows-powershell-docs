@@ -10,7 +10,6 @@ external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: FD97AEC6-E1BC-4BC5-8B0A-505FE738F0F5
-ms.manager: dansimp
 ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference

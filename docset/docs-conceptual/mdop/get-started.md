@@ -9,7 +9,7 @@ ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 title: Microsoft Desktop Optimization Pack Automation with Windows PowerShell
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # Microsoft Desktop Optimization Pack

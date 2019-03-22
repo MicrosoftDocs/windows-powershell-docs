@@ -10,7 +10,6 @@ external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: 06E7683D-82A8-403D-B8EA-41AB78EDC9E9
-ms.manager: dansimp
 ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference

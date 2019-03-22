@@ -10,7 +10,6 @@ external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: DFE028BA-0B7C-4B42-B400-F0BBDF909CD9
-ms.manager: dansimp
 ms.date: 2016-12-05
 ms.devlang: powershell
 ms.topic: reference

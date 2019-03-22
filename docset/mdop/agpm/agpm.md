@@ -18,7 +18,6 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 78529EB1-3FC2-4589-8C0B-7C1117F6E904
-ms.manager: dansimp
 ---
 
 # AGPM Module

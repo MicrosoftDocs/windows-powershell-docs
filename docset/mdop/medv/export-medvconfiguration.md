@@ -17,7 +17,6 @@ ms.date: 2016-12-05
 ms.topic: reference
 ms.devlang: powershell
 ms.assetid: 23E84610-D01D-4E48-9DE3-D2FE3B4E45BD
-ms.manager: dansimp
 ---
 
 # Export-MedvConfiguration

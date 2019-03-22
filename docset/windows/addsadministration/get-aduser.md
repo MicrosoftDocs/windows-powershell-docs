@@ -27,7 +27,7 @@ Gets one or more Active Directory users.
 
 ### Filter (Default)
 ```
-Get-ADUser [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <String> [-Properties <String[]>]
+Get-ADUser [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <FilterComponentList> [-Properties <String[]>]
  [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
  [-Server <String>] [<CommonParameters>]
 ```

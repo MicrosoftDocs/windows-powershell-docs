@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-CIPolicyRule
 ms.reviewer:
 ms.assetid: C85AE8E8-F3B3-445B-AC5A-7E095685B488
-ms.manager: dansimp
 ---
 
 # New-CIPolicyRule

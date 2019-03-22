@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 5B9BD6D4-1894-4173-8801-D433B8EE6EE8
-ms.manager: dansimp
 ---
 
 # DnsClient Module

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-MpThreatCatalog
 ms.reviewer:
 ms.assetid: 458E87E8-DD5C-47FB-8EB1-559E1AEC6BA2
-ms.manager: dansimp
 ---
 
 # Get-MpThreatCatalog

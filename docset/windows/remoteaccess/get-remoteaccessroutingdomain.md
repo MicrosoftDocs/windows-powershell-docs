@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessRoutingDomain
 ms.reviewer:
 ms.assetid: 35E46F63-030E-4C63-8398-5DCC6460043D
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessRoutingDomain

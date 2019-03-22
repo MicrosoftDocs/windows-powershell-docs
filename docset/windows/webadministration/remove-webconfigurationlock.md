@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WebConfigurationLock
 ms.reviewer:
 ms.assetid: 2240A329-67C4-4F6E-8C4E-F22C16D4DEB9
-ms.manager: dansimp
 ---
 
 # Remove-WebConfigurationLock

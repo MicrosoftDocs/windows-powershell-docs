@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPsecPhase2AuthSet
 ms.reviewer:
 ms.assetid: 203318BF-AC77-4F70-A074-250CF9389C51
-ms.manager: dansimp
 ---
 
 # Remove-NetIPsecPhase2AuthSet

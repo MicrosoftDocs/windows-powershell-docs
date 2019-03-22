@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DfsrGroupSchedule
 ms.reviewer:
 ms.assetid: 417B52C3-55A2-4445-AED8-E9DD65E0EAAB
-ms.manager: dansimp
 ---
 
 # Get-DfsrGroupSchedule

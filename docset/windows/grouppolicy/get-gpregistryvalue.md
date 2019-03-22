@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-GPRegistryValue
 ms.reviewer:
 ms.assetid: 6F526B5E-8887-4612-9CF4-C45DF9DBC546
-ms.manager: dansimp
 ---
 
 # Get-GPRegistryValue

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NfsNetgroup
 ms.reviewer:
 ms.assetid: 34880FC4-4062-40D4-A0B2-7D775C64F03B
-ms.manager: dansimp
 ---
 
 # Set-NfsNetgroup

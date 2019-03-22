@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-DAEntryPointTableItem
 ms.reviewer:
 ms.assetid: FCA241CE-76A9-4937-A37E-CAD0B0622E78
-ms.manager: dansimp
 ---
 
 # Reset-DAEntryPointTableItem

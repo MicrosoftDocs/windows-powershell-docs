@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Class
 ms.reviewer:
 ms.assetid: 2D9D58B8-793B-4731-B0EA-C42E57DCBF88
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Class

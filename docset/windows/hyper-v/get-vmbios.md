@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMBios
 ms.reviewer:
 ms.assetid: FFD7CE02-336E-4449-833D-7A6D3EE85458
-ms.manager: dansimp
 ---
 
 # Get-VMBios

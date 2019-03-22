@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDRemoteApp
 ms.reviewer:
 ms.assetid: D11BFD30-01D9-4D2A-B92F-801712DAC13D
-ms.manager: dansimp
 ---
 
 # Remove-RDRemoteApp

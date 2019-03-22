@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Deny-WsusUpdate
 ms.reviewer:
 ms.assetid: 695E1A58-E77F-46C8-85BF-7127443ED598
-ms.manager: dansimp
 ---
 
 # Deny-WsusUpdate

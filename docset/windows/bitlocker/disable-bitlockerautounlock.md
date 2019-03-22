@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-BitLockerAutoUnlock
 ms.reviewer:
 ms.assetid: 9C6846F1-173B-4DFE-B175-1D2FA486A1C9
-ms.manager: dansimp
 ---
 
 # Disable-BitLockerAutoUnlock

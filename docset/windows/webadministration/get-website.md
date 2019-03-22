@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-Website
 ms.reviewer:
 ms.assetid: 2F185688-C463-48A1-AA28-908DA4FA71DA
-ms.manager: dansimp
 ---
 
 # Get-Website

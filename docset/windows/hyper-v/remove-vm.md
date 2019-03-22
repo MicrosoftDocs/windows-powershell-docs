@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VM
 ms.reviewer:
 ms.assetid: 43E9854F-F085-4991-991A-89F8363CB4C0
-ms.manager: dansimp
 ---
 
 # Remove-VM

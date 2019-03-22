@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetEventVmNetworkAdapter
 ms.reviewer:
 ms.assetid: 0C6257A0-621C-4403-93E1-808FA1642B32
-ms.manager: dansimp
 ---
 
 # Remove-NetEventVmNetworkAdapter

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DAEntryPointTableItem
 ms.reviewer:
 ms.assetid: FA89F034-4EE8-4A14-ADD0-62810A5BF7ED
-ms.manager: dansimp
 ---
 
 # Set-DAEntryPointTableItem

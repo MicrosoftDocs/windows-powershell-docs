@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-PrintJob
 ms.reviewer:
 ms.assetid: B439E3E1-29A5-4B94-9A6A-07639FBE28A2
-ms.manager: dansimp
 ---
 
 # Remove-PrintJob

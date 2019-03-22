@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcLog
 ms.reviewer:
 ms.assetid: 98B9E36F-285E-45AF-BA09-9049F0AD2852
-ms.manager: dansimp
 ---
 
 # Get-DtcLog

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSan
 ms.reviewer:
 ms.assetid: 503032C8-E935-4E3E-A42E-0A845D541217
-ms.manager: dansimp
 ---
 
 # Get-VMSan

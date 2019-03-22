@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMHostNumaNode
 ms.reviewer:
 ms.assetid: AC4710F8-8CFD-4975-92EB-84675A025662
-ms.manager: dansimp
 ---
 
 # Get-VMHostNumaNode

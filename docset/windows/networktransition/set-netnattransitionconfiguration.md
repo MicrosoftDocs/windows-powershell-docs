@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetNatTransitionConfiguration
 ms.reviewer:
 ms.assetid: 872CC020-5367-4B61-8C88-E2351EBF0FB9
-ms.manager: dansimp
 ---
 
 # Set-NetNatTransitionConfiguration

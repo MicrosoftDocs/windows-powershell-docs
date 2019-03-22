@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-AppvSequencerPackage
 ms.reviewer:
 ms.assetid: C9955B66-8084-4EA0-862B-709978B0AEF9
-ms.manager: dansimp
 ---
 
 # Update-AppvSequencerPackage

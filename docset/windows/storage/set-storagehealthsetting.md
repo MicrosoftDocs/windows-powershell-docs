@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-StorageHealthSetting
 ms.reviewer:
 ms.assetid: 64E07C9C-77E9-470C-8E42-51AA151911DE
-ms.manager: dansimp
 ---
 
 # Set-StorageHealthSetting

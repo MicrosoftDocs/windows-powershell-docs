@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDPersonalVirtualDesktopAssignment
 ms.reviewer:
 ms.assetid: E1FDA538-4A2A-4B25-99D2-4846977505E5
-ms.manager: dansimp
 ---
 
 # Remove-RDPersonalVirtualDesktopAssignment

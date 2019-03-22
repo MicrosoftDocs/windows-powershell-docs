@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-StorageProviderCache
 ms.reviewer:
 ms.assetid: 5314BD55-B77B-43F0-8680-DC3012F87440
-ms.manager: dansimp
 ---
 
 # Update-StorageProviderCache

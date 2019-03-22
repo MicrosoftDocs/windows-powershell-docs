@@ -6,7 +6,6 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: EF79F93A-E79A-47E3-AF5A-6A63ADB7CFBD
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

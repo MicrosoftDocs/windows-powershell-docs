@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerRecursionScope
 ms.reviewer:
 ms.assetid: 95AD4D30-BCF9-4172-BA75-1D3EDFFA3C6C
-ms.manager: dansimp
 ---
 
 # Set-DnsServerRecursionScope

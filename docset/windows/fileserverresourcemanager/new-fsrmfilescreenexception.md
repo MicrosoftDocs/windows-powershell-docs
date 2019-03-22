@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-FsrmFileScreenException
 ms.reviewer:
 ms.assetid: 331ACAE2-7C05-49B0-9154-359D6DF9E82F
-ms.manager: dansimp
 ---
 
 # New-FsrmFileScreenException

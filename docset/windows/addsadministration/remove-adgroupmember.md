@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADGroupMember
 ms.reviewer:
 ms.assetid: 39B45E28-2934-416F-8D44-E23CCED252C4
-ms.manager: dansimp
 ---
 
 # Remove-ADGroupMember

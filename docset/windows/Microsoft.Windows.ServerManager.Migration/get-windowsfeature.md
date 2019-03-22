@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WindowsFeature
 ms.reviewer:
 ms.assetid: 49B3C89A-8395-4638-802A-451B56019188
-ms.manager: dansimp
 ---
 
 # Get-WindowsFeature

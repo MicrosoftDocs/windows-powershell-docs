@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerVirtualGatewayPolicyMap
 ms.reviewer:
 ms.assetid: ECE0277A-15A1-4C32-AEC3-DE2C1D24C584
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVirtualGatewayPolicyMap

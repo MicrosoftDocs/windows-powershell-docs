@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-DfsrPropagationTest
 ms.reviewer:
 ms.assetid: 2E151B7E-7EBE-4268-BEE9-A080CDB71D02
-ms.manager: dansimp
 ---
 
 # Start-DfsrPropagationTest

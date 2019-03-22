@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-BCCachePackage
 ms.reviewer:
 ms.assetid: 3EBCE69E-C9D9-43C8-9CBE-7E721851168A
-ms.manager: dansimp
 ---
 
 # Import-BCCachePackage

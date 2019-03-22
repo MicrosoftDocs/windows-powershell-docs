@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-WBFileSpec
 ms.reviewer:
 ms.assetid: B88533EF-4FCA-4EBE-98E9-C05D8AA2235F
-ms.manager: dansimp
 ---
 
 # New-WBFileSpec

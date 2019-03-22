@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: F917C6D6-16F8-447F-A187-B3D03F25D3CE
-ms.manager: dansimp
 ---
 
 # NetworkController Module

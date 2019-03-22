@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-SRPartnership
 ms.reviewer:
 ms.assetid: 31F9BF83-1001-49C0-BE41-01E1037B543E
-ms.manager: dansimp
 ---
 
 # Remove-SRPartnership

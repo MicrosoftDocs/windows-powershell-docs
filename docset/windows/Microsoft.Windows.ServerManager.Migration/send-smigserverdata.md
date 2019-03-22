@@ -15,7 +15,6 @@ schema: 2.0.0
 title: Send-SmigServerData
 ms.reviewer:
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
-ms.manager: dansimp
 ---
 
 # Send-SmigServerData

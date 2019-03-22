@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 4BB540B4-DE3E-4ADF-B306-5E714C527017
-ms.manager: dansimp
 ---
 
 # AppLocker Module

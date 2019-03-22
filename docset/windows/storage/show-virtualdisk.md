@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Show-VirtualDisk
 ms.reviewer:
 ms.assetid: 066B34B3-0B16-427E-B437-D6F3BD8A0AB7
-ms.manager: dansimp
 ---
 
 # Show-VirtualDisk

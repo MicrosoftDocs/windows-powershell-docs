@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMBios
 ms.reviewer:
 ms.assetid: D898A362-ADB0-4B21-8A50-BE3224D6BE86
-ms.manager: dansimp
 ---
 
 # Set-VMBios

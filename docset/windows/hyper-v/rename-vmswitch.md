@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Rename-VMSwitch
 ms.reviewer:
 ms.assetid: D153EEC8-80AB-4999-A054-8DDA38BCC0FA
-ms.manager: dansimp
 ---
 
 # Rename-VMSwitch

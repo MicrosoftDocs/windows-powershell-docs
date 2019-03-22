@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-AppvClientPackage
 ms.reviewer:
 ms.assetid: 55DF042F-71CC-421D-8C44-912BD5F8C0E1
-ms.manager: dansimp
 ---
 
 # Get-AppvClientPackage

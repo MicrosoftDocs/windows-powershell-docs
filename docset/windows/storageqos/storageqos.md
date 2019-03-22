@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 141B4BB3-EABD-4F8A-9F27-D434E0C32C18
-ms.manager: dansimp
 ---
 
 # StorageQoS Module

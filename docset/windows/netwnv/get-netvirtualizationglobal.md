@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetVirtualizationGlobal
 ms.reviewer:
 ms.assetid: EC058249-902C-4DCE-A252-6BE4077D537C
-ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationGlobal

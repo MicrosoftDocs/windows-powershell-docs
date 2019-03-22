@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-VMConsoleSupport
 ms.reviewer:
 ms.assetid: 2F0B0444-4D21-494D-ADB6-6E027C39F3F9
-ms.manager: dansimp
 ---
 
 # Enable-VMConsoleSupport

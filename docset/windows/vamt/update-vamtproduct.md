@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-VamtProduct
 ms.reviewer:
 ms.assetid: 5ABD215E-5333-479C-B691-861FBBC4F5AF
-ms.manager: dansimp
 ---
 
 # Update-VamtProduct

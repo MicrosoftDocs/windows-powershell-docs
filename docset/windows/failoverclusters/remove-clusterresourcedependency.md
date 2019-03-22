@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ClusterResourceDependency
 ms.reviewer:
 ms.assetid: CF2A8410-EE45-4493-872B-E5F82E478601
-ms.manager: dansimp
 ---
 
 # Remove-ClusterResourceDependency

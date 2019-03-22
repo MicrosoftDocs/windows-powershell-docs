@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DfsnRootTarget
 ms.reviewer:
 ms.assetid: 2B9018A4-5B74-40D4-BD6F-04B08A0B2AD5
-ms.manager: dansimp
 ---
 
 # Set-DfsnRootTarget

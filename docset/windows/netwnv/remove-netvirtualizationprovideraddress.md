@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetVirtualizationProviderAddress
 ms.reviewer:
 ms.assetid: 4F575423-EADD-46EA-BE65-8D10FE47C957
-ms.manager: dansimp
 ---
 
 # Remove-NetVirtualizationProviderAddress

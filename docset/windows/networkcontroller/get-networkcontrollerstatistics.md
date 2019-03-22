@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerStatistics
 ms.reviewer:
 ms.assetid: 4D06BF6F-B920-496E-BA38-D14EB91CB372
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerStatistics

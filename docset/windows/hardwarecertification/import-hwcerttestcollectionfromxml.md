@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-HwCertTestCollectionFromXml
 ms.reviewer:
 ms.assetid: A5BFF242-9450-4678-B8D0-032094077D30
-ms.manager: dansimp
 ---
 
 # Import-HwCertTestCollectionFromXml

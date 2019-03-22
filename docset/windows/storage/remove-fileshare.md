@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-FileShare
 ms.reviewer:
 ms.assetid: FC731D69-DAC6-44B0-B5F8-0217394F8D64
-ms.manager: dansimp
 ---
 
 # Remove-FileShare

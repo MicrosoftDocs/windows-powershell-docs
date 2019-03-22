@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-UevTemplateProfile
 ms.reviewer:
 ms.assetid: 01231844-3E17-4BFE-B052-538DD8D755B2
-ms.manager: dansimp
 ---
 
 # Set-UevTemplateProfile

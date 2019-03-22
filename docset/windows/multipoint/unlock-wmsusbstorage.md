@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unlock-WmsUsbStorage
 ms.reviewer:
 ms.assetid: BC416873-ABF6-4998-A6B7-82DD2A7D3937
-ms.manager: dansimp
 ---
 
 # Unlock-WmsUsbStorage

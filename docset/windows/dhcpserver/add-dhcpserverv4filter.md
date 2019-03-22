@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerv4Filter
 ms.reviewer:
 ms.assetid: B023D801-3097-4377-9234-8E8B71C3706B
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Filter

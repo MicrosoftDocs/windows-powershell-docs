@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetIPsecQuickModeCryptoProposal
 ms.reviewer:
 ms.assetid: 5C6C43AA-F785-4EA5-88C7-39A8DAF38DCA
-ms.manager: dansimp
 ---
 
 # New-NetIPsecQuickModeCryptoProposal

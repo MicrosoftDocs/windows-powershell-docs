@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RmsRequestInfo
 ms.reviewer:
 ms.assetid: 34DC413D-3EA7-4404-942F-CB7CF8CCBA03
-ms.manager: dansimp
 ---
 
 # Get-RmsRequestInfo

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-SmbDelegation
 ms.reviewer:
 ms.assetid: D93C2271-CED0-4B41-9E60-767F1086FEDF
-ms.manager: dansimp
 ---
 
 # Enable-SmbDelegation

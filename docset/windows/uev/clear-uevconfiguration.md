@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-UevConfiguration
 ms.reviewer:
 ms.assetid: D99A6501-88D0-46E9-B24E-89480221B730
-ms.manager: dansimp
 ---
 
 # Clear-UevConfiguration

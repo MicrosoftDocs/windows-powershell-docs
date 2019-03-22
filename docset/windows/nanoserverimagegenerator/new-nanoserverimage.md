@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NanoServerImage
 ms.reviewer:
 ms.assetid: 590470EA-3945-45D9-9FE4-EABE33A1823E
-ms.manager: dansimp
 ---
 
 # New-NanoServerImage

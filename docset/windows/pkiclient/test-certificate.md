@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-Certificate
 ms.reviewer:
 ms.assetid: D0E2D004-0EA9-45E4-B520-F14FCA21516D
-ms.manager: dansimp
 ---
 
 # Test-Certificate

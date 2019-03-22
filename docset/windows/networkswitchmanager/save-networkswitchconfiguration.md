@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Save-NetworkSwitchConfiguration
 ms.reviewer:
 ms.assetid: 067E510C-DBA5-4E74-92DB-5468C62FE3A1
-ms.manager: dansimp
 ---
 
 # Save-NetworkSwitchConfiguration

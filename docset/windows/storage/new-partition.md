@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-Partition
 ms.reviewer:
 ms.assetid: FD9EAA13-FD1A-4C95-A03E-842DBD1604BE
-ms.manager: dansimp
 ---
 
 # New-Partition

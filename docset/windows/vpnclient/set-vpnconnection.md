@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VpnConnection
 ms.reviewer:
 ms.assetid: 9B034F66-76F5-4FB7-BC70-B641B354C734
-ms.manager: dansimp
 ---
 
 # Set-VpnConnection

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DAAppServer
 ms.reviewer:
 ms.assetid: 7553CE46-74B9-4B56-BDBE-2A4FDFB964D9
-ms.manager: dansimp
 ---
 
 # Add-DAAppServer

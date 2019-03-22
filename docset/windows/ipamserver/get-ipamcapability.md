@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamCapability
 ms.reviewer:
 ms.assetid: 575CBD45-55A1-476A-B107-1BB40946DAD5
-ms.manager: dansimp
 ---
 
 # Get-IpamCapability

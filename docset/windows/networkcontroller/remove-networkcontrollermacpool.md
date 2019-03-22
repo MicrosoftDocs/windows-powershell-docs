@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerMacPool
 ms.reviewer:
 ms.assetid: DC2FE803-5AD0-4398-9135-DD4527E82A1D
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerMacPool

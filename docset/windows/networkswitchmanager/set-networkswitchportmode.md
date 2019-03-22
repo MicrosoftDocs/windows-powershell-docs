@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetworkSwitchPortMode
 ms.reviewer:
 ms.assetid: 0E28DD04-AC31-4A00-B510-CF3DE64E61DE
-ms.manager: dansimp
 ---
 
 # Set-NetworkSwitchPortMode

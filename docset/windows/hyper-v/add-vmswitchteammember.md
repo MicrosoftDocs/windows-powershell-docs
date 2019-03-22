@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VMSwitchTeamMember
 ms.reviewer:
 ms.assetid: 14025103-FBF9-49BC-9AE3-E73A3CFC9393
-ms.manager: dansimp
 ---
 
 # Add-VMSwitchTeamMember

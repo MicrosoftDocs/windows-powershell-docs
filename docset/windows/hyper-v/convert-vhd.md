@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Convert-VHD
 ms.reviewer:
 ms.assetid: 006A2961-50F2-43AE-BBA3-8B5D2C3E9288
-ms.manager: dansimp
 ---
 
 # Convert-VHD

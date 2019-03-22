@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-ScheduledTask
 ms.reviewer:
 ms.assetid: 5F4C5E2A-6769-44D9-AA6D-049D59ADED4B
-ms.manager: dansimp
 ---
 
 # Export-ScheduledTask

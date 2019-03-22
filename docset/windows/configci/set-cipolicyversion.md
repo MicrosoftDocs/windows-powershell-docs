@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-CIPolicyVersion
 ms.reviewer:
 ms.assetid: 216455BF-F857-458A-BECB-7CAD1DB4972B
-ms.manager: dansimp
 ---
 
 # Set-CIPolicyVersion

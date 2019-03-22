@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IscsiTarget
 ms.reviewer:
 ms.assetid: 686A3960-380E-4E4D-A6A4-24F9DFCC793E
-ms.manager: dansimp
 ---
 
 # Get-IscsiTarget

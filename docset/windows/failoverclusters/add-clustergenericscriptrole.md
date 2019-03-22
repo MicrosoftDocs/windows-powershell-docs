@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterGenericScriptRole
 ms.reviewer:
 ms.assetid: A7764644-9683-4D79-8C2C-447EADA1DE24
-ms.manager: dansimp
 ---
 
 # Add-ClusterGenericScriptRole

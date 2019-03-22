@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-FsrmAutoQuota
 ms.reviewer:
 ms.assetid: D1D3A53B-CFC3-47EB-A46E-39418A86F5D2
-ms.manager: dansimp
 ---
 
 # Get-FsrmAutoQuota

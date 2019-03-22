@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VpnConnection
 ms.reviewer:
 ms.assetid: 9E500D0B-AD09-463E-A5B7-E2986476BC58
-ms.manager: dansimp
 ---
 
 # Add-VpnConnection

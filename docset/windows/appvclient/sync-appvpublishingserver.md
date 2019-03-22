@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Sync-AppvPublishingServer
 ms.reviewer:
 ms.assetid: 2182F850-DB9B-48E7-9F48-D0398A3D4176
-ms.manager: dansimp
 ---
 
 # Sync-AppvPublishingServer

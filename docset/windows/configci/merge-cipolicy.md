@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Merge-CIPolicy
 ms.reviewer:
 ms.assetid: DC35F788-9CEB-4B15-9358-EED9C5B83F26
-ms.manager: dansimp
 ---
 
 # Merge-CIPolicy

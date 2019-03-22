@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NlbClusterVip
 ms.reviewer:
 ms.assetid: B2176720-D908-4C14-AB07-6D28F3590D53
-ms.manager: dansimp
 ---
 
 # Remove-NlbClusterVip

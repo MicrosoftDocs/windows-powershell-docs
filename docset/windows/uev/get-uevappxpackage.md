@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UevAppxPackage
 ms.reviewer:
 ms.assetid: 49451AF4-5855-40F8-8CD3-EA76D5FF7EF9
-ms.manager: dansimp
 ---
 
 # Get-UevAppxPackage

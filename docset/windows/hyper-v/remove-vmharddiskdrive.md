@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMHardDiskDrive
 ms.reviewer:
 ms.assetid: C1A0A105-91AC-4A3E-BB5F-D526A6E96747
-ms.manager: dansimp
 ---
 
 # Remove-VMHardDiskDrive

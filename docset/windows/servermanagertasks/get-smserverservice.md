@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SMServerService
 ms.reviewer:
 ms.assetid: 7AA84241-05D6-41CF-8B3C-68C5B81F213C
-ms.manager: dansimp
 ---
 
 # Get-SMServerService

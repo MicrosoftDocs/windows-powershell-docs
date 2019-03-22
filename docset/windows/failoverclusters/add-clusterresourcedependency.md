@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterResourceDependency
 ms.reviewer:
 ms.assetid: EFE27260-9B24-49E8-9906-0249FBD81AFA
-ms.manager: dansimp
 ---
 
 # Add-ClusterResourceDependency

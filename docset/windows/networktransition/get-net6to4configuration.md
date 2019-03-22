@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-Net6to4Configuration
 ms.reviewer:
 ms.assetid: 842E2785-8569-442C-A586-CCFD5B69CA60
-ms.manager: dansimp
 ---
 
 # Get-Net6to4Configuration

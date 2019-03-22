@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADAuthenticationPolicy
 ms.reviewer:
 ms.assetid: 5BF0CD1E-9FC9-4203-97DC-AD5FF8A58E15
-ms.manager: dansimp
 ---
 
 # Remove-ADAuthenticationPolicy

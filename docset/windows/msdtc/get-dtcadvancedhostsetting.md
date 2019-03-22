@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcAdvancedHostSetting
 ms.reviewer:
 ms.assetid: 1E5CAB93-9961-42FC-A689-676847C41FC8
-ms.manager: dansimp
 ---
 
 # Get-DtcAdvancedHostSetting

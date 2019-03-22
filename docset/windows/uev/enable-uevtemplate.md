@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-UevTemplate
 ms.reviewer:
 ms.assetid: 42DFF560-57FA-4E8A-8069-69890FE3DC6B
-ms.manager: dansimp
 ---
 
 # Enable-UevTemplate

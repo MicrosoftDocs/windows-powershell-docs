@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 339A6EE3-4826-43D3-99DE-5C719EE117DC
-ms.manager: dansimp
 ---
 
 # SMISConfig Module

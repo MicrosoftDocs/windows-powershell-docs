@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unregister-IscsiSession
 ms.reviewer:
 ms.assetid: BD05B373-4201-4531-BBAE-89C400F95573
-ms.manager: dansimp
 ---
 
 # Unregister-IscsiSession

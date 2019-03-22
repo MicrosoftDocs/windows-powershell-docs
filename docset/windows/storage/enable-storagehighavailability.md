@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-StorageHighAvailability
 ms.reviewer:
 ms.assetid: 3026238E-CB94-4927-B2ED-797720B22E18
-ms.manager: dansimp
 ---
 
 # Enable-StorageHighAvailability

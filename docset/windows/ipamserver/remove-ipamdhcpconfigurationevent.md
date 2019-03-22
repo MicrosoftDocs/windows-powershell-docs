@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IpamDhcpConfigurationEvent
 ms.reviewer:
 ms.assetid: 26B2D47A-5C46-4DE4-B757-717AA2ECF396
-ms.manager: dansimp
 ---
 
 # Remove-IpamDhcpConfigurationEvent

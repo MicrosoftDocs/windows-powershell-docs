@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Grant-SRAccess
 ms.reviewer:
 ms.assetid: B98E12A0-AB46-451A-AF7F-9EED3C2F999E
-ms.manager: dansimp
 ---
 
 # Grant-SRAccess

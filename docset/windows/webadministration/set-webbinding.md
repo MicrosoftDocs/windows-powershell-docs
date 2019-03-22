@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WebBinding
 ms.reviewer:
 ms.assetid: AC422DFB-2D9E-4C1E-810E-20642482982C
-ms.manager: dansimp
 ---
 
 # Set-WebBinding

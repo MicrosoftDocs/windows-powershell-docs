@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: D33BD27F-8640-4BC3-85AA-C34123FD506B
-ms.manager: dansimp
 ---
 
 # MultiPoint Module

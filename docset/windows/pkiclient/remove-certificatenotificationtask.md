@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-CertificateNotificationTask
 ms.reviewer:
 ms.assetid: 3E0D9B0B-766A-4EF6-B4C7-1CF6D1FF0FF5
-ms.manager: dansimp
 ---
 
 # Remove-CertificateNotificationTask

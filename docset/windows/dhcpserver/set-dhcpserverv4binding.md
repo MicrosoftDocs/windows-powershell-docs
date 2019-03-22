@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DhcpServerv4Binding
 ms.reviewer:
 ms.assetid: 08DE836C-462A-4E59-9E3B-1D3D22C61135
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4Binding

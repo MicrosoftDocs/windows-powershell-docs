@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-AppvVirtualProcess
 ms.reviewer:
 ms.assetid: 1F42D207-65AA-48CA-A756-A0D449A35CB5
-ms.manager: dansimp
 ---
 
 # Start-AppvVirtualProcess

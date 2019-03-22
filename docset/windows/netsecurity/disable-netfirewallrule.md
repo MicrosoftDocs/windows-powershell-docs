@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetFirewallRule
 ms.reviewer:
 ms.assetid: 064332BD-68EC-44E1-8A5A-E6C4F497D16A
-ms.manager: dansimp
 ---
 
 # Disable-NetFirewallRule

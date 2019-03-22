@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerZoneDelegation
 ms.reviewer:
 ms.assetid: F01664CF-1D04-4001-B3A1-A9F86C2A8B19
-ms.manager: dansimp
 ---
 
 # Get-DnsServerZoneDelegation

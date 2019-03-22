@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-GPPermission
 ms.reviewer:
 ms.assetid: BCAE0807-FDFF-4F3F-A678-5885D9784C8D
-ms.manager: dansimp
 ---
 
 # Get-GPPermission

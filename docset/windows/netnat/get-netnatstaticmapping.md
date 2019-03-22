@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetNatStaticMapping
 ms.reviewer:
 ms.assetid: 312BF566-61E3-4061-B9F9-828BC1A13695
-ms.manager: dansimp
 ---
 
 # Get-NetNatStaticMapping

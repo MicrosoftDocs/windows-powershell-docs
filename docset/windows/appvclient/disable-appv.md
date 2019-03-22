@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-Appv
 ms.reviewer:
 ms.assetid: 6397B0E7-1CE5-4F2D-85A2-84BB3C76243F
-ms.manager: dansimp
 ---
 
 # Disable-Appv

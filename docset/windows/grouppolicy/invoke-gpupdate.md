@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Invoke-GPUpdate
 ms.reviewer:
 ms.assetid: 4587F08A-A67B-4407-8FE2-B6ECE3643E94
-ms.manager: dansimp
 ---
 
 # Invoke-GPUpdate

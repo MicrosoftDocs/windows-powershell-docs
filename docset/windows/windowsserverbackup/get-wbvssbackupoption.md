@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBVssBackupOption
 ms.reviewer:
 ms.assetid: 0B8B0A93-ED16-4E01-9140-5F8386D8803D
-ms.manager: dansimp
 ---
 
 # Get-WBVssBackupOption

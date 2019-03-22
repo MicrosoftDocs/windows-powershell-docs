@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-FsrmFileManagementJob
 ms.reviewer:
 ms.assetid: 9F17AAB6-E761-4F8F-8137-53D8285DA651
-ms.manager: dansimp
 ---
 
 # Remove-FsrmFileManagementJob

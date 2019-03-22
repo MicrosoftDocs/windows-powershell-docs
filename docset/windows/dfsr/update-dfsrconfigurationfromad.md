@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-DfsrConfigurationFromAD
 ms.reviewer:
 ms.assetid: 05E7CD59-D712-4644-B1E7-AE22F469BD38
-ms.manager: dansimp
 ---
 
 # Update-DfsrConfigurationFromAD

@@ -15,7 +15,6 @@ schema: 2.0.0
 title: Import-SmigServerSetting
 ms.reviewer:
 ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
-ms.manager: dansimp
 ---
 
 # Import-SmigServerSetting

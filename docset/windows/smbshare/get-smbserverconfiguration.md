@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbServerConfiguration
 ms.reviewer:
 ms.assetid: B2F207DD-BAB1-4544-9D2F-AC1C5B7249C8
-ms.manager: dansimp
 ---
 
 # Get-SmbServerConfiguration

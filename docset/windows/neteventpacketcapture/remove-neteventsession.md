@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetEventSession
 ms.reviewer:
 ms.assetid: 5022D47F-EAEC-4E0D-A311-17107A9F3279
-ms.manager: dansimp
 ---
 
 # Remove-NetEventSession

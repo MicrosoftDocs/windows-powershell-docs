@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-BitLockerKeyProtector
 ms.reviewer:
 ms.assetid: 09CDDA63-9E82-44F0-8755-878974B0010B
-ms.manager: dansimp
 ---
 
 # Remove-BitLockerKeyProtector

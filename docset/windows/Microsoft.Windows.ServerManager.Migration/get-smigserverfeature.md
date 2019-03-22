@@ -15,7 +15,6 @@ schema: 2.0.0
 title: Get-SmigServerFeature
 ms.reviewer:
 ms.assetid: DDB21AFA-CAF9-481C-9E65-2513595D2DB0
-ms.manager: dansimp
 ---
 
 # Get-SmigServerFeature

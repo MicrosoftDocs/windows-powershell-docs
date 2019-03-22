@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DfsReplicationGroup
 ms.reviewer:
 ms.assetid: 209C030C-4BAE-4EBD-BE47-EE945F322E82
-ms.manager: dansimp
 ---
 
 # Set-DfsReplicationGroup

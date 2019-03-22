@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMMigrationNetwork
 ms.reviewer:
 ms.assetid: 18815F06-BBC6-469E-9DA3-432A7E77A14F
-ms.manager: dansimp
 ---
 
 # Set-VMMigrationNetwork

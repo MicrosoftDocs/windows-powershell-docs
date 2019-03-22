@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Hide-WmsIdentifier
 ms.reviewer:
 ms.assetid: 26F90975-4C32-4077-A88F-7754CEF8AC82
-ms.manager: dansimp
 ---
 
 # Hide-WmsIdentifier

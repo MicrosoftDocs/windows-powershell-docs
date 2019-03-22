@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-HostStorageCache
 ms.reviewer:
 ms.assetid: E8D3BC14-4851-4E1A-9855-99BFB38A1CB6
-ms.manager: dansimp
 ---
 
 # Update-HostStorageCache

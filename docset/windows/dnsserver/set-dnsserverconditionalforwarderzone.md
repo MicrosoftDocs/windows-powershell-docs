@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerConditionalForwarderZone
 ms.reviewer:
 ms.assetid: 8925DBAA-CDEE-428B-9FA6-3CF7725C13EE
-ms.manager: dansimp
 ---
 
 # Set-DnsServerConditionalForwarderZone

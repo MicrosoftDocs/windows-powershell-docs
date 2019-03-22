@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-StorageTier
 ms.reviewer:
 ms.assetid: 667677B8-CA32-4242-9E85-425EBBC4572F
-ms.manager: dansimp
 ---
 
 # Set-StorageTier

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetRoute
 ms.reviewer:
 ms.assetid: 3252B6F3-7908-47F2-BEAB-BFE265B7C985
-ms.manager: dansimp
 ---
 
 # Remove-NetRoute

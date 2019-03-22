@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DAMultiSite
 ms.reviewer:
 ms.assetid: 36B7594B-0FB5-43D6-B1A4-FD0A492622D1
-ms.manager: dansimp
 ---
 
 # Get-DAMultiSite

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-ADDSDomainInstallation
 ms.reviewer:
 ms.assetid: 1DD02CBB-CE03-49A3-AE33-8BC1A7DD3830
-ms.manager: dansimp
 ---
 
 # Test-ADDSDomainInstallation

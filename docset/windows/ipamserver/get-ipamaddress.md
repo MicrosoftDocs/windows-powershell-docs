@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamAddress
 ms.reviewer:
 ms.assetid: 3B0D99D7-44E0-46D2-A30B-F1B5DBF8BE14
-ms.manager: dansimp
 ---
 
 # Get-IpamAddress

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMNetworkAdapterRoutingDomainMapping
 ms.reviewer:
 ms.assetid: D97174BE-9438-4DBD-8820-9C8F87E00047
-ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterRoutingDomainMapping

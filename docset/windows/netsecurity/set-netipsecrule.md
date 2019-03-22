@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPsecRule
 ms.reviewer:
 ms.assetid: 08BA58AA-8A08-4F64-9AD9-3E68819116DB
-ms.manager: dansimp
 ---
 
 # Set-NetIPsecRule

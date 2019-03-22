@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Revoke-SRAccess
 ms.reviewer:
 ms.assetid: A0270DD4-AC19-4656-AB74-BBBF3577FE4E
-ms.manager: dansimp
 ---
 
 # Revoke-SRAccess

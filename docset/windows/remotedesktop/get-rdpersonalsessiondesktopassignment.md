@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDPersonalSessionDesktopAssignment
 ms.reviewer:
 ms.assetid: A131A1AD-F3A0-4773-8097-5F7E489122C3
-ms.manager: dansimp
 ---
 
 # Get-RDPersonalSessionDesktopAssignment

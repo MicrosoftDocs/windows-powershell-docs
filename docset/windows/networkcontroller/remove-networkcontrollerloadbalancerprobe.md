@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerProbe
 ms.reviewer:
 ms.assetid: A6877C3D-8D03-44C1-A37B-FCE4047BFB87
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLoadBalancerProbe

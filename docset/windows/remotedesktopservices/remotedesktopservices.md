@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 0A78697D-BDA5-428D-83A8-74773C1A3323
-ms.manager: dansimp
 ---
 
 # RemoteDesktopServices Module

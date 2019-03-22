@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageAdvancedProperty
 ms.reviewer:
 ms.assetid: 61684A19-C82F-4F58-AD41-C740E73A9937
-ms.manager: dansimp
 ---
 
 # Get-StorageAdvancedProperty

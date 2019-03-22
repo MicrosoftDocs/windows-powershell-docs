@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterResourceDependency
 ms.reviewer:
 ms.assetid: 6342B4AA-8AF6-47C5-81F8-4C21B708CF43
-ms.manager: dansimp
 ---
 
 # Get-ClusterResourceDependency

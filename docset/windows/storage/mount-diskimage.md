@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Mount-DiskImage
 ms.reviewer:
 ms.assetid: E10B4E05-1D98-4EAA-A6BE-2D3F4A885746
-ms.manager: dansimp
 ---
 
 # Mount-DiskImage

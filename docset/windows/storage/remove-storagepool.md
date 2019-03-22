@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-StoragePool
 ms.reviewer:
 ms.assetid: 253C076F-8A16-4DF0-8DD0-FECE70C06208
-ms.manager: dansimp
 ---
 
 # Remove-StoragePool

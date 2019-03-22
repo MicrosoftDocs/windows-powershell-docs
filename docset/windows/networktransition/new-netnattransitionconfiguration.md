@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetNatTransitionConfiguration
 ms.reviewer:
 ms.assetid: 23D2511A-F9FA-478C-89AD-A621A3C4FC63
-ms.manager: dansimp
 ---
 
 # New-NetNatTransitionConfiguration

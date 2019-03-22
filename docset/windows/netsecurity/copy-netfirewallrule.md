@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Copy-NetFirewallRule
 ms.reviewer:
 ms.assetid: F89D88FF-6E47-41CF-BF03-BE5AE61F27BD
-ms.manager: dansimp
 ---
 
 # Copy-NetFirewallRule

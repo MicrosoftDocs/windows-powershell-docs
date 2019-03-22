@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WdsDriverPackage
 ms.reviewer:
 ms.assetid: E428148C-66F6-4543-831A-D3C677A517CE
-ms.manager: dansimp
 ---
 
 # Add-WdsDriverPackage

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetAdapterBinding
 ms.reviewer:
 ms.assetid: 305CF732-2A47-4D45-A97C-9694B7B5F1B3
-ms.manager: dansimp
 ---
 
 # Disable-NetAdapterBinding

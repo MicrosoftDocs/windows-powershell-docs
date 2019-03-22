@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WBPolicy
 ms.reviewer:
 ms.assetid: B16B8D37-9AF7-4F9C-B31E-F29155E2090F
-ms.manager: dansimp
 ---
 
 # Remove-WBPolicy

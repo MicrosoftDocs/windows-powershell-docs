@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-SRNetworkConstraint
 ms.reviewer:
 ms.assetid: 7F7C3988-B063-4BB1-B0E4-F108F0D6923F
-ms.manager: dansimp
 ---
 
 # Set-SRNetworkConstraint

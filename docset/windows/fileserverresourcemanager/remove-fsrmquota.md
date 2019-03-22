@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-FsrmQuota
 ms.reviewer:
 ms.assetid: DDBA8BC2-B6C9-4E32-AA0D-6E48EFD9DEB1
-ms.manager: dansimp
 ---
 
 # Remove-FsrmQuota

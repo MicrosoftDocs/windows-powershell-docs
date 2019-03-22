@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcTransactionsStatistics
 ms.reviewer:
 ms.assetid: B864A4C6-F248-4685-BEE9-3DC293E01D92
-ms.manager: dansimp
 ---
 
 # Get-DtcTransactionsStatistics

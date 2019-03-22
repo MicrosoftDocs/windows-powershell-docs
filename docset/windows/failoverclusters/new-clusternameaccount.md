@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ClusterNameAccount
 ms.reviewer:
 ms.assetid: 562A0787-009F-44A1-B984-B5BD762FF68B
-ms.manager: dansimp
 ---
 
 # New-ClusterNameAccount

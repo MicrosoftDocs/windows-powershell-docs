@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VMStoragePath
 ms.reviewer:
 ms.assetid: 049788E9-A92D-48C8-A96C-33C5F03B0902
-ms.manager: dansimp
 ---
 
 # Add-VMStoragePath

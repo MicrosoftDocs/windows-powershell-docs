@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-DipHostReachability
 ms.reviewer:
 ms.assetid: CAE606C3-3A83-4126-A701-95C93929BE9E
-ms.manager: dansimp
 ---
 
 # Test-DipHostReachability

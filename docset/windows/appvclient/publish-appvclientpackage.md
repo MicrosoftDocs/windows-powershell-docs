@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Publish-AppvClientPackage
 ms.reviewer:
 ms.assetid: 4EF93DAF-DCFC-4B44-A929-7EE4880C38BF
-ms.manager: dansimp
 ---
 
 # Publish-AppvClientPackage

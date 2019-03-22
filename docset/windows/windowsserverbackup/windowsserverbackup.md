@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 0F8EB40C-4481-4DA7-9D60-62847E2BD367
-ms.manager: dansimp
 ---
 
 # WindowsServerBackup Module

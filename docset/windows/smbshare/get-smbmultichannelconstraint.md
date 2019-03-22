@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbMultichannelConstraint
 ms.reviewer:
 ms.assetid: 828A3C72-A3B9-41B2-9315-28A818974E3B
-ms.manager: dansimp
 ---
 
 # Get-SmbMultichannelConstraint

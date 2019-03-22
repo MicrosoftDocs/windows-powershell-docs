@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 85AAA420-97F3-423E-AE94-080BC32A8A27
-ms.manager: dansimp
 ---
 
 # MSMQ Module

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Send-RDUserMessage
 ms.reviewer:
 ms.assetid: F22E8EB8-2A09-4D79-9D8C-01B2FF72777C
-ms.manager: dansimp
 ---
 
 # Send-RDUserMessage

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-BgpRouter
 ms.reviewer:
 ms.assetid: 82045B7C-A2DB-4ADB-800F-C8FFFE9AAB26
-ms.manager: dansimp
 ---
 
 # Add-BgpRouter

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ResiliencySetting
 ms.reviewer:
 ms.assetid: 96270725-4A06-4893-9D86-036C7345F78F
-ms.manager: dansimp
 ---
 
 # Set-ResiliencySetting

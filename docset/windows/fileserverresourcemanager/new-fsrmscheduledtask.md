@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-FsrmScheduledTask
 ms.reviewer:
 ms.assetid: 67E030DA-8AB7-4E42-BEE7-BDAA9A6B5681
-ms.manager: dansimp
 ---
 
 # New-FsrmScheduledTask

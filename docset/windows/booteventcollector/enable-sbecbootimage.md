@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-SbecBootImage
 ms.reviewer:
 ms.assetid: 4BFA59C3-A963-4754-BF13-CCB8E147C639
-ms.manager: dansimp
 ---
 
 # Enable-SbecBootImage

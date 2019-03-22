@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetVirtualizationProviderRoute
 ms.reviewer:
 ms.assetid: BC4274F1-F6DC-4344-9A1B-DC68163248B0
-ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationProviderRoute

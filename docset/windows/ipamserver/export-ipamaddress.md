@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-IpamAddress
 ms.reviewer:
 ms.assetid: 2F4086C5-54C3-4AC2-B5EA-BF2F6108301A
-ms.manager: dansimp
 ---
 
 # Export-IpamAddress

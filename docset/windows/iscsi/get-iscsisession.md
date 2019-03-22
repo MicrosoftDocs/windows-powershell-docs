@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IscsiSession
 ms.reviewer:
 ms.assetid: 6DE53D66-DFEF-4734-9C17-5F71E66BF9DB
-ms.manager: dansimp
 ---
 
 # Get-IscsiSession

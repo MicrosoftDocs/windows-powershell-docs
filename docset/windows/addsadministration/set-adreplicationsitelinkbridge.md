@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADReplicationSiteLinkBridge
 ms.reviewer:
 ms.assetid: 01E16832-D15D-4D05-B70C-C799EF4227A4
-ms.manager: dansimp
 ---
 
 # Set-ADReplicationSiteLinkBridge

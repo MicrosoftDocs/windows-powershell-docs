@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsClientNrptRule
 ms.reviewer:
 ms.assetid: 40DEA51A-DF5A-4FD7-8705-B69CFEF339E9
-ms.manager: dansimp
 ---
 
 # Remove-DnsClientNrptRule

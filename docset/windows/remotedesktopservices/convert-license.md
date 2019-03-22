@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Convert-License
 ms.reviewer:
 ms.assetid: AF891764-E427-4256-AB2F-B2FCB4E640F3
-ms.manager: dansimp
 ---
 
 # Convert-License

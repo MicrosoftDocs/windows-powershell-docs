@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-SRGroup
 ms.reviewer:
 ms.assetid: 68BB6908-BB30-4615-96FB-23995F86D91C
-ms.manager: dansimp
 ---
 
 # Set-SRGroup

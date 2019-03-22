@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Find-NetIPsecRule
 ms.reviewer:
 ms.assetid: D409B5BE-03D1-4852-8DDB-88B3DF6F30A1
-ms.manager: dansimp
 ---
 
 # Find-NetIPsecRule

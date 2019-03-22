@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessRadius
 ms.reviewer:
 ms.assetid: E7DC401D-B13D-4E13-9815-5962B581905E
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessRadius

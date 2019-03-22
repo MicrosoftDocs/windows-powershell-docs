@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsClientNrptRule
 ms.reviewer:
 ms.assetid: 8F1AFEFB-6CEF-49EC-A97F-7F1E60675B09
-ms.manager: dansimp
 ---
 
 # Get-DnsClientNrptRule

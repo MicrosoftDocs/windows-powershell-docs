@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Rename-NetIPsecQuickModeCryptoSet
 ms.reviewer:
 ms.assetid: FF3485CE-29A1-4A8B-AFFF-1B9FA0B15898
-ms.manager: dansimp
 ---
 
 # Rename-NetIPsecQuickModeCryptoSet

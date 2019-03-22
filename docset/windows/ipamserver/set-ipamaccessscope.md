@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-IpamAccessScope
 ms.reviewer:
 ms.assetid: 5ED3884A-7E73-4245-8103-71A27FC92ACF
-ms.manager: dansimp
 ---
 
 # Set-IpamAccessScope

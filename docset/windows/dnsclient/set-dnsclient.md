@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsClient
 ms.reviewer:
 ms.assetid: B4FECE71-0E71-4819-9E3D-9117AC72CCFB
-ms.manager: dansimp
 ---
 
 # Set-DnsClient

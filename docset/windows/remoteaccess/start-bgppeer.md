@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-BgpPeer
 ms.reviewer:
 ms.assetid: ECED1D43-9CE2-4B06-907A-9BEC72A0B235
-ms.manager: dansimp
 ---
 
 # Start-BgpPeer

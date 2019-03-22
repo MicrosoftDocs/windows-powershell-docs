@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamAddressUtilizationThreshold
 ms.reviewer:
 ms.assetid: 78DC627F-B86D-4458-AF4D-CA0655E0BB0F
-ms.manager: dansimp
 ---
 
 # Get-IpamAddressUtilizationThreshold

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopCollectionJobStatus
 ms.reviewer:
 ms.assetid: EA5EDA09-8096-4751-9E37-5C848703B4FC
-ms.manager: dansimp
 ---
 
 # Get-RDVirtualDesktopCollectionJobStatus

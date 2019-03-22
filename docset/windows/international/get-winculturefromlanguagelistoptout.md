@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WinCultureFromLanguageListOptOut
 ms.reviewer:
 ms.assetid: E9F34EC5-6F21-4957-87F9-032E11CFDA07
-ms.manager: dansimp
 ---
 
 # Get-WinCultureFromLanguageListOptOut

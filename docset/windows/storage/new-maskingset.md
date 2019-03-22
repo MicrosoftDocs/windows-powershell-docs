@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-MaskingSet
 ms.reviewer:
 ms.assetid: 278B1797-9F08-4FD6-8039-8E50393EBF53
-ms.manager: dansimp
 ---
 
 # New-MaskingSet

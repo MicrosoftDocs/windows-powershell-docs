@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessAccounting
 ms.reviewer:
 ms.assetid: 798F002C-4411-4A66-A21F-8F3B32D8D9EE
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessAccounting

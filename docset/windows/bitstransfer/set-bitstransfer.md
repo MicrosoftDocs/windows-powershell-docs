@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-BitsTransfer
 ms.reviewer:
 ms.assetid: A4C536E3-D8B0-4124-BA0A-38C6D169FD22
-ms.manager: dansimp
 ---
 
 # Set-BitsTransfer

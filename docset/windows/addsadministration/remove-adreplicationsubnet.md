@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADReplicationSubnet
 ms.reviewer:
 ms.assetid: C9D4DDEA-D332-4601-BE77-D7164AB41CBD
-ms.manager: dansimp
 ---
 
 # Remove-ADReplicationSubnet

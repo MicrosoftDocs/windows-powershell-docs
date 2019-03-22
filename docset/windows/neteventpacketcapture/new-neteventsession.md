@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetEventSession
 ms.reviewer:
 ms.assetid: DA2C76D4-665E-45EF-93AD-10F31F5B5801
-ms.manager: dansimp
 ---
 
 # New-NetEventSession

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Rename-VMSnapshot
 ms.reviewer:
 ms.assetid: F3B23158-65C7-483E-98CD-44B1C53145DA
-ms.manager: dansimp
 ---
 
 # Rename-VMSnapshot

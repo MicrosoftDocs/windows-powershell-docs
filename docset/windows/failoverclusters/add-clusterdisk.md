@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterDisk
 ms.reviewer:
 ms.assetid: CB1E7D0E-5EC6-45DA-81BF-53CEBED5D827
-ms.manager: dansimp
 ---
 
 # Add-ClusterDisk

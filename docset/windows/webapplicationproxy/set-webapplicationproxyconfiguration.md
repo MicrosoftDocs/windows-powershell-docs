@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WebApplicationProxyConfiguration
 ms.reviewer:
 ms.assetid: 2621880E-9E47-4D4E-BC1F-F23E002E23A3
-ms.manager: dansimp
 ---
 
 # Set-WebApplicationProxyConfiguration

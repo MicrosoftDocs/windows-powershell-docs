@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WBSystemState
 ms.reviewer:
 ms.assetid: D07120D5-2D09-439C-B265-3FA1B5387302
-ms.manager: dansimp
 ---
 
 # Add-WBSystemState

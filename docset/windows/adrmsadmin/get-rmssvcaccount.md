@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RmsSvcAccount
 ms.reviewer:
 ms.assetid: A49F23B5-487F-43D3-9375-1B04F038E495
-ms.manager: dansimp
 ---
 
 # Get-RmsSvcAccount

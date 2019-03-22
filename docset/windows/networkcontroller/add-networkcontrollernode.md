@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-NetworkControllerNode
 ms.reviewer:
 ms.assetid: 8E0C29AC-E3FC-435C-8873-F1E64FD5ECA2
-ms.manager: dansimp
 ---
 
 # Add-NetworkControllerNode

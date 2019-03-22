@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UalServerUser
 ms.reviewer:
 ms.assetid: 3781A1E1-B43D-4F5A-836D-923B8581C271
-ms.manager: dansimp
 ---
 
 # Get-UalServerUser

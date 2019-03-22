@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-AppvClientMode
 ms.reviewer:
 ms.assetid: 2AC1A44F-9F77-4B39-9417-3F9F59656F0F
-ms.manager: dansimp
 ---
 
 # Get-AppvClientMode

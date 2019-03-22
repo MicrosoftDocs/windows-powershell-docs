@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-DnsServerPolicy
 ms.reviewer:
 ms.assetid: E382816B-7ED6-403B-A633-6D534FFF80E1
-ms.manager: dansimp
 ---
 
 # Disable-DnsServerPolicy

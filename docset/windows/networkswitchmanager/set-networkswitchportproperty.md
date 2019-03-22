@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetworkSwitchPortProperty
 ms.reviewer:
 ms.assetid: 2908E62E-3601-42A6-BC09-9E44DCB2B5FE
-ms.manager: dansimp
 ---
 
 # Set-NetworkSwitchPortProperty

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualGatewayPolicyMap
 ms.reviewer:
 ms.assetid: ACC89563-7EBD-4BEA-BFD0-CA8494FF6466
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualGatewayPolicyMap

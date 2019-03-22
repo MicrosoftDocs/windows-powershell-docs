@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbConnection
 ms.reviewer:
 ms.assetid: 901BD906-798D-4C09-9C84-4FD2B1E19260
-ms.manager: dansimp
 ---
 
 # Get-SmbConnection

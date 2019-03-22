@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-ScheduledTask
 ms.reviewer:
 ms.assetid: A95C9523-FFAF-4E16-9020-BEF0A605E47D
-ms.manager: dansimp
 ---
 
 # Start-ScheduledTask

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageEnclosure
 ms.reviewer:
 ms.assetid: EBE76BAF-2669-4A99-9AEE-59D8E514A029
-ms.manager: dansimp
 ---
 
 # Get-StorageEnclosure

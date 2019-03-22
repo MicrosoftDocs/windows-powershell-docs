@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-DfsrCloneState
 ms.reviewer:
 ms.assetid: 20A2D825-D7F7-411F-9A8C-4AB459B40161
-ms.manager: dansimp
 ---
 
 # Reset-DfsrCloneState

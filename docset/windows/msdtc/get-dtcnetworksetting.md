@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcNetworkSetting
 ms.reviewer:
 ms.assetid: 0D446E62-AC43-4B9C-BFA3-A2CFB9C9DF40
-ms.manager: dansimp
 ---
 
 # Get-DtcNetworkSetting

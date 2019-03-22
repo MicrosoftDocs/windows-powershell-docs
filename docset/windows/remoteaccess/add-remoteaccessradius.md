@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-RemoteAccessRadius
 ms.reviewer:
 ms.assetid: C1529F8C-0C72-4A73-90E6-66F4278E7825
-ms.manager: dansimp
 ---
 
 # Add-RemoteAccessRadius

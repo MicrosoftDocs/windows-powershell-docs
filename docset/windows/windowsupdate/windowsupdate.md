@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: B8D6B3A1-AFBF-4428-A95C-103704EDB001
-ms.manager: dansimp
 ---
 
 # WindowsUpdate Module

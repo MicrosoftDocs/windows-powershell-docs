@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-BCServeOnBattery
 ms.reviewer:
 ms.assetid: FAECFBF2-DDBC-4EE9-A2F9-FA248F30881B
-ms.manager: dansimp
 ---
 
 # Enable-BCServeOnBattery

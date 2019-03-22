@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-VMReplication
 ms.reviewer:
 ms.assetid: 191E2C21-1D9B-4513-96CD-7A2A8D4A373D
-ms.manager: dansimp
 ---
 
 # Enable-VMReplication

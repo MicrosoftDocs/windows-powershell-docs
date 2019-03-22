@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-BgpCustomRoute
 ms.reviewer:
 ms.assetid: E29DDA94-96C2-450C-8B15-B17E8A7365AD
-ms.manager: dansimp
 ---
 
 # Add-BgpCustomRoute

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADResourcePropertyList
 ms.reviewer:
 ms.assetid: 6882425F-13B1-4854-A7B0-F4AA4665DCAE
-ms.manager: dansimp
 ---
 
 # Set-ADResourcePropertyList

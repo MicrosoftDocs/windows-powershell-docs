@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-SbecInstance
 ms.reviewer:
 ms.assetid: DF8F8970-FEA6-4523-A509-8428AD4EF478
-ms.manager: dansimp
 ---
 
 # Stop-SbecInstance

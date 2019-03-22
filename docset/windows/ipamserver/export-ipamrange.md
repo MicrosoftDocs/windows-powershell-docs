@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-IpamRange
 ms.reviewer:
 ms.assetid: 543BE520-530C-4DD4-8403-659CF05826AD
-ms.manager: dansimp
 ---
 
 # Export-IpamRange

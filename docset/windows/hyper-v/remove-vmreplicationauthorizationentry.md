@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMReplicationAuthorizationEntry
 ms.reviewer:
 ms.assetid: 841B0143-884A-4E5A-BA85-300A9C86E6EF
-ms.manager: dansimp
 ---
 
 # Remove-VMReplicationAuthorizationEntry

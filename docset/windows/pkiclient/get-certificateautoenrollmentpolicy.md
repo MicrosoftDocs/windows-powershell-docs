@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-CertificateAutoEnrollmentPolicy
 ms.reviewer:
 ms.assetid: 20C1505A-014C-40B9-9C0F-F6C67C8282EE
-ms.manager: dansimp
 ---
 
 # Get-CertificateAutoEnrollmentPolicy

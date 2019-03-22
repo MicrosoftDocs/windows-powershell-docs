@@ -6,7 +6,6 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsAttestation
 ms.assetid: 603AAC8C-B18E-47AB-BF1A-EDFDD1F7ACAC
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

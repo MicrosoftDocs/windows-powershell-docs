@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Save-SbecInstance
 ms.reviewer:
 ms.assetid: 6532E9C9-70B8-4E3F-B649-87CEC4B2C75C
-ms.manager: dansimp
 ---
 
 # Save-SbecInstance

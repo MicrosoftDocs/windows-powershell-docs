@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-VM
 ms.reviewer:
 ms.assetid: 50464AFE-68F2-48D9-9C40-2CE9F61A5543
-ms.manager: dansimp
 ---
 
 # Import-VM

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-VMVersion
 ms.reviewer:
 ms.assetid: D72549F5-3AC6-43ED-9D6E-C4C021C740E8
-ms.manager: dansimp
 ---
 
 # Update-VMVersion

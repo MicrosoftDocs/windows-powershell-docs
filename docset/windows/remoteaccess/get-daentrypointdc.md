@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DAEntryPointDC
 ms.reviewer:
 ms.assetid: BBECAB94-B1EB-4BB4-A576-16707C60C3A4
-ms.manager: dansimp
 ---
 
 # Get-DAEntryPointDC

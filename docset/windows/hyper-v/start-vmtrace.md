@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-VMTrace
 ms.reviewer:
 ms.assetid: FC2D5744-65D9-4509-869C-642DE9A22B6B
-ms.manager: dansimp
 ---
 
 # Start-VMTrace

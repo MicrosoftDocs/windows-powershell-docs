@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetAdapterChecksumOffload
 ms.reviewer:
 ms.assetid: E2A16CFE-C881-4F1C-8704-286766490629
-ms.manager: dansimp
 ---
 
 # Enable-NetAdapterChecksumOffload

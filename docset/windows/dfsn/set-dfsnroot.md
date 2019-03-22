@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DfsnRoot
 ms.reviewer:
 ms.assetid: D4FF78B3-73BB-4F07-A1BC-08229B029BBD
-ms.manager: dansimp
 ---
 
 # Set-DfsnRoot

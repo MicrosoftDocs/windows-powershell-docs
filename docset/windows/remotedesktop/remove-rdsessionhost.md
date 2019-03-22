@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDSessionHost
 ms.reviewer:
 ms.assetid: 15C9F651-79E7-4DFC-8C1B-56E69744EE54
-ms.manager: dansimp
 ---
 
 # Remove-RDSessionHost

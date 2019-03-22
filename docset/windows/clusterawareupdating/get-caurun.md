@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-CauRun
 ms.reviewer:
 ms.assetid: CFBB5074-C881-44B0-AA1B-7EF0D7308497
-ms.manager: dansimp
 ---
 
 # Get-CauRun

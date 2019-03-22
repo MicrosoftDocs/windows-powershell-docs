@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetVirtualizationProviderAddress
 ms.reviewer:
 ms.assetid: 70B81AF5-345B-4140-B820-ACF8A5A31F2D
-ms.manager: dansimp
 ---
 
 # New-NetVirtualizationProviderAddress

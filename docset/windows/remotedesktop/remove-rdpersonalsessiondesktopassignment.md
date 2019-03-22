@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDPersonalSessionDesktopAssignment
 ms.reviewer:
 ms.assetid: AFA6C197-DB63-4AFB-8B14-0907BCCAE4FD
-ms.manager: dansimp
 ---
 
 # Remove-RDPersonalSessionDesktopAssignment

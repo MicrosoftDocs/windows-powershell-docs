@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ResiliencySetting
 ms.reviewer:
 ms.assetid: 699C06C9-4384-4369-91FF-EEA3BD1E2AD8
-ms.manager: dansimp
 ---
 
 # Get-ResiliencySetting

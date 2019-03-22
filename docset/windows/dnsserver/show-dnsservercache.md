@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Show-DnsServerCache
 ms.reviewer:
 ms.assetid: C37BCB58-F942-41AD-8B71-700C5C5921BE
-ms.manager: dansimp
 ---
 
 # Show-DnsServerCache

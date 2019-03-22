@@ -15,7 +15,7 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 72D9819C-2ADD-4886-8C37-019FB403EFDB
-ms.manager: dansimp
+manager: dansimp
 ---
 
 # IISAdministration Module

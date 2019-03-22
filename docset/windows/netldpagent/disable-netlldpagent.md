@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetLldpAgent
 ms.reviewer:
 ms.assetid: A7CC222A-B2C1-4A5F-B208-E3D7AC0378C0
-ms.manager: dansimp
 ---
 
 # Disable-NetLldpAgent

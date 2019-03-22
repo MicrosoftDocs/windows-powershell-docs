@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADCentralAccessPolicy
 ms.reviewer:
 ms.assetid: 9B783741-A707-4B43-9D5C-8A4A5439A86F
-ms.manager: dansimp
 ---
 
 # Set-ADCentralAccessPolicy

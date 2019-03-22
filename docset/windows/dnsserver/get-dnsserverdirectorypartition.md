@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerDirectoryPartition
 ms.reviewer:
 ms.assetid: 59D81384-63E8-4CAE-BD91-5ECCFA1BCC00
-ms.manager: dansimp
 ---
 
 # Get-DnsServerDirectoryPartition

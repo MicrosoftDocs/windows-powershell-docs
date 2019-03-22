@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv6FreeIPAddress
 ms.reviewer:
 ms.assetid: 0A64F272-2D6C-437E-8788-B7C38065F390
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6FreeIPAddress

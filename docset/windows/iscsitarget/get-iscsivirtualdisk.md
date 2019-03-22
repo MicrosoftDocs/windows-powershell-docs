@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 376513C8-34A5-4485-9083-439D1C4269ED
-ms.manager: dansimp
 ---
 
 # Get-IscsiVirtualDisk

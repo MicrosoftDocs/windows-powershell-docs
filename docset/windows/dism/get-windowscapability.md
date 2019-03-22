@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WindowsCapability
 ms.reviewer:
 ms.assetid: A637B762-96FF-4B84-8CC7-8840FC0BA9ED
-ms.manager: dansimp
 ---
 
 # Get-WindowsCapability

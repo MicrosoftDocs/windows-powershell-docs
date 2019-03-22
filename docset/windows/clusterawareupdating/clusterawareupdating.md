@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 58543A60-45DE-4020-95FE-803B65203C2C
-ms.manager: dansimp
 ---
 
 # ClusterAwareUpdating Module

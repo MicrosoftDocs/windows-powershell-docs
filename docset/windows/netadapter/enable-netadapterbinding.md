@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetAdapterBinding
 ms.reviewer:
 ms.assetid: CAE842A4-D3F2-4001-A768-892822EADB2B
-ms.manager: dansimp
 ---
 
 # Enable-NetAdapterBinding

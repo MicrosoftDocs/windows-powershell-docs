@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsServerZoneScope
 ms.reviewer:
 ms.assetid: D3CF3EC8-962B-401D-96FE-EF04F22884B5
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerZoneScope

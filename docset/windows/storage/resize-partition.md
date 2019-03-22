@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resize-Partition
 ms.reviewer:
 ms.assetid: 777A539C-AD9E-4BC8-AA99-397F3964EDA8
-ms.manager: dansimp
 ---
 
 # Resize-Partition

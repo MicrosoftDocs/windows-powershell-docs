@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-GPLink
 ms.reviewer:
 ms.assetid: 5C473200-9364-4C8E-AC45-5600F1CBF343
-ms.manager: dansimp
 ---
 
 # New-GPLink

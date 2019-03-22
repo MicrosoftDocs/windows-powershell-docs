@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resume-WmsDiskProtection
 ms.reviewer:
 ms.assetid: 70D33C59-689D-44C3-A174-FA8E1A0136FC
-ms.manager: dansimp
 ---
 
 # Resume-WmsDiskProtection

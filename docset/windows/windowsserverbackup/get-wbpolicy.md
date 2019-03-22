@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBPolicy
 ms.reviewer:
 ms.assetid: 6A50420C-39D1-4090-BB9E-80E36A80247F
-ms.manager: dansimp
 ---
 
 # Get-WBPolicy

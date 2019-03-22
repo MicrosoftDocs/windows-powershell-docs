@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebConfigFile
 ms.reviewer:
 ms.assetid: 60345A39-C114-44AC-89F3-ABCCA70483EA
-ms.manager: dansimp
 ---
 
 # Get-WebConfigFile

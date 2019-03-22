@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Show-NetFirewallRule
 ms.reviewer:
 ms.assetid: CF255861-15F4-4F28-A3C0-8A9E2C129BF6
-ms.manager: dansimp
 ---
 
 # Show-NetFirewallRule

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BCClientConfiguration
 ms.reviewer:
 ms.assetid: 7E93378E-58C5-4548-B827-B03DB745AC26
-ms.manager: dansimp
 ---
 
 # Get-BCClientConfiguration

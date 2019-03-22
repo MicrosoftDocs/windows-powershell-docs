@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamDhcpServer
 ms.reviewer:
 ms.assetid: D0DA2339-51F4-45A7-93DB-A3E816E82421
-ms.manager: dansimp
 ---
 
 # Get-IpamDhcpServer

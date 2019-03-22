@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebRequest
 ms.reviewer:
 ms.assetid: 02BB25C5-52F6-4515-8BF4-3EF55079FB4F
-ms.manager: dansimp
 ---
 
 # Get-WebRequest

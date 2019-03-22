@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMDvdDrive
 ms.reviewer:
 ms.assetid: 403BB6A5-E31E-4256-9D10-1018E39B317E
-ms.manager: dansimp
 ---
 
 # Set-VMDvdDrive

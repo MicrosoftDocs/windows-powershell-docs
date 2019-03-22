@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BCNetworkConfiguration
 ms.reviewer:
 ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
-ms.manager: dansimp
 ---
 
 # Get-BCNetworkConfiguration

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-FileShare
 ms.reviewer:
 ms.assetid: 752D959D-F2CD-4228-B4C5-752D8E653734
-ms.manager: dansimp
 ---
 
 # New-FileShare

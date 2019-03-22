@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetNeighbor
 ms.reviewer:
 ms.assetid: 2D6535B1-74DA-47A1-8787-2A23CBBAA322
-ms.manager: dansimp
 ---
 
 # New-NetNeighbor

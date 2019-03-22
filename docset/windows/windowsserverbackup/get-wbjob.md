@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBJob
 ms.reviewer:
 ms.assetid: 08375C25-61AF-4928-B052-A9993DCACAD7
-ms.manager: dansimp
 ---
 
 # Get-WBJob

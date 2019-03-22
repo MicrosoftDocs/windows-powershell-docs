@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VM
 ms.reviewer:
 ms.assetid: 99205277-D2BB-4879-ABC2-9FD1CA5BD2A5
-ms.manager: dansimp
 ---
 
 # New-VM

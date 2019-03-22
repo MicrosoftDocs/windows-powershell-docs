@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 701252C5-688B-4916-B563-2D6E9563E743
-ms.manager: dansimp
 ---
 
 # IscsiTarget Module

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADUser
 ms.reviewer:
 ms.assetid: 251AA5E1-8D5D-4EDA-82B5-F0092B44EC3F
-ms.manager: dansimp
 ---
 
 # Get-ADUser

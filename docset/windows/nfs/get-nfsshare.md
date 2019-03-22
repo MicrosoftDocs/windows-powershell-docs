@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NfsShare
 ms.reviewer:
 ms.assetid: EB994263-DF61-4AE0-AC8B-F4F6C8EB90FF
-ms.manager: dansimp
 ---
 
 # Get-NfsShare

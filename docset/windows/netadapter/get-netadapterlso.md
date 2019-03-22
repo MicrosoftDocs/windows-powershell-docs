@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetAdapterLso
 ms.reviewer:
 ms.assetid: ECBBCA96-A4FB-434F-A8AB-3C10C81329BE
-ms.manager: dansimp
 ---
 
 # Get-NetAdapterLso

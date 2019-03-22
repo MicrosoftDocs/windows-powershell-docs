@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-PrinterPort
 ms.reviewer:
 ms.assetid: 55A6114A-DA95-4D70-8007-6826DE0756B9
-ms.manager: dansimp
 ---
 
 # Remove-PrinterPort

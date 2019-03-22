@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-SRTopology
 ms.reviewer:
 ms.assetid: 7F3CD0F1-F507-4BB0-B677-93DAEBEB2E35
-ms.manager: dansimp
 ---
 
 # Test-SRTopology

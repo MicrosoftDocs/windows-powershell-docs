@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetEventPacketCaptureProvider
 ms.reviewer:
 ms.assetid: BF94EADD-2770-42F2-A28B-C03D1406A712
-ms.manager: dansimp
 ---
 
 # Remove-NetEventPacketCaptureProvider

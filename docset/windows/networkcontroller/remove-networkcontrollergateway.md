@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerGateway
 ms.reviewer:
 ms.assetid: F73DCCDA-A407-4519-98E9-61233DBA3FFF
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerGateway

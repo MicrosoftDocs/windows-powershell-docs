@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DhcpServerDnsCredential
 ms.reviewer:
 ms.assetid: BF8E840A-3EDC-4280-936A-6C6A1805A111
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerDnsCredential

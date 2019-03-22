@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unblock-FileShareAccess
 ms.reviewer:
 ms.assetid: 0BD0A5B2-6604-41CE-A3F3-1D9666977344
-ms.manager: dansimp
 ---
 
 # Unblock-FileShareAccess

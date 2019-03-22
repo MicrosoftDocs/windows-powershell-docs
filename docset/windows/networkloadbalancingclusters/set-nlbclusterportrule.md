@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NlbClusterPortRule
 ms.reviewer:
 ms.assetid: 51E2120E-4079-47D2-8A89-721D4530CEE9
-ms.manager: dansimp
 ---
 
 # Set-NlbClusterPortRule

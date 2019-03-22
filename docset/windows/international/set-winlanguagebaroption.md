@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WinLanguageBarOption
 ms.reviewer:
 ms.assetid: 021CE56C-21F2-4D32-A978-68A08058A128
-ms.manager: dansimp
 ---
 
 # Set-WinLanguageBarOption

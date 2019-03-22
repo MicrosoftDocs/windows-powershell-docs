@@ -16,7 +16,6 @@ schema: 2.0.0
 title: ConvertTo-WebApplication
 ms.reviewer:
 ms.assetid: 09B401A9-4E53-4CEC-AC08-419B9EE87BB2
-ms.manager: dansimp
 ---
 
 # ConvertTo-WebApplication

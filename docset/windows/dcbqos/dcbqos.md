@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 4ACBF941-38FF-485B-8919-22C594AC7788
-ms.manager: dansimp
 ---
 
 # DcbQoS Module

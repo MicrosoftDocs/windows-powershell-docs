@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-DnsServerPolicy
 ms.reviewer:
 ms.assetid: F012910D-7079-44C2-8F52-36A85A7DAF13
-ms.manager: dansimp
 ---
 
 # Enable-DnsServerPolicy

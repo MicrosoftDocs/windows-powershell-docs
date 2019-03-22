@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDVirtualDesktopFromCollection
 ms.reviewer:
 ms.assetid: FCB82045-2029-4874-BEEA-F0653C4B46B0
-ms.manager: dansimp
 ---
 
 # Remove-RDVirtualDesktopFromCollection

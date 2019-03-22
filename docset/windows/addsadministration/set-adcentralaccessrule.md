@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADCentralAccessRule
 ms.reviewer:
 ms.assetid: 342C58AF-2F20-433B-BB2D-2299DB7D7BA7
-ms.manager: dansimp
 ---
 
 # Set-ADCentralAccessRule

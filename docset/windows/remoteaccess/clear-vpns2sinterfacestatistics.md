@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-VpnS2SInterfaceStatistics
 ms.reviewer:
 ms.assetid: EBA1933F-2D9D-4CEB-BB0A-41B6AC3C98A8
-ms.manager: dansimp
 ---
 
 # Clear-VpnS2SInterfaceStatistics

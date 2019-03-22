@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPsecQuickModeCryptoSet
 ms.reviewer:
 ms.assetid: 22F90AA6-B29F-453D-A8A9-F683886C2895
-ms.manager: dansimp
 ---
 
 # Remove-NetIPsecQuickModeCryptoSet

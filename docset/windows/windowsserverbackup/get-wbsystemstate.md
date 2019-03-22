@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBSystemState
 ms.reviewer:
 ms.assetid: BD09EDAF-39BB-44B4-A8AE-3971D818CC4B
-ms.manager: dansimp
 ---
 
 # Get-WBSystemState

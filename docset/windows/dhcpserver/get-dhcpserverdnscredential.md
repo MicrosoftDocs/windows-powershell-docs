@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerDnsCredential
 ms.reviewer:
 ms.assetid: 3831E353-49CB-4EA6-AA4E-AFE362B4FB51
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerDnsCredential

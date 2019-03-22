@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DHASCertificateChainPolicy
 ms.reviewer:
 ms.assetid: DEECBFFC-FFD2-428A-9706-58A06659DDE3
-ms.manager: dansimp
 ---
 
 # Get-DHASCertificateChainPolicy

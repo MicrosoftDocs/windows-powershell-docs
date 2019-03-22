@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetNatStaticMapping
 ms.reviewer:
 ms.assetid: CF312668-8260-4108-92E6-05F109666CE2
-ms.manager: dansimp
 ---
 
 # Remove-NetNatStaticMapping

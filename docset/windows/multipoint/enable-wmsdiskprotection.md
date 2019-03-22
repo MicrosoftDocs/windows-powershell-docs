@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-WmsDiskProtection
 ms.reviewer:
 ms.assetid: FE66F5DE-4CC7-4B05-A61F-6E1B84988A1D
-ms.manager: dansimp
 ---
 
 # Enable-WmsDiskProtection

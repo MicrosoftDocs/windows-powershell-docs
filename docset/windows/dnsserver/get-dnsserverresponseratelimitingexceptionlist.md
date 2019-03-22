@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerResponseRateLimitingExceptionlist
 ms.reviewer:
 ms.assetid: B09519B8-3BC3-4B8E-9768-9F488FAE75AE
-ms.manager: dansimp
 ---
 
 # Get-DnsServerResponseRateLimitingExceptionlist

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetAdapterQos
 ms.reviewer:
 ms.assetid: 207DEA46-20E6-46EC-9317-538D56ED19D9
-ms.manager: dansimp
 ---
 
 # Enable-NetAdapterQos

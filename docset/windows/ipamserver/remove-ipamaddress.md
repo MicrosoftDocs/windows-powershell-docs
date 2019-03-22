@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IpamAddress
 ms.reviewer:
 ms.assetid: F746A0B2-9522-4724-8DD4-99300C702114
-ms.manager: dansimp
 ---
 
 # Remove-IpamAddress

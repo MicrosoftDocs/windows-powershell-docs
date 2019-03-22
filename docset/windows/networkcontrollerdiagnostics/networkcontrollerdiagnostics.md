@@ -17,7 +17,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: ED8A9D35-E584-4167-994B-CBC23B841CC1
-ms.manager: dansimp
 ---
 
 # NetworkControllerDiagnostics Module

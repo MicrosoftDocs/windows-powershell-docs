@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NlbClusterNode
 ms.reviewer:
 ms.assetid: 06DE5A4D-D9AC-4AFA-BF79-04E32AE3EE12
-ms.manager: dansimp
 ---
 
 # Remove-NlbClusterNode

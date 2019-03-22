@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NlbClusterPortRule
 ms.reviewer:
 ms.assetid: 86963755-70D4-461C-A612-A2250351AC90
-ms.manager: dansimp
 ---
 
 # Get-NlbClusterPortRule

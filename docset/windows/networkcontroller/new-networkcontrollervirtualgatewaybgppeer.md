@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerVirtualGatewayBgpPeer
 ms.reviewer:
 ms.assetid: 8F8251EE-5F32-4E34-9DB7-50EF302ECEE0
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerVirtualGatewayBgpPeer

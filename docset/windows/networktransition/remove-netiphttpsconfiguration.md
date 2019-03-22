@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPHttpsConfiguration
 ms.reviewer:
 ms.assetid: DA59CF8F-6554-47FD-9691-DFC1E3E93E10
-ms.manager: dansimp
 ---
 
 # Remove-NetIPHttpsConfiguration

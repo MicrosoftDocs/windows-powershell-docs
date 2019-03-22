@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-PhysicalDiskStorageNodeView
 ms.reviewer:
 ms.assetid: 4CA35E6D-662C-42CC-B877-82014B5D24B3
-ms.manager: dansimp
 ---
 
 # Get-PhysicalDiskStorageNodeView

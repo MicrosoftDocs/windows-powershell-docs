@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Optimize-StoragePool
 ms.reviewer:
 ms.assetid: A805F43C-5ED6-4F4C-9F15-44DDBBF93835
-ms.manager: dansimp
 ---
 
 # Optimize-StoragePool

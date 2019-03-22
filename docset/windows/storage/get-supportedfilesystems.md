@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SupportedFileSystems
 ms.reviewer:
 ms.assetid: D5C2DCD1-0959-455C-A983-EBED0B84C1D9
-ms.manager: dansimp
 ---
 
 # Get-SupportedFileSystems

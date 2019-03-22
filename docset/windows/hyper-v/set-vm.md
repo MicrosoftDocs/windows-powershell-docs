@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VM
 ms.reviewer:
 ms.assetid: CD0F5EB8-995B-40DE-BBC5-689CCA827ABE
-ms.manager: dansimp
 ---
 
 # Set-VM

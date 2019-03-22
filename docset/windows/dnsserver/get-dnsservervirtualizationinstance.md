@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerVirtualizationInstance
 ms.reviewer:
 ms.assetid: 7639FB08-D5E0-4DE1-8D15-4EBED0D2F982
-ms.manager: dansimp
 ---
 
 # Get-DnsServerVirtualizationInstance

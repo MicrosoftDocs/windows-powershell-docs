@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetFirewallProfile
 ms.reviewer:
 ms.assetid: C79BA415-AF74-4BCA-A4F4-E0B746D26511
-ms.manager: dansimp
 ---
 
 # Set-NetFirewallProfile

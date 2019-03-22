@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-GPO
 ms.reviewer:
 ms.assetid: C19D7D52-EF72-44E3-AC03-FD5B401769D1
-ms.manager: dansimp
 ---
 
 # Get-GPO

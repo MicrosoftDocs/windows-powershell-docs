@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMRemoteFx3dVideoAdapter
 ms.reviewer:
 ms.assetid: 082B9173-FC0C-4535-B034-DA69F03AA0C8
-ms.manager: dansimp
 ---
 
 # Get-VMRemoteFx3dVideoAdapter

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
-ms.manager: dansimp
 ---
 
 # WSUS Module

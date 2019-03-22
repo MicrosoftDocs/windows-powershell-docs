@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Suspend-PrintJob
 ms.reviewer:
 ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
-ms.manager: dansimp
 ---
 
 # Suspend-PrintJob

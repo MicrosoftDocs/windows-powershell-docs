@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Mount-IscsiVirtualDiskSnapshot
 ms.reviewer:
 ms.assetid: 001DF751-A6A3-4983-AC00-A6C3AAF46522
-ms.manager: dansimp
 ---
 
 # Mount-IscsiVirtualDiskSnapshot

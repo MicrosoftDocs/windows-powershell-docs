@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetAdapterAdvancedProperty
 ms.reviewer:
 ms.assetid: 560F5230-ED7F-4E59-A480-E4B04E3DB328
-ms.manager: dansimp
 ---
 
 # New-NetAdapterAdvancedProperty

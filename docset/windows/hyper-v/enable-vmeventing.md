@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-VMEventing
 ms.reviewer:
 ms.assetid: 137048D8-1B8B-43D9-930F-A18D9F9BB921
-ms.manager: dansimp
 ---
 
 # Enable-VMEventing

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NfsMappedIdentity
 ms.reviewer:
 ms.assetid: 5C87229C-5A89-41B9-8B92-94C29140438A
-ms.manager: dansimp
 ---
 
 # Get-NfsMappedIdentity

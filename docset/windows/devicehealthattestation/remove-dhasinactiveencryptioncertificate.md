@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DHASInactiveEncryptionCertificate
 ms.reviewer:
 ms.assetid: 790AEC26-F98B-453B-A689-270686B197B3
-ms.manager: dansimp
 ---
 
 # Remove-DHASInactiveEncryptionCertificate

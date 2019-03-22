@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-AppvPublishingServer
 ms.reviewer:
 ms.assetid: 09F2B929-9A0F-4B52-9C43-695ECF2792BE
-ms.manager: dansimp
 ---
 
 # Add-AppvPublishingServer

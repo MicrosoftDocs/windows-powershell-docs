@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DHASActiveSigningCertificate
 ms.reviewer:
 ms.assetid: 70989F7C-4752-4D12-919D-17588F58DD05
-ms.manager: dansimp
 ---
 
 # Set-DHASActiveSigningCertificate

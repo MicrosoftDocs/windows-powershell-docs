@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C8C34797-DC85-4065-90E5-CFE052086510
-ms.manager: dansimp
 ---
 
 # DeviceHealthAttestation Module

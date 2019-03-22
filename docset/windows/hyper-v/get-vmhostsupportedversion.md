@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMHostSupportedVersion
 ms.reviewer:
 ms.assetid: B03090C3-BAA3-4395-AF15-060EC08710BF
-ms.manager: dansimp
 ---
 
 # Get-VMHostSupportedVersion

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SMServerFeature
 ms.reviewer:
 ms.assetid: E23F771C-BC12-4F3D-849A-7926203F8566
-ms.manager: dansimp
 ---
 
 # Get-SMServerFeature

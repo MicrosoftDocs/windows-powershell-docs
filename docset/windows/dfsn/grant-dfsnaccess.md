@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Grant-DfsnAccess
 ms.reviewer:
 ms.assetid: 956730DE-562C-46BB-817C-3949CDDB6E4F
-ms.manager: dansimp
 ---
 
 # Grant-DfsnAccess

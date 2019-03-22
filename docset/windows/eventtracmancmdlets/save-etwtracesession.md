@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Save-EtwTraceSession
 ms.reviewer:
 ms.assetid: B932E465-329E-47AE-BB2D-D18F601BF89D
-ms.manager: dansimp
 ---
 
 # Save-EtwTraceSession

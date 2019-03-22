@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Optimize-VHDSet
 ms.reviewer:
 ms.assetid: AEC10F83-FEAF-45C9-93EC-13EE47B59D4A
-ms.manager: dansimp
 ---
 
 # Optimize-VHDSet

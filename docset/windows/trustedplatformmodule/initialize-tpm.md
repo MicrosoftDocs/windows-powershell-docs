@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Initialize-Tpm
 ms.reviewer:
 ms.assetid: 00BC67FE-0042-4424-AC02-DD8843D82D96
-ms.manager: dansimp
 ---
 
 # Initialize-Tpm

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetRoute
 ms.reviewer:
 ms.assetid: DF770A5C-F4DF-46B6-A756-1C27EEF542DC
-ms.manager: dansimp
 ---
 
 # New-NetRoute

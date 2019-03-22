@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetQosPolicy
 ms.reviewer:
 ms.assetid: 0043C08D-E596-4177-A981-0CD8C04CA7E4
-ms.manager: dansimp
 ---
 
 # Remove-NetQosPolicy

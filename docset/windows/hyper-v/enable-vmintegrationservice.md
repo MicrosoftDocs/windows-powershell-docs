@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-VMIntegrationService
 ms.reviewer:
 ms.assetid: 5BB80A43-60A6-41D1-B249-FFE7C4C8C3C9
-ms.manager: dansimp
 ---
 
 # Enable-VMIntegrationService

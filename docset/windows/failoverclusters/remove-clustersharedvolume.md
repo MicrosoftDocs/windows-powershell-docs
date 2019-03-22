@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ClusterSharedVolume
 ms.reviewer:
 ms.assetid: 3A030267-1460-464D-91F7-63407B0D7ADB
-ms.manager: dansimp
 ---
 
 # Remove-ClusterSharedVolume

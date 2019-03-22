@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv4SuperscopeStatistics
 ms.reviewer:
 ms.assetid: A05D8AA5-46CB-43D9-B19D-D92C259E62E1
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4SuperscopeStatistics

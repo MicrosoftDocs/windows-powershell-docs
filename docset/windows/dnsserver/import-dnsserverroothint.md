@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-DnsServerRootHint
 ms.reviewer:
 ms.assetid: 1477CCAB-A813-469E-955A-4FB094985CED
-ms.manager: dansimp
 ---
 
 # Import-DnsServerRootHint

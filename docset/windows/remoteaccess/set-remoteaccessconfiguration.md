@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-RemoteAccessConfiguration
 ms.reviewer:
 ms.assetid: 7BCB18F8-5F9B-4971-ACAD-C74E27909210
-ms.manager: dansimp
 ---
 
 # Set-RemoteAccessConfiguration

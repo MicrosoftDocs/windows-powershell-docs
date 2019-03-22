@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-ScheduledTask
 ms.reviewer:
 ms.assetid: AD79DF6E-F302-4CEE-8FDE-BCDD224A5A25
-ms.manager: dansimp
 ---
 
 # Enable-ScheduledTask

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDDeploymentGatewayConfiguration
 ms.reviewer:
 ms.assetid: F98C4DF8-F841-41F4-AD23-450D017BC0A4
-ms.manager: dansimp
 ---
 
 # Get-RDDeploymentGatewayConfiguration

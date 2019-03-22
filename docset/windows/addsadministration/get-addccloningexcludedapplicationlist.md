@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADDCCloningExcludedApplicationList
 ms.reviewer:
 ms.assetid: A43B14CD-8E32-404F-A2EA-8AA9BD5B1477
-ms.manager: dansimp
 ---
 
 # Get-ADDCCloningExcludedApplicationList

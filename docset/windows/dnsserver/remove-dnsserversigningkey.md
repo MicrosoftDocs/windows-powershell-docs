@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsServerSigningKey
 ms.reviewer:
 ms.assetid: 788041B6-8866-4D84-92AA-7543620DA4AA
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerSigningKey

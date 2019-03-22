@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restore-DfsrPreservedFiles
 ms.reviewer:
 ms.assetid: 8FADA0A8-B3DE-41CB-80FD-184D02753FF4
-ms.manager: dansimp
 ---
 
 # Restore-DfsrPreservedFiles

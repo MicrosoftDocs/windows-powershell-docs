@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VMFibreChannelHba
 ms.reviewer:
 ms.assetid: AB038205-233B-47BE-B202-AD5BF46F2CE2
-ms.manager: dansimp
 ---
 
 # Add-VMFibreChannelHba

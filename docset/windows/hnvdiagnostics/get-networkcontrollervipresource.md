@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerVipResource
 ms.reviewer:
 ms.assetid: 2ECF2855-CF31-4370-AD44-876EA6CF3AAE
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVipResource

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Sync-ADObject
 ms.reviewer:
 ms.assetid: A9F81EF1-BF28-4F63-AF88-9490FB9E9DFA
-ms.manager: dansimp
 ---
 
 # Sync-ADObject

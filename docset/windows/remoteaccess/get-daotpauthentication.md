@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DAOtpAuthentication
 ms.reviewer:
 ms.assetid: 7BEEA630-EBB9-4C83-8066-CEC3371AA1E4
-ms.manager: dansimp
 ---
 
 # Get-DAOtpAuthentication

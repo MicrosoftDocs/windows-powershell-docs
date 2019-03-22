@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDWorkspace
 ms.reviewer:
 ms.assetid: 90CAD965-2E03-4472-B5CE-CA541312882A
-ms.manager: dansimp
 ---
 
 # Get-RDWorkspace

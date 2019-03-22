@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDRemoteDesktop
 ms.reviewer:
 ms.assetid: 37504AB6-22BD-495A-81BC-032541BD594B
-ms.manager: dansimp
 ---
 
 # Get-RDRemoteDesktop

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetQosPolicy
 ms.reviewer:
 ms.assetid: 7E4D1383-2439-4F10-A86D-AA2BD4EC54E6
-ms.manager: dansimp
 ---
 
 # Get-NetQosPolicy

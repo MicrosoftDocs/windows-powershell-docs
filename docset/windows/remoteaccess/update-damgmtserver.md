@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-DAMgmtServer
 ms.reviewer:
 ms.assetid: 4AE61538-A4A2-4747-AAC7-C7C3154ECE07
-ms.manager: dansimp
 ---
 
 # Update-DAMgmtServer

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv4MulticastExclusionRange
 ms.reviewer:
 ms.assetid: 80A1A094-7313-468F-951A-03325A1A9626
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4MulticastExclusionRange

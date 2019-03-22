@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VpnIPAddressRange
 ms.reviewer:
 ms.assetid: 77ADE910-15EE-4438-94D2-9789B90A5BF4
-ms.manager: dansimp
 ---
 
 # Remove-VpnIPAddressRange

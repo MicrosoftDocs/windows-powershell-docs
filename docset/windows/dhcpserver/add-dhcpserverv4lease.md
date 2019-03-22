@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerv4Lease
 ms.reviewer:
 ms.assetid: 1928007D-0C76-4A8A-B6AD-AD0B380E6A3F
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Lease

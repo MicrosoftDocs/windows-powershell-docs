@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
-ms.manager: dansimp
 ---
 
 # Repair-Volume

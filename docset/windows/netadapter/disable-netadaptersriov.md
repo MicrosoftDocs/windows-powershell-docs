@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetAdapterSriov
 ms.reviewer:
 ms.assetid: CC6BD443-FDEB-4B8A-B897-725FE316B809
-ms.manager: dansimp
 ---
 
 # Disable-NetAdapterSriov

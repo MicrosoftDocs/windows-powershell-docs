@@ -6,7 +6,6 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ShieldedVMProvisioning
 ms.assetid: 1817F913-D586-4926-96C5-766DAD08C004
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-WdsInstallImage
 ms.reviewer:
 ms.assetid: E0AD370F-BD3C-43DD-B5FC-137A11B3D6D9
-ms.manager: dansimp
 ---
 
 # Import-WdsInstallImage

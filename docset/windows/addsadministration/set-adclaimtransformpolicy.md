@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADClaimTransformPolicy
 ms.reviewer:
 ms.assetid: F6AF9543-D62D-4954-81A0-9AE7EF57A856
-ms.manager: dansimp
 ---
 
 # Set-ADClaimTransformPolicy

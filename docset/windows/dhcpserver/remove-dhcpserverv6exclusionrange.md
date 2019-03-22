@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv6ExclusionRange
 ms.reviewer:
 ms.assetid: 3483D9F7-DF27-435F-921B-0C5AE0FAD91E
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6ExclusionRange

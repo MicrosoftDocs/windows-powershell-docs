@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-WdsBootImage
 ms.reviewer:
 ms.assetid: F5843663-6E03-403E-BE78-7F57843B028A
-ms.manager: dansimp
 ---
 
 # Disable-WdsBootImage

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 8F4825A6-2BB7-4093-AA4C-9EBE7623EB01
-ms.manager: dansimp
 ---
 
 # NetEventPacketCapture Module

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessConnectionStatistics
 ms.reviewer:
 ms.assetid: 26655B1B-1AF2-408C-9F48-45E9926ACD68
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessConnectionStatistics

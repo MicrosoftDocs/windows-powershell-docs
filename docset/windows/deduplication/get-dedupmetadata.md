@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DedupMetadata
 ms.reviewer:
 ms.assetid: 9B853179-B5D9-4340-B2DC-EE8B75671B22
-ms.manager: dansimp
 ---
 
 # Get-DedupMetadata

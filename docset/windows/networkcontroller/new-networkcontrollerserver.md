@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerServer
 ms.reviewer:
 ms.assetid: A8CC59FD-D792-4379-B1F6-0AE4D353ACA7
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerServer

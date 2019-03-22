@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-ScheduledTask
 ms.reviewer:
 ms.assetid: DABA0624-AC0F-4718-9271-89DCF9D2F300
-ms.manager: dansimp
 ---
 
 # Stop-ScheduledTask

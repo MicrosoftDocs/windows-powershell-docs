@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-Cluster
 ms.reviewer:
 ms.assetid: 69D30A79-E961-41C7-901A-DC04A17EAA6C
-ms.manager: dansimp
 ---
 
 # Test-Cluster

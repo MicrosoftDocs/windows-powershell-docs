@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebApplicationProxyAvailableADFSRelyingParty
 ms.reviewer:
 ms.assetid: 9CC77A2B-7664-4398-85AA-AD0870C23B4C
-ms.manager: dansimp
 ---
 
 # Get-WebApplicationProxyAvailableADFSRelyingParty

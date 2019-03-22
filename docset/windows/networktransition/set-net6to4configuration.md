@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-Net6to4Configuration
 ms.reviewer:
 ms.assetid: 1DDC482E-D30A-4684-85DE-DBC421803C3C
-ms.manager: dansimp
 ---
 
 # Set-Net6to4Configuration

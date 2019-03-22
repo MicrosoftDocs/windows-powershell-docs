@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-BgpRoutingPolicy
 ms.reviewer:
 ms.assetid: 4617C48A-A70D-42C1-B559-C89BABE855A9
-ms.manager: dansimp
 ---
 
 # Remove-BgpRoutingPolicy

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDServer
 ms.reviewer:
 ms.assetid: F059BDC6-53C4-487E-AD84-63DA0E26489D
-ms.manager: dansimp
 ---
 
 # Get-RDServer

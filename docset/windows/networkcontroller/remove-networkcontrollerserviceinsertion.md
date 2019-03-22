@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerServiceInsertion
 ms.reviewer:
 ms.assetid: DB9CA7FD-C650-4153-88CD-351CE3AD3ACB
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerServiceInsertion

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetAdapterQos
 ms.reviewer:
 ms.assetid: 9ABCED53-7C6A-4600-A7E2-805701A6AE79
-ms.manager: dansimp
 ---
 
 # Disable-NetAdapterQos

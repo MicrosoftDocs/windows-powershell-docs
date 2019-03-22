@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ADCentralAccessRule
 ms.reviewer:
 ms.assetid: 2E1B1CAC-17D4-4E23-A7D6-4155A94046BB
-ms.manager: dansimp
 ---
 
 # New-ADCentralAccessRule

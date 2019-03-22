@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Grant-VMConnectAccess
 ms.reviewer:
 ms.assetid: BD2A75F1-9544-4A10-90EB-9337E2308A3B
-ms.manager: dansimp
 ---
 
 # Grant-VMConnectAccess

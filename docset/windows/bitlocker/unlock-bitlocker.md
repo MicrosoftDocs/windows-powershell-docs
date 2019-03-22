@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unlock-BitLocker
 ms.reviewer:
 ms.assetid: A2806C1A-0703-4800-9356-7F3B4ADE9659
-ms.manager: dansimp
 ---
 
 # Unlock-BitLocker

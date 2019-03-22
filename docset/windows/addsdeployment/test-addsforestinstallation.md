@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-ADDSForestInstallation
 ms.reviewer:
 ms.assetid: 4BAB511B-0000-4AC1-8258-F945353FA10E
-ms.manager: dansimp
 ---
 
 # Test-ADDSForestInstallation

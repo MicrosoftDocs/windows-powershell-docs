@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-RmsTPD
 ms.reviewer:
 ms.assetid: AD78CFED-A52A-4AB0-900A-8E4E8ECEA651
-ms.manager: dansimp
 ---
 
 # Export-RmsTPD

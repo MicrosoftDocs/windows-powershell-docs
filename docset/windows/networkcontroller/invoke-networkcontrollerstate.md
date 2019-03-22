@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Invoke-NetworkControllerState
 ms.reviewer:
 ms.assetid: 18D068F1-0DFC-42AE-9EB8-78237ED5AA7F
-ms.manager: dansimp
 ---
 
 # Invoke-NetworkControllerState

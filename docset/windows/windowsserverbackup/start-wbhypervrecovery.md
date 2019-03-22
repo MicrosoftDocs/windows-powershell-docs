@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-WBHyperVRecovery
 ms.reviewer:
 ms.assetid: D84EF028-8940-4F93-9819-4062859D681C
-ms.manager: dansimp
 ---
 
 # Start-WBHyperVRecovery

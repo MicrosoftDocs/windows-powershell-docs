@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unregister-StorageSubsystem
 ms.reviewer:
 ms.assetid: 07048C7F-39AD-4C98-B700-7CA2B3933ABC
-ms.manager: dansimp
 ---
 
 # Unregister-StorageSubsystem

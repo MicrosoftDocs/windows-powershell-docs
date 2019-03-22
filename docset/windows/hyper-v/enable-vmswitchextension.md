@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-VMSwitchExtension
 ms.reviewer:
 ms.assetid: 9E649439-0DE9-43C6-9B34-AF0A9195CC41
-ms.manager: dansimp
 ---
 
 # Enable-VMSwitchExtension

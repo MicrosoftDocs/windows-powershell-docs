@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterSharedVolumeState
 ms.reviewer:
 ms.assetid: 18EB30D8-AFB5-4FFC-A246-2E10FCC287B2
-ms.manager: dansimp
 ---
 
 # Get-ClusterSharedVolumeState

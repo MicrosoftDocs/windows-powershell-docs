@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-EtwTraceSession
 ms.reviewer:
 ms.assetid: 38B52316-483D-48DC-A2C5-A51D68EEA3C0
-ms.manager: dansimp
 ---
 
 # Start-EtwTraceSession

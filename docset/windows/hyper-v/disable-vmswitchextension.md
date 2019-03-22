@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-VMSwitchExtension
 ms.reviewer:
 ms.assetid: A0007E5F-FABE-4E1C-8EB2-79D062639F93
-ms.manager: dansimp
 ---
 
 # Disable-VMSwitchExtension

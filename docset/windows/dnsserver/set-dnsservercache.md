@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerCache
 ms.reviewer:
 ms.assetid: 1CA7A62E-7DC1-44DB-867A-A66E6F8A55A2
-ms.manager: dansimp
 ---
 
 # Set-DnsServerCache

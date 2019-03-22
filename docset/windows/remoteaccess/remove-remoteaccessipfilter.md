@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RemoteAccessIpFilter
 ms.reviewer:
 ms.assetid: 14A29C07-7D6C-452A-8B55-BCA7BC8732DF
-ms.manager: dansimp
 ---
 
 # Remove-RemoteAccessIpFilter

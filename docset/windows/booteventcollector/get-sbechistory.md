@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SbecHistory
 ms.reviewer:
 ms.assetid: 14AEC2D2-3535-4032-A10E-0B8B1850E8A6
-ms.manager: dansimp
 ---
 
 # Get-SbecHistory

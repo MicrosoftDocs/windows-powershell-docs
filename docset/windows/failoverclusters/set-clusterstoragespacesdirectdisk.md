@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ClusterStorageSpacesDirectDisk
 ms.reviewer:
 ms.assetid: 938CA625-143A-4F2B-9C8A-87993987A5E6
-ms.manager: dansimp
 ---
 
 # Set-ClusterStorageSpacesDirectDisk

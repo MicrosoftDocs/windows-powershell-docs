@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-IpamDiscoveryDomain
 ms.reviewer:
 ms.assetid: 0331434C-B2E3-4CAD-969B-3B6F9665CF67
-ms.manager: dansimp
 ---
 
 # Set-IpamDiscoveryDomain

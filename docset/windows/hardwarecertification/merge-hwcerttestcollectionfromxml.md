@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Merge-HwCertTestCollectionFromXml
 ms.reviewer:
 ms.assetid: D9042790-96B3-47F7-8F83-8D2EFEED6C4D
-ms.manager: dansimp
 ---
 
 # Merge-HwCertTestCollectionFromXml

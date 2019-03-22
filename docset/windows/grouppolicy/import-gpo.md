@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-GPO
 ms.reviewer:
 ms.assetid: ABCBB483-2A0D-4380-83A0-B5F8D4AD13CA
-ms.manager: dansimp
 ---
 
 # Import-GPO

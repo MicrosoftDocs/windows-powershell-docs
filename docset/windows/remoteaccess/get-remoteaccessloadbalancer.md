@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessLoadBalancer
 ms.reviewer:
 ms.assetid: 29EDECC7-DDDB-4880-9332-246DD3BA97E4
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessLoadBalancer

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-CIPolicyIdInfo
 ms.reviewer:
 ms.assetid: E58E37BA-8999-4520-9E8E-1BC6371742F8
-ms.manager: dansimp
 ---
 
 # Get-CIPolicyIdInfo

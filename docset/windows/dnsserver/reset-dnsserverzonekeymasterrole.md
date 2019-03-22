@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-DnsServerZoneKeyMasterRole
 ms.reviewer:
 ms.assetid: F0E3BF5E-CE60-4923-B84E-909EFD6F4039
-ms.manager: dansimp
 ---
 
 # Reset-DnsServerZoneKeyMasterRole

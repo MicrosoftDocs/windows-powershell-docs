@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-Tpm
 ms.reviewer:
 ms.assetid: 8A2DF9AD-A0C9-4559-97E9-8E1267DC68FD
-ms.manager: dansimp
 ---
 
 # Get-Tpm

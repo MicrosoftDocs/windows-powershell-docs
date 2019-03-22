@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DHASInactiveEncryptionCertificate
 ms.reviewer:
 ms.assetid: B0BC1A49-BF65-415C-AB83-F085554B5B60
-ms.manager: dansimp
 ---
 
 # Get-DHASInactiveEncryptionCertificate

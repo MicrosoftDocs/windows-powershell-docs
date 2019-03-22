@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-DnsServerDnsSecPublicKey
 ms.reviewer:
 ms.assetid: E3C5714A-FF61-4485-9F86-D49A3AC8A86E
-ms.manager: dansimp
 ---
 
 # Export-DnsServerDnsSecPublicKey

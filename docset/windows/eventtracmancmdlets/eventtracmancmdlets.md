@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 50441A60-22D9-44CE-9AC8-C9DA06747745
-ms.manager: dansimp
 ---
 
 # EventTracManCmdlets Module

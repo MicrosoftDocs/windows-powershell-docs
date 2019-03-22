@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-SmbMultichannelConnection
 ms.reviewer:
 ms.assetid: 42A5CB1C-50F8-4AB1-B699-9B51A54B02D4
-ms.manager: dansimp
 ---
 
 # Update-SmbMultichannelConnection

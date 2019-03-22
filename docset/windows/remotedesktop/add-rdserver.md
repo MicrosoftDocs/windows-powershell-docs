@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-RDServer
 ms.reviewer:
 ms.assetid: F6ED71F5-3DB1-406F-B2BF-7DE7CB435DEE
-ms.manager: dansimp
 ---
 
 # Add-RDServer

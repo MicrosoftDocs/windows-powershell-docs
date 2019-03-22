@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unlock-ADAccount
 ms.reviewer:
 ms.assetid: 6119F110-7585-45A5-B391-612C5C4E4572
-ms.manager: dansimp
 ---
 
 # Unlock-ADAccount

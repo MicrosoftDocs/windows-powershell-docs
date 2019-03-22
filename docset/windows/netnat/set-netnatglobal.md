@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetNatGlobal
 ms.reviewer:
 ms.assetid: 287A2248-06E1-49E1-8B1C-999BE8436198
-ms.manager: dansimp
 ---
 
 # Set-NetNatGlobal

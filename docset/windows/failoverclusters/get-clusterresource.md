@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterResource
 ms.reviewer:
 ms.assetid: BDC2B8C2-898F-4CB7-86AB-55E304D829B9
-ms.manager: dansimp
 ---
 
 # Get-ClusterResource

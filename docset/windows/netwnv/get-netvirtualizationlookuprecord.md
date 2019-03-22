@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetVirtualizationLookupRecord
 ms.reviewer:
 ms.assetid: 33D18FAD-241B-4963-A0DB-A5988F6EFA19
-ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationLookupRecord

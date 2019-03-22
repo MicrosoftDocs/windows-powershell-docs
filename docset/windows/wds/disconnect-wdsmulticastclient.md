@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disconnect-WdsMulticastClient
 ms.reviewer:
 ms.assetid: 6844AAD1-7C35-4C4F-9D55-FE60358CBFF0
-ms.manager: dansimp
 ---
 
 # Disconnect-WdsMulticastClient

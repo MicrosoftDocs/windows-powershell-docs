@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NanoServerPackage
 ms.reviewer:
 ms.assetid: 604DC46F-035A-4636-B940-C0E17AB4A716
-ms.manager: dansimp
 ---
 
 # Get-NanoServerPackage

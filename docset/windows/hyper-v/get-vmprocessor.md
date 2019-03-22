@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMProcessor
 ms.reviewer:
 ms.assetid: 9612A436-8464-4FEF-A86C-CFBCA4F9A537
-ms.manager: dansimp
 ---
 
 # Get-VMProcessor

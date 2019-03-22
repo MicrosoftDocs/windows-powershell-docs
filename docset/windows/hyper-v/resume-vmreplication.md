@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resume-VMReplication
 ms.reviewer:
 ms.assetid: 6A875733-47A2-4480-8A88-05D2516599BC
-ms.manager: dansimp
 ---
 
 # Resume-VMReplication

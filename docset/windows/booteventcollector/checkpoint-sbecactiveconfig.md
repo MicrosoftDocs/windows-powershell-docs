@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Checkpoint-SbecActiveConfig
 ms.reviewer:
 ms.assetid: 3599DBC8-708E-4807-B95E-3A5EA33167D5
-ms.manager: dansimp
 ---
 
 # Checkpoint-SbecActiveConfig

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerAccessControlList
 ms.reviewer:
 ms.assetid: 607F091D-8972-4962-834D-1F78D61CA2C8
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerAccessControlList

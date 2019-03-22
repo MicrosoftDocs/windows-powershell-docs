@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsClient
 ms.reviewer:
 ms.assetid: F89AA7EE-5BD8-4548-8672-7CA0852B32F9
-ms.manager: dansimp
 ---
 
 # Get-DnsClient

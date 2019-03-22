@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unregister-DnsServerDirectoryPartition
 ms.reviewer:
 ms.assetid: 28F4646E-A4E7-4C9B-A195-69E733F55D7E
-ms.manager: dansimp
 ---
 
 # Unregister-DnsServerDirectoryPartition

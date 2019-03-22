@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetworkSwitchFeature
 ms.reviewer:
 ms.assetid: 49D88D6F-E29D-4D9D-AEB6-0F75CF11AC32
-ms.manager: dansimp
 ---
 
 # Disable-NetworkSwitchFeature

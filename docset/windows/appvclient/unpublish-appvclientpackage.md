@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unpublish-AppvClientPackage
 ms.reviewer:
 ms.assetid: 51ABD76D-5E36-4A60-B2C4-C571E23C3296
-ms.manager: dansimp
 ---
 
 # Unpublish-AppvClientPackage

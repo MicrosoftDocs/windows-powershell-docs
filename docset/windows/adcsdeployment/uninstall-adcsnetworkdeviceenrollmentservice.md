@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-AdcsNetworkDeviceEnrollmentService
 ms.reviewer:
 ms.assetid: BD14AF56-FE90-4C77-BA1C-27DC49E11FA1
-ms.manager: dansimp
 ---
 
 # Uninstall-AdcsNetworkDeviceEnrollmentService

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerSecondaryZone
 ms.reviewer:
 ms.assetid: D4330DFE-E2C6-4458-924D-69624439C283
-ms.manager: dansimp
 ---
 
 # Set-DnsServerSecondaryZone

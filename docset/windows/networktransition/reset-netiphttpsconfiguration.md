@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-NetIPHttpsConfiguration
 ms.reviewer:
 ms.assetid: 7B6E7F84-4021-445C-A976-797351F7AC1A
-ms.manager: dansimp
 ---
 
 # Reset-NetIPHttpsConfiguration

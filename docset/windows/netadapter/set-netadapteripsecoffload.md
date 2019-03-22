@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetAdapterIPsecOffload
 ms.reviewer:
 ms.assetid: 433AD139-902C-46C5-9EEA-98E39ADA5C66
-ms.manager: dansimp
 ---
 
 # Set-NetAdapterIPsecOffload

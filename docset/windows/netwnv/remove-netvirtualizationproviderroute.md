@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetVirtualizationProviderRoute
 ms.reviewer:
 ms.assetid: 9E327856-C0B0-47E5-8127-A4DFB7FFD3A5
-ms.manager: dansimp
 ---
 
 # Remove-NetVirtualizationProviderRoute

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-AppvPackageAccelerator
 ms.reviewer:
 ms.assetid: BA1EF7DD-B33B-4E09-9448-80BC3A3C801E
-ms.manager: dansimp
 ---
 
 # New-AppvPackageAccelerator

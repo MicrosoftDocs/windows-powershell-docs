@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-SRGroup
 ms.reviewer:
 ms.assetid: AE6A5672-BF08-4016-908D-37EEBDFFD367
-ms.manager: dansimp
 ---
 
 # Remove-SRGroup

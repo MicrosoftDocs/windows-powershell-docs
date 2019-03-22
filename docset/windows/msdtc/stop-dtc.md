@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-Dtc
 ms.reviewer:
 ms.assetid: 5EBC9066-0159-4753-88C2-F4E116861997
-ms.manager: dansimp
 ---
 
 # Stop-Dtc

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-InitiatorId
 ms.reviewer:
 ms.assetid: F5B949CB-0F3B-440B-812C-22342401B08C
-ms.manager: dansimp
 ---
 
 # Remove-InitiatorId

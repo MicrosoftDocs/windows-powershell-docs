@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualGatewayBgpPeer
 ms.reviewer:
 ms.assetid: 2C62CEF9-EEFF-4143-99A6-F7DC1161BB8E
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualGatewayBgpPeer

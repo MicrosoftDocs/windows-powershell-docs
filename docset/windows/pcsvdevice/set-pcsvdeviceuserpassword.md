@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-PcsvDeviceUserPassword
 ms.reviewer:
 ms.assetid: 388A2A1B-1267-49A4-BABA-BF0372D3AB0B
-ms.manager: dansimp
 ---
 
 # Set-PcsvDeviceUserPassword

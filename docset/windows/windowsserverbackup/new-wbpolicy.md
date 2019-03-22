@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-WBPolicy
 ms.reviewer:
 ms.assetid: DF2D77CE-FECB-45DE-A057-8BE4D9EBC1FE
-ms.manager: dansimp
 ---
 
 # New-WBPolicy

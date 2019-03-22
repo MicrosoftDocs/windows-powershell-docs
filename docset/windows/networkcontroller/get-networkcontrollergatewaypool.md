@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerGatewayPool
 ms.reviewer:
 ms.assetid: 16144827-C87E-4067-81E2-BF59F407C42F
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerGatewayPool

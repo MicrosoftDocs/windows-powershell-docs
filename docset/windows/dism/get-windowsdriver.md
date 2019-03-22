@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WindowsDriver
 ms.reviewer:
 ms.assetid: 50454F1E-D42E-48BD-94CA-AB3BD7EEA74C
-ms.manager: dansimp
 ---
 
 # Get-WindowsDriver

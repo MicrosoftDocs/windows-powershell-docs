@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Lock-WmsUsbStorage
 ms.reviewer:
 ms.assetid: 7A39EF23-036C-4814-BEE9-E2A372996A67
-ms.manager: dansimp
 ---
 
 # Lock-WmsUsbStorage

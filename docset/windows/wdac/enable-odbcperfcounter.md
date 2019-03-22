@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-OdbcPerfCounter
 ms.reviewer:
 ms.assetid: CBE7F5BF-3E8F-423F-B499-A59B783C56A4
-ms.manager: dansimp
 ---
 
 # Enable-OdbcPerfCounter

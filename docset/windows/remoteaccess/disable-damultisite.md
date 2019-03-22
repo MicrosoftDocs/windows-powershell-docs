@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-DAMultiSite
 ms.reviewer:
 ms.assetid: 7009111B-1464-4D08-81D5-0B68462C428D
-ms.manager: dansimp
 ---
 
 # Disable-DAMultiSite

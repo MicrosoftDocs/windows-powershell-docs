@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VpnTrafficSelector
 ms.reviewer:
 ms.assetid: 72987F13-1C44-4ACF-AF28-A377CF2A6324
-ms.manager: dansimp
 ---
 
 # New-VpnTrafficSelector

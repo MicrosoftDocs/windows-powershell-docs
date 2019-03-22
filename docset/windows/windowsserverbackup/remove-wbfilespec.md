@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WBFileSpec
 ms.reviewer:
 ms.assetid: BF74FF84-49EE-4D60-8C82-83E6B9C8D8CA
-ms.manager: dansimp
 ---
 
 # Remove-WBFileSpec

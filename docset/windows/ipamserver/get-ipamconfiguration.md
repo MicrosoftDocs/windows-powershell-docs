@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamConfiguration
 ms.reviewer:
 ms.assetid: 1BEB28C1-6E04-4C8E-91C1-10EB8AFBB42B
-ms.manager: dansimp
 ---
 
 # Get-IpamConfiguration

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WsusServer
 ms.reviewer:
 ms.assetid: 78345E36-259A-4D81-BEF1-9CB69C043427
-ms.manager: dansimp
 ---
 
 # Get-WsusServer

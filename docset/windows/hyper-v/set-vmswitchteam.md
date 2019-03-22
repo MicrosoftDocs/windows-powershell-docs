@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMSwitchTeam
 ms.reviewer:
 ms.assetid: 8400CD30-CAA0-46FC-8673-245C0BFDD739
-ms.manager: dansimp
 ---
 
 # Set-VMSwitchTeam

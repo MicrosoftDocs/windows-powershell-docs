@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMResourcePool
 ms.reviewer:
 ms.assetid: 33683F3F-BA13-4320-ACB9-ECFBF956426F
-ms.manager: dansimp
 ---
 
 # Get-VMResourcePool

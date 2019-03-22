@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetAdapterQos
 ms.reviewer:
 ms.assetid: CF781957-2C2B-48AC-8028-D8D040EC039E
-ms.manager: dansimp
 ---
 
 # Get-NetAdapterQos

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-MpPreference
 ms.reviewer:
 ms.assetid: 85FEE931-660A-44F2-AC41-00F585BE5E70
-ms.manager: dansimp
 ---
 
 # Get-MpPreference

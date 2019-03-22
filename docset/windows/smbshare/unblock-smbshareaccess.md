@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unblock-SmbShareAccess
 ms.reviewer:
 ms.assetid: 38B5521D-45D2-4A23-92BF-86B5CF6D0A75
-ms.manager: dansimp
 ---
 
 # Unblock-SmbShareAccess

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restore-NetworkSwitchConfiguration
 ms.reviewer:
 ms.assetid: B1210FE0-9807-4690-BBA3-C0D46E0E1888
-ms.manager: dansimp
 ---
 
 # Restore-NetworkSwitchConfiguration

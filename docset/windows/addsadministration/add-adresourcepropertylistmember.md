@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ADResourcePropertyListMember
 ms.reviewer:
 ms.assetid: F375185C-63D4-4825-9202-D732AB0266A4
-ms.manager: dansimp
 ---
 
 # Add-ADResourcePropertyListMember

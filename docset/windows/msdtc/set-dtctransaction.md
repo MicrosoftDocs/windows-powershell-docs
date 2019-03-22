@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DtcTransaction
 ms.reviewer:
 ms.assetid: BA7E24DE-F643-43A0-8F61-60AA7ACF6A1E
-ms.manager: dansimp
 ---
 
 # Set-DtcTransaction

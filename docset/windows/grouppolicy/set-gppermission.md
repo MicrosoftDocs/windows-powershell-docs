@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-GPPermission
 ms.reviewer:
 ms.assetid: 2096B6E1-DF11-4864-92D1-FB9371BE4C99
-ms.manager: dansimp
 ---
 
 # Set-GPPermission

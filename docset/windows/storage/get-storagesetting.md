@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageSetting
 ms.reviewer:
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
-ms.manager: dansimp
 ---
 
 # Get-StorageSetting

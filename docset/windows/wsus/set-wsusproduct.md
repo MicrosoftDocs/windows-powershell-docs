@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WsusProduct
 ms.reviewer:
 ms.assetid: 7C1A016A-A56E-44A2-9046-005490F13D82
-ms.manager: dansimp
 ---
 
 # Set-WsusProduct

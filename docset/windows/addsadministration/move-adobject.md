@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Move-ADObject
 ms.reviewer:
 ms.assetid: D71F5BF6-6EA7-4706-A125-B050628D22BA
-ms.manager: dansimp
 ---
 
 # Move-ADObject

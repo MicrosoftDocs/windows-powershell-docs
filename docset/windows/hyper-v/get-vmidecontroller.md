@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMIdeController
 ms.reviewer:
 ms.assetid: 1668FD0C-42B1-4E09-A9CF-7EEF76B967AE
-ms.manager: dansimp
 ---
 
 # Get-VMIdeController

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerIpPool
 ms.reviewer:
 ms.assetid: BDE15D73-0342-41B1-88B2-45234CF8451A
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerIpPool

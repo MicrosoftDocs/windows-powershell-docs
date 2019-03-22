@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DnsServerSecondaryZone
 ms.reviewer:
 ms.assetid: 99374013-D3CB-4754-99A9-7C6D02B126DA
-ms.manager: dansimp
 ---
 
 # Add-DnsServerSecondaryZone

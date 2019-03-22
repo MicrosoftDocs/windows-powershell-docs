@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageQosVolume
 ms.reviewer:
 ms.assetid: B7CA721F-2EE5-45F7-9E65-D4C6BE798445
-ms.manager: dansimp
 ---
 
 # Get-StorageQosVolume

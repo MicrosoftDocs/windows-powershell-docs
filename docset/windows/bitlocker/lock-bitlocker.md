@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Lock-BitLocker
 ms.reviewer:
 ms.assetid: 90042DB2-7289-4167-A7B3-245D316EF361
-ms.manager: dansimp
 ---
 
 # Lock-BitLocker

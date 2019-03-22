@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerGlobalNameZone
 ms.reviewer:
 ms.assetid: 674E481E-00CA-4895-98A0-33FBECB36688
-ms.manager: dansimp
 ---
 
 # Get-DnsServerGlobalNameZone

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Debug-StorageSubSystem
 ms.reviewer:
 ms.assetid: CA0440C6-55D6-42D2-BD21-52FD62DEB3DC
-ms.manager: dansimp
 ---
 
 # Debug-StorageSubSystem

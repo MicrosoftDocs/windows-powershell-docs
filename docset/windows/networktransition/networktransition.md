@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 4FF8EEDB-5AB8-4C70-8290-4B11A6D04791
-ms.manager: dansimp
 ---
 
 # NetworkTransition Module

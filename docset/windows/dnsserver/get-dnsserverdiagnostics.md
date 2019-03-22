@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerDiagnostics
 ms.reviewer:
 ms.assetid: 6DA4139A-9D29-4913-8658-8640EE0F22B7
-ms.manager: dansimp
 ---
 
 # Get-DnsServerDiagnostics

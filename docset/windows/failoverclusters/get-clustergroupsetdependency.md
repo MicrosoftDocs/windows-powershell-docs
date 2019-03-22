@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterGroupSetDependency
 ms.reviewer:
 ms.assetid: FE91D170-66FA-483E-B0E9-3EBDAC60CFC0
-ms.manager: dansimp
 ---
 
 # Get-ClusterGroupSetDependency

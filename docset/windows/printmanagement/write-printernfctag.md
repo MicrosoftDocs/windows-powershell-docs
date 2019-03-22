@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Write-PrinterNfcTag
 ms.reviewer:
 ms.assetid: 18943560-BADF-4960-BFF6-37729FA54B72
-ms.manager: dansimp
 ---
 
 # Write-PrinterNfcTag

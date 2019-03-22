@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ADServiceAccount
 ms.reviewer:
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
-ms.manager: dansimp
 ---
 
 # New-ADServiceAccount

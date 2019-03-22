@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerServiceInsertion
 ms.reviewer:
 ms.assetid: 255B584B-C53D-471F-891F-842C7F1EE20A
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerServiceInsertion

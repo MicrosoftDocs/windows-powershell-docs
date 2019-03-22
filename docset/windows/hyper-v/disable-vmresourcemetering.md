@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-VMResourceMetering
 ms.reviewer:
 ms.assetid: 5A184811-6ACF-4A76-98FA-A0D37ABDD2E3
-ms.manager: dansimp
 ---
 
 # Disable-VMResourceMetering

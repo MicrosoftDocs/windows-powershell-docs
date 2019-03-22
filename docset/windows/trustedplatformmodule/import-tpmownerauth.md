@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-TpmOwnerAuth
 ms.reviewer:
 ms.assetid: 5B8BC758-8BA0-476E-A895-60E11D3C9591
-ms.manager: dansimp
 ---
 
 # Import-TpmOwnerAuth

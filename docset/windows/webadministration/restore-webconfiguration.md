@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restore-WebConfiguration
 ms.reviewer:
 ms.assetid: 81C2DCCF-49AF-4948-97B3-EE9EEE723B64
-ms.manager: dansimp
 ---
 
 # Restore-WebConfiguration

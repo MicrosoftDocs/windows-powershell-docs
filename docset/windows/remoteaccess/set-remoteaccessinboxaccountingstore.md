@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-RemoteAccessInboxAccountingStore
 ms.reviewer:
 ms.assetid: 0B7E754E-0EF5-433E-9BDE-28E87137B305
-ms.manager: dansimp
 ---
 
 # Set-RemoteAccessInboxAccountingStore

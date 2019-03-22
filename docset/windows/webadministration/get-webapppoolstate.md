@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebAppPoolState
 ms.reviewer:
 ms.assetid: DB6C2AC0-0C2C-4897-A23D-4BA2E92E72B4
-ms.manager: dansimp
 ---
 
 # Get-WebAppPoolState

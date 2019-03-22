@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADPrincipalGroupMembership
 ms.reviewer:
 ms.assetid: 2A7ADE5B-9408-4329-B419-D9228396A98F
-ms.manager: dansimp
 ---
 
 # Remove-ADPrincipalGroupMembership

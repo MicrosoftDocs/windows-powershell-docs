@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMNetworkAdapterPortId
 ms.reviewer:
 ms.assetid: 1FF810CC-CC66-405E-94CA-E3865275B478
-ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterPortId

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VpnConnectionTriggerTrustedNetwork
 ms.reviewer:
 ms.assetid: 05F15031-FB69-4603-AE1D-078C5930F14B
-ms.manager: dansimp
 ---
 
 # Add-VpnConnectionTriggerTrustedNetwork

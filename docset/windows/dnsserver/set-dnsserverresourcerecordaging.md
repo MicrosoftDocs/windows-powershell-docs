@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerResourceRecordAging
 ms.reviewer:
 ms.assetid: F5AD1594-6D98-42E2-8C37-3860912ED276
-ms.manager: dansimp
 ---
 
 # Set-DnsServerResourceRecordAging

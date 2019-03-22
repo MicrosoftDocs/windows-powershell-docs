@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetworkSwitchVlan
 ms.reviewer:
 ms.assetid: C4033541-356F-4027-91B3-D4B335A4BD18
-ms.manager: dansimp
 ---
 
 # Disable-NetworkSwitchVlan

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WindowsImageContent
 ms.reviewer:
 ms.assetid: 71D2741F-CB3D-4111-B00D-54F91D945BB4
-ms.manager: dansimp
 ---
 
 # Get-WindowsImageContent

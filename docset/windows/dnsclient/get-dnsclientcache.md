@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsClientCache
 ms.reviewer:
 ms.assetid: 50AA93EA-4AE7-4DB1-B210-F0EF080F95BD
-ms.manager: dansimp
 ---
 
 # Get-DnsClientCache

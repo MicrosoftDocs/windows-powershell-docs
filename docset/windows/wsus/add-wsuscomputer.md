@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WsusComputer
 ms.reviewer:
 ms.assetid: 6CFD1224-CEC5-47D9-93F7-89B236146FF6
-ms.manager: dansimp
 ---
 
 # Add-WsusComputer

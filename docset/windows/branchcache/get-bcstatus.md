@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BCStatus
 ms.reviewer:
 ms.assetid: 2E68D4DA-55B8-46D1-A48C-5BD155CE6558
-ms.manager: dansimp
 ---
 
 # Get-BCStatus

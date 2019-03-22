@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-RDVirtualDesktopConcurrency
 ms.reviewer:
 ms.assetid: FD860ADB-81AC-45A9-95EC-BF16FDE70D7C
-ms.manager: dansimp
 ---
 
 # Set-RDVirtualDesktopConcurrency

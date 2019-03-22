@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-Dtc
 ms.reviewer:
 ms.assetid: 7F79A4D3-08FB-4A2A-871B-C994F351B635
-ms.manager: dansimp
 ---
 
 # Uninstall-Dtc

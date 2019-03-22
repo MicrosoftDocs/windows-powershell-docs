@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: FBE67210-06DA-4C91-BC82-17B260184D3A
-ms.manager: dansimp
 ---
 
 # New-IscsiVirtualDisk

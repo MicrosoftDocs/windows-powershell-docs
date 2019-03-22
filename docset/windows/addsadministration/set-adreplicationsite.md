@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADReplicationSite
 ms.reviewer:
 ms.assetid: CDEE90FB-5918-4234-99C9-18F90AE02984
-ms.manager: dansimp
 ---
 
 # Set-ADReplicationSite

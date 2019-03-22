@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv4DnsSetting
 ms.reviewer:
 ms.assetid: 8A660F44-9D03-431C-A581-0C6CCD776A56
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4DnsSetting

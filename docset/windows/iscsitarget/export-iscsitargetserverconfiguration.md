@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-IscsiTargetServerConfiguration
 ms.reviewer:
 ms.assetid: 949B24F5-7276-49D1-8B12-AED0B3707CA1
-ms.manager: dansimp
 ---
 
 # Export-IscsiTargetServerConfiguration

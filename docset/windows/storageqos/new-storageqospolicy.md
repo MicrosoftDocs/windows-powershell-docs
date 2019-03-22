@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-StorageQosPolicy
 ms.reviewer:
 ms.assetid: 6711ABD0-EC80-4887-BB04-72FF8C57509A
-ms.manager: dansimp
 ---
 
 # New-StorageQosPolicy

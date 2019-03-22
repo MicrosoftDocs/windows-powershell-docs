@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADFineGrainedPasswordPolicySubject
 ms.reviewer:
 ms.assetid: 968E750A-F708-424C-9648-E49F1C28FAE7
-ms.manager: dansimp
 ---
 
 # Remove-ADFineGrainedPasswordPolicySubject

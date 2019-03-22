@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Sync-DnsServerZone
 ms.reviewer:
 ms.assetid: 4CD15454-796D-4250-B830-73150342D1BE
-ms.manager: dansimp
 ---
 
 # Sync-DnsServerZone

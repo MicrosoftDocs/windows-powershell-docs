@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DfsrMember
 ms.reviewer:
 ms.assetid: D659EAE1-E7FB-4CA3-820B-37CE3A79C6A9
-ms.manager: dansimp
 ---
 
 # Remove-DfsrMember

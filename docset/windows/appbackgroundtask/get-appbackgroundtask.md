@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-AppBackgroundTask
 ms.reviewer:
 ms.assetid: 937AA4D9-7BB6-45CF-9AB0-ED45BFEC1725
-ms.manager: dansimp
 ---
 
 # Get-AppBackgroundTask

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-PnpDevice
 ms.reviewer:
 ms.assetid: 63EADD9D-118B-4AEF-810F-35655D5FB6FC
-ms.manager: dansimp
 ---
 
 # Disable-PnpDevice

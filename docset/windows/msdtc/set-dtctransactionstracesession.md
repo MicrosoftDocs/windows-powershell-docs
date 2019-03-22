@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DtcTransactionsTraceSession
 ms.reviewer:
 ms.assetid: 1DEC3646-9E71-4E64-A9DD-1DAE65C8591B
-ms.manager: dansimp
 ---
 
 # Set-DtcTransactionsTraceSession

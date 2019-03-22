@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-AppBackgroundTask
 ms.reviewer:
 ms.assetid: 3B142054-EA22-49CE-A034-B87B1C0D9D49
-ms.manager: dansimp
 ---
 
 # Start-AppBackgroundTask

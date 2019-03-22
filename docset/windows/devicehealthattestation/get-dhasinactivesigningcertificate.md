@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DHASInactiveSigningCertificate
 ms.reviewer:
 ms.assetid: 08082004-AE4D-4E6D-85AB-8D271FD63E4D
-ms.manager: dansimp
 ---
 
 # Get-DHASInactiveSigningCertificate

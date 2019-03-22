@@ -6,7 +6,6 @@ keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ShieldedVMDataFile
 ms.assetid: A11F462D-7241-49AA-B4F3-A5AE62B62799
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

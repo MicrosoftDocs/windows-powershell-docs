@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 517B5AA8-5FAF-41F1-BA11-2C87D3E78FC1
-ms.manager: dansimp
 ---
 
 # Wdac Module

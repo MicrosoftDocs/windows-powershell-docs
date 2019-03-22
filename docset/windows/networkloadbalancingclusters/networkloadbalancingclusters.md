@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 5633F599-8F57-4452-B083-B79D0E68C11E
-ms.manager: dansimp
 ---
 
 # NetworkLoadBalancingClusters Module

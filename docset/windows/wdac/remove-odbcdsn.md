@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-OdbcDsn
 ms.reviewer:
 ms.assetid: 59C94EFA-A8D5-4695-833B-DA6075C4C549
-ms.manager: dansimp
 ---
 
 # Remove-OdbcDsn

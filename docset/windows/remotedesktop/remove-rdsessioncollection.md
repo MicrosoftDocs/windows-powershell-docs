@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RDSessionCollection
 ms.reviewer:
 ms.assetid: 68EB435A-53DA-4A71-B6CC-C6F8BDC80658
-ms.manager: dansimp
 ---
 
 # Remove-RDSessionCollection

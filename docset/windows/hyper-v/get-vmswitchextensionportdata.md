@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSwitchExtensionPortData
 ms.reviewer:
 ms.assetid: 9D93AEBA-506C-4407-9128-A2DFCB993A2B
-ms.manager: dansimp
 ---
 
 # Get-VMSwitchExtensionPortData

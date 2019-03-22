@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VFD
 ms.reviewer:
 ms.assetid: 90B7A7BD-BD9B-4D66-91A4-344E424EFF60
-ms.manager: dansimp
 ---
 
 # New-VFD

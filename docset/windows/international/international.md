@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 907EAB19-5023-44EE-A421-085168E561E8
-ms.manager: dansimp
 ---
 
 # International Module

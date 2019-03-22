@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetAdapterBinding
 ms.reviewer:
 ms.assetid: EF6C7427-DD59-4F5F-8176-6CCF551D7824
-ms.manager: dansimp
 ---
 
 # Get-NetAdapterBinding

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetworkControllerNode
 ms.reviewer:
 ms.assetid: 66957A66-9348-4254-8DE7-9D3C731ED595
-ms.manager: dansimp
 ---
 
 # Disable-NetworkControllerNode

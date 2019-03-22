@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-BCCachePackage
 ms.reviewer:
 ms.assetid: 76012F58-0AE8-4FFD-9201-45B4FF6214C9
-ms.manager: dansimp
 ---
 
 # Export-BCCachePackage

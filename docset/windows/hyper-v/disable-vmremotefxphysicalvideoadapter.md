@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-VMRemoteFXPhysicalVideoAdapter
 ms.reviewer:
 ms.assetid: E2376CFA-E000-4C47-97F7-DC45C19775E9
-ms.manager: dansimp
 ---
 
 # Disable-VMRemoteFXPhysicalVideoAdapter

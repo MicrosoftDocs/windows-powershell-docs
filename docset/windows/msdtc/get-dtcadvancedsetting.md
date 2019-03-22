@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcAdvancedSetting
 ms.reviewer:
 ms.assetid: 139B40CB-DEC5-49ED-BDFA-B1856A6A57DA
-ms.manager: dansimp
 ---
 
 # Get-DtcAdvancedSetting

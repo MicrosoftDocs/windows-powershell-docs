@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Install-DeviceHealthAttestation
 ms.reviewer:
 ms.assetid: ED738047-83CC-4E1B-B8DE-937EF9712DF5
-ms.manager: dansimp
 ---
 
 # Install-DeviceHealthAttestation

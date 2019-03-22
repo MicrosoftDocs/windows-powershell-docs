@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WdsInstallImage
 ms.reviewer:
 ms.assetid: 3C6DCA6C-A525-42EA-908C-61695AF4D4B8
-ms.manager: dansimp
 ---
 
 # Remove-WdsInstallImage

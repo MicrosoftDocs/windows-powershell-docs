@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VpnS2SInterfaceStatistics
 ms.reviewer:
 ms.assetid: 3175F8EC-8CB3-43B7-9634-3C5C3BE15496
-ms.manager: dansimp
 ---
 
 # Get-VpnS2SInterfaceStatistics

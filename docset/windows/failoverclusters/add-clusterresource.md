@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterResource
 ms.reviewer:
 ms.assetid: 6005A875-33B1-4EBD-A069-D5F184F4EA2F
-ms.manager: dansimp
 ---
 
 # Add-ClusterResource

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VpnS2SInterface
 ms.reviewer:
 ms.assetid: 70777F8F-A443-455A-943A-EAE563D79CFB
-ms.manager: dansimp
 ---
 
 # Get-VpnS2SInterface

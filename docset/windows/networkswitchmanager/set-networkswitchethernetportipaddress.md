@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetworkSwitchEthernetPortIPAddress
 ms.reviewer:
 ms.assetid: 89020D48-F6B9-4524-B629-B3B7EC809904
-ms.manager: dansimp
 ---
 
 # Set-NetworkSwitchEthernetPortIPAddress

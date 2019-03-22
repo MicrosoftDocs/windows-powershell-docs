@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Find-IpamFreeSubnet
 ms.reviewer:
 ms.assetid: DD48EB78-1AE3-411F-B6BB-F3846F6DFB7E
-ms.manager: dansimp
 ---
 
 # Find-IpamFreeSubnet

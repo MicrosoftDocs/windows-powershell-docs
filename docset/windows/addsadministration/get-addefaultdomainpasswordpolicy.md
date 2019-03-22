@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADDefaultDomainPasswordPolicy
 ms.reviewer:
 ms.assetid: 81E76D95-63B3-4BCF-B16D-051CB53B6185
-ms.manager: dansimp
 ---
 
 # Get-ADDefaultDomainPasswordPolicy

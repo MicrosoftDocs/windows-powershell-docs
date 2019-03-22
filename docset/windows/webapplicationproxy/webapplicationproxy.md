@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 2B4AB85D-0228-4252-B8B4-2AB2315157DF
-ms.manager: dansimp
 ---
 
 # WebApplicationProxy Module

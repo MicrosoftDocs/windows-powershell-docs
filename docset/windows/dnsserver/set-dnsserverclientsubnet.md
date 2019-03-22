@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerClientSubnet
 ms.reviewer:
 ms.assetid: 89DA8FA2-44F5-475C-93E9-7C088637182F
-ms.manager: dansimp
 ---
 
 # Set-DnsServerClientSubnet

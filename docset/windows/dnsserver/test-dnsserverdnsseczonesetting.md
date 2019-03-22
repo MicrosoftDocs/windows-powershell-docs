@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-DnsServerDnsSecZoneSetting
 ms.reviewer:
 ms.assetid: FC8C0AAD-52D8-4DD8-9E54-1C1D9D57611B
-ms.manager: dansimp
 ---
 
 # Test-DnsServerDnsSecZoneSetting

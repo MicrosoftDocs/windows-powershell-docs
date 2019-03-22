@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disconnect-VpnUser
 ms.reviewer:
 ms.assetid: A4DCA216-584F-48F5-8594-0B04F010B3AC
-ms.manager: dansimp
 ---
 
 # Disconnect-VpnUser

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADAuthenticationPolicySilo
 ms.reviewer:
 ms.assetid: F6B161CD-79C1-48AD-AE24-7D47BAA7F033
-ms.manager: dansimp
 ---
 
 # Remove-ADAuthenticationPolicySilo

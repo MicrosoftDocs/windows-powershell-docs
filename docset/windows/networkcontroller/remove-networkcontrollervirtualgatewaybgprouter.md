@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerVirtualGatewayBgpRouter
 ms.reviewer:
 ms.assetid: F347426E-35E0-40A5-B6C2-9C50751A2A5D
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerVirtualGatewayBgpRouter

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-BCAuthentication
 ms.reviewer:
 ms.assetid: 49FD3900-808C-449F-AB42-646B49B3DDD0
-ms.manager: dansimp
 ---
 
 # Set-BCAuthentication

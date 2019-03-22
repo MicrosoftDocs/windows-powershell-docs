@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-IscsiTarget
 ms.reviewer:
 ms.assetid: C9EE0190-5831-4DD9-9EB6-778252C15DD4
-ms.manager: dansimp
 ---
 
 # Update-IscsiTarget

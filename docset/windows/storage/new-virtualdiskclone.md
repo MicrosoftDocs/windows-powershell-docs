@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VirtualDiskClone
 ms.reviewer:
 ms.assetid: C5ECB381-3631-4AB3-A0FD-DE20FC412E7B
-ms.manager: dansimp
 ---
 
 # New-VirtualDiskClone

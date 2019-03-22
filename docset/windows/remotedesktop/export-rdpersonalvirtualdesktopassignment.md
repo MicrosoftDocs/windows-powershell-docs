@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-RDPersonalVirtualDesktopAssignment
 ms.reviewer:
 ms.assetid: 7FF9BC8D-6EF3-478F-8C74-92329A29C46D
-ms.manager: dansimp
 ---
 
 # Export-RDPersonalVirtualDesktopAssignment

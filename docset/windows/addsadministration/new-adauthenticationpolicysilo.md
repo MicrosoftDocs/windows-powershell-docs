@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ADAuthenticationPolicySilo
 ms.reviewer:
 ms.assetid: BA25569C-423A-45B9-8B1F-DEBB30096435
-ms.manager: dansimp
 ---
 
 # New-ADAuthenticationPolicySilo

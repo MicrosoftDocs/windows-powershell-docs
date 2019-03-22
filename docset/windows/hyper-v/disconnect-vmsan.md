@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disconnect-VMSan
 ms.reviewer:
 ms.assetid: 407251E5-C578-4D10-875A-28633BCF88FC
-ms.manager: dansimp
 ---
 
 # Disconnect-VMSan

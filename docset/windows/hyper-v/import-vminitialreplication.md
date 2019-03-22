@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-VMInitialReplication
 ms.reviewer:
 ms.assetid: DFCA9ECE-DCD3-4184-BBA1-F6A7457EE408
-ms.manager: dansimp
 ---
 
 # Import-VMInitialReplication

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SRPartnership
 ms.reviewer:
 ms.assetid: 287E2538-B649-45A5-8F3F-ED7A41DB8D73
-ms.manager: dansimp
 ---
 
 # Get-SRPartnership

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-CIPolicyRule
 ms.reviewer:
 ms.assetid: 13590641-9A89-474B-B1C8-86F9BD1E1E25
-ms.manager: dansimp
 ---
 
 # Remove-CIPolicyRule

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopIdleCount
 ms.reviewer:
 ms.assetid: 2EFC4536-C23C-45A3-B7C8-767C83715F86
-ms.manager: dansimp
 ---
 
 # Get-RDVirtualDesktopIdleCount

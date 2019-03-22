@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Repair-VirtualDisk
 ms.reviewer:
 ms.assetid: A4087758-148D-4404-9414-987812E52991
-ms.manager: dansimp
 ---
 
 # Repair-VirtualDisk

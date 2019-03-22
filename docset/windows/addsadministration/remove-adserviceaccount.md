@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADServiceAccount
 ms.reviewer:
 ms.assetid: 6991EAF5-CCE9-4081-901C-C55765011D6A
-ms.manager: dansimp
 ---
 
 # Remove-ADServiceAccount

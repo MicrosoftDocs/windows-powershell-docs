@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-SyncServerSetting
 ms.reviewer:
 ms.assetid: B5625A3C-067B-4A33-BBAC-61CC2535FCDD
-ms.manager: dansimp
 ---
 
 # Set-SyncServerSetting

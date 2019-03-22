@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMSwitchTeamMember
 ms.reviewer:
 ms.assetid: 17055220-FEE8-42F4-85C4-F2289092AF61
-ms.manager: dansimp
 ---
 
 # Remove-VMSwitchTeamMember

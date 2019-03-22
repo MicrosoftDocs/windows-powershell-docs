@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerPublicIpAddress
 ms.reviewer:
 ms.assetid: E66B649C-9099-4EF2-9C9D-AD6A722A0BEB
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerPublicIpAddress

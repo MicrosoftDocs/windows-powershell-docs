@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-GPOReport
 ms.reviewer:
 ms.assetid: 76DFAAB3-FCF4-4707-9E74-3F38D457B68F
-ms.manager: dansimp
 ---
 
 # Get-GPOReport

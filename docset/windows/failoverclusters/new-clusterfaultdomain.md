@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ClusterFaultDomain
 ms.reviewer:
 ms.assetid: C52F5314-DF0E-4C1F-B0AD-A5AB290493F9
-ms.manager: dansimp
 ---
 
 # New-ClusterFaultDomain

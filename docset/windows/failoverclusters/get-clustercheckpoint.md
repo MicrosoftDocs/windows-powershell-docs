@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterCheckpoint
 ms.reviewer:
 ms.assetid: B296FDDC-A8FE-48A2-86BF-F120E3E53EC4
-ms.manager: dansimp
 ---
 
 # Get-ClusterCheckpoint

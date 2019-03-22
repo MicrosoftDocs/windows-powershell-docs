@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-SignerRule
 ms.reviewer:
 ms.assetid: 55153F8F-110A-4D8E-AC99-CFF4E533E023
-ms.manager: dansimp
 ---
 
 # Add-SignerRule

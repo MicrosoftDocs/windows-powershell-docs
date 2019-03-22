@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-IpamRange
 ms.reviewer:
 ms.assetid: EAD9FE7C-ACB7-416B-A016-C34AEDCE9892
-ms.manager: dansimp
 ---
 
 # Set-IpamRange

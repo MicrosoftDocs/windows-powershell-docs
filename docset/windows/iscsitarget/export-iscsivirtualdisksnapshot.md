@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-IscsiVirtualDiskSnapshot
 ms.reviewer:
 ms.assetid: 7B2EC10B-FA75-4444-852D-27D3A37F9EE4
-ms.manager: dansimp
 ---
 
 # Export-IscsiVirtualDiskSnapshot

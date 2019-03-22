@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-FsrmSetting
 ms.reviewer:
 ms.assetid: CD6DF9A0-1E07-4E0E-93FF-BFFEC729C900
-ms.manager: dansimp
 ---
 
 # Set-FsrmSetting

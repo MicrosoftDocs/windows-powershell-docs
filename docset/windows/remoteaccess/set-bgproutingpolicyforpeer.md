@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-BgpRoutingPolicyForPeer
 ms.reviewer:
 ms.assetid: 9E03FAFB-682F-4FB5-9D16-448A072DA3BF
-ms.manager: dansimp
 ---
 
 # Set-BgpRoutingPolicyForPeer

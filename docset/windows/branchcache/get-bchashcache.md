@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BCHashCache
 ms.reviewer:
 ms.assetid: 41A89F25-054F-45C4-B809-78199412E837
-ms.manager: dansimp
 ---
 
 # Get-BCHashCache

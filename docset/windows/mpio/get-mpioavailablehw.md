@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-MPIOAvailableHW
 ms.reviewer:
 ms.assetid: AE7B0548-14A7-4645-9E72-AE6E30138207
-ms.manager: dansimp
 ---
 
 # Get-MPIOAvailableHW

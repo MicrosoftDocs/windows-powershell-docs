@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebBinding
 ms.reviewer:
 ms.assetid: 891FBBE3-BA55-4E84-B0B7-9EDDB1CF98E7
-ms.manager: dansimp
 ---
 
 # Get-WebBinding

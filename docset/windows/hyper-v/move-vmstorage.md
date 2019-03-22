@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Move-VMStorage
 ms.reviewer:
 ms.assetid: E451DFC1-5226-4963-A1BE-CE42C31EAC9A
-ms.manager: dansimp
 ---
 
 # Move-VMStorage

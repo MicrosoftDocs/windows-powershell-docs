@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-MuxEchoResponder
 ms.reviewer:
 ms.assetid: 9DB96E25-63EC-4F0F-AF2A-A763F128EED3
-ms.manager: dansimp
 ---
 
 # Disable-MuxEchoResponder

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-GPPrefRegistryValue
 ms.reviewer:
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
-ms.manager: dansimp
 ---
 
 # Set-GPPrefRegistryValue

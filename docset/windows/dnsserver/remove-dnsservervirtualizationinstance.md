@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsServerVirtualizationInstance
 ms.reviewer:
 ms.assetid: E052350F-913F-4070-9BDC-FEEAF1C3DD57
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerVirtualizationInstance

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C13F141F-5421-486B-8F08-61936A9757E8
-ms.manager: dansimp
 ---
 
 # SyncShare Module

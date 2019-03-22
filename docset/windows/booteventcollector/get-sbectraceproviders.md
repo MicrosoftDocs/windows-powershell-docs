@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SbecTraceProviders
 ms.reviewer:
 ms.assetid: 79CAA504-F9A1-46E6-A5DB-EB9BCD78F49D
-ms.manager: dansimp
 ---
 
 # Get-SbecTraceProviders

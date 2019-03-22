@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DHASSupportedAuthenticationSchema
 ms.reviewer:
 ms.assetid: 428956DC-1347-4C64-A483-688BA451C815
-ms.manager: dansimp
 ---
 
 # Set-DHASSupportedAuthenticationSchema

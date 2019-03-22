@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Switch-NetQosFlowControl
 ms.reviewer:
 ms.assetid: 21828482-2E79-4363-8636-E05569563141
-ms.manager: dansimp
 ---
 
 # Switch-NetQosFlowControl

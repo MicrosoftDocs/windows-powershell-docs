@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Dismount-DiskImage
 ms.reviewer:
 ms.assetid: B38C053D-45B5-49F5-AFF9-0228ED638828
-ms.manager: dansimp
 ---
 
 # Dismount-DiskImage

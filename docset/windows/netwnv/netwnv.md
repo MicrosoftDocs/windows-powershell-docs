@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: BA0E9FC6-6949-4BF6-A231-B45FC76F66B9
-ms.manager: dansimp
 ---
 
 # NetWNV Module

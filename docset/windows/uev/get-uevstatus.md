@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UevStatus
 ms.reviewer:
 ms.assetid: 40E80A01-27CF-44BA-BE48-7D552F67FD1C
-ms.manager: dansimp
 ---
 
 # Get-UevStatus

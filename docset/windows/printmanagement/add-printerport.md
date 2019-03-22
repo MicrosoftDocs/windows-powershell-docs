@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-PrinterPort
 ms.reviewer:
 ms.assetid: 94D97C97-A825-46C2-94FF-07D90BE2CB80
-ms.manager: dansimp
 ---
 
 # Add-PrinterPort

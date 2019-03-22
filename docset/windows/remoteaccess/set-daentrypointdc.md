@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DAEntryPointDC
 ms.reviewer:
 ms.assetid: 8F633555-CDC1-4232-B746-E78A18959939
-ms.manager: dansimp
 ---
 
 # Set-DAEntryPointDC

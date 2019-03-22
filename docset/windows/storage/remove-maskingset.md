@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-MaskingSet
 ms.reviewer:
 ms.assetid: AC1D03CA-DAF1-4617-A22B-4A8B9A7A6CF2
-ms.manager: dansimp
 ---
 
 # Remove-MaskingSet

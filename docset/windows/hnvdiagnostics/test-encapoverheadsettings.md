@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-EncapOverheadSettings
 ms.reviewer:
 ms.assetid: 8C6FEF6F-A387-4C7A-B72F-3C442482D695
-ms.manager: dansimp
 ---
 
 # Test-EncapOverheadSettings

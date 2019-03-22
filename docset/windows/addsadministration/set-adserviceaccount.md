@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADServiceAccount
 ms.reviewer:
 ms.assetid: 0ED2B430-F6D2-4763-B1C5-6D606213F3EC
-ms.manager: dansimp
 ---
 
 # Set-ADServiceAccount

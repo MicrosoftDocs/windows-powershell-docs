@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UalUserAccess
 ms.reviewer:
 ms.assetid: A9C4B90C-173A-45BA-A8CF-8A0D27C387C9
-ms.manager: dansimp
 ---
 
 # Get-UalUserAccess

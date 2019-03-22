@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetTeredoState
 ms.reviewer:
 ms.assetid: 862A11AC-F6D2-43F1-9C47-354304610627
-ms.manager: dansimp
 ---
 
 # Get-NetTeredoState

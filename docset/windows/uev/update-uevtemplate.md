@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-UevTemplate
 ms.reviewer:
 ms.assetid: C73A5A2F-93C2-4047-9279-FA1FE89079E0
-ms.manager: dansimp
 ---
 
 # Update-UevTemplate

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-ClusterDiskReservation
 ms.reviewer:
 ms.assetid: A99C3621-A137-4EB1-9AC1-A05115BDDFD3
-ms.manager: dansimp
 ---
 
 # Clear-ClusterDiskReservation

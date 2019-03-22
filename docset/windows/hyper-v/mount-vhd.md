@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Mount-VHD
 ms.reviewer:
 ms.assetid: AB69C19D-5DB7-47A9-A938-DC22E7484DC4
-ms.manager: dansimp
 ---
 
 # Mount-VHD

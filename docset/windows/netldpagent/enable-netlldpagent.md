@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetLldpAgent
 ms.reviewer:
 ms.assetid: 70F02A28-EB79-4598-891D-DFAA91EAF4CE
-ms.manager: dansimp
 ---
 
 # Enable-NetLldpAgent

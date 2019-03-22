@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-ADDSDomainController
 ms.reviewer:
 ms.assetid: 009BCBE9-C869-41ED-A822-20C40A8E16B6
-ms.manager: dansimp
 ---
 
 # Uninstall-ADDSDomainController

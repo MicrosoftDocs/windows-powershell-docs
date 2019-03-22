@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebHandler
 ms.reviewer:
 ms.assetid: 8E74C047-54C0-4736-8145-54E6B7201EA8
-ms.manager: dansimp
 ---
 
 # Get-WebHandler

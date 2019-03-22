@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-AppvClientPackage
 ms.reviewer:
 ms.assetid: BF0E7402-D900-44D5-B321-C60F44226737
-ms.manager: dansimp
 ---
 
 # Remove-AppvClientPackage

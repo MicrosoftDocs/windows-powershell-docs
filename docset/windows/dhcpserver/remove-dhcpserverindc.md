@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerInDC
 ms.reviewer:
 ms.assetid: 06B5393E-D9BB-4B52-AAA8-A72CD3669436
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerInDC

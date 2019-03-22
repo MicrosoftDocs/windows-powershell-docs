@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Lock-WmsSession
 ms.reviewer:
 ms.assetid: B4D13723-44A5-455A-97A8-88C4C46523E7
-ms.manager: dansimp
 ---
 
 # Lock-WmsSession

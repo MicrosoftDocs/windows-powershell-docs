@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterNode
 ms.reviewer:
 ms.assetid: 08F23B75-257B-42AB-B13E-1A3190B0A845
-ms.manager: dansimp
 ---
 
 # Add-ClusterNode

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-FsrmFileScreen
 ms.reviewer:
 ms.assetid: AE603879-72CE-4D9D-BA0B-5205AB7347D9
-ms.manager: dansimp
 ---
 
 # Set-FsrmFileScreen

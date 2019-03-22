@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SbecActiveConfig
 ms.reviewer:
 ms.assetid: C9E5D55A-BDDD-4ECF-B7E1-7396FFB6E15D
-ms.manager: dansimp
 ---
 
 # Get-SbecActiveConfig

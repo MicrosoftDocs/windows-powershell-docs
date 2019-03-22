@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Rename-IpamCustomField
 ms.reviewer:
 ms.assetid: 5E342543-B056-4073-92BF-CF7DBFE906E9
-ms.manager: dansimp
 ---
 
 # Rename-IpamCustomField

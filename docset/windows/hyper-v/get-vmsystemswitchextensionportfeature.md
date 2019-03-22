@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSystemSwitchExtensionPortFeature
 ms.reviewer:
 ms.assetid: F89569D4-FBE5-46C0-A8CE-E1518FC13DD5
-ms.manager: dansimp
 ---
 
 # Get-VMSystemSwitchExtensionPortFeature

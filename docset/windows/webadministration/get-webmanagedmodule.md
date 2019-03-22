@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebManagedModule
 ms.reviewer:
 ms.assetid: 66CD73CB-B5A3-4AFE-BEF1-77B47822B968
-ms.manager: dansimp
 ---
 
 # Get-WebManagedModule

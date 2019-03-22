@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-MsmqQueue
 ms.reviewer:
 ms.assetid: B0AB4484-ED67-49B2-9462-AC1838D8C356
-ms.manager: dansimp
 ---
 
 # New-MsmqQueue

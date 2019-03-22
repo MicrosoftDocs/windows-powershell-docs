@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerGlobalNameZone
 ms.reviewer:
 ms.assetid: AD6F1FCA-3C4A-41E9-BF2B-5748834DF256
-ms.manager: dansimp
 ---
 
 # Set-DnsServerGlobalNameZone

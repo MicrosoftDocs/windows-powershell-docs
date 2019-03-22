@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerTrustPoint
 ms.reviewer:
 ms.assetid: 2E20F83B-02B6-42EC-B81C-FE10D3D55104
-ms.manager: dansimp
 ---
 
 # Get-DnsServerTrustPoint

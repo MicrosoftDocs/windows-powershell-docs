@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-AppBackgroundTaskDiagnosticLog
 ms.reviewer:
 ms.assetid: 02D467DC-414B-41B1-A5DB-7650A2E8B8AC
-ms.manager: dansimp
 ---
 
 # Enable-AppBackgroundTaskDiagnosticLog

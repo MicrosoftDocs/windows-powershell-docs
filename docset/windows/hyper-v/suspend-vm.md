@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Suspend-VM
 ms.reviewer:
 ms.assetid: 21C83EE8-10FB-4FC1-9CF5-1E9681ACA4BC
-ms.manager: dansimp
 ---
 
 # Suspend-VM

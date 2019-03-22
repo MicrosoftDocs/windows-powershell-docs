@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-SRGroup
 ms.reviewer:
 ms.assetid: 6EE6D0CD-2341-4399-93DA-2E6F496D98B0
-ms.manager: dansimp
 ---
 
 # New-SRGroup

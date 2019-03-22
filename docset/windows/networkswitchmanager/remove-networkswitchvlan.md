@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkSwitchVlan
 ms.reviewer:
 ms.assetid: B4AFB13B-8F68-49EA-B4D6-372916D777D6
-ms.manager: dansimp
 ---
 
 # Remove-NetworkSwitchVlan

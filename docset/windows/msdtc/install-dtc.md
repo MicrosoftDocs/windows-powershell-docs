@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Install-Dtc
 ms.reviewer:
 ms.assetid: 859C5378-7EED-4F4F-94DF-F418DA0369B6
-ms.manager: dansimp
 ---
 
 # Install-Dtc

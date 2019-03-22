@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-DfsnRoot
 ms.reviewer:
 ms.assetid: F067DDB3-A300-46C8-BE2C-9E3769FFBE35
-ms.manager: dansimp
 ---
 
 # New-DfsnRoot

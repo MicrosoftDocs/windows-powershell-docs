@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerGatewayPool
 ms.reviewer:
 ms.assetid: 140778A1-B623-4524-9313-A67C8C010AFE
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerGatewayPool

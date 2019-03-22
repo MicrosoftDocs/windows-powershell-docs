@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DfsrIdRecord
 ms.reviewer:
 ms.assetid: 5671A76F-5FDB-4661-B979-D47325E27A54
-ms.manager: dansimp
 ---
 
 # Get-DfsrIdRecord

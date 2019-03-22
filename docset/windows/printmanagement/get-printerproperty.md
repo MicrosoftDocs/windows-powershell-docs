@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-PrinterProperty
 ms.reviewer:
 ms.assetid: 162FC687-2EDA-4C4A-B17F-E9DEEAF748B0
-ms.manager: dansimp
 ---
 
 # Get-PrinterProperty

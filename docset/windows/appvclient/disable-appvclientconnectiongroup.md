@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: 1505DB12-8EF6-4C8D-B776-6CF338ED277A
-ms.manager: dansimp
 ---
 
 # Disable-AppvClientConnectionGroup

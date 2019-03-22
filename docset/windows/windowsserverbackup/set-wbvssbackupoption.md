@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WBVssBackupOption
 ms.reviewer:
 ms.assetid: F3EC835B-2CD6-4B2E-B840-DB3C977FBA89
-ms.manager: dansimp
 ---
 
 # Set-WBVssBackupOption

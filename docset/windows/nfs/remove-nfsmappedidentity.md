@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NfsMappedIdentity
 ms.reviewer:
 ms.assetid: D9CE0518-6C59-4834-9D7C-F6388ABAD7E9
-ms.manager: dansimp
 ---
 
 # Remove-NfsMappedIdentity

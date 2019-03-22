@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetAdapterEncapsulatedPacketTaskOffload
 ms.reviewer:
 ms.assetid: B2CA6038-C801-4CD6-A037-63560CDF6AE7
-ms.manager: dansimp
 ---
 
 # Set-NetAdapterEncapsulatedPacketTaskOffload

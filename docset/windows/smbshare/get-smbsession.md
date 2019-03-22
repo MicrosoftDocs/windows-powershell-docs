@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbSession
 ms.reviewer:
 ms.assetid: 6160AB3A-4385-421C-B6EE-9357FF436E1D
-ms.manager: dansimp
 ---
 
 # Get-SmbSession

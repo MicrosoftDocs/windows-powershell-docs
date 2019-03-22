@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WmsSystem
 ms.reviewer:
 ms.assetid: AFAD0272-C9F0-4F92-88BF-4BA4E6FF7018
-ms.manager: dansimp
 ---
 
 # Remove-WmsSystem

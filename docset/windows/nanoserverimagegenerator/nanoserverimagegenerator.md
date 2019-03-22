@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: B5A6CE33-AAB9-486E-8625-1913606577E5
-ms.manager: dansimp
 ---
 
 # NanoServerImageGenerator Module

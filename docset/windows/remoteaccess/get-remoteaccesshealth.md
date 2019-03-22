@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccessHealth
 ms.reviewer:
 ms.assetid: FDBB76F2-7449-4426-B39D-D83AD6B29E08
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccessHealth

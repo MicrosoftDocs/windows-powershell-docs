@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-WebRequestTracingSetting
 ms.reviewer:
 ms.assetid: B03DC350-FFFE-442B-942C-FF180D5370A2
-ms.manager: dansimp
 ---
 
 # Clear-WebRequestTracingSetting

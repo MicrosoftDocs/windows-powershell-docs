@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WebApplicationProxySslCertificate
 ms.reviewer:
 ms.assetid: A268DE0E-ADB2-482F-AE8B-EB218D423B67
-ms.manager: dansimp
 ---
 
 # Set-WebApplicationProxySslCertificate

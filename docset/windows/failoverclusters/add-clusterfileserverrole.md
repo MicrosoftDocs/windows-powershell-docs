@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterFileServerRole
 ms.reviewer:
 ms.assetid: 5A57EC37-6A26-40D3-8CD4-7AE6F3D09282
-ms.manager: dansimp
 ---
 
 # Add-ClusterFileServerRole

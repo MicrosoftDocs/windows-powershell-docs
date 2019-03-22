@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-SmbBandwidthLimit
 ms.reviewer:
 ms.assetid: 5C948486-EA2D-4F61-A5AA-CC55390E2FCC
-ms.manager: dansimp
 ---
 
 # Set-SmbBandwidthLimit

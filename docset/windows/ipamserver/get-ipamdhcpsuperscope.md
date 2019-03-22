@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamDhcpSuperscope
 ms.reviewer:
 ms.assetid: 3C67A3D3-29B1-4BBA-A7DF-FFFB6D00E735
-ms.manager: dansimp
 ---
 
 # Get-IpamDhcpSuperscope

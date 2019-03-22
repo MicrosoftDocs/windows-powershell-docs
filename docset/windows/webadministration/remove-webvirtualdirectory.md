@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WebVirtualDirectory
 ms.reviewer:
 ms.assetid: 2A4DB4A4-BE0B-4371-A625-C9D27492AF3F
-ms.manager: dansimp
 ---
 
 # Remove-WebVirtualDirectory

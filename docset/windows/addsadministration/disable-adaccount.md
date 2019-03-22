@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-ADAccount
 ms.reviewer:
 ms.assetid: 70167D4B-09FF-42A2-BFF8-09450F8DBC14
-ms.manager: dansimp
 ---
 
 # Disable-ADAccount

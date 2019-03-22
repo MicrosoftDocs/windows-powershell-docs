@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-WindowsErrorReporting
 ms.reviewer:
 ms.assetid: 42D79D03-3D10-4D4C-9102-0A3F7C784B24
-ms.manager: dansimp
 ---
 
 # Disable-WindowsErrorReporting

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-OdbcDriver
 ms.reviewer:
 ms.assetid: F8131A60-6186-44F4-B6B2-003E438CCA8D
-ms.manager: dansimp
 ---
 
 # Set-OdbcDriver

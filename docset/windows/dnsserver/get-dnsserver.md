@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServer
 ms.reviewer:
 ms.assetid: AB325C11-CDA0-4071-A573-30FFBD46760D
-ms.manager: dansimp
 ---
 
 # Get-DnsServer

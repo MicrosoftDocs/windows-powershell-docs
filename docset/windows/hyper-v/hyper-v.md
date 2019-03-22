@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: BBEE3D24-D776-468A-B8CF-6878D2F0570F
-ms.manager: dansimp
 ---
 
 # Hyper-V Module

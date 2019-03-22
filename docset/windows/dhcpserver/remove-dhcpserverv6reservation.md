@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv6Reservation
 ms.reviewer:
 ms.assetid: F11C6412-7CDB-4398-85C8-C599E963F3D8
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6Reservation

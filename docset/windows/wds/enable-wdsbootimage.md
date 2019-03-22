@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-WdsBootImage
 ms.reviewer:
 ms.assetid: F8047CCD-48F7-4716-AC03-399E898D1529
-ms.manager: dansimp
 ---
 
 # Enable-WdsBootImage

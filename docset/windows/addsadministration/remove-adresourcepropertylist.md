@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADResourcePropertyList
 ms.reviewer:
 ms.assetid: 6C758A82-DECE-4FD0-BDE2-F3A83301AFEF
-ms.manager: dansimp
 ---
 
 # Remove-ADResourcePropertyList

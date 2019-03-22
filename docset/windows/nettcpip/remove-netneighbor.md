@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetNeighbor
 ms.reviewer:
 ms.assetid: E2F572BF-EA80-4967-93D3-643CD4BEF85C
-ms.manager: dansimp
 ---
 
 # Remove-NetNeighbor

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerVersion
 ms.reviewer:
 ms.assetid: 05E7A9C2-2568-4B89-9C76-C48EAAA45718
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerVersion

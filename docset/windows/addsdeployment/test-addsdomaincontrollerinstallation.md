@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-ADDSDomainControllerInstallation
 ms.reviewer:
 ms.assetid: E65920A5-9158-4832-B973-403C6AD3892A
-ms.manager: dansimp
 ---
 
 # Test-ADDSDomainControllerInstallation

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageEnclosureStorageNodeView
 ms.reviewer:
 ms.assetid: 1E96C006-ECBC-499A-9EEE-C58F021264A7
-ms.manager: dansimp
 ---
 
 # Get-StorageEnclosureStorageNodeView

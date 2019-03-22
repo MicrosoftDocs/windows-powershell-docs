@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADAuthenticationPolicy
 ms.reviewer:
 ms.assetid: 24CFCC45-5935-4580-8180-D2B61EEE93B4
-ms.manager: dansimp
 ---
 
 # Get-ADAuthenticationPolicy

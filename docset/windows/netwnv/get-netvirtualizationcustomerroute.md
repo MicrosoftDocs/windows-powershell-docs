@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetVirtualizationCustomerRoute
 ms.reviewer:
 ms.assetid: ECDE0317-9F91-4D9C-AA0D-3C99A86FB925
-ms.manager: dansimp
 ---
 
 # Get-NetVirtualizationCustomerRoute

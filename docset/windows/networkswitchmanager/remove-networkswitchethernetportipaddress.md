@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkSwitchEthernetPortIPAddress
 ms.reviewer:
 ms.assetid: BB6F30EA-B5E2-4140-86ED-1ABC32065184
-ms.manager: dansimp
 ---
 
 # Remove-NetworkSwitchEthernetPortIPAddress

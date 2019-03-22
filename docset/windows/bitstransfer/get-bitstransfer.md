@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BitsTransfer
 ms.reviewer:
 ms.assetid: 7C9B7506-B22B-4566-AED1-96C3B9C73638
-ms.manager: dansimp
 ---
 
 # Get-BitsTransfer

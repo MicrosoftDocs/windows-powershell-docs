@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-FsrmFileManagementJob
 ms.reviewer:
 ms.assetid: C7B09260-DC16-4759-B849-BF9D98A4C151
-ms.manager: dansimp
 ---
 
 # Set-FsrmFileManagementJob

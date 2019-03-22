@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Open-WmsVirtualDesktop
 ms.reviewer:
 ms.assetid: 58D32C41-4B77-4C82-A1F2-021449E21F6E
-ms.manager: dansimp
 ---
 
 # Open-WmsVirtualDesktop

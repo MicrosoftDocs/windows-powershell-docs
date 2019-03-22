@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPInterface
 ms.reviewer:
 ms.assetid: 3268460C-920A-4E06-9A45-4A2BFFD63E3C
-ms.manager: dansimp
 ---
 
 # Set-NetIPInterface

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Revoke-NfsMountedClient
 ms.reviewer:
 ms.assetid: 034AE8BF-2EAC-498F-8B82-785F494573C5
-ms.manager: dansimp
 ---
 
 # Revoke-NfsMountedClient

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-ScheduledTask
 ms.reviewer:
 ms.assetid: 5B59047C-9C06-422F-8382-5C81DC285F3E
-ms.manager: dansimp
 ---
 
 # Disable-ScheduledTask

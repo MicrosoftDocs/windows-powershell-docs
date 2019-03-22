@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-IscsiVirtualDiskOperation
 ms.reviewer:
 ms.assetid: C578971D-E720-40DE-8BBA-47414198C44B
-ms.manager: dansimp
 ---
 
 # Stop-IscsiVirtualDiskOperation

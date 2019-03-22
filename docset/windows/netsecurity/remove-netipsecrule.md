@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPsecRule
 ms.reviewer:
 ms.assetid: CB0CD2FE-BA64-4D28-9877-E23B2610DA0B
-ms.manager: dansimp
 ---
 
 # Remove-NetIPsecRule

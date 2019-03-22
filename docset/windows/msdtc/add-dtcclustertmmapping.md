@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DtcClusterTMMapping
 ms.reviewer:
 ms.assetid: 84AE919B-144B-45A5-A217-14B9D2DA4EB1
-ms.manager: dansimp
 ---
 
 # Add-DtcClusterTMMapping

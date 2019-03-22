@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 64D8C55E-60B7-4867-AD39-ACF8AC69A9EE
-ms.manager: dansimp
 ---
 
 # ConfigCI Module

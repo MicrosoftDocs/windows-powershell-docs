@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageHealthReport
 ms.reviewer:
 ms.assetid: A9F9F760-FEA9-47A8-938C-FDBE4BAFCF83
-ms.manager: dansimp
 ---
 
 # Get-StorageHealthReport

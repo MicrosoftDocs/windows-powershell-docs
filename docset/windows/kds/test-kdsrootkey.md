@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-KdsRootKey
 ms.reviewer:
 ms.assetid: FEB2DF09-6815-46CA-97D9-ABAC6E78838E
-ms.manager: dansimp
 ---
 
 # Test-KdsRootKey

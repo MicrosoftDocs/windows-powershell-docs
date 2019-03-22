@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetEventPacketCaptureProvider
 ms.reviewer:
 ms.assetid: 7F5561F6-91D2-4B8B-ABD2-2D01C8B74966
-ms.manager: dansimp
 ---
 
 # Set-NetEventPacketCaptureProvider

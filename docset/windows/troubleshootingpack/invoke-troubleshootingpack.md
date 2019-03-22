@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Invoke-TroubleshootingPack
 ms.reviewer:
 ms.assetid: 25FC6F1B-B88E-457B-8AC2-95A35E63FF63
-ms.manager: dansimp
 ---
 
 # Invoke-TroubleshootingPack

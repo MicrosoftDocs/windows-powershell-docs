@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SyncUserStatus
 ms.reviewer:
 ms.assetid: E8A1ED3A-6950-4E75-835A-16B37A21CD10
-ms.manager: dansimp
 ---
 
 # Get-SyncUserStatus

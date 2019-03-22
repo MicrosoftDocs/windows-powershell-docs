@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-SbecAutologger
 ms.reviewer:
 ms.assetid: 776DF186-8A8D-46E9-97ED-28297D0AD498
-ms.manager: dansimp
 ---
 
 # Enable-SbecAutologger

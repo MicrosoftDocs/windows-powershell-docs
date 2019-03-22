@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-FileStorageTier
 ms.reviewer:
 ms.assetid: ED9B2860-8E82-4E35-8B05-4CDCA8025532
-ms.manager: dansimp
 ---
 
 # Clear-FileStorageTier

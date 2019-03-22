@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerConfiguration
 ms.reviewer:
 ms.assetid: AEB6E6B3-8E88-4409-908B-03CA378B8682
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLoadBalancerConfiguration

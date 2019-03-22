@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NfsStatistics
 ms.reviewer:
 ms.assetid: E1C01056-F069-4160-8AF9-F25046671F31
-ms.manager: dansimp
 ---
 
 # Get-NfsStatistics

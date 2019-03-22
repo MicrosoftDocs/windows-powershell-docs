@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-Disk
 ms.reviewer:
 ms.assetid: 4084251C-5301-45DD-B710-20A7ED67799B
-ms.manager: dansimp
 ---
 
 # Clear-Disk

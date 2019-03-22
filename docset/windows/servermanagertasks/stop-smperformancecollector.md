@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-SMPerformanceCollector
 ms.reviewer:
 ms.assetid: 121F78B7-458C-4E8D-8C82-64045C27ADF0
-ms.manager: dansimp
 ---
 
 # Stop-SMPerformanceCollector

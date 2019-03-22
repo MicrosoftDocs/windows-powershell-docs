@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-VMConsoleSupport
 ms.reviewer:
 ms.assetid: C1BCE062-4E39-4696-90CC-41FFBC963C34
-ms.manager: dansimp
 ---
 
 # Disable-VMConsoleSupport

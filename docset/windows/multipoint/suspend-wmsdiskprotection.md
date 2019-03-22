@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Suspend-WmsDiskProtection
 ms.reviewer:
 ms.assetid: BFDCC69C-1C5D-43BF-A9E7-6CB279C4B466
-ms.manager: dansimp
 ---
 
 # Suspend-WmsDiskProtection

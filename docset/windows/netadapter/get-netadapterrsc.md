@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetAdapterRsc
 ms.reviewer:
 ms.assetid: 61A489ED-2CCD-4155-9180-12EA10B3DB8F
-ms.manager: dansimp
 ---
 
 # Get-NetAdapterRsc

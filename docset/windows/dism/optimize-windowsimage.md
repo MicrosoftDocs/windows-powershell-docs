@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Optimize-WindowsImage
 ms.reviewer:
 ms.assetid: 109D170C-2DBF-4838-BBE5-F2A39C49D384
-ms.manager: dansimp
 ---
 
 # Optimize-WindowsImage

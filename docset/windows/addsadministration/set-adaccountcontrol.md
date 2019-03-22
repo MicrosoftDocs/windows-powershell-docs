@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADAccountControl
 ms.reviewer:
 ms.assetid: C0B08CB5-D72C-4A3F-A39A-3910EF781AAE
-ms.manager: dansimp
 ---
 
 # Set-ADAccountControl

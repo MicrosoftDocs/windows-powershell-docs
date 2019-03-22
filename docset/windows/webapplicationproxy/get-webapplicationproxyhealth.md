@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebApplicationProxyHealth
 ms.reviewer:
 ms.assetid: 98669250-60D7-4503-8AD9-B1E998C3695D
-ms.manager: dansimp
 ---
 
 # Get-WebApplicationProxyHealth

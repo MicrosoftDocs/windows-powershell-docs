@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: B64DA43E-C0A8-48EB-8136-653B2062FEB9
-ms.manager: dansimp
 ---
 
 # Import-IscsiVirtualDisk

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DAClientExperienceConfiguration
 ms.reviewer:
 ms.assetid: 9CDBD12F-093F-415B-A0DB-1298D1518EBA
-ms.manager: dansimp
 ---
 
 # Set-DAClientExperienceConfiguration

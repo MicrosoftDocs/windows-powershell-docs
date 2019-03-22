@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-CATemplate
 ms.reviewer:
 ms.assetid: 6545F6DF-6593-4DD4-9391-98DBDCE63F64
-ms.manager: dansimp
 ---
 
 # Remove-CATemplate

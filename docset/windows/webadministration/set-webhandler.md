@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WebHandler
 ms.reviewer:
 ms.assetid: 6760B8EB-35D3-4D87-9FB2-64AA0B647B48
-ms.manager: dansimp
 ---
 
 # Set-WebHandler

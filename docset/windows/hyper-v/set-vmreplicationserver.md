@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMReplicationServer
 ms.reviewer:
 ms.assetid: E422AB03-1F1C-4544-8BDF-0B27DB3B9A5B
-ms.manager: dansimp
 ---
 
 # Set-VMReplicationServer

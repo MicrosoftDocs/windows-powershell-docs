@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NfsNetgroupStore
 ms.reviewer:
 ms.assetid: 7550B515-D26D-49CE-A09A-579817C138C7
-ms.manager: dansimp
 ---
 
 # Get-NfsNetgroupStore

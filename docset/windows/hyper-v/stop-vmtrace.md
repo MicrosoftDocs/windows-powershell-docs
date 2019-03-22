@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-VMTrace
 ms.reviewer:
 ms.assetid: 77B5ED2E-D854-47E4-86F4-5BBF5E4807EC
-ms.manager: dansimp
 ---
 
 # Stop-VMTrace

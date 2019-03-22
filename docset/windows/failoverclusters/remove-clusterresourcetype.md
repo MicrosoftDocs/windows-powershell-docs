@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ClusterResourceType
 ms.reviewer:
 ms.assetid: BC4F51A9-B0EC-4908-B251-C2469FA470A4
-ms.manager: dansimp
 ---
 
 # Remove-ClusterResourceType

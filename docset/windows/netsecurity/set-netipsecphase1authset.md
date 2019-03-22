@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPsecPhase1AuthSet
 ms.reviewer:
 ms.assetid: 8D843BB8-8F79-4E1E-A6F9-5AD9615CB526
-ms.manager: dansimp
 ---
 
 # Set-NetIPsecPhase1AuthSet

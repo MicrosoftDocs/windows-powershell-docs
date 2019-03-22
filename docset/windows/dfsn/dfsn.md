@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 2A1924D6-3934-48B8-807D-D4E417625396
-ms.manager: dansimp
 ---
 
 # DFSN Module

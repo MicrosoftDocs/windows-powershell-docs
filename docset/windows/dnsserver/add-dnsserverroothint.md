@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DnsServerRootHint
 ms.reviewer:
 ms.assetid: 0871F040-A967-4E49-A01D-EDC259F10C66
-ms.manager: dansimp
 ---
 
 # Add-DnsServerRootHint

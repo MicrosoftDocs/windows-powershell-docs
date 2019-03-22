@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerNode
 ms.reviewer:
 ms.assetid: C4D7BF75-9A90-4CDC-AE7D-7CAD81259629
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerNode

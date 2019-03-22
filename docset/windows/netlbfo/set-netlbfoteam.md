@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetLbfoTeam
 ms.reviewer:
 ms.assetid: 15D7041C-D5BD-4F55-833F-0F25B1E5445A
-ms.manager: dansimp
 ---
 
 # Set-NetLbfoTeam

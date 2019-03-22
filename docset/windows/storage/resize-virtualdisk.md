@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resize-VirtualDisk
 ms.reviewer:
 ms.assetid: 39435A9B-804E-4F3E-92E7-EFB7C6404F05
-ms.manager: dansimp
 ---
 
 # Resize-VirtualDisk

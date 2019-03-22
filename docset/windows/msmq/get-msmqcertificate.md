@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-MSMQCertificate
 ms.reviewer:
 ms.assetid: 02BEFEEE-443C-4A15-AA58-4497B9C344A2
-ms.manager: dansimp
 ---
 
 # Get-MsmqCertificate

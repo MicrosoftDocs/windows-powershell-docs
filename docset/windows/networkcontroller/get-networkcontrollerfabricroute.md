@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerFabricRoute
 ms.reviewer:
 ms.assetid: 23F34341-33E2-4897-9A9A-A9FFC3FE10D0
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerFabricRoute

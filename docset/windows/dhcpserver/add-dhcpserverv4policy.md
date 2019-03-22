@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerv4Policy
 ms.reviewer:
 ms.assetid: 0DBF6FD1-56F4-4E1B-BF4D-F65968C8E182
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Policy

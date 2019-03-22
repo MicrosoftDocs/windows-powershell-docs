@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DedupVolume
 ms.reviewer:
 ms.assetid: B95430BE-3433-4A31-9442-EDCE96C3DB89
-ms.manager: dansimp
 ---
 
 # Get-DedupVolume

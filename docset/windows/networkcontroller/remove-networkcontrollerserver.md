@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerServer
 ms.reviewer:
 ms.assetid: E4D37ED0-6E99-4C0F-8D3A-6B032F0CB690
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerServer

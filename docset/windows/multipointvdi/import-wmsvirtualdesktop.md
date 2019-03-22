@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-WmsVirtualDesktop
 ms.reviewer:
 ms.assetid: 645034D1-A1A8-48FB-8280-C9AF3C0693E7
-ms.manager: dansimp
 ---
 
 # Import-WmsVirtualDesktop

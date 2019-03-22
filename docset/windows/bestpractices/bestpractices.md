@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: F8643E33-1240-44C1-A3E3-08A355A4E190
-ms.manager: dansimp
 ---
 
 # BestPractices Module

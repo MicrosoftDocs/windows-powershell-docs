@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DhcpServerSetting
 ms.reviewer:
 ms.assetid: D364C9E8-C0BA-4C07-856A-2319617EE9D5
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerSetting

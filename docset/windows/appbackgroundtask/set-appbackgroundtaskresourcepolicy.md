@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-AppBackgroundTaskResourcePolicy
 ms.reviewer:
 ms.assetid: 82B0732A-B6CD-46C8-9D83-212A05EFB3D6
-ms.manager: dansimp
 ---
 
 # Set-AppBackgroundTaskResourcePolicy

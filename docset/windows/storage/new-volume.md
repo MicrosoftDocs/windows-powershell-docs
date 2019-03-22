@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-Volume
 ms.reviewer:
 ms.assetid: 038D0DAD-E00B-479C-BEE8-6D163BBA7C1C
-ms.manager: dansimp
 ---
 
 # New-Volume

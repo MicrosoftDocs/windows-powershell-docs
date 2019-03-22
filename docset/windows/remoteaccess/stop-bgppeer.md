@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-BgpPeer
 ms.reviewer:
 ms.assetid: 66F31195-7E41-4594-9B57-A00C827CABBD
-ms.manager: dansimp
 ---
 
 # Stop-BgpPeer

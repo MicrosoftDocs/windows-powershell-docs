@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Debug-VirtualMachineQueueOperation
 ms.reviewer:
 ms.assetid: FCA9661F-E96D-4CEB-A6F5-B21535B2E8EE
-ms.manager: dansimp
 ---
 
 # Debug-VirtualMachineQueueOperation

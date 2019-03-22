@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterCheckpoint
 ms.reviewer:
 ms.assetid: 4C3E1376-B8DE-4B3E-87F3-E351F369E314
-ms.manager: dansimp
 ---
 
 # Add-ClusterCheckpoint

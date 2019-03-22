@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-NetworkControllerCluster
 ms.reviewer:
 ms.assetid: D3AC9AAD-4EE0-4533-B187-E2BA0E4AF07A
-ms.manager: dansimp
 ---
 
 # Uninstall-NetworkControllerCluster

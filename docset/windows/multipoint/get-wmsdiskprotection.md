@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WmsDiskProtection
 ms.reviewer:
 ms.assetid: 834D6E9C-76EB-4F8A-B79E-767F38E6B622
-ms.manager: dansimp
 ---
 
 # Get-WmsDiskProtection

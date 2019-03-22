@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerZoneTransferPolicy
 ms.reviewer:
 ms.assetid: D4A13992-A4DD-453A-9576-3A900B15700B
-ms.manager: dansimp
 ---
 
 # Get-DnsServerZoneTransferPolicy

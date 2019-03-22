@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerLoadBalancerFrontendIpConfiguration
 ms.reviewer:
 ms.assetid: 3AB83D2B-2E4C-4C30-AEEA-4C22619DE2A6
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLoadBalancerFrontendIpConfiguration

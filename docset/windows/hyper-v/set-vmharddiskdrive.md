@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMHardDiskDrive
 ms.reviewer:
 ms.assetid: F3269885-AB4C-408D-8924-7B4484B4D9A3
-ms.manager: dansimp
 ---
 
 # Set-VMHardDiskDrive

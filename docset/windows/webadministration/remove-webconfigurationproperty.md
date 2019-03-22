@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WebConfigurationProperty
 ms.reviewer:
 ms.assetid: 81E78132-AA72-4CF2-8F90-38602F8E25EA
-ms.manager: dansimp
 ---
 
 # Remove-WebConfigurationProperty

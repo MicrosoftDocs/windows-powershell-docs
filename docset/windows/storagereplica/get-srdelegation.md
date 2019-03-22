@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SRDelegation
 ms.reviewer:
 ms.assetid: B79EC885-54AE-4356-8859-21B493626EA6
-ms.manager: dansimp
 ---
 
 # Get-SRDelegation

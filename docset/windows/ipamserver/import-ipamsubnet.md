@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-IpamSubnet
 ms.reviewer:
 ms.assetid: 4BCCE894-632B-4DC2-9134-C72304D360E9
-ms.manager: dansimp
 ---
 
 # Import-IpamSubnet

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMSan
 ms.reviewer:
 ms.assetid: 78CAC821-04DF-474B-902B-050593D99279
-ms.manager: dansimp
 ---
 
 # Set-VMSan

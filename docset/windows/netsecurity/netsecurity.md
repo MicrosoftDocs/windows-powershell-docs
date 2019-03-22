@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 9E474DAE-3089-41AF-98FF-30EA9FDB0C32
-ms.manager: dansimp
 ---
 
 # NetSecurity Module

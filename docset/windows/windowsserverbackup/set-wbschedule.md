@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WBSchedule
 ms.reviewer:
 ms.assetid: 2F91AF99-2E20-4040-A9BD-4A6BDC6319C0
-ms.manager: dansimp
 ---
 
 # Set-WBSchedule

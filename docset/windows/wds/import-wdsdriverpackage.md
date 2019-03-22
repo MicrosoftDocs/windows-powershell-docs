@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-WdsDriverPackage
 ms.reviewer:
 ms.assetid: 297D2B18-BD20-4445-AF00-76D168366AC6
-ms.manager: dansimp
 ---
 
 # Import-WdsDriverPackage

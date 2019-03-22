@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ClusterFaultDomain
 ms.reviewer:
 ms.assetid: DC9961A7-1DEA-4C58-87D5-9D4B7C7BA561
-ms.manager: dansimp
 ---
 
 # Remove-ClusterFaultDomain

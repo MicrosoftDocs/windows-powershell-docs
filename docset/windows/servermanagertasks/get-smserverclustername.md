@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SMServerClusterName
 ms.reviewer:
 ms.assetid: 2C57BC34-F9B7-419A-80E6-563465BCCF2A
-ms.manager: dansimp
 ---
 
 # Get-SMServerClusterName

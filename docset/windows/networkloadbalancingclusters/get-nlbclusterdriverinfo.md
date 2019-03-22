@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NlbClusterDriverInfo
 ms.reviewer:
 ms.assetid: 38BA9F98-BA31-4B71-A5F3-19AB8782BA06
-ms.manager: dansimp
 ---
 
 # Get-NlbClusterDriverInfo

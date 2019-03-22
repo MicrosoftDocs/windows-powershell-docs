@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-SmbMultichannelConstraint
 ms.reviewer:
 ms.assetid: 0BDF6C5E-F391-4B3C-A661-23CDE7EEA82B
-ms.manager: dansimp
 ---
 
 # New-SmbMultichannelConstraint

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C7CB3606-F583-4B89-BAAB-C0FEA48D0678
-ms.manager: dansimp
 ---
 
 # NetQoS Module

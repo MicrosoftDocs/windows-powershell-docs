@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-Printer
 ms.reviewer:
 ms.assetid: 8CAA8567-4F79-45B4-A49B-9707973D830B
-ms.manager: dansimp
 ---
 
 # Get-Printer

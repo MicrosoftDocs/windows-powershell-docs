@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetNatGlobal
 ms.reviewer:
 ms.assetid: 03EF1840-E1B8-4A61-AC6A-4F4052B6AE3E
-ms.manager: dansimp
 ---
 
 # Get-NetNatGlobal

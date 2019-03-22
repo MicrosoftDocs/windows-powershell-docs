@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-VMNetworkAdapter
 ms.reviewer:
 ms.assetid: 638F9A16-DF77-4313-8886-1318AFFD0139
-ms.manager: dansimp
 ---
 
 # Test-VMNetworkAdapter

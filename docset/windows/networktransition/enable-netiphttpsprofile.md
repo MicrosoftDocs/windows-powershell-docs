@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetIPHttpsProfile
 ms.reviewer:
 ms.assetid: 2D03CC4A-89CB-47B1-ABDE-7AB4E2DA0232
-ms.manager: dansimp
 ---
 
 # Enable-NetIPHttpsProfile

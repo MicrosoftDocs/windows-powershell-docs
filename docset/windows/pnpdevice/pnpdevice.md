@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: B3C31B30-F4D8-414B-8433-4AD7152699A2
-ms.manager: dansimp
 ---
 
 # PnpDevice Module

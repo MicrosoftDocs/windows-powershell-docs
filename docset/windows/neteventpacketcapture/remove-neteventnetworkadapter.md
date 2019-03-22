@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetEventNetworkAdapter
 ms.reviewer:
 ms.assetid: B649B3AD-B40C-4836-AB11-A5F0350569A5
-ms.manager: dansimp
 ---
 
 # Remove-NetEventNetworkAdapter

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsServerQueryResolutionPolicy
 ms.reviewer:
 ms.assetid: 0D7A6874-0BFD-4A01-B6CE-C2F6A8C287AA
-ms.manager: dansimp
 ---
 
 # Set-DnsServerQueryResolutionPolicy

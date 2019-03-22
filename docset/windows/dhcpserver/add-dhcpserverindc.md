@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerInDC
 ms.reviewer:
 ms.assetid: AC82E069-C63B-47A7-BDC3-35589830C119
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerInDC

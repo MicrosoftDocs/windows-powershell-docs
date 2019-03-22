@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADOrganizationalUnit
 ms.reviewer:
 ms.assetid: B85DA4BE-E1CA-4D29-A2D9-1987D258F8EB
-ms.manager: dansimp
 ---
 
 # Get-ADOrganizationalUnit

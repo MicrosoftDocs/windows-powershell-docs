@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Close-WmsApp
 ms.reviewer:
 ms.assetid: 050C6E96-D91B-4020-B752-859BEA975416
-ms.manager: dansimp
 ---
 
 # Close-WmsApp

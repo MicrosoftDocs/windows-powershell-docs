@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DnsClientNrptGlobal
 ms.reviewer:
 ms.assetid: 3B2243A2-20A8-4A89-BAF8-DE972758EB54
-ms.manager: dansimp
 ---
 
 # Set-DnsClientNrptGlobal

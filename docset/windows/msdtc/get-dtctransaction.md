@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DtcTransaction
 ms.reviewer:
 ms.assetid: 4935A981-4E66-4BCE-9882-F9CE00BBA810
-ms.manager: dansimp
 ---
 
 # Get-DtcTransaction

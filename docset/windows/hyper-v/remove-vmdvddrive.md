@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMDvdDrive
 ms.reviewer:
 ms.assetid: A079087D-0690-4228-AF6D-6774E3B87C30
-ms.manager: dansimp
 ---
 
 # Remove-VMDvdDrive

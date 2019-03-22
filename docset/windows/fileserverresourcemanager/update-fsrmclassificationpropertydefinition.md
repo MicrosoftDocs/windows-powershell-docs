@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-FsrmClassificationPropertyDefinition
 ms.reviewer:
 ms.assetid: F25087A9-A048-4577-B4FE-85338E7A19CD
-ms.manager: dansimp
 ---
 
 # Update-FsrmClassificationPropertyDefinition

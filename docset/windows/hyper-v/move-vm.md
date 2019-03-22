@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Move-VM
 ms.reviewer:
 ms.assetid: A22AE48F-D71D-4219-BB4A-B3FCD0DC03BB
-ms.manager: dansimp
 ---
 
 # Move-VM

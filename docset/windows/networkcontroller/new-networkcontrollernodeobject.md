@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerNodeObject
 ms.reviewer:
 ms.assetid: 2DBFCDA2-B3CB-4C26-8E5F-F7141F824F75
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerNodeObject

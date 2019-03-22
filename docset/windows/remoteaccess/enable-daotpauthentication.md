@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-DAOtpAuthentication
 ms.reviewer:
 ms.assetid: 577D95A4-08D4-46E5-B50B-756FBC0CAA14
-ms.manager: dansimp
 ---
 
 # Enable-DAOtpAuthentication

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerNetworkInterfaceIpConfiguration
 ms.reviewer:
 ms.assetid: 3DF29F04-CFE0-4083-827B-4DA64CFF7971
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerNetworkInterfaceIpConfiguration

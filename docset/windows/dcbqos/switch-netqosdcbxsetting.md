@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Switch-NetQosDcbxSetting
 ms.reviewer:
 ms.assetid: C29A3BA7-1116-41DB-B541-A4BC97A47AB3
-ms.manager: dansimp
 ---
 
 # Switch-NetQosDcbxSetting

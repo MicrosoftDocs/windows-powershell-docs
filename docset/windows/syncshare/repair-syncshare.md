@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Repair-SyncShare
 ms.reviewer:
 ms.assetid: 1472A1EA-078D-48CA-8A28-F8986E2000C1
-ms.manager: dansimp
 ---
 
 # Repair-SyncShare

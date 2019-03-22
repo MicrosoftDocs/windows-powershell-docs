@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-WebApplication
 ms.reviewer:
 ms.assetid: A316977C-3685-40E1-A011-EE069E456263
-ms.manager: dansimp
 ---
 
 # New-WebApplication

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv4MulticastScope
 ms.reviewer:
 ms.assetid: 0ABA9E8A-DAA9-48D1-9AE5-FFE743D2A170
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4MulticastScope

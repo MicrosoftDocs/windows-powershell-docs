@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerDatabase
 ms.reviewer:
 ms.assetid: 296A100B-C633-4BD8-88BD-520A5ECB0772
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerDatabase

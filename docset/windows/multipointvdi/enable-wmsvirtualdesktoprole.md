@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-WmsVirtualDesktopRole
 ms.reviewer:
 ms.assetid: 5CD9736D-9BFD-466B-9E38-E8058AC1821C
-ms.manager: dansimp
 ---
 
 # Enable-WmsVirtualDesktopRole

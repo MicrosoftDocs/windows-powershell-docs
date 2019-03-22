@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SMServerEvent
 ms.reviewer:
 ms.assetid: 7C6007B9-B3C7-4BB4-B7E6-D8310F9B32F2
-ms.manager: dansimp
 ---
 
 # Get-SMServerEvent

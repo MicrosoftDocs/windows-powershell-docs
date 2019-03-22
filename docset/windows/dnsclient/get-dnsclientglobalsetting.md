@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsClientGlobalSetting
 ms.reviewer:
 ms.assetid: 388CDBFB-6DC1-452F-AF28-3FF59FD3317F
-ms.manager: dansimp
 ---
 
 # Get-DnsClientGlobalSetting

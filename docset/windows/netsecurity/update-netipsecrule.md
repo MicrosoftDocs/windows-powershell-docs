@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-NetIPsecRule
 ms.reviewer:
 ms.assetid: F303B0A3-1070-45CB-8AB4-2BF4E4B26623
-ms.manager: dansimp
 ---
 
 # Update-NetIPsecRule

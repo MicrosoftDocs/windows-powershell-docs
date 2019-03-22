@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMSnapshot
 ms.reviewer:
 ms.assetid: E5EE75A0-D355-4ACC-A8D9-14CD44079AC5
-ms.manager: dansimp
 ---
 
 # Remove-VMSnapshot

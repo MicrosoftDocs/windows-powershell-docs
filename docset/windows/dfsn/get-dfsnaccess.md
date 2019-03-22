@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DfsnAccess
 ms.reviewer:
 ms.assetid: 17623C97-B384-4998-85FC-71BD5E581F95
-ms.manager: dansimp
 ---
 
 # Get-DfsnAccess

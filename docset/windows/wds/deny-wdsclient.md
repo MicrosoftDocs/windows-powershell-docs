@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Deny-WdsClient
 ms.reviewer:
 ms.assetid: 78F41FE8-47AE-43AE-800E-CA1119CF99AC
-ms.manager: dansimp
 ---
 
 # Deny-WdsClient

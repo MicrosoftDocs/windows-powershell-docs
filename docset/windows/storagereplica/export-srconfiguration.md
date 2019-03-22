@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-SRConfiguration
 ms.reviewer:
 ms.assetid: 6F4C323C-2A34-4F0E-8ADB-E9CEA6A6E5B3
-ms.manager: dansimp
 ---
 
 # Export-SRConfiguration

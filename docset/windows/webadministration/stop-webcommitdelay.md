@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-WebCommitDelay
 ms.reviewer:
 ms.assetid: 5E131CE9-F931-49B5-96E2-19D92CC2A54E
-ms.manager: dansimp
 ---
 
 # Stop-WebCommitDelay

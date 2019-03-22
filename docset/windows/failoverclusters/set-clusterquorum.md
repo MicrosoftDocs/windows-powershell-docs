@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ClusterQuorum
 ms.reviewer:
 ms.assetid: 6ACBC5B5-5A70-4461-81F2-BF759998A1C6
-ms.manager: dansimp
 ---
 
 # Set-ClusterQuorum

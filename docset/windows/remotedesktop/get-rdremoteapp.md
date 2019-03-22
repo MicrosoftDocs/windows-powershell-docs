@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDRemoteApp
 ms.reviewer:
 ms.assetid: 3318F2BE-ACA1-4C08-885F-76C00E476807
-ms.manager: dansimp
 ---
 
 # Get-RDRemoteApp

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageNode
 ms.reviewer:
 ms.assetid: A35EBC11-9854-4287-9C6F-DDB3C13FB2B2
-ms.manager: dansimp
 ---
 
 # Get-StorageNode

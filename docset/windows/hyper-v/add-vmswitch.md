@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VMSwitch
 ms.reviewer:
 ms.assetid: CBDB65E2-F651-4FF0-9BB1-9A13C104056F
-ms.manager: dansimp
 ---
 
 # Add-VMSwitch

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADReplicationPartnerMetadata
 ms.reviewer:
 ms.assetid: 91A2E11C-4810-4162-81D1-3A7DED92D2BA
-ms.manager: dansimp
 ---
 
 # Get-ADReplicationPartnerMetadata

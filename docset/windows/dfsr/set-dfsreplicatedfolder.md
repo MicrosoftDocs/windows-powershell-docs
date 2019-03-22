@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DfsReplicatedFolder
 ms.reviewer:
 ms.assetid: 8816AFEA-8785-49C5-A433-6A90F53E0D47
-ms.manager: dansimp
 ---
 
 # Set-DfsReplicatedFolder

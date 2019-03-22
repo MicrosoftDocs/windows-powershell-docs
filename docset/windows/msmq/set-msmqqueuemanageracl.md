@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-MsmqQueueManagerACL
 ms.reviewer:
 ms.assetid: B0D7C113-9A7F-4C83-93BE-06BF8795F19E
-ms.manager: dansimp
 ---
 
 # Set-MsmqQueueManagerACL

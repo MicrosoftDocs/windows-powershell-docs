@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetFirewallRule
 ms.reviewer:
 ms.assetid: CBD6CC37-2EE3-42E7-A062-9BEABEB3DB88
-ms.manager: dansimp
 ---
 
 # Set-NetFirewallRule

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Suspend-BitsTransfer
 ms.reviewer:
 ms.assetid: 077A7C6E-0608-4ACD-94C7-901445AC7C50
-ms.manager: dansimp
 ---
 
 # Suspend-BitsTransfer

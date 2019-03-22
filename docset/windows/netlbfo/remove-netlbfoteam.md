@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetLbfoTeam
 ms.reviewer:
 ms.assetid: 3A22E200-366D-4CC8-92DB-51BF4B085D1F
-ms.manager: dansimp
 ---
 
 # Remove-NetLbfoTeam

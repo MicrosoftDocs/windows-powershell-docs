@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMReplication
 ms.reviewer:
 ms.assetid: C8DB44FD-2CE3-499A-9232-576370E1517C
-ms.manager: dansimp
 ---
 
 # Get-VMReplication

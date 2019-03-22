@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WmsStation
 ms.reviewer:
 ms.assetid: F523F1F9-74B5-42BD-B155-A7220B300ECA
-ms.manager: dansimp
 ---
 
 # Get-WmsStation

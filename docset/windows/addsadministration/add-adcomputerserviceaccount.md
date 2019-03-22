@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ADComputerServiceAccount
 ms.reviewer:
 ms.assetid: 76DE78A2-D5A3-4013-A0D5-78B0583FD58A
-ms.manager: dansimp
 ---
 
 # Add-ADComputerServiceAccount

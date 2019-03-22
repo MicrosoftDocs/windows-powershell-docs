@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-IscsiVirtualDiskSnapshot
 ms.reviewer:
 ms.assetid: 57CA5EDD-80DF-4FDD-AC2E-7BEA137969A4
-ms.manager: dansimp
 ---
 
 # Set-IscsiVirtualDiskSnapshot

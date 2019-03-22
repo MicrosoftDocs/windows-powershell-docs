@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterNetworkInterface
 ms.reviewer:
 ms.assetid: 923D1109-52BC-4002-BDEC-727597CE3585
-ms.manager: dansimp
 ---
 
 # Get-ClusterNetworkInterface

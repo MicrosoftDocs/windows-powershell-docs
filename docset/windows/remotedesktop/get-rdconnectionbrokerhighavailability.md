@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDConnectionBrokerHighAvailability
 ms.reviewer:
 ms.assetid: 4B896F36-CE23-4AE9-B887-F155EB316E6B
-ms.manager: dansimp
 ---
 
 # Get-RDConnectionBrokerHighAvailability

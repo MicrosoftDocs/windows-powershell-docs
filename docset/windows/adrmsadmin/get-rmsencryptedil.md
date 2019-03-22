@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RmsEncryptedIL
 ms.reviewer:
 ms.assetid: 0E60DBB0-CC4A-4D2E-832E-970657361CA3
-ms.manager: dansimp
 ---
 
 # Get-RmsEncryptedIL

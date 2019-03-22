@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Copy-VMFile
 ms.reviewer:
 ms.assetid: 41BE782E-40FE-45A0-A233-7F21D46CFFB9
-ms.manager: dansimp
 ---
 
 # Copy-VMFile

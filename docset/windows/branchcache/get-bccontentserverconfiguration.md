@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BCContentServerConfiguration
 ms.reviewer:
 ms.assetid: ACA95D26-1438-42F5-80A6-E3D0FFC1BC33
-ms.manager: dansimp
 ---
 
 # Get-BCContentServerConfiguration

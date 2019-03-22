@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbOpenFile
 ms.reviewer:
 ms.assetid: 20AA3A6F-38D3-4692-98E5-4F510B9BE782
-ms.manager: dansimp
 ---
 
 # Get-SmbOpenFile

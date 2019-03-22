@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-CertificateEnrollmentPolicyServer
 ms.reviewer:
 ms.assetid: 0129619B-6FDE-44E0-9BD4-5C96326B76BC
-ms.manager: dansimp
 ---
 
 # Get-CertificateEnrollmentPolicyServer

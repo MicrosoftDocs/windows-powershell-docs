@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RemoteAccess
 ms.reviewer:
 ms.assetid: 95308A85-ED24-47A2-9388-81FB12BD7D55
-ms.manager: dansimp
 ---
 
 # Get-RemoteAccess

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-RDSessionHost
 ms.reviewer:
 ms.assetid: 9447CF73-4CD4-495F-8757-DA8156325BCC
-ms.manager: dansimp
 ---
 
 # Set-RDSessionHost

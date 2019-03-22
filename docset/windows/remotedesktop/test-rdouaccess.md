@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-RDOUAccess
 ms.reviewer:
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
-ms.manager: dansimp
 ---
 
 # Test-RDOUAccess

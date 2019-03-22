@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-ServerManagerStandardUserRemoting
 ms.reviewer:
 ms.assetid: A7072A86-E337-4DC5-A699-CE80CFE85FEF
-ms.manager: dansimp
 ---
 
 # Enable-ServerManagerStandardUserRemoting

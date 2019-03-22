@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-MsmqQueue
 ms.reviewer:
 ms.assetid: 65884D1F-717E-4B91-96D3-3BA21329D1DC
-ms.manager: dansimp
 ---
 
 # Remove-MsmqQueue

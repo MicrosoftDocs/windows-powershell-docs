@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 7710FA9C-A106-4C4A-BC8F-0EB352538B04
-ms.manager: dansimp
 ---
 
 # WindowsErrorReporting Module

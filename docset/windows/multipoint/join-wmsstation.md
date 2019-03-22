@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Join-WmsStation
 ms.reviewer:
 ms.assetid: AFBC6B2E-6576-4618-8F05-80AA1F7DB557
-ms.manager: dansimp
 ---
 
 # Join-WmsStation

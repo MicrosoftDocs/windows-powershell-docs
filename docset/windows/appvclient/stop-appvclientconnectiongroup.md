@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: AE6A0C24-FE51-4E36-B0C6-E50132DE6875
-ms.manager: dansimp
 ---
 
 # Stop-AppvClientConnectionGroup

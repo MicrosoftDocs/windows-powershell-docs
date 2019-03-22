@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-NetNatExternalAddress
 ms.reviewer:
 ms.assetid: 836A2249-5D84-4CDC-B446-1C98DF9E756E
-ms.manager: dansimp
 ---
 
 # Add-NetNatExternalAddress

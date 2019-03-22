@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Revoke-DfsrDelegation
 ms.reviewer:
 ms.assetid: 2CA54B28-72B5-471C-9AD0-59CB658328E6
-ms.manager: dansimp
 ---
 
 # Revoke-DfsrDelegation

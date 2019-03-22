@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VMSwitch
 ms.reviewer:
 ms.assetid: 0449AFFC-E6C3-48DB-BFB3-61CBF52DC0C2
-ms.manager: dansimp
 ---
 
 # New-VMSwitch

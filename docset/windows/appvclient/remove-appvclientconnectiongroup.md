@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-AppvClientConnectionGroup
 ms.reviewer:
 ms.assetid: F949BF74-7417-44F3-9121-E045AE5B26BE
-ms.manager: dansimp
 ---
 
 # Remove-AppvClientConnectionGroup

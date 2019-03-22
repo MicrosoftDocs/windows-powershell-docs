@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-ClusterVMMonitoredState
 ms.reviewer:
 ms.assetid: CFCF68B3-A7E4-42E9-A185-61DF7D0CA4B2
-ms.manager: dansimp
 ---
 
 # Reset-ClusterVMMonitoredState

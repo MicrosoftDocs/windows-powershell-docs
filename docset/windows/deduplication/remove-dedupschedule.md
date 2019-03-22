@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DedupSchedule
 ms.reviewer:
 ms.assetid: ED2C90F6-5605-4041-93CD-CF179D010631
-ms.manager: dansimp
 ---
 
 # Remove-DedupSchedule

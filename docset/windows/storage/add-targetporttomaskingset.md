@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-TargetPortToMaskingSet
 ms.reviewer:
 ms.assetid: 196E0BF1-8FE2-452C-8D7A-258443DCEDA1
-ms.manager: dansimp
 ---
 
 # Add-TargetPortToMaskingSet

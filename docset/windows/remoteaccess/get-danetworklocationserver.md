@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DANetworkLocationServer
 ms.reviewer:
 ms.assetid: 1A1F798C-DE10-4CEA-A65D-418560ED9EFC
-ms.manager: dansimp
 ---
 
 # Get-DANetworkLocationServer

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebApplicationProxyApplication
 ms.reviewer:
 ms.assetid: 99D86A99-E40A-45E1-B048-06172CB73BE7
-ms.manager: dansimp
 ---
 
 # Get-WebApplicationProxyApplication

@@ -4,7 +4,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 3E8534D7-0D92-42EB-BFDE-BB430C0C9CD0
-ms.manager: dansimp
+manager: dansimp
 ms.author: kenwith
 ms.mktglfcycl: manage
 ms.date: 12/20/2016

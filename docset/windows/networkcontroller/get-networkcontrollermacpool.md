@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerMacPool
 ms.reviewer:
 ms.assetid: 1E83335E-BFEF-409D-B201-06A8AD05C41A
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerMacPool

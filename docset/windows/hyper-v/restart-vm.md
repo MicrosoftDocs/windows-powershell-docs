@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restart-VM
 ms.reviewer:
 ms.assetid: F305EA18-C9B9-49A8-A3FC-B3C6626E2F57
-ms.manager: dansimp
 ---
 
 # Restart-VM

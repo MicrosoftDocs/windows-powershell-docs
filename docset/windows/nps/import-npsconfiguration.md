@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-NpsConfiguration
 ms.reviewer:
 ms.assetid: ECFA9FCE-617C-408B-B4D8-C53CB4835522
-ms.manager: dansimp
 ---
 
 # Import-NpsConfiguration

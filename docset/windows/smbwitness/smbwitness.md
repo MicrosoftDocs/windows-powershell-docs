@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 4F0AD55F-79C7-4918-B66D-D337FC3DBB99
-ms.manager: dansimp
 ---
 
 # SmbWitness Module

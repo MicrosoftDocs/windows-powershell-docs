@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resume-ClusterNode
 ms.reviewer:
 ms.assetid: 1FB038FB-B8C1-414D-B2D9-52A65747723A
-ms.manager: dansimp
 ---
 
 # Resume-ClusterNode

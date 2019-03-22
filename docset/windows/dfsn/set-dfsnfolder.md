@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DfsnFolder
 ms.reviewer:
 ms.assetid: E7AC0201-4475-401E-B192-FD8E41EAB0FE
-ms.manager: dansimp
 ---
 
 # Set-DfsnFolder

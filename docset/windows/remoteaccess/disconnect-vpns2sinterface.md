@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disconnect-VpnS2SInterface
 ms.reviewer:
 ms.assetid: BBC9FA01-8BCD-4254-80BF-70F5BA0E4F9A
-ms.manager: dansimp
 ---
 
 # Disconnect-VpnS2SInterface

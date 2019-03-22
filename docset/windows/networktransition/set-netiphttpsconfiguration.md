@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPHttpsConfiguration
 ms.reviewer:
 ms.assetid: 70F6EA7A-C6E8-4AD1-AFC7-07EA8FF091C9
-ms.manager: dansimp
 ---
 
 # Set-NetIPHttpsConfiguration

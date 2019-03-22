@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBBackupSet
 ms.reviewer:
 ms.assetid: FE786AAE-7B79-4D2E-9594-0D48AEF2CD0F
-ms.manager: dansimp
 ---
 
 # Get-WBBackupSet

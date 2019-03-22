@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-VMMigrationNetwork
 ms.reviewer:
 ms.assetid: 4CC447AE-DAB0-45AF-B3A1-44CD4D380560
-ms.manager: dansimp
 ---
 
 # Add-VMMigrationNetwork

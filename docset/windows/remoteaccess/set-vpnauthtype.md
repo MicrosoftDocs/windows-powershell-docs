@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VpnAuthType
 ms.reviewer:
 ms.assetid: 8B4AA1E7-D102-4304-A987-91F99AFA9A1B
-ms.manager: dansimp
 ---
 
 # Set-VpnAuthType

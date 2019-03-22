@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetworkSwitchFeature
 ms.reviewer:
 ms.assetid: 3CC8FEE6-5C43-4371-A485-A90185765B51
-ms.manager: dansimp
 ---
 
 # Enable-NetworkSwitchFeature

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-UevAppxPackage
 ms.reviewer:
 ms.assetid: 4FB118F6-EC13-48CA-A273-B7290AC36157
-ms.manager: dansimp
 ---
 
 # Disable-UevAppxPackage

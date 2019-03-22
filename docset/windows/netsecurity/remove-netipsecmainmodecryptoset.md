@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPsecMainModeCryptoSet
 ms.reviewer:
 ms.assetid: 16B043BD-9048-4E86-B8F0-C60777D0D5D3
-ms.manager: dansimp
 ---
 
 # Remove-NetIPsecMainModeCryptoSet

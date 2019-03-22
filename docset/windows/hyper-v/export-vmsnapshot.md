@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-VMSnapshot
 ms.reviewer:
 ms.assetid: 6B839212-BB3E-4321-92C1-A32FFC38FDFD
-ms.manager: dansimp
 ---
 
 # Export-VMSnapshot

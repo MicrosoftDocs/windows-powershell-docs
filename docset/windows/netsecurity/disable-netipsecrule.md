@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetIPsecRule
 ms.reviewer:
 ms.assetid: B16EA1C8-ADC3-4B7C-A1B8-FAE17279B268
-ms.manager: dansimp
 ---
 
 # Disable-NetIPsecRule

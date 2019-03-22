@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restart-WmsSystem
 ms.reviewer:
 ms.assetid: 17CF0F16-D72C-4B49-BBB3-91BBDFA8B877
-ms.manager: dansimp
 ---
 
 # Restart-WmsSystem

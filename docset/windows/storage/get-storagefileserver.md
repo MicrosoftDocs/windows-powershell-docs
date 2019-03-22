@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageFileServer
 ms.reviewer:
 ms.assetid: D9F38B29-9394-43F1-A0F2-01E710A3E9F2
-ms.manager: dansimp
 ---
 
 # Get-StorageFileServer

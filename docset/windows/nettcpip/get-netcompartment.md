@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetCompartment
 ms.reviewer:
 ms.assetid: 9290E2A0-6239-4C96-BF91-B31BC62DC9EA
-ms.manager: dansimp
 ---
 
 # Get-NetCompartment

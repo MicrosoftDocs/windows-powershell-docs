@@ -5,7 +5,6 @@ external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.x
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: 76B42B71-8D84-428E-B63D-17A6674B2FFA
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

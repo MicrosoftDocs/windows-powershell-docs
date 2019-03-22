@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetDnsTransitionConfiguration
 ms.reviewer:
 ms.assetid: F02B991B-500F-48E8-B6FC-2B05848B593E
-ms.manager: dansimp
 ---
 
 # Set-NetDnsTransitionConfiguration

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Revoke-DfsnAccess
 ms.reviewer:
 ms.assetid: 2E04C0A9-1EFB-4E37-BD6C-7121E41BC668
-ms.manager: dansimp
 ---
 
 # Revoke-DfsnAccess

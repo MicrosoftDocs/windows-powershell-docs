@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SbecLocalizedMessage
 ms.reviewer:
 ms.assetid: 949374B5-4211-4638-8B23-DD1B7A34CDDA
-ms.manager: dansimp
 ---
 
 # Get-SbecLocalizedMessage

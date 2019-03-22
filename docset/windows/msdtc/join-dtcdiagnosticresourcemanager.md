@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Join-DtcDiagnosticResourceManager
 ms.reviewer:
 ms.assetid: 68A0664C-705E-48D4-8A80-F036FA000ECE
-ms.manager: dansimp
 ---
 
 # Join-DtcDiagnosticResourceManager

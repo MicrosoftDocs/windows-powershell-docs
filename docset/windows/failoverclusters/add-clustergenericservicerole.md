@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterGenericServiceRole
 ms.reviewer:
 ms.assetid: 188158B2-1000-46CE-BBF0-13D0A8191AD4
-ms.manager: dansimp
 ---
 
 # Add-ClusterGenericServiceRole

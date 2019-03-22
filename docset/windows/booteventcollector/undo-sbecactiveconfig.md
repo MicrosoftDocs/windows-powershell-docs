@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Undo-SbecActiveConfig
 ms.reviewer:
 ms.assetid: FCAA8BCA-A4CC-481D-8014-6CB5FD88AF2F
-ms.manager: dansimp
 ---
 
 # Undo-SbecActiveConfig

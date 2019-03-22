@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-EtwTraceProvider
 ms.reviewer:
 ms.assetid: 1E0E1954-13A2-4F00-91C8-9105731CA3B3
-ms.manager: dansimp
 ---
 
 # Remove-EtwTraceProvider

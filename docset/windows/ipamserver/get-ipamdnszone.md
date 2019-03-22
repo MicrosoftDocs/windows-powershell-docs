@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamDnsZone
 ms.reviewer:
 ms.assetid: 2192BCBD-045A-4F51-A49E-8DFE1AF2D47B
-ms.manager: dansimp
 ---
 
 # Get-IpamDnsZone

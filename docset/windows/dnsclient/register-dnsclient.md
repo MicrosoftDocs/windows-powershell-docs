@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Register-DnsClient
 ms.reviewer:
 ms.assetid: B9F7F973-243F-471D-BC46-A0A016B3A893
-ms.manager: dansimp
 ---
 
 # Register-DnsClient

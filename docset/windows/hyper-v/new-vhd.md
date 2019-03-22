@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VHD
 ms.reviewer:
 ms.assetid: 5F4C3EC8-63BA-4F9B-9DB2-C2DEE03EC335
-ms.manager: dansimp
 ---
 
 # New-VHD

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerVirtualSubnet
 ms.reviewer:
 ms.assetid: 213E8037-4E46-47C6-9F78-3047195EFE4E
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVirtualSubnet

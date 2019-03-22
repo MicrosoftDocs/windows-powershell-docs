@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WinLanguageBarOption
 ms.reviewer:
 ms.assetid: 9BF4040E-693C-4780-9F38-040A12ED979B
-ms.manager: dansimp
 ---
 
 # Get-WinLanguageBarOption

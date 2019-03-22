@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ADOrganizationalUnit
 ms.reviewer:
 ms.assetid: 4BB22453-8D6B-46C6-8BF3-11FCA642A75B
-ms.manager: dansimp
 ---
 
 # Remove-ADOrganizationalUnit

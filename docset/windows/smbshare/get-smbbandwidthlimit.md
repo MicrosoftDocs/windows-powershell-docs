@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SmbBandwidthLimit
 ms.reviewer:
 ms.assetid: 9EBBB37D-0B3A-46FB-B3CD-2A68798FAFBB
-ms.manager: dansimp
 ---
 
 # Get-SmbBandwidthLimit

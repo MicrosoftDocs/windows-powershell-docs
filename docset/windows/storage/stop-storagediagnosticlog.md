@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-StorageDiagnosticLog
 ms.reviewer:
 ms.assetid: E2F3A003-653E-45CF-A203-460B567E979A
-ms.manager: dansimp
 ---
 
 # Stop-StorageDiagnosticLog

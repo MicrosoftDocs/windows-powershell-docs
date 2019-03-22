@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Expand-AppvSequencerPackage
 ms.reviewer:
 ms.assetid: 155562F7-1700-45CA-BFB5-26AB1D97CDCF
-ms.manager: dansimp
 ---
 
 # Expand-AppvSequencerPackage

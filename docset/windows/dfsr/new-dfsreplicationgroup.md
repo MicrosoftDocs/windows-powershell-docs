@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-DfsReplicationGroup
 ms.reviewer:
 ms.assetid: D8161C82-8123-43A0-8228-E655BB62394F
-ms.manager: dansimp
 ---
 
 # New-DfsReplicationGroup

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-BitsTransfer
 ms.reviewer:
 ms.assetid: 4729B6BA-5A6B-4509-A908-B1531C49BA76
-ms.manager: dansimp
 ---
 
 # Remove-BitsTransfer

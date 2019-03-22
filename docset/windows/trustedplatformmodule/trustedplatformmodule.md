@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 2F5F8534-8D34-4AA2-B8F2-8404D15EAC44
-ms.manager: dansimp
 ---
 
 # TrustedPlatformModule Module

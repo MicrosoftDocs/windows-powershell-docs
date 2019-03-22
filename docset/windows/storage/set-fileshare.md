@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-FileShare
 ms.reviewer:
 ms.assetid: 6252BFA5-9580-4F33-8AF5-E3941E2A3444
-ms.manager: dansimp
 ---
 
 # Set-FileShare

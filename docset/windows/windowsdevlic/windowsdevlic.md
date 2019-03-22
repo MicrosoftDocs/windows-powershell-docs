@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: F939544D-0DF1-49DA-8CA1-72F4DF42E6A0
-ms.manager: dansimp
 ---
 
 # WindowsDevLic Module

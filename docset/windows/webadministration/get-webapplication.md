@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebApplication
 ms.reviewer:
 ms.assetid: 76C3A941-6AAB-4F53-ACE4-F7FDA7244E7D
-ms.manager: dansimp
 ---
 
 # Get-WebApplication

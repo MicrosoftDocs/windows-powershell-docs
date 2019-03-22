@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMSwitch
 ms.reviewer:
 ms.assetid: F8898452-9A9C-4428-A9AC-FD91D8DF7B49
-ms.manager: dansimp
 ---
 
 # Remove-VMSwitch

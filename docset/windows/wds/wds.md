@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 0564E442-8543-4621-8054-C550D246909B
-ms.manager: dansimp
 ---
 
 # WDS Module

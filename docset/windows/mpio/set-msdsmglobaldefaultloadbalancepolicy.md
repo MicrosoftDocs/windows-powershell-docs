@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-MSDSMGlobalDefaultLoadBalancePolicy
 ms.reviewer:
 ms.assetid: A23ADBC9-05DB-41B0-92C9-96E682E81C58
-ms.manager: dansimp
 ---
 
 # Set-MSDSMGlobalDefaultLoadBalancePolicy

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Restore-DhcpServer
 ms.reviewer:
 ms.assetid: 78AFC8F5-EACA-4D07-8041-78D0895C936A
-ms.manager: dansimp
 ---
 
 # Restore-DhcpServer

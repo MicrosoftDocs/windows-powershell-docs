@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMSwitchExtensionPortFeature
 ms.reviewer:
 ms.assetid: 28190B14-52DA-4FCB-A5E0-04BB1FFBF279
-ms.manager: dansimp
 ---
 
 # Set-VMSwitchExtensionPortFeature

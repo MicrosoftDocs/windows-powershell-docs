@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADDomain
 ms.reviewer:
 ms.assetid: 877E4715-5573-49A9-98D6-04B1444B0273
-ms.manager: dansimp
 ---
 
 # Set-ADDomain

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-VMInitialReplication
 ms.reviewer:
 ms.assetid: 08F040CB-B6F9-468C-8FBD-FCEC1B3A7B54
-ms.manager: dansimp
 ---
 
 # Stop-VMInitialReplication

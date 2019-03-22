@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Dismount-VHD
 ms.reviewer:
 ms.assetid: C066F232-F87A-4EA0-AD33-D036A1E80083
-ms.manager: dansimp
 ---
 
 # Dismount-VHD

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSnapshot
 ms.reviewer:
 ms.assetid: C8759480-D333-4D06-9987-ED265B2D143F
-ms.manager: dansimp
 ---
 
 # Get-VMSnapshot

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Connect-VMSan
 ms.reviewer:
 ms.assetid: DA01E844-1462-4284-B2BA-CC9BCB9E0990
-ms.manager: dansimp
 ---
 
 # Connect-VMSan

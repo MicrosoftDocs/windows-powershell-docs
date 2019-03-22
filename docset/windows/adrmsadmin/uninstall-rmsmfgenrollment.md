@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-RmsMfgEnrollment
 ms.reviewer:
 ms.assetid: 5106BC37-49FA-4B6C-AF55-633BCB38B546
-ms.manager: dansimp
 ---
 
 # Uninstall-RmsMfgEnrollment

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Debug-MMAppPrelaunch
 ms.reviewer:
 ms.assetid: 01B55FF9-63D9-4B4A-A249-3EF16E68F12E
-ms.manager: dansimp
 ---
 
 # Debug-MMAppPrelaunch

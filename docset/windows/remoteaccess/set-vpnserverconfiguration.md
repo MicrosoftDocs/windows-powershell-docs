@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VpnServerConfiguration
 ms.reviewer:
 ms.assetid: B3270D2C-2E5A-490C-9176-292B1586BD4E
-ms.manager: dansimp
 ---
 
 # Set-VpnServerConfiguration

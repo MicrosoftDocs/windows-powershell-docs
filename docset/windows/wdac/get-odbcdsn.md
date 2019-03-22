@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-OdbcDsn
 ms.reviewer:
 ms.assetid: 27076FF9-23E4-4B91-93DC-1E9A759BA2EB
-ms.manager: dansimp
 ---
 
 # Get-OdbcDsn

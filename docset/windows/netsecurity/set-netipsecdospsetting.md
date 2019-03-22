@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPsecDospSetting
 ms.reviewer:
 ms.assetid: 776B0949-B51C-4FCF-9B68-66FCFB0E9128
-ms.manager: dansimp
 ---
 
 # Set-NetIPsecDospSetting

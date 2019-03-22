@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VMResourcePool
 ms.reviewer:
 ms.assetid: D83324EF-EE04-4C9F-ABA3-947282AF4604
-ms.manager: dansimp
 ---
 
 # New-VMResourcePool

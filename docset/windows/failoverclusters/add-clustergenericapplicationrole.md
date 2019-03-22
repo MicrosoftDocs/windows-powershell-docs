@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterGenericApplicationRole
 ms.reviewer:
 ms.assetid: 06C356B1-8331-4D37-A1F7-A1EC9ACF24CC
-ms.manager: dansimp
 ---
 
 # Add-ClusterGenericApplicationRole

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-ClusterResourceFailure
 ms.reviewer:
 ms.assetid: 603DAB8D-743A-42B0-BAAE-9E32770C966B
-ms.manager: dansimp
 ---
 
 # Test-ClusterResourceFailure

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMSwitchExtensionPortFeature
 ms.reviewer:
 ms.assetid: A3D98FF5-CAC6-4A2A-8962-FF47944D33F1
-ms.manager: dansimp
 ---
 
 # Remove-VMSwitchExtensionPortFeature

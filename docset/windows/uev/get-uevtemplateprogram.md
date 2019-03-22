@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UevTemplateProgram
 ms.reviewer:
 ms.assetid: 6D04D68A-9EBD-4D65-AE8E-5D3D4498D74C
-ms.manager: dansimp
 ---
 
 # Get-UevTemplateProgram

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMNetworkAdapterExtendedAcl
 ms.reviewer:
 ms.assetid: B5D0B3C0-9E2D-44F8-A6F2-B5FDCD6D5949
-ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterExtendedAcl

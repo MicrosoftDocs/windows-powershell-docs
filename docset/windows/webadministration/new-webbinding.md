@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-WebBinding
 ms.reviewer:
 ms.assetid: 741FF2B8-A6E2-4A39-8470-2F7CA6CC7808
-ms.manager: dansimp
 ---
 
 # New-WebBinding

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-MpSignature
 ms.reviewer:
 ms.assetid: 755740EB-1B6C-48C2-BE9C-16CD893EE064
-ms.manager: dansimp
 ---
 
 # Update-MpSignature

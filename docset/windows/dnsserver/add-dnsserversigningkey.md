@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DnsServerSigningKey
 ms.reviewer:
 ms.assetid: 1D1D194D-EB8C-4B53-949C-2AA9E19EA793
-ms.manager: dansimp
 ---
 
 # Add-DnsServerSigningKey

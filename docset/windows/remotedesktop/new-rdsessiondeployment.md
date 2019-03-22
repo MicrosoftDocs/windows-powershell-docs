@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-RDSessionDeployment
 ms.reviewer:
 ms.assetid: D1AF1DE6-F925-4926-9911-2C53B7D1568E
-ms.manager: dansimp
 ---
 
 # New-RDSessionDeployment

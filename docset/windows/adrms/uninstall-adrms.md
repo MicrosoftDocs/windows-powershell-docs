@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Uninstall-ADRMS
 ms.reviewer:
 ms.assetid: 8D3160C9-85B2-4401-8927-A4E6846947F3
-ms.manager: dansimp
 ---
 
 # Uninstall-ADRMS

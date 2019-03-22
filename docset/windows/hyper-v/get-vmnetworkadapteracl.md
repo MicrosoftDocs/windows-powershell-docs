@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMNetworkAdapterAcl
 ms.reviewer:
 ms.assetid: CCA47110-FE0F-40DE-ADEC-8C6D7E254DAA
-ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterAcl

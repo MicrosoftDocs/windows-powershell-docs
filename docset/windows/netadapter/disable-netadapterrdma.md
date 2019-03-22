@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetAdapterRdma
 ms.reviewer:
 ms.assetid: 65E7E0CA-F652-4880-8CC2-80176B5376FA
-ms.manager: dansimp
 ---
 
 # Disable-NetAdapterRdma

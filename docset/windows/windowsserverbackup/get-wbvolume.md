@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WBVolume
 ms.reviewer:
 ms.assetid: 7C118C1F-7616-48DA-AE69-4E7B80CAE748
-ms.manager: dansimp
 ---
 
 # Get-WBVolume

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerGatewayPool
 ms.reviewer:
 ms.assetid: 0EE54B56-AE60-42EC-8891-0005584E1491
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerGatewayPool

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Register-SmisProvider
 ms.reviewer:
 ms.assetid: BA892703-88F4-45C9-AFD3-29B2E3389742
-ms.manager: dansimp
 ---
 
 # Register-SmisProvider

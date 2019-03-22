@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Backup-WebConfiguration
 ms.reviewer:
 ms.assetid: 67560205-D4D2-4BCB-81F1-511B0433963A
-ms.manager: dansimp
 ---
 
 # Backup-WebConfiguration

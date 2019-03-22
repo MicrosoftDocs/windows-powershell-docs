@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NCSIPolicyConfiguration
 ms.reviewer:
 ms.assetid: AD6DD8E8-6C58-456B-8C05-43F59567141F
-ms.manager: dansimp
 ---
 
 # Get-NCSIPolicyConfiguration

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetVirtualizationProviderRoute
 ms.reviewer:
 ms.assetid: FE9179A0-8B60-41C2-89C5-7A71ACA3E9D9
-ms.manager: dansimp
 ---
 
 # New-NetVirtualizationProviderRoute

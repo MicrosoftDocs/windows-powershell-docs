@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: C362E2E9-6D95-4A7F-A526-C553D116023B
-ms.manager: dansimp
 ---
 
 # MsDtc Module

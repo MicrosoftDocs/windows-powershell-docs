@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv6StatelessStore
 ms.reviewer:
 ms.assetid: 38F04AF5-A148-4756-8FE6-D6B911319565
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6StatelessStore

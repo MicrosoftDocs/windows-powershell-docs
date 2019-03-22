@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-RDVirtualDesktopADMachineAccountReuse
 ms.reviewer:
 ms.assetid: 33D5210F-CA52-4E43-AA55-859E2C7C5D13
-ms.manager: dansimp
 ---
 
 # Enable-RDVirtualDesktopADMachineAccountReuse

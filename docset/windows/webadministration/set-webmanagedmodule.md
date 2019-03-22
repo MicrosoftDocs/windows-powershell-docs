@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WebManagedModule
 ms.reviewer:
 ms.assetid: DDF01729-FDE2-427F-AE88-C6F4AE80F70A
-ms.manager: dansimp
 ---
 
 # Set-WebManagedModule

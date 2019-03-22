@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DnsServerClientSubnet
 ms.reviewer:
 ms.assetid: 77725BCD-27F2-4FA4-AA26-012C0A1AC53B
-ms.manager: dansimp
 ---
 
 # Add-DnsServerClientSubnet

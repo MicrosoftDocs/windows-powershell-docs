@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamConfigurationEvent
 ms.reviewer:
 ms.assetid: 4068DB91-8843-4F62-BF20-DC2404844C85
-ms.manager: dansimp
 ---
 
 # Get-IpamConfigurationEvent

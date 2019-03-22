@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADClaimType
 ms.reviewer:
 ms.assetid: 3BFD25C8-5B47-47C5-808F-6725A9AB8EFF
-ms.manager: dansimp
 ---
 
 # Set-ADClaimType

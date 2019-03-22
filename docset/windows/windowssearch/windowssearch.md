@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 52850230-53B5-4AC7-A3C9-2C902AE68972
-ms.manager: dansimp
 ---
 
 # WindowsSearch Module

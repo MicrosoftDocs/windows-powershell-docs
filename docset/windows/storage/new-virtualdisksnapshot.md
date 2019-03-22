@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VirtualDiskSnapshot
 ms.reviewer:
 ms.assetid: B5414111-13A8-44ED-8AF0-83F6A8192DB0
-ms.manager: dansimp
 ---
 
 # New-VirtualDiskSnapshot

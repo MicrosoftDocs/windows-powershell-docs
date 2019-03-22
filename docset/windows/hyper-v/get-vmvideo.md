@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMVideo
 ms.reviewer:
 ms.assetid: 5E646383-18C4-404C-A8B8-84E0B839D928
-ms.manager: dansimp
 ---
 
 # Get-VMVideo

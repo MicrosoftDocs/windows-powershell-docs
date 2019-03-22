@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 3CC98C40-7578-4C90-9F53-A5CD7DDA1574
-ms.manager: dansimp
 ---
 
 # ADRMSAdmin Module

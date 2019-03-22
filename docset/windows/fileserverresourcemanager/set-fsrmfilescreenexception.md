@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-FsrmFileScreenException
 ms.reviewer:
 ms.assetid: 0B5C284E-3570-488F-8624-C459AF9C5B27
-ms.manager: dansimp
 ---
 
 # Set-FsrmFileScreenException

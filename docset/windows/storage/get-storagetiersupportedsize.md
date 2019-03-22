@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-StorageTierSupportedSize
 ms.reviewer:
 ms.assetid: 0538D68C-02C5-42D3-92FC-BE8DC7825730
-ms.manager: dansimp
 ---
 
 # Get-StorageTierSupportedSize

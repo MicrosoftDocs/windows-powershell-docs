@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-DtcLog
 ms.reviewer:
 ms.assetid: D2D0AA6A-7B24-4D1D-BEE2-ED13B039B2B2
-ms.manager: dansimp
 ---
 
 # Reset-DtcLog

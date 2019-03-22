@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterNetwork
 ms.reviewer:
 ms.assetid: BC7E8823-6E63-4DFB-8675-81CD5E76F4D7
-ms.manager: dansimp
 ---
 
 # Get-ClusterNetwork

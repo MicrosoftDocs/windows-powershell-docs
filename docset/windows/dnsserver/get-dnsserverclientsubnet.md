@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerClientSubnet
 ms.reviewer:
 ms.assetid: F5572220-164A-4097-8FF8-3C426FAF80EE
-ms.manager: dansimp
 ---
 
 # Get-DnsServerClientSubnet

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Open-NetGPO
 ms.reviewer:
 ms.assetid: 78D22B3A-37E0-4D0F-82C5-F7EF52853BA0
-ms.manager: dansimp
 ---
 
 # Open-NetGPO

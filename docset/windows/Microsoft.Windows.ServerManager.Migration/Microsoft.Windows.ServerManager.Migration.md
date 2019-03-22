@@ -9,7 +9,6 @@ manager: jasgro
 author: kenwith
 ms.prod: w10
 ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
-ms.manager: dansimp
 keywords: powershell, cmdlet
 ms.date: 2017-01-03
 title: Microsoft.Windows.ServerManager.Migration

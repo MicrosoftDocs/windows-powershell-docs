@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMFibreChannelHba
 ms.reviewer:
 ms.assetid: DD45F67F-8EE7-455C-ACF2-E1D45F39AFB9
-ms.manager: dansimp
 ---
 
 # Get-VMFibreChannelHba

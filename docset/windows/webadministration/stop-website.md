@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-Website
 ms.reviewer:
 ms.assetid: 70B6FEA0-E95A-42FA-9699-7B665FF42FC8
-ms.manager: dansimp
 ---
 
 # Stop-Website

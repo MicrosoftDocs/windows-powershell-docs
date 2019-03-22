@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UevConfiguration
 ms.reviewer:
 ms.assetid: 452909EB-126B-4929-8CC2-8AD93320EDD3
-ms.manager: dansimp
 ---
 
 # Get-UevConfiguration

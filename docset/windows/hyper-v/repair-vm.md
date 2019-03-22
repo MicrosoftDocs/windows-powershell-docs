@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Repair-VM
 ms.reviewer:
 ms.assetid: E4F2F761-925C-4609-A009-3A1E54DC9D7A
-ms.manager: dansimp
 ---
 
 # Repair-VM

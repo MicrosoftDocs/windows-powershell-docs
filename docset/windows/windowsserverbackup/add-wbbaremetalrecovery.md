@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WBBareMetalRecovery
 ms.reviewer:
 ms.assetid: A67A3E90-8591-415C-8610-C3B55B38AE1D
-ms.manager: dansimp
 ---
 
 # Add-WBBareMetalRecovery

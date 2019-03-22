@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-WebItem
 ms.reviewer:
 ms.assetid: 1A1F6463-6928-4713-A70E-A5DCA331E37B
-ms.manager: dansimp
 ---
 
 # Stop-WebItem

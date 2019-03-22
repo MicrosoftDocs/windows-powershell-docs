@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerLogicalNetwork
 ms.reviewer:
 ms.assetid: C6EEEFDF-0550-4A4E-9485-587416A10382
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLogicalNetwork

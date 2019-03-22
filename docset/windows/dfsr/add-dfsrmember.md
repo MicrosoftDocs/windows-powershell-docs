@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DfsrMember
 ms.reviewer:
 ms.assetid: 9D7B37F3-8E5B-4FD7-8DBA-96627D394E42
-ms.manager: dansimp
 ---
 
 # Add-DfsrMember

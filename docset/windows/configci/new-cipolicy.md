@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-CIPolicy
 ms.reviewer:
 ms.assetid: 324A9B4A-16E4-4555-B0AF-1F8338F56ED7
-ms.manager: dansimp
 ---
 
 # New-CIPolicy

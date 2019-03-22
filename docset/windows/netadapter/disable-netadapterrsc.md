@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-NetAdapterRsc
 ms.reviewer:
 ms.assetid: 89F435A4-2771-4245-A44C-16F79EE2AB0E
-ms.manager: dansimp
 ---
 
 # Disable-NetAdapterRsc

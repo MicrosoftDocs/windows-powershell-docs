@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-GPO
 ms.reviewer:
 ms.assetid: BFF99644-7AC6-40A0-97A0-48E161363338
-ms.manager: dansimp
 ---
 
 # New-GPO

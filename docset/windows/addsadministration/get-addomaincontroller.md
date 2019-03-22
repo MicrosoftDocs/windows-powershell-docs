@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADDomainController
 ms.reviewer:
 ms.assetid: A5D81755-6799-41FE-8AAF-FB42F9A697F5
-ms.manager: dansimp
 ---
 
 # Get-ADDomainController

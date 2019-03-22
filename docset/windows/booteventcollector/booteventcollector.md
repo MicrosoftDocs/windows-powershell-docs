@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 394B60AC-9516-494B-86D7-50F767321820
-ms.manager: dansimp
 ---
 
 # BootEventCollector Module

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-MSDSMSupportedHW
 ms.reviewer:
 ms.assetid: C61A8B24-45B5-48D0-B2B5-563EE695CA82
-ms.manager: dansimp
 ---
 
 # New-MSDSMSupportedHW

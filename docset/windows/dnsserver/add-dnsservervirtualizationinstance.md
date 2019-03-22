@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DnsServerVirtualizationInstance
 ms.reviewer:
 ms.assetid: 1BD0911B-EAC2-4D16-8B3C-2FB8B2B8CF2B
-ms.manager: dansimp
 ---
 
 # Add-DnsServerVirtualizationInstance

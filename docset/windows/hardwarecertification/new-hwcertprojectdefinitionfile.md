@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-HwCertProjectDefinitionFile
 ms.reviewer:
 ms.assetid: F83816AA-FB59-4834-8292-89FD7C284568
-ms.manager: dansimp
 ---
 
 # New-HwCertProjectDefinitionFile

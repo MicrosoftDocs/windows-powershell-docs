@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerv4MulticastExclusionRange
 ms.reviewer:
 ms.assetid: 5D3C543D-220A-4673-8E80-0E18F03928F4
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4MulticastExclusionRange

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-RDVirtualDesktopDeployment
 ms.reviewer:
 ms.assetid: AD750689-1B3C-4918-9BD0-F180F2770515
-ms.manager: dansimp
 ---
 
 # New-RDVirtualDesktopDeployment

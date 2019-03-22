@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Revoke-VMConnectAccess
 ms.reviewer:
 ms.assetid: C4BE74B1-9755-4F80-A88F-33569515B629
-ms.manager: dansimp
 ---
 
 # Revoke-VMConnectAccess

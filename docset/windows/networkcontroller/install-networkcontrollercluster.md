@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Install-NetworkControllerCluster
 ms.reviewer:
 ms.assetid: 0A2306ED-2DBD-4673-93EE-D2E650CBF7FC
-ms.manager: dansimp
 ---
 
 # Install-NetworkControllerCluster

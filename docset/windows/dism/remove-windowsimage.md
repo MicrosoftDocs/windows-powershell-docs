@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WindowsImage
 ms.reviewer:
 ms.assetid: 9E5F80A6-E4BB-4943-9353-C9AEADEBC645
-ms.manager: dansimp
 ---
 
 # Remove-WindowsImage

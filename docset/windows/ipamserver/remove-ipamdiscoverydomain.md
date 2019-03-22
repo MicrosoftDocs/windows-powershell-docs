@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IpamDiscoveryDomain
 ms.reviewer:
 ms.assetid: 41105EDD-89CF-46F1-A034-76362DC61C61
-ms.manager: dansimp
 ---
 
 # Remove-IpamDiscoveryDomain

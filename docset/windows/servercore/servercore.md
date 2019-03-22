@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: ECA5B1BF-C761-4D9B-A8B3-CCA27F1A3E5F
-ms.manager: dansimp
 ---
 
 # ServerCore Module

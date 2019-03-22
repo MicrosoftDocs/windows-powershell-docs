@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DiskStorageNodeView
 ms.reviewer:
 ms.assetid: 4555DDB3-E277-489C-83D9-4F117AF965D7
-ms.manager: dansimp
 ---
 
 # Get-DiskStorageNodeView

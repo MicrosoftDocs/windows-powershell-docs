@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WindowsDriver
 ms.reviewer:
 ms.assetid: FF7615FF-C6D5-4EA5-A227-675775C24DB6
-ms.manager: dansimp
 ---
 
 # Add-WindowsDriver

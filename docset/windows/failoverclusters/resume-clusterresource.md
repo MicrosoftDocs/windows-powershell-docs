@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Resume-ClusterResource
 ms.reviewer:
 ms.assetid: ACF82BAB-08BA-4D3B-AD60-A554F5AE0A7D
-ms.manager: dansimp
 ---
 
 # Resume-ClusterResource

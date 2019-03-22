@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetVirtualizationProviderAddress
 ms.reviewer:
 ms.assetid: 784ACEC9-9596-4ED3-AE21-6D0B4FF72D76
-ms.manager: dansimp
 ---
 
 # Set-NetVirtualizationProviderAddress

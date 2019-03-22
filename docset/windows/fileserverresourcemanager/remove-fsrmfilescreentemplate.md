@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-FsrmFileScreenTemplate
 ms.reviewer:
 ms.assetid: 70148A36-944D-4B4D-8531-A739A9D1191D
-ms.manager: dansimp
 ---
 
 # Remove-FsrmFileScreenTemplate

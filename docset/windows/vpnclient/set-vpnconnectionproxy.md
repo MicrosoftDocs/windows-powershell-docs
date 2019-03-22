@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VpnConnectionProxy
 ms.reviewer:
 ms.assetid: 642D266F-03EC-4C92-AC30-DDA6B27EF2AA
-ms.manager: dansimp
 ---
 
 # Set-VpnConnectionProxy

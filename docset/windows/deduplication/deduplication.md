@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: D93886EE-21C3-470A-B4A5-54F64A74A491
-ms.manager: dansimp
 ---
 
 # Deduplication Module

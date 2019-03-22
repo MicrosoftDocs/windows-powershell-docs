@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamDhcpScope
 ms.reviewer:
 ms.assetid: FA044F44-578A-43F1-A57B-9987E0F1E74E
-ms.manager: dansimp
 ---
 
 # Get-IpamDhcpScope

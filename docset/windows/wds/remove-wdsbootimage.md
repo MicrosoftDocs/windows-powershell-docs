@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WdsBootImage
 ms.reviewer:
 ms.assetid: A0E9892E-F4AA-45B7-B88D-908670FE1F31
-ms.manager: dansimp
 ---
 
 # Remove-WdsBootImage

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSwitchExtensionSwitchFeature
 ms.reviewer:
 ms.assetid: D82ECE6C-2741-45E4-9A96-3FFDFC1CC093
-ms.manager: dansimp
 ---
 
 # Get-VMSwitchExtensionSwitchFeature

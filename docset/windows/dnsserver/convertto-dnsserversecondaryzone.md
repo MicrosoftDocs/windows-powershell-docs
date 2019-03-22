@@ -16,7 +16,6 @@ schema: 2.0.0
 title: ConvertTo-DnsServerSecondaryZone
 ms.reviewer:
 ms.assetid: 9EB56481-7D34-4087-811D-7C6BC30499DA
-ms.manager: dansimp
 ---
 
 # ConvertTo-DnsServerSecondaryZone

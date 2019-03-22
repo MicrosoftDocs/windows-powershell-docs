@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-ADReplicationSiteLink
 ms.reviewer:
 ms.assetid: 6D42D99D-E9A6-4D07-887B-A8A1771D25D5
-ms.manager: dansimp
 ---
 
 # Set-ADReplicationSiteLink

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ADObject
 ms.reviewer:
 ms.assetid: 0E825263-03D9-4720-B943-99624FBB94BC
-ms.manager: dansimp
 ---
 
 # New-ADObject

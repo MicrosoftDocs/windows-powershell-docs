@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-VMGroup
 ms.reviewer:
 ms.assetid: DE25B3FF-9D3D-4A1D-B209-EFD5F56F5FD1
-ms.manager: dansimp
 ---
 
 # New-VMGroup

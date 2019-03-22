@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Import-BCSecretKey
 ms.reviewer:
 ms.assetid: 3C798BA0-BA8C-44FE-8694-4F2F669E9898
-ms.manager: dansimp
 ---
 
 # Import-BCSecretKey

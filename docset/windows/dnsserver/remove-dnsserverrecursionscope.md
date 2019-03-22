@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsServerRecursionScope
 ms.reviewer:
 ms.assetid: 7158258B-73DD-4B02-A167-498106EA8F46
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerRecursionScope

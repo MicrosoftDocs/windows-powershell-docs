@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetAdapterSriov
 ms.reviewer:
 ms.assetid: D9B971D9-2C10-424A-A277-704C156C8F18
-ms.manager: dansimp
 ---
 
 # Set-NetAdapterSriov

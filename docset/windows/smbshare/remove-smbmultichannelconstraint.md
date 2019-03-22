@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-SmbMultichannelConstraint
 ms.reviewer:
 ms.assetid: 382A020C-5DD3-49CE-BBC4-7095E8EF7B48
-ms.manager: dansimp
 ---
 
 # Remove-SmbMultichannelConstraint

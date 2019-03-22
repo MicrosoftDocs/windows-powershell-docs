@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DnsServerSigningKey
 ms.reviewer:
 ms.assetid: BA59E29D-8212-484A-A278-3E63450E9510
-ms.manager: dansimp
 ---
 
 # Get-DnsServerSigningKey

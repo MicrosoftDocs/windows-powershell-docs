@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMConnectAccess
 ms.reviewer:
 ms.assetid: 9AF158B2-8396-4B04-AA74-8C62A8B5489C
-ms.manager: dansimp
 ---
 
 # Get-VMConnectAccess

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerVirtualGateway
 ms.reviewer:
 ms.assetid: B0F12A7D-677D-4122-B5FA-8063D792598F
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerVirtualGateway

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: AC9B47F4-19F7-4EB5-B5FE-70790B7A825D
-ms.manager: dansimp
 ---
 
 # UEV Module

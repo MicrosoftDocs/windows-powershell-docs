@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetVirtualizationCustomerRoute
 ms.reviewer:
 ms.assetid: DBD70482-0849-404E-825C-A848EC84D2D4
-ms.manager: dansimp
 ---
 
 # Set-NetVirtualizationCustomerRoute

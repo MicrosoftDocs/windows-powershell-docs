@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-ScheduledTaskPrincipal
 ms.reviewer:
 ms.assetid: FAC8BDBD-5700-4566-B58D-197602DC59F1
-ms.manager: dansimp
 ---
 
 # New-ScheduledTaskPrincipal

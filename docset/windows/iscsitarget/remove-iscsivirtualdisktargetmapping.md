@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IscsiVirtualDiskTargetMapping
 ms.reviewer:
 ms.assetid: B16EE8B7-74D1-448F-B7F5-3E4CE192E8AF
-ms.manager: dansimp
 ---
 
 # Remove-IscsiVirtualDiskTargetMapping

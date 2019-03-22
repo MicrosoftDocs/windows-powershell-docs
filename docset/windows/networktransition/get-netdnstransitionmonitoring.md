@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetDnsTransitionMonitoring
 ms.reviewer:
 ms.assetid: 06FD4F67-5A4E-4A73-847E-909482BC5539
-ms.manager: dansimp
 ---
 
 # Get-NetDnsTransitionMonitoring

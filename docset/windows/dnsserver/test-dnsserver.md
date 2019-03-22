@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Test-DnsServer
 ms.reviewer:
 ms.assetid: B93531FB-2130-428B-8DAA-66027AA2488B
-ms.manager: dansimp
 ---
 
 # Test-DnsServer

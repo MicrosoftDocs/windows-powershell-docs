@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-PnpDeviceProperty
 ms.reviewer:
 ms.assetid: C646F256-6F3F-4666-9AA1-5CCA3B8BF0B9
-ms.manager: dansimp
 ---
 
 # Get-PnpDeviceProperty

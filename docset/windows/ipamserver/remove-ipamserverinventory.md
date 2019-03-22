@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IpamServerInventory
 ms.reviewer:
 ms.assetid: 3AE737DC-70F7-4157-A15C-B1940211EBD4
-ms.manager: dansimp
 ---
 
 # Remove-IpamServerInventory

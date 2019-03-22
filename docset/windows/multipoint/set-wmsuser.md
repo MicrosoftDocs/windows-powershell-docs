@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WmsUser
 ms.reviewer:
 ms.assetid: 36EA3998-AC6D-4269-98D4-5E73C37BB8A8
-ms.manager: dansimp
 ---
 
 # Set-WmsUser

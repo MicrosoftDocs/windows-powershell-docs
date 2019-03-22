@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-Dtc
 ms.reviewer:
 ms.assetid: F5E605BD-7C7B-45A0-BDEC-2943E971735F
-ms.manager: dansimp
 ---
 
 # Start-Dtc

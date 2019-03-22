@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetIPsecDospSetting
 ms.reviewer:
 ms.assetid: EC1F98C4-4B51-4124-ACF0-918DBC82BAB0
-ms.manager: dansimp
 ---
 
 # Remove-NetIPsecDospSetting

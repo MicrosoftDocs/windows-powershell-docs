@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Suspend-DfsReplicationGroup
 ms.reviewer:
 ms.assetid: 634E4EA6-F41F-459D-9295-4FB158141F15
-ms.manager: dansimp
 ---
 
 # Suspend-DfsReplicationGroup

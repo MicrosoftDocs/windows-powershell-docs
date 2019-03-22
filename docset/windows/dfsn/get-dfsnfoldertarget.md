@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DfsnFolderTarget
 ms.reviewer:
 ms.assetid: 9CC8E2DF-1EBF-4E77-A5EF-D4B60B5367E9
-ms.manager: dansimp
 ---
 
 # Get-DfsnFolderTarget

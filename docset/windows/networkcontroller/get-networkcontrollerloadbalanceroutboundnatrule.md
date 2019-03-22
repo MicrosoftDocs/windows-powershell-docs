@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerLoadBalancerOutboundNatRule
 ms.reviewer:
 ms.assetid: 19F44A6A-C4A5-4A2D-94CD-23328E815F9D
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerLoadBalancerOutboundNatRule

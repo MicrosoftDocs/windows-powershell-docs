@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NfsMappedIdentity
 ms.reviewer:
 ms.assetid: 1F14280F-2E37-4AEB-A08C-70BC1C7731F3
-ms.manager: dansimp
 ---
 
 # New-NfsMappedIdentity

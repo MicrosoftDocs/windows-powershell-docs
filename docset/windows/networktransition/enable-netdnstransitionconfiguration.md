@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetDnsTransitionConfiguration
 ms.reviewer:
 ms.assetid: BD405858-44E3-4186-B586-B5308DEFF011
-ms.manager: dansimp
 ---
 
 # Enable-NetDnsTransitionConfiguration

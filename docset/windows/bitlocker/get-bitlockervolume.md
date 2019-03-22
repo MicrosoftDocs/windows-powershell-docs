@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BitLockerVolume
 ms.reviewer:
 ms.assetid: 0714E33E-71B1-4FDE-8B83-25F50135874B
-ms.manager: dansimp
 ---
 
 # Get-BitLockerVolume

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 6BE9E974-A772-474D-A27E-5F15E9FAC8C8
-ms.manager: dansimp
 ---
 
 # HostComputeService Module

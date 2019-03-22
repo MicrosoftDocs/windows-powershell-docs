@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-DnsServerSigningKeyRollover
 ms.reviewer:
 ms.assetid: 858E028F-F608-48EE-9AF6-04A51C410808
-ms.manager: dansimp
 ---
 
 # Disable-DnsServerSigningKeyRollover

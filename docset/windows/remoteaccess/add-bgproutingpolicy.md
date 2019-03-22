@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-BgpRoutingPolicy
 ms.reviewer:
 ms.assetid: 65E4CF9D-D0F2-4DB5-8E45-4250AAD16784
-ms.manager: dansimp
 ---
 
 # Add-BgpRoutingPolicy

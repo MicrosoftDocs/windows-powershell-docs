@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSwitchExternalPortId
 ms.reviewer:
 ms.assetid: 75CFA890-FC81-401A-9D28-0B7B0B35AFE1
-ms.manager: dansimp
 ---
 
 # Get-VMSwitchExternalPortId

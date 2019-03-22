@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-PhysicalDisk
 ms.reviewer:
 ms.assetid: D6192DDC-C09D-4CB3-B406-A1AD801D3DED
-ms.manager: dansimp
 ---
 
 # Add-PhysicalDisk

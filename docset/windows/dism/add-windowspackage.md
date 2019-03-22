@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-WindowsPackage
 ms.reviewer:
 ms.assetid: D1871FB1-D599-4997-A992-8F5F7BC84A82
-ms.manager: dansimp
 ---
 
 # Add-WindowsPackage

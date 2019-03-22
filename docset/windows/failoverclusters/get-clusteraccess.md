@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterAccess
 ms.reviewer:
 ms.assetid: 65A0C90E-C243-4EF7-913A-687FDCC61080
-ms.manager: dansimp
 ---
 
 # Get-ClusterAccess

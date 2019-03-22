@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disconnect-VirtualDisk
 ms.reviewer:
 ms.assetid: D1FD0E42-ED79-41CC-A37A-C9D1A8721ABF
-ms.manager: dansimp
 ---
 
 # Disconnect-VirtualDisk

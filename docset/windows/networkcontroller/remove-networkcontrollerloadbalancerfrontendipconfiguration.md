@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerFrontendIpConfiguration
 ms.reviewer:
 ms.assetid: 4BD405CD-5D40-423B-81FB-279F7CB7016F
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerLoadBalancerFrontendIpConfiguration

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetNat
 ms.reviewer:
 ms.assetid: 56612B89-2F6B-49C2-BC42-E46D2624741B
-ms.manager: dansimp
 ---
 
 # Remove-NetNat

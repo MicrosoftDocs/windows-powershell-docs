@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WsusDynamicCategory
 ms.reviewer:
 ms.assetid: B166EBCA-B7ED-40DB-A2D8-5647396B8C62
-ms.manager: dansimp
 ---
 
 # Remove-WsusDynamicCategory

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 93D214CA-DED9-4651-9171-72A50E01B6A4
-ms.manager: dansimp
 ---
 
 # MultipointVdi Module

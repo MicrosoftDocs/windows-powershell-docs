@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WheaMemoryPolicy
 ms.reviewer:
 ms.assetid: AEDADF61-840D-4F98-B949-D95779ED2B40
-ms.manager: dansimp
 ---
 
 # Set-WheaMemoryPolicy

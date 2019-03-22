@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WmsVirtualDesktop
 ms.reviewer:
 ms.assetid: 97E46E20-E4C4-4AE4-83E3-AEAC59F45630
-ms.manager: dansimp
 ---
 
 # Get-WmsVirtualDesktop

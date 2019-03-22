@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Show-WmsIdentifier
 ms.reviewer:
 ms.assetid: C281BBA8-F498-4A9B-8D88-1143EEEBFEF7
-ms.manager: dansimp
 ---
 
 # Show-WmsIdentifier

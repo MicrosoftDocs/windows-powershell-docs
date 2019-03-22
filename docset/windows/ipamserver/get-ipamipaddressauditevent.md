@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-IpamIpAddressAuditEvent
 ms.reviewer:
 ms.assetid: EF169672-28E8-444C-8FAE-572725C85C8A
-ms.manager: dansimp
 ---
 
 # Get-IpamIpAddressAuditEvent

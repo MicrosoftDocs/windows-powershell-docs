@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DnsServerDirectoryPartition
 ms.reviewer:
 ms.assetid: 0B3F2DA3-1733-47A7-A040-16347557DC30
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerDirectoryPartition

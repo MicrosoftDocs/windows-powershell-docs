@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VpnConnectionTriggerDnsConfiguration
 ms.reviewer:
 ms.assetid: FEBA73DA-4812-4008-B0ED-AF0E451CD573
-ms.manager: dansimp
 ---
 
 # Set-VpnConnectionTriggerDnsConfiguration

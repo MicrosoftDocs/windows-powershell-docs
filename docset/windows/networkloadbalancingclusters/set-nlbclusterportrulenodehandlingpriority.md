@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NlbClusterPortRuleNodeHandlingPriority
 ms.reviewer:
 ms.assetid: CFD099A4-38EC-4FB3-9727-C9CDE4D4A900
-ms.manager: dansimp
 ---
 
 # Set-NlbClusterPortRuleNodeHandlingPriority

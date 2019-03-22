@@ -5,7 +5,6 @@ external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
-ms.manager: dansimp
 ms.author: kenwith
 ms.date: 12/20/2016
 ms.mktglfcycl: manage

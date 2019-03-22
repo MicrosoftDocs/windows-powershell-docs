@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerGateway
 ms.reviewer:
 ms.assetid: 06E420BA-507B-4FB3-A8D8-D4C96CB1405C
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerGateway

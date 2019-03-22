@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-SbecInstance
 ms.reviewer:
 ms.assetid: E066D528-8956-4F9F-931E-D4D35FE72899
-ms.manager: dansimp
 ---
 
 # Start-SbecInstance

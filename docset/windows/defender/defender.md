@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 00797342-0AAC-4FFF-84FE-4749DA9242D6
-ms.manager: dansimp
 ---
 
 # Defender Module

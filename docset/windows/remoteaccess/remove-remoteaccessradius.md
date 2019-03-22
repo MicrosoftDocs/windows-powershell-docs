@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-RemoteAccessRadius
 ms.reviewer:
 ms.assetid: A397E89A-78BF-491A-A57B-2CC8DAF71ACB
-ms.manager: dansimp
 ---
 
 # Remove-RemoteAccessRadius

@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
-ms.manager: dansimp
 ---
 
 # DnsServer Module

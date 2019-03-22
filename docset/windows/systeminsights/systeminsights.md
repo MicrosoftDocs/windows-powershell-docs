@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
-ms.manager: dansimp
 ---
 
 # systeminsights Module

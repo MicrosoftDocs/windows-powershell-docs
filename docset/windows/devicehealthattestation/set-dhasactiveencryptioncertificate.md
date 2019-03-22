@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-DHASActiveEncryptionCertificate
 ms.reviewer:
 ms.assetid: C9CB59D1-200A-4043-9135-719A61A6E234
-ms.manager: dansimp
 ---
 
 # Set-DHASActiveEncryptionCertificate

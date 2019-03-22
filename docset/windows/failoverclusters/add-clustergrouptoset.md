@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-ClusterGroupToSet
 ms.reviewer:
 ms.assetid: 403DDD62-F96B-4394-A6DD-ECFEF7D12400
-ms.manager: dansimp
 ---
 
 # Add-ClusterGroupToSet

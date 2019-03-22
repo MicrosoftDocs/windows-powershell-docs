@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetIPsecPhase1AuthSet
 ms.reviewer:
 ms.assetid: 332EB5C5-D965-4504-B4EE-016C6C0F427C
-ms.manager: dansimp
 ---
 
 # New-NetIPsecPhase1AuthSet

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMSwitch
 ms.reviewer:
 ms.assetid: 6F5A3995-7710-4D08-A5A8-19D5EF2E0FA7
-ms.manager: dansimp
 ---
 
 # Set-VMSwitch

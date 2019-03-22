@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DAClient
 ms.reviewer:
 ms.assetid: B0F23FD5-86D0-4102-A91D-6C75D6A24CBF
-ms.manager: dansimp
 ---
 
 # Remove-DAClient

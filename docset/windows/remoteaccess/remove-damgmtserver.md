@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DAMgmtServer
 ms.reviewer:
 ms.assetid: 538962B5-D9D9-4031-9688-20A6B62CE244
-ms.manager: dansimp
 ---
 
 # Remove-DAMgmtServer

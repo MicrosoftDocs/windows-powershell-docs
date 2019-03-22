@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Export-RmsTUD
 ms.reviewer:
 ms.assetid: FF0D9DD1-4B65-41E0-B18F-614FD80BC779
-ms.manager: dansimp
 ---
 
 # Export-RmsTUD

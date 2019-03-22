@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-UalDeviceAccess
 ms.reviewer:
 ms.assetid: 7E8FA628-D4F8-44B1-BFEE-AAD7891A8BBC
-ms.manager: dansimp
 ---
 
 # Get-UalDeviceAccess

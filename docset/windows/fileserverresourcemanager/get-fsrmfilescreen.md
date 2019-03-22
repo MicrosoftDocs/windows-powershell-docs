@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-FsrmFileScreen
 ms.reviewer:
 ms.assetid: C09CDE6B-B2D1-445A-917E-42E9D2FAE88F
-ms.manager: dansimp
 ---
 
 # Get-FsrmFileScreen

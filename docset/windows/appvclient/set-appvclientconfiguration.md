@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-AppvClientConfiguration
 ms.reviewer:
 ms.assetid: 33355C10-BBF5-4296-B152-E0176838D78B
-ms.manager: dansimp
 ---
 
 # Set-AppvClientConfiguration

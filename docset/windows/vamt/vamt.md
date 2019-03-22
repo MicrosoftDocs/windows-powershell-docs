@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 38E37D22-F0CF-4EBC-8E1D-8F75A0376C6A
-ms.manager: dansimp
 ---
 
 # VAMT Module

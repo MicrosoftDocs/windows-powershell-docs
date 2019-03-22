@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-VM
 ms.reviewer:
 ms.assetid: DD7280C5-1F1A-45C7-8A40-2047AACE9053
-ms.manager: dansimp
 ---
 
 # Start-VM

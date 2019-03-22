@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-OffloadDataTransferSetting
 ms.reviewer:
 ms.assetid: DD977856-6C27-4A52-A88E-FB4BC2C0390C
-ms.manager: dansimp
 ---
 
 # Get-OffloadDataTransferSetting

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BgpPeer
 ms.reviewer:
 ms.assetid: 5BA03C10-3681-4DFC-8CAA-AC05CBF2BC3E
-ms.manager: dansimp
 ---
 
 # Get-BgpPeer

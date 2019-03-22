@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-BgpCustomRoute
 ms.reviewer:
 ms.assetid: 8E87C7B6-A4B4-49BC-B469-0446D7908CD5
-ms.manager: dansimp
 ---
 
 # Remove-BgpCustomRoute

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-VMHostCluster
 ms.reviewer:
 ms.assetid: E7E684CD-016F-44A9-A72B-A8B478EF2896
-ms.manager: dansimp
 ---
 
 # Set-VMHostCluster

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-PnpDevice
 ms.reviewer:
 ms.assetid: 1EC96077-E9C8-4B3A-9ABB-6059D396796F
-ms.manager: dansimp
 ---
 
 # Enable-PnpDevice

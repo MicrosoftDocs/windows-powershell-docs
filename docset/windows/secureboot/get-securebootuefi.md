@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SecureBootUEFI
 ms.reviewer:
 ms.assetid: 254A50F5-D51F-4432-AAAD-83A14E273B79
-ms.manager: dansimp
 ---
 
 # Get-SecureBootUEFI

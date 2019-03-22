@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-FsrmFileGroup
 ms.reviewer:
 ms.assetid: 59B423DF-65F7-4090-A853-9D8B98793314
-ms.manager: dansimp
 ---
 
 # Get-FsrmFileGroup

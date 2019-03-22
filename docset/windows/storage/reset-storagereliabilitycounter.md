@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-StorageReliabilityCounter
 ms.reviewer:
 ms.assetid: 76FFF486-BBD6-462E-94C0-02F292601FA2
-ms.manager: dansimp
 ---
 
 # Reset-StorageReliabilityCounter

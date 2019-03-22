@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VHDSnapshot
 ms.reviewer:
 ms.assetid: ED242D6B-4472-4CD8-8D57-705D9B678B89
-ms.manager: dansimp
 ---
 
 # Remove-VHDSnapshot

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetAdapterPowerManagement
 ms.reviewer:
 ms.assetid: 85E56DA8-8A5A-4BFF-BF13-30A923379E1A
-ms.manager: dansimp
 ---
 
 # Get-NetAdapterPowerManagement

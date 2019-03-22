@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-FsrmClassificationPropertyValue
 ms.reviewer:
 ms.assetid: 950A3ABF-7FA0-426B-94C5-42DA59C2B13B
-ms.manager: dansimp
 ---
 
 # New-FsrmClassificationPropertyValue

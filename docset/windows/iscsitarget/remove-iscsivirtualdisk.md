@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IscsiVirtualDisk
 ms.reviewer:
 ms.assetid: 0B3A9DEF-A415-4C14-ABD8-0A0DB7108A20
-ms.manager: dansimp
 ---
 
 # Remove-IscsiVirtualDisk

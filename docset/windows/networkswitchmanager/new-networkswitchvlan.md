@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkSwitchVlan
 ms.reviewer:
 ms.assetid: D68D9D99-F23F-44B3-B634-71B1711A9F3E
-ms.manager: dansimp
 ---
 
 # New-NetworkSwitchVlan

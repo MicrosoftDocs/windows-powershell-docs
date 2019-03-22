@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NetworkControllerVirtualServer
 ms.reviewer:
 ms.assetid: 151222A7-EFBC-4E29-BC41-1D6780207013
-ms.manager: dansimp
 ---
 
 # Get-NetworkControllerVirtualServer

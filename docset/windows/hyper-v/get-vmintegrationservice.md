@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMIntegrationService
 ms.reviewer:
 ms.assetid: 9F23C473-4BA9-4BE8-9205-F02A3FCA7174
-ms.manager: dansimp
 ---
 
 # Get-VMIntegrationService

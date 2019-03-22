@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Stop-WmsSystem
 ms.reviewer:
 ms.assetid: 9CC30589-27EF-42F6-81BD-2458980149FA
-ms.manager: dansimp
 ---
 
 # Stop-WmsSystem

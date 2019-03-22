@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMResourcePool
 ms.reviewer:
 ms.assetid: DADB9AEE-C328-4D1C-B311-CF6B52C3C275
-ms.manager: dansimp
 ---
 
 # Remove-VMResourcePool

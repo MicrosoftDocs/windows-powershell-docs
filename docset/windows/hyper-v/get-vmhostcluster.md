@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMHostCluster
 ms.reviewer:
 ms.assetid: 4023B3BB-DEAC-400B-BC2D-A2A59AE912CA
-ms.manager: dansimp
 ---
 
 # Get-VMHostCluster

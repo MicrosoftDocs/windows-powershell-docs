@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerFabricRoute
 ms.reviewer:
 ms.assetid: A411D18B-537E-42BB-B5E6-E6D0D78C0FE8
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerFabricRoute

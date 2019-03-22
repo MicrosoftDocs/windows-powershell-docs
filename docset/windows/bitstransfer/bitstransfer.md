@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 34F36891-5E50-42FD-B5F1-038BF55946B6
-ms.manager: dansimp
 ---
 
 # BitsTransfer Module

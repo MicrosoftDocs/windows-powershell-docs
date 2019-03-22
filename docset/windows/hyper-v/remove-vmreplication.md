@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-VMReplication
 ms.reviewer:
 ms.assetid: 90883CF7-704F-469B-AD34-2212FDD75E52
-ms.manager: dansimp
 ---
 
 # Remove-VMReplication

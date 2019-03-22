@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-StorageHealthSetting
 ms.reviewer:
 ms.assetid: E0C4854A-F19E-40D9-A098-6BCE4AFCD169
-ms.manager: dansimp
 ---
 
 # Remove-StorageHealthSetting

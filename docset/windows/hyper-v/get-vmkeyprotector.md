@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMKeyProtector
 ms.reviewer:
 ms.assetid: F9A4554E-E129-40C4-969F-60900460F5AB
-ms.manager: dansimp
 ---
 
 # Get-VMKeyProtector

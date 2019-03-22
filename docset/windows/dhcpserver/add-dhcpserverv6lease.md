@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Add-DhcpServerv6Lease
 ms.reviewer:
 ms.assetid: BAFE3268-DCF5-42B0-864F-162DDE499FAA
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv6Lease

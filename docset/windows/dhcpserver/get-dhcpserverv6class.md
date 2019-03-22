@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-DhcpServerv6Class
 ms.reviewer:
 ms.assetid: 3D62E1AB-62B5-4018-B35E-6B2FB2F1C14D
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Class

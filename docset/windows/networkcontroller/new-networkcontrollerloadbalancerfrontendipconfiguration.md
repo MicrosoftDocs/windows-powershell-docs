@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerLoadBalancerFrontendIpConfiguration
 ms.reviewer:
 ms.assetid: 69EADC55-F391-4179-B0CB-701B3D6E2A9E
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerLoadBalancerFrontendIpConfiguration

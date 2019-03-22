@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Checkpoint-VM
 ms.reviewer:
 ms.assetid: 9B224E50-9571-4216-A938-7A448B9BC236
-ms.manager: dansimp
 ---
 
 # Checkpoint-VM

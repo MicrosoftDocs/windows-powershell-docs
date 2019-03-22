@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 600B93F2-5D7E-4E65-992F-C0BA34104DDE
-ms.manager: dansimp
 ---
 
 # StorageReplica Module

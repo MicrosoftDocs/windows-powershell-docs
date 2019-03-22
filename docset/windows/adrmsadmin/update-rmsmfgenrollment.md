@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-RmsMfgEnrollment
 ms.reviewer:
 ms.assetid: 855A4537-3F85-470D-93C0-1F6CA48958B3
-ms.manager: dansimp
 ---
 
 # Update-RmsMfgEnrollment

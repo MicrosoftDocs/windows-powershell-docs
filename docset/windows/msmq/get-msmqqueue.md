@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-MsmqQueue
 ms.reviewer:
 ms.assetid: 5735D84D-4C83-4350-A91B-5C0A0F009638
-ms.manager: dansimp
 ---
 
 # Get-MsmqQueue

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DHASInactiveSigningCertificate
 ms.reviewer:
 ms.assetid: D3F8F003-492C-488B-9C4C-DF84E5C18C0A
-ms.manager: dansimp
 ---
 
 # Remove-DHASInactiveSigningCertificate

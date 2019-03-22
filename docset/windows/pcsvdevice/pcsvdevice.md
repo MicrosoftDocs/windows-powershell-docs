@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 108F3AEF-F78E-4950-957A-AA36B9FFFF26
-ms.manager: dansimp
 ---
 
 # PCSVDevice Module

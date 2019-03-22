@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-UevAppxPackage
 ms.reviewer:
 ms.assetid: 4C56C860-6DA8-412A-A5E3-6CE691B7BD8A
-ms.manager: dansimp
 ---
 
 # Clear-UevAppxPackage

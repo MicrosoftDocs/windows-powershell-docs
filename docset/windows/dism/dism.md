@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 3DD32417-9E7D-41FE-BB76-8F24D96B835A
-ms.manager: dansimp
 ---
 
 # DISM Module

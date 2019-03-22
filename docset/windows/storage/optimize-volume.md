@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Optimize-Volume
 ms.reviewer:
 ms.assetid: 5FA44E53-C2D4-4870-A934-62430AF19BC6
-ms.manager: dansimp
 ---
 
 # Optimize-Volume

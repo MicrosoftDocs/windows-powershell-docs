@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-MSDSMSupportedHW
 ms.reviewer:
 ms.assetid: B9BB4764-9CDC-4220-BC2A-67C7789567A8
-ms.manager: dansimp
 ---
 
 # Remove-MSDSMSupportedHW

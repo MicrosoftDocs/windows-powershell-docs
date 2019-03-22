@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv4MulticastScope
 ms.reviewer:
 ms.assetid: 6C01EE7C-C077-40C1-9203-9A85355B9478
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4MulticastScope

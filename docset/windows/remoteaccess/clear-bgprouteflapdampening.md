@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-BgpRouteFlapDampening
 ms.reviewer:
 ms.assetid: EA68FE5F-EC3C-41FB-B5F8-5FCF9810ADD6
-ms.manager: dansimp
 ---
 
 # Clear-BgpRouteFlapDampening

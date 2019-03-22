@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-CATemplate
 ms.reviewer:
 ms.assetid: 26067498-C23B-4EAB-97D1-932508F43FCE
-ms.manager: dansimp
 ---
 
 # Get-CATemplate

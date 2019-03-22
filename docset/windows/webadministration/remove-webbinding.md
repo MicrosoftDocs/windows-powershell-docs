@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-WebBinding
 ms.reviewer:
 ms.assetid: DAB869BC-1192-4261-81FA-8EFB92367EC5
-ms.manager: dansimp
 ---
 
 # Remove-WebBinding

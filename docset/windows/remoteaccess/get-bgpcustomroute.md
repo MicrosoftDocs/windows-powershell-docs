@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-BgpCustomRoute
 ms.reviewer:
 ms.assetid: 7FC76301-F221-4CD6-8BAD-393F8CFAD2E3
-ms.manager: dansimp
 ---
 
 # Get-BgpCustomRoute

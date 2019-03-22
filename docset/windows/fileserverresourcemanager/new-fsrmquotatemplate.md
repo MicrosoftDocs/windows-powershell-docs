@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-FsrmQuotaTemplate
 ms.reviewer:
 ms.assetid: 0953D1D4-FDE2-4742-A15D-DC94931FCF91
-ms.manager: dansimp
 ---
 
 # New-FsrmQuotaTemplate

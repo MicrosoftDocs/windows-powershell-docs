@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NetIPsecMainModeRule
 ms.reviewer:
 ms.assetid: 30C0E331-8926-48D7-9169-EB0EEC09369B
-ms.manager: dansimp
 ---
 
 # Set-NetIPsecMainModeRule

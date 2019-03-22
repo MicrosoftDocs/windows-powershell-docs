@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Save-SbecLogSession
 ms.reviewer:
 ms.assetid: 01036A28-22E9-4660-8765-8BA73108F69F
-ms.manager: dansimp
 ---
 
 # Save-SbecLogSession

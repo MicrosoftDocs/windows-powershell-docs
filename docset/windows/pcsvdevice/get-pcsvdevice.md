@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-PcsvDevice
 ms.reviewer:
 ms.assetid: 0F8A89F2-AEC0-48E3-BAFA-C658AF41E753
-ms.manager: dansimp
 ---
 
 # Get-PcsvDevice

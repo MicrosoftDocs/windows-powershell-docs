@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-SbecLogSession
 ms.reviewer:
 ms.assetid: 3EE79EA5-D5D8-451D-B8A9-998F25E899F3
-ms.manager: dansimp
 ---
 
 # Set-SbecLogSession

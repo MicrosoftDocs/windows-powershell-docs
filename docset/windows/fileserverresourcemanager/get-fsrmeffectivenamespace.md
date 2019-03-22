@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-FsrmEffectiveNamespace
 ms.reviewer:
 ms.assetid: 81DD991F-CE5E-45DC-9BBB-37EC40D0D69D
-ms.manager: dansimp
 ---
 
 # Get-FsrmEffectiveNamespace

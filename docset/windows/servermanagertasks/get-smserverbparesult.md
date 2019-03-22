@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-SMServerBpaResult
 ms.reviewer:
 ms.assetid: CF4ACB47-4167-415D-85FF-D2D107539188
-ms.manager: dansimp
 ---
 
 # Get-SMServerBpaResult

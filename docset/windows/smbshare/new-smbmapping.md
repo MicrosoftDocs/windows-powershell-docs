@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-SmbMapping
 ms.reviewer:
 ms.assetid: 1F12B476-BC62-454B-8E4E-5CCB1BF66D95
-ms.manager: dansimp
 ---
 
 # New-SmbMapping

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetNat
 ms.reviewer:
 ms.assetid: B64A451E-9D59-46A5-86B6-07DF85C6228E
-ms.manager: dansimp
 ---
 
 # New-NetNat

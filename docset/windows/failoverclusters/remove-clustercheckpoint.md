@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-ClusterCheckpoint
 ms.reviewer:
 ms.assetid: AD14F17F-52B6-4D55-B3D4-D98983588220
-ms.manager: dansimp
 ---
 
 # Remove-ClusterCheckpoint

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Save-VM
 ms.reviewer:
 ms.assetid: DF466680-1E07-427F-8105-B6DD6E2B4500
-ms.manager: dansimp
 ---
 
 # Save-VM

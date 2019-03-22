@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-WinAcceptLanguageFromLanguageListOptOut
 ms.reviewer:
 ms.assetid: A509AEC3-DD9D-4168-A0FC-74935153749F
-ms.manager: dansimp
 ---
 
 # Set-WinAcceptLanguageFromLanguageListOptOut

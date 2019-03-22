@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-PfxData
 ms.reviewer:
 ms.assetid: 654BB02E-B277-4497-AD58-BEAA73B725B5
-ms.manager: dansimp
 ---
 
 # Get-PfxData

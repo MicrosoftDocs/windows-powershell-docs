@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ADServiceAccount
 ms.reviewer:
 ms.assetid: F025132E-9FD5-4870-BE58-A1AB16DCBC3A
-ms.manager: dansimp
 ---
 
 # Get-ADServiceAccount

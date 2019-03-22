@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-SbecNtKernelLogSession
 ms.reviewer:
 ms.assetid: 66762E9D-DD03-43AB-836B-713C9E0D2449
-ms.manager: dansimp
 ---
 
 # Start-SbecNtKernelLogSession

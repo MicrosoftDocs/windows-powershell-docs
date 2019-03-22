@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-NfsMappingStore
 ms.reviewer:
 ms.assetid: CAAE5AAF-704B-4281-88DF-77B8BF00F868
-ms.manager: dansimp
 ---
 
 # Get-NfsMappingStore

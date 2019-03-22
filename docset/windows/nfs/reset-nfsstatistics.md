@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Reset-NfsStatistics
 ms.reviewer:
 ms.assetid: 9C46C907-6F14-4C50-92EC-00FEB36A56D5
-ms.manager: dansimp
 ---
 
 # Reset-NfsStatistics

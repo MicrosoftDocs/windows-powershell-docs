@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-DAManualEntryPointSelection
 ms.reviewer:
 ms.assetid: CC431359-C693-42CB-9D09-49D886FA8255
-ms.manager: dansimp
 ---
 
 # Disable-DAManualEntryPointSelection

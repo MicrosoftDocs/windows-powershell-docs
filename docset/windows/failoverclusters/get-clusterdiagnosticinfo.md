@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-ClusterDiagnosticInfo
 ms.reviewer:
 ms.assetid: 540818BC-21E2-4CFC-BDD0-5E18EFC43EEC
-ms.manager: dansimp
 ---
 
 # Get-ClusterDiagnosticInfo

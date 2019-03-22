@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Unregister-ScheduledTask
 ms.reviewer:
 ms.assetid: 0A57ABC4-35A8-43B2-81C2-193EB5E1FDA7
-ms.manager: dansimp
 ---
 
 # Unregister-ScheduledTask

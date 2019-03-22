@@ -18,7 +18,6 @@ ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows
 ms.assetid: 2E018228-3ABE-4901-B33D-92C2D16262CC
-ms.manager: dansimp
 ---
 
 # NetTCPIP Module

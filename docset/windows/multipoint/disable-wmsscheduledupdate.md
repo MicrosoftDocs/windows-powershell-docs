@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Disable-WmsScheduledUpdate
 ms.reviewer:
 ms.assetid: DA709A52-8A83-4845-ACAC-99A0E288970C
-ms.manager: dansimp
 ---
 
 # Disable-WmsScheduledUpdate

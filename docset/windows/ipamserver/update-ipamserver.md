@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Update-IpamServer
 ms.reviewer:
 ms.assetid: C40F44B0-433B-4A5A-AF5D-73219BEE3B58
-ms.manager: dansimp
 ---
 
 # Update-IpamServer

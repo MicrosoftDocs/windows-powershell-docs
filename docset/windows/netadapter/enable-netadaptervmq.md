@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-NetAdapterVmq
 ms.reviewer:
 ms.assetid: 2CC509E4-1633-4E92-86FE-9A420C700488
-ms.manager: dansimp
 ---
 
 # Enable-NetAdapterVmq

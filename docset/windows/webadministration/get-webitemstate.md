@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-WebItemState
 ms.reviewer:
 ms.assetid: 9723EF9F-657A-4450-9CB9-06A93E628370
-ms.manager: dansimp
 ---
 
 # Get-WebItemState

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-SbecUnattendFragment
 ms.reviewer:
 ms.assetid: 0222538F-E9CE-4663-BCFE-85DEDE6BF4AF
-ms.manager: dansimp
 ---
 
 # New-SbecUnattendFragment

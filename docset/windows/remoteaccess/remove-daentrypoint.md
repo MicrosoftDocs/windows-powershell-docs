@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DAEntryPoint
 ms.reviewer:
 ms.assetid: CC818978-281C-44E6-B9B4-709674FF88E7
-ms.manager: dansimp
 ---
 
 # Remove-DAEntryPoint

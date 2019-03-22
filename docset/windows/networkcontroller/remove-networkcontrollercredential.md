@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetworkControllerCredential
 ms.reviewer:
 ms.assetid: 798F1B50-6D3D-4E65-B699-1852807ADA0A
-ms.manager: dansimp
 ---
 
 # Remove-NetworkControllerCredential

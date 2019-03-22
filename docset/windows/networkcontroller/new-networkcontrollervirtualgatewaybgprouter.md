@@ -16,7 +16,6 @@ schema: 2.0.0
 title: New-NetworkControllerVirtualGatewayBgpRouter
 ms.reviewer:
 ms.assetid: 4A6CAA9E-670E-430D-AEC4-6845E3DA0F44
-ms.manager: dansimp
 ---
 
 # New-NetworkControllerVirtualGatewayBgpRouter

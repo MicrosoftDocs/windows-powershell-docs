@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-IpamSubnet
 ms.reviewer:
 ms.assetid: 35D6FA8A-88D2-428E-9EE7-D7DB5D725C51
-ms.manager: dansimp
 ---
 
 # Remove-IpamSubnet

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-VMSwitchTeam
 ms.reviewer:
 ms.assetid: 5C5ED9EC-7569-4C8E-933A-F61BEBEACC1F
-ms.manager: dansimp
 ---
 
 # Get-VMSwitchTeam

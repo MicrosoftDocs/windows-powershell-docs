@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv4Scope
 ms.reviewer:
 ms.assetid: 3CEEF261-0442-4A2D-A6DC-A32C04FB6D1F
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Scope

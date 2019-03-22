@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopTemplateExportPath
 ms.reviewer:
 ms.assetid: 905E45A7-F7D0-4408-B360-B39591190CB4
-ms.manager: dansimp
 ---
 
 # Get-RDVirtualDesktopTemplateExportPath

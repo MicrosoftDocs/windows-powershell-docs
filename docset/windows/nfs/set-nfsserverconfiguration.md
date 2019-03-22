@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-NfsServerConfiguration
 ms.reviewer:
 ms.assetid: C897EB1C-04F1-4CDF-8891-9B2C13F7151D
-ms.manager: dansimp
 ---
 
 # Set-NfsServerConfiguration

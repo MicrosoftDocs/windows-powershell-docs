@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-DhcpServerv6OptionValue
 ms.reviewer:
 ms.assetid: 49F53B97-6213-44AE-A4E5-DF520DCBAB3F
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6OptionValue

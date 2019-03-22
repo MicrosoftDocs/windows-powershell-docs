@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Set-AutologgerConfig
 ms.reviewer:
 ms.assetid: 2CD2279D-00DA-4DE9-BAB1-7E579901649E
-ms.manager: dansimp
 ---
 
 # Set-AutologgerConfig

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Start-WBFileRecovery
 ms.reviewer:
 ms.assetid: BAE102D6-B4DD-4818-81DA-92538547B1CD
-ms.manager: dansimp
 ---
 
 # Start-WBFileRecovery

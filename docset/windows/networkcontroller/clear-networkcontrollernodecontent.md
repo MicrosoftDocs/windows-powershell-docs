@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Clear-NetworkControllerNodeContent
 ms.reviewer:
 ms.assetid: 63A6E7DF-BEF4-49AA-B1AC-79D32A3DF182
-ms.manager: dansimp
 ---
 
 # Clear-NetworkControllerNodeContent

@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Remove-NetEventWFPCaptureProvider
 ms.reviewer:
 ms.assetid: 2AD1271C-5939-4C11-809F-5D416A522E2E
-ms.manager: dansimp
 ---
 
 # Remove-NetEventWFPCaptureProvider

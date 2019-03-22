@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Backup-DhcpServer
 ms.reviewer:
 ms.assetid: 8297D7EB-72B2-402D-9CDC-5E5745F0F582
-ms.manager: dansimp
 ---
 
 # Backup-DhcpServer

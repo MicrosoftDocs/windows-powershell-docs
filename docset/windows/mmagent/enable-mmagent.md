@@ -16,7 +16,6 @@ schema: 2.0.0
 title: Enable-MMAgent
 ms.reviewer:
 ms.assetid: 6432D312-2D2F-4411-BEAD-6E7479659FC3
-ms.manager: dansimp
 ---
 
 # Enable-MMAgent

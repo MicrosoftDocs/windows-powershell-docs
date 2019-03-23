@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BA59E29D-8212-484A-A278-3E63450E9510
+ms.manager: dansimp
 ---
 
 # Get-DnsServerSigningKey

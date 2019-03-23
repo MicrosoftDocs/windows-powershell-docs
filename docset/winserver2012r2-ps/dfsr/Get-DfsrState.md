@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CD5B9830-CF5B-415B-A3B4-57A30D1C0310
+ms.manager: dansimp
 ---
 
 # Get-DfsrState

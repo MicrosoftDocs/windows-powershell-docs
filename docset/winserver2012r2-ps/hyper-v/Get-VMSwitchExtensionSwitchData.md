@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C717EDEE-4F75-4891-B798-86F928E0E017
+ms.manager: dansimp
 ---
 
 # Get-VMSwitchExtensionSwitchData

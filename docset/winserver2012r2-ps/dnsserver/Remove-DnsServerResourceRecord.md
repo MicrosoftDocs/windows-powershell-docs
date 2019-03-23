@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 544BB23C-3448-41ED-B098-823B74D0FFF7
+ms.manager: dansimp
 ---
 
 # Remove-DnsServerResourceRecord

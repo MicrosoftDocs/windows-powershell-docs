@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 86D6A675-C51E-419F-8E39-6D26EE26D2F7
+ms.manager: dansimp
 ---
 
 # Resume-VM

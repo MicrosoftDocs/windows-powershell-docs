@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F924F18F-19B8-471F-8CB3-210A2F782831
+ms.manager: dansimp
 ---
 
 # Add-ADGroupMember

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5A184811-6ACF-4A76-98FA-A0D37ABDD2E3
+ms.manager: dansimp
 ---
 
 # Disable-VMResourceMetering

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD8807A5-3CD5-4A73-B372-979696936C6D
+ms.manager: dansimp
 ---
 
 # Remove-FsrmFileGroup

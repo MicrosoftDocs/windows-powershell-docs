@@ -14,6 +14,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7B0BC3C5-CE04-4A9B-A03E-CD5C1AC92804
+ms.manager: dansimp
 ---
 
 # Get-HcsDnsClientServerAddress

@@ -13,6 +13,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 207632BA-A5A0-4D2E-B3FA-7CEBFE61E9E2
+ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---
@@ -247,8 +248,7 @@ This cmdlet accepts one print job object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

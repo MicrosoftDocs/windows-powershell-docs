@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52cdbc8f-6bd0-4f77-951c-ff94db16a00b
+ms.manager: dansimp
 ---
 
 # KDS Module

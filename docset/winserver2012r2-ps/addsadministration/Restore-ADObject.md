@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2A4F2E6-DABB-4277-9FB6-A1579687F08E
+ms.manager: dansimp
 ---
 
 # Restore-ADObject

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70EF1E21-21D0-47CD-BA75-BC214E32A490
+ms.manager: dansimp
 ---
 
 # Get-FsrmFileManagementJob

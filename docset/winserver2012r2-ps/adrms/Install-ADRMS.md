@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F44B9525-0E1E-43EA-8FC0-CE9514EEF950
+ms.manager: dansimp
 ---
 
 # Install-ADRMS

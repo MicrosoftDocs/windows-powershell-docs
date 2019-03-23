@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CEC3A38D-EA1E-4907-A291-D8EF31DA61DE
+ms.manager: dansimp
 ---
 
 # Remove-IpamBlock

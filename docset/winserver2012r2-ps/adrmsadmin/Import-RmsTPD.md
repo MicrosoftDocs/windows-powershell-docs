@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 40463418-5B82-42E6-86E0-396B31E01EA8
+ms.manager: dansimp
 ---
 
 # Import-RmsTPD

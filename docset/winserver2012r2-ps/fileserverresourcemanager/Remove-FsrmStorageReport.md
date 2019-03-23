@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC3E89C0-2370-415C-8E38-E5598264DECE
+ms.manager: dansimp
 ---
 
 # Remove-FsrmStorageReport

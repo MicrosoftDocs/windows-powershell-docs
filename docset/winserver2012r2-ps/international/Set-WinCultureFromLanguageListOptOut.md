@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3383B8A3-16DF-45A9-848F-B6A76FFAB900
+ms.manager: dansimp
 ---
 
 # Set-WinCultureFromLanguageListOptOut

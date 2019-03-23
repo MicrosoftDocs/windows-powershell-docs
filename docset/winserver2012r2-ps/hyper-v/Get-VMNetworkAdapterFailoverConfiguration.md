@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B1E99EED-F9FB-4BEE-A25F-00F890DCCDD7
+ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterFailoverConfiguration

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B3DB1B3F-2FFF-4087-AA22-3434748CF858
+ms.manager: dansimp
 ---
 
 # Set-AdfsGlobalWebContent

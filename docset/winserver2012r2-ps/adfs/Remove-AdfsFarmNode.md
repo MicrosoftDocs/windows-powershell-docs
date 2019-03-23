@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5FA802A-119E-498E-B99D-9E55F51EDEB8
+ms.manager: dansimp
 ---
 
 # Remove-AdfsFarmNode

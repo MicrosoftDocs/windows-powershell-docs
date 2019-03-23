@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DF236D57-F8CE-496C-A003-9FD868BFC1BC
+ms.manager: dansimp
 ---
 
 # Stop-CauRun

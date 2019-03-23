@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5FA0CD9C-088A-4296-9B8B-A9529BAD7489
+ms.manager: dansimp
 ---
 
 # Use-WindowsUnattend

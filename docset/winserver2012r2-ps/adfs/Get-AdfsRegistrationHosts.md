@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 195F5534-DBC0-4B96-8C18-C98C4487EC47
+ms.manager: dansimp
 ---
 
 # Get-AdfsRegistrationHosts

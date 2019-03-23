@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8ACACDB3-87C4-4CE0-85C2-769FCB9120D1
+ms.manager: dansimp
 ---
 
 # New-FsrmFileScreen

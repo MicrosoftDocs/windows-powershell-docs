@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64A40824-4DCD-4DF8-8EFC-0CE756ACE8C8
+ms.manager: dansimp
 ---
 
 # Disable-AdfsDeviceRegistration

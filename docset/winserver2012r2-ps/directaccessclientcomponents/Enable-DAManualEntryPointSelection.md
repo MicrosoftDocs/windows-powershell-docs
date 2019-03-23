@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E0662F30-27FF-4182-87A0-567CAB097C51
+ms.manager: dansimp
 ---
 
 # Enable-DAManualEntryPointSelection
@@ -152,13 +153,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

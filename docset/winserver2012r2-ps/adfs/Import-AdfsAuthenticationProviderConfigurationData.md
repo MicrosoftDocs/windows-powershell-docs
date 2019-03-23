@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 43CBB153-F575-4F82-B315-A33604CD09FA
+ms.manager: dansimp
 ---
 
 # Import-AdfsAuthenticationProviderConfigurationData

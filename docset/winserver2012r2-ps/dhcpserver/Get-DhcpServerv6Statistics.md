@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A85AAD1E-A992-46B1-B836-9B9E3FA52F14
+ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Statistics

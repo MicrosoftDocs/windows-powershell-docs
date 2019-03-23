@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4590635E-C5D5-4696-B149-1D87ABB340E9
+ms.manager: dansimp
 ---
 
 # Add-ClusteriSCSITargetServerRole

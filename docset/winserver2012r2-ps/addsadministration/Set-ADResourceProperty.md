@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 038A77ED-8A63-46B2-9DC3-000BB8610113
+ms.manager: dansimp
 ---
 
 # Set-ADResourceProperty

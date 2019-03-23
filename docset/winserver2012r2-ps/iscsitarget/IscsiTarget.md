@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5e639b6b-8be5-4abe-859f-ce842558e3de
+ms.manager: dansimp
 ---
 
 # IscsiTarget Module

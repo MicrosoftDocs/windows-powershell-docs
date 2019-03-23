@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E03584B5-020B-4952-9B9F-371A7716EB94
+ms.manager: dansimp
 ---
 
 # Remove-ADCentralAccessPolicy

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 37258538-9859-42F9-921A-4FA172705C4A
+ms.manager: dansimp
 ---
 
 # New-FsrmFileGroup

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FA89F034-4EE8-4A14-ADD0-62810A5BF7ED
+ms.manager: dansimp
 ---
 
 # Set-DAEntryPointTableItem
@@ -350,8 +351,7 @@ This cmdlet returns a CIM object which contains the DA entry point table item.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

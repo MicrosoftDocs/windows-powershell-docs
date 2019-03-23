@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EE3FEEC6-B7AF-46C9-A5EF-C9190D498AB4
+ms.manager: dansimp
 ---
 
 # Get-FsrmClassificationRule

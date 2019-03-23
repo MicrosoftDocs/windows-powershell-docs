@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5DDCD4DC-06F9-4340-96F4-463847BD8426
+ms.manager: dansimp
 ---
 
 # Add-ClusterVirtualMachineRole

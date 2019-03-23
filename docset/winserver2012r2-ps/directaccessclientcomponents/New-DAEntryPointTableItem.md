@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 34867B6B-0AEF-40A2-B34E-76F0B6A55CB8
+ms.manager: dansimp
 ---
 
 # New-DAEntryPointTableItem
@@ -295,8 +296,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 

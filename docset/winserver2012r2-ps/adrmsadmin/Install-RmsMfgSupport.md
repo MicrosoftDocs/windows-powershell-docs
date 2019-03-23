@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CE19107A-D9E3-4919-B4D7-26F1506E213E
+ms.manager: dansimp
 ---
 
 # Install-RmsMfgSupport

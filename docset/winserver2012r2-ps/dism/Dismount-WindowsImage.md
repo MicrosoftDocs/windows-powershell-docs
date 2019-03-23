@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED90878C-C306-4BBE-902D-EDF4BE37E8BC
+ms.manager: dansimp
 ---
 
 # Dismount-WindowsImage

@@ -13,6 +13,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0E552072-0B57-4C15-A5E7-4004D45568F0
+ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---
@@ -202,13 +203,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet takes no input objects.
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

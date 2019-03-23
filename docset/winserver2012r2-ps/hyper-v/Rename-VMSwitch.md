@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D153EEC8-80AB-4999-A054-8DDA38BCC0FA
+ms.manager: dansimp
 ---
 
 # Rename-VMSwitch

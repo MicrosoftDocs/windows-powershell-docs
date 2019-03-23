@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 743aeadc-557a-4869-9b6d-7fa7ff1404ff
+ms.manager: dansimp
 ---
 
 # DFSR Module

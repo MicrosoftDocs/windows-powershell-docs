@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F7680658-A547-4087-AF94-D9250E48B524
+ms.manager: dansimp
 ---
 
 # Import-IscsiTargetServerConfiguration

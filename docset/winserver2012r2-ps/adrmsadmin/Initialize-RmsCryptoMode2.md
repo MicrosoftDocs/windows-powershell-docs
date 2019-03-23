@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D2E65B69-E9E6-40D4-B5EF-0674CFC51205
+ms.manager: dansimp
 ---
 
 # Initialize-RmsCryptoMode2

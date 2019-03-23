@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E1C9D6D3-933A-40A4-A2DB-B0763B82363B
+ms.manager: dansimp
 ---
 
 # Import-RmsTUD

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 848467EE-2F72-4680-8540-08A86DB12916
+ms.manager: dansimp
 ---
 
 # Move-ClusterSharedVolume

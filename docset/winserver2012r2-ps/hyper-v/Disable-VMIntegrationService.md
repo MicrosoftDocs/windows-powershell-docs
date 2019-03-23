@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 426A3EA5-A0EA-4B49-8AC9-CF11937EC5AB
+ms.manager: dansimp
 ---
 
 # Disable-VMIntegrationService

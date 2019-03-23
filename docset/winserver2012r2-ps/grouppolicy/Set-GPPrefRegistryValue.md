@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
+ms.manager: dansimp
 ---
 
 # Set-GPPrefRegistryValue

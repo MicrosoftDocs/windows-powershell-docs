@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3A5072BD-150F-4CA3-AB96-6EF007B4F49E
+ms.manager: dansimp
 ---
 
 # Get-DnsServerResourceRecord

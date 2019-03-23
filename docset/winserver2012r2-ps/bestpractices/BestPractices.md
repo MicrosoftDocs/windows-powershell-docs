@@ -16,6 +16,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1ca8a602-4787-4461-9550-3b3fd30fbdab
+ms.manager: dansimp
 ---
 
 # BestPractices Module

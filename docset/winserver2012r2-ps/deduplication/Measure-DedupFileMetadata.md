@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E39F7A3B-2E8E-4038-B8E5-45CC4279898D
+ms.manager: dansimp
 ---
 
 # Measure-DedupFileMetadata

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A05B05B-DAAE-4982-9D27-21ED2714DD20
+ms.manager: dansimp
 ---
 
 # Stop-VM

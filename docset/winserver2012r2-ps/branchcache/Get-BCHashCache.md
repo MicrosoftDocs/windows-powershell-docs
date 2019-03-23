@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 41A89F25-054F-45C4-B809-78199412E837
+ms.manager: dansimp
 ---
 
 # Get-BCHashCache

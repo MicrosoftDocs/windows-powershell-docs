@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EAE5EBC2-27A1-4C60-8894-FBFB8A428559
+ms.manager: dansimp
 ---
 
 # New-DfsReplicatedFolder

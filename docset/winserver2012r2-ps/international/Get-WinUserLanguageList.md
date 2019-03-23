@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F69CACEE-63A8-4B52-A802-D1AF77E7690C
+ms.manager: dansimp
 ---
 
 # Get-WinUserLanguageList

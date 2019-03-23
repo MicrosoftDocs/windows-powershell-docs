@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EBCFDB37-EEFE-4170-8D48-DE418D74B19D
+ms.manager: dansimp
 ---
 
 # Add-AdfsClient

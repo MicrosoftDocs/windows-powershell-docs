@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 373AE22C-2936-4D5C-A99E-12E2E31A7E03
+ms.manager: dansimp
 ---
 
 # Add-IscsiVirtualDiskTargetMapping

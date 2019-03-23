@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D46999F5-C859-46D8-8496-A75C561CC78A
+ms.manager: dansimp
 ---
 
 # Get-ADUserResultantPasswordPolicy

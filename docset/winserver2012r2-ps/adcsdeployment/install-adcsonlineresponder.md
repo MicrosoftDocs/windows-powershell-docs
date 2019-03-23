@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 461DA0B7-62C8-4299-9A58-42C4F15146F5
+ms.manager: dansimp
 ---
 
 # Install-AdcsOnlineResponder

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
+ms.manager: dansimp
 ---
 
 # Reset-DAClientExperienceConfiguration
@@ -383,8 +384,7 @@ This cmdlet accepts as input a CIM object that contains a DA client experience c
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

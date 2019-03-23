@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3A030267-1460-464D-91F7-63407B0D7ADB
+ms.manager: dansimp
 ---
 
 # Remove-ClusterSharedVolume

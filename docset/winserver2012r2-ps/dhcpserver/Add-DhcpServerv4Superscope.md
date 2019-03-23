@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 29FE4630-7B29-4BB2-BA4C-7FE16F11240E
+ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4Superscope

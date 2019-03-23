@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5ABA2089-988B-4C9B-A1CB-D9DCF3CF3BFC
+ms.manager: dansimp
 ---
 
 # Get-VMSwitch

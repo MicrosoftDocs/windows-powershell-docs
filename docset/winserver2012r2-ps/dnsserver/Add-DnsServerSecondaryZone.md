@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 99374013-D3CB-4754-99A9-7C6D02B126DA
+ms.manager: dansimp
 ---
 
 # Add-DnsServerSecondaryZone

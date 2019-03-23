@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C4BE74B1-9755-4F80-A88F-33569515B629
+ms.manager: dansimp
 ---
 
 # Revoke-VMConnectAccess

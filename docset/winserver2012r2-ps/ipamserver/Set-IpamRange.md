@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EAD9FE7C-ACB7-416B-A016-C34AEDCE9892
+ms.manager: dansimp
 ---
 
 # Set-IpamRange

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 32575D8C-9F70-4090-BAB9-2486C30186FB
+ms.manager: dansimp
 ---
 
 # Get-AppLockerFileInformation

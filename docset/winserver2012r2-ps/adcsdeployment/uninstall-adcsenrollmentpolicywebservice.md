@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3EDD4F25-41F2-4F11-BD20-3BE143D6FD3E
+ms.manager: dansimp
 ---
 
 # Uninstall-AdcsEnrollmentPolicyWebService

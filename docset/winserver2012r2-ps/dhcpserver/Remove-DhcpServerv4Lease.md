@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AAC6BD13-2DF9-4DC8-826C-D9EEEDAD2C50
+ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Lease

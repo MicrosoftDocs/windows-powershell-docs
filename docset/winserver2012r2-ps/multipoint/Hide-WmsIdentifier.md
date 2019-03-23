@@ -13,6 +13,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26F90975-4C32-4077-A88F-7754CEF8AC82
+ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -132,8 +133,7 @@ You cannot pipes to object to Hide-WmsIdentifier
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 51EE4E28-C6FF-4AF9-856C-6B517B3353BF
+ms.manager: dansimp
 ---
 
 # Set-ADForestMode

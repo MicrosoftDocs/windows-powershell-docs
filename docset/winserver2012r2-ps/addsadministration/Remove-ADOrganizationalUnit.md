@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4BB22453-8D6B-46C6-8BF3-11FCA642A75B
+ms.manager: dansimp
 ---
 
 # Remove-ADOrganizationalUnit

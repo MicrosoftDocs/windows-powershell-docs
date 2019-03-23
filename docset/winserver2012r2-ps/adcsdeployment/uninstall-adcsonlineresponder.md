@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DB15EC96-69EF-4303-BD9B-254619C02C4C
+ms.manager: dansimp
 ---
 
 # Uninstall-AdcsOnlineResponder

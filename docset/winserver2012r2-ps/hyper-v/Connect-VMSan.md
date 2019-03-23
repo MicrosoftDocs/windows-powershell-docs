@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA01E844-1462-4284-B2BA-CC9BCB9E0990
+ms.manager: dansimp
 ---
 
 # Connect-VMSan

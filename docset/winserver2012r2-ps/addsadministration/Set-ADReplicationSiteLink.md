@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6D42D99D-E9A6-4D07-887B-A8A1771D25D5
+ms.manager: dansimp
 ---
 
 # Set-ADReplicationSiteLink

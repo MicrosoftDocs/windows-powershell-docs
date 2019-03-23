@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FC16D972-7D9C-48E4-A5C0-B68259042385
+ms.manager: dansimp
 ---
 
 # Export-AdfsAuthenticationProviderConfigurationData

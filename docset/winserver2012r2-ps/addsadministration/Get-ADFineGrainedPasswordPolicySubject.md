@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7373D156-E02D-4108-80FA-24B675081075
+ms.manager: dansimp
 ---
 
 # Get-ADFineGrainedPasswordPolicySubject

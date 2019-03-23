@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AA728517-3C09-455C-8285-B7C5F8A1DEA5
+ms.manager: dansimp
 ---
 
 # Set-BCMinSMBLatency

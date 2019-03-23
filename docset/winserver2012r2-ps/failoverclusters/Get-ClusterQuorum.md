@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B8B052BB-D0F8-4CC8-9848-0B856C650BA7
+ms.manager: dansimp
 ---
 
 # Get-ClusterQuorum

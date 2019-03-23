@@ -15,6 +15,7 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B0CAAB36-2228-4DDF-B110-6836479DED16
+ms.manager: dansimp
 ---
 
 # Add-IpamCustomField

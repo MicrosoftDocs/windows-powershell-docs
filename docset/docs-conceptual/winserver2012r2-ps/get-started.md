@@ -96,7 +96,7 @@ The table below also shows the latest published version of the Help for each mod
 | SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfig) |
 | SoftwareInventoryLogging | [Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging) |
 | StartScreen | [Start Screen Configuration Cmdlets](/powershell/module/startscreen) |
-| Storage | [Storage Cmdlets](/powershell/module/stroage) |
+| Storage | [Storage Cmdlets](/powershell/module/storage) |
 | StorageSpaces | [Storage Spaces Cmdlets](/powershell/module/storagespaces) |
 | SyncShare | [Sync Share Cmdlets](/powershell/module/syncshare) |
 | TLS | [Transport Layer Security (TLS) Authentication Cmdlets](/powershell/module/tls) |

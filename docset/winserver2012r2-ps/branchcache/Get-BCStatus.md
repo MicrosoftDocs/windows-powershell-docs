@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E68D4DA-55B8-46D1-A48C-5BD155CE6558
-ms.manager: dansimp
 ---
 
 # Get-BCStatus

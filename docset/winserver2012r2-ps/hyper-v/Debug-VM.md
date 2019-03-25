@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3ACDD2AC-5C11-47FC-8DF8-3BF9F73C1DD8
-ms.manager: dansimp
 ---
 
 # Debug-VM

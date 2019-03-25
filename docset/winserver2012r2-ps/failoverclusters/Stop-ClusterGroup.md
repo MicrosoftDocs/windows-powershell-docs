@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BE89DFE6-70CF-4A30-BE4F-DC8679C8776E
-ms.manager: dansimp
 ---
 
 # Stop-ClusterGroup

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 958902EA-0FBB-474D-82BD-4FA8B44017F2
-ms.manager: dansimp
 ---
 
 # Resize-VHD

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 933DF783-4CB6-4E94-87E4-D7E4EB1D3E59
-ms.manager: dansimp
 ---
 
 # Get-DfsrBacklog

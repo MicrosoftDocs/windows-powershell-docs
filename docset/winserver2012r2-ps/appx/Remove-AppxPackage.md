@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
-ms.manager: dansimp
 ---
 
 # Remove-AppxPackage

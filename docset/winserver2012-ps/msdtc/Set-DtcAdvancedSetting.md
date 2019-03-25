@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 88A96F40-774D-4B01-8F7E-39186348A8C5
+manager: dansimp
 ---
 
 # Set-DtcAdvancedSetting

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D0F100E8-FE3C-4718-B8D6-3F1A1597F22E
-ms.manager: dansimp
 ---
 
 # Set-BCDataCacheEntryMaxAge

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD05B373-4201-4531-BBAE-89C400F95573
-ms.manager: dansimp
 ---
 
 # Unregister-IscsiSession

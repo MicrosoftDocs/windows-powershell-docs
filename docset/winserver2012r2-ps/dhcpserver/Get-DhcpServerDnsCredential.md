@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3831E353-49CB-4EA6-AA4E-AFE362B4FB51
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerDnsCredential

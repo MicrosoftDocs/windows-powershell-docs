@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BFAE990E-59A8-4632-8F37-E8B561A8BD2F
+manager: dansimp
 ---
 
 # Sync-NetIPsecRule

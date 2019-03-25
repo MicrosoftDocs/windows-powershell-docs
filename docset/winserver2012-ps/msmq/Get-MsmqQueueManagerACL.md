@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5BBFBEF5-2964-4140-97D8-CD852FBFA9F1
+manager: dansimp
 ---
 
 # Get-MsmqQueueManagerACL

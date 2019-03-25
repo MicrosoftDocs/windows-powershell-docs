@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3677B16-138B-4BB7-A814-3F5789B8CA8C
-ms.manager: dansimp
 ---
 
 # Set-ADObject

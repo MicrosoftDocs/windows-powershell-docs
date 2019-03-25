@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8150ACFB-8077-4394-9FF1-3293F28FF32E
-ms.manager: dansimp
 ---
 
 # Register-CauPlugin

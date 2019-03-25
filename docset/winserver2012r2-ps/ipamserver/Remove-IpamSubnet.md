@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 35D6FA8A-88D2-428E-9EE7-D7DB5D725C51
-ms.manager: dansimp
 ---
 
 # Remove-IpamSubnet

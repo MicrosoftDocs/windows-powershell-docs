@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5ABD215E-5333-479C-B691-861FBBC4F5AF
+manager: dansimp
 ---
 
 # Update-VamtProduct

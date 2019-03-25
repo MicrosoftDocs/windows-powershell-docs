@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182877
 schema: 2.0.0
 title: Validate-HpcIScsiStorageArray
 ms.assetid: C95A33FD-33FE-4BCC-9B8F-AC293B055E4C
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2A582615-43A4-4E55-8482-5ABA621125E7
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6Class

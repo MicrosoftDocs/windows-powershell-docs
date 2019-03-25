@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 18A92629-1EB1-494B-A000-564951F3B736
+manager: dansimp
 ---
 
 # Copy-NetIPsecMainModeRule

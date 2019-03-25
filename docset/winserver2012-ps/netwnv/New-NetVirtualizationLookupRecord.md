@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1EE6D032-B38A-44BB-98E9-01005266EA53
+manager: dansimp
 ---
 
 # New-NetVirtualizationLookupRecord

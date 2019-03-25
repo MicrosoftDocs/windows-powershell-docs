@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9442EF8F-D147-4886-BF9B-C13007EF7002
+manager: dansimp
 ---
 
 # Add-WssBackupVolume

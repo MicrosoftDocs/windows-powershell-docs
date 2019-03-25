@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9F68FAF7-254B-4C01-8222-96DDDD0C9D37
+manager: dansimp
 ---
 
 # Disable-NetAdapter

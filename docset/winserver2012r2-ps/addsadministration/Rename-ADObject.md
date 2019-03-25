@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E332857A-35C9-4C90-85F7-8B8099BB8A56
-ms.manager: dansimp
 ---
 
 # Rename-ADObject

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 10357DDB-98F1-4554-8CF8-7877C733E8E5
+manager: dansimp
 ---
 
 # Initialize-WssBackupDisk

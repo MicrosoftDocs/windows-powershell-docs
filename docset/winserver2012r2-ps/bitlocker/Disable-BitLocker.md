@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C47D89E1-C414-4523-B8C7-4F4297E21716
-ms.manager: dansimp
 ---
 
 # Disable-BitLocker

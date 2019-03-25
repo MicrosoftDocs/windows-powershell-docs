@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B1E0B36-503F-497C-82A3-97307285D480
-ms.manager: dansimp
 ---
 
 # Set-DfsrConnectionSchedule

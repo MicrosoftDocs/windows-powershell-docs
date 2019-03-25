@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC97581D-B896-492F-94A5-1A214FD409CC
-ms.manager: dansimp
 ---
 
 # Move-DfsnFolder

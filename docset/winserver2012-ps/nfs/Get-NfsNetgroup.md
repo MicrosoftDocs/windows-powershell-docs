@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 21EF01B6-7129-4F10-87CE-FBA1F5B0D960
+manager: dansimp
 ---
 
 # Get-NfsNetgroup

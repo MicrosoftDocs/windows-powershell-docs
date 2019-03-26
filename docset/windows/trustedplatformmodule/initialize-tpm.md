@@ -39,7 +39,7 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 
 ### Example 1: Initialize a TPM
 ```
-PS C:\> Initialize-Tpm -ForceClearAllowed -PhysicalPresenceAllowed
+PS C:\> Initialize-Tpm -AllowClear -AllowPhysicalPresence
 TpmReady                 : False
 RestartRequired          : True
 ShutdownRequired         : False
@@ -48,8 +48,7 @@ PhysicalPresenceRequired : True
 ```
 
 This command initializes a TPM.
-The *ForceClearAllowed* parameter means that the owner authorization value needs to be imported or reset in order for provisioning to continue.
-The *PhysicalPresenceAllowed* parameter means that a user must be present during a restart to continue the process.
+The *AllowClear* parameter means that the owner authorization value needs to be imported or reset in order for provisioning to continue. The *AllowPhysicalPresence* parameter means that a user must be present during a restart to continue the process.
 
 The cmdlet returns an object with information about the state of the provisioning process.
 

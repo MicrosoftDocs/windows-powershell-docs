@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B81BE96E-B6BA-45FB-8EBD-13C8CE70400F
-ms.manager: dansimp
 ---
 
 # Wait-FsrmFileManagementJob

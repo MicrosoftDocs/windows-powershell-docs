@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72144cf9-f9f5-43b3-be84-5c959089c28f
-ms.manager: dansimp
 ---
 
 # Deduplication Module

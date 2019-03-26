@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 06DE5A4D-D9AC-4AFA-BF79-04E32AE3EE12
+manager: dansimp
 ---
 
 # Remove-NlbClusterNode

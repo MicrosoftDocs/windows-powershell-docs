@@ -1,6 +1,7 @@
 ---
 external help file: dnslookup.dll-Help.xml
 ms.assetid: C9DC4027-5A1F-4679-816B-C0039F02AC2C
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

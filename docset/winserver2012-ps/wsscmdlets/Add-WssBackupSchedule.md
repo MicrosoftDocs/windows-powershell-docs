@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6793DDC0-107D-4975-AC28-4632FAD9D401
+manager: dansimp
 ---
 
 # Add-WssBackupSchedule

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 18902AAE-5A6D-4E05-99AA-9B6AC326A97E
+manager: dansimp
 ---
 
 # Disable-MSDSMAutomaticClaim

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6803586B-064D-4A92-BB88-C1542D1C365C
-ms.manager: dansimp
 ---
 
 # Get-RmsChildCert

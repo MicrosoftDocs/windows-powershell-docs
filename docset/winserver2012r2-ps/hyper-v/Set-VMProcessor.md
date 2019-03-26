@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9397FFB5-88C8-44A6-A62C-5334E98710D1
-ms.manager: dansimp
 ---
 
 # Set-VMProcessor

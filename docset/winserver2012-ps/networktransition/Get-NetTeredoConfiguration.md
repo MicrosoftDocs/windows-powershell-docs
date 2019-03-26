@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4DA932F6-052A-4310-832E-33121E213BDD
+manager: dansimp
 ---
 
 # Get-NetTeredoConfiguration

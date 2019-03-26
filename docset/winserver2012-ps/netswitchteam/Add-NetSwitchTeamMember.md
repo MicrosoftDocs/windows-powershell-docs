@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: ED76A9C8-B2F3-4F12-9615-0BD8F067307E
+manager: dansimp
 ---
 
 # Add-NetSwitchTeamMember

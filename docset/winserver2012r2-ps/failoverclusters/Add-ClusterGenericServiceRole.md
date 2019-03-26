@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 188158B2-1000-46CE-BBF0-13D0A8191AD4
-ms.manager: dansimp
 ---
 
 # Add-ClusterGenericServiceRole

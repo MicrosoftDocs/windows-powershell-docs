@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E8DA9E34-DD09-485E-9832-9B6D136BF1D5
-ms.manager: dansimp
 ---
 
 # Get-VMSystemSwitchExtension

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5EE1FCCD-DC7A-4C50-ABB5-7C0D240D851A
-ms.manager: dansimp
 ---
 
 # Get-ADResourcePropertyValueType

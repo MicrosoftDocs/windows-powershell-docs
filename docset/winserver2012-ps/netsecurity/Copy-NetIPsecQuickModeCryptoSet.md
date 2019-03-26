@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 420A5F38-71C8-49A8-97B0-3F87C7F3424E
+manager: dansimp
 ---
 
 # Copy-NetIPsecQuickModeCryptoSet

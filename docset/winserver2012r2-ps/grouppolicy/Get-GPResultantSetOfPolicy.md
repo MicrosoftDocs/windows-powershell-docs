@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 32368411-0B0C-4CE5-A00C-2296728308D9
-ms.manager: dansimp
 ---
 
 # Get-GPResultantSetOfPolicy

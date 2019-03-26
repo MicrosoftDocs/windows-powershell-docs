@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B491D354-EAD2-402F-B762-0136B615C9FB
-ms.manager: dansimp
 ---
 
 # Set-DnsServerSetting

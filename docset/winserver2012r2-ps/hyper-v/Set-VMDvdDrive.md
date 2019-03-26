@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 403BB6A5-E31E-4256-9D10-1018E39B317E
-ms.manager: dansimp
 ---
 
 # Set-VMDvdDrive

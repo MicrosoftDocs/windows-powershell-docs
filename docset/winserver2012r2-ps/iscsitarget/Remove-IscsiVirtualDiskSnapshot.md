@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D66A76E7-28E7-4231-91A4-03183871F4A0
-ms.manager: dansimp
 ---
 
 # Remove-IscsiVirtualDiskSnapshot

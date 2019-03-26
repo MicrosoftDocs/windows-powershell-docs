@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D1CD4CBF-CCA0-41D1-9DE2-C497199E7A95
+manager: dansimp
 ---
 
 # Get-NlbClusterNodeDip

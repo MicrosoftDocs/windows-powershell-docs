@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6A163BB0-D459-4304-86BA-698960B0191F
-ms.manager: dansimp
 ---
 
 # Reset-ADServiceAccountPassword

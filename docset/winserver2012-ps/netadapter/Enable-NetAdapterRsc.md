@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 62969473-C923-4459-84AA-BEC1BF11E075
+manager: dansimp
 ---
 
 # Enable-NetAdapterRsc

@@ -3,6 +3,7 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: C7B09260-DC16-4759-B849-BF9D98A4C151
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

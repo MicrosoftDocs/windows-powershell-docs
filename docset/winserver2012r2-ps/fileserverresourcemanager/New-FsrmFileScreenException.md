@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 331ACAE2-7C05-49B0-9154-359D6DF9E82F
-ms.manager: dansimp
 ---
 
 # New-FsrmFileScreenException

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 23496DD7-37FC-4D22-8060-ED3B25045451
+manager: dansimp
 ---
 
 # Get-WsusComputer

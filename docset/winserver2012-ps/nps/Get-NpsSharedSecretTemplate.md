@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 70DFEF1B-FA97-4700-92A9-C4A698551DE6
+manager: dansimp
 ---
 
 # Get-NpsSharedSecretTemplate

@@ -1,6 +1,7 @@
 ---
 external help file: MsftUal_DailyDeviceAccess.cdxml-help.xml
 ms.assetid: 5523CF82-D156-4C50-AB59-FEE5747B099B
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

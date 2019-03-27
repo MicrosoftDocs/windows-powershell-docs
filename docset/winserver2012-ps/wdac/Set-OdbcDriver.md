@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F8131A60-6186-44F4-B6B2-003E438CCA8D
+manager: dansimp
 ---
 
 # Set-OdbcDriver

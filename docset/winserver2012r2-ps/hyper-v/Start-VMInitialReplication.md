@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E9EE3CD9-273A-41C1-918A-CEE0CBA99772
-ms.manager: dansimp
 ---
 
 # Start-VMInitialReplication

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
-ms.manager: dansimp
 ---
 
 # New-ADServiceAccount

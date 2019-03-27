@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182868
 schema: 2.0.0
 title: Set-HpcTask
 ms.assetid: E557121D-4E20-4DA3-A658-9DEE047C2683
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

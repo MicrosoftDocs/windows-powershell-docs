@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CBBA788E-2BC9-448F-8CC6-B5DD4F2B727E
+manager: dansimp
 ---
 
 # Reset-WASComputer

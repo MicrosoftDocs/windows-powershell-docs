@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0E60DBB0-CC4A-4D2E-832E-970657361CA3
-ms.manager: dansimp
 ---
 
 # Get-RmsEncryptedIL

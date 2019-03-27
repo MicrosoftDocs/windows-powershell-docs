@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C79BA415-AF74-4BCA-A4F4-E0B746D26511
+manager: dansimp
 ---
 
 # Set-NetFirewallProfile

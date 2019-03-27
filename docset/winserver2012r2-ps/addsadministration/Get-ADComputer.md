@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3EECD4C-C26D-4423-B699-6F369AB8FFF6
-ms.manager: dansimp
 ---
 
 # Get-ADComputer

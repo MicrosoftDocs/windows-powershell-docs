@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CF4ACB47-4167-415D-85FF-D2D107539188
+manager: dansimp
 ---
 
 # Get-SMServerBpaResult

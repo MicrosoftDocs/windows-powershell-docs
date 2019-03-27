@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
-ms.manager: dansimp
 ---
 
 # Reset-DAClientExperienceConfiguration

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C63BA3B9-2BBB-43C8-90A5-7C95CE0DB67A
-ms.manager: dansimp
 ---
 
 # Start-DnsServerZoneTransfer

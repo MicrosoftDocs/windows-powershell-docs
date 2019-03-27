@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DC6818F2-41CC-4F63-8D7A-A82456A75189
-ms.manager: dansimp
 ---
 
 # Get-VMComPort

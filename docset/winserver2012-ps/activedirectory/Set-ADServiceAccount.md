@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 0ED2B430-F6D2-4763-B1C5-6D606213F3EC
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
@@ -16,7 +17,7 @@ Modifies an Active Directory managed service account or group managed service ac
 ## SYNTAX
 
 ### Identity
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-Add <Hashtable>] [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Clear <String[]>]
  [-CompoundIdentitySupported <Boolean>] [-Credential <PSCredential>] [-Description <String>]
@@ -29,7 +30,7 @@ Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### Instance
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
  -Instance <ADServiceAccount> [-PassThru] [-Server <String>] [<CommonParameters>]
 ```
@@ -71,46 +72,44 @@ Get-ADServiceAccount -Identity "AccessIndia" | Set-ADServiceAccount -ServicePrin
 Method 3: Modify the \<property\> property for the AccessIndia MSA by using the Windows PowerShell command line to modify a local instance of the AccessIndia MSA.
 Then set the Instance parameter to the local instance.
 
+```Powershell
 $serviceAccount = Get-ADServiceAccount -Identity "AccessIndia"
-
 $serviceAccount.ServicePrincipalNames = @{Add=ACCESSAPP/india.contoso.com}
-
 Set-ADServiceAccount -Instance $serviceAccount.
+```
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount service1 -Description "Secretive Data Server"
 ```
-
-Description
-
------------
 
 Set the description of Managed Service Account 'service1' to "Secretive Data Server"
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount Mongol01ADAM -ServicePrincipalNames @{replace="ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"}
 ```
 
-Description
-
------------
-
-Replace the value of property ServicePrincipalNames with "ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"
+Replace the value of property ServicePrincipalNames with "ADAMwdb/a.contoso.com" and "ADAMbdb/a.contoso.com"
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount service1 -PrincipalsAllowedToRetrieveManagedPassword "MsaAdmins.corp.contoso.com"
 ```
 
-Description
-
------------
-
 Sets the principals allowed to retrieve the password for this managed service account to be limited to only members of the specified Active Directory group account.
+
+### -------------------------- EXAMPLE 4 --------------------------
+```Powershell
+C:\PS>Set-ADServiceAccount service1 -ServicePrincipalNames @{add="ADAMwdb/a.contoso.com"}
+```
+
+This Cmdlet adds a new principalname to the service, ADAMwdb/a.contoso.com, make sure that a.contoso.com is unique domain wide.
+
+
+
 
 ## PARAMETERS
 

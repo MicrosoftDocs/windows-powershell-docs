@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: a6771a5e-e72b-4188-9658-a5e07e3f5b7a
-ms.manager: dansimp
 ---
 
 # ClusterAwareUpdating Module

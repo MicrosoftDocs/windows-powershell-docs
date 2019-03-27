@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AD0A548E-99FA-4D2F-810C-0F071116DA79
-ms.manager: dansimp
 ---
 
 # Get-DfsrMembership

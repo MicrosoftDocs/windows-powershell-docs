@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: F9F98617-959C-4C4F-9ED2-4CD25662A493
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

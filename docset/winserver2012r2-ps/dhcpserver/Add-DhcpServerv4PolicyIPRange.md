@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E8F48571-4187-48A3-BEB6-60BA65616757
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4PolicyIPRange

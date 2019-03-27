@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0ED2B430-F6D2-4763-B1C5-6D606213F3EC
-ms.manager: dansimp
 ---
 
 # Set-ADServiceAccount
@@ -26,7 +25,7 @@ Modifies an Active Directory managed service account or group managed service ac
 ## SYNTAX
 
 ### Identity
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-Add <Hashtable>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
  [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
@@ -40,7 +39,7 @@ Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### Instance
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
  -Instance <ADServiceAccount> [-PassThru] [-Server <String>] [<CommonParameters>]
 ```
@@ -64,43 +63,45 @@ For more information about the **Instance** parameter, see the **Instance** para
 ## EXAMPLES
 
 ### Example 1: Set the description for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Service1 -Description "Secretive Data Server"
 ```
 
 This command sets the description of the MSA identified as Service1 to Secretive Data Server.
 
 ### Example 2: Replace the value of a property for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Mongol01ADAM -ServicePrincipalNames @{replace="ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"}
 ```
 
-This command replaces the value of property **ServicePrincipalNames** with ADAMwdb/a.contoso.com, ADAMbdb/a.contoso.com.
+This command replaces the value of property **ServicePrincipalNames** with ADAMwdb/a.contoso.com and ADAMbdb/a.contoso.com.
 
 ### Example 3: Set the principals allowed to retrieve the password for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Service1 -PrincipalsAllowedToRetrieveManagedPassword "MsaAdmins.corp.contoso.com"
 ```
 
 This command sets the principals allowed to retrieve the password for this MSA to be limited to members of the specified Active Directory group account.
 
 ### Example 4: Set the ServicePrincipalNames property
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity AccessTSQA -ServicePrincipalNames @{Add=ACCESSAPP/TSQA.contoso.com}
 ```
 
 This command modifies the **ServicePrincipalNames** property for the AccessTSQA MSA by specifying the **Identity** and **ServicePrincipalNames** parameters.
 
 ### Example 5: Get a specified MSA and modify its ServicePrincipalNames property
-```
+```Powershell
 PS C:\>Get-ADServiceAccount -Identity "AccessTSQA" | Set-ADServiceAccount -ServicePrincipalNames @{Add=ACCESSAPP/TSQA.contoso.com}
 ```
 
 This command modifies the **ServicePrincipalNames** property for the AccessTSQA MSA.
 The command uses the Get-ADServiceAccount cmdlet to get the AccessTSQA MSA, and then passes the AccessTSQA MSA to the current cmdlet by using the pipeline operator.
 
+>[!NOTE] make sure that the object ACCESSAPP/TSQA.contoso.com is unique domain-wide.
+
 ### Example 6: Set an MSA from a local instance
-```
+```Powershell
 PS C:\>$ServiceAccount = Get-ADServiceAccount -Identity "AccessTSQA"
 PS C:\> $ServiceAccount.ServicePrincipalNames = @{Add=ACCESSAPP/TSQA.contoso.com}
 PS C:\> Set-ADServiceAccount -Instance $ServiceAccount

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8093DA2-0AC9-4244-9206-B1B9E48A2769
-ms.manager: dansimp
 ---
 
 # Compare-VM

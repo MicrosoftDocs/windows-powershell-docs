@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
+manager: dansimp
 ---
 
 # Suspend-BitLocker

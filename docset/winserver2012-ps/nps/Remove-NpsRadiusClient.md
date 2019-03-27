@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 575A8489-73DB-4C77-BB77-15971D5D159B
+manager: dansimp
 ---
 
 # Remove-NpsRadiusClient

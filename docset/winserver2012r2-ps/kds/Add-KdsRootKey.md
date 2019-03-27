@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E649F25-5050-492D-8A49-662B73B4C7B5
-ms.manager: dansimp
 ---
 
 # Add-KdsRootKey
@@ -26,12 +25,12 @@ Generates a new root key for the Microsoft Group Key Distribution Service (KdsSv
 ## SYNTAX
 
 ### EffectiveTime (Default)
-```
+```yaml
 Add-KdsRootKey [-LocalTestOnly] [[-EffectiveTime] <DateTime>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EffectiveImmediately
-```
+```yaml
 Add-KdsRootKey [-LocalTestOnly] [-EffectiveImmediately] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -42,28 +41,36 @@ The Microsoft Group KdsSvc generates new group keys from the new root key.
 ## EXAMPLES
 
 ### Example 1: Generate a new root key
-```
+```Powershell 
 PS C:\>Add-KdsRootKey
 ```
 
 This example generates a new root key for the Microsoft Group KdsSvc within AD.
 
 ### Example 2: Generate a new root key for immediate use
-```
+```Powershell 
 PS C:\>Add-KdsRootKey -EffectiveImmediately
 ```
 
+This example generates a new root key and will be usable after 10 hours of creation and adds it to the Microsoft Group KdsSvc.
+>[!TIP] This inmediate use is conditioned to wait 10 hours from creation time to allow all DCs to converge AD replication befure you can create gMSA. This time prevents password generation from occurring before all DCs in environment capable of answering gMSA request.>
+
+>[!TIP] For inmediate use please use:
+>```Powershell 
+>Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))  
+>``` 
+>*Allows using gMSAs **immediately**, because it sets the start time 10 hours in past.*
 This example generates a new root key immediately and adds it to the Microsoft Group KdsSvc.
 
 ### Example 3: Generate a new root key which takes effect on a specific date
-```
+```Powershell 
 PS C:\>Add-KdsRootKey -EffectiveTime "03/06/2013"
 ```
 
 This example generates a new root key for the Microsoft Group KdsSvc which takes effect on the specified date 03/06/2013 using the mm/dd/yyyy format.
 
 ### Example 4: Generate a new root key on the local host only
-```
+```Powershell 
 PS C:\>Add-KdsRootKey -LocalTestOnly
 ```
 

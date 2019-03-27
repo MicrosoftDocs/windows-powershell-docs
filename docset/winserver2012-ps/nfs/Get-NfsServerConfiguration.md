@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C20856F1-CD39-40CF-84F0-B24080390119
+manager: dansimp
 ---
 
 # Get-NfsServerConfiguration

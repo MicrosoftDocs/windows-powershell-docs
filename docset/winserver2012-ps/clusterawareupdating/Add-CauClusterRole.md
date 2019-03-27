@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F8E207A2-77D2-48D8-A689-6B22060C3827
+manager: dansimp
 ---
 
 # Add-CauClusterRole

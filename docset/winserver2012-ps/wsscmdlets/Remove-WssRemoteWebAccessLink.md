@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B68093A2-1860-4972-A4A5-97CE2AEBFA13
+manager: dansimp
 ---
 
 # Remove-WssRemoteWebAccessLink

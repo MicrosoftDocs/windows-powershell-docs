@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\docset",
+    "\\docset\\windows",
+    "\\docset\\windows\\storage",
+    "\\docset\\winserver2012-ps",
+    "\\docset\\winserver2012-ps\\storage",
+    "\\docset\\winserver2012r2-ps",
+    "\\docset\\winserver2012r2-ps\\storage"
+  ],
+  "SelectedNode": "\\docset\\windows\\storage\\get-physicaldisk.md",
+  "PreviewInSolutionExplorer": false
+}

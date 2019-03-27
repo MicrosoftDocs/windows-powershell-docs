@@ -40,7 +40,7 @@ If you do not specify any parameters this cmdlet will return all Public, Private
 
 ### Example 1: Get an array of MsmqQueue objects
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private
 ```
 
 This command gets an array of private MsmqQueue objects that are have the name Order.

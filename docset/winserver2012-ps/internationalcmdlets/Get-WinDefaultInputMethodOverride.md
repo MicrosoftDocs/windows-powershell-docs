@@ -33,7 +33,7 @@ InputMethodTip      Keyboard name
 
 ---------------     -------------
 
-0409:00000409       English (United States) â€" US
+0409:00000409       English (United States) - US
 ```
 
 This command returns and displays the default input method for the current user account.

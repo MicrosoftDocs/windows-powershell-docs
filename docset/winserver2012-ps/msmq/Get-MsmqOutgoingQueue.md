@@ -29,7 +29,7 @@ Without parameters, this cmdlet returns all outgoing queues of the host machine.
 
 ### Example 1: Get an array of Outgoing queue objects specified by name
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name Order*
+PS C:\>Get-MsmqOutgoingQueue -Name Order*
 ```
 
 This command gets an array of outgoing queue objects that have the wildcard named Order.

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5A75228C-5B7E-4E55-A3D1-E82EBD6DE2ED
+manager: dansimp
 ---
 
 # Get-DAPolicyChange

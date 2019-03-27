@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 89F9E163-2E6A-448D-8C11-5D26B5FE82D4
-ms.manager: dansimp
 ---
 
 # Add-IpamBlock

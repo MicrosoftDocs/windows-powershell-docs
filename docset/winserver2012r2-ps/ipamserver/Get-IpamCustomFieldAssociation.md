@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8DDBEC3-DAFF-44EB-8B92-9AB1B89B5395
-ms.manager: dansimp
 ---
 
 # Get-IpamCustomFieldAssociation

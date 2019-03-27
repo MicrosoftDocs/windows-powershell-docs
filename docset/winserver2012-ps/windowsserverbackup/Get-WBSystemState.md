@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BD09EDAF-39BB-44B4-A8AE-3971D818CC4B
+manager: dansimp
 ---
 
 # Get-WBSystemState

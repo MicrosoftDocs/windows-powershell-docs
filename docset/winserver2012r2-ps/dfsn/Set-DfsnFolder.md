@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7AC0201-4475-401E-B192-FD8E41EAB0FE
-ms.manager: dansimp
 ---
 
 # Set-DfsnFolder

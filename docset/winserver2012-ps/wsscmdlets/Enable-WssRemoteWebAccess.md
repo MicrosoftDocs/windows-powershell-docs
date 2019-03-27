@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0EDFB6C2-B7CF-4F32-BA54-4A0663D45F86
+manager: dansimp
 ---
 
 # Enable-WssRemoteWebAccess

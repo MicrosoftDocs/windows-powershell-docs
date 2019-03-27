@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BA7E24DE-F643-43A0-8F61-60AA7ACF6A1E
+manager: dansimp
 ---
 
 # Set-DtcTransaction

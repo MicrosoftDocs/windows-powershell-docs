@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 99850379-D448-42D9-91D0-1720A83798F9
-ms.manager: dansimp
 ---
 
 # Get-DfsnFolder

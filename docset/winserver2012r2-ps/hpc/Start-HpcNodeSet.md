@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=205311
 schema: 2.0.0
 title: Start-HpcNodeSet
 ms.assetid: 383CE8F0-810D-4C87-B415-B405E67F960F
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

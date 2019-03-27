@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A22AE48F-D71D-4219-BB4A-B3FCD0DC03BB
-ms.manager: dansimp
 ---
 
 # Move-VM

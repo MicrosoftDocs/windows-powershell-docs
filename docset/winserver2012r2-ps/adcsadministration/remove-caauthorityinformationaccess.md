@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8A3ABA4F-7422-48DD-AA60-A943E8D31474
-ms.manager: dansimp
 ---
 
 # Remove-CAAuthorityInformationAccess

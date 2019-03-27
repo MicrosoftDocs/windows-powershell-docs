@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D5507E92-8CB3-4743-AB87-5211605A5602
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv6Scope

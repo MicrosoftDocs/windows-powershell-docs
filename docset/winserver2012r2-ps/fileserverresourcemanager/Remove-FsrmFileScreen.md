@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A707C35D-2374-4A50-A39B-74A132CBE068
-ms.manager: dansimp
 ---
 
 # Remove-FsrmFileScreen

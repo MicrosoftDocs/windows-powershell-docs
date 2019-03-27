@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 83C2727D-5E10-4DA7-915B-476AF11A3F29
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4FreeIPAddress

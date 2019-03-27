@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3EE6EC5-BA2A-4734-897A-ACD4DB9CC4B5
-ms.manager: dansimp
 ---
 
 # Set-CauClusterRole

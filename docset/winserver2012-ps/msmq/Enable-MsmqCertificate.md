@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3A1265A7-FDE8-469E-87B8-9E0EC72E8BBA
+manager: dansimp
 ---
 
 # Enable-MsmqCertificate

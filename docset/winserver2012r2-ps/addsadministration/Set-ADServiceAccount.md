@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0ED2B430-F6D2-4763-B1C5-6D606213F3EC
-ms.manager: dansimp
 ---
 
 # Set-ADServiceAccount

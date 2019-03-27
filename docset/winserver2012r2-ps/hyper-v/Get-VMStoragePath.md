@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64CF28D6-1FE4-4FF1-8F64-1C3946E0F2B3
-ms.manager: dansimp
 ---
 
 # Get-VMStoragePath

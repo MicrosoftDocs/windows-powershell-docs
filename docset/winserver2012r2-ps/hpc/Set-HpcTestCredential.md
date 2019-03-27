@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182869
 schema: 2.0.0
 title: Set-HpcTestCredential
 ms.assetid: AB026CFE-2A4B-4C26-8356-120FB03EF458
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

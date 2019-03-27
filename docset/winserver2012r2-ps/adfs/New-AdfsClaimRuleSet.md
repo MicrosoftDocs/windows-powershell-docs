@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5108E6A1-37A4-4EA9-AA8A-FFBEAB0B8CBD
-ms.manager: dansimp
 ---
 
 # New-AdfsClaimRuleSet

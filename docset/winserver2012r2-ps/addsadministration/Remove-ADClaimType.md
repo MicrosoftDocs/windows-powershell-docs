@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F262EFCB-0878-45E3-AD7E-C77823B8FECD
-ms.manager: dansimp
 ---
 
 # Remove-ADClaimType

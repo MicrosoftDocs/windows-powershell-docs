@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: d2c2a595-855a-49f3-97c8-1092df8ff0fe
-ms.manager: dansimp
 ---
 
 # HCS Module

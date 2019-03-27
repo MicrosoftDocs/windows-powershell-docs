@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AB69C19D-5DB7-47A9-A938-DC22E7484DC4
-ms.manager: dansimp
 ---
 
 # Mount-VHD

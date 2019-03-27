@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4AE61538-A4A2-4747-AAC7-C7C3154ECE07
+manager: dansimp
 ---
 
 # Update-DAMgmtServer

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EF593C1C-5927-4E90-982D-35C9F9F386F8
+manager: dansimp
 ---
 
 # Send-DtcDiagnosticTransaction

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 191E2C21-1D9B-4513-96CD-7A2A8D4A373D
-ms.manager: dansimp
 ---
 
 # Enable-VMReplication

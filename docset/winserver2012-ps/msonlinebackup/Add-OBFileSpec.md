@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C9BAD40B-646F-4AFF-94A0-7D5F33CF2F57
+manager: dansimp
 ---
 
 # Add-OBFileSpec

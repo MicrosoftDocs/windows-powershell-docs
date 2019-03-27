@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E7DC401D-B13D-4E13-9815-5962B581905E
+manager: dansimp
 ---
 
 # Get-RemoteAccessRadius

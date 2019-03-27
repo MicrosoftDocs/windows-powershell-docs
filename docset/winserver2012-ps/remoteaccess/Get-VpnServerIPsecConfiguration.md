@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F0FDCF47-344C-4998-83FA-DEC416762537
+manager: dansimp
 ---
 
 # Get-VpnServerIPsecConfiguration

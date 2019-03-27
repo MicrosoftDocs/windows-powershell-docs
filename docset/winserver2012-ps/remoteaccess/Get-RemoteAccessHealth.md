@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FDBB76F2-7449-4426-B39D-D83AD6B29E08
+manager: dansimp
 ---
 
 # Get-RemoteAccessHealth

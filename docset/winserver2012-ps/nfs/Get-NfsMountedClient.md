@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E1F71CF4-D149-4CA2-B8A6-BFF510B546D1
+manager: dansimp
 ---
 
 # Get-NfsMountedClient

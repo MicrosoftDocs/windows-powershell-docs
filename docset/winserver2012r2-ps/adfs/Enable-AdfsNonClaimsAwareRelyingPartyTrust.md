@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 633045E2-52BF-4C8A-B332-71E2DCD887A4
-ms.manager: dansimp
 ---
 
 # Enable-AdfsNonClaimsAwareRelyingPartyTrust

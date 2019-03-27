@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1BC393A5-0E77-40A1-A974-1CB5CD2D1442
+manager: dansimp
 ---
 
 # Get-NetIPsecMainModeRule

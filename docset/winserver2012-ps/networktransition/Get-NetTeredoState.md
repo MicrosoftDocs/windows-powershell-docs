@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 862A11AC-F6D2-43F1-9C47-354304610627
+manager: dansimp
 ---
 
 # Get-NetTeredoState

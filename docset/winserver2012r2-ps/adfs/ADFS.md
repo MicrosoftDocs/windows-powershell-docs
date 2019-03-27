@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 627a0682-cc70-4354-8984-0ab8e07d251a
-ms.manager: dansimp
 ---
 
 # ADFS Module

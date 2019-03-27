@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5340F8AF-66D3-40F4-A9E7-E30511B7C5D3
-ms.manager: dansimp
 ---
 
 # Set-NetQosDcbxSetting

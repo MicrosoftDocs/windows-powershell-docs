@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D5C2DCD1-0959-455C-A983-EBED0B84C1D9
+manager: dansimp
 ---
 
 # Get-SupportedFileSystems

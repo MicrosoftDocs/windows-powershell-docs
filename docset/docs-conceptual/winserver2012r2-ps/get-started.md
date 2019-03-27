@@ -2,6 +2,7 @@
 title: Windows 8.1 and Windows Server 2012 R2
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 ms.assetid: fb041404-841c-4986-8e04-58da7d313f11
+manager: dansimp
 ms.date: 01/10/2018
 ms.reviewer:
 ms.author: kenwith

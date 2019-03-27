@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1ACF4732-E32D-4741-8583-79E7BD0D43E6
-ms.manager: dansimp
 ---
 
 # Remove-AdfsAttributeStore

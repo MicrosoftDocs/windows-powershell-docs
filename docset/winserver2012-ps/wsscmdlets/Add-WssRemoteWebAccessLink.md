@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8F64B520-98EE-4D08-96B6-FFE281F3DB74
+manager: dansimp
 ---
 
 # Add-WssRemoteWebAccessLink

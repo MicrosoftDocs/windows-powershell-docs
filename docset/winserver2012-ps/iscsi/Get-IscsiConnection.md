@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E566D297-76AD-48D0-B5AF-11674F23B080
+manager: dansimp
 ---
 
 # Get-IscsiConnection

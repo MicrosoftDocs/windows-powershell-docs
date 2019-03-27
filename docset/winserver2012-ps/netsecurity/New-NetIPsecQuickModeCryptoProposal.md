@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5C6C43AA-F785-4EA5-88C7-39A8DAF38DCA
+manager: dansimp
 ---
 
 # New-NetIPsecQuickModeCryptoProposal

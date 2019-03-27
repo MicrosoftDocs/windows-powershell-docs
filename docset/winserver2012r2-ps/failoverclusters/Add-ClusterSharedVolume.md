@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEE8A735-0D5F-4C07-A70E-73F0BB90DEB1
-ms.manager: dansimp
 ---
 
 # Add-ClusterSharedVolume

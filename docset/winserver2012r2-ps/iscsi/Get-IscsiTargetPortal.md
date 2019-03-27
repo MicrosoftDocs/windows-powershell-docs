@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA6E900A-BF02-4457-BD71-E133AAE50E60
-ms.manager: dansimp
 ---
 
 # Get-IscsiTargetPortal

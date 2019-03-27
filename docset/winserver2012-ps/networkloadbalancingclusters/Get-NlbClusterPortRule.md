@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 86963755-70D4-461C-A612-A2250351AC90
+manager: dansimp
 ---
 
 # Get-NlbClusterPortRule

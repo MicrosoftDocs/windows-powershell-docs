@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 991DE50A-9447-44E8-B772-1F2A286BFBAB
-ms.manager: dansimp
 ---
 
 # Enter-HcsSupportSession

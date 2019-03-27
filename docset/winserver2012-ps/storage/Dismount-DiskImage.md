@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B38C053D-45B5-49F5-AFF9-0228ED638828
+manager: dansimp
 ---
 
 # Dismount-DiskImage

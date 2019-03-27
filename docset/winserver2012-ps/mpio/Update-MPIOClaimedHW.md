@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1E060953-FA34-4BF1-891E-249A1DBAC3FB
+manager: dansimp
 ---
 
 # Update-MPIOClaimedHW

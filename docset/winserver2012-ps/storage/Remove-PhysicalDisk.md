@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BDA3A89C-247C-4D07-B11C-DF8E96853D35
+manager: dansimp
 ---
 
 # Remove-PhysicalDisk

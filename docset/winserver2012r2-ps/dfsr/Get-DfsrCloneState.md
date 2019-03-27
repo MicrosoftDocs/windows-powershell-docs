@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7AB69D87-9BD9-4058-9E40-6A50C6382BBB
-ms.manager: dansimp
 ---
 
 # Get-DfsrCloneState

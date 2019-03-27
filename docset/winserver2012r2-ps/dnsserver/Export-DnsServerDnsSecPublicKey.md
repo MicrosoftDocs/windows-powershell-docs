@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E3C5714A-FF61-4485-9F86-D49A3AC8A86E
-ms.manager: dansimp
 ---
 
 # Export-DnsServerDnsSecPublicKey

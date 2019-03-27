@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
-ms.manager: dansimp
 ---
 
 # Install-AdcsCertificationAuthority

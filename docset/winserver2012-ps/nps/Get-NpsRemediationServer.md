@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 42367CB1-3ACA-49EB-B893-B2C80D2E4285
+manager: dansimp
 ---
 
 # Get-NpsRemediationServer

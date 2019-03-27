@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3B0D99D7-44E0-46D2-A30B-F1B5DBF8BE14
-ms.manager: dansimp
 ---
 
 # Get-IpamAddress

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 887FB74B-DC18-4183-A3E1-72E41F61072D
+manager: dansimp
 ---
 
 # Set-NetVirtualizationGlobal

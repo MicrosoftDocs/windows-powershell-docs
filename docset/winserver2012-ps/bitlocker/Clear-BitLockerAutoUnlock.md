@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: D39F712B-7DCC-4F4D-BE51-449D7F5647E6
+manager: dansimp
 ---
 
 # Clear-BitLockerAutoUnlock

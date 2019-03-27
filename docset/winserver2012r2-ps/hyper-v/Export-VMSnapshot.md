@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6B839212-BB3E-4321-92C1-A32FFC38FDFD
-ms.manager: dansimp
 ---
 
 # Export-VMSnapshot

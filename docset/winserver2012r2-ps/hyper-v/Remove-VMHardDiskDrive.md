@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C1A0A105-91AC-4A3E-BB5F-D526A6E96747
-ms.manager: dansimp
 ---
 
 # Remove-VMHardDiskDrive

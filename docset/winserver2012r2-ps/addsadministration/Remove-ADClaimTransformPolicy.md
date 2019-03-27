@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EE61D495-9BC6-4DD6-8FCA-172E4F72E712
-ms.manager: dansimp
 ---
 
 # Remove-ADClaimTransformPolicy

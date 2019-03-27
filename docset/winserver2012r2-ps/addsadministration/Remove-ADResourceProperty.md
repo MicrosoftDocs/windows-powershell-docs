@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 10CDAEE9-1D5E-4FAB-8907-3DCDA92B1E14
-ms.manager: dansimp
 ---
 
 # Remove-ADResourceProperty

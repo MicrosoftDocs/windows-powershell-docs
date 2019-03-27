@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C860935E-5A0D-4BBB-B154-31E11CA7D84F
-ms.manager: dansimp
 ---
 
 # Get-DnsServerCache

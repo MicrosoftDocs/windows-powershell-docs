@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 375BEA74-E632-41FA-9090-2C4F9D10584B
-ms.manager: dansimp
 ---
 
 # New-ADClaimType

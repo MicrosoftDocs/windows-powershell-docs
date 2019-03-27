@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 24F71EF7-BA39-4434-A1EE-E43FFFCB1319
+manager: dansimp
 ---
 
 # Reset-Net6to4Configuration

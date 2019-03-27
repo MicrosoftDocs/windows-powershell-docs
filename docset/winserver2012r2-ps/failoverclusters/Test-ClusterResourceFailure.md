@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 603DAB8D-743A-42B0-BAAE-9E32770C966B
-ms.manager: dansimp
 ---
 
 # Test-ClusterResourceFailure

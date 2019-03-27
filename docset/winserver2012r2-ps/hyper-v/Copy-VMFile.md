@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 41BE782E-40FE-45A0-A233-7F21D46CFFB9
-ms.manager: dansimp
 ---
 
 # Copy-VMFile

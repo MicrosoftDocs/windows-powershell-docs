@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78CAC821-04DF-474B-902B-050593D99279
-ms.manager: dansimp
 ---
 
 # Set-VMSan

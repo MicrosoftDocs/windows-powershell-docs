@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7EC42317-3C7A-4F7E-BE4E-950BEBFD1F47
-ms.manager: dansimp
 ---
 
 # Get-ADReplicationSite

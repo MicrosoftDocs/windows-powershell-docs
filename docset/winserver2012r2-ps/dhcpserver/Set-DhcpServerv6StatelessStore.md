@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 04945C8D-E951-4B4A-8B57-47FF9DE98AA8
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerv6StatelessStore

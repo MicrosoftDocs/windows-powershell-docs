@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3EC04CE3-FEBF-4DE6-83A3-5DFC5091029B
-ms.manager: dansimp
 ---
 
 # Get-DnsServerDnsSecZoneSetting

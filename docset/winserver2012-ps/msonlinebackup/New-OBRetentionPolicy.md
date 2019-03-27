@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CC58A2E5-286A-4819-AB6A-DBD6C970A457
+manager: dansimp
 ---
 
 # New-OBRetentionPolicy

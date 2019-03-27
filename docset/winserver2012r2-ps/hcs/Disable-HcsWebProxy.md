@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B12BE6DD-7A8C-4DFD-99D3-F53D87379B38
-ms.manager: dansimp
 ---
 
 # Disable-HcsWebProxy

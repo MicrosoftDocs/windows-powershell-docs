@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 68E1CC66-8A5C-4BD3-B7A5-3ED958FC4A3C
+manager: dansimp
 ---
 
 # Get-NetOffloadGlobalSetting

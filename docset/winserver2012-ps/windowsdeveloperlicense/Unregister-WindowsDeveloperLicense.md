@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
 ms.assetid: 2D3D3DD5-BA97-4613-BADE-609298A6229B
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

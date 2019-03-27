@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D71F5BF6-6EA7-4706-A125-B050628D22BA
-ms.manager: dansimp
 ---
 
 # Move-ADObject

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE2F7465-C679-4A45-BEA1-D517A7FD7918
-ms.manager: dansimp
 ---
 
 # Update-AdfsClaimsProviderTrust

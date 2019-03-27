@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 65F40A1A-C427-4916-9AF6-E8DE7F4BCD28
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4MulticastScopeStatistics

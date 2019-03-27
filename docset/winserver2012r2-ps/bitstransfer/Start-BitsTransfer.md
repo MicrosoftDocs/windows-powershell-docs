@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D292A19B-5BCB-4E62-8AA4-FE371F3FABCF
-ms.manager: dansimp
 ---
 
 # Start-BitsTransfer

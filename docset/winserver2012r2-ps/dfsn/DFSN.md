@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f2f787ee-8a15-498e-bba7-2742234d975c
-ms.manager: dansimp
 ---
 
 # DFSN Module

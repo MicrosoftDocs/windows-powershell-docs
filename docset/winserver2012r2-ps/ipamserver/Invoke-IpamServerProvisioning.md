@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0D803E57-68C1-4767-AB40-827E80DBC5BF
-ms.manager: dansimp
 ---
 
 # Invoke-IpamServerProvisioning

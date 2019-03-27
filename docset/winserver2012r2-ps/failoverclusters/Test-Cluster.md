@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 69D30A79-E961-41C7-901A-DC04A17EAA6C
-ms.manager: dansimp
 ---
 
 # Test-Cluster

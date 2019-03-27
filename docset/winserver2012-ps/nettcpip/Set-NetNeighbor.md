@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5AB2C464-1746-4874-8B07-156D743D0B6F
+manager: dansimp
 ---
 
 # Set-NetNeighbor

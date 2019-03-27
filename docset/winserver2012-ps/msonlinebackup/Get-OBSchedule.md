@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C178CF8E-932E-42CE-831A-1D6450C33437
+manager: dansimp
 ---
 
 # Get-OBSchedule

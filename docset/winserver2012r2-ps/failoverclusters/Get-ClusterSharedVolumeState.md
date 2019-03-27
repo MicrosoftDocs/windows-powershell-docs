@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18EB30D8-AFB5-4FFC-A246-2E10FCC287B2
-ms.manager: dansimp
 ---
 
 # Get-ClusterSharedVolumeState

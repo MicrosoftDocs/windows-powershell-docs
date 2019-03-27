@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
+manager: dansimp
 ---
 
 # Set-StorageSetting

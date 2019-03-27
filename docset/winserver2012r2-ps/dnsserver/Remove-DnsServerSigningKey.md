@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 788041B6-8866-4D84-92AA-7543620DA4AA
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerSigningKey

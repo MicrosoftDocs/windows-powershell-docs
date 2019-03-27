@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 43711CCF-272B-4C16-A094-8A69D2C4194D
+manager: dansimp
 ---
 
 # New-NetIPsecMainModeRule

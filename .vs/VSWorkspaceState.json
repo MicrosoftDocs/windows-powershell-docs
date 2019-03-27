@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\docset",
+    "\\docset\\winserver2012-ps",
+    "\\docset\\winserver2012-ps\\activedirectory",
+    "\\docset\\winserver2012-ps\\netadapter",
+    "\\docset\\winserver2012-ps\\webadminstration",
+    "\\docset\\winserver2012-ps\\windowsserverbackup",
+    "\\docset\\winserver2012-ps\\wsscmdlets",
+    "\\docset\\winserver2012r2-ps",
+    "\\docset\\winserver2012r2-ps\\addsadministration",
+    "\\docset\\winserver2012r2-ps\\netadapter"
+  ],
+  "SelectedNode": "\\docset\\images",
+  "PreviewInSolutionExplorer": false
+}

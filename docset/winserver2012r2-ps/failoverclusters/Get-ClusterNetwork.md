@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BC7E8823-6E63-4DFB-8675-81CD5E76F4D7
-ms.manager: dansimp
 ---
 
 # Get-ClusterNetwork

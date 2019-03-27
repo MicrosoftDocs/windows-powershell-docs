@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E0662F30-27FF-4182-87A0-567CAB097C51
-ms.manager: dansimp
 ---
 
 # Enable-DAManualEntryPointSelection

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5F7B7FB1-A749-4637-87CF-AC1E8DD7C588
+manager: dansimp
 ---
 
 # Move-MsmqMessage

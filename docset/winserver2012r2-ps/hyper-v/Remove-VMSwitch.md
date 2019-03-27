@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8898452-9A9C-4428-A9AC-FD91D8DF7B49
-ms.manager: dansimp
 ---
 
 # Remove-VMSwitch

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 76012F58-0AE8-4FFD-9201-45B4FF6214C9
-ms.manager: dansimp
 ---
 
 # Export-BCCachePackage

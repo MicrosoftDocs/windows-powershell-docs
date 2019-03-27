@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 84AE919B-144B-45A5-A217-14B9D2DA4EB1
+manager: dansimp
 ---
 
 # Add-DtcClusterTMMapping

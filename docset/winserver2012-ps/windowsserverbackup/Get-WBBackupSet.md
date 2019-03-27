@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FE786AAE-7B79-4D2E-9594-0D48AEF2CD0F
+manager: dansimp
 ---
 
 # Get-WBBackupSet

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 30C0E331-8926-48D7-9169-EB0EEC09369B
+manager: dansimp
 ---
 
 # Set-NetIPsecMainModeRule

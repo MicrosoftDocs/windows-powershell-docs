@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4A46FE32-3ECC-4A7B-9EFB-37AF40AB4D3C
+manager: dansimp
 ---
 
 # Disable-DAOtpAuthentication

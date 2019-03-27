@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A789707E-04CB-4F49-B785-92247C8EB8AB
+manager: dansimp
 ---
 
 # New-StoragePool

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B25A6D2-2FEB-468B-A8AC-9970D818FCA8
-ms.manager: dansimp
 ---
 
 # Remove-CauClusterRole

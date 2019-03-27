@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D110122B-2F95-42FF-82F4-E37BB7E01F5E
-ms.manager: dansimp
 ---
 
 # Remove-IpamRange

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2F1B3F0-86FC-4CEA-840D-F411DABADF2C
-ms.manager: dansimp
 ---
 
 # Set-AssignedAccess

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BFB98125-9725-424C-A4D5-C27AC948C38C
-ms.manager: dansimp
 ---
 
 # Set-ADAccountAuthenticationPolicySilo

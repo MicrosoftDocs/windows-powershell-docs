@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0B7E754E-0EF5-433E-9BDE-28E87137B305
+manager: dansimp
 ---
 
 # Set-RemoteAccessInboxAccountingStore

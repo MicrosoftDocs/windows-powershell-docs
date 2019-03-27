@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED2C90F6-5605-4041-93CD-CF179D010631
-ms.manager: dansimp
 ---
 
 # Remove-DedupSchedule

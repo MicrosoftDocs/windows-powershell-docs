@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3C776A62-79F8-46D7-A1D3-59A2D26976E0
-ms.manager: dansimp
 ---
 
 # Set-AppXProvisionedDataFile

@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9451ee96-965a-4221-9403-9c2e760912a2
-ms.manager: dansimp
 ---
 
 # ADRMS Module

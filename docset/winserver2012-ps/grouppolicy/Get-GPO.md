@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C19D7D52-EF72-44E3-AC03-FD5B401769D1
+manager: dansimp
 ---
 
 # Get-GPO

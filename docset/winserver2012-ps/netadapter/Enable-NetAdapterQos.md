@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 207DEA46-20E6-46EC-9317-538D56ED19D9
+manager: dansimp
 ---
 
 # Enable-NetAdapterQos

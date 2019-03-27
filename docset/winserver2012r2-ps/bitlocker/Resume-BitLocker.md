@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18BE9A1F-283D-448F-A68F-D0450FCAB515
-ms.manager: dansimp
 ---
 
 # Resume-BitLocker

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 89601806-F13E-4C1E-AECC-ECC0CA7758F5
+manager: dansimp
 ---
 
 # Get-WBDisk

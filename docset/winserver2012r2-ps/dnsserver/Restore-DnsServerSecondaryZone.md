@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C68C6B38-79C5-4225-8458-4F391B63C44F
-ms.manager: dansimp
 ---
 
 # Restore-DnsServerSecondaryZone

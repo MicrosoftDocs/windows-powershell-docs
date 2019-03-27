@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 393366D5-4123-42FC-BC28-B015002280A6
+manager: dansimp
 ---
 
 # Get-ClusteredScheduledTask

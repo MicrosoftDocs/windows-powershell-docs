@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A1A175E-C05F-4931-ABB2-2CAB46F8CC32
-ms.manager: dansimp
 ---
 
 # Set-ADComputer

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4F9AFA05-30C3-481C-9820-023C325F4C0D
+manager: dansimp
 ---
 
 # Add-WBVirtualMachine

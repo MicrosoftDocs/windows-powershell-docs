@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6140668B-3853-472F-95A0-939F64D7455F
+manager: dansimp
 ---
 
 # Stop-WssClientBackupRepair

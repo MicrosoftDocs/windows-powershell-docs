@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3B142054-EA22-49CE-A034-B87B1C0D9D49
-ms.manager: dansimp
 ---
 
 # Start-AppBackgroundTask

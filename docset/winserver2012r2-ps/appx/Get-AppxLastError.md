@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 658F6689-4A9E-4EF1-8C2F-F06BBD0947BD
-ms.manager: dansimp
 ---
 
 # Get-AppxLastError

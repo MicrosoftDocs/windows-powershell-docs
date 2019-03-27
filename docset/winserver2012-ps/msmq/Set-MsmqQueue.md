@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E92DABAF-87C0-487D-8DA3-9D1C52587855
+manager: dansimp
 ---
 
 # Set-MsmqQueue

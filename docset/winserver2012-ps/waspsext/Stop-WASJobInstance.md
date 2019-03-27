@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 61BEFC93-70F6-487C-9505-B34DDFCCEE79
+manager: dansimp
 ---
 
 # Stop-WASJobInstance

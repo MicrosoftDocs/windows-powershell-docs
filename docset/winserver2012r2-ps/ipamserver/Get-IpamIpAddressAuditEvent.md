@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EF169672-28E8-444C-8FAE-572725C85C8A
-ms.manager: dansimp
 ---
 
 # Get-IpamIpAddressAuditEvent

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D58BC86F-AAC1-4BCF-A1B7-13152A50ECB4
-ms.manager: dansimp
 ---
 
 # Mount-WindowsImage

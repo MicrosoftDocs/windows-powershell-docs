@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C51A92A1-8994-4D65-8618-DAA35DD61815
-ms.manager: dansimp
 ---
 
 # Disable-AdfsRelyingPartyTrust

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C4326170-FF50-4A3F-A4E6-994F598D4C25
-ms.manager: dansimp
 ---
 
 # Stop-ClusterResource

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66EF6F05-971C-4D89-9D5E-00F6A3802ED4
-ms.manager: dansimp
 ---
 
 # Get-AdfsClient

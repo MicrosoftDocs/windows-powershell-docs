@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 06868ED8-D84C-4BD4-9848-84378ECB99A0
-ms.manager: dansimp
 ---
 
 # Publish-SslCertificate

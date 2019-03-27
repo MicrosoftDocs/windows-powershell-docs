@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BFF99644-7AC6-40A0-97A0-48E161363338
+manager: dansimp
 ---
 
 # New-GPO

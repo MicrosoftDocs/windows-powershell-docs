@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5841ABD5-8FDB-4444-B55A-FC2205A82C84
-ms.manager: dansimp
 ---
 
 # Get-AdfsDeviceRegistrationUpnSuffix

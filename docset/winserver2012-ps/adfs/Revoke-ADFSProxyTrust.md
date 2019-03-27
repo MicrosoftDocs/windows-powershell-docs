@@ -4,9 +4,6 @@ ms.assetid: D195E1FA-27A4-443A-A117-8CC8FF5920CB
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Revoke-ADFSProxyTrust

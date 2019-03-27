@@ -2,9 +2,6 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ms.assetid: B579FEB7-574E-4039-8F0C-F713BC160B9B
 manager: dansimp
 ---

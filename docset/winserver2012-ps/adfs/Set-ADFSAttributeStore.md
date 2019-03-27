@@ -4,9 +4,6 @@ ms.assetid: D579577A-E578-4DFB-BFAA-1652E7E9D118
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADFSAttributeStore

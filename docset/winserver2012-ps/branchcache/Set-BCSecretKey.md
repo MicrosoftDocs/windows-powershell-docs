@@ -4,9 +4,6 @@ ms.assetid: 1A9FB4EF-F7B0-4907-AA14-21233F4153A1
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-BCSecretKey

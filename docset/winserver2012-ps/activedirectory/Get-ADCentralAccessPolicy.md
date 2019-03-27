@@ -4,9 +4,6 @@ ms.assetid: E22093AC-BD7D-404C-95E3-C4D24DE72B4A
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADCentralAccessPolicy

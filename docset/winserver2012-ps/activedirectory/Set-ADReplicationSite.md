@@ -4,9 +4,6 @@ ms.assetid: CDEE90FB-5918-4234-99C9-18F90AE02984
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADReplicationSite

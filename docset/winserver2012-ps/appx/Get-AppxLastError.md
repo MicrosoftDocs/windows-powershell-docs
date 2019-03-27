@@ -4,9 +4,6 @@ ms.assetid: 658F6689-4A9E-4EF1-8C2F-F06BBD0947BD
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-AppxLastError

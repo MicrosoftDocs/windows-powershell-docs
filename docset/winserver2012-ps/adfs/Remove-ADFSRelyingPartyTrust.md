@@ -4,9 +4,6 @@ ms.assetid: A8055D6C-C344-456B-9ED3-FEBA67F4FB8E
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADFSRelyingPartyTrust

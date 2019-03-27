@@ -4,9 +4,6 @@ ms.assetid: 72EF5EDC-5AF2-423C-9DA5-536E7CA7A7AF
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # New-ADResourcePropertyList

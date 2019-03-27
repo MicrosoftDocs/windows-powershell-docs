@@ -4,9 +4,6 @@ ms.assetid: 6A163BB0-D459-4304-86BA-698960B0191F
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Reset-ADServiceAccountPassword

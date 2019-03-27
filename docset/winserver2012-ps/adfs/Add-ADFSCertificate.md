@@ -4,9 +4,6 @@ ms.assetid: 8C858920-7B90-490B-9C6C-45B97EF82F7E
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Add-ADFSCertificate

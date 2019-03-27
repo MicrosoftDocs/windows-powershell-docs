@@ -4,9 +4,6 @@ ms.assetid: 5EE1FCCD-DC7A-4C50-ABB5-7C0D240D851A
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADResourcePropertyValueType

@@ -4,9 +4,6 @@ ms.assetid: 7974AE6F-264B-498C-893F-4069DF974E8D
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADDomainControllerPasswordReplicationPolicy

@@ -4,9 +4,6 @@ ms.assetid: 4F35B658-C749-4EB6-B080-52CA6877377F
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADReplicationConnection

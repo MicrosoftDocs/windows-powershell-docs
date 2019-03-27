@@ -4,9 +4,6 @@ ms.assetid: DD4457AA-A27C-42DA-BCB0-F0BDBBB0C0E7
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADComputer

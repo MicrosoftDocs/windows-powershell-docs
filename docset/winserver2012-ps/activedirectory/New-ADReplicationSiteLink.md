@@ -4,9 +4,6 @@ ms.assetid: ECE9D850-1F54-4D13-B6E4-40D95FB662DC
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # New-ADReplicationSiteLink

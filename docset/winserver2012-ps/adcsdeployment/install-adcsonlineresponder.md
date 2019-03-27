@@ -4,9 +4,6 @@ ms.assetid: 461DA0B7-62C8-4299-9A58-42C4F15146F5
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Install-AdcsOnlineResponder

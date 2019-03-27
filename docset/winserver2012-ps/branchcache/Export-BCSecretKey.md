@@ -4,9 +4,6 @@ ms.assetid: 94140170-8217-4C25-A899-82B5BE694E17
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Export-BCSecretKey

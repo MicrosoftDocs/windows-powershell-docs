@@ -4,9 +4,6 @@ ms.assetid: FAECFBF2-DDBC-4EE9-A2F9-FA248F30881B
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Enable-BCServeOnBattery

@@ -4,9 +4,6 @@ ms.assetid: 37FCBF36-BF04-41C3-B2A8-D74C8D39235D
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Clear-ADAccountExpiration

@@ -4,9 +4,6 @@ ms.assetid: 855A4537-3F85-470D-93C0-1F6CA48958B3
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Update-RmsMfgEnrollment

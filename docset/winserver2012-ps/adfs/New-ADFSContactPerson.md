@@ -4,9 +4,6 @@ ms.assetid: CC60A897-EF69-40DD-9016-C0C3EF457DD8
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # New-ADFSContactPerson

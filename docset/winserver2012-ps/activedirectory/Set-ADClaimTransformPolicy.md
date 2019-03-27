@@ -4,9 +4,6 @@ ms.assetid: F6AF9543-D62D-4954-81A0-9AE7EF57A856
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADClaimTransformPolicy

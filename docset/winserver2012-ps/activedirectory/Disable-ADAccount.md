@@ -4,9 +4,6 @@ ms.assetid: 70167D4B-09FF-42A2-BFF8-09450F8DBC14
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Disable-ADAccount

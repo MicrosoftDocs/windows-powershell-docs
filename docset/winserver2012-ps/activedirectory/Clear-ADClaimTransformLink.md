@@ -4,9 +4,6 @@ ms.assetid: 19BEF7F8-7062-4525-AC80-D24964A9CD50
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Clear-ADClaimTransformLink

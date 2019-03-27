@@ -4,9 +4,6 @@ ms.assetid: 842EE916-35DF-4782-9411-4A10910DD9A2
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Publish-BCFileContent

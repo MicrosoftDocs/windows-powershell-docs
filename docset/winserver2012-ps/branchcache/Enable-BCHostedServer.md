@@ -4,9 +4,6 @@ ms.assetid: E4221D3B-2453-45A9-B285-35A810ADD206
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Enable-BCHostedServer

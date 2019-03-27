@@ -4,9 +4,6 @@ ms.assetid: 1F36F293-04EC-44A7-935E-8F71AD81B178
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Update-ADRMS

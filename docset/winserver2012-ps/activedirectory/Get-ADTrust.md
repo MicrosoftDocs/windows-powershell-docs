@@ -4,9 +4,6 @@ ms.assetid: E0C0AA95-1854-4AAD-8657-259BB8B4F693
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADTrust

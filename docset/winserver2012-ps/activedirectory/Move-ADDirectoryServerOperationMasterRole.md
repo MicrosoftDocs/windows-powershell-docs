@@ -4,9 +4,6 @@ ms.assetid: C779A4F5-0BB8-4E7B-B91C-FC44E2DBE160
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Move-ADDirectoryServerOperationMasterRole

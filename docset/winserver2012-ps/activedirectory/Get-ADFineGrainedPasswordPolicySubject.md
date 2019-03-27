@@ -4,9 +4,6 @@ ms.assetid: 7373D156-E02D-4108-80FA-24B675081075
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADFineGrainedPasswordPolicySubject

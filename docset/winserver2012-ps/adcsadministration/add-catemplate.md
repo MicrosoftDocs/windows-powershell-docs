@@ -4,9 +4,6 @@ ms.assetid: C8A5382D-23F3-4DDE-9661-EAF69E65B2AB
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Add-CATemplate

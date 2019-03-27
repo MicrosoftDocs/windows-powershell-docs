@@ -4,9 +4,6 @@ ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-BCNetworkConfiguration

@@ -4,9 +4,6 @@ ms.assetid: 6803586B-064D-4A92-BB88-C1542D1C365C
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-RmsChildCert

@@ -4,9 +4,6 @@ ms.assetid: 6BE78483-633F-43B1-96B5-C1123CC1F21A
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-RmsSvcAccount

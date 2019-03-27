@@ -4,9 +4,6 @@ ms.assetid: E03584B5-020B-4952-9B9F-371A7716EB94
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADCentralAccessPolicy

@@ -4,9 +4,6 @@ ms.assetid: 3946BA04-13FB-482D-9824-89F8994FBF03
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Add-ADDSReadOnlyDomainControllerAccount

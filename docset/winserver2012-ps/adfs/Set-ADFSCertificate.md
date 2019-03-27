@@ -4,9 +4,6 @@ ms.assetid: AFE7301A-2114-4062-BD66-55220CFBBFC7
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADFSCertificate

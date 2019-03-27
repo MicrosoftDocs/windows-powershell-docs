@@ -4,9 +4,6 @@ ms.assetid: 3EDD4F25-41F2-4F11-BD20-3BE143D6FD3E
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Uninstall-AdcsEnrollmentPolicyWebService

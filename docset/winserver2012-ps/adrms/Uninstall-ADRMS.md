@@ -4,9 +4,6 @@ ms.assetid: 8D3160C9-85B2-4401-8927-A4E6846947F3
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Uninstall-ADRMS

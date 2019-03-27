@@ -4,9 +4,6 @@ ms.assetid: 64D8530E-2A66-4866-A719-5269F3B859CF
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Clear-BCCache

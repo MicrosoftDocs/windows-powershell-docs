@@ -4,9 +4,6 @@ ms.assetid: D5F13D37-F9E2-4206-93D5-DC44B5A1568D
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADFineGrainedPasswordPolicy

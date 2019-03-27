@@ -4,9 +4,6 @@ ms.assetid: 968E750A-F708-424C-9648-E49F1C28FAE7
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADFineGrainedPasswordPolicySubject

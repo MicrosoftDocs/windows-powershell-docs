@@ -4,9 +4,6 @@ ms.assetid: D34852CB-CB0D-4670-91C2-2CE19A3070CC
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Reset-BC

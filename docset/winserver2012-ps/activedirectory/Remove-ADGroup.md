@@ -4,9 +4,6 @@ ms.assetid: 65C49328-C60F-4D05-8507-09CF56091982
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADGroup

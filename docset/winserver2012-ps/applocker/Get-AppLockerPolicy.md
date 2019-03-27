@@ -4,9 +4,6 @@ ms.assetid: EE3463D6-A81F-4C97-900B-E6C0F400D40F
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-AppLockerPolicy

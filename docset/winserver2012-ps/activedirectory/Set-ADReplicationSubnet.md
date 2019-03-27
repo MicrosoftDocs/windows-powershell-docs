@@ -4,9 +4,6 @@ ms.assetid: 0AA5D022-51D8-45C4-A5C5-112973CD11D2
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADReplicationSubnet

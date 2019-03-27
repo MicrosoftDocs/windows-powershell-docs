@@ -4,9 +4,6 @@ ms.assetid: 3FE9F02A-96EA-401C-8E7D-9A0426FA43DE
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADReplicationSiteLink

@@ -4,9 +4,6 @@ ms.assetid: 28AE4F8D-8D1F-4569-B3A2-F2A4446877F8
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADComputerServiceAccount

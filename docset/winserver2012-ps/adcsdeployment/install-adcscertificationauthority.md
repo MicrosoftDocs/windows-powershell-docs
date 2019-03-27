@@ -4,9 +4,6 @@ ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Install-AdcsCertificationAuthority

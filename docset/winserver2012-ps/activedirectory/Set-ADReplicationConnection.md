@@ -4,9 +4,6 @@ ms.assetid: BB77517D-2A1A-42B6-8D5E-CB99D5D463FE
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADReplicationConnection

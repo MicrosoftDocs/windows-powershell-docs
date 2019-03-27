@@ -4,9 +4,6 @@ ms.assetid: 7C7ECB51-BF09-4537-ADF5-4B81B2FECA5B
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Disable-BCDowngrading

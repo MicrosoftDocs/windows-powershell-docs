@@ -4,9 +4,6 @@ ms.assetid: E21BE6D6-59EA-451F-8FAA-7B89E121ECB0
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADFSConfiguration

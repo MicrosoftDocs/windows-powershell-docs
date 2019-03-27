@@ -4,9 +4,6 @@ ms.assetid: B509236C-E311-4683-9DA2-A403BE87D914
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADFSClaimDescription

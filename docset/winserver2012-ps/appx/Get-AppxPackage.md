@@ -4,9 +4,6 @@ ms.assetid: D656EADB-79C4-4057-B933-2F8019BA4681
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-AppxPackage

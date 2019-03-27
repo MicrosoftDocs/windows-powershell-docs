@@ -4,9 +4,6 @@ ms.assetid: 276B5CA1-081E-4FC5-91EE-A458D2E05720
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADReplicationAttributeMetadata

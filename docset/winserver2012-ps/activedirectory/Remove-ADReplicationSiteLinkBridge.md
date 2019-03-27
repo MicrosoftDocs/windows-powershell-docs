@@ -4,9 +4,6 @@ ms.assetid: F357B82E-6003-45CE-A554-71CBE67F3736
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADReplicationSiteLinkBridge

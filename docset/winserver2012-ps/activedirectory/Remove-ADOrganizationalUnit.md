@@ -4,9 +4,6 @@ ms.assetid: 4BB22453-8D6B-46C6-8BF3-11FCA642A75B
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Remove-ADOrganizationalUnit

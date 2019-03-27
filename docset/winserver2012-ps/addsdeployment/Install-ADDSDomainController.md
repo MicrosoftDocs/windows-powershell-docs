@@ -4,9 +4,6 @@ ms.assetid: 92D42F54-D6E9-422B-8174-A53F8FE86017
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Install-ADDSDomainController

@@ -4,9 +4,6 @@ ms.assetid: 251AA5E1-8D5D-4EDA-82B5-F0092B44EC3F
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADUser

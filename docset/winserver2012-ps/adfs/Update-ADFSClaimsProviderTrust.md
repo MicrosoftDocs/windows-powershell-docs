@@ -4,9 +4,6 @@ ms.assetid: 87C181D1-5D53-49C4-9389-9EAEE11B8BBB
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Update-ADFSClaimsProviderTrust

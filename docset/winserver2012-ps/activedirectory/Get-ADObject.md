@@ -4,9 +4,6 @@ ms.assetid: FBC1D06F-C845-4B26-8AE2-DCA1B8E53107
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADObject

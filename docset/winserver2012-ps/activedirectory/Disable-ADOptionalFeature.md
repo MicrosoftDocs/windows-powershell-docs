@@ -4,9 +4,6 @@ ms.assetid: 3CF6B1D8-DA88-45F2-9520-34B11CAA3928
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Disable-ADOptionalFeature

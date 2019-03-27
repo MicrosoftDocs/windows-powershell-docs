@@ -4,9 +4,6 @@ ms.assetid: 6B3BBE29-2BE9-45B8-97E0-05E10C29F5ED
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Disable-BC

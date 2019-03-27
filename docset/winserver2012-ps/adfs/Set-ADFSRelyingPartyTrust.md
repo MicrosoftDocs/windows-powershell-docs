@@ -4,9 +4,6 @@ ms.assetid: 79C5CC0C-311C-450E-AFF5-666E85FCE249
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Set-ADFSRelyingPartyTrust

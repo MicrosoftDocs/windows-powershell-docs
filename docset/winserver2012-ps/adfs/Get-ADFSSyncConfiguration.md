@@ -4,9 +4,6 @@ ms.assetid: 5A558B39-8693-4E6B-BCAE-CC7B1BE15B0E
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADFSSyncConfiguration

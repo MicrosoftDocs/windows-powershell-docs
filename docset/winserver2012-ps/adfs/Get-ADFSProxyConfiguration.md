@@ -4,9 +4,6 @@ ms.assetid: FE86231C-AE53-42AF-B38F-9EE7386BF08C
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # Get-ADFSProxyConfiguration

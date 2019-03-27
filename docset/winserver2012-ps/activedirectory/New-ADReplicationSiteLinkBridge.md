@@ -4,9 +4,6 @@ ms.assetid: A8E928D5-822F-42A3-B47F-D76E00FF592F
 manager: dansimp
 online version: 
 schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
-author: kenwith
 ---
 
 # New-ADReplicationSiteLinkBridge

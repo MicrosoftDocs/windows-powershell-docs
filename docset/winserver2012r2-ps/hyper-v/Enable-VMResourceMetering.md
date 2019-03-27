@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 30CFC606-EE24-4001-BD65-16602BB76CE2
-ms.manager: dansimp
 ---
 
 # Enable-VMResourceMetering

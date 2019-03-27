@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4587F08A-A67B-4407-8FE2-B6ECE3643E94
+manager: dansimp
 ---
 
 # Invoke-GPUpdate

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 077A7C6E-0608-4ACD-94C7-901445AC7C50
-ms.manager: dansimp
 ---
 
 # Suspend-BitsTransfer

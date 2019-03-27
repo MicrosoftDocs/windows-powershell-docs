@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AD78CFED-A52A-4AB0-900A-8E4E8ECEA651
-ms.manager: dansimp
 ---
 
 # Export-RmsTPD

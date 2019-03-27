@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0D446E62-AC43-4B9C-BFA3-A2CFB9C9DF40
+manager: dansimp
 ---
 
 # Get-DtcNetworkSetting

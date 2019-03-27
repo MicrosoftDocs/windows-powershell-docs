@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 98B9E36F-285E-45AF-BA09-9049F0AD2852
+manager: dansimp
 ---
 
 # Get-DtcLog

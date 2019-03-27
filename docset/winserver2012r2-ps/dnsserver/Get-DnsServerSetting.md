@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 12ED2919-A1F8-4108-9135-7F14435083FE
-ms.manager: dansimp
 ---
 
 # Get-DnsServerSetting

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B2D4E04A-1B8A-4083-BF4C-85BB12B74B26
+manager: dansimp
 ---
 
 # Set-NetFirewallSecurityFilter

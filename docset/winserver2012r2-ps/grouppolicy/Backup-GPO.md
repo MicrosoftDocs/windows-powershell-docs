@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEF0777A-CC17-4B94-8F81-4564CE511E74
-ms.manager: dansimp
 ---
 
 # Backup-GPO

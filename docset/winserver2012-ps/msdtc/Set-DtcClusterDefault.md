@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E3AB0237-DE07-409C-A23F-2DDC2B4B042D
+manager: dansimp
 ---
 
 # Set-DtcClusterDefault

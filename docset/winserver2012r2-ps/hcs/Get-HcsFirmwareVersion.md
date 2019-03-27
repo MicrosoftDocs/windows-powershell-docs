@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5AA791E5-CBC4-4E42-BBC8-F7BC740B9AED
-ms.manager: dansimp
 ---
 
 # Get-HcsFirmwareVersion

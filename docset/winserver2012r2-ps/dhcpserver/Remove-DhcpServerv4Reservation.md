@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8D308DAE-D3A5-44A5-8AC7-3F890596B4E6
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4Reservation

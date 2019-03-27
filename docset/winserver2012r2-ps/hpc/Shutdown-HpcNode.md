@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182870
 schema: 2.0.0
 title: Shutdown-HpcNode
 ms.assetid: 1E9A957F-FB31-4316-B1A3-E923567C4D85
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

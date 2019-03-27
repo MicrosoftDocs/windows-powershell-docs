@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 506C14DF-DD28-4EEE-AB81-8594777E12B9
-ms.manager: dansimp
 ---
 
 # Convert-IscsiVirtualDisk

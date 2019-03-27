@@ -5,6 +5,7 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216901
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 8C40FD13-5AE8-4410-850F-839841C1B9DB
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

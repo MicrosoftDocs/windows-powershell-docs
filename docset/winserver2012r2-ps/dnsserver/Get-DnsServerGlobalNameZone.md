@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 674E481E-00CA-4895-98A0-33FBECB36688
-ms.manager: dansimp
 ---
 
 # Get-DnsServerGlobalNameZone

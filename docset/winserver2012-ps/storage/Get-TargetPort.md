@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4C139739-CDA3-4379-B87B-60B1B4DB8CD2
+manager: dansimp
 ---
 
 # Get-TargetPort

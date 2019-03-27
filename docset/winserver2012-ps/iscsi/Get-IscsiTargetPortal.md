@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EA6E900A-BF02-4457-BD71-E133AAE50E60
+manager: dansimp
 ---
 
 # Get-IscsiTargetPortal

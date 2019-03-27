@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7E93378E-58C5-4548-B827-B03DB745AC26
-ms.manager: dansimp
 ---
 
 # Get-BCClientConfiguration

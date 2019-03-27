@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3483D9F7-DF27-435F-921B-0C5AE0FAD91E
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv6ExclusionRange

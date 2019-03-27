@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1624CA2F-FE6D-476C-A480-764B9969FA7F
-ms.manager: dansimp
 ---
 
 # Get-DfsReplicationGroup

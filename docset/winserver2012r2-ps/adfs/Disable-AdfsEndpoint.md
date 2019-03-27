@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC488965-7310-4586-83EC-791BB06838A1
-ms.manager: dansimp
 ---
 
 # Disable-AdfsEndpoint

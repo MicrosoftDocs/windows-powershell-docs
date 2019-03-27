@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 006A2961-50F2-43AE-BBA3-8B5D2C3E9288
-ms.manager: dansimp
 ---
 
 # Convert-VHD

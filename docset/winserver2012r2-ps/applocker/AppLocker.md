@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1aeef434-5587-4ec1-9854-222d707bc362
-ms.manager: dansimp
 ---
 
 # AppLocker Module

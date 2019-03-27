@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09CDDA63-9E82-44F0-8755-878974B0010B
-ms.manager: dansimp
 ---
 
 # Remove-BitLockerKeyProtector

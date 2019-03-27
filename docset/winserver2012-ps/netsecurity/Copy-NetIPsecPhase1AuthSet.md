@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CB953D49-0297-4C2B-8308-6E208250C6B9
+manager: dansimp
 ---
 
 # Copy-NetIPsecPhase1AuthSet

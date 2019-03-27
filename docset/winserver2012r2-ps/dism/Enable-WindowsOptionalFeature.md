@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A8A980F-2C51-41DF-ACAF-227054806EB2
-ms.manager: dansimp
 ---
 
 # Enable-WindowsOptionalFeature

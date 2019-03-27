@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C066F232-F87A-4EA0-AD33-D036A1E80083
-ms.manager: dansimp
 ---
 
 # Dismount-VHD

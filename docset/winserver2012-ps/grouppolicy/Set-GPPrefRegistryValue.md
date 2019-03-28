@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
+manager: dansimp
 ---
 
 # Set-GPPrefRegistryValue

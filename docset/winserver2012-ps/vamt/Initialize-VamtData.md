@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6DF25E18-FC39-42E2-B616-1EC5EE860ED6
+manager: dansimp
 ---
 
 # Initialize-VamtData

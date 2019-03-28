@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EF6C7427-DD59-4F5F-8176-6CCF551D7824
+manager: dansimp
 ---
 
 # Get-NetAdapterBinding

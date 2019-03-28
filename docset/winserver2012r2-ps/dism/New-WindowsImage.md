@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 48C44DEE-EE4C-4040-9B42-297EAAD5E4E4
-ms.manager: dansimp
 ---
 
 # New-WindowsImage

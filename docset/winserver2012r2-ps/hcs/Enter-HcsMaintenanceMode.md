@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36D665B9-F57E-4924-BFBD-DEF9C90751AA
-ms.manager: dansimp
 ---
 
 # Enter-HcsMaintenanceMode

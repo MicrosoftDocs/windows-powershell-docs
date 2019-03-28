@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A4A95DD7-4744-4BC5-8197-375971B2F599
-ms.manager: dansimp
 ---
 
 # Start-Cluster

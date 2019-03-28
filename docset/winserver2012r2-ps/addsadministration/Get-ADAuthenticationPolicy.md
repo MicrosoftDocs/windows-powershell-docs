@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 24CFCC45-5935-4580-8180-D2B61EEE93B4
-ms.manager: dansimp
 ---
 
 # Get-ADAuthenticationPolicy

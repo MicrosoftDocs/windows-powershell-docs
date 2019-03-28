@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6DE53D66-DFEF-4734-9C17-5F71E66BF9DB
+manager: dansimp
 ---
 
 # Get-IscsiSession

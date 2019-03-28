@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7B2EC10B-FA75-4444-852D-27D3A37F9EE4
-ms.manager: dansimp
 ---
 
 # Export-IscsiVirtualDiskSnapshot

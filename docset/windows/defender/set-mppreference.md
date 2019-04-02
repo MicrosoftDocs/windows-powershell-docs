@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True or do not specify a value, Windows Defender does not perform email scanning.
+If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender does not perform email scanning.
 
 ```yaml
 Type: Boolean
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True or do not specify a value, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
 
 ```yaml
 Type: Boolean

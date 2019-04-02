@@ -180,6 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBlockAtFirstSeen
+Indicates whether to enable lock at first seen.
+If you specify a value of $False or do not specify a value, Windows Defender enables lock at first seen.
 
 ```yaml
 Type: Boolean
@@ -279,6 +281,7 @@ Accept wildcard characters: False
 ### -DisablePrivacyMode
 Indicates whether to disable privacy mode.
 Privacy mode prevents users, other than administrators, from displaying threat history.
+If you specify a value of $False or do not specify a value, privacy mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -327,6 +330,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 Indicates whether to disable scanning of restore points.
+If you specify a value of $False or do not specify a value, Windows Defender restore point is enabled.
 
 ```yaml
 Type: Boolean
@@ -349,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives.If you specify a value of $True, Windows Defender does not scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender does not scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -380,6 +384,7 @@ Accept wildcard characters: False
 
 ### -DisableScriptScanning
 Specifies whether to disable the scanning of scripts during malware scans.
+If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
 
 ```yaml
 Type: Boolean
@@ -1197,4 +1202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
-

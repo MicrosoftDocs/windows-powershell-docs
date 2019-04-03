@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C9CFEB42-ED01-4197-937F-BEAFE0C236A7
+manager: dansimp
 ---
 
 # Enable-CauClusterRole

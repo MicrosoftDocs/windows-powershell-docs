@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BD457C79-7073-44C9-BED4-BA94CA346715
+manager: dansimp
 ---
 
 # Select-WssMountVhd

@@ -361,8 +361,7 @@ This cmdlet returns a CIM object which contains the DA entry point table item.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

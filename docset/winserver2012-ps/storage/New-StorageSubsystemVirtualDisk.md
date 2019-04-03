@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 6D5C5FFD-47E0-4B8C-8366-149D8D36B456
+manager: dansimp
 ---
 
 # New-StorageSubsystemVirtualDisk

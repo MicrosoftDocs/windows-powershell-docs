@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 54CBC60C-5295-4FCC-8F7C-2FC73E26DACC
+manager: dansimp
 ---
 
 # Remove-NetTransportFilter

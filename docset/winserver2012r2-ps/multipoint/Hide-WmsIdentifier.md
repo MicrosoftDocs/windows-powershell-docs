@@ -132,8 +132,7 @@ You cannot pipes to object to Hide-WmsIdentifier
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

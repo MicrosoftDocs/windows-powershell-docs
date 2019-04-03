@@ -103,8 +103,7 @@ You cannot pipe objects to Unregister-WmsEvent.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

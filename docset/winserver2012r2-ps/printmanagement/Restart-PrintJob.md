@@ -249,8 +249,7 @@ This cmdlet accepts one print job object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

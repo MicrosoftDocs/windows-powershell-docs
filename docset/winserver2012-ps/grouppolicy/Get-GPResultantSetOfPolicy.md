@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 32368411-0B0C-4CE5-A00C-2296728308D9
+manager: dansimp
 ---
 
 # Get-GPResultantSetOfPolicy

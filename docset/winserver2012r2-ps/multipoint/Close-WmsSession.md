@@ -118,8 +118,7 @@ You cannot pipe objects to Close-WmsSession.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 Returns ItemNotFoundException if the specified session ID is not found.
 
 ## NOTES

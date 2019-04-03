@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 42EAD0A2-60B2-4ACC-8836-5D815BCF3D2D
+manager: dansimp
 ---
 
 # Remove-VirtualDisk

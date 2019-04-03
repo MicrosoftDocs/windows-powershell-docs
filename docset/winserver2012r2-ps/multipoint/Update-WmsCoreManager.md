@@ -103,8 +103,7 @@ You cannot pipe objects to Update-WmsCoreManager.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

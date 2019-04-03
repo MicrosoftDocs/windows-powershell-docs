@@ -1,6 +1,7 @@
 ---
 external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
 ms.assetid: 8AD66898-56D9-4CDB-B2CC-AC0B8B8CFD8B
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith
@@ -132,8 +133,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 

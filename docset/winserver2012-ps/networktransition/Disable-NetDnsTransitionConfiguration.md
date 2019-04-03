@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F40D3E8B-F286-4D27-BFA9-E7D58C95E5A4
+manager: dansimp
 ---
 
 # Disable-NetDnsTransitionConfiguration

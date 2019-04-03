@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3A379E5D-C44B-44FF-A609-C6DF837AE844
+manager: dansimp
 ---
 
 # New-NlbClusterIpv6Address

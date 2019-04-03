@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 38B5EFB4-24BF-4695-8E4A-62ABBDF09667
+manager: dansimp
 ---
 
 # Get-MSDSMGlobalDefaultLoadBalancePolicy

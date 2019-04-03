@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BF74FF84-49EE-4D60-8C82-83E6B9C8D8CA
+manager: dansimp
 ---
 
 # Remove-WBFileSpec

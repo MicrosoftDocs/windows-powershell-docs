@@ -135,8 +135,7 @@ You cannot pipe objects to Lock-WmsSession.
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 49421DA2-18F2-43E5-BA8A-DB589BCEF699
+manager: dansimp
 ---
 
 # New-ScheduledTask

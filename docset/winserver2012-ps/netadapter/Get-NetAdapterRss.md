@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BDE7A13E-E3D2-4990-A4C2-6FB48674C118
+manager: dansimp
 ---
 
 # Get-NetAdapterRss

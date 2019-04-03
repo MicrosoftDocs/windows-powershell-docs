@@ -1,4 +1,3 @@
----
 author: kenwith
 ms.author: kenwith
 description:
@@ -107,5 +106,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-HpcJobCredential](./Get-HpcJobCredential.md)
+
 
 [Set-HpcJobCredential](./Set-HpcJobCredential.md)

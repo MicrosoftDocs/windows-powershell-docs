@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CB0CD2FE-BA64-4D28-9877-E23B2610DA0B
+manager: dansimp
 ---
 
 # Remove-NetIPsecRule

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: E65920A5-9158-4832-B973-403C6AD3892A
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

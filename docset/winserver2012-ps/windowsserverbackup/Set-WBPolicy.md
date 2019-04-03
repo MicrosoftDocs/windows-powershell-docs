@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1213FFEC-6B21-4134-9997-8A9C3EADB9EE
+manager: dansimp
 ---
 
 # Set-WBPolicy

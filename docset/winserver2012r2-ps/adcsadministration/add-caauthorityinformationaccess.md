@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8E46D7F9-433C-4196-BF9C-4E1EC7A37210
-ms.manager: dansimp
 ---
 
 # Add-CAAuthorityInformationAccess

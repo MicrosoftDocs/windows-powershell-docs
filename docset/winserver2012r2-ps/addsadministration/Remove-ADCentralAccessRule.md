@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8B9AA43E-240E-43DA-AFCF-80D79A79CD5F
-ms.manager: dansimp
 ---
 
 # Remove-ADCentralAccessRule

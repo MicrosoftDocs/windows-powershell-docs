@@ -1,6 +1,7 @@
 ---
 external help file: DfsNamespaceFolderTarget.cdxml-help.xml
 ms.assetid: DD926D61-CF04-43E0-9518-DB8AC6D74C03
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

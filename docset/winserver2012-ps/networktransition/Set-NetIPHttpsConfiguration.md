@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 70F6EA7A-C6E8-4AD1-AFC7-07EA8FF091C9
+manager: dansimp
 ---
 
 # Set-NetIPHttpsConfiguration

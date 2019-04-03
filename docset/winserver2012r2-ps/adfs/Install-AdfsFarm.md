@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF8CAD1C-9110-44E5-A08F-28669B87B482
-ms.manager: dansimp
 ---
 
 # Install-AdfsFarm

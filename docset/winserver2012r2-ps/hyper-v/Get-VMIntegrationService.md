@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9F23C473-4BA9-4BE8-9205-F02A3FCA7174
-ms.manager: dansimp
 ---
 
 # Get-VMIntegrationService

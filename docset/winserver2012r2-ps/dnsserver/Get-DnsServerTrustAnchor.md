@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1F05D276-380C-44F4-A856-723827363140
-ms.manager: dansimp
 ---
 
 # Get-DnsServerTrustAnchor

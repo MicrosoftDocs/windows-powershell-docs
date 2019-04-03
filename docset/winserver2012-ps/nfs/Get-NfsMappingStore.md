@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CAAE5AAF-704B-4281-88DF-77B8BF00F868
+manager: dansimp
 ---
 
 # Get-NfsMappingStore

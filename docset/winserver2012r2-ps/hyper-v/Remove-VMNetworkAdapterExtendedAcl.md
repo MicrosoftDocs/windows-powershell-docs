@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B5D0B3C0-9E2D-44F8-A6F2-B5FDCD6D5949
-ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterExtendedAcl

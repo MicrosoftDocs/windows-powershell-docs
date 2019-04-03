@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A228EAE3-D689-4D7C-A883-75CBA844BE17
-ms.manager: dansimp
 ---
 
 # Remove-ADObject

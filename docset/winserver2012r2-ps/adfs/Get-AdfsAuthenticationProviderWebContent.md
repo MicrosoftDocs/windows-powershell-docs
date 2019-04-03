@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9FDAEEBA-549F-40C4-82E1-2135CADFF187
-ms.manager: dansimp
 ---
 
 # Get-AdfsAuthenticationProviderWebContent

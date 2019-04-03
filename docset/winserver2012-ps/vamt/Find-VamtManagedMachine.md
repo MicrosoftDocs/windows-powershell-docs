@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9F511857-9418-4742-989E-D2B39FA829C0
+manager: dansimp
 ---
 
 # Find-VamtManagedMachine

@@ -180,8 +180,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBlockAtFirstSeen
-Indicates whether to enable lock at first seen.
-If you specify a value of $False or do not specify a value, Windows Defender enables lock at first seen.
+Indicates whether to enable block at first seen.
+If you specify a value of $False or do not specify a value, Windows Defender enables block at first seen.
 
 ```yaml
 Type: Boolean

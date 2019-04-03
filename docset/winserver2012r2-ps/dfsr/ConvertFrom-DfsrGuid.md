@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A33AC53F-2662-478F-9F40-7306FC6980E4
-ms.manager: dansimp
 ---
 
 # ConvertFrom-DfsrGuid

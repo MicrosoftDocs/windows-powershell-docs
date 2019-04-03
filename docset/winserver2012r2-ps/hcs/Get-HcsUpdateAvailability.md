@@ -14,7 +14,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8264BDCA-CDC8-415C-B322-B24D41BAA282
-ms.manager: dansimp
 ---
 
 # Get-HcsUpdateAvailability

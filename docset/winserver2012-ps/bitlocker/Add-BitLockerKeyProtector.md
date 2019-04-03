@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4AB130BF-4F93-492A-9AE9-B8406FD9D181
+manager: dansimp
 ---
 
 # Add-BitLockerKeyProtector

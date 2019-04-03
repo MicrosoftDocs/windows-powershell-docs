@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AB867988-6482-4B37-BE74-7748A59D865C
-ms.manager: dansimp
 ---
 
 # Get-AdfsClaimDescription

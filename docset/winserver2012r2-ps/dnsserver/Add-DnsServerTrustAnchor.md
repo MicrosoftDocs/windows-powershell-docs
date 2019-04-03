@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED7F144C-6527-4504-852E-AEC1BD575111
-ms.manager: dansimp
 ---
 
 # Add-DnsServerTrustAnchor

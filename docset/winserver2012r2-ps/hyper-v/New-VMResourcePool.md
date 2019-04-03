@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D83324EF-EE04-4C9F-ABA3-947282AF4604
-ms.manager: dansimp
 ---
 
 # New-VMResourcePool

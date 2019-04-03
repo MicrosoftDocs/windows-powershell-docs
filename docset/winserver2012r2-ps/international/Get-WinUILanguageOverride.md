@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EBDDEED1-79CD-4383-B4C3-6C7E1E0F4967
-ms.manager: dansimp
 ---
 
 # Get-WinUILanguageOverride

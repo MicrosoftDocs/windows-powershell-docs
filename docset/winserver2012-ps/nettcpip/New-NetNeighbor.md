@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2D6535B1-74DA-47A1-8787-2A23CBBAA322
+manager: dansimp
 ---
 
 # New-NetNeighbor

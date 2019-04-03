@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BCCBF362-4851-4AD1-B235-B9E223368231
+manager: dansimp
 ---
 
 # Set-NetLbfoTeamNic

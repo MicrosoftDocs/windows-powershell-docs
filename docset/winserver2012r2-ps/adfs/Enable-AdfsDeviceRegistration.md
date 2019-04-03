@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CCFC562A-AF1E-488E-B85D-1F12A6D8C9C5
-ms.manager: dansimp
 ---
 
 # Enable-AdfsDeviceRegistration

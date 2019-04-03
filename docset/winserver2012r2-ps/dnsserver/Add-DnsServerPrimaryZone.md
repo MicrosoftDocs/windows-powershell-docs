@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 623236C1-00B9-4F14-B98C-3751126CC688
-ms.manager: dansimp
 ---
 
 # Add-DnsServerPrimaryZone

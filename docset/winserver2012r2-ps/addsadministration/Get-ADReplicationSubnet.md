@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 60A07BDD-785C-45CB-A556-2F74B549DEEA
-ms.manager: dansimp
 ---
 
 # Get-ADReplicationSubnet

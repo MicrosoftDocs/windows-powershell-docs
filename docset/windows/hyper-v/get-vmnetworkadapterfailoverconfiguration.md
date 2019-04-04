@@ -181,7 +181,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VMNetworkAdapterFailoverConfiguration
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterFailoverSetting
 
 ## NOTES
 

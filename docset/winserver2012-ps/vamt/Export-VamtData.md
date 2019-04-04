@@ -149,4 +149,3 @@ Accept wildcard characters: False
 [Import-VamtData](./Import-VamtData.md)
 
 [Initialize-VamtData](./Initialize-VamtData.md)
-

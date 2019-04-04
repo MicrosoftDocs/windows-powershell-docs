@@ -323,4 +323,3 @@ None.
 [New-RDRemoteApp](./New-RDRemoteApp.md)
 
 [Remove-RDRemoteApp](./Remove-RDRemoteApp.md)
-

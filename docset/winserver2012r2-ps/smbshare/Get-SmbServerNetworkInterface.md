@@ -196,4 +196,3 @@ The MSFT_SmbServerNetworkInterface object represents the network interfaces of t
 ## RELATED LINKS
 
 [Get-SmbClientNetworkInterface](/.Get-SmbClientNetworkInterface.md)
-

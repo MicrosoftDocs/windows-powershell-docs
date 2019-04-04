@@ -536,4 +536,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [Get-NetIPv4Protocol](./Get-NetIPv4Protocol.md)
-

@@ -188,4 +188,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-DtcTransaction](./Get-DtcTransaction.md)
-

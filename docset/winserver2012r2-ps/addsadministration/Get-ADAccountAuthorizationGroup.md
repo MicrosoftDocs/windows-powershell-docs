@@ -305,4 +305,3 @@ Returns group objects that represent the security groups for the account.
 [Search-ADAccount](./Search-ADAccount.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

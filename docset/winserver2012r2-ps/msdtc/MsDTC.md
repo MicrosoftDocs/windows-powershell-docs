@@ -145,4 +145,3 @@ Uninstalls the local transactions coordinator.
 
 ### [Write-DtcTransactionsTraceSession](./Write-DtcTransactionsTraceSession.md)
 Writes the data from an active DTC transactions trace session into the log file.
-

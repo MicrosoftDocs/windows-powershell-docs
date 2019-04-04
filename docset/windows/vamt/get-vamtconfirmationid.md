@@ -136,4 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-VamtProduct](./Get-VamtProduct.md)
 
 [Install-VamtConfirmationId](./Install-VamtConfirmationId.md)
-

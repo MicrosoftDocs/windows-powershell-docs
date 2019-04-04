@@ -210,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ADResourcePropertyList](./New-ADResourcePropertyList.md)
 
 [Set-ADResourcePropertyList](./Set-ADResourcePropertyList.md)
-

@@ -74,4 +74,3 @@ An owner authorization value.
 [Import-TpmOwnerAuth](./Import-TpmOwnerAuth.md)
 
 [Set-TpmOwnerAuth](./Set-TpmOwnerAuth.md)
-

@@ -100,4 +100,3 @@ A class structure that represents the certificate objects for the Federation Ser
 [Remove-ADFSCertificate](./Remove-ADFSCertificate.md)
 
 [Update-ADFSCertificate](./Update-ADFSCertificate.md)
-

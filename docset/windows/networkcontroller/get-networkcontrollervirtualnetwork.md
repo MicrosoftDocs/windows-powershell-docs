@@ -135,4 +135,3 @@ Following properties can be retrieved for a virtual network:
 ## NOTES
 
 ## RELATED LINKS
-

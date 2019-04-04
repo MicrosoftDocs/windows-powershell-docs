@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AppvPublishingServer](./Set-AppvPublishingServer.md)
 
 [Sync-AppvPublishingServer](./Sync-AppvPublishingServer.md)
-

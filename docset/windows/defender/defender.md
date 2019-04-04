@@ -61,4 +61,3 @@ Starts a Windows Defender offline scan.
 
 ### [Update-MpSignature](./Update-MpSignature.md)
 Updates the antimalware definitions on a computer.
-

@@ -157,4 +157,3 @@ This cmdlet returns a **WmsSession** collection as a **PSObject** collection.
 [Lock-WmsSession](./Lock-WmsSession.md)
 
 [Unlock-WmsSession](./Unlock-WmsSession.md)
-

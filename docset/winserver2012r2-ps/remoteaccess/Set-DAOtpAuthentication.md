@@ -302,4 +302,3 @@ The DAOtpAuth object contains the following OTP authentication configuration set
 [Enable-DAOtpAuthentication](./Enable-DAOtpAuthentication.md)
 
 [Get-DAOtpAuthentication](./Get-DAOtpAuthentication.md)
-

@@ -291,4 +291,3 @@ This cmdlet returns a **MSFT_SmbShareAccessControlEntry** object.
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
 
 [Unblock-SmbShareAccess](./Unblock-SmbShareAccess.md)
-

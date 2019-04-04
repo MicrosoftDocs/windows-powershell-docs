@@ -155,4 +155,3 @@ An array of paths to settings location templates.
 [Test-UevTemplate](./Test-UevTemplate.md)
 
 [Unregister-UevTemplate](./Unregister-UevTemplate.md)
-

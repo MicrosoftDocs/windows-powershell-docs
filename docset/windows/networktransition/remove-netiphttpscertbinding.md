@@ -143,4 +143,3 @@ This cmdlet returns an object that contains information about an IP-HTTPS certif
 ## RELATED LINKS
 
 [Add-NetIPHttpsCertBinding](./Add-NetIPHttpsCertBinding.md)
-

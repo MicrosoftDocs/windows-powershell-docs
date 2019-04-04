@@ -279,4 +279,3 @@ A group object is received by the *Identity* parameter.
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
 
 [Set-ADGroup](./Set-ADGroup.md)
-

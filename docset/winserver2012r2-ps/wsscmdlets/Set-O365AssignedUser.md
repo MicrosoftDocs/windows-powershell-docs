@@ -102,4 +102,3 @@ Description: user principal name
 [Get-O365AssignedUser](./Get-O365AssignedUser.md)
 
 [Clear-O365AssignedUser](./Clear-O365AssignedUser.md)
-

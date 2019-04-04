@@ -253,4 +253,3 @@ This cmdlet returns an object that represents a configuration event for the IPAM
 ## RELATED LINKS
 
 [Remove-IpamConfigurationEvent](./Remove-IpamConfigurationEvent.md)
-

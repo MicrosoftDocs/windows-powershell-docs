@@ -145,4 +145,3 @@ Accept wildcard characters: False
 [Get-VamtProductKey](./Get-VamtProductKey.md)
 
 [Add-VamtProductKey](./Add-VamtProductKey.md)
-

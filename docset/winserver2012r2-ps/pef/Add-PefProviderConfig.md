@@ -113,4 +113,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-PefMessageSource](./Add-PefMessageSource.md)
 
 [Start-PefTraceSession](./Start-PefTraceSession.md)
-

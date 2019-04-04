@@ -642,4 +642,3 @@ A domain object is received by the Identity parameter.
 ## RELATED LINKS
 
 [Get-ADDefaultDomainPasswordPolicy](./Get-ADDefaultDomainPasswordPolicy.md)
-

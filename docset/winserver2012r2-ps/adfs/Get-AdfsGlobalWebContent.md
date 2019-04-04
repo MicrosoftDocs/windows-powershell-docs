@@ -126,4 +126,3 @@ SignInPageAdditionalAuthenticationDescriptionText: **System.String**
 [Set-AdfsGlobalWebContent](./Set-AdfsGlobalWebContent.md)
 
 [Remove-AdfsGlobalWebContent](./Remove-AdfsGlobalWebContent.md)
-

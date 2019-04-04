@@ -104,4 +104,3 @@ This cmdlet returns a **VirtualDisk** object, if the physical extent is associat
 [Get-PhysicalDisk](./Get-PhysicalDisk.md)
 
 [Get-PhysicalExtent](./Get-PhysicalExtent.md)
-

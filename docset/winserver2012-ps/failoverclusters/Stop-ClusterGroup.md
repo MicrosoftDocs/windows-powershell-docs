@@ -139,4 +139,3 @@ Accept wildcard characters: False
 [Remove-ClusterGroup](./Remove-ClusterGroup.md)
 
 [Start-ClusterGroup](./Start-ClusterGroup.md)
-

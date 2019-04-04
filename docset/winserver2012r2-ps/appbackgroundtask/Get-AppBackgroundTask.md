@@ -154,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-AppBackgroundTask](./Start-AppBackgroundTask.md)
 
 [Unregister-AppBackgroundTask](./Unregister-AppBackgroundTask.md)
-

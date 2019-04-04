@@ -138,4 +138,3 @@ If you do not specify a **MappingName**, this cmdlet gets all mappings.
 [Remove-DtcClusterTMMapping](./Remove-DtcClusterTMMapping.md)
 
 [Set-DtcClusterTMMapping](./Set-DtcClusterTMMapping.md)
-

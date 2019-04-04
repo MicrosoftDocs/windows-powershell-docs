@@ -137,4 +137,3 @@ Accept wildcard characters: False
 [Remove-BitLockerKeyProtector](./Remove-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

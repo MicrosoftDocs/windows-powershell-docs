@@ -288,4 +288,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetNatStaticMapping](./Get-NetNatStaticMapping.md)
 
 [Remove-NetNatStaticMapping](./Remove-NetNatStaticMapping.md)
-

@@ -239,4 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-VMNetworkAdapter](./Get-VMNetworkAdapter.md)
 
 [Get-VMSnapshot](./Get-VMSnapshot.md)
-

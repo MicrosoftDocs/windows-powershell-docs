@@ -214,4 +214,3 @@ This cmdlet accepts an authentication policy object.
 [Set-ADAuthenticationPolicy](./Set-ADAuthenticationPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

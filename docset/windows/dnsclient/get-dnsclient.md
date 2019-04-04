@@ -235,4 +235,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Register-DnsClient](./Register-DnsClient.md)
 
 [Set-DnsClient](./Set-DnsClient.md)
-

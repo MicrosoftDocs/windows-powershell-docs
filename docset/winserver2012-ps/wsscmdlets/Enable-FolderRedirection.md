@@ -81,4 +81,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Disable-FolderRedirection](./Disable-FolderRedirection.md)
-

@@ -220,4 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-NetNatExternalAddress](./Add-NetNatExternalAddress.md)
 
 [Get-NetNatExternalAddress](./Get-NetNatExternalAddress.md)
-

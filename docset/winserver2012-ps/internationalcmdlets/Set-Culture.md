@@ -63,4 +63,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [GetCulture Class](http://go.microsoft.com/fwlink/?LinkID=243343)
-

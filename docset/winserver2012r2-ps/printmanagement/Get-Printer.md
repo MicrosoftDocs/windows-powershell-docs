@@ -197,4 +197,3 @@ This cmdlet outputs one or more printer objects.
 [Remove-Printer](./Remove-Printer.md)
 
 [Rename-Printer](./Rename-Printer.md)
-

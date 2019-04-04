@@ -187,4 +187,3 @@ A class structure that represents a claims provider trust.
 [Set-ADFSClaimsProviderTrust](./Set-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

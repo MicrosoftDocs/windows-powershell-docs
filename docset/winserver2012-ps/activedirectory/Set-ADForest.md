@@ -447,4 +447,3 @@ By default, this cmdlet does not generate any output.
 [Get-ADForest](./Get-ADForest.md)
 
 [Set-ADForestMode](./Set-ADForestMode.md)
-

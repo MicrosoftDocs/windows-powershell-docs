@@ -82,4 +82,3 @@ This cmdlet returns a **TpmObject** object that contains the following informati
 [Initialize-Tpm](./Initialize-Tpm.md)
 
 [Unblock-Tpm](./Unblock-Tpm.md)
-

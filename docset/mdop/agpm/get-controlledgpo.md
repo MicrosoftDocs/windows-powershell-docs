@@ -105,4 +105,3 @@ This cmdlet returns controlled GPO objects.
 [Remove-ControlledGpo](./Remove-ControlledGpo.md)
 
 [Unlock-ControlledGpo](./Unlock-ControlledGpo.md)
-

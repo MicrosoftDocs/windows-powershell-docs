@@ -124,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MbamCMIntegration](get-mbamcmintegration.md)
 
 [Test-MbamCMIntegration](test-mbamcmintegration.md)
-

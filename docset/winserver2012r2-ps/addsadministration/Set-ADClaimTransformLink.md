@@ -283,4 +283,3 @@ A trust object is received by the **Identity** parameter.
 [Clear-ADClaimTransformLink](./Clear-ADClaimTransformLink.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

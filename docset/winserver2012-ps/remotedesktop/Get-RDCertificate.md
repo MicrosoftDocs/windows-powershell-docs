@@ -117,4 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-RDCertificate](./New-RDCertificate.md)
 
 [Set-RDCertificate](./Set-RDCertificate.md)
-

@@ -238,4 +238,3 @@ This cmdlet produces no output.
 ## RELATED LINKS
 
 [Get-PrinterProperty](./Get-PrinterProperty.md)
-

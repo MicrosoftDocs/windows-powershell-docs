@@ -468,4 +468,3 @@ To get a list of all the properties of an ADService account object, use the foll
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

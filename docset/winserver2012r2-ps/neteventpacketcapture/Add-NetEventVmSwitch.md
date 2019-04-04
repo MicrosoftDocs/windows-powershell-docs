@@ -166,4 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetEventVmSwitch](./Get-NetEventVmSwitch.md)
 
 [Remove-NetEventVmSwitch](./Remove-NetEventVmSwitch.md)
-

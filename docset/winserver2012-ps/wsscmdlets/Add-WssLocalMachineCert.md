@@ -41,4 +41,3 @@ This command adds or renews a certificate for the server.
 ## NOTES
 
 ## RELATED LINKS
-

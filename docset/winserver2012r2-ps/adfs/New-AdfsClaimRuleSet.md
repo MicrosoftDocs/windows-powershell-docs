@@ -117,4 +117,3 @@ This cmdlet generates a class structure that represents a set of AD FS 2.0 claim
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
 
 [Set-AdfsRelyingPartyTrust](./Set-AdfsRelyingPartyTrust.md)
-

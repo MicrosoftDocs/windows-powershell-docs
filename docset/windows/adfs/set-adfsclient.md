@@ -417,4 +417,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsClient](./Get-AdfsClient.md)
 
 [Remove-AdfsClient](./Remove-AdfsClient.md)
-

@@ -76,4 +76,3 @@ DrsObjectDN: Type: **string**
 [Set-AdfsDeviceRegistration](./Set-AdfsDeviceRegistration.md)
 
 [Enable-AdfsDeviceRegistration](./Enable-AdfsDeviceRegistration.md)
-

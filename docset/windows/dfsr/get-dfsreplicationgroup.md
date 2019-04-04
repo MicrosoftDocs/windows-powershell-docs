@@ -153,4 +153,3 @@ This cmdlet returns an object that contains the properties of a DFS Replication 
 [Suspend-DfsReplicationGroup](./Suspend-DfsReplicationGroup.md)
 
 [Sync-DfsReplicationGroup](./Sync-DfsReplicationGroup.md)
-

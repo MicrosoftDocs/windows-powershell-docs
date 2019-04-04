@@ -152,4 +152,3 @@ An object that contains the properties of a DFS replication group
 [Suspend-DfsReplicationGroup](./Suspend-DfsReplicationGroup.md)
 
 [Sync-DfsReplicationGroup](./Sync-DfsReplicationGroup.md)
-

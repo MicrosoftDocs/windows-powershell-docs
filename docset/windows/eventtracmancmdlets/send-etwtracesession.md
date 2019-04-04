@@ -234,4 +234,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-EtwTraceSession](./Stop-EtwTraceSession.md)
 
 [Update-EtwTraceSession](./Update-EtwTraceSession.md)
-

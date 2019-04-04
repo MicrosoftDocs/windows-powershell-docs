@@ -187,4 +187,3 @@ This cmdlet returns an object that represents an IP address audit event in IPAM.
 ## RELATED LINKS
 
 [Get-IpamIpAddressAuditEvent](./Get-IpamIpAddressAuditEvent.md)
-

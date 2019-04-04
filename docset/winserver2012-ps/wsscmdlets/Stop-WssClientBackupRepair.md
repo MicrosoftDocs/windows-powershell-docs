@@ -46,4 +46,3 @@ This command stops the attempt to repair the client backup database.
 [Start-WssClientBackupRepair](./Start-WssClientBackupRepair.md)
 
 [Enable-WssClientBackup](./Enable-WssClientBackup.md)
-

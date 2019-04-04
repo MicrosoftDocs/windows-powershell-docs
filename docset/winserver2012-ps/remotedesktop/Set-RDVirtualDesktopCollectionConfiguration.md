@@ -415,4 +415,3 @@ None.
 [Get-RDVirtualDesktopCollectionConfiguration](./Get-RDVirtualDesktopCollectionConfiguration.md)
 
 [Get-RDVirtualDesktopCollection](./Get-RDVirtualDesktopCollection.md)
-

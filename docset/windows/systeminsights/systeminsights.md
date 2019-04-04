@@ -73,4 +73,3 @@ The **Set-InsightsCapabilitySchedule** cmdlet sets a prediction schedule for the
 
 ### [Update-InsightsCapability](Update-InsightsCapability.md)
 The **Update-InsightsCapability** cmdlet updates an existing System Insights capability. Updating a capability will preserve all of the custom configuration information associated with a capability.
-

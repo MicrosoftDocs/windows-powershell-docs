@@ -137,4 +137,3 @@ Accept wildcard characters: False
 [Get-CauClusterRole](./Get-CauClusterRole.md)
 
 [Set-CauClusterRole](./Set-CauClusterRole.md)
-

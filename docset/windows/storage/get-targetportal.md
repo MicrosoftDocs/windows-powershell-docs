@@ -222,4 +222,3 @@ This cmdlet returns an object that represents the target portal.
 ## RELATED LINKS
 
 [Get-TargetPort](./Get-TargetPort.md)
-

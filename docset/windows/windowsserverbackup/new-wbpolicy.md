@@ -74,4 +74,3 @@ This cmdlet returns and generates an empty **WBPolicy** object in edit mode.
 [Set-WBPolicy](./Set-WBPolicy.md)
 
 [Start-WBBackup](./Start-WBBackup.md)
-

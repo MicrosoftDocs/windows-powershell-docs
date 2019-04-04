@@ -121,4 +121,3 @@ This cmdlet returns a **UEFIEnvironmentVariable** object that contains the follo
 [Get-SecureBootPolicy](./Get-SecureBootPolicy.md)
 
 [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
-

@@ -136,4 +136,3 @@ This cmdlet returns a list of storage locations from the **WBPolicy** objects th
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

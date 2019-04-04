@@ -171,4 +171,3 @@ Displays the Web Application Proxy configuration.
 [Publishing Internal Applications using Web Application](http://technet.microsoft.com/library/dn383650.aspx)
 
 [Set-WebApplicationProxyConfiguration](./Set-WebApplicationProxyConfiguration.md)
-

@@ -209,4 +209,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetworkControllerGateway](./Get-NetworkControllerGateway.md)
 
 [New-NetworkControllerGateway](./New-NetworkControllerGateway.md)
-

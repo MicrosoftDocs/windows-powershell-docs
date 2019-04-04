@@ -82,4 +82,3 @@ This cmdlet returns a list of email addresses for a user.
 ## RELATED LINKS
 
 [Set-O365EmailAddresses](./Set-O365EmailAddresses.md)
-

@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterResourceDependencyReport](./Get-ClusterResourceDependencyReport.md)
 
 [Remove-ClusterResourceDependency](./Remove-ClusterResourceDependency.md)
-

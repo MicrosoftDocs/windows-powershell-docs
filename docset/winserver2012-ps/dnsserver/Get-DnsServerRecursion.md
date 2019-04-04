@@ -120,4 +120,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-DnsServerRecursion](./Set-DnsServerRecursion.md)
-

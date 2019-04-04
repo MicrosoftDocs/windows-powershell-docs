@@ -76,4 +76,3 @@ This cmdlet returns a list of backup targets.
 [New-WssBackupTarget](./New-WssBackupTarget.md)
 
 [Remove-WssBackupTarget](./Remove-WssBackupTarget.md)
-

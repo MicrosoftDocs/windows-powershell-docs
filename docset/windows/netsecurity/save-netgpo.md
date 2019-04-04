@@ -152,4 +152,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Open-NetGPO](./Open-NetGPO.md)
 
 [Remove-NetFirewallRule](./Remove-NetFirewallRule.md)
-

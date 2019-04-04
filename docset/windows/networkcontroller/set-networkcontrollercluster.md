@@ -251,4 +251,3 @@ This cmdlet returns an object that contains the following fields:
 [Repair-NetworkControllerCluster](./Repair-NetworkControllerCluster.md)
 
 [Uninstall-NetworkControllerCluster](./Uninstall-NetworkControllerCluster.md)
-

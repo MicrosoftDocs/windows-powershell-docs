@@ -291,4 +291,3 @@ This cmdlet returns a **VpnConnection** object that contains the VPN Connection 
 [Set-VpnConnection](./Set-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

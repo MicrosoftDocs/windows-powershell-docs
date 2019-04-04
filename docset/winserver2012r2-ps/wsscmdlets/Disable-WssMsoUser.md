@@ -79,4 +79,3 @@ WssUserName - local network account name of user.
 [Get-WssMsoUser](./Get-WssMsoUser.md)
 
 [Remove-WssMsoUser](./Remove-WssMsoUser.md)
-

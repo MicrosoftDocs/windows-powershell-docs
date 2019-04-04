@@ -55,4 +55,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-WebApplicationProxySslCertificate](./Set-WebApplicationProxySslCertificate.md)
-

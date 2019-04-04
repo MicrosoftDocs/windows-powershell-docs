@@ -189,4 +189,3 @@ This cmdlet returns one or more printer driver objects.
 [Add-PrinterDriver](./Add-PrinterDriver.md)
 
 [Remove-PrinterDriver](./Remove-PrinterDriver.md)
-

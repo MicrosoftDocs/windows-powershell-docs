@@ -115,4 +115,3 @@ Accept wildcard characters: False
 [Start-DtcTransactionsTraceSession](./Start-DtcTransactionsTraceSession.md)
 
 [Write-DtcTransactionsTraceSession](./Write-DtcTransactionsTraceSession.md)
-

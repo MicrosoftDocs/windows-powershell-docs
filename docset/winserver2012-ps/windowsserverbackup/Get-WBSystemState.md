@@ -76,4 +76,3 @@ The Get-WBSystemState cmdlet displays a Boolean value to indicate whether the sy
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBSystemState](./Remove-WBSystemState.md)
-

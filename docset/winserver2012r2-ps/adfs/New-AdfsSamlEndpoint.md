@@ -170,4 +170,3 @@ This cmdlet generates a class structure that represents a SAML endpoint resource
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsRelyingPartyTrust](./Update-AdfsRelyingPartyTrust.md)
-

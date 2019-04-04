@@ -151,4 +151,3 @@ This cmdlet returns an **ItemNotFoundException** if the specified session ID is 
 [Lock-WmsSession](./Lock-WmsSession.md)
 
 [Unlock-WmsSession](./Unlock-WmsSession.md)
-

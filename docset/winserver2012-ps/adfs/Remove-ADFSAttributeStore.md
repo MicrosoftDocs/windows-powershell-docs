@@ -145,4 +145,3 @@ A class structure that represents an AD FS 2.0 attribute store object
 [Get-ADFSAttributeStore](./Get-ADFSAttributeStore.md)
 
 [Set-ADFSAttributeStore](./Set-ADFSAttributeStore.md)
-

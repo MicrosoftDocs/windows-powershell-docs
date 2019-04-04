@@ -72,4 +72,3 @@ Accept wildcard characters: False
 [New-NpsRemediationServerGroup](./New-NpsRemediationServerGroup.md)
 
 [Remove-NpsRemediationServer](./Remove-NpsRemediationServer.md)
-

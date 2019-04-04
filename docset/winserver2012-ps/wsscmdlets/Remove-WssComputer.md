@@ -118,4 +118,3 @@ Accept wildcard characters: False
 [Get-WssComputer](./Get-WssComputer.md)
 
 [Get-WssComputer](./Get-WssComputer.md)
-

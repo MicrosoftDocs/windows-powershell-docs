@@ -456,4 +456,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Get-VpnConnection](./Get-VpnConnection.md)
 
 [Remove-VpnConnection](./Remove-VpnConnection.md)
-

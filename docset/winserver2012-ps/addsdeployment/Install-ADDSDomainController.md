@@ -646,4 +646,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-ADDSDomain](./Install-ADDSDomain.md)
 
 [Install-ADDSForest](./Install-ADDSForest.md)
-

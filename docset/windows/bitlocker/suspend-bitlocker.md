@@ -151,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-BitLocker](./Resume-BitLocker.md)
 
 [Unlock-BitLocker](./Unlock-BitLocker.md)
-

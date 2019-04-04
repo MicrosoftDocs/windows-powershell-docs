@@ -189,4 +189,3 @@ This cmdlet returns an RSoP object.
 * This cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
 
 ## RELATED LINKS
-

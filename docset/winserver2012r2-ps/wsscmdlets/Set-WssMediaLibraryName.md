@@ -69,4 +69,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
-

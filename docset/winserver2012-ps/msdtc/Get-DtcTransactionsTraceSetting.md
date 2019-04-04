@@ -84,4 +84,3 @@ This cmdlet returns an object of DtcTransactionsTraceSettings containing the tra
 ## RELATED LINKS
 
 [Set-DtcTransactionsTraceSetting](./Set-DtcTransactionsTraceSetting.md)
-

@@ -151,4 +151,3 @@ This cmdlet does not have an output object.
 [Get-RDVirtualDesktopCollection](./Get-RDVirtualDesktopCollection.md)
 
 [Add-RDVirtualDesktopToCollection](./Add-RDVirtualDesktopToCollection.md)
-

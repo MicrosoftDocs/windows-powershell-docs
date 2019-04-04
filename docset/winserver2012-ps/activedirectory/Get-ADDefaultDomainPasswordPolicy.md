@@ -302,4 +302,3 @@ Returns the default domain password policy object for the specified domain.
 ## RELATED LINKS
 
 [Get-ADDomain](./Get-ADDomain.md)
-

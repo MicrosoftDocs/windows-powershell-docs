@@ -79,4 +79,3 @@ Accept wildcard characters: False
 [Register-CauPlugin](./Register-CauPlugin.md)
 
 [Unregister-CauPlugin](./Unregister-CauPlugin.md)
-

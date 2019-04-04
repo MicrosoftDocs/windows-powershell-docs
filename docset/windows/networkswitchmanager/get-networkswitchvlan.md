@@ -201,4 +201,3 @@ This cmdlet returns an array of **CimInstance** objects for network switch VLANs
 [Remove-NetworkSwitchVlan](./Remove-NetworkSwitchVlan.md)
 
 [Set-NetworkSwitchVlanProperty](./Set-NetworkSwitchVlanProperty.md)
-

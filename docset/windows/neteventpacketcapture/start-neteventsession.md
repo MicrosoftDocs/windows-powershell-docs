@@ -212,4 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-NetEventSession](./Set-NetEventSession.md)
 
 [Stop-NetEventSession](./Stop-NetEventSession.md)
-

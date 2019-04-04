@@ -76,4 +76,3 @@ A class structure that represents the attribute stores that are configured for t
 [Remove-ADFSAttributeStore](./Remove-ADFSAttributeStore.md)
 
 [Set-ADFSAttributeStore](./Set-ADFSAttributeStore.md)
-

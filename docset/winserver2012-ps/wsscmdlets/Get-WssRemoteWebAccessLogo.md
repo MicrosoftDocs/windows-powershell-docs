@@ -44,4 +44,3 @@ This command retrieves the name of the file that contains the logo for the Remot
 ## RELATED LINKS
 
 [Set-WssRemoteWebAccessLogo](./Set-WssRemoteWebAccessLogo.md)
-

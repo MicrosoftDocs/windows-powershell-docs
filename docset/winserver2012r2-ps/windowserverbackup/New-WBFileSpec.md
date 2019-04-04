@@ -147,4 +147,3 @@ You can add a **WBFileSpec** object to a **WBPolicy** object as a source for bac
 [Get-WBFileSpec](./Get-WBFileSpec.md)
 
 [Remove-WBFileSpec](./Remove-WBFileSpec.md)
-

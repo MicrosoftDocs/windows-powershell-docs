@@ -144,4 +144,3 @@ The **MSFT_NetNatTransitionMonitoring** object contains NAT64 monitoring informa
 [Remove-NetNatTransitionConfiguration](./Remove-NetNatTransitionConfiguration.md)
 
 [Set-NetNatTransitionConfiguration](./Set-NetNatTransitionConfiguration.md)
-

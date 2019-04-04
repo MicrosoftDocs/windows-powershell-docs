@@ -205,4 +205,3 @@ Accept wildcard characters: False
 [Remove-DtcClusterTMMapping](./Remove-DtcClusterTMMapping.md)
 
 [Set-DtcClusterTMMapping](./Set-DtcClusterTMMapping.md)
-

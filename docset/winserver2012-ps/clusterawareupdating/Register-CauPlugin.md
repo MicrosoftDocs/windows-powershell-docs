@@ -101,4 +101,3 @@ Accept wildcard characters: False
 [Get-CauPlugin](./Get-CauPlugin.md)
 
 [Unregister-CauPlugin](./Unregister-CauPlugin.md)
-

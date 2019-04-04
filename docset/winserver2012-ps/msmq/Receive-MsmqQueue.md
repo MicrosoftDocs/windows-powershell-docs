@@ -156,4 +156,3 @@ Accept wildcard characters: False
 [Send-MsmqQueue](./Send-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

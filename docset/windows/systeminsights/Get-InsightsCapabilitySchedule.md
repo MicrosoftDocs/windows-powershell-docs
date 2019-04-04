@@ -123,4 +123,3 @@ The cmdlet returns one or more objects that represent the specified capability s
 [Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)
 
 [Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)
-

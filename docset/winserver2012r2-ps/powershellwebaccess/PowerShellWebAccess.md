@@ -40,4 +40,3 @@ Verifies whether a rule exists for a specified user, computer, or endpoint.
 
 ### [Uninstall-PswaWebApplication](./Uninstall-PswaWebApplication.md)
 Uninstalls the Windows PowerShell® web application.
-

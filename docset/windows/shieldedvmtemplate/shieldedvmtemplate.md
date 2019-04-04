@@ -19,4 +19,3 @@ Initializes a VHD for use as a shielding utility disk in a guarded fabric.
 
 ### [Protect-TemplateDisk](Protect-TemplateDisk.md)
 Prepares a signed template disk (.VHDX) which can be used to provision new shielded virtual machines.
-

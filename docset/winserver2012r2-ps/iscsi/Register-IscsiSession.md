@@ -218,4 +218,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [iSCSI on TechNet](http://www.microsoft.com/iSCSI)
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
-

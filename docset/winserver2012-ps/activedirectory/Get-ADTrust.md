@@ -419,4 +419,3 @@ A trusted domain object is received by the Identity parameter.
 * This cmdlet does not work with an Active Directory Snapshot.
 
 ## RELATED LINKS
-

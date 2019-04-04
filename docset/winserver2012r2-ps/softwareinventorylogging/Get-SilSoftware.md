@@ -164,4 +164,3 @@ That object includes the following properties:
 [Get-SilLogging](./Get-SilLogging.md)
 
 [Get-SilWindowsUpdate](./Get-SilWindowsUpdate.md)
-

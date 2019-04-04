@@ -147,4 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WmiObject](http://go.microsoft.com/fwlink/?LinkId=821595)
 
 [Get-Member](http://go.microsoft.com/fwlink/?LinkId=821792)
-

@@ -216,4 +216,3 @@ AppLockerPolicy
 [Set-AppLockerPolicy](./Set-AppLockerPolicy.md)
 
 [Get-AppxPackage](../appx/Get-AppxPackage.md)
-

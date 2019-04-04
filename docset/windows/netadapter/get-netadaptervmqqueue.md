@@ -193,4 +193,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterVmq](./Get-NetAdapterVmq.md)
 
 [Set-NetAdapterVmq](./Set-NetAdapterVmq.md)
-

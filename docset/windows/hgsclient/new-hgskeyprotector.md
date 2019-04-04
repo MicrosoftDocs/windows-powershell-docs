@@ -142,4 +142,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Revoke-HgsKeyProtectorAccess](./Revoke-HgsKeyProtectorAccess.md)
 
 [Get-HgsGuardian](./Get-HgsGuardian.md)
-

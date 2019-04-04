@@ -620,4 +620,3 @@ This cmdlet returns a **VpnConnection** object that contains the VPN connection 
 [Get-VpnConnection](./Get-VpnConnection.md)
 
 [Remove-VpnConnection](./Remove-VpnConnection.md)
-

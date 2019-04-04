@@ -257,4 +257,3 @@ If Restart equals True, then the CA must be restarted.
 [Get-CACrlDistributionPoint](./Get-CACrlDistributionPoint.md)
 
 [Remove-CACrlDistributionPoint](./Remove-CACrlDistributionPoint.md)
-

@@ -475,4 +475,3 @@ The DnsClientNrptRule object contains all of the properties of the DNS client NR
 [Remove-DnsClientNrptRule](./Remove-DnsClientNrptRule.md)
 
 [Set-DnsClientNrptGlobal](./Set-DnsClientNrptGlobal.md)
-

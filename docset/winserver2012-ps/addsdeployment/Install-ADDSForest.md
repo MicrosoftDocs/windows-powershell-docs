@@ -393,4 +393,3 @@ This helps assure that the IP address of the first domain controller will be res
 [Install-ADDSDomain](./Install-ADDSDomain.md)
 
 [Test-ADDSForestInstallation](./Test-ADDSForestInstallation.md)
-

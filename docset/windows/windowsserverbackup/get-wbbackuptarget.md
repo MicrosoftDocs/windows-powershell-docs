@@ -95,4 +95,3 @@ This cmdlet returns a list of the storage locations that the backup policy objec
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

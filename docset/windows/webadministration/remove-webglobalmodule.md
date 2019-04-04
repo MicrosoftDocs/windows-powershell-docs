@@ -109,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-WebGlobalModule](./New-WebGlobalModule.md)
 
 [Set-WebGlobalModule](./Set-WebGlobalModule.md)
-

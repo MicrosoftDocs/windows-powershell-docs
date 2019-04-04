@@ -291,4 +291,3 @@ This cmdlet outputs the following information:
 [Get-NetworkControllerVirtualGatewayPolicyMap](./Get-NetworkControllerVirtualGatewayPolicyMap.md)
 
 [Remove-NetworkControllerVirtualGatewayPolicyMap](./Remove-NetworkControllerVirtualGatewayPolicyMap.md)
-

@@ -63,4 +63,3 @@ Accept wildcard characters: False
 [New-WssBackupTarget](./New-WssBackupTarget.md)
 
 [Remove-WssBackupTarget](./Remove-WssBackupTarget.md)
-

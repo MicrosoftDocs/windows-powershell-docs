@@ -51,4 +51,3 @@ This command synchronizes the account information from a domain controller.
 [Import-WssUser](./Import-WssUser.md)
 
 [Remove-WssUser](./Remove-WssUser.md)
-

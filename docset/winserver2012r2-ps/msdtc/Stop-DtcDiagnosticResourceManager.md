@@ -114,4 +114,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Join-DtcDiagnosticResourceManager](./Join-DtcDiagnosticResourceManager.md)
 
 [Start-DtcDiagnosticResourceManager](./Start-DtcDiagnosticResourceManager.md)
-

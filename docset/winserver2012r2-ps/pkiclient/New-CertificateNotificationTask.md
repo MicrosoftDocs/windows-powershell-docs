@@ -208,4 +208,3 @@ A CertificateNotificationTask object that contains details about a newly created
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
 
 [Switch-Certificate](./Switch-Certificate.md)
-

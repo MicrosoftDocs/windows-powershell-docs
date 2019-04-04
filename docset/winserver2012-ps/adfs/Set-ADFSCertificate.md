@@ -159,4 +159,3 @@ A class structure that represents a service certificate.
 [Remove-ADFSCertificate](./Remove-ADFSCertificate.md)
 
 [Update-ADFSCertificate](./Update-ADFSCertificate.md)
-

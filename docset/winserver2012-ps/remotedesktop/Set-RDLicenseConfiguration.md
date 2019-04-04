@@ -140,4 +140,3 @@ None
 ## RELATED LINKS
 
 [Get-RDLicenseConfiguration](./Get-RDLicenseConfiguration.md)
-

@@ -57,4 +57,3 @@ This cmdlet returns an object that represents the Storage Spaces storage subsyst
 * This cmdlet is similar to the Get-StorageSubsystem cmdlet of the Storage module, except that instead of getting all storage subsystems, the Get-SpacesSubsystem cmdlet gets only the Storage Spaces storage subsystem object.
 
 ## RELATED LINKS
-

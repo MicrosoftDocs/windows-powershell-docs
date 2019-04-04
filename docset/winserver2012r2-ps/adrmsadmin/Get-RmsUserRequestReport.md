@@ -227,4 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-RmsCertInfo](./Get-RmsCertInfo.md)
 
 [Get-RmsRequestInfo](./Get-RmsRequestInfo.md)
-

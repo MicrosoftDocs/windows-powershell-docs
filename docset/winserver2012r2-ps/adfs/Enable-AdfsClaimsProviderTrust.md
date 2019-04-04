@@ -195,4 +195,3 @@ A class structure that represents the claims provider trusts for the Federation 
 [Set-AdfsClaimsProviderTrust](./Set-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

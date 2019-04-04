@@ -170,4 +170,3 @@ None.
 [Get-RDCertificate](./Get-RDCertificate.md)
 
 [New-RDCertificate](./New-RDCertificate.md)
-

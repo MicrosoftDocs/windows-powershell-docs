@@ -341,4 +341,3 @@ The DANetworkLocationServer object consists of the following properties:
 [Where-Object](http://go.microsoft.com/fwlink/?LinkId=113423)
 
 [Get-DANetworkLocationServer](./Get-DANetworkLocationServer.md)
-

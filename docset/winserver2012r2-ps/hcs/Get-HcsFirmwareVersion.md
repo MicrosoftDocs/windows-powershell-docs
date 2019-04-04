@@ -67,4 +67,3 @@ The NodeFirmwareVersion object has the following properties:
 ## RELATED LINKS
 
 [Start-HcsFirmwareCheck](./Start-HcsFirmwareCheck.md)
-

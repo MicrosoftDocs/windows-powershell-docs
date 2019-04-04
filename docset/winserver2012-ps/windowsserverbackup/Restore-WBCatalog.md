@@ -94,4 +94,3 @@ Specifies a warning that gives details about the backups present in the backup t
 [00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
 
 [Remove-WBCatalog](./Remove-WBCatalog.md)
-

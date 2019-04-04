@@ -98,4 +98,3 @@ Accept wildcard characters: False
 [Get-VamtProductKey](./Get-VamtProductKey.md)
 
 [Install-VamtProductKey](./Install-VamtProductKey.md)
-

@@ -189,4 +189,3 @@ This cmdlet returns one or more objects that contain the following fields:
 [New-NetworkControllerGateway](./New-NetworkControllerGateway.md)
 
 [Remove-NetworkControllerGateway](./Remove-NetworkControllerGateway.md)
-

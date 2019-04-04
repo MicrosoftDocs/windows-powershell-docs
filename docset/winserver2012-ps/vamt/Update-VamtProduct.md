@@ -127,4 +127,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-VamtProduct](./Get-VamtProduct.md)
-

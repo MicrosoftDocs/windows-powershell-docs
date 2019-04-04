@@ -85,4 +85,3 @@ Accept wildcard characters: False
 [Invoke-BpaModel](../BPAv2_Cmdlets/Invoke-BpaModel.md)
 
 [Get-BpaResult](../BPAv2_Cmdlets/Get-BpaResult.md)
-

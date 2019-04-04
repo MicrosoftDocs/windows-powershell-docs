@@ -230,4 +230,3 @@ The cmdlet uses the **FullName** property as the value of the **FileName** param
 [Get-FileIntegrity](./Get-FileIntegrity.md)
 
 [Repair-FileIntegrity](./Repair-FileIntegrity.md)
-

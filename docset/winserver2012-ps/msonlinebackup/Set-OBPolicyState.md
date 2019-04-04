@@ -134,4 +134,3 @@ Accept wildcard characters: False
 [Get-OBPolicy](./Get-OBPolicy.md)
 
 [Set-OBPolicy](./Set-OBPolicy.md)
-

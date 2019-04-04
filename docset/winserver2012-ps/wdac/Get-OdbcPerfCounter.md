@@ -130,4 +130,3 @@ Accept wildcard characters: False
 [Enable-OdbcPerfCounter](./Enable-OdbcPerfCounter.md)
 
 [N:Wdac](00000000-0000-0000-0000-000000000000)
-

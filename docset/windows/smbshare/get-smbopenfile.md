@@ -343,4 +343,3 @@ This cmdlet return a **MSFT_SmbOpenFile** object that represents the files opene
 ## RELATED LINKS
 
 [Close-SmbOpenFile](./Close-SmbOpenFile.md)
-

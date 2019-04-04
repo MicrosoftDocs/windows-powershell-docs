@@ -681,4 +681,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-VpnAuthProtocol](./Set-VpnAuthProtocol.md)
 
 [Set-VpnServerIPsecConfiguration](./Set-VpnServerIPsecConfiguration.md)
-

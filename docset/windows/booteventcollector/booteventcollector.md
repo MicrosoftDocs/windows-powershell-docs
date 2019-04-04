@@ -120,4 +120,3 @@ Validates a configuration.
 
 ### [Undo-SbecActiveConfig](./Undo-SbecActiveConfig.md)
 Reverts a change to the active configuration.
-

@@ -148,4 +148,3 @@ This cmdlet returns one or more printer port objects.
 [Add-PrinterPort](./Add-PrinterPort.md)
 
 [Remove-PrinterPort](./Remove-PrinterPort.md)
-

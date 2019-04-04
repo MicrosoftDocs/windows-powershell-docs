@@ -296,4 +296,3 @@ Only if you specify the *PassThru* parameter does the cmdlet return the **MSFT_N
 [Set-NetQosDcbxSetting](./Set-NetQosDcbxSetting.md)
 
 [Set-NetQosTrafficClass](./Set-NetQosTrafficClass.md)
-

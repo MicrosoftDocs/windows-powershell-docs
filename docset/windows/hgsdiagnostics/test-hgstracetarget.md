@@ -71,4 +71,3 @@ The cmdlet reports a detailed error if the test fails.
 ## RELATED LINKS
 
 [New-HgsTraceTarget](./New-HgsTraceTarget.md)
-

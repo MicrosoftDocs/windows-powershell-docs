@@ -194,4 +194,3 @@ Represents an active directory domain in which IPAM Server discovers infrastruct
 [Get-IpamDiscoveryDomain](./Get-IpamDiscoveryDomain.md)
 
 [Set-IpamDiscoveryDomain](./Set-IpamDiscoveryDomain.md)
-

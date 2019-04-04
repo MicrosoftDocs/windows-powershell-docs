@@ -68,4 +68,3 @@ Accept wildcard characters: False
 [Get-OBPolicy](./Get-OBPolicy.md)
 
 [Set-OBSchedule](./Set-OBSchedule.md)
-

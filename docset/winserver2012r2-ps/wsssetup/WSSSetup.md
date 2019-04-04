@@ -37,4 +37,3 @@ Validates server name, domain name and domain administrator credentials.
 
 ### [Test-WssPrecheckResult](./Test-WssPrecheckResult.md)
 Verifies prerequisites for configuration of Windows Server Essentials.
-

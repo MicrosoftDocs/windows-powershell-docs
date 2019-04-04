@@ -276,4 +276,3 @@ The **MSFT_SmbShareAccessControlEntry** object represents the new SMB share ACE.
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
 
 [Unblock-SmbShareAccess](./Unblock-SmbShareAccess.md)
-

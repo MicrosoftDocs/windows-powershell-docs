@@ -313,4 +313,3 @@ The FileInfo object contains the information about the PFX file.
 [Get-PfxData](./Get-PfxData.md)
 
 [Import-PfxCertificate](./Import-PfxCertificate.md)
-

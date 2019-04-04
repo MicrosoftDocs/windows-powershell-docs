@@ -284,4 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-VpnConnectionTriggerDnsConfiguration](./Remove-VpnConnectionTriggerDnsConfiguration.md)
 
 [Set-VpnConnectionTriggerDnsConfiguration](./Set-VpnConnectionTriggerDnsConfiguration.md)
-

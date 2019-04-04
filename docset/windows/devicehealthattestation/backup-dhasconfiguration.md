@@ -90,4 +90,3 @@ This cmdlet returns a string with the backup file path.
 ## RELATED LINKS
 
 [Restore-DHASConfiguration](./Restore-DHASConfiguration.md)
-

@@ -190,4 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
-

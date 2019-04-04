@@ -82,4 +82,3 @@ The Get-WBBackupTarget cmdlet displays a list of the storage locations that the 
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

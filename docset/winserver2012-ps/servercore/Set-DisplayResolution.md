@@ -126,4 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-DisplayResolution](./Get-DisplayResolution.md)
-

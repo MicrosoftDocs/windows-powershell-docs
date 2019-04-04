@@ -64,4 +64,3 @@ This cmdlet returns a CertificateNotificationTask object for each certificate no
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
 
 [Switch-Certificate](./Switch-Certificate.md)
-

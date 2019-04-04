@@ -95,4 +95,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-VamtConfirmationId](./Get-VamtConfirmationId.md)
-

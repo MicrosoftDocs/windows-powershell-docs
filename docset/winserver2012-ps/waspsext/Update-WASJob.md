@@ -215,4 +215,3 @@ Accept wildcard characters: False
 [Get-WASImage](./Get-WASImage.md)
 
 [Get-WASJob](./Get-WASJob.md)
-

@@ -99,4 +99,3 @@ A class structure that represents the claim description resources for the Federa
 [Remove-ADFSClaimDescription](./Remove-ADFSClaimDescription.md)
 
 [Set-ADFSClaimDescription](./Set-ADFSClaimDescription.md)
-

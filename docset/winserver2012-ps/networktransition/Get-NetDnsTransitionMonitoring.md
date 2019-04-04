@@ -108,4 +108,3 @@ The MSFT_NetDnsTransitionMonitoring object contains DNS64 monitoring information
 [Reset-NetDnsTransitionConfiguration](./Reset-NetDnsTransitionConfiguration.md)
 
 [Set-NetDnsTransitionConfiguration](./Set-NetDnsTransitionConfiguration.md)
-

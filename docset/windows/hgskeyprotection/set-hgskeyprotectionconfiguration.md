@@ -194,4 +194,3 @@ This cmdlet does not generate any output.
 ## RELATED LINKS
 
 [Get-HgsKeyProtectionConfiguration](./Get-HgsKeyProtectionConfiguration.md)
-

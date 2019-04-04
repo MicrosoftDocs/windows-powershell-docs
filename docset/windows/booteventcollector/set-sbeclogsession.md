@@ -364,4 +364,3 @@ The class is defined in $PsHome\Modules\BootEventCollector\SbecTraceHelpers.psm1
 [Start-SbecSimpleLogSession](./Start-SbecSimpleLogSession.md)
 
 [Stop-SbecLogSession](./Stop-SbecLogSession.md)
-

@@ -123,4 +123,3 @@ The output language object contains the following properties:
 [New-WinUserLanguageList](./New-WinUserLanguageList.md)
 
 [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
-

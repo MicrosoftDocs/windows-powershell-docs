@@ -246,4 +246,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-Targetport](./Get-TargetPort.md)
 
 [Get-VirtualDisk](./Get-VirtualDisk.md)
-

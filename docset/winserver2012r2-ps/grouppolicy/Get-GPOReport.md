@@ -270,4 +270,3 @@ If you pipe a collection of GPO (Microsoft.GroupPolicy.Gpo) objects to this cmdl
 If this domain is different from the domain of the user account (for startup or shutdown scripts, the computer account), a trust must exist between the two domains.
 
 ## RELATED LINKS
-

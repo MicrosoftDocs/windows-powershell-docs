@@ -224,4 +224,3 @@ Accept wildcard characters: False
 [Get-WssGlobalClientBackupPolicy](./Get-WssGlobalClientBackupPolicy.md)
 
 [Enable-WssClientBackup](./Enable-WssClientBackup.md)
-

@@ -112,4 +112,3 @@ This cmdlet returns a **VMHostCluster** object.
 ## RELATED LINKS
 
 [Set-VMHostCluster](./Set-VMHostCluster.md)
-

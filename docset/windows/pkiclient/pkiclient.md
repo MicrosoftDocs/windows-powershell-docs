@@ -74,4 +74,3 @@ Marks one certificate as having been replaced by another certificate.
 
 ### [Test-Certificate](./Test-Certificate.md)
 Verifies a certificate according to the input parameters.
-

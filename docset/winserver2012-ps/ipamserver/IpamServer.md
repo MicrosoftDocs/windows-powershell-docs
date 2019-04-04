@@ -45,4 +45,3 @@ Creates and links group policies in the specified domain for provisioning requir
 
 ### [Set-IpamConfiguration](./Set-IpamConfiguration.md)
 Sets the configuration for the computer running the IP Address Management (IPAM) server, including the TCP port number over which the computer running the IPAM Remote Server Administration Tools (RSAT) client connects with the computer running the IPAM server.
-

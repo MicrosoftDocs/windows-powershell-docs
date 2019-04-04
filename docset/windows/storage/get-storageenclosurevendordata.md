@@ -188,4 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-StorageEnclosureIdentification](./Disable-StorageEnclosureIdentification.md)
 
 [Enable-StorageEnclosureIdentification](./Enable-StorageEnclosureIdentification.md)
-

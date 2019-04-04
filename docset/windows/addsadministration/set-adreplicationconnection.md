@@ -440,4 +440,3 @@ A connection object that was retrieved by using the Get-ADReplicationConnection 
 ## RELATED LINKS
 
 [Get-ADReplicationConnection](./Get-ADReplicationConnection.md)
-

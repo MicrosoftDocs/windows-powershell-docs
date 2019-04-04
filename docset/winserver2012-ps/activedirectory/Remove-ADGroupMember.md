@@ -428,4 +428,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Get-ADPrincipalGroupMembership](./Get-ADPrincipalGroupMembership.md)
 
 [Remove-ADPrincipalGroupMembership](./Remove-ADPrincipalGroupMembership.md)
-

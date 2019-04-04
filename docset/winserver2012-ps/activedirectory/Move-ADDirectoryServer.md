@@ -323,4 +323,3 @@ A directory server object is received b y the Identity parameter.
 ## RELATED LINKS
 
 [Move-ADDirectoryServerOperationMasterRole](./Move-ADDirectoryServerOperationMasterRole.md)
-

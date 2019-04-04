@@ -136,4 +136,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-ClusterOwnerNode](./Get-ClusterOwnerNode.md)
-

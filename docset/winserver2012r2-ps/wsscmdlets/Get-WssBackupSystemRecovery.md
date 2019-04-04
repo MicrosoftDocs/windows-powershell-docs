@@ -77,4 +77,3 @@ This cmdlet indicates whether BMR is enabled.
 [Add-WssBackupSystemRecovery](./Add-WssBackupSystemRecovery.md)
 
 [Remove-WssBackupSystemRecovery](./Remove-WssBackupSystemRecovery.md)
-

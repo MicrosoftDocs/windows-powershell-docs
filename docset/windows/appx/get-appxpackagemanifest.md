@@ -123,4 +123,3 @@ This cmdlet returns a read-only .xml document that contains information about th
 [Get-AppxPackage](./Get-AppxPackage.md)
 
 [Add-AppxPackage](./Add-AppxPackage.md)
-

@@ -396,4 +396,3 @@ The default maximum log size is 200 MB.
 - Data: Whole numbers between 1 and 1000 (represents log size, in MB)
 
 ## RELATED LINKS
-

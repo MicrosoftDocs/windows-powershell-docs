@@ -161,4 +161,3 @@ Accept wildcard characters: False
 [Get-NlbClusterVip](./Get-NlbClusterVip.md)
 
 [Set-NlbClusterVip](./Set-NlbClusterVip.md)
-

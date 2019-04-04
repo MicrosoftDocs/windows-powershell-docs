@@ -108,4 +108,3 @@ Accept wildcard characters: False
 [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
-

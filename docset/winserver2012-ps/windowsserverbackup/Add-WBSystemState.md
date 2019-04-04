@@ -79,4 +79,3 @@ None
 [Get-WBSystemState](./Get-WBSystemState.md)
 
 [Remove-WBSystemState](./Remove-WBSystemState.md)
-

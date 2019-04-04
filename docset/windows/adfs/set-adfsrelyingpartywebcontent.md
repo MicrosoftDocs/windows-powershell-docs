@@ -476,4 +476,3 @@ The object includes the following properties:
 [Get-AdfsRelyingPartyWebContent](./Get-AdfsRelyingPartyWebContent.md)
 
 [Remove-AdfsRelyingPartyWebContent](./Remove-AdfsRelyingPartyWebContent.md)
-

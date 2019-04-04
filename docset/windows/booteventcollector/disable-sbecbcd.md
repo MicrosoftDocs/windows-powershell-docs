@@ -227,4 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-SbecBootImage](./Enable-SbecBootImage.md)
 
 [Enable-SbecWdsBcd](./Enable-SbecWdsBcd.md)
-

@@ -51,4 +51,3 @@ This example gets all recovery points available to recover.
 ## RELATED LINKS
 
 [00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
-

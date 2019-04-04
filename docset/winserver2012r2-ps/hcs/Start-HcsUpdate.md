@@ -129,4 +129,3 @@ This cmdlet generates a value of $True if it starts installing an update or a va
 [Get-HcsUpdateStatus](./Get-HcsUpdateStatus.md)
 
 [Start-HcsHotfix](./Start-HcsHotfix.md)
-

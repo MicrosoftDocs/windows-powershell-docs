@@ -70,4 +70,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamReport](enable-mbamreport.md)
 
 [Test-MbamReport](test-mbamreport.md)
-

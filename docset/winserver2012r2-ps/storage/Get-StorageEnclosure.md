@@ -339,4 +339,3 @@ This cmdlet returns an array of **StorageEnclosure** objects.
 [Get-StorageNode](./Get-StorageNode.md)
 
 [Get-StorageSubSystem](./Get-StorageSubsystem.md)
-

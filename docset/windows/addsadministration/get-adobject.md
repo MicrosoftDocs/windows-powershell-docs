@@ -550,4 +550,3 @@ To get a list of all the properties of an **ADObject** object, use the following
 [Set-ADObject](./Set-ADObject.md)
 
 [Sync-ADObject](./Sync-ADObject.md)
-

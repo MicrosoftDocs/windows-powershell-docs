@@ -336,4 +336,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Install-ADDSDomainController](./Install-ADDSDomainController.md)
-

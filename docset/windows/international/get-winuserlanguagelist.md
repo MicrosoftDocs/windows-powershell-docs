@@ -119,4 +119,3 @@ This value is either 0 (freehand) or 1 (write each character separately).
 [New-WinUserLanguageList](./New-WinUserLanguageList.md)
 
 [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
-

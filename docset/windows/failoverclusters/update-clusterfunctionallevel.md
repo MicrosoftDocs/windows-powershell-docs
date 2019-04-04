@@ -174,4 +174,3 @@ This cmdlet updates the functional level of this cluster.
 [Suspend-ClusterNode](./Suspend-ClusterNode.md)
 
 [Remove-ClusterNode](./Remove-ClusterNode.md)
-

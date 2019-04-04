@@ -215,4 +215,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DtcLog](./Get-DtcLog.md)
 
 [Reset-DtcLog](./Reset-DtcLog.md)
-

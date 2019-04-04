@@ -266,4 +266,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetAdapterRsc](./Set-NetAdapterRsc.md)
 
 [Set-NetOffloadGlobalSetting](../NetTCPIP_Cmdlets/Set-NetOffloadGlobalSetting.md)
-

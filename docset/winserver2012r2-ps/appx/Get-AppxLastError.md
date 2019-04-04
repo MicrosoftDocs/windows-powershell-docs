@@ -70,4 +70,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AppxLog](./Get-AppxLog.md)
 
 [Add-AppxPackage](./Add-AppxPackage.md)
-

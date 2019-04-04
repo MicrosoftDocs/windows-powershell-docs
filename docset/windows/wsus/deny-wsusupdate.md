@@ -110,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Approve-WsusUpdate](./Approve-WsusUpdate.md)
 
 [Get-WsusUpdate](./Get-WsusUpdate.md)
-

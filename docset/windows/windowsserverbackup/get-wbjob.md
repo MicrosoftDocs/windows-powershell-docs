@@ -102,4 +102,3 @@ This cmdlet returns a **WBJob** object that contains the currently or previously
 [Start-WBBackup](./Start-WBBackup.md)
 
 [Stop-WBJob](./Stop-WBJob.md)
-

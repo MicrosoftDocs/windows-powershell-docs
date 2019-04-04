@@ -24,4 +24,3 @@ Starts the developer license registration workflow that allows a user to registe
 
 ### [Unregister-WindowsDeveloperLicense](./Unregister-WindowsDeveloperLicense.md)
 Removes the developer license from the current computer.
-

@@ -331,4 +331,3 @@ By default, this cmdlet does not generate any output.
 ## RELATED LINKS
 
 [Get-ADForest](./Get-ADForest.md)
-

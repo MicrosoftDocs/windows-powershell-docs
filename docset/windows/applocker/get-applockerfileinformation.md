@@ -307,4 +307,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AppLockerPolicy](./Set-AppLockerPolicy.md)
 
 [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
-

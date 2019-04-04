@@ -108,4 +108,3 @@ The Get-WBFileSpec cmdlet displays the list of **WBFileSpec** objects that conta
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBFileSpec](./Remove-WBFileSpec.md)
-

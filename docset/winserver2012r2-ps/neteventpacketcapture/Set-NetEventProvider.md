@@ -331,4 +331,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetEventVmSwitch](./Get-NetEventVmSwitch.md)
 
 [Get-NetEventSession](./Get-NetEventSession.md)
-

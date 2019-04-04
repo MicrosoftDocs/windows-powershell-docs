@@ -180,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Move-SmbWitnessClient](./Move-SmbWitnessClient.md)
-

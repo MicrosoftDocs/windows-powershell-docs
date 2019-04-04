@@ -48,4 +48,3 @@ This command retrieves the collection of links on the home page of a Remote Web 
 [Add-WssRemoteWebAccessLink](./Add-WssRemoteWebAccessLink.md)
 
 [Remove-WssRemoteWebAccessLink](./Remove-WssRemoteWebAccessLink.md)
-

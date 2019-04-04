@@ -214,4 +214,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetNatExternalAddress](./Get-NetNatExternalAddress.md)
 
 [Remove-NetNatExternalAddress](./Remove-NetNatExternalAddress.md)
-

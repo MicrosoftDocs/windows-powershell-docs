@@ -168,4 +168,3 @@ Accept wildcard characters: False
 [Add-ClusterCheckpoint](./Add-ClusterCheckpoint.md)
 
 [Get-ClusterCheckpoint](./Get-ClusterCheckpoint.md)
-

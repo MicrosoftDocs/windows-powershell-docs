@@ -88,4 +88,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-WebApplication](./New-WebApplication.md)
 
 [Remove-WebApplication](./Remove-WebApplication.md)
-

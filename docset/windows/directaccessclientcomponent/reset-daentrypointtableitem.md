@@ -310,4 +310,3 @@ This cmdlet accepts as input a CIM object which contains a DA site table entry.
 [Rename-DAEntryPointTableItem](./Rename-DAEntryPointTableItem.md)
 
 [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
-

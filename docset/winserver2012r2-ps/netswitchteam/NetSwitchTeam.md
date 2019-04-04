@@ -45,4 +45,3 @@ Removes a network adapter member from a switch team.
 
 ### [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
 Changes the name of a switch team.
-

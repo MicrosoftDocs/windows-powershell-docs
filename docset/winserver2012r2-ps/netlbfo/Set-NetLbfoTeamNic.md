@@ -280,4 +280,3 @@ If the **PassThru** parameter is specified, the cmdlet returns the newly modifie
 [Get-NetLbfoTeamNic](./Get-NetLbfoTeamNic.md)
 
 [Remove-NetLbfoTeamNic](./Remove-NetLbfoTeamNic.md)
-

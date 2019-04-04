@@ -140,4 +140,3 @@ The MSFT_SmbMultichannelConstraint object represents the constraints that define
 [New-SmbMultichannelConstraint](./New-SmbMultichannelConstraint.md)
 
 [Remove-SmbMultichannelConstraint](./Remove-SmbMultichannelConstraint.md)
-

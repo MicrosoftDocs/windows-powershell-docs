@@ -340,4 +340,3 @@ When the **Passthru** parameter is specified, this cmdlet outputs a modified 6to
 [Get-Net6to4Configuration](./Get-Net6to4Configuration.md)
 
 [Reset-Net6to4Configuration](./Reset-Net6to4Configuration.md)
-

@@ -252,4 +252,3 @@ Registers existing Network Name resources with a DNS server in a way that does n
 
 ### [Update-ClusterVirtualMachineConfiguration](./Update-ClusterVirtualMachineConfiguration.md)
 Refreshes the configuration of a clustered virtual machine within a failover cluster.
-

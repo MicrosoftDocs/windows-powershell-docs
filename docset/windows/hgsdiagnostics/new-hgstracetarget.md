@@ -215,4 +215,3 @@ This cmdlet returns a target object that is a collection of metadata that contai
 [Test-HgsTraceTarget](./Test-HgsTraceTarget.md)
 
 [Get-HgsTrace](./Get-HgsTrace.md)
-

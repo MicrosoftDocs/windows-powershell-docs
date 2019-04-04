@@ -162,4 +162,3 @@ This cmdlet returns the rules in the policy that it creates.
 [Get-CIPolicy](./Get-CIPolicy.md)
 
 [New-CIPolicy](./New-CIPolicy.md)
-

@@ -84,4 +84,3 @@ Accept wildcard characters: False
 [Get-WssBackupConfiguration](./Get-WssBackupConfiguration.md)
 
 [New-WssBackupConfiguration](./New-WssBackupConfiguration.md)
-

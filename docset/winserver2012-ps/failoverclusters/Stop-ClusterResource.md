@@ -148,4 +148,3 @@ Accept wildcard characters: False
 [Start-ClusterResource](./Start-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

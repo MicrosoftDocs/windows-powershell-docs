@@ -405,4 +405,3 @@ To see parameters, run the following command: `Install-AdcsNetworkDeviceEnrollme
 [Uninstall-AdcsNetworkDeviceEnrollmentService](./Uninstall-AdcsNetworkDeviceEnrollmentService.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

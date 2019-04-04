@@ -34,4 +34,3 @@ Exports a TLS session ticket key.
 
 ### [New-TlsSessionTicketKey](./New-TlsSessionTicketKey.md)
 Creates a TLS session ticket key configuration file.
-

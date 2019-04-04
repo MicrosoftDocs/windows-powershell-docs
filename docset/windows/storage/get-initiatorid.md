@@ -255,4 +255,3 @@ This cmdlet returns an object that represents an initiator ID.
 [Get-InitiatorPort](./Get-InitiatorPort.md)
 
 [Remove-InitiatorId](./Remove-InitiatorId.md)
-

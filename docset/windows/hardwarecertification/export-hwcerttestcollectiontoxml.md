@@ -120,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-HwCertTestCollectionFromXml](./Merge-HwCertTestCollectionFromXml.md)
 
 [Merge-HwCertTestCollectionFromPackage](./Merge-HwCertTestCollectionFromPackage.md)
-

@@ -188,4 +188,3 @@ A class that represents a claims provider trust for the Federation Service.
 [Set-ADFSClaimsProviderTrust](./Set-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

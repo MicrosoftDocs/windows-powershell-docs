@@ -169,4 +169,3 @@ A class structure that represents a service certificate.
 [Remove-AdfsCertificate](./Remove-AdfsCertificate.md)
 
 [Update-AdfsCertificate](./Update-AdfsCertificate.md)
-

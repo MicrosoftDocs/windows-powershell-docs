@@ -202,4 +202,3 @@ This cmdlet returns one or more print job objects.
 [Suspend-PrintJob](./Suspend-PrintJob.md)
 
 [Resume-PrintJob](./Resume-PrintJob.md)
-

@@ -192,4 +192,3 @@ Accept wildcard characters: False
 [New-NetSwitchTeam](./New-NetSwitchTeam.md)
 
 [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
-

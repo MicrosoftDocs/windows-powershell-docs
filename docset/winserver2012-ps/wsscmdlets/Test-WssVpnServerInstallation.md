@@ -45,4 +45,3 @@ This command tests the VPN server installation.
 [Install-WssVpnServer](./Install-WssVpnServer.md)
 
 [Uninstall-WssVpnServer](./Uninstall-WssVpnServer.md)
-

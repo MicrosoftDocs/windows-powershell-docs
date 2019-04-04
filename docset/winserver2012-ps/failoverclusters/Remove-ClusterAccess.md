@@ -95,4 +95,3 @@ Accept wildcard characters: False
 [Get-ClusterAccess](./Get-ClusterAccess.md)
 
 [Grant-ClusterAccess](./Grant-ClusterAccess.md)
-

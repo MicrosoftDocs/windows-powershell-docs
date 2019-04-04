@@ -56,4 +56,3 @@ This command gets the remediation groups from an NPS and assigns them to the var
 [Remove-NpsRemediationServer](./Remove-NpsRemediationServer.md)
 
 [Remove-NpsRemediationServerGroup](./Remove-NpsRemediationServerGroup.md)
-

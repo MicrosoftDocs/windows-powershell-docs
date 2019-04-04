@@ -506,4 +506,3 @@ To get a list of all the properties of an **ADGroup** object, use the following 
 [Remove-ADGroup](./Remove-ADGroup.md)
 
 [Set-ADGroup](./Set-ADGroup.md)
-

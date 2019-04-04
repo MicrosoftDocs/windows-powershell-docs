@@ -259,4 +259,3 @@ The DAMultiSite object contains the following properties:
 [Enable-DAMultiSite](./Enable-DAMultiSite.md)
 
 [Get-DAMultiSite](./Get-DAMultiSite.md)
-

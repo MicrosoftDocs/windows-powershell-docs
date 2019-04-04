@@ -182,4 +182,3 @@ This cmdlet returns the user object created by this cmdlet.
 [Get-WssUser](./Get-WssUser.md)
 
 [Remove-WssUser](./Remove-WssUser.md)
-

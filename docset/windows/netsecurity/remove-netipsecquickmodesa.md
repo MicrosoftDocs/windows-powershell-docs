@@ -266,4 +266,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetIPsecMainModeSA](./Get-NetIPsecMainModeSA.md)
 
 [Get-NetIPsecQuickModeSA](./Get-NetIPsecQuickModeSA.md)
-

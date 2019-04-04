@@ -154,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsRelyingPartyWebContent](./Get-AdfsRelyingPartyWebContent.md)
 
 [Set-AdfsRelyingPartyWebContent](./Set-AdfsRelyingPartyWebContent.md)
-

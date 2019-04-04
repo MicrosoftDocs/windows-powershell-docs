@@ -560,4 +560,3 @@ You can use the pipeline operator to pass one or more MSFT_StoragePool objects t
 [New-StoragePool](./New-StoragePool.md)
 
 [Remove-StoragePool](./Remove-StoragePool.md)
-

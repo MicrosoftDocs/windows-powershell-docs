@@ -365,4 +365,3 @@ Derived types, such as the following, are also accepted:
 [Set-ADObject](./Set-ADObject.md)
 
 [Sync-ADObject](./Sync-ADObject.md)
-

@@ -183,4 +183,3 @@ None
 ## RELATED LINKS
 
 [Get-RDDeploymentGatewayConfiguration](./Get-RDDeploymentGatewayConfiguration.md)
-

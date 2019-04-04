@@ -259,4 +259,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-RDSessionCollection](./New-RDSessionCollection.md)
 
 [Remove-RDSessionCollection](./Remove-RDSessionCollection.md)
-

@@ -226,4 +226,3 @@ This parameter can also get this object through the pipeline or you can set this
 [New-ADReplicationSite](./New-ADReplicationSite.md)
 
 [Set-ADReplicationSite](./Set-ADReplicationSite.md)
-

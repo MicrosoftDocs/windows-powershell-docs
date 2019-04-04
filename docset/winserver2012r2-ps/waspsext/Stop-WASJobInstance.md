@@ -79,4 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WASJob](./Get-WASJob.md)
 
 [Get-WASJobInstance](./Get-WASJobInstance.md)
-

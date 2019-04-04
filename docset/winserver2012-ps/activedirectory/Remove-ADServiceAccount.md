@@ -319,4 +319,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

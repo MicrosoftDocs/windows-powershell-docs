@@ -96,4 +96,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Invoke-BpaModel](http://technet.microsoft.com/library/ee617290.aspx)
 
 [Get-BpaResult](http://technet.microsoft.com/library/ee617286.aspx)
-

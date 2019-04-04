@@ -66,4 +66,3 @@ The **Enable-WindowsErrorReporting** cmdlet returns $True if successful; otherwi
 [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.md)
 
 [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
-

@@ -242,4 +242,3 @@ This cmdlet outputs an object that represents the physical disk for which you en
 [Get-StoragePool](./Get-StoragePool.md)
 
 [Get-VirtualDisk](./Get-VirtualDisk.md)
-

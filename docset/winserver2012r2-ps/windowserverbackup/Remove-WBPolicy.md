@@ -155,4 +155,3 @@ This cmdlet specifies the **WBPolicy** object to remove.
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBPolicy](./Set-WBPolicy.md)
-

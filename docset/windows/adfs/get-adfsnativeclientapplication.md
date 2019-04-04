@@ -161,4 +161,3 @@ RedirectUri                 string[]
 [Remove-AdfsNativeClientApplication](./Remove-AdfsNativeClientApplication.md)
 
 [Set-AdfsNativeClientApplication](./Set-AdfsNativeClientApplication.md)
-

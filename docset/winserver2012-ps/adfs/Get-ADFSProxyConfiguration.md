@@ -52,4 +52,3 @@ A class structure that represents the properties for a federation server proxy i
 ## RELATED LINKS
 
 [Set-ADFSProxyConfiguration](./Set-ADFSProxyConfiguration.md)
-

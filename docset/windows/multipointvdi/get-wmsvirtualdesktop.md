@@ -78,4 +78,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-WmsVirtualDesktop](./New-WmsVirtualDesktop.md)
 
 [Open-WmsVirtualDesktop](./Open-WmsVirtualDesktop.md)
-

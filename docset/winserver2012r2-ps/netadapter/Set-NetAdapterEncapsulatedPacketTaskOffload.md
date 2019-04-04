@@ -286,4 +286,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Enable-NetAdapterEncapsulatedPacketTaskOffload](./Enable-NetAdapterEncapsulatedPacketTaskOffload.md)
 
 [Get-NetAdapterEncapsulatedPacketTaskOffload](./Get-NetAdapterEncapsulatedPacketTaskOffload.md)
-

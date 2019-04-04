@@ -125,4 +125,3 @@ Accept wildcard characters: False
 [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 
 [Move-ClusterVirtualMachineRole](./Move-ClusterVirtualMachineRole.md)
-

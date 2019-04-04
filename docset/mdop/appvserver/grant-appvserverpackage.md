@@ -214,4 +214,3 @@ For more information, see Hotfix Package 2 for Microsoft Application Virtualizat
 [Set-AppvServerPackage](./Set-AppvServerPackage.md)
 
 [Unpublish-AppvServerPackage](./Unpublish-AppvServerPackage.md)
-

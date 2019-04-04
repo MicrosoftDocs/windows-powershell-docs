@@ -90,4 +90,3 @@ This cmdlet returns a **DtcTransactionsTraceSession** object that contains trace
 [Stop-DtcTransactionsTraceSession](./Stop-DtcTransactionsTraceSession.md)
 
 [Write-DtcTransactionsTraceSession](./Write-DtcTransactionsTraceSession.md)
-

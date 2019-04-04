@@ -115,4 +115,3 @@ Otherwise will be empty.
 [Get-SbecDestination](./Get-SbecDestination.md)
 
 [Get-SbecHistory](./Get-SbecHistory.md)
-

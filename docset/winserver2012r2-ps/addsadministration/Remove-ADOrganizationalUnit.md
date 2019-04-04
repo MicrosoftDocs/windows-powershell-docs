@@ -309,4 +309,3 @@ An **ADOrganizationalUnit** object is received by the **Identity** parameter.
 [New-ADOrganizationalUnit](./New-ADOrganizationalUnit.md)
 
 [Set-ADOrganizationalUnit](./Set-ADOrganizationalUnit.md)
-

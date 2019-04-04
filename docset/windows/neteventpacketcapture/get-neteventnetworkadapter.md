@@ -167,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetEventNetworkAdapter](./Remove-NetEventNetworkAdapter.md)
 
 [Get-NetEventPacketCaptureProvider](./Get-NetEventPacketCaptureProvider.md)
-

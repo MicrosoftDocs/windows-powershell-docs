@@ -359,4 +359,3 @@ The VpnAuth object consists of the following properties:
 [Get-VpnAuthProtocol](./Get-VpnAuthProtocol.md)
 
 [Set-VpnAuthProtocol](./Set-VpnAuthProtocol.md)
-

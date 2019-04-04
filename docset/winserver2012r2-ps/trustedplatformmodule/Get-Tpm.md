@@ -81,4 +81,3 @@ A **TpmObject** object contains the following information:
 [Initialize-Tpm](./Initialize-Tpm.md)
 
 [Unblock-Tpm](./Unblock-Tpm.md)
-

@@ -234,4 +234,3 @@ Detects whether the RD Connection Broker server is configured to reuse existing 
 
 ### [Update-RDVirtualDesktopCollection](./Update-RDVirtualDesktopCollection.md)
 Associates a virtual desktop collection with a new virtual desktop template.
-

@@ -185,4 +185,3 @@ This cmdlet returns a printer configuration object.
 ## RELATED LINKS
 
 [Set-PrintConfiguration](./Set-PrintConfiguration.md)
-

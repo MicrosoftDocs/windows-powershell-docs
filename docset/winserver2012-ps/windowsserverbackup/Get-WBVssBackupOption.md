@@ -73,4 +73,3 @@ The **Get-WBVssBackupOptions** cmdlet returns either VssCopyBackup or VssFullBac
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBVSSBackupOptions](00000000-0000-0000-0000-000000000000)
-

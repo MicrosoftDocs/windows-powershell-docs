@@ -68,4 +68,3 @@ Accept wildcard characters: False
 [Receive-DtcDiagnosticTransaction](./Receive-DtcDiagnosticTransaction.md)
 
 [Send-DtcDiagnosticTransaction](./Send-DtcDiagnosticTransaction.md)
-

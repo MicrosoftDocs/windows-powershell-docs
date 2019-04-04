@@ -115,4 +115,3 @@ Accept wildcard characters: False
 [Set-DnsServerForwarder](./Set-DnsServerForwarder.md)
 
 [Add-DnsServerForwarder](./Add-DnsServerForwarder.md)
-

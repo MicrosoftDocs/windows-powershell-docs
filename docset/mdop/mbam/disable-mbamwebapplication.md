@@ -185,4 +185,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MbamWebApplication](get-mbamwebapplication.md)
 
 [Test-MbamWebApplication](test-mbamwebapplication.md)
-

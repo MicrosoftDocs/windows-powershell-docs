@@ -118,4 +118,3 @@ This cmdlet queries the specified **WBPolicy** object.
 ## RELATED LINKS
 
 [Get-WBVssBackupOption](./Get-WBVssBackupOption.md)
-

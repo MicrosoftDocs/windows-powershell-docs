@@ -463,4 +463,3 @@ This cmdlet returns an object that represents an address block object in IPAM.
 [Add-IpamBlock](./Add-IpamBlock.md)
 
 [Remove-IpamBlock](./Remove-IpamBlock.md)
-

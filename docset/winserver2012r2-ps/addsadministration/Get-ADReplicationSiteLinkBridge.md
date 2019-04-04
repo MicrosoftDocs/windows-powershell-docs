@@ -276,4 +276,3 @@ A site link bridge object is received by the **Identity** parameter.
 [Remove-ADReplicationSiteLinkBridge](./Remove-ADReplicationSiteLinkBridge.md)
 
 [Set-ADReplicationSiteLinkBridge](./Set-ADReplicationSiteLinkBridge.md)
-

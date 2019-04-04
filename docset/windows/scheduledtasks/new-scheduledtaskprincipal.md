@@ -281,4 +281,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
 
 [Register-ScheduledTask](./Register-ScheduledTask.md)
-

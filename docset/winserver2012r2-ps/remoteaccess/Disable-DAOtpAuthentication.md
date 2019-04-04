@@ -223,4 +223,3 @@ The DAOtpAuth object contains the following OTP authentication configuration set
 [Get-DAOtpAuthentication](./Get-DAOtpAuthentication.md)
 
 [Set-DAOtpAuthentication](./Set-DAOtpAuthentication.md)
-

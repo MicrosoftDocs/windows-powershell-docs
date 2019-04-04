@@ -482,4 +482,3 @@ The **Get-StoragePool** cmdlet returns objects representing storage pools.
 [Get-StorageNode](./Get-StorageNode.md)
 
 [Get-StorageTier](./Get-StorageTier.md)
-

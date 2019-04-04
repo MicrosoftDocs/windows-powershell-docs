@@ -114,4 +114,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WindowsDeveloperLicense](./Get-WindowsDeveloperLicense.md)
 
 [Show-WindowsDeveloperLicenseRegistration](./Show-WindowsDeveloperLicenseRegistration.md)
-

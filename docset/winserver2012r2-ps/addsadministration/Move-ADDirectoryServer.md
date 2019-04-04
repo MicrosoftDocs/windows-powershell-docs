@@ -260,4 +260,3 @@ A directory server object is received by the **Identity** parameter.
 [Move-ADDirectoryServerOperationMasterRole](./Move-ADDirectoryServerOperationMasterRole.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

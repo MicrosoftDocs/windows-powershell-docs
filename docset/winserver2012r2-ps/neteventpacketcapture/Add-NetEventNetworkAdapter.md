@@ -174,4 +174,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-NetEventSession](./New-NetEventSession.md)
 
 [Add-NetEventPacketCaptureProvider](./Add-NetEventPacketCaptureProvider.md)
-

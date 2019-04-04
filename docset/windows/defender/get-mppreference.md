@@ -118,4 +118,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpPreference](./Remove-MpPreference.md)
 
 [Set-MpPreference](./Set-MpPreference.md)
-

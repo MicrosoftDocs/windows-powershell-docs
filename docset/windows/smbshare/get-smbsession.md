@@ -304,4 +304,3 @@ The **MSFT_SmbSession** object represents the sessions established between the S
 ## RELATED LINKS
 
 [Close-SmbSession](./Close-SmbSession.md)
-

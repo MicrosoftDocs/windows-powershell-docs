@@ -309,4 +309,3 @@ If you specify the **Passthru** parameter, this cmdlet outputs an object represe
 [Resize-VirtualDisk](./Resize-VirtualDisk.md)
 
 [Set-VirtualDisk](./Set-VirtualDisk.md)
-

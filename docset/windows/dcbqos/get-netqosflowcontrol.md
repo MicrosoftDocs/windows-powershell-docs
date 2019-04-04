@@ -182,4 +182,3 @@ This cmdlet returns a **MSFT_NetQosFlowControlSettingData** object that contains
 [Set-NetQosDcbxSetting](./Set-NetQosDcbxSetting.md)
 
 [Set-NetQosFlowControl](./Set-NetQosFlowControl.md)
-

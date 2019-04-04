@@ -299,4 +299,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterLso](./Get-NetAdapterLso.md)
 
 [Set-NetAdapterLso](./Set-NetAdapterLso.md)
-

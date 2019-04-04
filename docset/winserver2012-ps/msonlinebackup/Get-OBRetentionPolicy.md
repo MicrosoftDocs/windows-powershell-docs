@@ -65,4 +65,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-OBPolicy](./Get-OBPolicy.md)
-

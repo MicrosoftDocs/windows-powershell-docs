@@ -232,4 +232,3 @@ If you do not specify any names, this command clears the block list.
 ## RELATED LINKS
 
 [Get-DnsServerGlobalQueryBlockList](./Get-DnsServerGlobalQueryBlockList.md)
-

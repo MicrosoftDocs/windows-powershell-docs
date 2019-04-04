@@ -110,4 +110,3 @@ This cmdlet does not generate any output.
 ## RELATED LINKS
 
 [Restore-NetworkSwitchConfiguration](./Restore-NetworkSwitchConfiguration.md)
-

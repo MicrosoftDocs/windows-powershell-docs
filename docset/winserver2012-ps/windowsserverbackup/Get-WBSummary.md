@@ -55,4 +55,3 @@ The Get-WBSummary cmdlet returns the **WBSummary** object that contains informat
 [Get-WBJob](./Get-WBJob.md)
 
 [Start-WBBackup](./Start-WBBackup.md)
-

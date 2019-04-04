@@ -277,4 +277,3 @@ Gets the list of IP addresses to be added and deleted to an IPsec rule based on 
 
 ### [Update-NetIPsecRule](./Update-NetIPsecRule.md)
 Updates an IPsec rule by adding or removing a set of IP addresses.
-

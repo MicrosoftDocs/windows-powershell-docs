@@ -218,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetworkControllerVirtualGatewayBgpRouter](./Get-NetworkControllerVirtualGatewayBgpRouter.md)
 
 [New-NetworkControllerVirtualGatewayBgpRouter](./New-NetworkControllerVirtualGatewayBgpRouter.md)
-

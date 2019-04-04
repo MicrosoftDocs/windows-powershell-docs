@@ -232,4 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-UalDns](./Get-UalDns.md)
 
 [Get-Ual](./Get-Ual.md)
-

@@ -137,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-HgsAttestationTpmHost](./Add-HgsAttestationTpmHost.md)
 
 [Get-HgsAttestationTpmHost](./Get-HgsAttestationTpmHost.md)
-

@@ -182,4 +182,3 @@ This cmdlet returns an object that represents an **IpamDhcpScope** object.
 [Get-IpamDhcpServer](./Get-IpamDhcpServer.md)
 
 [Get-IpamDhcpSuperscope](./Get-IpamDhcpSuperscope.md)
-

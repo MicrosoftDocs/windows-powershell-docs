@@ -97,4 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AdfsRelyingPartyTrustsGroup](./Add-AdfsRelyingPartyTrustsGroup.md)
 
 [Get-AdfsRelyingPartyTrustsGroup](./Get-AdfsRelyingPartyTrustsGroup.md)
-

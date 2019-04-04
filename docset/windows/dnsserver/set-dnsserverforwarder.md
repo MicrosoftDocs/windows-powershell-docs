@@ -278,4 +278,3 @@ boolean IsSlave; //True if the DNS server does not use recursion when name resol
 [Add-DnsServerForwarder](./Add-DnsServerForwarder.md)
 
 [Remove-DnsServerForwarder](./Remove-DnsServerForwarder.md)
-

@@ -168,4 +168,3 @@ To obtain a **DiagPack** object, use the **Get-TroubleshootingPack** cmdlet.
 ## RELATED LINKS
 
 [Get-TroubleshootingPack](./Get-TroubleshootingPack.md)
-

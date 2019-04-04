@@ -166,4 +166,3 @@ This cmdlet returns a **VHDSnapshotInfo** object.
 [Restore-VMSnapshot](./Restore-VMSnapshot.md)
 
 [Get-VHDSet](./Get-VHDSet.md)
-

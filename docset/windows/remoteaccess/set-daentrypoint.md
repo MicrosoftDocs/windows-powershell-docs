@@ -251,4 +251,3 @@ The DAEntryPoint object contains the following properties:
 [Remove-DAEntryPoint](./Remove-DAEntryPoint.md)
 
 [Set-DAEntryPointDC](./Set-DAEntryPointDC.md)
-

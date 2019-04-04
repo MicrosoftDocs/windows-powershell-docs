@@ -30,4 +30,3 @@ Gets a list of running compute systems from the Hyper-V Host Compute Service.
 
 ### [Stop-ComputeProcess](./Stop-ComputeProcess.md)
 Stops a running compute system in the Hyper-V Host Compute Service.
-

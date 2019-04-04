@@ -73,4 +73,3 @@ The Get-WBDisk cmdlet lists an array of **WBDisk** objects for the hard disks th
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

@@ -81,4 +81,3 @@ This cmdlet returns a **SecureBootPolicy** object that contains the following in
 [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
 
 [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
-

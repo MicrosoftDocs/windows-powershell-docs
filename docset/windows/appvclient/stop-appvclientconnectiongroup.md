@@ -175,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AppvClientConnectionGroup](./Remove-AppvClientConnectionGroup.md)
 
 [Repair-AppvClientConnectionGroup](./Repair-AppvClientConnectionGroup.md)
-

@@ -200,4 +200,3 @@ An object that represents an optional capability provided by an IPAM server.
 [Get-IpamCapability](./Get-IpamCapability.md)
 
 [Disable-IpamCapability](./Disable-IpamCapability.md)
-

@@ -241,4 +241,3 @@ Represents an active directory domain in which IPAM will discover infrastructure
 [Get-IpamDiscoveryDomain](./Get-IpamDiscoveryDomain.md)
 
 [Remove-IpamDiscoveryDomain](./Remove-IpamDiscoveryDomain.md)
-

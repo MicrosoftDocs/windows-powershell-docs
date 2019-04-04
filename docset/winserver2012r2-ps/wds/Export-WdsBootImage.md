@@ -243,4 +243,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WdsBootImage](./Remove-WdsBootImage.md)
 
 [Import-WdsBootImage](./Import-WdsBootImage.md)
-

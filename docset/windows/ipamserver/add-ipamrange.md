@@ -679,4 +679,3 @@ This cmdlet returns the IP address range object added to the IPAM data store.
 [Remove-IpamRange](./Remove-IpamRange.md)
 
 [Set-IpamRange](./Set-IpamRange.md)
-

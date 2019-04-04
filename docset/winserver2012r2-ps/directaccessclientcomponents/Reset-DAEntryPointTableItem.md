@@ -301,4 +301,3 @@ This cmdlet accepts as input a CIM object which contains a DA site table entry.
 [Rename-DAEntryPointTableItem](./Rename-DAEntryPointTableItem.md)
 
 [Remove-DAEntryPointTableItem](./Remove-DAEntryPointTableItem.md)
-

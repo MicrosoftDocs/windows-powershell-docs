@@ -431,4 +431,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterPowerManagement](./Get-NetAdapterPowerManagement.md)
 
 [Set-NetAdapterPowerManagement](./Set-NetAdapterPowerManagement.md)
-

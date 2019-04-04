@@ -320,4 +320,3 @@ This cmdlet returns an object that contains an IPAM configuration.
 ## RELATED LINKS
 
 [Get-IpamConfiguration](./Get-IpamConfiguration.md)
-

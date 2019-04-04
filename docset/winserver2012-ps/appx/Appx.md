@@ -33,4 +33,3 @@ Gets the manifest of an app package.
 
 ### [Remove-AppxPackage](./Remove-AppxPackage.md)
 Removes an app package from a user account.
-

@@ -221,4 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetEventNetworkAdapter](./Get-NetEventNetworkAdapter.md)
 
 [Get-NetEventPacketCaptureProvider](./Get-NetEventPacketCaptureProvider.md)
-

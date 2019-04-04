@@ -126,4 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-HcsUpdateAvailability](./Get-HcsUpdateAvailability.md)
 
 [Start-HcsUpdate](./Start-HcsUpdate.md)
-

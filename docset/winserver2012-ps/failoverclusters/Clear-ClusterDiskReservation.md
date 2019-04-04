@@ -106,4 +106,3 @@ Accept wildcard characters: False
 [Clear-ClusterNode](./Clear-ClusterNode.md)
 
 [Remove-Cluster](./Remove-Cluster.md)
-

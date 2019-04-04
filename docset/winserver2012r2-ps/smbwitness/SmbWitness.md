@@ -28,4 +28,3 @@ Retrieves information about the Server Message Block (SMB) clients connected to 
 
 ### [Move-SmbWitnessClient](./Move-SmbWitnessClient.md)
 Requests a Server Message Block (SMB) client to move the associated SMB connection from the current cluster node to the specified cluster node.
-

@@ -284,4 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Uninstall-ADDSDomainController](./Uninstall-ADDSDomainController.md)
-

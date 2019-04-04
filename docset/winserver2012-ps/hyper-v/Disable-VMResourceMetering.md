@@ -156,4 +156,3 @@ Accept wildcard characters: False
 [Measure-VMResourcePool](692df375-67a3-4945-8590-3cccab788f35)
 
 [Enable-VMResourceMetering](30cfc606-ee24-4001-bd65-16602bb76ce2)
-

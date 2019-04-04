@@ -42,4 +42,3 @@ Starts a background task.
 
 ### [Unregister-AppBackgroundTask](./Unregister-AppBackgroundTask.md)
 Unregisters a background task.
-

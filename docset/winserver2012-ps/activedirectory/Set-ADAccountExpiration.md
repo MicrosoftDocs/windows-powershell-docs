@@ -462,4 +462,3 @@ Microsoft.ActiveDirectory.Management.ADServiceAccount
 [Get-ADUser](./Get-ADUser.md)
 
 [Search-ADAccount](./Search-ADAccount.md)
-

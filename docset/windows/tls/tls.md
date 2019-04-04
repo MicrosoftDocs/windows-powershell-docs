@@ -43,4 +43,3 @@ Gets the status TLS Ecc Curve.
 
 ### [New-TlsSessionTicketKey](New-TlsSessionTicketKey.md)
 Creates a TLS session ticket key configuration file.
-

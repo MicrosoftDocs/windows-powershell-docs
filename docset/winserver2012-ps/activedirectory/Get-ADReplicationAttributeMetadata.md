@@ -307,4 +307,3 @@ A class structure that represents Active Directory replication attribute metadat
 * The default behavior for this cmdlet is to prompt for object identity. Other tools that have been provided to manage this feature in previous releases of Windows Server include the Repadmin.exe command-line tool.
 
 ## RELATED LINKS
-

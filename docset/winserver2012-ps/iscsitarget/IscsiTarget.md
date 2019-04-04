@@ -84,4 +84,3 @@ Modifies the settings for the specified iSCSI virtual disk.
 
 ### [Set-IscsiVirtualDiskSnapshot](./Set-IscsiVirtualDiskSnapshot.md)
 Sets the description for an iSCSI virtual disk snapshot.
-

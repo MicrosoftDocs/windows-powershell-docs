@@ -127,4 +127,3 @@ If you do not specify the **ValidateOnly** parameter, the cmdlet provides the se
 [Test-WssConfigurationOption](./Test-WssConfigurationOption.md)
 
 [Test-WssPrecheckResult](./Test-WssPrecheckResult.md)
-

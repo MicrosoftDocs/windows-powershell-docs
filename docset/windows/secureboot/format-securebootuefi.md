@@ -298,4 +298,3 @@ The **UEFIFormattedVariable** object can be used to pipe to the Set-SecureBootUE
 [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
 
 [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
-

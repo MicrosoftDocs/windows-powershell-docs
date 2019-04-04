@@ -94,4 +94,3 @@ The Set-WBSchedule cmdlet returns the **Datetime** list that you use to update t
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBSchedule](./Get-WBSchedule.md)
-

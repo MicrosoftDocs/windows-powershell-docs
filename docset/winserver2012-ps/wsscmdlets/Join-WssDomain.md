@@ -105,4 +105,3 @@ Accept wildcard characters: False
 [Exit-WssDomain](./Exit-WssDomain.md)
 
 [Get-WssDomainNameConfiguration](./Get-WssDomainNameConfiguration.md)
-

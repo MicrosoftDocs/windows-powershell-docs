@@ -142,4 +142,3 @@ The language object contains the following properties:
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
 
 [New-WinUserLanguageList](./New-WinUserLanguageList.md)
-

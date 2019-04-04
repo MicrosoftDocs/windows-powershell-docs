@@ -38,4 +38,3 @@ Queries the Network Controller for REST information.
 
 ### [Get-NetworkControllerReplica](./Get-NetworkControllerReplica.md)
 Determines which node the Network Controller service modules use as primary.
-

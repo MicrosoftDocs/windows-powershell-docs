@@ -159,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ClusterResource](./Start-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

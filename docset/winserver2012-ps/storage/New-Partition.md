@@ -378,4 +378,3 @@ This cmdlet outputs an object that represents the newly created partition.
 [Initialize-Disk](./Initialize-Disk.md)
 
 [Format-Volume](./Format-Volume.md)
-

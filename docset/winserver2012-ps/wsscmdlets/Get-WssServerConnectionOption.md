@@ -44,4 +44,3 @@ This command gets the server connection option.
 ## RELATED LINKS
 
 [Set-WssServerConnectionOption](./Set-WssServerConnectionOption.md)
-

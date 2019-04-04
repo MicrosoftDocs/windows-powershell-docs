@@ -81,4 +81,3 @@ This cmdlet generates a **StringCollection** object that contains features that 
 ## RELATED LINKS
 
 [Trusted Platform Module Cmdlets in Windows PowerShell](./trustedplatformmodule.md)
-

@@ -120,4 +120,3 @@ Indicates either global settings or volume settings.
 [Get-WBBackupSet](./Get-WBBackupSet.md)
 
 [Set-WBPerformanceConfiguration](./Set-WBPerformanceConfiguration.md)
-

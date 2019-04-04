@@ -440,4 +440,3 @@ This cmdlet returns an object representing the newly created storage pool.
 [Remove-StoragePool](./Remove-StoragePool.md)
 
 [Set-StoragePool](./Set-StoragePool.md)
-

@@ -175,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ClusterGroup](./Remove-ClusterGroup.md)
 
 [Stop-ClusterGroup](./Stop-ClusterGroup.md)
-

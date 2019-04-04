@@ -124,4 +124,3 @@ This cmdlet returns an IP-HTTPS state object.
 [Reset-NetIPHttpsConfiguration](./Reset-NetIPHttpsConfiguration.md)
 
 [Set-NetIPHttpsConfiguration](./Set-NetIPHttpsConfiguration.md)
-

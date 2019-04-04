@@ -138,4 +138,3 @@ The default maximum connection time is 300 seconds, or five minutes.
 If a value larger than 3600 is specified, 3600 seconds is used as the maximum connection time.
 
 ## RELATED LINKS
-

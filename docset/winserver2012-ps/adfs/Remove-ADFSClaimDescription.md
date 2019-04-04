@@ -165,4 +165,3 @@ A class structure that represents a claim description object for the Federation 
 [Get-ADFSClaimDescription](./Get-ADFSClaimDescription.md)
 
 [Set-ADFSClaimDescription](./Set-ADFSClaimDescription.md)
-

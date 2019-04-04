@@ -314,4 +314,3 @@ Represents an infrastructure server in IPAM system.
 [Get-IpamServerInventory](./Get-IpamServerInventory.md)
 
 [Remove-IpamServerInventory](./Remove-IpamServerInventory.md)
-

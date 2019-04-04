@@ -51,4 +51,3 @@ Requires Windows 10 version 17134 (1803) or higher
 ## RELATED LINKS
 
 [About Windows Diagnostic Data](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data)
-

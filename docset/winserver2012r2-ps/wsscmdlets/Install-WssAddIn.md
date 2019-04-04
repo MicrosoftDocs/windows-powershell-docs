@@ -174,4 +174,3 @@ This cmdlet generates package information about the installed add-in.
 [Get-WssAddIn](./Get-WssAddIn.md)
 
 [Uninstall-WssAddIn](./Uninstall-WssAddIn.md)
-

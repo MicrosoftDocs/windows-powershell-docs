@@ -84,4 +84,3 @@ This cmdlet returns a **StringCollection** object.
 [Add-HgsAttestationHostGroup](./Add-HgsAttestationHostGroup.md)
 
 [Remove-HgsAttestationHostGroup](./Remove-HgsAttestationHostGroup.md)
-

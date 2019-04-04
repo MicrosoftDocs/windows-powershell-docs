@@ -280,4 +280,3 @@ If the *Effective* parameter is specified, then only the contents of effective p
 [Set-DnsClientNrptGlobal](./Set-DnsClientNrptGlobal.md)
 
 [Set-DnsClientNrptRule](./Set-DnsClientNrptRule.md)
-

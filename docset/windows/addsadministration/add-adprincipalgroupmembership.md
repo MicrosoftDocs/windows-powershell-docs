@@ -378,4 +378,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
 
 [Remove-ADPrincipalGroupMembership](./Remove-ADPrincipalGroupMembership.md)
-

@@ -119,4 +119,3 @@ Accept wildcard characters: False
 [Clear-WssAlert](./Clear-WssAlert.md)
 
 [Enable-WssAlert](./Enable-WssAlert.md)
-

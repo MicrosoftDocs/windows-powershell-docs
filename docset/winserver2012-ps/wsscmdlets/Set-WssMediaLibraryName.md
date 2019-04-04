@@ -59,4 +59,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
-

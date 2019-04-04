@@ -185,4 +185,3 @@ This cmdlet generates an object that represents the removed folder.
 [Move-WssFolder](./Move-WssFolder.md)
 
 [Measure-WssFolder](./Measure-WssFolder.md)
-

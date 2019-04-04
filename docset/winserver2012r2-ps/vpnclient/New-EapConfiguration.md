@@ -417,4 +417,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Add-VpnConnection](./Add-VpnConnection.md)
 
 [Set-VpnConnection](./Set-VpnConnection.md)
-

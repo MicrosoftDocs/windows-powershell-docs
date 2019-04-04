@@ -246,4 +246,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-AdfsApplicationPermission](./Grant-AdfsApplicationPermission.md)
 
 [Revoke-AdfsApplicationPermission](./Revoke-AdfsApplicationPermission.md)
-

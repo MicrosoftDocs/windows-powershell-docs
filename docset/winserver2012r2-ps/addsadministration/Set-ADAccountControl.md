@@ -578,4 +578,3 @@ Derived types, such as the following are also accepted:
 [Get-ADUser](./Get-ADUser.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

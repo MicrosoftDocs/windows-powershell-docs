@@ -278,4 +278,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-NetEventSession](./Stop-NetEventSession.md)
 
 [Add-NetEventProvider](./Add-NetEventProvider.md)
-

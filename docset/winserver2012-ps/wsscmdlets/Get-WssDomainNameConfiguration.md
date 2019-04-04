@@ -48,4 +48,3 @@ This command gets the domain name configuration of Windows Server 2012.
 [Join-WssDomain](./Join-WssDomain.md)
 
 [Exit-WssDomain](./Exit-WssDomain.md)
-

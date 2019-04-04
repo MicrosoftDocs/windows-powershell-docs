@@ -123,4 +123,3 @@ The input type is a **String** for the active encryption certificate thumbprint.
 ## RELATED LINKS
 
 [Get-DHASActiveEncryptionCertificate](./Get-DHASActiveEncryptionCertificate.md)
-

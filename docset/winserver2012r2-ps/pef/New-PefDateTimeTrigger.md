@@ -123,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-PefTraceFilter](./Set-PefTraceFilter.md)
 
 [Start-PefTraceSession](./Start-PefTraceSession.md)
-

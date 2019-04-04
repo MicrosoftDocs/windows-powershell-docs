@@ -68,4 +68,3 @@ Possible values are the following:
 ## RELATED LINKS
 
 [Set-WinLanguageBarOption](./Set-WinLanguageBarOption.md)
-

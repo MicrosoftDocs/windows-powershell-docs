@@ -180,4 +180,3 @@ AppLockerPolicy
 [New-AppLockerPolicy](./New-AppLockerPolicy.md)
 
 [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
-

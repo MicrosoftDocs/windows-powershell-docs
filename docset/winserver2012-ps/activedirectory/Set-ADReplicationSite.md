@@ -797,4 +797,3 @@ A site object that was retrieved by using the Get-ADReplicationSite cmdlet and t
 [New-ADReplicationSite](./New-ADReplicationSite.md)
 
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
-

@@ -54,4 +54,3 @@ Refreshes the information about connected iSCSI target objects.
 
 ### [Update-IscsiTargetPortal](./Update-IscsiTargetPortal.md)
 Updates information about the specified iSCSI target portal.
-

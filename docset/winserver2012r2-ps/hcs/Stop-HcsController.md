@@ -140,4 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Restart-HcsController](./Restart-HcsController.md)
-

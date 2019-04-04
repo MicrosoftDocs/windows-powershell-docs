@@ -332,4 +332,3 @@ This cmdlet returns an object that contains the new printer port.
 [Get-PrinterPort](./Get-PrinterPort.md)
 
 [Remove-PrinterPort](./Remove-PrinterPort.md)
-

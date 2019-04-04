@@ -74,4 +74,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-RDVirtualDesktopTemplateExportPath](./Set-RDVirtualDesktopTemplateExportPath.md)
 
 [Update-RDVirtualDesktopCollection](./Update-RDVirtualDesktopCollection.md)
-

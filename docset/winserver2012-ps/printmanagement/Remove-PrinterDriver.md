@@ -245,4 +245,3 @@ By default, this cmdlet produces no output.
 [Get-PrinterDriver](./Get-PrinterDriver.md)
 
 [Add-PrinterDriver](./Add-PrinterDriver.md)
-

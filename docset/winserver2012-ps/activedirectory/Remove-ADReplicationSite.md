@@ -250,4 +250,3 @@ A site object is received by the Identity parameter.
 [New-ADReplicationSite](./New-ADReplicationSite.md)
 
 [Set-ADReplicationSite](./Set-ADReplicationSite.md)
-

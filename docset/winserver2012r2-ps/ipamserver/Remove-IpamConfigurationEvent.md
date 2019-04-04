@@ -198,4 +198,3 @@ An object that represents an IPAM server configuration event.
 ## RELATED LINKS
 
 [Get-IpamConfigurationEvent](./Get-IpamConfigurationEvent.md)
-

@@ -92,4 +92,3 @@ The cmdlet removes the **WBSystemState** object if it is present.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBSystemState](./Get-WBSystemState.md)
-

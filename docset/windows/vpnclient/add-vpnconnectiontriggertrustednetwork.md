@@ -207,4 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-VpnConnectionTriggerTrustedNetwork](./Remove-VpnConnectionTriggerTrustedNetwork.md)
 
 [Get-VpnConnectionTrigger](./Get-VpnConnectionTrigger.md)
-

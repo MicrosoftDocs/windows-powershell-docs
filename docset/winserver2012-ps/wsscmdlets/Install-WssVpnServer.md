@@ -194,4 +194,3 @@ Accept wildcard characters: False
 [Test-WssVpnServerInstallation](./Test-WssVpnServerInstallation.md)
 
 [Uninstall-WssVpnServer](./Uninstall-WssVpnServer.md)
-

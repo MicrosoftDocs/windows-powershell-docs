@@ -147,4 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

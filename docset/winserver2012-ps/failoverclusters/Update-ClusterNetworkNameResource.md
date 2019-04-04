@@ -98,4 +98,3 @@ Accept wildcard characters: False
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Update-ClusterIPResource](./Update-ClusterIPResource.md)
-

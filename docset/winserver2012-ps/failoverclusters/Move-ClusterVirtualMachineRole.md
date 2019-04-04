@@ -247,4 +247,3 @@ Accept wildcard characters: False
 [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 
 [Update-ClusterVirtualMachineConfiguration](./Update-ClusterVirtualMachineConfiguration.md)
-

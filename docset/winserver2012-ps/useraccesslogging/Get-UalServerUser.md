@@ -221,4 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-UalDailyDeviceAccess](./Get-UalDailyDeviceAccess.md)
 
 [Get-UalDeviceAccess](./Get-UalDeviceAccess.md)
-

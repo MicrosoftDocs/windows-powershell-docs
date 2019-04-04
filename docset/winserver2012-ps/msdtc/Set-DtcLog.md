@@ -181,4 +181,3 @@ Accept wildcard characters: False
 [Get-DtcLog](./Get-DtcLog.md)
 
 [Reset-DtcLog](./Reset-DtcLog.md)
-

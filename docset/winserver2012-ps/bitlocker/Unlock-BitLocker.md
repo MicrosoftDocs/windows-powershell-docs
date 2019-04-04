@@ -205,4 +205,3 @@ Accept wildcard characters: False
 [Suspend-BitLocker](./Suspend-BitLocker.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

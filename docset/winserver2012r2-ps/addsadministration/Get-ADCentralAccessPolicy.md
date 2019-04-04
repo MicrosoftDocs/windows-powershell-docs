@@ -338,4 +338,3 @@ To get a list of all the properties of an **ADCentralAccessPolicy** object, use 
 [Set-ADCentralAccessPolicy](./Set-ADCentralAccessPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

@@ -30,4 +30,3 @@ Converts App-V packages to the format for the current version of App-V.
 
 ### [Test-AppvLegacyPackage](./Test-AppvLegacyPackage.md)
 Validates App-V packages for conversion.
-

@@ -44,4 +44,3 @@ This command gets the most recent BPA scan result.
 ## RELATED LINKS
 
 [Invoke-WssBpaScan](./Invoke-WssBpaScan.md)
-

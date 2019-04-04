@@ -175,4 +175,3 @@ This cmdlet returns a **MSFT_NetQosTrafficClassSettingData** object that contain
 [New-NetQosTrafficClass](./New-NetQosTrafficClass.md)
 
 [Set-NetQosTrafficClass](./Set-NetQosTrafficClass.md)
-

@@ -49,4 +49,3 @@ Modifies properties of a key certificate in the Key Protection Service.
 
 ### [Set-HgsKeyProtectionConfiguration](Set-HgsKeyProtectionConfiguration.md)
 Modifies the configuration of the Key Protection Service.
-

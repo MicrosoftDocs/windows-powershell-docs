@@ -222,4 +222,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-OdbcPerfCounter](./Enable-OdbcPerfCounter.md)
 
 [Get-OdbcPerfCounter](./Get-OdbcPerfCounter.md)
-

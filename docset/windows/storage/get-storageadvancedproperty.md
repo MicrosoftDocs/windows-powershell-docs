@@ -90,4 +90,3 @@ The cmdlet gets the advanced properties for **PhysicalDisk** objects: **IsPowerP
 ## RELATED LINKS
 
 [Get-PhysicalDisk](./Get-PhysicalDisk.md)
-

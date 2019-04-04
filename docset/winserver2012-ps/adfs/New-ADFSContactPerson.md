@@ -135,4 +135,3 @@ A class structure that represents a contact person object in the Federation Serv
 [Get-ADFSProperties](00000000-0000-0000-0000-000000000000)
 
 [Set-ADFSProperties](00000000-0000-0000-0000-000000000000)
-

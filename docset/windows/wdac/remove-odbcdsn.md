@@ -304,4 +304,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-OdbcDsn](./Get-OdbcDsn.md)
 
 [Set-OdbcDsn](./Set-OdbcDsn.md)
-

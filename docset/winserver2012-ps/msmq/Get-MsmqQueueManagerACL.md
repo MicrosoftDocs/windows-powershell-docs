@@ -41,4 +41,3 @@ The **Get-MsmqQueueManagerACL** cmdlet gets an array of **MsmqQueueManagerAcl** 
 ## RELATED LINKS
 
 [Set-MsmqQueueManagerACL](./Set-MsmqQueueManagerACL.md)
-

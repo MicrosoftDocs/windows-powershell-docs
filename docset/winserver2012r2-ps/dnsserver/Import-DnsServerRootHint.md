@@ -198,4 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DnsServerRootHint](./Get-DnsServerRootHint.md)
 
 [Set-DnsServerRootHint](./Set-DnsServerRootHint.md)
-

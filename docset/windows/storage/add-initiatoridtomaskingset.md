@@ -259,4 +259,3 @@ If you specify the **Passthru** parameter, this cmdlet outputs an object that re
 [Get-InitiatorId](./Get-InitiatorId.md)
 
 [Get-InitiatorPort](./Get-InitiatorPort.md)
-

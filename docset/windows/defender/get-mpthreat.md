@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpThreatCatalog](./Get-MpThreatCatalog.md)
 
 [Get-MpThreatDetection](./Get-MpThreatDetection.md)
-

@@ -61,4 +61,3 @@ This command gets the global default load balance policy, in this case, RR for r
 ## RELATED LINKS
 
 [Set-MSDSMGlobalDefaultLoadBalancePolicy](./Set-MSDSMGlobalDefaultLoadBalancePolicy.md)
-

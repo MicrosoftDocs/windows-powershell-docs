@@ -74,4 +74,3 @@ Tests whether a cluster is properly set up to apply software updates using Clust
 
 ### [Unregister-CauPlugin](./Unregister-CauPlugin.md)
 Removes a software updating plug-in from the list of plug-ins that are used by Cluster-Aware Updating (CAU).
-

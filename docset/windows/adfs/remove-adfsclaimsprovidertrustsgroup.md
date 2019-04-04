@@ -97,4 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AdfsClaimsProviderTrustsGroup](./Add-AdfsClaimsProviderTrustsGroup.md)
 
 [Get-AdfsClaimsProviderTrustsGroup](./Get-AdfsClaimsProviderTrustsGroup.md)
-

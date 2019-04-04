@@ -230,4 +230,3 @@ The Connect-VirtualDisk cmdlet does not output objects unless you use the Passth
 [Set-VirtualDisk](./Set-VirtualDisk.md)
 
 [Show-VirtualDisk](./Show-VirtualDisk.md)
-

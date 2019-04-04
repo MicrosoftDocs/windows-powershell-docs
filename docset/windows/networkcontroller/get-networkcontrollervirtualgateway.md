@@ -180,4 +180,3 @@ This cmdlet returns objects that contain the following fields.
 [New-NetworkControllerVirtualGateway](./New-NetworkControllerVirtualGateway.md)
 
 [Remove-NetworkControllerVirtualGateway](./Remove-NetworkControllerVirtualGateway.md)
-

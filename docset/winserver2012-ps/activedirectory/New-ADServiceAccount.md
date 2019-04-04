@@ -1007,4 +1007,3 @@ For more information on how to create the KDS root key using Windows PowerShell,
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

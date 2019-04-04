@@ -276,4 +276,3 @@ The MSFT_SmbSession object represents the sessions established between the SMB s
 ## RELATED LINKS
 
 [Close-SmbSession](./Close-SmbSession.md)
-

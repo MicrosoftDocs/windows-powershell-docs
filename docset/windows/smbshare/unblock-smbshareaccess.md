@@ -271,4 +271,3 @@ This cmdlet returns a **MSFT_SmbShareAccessControlEntry** object.
 [Grant-SmbShareAccess](./Grant-SmbShareAccess.md)
 
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
-

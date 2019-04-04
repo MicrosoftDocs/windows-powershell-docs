@@ -172,4 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsWebTheme](./Remove-AdfsWebTheme.md)
 
 [Set-AdfsWebTheme](./Set-AdfsWebTheme.md)
-

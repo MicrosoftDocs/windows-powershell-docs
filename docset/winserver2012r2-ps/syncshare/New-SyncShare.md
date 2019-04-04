@@ -370,4 +370,3 @@ This cmdlet outputs an object that represents the new sync share.
 [Remove-SyncShare](./Remove-SyncShare.md)
 
 [Set-SyncShare](./Set-SyncShare.md)
-

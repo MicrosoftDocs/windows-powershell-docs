@@ -79,4 +79,3 @@ This cmdlet gets an object that represents the configuration status.
 [Test-WssConfigurationOption](./Test-WssConfigurationOption.md)
 
 [Test-WssPrecheckResult](./Test-WssPrecheckResult.md)
-

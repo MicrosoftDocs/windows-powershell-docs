@@ -199,4 +199,3 @@ This cmdlet generates a WMI error code.
 [Enable-PnpDevice](./Enable-PnpDevice.md)
 
 [Get-PnpDevice](./Get-PnpDevice.md)
-

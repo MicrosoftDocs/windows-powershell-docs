@@ -182,4 +182,3 @@ The **MSFT_SmbServerConfiguration** object represents the configuration of the S
 ## RELATED LINKS
 
 [Set-SmbServerConfiguration](./Set-SmbServerConfiguration.md)
-

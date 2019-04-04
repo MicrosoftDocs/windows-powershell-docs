@@ -235,4 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MsmqQueue](./Remove-MsmqQueue.md)
 
 [Send-MsmqQueue](./Send-MsmqQueue.md)
-

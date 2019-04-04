@@ -79,4 +79,3 @@ This cmdlet returns the BackupPolicy parameter.
 [Get-WssBackupSystemRecovery](./Get-WssBackupSystemRecovery.md)
 
 [Remove-WssBackupSystemRecovery](./Remove-WssBackupSystemRecovery.md)
-

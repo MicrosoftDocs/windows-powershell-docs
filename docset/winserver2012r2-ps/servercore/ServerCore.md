@@ -28,4 +28,3 @@ Shows the current display resolution for a Server Core server.
 
 ### [Set-DisplayResolution](./Set-DisplayResolution.md)
 Changes the display resolution for a Server Core server.
-

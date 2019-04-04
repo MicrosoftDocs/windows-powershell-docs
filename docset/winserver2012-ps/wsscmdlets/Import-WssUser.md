@@ -65,4 +65,3 @@ Accept wildcard characters: False
 [Remove-WssUser](./Remove-WssUser.md)
 
 [Sync-WssUser](./Sync-WssUser.md)
-

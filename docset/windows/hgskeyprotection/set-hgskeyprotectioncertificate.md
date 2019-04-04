@@ -190,4 +190,3 @@ This cmdlet does not generate any output.
 [Get-HgsKeyProtectionCertificate](./Get-HgsKeyProtectionCertificate.md)
 
 [Remove-HgsKeyProtectionCertificate](./Remove-HgsKeyProtectionCertificate.md)
-

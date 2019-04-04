@@ -388,4 +388,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WebApplicationProxyApplication](./Remove-WebApplicationProxyApplication.md)
 
 [Set-WebApplicationProxyApplication](./Set-WebApplicationProxyApplication.md)
-

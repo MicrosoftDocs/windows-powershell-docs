@@ -137,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-ADFSCertificate](./Add-ADFSCertificate.md)
 
 [Remove-ADFSCertificate](./Remove-ADFSCertificate.md)
-

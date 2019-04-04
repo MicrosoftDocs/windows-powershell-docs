@@ -213,4 +213,3 @@ This cmdlet accepts one printer object.
 [Get-Printer](./Get-Printer.md)
 
 [Set-Printer](./Set-Printer.md)
-

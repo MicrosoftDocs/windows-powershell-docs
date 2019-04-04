@@ -105,4 +105,3 @@ The URI represents the list of devices that the cmdlet discovered.
 [Unregister-SmisProvider](./Unregister-SmisProvider.md)
 
 [Get-StorageProvider](../Storage2_Cmdlets/Get-StorageProvider.md)
-

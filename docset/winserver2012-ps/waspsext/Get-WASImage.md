@@ -95,4 +95,3 @@ Accept wildcard characters: False
 [Windows Assessment Services Technical Reference](http://go.microsoft.com/fwlink/?LinkId=215628)
 
 [Update-WASJob](./Update-WASJob.md)
-

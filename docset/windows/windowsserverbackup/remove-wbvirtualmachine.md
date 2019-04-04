@@ -151,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WBVirtualMachine](./Get-WBVirtualMachine.md)
 
 [Get-WBPolicy](./Get-WBPolicy.md)
-

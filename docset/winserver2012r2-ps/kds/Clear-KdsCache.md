@@ -123,4 +123,3 @@ This cmdlet produces no output.
 [Set-KdsConfiguration](./Set-KdsConfiguration.md)
 
 [Test-KdsRootKey](./Test-KdsRootKey.md)
-

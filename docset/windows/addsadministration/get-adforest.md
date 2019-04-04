@@ -280,4 +280,3 @@ To view all of the properties for an **ADForest** object, use the following comm
 ## RELATED LINKS
 
 [Set-ADForest](./Set-ADForest.md)
-

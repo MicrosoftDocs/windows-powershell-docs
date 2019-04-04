@@ -95,4 +95,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Initialize-ShieldedVM](./Initialize-ShieldedVM.md)
 
 [Test-ShieldingDataApplicability](./Test-ShieldingDataApplicability.md)
-

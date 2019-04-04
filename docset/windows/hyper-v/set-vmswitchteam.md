@@ -280,4 +280,3 @@ This cmdlet returns a **VMSwitch** object, if you specify the **Passthru** param
 [Get-VMSwitchTeam](./Get-VMSwitchTeam.md)
 
 [Get-VMSwitch](./Get-VMSwitch.md)
-

@@ -140,4 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-ClusterAccess](./Grant-ClusterAccess.md)
 
 [Remove-ClusterAccess](./Remove-ClusterAccess.md)
-

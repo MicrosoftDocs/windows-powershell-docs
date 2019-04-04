@@ -200,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ClusterGroup](./Start-ClusterGroup.md)
 
 [Stop-ClusterGroup](./Stop-ClusterGroup.md)
-

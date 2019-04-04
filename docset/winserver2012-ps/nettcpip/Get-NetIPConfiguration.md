@@ -195,4 +195,3 @@ Accept wildcard characters: False
 [Get-NetIPInterface](./Get-NetIPInterface.md)
 
 [Get-NetRoute](./Get-NetRoute.md)
-

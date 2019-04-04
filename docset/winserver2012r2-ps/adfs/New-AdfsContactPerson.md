@@ -141,4 +141,3 @@ This cmdlet generates a class structure that represents a contact person object 
 [Get-AdfsProperties](./Get-AdfsProperties.md)
 
 [Set-AdfsProperties](./Set-AdfsProperties.md)
-

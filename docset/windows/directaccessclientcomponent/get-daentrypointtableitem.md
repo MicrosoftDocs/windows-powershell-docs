@@ -210,4 +210,3 @@ This cmdlet returns a CIM object that contains the DA entry point table item.
 [Remove-DAEntryPointTableItem](./Remove-DAEntryPointTableItem.md)
 
 [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
-

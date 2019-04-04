@@ -180,4 +180,3 @@ This cmdlet retrieves the following settings:
 [Disable-NetLldpAgent](./Disable-NetLldpAgent.md)
 
 [Enable-NetLldpAgent](./Enable-NetLldpAgent.md)
-

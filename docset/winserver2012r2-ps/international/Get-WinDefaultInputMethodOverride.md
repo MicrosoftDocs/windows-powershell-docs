@@ -63,4 +63,3 @@ The Tablet Input Panel (TIP) string for the default input method override settin
 ## RELATED LINKS
 
 [Set-WinDefaultInputMethodOverride](./Set-WinDefaultInputMethodOverride.md)
-

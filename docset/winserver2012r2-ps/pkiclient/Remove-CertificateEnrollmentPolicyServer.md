@@ -141,4 +141,3 @@ Contains information about the certificate enrollment policy.
 [Add-CertificateEnrollmentPolicyServer](./Add-CertificateEnrollmentPolicyServer.md)
 
 [Get-CertificateEnrollmentPolicyServer](./Get-CertificateEnrollmentPolicyServer.md)
-

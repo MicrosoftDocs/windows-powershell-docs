@@ -594,4 +594,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AdfsClaimsProviderTrust](./Set-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

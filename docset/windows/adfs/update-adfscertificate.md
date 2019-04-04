@@ -153,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsCertificate](./Remove-AdfsCertificate.md)
 
 [Set-AdfsCertificate](./Set-AdfsCertificate.md)
-

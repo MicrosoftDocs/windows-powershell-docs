@@ -198,4 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ADFSClaimDescription](./Remove-ADFSClaimDescription.md)
 
 [Set-ADFSClaimDescription](./Set-ADFSClaimDescription.md)
-

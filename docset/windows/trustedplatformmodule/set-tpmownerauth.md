@@ -198,4 +198,3 @@ This cmdlet returns a **TpmObject** object contains the following information:
 [ConvertTo-TpmOwnerAuth](./ConvertTo-TpmOwnerAuth.md)
 
 [Import-TpmOwnerAuth](./Import-TpmOwnerAuth.md)
-

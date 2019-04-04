@@ -131,4 +131,3 @@ Accept wildcard characters: False
 [Add-DnsServerTrustAnchor](./Add-DnsServerTrustAnchor.md)
 
 [Remove-DnsServerTrustAnchor](./Remove-DnsServerTrustAnchor.md)
-

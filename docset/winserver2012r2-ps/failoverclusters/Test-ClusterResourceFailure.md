@@ -109,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Move-ClusterGroup](./Move-ClusterGroup.md)
 
 [Start-ClusterResource](./Start-ClusterResource.md)
-

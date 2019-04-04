@@ -160,4 +160,3 @@ Each rule has the following output:
 ## RELATED LINKS
 
 [New-NetworkControllerAccessControlListRule](./New-NetworkControllerAccessControlListRule.md)
-

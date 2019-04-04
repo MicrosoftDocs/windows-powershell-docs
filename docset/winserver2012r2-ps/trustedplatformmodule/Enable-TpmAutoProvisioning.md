@@ -77,4 +77,3 @@ A **TpmObject** object contains the following information:
 ## RELATED LINKS
 
 [Disable-TpmAutoProvisioning](./Disable-TpmAutoProvisioning.md)
-

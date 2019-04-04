@@ -75,4 +75,3 @@ Modifies the printer properties for the specified printer.
 
 ### [Suspend-PrintJob](./Suspend-PrintJob.md)
 Suspends a print job on the specified printer.
-

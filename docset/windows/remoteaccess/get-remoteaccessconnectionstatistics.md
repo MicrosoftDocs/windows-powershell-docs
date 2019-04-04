@@ -310,4 +310,3 @@ A separate instance of the object is outputted for every connection.
 [Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
 
 [Get-RemoteAccessConnectionStatisticsSummary](./Get-RemoteAccessConnectionStatisticsSummary.md)
-

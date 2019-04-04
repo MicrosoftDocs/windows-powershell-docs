@@ -179,4 +179,3 @@ Type  `Get-WBJob -Previous 1` to get the status after the recovery operation com
 ## RELATED LINKS
 
 [Resume-WBVolumeRecovery](./Resume-WBVolumeRecovery.md)
-

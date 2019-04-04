@@ -44,4 +44,3 @@ This command gets the list of clients that the server can back up.
 ## RELATED LINKS
 
 [Enable-WssClientBackup](./Enable-WssClientBackup.md)
-

@@ -342,4 +342,3 @@ To retrieve additional **ADAuthenticationPolicy** properties, use the **Properti
 [Set-ADAuthenticationPolicy](./Set-ADAuthenticationPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

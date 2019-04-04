@@ -388,4 +388,3 @@ The Get-PhysicalDisk cmdlet returns objects that represent physical disks.
 [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
 
 [Set-PhysicalDisk](./Set-PhysicalDisk.md)
-

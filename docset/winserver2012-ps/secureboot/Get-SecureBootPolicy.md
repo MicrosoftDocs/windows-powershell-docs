@@ -71,4 +71,3 @@ Contains the following fields:
 [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
 
 [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
-

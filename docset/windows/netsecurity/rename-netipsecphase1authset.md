@@ -598,4 +598,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Remove-NetIPsecQuickModeCryptoSet](./Remove-NetIPsecQuickModeCryptoSet.md)
 
 [Set-NetIPsecPhase1AuthSet](./Set-NetIPsecPhase1AuthSet.md)
-

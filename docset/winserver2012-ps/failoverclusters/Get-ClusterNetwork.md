@@ -106,4 +106,3 @@ Accept wildcard characters: True
 ## RELATED LINKS
 
 [Get-ClusterNetworkInterface](./Get-ClusterNetworkInterface.md)
-

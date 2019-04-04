@@ -106,4 +106,3 @@ This cmdlet generates the backup target.
 [Get-WssBackupTarget](./Get-WssBackupTarget.md)
 
 [Remove-WssBackupTarget](./Remove-WssBackupTarget.md)
-

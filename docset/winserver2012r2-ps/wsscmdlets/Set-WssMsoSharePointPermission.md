@@ -148,4 +148,3 @@ Site -- Type: Microsoft.WindowsServerSolutions.O365Integration.SharePointSite --
 [Get-WssMsoSharePointPermission](./Get-WssMsoSharePointPermission.md)
 
 [Remove-WssMsoSharePointPermission](./Remove-WssMsoSharePointPermission.md)
-

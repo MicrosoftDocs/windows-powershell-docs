@@ -107,4 +107,3 @@ Accept wildcard characters: False
 [Get-WssAddIn](./Get-WssAddIn.md)
 
 [Install-WssAddIn](./Install-WssAddIn.md)
-

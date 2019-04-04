@@ -74,4 +74,3 @@ This cmdlet generates the file history managed status for a user, which is $True
 [Set-WssFileHistoryManagementStatus](./Set-WssFileHistoryManagementStatus.md)
 
 [Get-WssFileHistoryConfiguration](./Get-WssFileHistoryConfiguration.md)
-

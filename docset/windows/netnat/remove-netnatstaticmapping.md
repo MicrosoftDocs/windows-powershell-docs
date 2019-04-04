@@ -219,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-NetNatStaticMapping](./Add-NetNatStaticMapping.md)
 
 [Get-NetNatStaticMapping](./Get-NetNatStaticMapping.md)
-

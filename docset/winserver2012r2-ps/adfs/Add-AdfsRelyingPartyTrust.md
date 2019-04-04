@@ -817,4 +817,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AdfsRelyingPartyTrust](./Set-AdfsRelyingPartyTrust.md)
 
 [Update-AdfsRelyingPartyTrust](./Update-AdfsRelyingPartyTrust.md)
-

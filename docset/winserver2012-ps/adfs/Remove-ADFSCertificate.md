@@ -145,4 +145,3 @@ A class structure that represents the service certificates for the Federation Se
 [Add-ADFSCertificate](./Add-ADFSCertificate.md)
 
 [Update-ADFSCertificate](./Update-ADFSCertificate.md)
-

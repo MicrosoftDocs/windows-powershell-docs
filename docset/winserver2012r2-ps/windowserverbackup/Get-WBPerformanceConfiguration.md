@@ -113,4 +113,3 @@ Indicates either global settings or volume settings.
 ## RELATED LINKS
 
 [Set-WBPerformanceConfiguration](./Set-WBPerformanceConfiguration.md)
-

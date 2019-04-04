@@ -117,4 +117,3 @@ If you do, the command will not respond until you close the AD RMS MMC snap-in.
 Failure to do this may cause an inconsistent configuration of your AD RMS cluster.
 
 ## RELATED LINKS
-

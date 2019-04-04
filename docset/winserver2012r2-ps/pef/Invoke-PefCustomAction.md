@@ -104,4 +104,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-PefProcessTrigger](./New-PefProcessTrigger.md)
 
 [New-PefTimeSpanTrigger](./New-PefTimeSpanTrigger.md)
-

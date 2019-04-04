@@ -234,4 +234,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssGlobalClientBackupPolicy](./Get-WssGlobalClientBackupPolicy.md)
 
 [Enable-WssClientBackup](./Enable-WssClientBackup.md)
-

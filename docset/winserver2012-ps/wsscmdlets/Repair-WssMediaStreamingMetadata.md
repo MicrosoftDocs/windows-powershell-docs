@@ -46,4 +46,3 @@ This command repairs the database that contains media streaming metadata.
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
 
 [Set-WssMediaLibraryName](./Set-WssMediaLibraryName.md)
-

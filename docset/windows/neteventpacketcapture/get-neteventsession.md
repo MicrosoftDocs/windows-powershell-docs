@@ -163,4 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-NetEventSession](./Stop-NetEventSession.md)
 
 [Get-NetEventProvider](./Get-NetEventProvider.md)
-

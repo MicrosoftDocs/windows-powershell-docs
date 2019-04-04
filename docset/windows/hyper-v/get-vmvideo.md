@@ -174,4 +174,3 @@ This cmdlet returns a **VMVideo** object.
 [Get-VM](./Get-VM.md)
 
 [Get-VMSnapshot](./Get-VMSnapshot.md)
-

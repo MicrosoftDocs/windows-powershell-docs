@@ -84,4 +84,3 @@ The Get-WBBareMetalRecovery cmdlet displays a Boolean value to indicate whether 
 [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md)
 
 [Remove-WBBareMetalRecovery](./Remove-WBBareMetalRecovery.md)
-

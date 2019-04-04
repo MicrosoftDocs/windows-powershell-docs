@@ -381,4 +381,3 @@ When the *Passthru* parameter is specified, this cmdlet outputs a modified Tered
 [Get-NetTeredoConfiguration](./Get-NetTeredoConfiguration.md)
 
 [Reset-NetTeredoConfiguration](./Reset-NetTeredoConfiguration.md)
-

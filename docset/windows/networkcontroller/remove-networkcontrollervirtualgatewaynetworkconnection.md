@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetworkControllerVirtualGatewayNetworkConnection](./Get-NetworkControllerVirtualGatewayNetworkConnection.md)
 
 [New-NetworkControllerVirtualGatewayNetworkConnection](./New-NetworkControllerVirtualGatewayNetworkConnection.md)
-

@@ -131,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Receive-DtcDiagnosticTransaction](./Receive-DtcDiagnosticTransaction.md)
 
 [Undo-DtcDiagnosticTransaction](./Undo-DtcDiagnosticTransaction.md)
-

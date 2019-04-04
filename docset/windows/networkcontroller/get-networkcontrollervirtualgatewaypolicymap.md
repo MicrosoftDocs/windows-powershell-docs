@@ -176,4 +176,3 @@ Each entry has the policy type, list of match criteria, and list of set actions.
 [New-NetworkControllerVirtualGatewayPolicyMap](./New-NetworkControllerVirtualGatewayPolicyMap.md)
 
 [Remove-NetworkControllerVirtualGatewayPolicyMap](./Remove-NetworkControllerVirtualGatewayPolicyMap.md)
-

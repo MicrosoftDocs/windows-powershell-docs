@@ -169,4 +169,3 @@ Accept wildcard characters: False
 [Set-DnsServerScavenging](./Set-DnsServerScavenging.md)
 
 [Get-DnsServerScavenging](./Get-DnsServerScavenging.md)
-

@@ -114,4 +114,3 @@ Accept wildcard characters: False
 [Import-VamtData](./Import-VamtData.md)
 
 [Export-VamtData](./Export-VamtData.md)
-

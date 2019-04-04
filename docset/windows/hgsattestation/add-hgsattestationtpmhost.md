@@ -212,4 +212,3 @@ This cmdlet returns a string.
 [Get-HgsAttestationTpmHost](./Get-HgsAttestationTpmHost.md)
 
 [Remove-HgsAttestationTpmHost](./Remove-HgsAttestationTpmHost.md)
-

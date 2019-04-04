@@ -128,4 +128,3 @@ Accept wildcard characters: False
 [Unlock-BitLocker](./Unlock-BitLocker.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

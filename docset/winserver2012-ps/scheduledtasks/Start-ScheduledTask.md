@@ -170,4 +170,3 @@ Accept wildcard characters: False
 [Stop-ScheduledTask](./Stop-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

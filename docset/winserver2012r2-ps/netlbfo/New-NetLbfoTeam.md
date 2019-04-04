@@ -275,4 +275,3 @@ This cmdlet produces an **MSFT_NetLbfoTeam** object, corresponding to the newly 
 [Rename-NetLbfoTeam](./Rename-NetLbfoTeam.md)
 
 [Remove-NetLbfoTeam](./Remove-NetLbfoTeam.md)
-

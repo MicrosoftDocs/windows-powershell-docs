@@ -241,4 +241,3 @@ This cmdlet returns an object that contains details about the storage tier, such
 [Resize-StorageTier](./Resize-StorageTier.md)
 
 [Set-StorageTier](./Set-StorageTier.md)
-

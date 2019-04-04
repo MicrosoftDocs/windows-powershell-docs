@@ -217,4 +217,3 @@ You can pipe an MSFT_PhysicalDisk object to the InputObject parameter.
 [Remove-PhysicalDisk](./Remove-PhysicalDisk.md)
 
 [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
-

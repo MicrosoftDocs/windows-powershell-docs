@@ -192,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Suspend-DfsReplicationGroup](./Suspend-DfsReplicationGroup.md)
 
 [Sync-DfsReplicationGroup](./Sync-DfsReplicationGroup.md)
-

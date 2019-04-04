@@ -118,4 +118,3 @@ Accept wildcard characters: False
 [Stop-NlbClusterNode](./Stop-NlbClusterNode.md)
 
 [Suspend-NlbCluster](./Suspend-NlbCluster.md)
-

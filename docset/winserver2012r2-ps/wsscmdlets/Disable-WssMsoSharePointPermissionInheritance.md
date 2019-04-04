@@ -113,4 +113,3 @@ Description: SharePoint site
 ## RELATED LINKS
 
 [Enable-WssMsoSharePointPermissionInheritance](./Enable-WssMsoSharePointPermissionInheritance.md)
-

@@ -354,4 +354,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetIPsecMainModeRule](./Get-NetIPsecMainModeRule.md)
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
-

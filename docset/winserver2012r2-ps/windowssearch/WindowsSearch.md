@@ -28,4 +28,3 @@ Gets the values of settings for Windows Search.
 
 ### [Set-WindowsSearchSetting](./Set-WindowsSearchSetting.md)
 Modifies values that control Windows Search.
-

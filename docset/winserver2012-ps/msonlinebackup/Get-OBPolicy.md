@@ -51,4 +51,3 @@ This example returns a saved policy.
 ## RELATED LINKS
 
 [Set-OBPolicy](./Set-OBPolicy.md)
-

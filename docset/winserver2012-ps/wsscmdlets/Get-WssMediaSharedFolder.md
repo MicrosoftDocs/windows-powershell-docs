@@ -47,4 +47,3 @@ This command gets the shared folders included in the Medial Library.
 [Get-WssMediaServerEnabled](./Get-WssMediaServerEnabled.md)
 
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
-

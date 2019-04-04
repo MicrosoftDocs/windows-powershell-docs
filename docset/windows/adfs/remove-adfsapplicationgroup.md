@@ -162,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AdfsApplicationGroup](./New-AdfsApplicationGroup.md)
 
 [Set-AdfsApplicationGroup](./Set-AdfsApplicationGroup.md)
-

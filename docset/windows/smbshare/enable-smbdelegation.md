@@ -98,4 +98,3 @@ To check the functional level of the Active Directory forest, use the Get-ADFore
 [Disable-SmbDelegation](./Disable-SmbDelegation.md)
 
 [Get-SmbDelegation](./Get-SmbDelegation.md)
-

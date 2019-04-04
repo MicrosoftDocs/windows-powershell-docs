@@ -60,4 +60,3 @@ This cmdlet returns the active signing certificate thumbprint.
 ## RELATED LINKS
 
 [Set-DHASActiveSigningCertificate](./Set-DHASActiveSigningCertificate.md)
-

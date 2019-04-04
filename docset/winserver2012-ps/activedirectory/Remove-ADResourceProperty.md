@@ -230,4 +230,3 @@ This cmdlet does not work with a read-only domain controller.
 * By default, this cmdlet has the -Confirm parameter set, which prompts you to confirm before a removal of the specified object type can occur. To bypass prompting for confirmation before removal, you can specify -Confirm:$false when using this cmdlet.
 
 ## RELATED LINKS
-

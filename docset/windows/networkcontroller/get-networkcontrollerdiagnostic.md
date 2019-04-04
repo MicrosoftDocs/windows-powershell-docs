@@ -140,4 +140,3 @@ This cmdlet returns an object that contains the following fields:
 ## RELATED LINKS
 
 [Set-NetworkControllerDiagnostic](./Set-NetworkControllerDiagnostic.md)
-

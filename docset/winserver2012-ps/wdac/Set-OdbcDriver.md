@@ -280,4 +280,3 @@ Accept wildcard characters: False
 [Get-OdbcDriver](./Get-OdbcDriver.md)
 
 [N:Wdac](00000000-0000-0000-0000-000000000000)
-

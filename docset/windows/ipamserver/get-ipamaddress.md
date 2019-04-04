@@ -462,4 +462,3 @@ This cmdlet returns an object that represents a set of IP addresses on the IPAM 
 [Get-IpamSubnet](./Get-IpamSubnet.md)
 
 [Get-IpamRange](./Get-IpamRange.md)
-

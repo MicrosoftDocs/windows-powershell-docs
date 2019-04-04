@@ -83,4 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsAccessControlPolicy](./Remove-AdfsAccessControlPolicy.md)
 
 [Set-AdfsAccessControlPolicy](./Set-AdfsAccessControlPolicy.md)
-

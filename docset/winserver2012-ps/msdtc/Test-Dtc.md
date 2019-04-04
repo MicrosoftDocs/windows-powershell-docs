@@ -306,4 +306,3 @@ Accept wildcard characters: False
 [Stop-Dtc](./Stop-Dtc.md)
 
 [Uninstall-Dtc](./Uninstall-Dtc.md)
-

@@ -497,4 +497,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ADResourceProperty](./New-ADResourceProperty.md)
 
 [Remove-ADResourceProperty](./Remove-ADResourceProperty.md)
-

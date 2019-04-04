@@ -148,4 +148,3 @@ An object that represents the database settings used by IPAM to connect to the d
 [Move-IpamDatabase](./Move-IpamDatabase.md)
 
 [Set-IpamDatabase](./Set-IpamDatabase.md)
-

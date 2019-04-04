@@ -335,4 +335,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetDnsTransitionMonitoring](./Get-NetDnsTransitionMonitoring.md)
 
 [Reset-NetDnsTransitionConfiguration](./Reset-NetDnsTransitionConfiguration.md)
-

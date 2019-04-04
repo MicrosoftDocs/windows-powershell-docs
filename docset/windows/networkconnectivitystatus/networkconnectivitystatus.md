@@ -36,4 +36,3 @@ Resets a configuration for NCSI.
 
 ### [Set-NCSIPolicyConfiguration](./Set-NCSIPolicyConfiguration.md)
 Specifies the policy store from which the cmdlet should pull configuration information.
-

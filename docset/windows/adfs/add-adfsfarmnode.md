@@ -264,4 +264,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Remove-AdfsFarmNode](./Remove-AdfsFarmNode.md)
-

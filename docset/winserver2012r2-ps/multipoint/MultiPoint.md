@@ -106,4 +106,3 @@ Unregisters for notification from Windows MultiPoint Server Core Service.
 
 ### [Update-WmsCoreManager](./Update-WmsCoreManager.md)
 Refreshes the connection with Windows MultiPoint Server Core Service.
-

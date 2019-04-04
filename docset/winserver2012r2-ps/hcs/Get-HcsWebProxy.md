@@ -69,4 +69,3 @@ The WebProxyInfo object has the following properties:
 [Enable-HcsWebProxy](./Enable-HcsWebProxy.md)
 
 [Set-HcsWebProxy](./Set-HcsWebProxy.md)
-

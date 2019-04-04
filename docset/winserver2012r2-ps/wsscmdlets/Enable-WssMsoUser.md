@@ -79,4 +79,3 @@ WssUserName - the local account name of user to be enabled.
 [Get-WssMsoUser](./Get-WssMsoUser.md)
 
 [Remove-WssMsoUser](./Remove-WssMsoUser.md)
-

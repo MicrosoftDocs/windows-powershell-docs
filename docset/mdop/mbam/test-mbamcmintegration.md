@@ -208,4 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamCMIntegration](enable-mbamcmintegration.md)
 
 [Get-MbamCMIntegration](get-mbamcmintegration.md)
-

@@ -255,4 +255,3 @@ This cmdlet accepts one print job object.
 [Suspend-PrintJob](./Suspend-PrintJob.md)
 
 [Resume-PrintJob](./Resume-PrintJob.md)
-

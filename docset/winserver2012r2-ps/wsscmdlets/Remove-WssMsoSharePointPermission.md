@@ -129,4 +129,3 @@ Description: SharePoint site
 [Get-WssMsoSharePointPermission](./Get-WssMsoSharePointPermission.md)
 
 [Set-WssMsoSharePointPermission](./Set-WssMsoSharePointPermission.md)
-

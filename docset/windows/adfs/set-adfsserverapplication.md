@@ -389,4 +389,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsServerApplication](./Get-AdfsServerApplication.md)
 
 [Remove-AdfsServerApplication](./Remove-AdfsServerApplication.md)
-

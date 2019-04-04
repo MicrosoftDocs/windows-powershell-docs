@@ -596,4 +596,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-ADDSDomainInstallation](./Test-ADDSDomainInstallation.md)
 
 [Test-ADDSForestInstallation](./Test-ADDSForestInstallation.md)
-

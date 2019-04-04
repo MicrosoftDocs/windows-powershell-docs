@@ -108,4 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AdfsAuthenticationProvider](./Register-AdfsAuthenticationProvider.md)
 
 [Unregister-AdfsAuthenticationProvider](./Unregister-AdfsAuthenticationProvider.md)
-

@@ -45,4 +45,3 @@ This command retrieves a setting that determines if the CPU assessment is user-c
 [Get-WssWinSatCpuScore](./Get-WssWinSatCpuScore.md)
 
 [Set-WssWinSatCpuScore](./Set-WssWinSatCpuScore.md)
-

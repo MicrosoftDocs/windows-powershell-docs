@@ -33,4 +33,3 @@ Gets the names and AppIDs of installed apps.
 
 ### [Import-StartLayout](./Import-StartLayout.md)
 Imports the layout of the Start into a mounted Windows image.
-

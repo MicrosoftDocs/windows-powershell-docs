@@ -63,4 +63,3 @@ Accept wildcard characters: False
 [Install-WssAddIn](./Install-WssAddIn.md)
 
 [Uninstall-WssAddIn](./Uninstall-WssAddIn.md)
-

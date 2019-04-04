@@ -107,4 +107,3 @@ A **TpmObject** object contains the following information:
 [Get-Tpm](./Get-Tpm.md)
 
 [Initialize-Tpm](./Initialize-Tpm.md)
-

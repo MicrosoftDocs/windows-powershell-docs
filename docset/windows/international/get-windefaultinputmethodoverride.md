@@ -63,4 +63,3 @@ This cmdlet returns the Tablet Input Panel (TIP) string for the default input me
 ## RELATED LINKS
 
 [Set-WinDefaultInputMethodOverride](./Set-WinDefaultInputMethodOverride.md)
-

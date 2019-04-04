@@ -231,4 +231,3 @@ ErrorPageDeviceAuthenticationErrorMessage: **System.String**
 [Get-AdfsRelyingPartyWebContent](./Get-AdfsRelyingPartyWebContent.md)
 
 [Remove-AdfsRelyingPartyWebContent](./Remove-AdfsRelyingPartyWebContent.md)
-

@@ -144,4 +144,3 @@ The resource has the following output:
 ## NOTES
 
 ## RELATED LINKS
-

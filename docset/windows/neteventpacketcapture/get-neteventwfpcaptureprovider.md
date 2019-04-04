@@ -149,4 +149,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetEventWFPCaptureProvider](./Remove-NetEventWFPCaptureProvider.md)
 
 [Set-NetEventWFPCaptureProvider](./Set-NetEventWFPCaptureProvider.md)
-

@@ -57,4 +57,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-DHASInactiveSigningCertificate](./Remove-DHASInactiveSigningCertificate.md)
-

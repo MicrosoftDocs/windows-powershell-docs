@@ -147,4 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-UevAppxPackage](./Enable-UevAppxPackage.md)
 
 [Get-UevAppxPackage](./Get-UevAppxPackage.md)
-

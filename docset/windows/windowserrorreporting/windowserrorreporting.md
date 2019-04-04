@@ -33,4 +33,3 @@ Enables Windows Error Reporting.
 
 ### [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
 Retrieves the Windows Error Reporting status.
-

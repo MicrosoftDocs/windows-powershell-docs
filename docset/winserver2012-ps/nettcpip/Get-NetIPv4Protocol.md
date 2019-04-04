@@ -413,4 +413,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
 
 [Get-NetIPv6Protocol](./Get-NetIPv6Protocol.md)
-

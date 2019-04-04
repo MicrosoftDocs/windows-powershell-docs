@@ -280,4 +280,3 @@ This cmdlet generates an object that represents the modified folder.
 [Remove-WssFolder](./Remove-WssFolder.md)
 
 [Measure-WssFolder](./Measure-WssFolder.md)
-

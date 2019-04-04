@@ -274,4 +274,3 @@ Returns one or more objects that represent the service accounts hosted by the sp
 [Get-ADComputer](./Get-ADComputer.md)
 
 [Remove-ADComputerServiceAccount](./Remove-ADComputerServiceAccount.md)
-

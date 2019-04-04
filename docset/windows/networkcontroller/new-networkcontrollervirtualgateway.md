@@ -316,4 +316,3 @@ This cmdlet outputs the following information:
 [Get-NetworkControllerVirtualGateway](./Get-NetworkControllerVirtualGateway.md)
 
 [Remove-NetworkControllerVirtualGateway](./Remove-NetworkControllerVirtualGateway.md)
-

@@ -269,4 +269,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-WdacBidTrace](./Disable-WdacBidTrace.md)
 
 [Enable-WdacBidTrace](./Enable-WdacBidTrace.md)
-

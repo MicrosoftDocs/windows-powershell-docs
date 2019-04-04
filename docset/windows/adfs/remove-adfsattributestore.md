@@ -150,4 +150,3 @@ You can pipe a class structure that represents an AD FS 2.0 attribute store obje
 [Add-AdfsAttributeStore](./Add-AdfsAttributeStore.md)
 
 [Set-AdfsAttributeStore](./Set-AdfsAttributeStore.md)
-

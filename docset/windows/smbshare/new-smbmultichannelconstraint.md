@@ -244,4 +244,3 @@ This cmdlet returns a **MSFT_SmbMultiChannelConnection** object that represents 
 [Get-SmbMultichannelConstraint](./Get-SmbMultichannelConstraint.md)
 
 [Remove-SmbMultichannelConstraint](./Remove-SmbMultichannelConstraint.md)
-

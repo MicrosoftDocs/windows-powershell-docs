@@ -342,4 +342,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-AdfsFarm](./Install-AdfsFarm.md)
 
 [Test-AdfsFarmJoin](./Test-AdfsFarmJoin.md)
-

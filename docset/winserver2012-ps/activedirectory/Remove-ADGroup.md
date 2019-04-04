@@ -333,4 +333,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
 
 [Set-ADGroup](./Set-ADGroup.md)
-

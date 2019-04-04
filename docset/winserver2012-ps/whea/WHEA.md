@@ -21,4 +21,3 @@ Gets WHEA memory policies.
 
 ### [Set-WheaMemoryPolicy](./Set-WheaMemoryPolicy.md)
 Sets the WHEA memory policy on a local or remote computer.
-

@@ -208,4 +208,3 @@ The array of DnsClientNRPTRule objects contains the following properties:
 [Get-DAClientDnsConfiguration](./Get-DAClientDnsConfiguration.md)
 
 [Set-DAClientDnsConfiguration](./Set-DAClientDnsConfiguration.md)
-

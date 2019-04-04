@@ -159,4 +159,3 @@ To see parameters, run the following command: `Install-AdcsWebEnrollment -?`
 [Uninstall-AdcsWebEnrollment](./Uninstall-AdcsWebEnrollment.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

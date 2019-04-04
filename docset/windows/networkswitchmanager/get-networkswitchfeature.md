@@ -173,4 +173,3 @@ This cmdlet returns an array of **CimInstance** objects that represent network s
 [Disable-NetworkSwitchFeature](./Disable-NetworkSwitchFeature.md)
 
 [Enable-NetworkSwitchFeature](./Enable-NetworkSwitchFeature.md)
-

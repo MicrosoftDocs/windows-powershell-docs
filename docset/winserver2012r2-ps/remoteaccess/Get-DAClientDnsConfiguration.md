@@ -151,4 +151,3 @@ Each entry is an instance of the **DnsClientNrptRule** object.
 [Remove-DAClientDnsConfiguration](./Remove-DAClientDnsConfiguration.md)
 
 [Set-DAClientDnsConfiguration](./Set-DAClientDnsConfiguration.md)
-

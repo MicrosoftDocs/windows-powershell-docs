@@ -288,4 +288,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-WdsClient](./New-WdsClient.md)
 
 [Set-WdsClient](./Set-WdsClient.md)
-

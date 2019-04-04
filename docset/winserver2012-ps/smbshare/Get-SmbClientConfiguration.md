@@ -151,4 +151,3 @@ The MSFT_SmbClientConfiguration object represents the configuration of the SMB c
 ## RELATED LINKS
 
 [Set-SmbClientConfiguration](./Set-SmbClientConfiguration.md)
-

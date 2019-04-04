@@ -228,4 +228,3 @@ Represents a configuration event for the IPAM server.
 ## RELATED LINKS
 
 [Remove-IpamConfigurationEvent](./Remove-IpamConfigurationEvent.md)
-

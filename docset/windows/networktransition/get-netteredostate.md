@@ -119,4 +119,3 @@ This cmdlet returns a Teredo state object.
 [Reset-NetTeredoConfiguration](./Reset-NetTeredoConfiguration.md)
 
 [Set-NetTeredoConfiguration](./Set-NetTeredoConfiguration.md)
-

@@ -194,4 +194,3 @@ This cmdlet returns an **AppxPackage** object that contains information, includi
 [Move-AppxPackage](./Move-AppxPackage.md)
 
 [Remove-AppxPackage](./Remove-AppxPackage.md)
-

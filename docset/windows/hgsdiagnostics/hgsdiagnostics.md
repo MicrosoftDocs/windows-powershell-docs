@@ -25,4 +25,3 @@ Creates a HGS Diagnostics target object.
 
 ### [Test-HgsTraceTarget](Test-HgsTraceTarget.md)
 Verifies that a remote Windows PowerShell® session can be opened to the provided target.
-

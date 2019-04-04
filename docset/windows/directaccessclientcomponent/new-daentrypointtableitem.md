@@ -325,4 +325,3 @@ This cmdlet returns a CIM object which contains the new DA entry point table ite
 [Reset-DAEntryPointTableItem](./Reset-DAEntryPointTableItem.md)
 
 [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
-

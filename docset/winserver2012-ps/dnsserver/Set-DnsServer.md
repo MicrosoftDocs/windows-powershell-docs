@@ -240,4 +240,3 @@ Accept wildcard characters: False
 [Get-DnsServer](./Get-DnsServer.md)
 
 [Test-DnsServer](./Test-DnsServer.md)
-

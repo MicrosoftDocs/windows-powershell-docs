@@ -306,4 +306,3 @@ Set-ADFSRelyingParty RP1Name -Name RP2Name
 [Get-AdfsClaimDescription](./Get-AdfsClaimDescription.md)
 
 [Remove-AdfsClaimDescription](./Remove-AdfsClaimDescription.md)
-

@@ -200,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-UalUserAccess](./Get-UalUserAccess.md)
 
 [Get-Ual](./Get-Ual.md)
-

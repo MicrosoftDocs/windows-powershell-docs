@@ -61,4 +61,3 @@ Removes a remediation server group from an NPS.
 
 ### [Set-NpsRadiusClient](./Set-NpsRadiusClient.md)
 Specifies configuration settings for a RADIUS client.
-

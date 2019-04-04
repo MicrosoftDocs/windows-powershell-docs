@@ -47,4 +47,3 @@ This command gets the current settings for alert email notification.
 [Set-WssAlertEmailSetting](./Set-WssAlertEmailSetting.md)
 
 [Test-WssAlertEmail](./Test-WssAlertEmail.md)
-

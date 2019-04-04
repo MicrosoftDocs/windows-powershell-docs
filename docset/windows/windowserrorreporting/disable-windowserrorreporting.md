@@ -68,4 +68,3 @@ Otherwise, it returns $False.
 [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md)
 
 [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
-

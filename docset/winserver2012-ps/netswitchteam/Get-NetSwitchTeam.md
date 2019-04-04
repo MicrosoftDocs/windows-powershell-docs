@@ -152,4 +152,3 @@ Accept wildcard characters: False
 [Remove-NetSwitchTeam](./Remove-NetSwitchTeam.md)
 
 [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
-

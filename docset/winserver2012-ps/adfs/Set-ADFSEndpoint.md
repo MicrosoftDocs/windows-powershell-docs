@@ -183,4 +183,3 @@ Depending on the type of endpoint, you can enable or disable the endpoint or con
 [Enable-ADFSEndpoint](./Enable-ADFSEndpoint.md)
 
 [Get-ADFSEndpoint](./Get-ADFSEndpoint.md)
-

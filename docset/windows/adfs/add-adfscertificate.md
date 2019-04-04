@@ -169,4 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AdfsCertificate](./Set-AdfsCertificate.md)
 
 [Update-AdfsCertificate](./Update-AdfsCertificate.md)
-

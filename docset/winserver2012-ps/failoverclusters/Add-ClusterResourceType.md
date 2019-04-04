@@ -145,4 +145,3 @@ Accept wildcard characters: False
 [Get-ClusterResourceType](./Get-ClusterResourceType.md)
 
 [Remove-ClusterResourceType](./Remove-ClusterResourceType.md)
-

@@ -90,4 +90,3 @@ Accept wildcard characters: False
 [Get-WssDomainNameConfiguration](./Get-WssDomainNameConfiguration.md)
 
 [Set-WssDomainNameConfiguration](./Set-WssDomainNameConfiguration.md)
-

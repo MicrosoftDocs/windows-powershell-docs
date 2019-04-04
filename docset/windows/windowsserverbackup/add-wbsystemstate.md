@@ -91,4 +91,3 @@ This cmdlet accepts a **WBPolicy** object as input.
 [Get-WBSystemState](./Get-WBSystemState.md)
 
 [Remove-WBSystemState](./Remove-WBSystemState.md)
-

@@ -160,4 +160,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Import-VamtData](./Import-VamtData.md)
 
 [Initialize-VamtData](./Initialize-VamtData.md)
-

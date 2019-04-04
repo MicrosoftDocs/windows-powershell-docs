@@ -286,4 +286,3 @@ The output object is returned only when the *PassThru* parameter is specified.
 [Get-NetAdapter](./Get-NetAdapter.md)
 
 [Get-NetAdapterQos](./Get-NetAdapterQos.md)
-

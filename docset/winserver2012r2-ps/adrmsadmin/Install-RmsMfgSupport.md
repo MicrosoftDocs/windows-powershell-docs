@@ -127,4 +127,3 @@ Failure to do this may cause an inconsistent configuration of your AD RMS cluste
 ## RELATED LINKS
 
 [Using Windows PowerShell with AD RMS](http://go.microsoft.com/fwlink/?LinkId=136806)
-

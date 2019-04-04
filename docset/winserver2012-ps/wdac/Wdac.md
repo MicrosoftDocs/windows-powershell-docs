@@ -51,4 +51,3 @@ Configure driver's properties for one or more installed ODBC drivers.
 
 ### [Set-OdbcDsn](./Set-OdbcDsn.md)
 Modifies one or more ODBC data source names (DSNs).
-

@@ -131,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AdfsDeviceRegistration](./Set-AdfsDeviceRegistration.md)
 
 [Initialize-ADDeviceRegistration](./Initialize-ADDeviceRegistration.md)
-

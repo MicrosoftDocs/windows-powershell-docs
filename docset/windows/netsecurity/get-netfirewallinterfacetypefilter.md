@@ -341,4 +341,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetFirewallInterfaceTypeFilter](./Set-NetFirewallInterfaceTypeFilter.md)
 
 [Set-NetFirewallRule](./Set-NetFirewallRule.md)
-

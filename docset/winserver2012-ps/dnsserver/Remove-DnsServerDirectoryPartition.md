@@ -197,4 +197,3 @@ Accept wildcard characters: False
 [Register-DnsServerDirectoryPartition](./Register-DnsServerDirectoryPartition.md)
 
 [Unregister-DnsServerDirectoryPartition](./Unregister-DnsServerDirectoryPartition.md)
-

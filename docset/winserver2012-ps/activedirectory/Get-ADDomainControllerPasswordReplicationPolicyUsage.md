@@ -209,4 +209,3 @@ Returns one or more account objects that represent the users, computers, and ser
 ## RELATED LINKS
 
 [Get-ADDomainController](./Get-ADDomainController.md)
-

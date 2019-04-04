@@ -249,4 +249,3 @@ The Disconnect-VirtualDisk cmdlet does not output objects unless you use the Pas
 [Set-VirtualDisk](./Set-VirtualDisk.md)
 
 [Show-VirtualDisk](./Show-VirtualDisk.md)
-

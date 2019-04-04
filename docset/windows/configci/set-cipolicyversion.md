@@ -100,4 +100,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicy](./New-CIPolicy.md)
-

@@ -31,4 +31,3 @@ Extracts and saves a volume signature catalog file from a given shielded VM temp
 
 ### [Unprotect-ShieldedVMRecoveryKey](Unprotect-ShieldedVMRecoveryKey.md)
 Decrypts an encrypted recovery key for a Windows shielded VM obtained from the [Save-ShieldedVMRecoveryKey](Save-ShieldedVMRecoveryKey.md) cmdlet.
-

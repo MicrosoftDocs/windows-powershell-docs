@@ -97,4 +97,3 @@ Accept wildcard characters: False
 [Add-WBVirtualMachine](./Add-WBVirtualMachine.md)
 
 [Remove-WBVirtualMachine](./Remove-WBVirtualMachine.md)
-

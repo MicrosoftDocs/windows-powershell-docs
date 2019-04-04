@@ -264,4 +264,3 @@ A managed service account object is received by the *Identity* parameter.
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

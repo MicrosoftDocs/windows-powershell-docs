@@ -209,4 +209,3 @@ This cmdlet returns an object that represents an initiator ID.
 ## RELATED LINKS
 
 [Get-InitiatorId](./Get-InitiatorId.md)
-

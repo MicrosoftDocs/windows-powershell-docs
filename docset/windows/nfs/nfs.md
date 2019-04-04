@@ -150,4 +150,3 @@ Verifies that a mapped identity is correctly configured.
 
 ### [Test-NfsMappingStore](./Test-NfsMappingStore.md)
 Verifies that an identity mapping store is configured correctly.
-

@@ -55,4 +55,3 @@ Changes the TPM owner authorization value.
 
 ### [Unblock-Tpm](./Unblock-Tpm.md)
 Resets a TPM lockout.
-

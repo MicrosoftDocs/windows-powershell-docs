@@ -48,4 +48,3 @@ Starts a data collector set.
 
 ### [Stop-SMPerformanceCollector](./Stop-SMPerformanceCollector.md)
 Stops a data collector set.
-

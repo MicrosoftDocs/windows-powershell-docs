@@ -76,4 +76,3 @@ Accept wildcard characters: False
 [New-Object](http://go.microsoft.com/fwlink/?LinkID=113355)
 
 [Get-OBAlternateBackupServer](./Get-OBAlternateBackupServer.md)
-

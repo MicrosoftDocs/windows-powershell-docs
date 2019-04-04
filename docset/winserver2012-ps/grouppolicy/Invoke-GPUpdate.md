@@ -241,4 +241,3 @@ Invoke-GPUpdate does not return an object.
   --Windows Management Instrumentation (WMI-IN)
 
 ## RELATED LINKS
-

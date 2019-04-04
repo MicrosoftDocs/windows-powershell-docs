@@ -52,4 +52,3 @@ A class structure that represents the synchronization properties for the Federat
 ## RELATED LINKS
 
 [Set-ADFSSyncConfiguration](./Set-ADFSSyncConfiguration.md)
-

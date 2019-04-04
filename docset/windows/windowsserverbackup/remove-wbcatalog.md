@@ -86,4 +86,3 @@ This cmdlet returns a string that indicates that the cmdlet has removed the cata
 ## RELATED LINKS
 
 [Restore-WBCatalog](./Restore-WBCatalog.md)
-

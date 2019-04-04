@@ -245,4 +245,3 @@ This cmdlet returns an array of **VMSwitch** objects, if you specify the **Passt
 [Add-VMSwitchTeamMember](./Add-VMSwitchTeamMember.md)
 
 [Get-VMSwitch](./Get-VMSwitch.md)
-

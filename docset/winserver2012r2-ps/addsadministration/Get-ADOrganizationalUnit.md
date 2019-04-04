@@ -469,4 +469,3 @@ To get a list of all the properties of an **ADOrganizational** object, use the f
 [Remove-ADOrganizationalUnit](./Remove-ADOrganizationalUnit.md)
 
 [Set-ADOrganizationalUnit](./Set-ADOrganizationalUnit.md)
-

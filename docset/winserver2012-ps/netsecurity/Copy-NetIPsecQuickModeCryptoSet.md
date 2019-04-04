@@ -677,4 +677,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetIPsecQuickModeCryptoSet](./Set-NetIPsecQuickModeCryptoSet.md)
 
 [New-GPO](../GPv2_Cmdlets/New-GPO.md)
-

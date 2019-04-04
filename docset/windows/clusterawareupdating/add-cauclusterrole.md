@@ -665,4 +665,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-CauClusterRole](./Remove-CauClusterRole.md)
 
 [Set-CauClusterRole](./Set-CauClusterRole.md)
-

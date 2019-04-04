@@ -341,4 +341,3 @@ Derived types, such as the following, are also accepted:
 [Restore-ADObject](./Restore-ADObject.md)
 
 [Set-ADObject](./Set-ADObject.md)
-

@@ -118,4 +118,3 @@ Accept wildcard characters: False
 [Get-MsmqCertificate](./Get-MsmqCertificate.md)
 
 [Remove-MsmqCertificate](./Remove-MsmqCertificate.md)
-

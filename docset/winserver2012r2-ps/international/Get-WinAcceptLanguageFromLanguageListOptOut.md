@@ -64,4 +64,3 @@ A Boolean value that reports the status of the **HTTP Accept Language from Langu
 [Set-WinAcceptLanguageFromLanguageListOptOut](./Set-WinAcceptLanguageFromLanguageListOptOut.md)
 
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
-

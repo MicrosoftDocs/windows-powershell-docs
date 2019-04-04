@@ -301,4 +301,3 @@ This cmdlet produces an **MSFT_NetLbfoTeam** object, corresponding to the newly 
 [Rename-NetLbfoTeam](./Rename-NetLbfoTeam.md)
 
 [Set-NetLbfoTeam](./Set-NetLbfoTeam.md)
-

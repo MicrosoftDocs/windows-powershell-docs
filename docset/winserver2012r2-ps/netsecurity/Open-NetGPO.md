@@ -223,4 +223,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-ADDomainController](../addsadministration/Get-ADDomainController.md)
 
 [New-GPO](../grouppolicy/New-GPO.md)
-

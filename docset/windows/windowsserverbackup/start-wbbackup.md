@@ -224,4 +224,3 @@ If you specify the *Async* parameter, you can use the Get-WBJob cmdlet to get th
 [Resume-WBBackup](./Resume-WBBackup.md)
 
 [Set-WBVssBackupOption](./Set-WBVssBackupOption.md)
-

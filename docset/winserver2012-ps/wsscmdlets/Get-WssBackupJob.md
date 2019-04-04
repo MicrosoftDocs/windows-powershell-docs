@@ -60,4 +60,3 @@ Accept wildcard characters: False
 [Start-WssBackupJob](./Start-WssBackupJob.md)
 
 [Stop-WssBackupJob](./Stop-WssBackupJob.md)
-

@@ -112,4 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MSDSMAutomaticClaim](./Enable-MSDSMAutomaticClaim.md)
 
 [Get-MSDSMAutomaticClaimSettings](./Get-MSDSMAutomaticClaimSettings.md)
-

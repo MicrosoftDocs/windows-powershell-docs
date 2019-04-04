@@ -211,4 +211,3 @@ This cmdlet returns object(s) that contain the following fields:
 [New-NetworkControllerVirtualGatewayBgpPeer](./New-NetworkControllerVirtualGatewayBgpPeer.md)
 
 [Remove-NetworkControllerVirtualGatewayBgpPeer](./Remove-NetworkControllerVirtualGatewayBgpPeer.md)
-

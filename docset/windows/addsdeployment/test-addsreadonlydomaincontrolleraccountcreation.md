@@ -239,4 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-ADDSReadOnlyDomainControllerAccount](./Add-ADDSReadOnlyDomainControllerAccount.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

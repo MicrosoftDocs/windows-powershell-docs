@@ -126,4 +126,3 @@ Accept wildcard characters: False
 [Remove-DnsServerRootHint](./Remove-DnsServerRootHint.md)
 
 [Import-DnsServerRootHint](./Import-DnsServerRootHint.md)
-

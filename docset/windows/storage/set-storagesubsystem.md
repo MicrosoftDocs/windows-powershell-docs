@@ -278,4 +278,3 @@ You can use the pipeline operator to pass an array of MSFT_StorageSubsytem objec
 ## RELATED LINKS
 
 [Get-StorageSubSystem](./Get-StorageSubsystem.md)
-

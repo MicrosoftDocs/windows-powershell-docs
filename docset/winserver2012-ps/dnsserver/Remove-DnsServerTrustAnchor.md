@@ -236,4 +236,3 @@ Accept wildcard characters: False
 [Get-DnsServerTrustAnchor](./Get-DnsServerTrustAnchor.md)
 
 [Import-DnsServerTrustAnchor](./Import-DnsServerTrustAnchor.md)
-

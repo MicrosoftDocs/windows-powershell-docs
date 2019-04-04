@@ -195,4 +195,3 @@ This cmdlet produces an **MFT_NetLbfoTeamNic** object containing the newly creat
 [Remove-NetLbfoTeamNic](./Remove-NetLbfoTeamNic.md)
 
 [Set-NetLbfoTeamNic](./Set-NetLbfoTeamNic.md)
-

@@ -27,4 +27,3 @@ Returns the state of application launch prefetching, operation API prefetching f
 
 ### [Set-MMAgent](./Set-MMAgent.md)
 Sets the maximum number of prefetch files for scenarios that the Operation Recorder API records.
-

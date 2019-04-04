@@ -60,4 +60,3 @@ Accept wildcard characters: False
 [Enable-MsmqCertificate](./Enable-MsmqCertificate.md)
 
 [Remove-MsmqCertificate](./Remove-MsmqCertificate.md)
-

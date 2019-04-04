@@ -559,4 +559,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-NetIPsecPhase2AuthSet](./New-NetIPsecPhase2AuthSet.md)
 
 [New-NetIPSecRule](./New-NetIPsecRule.md)
-

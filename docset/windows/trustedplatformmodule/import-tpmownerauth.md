@@ -132,4 +132,3 @@ This cmdlet returns a **TpmObject** object that contains the following informati
 [ConvertTo-TpmOwnerAuth](./ConvertTo-TpmOwnerAuth.md)
 
 [Set-TpmOwnerAuth](./Set-TpmOwnerAuth.md)
-

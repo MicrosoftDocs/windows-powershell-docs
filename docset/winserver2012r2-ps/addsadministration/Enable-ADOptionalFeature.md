@@ -294,4 +294,3 @@ An optional feature object is received by the **Identity** parameter.
 [Disable-ADOptionalFeature](./Disable-ADOptionalFeature.md)
 
 [Get-ADOptionalFeature](./Get-ADOptionalFeature.md)
-

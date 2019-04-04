@@ -441,4 +441,3 @@ This cmdlet returns an MSFT_StorageTier object that contains details about the t
 [Remove-StorageTier](./Remove-StorageTier.md)
 
 [Resize-StorageTier](./Resize-StorageTier.md)
-

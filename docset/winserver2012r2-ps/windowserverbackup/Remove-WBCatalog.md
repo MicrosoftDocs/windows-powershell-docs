@@ -87,4 +87,3 @@ String that indicates that the cmdlet has deleted the catalog.
 ## RELATED LINKS
 
 [Restore-WBCatalog](./Restore-WBCatalog.md)
-

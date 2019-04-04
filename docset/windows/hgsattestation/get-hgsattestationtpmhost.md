@@ -147,4 +147,3 @@ This cmdlet returns an array of strings.
 [Add-HgsAttestationTpmHost](./Add-HgsAttestationTpmHost.md)
 
 [Remove-HgsAttestationTpmHost](./Remove-HgsAttestationTpmHost.md)
-

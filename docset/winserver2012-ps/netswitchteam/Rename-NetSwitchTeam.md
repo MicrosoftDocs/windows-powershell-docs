@@ -140,4 +140,3 @@ Accept wildcard characters: False
 [New-NetSwitchTeam](./New-NetSwitchTeam.md)
 
 [Remove-NetSwitchTeam](./Remove-NetSwitchTeam.md)
-

@@ -210,4 +210,3 @@ This cmdlet returns an array of **MSFT_NetLbfoTeam** objects containing the team
 [Rename-NetLbfoTeam](./Rename-NetLbfoTeam.md)
 
 [Set-NetLbfoTeam](./Set-NetLbfoTeam.md)
-

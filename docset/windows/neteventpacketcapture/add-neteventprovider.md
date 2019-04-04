@@ -242,4 +242,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetEventProvider](./Remove-NetEventProvider.md)
 
 [Set-NetEventProvider](./Set-NetEventProvider.md)
-

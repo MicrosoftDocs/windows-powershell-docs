@@ -302,4 +302,3 @@ An optional feature object is received by the *Identity* parameter.
 [Enable-ADOptionalFeature](./Enable-ADOptionalFeature.md)
 
 [Get-ADOptionalFeature](./Get-ADOptionalFeature.md)
-

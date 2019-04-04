@@ -341,4 +341,3 @@ To get a list of all the properties of an **ADCentralAccessRule** object, use th
 [Set-ADCentralAccessRule](./Set-ADCentralAccessRule.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

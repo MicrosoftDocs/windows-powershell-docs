@@ -288,4 +288,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-ADDSDomainController](./Install-ADDSDomainController.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

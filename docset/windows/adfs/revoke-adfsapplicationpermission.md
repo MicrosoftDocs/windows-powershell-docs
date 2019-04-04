@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Grant-AdfsApplicationPermission](./Grant-AdfsApplicationPermission.md)
 
 [Set-AdfsApplicationPermission](./Set-AdfsApplicationPermission.md)
-

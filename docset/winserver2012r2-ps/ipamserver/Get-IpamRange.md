@@ -417,4 +417,3 @@ An array of IP address ranges that are present in IPAM datastore.
 [Remove-IpamRange](./Remove-IpamRange.md)
 
 [Set-IpamRange](./Set-IpamRange.md)
-

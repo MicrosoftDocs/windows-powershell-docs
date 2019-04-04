@@ -369,4 +369,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-VMNetworkAdapter](./Set-VMNetworkAdapter.md)
 
 [Set-VMNetworkAdapterVlan](./Set-VMNetworkAdapterVlan.md)
-

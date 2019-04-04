@@ -191,4 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Read-PrinterNfcTag](./Read-PrinterNfcTag.md)
-

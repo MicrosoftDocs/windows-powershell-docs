@@ -52,4 +52,3 @@ This example gets the machine settings for the current protected server.
 [Get-OBMachineUsage](./Get-OBMachineUsage.md)
 
 [Set-OBMachineSetting](./Set-OBMachineSetting.md)
-

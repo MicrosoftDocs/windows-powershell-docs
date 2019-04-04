@@ -71,4 +71,3 @@ ContextCookieEnabled: **System.Boolean**
 ## RELATED LINKS
 
 [Set-AdfsWebConfig](./Set-AdfsWebConfig.md)
-

@@ -118,4 +118,3 @@ This cmdlet returns a list of **WBFileSpec** objects that contain backup file sp
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBFileSpec](./Remove-WBFileSpec.md)
-

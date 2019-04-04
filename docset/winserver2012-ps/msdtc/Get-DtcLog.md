@@ -110,4 +110,3 @@ Accept wildcard characters: False
 [Reset-DtcLog](./Reset-DtcLog.md)
 
 [Set-DtcLog](./Set-DtcLog.md)
-

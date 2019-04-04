@@ -163,4 +163,3 @@ This cmdlet returns an object that contains the following fields:
 [Set-NetworkController](./Set-NetworkController.md)
 
 [Uninstall-NetworkController](./Uninstall-NetworkController.md)
-

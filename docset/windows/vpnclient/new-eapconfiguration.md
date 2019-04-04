@@ -423,4 +423,3 @@ This cmdlet returns a **VpnConnection** object that contains the VPN connection 
 [Add-VpnConnection](./Add-VpnConnection.md)
 
 [Set-VpnConnection](./Set-VpnConnection.md)
-

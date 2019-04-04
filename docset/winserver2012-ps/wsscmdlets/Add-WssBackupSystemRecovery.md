@@ -65,4 +65,3 @@ Accept wildcard characters: False
 [Get-WssBackupSystemRecovery](./Get-WssBackupSystemRecovery.md)
 
 [Remove-WssBackupSystemRecovery](./Remove-WssBackupSystemRecovery.md)
-

@@ -96,4 +96,3 @@ This cmdlet does not generate any output.
 [Get-HcsFirmwareVersion](./Get-HcsFirmwareVersion.md)
 
 [Start-HcsFirmwareCheck](./Start-HcsFirmwareCheck.md)
-

@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ShieldedVMSpecializationDataFile](./New-ShieldedVMSpecializationDataFile.md)
 
 [Test-ShieldingDataApplicability](./Test-ShieldingDataApplicability.md)
-

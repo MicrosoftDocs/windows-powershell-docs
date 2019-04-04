@@ -84,4 +84,3 @@ Accept wildcard characters: False
 [Stop-DtcTransactionsTraceSession](./Stop-DtcTransactionsTraceSession.md)
 
 [Write-DtcTransactionsTraceSession](./Write-DtcTransactionsTraceSession.md)
-

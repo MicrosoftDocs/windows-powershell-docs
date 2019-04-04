@@ -162,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Disable-BCHostedClient](00000000-0000-0000-0000-000000000000)
-

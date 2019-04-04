@@ -262,4 +262,3 @@ Changes the RelyingParty object whose name is RP1, setting its name to RP2 Set-A
 [Get-ADFSClaimDescription](./Get-ADFSClaimDescription.md)
 
 [Remove-ADFSClaimDescription](./Remove-ADFSClaimDescription.md)
-

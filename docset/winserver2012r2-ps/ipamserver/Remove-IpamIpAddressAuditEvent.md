@@ -177,4 +177,3 @@ Represents an IP address audit event in IPAM
 ## RELATED LINKS
 
 [Get-IpamIpAddressAuditEvent](./Get-IpamIpAddressAuditEvent.md)
-

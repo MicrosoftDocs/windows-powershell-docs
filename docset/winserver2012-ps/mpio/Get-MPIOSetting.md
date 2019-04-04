@@ -70,4 +70,3 @@ This command gets the MPIO settings.
 ## RELATED LINKS
 
 [Set-MPIOSetting](./Set-MPIOSetting.md)
-

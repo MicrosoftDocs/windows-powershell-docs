@@ -54,4 +54,3 @@ PS C:\>Remove-StorageSpacesEventLog
 ## RELATED LINKS
 
 [New-StorageSpacesEventLog](./New-StorageSpacesEventLog.md)
-

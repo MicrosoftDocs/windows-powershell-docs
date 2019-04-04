@@ -618,4 +618,3 @@ Get-ADService account \<service account\> -Properties ALL | Get-Member
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

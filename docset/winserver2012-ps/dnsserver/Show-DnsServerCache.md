@@ -171,4 +171,3 @@ Accept wildcard characters: False
 [Get-DnsServerCache](./Get-DnsServerCache.md)
 
 [Set-DnsServerCache](./Set-DnsServerCache.md)
-

@@ -310,4 +310,3 @@ If you specify the *PassThru* parameter, this cmdlet outputs an object represent
 [Resize-VirtualDisk](./Resize-VirtualDisk.md)
 
 [Set-VirtualDisk](./Set-VirtualDisk.md)
-

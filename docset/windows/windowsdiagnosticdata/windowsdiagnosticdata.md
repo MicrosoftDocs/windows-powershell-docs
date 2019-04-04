@@ -16,4 +16,3 @@ This reference provides cmdlet descriptions and syntax for all Windows Diagnosti
 ## WindowsDiagnosticData Cmdlets
 ### [Clear-WindowsDiagnosticData](Clear-WindowsDiagnosticData.md)
 Sends a request to delete the uploaded diagnostic data sent to Microsoft from the current device.
-

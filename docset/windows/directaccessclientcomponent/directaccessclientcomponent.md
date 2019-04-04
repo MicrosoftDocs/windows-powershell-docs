@@ -58,4 +58,3 @@ Modifies the configuration of the specified DirectAccess client user experience.
 
 ### [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
 Modifies the configuration of a DirectAccess entry point stored in a Group Policy object.
-

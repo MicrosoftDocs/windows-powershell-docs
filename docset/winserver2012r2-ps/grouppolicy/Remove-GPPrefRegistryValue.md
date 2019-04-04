@@ -379,4 +379,3 @@ Therefore, when this cmdlet is run from a startup or shutdown script, the defaul
 [Get-GPPrefRegistryValue](./Get-GPPrefRegistryValue.md)
 
 [Set-GPPrefRegistryValue](./Set-GPPrefRegistryValue.md)
-

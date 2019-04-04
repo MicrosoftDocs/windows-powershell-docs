@@ -90,4 +90,3 @@ Suspends a print job on the specified printer.
 
 ### [Write-PrinterNfcTag](./Write-PrinterNfcTag.md)
 Writes printer connection data to an NFC tag.
-

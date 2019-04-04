@@ -66,4 +66,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AdfsClaimsProviderTrustsGroup](./Add-AdfsClaimsProviderTrustsGroup.md)
 
 [Remove-AdfsClaimsProviderTrustsGroup](./Remove-AdfsClaimsProviderTrustsGroup.md)
-

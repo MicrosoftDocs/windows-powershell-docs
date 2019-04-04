@@ -154,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-CATemplate](./Add-CATemplate.md)
 
 [Get-CATemplate](./Get-CATemplate.md)
-

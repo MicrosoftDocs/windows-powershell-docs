@@ -139,4 +139,3 @@ Accept wildcard characters: False
 [Get-ClusterResourceDependencyReport](./Get-ClusterResourceDependencyReport.md)
 
 [Remove-ClusterResourceDependency](./Remove-ClusterResourceDependency.md)
-

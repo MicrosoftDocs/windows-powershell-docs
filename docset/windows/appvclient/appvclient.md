@@ -123,4 +123,3 @@ Initiates the App-V Publishing Refresh operation.
 
 ### [Unpublish-AppvClientPackage](./Unpublish-AppvClientPackage.md)
 Removes the extension points for packages.
-

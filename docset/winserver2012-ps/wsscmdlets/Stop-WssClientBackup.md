@@ -89,4 +89,3 @@ Accept wildcard characters: False
 [Set-WssClientBackup](./Set-WssClientBackup.md)
 
 [Start-WssClientBackup](./Start-WssClientBackup.md)
-

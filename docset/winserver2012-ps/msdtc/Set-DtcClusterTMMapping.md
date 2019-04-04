@@ -227,4 +227,3 @@ Accept wildcard characters: False
 [Get-DtcClusterTMMapping](./Get-DtcClusterTMMapping.md)
 
 [Remove-DtcClusterTMMapping](./Remove-DtcClusterTMMapping.md)
-

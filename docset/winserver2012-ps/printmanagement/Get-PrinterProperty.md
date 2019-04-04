@@ -161,4 +161,3 @@ This cmdlet returns a printer property object.
 ## RELATED LINKS
 
 [Set-PrinterProperty](./Set-PrinterProperty.md)
-

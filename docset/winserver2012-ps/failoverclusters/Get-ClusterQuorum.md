@@ -95,4 +95,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-ClusterQuorum](./Set-ClusterQuorum.md)
-

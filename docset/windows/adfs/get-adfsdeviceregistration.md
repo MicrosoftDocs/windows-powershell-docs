@@ -78,4 +78,3 @@ The object includes the following properties:
 [Enable-AdfsDeviceRegistration](./Enable-AdfsDeviceRegistration.md)
 
 [Set-AdfsDeviceRegistration](./Set-AdfsDeviceRegistration.md)
-

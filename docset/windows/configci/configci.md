@@ -70,4 +70,3 @@ Modifies hypervisor Code Integrity options for a policy.
 
 ### [Set-RuleOption](./Set-RuleOption.md)
 Modifies rule options in a Code Integrity policy.
-

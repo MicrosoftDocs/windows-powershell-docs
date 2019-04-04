@@ -52,4 +52,3 @@ This cmdlet returns an object that represents the storage provider for Storage S
 * This cmdlet is similar to the Get-StorageProvider cmdlet of the Storage module, except that instead of getting all storage providers, the Get-SpacesProvider cmdlet gets only the Storage Spaces provider.
 
 ## RELATED LINKS
-

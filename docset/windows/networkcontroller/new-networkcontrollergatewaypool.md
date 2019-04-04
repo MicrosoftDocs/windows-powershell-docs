@@ -286,4 +286,3 @@ This cmdlet outputs the following information:
 [Get-NetworkControllerGatewayPool](./Get-NetworkControllerGatewayPool.md)
 
 [Remove-NetworkControllerGatewayPool](./Remove-NetworkControllerGatewayPool.md)
-

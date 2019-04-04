@@ -78,4 +78,3 @@ This cmdlet returns a collection of alert objects.
 [Clear-WssAlert](./Clear-WssAlert.md)
 
 [Repair-WssAlert](./Repair-WssAlert.md)
-

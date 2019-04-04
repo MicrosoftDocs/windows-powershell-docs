@@ -128,4 +128,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-HgsKeyProtector](./New-HgsKeyProtector.md)
 
 [Get-HgsGuardian](./Get-HgsGuardian.md)
-

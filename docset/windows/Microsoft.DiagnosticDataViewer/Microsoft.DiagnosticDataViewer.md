@@ -44,4 +44,3 @@ Sets the diagnostic store time and size capacity.
 
 ## Related Links
 [Microsoft Privacy Policy](https://privacy.microsoft.com/en-us/privacy)
-

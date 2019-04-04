@@ -135,4 +135,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebApplication](./Get-WebApplication.md)
 
 [Remove-WebApplication](./Remove-WebApplication.md)
-

@@ -28,4 +28,3 @@ Gets a troubleshooting pack or generates an answer file.
 
 ### [Invoke-TroubleshootingPack](./Invoke-TroubleshootingPack.md)
 Runs a troubleshooting pack.
-

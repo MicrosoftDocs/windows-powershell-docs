@@ -248,4 +248,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-EtwTraceProvider](./Get-EtwTraceProvider.md)
 
 [Set-EtwTraceProvider](./Set-EtwTraceProvider.md)
-

@@ -101,4 +101,3 @@ A String containing the name of the task to be removed.
 [New-CertificateNotificationTask](./New-CertificateNotificationTask.md)
 
 [Switch-Certificate](./Switch-Certificate.md)
-

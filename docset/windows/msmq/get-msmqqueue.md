@@ -181,4 +181,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Send-MsmqQueue](./Send-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

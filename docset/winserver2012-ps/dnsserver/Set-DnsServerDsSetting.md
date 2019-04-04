@@ -318,4 +318,3 @@ boolean  DefaultDirectoryPartitions
 [[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](http://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
 
 [Get-DnsServerDsSetting](./Get-DnsServerDsSetting.md)
-

@@ -468,4 +468,3 @@ A site link object that is a template for the new site link object is received b
 [Remove-ADReplicationSiteLink](./Remove-ADReplicationSiteLink.md)
 
 [Set-ADReplicationSiteLink](./Set-ADReplicationSiteLink.md)
-

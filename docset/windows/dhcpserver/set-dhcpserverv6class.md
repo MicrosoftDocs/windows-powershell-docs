@@ -274,4 +274,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-DhcpServerv6Class](./Get-DhcpServerv6Class.md)
 
 [Remove-DhcpServerv6Class](./Remove-DhcpServerv6Class.md)
-

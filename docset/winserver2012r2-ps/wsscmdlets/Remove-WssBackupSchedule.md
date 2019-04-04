@@ -90,4 +90,3 @@ This cmdlet generates the **BackupPolicy** parameter value.
 [Get-WssBackupSchedule](./Get-WssBackupSchedule.md)
 
 [Add-WssBackupSchedule](./Add-WssBackupSchedule.md)
-

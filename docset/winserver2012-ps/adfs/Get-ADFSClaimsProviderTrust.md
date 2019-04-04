@@ -121,4 +121,3 @@ A class structure that represents the claims provider trusts for the Federation 
 [Set-ADFSClaimsProviderTrust](./Set-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

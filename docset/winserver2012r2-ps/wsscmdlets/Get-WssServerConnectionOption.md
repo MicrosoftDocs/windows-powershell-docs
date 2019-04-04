@@ -57,4 +57,3 @@ This cmdlet generates a string object representing the server connection option,
 ## RELATED LINKS
 
 [Set-WssServerConnectionOption](./Set-WssServerConnectionOption.md)
-

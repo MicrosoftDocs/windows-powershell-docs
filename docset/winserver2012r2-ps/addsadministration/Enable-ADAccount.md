@@ -301,4 +301,3 @@ Derived types, such as the following, are also accepted:
 [Set-ADAccountPassword](./Set-ADAccountPassword.md)
 
 [Unlock-ADAccount](./Unlock-ADAccount.md)
-

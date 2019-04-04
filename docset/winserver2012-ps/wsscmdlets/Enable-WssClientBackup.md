@@ -119,4 +119,3 @@ Accept wildcard characters: False
 [Start-WssClientBackup](./Start-WssClientBackup.md)
 
 [Stop-WssClientBackup](./Stop-WssClientBackup.md)
-

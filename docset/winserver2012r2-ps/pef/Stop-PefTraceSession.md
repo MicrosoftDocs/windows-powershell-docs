@@ -124,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Save-PefDataCollection](./Save-PefDataCollection.md)
 
 [Start-PefTraceSession](./Start-PefTraceSession.md)
-

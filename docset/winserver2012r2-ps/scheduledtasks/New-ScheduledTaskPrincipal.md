@@ -270,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ScheduledTaskSettingsSet](./New-ScheduledTaskSettingsSet.md)
 
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
-

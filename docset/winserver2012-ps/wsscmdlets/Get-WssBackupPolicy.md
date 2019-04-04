@@ -50,4 +50,3 @@ This command gets the currently scheduled backup policy and stores it in the **$
 [Set-WssBackupPolicy](./Set-WssBackupPolicy.md)
 
 [Suspend-WssBackupPolicy](./Suspend-WssBackupPolicy.md)
-

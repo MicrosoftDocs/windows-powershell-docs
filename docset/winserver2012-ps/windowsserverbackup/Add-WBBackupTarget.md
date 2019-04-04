@@ -123,4 +123,3 @@ The Add-WBBackupTarget cmdlet displays a list of storage locations from the **WB
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

@@ -158,4 +158,3 @@ A class structure that represents the service certificates for the Federation Se
 [Set-AdfsCertificate](./Set-AdfsCertificate.md)
 
 [Update-AdfsCertificate](./Update-AdfsCertificate.md)
-

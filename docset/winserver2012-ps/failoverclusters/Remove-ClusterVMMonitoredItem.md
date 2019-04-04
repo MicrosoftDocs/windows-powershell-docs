@@ -174,4 +174,3 @@ Accept wildcard characters: False
 [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
-

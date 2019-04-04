@@ -214,4 +214,3 @@ The WebProxyInfo object has the following properties:
 [Enable-HcsWebProxy](./Enable-HcsWebProxy.md)
 
 [Get-HcsWebProxy](./Get-HcsWebProxy.md)
-

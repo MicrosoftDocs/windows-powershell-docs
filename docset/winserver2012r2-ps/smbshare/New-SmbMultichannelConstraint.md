@@ -244,4 +244,3 @@ The MSFT_SmbMultiChannelConnection object represents the SMB multi-channel const
 [Get-SmbMultichannelConstraint](./Get-SmbMultichannelConstraint.md)
 
 [Remove-SmbMultichannelConstraint](./Remove-SmbMultichannelConstraint.md)
-

@@ -305,4 +305,3 @@ When the **Passthru** parameter is specified, this cmdlet outputs a modified Win
 [Rename-NetIPHttpsConfiguration](./Rename-NetIPHttpsConfiguration.md)
 
 [Set-NetIPHttpsConfiguration](./Set-NetIPHttpsConfiguration.md)
-

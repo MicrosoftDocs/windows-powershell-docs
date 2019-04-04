@@ -311,4 +311,3 @@ The New-WBBackupTarget cmdlet creates a **WBBackupTarget** object, which you can
 [Get-WBVolume](./Get-WBVolume.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

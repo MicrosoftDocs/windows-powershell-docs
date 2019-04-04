@@ -180,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebApplicationProxyConfiguration](./Get-WebApplicationProxyConfiguration.md)
 
 [Set-WebApplicationProxyConfiguration](./Set-WebApplicationProxyConfiguration.md)
-

@@ -125,4 +125,3 @@ Describes the enrollment policy obtained from the specified URL.
 [Add-CertificateEnrollmentPolicyServer](./Add-CertificateEnrollmentPolicyServer.md)
 
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
-

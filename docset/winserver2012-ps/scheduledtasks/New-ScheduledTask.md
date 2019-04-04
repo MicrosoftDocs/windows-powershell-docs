@@ -216,4 +216,3 @@ Accept wildcard characters: False
 [New-ScheduledTaskSettingsSet](./New-ScheduledTaskSettingsSet.md)
 
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
-

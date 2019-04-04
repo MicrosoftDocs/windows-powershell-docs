@@ -174,4 +174,3 @@ The **MSFT_NetNatTransitionConfiguration** object contains NAT64 configuration i
 [Remove-NetNatTransitionConfiguration](./Remove-NetNatTransitionConfiguration.md)
 
 [Set-NetNatTransitionConfiguration](./Set-NetNatTransitionConfiguration.md)
-

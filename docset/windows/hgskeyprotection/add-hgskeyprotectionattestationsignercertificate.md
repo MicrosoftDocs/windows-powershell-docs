@@ -132,4 +132,3 @@ This cmdlet does not generate any output.
 [Remove-HgsKeyProtectionAttestationSignerCertificate](./Remove-HgsKeyProtectionAttestationSignerCertificate.md)
 
 [Set-HgsKeyProtectionAttestationSignerCertificatePolicy](./Set-HgsKeyProtectionAttestationSignerCertificatePolicy.md)
-

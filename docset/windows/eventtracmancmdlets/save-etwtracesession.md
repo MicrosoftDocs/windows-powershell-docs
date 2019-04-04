@@ -198,4 +198,3 @@ This cmdlet returns a **CIM_DataFile** object when the current session is saved 
 [Stop-EtwTraceSession](./Stop-EtwTraceSession.md)
 
 [Update-EtwTraceSession](./Update-EtwTraceSession.md)
-

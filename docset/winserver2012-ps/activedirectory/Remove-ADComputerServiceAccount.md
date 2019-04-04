@@ -371,4 +371,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Add-ADComputerServiceAccount](./Add-ADComputerServiceAccount.md)
 
 [Get-ADComputer](./Get-ADComputer.md)
-

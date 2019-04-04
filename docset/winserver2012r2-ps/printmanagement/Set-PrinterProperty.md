@@ -248,4 +248,3 @@ This cmdlet accepts one printer object.
 ## RELATED LINKS
 
 [Get-PrinterProperty](./Get-PrinterProperty.md)
-

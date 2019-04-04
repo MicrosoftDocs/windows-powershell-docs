@@ -129,4 +129,3 @@ Accept wildcard characters: False
 [Get-DtcLog](./Get-DtcLog.md)
 
 [Set-DtcLog](./Set-DtcLog.md)
-

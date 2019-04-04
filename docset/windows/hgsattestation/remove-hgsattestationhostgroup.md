@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-HgsAttestationHostGroup](./Add-HgsAttestationHostGroup.md)
 
 [Get-HgsAttestationHostGroup](./Get-HgsAttestationHostGroup.md)
-

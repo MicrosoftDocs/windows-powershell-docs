@@ -91,4 +91,3 @@ Accept wildcard characters: False
 [Get-MsmqCertificate](./Get-MsmqCertificate.md)
 
 [Enable-MsmqCertificate](./Enable-MsmqCertificate.md)
-

@@ -64,4 +64,3 @@ Gets information that can uniquely identify a server.
 
 ### [Get-UalUserAccess](./Get-UalUserAccess.md)
 Gets UAL records of client requests per user.
-

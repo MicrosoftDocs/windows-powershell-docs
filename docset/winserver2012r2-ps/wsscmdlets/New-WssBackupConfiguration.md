@@ -124,4 +124,3 @@ This cmdlet generates the object that specifies whether files or folders are inc
 [Get-WssBackupConfiguration](./Get-WssBackupConfiguration.md)
 
 [Remove-WssBackupConfiguration](./Remove-WssBackupConfiguration.md)
-

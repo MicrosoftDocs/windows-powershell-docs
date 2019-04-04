@@ -74,4 +74,3 @@ This object contains the following properties:
 ## RELATED LINKS
 
 [Set-AdfsWebConfig](./Set-AdfsWebConfig.md)
-

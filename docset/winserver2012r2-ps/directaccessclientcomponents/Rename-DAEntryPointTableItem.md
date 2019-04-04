@@ -266,4 +266,3 @@ This cmdlet accepts as input a CIM object that contains a DA site table entry.
 [Reset-DAEntryPointTableItem](./Reset-DAEntryPointTableItem.md)
 
 [Remove-DAEntryPointTableItem](./Remove-DAEntryPointTableItem.md)
-

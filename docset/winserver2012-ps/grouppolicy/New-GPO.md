@@ -302,4 +302,3 @@ The LocalSystem account is a built-in local account, and it accesses network res
 Therefore, when this cmdlet is run from a startup or shutdown script, the default domain is the domain to which the computer is joined.
 
 ## RELATED LINKS
-

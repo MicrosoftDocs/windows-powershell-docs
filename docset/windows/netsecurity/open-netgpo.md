@@ -207,4 +207,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
 
 [Get-ADDomainController](../addsadministration/Get-ADDomainController.md)
-

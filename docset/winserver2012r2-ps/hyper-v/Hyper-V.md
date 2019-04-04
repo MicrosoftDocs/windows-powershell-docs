@@ -556,4 +556,3 @@ Tests connectivity between virtual machines.
 
 ### [Test-VMReplicationConnection](./Test-VMReplicationConnection.md)
 Tests the connection between a primary server and a Replica server.
-

@@ -254,4 +254,3 @@ This cmdlet returns a **MSFT_NetQosTrafficClassSettingData** object that contain
 [Get-NetQosTrafficClass](./Get-NetQosTrafficClass.md)
 
 [Set-NetQosTrafficClass](./Set-NetQosTrafficClass.md)
-

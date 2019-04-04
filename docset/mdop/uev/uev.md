@@ -91,4 +91,3 @@ Unregisters a settings location template from uev_1.
 
 ### [Update-UevTemplate](Update-UevTemplate.md)
 Updates settings location templates in uev_tla.
-

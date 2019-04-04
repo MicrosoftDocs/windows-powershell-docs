@@ -97,4 +97,3 @@ A PFXData object.
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
-

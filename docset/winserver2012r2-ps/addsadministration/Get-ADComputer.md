@@ -563,4 +563,3 @@ To get a list of all the properties of an ADComputer object, use the following c
 [Set-ADComputer](./Set-ADComputer.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

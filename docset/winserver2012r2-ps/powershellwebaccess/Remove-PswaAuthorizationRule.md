@@ -156,4 +156,3 @@ This cmdlet accepts either an array of integers or an array of PswaAuthorization
 [Test-PswaAuthorizationRule](./Test-PswaAuthorizationRule.md)
 
 [Install-PswaWebApplication](./Install-PswaWebApplication.md)
-

@@ -190,4 +190,3 @@ A class structure that represents a claim description object for the Federation 
 [Get-AdfsClaimDescription](./Get-AdfsClaimDescription.md)
 
 [Set-AdfsClaimDescription](./Set-AdfsClaimDescription.md)
-

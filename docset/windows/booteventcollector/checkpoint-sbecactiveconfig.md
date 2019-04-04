@@ -197,4 +197,3 @@ If a failure occurs, `<ErrorType>` has a code that describes the error:
 [Set-SbecActiveConfig](./Set-SbecActiveConfig.md)
 
 [Undo-SbecActiveConfig](./Undo-SbecActiveConfig.md)
-

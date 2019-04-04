@@ -207,4 +207,3 @@ The output object contains QoS capabilities and configurations on a network adap
 [Enable-NetAdapterQos](./Enable-NetAdapterQos.md)
 
 [Set-NetAdapterQos](./Set-NetAdapterQos.md)
-

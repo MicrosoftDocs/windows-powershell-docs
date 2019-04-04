@@ -101,4 +101,3 @@ This cmdlet generates backup targets.
 [Get-WssBackupTarget](./Get-WssBackupTarget.md)
 
 [New-WssBackupTarget](./New-WssBackupTarget.md)
-

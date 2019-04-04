@@ -166,4 +166,3 @@ This value is either 0 (freehand) or 1 (write each character separately).
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
 
 [New-WinUserLanguageList](./New-WinUserLanguageList.md)
-

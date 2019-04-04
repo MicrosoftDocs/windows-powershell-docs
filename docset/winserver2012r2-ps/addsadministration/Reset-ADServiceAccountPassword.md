@@ -189,4 +189,3 @@ A managed service account object is received by the **Identity** parameter.
 ## RELATED LINKS
 
 [Get-ADServiceAccount](./Get-ADServiceAccount.md)
-

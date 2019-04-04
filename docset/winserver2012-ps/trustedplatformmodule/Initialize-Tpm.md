@@ -105,4 +105,3 @@ This cmdlet returns a **TpmProvisioningObject** object that includes the followi
 [Get-Tpm](./Get-Tpm.md)
 
 [Unblock-Tpm](./Unblock-Tpm.md)
-

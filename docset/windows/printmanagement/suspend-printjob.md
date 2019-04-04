@@ -266,4 +266,3 @@ This cmdlet accepts one print job object.
 [Restart-PrintJob](./Restart-PrintJob.md)
 
 [Resume-PrintJob](./Resume-PrintJob.md)
-

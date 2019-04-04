@@ -437,4 +437,3 @@ Accept wildcard characters: False
 [Get-DnsServerDnsSecZoneSetting](./Get-DnsServerDnsSecZoneSetting.md)
 
 [Test-DnsServerDnsSecZoneSetting](./Test-DnsServerDnsSecZoneSetting.md)
-

@@ -614,4 +614,3 @@ A site object that is a template for the new site object is received by the **In
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
 
 [Set-ADReplicationSite](./Set-ADReplicationSite.md)
-

@@ -241,4 +241,3 @@ Accept wildcard characters: False
 [Get-SmbMapping](./Get-SmbMapping.md)
 
 [New-SmbMapping](./New-SmbMapping.md)
-

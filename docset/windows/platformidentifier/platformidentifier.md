@@ -27,4 +27,3 @@ This reference provides cmdlet descriptions and syntax for the platform identifi
 ## PlatformIdentifier Cmdlets
 ### [Get-PlatformIdentifier](./Get-PlatformIdentifier.md)
 Gathers computer identifiers into an XML document.
-

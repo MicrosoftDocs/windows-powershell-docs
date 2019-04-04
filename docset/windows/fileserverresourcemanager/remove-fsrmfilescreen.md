@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Reset-FsrmFileScreen](./Reset-FsrmFileScreen.md)
 
 [Set-FsrmFileScreen](./Set-FsrmFileScreen.md)
-

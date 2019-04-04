@@ -162,4 +162,3 @@ Accept wildcard characters: False
 [Add-ClusterCheckpoint](./Add-ClusterCheckpoint.md)
 
 [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
-

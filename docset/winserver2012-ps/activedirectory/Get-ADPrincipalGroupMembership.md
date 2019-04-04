@@ -477,4 +477,3 @@ Specify the additional properties required from the group objects by passing the
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
 
 [Remove-ADPrincipalGroupMembership](./Remove-ADPrincipalGroupMembership.md)
-

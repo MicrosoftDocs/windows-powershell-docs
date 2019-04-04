@@ -229,4 +229,3 @@ The MSFT_NetQosTrafficClassSettingData object contains a network traffic class.
 [Get-NetQosTrafficClass](./Get-NetQosTrafficClass.md)
 
 [Set-NetQosTrafficClass](./Set-NetQosTrafficClass.md)
-

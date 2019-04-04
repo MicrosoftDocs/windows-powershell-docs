@@ -78,4 +78,3 @@ Sets the Windows user interface (UI) language override setting for the current u
 
 ### [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
 Sets the language list and associated properties for the current user account.
-

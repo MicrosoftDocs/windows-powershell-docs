@@ -58,4 +58,3 @@ Sets the binding to the AD FS SSL certificate that is installed and configured f
 
 ### [Update-WebApplicationProxyDeviceRegistration](./Update-WebApplicationProxyDeviceRegistration.md)
 Configures the AD FS SSL endpoint listeners that correspond to the UPN suffixes.
-

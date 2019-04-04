@@ -130,4 +130,3 @@ Accept wildcard characters: False
 [Get-DnsServerDnsSecZoneSetting](./Get-DnsServerDnsSecZoneSetting.md)
 
 [Set-DnsServerDnsSecZoneSetting](./Set-DnsServerDnsSecZoneSetting.md)
-

@@ -183,4 +183,3 @@ This cmdlet accepts a **Cluster** object for which it creates a cluster name acc
 ## RELATED LINKS
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

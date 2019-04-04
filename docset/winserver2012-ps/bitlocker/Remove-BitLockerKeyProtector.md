@@ -134,4 +134,3 @@ Accept wildcard characters: False
 [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

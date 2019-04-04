@@ -282,4 +282,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-ClusteredScheduledTask](./Register-ClusteredScheduledTask.md)
 
 [Unregister-ClusteredScheduledTask](./Unregister-ClusteredScheduledTask.md)
-

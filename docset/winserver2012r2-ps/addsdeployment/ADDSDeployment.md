@@ -52,4 +52,3 @@ Runs the prerequisites (only) for adding a read-only domain controller (RODC) ac
 
 ### [Uninstall-ADDSDomainController](./Uninstall-ADDSDomainController.md)
 Uninstalls a domain controller in Active Directory.
-

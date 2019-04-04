@@ -144,4 +144,3 @@ This cmdlet returns an **AttestationPolicyInfo** object.
 [Get-HgsAttestationPolicy](./Get-HgsAttestationPolicy.md)
 
 [Remove-HgsAttestationPolicy](./Remove-HgsAttestationPolicy.md)
-

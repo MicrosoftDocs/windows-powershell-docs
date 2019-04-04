@@ -153,4 +153,3 @@ Accept wildcard characters: False
 [Get-MMAgent](./Get-MMAgent.md)
 
 [Set-MMAgent](./Set-MMAgent.md)
-

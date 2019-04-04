@@ -104,4 +104,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Update-VamtProduct](./Update-VamtProduct.md)
-

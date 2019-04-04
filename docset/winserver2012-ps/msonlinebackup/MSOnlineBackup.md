@@ -120,4 +120,3 @@ Registers the current computer to mob_name_1.
 
 ### [Stop-OBJob](./Stop-OBJob.md)
 Stops the specified backup or recovery job.
-

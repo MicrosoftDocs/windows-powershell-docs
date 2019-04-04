@@ -497,4 +497,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-NetIPsecQuickModeCryptoSet](./New-NetIPsecQuickModeCryptoSet.md)
 
 [Set-NetIPsecQuickModeCryptoSet](./Set-NetIPsecQuickModeCryptoSet.md)
-

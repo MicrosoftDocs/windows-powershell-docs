@@ -67,4 +67,3 @@ Accept wildcard characters: False
 [Disable-MSDSMAutomaticClaim](./Disable-MSDSMAutomaticClaim.md)
 
 [Get-MSDSMAutomaticClaimSettings](./Get-MSDSMAutomaticClaimSettings.md)
-

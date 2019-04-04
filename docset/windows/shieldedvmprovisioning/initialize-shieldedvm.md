@@ -140,4 +140,3 @@ This cmdlet returns a CimInstance object that represents the provisioning job fo
 [New-ShieldedVMSpecializationDataFile](./New-ShieldedVMSpecializationDataFile.md)
 
 [Test-ShieldingDataApplicability](./Test-ShieldingDataApplicability.md)
-

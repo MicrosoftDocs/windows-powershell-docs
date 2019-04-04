@@ -252,4 +252,3 @@ This cmdlet returns an object that represents an Active Directory domain in whic
 [Remove-IpamDiscoveryDomain](./Remove-IpamDiscoveryDomain.md)
 
 [Set-IpamDiscoveryDomain](./Set-IpamDiscoveryDomain.md)
-

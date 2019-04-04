@@ -352,4 +352,3 @@ You can pipe an MSFT_VirtualDisk object to the VirtualDisk parameter.
 [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
 
 [Set-PhysicalDisk](./Set-PhysicalDisk.md)
-

@@ -469,4 +469,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-NetIPAddress](./New-NetIPAddress.md)
 
 [Set-NetIPAddress](./Set-NetIPAddress.md)
-

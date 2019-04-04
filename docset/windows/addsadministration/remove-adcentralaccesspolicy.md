@@ -214,4 +214,3 @@ An Active Directory object is received by the *Identity* parameter.
 [Set-ADCentralAccessPolicy](./Set-ADCentralAccessPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

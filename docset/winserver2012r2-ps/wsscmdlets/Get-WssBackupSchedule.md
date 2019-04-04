@@ -78,4 +78,3 @@ This cmdlet returns a list of backup schedule times.
 [Add-WssBackupSchedule](./Add-WssBackupSchedule.md)
 
 [Remove-WssBackupSchedule](./Remove-WssBackupSchedule.md)
-

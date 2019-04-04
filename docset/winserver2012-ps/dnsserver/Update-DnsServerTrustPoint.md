@@ -154,4 +154,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-DnsServerTrustPoint](./Get-DnsServerTrustPoint.md)
-

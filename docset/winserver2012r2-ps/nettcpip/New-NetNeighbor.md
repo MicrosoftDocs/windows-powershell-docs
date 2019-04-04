@@ -306,4 +306,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 
 [Get-NetNeighbor](./Get-NetNeighbor.md)
-

@@ -94,4 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-HgsGuardian](./New-HgsGuardian.md)
 
 [Remove-HgsGuardian](./Remove-HgsGuardian.md)
-

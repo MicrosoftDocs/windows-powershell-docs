@@ -195,4 +195,3 @@ A class structure that represents a claims provider trust.
 [Set-AdfsClaimsProviderTrust](./Set-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

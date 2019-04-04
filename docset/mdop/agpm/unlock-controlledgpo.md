@@ -174,4 +174,3 @@ This cmdlet returns controlled GPO objects, if you specify the *PassThru* parame
 [Publish-ControlledGpo](./Publish-ControlledGpo.md)
 
 [Remove-ControlledGpo](./Remove-ControlledGpo.md)
-

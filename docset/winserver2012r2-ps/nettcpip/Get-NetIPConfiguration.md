@@ -188,4 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetIPInterface](./Get-NetIPInterface.md)
 
 [Get-NetRoute](./Get-NetRoute.md)
-

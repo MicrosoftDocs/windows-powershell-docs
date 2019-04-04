@@ -74,4 +74,3 @@ This cmdlet returns an array of **WBDisk** objects for the hard disks that the c
 [New-WBBackupTarget](./New-WBBackupTarget.md)
 
 [Remove-WBBackupTarget](./Remove-WBBackupTarget.md)
-

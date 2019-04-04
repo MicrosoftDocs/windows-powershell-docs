@@ -407,4 +407,3 @@ The MSFT_SmbShare object represents the modified share.
 [New-SmbShare](./New-SmbShare.md)
 
 [Remove-SmbShare](./Remove-SmbShare.md)
-

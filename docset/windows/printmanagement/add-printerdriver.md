@@ -216,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-PrinterDriver](./Get-PrinterDriver.md)
 
 [Remove-PrinterDriver](./Remove-PrinterDriver.md)
-

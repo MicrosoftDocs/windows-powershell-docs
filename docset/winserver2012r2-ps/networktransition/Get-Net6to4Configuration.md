@@ -180,4 +180,3 @@ This cmdlet returns a 6to4 configuration object.
 [Reset-Net6to4Configuration](./Reset-Net6to4Configuration.md)
 
 [Set-Net6to4Configuration](./Set-Net6to4Configuration.md)
-

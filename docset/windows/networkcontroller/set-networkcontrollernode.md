@@ -240,4 +240,3 @@ This cmdlet returns an object that contains the following fields:
 [Get-NetworkControllerNode](./Get-NetworkControllerNode.md)
 
 [Remove-NetworkControllerNode](./Remove-NetworkControllerNode.md)
-

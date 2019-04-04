@@ -151,4 +151,3 @@ This cmdlet does not generate any output.
 [Set-NetworkSwitchEthernetPortIPAddress](./Set-NetworkSwitchEthernetPortIPAddress.md)
 
 [Get-NetworkSwitchEthernetPort](./Get-NetworkSwitchEthernetPort.md)
-

@@ -48,4 +48,3 @@ This command gets the File History configuration settings for the server.
 [Set-WssFileHistoryConfiguration](./Set-WssFileHistoryConfiguration.md)
 
 [Get-WssFileHistoryManagementStatus](./Get-WssFileHistoryManagementStatus.md)
-

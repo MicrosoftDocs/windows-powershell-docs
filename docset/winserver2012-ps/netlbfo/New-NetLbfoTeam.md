@@ -229,4 +229,3 @@ This cmdlet produces an **MSFT_NetLbfoTeam** object, corresponding to the newly 
 [Remove-NetLbfoTeam](./Remove-NetLbfoTeam.md)
 
 [00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
-

@@ -89,4 +89,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsTrustedFederationPartner](./Remove-AdfsTrustedFederationPartner.md)
 
 [Set-AdfsTrustedFederationPartner](./Set-AdfsTrustedFederationPartner.md)
-

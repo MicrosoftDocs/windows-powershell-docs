@@ -195,4 +195,3 @@ This cmdlet returns object(s) that contain the following fields:
 [New-NetworkControllerVirtualGatewayBgpRouter](./New-NetworkControllerVirtualGatewayBgpRouter.md)
 
 [Remove-NetworkControllerVirtualGatewayBgpRouter](./Remove-NetworkControllerVirtualGatewayBgpRouter.md)
-

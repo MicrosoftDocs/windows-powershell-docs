@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetSwitchTeam](./Remove-NetSwitchTeam.md)
 
 [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
-

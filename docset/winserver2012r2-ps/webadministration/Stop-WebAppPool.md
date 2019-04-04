@@ -90,4 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restart-WebAppPool](./Restart-WebAppPool.md)
 
 [Start-WebAppPool](./Start-WebAppPool.md)
-

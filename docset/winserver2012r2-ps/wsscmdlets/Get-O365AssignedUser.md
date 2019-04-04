@@ -89,4 +89,3 @@ Licenses Property System.Collections.ObjectModel.ReadOnlyCollection\<O365UserLic
 [Set-O365AssignedUser](./Set-O365AssignedUser.md)
 
 [Clear-O365AssignedUser](./Clear-O365AssignedUser.md)
-

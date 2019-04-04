@@ -139,4 +139,3 @@ Accept wildcard characters: True
 [Add-ClusterResourceType](./Add-ClusterResourceType.md)
 
 [Remove-ClusterResourceType](./Remove-ClusterResourceType.md)
-

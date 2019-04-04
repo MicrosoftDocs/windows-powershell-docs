@@ -62,4 +62,3 @@ In this instance, MSDSM automatically claims SAS disks, but not iSCSI disks.
 [Disable-MSDSMAutomaticClaim](./Disable-MSDSMAutomaticClaim.md)
 
 [Enable-MSDSMAutomaticClaim](./Enable-MSDSMAutomaticClaim.md)
-

@@ -176,4 +176,3 @@ The cmdlet uses the **FullName** property as the value of the *FileName* paramet
 [Get-FileIntegrity](./Get-FileIntegrity.md)
 
 [Set-FileIntegrity](./Set-FileIntegrity.md)
-

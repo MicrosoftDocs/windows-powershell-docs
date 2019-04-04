@@ -179,4 +179,3 @@ Accept wildcard characters: False
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Remove-ClusterCheckpoint](./Remove-ClusterCheckpoint.md)
-

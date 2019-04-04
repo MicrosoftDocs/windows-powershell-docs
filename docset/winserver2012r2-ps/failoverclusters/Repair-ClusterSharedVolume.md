@@ -142,4 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-ClusterResource](./Resume-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

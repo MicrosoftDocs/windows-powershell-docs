@@ -65,4 +65,3 @@ This cmdlet returns a Boolean value that reports the status of the **HTTP Accept
 [Set-WinAcceptLanguageFromLanguageListOptOut](./Set-WinAcceptLanguageFromLanguageListOptOut.md)
 
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
-

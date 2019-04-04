@@ -137,4 +137,3 @@ Accept wildcard characters: False
 [Get-NetSwitchTeamMember](./Get-NetSwitchTeamMember.md)
 
 [Remove-NetSwitchTeamMember](./Remove-NetSwitchTeamMember.md)
-

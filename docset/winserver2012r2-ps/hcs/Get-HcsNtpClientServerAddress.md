@@ -69,4 +69,3 @@ The NtpInfo object has the following properties:
 ## RELATED LINKS
 
 [Set-HcsNtpClientServerAddress](./Set-HcsNtpClientServerAddress.md)
-

@@ -503,4 +503,3 @@ By default, this cmdlet does not generate any output.
 [Get-ADDomain](./Get-ADDomain.md)
 
 [Get-ADDomainController](./Get-ADDomainController.md)
-

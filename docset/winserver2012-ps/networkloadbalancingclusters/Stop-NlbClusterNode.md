@@ -162,4 +162,3 @@ Accept wildcard characters: False
 [Start-NlbClusterNode](./Start-NlbClusterNode.md)
 
 [Suspend-NlbClusterNode](./Suspend-NlbClusterNode.md)
-

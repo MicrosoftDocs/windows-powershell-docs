@@ -25,4 +25,3 @@ This reference provides cmdlet descriptions and syntax for all Remote Desktop Se
 ## RemoteDesktopServices Cmdlets
 ### [Convert-License](./Convert-License.md)
 Converts licenses in a key pack to per-device or per-user licenses.
-

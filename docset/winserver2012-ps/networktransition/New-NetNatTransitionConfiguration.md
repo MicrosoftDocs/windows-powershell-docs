@@ -279,4 +279,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Remove-NetNatTransitionConfiguration](./Remove-NetNatTransitionConfiguration.md)
 
 [Set-NetNatTransitionConfiguration](./Set-NetNatTransitionConfiguration.md)
-

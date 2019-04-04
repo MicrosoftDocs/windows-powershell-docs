@@ -278,4 +278,3 @@ The output object is returned only when the **PassThru** parameter is specified.
 [New-NetQosTrafficClass](../DcbQos_Cmdlets/New-NetQosTrafficClass.md)
 
 [Set-NetQosDcbxSetting](../DcbQos_Cmdlets/Set-NetQosDcbxSetting.md)
-

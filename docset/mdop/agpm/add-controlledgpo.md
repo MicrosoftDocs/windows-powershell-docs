@@ -185,4 +185,3 @@ This cmdlet returns controlled GPO objects, if you specify the *PassThru* parame
 [Remove-ControlledGpo](remove-controlledgpo.md)
 
 [Unlock-ControlledGpo](unlock-controlledgpo.md)
-

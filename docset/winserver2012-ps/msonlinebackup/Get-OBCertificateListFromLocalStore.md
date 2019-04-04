@@ -50,4 +50,3 @@ List of certificates that you can use to register the server.
 ## RELATED LINKS
 
 [Get-OBRecoveryService](./Get-OBRecoveryService.md)
-

@@ -101,4 +101,3 @@ Description: local network account name of user
 [Rename-WssMsoAssignedUser](./Rename-WssMsoAssignedUser.md)
 
 [Set-WssMsoGroupAssignment](./Set-WssMsoGroupAssignment.md)
-

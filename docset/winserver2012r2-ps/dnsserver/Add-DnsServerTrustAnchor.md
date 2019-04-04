@@ -370,4 +370,3 @@ The DnsServerTrustAnchor object contains the following fields:
 [Remove-DnsServerTrustAnchor](./Remove-DnsServerTrustAnchor.md)
 
 [Get-DnsServerResourceRecord](./Get-DnsServerResourceRecord.md)
-

@@ -157,4 +157,3 @@ Accept wildcard characters: False
 [Get-DtcClusterTMMapping](./Get-DtcClusterTMMapping.md)
 
 [Set-DtcClusterTMMapping](./Set-DtcClusterTMMapping.md)
-

@@ -81,4 +81,3 @@ None
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBSystemState](./Get-WBSystemState.md)
-

@@ -600,4 +600,3 @@ A class structure that represents a claims provider trust.
 [Remove-ADFSClaimsProviderTrust](./Remove-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

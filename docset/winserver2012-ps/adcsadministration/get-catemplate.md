@@ -58,4 +58,3 @@ Both properties are of string type.
 [Add-CATemplate](./Add-CATemplate.md)
 
 [Remove-CATemplate](./Remove-CATemplate.md)
-

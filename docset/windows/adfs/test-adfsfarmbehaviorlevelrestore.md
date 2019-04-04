@@ -116,4 +116,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restore-AdfsFarmBehaviorLevel](./Restore-AdfsFarmBehaviorLevel.md)
 
 [Test-AdfsFarmBehaviorLevelRaise](./Test-AdfsFarmBehaviorLevelRaise.md)
-

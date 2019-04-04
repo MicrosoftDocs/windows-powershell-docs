@@ -585,4 +585,3 @@ Returns one or more account objects that meet the conditions set by the paramete
 [Set-ADAccountPassword](./Set-ADAccountPassword.md)
 
 [Unlock-ADAccount](./Unlock-ADAccount.md)
-

@@ -350,4 +350,3 @@ Returns one or more principal objects that represent users, computers or groups 
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
 
 [Remove-ADPrincipalGroupMembership](./Remove-ADPrincipalGroupMembership.md)
-

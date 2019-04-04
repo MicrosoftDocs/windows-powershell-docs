@@ -100,4 +100,3 @@ This cmdlet accepts **SbecEtwTrace.TraceSessionInfo** objects as the sessions to
 [Start-SbecNtKernelLogSession](./Start-SbecNtKernelLogSession.md)
 
 [Stop-SbecLogSession](./Stop-SbecLogSession.md)
-

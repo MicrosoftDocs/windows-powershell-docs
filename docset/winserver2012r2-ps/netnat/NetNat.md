@@ -61,4 +61,3 @@ Modifies settings for NAT objects.
 
 ### [Set-NetNatGlobal](./Set-NetNatGlobal.md)
 Modifies global settings for NAT instances on a computer.
-

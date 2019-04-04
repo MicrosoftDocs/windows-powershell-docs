@@ -107,4 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-CauPlugin](./Get-CauPlugin.md)
 
 [Register-CauPlugin](./Register-CauPlugin.md)
-

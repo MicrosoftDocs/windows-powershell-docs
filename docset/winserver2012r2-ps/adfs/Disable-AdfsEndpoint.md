@@ -170,4 +170,3 @@ A class that represents an endpoint for the Federation Service.
 [Get-AdfsEndpoint](./Get-AdfsEndpoint.md)
 
 [Set-AdfsEndpoint](./Set-AdfsEndpoint.md)
-

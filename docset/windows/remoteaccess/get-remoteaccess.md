@@ -265,4 +265,3 @@ The RemoteAccessCommon object consists of the following properties:
 [Set-RemoteAccess](./Set-RemoteAccess.md)
 
 [Uninstall-RemoteAccess](./Uninstall-RemoteAccess.md)
-

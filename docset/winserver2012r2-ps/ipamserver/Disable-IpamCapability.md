@@ -209,4 +209,3 @@ An object that represents an optional capability provided by an IPAM server.
 [Get-IpamCapability](./Get-IpamCapability.md)
 
 [Enable-IpamCapability](./Enable-IpamCapability.md)
-

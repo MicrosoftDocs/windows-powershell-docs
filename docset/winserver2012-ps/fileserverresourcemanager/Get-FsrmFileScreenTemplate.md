@@ -120,4 +120,3 @@ Accept wildcard characters: False
 [New-FsrmFileScreenTemplate](./New-FsrmFileScreenTemplate.md)
 
 [Remove-FsrmFileScreenTemplate](./Remove-FsrmFileScreenTemplate.md)
-

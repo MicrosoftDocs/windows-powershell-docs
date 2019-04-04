@@ -249,4 +249,3 @@ A site link object is received by the Identity parameter.
 [New-ADReplicationSiteLink](./New-ADReplicationSiteLink.md)
 
 [Set-ADReplicationSiteLink](./Set-ADReplicationSiteLink.md)
-

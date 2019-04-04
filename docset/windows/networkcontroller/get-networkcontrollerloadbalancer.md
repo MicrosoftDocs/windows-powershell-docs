@@ -140,4 +140,3 @@ Following properties can be retrieved for a load balancer resource:
 ## NOTES
 
 ## RELATED LINKS
-

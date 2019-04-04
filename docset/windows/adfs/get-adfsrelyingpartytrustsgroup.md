@@ -66,4 +66,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AdfsRelyingPartyTrustsGroup](./Add-AdfsRelyingPartyTrustsGroup.md)
 
 [Remove-AdfsRelyingPartyTrustsGroup](./Remove-AdfsRelyingPartyTrustsGroup.md)
-

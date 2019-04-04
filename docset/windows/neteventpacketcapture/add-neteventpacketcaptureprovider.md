@@ -381,4 +381,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NetEventPacketCaptureProvider](./Remove-NetEventPacketCaptureProvider.md)
 
 [Set-NetEventPacketCaptureProvider](./Set-NetEventPacketCaptureProvider.md)
-

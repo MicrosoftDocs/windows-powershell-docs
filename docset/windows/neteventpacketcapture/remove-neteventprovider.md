@@ -192,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetEventProvider](./Get-NetEventProvider.md)
 
 [Set-NetEventProvider](./Set-NetEventProvider.md)
-

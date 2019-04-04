@@ -114,4 +114,3 @@ Accept wildcard characters: False
 [New-Object](http://go.microsoft.com/fwlink/?LinkID=113355)
 
 [Get-OBRecoveryService](./Get-OBRecoveryService.md)
-

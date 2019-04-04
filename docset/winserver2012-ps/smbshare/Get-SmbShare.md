@@ -407,4 +407,3 @@ The MSFT_SmbShare object represents the SMB shares on the computer.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

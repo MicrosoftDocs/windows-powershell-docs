@@ -234,4 +234,3 @@ These results are grouped by target and category with each group possessing an a
 [Get-HgsTraceFileData](./Get-HgsTraceFileData.md)
 
 [New-HgsTraceTarget](./New-HgsTraceTarget.md)
-

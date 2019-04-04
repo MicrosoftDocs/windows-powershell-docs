@@ -83,4 +83,3 @@ You can use the pipeline operator to pass this parameter value to the cmdlet.
 [Send-DtcDiagnosticTransaction](./Send-DtcDiagnosticTransaction.md)
 
 [Undo-DtcDiagnosticTransaction](./Undo-DtcDiagnosticTransaction.md)
-

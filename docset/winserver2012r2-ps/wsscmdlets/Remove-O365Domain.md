@@ -62,4 +62,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-O365Domain](./Set-O365Domain.md)
 
 [Get-O365DomainConfiguration](./Get-O365DomainConfiguration.md)
-

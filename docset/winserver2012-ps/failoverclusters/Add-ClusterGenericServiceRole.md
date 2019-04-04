@@ -219,4 +219,3 @@ Accept wildcard characters: False
 [Start-ClusterGroup](./Start-ClusterGroup.md)
 
 [Stop-ClusterGroup](./Stop-ClusterGroup.md)
-

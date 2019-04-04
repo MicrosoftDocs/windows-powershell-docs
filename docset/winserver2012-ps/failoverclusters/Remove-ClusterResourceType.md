@@ -97,4 +97,3 @@ Accept wildcard characters: False
 [Add-ClusterResourceType](./Add-ClusterResourceType.md)
 
 [Get-ClusterResourceType](./Get-ClusterResourceType.md)
-

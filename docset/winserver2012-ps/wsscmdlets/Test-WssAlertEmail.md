@@ -48,4 +48,3 @@ This command sends a test alert email that uses the current email settings.
 [Get-WssAlertEmailSetting](./Get-WssAlertEmailSetting.md)
 
 [Set-WssAlertEmailSetting](./Set-WssAlertEmailSetting.md)
-

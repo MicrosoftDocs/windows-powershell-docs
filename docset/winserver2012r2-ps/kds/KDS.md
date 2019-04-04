@@ -40,4 +40,3 @@ Sets the configuration of Microsoft Group Key Distribution Service (KdsSvc).
 
 ### [Test-KdsRootKey](./Test-KdsRootKey.md)
 Tests the root key configuration.
-

@@ -160,4 +160,3 @@ Accept wildcard characters: False
 [Set-DnsServerCache](./Set-DnsServerCache.md)
 
 [Show-DnsServerCache](./Show-DnsServerCache.md)
-

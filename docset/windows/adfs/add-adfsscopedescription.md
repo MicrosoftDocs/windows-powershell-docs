@@ -131,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AdfsScopeDescription](./Remove-AdfsScopeDescription.md)
 
 [Set-AdfsScopeDescription](./Set-AdfsScopeDescription.md)
-

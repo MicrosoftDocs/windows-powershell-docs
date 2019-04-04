@@ -240,4 +240,3 @@ Global settings include non-interface specific settings.
 ## RELATED LINKS
 
 [Get-DnsClientGlobalSetting](./Get-DnsClientGlobalSetting.md)
-

@@ -161,4 +161,3 @@ Accept wildcard characters: False
 [Get-ClusterResourceDependency](./Get-ClusterResourceDependency.md)
 
 [Set-ClusterResourceDependency](./Set-ClusterResourceDependency.md)
-

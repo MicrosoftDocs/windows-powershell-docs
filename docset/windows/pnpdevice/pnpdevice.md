@@ -36,4 +36,3 @@ Returns information about PnP devices.
 
 ### [Get-PnpDeviceProperty](./Get-PnpDeviceProperty.md)
 Gets detailed properties for a PnP device.
-

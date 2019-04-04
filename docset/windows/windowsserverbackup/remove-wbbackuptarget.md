@@ -120,4 +120,3 @@ This cmdlet returns a list of **WBBackupTarget** objects left in the policy.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [New-WBBackupTarget](./New-WBBackupTarget.md)
-

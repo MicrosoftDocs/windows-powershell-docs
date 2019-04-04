@@ -79,4 +79,3 @@ This cmdlet generates the CalculateFolderSizeRequest object which can be used to
 [Set-WssFolder](./Set-WssFolder.md)
 
 [Remove-WssFolder](./Remove-WssFolder.md)
-

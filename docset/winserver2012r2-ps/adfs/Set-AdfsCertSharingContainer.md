@@ -101,4 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 * Active Directory Federation Services (AD FS) 2.0 does not share the private keys of administrator-specified certificates in a federation server farm, such as certificates that a certification authority (CA) issues.
 
 ## RELATED LINKS
-

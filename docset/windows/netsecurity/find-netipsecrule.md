@@ -321,4 +321,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Copy-NetIPsecRule](./Copy-NetIPsecRule.md)
 
 [Update-NetIPsecRule](./Update-NetIPsecRule.md)
-

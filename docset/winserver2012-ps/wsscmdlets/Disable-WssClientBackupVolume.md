@@ -131,4 +131,3 @@ Accept wildcard characters: False
 [Get-WssClientBackupVolume](./Get-WssClientBackupVolume.md)
 
 [Get-WssClientBackupVolumeJob](./Get-WssClientBackupVolumeJob.md)
-

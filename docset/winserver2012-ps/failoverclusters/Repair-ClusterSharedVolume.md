@@ -131,4 +131,3 @@ Accept wildcard characters: False
 [Resume-ClusterResource](./Resume-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

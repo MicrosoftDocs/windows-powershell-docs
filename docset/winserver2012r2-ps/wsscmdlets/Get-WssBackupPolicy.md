@@ -63,4 +63,3 @@ This cmdlet returns the server backup policy that specifies backup options such 
 [Set-WssBackupPolicy](./Set-WssBackupPolicy.md)
 
 [Suspend-WssBackupPolicy](./Suspend-WssBackupPolicy.md)
-

@@ -77,4 +77,3 @@ Accept wildcard characters: False
 [Add-WssBackupSchedule](./Add-WssBackupSchedule.md)
 
 [Remove-WssBackupSchedule](./Remove-WssBackupSchedule.md)
-

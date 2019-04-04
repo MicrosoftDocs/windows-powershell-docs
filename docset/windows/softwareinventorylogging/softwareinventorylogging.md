@@ -53,4 +53,3 @@ Starts Software Inventory Logging daily logging.
 
 ### [Stop-SilLogging](./Stop-SilLogging.md)
 Stops Software Inventory Logging daily logging.
-

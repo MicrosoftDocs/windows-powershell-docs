@@ -198,4 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-AdfsAuthenticationProvider](./Register-AdfsAuthenticationProvider.md)
 
 [Get-AdfsAuthenticationProvider](./Get-AdfsAuthenticationProvider.md)
-

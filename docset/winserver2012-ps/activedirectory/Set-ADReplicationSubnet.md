@@ -493,4 +493,3 @@ A subnet object that was retrieved by using the Get-ADReplicationSubnet cmdlet a
 [New-ADReplicationSubnet](./New-ADReplicationSubnet.md)
 
 [Remove-ADReplicationSubnet](./Remove-ADReplicationSubnet.md)
-

@@ -145,4 +145,3 @@ This cmdlet outputs one or more objects that represents the ODX settings for one
 ## RELATED LINKS
 
 [Get-StorageSubSystem](./Get-StorageSubsystem.md)
-

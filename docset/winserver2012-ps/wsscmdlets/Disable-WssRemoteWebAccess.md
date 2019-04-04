@@ -47,4 +47,3 @@ This command disables Remote Web Access on the server.
 [Enable-WssRemoteWebAccess](./Enable-WssRemoteWebAccess.md)
 
 [Repair-WssRemoteWebAccess](./Repair-WssRemoteWebAccess.md)
-

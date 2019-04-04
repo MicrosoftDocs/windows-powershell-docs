@@ -152,4 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-ClusterResourceType](./Add-ClusterResourceType.md)
 
 [Remove-ClusterResourceType](./Remove-ClusterResourceType.md)
-

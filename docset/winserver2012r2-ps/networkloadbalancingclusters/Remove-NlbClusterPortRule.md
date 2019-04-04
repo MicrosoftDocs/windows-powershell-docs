@@ -196,4 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NlbClusterPortRule](./Get-NlbClusterPortRule.md)
 
 [Set-NlbClusterPortRule](./Set-NlbClusterPortRule.md)
-

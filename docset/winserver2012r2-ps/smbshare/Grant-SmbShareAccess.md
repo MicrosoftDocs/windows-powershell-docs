@@ -292,4 +292,3 @@ The MSFT_SmbShareAccessControlEntry object is returned.
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
 
 [Unblock-SmbShareAccess](./Unblock-SmbShareAccess.md)
-

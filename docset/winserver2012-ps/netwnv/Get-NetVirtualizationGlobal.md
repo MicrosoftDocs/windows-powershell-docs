@@ -112,4 +112,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-NetVirtualizationGlobal](./Set-NetVirtualizationGlobal.md)
-

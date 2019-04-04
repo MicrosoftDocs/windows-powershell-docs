@@ -187,4 +187,3 @@ Get-AppxPackage -User username
 [Get-AssignedAccess](./Get-AssignedAccess.md)
 
 [Clear-AssignedAccess](./Clear-AssignedAccess.md)
-

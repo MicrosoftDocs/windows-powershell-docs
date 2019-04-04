@@ -187,4 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ADFSAttributeStore](./Remove-ADFSAttributeStore.md)
 
 [Set-ADFSAttributeStore](./Set-ADFSAttributeStore.md)
-

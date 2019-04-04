@@ -239,4 +239,3 @@ This cmdlet returns an object that represents the initiator port you specified.
 ## RELATED LINKS
 
 [Get-InitiatorPort](./Get-InitiatorPort.md)
-

@@ -335,4 +335,3 @@ This cmdlet produces no output objects.
 ## RELATED LINKS
 
 [Get-PrintConfiguration](./Get-PrintConfiguration.md)
-

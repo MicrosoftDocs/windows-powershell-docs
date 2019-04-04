@@ -69,4 +69,3 @@ Stops the specified ETW session.
 
 ### [Update-EtwTraceSession](./Update-EtwTraceSession.md)
 Modifies an existing ETW session.
-

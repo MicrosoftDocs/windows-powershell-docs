@@ -640,4 +640,3 @@ Get-ADGroup \<group\> -Properties * | Get-Member
 [Remove-ADGroup](./Remove-ADGroup.md)
 
 [Set-ADGroup](./Set-ADGroup.md)
-

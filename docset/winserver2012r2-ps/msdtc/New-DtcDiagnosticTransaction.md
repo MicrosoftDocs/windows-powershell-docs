@@ -106,4 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Send-DtcDiagnosticTransaction](./Send-DtcDiagnosticTransaction.md)
 
 [Undo-DtcDiagnosticTransaction](./Undo-DtcDiagnosticTransaction.md)
-

@@ -139,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpThreat](./Remove-MpThreat.md)
 
 [Get-MpThreatDetection](./Get-MpThreatDetection.md)
-

@@ -151,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Repair-AppvClientConnectionGroup](./Repair-AppvClientConnectionGroup.md)
 
 [Stop-AppvClientConnectionGroup](./Stop-AppvClientConnectionGroup.md)
-

@@ -228,4 +228,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-WsusDynamicCategory](./Set-WsusDynamicCategory.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

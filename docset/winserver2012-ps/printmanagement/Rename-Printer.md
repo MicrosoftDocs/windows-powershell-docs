@@ -204,4 +204,3 @@ This cmdlet produces no output.
 [Get-Printer](./Get-Printer.md)
 
 [Set-Printer](./Set-Printer.md)
-

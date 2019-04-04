@@ -132,4 +132,3 @@ Description: local network account name of group
 [Get-WssMsoGroup](./Get-WssMsoGroup.md)
 
 [Remove-WssMsoGroupAssignment](./Remove-WssMsoGroupAssignment.md)
-

@@ -56,4 +56,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
 
 [Set-WssMediaLibraryName](./Set-WssMediaLibraryName.md)
-

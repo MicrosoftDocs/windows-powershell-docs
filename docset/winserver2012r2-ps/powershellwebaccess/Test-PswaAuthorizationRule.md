@@ -184,4 +184,3 @@ This cmdlet produces a PswaAuthorizationRule object as output.
 [Remove-PswaAuthorizationRule](./Remove-PswaAuthorizationRule.md)
 
 [Install-PswaWebApplication](./Install-PswaWebApplication.md)
-

@@ -34,4 +34,3 @@ Starts a Best Practices Analyzer (BPA) scan for a specific model that is install
 
 ### [Set-BpaResult](./Set-BpaResult.md)
 Excludes or includes existing results of a Best Practices Analyzer (BPA) scan to display only the specified scan results.
-

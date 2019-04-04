@@ -351,4 +351,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Enable-NetAdapterChecksumOffload](./Enable-NetAdapterChecksumOffload.md)
 
 [Get-NetAdapterChecksumOffload](./Get-NetAdapterChecksumOffload.md)
-

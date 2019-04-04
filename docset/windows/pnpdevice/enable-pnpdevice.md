@@ -210,4 +210,3 @@ This cmdlet generates a WMI error code.
 [Disable-PnpDevice](./Disable-PnpDevice.md)
 
 [Get-PnpDevice](./Get-PnpDevice.md)
-

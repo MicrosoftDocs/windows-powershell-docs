@@ -94,4 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 * The previous syntax for the same task, `((Get-SmbShare -Name \<ShareName\> ).PresetPathACL | Set-Acl)`, continues to work with newer versions of the Windows Server operating system, but the new syntax is much simpler and therefore recommended.
 
 ## RELATED LINKS
-

@@ -248,4 +248,3 @@ Accept wildcard characters: False
 [Set-DnsServerRootHint](./Set-DnsServerRootHint.md)
 
 [Import-DnsServerRootHint](./Import-DnsServerRootHint.md)
-

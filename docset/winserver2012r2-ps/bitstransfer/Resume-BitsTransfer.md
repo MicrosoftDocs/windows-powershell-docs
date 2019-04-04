@@ -183,4 +183,3 @@ Otherwise, no output is generated.
 [Start-BitsTransfer](./Start-BitsTransfer.md)
 
 [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
-

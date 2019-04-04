@@ -53,4 +53,3 @@ This command gets a list of all RADIUS clients and puts the list in the variable
 [Remove-NpsRadiusClient](./Remove-NpsRadiusClient.md)
 
 [Set-NpsRadiusClient](./Set-NpsRadiusClient.md)
-

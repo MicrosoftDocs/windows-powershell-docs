@@ -226,4 +226,3 @@ Following properties can be provided for each ACL rule:
 ## RELATED LINKS
 
 [Get-NetworkControllerAccessControlListRule](./Get-NetworkControllerAccessControlListRule.md)
-

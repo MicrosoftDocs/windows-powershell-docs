@@ -118,4 +118,3 @@ Following properties can be retrieved for a load balancer configuration:
 ## NOTES
 
 ## RELATED LINKS
-

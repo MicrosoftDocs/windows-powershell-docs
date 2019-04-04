@@ -223,4 +223,3 @@ If you specify the **Passthru** parameter, this cmdlet returns an object that re
 [Resize-StorageTier](./Resize-StorageTier.md)
 
 [Set-StorageTier](./Set-StorageTier.md)
-

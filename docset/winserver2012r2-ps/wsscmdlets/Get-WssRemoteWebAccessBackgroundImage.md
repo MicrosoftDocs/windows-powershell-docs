@@ -57,4 +57,3 @@ The cmdlet does not generate any output if Remote Web Access uses the default im
 ## RELATED LINKS
 
 [Set-WssRemoteWebAccessBackgroundImage](./Set-WssRemoteWebAccessBackgroundImage.md)
-

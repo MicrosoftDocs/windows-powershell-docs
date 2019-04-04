@@ -163,4 +163,3 @@ This cmdlet returns a CIM object that contains the DA client experience configur
 [Reset-DAClientExperienceConfiguration](./Reset-DAClientExperienceConfiguration.md)
 
 [Set-DAClientExperienceConfiguration](./Set-DAClientExperienceConfiguration.md)
-

@@ -201,4 +201,3 @@ This cmdlet returns a **MSFT_SmbConnection** object that represents the per shar
 [Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)
 
 [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
-

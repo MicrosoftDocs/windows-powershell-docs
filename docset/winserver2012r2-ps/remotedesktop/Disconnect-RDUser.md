@@ -115,4 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Invoke-RDUserLogoff](./Invoke-RDUserLogoff.md)
 
 [Send-RDUserMessage](./Send-RDUserMessage.md)
-

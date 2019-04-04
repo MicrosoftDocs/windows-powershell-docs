@@ -1242,4 +1242,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Save-NetGPO](./Save-NetGPO.md)
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
-

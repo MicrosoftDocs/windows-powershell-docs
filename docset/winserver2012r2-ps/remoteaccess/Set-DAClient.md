@@ -286,4 +286,3 @@ The DAClientSettings object contains the following properties:
 [Remove-DAClient](./Remove-DAClient.md)
 
 [Set-DAServer](./Set-DAServer.md)
-

@@ -143,4 +143,3 @@ This cmdlet produces no output.
 [Get-RDVirtualDesktopCollection](./Get-RDVirtualDesktopCollection.md)
 
 [Add-RDVirtualDesktopToCollection](./Add-RDVirtualDesktopToCollection.md)
-

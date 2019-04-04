@@ -66,4 +66,3 @@ Accept wildcard characters: False
 [Get-CauPlugin](./Get-CauPlugin.md)
 
 [Register-CauPlugin](./Register-CauPlugin.md)
-

@@ -272,4 +272,3 @@ This cmdlet returns a **VMGroup** object, if you specify the **Passthru** parame
 [Get-VM](./Get-VM.md)
 
 [Get-VMGroup](./Get-VMGroup.md)
-

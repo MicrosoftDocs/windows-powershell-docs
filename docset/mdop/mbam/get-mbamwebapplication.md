@@ -169,4 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamWebApplication](enable-mbamwebapplication.md)
 
 [Test-MbamWebApplication](test-mbamwebapplication.md)
-

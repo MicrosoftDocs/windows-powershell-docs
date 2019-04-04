@@ -210,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetEventVmNetworkAdapter](./Get-NetEventVmNetworkAdapter.md)
 
 [Add-NetEventVmNetworkAdapter](./Add-NetEventVmNetworkAdapter.md)
-

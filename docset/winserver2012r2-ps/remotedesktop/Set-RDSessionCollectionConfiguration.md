@@ -619,4 +619,3 @@ None.
 [New-RDSessionCollection](./New-RDSessionCollection.md)
 
 [Remove-RDSessionCollection](./Remove-RDSessionCollection.md)
-

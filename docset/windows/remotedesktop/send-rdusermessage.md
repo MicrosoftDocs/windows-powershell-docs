@@ -127,4 +127,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-RDUserSession](./Get-RDUserSession.md)
 
 [Invoke-RDUserLogoff](./Invoke-RDUserLogoff.md)
-

@@ -214,4 +214,3 @@ Sets the Single-Root I/O Virtualization (SR-IOV) properties of the network adapt
 
 ### [Set-NetAdapterVmq](./Set-NetAdapterVmq.md)
 Sets the virtual machine queue (VMQ) properties of the network adapter.
-

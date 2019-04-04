@@ -375,4 +375,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-ADDSDomainInstallation](./Test-ADDSDomainInstallation.md)
 
 [Test-ADDSDomainControllerInstallation](./Test-ADDSDomainControllerInstallation.md)
-

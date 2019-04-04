@@ -197,4 +197,3 @@ If the **PassThru** parameter is not specified, there is no output.
 [Set-NetLbfoTeam](./Set-NetLbfoTeam.md)
 
 [Remove-NetLbfoTeam](./Remove-NetLbfoTeam.md)
-

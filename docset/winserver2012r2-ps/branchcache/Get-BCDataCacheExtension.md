@@ -112,4 +112,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Add-BCDataCacheExtension](./Add-BCDataCacheExtension.md)
 
 [Remove-BCDataCacheExtension](./Remove-BCDataCacheExtension.md)
-

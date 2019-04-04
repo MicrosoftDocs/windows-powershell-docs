@@ -37,4 +37,3 @@ Provides information about how to enable a device for development.
 
 ### [Unregister-WindowsDeveloperLicense](./Unregister-WindowsDeveloperLicense.md)
 Disables Developer Mode on the current computer.
-

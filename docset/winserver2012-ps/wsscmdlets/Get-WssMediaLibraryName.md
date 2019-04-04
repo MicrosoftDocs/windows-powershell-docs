@@ -43,4 +43,3 @@ This command gets the name of the Media Library.
 ## RELATED LINKS
 
 [Set-WssMediaLibraryName](./Set-WssMediaLibraryName.md)
-

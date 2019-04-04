@@ -445,4 +445,3 @@ This cmdlet returns a **MSFT_SmbShare** object that represents the SMB share.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

@@ -71,4 +71,3 @@ Specifies the number of days that the backup needs to be retained.
 [Set-OBRetentionPolicy](./Set-OBRetentionPolicy.md)
 
 [New-OBPolicy](./New-OBPolicy.md)
-

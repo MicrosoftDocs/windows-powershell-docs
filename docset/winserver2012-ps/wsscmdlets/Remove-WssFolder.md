@@ -174,4 +174,3 @@ Accept wildcard characters: False
 [Move-WssFolder](./Move-WssFolder.md)
 
 [Measure-WssFolder](./Measure-WssFolder.md)
-

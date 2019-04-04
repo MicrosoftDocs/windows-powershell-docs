@@ -143,4 +143,3 @@ This cmdlet returns the storage pool into which the physical disks are added.
 [Get-WssSpacesPool](./Get-WssSpacesPool.md)
 
 [Get-WssDisk](./Get-WssDisk.md)
-

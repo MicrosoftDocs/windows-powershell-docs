@@ -536,4 +536,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-Printer](./Remove-Printer.md)
 
 [Rename-Printer](./Rename-Printer.md)
-

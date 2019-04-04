@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-OdbcPerfCounter](./Disable-OdbcPerfCounter.md)
 
 [Enable-OdbcPerfCounter](./Enable-OdbcPerfCounter.md)
-

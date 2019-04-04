@@ -153,4 +153,3 @@ Accept wildcard characters: False
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Update-ClusterNetworkNameResource](./Update-ClusterNetworkNameResource.md)
-

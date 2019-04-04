@@ -214,4 +214,3 @@ If you specify the *PassThru* parameter, the cmdlet returns an array of **MSFT_S
 [Get-StorageEnclosure](./Get-StorageEnclosure.md)
 
 [Get-StorageEnclosureVendorData](./Get-StorageEnclosureVendorData.md)
-

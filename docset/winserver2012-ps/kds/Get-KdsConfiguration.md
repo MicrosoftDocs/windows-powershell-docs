@@ -61,4 +61,3 @@ A KdsServerConfiguration object contains information such as the key derivation 
 [Set-KdsConfiguration](./Set-KdsConfiguration.md)
 
 [Test-KdsRootKey](./Test-KdsRootKey.md)
-

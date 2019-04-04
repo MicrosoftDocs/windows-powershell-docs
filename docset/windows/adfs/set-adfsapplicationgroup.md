@@ -210,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AdfsApplicationGroup](./New-AdfsApplicationGroup.md)
 
 [Remove-AdfsApplicationGroup](./Remove-AdfsApplicationGroup.md)
-

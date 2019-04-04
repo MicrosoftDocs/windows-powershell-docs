@@ -82,4 +82,3 @@ Accept wildcard characters: False
 [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
 
 [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
-

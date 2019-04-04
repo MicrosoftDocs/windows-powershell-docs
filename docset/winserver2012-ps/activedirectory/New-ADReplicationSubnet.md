@@ -378,4 +378,3 @@ A subnet object that is a template for the new subnet object is received by the 
 [Remove-ADReplicationSubnet](./Remove-ADReplicationSubnet.md)
 
 [Set-ADReplicationSubnet](./Set-ADReplicationSubnet.md)
-

@@ -348,4 +348,3 @@ This cmdlet returns an object that represents an IP address on the IPAM server.
 [Export-IpamAddress](./Export-IpamAddress.md)
 
 [Get-IpamAddressSpace](./Get-IpamAddressSpace.md)
-

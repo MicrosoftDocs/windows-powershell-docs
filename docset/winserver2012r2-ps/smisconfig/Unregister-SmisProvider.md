@@ -137,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-SmisProvider](./Register-SmisProvider.md)
 
 [Search-SmisProvider](./Search-SmisProvider.md)
-

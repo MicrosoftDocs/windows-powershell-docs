@@ -243,4 +243,3 @@ Only if you specify the *PassThru* parameter does the command return the **MSFT_
 [Get-NetQosDcbxSetting](./Get-NetQosDcbxSetting.md)
 
 [Get-NetQosDcbxSetting](./Get-NetQosDcbxSetting.md)
-

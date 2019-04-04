@@ -103,4 +103,3 @@ Accept wildcard characters: False
 [Send-DtcDiagnosticTransaction](./Send-DtcDiagnosticTransaction.md)
 
 [Undo-DtcDiagnosticTransaction](./Undo-DtcDiagnosticTransaction.md)
-

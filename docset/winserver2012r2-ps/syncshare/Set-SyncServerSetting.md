@@ -259,4 +259,3 @@ Change synchronization configuration on the local server.
 ## RELATED LINKS
 
 [Get-SyncServerSetting](./Get-SyncServerSetting.md)
-

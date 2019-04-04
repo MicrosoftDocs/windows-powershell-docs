@@ -184,4 +184,3 @@ The DnsClientNrptGlobal object contains all of the properties of the DNS client 
 [Set-DnsClientNrptGlobal](./Set-DnsClientNrptGlobal.md)
 
 [Set-DnsClientNrptRule](./Set-DnsClientNrptRule.md)
-

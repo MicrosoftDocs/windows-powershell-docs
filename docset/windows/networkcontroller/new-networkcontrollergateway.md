@@ -288,4 +288,3 @@ This cmdlet outputs the following information:
 [Get-NetworkControllerGateway](./Get-NetworkControllerGateway.md)
 
 [Remove-NetworkControllerGateway](./Remove-NetworkControllerGateway.md)
-

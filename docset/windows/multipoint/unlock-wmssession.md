@@ -119,4 +119,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WmsSession](./Get-WmsSession.md)
 
 [Lock-WmsSession](./Lock-WmsSession.md)
-

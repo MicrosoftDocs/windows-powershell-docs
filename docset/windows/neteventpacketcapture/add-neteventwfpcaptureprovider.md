@@ -315,4 +315,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-NetEventWFPCaptureProvider](./Set-NetEventWFPCaptureProvider.md)
 
 [New-NetEventSession](./New-NetEventSession.md)
-

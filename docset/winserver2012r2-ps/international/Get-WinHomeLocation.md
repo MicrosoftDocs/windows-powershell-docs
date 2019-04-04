@@ -68,4 +68,3 @@ A 32-bit signed number that uniquely identifies a geographical location.
 [RegionInfo.GeoId Property](http://go.microsoft.com/fwlink/?LinkID=242310)
 
 [Set-WinHomeLocation](./Set-WinHomeLocation.md)
-

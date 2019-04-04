@@ -137,4 +137,3 @@ Accept wildcard characters: False
 [Remove-ClusterResourceDependency](./Remove-ClusterResourceDependency.md)
 
 [Set-ClusterResourceDependency](./Set-ClusterResourceDependency.md)
-

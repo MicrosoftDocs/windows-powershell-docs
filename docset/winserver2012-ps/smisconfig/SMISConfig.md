@@ -24,4 +24,3 @@ Searches for a list of SMI-S providers.
 
 ### [Unregister-SmisProvider](./Unregister-SmisProvider.md)
 Removes a registered SMI-S provider.
-

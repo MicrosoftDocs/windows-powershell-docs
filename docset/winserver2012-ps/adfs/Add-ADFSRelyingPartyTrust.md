@@ -634,4 +634,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-ADFSRelyingPartyTrust](./Set-ADFSRelyingPartyTrust.md)
 
 [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
-

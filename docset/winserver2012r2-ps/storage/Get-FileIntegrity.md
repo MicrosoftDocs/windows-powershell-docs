@@ -161,4 +161,3 @@ This cmdlet generates an **MSFT_FileIntegrity** object.
 [Repair-FileIntegrity](./Repair-FileIntegrity.md)
 
 [Set-FileIntegrity](./Set-FileIntegrity.md)
-

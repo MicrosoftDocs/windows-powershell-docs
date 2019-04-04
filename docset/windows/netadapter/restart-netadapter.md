@@ -255,4 +255,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Rename-NetAdapter](./Rename-NetAdapter.md)
 
 [Set-NetAdapter](./Set-NetAdapter.md)
-

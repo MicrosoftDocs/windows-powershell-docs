@@ -88,4 +88,3 @@ This cmdlet returns either a **VssCopyBackup** or **VssFullBackup** object, depe
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBVssBackupOption](./Set-WBVssBackupOption.md)
-

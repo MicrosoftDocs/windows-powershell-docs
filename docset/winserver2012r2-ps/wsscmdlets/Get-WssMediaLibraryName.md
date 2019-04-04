@@ -56,4 +56,3 @@ This cmdlet generates the name of the Media Library shared by the server.
 ## RELATED LINKS
 
 [Set-WssMediaLibraryName](./Set-WssMediaLibraryName.md)
-

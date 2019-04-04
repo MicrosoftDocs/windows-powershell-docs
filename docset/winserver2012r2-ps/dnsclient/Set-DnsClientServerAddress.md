@@ -291,4 +291,3 @@ If no interface is specified, then all interfaces are configured.
 ## RELATED LINKS
 
 [Get-DnsClientServerAddress](./Get-DnsClientServerAddress.md)
-

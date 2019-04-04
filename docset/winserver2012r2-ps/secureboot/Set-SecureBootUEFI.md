@@ -248,4 +248,3 @@ The UEFIEnvironmentVariable object contains the following properties:
 [Get-SecureBootPolicy](./Get-SecureBootPolicy.md)
 
 [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
-

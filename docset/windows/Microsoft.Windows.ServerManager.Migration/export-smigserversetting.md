@@ -261,4 +261,3 @@ The default maximum log size is 200 MB.
 ## RELATED LINKS
 
 [Import-SmigServerSetting](./Import-SmigServerSetting.md)
-

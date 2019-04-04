@@ -223,4 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsClaimsProviderTrustsGroup](./Get-AdfsClaimsProviderTrustsGroup.md)
 
 [Remove-AdfsClaimsProviderTrustsGroup](./Remove-AdfsClaimsProviderTrustsGroup.md)
-

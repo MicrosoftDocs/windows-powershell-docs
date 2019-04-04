@@ -219,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Publish-BCFileContent](./Publish-BCFileContent.md)
 
 [Publish-BCWebContent](./Publish-BCWebContent.md)
-

@@ -181,4 +181,3 @@ AppLockerPolicy
 [Set-AppLockerPolicy](./Set-AppLockerPolicy.md)
 
 [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
-

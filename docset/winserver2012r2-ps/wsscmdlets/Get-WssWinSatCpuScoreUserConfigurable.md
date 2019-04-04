@@ -55,4 +55,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssWinSatCpuScore](./Get-WssWinSatCpuScore.md)
 
 [Set-WssWinSatCpuScore](./Set-WssWinSatCpuScore.md)
-

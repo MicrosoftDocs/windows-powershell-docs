@@ -187,4 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-VpnAuthProtocol](./Set-VpnAuthProtocol.md)
 
 [Set-VpnS2SInterface](./Set-VpnS2SInterface.md)
-

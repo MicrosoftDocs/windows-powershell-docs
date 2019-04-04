@@ -267,4 +267,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterRss](./Get-NetAdapterRss.md)
 
 [Set-NetAdapterRss](./Set-NetAdapterRss.md)
-

@@ -121,4 +121,3 @@ Modifies the properties of an install image.
 
 ### [Set-WdsInstallImageGroup](./Set-WdsInstallImageGroup.md)
 Modifies the name and access permissions of an install image group.
-

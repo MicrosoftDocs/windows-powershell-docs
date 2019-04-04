@@ -236,4 +236,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-DnsServerRootHint](./Remove-DnsServerRootHint.md)
 
 [Set-DnsServerRootHint](./Set-DnsServerRootHint.md)
-

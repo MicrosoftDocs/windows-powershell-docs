@@ -304,4 +304,3 @@ Accept wildcard characters: False
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
 
 [New-ScheduledTaskAction](./New-ScheduledTaskAction.md)
-

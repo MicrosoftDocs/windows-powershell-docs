@@ -63,4 +63,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-WssRemoteWebAccessBackgroundImage](./Get-WssRemoteWebAccessBackgroundImage.md)
-

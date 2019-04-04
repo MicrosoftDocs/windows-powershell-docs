@@ -211,4 +211,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-ClusterCheckpoint](./Add-ClusterCheckpoint.md)
 
 [Get-ClusterCheckpoint](./Get-ClusterCheckpoint.md)
-

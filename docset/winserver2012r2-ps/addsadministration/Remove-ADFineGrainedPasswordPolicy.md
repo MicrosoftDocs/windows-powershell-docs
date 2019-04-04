@@ -230,4 +230,3 @@ A fine-grained password policy object is received by the **Identity** parameter.
 [Set-ADFineGrainedPasswordPolicy](./Set-ADFineGrainedPasswordPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

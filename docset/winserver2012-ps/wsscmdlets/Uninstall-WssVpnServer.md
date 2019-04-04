@@ -76,4 +76,3 @@ Accept wildcard characters: False
 [Install-WssVpnServer](./Install-WssVpnServer.md)
 
 [Test-WssVpnServerInstallation](./Test-WssVpnServerInstallation.md)
-

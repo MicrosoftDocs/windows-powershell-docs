@@ -191,4 +191,3 @@ Accept wildcard characters: False
 [Add-DnsServerRootHint](./Add-DnsServerRootHint.md)
 
 [Remove-DnsServerRootHint](./Remove-DnsServerRootHint.md)
-

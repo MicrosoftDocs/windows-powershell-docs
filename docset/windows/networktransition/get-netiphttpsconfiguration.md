@@ -205,4 +205,3 @@ This cmdlet returns one or more IP-HTTPS configuration objects.
 [Reset-NetIPHttpsConfiguration](./Reset-NetIPHttpsConfiguration.md)
 
 [Set-NetIPHttpsConfiguration](./Set-NetIPHttpsConfiguration.md)
-

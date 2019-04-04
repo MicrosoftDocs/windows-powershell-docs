@@ -151,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DnsClient](./Get-DnsClient.md)
 
 [Set-DnsClient](./Set-DnsClient.md)
-

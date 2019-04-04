@@ -199,4 +199,3 @@ The MSFT_SmbConnection object represent the per share per user logon per credent
 [Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)
 
 [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
-

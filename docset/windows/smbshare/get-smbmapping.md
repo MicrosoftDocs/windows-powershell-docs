@@ -163,4 +163,3 @@ This cmdlet returns a **MSFT_SmbMapping** object that represents the mappings cr
 [New-SmbMapping](./New-SmbMapping.md)
 
 [Remove-SmbMapping](./Remove-SmbMapping.md)
-

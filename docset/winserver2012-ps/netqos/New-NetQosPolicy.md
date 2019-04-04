@@ -809,4 +809,3 @@ The MSFT_NetQosPolicySettingData object contains a QoS policy.
 [Remove-NetQosPolicy](./Remove-NetQosPolicy.md)
 
 [Set-NetQosPolicy](./Set-NetQosPolicy.md)
-

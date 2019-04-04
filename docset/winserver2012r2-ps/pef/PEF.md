@@ -70,4 +70,3 @@ Starts a PEF Trace Session.
 
 ### [Stop-PefTraceSession](./Stop-PefTraceSession.md)
 Stops a PEF Trace Session.
-

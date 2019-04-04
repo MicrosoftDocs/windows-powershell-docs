@@ -74,4 +74,3 @@ The Get-WBSchedule cmdlet displays the list of **Datetime** objects in the **WBP
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBSchedule](./Set-WBSchedule.md)
-

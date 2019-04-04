@@ -148,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Unpublish-WmsDesktop](./Unpublish-WmsDesktop.md)
 
 [Publish-WmsDesktop](./Publish-WmsDesktop.md)
-

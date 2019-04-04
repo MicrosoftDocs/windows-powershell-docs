@@ -63,4 +63,3 @@ Accept wildcard characters: False
 [Add-WssRemoteWebAccessLink](./Add-WssRemoteWebAccessLink.md)
 
 [Get-WssRemoteWebAccessLink](./Get-WssRemoteWebAccessLink.md)
-

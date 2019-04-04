@@ -336,4 +336,3 @@ This is defined in the **PnpDeviceProperty.Type** enum.
 [Enable-PnpDevice](./Enable-PnpDevice.md)
 
 [Get-PnpDevice](./Get-PnpDevice.md)
-

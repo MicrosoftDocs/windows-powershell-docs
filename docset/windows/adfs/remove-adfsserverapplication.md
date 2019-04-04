@@ -157,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsServerApplication](./Get-AdfsServerApplication.md)
 
 [Set-AdfsServerApplication](./Set-AdfsServerApplication.md)
-

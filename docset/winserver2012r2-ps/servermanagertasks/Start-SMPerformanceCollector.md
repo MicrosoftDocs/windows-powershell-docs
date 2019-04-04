@@ -153,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SMPerformanceCollector](./Get-SMPerformanceCollector.md)
 
 [Stop-SMPerformanceCollector](./Stop-SMPerformanceCollector.md)
-

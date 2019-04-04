@@ -109,4 +109,3 @@ A class structure that represents a set of AD FS 2.0 claim rules.
 [Set-ADFSClaimsProviderTrust](./Set-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

@@ -304,4 +304,3 @@ This cmdlet returns an object that represents the initiator port you specified.
 [Select-Object](http://go.microsoft.com/fwlink/?LinkID=113387)
 
 [Set-InitiatorPort](./Set-InitiatorPort.md)
-

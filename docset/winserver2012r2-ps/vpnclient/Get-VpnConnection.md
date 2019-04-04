@@ -334,4 +334,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Remove-VpnConnection](./Remove-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

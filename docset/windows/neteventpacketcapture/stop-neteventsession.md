@@ -216,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-NetEventSession](./Start-NetEventSession.md)
 
 [Add-NetEventProvider](./Add-NetEventProvider.md)
-

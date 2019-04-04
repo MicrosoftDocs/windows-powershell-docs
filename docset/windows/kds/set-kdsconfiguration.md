@@ -294,4 +294,3 @@ This cmdlet returns a **KdsServerConfiguration** object that contains configurat
 [Get-KdsRootKey](./Get-KdsRootKey.md)
 
 [Test-KdsRootKey](./Test-KdsRootKey.md)
-

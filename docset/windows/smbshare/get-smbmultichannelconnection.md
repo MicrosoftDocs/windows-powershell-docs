@@ -254,4 +254,3 @@ The **MSFT_SmbMultiChannelConnection** object represents a pair of a client and 
 ## RELATED LINKS
 
 [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
-

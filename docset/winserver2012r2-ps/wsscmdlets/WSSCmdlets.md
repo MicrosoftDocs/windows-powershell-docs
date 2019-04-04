@@ -694,4 +694,3 @@ Uninstalls a VPN server.
 
 ### [Update-O365AccountName](./Update-O365AccountName.md)
 Updates the email name for an office_365_2 user account.
-

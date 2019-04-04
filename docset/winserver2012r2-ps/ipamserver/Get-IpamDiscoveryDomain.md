@@ -146,4 +146,3 @@ Represents an Active Directory domain in which IPAM discovers infrastructure ser
 [Remove-IpamDiscoveryDomain](./Remove-IpamDiscoveryDomain.md)
 
 [Set-IpamDiscoveryDomain](./Set-IpamDiscoveryDomain.md)
-

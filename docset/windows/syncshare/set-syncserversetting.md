@@ -259,4 +259,3 @@ This cmdlet returns an object that changes the synchronization configuration on 
 ## RELATED LINKS
 
 [Get-SyncServerSetting](./Get-SyncServerSetting.md)
-

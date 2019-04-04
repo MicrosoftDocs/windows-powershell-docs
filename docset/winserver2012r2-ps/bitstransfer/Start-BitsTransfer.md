@@ -688,4 +688,3 @@ Once the BITS service is restarted, the file transfer job will recover and resum
 [Set-BitsTransfer](./Set-BitsTransfer.md)
 
 [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
-

@@ -140,4 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-MsmqMessage](./New-MsmqMessage.md)
 
 [Receive-MsmqQueue](./Receive-MsmqQueue.md)
-

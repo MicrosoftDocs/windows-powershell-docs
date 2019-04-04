@@ -279,4 +279,3 @@ A user object is received by the *Identity* parameter.
 [New-ADUser](./New-ADUser.md)
 
 [Set-ADUser](./Set-ADUser.md)
-

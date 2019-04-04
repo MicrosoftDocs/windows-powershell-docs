@@ -353,4 +353,3 @@ Get-ADDomain \<domain\>| Get-Member
 [Set-ADDomain](./Set-ADDomain.md)
 
 [Set-ADDomainMode](./Set-ADDomainMode.md)
-

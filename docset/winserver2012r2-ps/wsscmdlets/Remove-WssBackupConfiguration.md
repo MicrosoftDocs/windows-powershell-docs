@@ -101,4 +101,3 @@ This cmdlet generates an object that indicates whether to include or exclude fil
 [Get-WssBackupConfiguration](./Get-WssBackupConfiguration.md)
 
 [New-WssBackupConfiguration](./New-WssBackupConfiguration.md)
-

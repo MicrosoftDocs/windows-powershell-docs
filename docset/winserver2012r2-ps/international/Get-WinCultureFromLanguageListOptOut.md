@@ -58,4 +58,3 @@ A Boolean value that reports the status of this setting.
 ## RELATED LINKS
 
 [Set-WinCultureFromLanguageListOptOut](./Set-WinCultureFromLanguageListOptOut.md)
-

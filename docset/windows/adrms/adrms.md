@@ -33,4 +33,3 @@ Removes configuration for an existing deployment of AD RMS Server.
 
 ### [Update-ADRMS](./Update-ADRMS.md)
 Updates an existing deployment of AD RMS Server.
-

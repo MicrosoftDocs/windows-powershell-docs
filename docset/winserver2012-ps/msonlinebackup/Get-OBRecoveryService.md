@@ -65,4 +65,3 @@ Accept wildcard characters: False
 [Start-OBRegistration](./Start-OBRegistration.md)
 
 [Start-OBRecovery](./Start-OBRecovery.md)
-

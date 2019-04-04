@@ -185,4 +185,3 @@ Accept wildcard characters: False
 [Get-NlbClusterPortRule](./Get-NlbClusterPortRule.md)
 
 [Set-NlbClusterPortRule](./Set-NlbClusterPortRule.md)
-

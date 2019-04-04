@@ -63,4 +63,3 @@ Accept wildcard characters: False
 [Get-MsmqOutgoingQueue](./Get-MsmqOutgoingQueue.md)
 
 [Resume-MsmqOutgoingQueue](./Resume-MsmqOutgoingQueue.md)
-

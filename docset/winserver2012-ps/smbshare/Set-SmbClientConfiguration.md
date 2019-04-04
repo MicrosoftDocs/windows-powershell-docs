@@ -507,4 +507,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SmbClientConfiguration](./Get-SmbClientConfiguration.md)
-

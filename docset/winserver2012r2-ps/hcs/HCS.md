@@ -133,4 +133,3 @@ Stops a controller.
 
 ### [Test-HcsNtp](./Test-HcsNtp.md)
 Attempts to synchronize the time to the NTP server.
-

@@ -224,4 +224,3 @@ This cmdlet returns a **VirtualMachine** object, if you specify the **Passthru**
 ## RELATED LINKS
 
 [Get-VM](./Get-VM.md)
-

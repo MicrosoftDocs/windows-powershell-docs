@@ -179,4 +179,3 @@ Accept wildcard characters: False
 [Set-NlbClusterPortRule](./Set-NlbClusterPortRule.md)
 
 [Set-NlbClusterPortRuleNodeWeight](./Set-NlbClusterPortRuleNodeWeight.md)
-

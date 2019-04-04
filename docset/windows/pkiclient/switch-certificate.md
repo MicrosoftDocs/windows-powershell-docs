@@ -161,4 +161,3 @@ The **Certificate** object can either be provided as a Path object to a certific
 [New-CertificateNotificationTask](./New-CertificateNotificationTask.md)
 
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
-

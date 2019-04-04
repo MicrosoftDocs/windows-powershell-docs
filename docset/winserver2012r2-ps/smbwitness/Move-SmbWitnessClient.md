@@ -190,4 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SmbWitnessClient](./Get-SmbWitnessClient.md)
 
 [Get-SmbOpenFile](../smbshare/Get-SmbOpenFile.md)
-

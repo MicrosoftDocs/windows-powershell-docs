@@ -410,4 +410,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Get-ADUser](./Get-ADUser.md)
 
 [Remove-ADGroupMember](./Remove-ADGroupMember.md)
-

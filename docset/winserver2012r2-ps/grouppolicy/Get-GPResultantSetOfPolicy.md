@@ -208,4 +208,3 @@ Get-GPResultantSetOfPolicy returns an RSoP object.
 * The Get-GPResultantSetOfPolicy cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
 
 ## RELATED LINKS
-

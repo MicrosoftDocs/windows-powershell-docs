@@ -107,4 +107,3 @@ This cmdlet generates a class structure that represents the certificate objects 
 [Set-AdfsCertificate](./Set-AdfsCertificate.md)
 
 [Update-AdfsCertificate](./Update-AdfsCertificate.md)
-

@@ -54,4 +54,3 @@ For more information about the CultureInfo object, see CultureInfo Classhttp://g
 ## RELATED LINKS
 
 [Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307)
-

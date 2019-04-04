@@ -109,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MbamReport](get-mbamreport.md)
 
 [Test-MbamReport](test-mbamreport.md)
-

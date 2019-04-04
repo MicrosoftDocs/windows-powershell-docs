@@ -132,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AppxPackage](./Get-AppxPackage.md)
 
 [Remove-AppxPackage](./Remove-AppxPackage.md)
-

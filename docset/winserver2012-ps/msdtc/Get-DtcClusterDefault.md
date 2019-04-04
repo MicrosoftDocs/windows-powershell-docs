@@ -80,4 +80,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-DtcClusterDefault](./Set-DtcClusterDefault.md)
-

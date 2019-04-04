@@ -159,4 +159,3 @@ The settings location template ID.
 [Test-UevTemplate](./Test-UevTemplate.md)
 
 [Update-UevTemplate](./Update-UevTemplate.md)
-

@@ -88,4 +88,3 @@ None
 [Get-WBBareMetalRecovery](./Get-WBBareMetalRecovery.md)
 
 [Remove-WBBareMetalRecovery](./Remove-WBBareMetalRecovery.md)
-

@@ -127,4 +127,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Install-VamtConfirmationId](./Install-VamtConfirmationId.md)
-

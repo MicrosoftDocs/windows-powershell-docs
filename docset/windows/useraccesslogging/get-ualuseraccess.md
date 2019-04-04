@@ -265,4 +265,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-UalDailyUserAccess](./Get-UalDailyUserAccess.md)
 
 [Get-UalDeviceAccess](./Get-UalDeviceAccess.md)
-

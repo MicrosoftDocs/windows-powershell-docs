@@ -227,4 +227,3 @@ By default, this cmdlet produces no output objects.
 [Get-PrinterPort](./Get-PrinterPort.md)
 
 [Add-PrinterPort](./Add-PrinterPort.md)
-

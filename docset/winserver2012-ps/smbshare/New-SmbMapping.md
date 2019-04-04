@@ -250,4 +250,3 @@ The MSFT_SmbMapping object represents the newly created SMB mapping.
 [Get-SmbMapping](./Get-SmbMapping.md)
 
 [Remove-SmbMapping](./Remove-SmbMapping.md)
-

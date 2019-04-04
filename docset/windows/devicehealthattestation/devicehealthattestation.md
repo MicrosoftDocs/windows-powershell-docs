@@ -69,4 +69,3 @@ Sets authentication schemas.
 
 ### [Uninstall-DeviceHealthAttestation](./Uninstall-DeviceHealthAttestation.md)
 Uninstalls the Device Health Attestation service.
-

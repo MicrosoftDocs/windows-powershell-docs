@@ -120,4 +120,3 @@ The MSFT_NetQosDcbxSettingData output object contains the DCBX setting configure
 ## RELATED LINKS
 
 [Set-NetQosDcbxSetting](./Set-NetQosDcbxSetting.md)
-

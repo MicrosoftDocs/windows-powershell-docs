@@ -208,4 +208,3 @@ This cmdlet returns an instance of the **IpamDnsResourceRecord** object.
 [Get-IpamDnsServer](./Get-IpamDnsServer.md)
 
 [Get-IpamDnsZone](./Get-IpamDnsZone.md)
-

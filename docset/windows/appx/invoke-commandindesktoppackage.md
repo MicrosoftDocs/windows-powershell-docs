@@ -132,4 +132,3 @@ System.Management.Automation.SwitchParameter
 ## RELATED LINKS
 
 [Get-AppxPackage](./Get-AppxPackage.md)
-

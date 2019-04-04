@@ -305,4 +305,3 @@ The New-WBBackupTarget cmdlet creates a **WBBackupTarget** object, which you can
 [Get-WBDisk](./Get-WBDisk.md)
 
 [Get-WBVolume](./Get-WBVolume.md)
-

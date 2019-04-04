@@ -579,4 +579,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamReport](enable-mbamreport.md)
 
 [Enable-MbamDatabase](enable-mbamdatabase.md)
-

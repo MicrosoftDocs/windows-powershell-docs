@@ -270,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DnsServerQueryResolutionPolicy](./Get-DnsServerQueryResolutionPolicy.md)
 
 [Set-DnsServerQueryResolutionPolicy](./Set-DnsServerQueryResolutionPolicy.md)
-

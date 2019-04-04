@@ -85,4 +85,3 @@ Accept wildcard characters: False
 [Get-WASJob](./Get-WASJob.md)
 
 [Get-WASJobInstance](./Get-WASJobInstance.md)
-

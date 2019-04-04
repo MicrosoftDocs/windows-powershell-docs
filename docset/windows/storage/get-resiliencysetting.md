@@ -195,4 +195,3 @@ The Get-ResiliencySetting cmdlet returns objects representing resiliency setting
 [Set-ResiliencySetting](./Set-ResiliencySetting.md)
 
 [Set-StoragePool](./Set-StoragePool.md)
-

@@ -155,4 +155,3 @@ Updates the claims provider trust from federation metadata.
 
 ### [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
 Updates the relying party trust from federation metadata.
-

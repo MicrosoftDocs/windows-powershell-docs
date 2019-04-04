@@ -43,4 +43,3 @@ This command retrieves the WinSAT processor subscore.
 ## RELATED LINKS
 
 [Set-WssWinSatCpuScore](./Set-WssWinSatCpuScore.md)
-

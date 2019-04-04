@@ -280,4 +280,3 @@ Represents an address block in IPAM.
 [Set-IpamBlock](./Set-IpamBlock.md)
 
 [Add-IpamBlock](./Add-IpamBlock.md)
-

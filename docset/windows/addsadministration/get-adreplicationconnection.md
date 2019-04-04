@@ -252,4 +252,3 @@ A connection object is received by the *Identity* parameter.
 ## RELATED LINKS
 
 [Set-ADReplicationConnection](./Set-ADReplicationConnection.md)
-

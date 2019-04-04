@@ -417,4 +417,3 @@ Deregisters a DNS server from a DNS application directory partition.
 
 ### [Update-DnsServerTrustPoint](./Update-DnsServerTrustPoint.md)
 Updates all trust points in a DNS trust anchor zone.
-

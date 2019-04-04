@@ -97,4 +97,3 @@ Accept wildcard characters: False
 [Move-ClusterGroup](./Move-ClusterGroup.md)
 
 [Start-ClusterResource](./Start-ClusterResource.md)
-

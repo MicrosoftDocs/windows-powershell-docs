@@ -284,4 +284,3 @@ The DnsClientNRPTRule object consists of the following properties:
 [Remove-DAClientDnsConfiguration](./Remove-DAClientDnsConfiguration.md)
 
 [Set-DAClientDnsConfiguration](./Set-DAClientDnsConfiguration.md)
-

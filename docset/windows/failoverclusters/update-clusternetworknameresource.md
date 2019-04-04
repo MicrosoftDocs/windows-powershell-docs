@@ -111,4 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterResource](./Get-ClusterResource.md)
 
 [Update-ClusterIPResource](./Update-ClusterIPResource.md)
-

@@ -286,4 +286,3 @@ This cmdlet accepts a string or an array of strings as input.
 [Test-PswaAuthorizationRule](./Test-PswaAuthorizationRule.md)
 
 [Install-PswaWebApplication](./Install-PswaWebApplication.md)
-

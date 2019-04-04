@@ -110,4 +110,3 @@ Accept wildcard characters: False
 [Get-WssBackupConfiguration](./Get-WssBackupConfiguration.md)
 
 [Remove-WssBackupConfiguration](./Remove-WssBackupConfiguration.md)
-

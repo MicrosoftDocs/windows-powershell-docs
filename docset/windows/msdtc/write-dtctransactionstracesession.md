@@ -119,4 +119,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-DtcTransactionsTraceSession](./Start-DtcTransactionsTraceSession.md)
 
 [Stop-DtcTransactionsTraceSession](./Stop-DtcTransactionsTraceSession.md)
-

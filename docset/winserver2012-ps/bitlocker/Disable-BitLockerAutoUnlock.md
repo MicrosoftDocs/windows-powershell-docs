@@ -109,4 +109,3 @@ Accept wildcard characters: False
 [Enable-BitLockerAutoUnlock](./Enable-BitLockerAutoUnlock.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

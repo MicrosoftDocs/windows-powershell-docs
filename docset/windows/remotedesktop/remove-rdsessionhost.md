@@ -143,4 +143,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-RDSessionHost](./Get-RDSessionHost.md)
 
 [Set-RDSessionHost](./Set-RDSessionHost.md)
-

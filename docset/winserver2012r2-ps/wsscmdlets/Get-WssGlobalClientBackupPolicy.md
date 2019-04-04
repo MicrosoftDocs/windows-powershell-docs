@@ -80,4 +80,3 @@ This cmdlet generates the PC backup configuration.
 ## RELATED LINKS
 
 [Set-WssGlobalClientBackupPolicy](./Set-WssGlobalClientBackupPolicy.md)
-

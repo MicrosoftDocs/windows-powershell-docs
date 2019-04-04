@@ -308,4 +308,3 @@ A class structure for representing a claim description object for the Federation
 [Get-AdfsClaimDescription](./Get-AdfsClaimDescription.md)
 
 [Remove-AdfsClaimDescription](./Remove-AdfsClaimDescription.md)
-

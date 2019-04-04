@@ -164,4 +164,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Register-ClusteredScheduledTask](./Register-ClusteredScheduledTask.md)
 
 [Set-ClusteredScheduledTask](./Set-ClusteredScheduledTask.md)
-

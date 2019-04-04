@@ -84,4 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-NpsRemediationServer](./Remove-NpsRemediationServer.md)
 
 [Remove-NpsRemediationServerGroup](./Remove-NpsRemediationServerGroup.md)
-

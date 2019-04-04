@@ -88,4 +88,3 @@ Writes the recovery information of a BitLocker encrypted volume to the Microsoft
 
 ### [Write-MbamTPMInformation](write-mbamtpminformation.md)
 Writes Trusted Platform Module (TPM) information to a Microsoft BitLocker Administration and Monitoring (MBAM) server.
-

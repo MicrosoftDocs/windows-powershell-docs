@@ -78,4 +78,3 @@ This cmdlet returns the **globalData** of the network switch as **CimInstance** 
 ## NOTES
 
 ## RELATED LINKS
-

@@ -205,4 +205,3 @@ The DAEntryPoint object that contains the IP address used for global load balanc
 [Set-DAEntryPoint](./Set-DAEntryPoint.md)
 
 [Set-DAEntryPointDC](./Set-DAEntryPointDC.md)
-

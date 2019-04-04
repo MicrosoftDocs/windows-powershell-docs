@@ -510,4 +510,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-ADDSDomainController](./Install-ADDSDomainController.md)
 
 [Install-ADDSForest](./Install-ADDSForest.md)
-

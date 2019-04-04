@@ -191,4 +191,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Enable-NetAdapterIPsecOffload](./Enable-NetAdapterIPsecOffload.md)
 
 [Set-NetAdapterIPsecOffload](./Set-NetAdapterIPsecOffload.md)
-

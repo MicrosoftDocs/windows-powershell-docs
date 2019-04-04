@@ -354,4 +354,3 @@ By default, this cmdlet does not generate any output.
 [Get-ADPrincipalGroupMembership](./Get-ADPrincipalGroupMembership.md)
 
 [Remove-ADPrincipalGroupMembership](./Remove-ADPrincipalGroupMembership.md)
-

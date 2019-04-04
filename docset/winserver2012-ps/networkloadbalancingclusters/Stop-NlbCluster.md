@@ -149,4 +149,3 @@ Accept wildcard characters: False
 [Start-NlbCluster](./Start-NlbCluster.md)
 
 [Suspend-NlbCluster](./Suspend-NlbCluster.md)
-

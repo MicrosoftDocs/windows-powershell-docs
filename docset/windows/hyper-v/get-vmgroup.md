@@ -150,4 +150,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-VMGroup](./Remove-VMGroup.md)
 
 [Rename-VMGroup](./Rename-VMGroup.md)
-

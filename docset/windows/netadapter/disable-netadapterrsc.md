@@ -297,4 +297,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterRsc](./Get-NetAdapterRsc.md)
 
 [Set-NetAdapterRsc](./Set-NetAdapterRsc.md)
-

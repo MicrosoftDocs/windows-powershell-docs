@@ -49,4 +49,3 @@ Locale: en-US
 
 ### [Uninstall-TrustedProvisioningCertificate](Uninstall-TrustedProvisioningCertificate.md)
 {{Manually Enter Uninstall-TrustedProvisioningCertificate Description Here}}
-

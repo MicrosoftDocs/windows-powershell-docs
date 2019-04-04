@@ -144,4 +144,3 @@ Accept wildcard characters: False
 [Get-NlbClusterVip](./Get-NlbClusterVip.md)
 
 [Remove-NlbClusterVip](./Remove-NlbClusterVip.md)
-

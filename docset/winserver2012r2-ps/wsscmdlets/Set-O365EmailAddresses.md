@@ -101,4 +101,3 @@ Description: email addresses of the user
 ## RELATED LINKS
 
 [Get-O365EmailAddresses](./Get-O365EmailAddresses.md)
-

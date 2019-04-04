@@ -130,4 +130,3 @@ This cmdlet generates the file history configuration settings stored on the serv
 ## RELATED LINKS
 
 [Get-WssFileHistoryManagementStatus](./Get-WssFileHistoryManagementStatus.md)
-

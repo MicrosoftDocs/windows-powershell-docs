@@ -237,4 +237,3 @@ This cmdlet generates a **Template** object that contains the general informatio
 [Unregister-UevTemplate](./Unregister-UevTemplate.md)
 
 [Update-UevTemplate](./Update-UevTemplate.md)
-

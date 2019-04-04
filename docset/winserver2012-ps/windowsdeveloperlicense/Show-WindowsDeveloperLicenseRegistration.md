@@ -54,4 +54,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WindowsDeveloperLicense](./Get-WindowsDeveloperLicense.md)
 
 [Unregister-WindowsStoreDeveloperLicense](00000000-0000-0000-0000-000000000000)
-

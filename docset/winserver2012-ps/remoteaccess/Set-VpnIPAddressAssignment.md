@@ -292,4 +292,3 @@ Each pool consists of a starting IP address and an ending IP address.
 [Add-VpnIPAddressRange](./Add-VpnIPAddressRange.md)
 
 [Remove-VpnIPAddressRange](./Remove-VpnIPAddressRange.md)
-

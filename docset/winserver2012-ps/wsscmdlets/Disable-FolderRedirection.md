@@ -80,4 +80,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Enable-FolderRedirection](./Enable-FolderRedirection.md)
-

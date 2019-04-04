@@ -333,4 +333,3 @@ You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *Inp
 [Resize-VirtualDisk](./Resize-VirtualDisk.md)
 
 [Show-VirtualDisk](./Show-VirtualDisk.md)
-

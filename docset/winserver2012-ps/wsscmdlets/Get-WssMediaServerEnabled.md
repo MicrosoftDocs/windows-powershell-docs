@@ -45,4 +45,3 @@ Media streaming is either enabled or disabled.
 ## RELATED LINKS
 
 [Set-WssMediaServerEnabled](./Set-WssMediaServerEnabled.md)
-

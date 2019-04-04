@@ -167,4 +167,3 @@ This cmdlet returns a Teredo configuration object.
 [Reset-NetTeredoConfiguration](./Reset-NetTeredoConfiguration.md)
 
 [Set-NetTeredoConfiguration](./Set-NetTeredoConfiguration.md)
-

@@ -296,4 +296,3 @@ This object includes the following properties:
 [New-AdfsWebTheme](./New-AdfsWebTheme.md)
 
 [Remove-AdfsWebTheme](./Remove-AdfsWebTheme.md)
-

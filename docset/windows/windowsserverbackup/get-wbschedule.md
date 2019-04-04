@@ -87,4 +87,3 @@ This cmdlet returns a list of **Datetime** objects in the **WBPolicy** object.
 [New-WBPolicy](./New-WBPolicy.md)
 
 [Set-WBSchedule](./Set-WBSchedule.md)
-

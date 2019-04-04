@@ -79,4 +79,3 @@ Removes a scheduled task from a failover cluster.
 
 ### [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
 Unregisters a scheduled task.
-

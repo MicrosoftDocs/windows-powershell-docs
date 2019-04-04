@@ -324,4 +324,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-Net6to4Configuration](./Get-Net6to4Configuration.md)
 
 [Set-Net6to4Configuration](./Set-Net6to4Configuration.md)
-

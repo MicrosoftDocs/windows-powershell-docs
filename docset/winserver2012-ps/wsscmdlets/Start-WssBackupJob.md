@@ -47,4 +47,3 @@ This command starts a manual server backup.
 [Get-WssBackupJob](./Get-WssBackupJob.md)
 
 [Stop-WssBackupJob](./Stop-WssBackupJob.md)
-

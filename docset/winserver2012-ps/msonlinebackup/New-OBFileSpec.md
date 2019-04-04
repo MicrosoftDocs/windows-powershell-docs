@@ -122,4 +122,3 @@ This can be added to the OBPolicy object as a source for backup.
 [Set-OBRetentionPolicy](./Set-OBRetentionPolicy.md)
 
 [Set-OBSchedule](./Set-OBSchedule.md)
-

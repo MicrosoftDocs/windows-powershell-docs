@@ -603,4 +603,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ADClaimType](./Get-ADClaimType.md)
 
 [New-ADClaimType](./New-ADClaimType.md)
-

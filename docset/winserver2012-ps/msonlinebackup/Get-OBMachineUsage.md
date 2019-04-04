@@ -52,4 +52,3 @@ This example gets the storage consumed on mob_name_1 by the current protected se
 [Get-OBMachineSetting](./Get-OBMachineSetting.md)
 
 [Set-OBMachineUsage](00000000-0000-0000-0000-000000000000)
-

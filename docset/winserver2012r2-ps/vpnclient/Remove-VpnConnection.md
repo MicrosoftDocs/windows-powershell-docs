@@ -290,4 +290,3 @@ The VpnConnection object contains the VpnConnection configuration settings.
 [Set-VpnConnection](./Set-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

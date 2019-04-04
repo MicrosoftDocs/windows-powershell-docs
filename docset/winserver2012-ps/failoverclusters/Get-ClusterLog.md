@@ -172,4 +172,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Set-ClusterLog](./Set-ClusterLog.md)
-

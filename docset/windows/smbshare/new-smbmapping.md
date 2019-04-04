@@ -252,4 +252,3 @@ This cmdlet returns a **MSFT_SmbMapping** object that represents the newly creat
 [Get-SmbMapping](./Get-SmbMapping.md)
 
 [Remove-SmbMapping](./Remove-SmbMapping.md)
-

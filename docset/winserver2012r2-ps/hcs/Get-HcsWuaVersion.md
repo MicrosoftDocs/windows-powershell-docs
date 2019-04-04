@@ -63,4 +63,3 @@ The HcsWuaVersion object has the following properties:
 [Get-HcsUpdateStatus](./Get-HcsUpdateStatus.md)
 
 [Start-HcsUpdate](./Start-HcsUpdate.md)
-

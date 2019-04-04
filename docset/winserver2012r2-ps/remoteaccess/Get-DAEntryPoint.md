@@ -160,4 +160,3 @@ The DAEntryPoint object contains the following:
 [Set-DAEntryPoint](./Set-DAEntryPoint.md)
 
 [Set-DAEntryPointDC](./Set-DAEntryPointDC.md)
-

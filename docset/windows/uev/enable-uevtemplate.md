@@ -115,4 +115,3 @@ The settings location template ID.
 [Unregister-UevTemplate](./Unregister-UevTemplate.md)
 
 [Update-UevTemplate](./Update-UevTemplate.md)
-

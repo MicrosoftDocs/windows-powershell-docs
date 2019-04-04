@@ -181,4 +181,3 @@ This array of objects contains IPAM IP addresses.
 [Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Import-IpamAddress](./Import-IpamAddress.md)
-

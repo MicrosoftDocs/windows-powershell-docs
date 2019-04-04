@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-HgsAttestationHostGroup](./Get-HgsAttestationHostGroup.md)
 
 [Remove-HgsAttestationHostGroup](./Remove-HgsAttestationHostGroup.md)
-

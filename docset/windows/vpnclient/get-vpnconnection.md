@@ -335,4 +335,3 @@ This cmdlet returns a **VpnConnection** object that contains the VPN connection 
 [Remove-VpnConnection](./Remove-VpnConnection.md)
 
 [New-EapConfiguration](./New-EapConfiguration.md)
-

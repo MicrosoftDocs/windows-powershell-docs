@@ -113,4 +113,3 @@ Accept wildcard characters: False
 [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Get-WsusProduct](./Get-WsusProduct.md)
-

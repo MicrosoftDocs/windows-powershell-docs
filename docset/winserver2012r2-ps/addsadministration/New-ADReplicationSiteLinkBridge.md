@@ -338,4 +338,3 @@ A site link bridge object that is a template for the new site link bridge object
 [Remove-ADReplicationSiteLinkBridge](./Remove-ADReplicationSiteLinkBridge.md)
 
 [Set-ADReplicationSiteLinkBridge](./Set-ADReplicationSiteLinkBridge.md)
-

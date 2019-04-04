@@ -162,4 +162,3 @@ A class structure that represents a SAML endpoint resource object.
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
-

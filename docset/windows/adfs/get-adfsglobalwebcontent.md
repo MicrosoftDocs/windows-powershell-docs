@@ -126,4 +126,3 @@ The object includes the following properties:
 [Set-AdfsGlobalWebContent](./Set-AdfsGlobalWebContent.md)
 
 [Remove-AdfsGlobalWebContent](./Remove-AdfsGlobalWebContent.md)
-

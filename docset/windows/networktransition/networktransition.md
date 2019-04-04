@@ -126,4 +126,3 @@ Sets the NAT64 configuration on a computer.
 
 ### [Set-NetTeredoConfiguration](./Set-NetTeredoConfiguration.md)
 Modifies the Teredo configuration of a computer or a Group Policy object (GPO).
-

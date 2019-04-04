@@ -285,4 +285,3 @@ Following properties can be added/modified for a load balancer resource:
 ## NOTES
 
 ## RELATED LINKS
-

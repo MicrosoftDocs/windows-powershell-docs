@@ -244,4 +244,3 @@ The MSFT_SmbShareAccessControlEntry object is returned.
 [Grant-SmbShareAccess](./Grant-SmbShareAccess.md)
 
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
-

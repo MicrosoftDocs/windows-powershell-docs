@@ -124,4 +124,3 @@ Accept wildcard characters: False
 [Set-DnsServer](./Set-DnsServer.md)
 
 [Test-DnsServer](./Test-DnsServer.md)
-

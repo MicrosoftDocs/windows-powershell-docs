@@ -148,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetSwitchTeamMember](./Get-NetSwitchTeamMember.md)
 
 [Remove-NetSwitchTeamMember](./Remove-NetSwitchTeamMember.md)
-

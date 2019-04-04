@@ -80,4 +80,3 @@ The HCSUpdateSearchResults object has the following properties:
 [Start-HcsUpdate](./Start-HcsUpdate.md)
 
 [Start-HcsHotfix](./Start-HcsHotfix.md)
-

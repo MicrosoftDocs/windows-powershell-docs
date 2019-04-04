@@ -93,4 +93,3 @@ Accept wildcard characters: False
 [Get-WssBackupTarget](./Get-WssBackupTarget.md)
 
 [Remove-WssBackupTarget](./Remove-WssBackupTarget.md)
-

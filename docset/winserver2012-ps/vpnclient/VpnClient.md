@@ -33,4 +33,3 @@ Changes the configuration settings of an existing VPN connection profile.
 
 ### [Set-VpnConnectionProxy](./Set-VpnConnectionProxy.md)
 Configures web proxy information for the specified VPN connection.
-

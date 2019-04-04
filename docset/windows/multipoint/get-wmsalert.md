@@ -80,4 +80,3 @@ This cmdlet returns a **WmsAlert** collection as a **PSObject** collection.
 ## NOTES
 
 ## RELATED LINKS
-

@@ -157,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ADFSCertificate](./Remove-ADFSCertificate.md)
 
 [Update-ADFSCertificate](./Update-ADFSCertificate.md)
-

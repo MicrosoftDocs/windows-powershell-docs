@@ -112,4 +112,3 @@ This cmdlet returns a **TpmObject** object that contains the following informati
 ## RELATED LINKS
 
 [Enable-TpmAutoProvisioning](./Enable-TpmAutoProvisioning.md)
-

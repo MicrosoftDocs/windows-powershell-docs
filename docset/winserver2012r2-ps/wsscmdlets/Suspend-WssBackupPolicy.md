@@ -129,4 +129,3 @@ This cmdlet generates the **BackupPolicy** parameter value.
 [Resume-WssBackupPolicy](./Resume-WssBackupPolicy.md)
 
 [Set-WssBackupPolicy](./Set-WssBackupPolicy.md)
-

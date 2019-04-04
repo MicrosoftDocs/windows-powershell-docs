@@ -568,4 +568,3 @@ A site link object that was retrieved by using the Get-ADReplicationSitLink cmdl
 [New-ADReplicationSiteLink](./New-ADReplicationSiteLink.md)
 
 [Remove-ADReplicationSiteLink](./Remove-ADReplicationSiteLink.md)
-

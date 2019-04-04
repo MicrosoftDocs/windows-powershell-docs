@@ -187,4 +187,3 @@ The full **X509Certificate2** object associated with this key certificate.
 [Remove-HgsKeyProtectionCertificate](./Remove-HgsKeyProtectionCertificate.md)
 
 [Set-HgsKeyProtectionCertificate](./Set-HgsKeyProtectionCertificate.md)
-

@@ -108,4 +108,3 @@ This cmdlet returns the computer name of the default transactions coordinator.
 ## RELATED LINKS
 
 [Set-DtcDefault](./Set-DtcDefault.md)
-

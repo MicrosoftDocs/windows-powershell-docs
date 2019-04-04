@@ -378,4 +378,3 @@ This cmdlet outputs an object that represents the newly created volume.
 * To create a volume on a new storage space with enclosure-awareness enabled (providing resiliency for an entire JBOD enclosure failure), use the **Set-StoragePool** cmdlet with the **-EnclosureAwareDefault $true** parameter to set the storage pool to create storage spaces with enclosure awareness enabled by default.
 
 ## RELATED LINKS
-

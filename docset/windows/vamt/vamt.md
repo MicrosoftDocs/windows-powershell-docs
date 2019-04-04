@@ -60,4 +60,3 @@ Installs the specified product key on a product or a group of products.
 
 ### [Update-VamtProduct](./Update-VamtProduct.md)
 Updates the VAMT database by querying the computers for their current status.
-

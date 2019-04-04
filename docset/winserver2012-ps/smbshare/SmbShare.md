@@ -99,4 +99,3 @@ Removes all of the deny access control entries (ACEs) for the trustee from the s
 
 ### [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
 Forces the Server Message Block (SMB) client to update the multi-channel-related information.
-

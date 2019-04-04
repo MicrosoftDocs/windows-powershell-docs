@@ -235,4 +235,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Enable-NetAdapterBinding](./Enable-NetAdapterBinding.md)
 
 [Set-NetAdapterBinding](./Set-NetAdapterBinding.md)
-

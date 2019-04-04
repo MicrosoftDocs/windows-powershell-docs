@@ -40,4 +40,3 @@ Tests if the local computer can function as a Host Guardian Service server node.
 
 ### [Uninstall-HgsServer](Uninstall-HgsServer.md)
 Removes a local node from a Host Guardian Service and from the domain.
-

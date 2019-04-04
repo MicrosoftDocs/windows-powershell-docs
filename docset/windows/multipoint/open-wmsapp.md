@@ -139,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Close-WmsApp](./Close-WmsApp.md)
 
 [Get-WmsApp](./Get-WmsApp.md)
-

@@ -317,4 +317,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SmbOpenFile](./Get-SmbOpenFile.md)
-

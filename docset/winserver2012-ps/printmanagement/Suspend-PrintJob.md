@@ -251,4 +251,3 @@ This cmdlet produces no output.
 [Restart-PrintJob](./Restart-PrintJob.md)
 
 [Resume-PrintJob](./Resume-PrintJob.md)
-

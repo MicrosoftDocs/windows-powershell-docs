@@ -85,4 +85,3 @@ Description: local network account name of user
 [Get-WssMsoAssignedUser](./Get-WssMsoAssignedUser.md)
 
 [Remove-WssMsoGroupAssignment](./Remove-WssMsoGroupAssignment.md)
-

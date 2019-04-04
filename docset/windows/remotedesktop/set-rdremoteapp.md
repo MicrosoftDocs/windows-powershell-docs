@@ -323,4 +323,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-RDRemoteApp](./New-RDRemoteApp.md)
 
 [Remove-RDRemoteApp](./Remove-RDRemoteApp.md)
-

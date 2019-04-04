@@ -107,4 +107,3 @@ This cmdlet generates a class structure that represents the organization object 
 [Get-AdfsProperties](./Get-AdfsProperties.md)
 
 [Set-AdfsProperties](./Set-AdfsProperties.md)
-

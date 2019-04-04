@@ -93,4 +93,3 @@ This cmdlet returns the account information from the hosted email provider.
 [Remove-HostedEmailAccount](./Remove-HostedEmailAccount.md)
 
 [Clear-AssignedHostedEmailAccount](./Clear-AssignedHostedEmailAccount.md)
-

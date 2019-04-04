@@ -270,4 +270,3 @@ If the *PassThru* parameter is specified, the cmdlet returns the updated **MSFT_
 [Add-NetLbfoTeamMember](./Add-NetLbfoTeamMember.md)
 
 [Remove-NetLbfoTeamMember](./Remove-NetLbfoTeamMember.md)
-

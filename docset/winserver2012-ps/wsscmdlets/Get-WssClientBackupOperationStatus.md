@@ -55,4 +55,3 @@ This command gets the status of backup-related operations for the current server
 [Start-WssClientBackup](./Start-WssClientBackup.md)
 
 [Stop-WssClientBackup](./Stop-WssClientBackup.md)
-

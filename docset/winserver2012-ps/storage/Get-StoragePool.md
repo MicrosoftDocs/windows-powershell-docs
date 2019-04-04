@@ -357,4 +357,3 @@ The **Get-StoragePool** cmdlet returns objects representing storage pools.
 [Remove-StoragePool](./Remove-StoragePool.md)
 
 [Set-StoragePool](./Set-StoragePool.md)
-

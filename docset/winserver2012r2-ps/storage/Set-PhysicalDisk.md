@@ -253,4 +253,3 @@ You can use the pipeline operator to pass an MSFT_PhysicalDisk object to the Inp
 [Remove-PhysicalDisk](./Remove-PhysicalDisk.md)
 
 [Reset-PhysicalDisk](./Reset-PhysicalDisk.md)
-

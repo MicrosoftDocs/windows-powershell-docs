@@ -129,4 +129,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=289623)
 
 [Get-WsusClassification](./Get-WsusClassification.md)
-

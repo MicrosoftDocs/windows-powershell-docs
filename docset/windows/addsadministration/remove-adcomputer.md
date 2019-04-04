@@ -288,4 +288,3 @@ A computer object is received by the *Identity* parameter.
 [Set-ADComputer](./Set-ADComputer.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

@@ -58,4 +58,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-WssWinSatCpuScore](./Get-WssWinSatCpuScore.md)
-

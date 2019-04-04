@@ -124,4 +124,3 @@ Accept wildcard characters: False
 [Stop-ClusterResource](./Stop-ClusterResource.md)
 
 [Suspend-ClusterResource](./Suspend-ClusterResource.md)
-

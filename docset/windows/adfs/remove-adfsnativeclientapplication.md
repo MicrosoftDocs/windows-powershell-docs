@@ -158,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsNativeClientApplication](./Get-AdfsNativeClientApplication.md)
 
 [Set-AdfsNativeClientApplication](./Set-AdfsNativeClientApplication.md)
-

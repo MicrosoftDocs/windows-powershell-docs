@@ -79,4 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssUserGroup](./Get-WssUserGroup.md)
 
 [Set-WssUserGroup](./Set-WssUserGroup.md)
-

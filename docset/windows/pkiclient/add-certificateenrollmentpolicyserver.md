@@ -241,4 +241,3 @@ The **EnrollmentPolicyServer** object contains information about the certificate
 [Get-CertificateEnrollmentPolicyServer](./Get-CertificateEnrollmentPolicyServer.md)
 
 [Remove-CertificateEnrollmentPolicyServer](./Remove-CertificateEnrollmentPolicyServer.md)
-

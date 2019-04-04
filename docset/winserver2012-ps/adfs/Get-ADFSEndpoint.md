@@ -97,4 +97,3 @@ A class structure that represents the endpoints for the Federation Service.
 [Enable-ADFSEndpoint](./Enable-ADFSEndpoint.md)
 
 [Set-ADFSEndpoint](./Set-ADFSEndpoint.md)
-

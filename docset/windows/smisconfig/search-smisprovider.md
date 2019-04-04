@@ -121,4 +121,3 @@ This cmdlet returns an array of URIs that represent devices that the cmdlet disc
 [Register-SmisProvider](./Register-SmisProvider.md)
 
 [Unregister-SmisProvider](./Unregister-SmisProvider.md)
-

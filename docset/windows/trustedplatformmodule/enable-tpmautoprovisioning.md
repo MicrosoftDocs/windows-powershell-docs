@@ -77,4 +77,3 @@ This cmdlet returns a **TpmObject** object that contains the following informati
 ## RELATED LINKS
 
 [Disable-TpmAutoProvisioning](./Disable-TpmAutoProvisioning.md)
-

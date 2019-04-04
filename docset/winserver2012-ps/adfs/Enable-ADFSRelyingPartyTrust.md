@@ -171,4 +171,3 @@ A class structure that represents relying party trusts for the Federation Servic
 [Set-ADFSRelyingPartyTrust](./Set-ADFSRelyingPartyTrust.md)
 
 [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
-

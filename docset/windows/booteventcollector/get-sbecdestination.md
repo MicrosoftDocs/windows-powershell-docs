@@ -125,4 +125,3 @@ Otherwise will be empty.
 [Get-SbecForwarding](./Get-SbecForwarding.md)
 
 [Get-SbecHistory](./Get-SbecHistory.md)
-

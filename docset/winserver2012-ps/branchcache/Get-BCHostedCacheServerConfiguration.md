@@ -104,4 +104,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Disable-BC](./Disable-BC.md)
 
 [Reset-BC](./Reset-BC.md)
-

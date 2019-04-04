@@ -90,4 +90,3 @@ The Add-WBSystemState**Add-WBSystemState** cmdlet accepts a **WBPolicy** object 
 [Get-WBSystemState](./Get-WBSystemState.md)
 
 [Remove-WBSystemState](./Remove-WBSystemState.md)
-

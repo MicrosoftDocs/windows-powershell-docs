@@ -99,4 +99,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Export-HwCertTestCollectionToXml](./Export-HwCertTestCollectionToXml.md)
 
 [New-HwCertProjectDefinitionFile](./New-HwCertProjectDefinitionFile.md)
-

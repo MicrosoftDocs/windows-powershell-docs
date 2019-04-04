@@ -96,4 +96,3 @@ This cmdlet returns the virtual server name of the cluster default transactions 
 ## RELATED LINKS
 
 [Get-DtcClusterDefault](./Get-DtcClusterDefault.md)
-

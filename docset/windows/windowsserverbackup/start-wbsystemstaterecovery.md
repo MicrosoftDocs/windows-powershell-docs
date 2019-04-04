@@ -206,4 +206,3 @@ After completion of recovery, run Get-WBJob with the *Previous* parameter and an
 [Get-WBBackupSet](./Get-WBBackupSet.md)
 
 [Get-WBJob](./Get-WBJob.md)
-

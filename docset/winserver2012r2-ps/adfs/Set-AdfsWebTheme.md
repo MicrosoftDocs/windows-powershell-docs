@@ -279,4 +279,3 @@ AdditionalFileResources: **IDictionary\<string, byte\[\]\>**
 [New-AdfsWebTheme](./New-AdfsWebTheme.md)
 
 [Remove-AdfsWebTheme](./Remove-AdfsWebTheme.md)
-

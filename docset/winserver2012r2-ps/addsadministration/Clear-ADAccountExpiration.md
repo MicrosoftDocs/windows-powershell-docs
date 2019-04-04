@@ -295,4 +295,3 @@ Derived types, such as the following are also accepted:
 [Get-ADComputer](./Get-ADComputer.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

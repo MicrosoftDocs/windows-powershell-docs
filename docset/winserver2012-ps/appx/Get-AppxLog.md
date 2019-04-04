@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)
 
 [Troubleshooting packaging, deployment, and query of Windows Store apps](http://go.microsoft.com/fwlink/?LinkId=271201)
-

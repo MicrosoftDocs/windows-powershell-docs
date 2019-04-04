@@ -30,4 +30,3 @@ Gets the UEFI variable values related to Secure Boot such as the SetupMode, Secu
 
 ### [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
 Sets the Secure Boot-related UEFI variables such as Platform Key, Key Exchange Key, Signature Database and Forbidden Signature Database.
-

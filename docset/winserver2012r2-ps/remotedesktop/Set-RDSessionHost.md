@@ -113,4 +113,3 @@ None.
 [Get-RDSessionHost](./Get-RDSessionHost.md)
 
 [Remove-RDSessionHost](./Remove-RDSessionHost.md)
-

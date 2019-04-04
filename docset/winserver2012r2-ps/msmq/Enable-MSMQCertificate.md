@@ -129,4 +129,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MsmqCertificate](./Get-MSMQCertificate.md)
 
 [Remove-MsmqCertificate](./Remove-MsmqCertificate.md)
-

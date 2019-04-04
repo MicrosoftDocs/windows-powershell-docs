@@ -137,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AdfsGlobalWebContent](./Set-AdfsGlobalWebContent.md)
 
 [Remove-AdfsGlobalWebContent](./Remove-AdfsGlobalWebContent.md)
-

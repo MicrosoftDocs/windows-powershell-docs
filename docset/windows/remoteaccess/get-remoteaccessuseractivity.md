@@ -271,4 +271,3 @@ A separate instance of the RemoteAccessUserActivity object is output for every c
 ## RELATED LINKS
 
 [Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
-

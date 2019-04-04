@@ -66,4 +66,3 @@ Modifies a DNS client Name Resolution Policy Table (NRPT) rule for the specified
 
 ### [Set-DnsClientServerAddress](./Set-DnsClientServerAddress.md)
 Sets DNS server addresses associated with the TCP/IP properties on an interface.
-

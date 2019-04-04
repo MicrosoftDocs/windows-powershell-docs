@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-NetSwitchTeamMember](./Add-NetSwitchTeamMember.md)
 
 [Get-NetSwitchTeamMember](./Get-NetSwitchTeamMember.md)
-

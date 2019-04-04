@@ -118,4 +118,3 @@ This object includes the following properties:
 [Remove-AdfsWebTheme](./Remove-AdfsWebTheme.md)
 
 [Set-AdfsWebTheme](./Set-AdfsWebTheme.md)
-

@@ -67,4 +67,3 @@ Sets the IPsec parameters of a VPN connection.
 
 ### [Set-VpnConnectionProxy](./Set-VpnConnectionProxy.md)
 Configures web proxy information for the specified VPN connection.
-

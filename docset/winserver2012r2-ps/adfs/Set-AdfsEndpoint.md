@@ -190,4 +190,3 @@ Depending on the type of endpoint, you can enable or disable the endpoint or con
 [Enable-AdfsEndpoint](./Enable-AdfsEndpoint.md)
 
 [Get-AdfsEndpoint](./Get-AdfsEndpoint.md)
-

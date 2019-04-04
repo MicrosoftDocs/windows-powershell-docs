@@ -85,4 +85,3 @@ Accept wildcard characters: False
 [Get-WssBackupTarget](./Get-WssBackupTarget.md)
 
 [New-WssBackupTarget](./New-WssBackupTarget.md)
-

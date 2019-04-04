@@ -160,4 +160,3 @@ Following settings of a network interface can be retrieved:
 ## NOTES
 
 ## RELATED LINKS
-

@@ -271,4 +271,3 @@ Accept wildcard characters: False
 [Register-ClusteredScheduledTask](./Register-ClusteredScheduledTask.md)
 
 [Unregister-ClusteredScheduledTask](./Unregister-ClusteredScheduledTask.md)
-

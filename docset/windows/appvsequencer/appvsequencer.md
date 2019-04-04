@@ -36,4 +36,3 @@ Creates a new App-V package.
 
 ### [Update-AppvSequencerPackage](./Update-AppvSequencerPackage.md)
 Upgrades virtual application packages.
-

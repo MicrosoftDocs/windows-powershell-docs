@@ -173,4 +173,3 @@ This cmdlet returns a structure containing the current configuration.
 [Get-WmsScheduledUpdate](./Get-WmsScheduledUpdate.md)
 
 [Set-WmsScheduledUpdate](./Set-WmsScheduledUpdate.md)
-

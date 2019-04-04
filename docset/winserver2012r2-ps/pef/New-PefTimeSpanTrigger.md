@@ -112,4 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-PefTraceSession](./Stop-PefTraceSession.md)
 
 [Start-PefTraceSession](./Start-PefTraceSession.md)
-

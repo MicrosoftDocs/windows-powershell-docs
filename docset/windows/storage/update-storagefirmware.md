@@ -198,4 +198,3 @@ This cmdlet returns extended status error information as a **String** from the s
 ## RELATED LINKS
 
 [Get-StorageFirmwareInformation](./Get-StorageFirmwareInformation.md)
-

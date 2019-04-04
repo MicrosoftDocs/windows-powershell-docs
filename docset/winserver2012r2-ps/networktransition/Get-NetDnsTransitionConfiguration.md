@@ -137,4 +137,3 @@ The MSFT_NetDnsTransitionConfiguration object contains the DNS64 configuration.
 [Reset-NetDnsTransitionConfiguration](./Reset-NetDnsTransitionConfiguration.md)
 
 [Set-NetDnsTransitionConfiguration](./Set-NetDnsTransitionConfiguration.md)
-

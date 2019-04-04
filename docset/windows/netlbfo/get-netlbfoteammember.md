@@ -188,4 +188,3 @@ This cmdlet returns an array of **MSFT_NetLbfoTeamMember** objects.
 [Remove-NetLbfoTeamMember](./Remove-NetLbfoTeamMember.md)
 
 [Set-NetLbfoTeamMember](./Set-NetLbfoTeamMember.md)
-

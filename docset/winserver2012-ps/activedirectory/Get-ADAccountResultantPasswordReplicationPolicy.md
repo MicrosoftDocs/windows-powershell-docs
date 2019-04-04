@@ -384,4 +384,3 @@ Returns an ADResultantPasswordReplicationPolicy enum value that represents the r
 [Get-ADUser](./Get-ADUser.md)
 
 [Search-ADAccount](./Search-ADAccount.md)
-

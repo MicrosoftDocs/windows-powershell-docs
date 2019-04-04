@@ -192,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-BC](./Disable-BC.md)
 
 [Reset-BC](./Reset-BC.md)
-

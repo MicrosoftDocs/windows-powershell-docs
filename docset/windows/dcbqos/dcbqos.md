@@ -62,4 +62,3 @@ Sets the traffic class settings.
 ### [Switch-NetQosFlowControl](./Switch-NetQosFlowControl.md)
 
 ### [Switch-NetQosTrafficClass](./Switch-NetQosTrafficClass.md)
-

@@ -177,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Rename-VMGroup](./Rename-VMGroup.md)
 
 [Add-VMGroupMember](./Add-VMGroupMember.md)
-

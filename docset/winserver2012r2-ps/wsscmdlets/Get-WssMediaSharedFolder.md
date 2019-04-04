@@ -60,4 +60,3 @@ This cmdlet generates a shared folder object with information specific to media.
 [Get-WssMediaServerEnabled](./Get-WssMediaServerEnabled.md)
 
 [Get-WssMediaLibraryName](./Get-WssMediaLibraryName.md)
-

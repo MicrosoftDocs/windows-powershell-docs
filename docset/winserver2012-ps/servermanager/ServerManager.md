@@ -30,4 +30,3 @@ Installs one or more Windows Server roles, role services, or features on either 
 
 ### [Uninstall-WindowsFeature](./Uninstall-WindowsFeature.md)
 Uninstalls specified Windows Server roles, role services, and features from a computer that is running Windows Server 2012.
-

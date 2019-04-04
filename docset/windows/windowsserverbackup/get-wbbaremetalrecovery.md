@@ -88,4 +88,3 @@ This cmdlet returns a Boolean value to indicate whether the server can run backu
 [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md)
 
 [Remove-WBBareMetalRecovery](./Remove-WBBareMetalRecovery.md)
-

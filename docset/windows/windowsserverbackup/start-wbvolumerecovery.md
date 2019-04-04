@@ -183,4 +183,3 @@ Type `Get-WBJob -Previous 1` to get the status after the recovery operation comp
 [Get-WBVolume](./Get-WBVolume.md)
 
 [Resume-WBVolumeRecovery](./Resume-WBVolumeRecovery.md)
-

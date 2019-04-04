@@ -222,4 +222,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-OdbcDsn](./Remove-OdbcDsn.md)
 
 [Set-OdbcDsn](./Set-OdbcDsn.md)
-

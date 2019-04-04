@@ -83,4 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-RDVirtualDesktopCollectionJob](./Stop-RDVirtualDesktopCollectionJob.md)
 
 [Get-RDVirtualDesktopCollection](./Get-RDVirtualDesktopCollection.md)
-

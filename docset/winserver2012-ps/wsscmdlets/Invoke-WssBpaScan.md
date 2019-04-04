@@ -44,4 +44,3 @@ This command starts a BPA scan.
 ## RELATED LINKS
 
 [Get-WssBpaScanResult](./Get-WssBpaScanResult.md)
-

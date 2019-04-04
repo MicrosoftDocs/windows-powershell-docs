@@ -288,4 +288,3 @@ This cmdlet returns an object that represents an address block in IPAM.
 [Set-IpamBlock](./Set-IpamBlock.md)
 
 [Add-IpamBlock](./Add-IpamBlock.md)
-

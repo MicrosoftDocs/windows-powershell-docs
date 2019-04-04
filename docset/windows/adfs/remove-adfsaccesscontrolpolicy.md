@@ -141,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AdfsAccessControlPolicy](./New-AdfsAccessControlPolicy.md)
 
 [Set-AdfsAccessControlPolicy](./Set-AdfsAccessControlPolicy.md)
-

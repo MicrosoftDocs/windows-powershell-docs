@@ -95,4 +95,3 @@ This cmdlet returns the BackupPolicy parameter.
 [Get-WssBackupSchedule](./Get-WssBackupSchedule.md)
 
 [Remove-WssBackupSchedule](./Remove-WssBackupSchedule.md)
-

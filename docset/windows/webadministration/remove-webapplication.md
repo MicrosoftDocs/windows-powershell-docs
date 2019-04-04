@@ -122,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WebApplication](./Get-WebApplication.md)
 
 [New-WebApplication](./New-WebApplication.md)
-

@@ -99,4 +99,3 @@ Unregisters a settings location template from Microsoft User Experience Virtuali
 
 ### [Update-UevTemplate](./Update-UevTemplate.md)
 Updates settings location templates in UE-V.
-

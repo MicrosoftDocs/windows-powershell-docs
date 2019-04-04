@@ -107,4 +107,3 @@ This cmdlet returns the **Datetime** list that you use to update the policy.
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBSchedule](./Get-WBSchedule.md)
-

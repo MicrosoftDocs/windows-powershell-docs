@@ -155,4 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-RDVirtualDesktopIdleCount](./Get-RDVirtualDesktopIdleCount.md)
 
 [Get-RDVirtualDesktop](./Get-RDVirtualDesktop.md)
-

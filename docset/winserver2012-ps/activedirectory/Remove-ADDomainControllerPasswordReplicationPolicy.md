@@ -241,4 +241,3 @@ To bypass prompting for confirmation before removal, you can specify -Confirm:$f
 [Get-ADDomainController](./Get-ADDomainController.md)
 
 [Get-ADDomainControllerPasswordReplicationPolicy](./Get-ADDomainControllerPasswordReplicationPolicy.md)
-

@@ -131,4 +131,3 @@ The output is an array of X509Certificate2\[\] objects.
 [Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=113397)
 
 [Export-Certificate](./Export-Certificate.md)
-

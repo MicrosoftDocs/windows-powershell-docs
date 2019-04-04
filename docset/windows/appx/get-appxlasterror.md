@@ -68,4 +68,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
 
 [Get-AppxLog](./Get-AppxLog.md)
-

@@ -79,4 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-HcsNtpClientServerAddress](./Get-HcsNtpClientServerAddress.md)
 
 [Set-HcsNtpClientServerAddress](./Set-HcsNtpClientServerAddress.md)
-

@@ -261,4 +261,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-DtcClusterTMMapping](./Get-DtcClusterTMMapping.md)
 
 [Remove-DtcClusterTMMapping](./Remove-DtcClusterTMMapping.md)
-

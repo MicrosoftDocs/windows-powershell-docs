@@ -371,4 +371,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-ADDSDomainController](./Install-ADDSDomainController.md)
 
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
-

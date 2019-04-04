@@ -52,4 +52,3 @@ A Boolean value that reports the status of the **HTTP Accept Language from Langu
 ## NOTES
 
 ## RELATED LINKS
-

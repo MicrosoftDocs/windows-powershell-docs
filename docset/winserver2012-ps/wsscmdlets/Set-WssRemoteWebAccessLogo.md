@@ -60,4 +60,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-WssRemoteWebAccessLogo](./Get-WssRemoteWebAccessLogo.md)
-

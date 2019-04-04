@@ -94,4 +94,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssUserGroup](./Get-WssUserGroup.md)
 
 [Remove-WssUserGroup](./Remove-WssUserGroup.md)
-

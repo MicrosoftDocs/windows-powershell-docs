@@ -297,4 +297,3 @@ If you specify the **Passthru** parameter, this cmdlet outputs a Partition objec
 [Remove-PartitionAccessPath](./Remove-PartitionAccessPath.md)
 
 [Set-Partition](./Set-Partition.md)
-

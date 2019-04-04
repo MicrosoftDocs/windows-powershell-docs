@@ -77,4 +77,3 @@ Accept wildcard characters: False
 [Join-DtcDiagnosticResourceManager](./Join-DtcDiagnosticResourceManager.md)
 
 [Stop-DtcDiagnosticResourceManager](./Stop-DtcDiagnosticResourceManager.md)
-

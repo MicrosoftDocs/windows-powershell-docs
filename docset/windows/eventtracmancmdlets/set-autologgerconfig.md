@@ -419,4 +419,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AutologgerConfig](./New-AutologgerConfig.md)
 
 [Remove-AutologgerConfig](./Remove-AutologgerConfig.md)
-

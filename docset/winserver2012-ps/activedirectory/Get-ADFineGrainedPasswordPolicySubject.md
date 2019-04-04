@@ -222,4 +222,3 @@ Returns principal objects that represent the users and groups to which the fine 
 ## RELATED LINKS
 
 [Get-ADFineGrainedPasswordPolicy](./Get-ADFineGrainedPasswordPolicy.md)
-

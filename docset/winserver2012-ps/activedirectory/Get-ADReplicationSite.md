@@ -382,4 +382,3 @@ A site object is received by the Identity parameter.
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
 
 [Set-ADReplicationSite](./Set-ADReplicationSite.md)
-

@@ -30,4 +30,3 @@ Retrieves information about the SMB clients connected to the SMB witness servers
 
 ### [Move-SmbWitnessClient](./Move-SmbWitnessClient.md)
 Requests an SMB client to move the associated SMB connection to a specified cluster node.
-

@@ -217,4 +217,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-EtwTraceProvider](./Remove-EtwTraceProvider.md)
 
 [Set-EtwTraceProvider](./Set-EtwTraceProvider.md)
-

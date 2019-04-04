@@ -103,4 +103,3 @@ Accept wildcard characters: False
 [Join-DtcDiagnosticResourceManager](./Join-DtcDiagnosticResourceManager.md)
 
 [Start-DtcDiagnosticResourceManager](./Start-DtcDiagnosticResourceManager.md)
-

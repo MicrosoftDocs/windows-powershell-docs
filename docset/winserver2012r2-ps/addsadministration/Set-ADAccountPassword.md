@@ -366,4 +366,3 @@ Derived types, such as the following are also accepted:
 [Search-ADAccount](./Search-ADAccount.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

@@ -92,4 +92,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Publish-WmsDesktop](./Publish-WmsDesktop.md)
 
 [Show-WmsDesktop](./Show-WmsDesktop.md)
-

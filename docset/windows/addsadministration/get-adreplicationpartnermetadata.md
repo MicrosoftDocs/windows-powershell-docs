@@ -304,4 +304,3 @@ A class structure that represents Active Directory replication partner metadata 
 * The default behavior for this cmdlet is to prompt for server identity. Other tools that have been made available in prior releases of Windows Server to manage replication partnerships include Active Directory Sites and Services and the Repadmin.exe tool. If this cmdlet is aliased, it should use ReplSummary as the alias name value.
 
 ## RELATED LINKS
-

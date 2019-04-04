@@ -65,4 +65,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.md)
 
 [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md)
-

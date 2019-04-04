@@ -89,4 +89,3 @@ If the computer does not support Secure Boot or is a BIOS (non-UEFI) computer, t
 [Get-SecureBootUEFI](./Get-SecureBootUEFI.md)
 
 [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
-

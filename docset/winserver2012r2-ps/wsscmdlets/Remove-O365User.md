@@ -117,4 +117,3 @@ Description: local user name
 [Enable-O365User](./Enable-O365User.md)
 
 [Disable-O365User](./Disable-O365User.md)
-

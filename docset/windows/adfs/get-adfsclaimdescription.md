@@ -126,4 +126,3 @@ This cmdlet generates a class structure that represents the claim description re
 [Remove-AdfsClaimDescription](./Remove-AdfsClaimDescription.md)
 
 [Set-AdfsClaimDescription](./Set-AdfsClaimDescription.md)
-

@@ -313,4 +313,3 @@ The output object will have the updated SR-IOV settings.
 [Get-NetAdapterSriov](./Get-NetAdapterSriov.md)
 
 [Get-NetAdapterSriovVf](./Get-NetAdapterSriovVf.md)
-

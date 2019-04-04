@@ -218,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-UalHyperV](./Get-UalHyperV.md)
 
 [Get-Ual](./Get-Ual.md)
-

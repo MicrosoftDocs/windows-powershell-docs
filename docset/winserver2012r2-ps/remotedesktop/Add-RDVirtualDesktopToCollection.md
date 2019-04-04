@@ -182,4 +182,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-RDVirtualDesktopFromCollection](./Remove-RDVirtualDesktopFromCollection.md)
 
 [Get-RDVirtualDesktopCollection](./Get-RDVirtualDesktopCollection.md)
-

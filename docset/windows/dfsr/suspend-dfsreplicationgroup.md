@@ -176,4 +176,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-DfsReplicationGroup](./Set-DfsReplicationGroup.md)
 
 [Sync-DfsReplicationGroup](./Sync-DfsReplicationGroup.md)
-

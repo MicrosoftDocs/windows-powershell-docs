@@ -154,4 +154,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-PswaAuthorizationRule](./Remove-PswaAuthorizationRule.md)
 
 [Test-PswaAuthorizationRule](./Test-PswaAuthorizationRule.md)
-

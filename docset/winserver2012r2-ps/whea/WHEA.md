@@ -28,4 +28,3 @@ Retrieves the Windows Hardware Error Architecture (WHEA) memory policies in effe
 
 ### [Set-WheaMemoryPolicy](./Set-WheaMemoryPolicy.md)
 Sets the Windows Hardware Error Architecture (WHEA) memory policy on a local or remote computer.
-

@@ -57,4 +57,3 @@ This cmdlet returns BPA issues.
 ## RELATED LINKS
 
 [Invoke-WssBpaScan](./Invoke-WssBpaScan.md)
-

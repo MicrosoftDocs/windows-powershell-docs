@@ -147,4 +147,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [New-HgsGuardian](./New-HgsGuardian.md)
 
 [Remove-HgsGuardian](./Remove-HgsGuardian.md)
-

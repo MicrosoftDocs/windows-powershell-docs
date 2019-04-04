@@ -270,4 +270,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SmbSession](./Get-SmbSession.md)
-

@@ -92,4 +92,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsDeviceRegistration](./Get-AdfsDeviceRegistration.md)
 
 [Set-AdfsDeviceRegistration](./Set-AdfsDeviceRegistration.md)
-

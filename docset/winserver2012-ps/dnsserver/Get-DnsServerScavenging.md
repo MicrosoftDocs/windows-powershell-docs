@@ -112,4 +112,3 @@ Accept wildcard characters: False
 [Set-DnsServerScavenging](./Set-DnsServerScavenging.md)
 
 [Start-DnsServerScavenging](./Start-DnsServerScavenging.md)
-

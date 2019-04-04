@@ -228,4 +228,3 @@ Only if the *PassThru* parameter is specified does this cmdlet return the **MSFT
 [New-NetQosPolicy](./New-NetQosPolicy.md)
 
 [Set-NetQosPolicy](./Set-NetQosPolicy.md)
-

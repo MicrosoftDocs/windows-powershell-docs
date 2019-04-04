@@ -190,4 +190,3 @@ Accept wildcard characters: False
 [Test-Dtc](./Test-Dtc.md)
 
 [Uninstall-Dtc](./Uninstall-Dtc.md)
-

@@ -133,4 +133,3 @@ A **TpmObject** object contains the following information:
 [ConvertTo-TpmOwnerAuth](./ConvertTo-TpmOwnerAuth.md)
 
 [Set-TpmOwnerAuth](./Set-TpmOwnerAuth.md)
-

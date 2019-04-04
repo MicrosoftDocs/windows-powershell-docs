@@ -345,4 +345,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-BgpRouter](./Add-BgpRouter.md)
 
 [Remove-BgpRouter](./Remove-BgpRouter.md)
-

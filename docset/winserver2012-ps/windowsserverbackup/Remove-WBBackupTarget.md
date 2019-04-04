@@ -106,4 +106,3 @@ The Remove-WBBackupTarget cmdlet displays a list of **WBBackupTarget** objects l
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [New-WBBackupTarget](./New-WBBackupTarget.md)
-

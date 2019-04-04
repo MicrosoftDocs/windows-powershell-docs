@@ -93,4 +93,3 @@ The output type is **Microsoft.RemoteDesktopServices.Management.RDVirtualDesktop
 [Remove-RDVirtualDesktopCollection](./Remove-RDVirtualDesktopCollection.md)
 
 [Update-RDVirtualDesktopCollection](./Update-RDVirtualDesktopCollection.md)
-

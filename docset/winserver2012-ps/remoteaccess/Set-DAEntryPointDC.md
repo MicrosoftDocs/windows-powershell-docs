@@ -275,4 +275,3 @@ The **EntryPointName** parameter has a specified value.
 [Remove-DAEntryPoint](./Remove-DAEntryPoint.md)
 
 [Set-DAEntryPoint](./Set-DAEntryPoint.md)
-

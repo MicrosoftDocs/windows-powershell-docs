@@ -229,4 +229,3 @@ The NetInterfaceInfo object has the following properties:
 [Enable-HcsNetInterface](./Enable-HcsNetInterface.md)
 
 [Set-HcsNetInterface](./Set-HcsNetInterface.md)
-

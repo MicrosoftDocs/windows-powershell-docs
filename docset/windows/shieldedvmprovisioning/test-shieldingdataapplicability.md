@@ -93,4 +93,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Initialize-ShieldedVM](./Initialize-ShieldedVM.md)
 
 [New-ShieldedVMSpecializationDataFile](./New-ShieldedVMSpecializationDataFile.md)
-

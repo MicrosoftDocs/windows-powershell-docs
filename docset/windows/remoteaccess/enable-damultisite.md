@@ -347,4 +347,3 @@ The DAMultisite object contains the entire multi-site deployment configuration a
 [Get-DAMultiSite](./Get-DAMultiSite.md)
 
 [Set-DAMultiSite](./Set-DAMultiSite.md)
-

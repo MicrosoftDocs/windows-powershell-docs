@@ -61,4 +61,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WssClientBmrMediaGenerationJob](./Get-WssClientBmrMediaGenerationJob.md)
 
 [Start-WssClientBmrMediaGenerationJob](./Start-WssClientBmrMediaGenerationJob.md)
-

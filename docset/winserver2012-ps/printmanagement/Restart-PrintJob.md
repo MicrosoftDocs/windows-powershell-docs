@@ -250,4 +250,3 @@ This cmdlet produces no output.
 [Suspend-PrintJob](./Suspend-PrintJob.md)
 
 [Resume-PrintJob](./Resume-PrintJob.md)
-

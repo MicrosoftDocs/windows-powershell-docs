@@ -194,4 +194,3 @@ This cmdlet returns a CIM object that contains the DA entry point table item.
 [Rename-DAEntryPointTableItem](./Rename-DAEntryPointTableItem.md)
 
 [Remove-DAEntryPointTableItem](./Remove-DAEntryPointTableItem.md)
-

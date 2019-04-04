@@ -59,4 +59,3 @@ This cmdlet generates file history configuration settings.
 [Set-WssFileHistoryConfiguration](./Set-WssFileHistoryConfiguration.md)
 
 [Get-WssFileHistoryManagementStatus](./Get-WssFileHistoryManagementStatus.md)
-

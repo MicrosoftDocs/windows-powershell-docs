@@ -324,4 +324,3 @@ This cmdlet generates an object that represents resiliency settings if you speci
 [Get-ResiliencySetting](./Get-ResiliencySetting.md)
 
 [Get-StoragePool](./Get-StoragePool.md)
-

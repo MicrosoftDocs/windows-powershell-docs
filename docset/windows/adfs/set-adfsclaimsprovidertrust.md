@@ -800,4 +800,3 @@ A class structure that represents a claims provider trust.
 [Remove-AdfsClaimsProviderTrust](./Remove-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

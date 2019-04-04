@@ -268,4 +268,3 @@ Accept wildcard characters: False
 [Get-DnsServerScavenging](./Get-DnsServerScavenging.md)
 
 [Start-DnsServerScavenging](./Start-DnsServerScavenging.md)
-

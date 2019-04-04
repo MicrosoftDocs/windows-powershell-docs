@@ -138,4 +138,3 @@ The **MSFT_NetDnsTransitionConfiguration** object contains the DNS64 configurati
 [Reset-NetDnsTransitionConfiguration](./Reset-NetDnsTransitionConfiguration.md)
 
 [Set-NetDnsTransitionConfiguration](./Set-NetDnsTransitionConfiguration.md)
-

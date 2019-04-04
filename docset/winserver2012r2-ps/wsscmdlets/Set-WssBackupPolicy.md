@@ -132,4 +132,3 @@ This cmdlet generates a server backup policy object that specifies backup option
 [Resume-WssBackupPolicy](./Resume-WssBackupPolicy.md)
 
 [Suspend-WssBackupPolicy](./Suspend-WssBackupPolicy.md)
-

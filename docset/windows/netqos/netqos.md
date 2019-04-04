@@ -36,4 +36,3 @@ Removes a network Quality of Service (QoS) policy.
 
 ### [Set-NetQosPolicy](./Set-NetQosPolicy.md)
 Updates the QoS policy settings.
-

@@ -256,4 +256,3 @@ A claim transform policy object is received by the Identity parameter.
 * By default, this cmdlet has the -Confirm parameter set, which prompts you to confirm before a removal of the specified object type can occur. To bypass prompting for confirmation before removal, you can specify -Confirm:$false when using this cmdlet.
 
 ## RELATED LINKS
-

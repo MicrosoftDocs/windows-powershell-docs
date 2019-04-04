@@ -146,4 +146,3 @@ The input object specified by the **Results** parameter.
 [Get-BpaResult](./Get-BpaResult.md)
 
 [Invoke-BpaModel](./Invoke-BpaModel.md)
-

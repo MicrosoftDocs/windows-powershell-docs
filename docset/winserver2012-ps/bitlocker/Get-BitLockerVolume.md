@@ -120,4 +120,3 @@ Accept wildcard characters: False
 [Enable-BitLocker](./Enable-BitLocker.md)
 
 [Enable-BitLockerAutoUnlock](./Enable-BitLockerAutoUnlock.md)
-

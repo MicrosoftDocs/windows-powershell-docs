@@ -81,4 +81,3 @@ Description: local user name
 [Get-O365AssignedUser](./Get-O365AssignedUser.md)
 
 [Set-O365AssignedUser](./Set-O365AssignedUser.md)
-

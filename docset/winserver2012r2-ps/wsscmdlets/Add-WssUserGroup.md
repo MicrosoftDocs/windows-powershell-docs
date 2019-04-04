@@ -120,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WssUserGroup](./Remove-WssUserGroup.md)
 
 [Set-WssUserGroup](./Set-WssUserGroup.md)
-

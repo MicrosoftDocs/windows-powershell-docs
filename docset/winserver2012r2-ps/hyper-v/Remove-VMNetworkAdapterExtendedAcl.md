@@ -300,4 +300,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-VM](./Get-VM.md)
 
 [Get-VMNetworkAdapter](./Get-VMNetworkAdapter.md)
-

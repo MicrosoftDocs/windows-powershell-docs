@@ -148,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WBVirtualMachine](./Get-WBVirtualMachine.md)
 
 [Remove-WBVirtualMachine](./Remove-WBVirtualMachine.md)
-

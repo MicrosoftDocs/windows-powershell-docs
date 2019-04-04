@@ -156,4 +156,3 @@ This cmdlet accepts controlled GPOs.
 [Publish-ControlledGpo](./Publish-ControlledGpo.md)
 
 [Unlock-ControlledGpo](./Unlock-ControlledGpo.md)
-

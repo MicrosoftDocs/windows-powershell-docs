@@ -162,4 +162,3 @@ None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter\[\
 ## NOTES
 
 ## RELATED LINKS
-

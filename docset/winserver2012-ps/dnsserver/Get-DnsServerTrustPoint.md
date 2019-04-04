@@ -127,4 +127,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Update-DnsServerTrustPoint](./Update-DnsServerTrustPoint.md)
-

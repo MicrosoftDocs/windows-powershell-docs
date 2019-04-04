@@ -97,4 +97,3 @@ This cmdlet returns a **WmsRunningApp** collection as **PSObject** collection.
 [Close-WmsApp](./Close-WmsApp.md)
 
 [Open-WmsApp](./Open-WmsApp.md)
-

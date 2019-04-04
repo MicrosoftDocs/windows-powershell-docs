@@ -52,4 +52,3 @@ This example creates a new empty backup policy.
 ## RELATED LINKS
 
 [Set-OBPolicy](./Set-OBPolicy.md)
-

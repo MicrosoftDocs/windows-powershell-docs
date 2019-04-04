@@ -41,4 +41,3 @@ This command gets the password policy from a server and stores it in the variabl
 ## NOTES
 
 ## RELATED LINKS
-

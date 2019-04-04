@@ -274,4 +274,3 @@ This cmdlet returns an MSFT_StorageTier object that contains details about the t
 [Resize-StorageTier](./Resize-StorageTier.md)
 
 [Get-VirtualDisk](./Get-VirtualDisk.md)
-

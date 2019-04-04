@@ -363,4 +363,3 @@ The only way to restore these objects is though an authoritative restore from an
 [Disable-ADOptionalFeature](./Disable-ADOptionalFeature.md)
 
 [Get-ADOptionalFeature](./Get-ADOptionalFeature.md)
-

@@ -224,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-VMNetworkAdapterTeamMapping](./Remove-VMNetworkAdapterTeamMapping.md)
 
 [Set-VMNetworkAdapterTeamMapping](./Set-VMNetworkAdapterTeamMapping.md)
-

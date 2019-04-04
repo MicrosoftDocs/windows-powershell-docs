@@ -286,4 +286,3 @@ The output object contains the network adapter object with SR-IOV disabled.
 [Get-NetAdapterSriovVf](./Get-NetAdapterSriovVf.md)
 
 [Get-NetAdapterSriov](./Get-NetAdapterSriov.md)
-

@@ -79,4 +79,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Receive-DtcDiagnosticTransaction](./Receive-DtcDiagnosticTransaction.md)
 
 [Send-DtcDiagnosticTransaction](./Send-DtcDiagnosticTransaction.md)
-

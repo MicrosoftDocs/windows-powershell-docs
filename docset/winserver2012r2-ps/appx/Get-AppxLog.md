@@ -121,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AppxPackage](./Add-AppxPackage.md)
 
 [Get-AppxLastError](./Get-AppxLastError.md)
-

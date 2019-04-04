@@ -187,4 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Update-ClusterVirtualMachineConfiguration](./Update-ClusterVirtualMachineConfiguration.md)
 
 [Get-VM](../hyper-v/Get-VM.md)
-

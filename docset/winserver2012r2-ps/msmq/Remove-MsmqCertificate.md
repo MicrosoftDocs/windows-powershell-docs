@@ -102,4 +102,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MsmqCertificate](./Get-MSMQCertificate.md)
 
 [Enable-MsmqCertificate](./Enable-MSMQCertificate.md)
-

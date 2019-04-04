@@ -171,4 +171,3 @@ The cmdlet returns an instance of the **IpamFreeRange** object.
 [Find-IpamFreeAddress](./Find-IpamFreeAddress.md)
 
 [Find-IpamFreeSubnet](./Find-IpamFreeSubnet.md)
-

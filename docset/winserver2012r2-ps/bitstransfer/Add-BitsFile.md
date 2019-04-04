@@ -212,4 +212,3 @@ This cmdlet generates the BitsJob objects that are associated with the BITS tran
 [Start-BitsTransfer](./Start-BitsTransfer.md)
 
 [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
-

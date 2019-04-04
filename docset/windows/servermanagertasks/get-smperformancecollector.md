@@ -130,4 +130,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-SMPerformanceCollector](./Start-SMPerformanceCollector.md)
 
 [Stop-SMPerformanceCollector](./Stop-SMPerformanceCollector.md)
-

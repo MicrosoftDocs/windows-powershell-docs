@@ -67,4 +67,3 @@ This command gets the global client backup policy.
 ## RELATED LINKS
 
 [Set-WssGlobalClientBackupPolicy](./Set-WssGlobalClientBackupPolicy.md)
-

@@ -64,4 +64,3 @@ Accept wildcard characters: False
 [Get-MsmqOutgoingQueue](./Get-MsmqOutgoingQueue.md)
 
 [Suspend-MsmqOutgoingQueue](./Suspend-MsmqOutgoingQueue.md)
-

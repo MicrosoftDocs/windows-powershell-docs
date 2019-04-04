@@ -343,4 +343,3 @@ A site link object is received by the Identity parameter.
 [Remove-ADReplicationSiteLink](./Remove-ADReplicationSiteLink.md)
 
 [Set-ADReplicationSiteLink](./Set-ADReplicationSiteLink.md)
-

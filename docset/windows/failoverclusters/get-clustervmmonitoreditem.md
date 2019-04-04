@@ -158,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
-

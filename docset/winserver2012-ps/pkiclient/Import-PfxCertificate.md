@@ -176,4 +176,3 @@ The imported X509Certificate2 object contained in the PFX file that is associate
 [Set-Location](http://go.microsoft.com/fwlink/p/?LinkID=113397)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
-

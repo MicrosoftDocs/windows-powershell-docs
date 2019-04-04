@@ -124,4 +124,3 @@ The Remove-WBVolume cmdlet displays the list of **WBVolume** objects left in **W
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Get-WBVolume](./Get-WBVolume.md)
-

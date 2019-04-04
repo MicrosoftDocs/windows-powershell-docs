@@ -266,4 +266,3 @@ Represents an infrastructure server in IPAM system.
 [Remove-IpamServerInventory](./Remove-IpamServerInventory.md)
 
 [Set-IpamServerInventory](./Set-IpamServerInventory.md)
-

@@ -126,4 +126,3 @@ A read-only .xml document that contains information about the app package (.appx
 [Get-AppxLog](./Get-AppxLog.md)
 
 [Get-AppxLastError](./Get-AppxLastError.md)
-

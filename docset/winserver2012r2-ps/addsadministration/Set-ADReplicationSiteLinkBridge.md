@@ -412,4 +412,3 @@ A site link bridge object that was retrieved by using the **Get-ADReplicationSit
 [New-ADReplicationSiteLinkBridge](./New-ADReplicationSiteLinkBridge.md)
 
 [Remove-ADReplicationSiteLinkBridge](./Remove-ADReplicationSiteLinkBridge.md)
-

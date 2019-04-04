@@ -113,4 +113,3 @@ To check the functional level of the Active Directory forest, use the **Get-ADFo
 [Enable-SmbDelegation](./Enable-SmbDelegation.md)
 
 [Get-SmbDelegation](./Get-SmbDelegation.md)
-

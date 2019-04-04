@@ -173,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WmsApp](./Get-WmsApp.md)
 
 [Open-WmsApp](./Open-WmsApp.md)
-

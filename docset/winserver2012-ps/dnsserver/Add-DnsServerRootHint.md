@@ -225,4 +225,3 @@ Accept wildcard characters: False
 [Remove-DnsServerRootHint](./Remove-DnsServerRootHint.md)
 
 [Set-DnsServerRootHint](./Set-DnsServerRootHint.md)
-

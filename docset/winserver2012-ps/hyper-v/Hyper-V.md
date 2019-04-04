@@ -505,4 +505,3 @@ This reference provides cmdlet descriptions and syntax for all Hyper-V-specific 
 
 ### [Test-VMReplicationConnection](Test-VMReplicationConnection.md)
 {{Manually Enter Test-VMReplicationConnection Description Here}}
-

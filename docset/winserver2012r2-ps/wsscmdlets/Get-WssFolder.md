@@ -107,4 +107,3 @@ This cmdlet generates the server **Folder** object.
 [Remove-WssFolder](./Remove-WssFolder.md)
 
 [Measure-WssFolder](./Measure-WssFolder.md)
-

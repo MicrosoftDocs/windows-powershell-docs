@@ -30,4 +30,3 @@ Allows a destination server to receive shares, folders, files, and associated pe
 
 ### [Send-SmigServerData](./Send-SmigServerData.md)
 Migrates folders, files, and associated permissions and share properties from a source server to a destination server through port 7000.
-

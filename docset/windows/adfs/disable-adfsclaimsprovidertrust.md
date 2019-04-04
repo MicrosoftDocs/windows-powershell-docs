@@ -196,4 +196,3 @@ A class that represents a claims provider trust for the Federation Service.
 [Set-AdfsClaimsProviderTrust](./Set-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

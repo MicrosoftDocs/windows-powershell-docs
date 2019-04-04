@@ -75,4 +75,3 @@ When this setting is set to false, the input method is selected for all applicat
 [Get-WinDefaultInputMethodOverride](./Get-WinDefaultInputMethodOverride.md)
 
 [Set-WinLanguageBarOption](./Set-WinLanguageBarOption.md)
-

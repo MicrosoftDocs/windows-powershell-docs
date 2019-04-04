@@ -61,4 +61,3 @@ Accept wildcard characters: False
 [Set-WssFileHistoryManagementStatus](./Set-WssFileHistoryManagementStatus.md)
 
 [Get-WssFileHistoryConfiguration](./Get-WssFileHistoryConfiguration.md)
-

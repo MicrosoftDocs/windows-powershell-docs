@@ -85,4 +85,3 @@ Updates the Active Directory Rights Management Services (AD RMS) cluster informa
 
 ### [Update-RmsMfgEnrollment](./Update-RmsMfgEnrollment.md)
 Updates enrollment information for an AD RMS server enrolled with the Microsoft Federation Gateway service.
-

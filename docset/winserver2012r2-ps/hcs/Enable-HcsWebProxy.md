@@ -79,4 +79,3 @@ The WebProxyAuthType enumeration has the following values:
 [Get-HcsWebProxy](./Get-HcsWebProxy.md)
 
 [Set-HcsWebProxy](./Set-HcsWebProxy.md)
-

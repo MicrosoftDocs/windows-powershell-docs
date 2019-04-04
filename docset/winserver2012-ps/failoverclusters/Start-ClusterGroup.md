@@ -149,4 +149,3 @@ Accept wildcard characters: False
 [Remove-ClusterGroup](./Remove-ClusterGroup.md)
 
 [Stop-ClusterGroup](./Stop-ClusterGroup.md)
-

@@ -230,4 +230,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SRPartnership](./Remove-SRPartnership.md)
 
 [Set-SRPartnership](./Set-SRPartnership.md)
-

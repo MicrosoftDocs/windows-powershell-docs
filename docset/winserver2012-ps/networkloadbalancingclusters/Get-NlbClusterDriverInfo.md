@@ -349,4 +349,3 @@ Accept wildcard characters: False
 [Get-NlbCluster](./Get-NlbCluster.md)
 
 [Get-NlbClusterNode](./Get-NlbClusterNode.md)
-

@@ -218,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetworkControllerVirtualGatewayPolicyMap](./Get-NetworkControllerVirtualGatewayPolicyMap.md)
 
 [New-NetworkControllerVirtualGatewayPolicyMap](./New-NetworkControllerVirtualGatewayPolicyMap.md)
-

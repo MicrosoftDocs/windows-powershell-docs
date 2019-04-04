@@ -136,4 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-WdsInstallImageGroup](./New-WdsInstallImageGroup.md)
 
 [Remove-WdsInstallImageGroup](./Remove-WdsInstallImageGroup.md)
-

@@ -64,4 +64,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WssReport](./Remove-WssReport.md)
 
 [Send-WssReport](./Send-WssReport.md)
-

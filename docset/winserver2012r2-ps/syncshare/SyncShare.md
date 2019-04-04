@@ -52,4 +52,3 @@ Modifies settings of the Sync Share.
 
 ### [Set-SyncShare](./Set-SyncShare.md)
 Modifies the settings for a sync share.
-

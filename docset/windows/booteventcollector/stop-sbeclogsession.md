@@ -99,4 +99,3 @@ The **SbecEtwTrace.TraceSessionInfo** class is defined in $PsHome\Modules\BootEv
 [Start-SbecNtKernelLogSession](./Start-SbecNtKernelLogSession.md)
 
 [Start-SbecSimpleLogSession](./Start-SbecSimpleLogSession.md)
-

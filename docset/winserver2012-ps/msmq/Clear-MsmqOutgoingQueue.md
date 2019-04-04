@@ -94,4 +94,3 @@ Accept wildcard characters: False
 [Resume-MsmqOutgoingQueue](./Resume-MsmqOutgoingQueue.md)
 
 [Suspend-MsmqOutgoingQueue](./Suspend-MsmqOutgoingQueue.md)
-

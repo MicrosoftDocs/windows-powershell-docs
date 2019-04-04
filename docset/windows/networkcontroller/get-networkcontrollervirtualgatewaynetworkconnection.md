@@ -186,4 +186,3 @@ This cmdlet returns object(s) that contains the following fields:
 [New-NetworkControllerVirtualGatewayNetworkConnection](./New-NetworkControllerVirtualGatewayNetworkConnection.md)
 
 [Remove-NetworkControllerVirtualGatewayNetworkConnection](./Remove-NetworkControllerVirtualGatewayNetworkConnection.md)
-

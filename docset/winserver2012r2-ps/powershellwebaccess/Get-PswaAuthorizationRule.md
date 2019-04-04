@@ -122,4 +122,3 @@ This cmdlet produces a PswaAuthorizationRule object as output.
 [Test-PswaAuthorizationRule](./Test-PswaAuthorizationRule.md)
 
 [Install-PswaWebApplication](./Install-PswaWebApplication.md)
-

@@ -557,4 +557,3 @@ After the trust is established, tokens and Information Cards can be presented to
 [Set-ADFSClaimsProviderTrust](./Set-ADFSClaimsProviderTrust.md)
 
 [Update-ADFSClaimsProviderTrust](./Update-ADFSClaimsProviderTrust.md)
-

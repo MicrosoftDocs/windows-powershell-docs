@@ -221,4 +221,3 @@ A read-only domain controller (RODC) object is received by the Identity paramete
 [Get-ADDomainController](./Get-ADDomainController.md)
 
 [Get-ADDomainControllerPasswordReplicationPolicy](./Get-ADDomainControllerPasswordReplicationPolicy.md)
-

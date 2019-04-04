@@ -103,4 +103,3 @@ Accept wildcard characters: False
 [Remove-NpsRemediationServer](./Remove-NpsRemediationServer.md)
 
 [Remove-NpsRemediationServerGroup](./Remove-NpsRemediationServerGroup.md)
-

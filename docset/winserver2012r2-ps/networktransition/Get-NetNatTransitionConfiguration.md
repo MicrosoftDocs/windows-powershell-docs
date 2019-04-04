@@ -173,4 +173,3 @@ The MSFT_NetNatTransitionConfiguration object contains NAT64 configuration infor
 [Remove-NetNatTransitionConfiguration](./Remove-NetNatTransitionConfiguration.md)
 
 [Set-NetNatTransitionConfiguration](./Set-NetNatTransitionConfiguration.md)
-

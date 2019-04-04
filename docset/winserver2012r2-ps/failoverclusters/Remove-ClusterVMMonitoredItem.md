@@ -223,4 +223,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
-

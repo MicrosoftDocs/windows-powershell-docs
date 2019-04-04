@@ -115,4 +115,3 @@ None.
 ## RELATED LINKS
 
 [Get-RDConnectionBrokerHighAvailability](./Get-RDConnectionBrokerHighAvailability.md)
-

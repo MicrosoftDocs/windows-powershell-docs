@@ -84,4 +84,3 @@ Unpublishes packages.
 
 ### [Update-AppvServerConnectionGroup](./Update-AppvServerConnectionGroup.md)
 Updates the specified connection group.
-

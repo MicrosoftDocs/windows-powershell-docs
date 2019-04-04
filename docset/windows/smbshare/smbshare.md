@@ -129,4 +129,3 @@ Removes all of the deny ACEs for the trustee from the security descriptor of the
 
 ### [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
 Forces the SMB client to update the multi-channel-related information.
-

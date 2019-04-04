@@ -22,4 +22,3 @@ Gets the current process mitigation settings, either from the registry, from a r
 
 ### [Set-ProcessMitigation](Set-ProcessMitigation.md)
 Commands to enable and disable process mitigations or set them in bulk from an XML file.
-

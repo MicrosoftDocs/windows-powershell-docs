@@ -60,4 +60,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-WssReportSchedule](./Set-WssReportSchedule.md)
-

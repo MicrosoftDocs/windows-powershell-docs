@@ -197,4 +197,3 @@ A site link bridge object is received by the *Identity* parameter.
 [New-ADReplicationSiteLinkBridge](./New-ADReplicationSiteLinkBridge.md)
 
 [Set-ADReplicationSiteLinkBridge](./Set-ADReplicationSiteLinkBridge.md)
-

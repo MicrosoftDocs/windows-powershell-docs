@@ -187,4 +187,3 @@ Accept wildcard characters: False
 [Get-DnsServerRootHint](./Get-DnsServerRootHint.md)
 
 [Set-DnsServerRootHint](./Set-DnsServerRootHint.md)
-

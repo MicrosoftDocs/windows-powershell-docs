@@ -233,4 +233,3 @@ This cmdlet returns a **Microsoft.HyperV.PowerShell.VMGroup** object, if you spe
 [New-VMGroup](./New-VMGroup.md)
 
 [Remove-VMGroup](./Remove-VMGroup.md)
-

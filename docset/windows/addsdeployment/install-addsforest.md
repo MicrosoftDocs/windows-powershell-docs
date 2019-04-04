@@ -415,4 +415,3 @@ This helps assure that the IP address of the first domain controller is resolved
 [Test-ADDSForestInstallation](./Test-ADDSForestInstallation.md)
 
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
-

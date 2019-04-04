@@ -119,4 +119,3 @@ Accept wildcard characters: False
 [Receive-DtcDiagnosticTransaction](./Receive-DtcDiagnosticTransaction.md)
 
 [Undo-DtcDiagnosticTransaction](./Undo-DtcDiagnosticTransaction.md)
-

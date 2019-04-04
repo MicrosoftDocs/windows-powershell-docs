@@ -209,4 +209,3 @@ A **CertificateNotificationTask** object that contains details about a newly cre
 [Remove-CertificateNotificationTask](./Remove-CertificateNotificationTask.md)
 
 [Switch-Certificate](./Switch-Certificate.md)
-

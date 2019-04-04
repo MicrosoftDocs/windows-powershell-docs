@@ -42,4 +42,3 @@ Removes the URI for the certificate revocation list (CRL) distribution point (CD
 
 ### [Remove-CATemplate](./Remove-CATemplate.md)
 Removes the templates from the certification authority (CA) which were set for issuance of certificates.
-

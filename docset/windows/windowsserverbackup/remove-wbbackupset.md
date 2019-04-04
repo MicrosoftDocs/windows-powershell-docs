@@ -247,4 +247,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WBBackupSet](./Get-WBBackupSet.md)
 
 [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
-

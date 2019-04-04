@@ -244,4 +244,3 @@ An Active Directory object is received by the Identity parameter.
 To bypass prompting for confirmation before removal, you can specify -Confirm:$false when using this cmdlet.
 
 ## RELATED LINKS
-

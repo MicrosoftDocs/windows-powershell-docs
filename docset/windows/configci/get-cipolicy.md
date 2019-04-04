@@ -113,4 +113,3 @@ This cmdlet returns rules from the policy.
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicy](./New-CIPolicy.md)
-

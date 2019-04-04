@@ -112,4 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-WBVirtualMachine](./Add-WBVirtualMachine.md)
 
 [Remove-WBVirtualMachine](./Remove-WBVirtualMachine.md)
-

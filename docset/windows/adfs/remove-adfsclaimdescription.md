@@ -192,4 +192,3 @@ You can pipe a class structure that represents a claim description object for th
 [Get-AdfsClaimDescription](./Get-AdfsClaimDescription.md)
 
 [Set-AdfsClaimDescription](./Set-AdfsClaimDescription.md)
-

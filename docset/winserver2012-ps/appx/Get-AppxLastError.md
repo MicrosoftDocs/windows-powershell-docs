@@ -53,4 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [PackageManager class](http://go.microsoft.com/fwlink/?LinkId=245447)
 
 [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)
-

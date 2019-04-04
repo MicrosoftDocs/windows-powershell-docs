@@ -566,4 +566,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsWebApiApplication](./Get-AdfsWebApiApplication.md)
 
 [Remove-AdfsWebApiApplication](./Remove-AdfsWebApiApplication.md)
-

@@ -495,4 +495,3 @@ You can pipe a Partition object to the InputObject parameter to specify the part
 [Get-Partition](./Get-Partition.md)
 
 [New-Partition](./New-Partition.md)
-

@@ -77,4 +77,3 @@ Accept wildcard characters: False
 [Get-WssRemoteWebAccessLink](./Get-WssRemoteWebAccessLink.md)
 
 [Remove-WssRemoteWebAccessLink](./Remove-WssRemoteWebAccessLink.md)
-

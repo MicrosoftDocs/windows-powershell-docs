@@ -141,4 +141,3 @@ A **MedvWorkspace** object contains the information and location of all files ne
 ## RELATED LINKS
 
 [New-MedvWorkspace](./New-MedvWorkspace.md)
-

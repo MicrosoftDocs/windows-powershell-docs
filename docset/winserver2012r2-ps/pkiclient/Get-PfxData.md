@@ -105,4 +105,3 @@ A PFXData object.
 [ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=293933)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
-

@@ -200,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-RoutingProtocolPreference](./Get-RoutingProtocolPreference.md)
-

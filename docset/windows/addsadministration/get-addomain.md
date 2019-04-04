@@ -281,4 +281,3 @@ To view all of the properties for an **ADDomain** object, use the following comm
 [Set-ADDomain](./Set-ADDomain.md)
 
 [Set-ADDomainMode](./Set-ADDomainMode.md)
-

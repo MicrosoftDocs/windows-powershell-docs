@@ -155,4 +155,3 @@ Accept wildcard characters: False
 [Set-OdbcDriver](./Set-OdbcDriver.md)
 
 [N:Wdac](00000000-0000-0000-0000-000000000000)
-

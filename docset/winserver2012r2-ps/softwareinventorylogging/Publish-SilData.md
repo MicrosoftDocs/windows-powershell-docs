@@ -173,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SilLogging](./Set-SilLogging.md)
 
 [Start-SilLogging](./Start-SilLogging.md)
-

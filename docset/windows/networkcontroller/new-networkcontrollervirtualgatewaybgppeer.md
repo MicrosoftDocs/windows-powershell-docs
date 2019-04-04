@@ -298,4 +298,3 @@ This cmdlet outputs the following information:
 [Get-NetworkControllerVirtualGatewayBgpPeer](./Get-NetworkControllerVirtualGatewayBgpPeer.md)
 
 [Remove-NetworkControllerVirtualGatewayBgpPeer](./Remove-NetworkControllerVirtualGatewayBgpPeer.md)
-

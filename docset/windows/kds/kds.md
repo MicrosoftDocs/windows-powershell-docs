@@ -42,4 +42,3 @@ Sets the configuration of Microsoft Group KdsSvc.
 
 ### [Test-KdsRootKey](./Test-KdsRootKey.md)
 Tests the root key configuration.
-

@@ -167,4 +167,3 @@ The FirmwareStatus enumeration has the following values:
 ## RELATED LINKS
 
 [Get-HcsFirmwareVersion](./Get-HcsFirmwareVersion.md)
-

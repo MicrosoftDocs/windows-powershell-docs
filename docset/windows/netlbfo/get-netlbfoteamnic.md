@@ -178,4 +178,3 @@ This cmdlet produces an array of **MSFT_NetLbfoTeamNic** objects corresponding t
 [Remove-NetLbfoTeamNic](./Remove-NetLbfoTeamNic.md)
 
 [Set-NetLbfoTeamNic](./Set-NetLbfoTeamNic.md)
-

@@ -326,4 +326,3 @@ This cmdlet returns an object that represents an infrastructure server in IPAM s
 [Get-IpamServerInventory](./Get-IpamServerInventory.md)
 
 [Remove-IpamServerInventory](./Remove-IpamServerInventory.md)
-

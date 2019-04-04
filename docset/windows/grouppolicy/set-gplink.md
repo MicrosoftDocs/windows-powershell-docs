@@ -335,4 +335,3 @@ Therefore, when this cmdlet is run from a startup or shutdown script, the defaul
 [New-GPLink](./New-GPLink.md)
 
 [Remove-GPLink](./Remove-GPLink.md)
-

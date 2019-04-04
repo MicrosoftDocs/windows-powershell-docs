@@ -70,4 +70,3 @@ This cmdlet returns a **KdsServerConfiguration** object contains information suc
 [Set-KdsConfiguration](./Set-KdsConfiguration.md)
 
 [Test-KdsRootKey](./Test-KdsRootKey.md)
-

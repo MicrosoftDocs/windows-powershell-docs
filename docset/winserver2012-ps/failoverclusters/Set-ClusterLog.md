@@ -124,4 +124,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-ClusterLog](./Get-ClusterLog.md)
-

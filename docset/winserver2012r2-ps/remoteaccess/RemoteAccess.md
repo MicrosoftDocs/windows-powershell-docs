@@ -337,4 +337,3 @@ Uninstalls DirectAccess (DA) and VPN, both Remote Access (RA) VPN and site-to-si
 
 ### [Update-DAMgmtServer](./Update-DAMgmtServer.md)
 Updates the list of Management servers of the DirectAccess (DA) deployment.
-

@@ -99,4 +99,3 @@ Each property can be modified and piped into the Set-CertificateAutoEnrollmentPo
 ## RELATED LINKS
 
 [Set-CertificateAutoEnrollmentPolicy](./Set-CertificateAutoEnrollmentPolicy.md)
-

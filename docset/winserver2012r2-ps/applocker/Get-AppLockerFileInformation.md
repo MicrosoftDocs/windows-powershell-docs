@@ -302,4 +302,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
 
 [Get-AppXPackage](../appx/Get-AppxPackage.md)
-

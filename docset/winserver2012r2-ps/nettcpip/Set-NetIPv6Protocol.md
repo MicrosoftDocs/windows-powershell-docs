@@ -621,4 +621,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetIPv6Protocol](./Get-NetIPv6Protocol.md)
 
 [Set-NetIPv4Protocol](./Set-NetIPv4Protocol.md)
-

@@ -213,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Resume-BitLocker](./Resume-BitLocker.md)
 
 [Suspend-BitLocker](./Suspend-BitLocker.md)
-

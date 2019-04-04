@@ -171,4 +171,3 @@ A class structure that represents the endpoints for the Federation Service.
 [Get-AdfsEndpoint](./Get-AdfsEndpoint.md)
 
 [Set-AdfsEndpoint](./Set-AdfsEndpoint.md)
-

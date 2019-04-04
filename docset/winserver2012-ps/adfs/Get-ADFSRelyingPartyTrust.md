@@ -147,4 +147,3 @@ A class structure that represents a relying party trust.
 [Set-ADFSRelyingPartyTrust](./Set-ADFSRelyingPartyTrust.md)
 
 [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
-

@@ -56,4 +56,3 @@ This cmdlet returns the disks which can be used as server backup targets.
 ## RELATED LINKS
 
 [Initialize-WssBackupDisk](./Initialize-WssBackupDisk.md)
-

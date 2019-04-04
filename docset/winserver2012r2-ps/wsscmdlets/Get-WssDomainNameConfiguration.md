@@ -57,4 +57,3 @@ This cmdlet generates the currently active domain name configuration object.
 ## RELATED LINKS
 
 [Set-WssDomainNameConfiguration](./Set-WssDomainNameConfiguration.md)
-

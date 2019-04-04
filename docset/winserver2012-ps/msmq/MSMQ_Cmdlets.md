@@ -81,4 +81,3 @@ Sets access rights of the local queue manager.
 
 ### [Suspend-MsmqOutgoingQueue](./Suspend-MsmqOutgoingQueue.md)
 Suspends the specified outgoing queues.
-

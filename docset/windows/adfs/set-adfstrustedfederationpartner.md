@@ -190,4 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AdfsTrustedFederationPartner](./Get-AdfsTrustedFederationPartner.md)
 
 [Remove-AdfsTrustedFederationPartner](./Remove-AdfsTrustedFederationPartner.md)
-

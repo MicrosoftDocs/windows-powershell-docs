@@ -217,4 +217,3 @@ This cmdlet generates string for a theme to save as the active theme.
 [Get-AdfsWebConfig](./Get-AdfsWebConfig.md)
 
 [New-AdfsWebTheme](./New-AdfsWebTheme.md)
-

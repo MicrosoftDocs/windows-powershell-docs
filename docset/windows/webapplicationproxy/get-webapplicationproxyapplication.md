@@ -187,4 +187,3 @@ If the cmdlet gets a single application, it displays the properties of the appli
 [Remove-WebApplicationProxyApplication](./Remove-WebApplicationProxyApplication.md)
 
 [Set-WebApplicationProxyApplication](./Set-WebApplicationProxyApplication.md)
-

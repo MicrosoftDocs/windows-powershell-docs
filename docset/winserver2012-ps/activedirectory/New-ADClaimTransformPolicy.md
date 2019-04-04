@@ -456,4 +456,3 @@ A claims transformation policy object that is a template for the new claims tran
   This cmdlet does not work with a read-only domain controller.
 
 ## RELATED LINKS
-

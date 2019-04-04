@@ -336,4 +336,3 @@ When the *Passthru* parameter is specified, this cmdlet outputs a modified ISATA
 [Get-NetIsatapConfiguration](./Get-NetIsatapConfiguration.md)
 
 [Set-NetIsatapConfiguration](./Set-NetIsatapConfiguration.md)
-

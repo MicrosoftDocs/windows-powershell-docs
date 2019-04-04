@@ -235,4 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AppvPackageAccelerator](./New-AppvPackageAccelerator.md)
 
 [Update-AppvSequencerPackage](./Update-AppvSequencerPackage.md)
-

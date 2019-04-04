@@ -178,4 +178,3 @@ An AppxPackage object that contain information, including the full name of the a
 [Get-AppxLog](./Get-AppxLog.md)
 
 [Get-AppxLastError](./Get-AppxLastError.md)
-

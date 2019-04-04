@@ -135,4 +135,3 @@ Accept wildcard characters: False
 [Add-WBVirtualMachine](./Add-WBVirtualMachine.md)
 
 [Get-WBVirtualMachine](./Get-WBVirtualMachine.md)
-

@@ -58,4 +58,3 @@ Sets whether the product representing the category of updates to synchronize is 
 
 ### [Set-WsusServerSynchronization](./Set-WsusServerSynchronization.md)
 Sets whether the Windows Server Update Services (WSUS) server synchronizes from Microsoft Update, or an upstream server and the upstream server properties.
-

@@ -204,4 +204,3 @@ Accept wildcard characters: False
 [Get-DnsServer](./Get-DnsServer.md)
 
 [Set-DnsServer](./Set-DnsServer.md)
-

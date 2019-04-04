@@ -46,4 +46,3 @@ Creates a new Background Intelligent Transfer Service (BITS) transfer job.
 
 ### [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
 Suspends a Background Intelligent Transfer Service (BITS) transfer job.
-

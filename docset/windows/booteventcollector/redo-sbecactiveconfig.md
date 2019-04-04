@@ -187,4 +187,3 @@ The `<OriginalTimestamp>` element contains the original timestamp of the newly r
 [Set-SbecActiveConfig](./Set-SbecActiveConfig.md)
 
 [Undo-SbecActiveConfig](./Undo-SbecActiveConfig.md)
-

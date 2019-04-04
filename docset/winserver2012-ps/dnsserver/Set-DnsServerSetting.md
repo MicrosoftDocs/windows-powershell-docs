@@ -205,4 +205,3 @@ boolean WriteAuthorityNS; //Indicates whether the DNS server writes name server 
 ## RELATED LINKS
 
 [Get-DnsServerSetting](./Get-DnsServerSetting.md)
-

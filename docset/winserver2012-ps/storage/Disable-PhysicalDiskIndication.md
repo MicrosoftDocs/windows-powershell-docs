@@ -222,4 +222,3 @@ This cmdlet outputs an object that represents the physical disk for which you di
 [Get-StoragePool](./Get-StoragePool.md)
 
 [Get-VirtualDisk](./Get-VirtualDisk.md)
-

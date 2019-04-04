@@ -840,4 +840,3 @@ A class structure that represents a relying party trust.
 [Remove-AdfsRelyingPartyTrust](./Remove-AdfsRelyingPartyTrust.md)
 
 [Update-AdfsRelyingPartyTrust](./Update-AdfsRelyingPartyTrust.md)
-

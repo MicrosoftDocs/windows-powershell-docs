@@ -122,4 +122,3 @@ This cmdlet sets the OBPolicy object as the backup policy to use for scheduled b
 [Set-OBRetentionPolicy](./Set-OBRetentionPolicy.md)
 
 [Set-OBSchedule](./Set-OBSchedule.md)
-

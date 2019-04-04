@@ -54,4 +54,3 @@ Suspends Bitlocker encryption for the specified volume.
 
 ### [Unlock-BitLocker](./Unlock-BitLocker.md)
 Restores access to data on a BitLocker volume.
-

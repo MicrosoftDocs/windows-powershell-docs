@@ -162,4 +162,3 @@ This cmdlet returns a **MSFT_SmbClientNetworkInterface** object that represents 
 ## RELATED LINKS
 
 [Get-SmbServerNetworkInterface](./Get-SmbServerNetworkInterface.md)
-

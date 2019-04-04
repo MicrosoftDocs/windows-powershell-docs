@@ -180,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-DnsServerScavenging](./Set-DnsServerScavenging.md)
 
 [Get-DnsServerScavenging](./Get-DnsServerScavenging.md)
-

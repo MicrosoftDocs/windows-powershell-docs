@@ -506,4 +506,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-DfsReplicationGroup](./New-DfsReplicationGroup.md)
 
 [New-DfsReplicatedFolder](./New-DfsReplicatedFolder.md)
-

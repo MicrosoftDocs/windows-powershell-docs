@@ -594,4 +594,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Architectural Overview of the TCP/IP Protocol Suite on TechNet](http://technet.microsoft.com/library/bb726993.aspx)
 
 [Get-NetIPv6Protocol](./Get-NetIPv6Protocol.md)
-

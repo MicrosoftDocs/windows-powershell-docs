@@ -246,4 +246,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-NetAdapterRdma](./Get-NetAdapterRdma.md)
 
 [Set-NetAdapterRdma](./Set-NetAdapterRdma.md)
-

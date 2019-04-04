@@ -157,4 +157,3 @@ This cmdlet returns an object that contains the following fields:
 [Set-NetworkControllerCluster](./Set-NetworkControllerCluster.md)
 
 [Uninstall-NetworkControllerCluster](./Uninstall-NetworkControllerCluster.md)
-

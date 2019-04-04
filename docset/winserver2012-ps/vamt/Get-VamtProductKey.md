@@ -84,4 +84,3 @@ Accept wildcard characters: False
 [Add-VamtProductKey](./Add-VamtProductKey.md)
 
 [Install-VamtProductKey](./Install-VamtProductKey.md)
-

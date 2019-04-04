@@ -31,4 +31,3 @@ Retrieves the current configuration for assigned access.
 
 ### [Set-AssignedAccess](./Set-AssignedAccess.md)
 Configures a user to launch only one app.
-

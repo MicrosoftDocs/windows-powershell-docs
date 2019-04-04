@@ -42,4 +42,3 @@ The cmdlet will call native Microsoft Message queue (MSMQ) APIs to populate the 
 ## RELATED LINKS
 
 [Set-MsmqQueueManager](./Set-MsmqQueueManager.md)
-

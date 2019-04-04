@@ -528,4 +528,3 @@ This cmdlet returns a printer object.
 [Remove-Printer](./Remove-Printer.md)
 
 [Rename-Printer](./Rename-Printer.md)
-

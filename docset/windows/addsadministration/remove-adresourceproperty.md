@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ADResourceProperty](./New-ADResourceProperty.md)
 
 [Set-ADResourceProperty](./Set-ADResourceProperty.md)
-

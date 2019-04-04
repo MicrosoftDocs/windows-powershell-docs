@@ -46,4 +46,3 @@ This command cancels the current backup job.
 [Get-WssBackupJob](./Get-WssBackupJob.md)
 
 [Start-WssBackupJob](./Start-WssBackupJob.md)
-

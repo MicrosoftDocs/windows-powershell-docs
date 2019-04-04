@@ -127,4 +127,3 @@ The cmdlet outputs a class structure that represents the claims provider trusts 
 [Set-AdfsClaimsProviderTrust](./Set-AdfsClaimsProviderTrust.md)
 
 [Update-AdfsClaimsProviderTrust](./Update-AdfsClaimsProviderTrust.md)
-

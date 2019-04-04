@@ -268,4 +268,3 @@ This cmdlet returns the GPO for which the link has been removed.
 [New-GPLink](./New-GPLink.md)
 
 [Set-GPLink](./Set-GPLink.md)
-

@@ -356,4 +356,3 @@ When the *Passthru* parameter is specified, this cmdlet outputs a modified Windo
 [Get-NetTeredoConfiguration](./Get-NetTeredoConfiguration.md)
 
 [Set-NetTeredoConfiguration](./Set-NetTeredoConfiguration.md)
-

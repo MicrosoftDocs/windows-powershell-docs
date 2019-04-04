@@ -114,4 +114,3 @@ Accept wildcard characters: False
 [Resume-WssBackupPolicy](./Resume-WssBackupPolicy.md)
 
 [Set-WssBackupPolicy](./Set-WssBackupPolicy.md)
-

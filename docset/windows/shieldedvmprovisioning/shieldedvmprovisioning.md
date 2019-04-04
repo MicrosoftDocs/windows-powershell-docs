@@ -28,4 +28,3 @@ Creates a specialization data file to be used when provisioning a shielded virtu
 
 ### [Test-ShieldingDataApplicability](Test-ShieldingDataApplicability.md)
 Verifies a shielding data file can be used with a given volume signature catalog.
-

@@ -73,4 +73,3 @@ Accept wildcard characters: False
 [Get-WssAlertEmailSetting](./Get-WssAlertEmailSetting.md)
 
 [Test-WssAlertEmail](./Test-WssAlertEmail.md)
-

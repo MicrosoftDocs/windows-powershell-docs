@@ -114,4 +114,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-WssFileHistoryManagementStatus](./Get-WssFileHistoryManagementStatus.md)
-

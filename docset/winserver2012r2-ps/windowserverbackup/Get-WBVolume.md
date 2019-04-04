@@ -240,4 +240,3 @@ The Get-WBVolume cmdlet displays the array of volumes in the **WBPolicy** object
 [Get-WBPolicy](./Get-WBPolicy.md)
 
 [Remove-WBVolume](./Remove-WBVolume.md)
-

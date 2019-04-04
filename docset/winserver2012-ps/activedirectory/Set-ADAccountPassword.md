@@ -460,4 +460,3 @@ This cmdlet does not work when connected to Global Catalog port.
 [Get-ADUser](./Get-ADUser.md)
 
 [Search-ADAccount](./Search-ADAccount.md)
-

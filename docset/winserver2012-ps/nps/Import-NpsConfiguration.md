@@ -63,4 +63,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Export-NpsConfiguration](./Export-NpsConfiguration.md)
-

@@ -425,4 +425,3 @@ You can pipe one or more MSFT_StoragePool objects to the InputObject parameter.
 [New-StoragePool](./New-StoragePool.md)
 
 [Remove-StoragePool](./Remove-StoragePool.md)
-

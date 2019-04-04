@@ -218,4 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-ClusterResource](./Start-ClusterResource.md)
 
 [Stop-ClusterResource](./Stop-ClusterResource.md)
-

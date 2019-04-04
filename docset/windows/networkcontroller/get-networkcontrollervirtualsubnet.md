@@ -152,4 +152,3 @@ Following properties of a virtual subnet are retrieved:
 ## NOTES
 
 ## RELATED LINKS
-

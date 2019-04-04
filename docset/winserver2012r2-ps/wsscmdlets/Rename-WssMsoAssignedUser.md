@@ -95,4 +95,3 @@ Description: local network account name of user
 ## RELATED LINKS
 
 [Get-WssMsoAssignedUser](./Get-WssMsoAssignedUser.md)
-

@@ -187,4 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-PefMessageSource](./Add-PefMessageSource.md)
 
 [New-PefKeyDownTrigger](./New-PefKeyDownTrigger.md)
-

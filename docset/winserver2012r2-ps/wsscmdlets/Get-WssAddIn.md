@@ -74,4 +74,3 @@ This cmdlet returns package information of specific add-ins.
 [Install-WssAddIn](./Install-WssAddIn.md)
 
 [Uninstall-WssAddIn](./Uninstall-WssAddIn.md)
-

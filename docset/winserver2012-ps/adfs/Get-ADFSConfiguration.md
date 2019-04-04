@@ -52,4 +52,3 @@ A class structure that represents the properties for the Federation Service.
 ## RELATED LINKS
 
 [Set-ADFSConfiguration](./Set-ADFSConfiguration.md)
-

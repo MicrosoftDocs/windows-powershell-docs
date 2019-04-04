@@ -231,4 +231,3 @@ There is an output property named RestartCA, which when set to True indicates th
 [Add-CACrlDistributionPoint](./Add-CACrlDistributionPoint.md)
 
 [Get-CACrlDistributionPoint](./Get-CACrlDistributionPoint.md)
-

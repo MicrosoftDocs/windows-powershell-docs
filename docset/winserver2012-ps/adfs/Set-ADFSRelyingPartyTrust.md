@@ -667,4 +667,3 @@ A class structure that represents a relying party trust.
 [Remove-ADFSRelyingPartyTrust](./Remove-ADFSRelyingPartyTrust.md)
 
 [Update-ADFSRelyingPartyTrust](./Update-ADFSRelyingPartyTrust.md)
-

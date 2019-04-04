@@ -102,4 +102,3 @@ Sets the description for a snapshot.
 
 ### [Stop-IscsiVirtualDiskOperation](./Stop-IscsiVirtualDiskOperation.md)
 Stops a long-running operation in progress on an iSCSI virtual disk.
-

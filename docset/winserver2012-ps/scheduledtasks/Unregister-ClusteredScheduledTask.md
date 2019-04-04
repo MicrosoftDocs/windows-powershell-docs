@@ -155,4 +155,3 @@ Accept wildcard characters: False
 [Register-ClusteredScheduledTask](./Register-ClusteredScheduledTask.md)
 
 [Set-ClusteredScheduledTask](./Set-ClusteredScheduledTask.md)
-

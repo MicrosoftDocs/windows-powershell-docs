@@ -213,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-AdfsFarmNode](./Add-AdfsFarmNode.md)
 
 [Test-AdfsFarmInstallation](./Test-AdfsFarmInstallation.md)
-

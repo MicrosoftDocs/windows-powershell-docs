@@ -102,4 +102,3 @@ Specifies a warning that gives details about the backups present in the backup t
 ## RELATED LINKS
 
 [Remove-WBCatalog](./Remove-WBCatalog.md)
-

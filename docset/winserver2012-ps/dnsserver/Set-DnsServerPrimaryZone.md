@@ -406,4 +406,3 @@ Accept wildcard characters: False
 [ConvertTo-DnsServerPrimaryZone](./ConvertTo-DnsServerPrimaryZone.md)
 
 [Restore-DnsServerPrimaryZone](./Restore-DnsServerPrimaryZone.md)
-

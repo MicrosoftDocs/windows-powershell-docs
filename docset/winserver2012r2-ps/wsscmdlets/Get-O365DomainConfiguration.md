@@ -68,4 +68,3 @@ CustomDomainStatus Property Microsoft.WindowsServerSolutions.O365Integration.O36
 [Set-O365Domain](./Set-O365Domain.md)
 
 [Remove-O365Domain](./Remove-O365Domain.md)
-

@@ -58,4 +58,3 @@ Configures the properties for installed ODBC drivers.
 
 ### [Set-OdbcDsn](./Set-OdbcDsn.md)
 Configures properties for existing ODBC DSNs.
-

@@ -165,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-PefTimeSpanTrigger](./New-PefTimeSpanTrigger.md)
 
 [New-PefTraceSession](./New-PefTraceSession.md)
-

@@ -199,4 +199,3 @@ This cmdlet returns a **VirtualMachine** object, if you specify the **Passthru**
 [Disable-VMConsoleSupport](./Disable-VMConsoleSupport.md)
 
 [Get-VM](./Get-VM.md)
-

@@ -74,4 +74,3 @@ This cmdlet generates the **BackupPolicy** parameter value.
 [Add-WssBackupSystemRecovery](./Add-WssBackupSystemRecovery.md)
 
 [Get-WssBackupSystemRecovery](./Get-WssBackupSystemRecovery.md)
-

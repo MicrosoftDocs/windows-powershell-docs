@@ -70,4 +70,3 @@ The return value is 1 if healthy, and any other value for non-healthy.
 [Get-WebApplicationProxyApplication](./Get-WebApplicationProxyApplication.md)
 
 [Get-WebApplicationProxyConfiguration](./Get-WebApplicationProxyConfiguration.md)
-

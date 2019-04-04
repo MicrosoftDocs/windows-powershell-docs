@@ -112,4 +112,3 @@ For each computer added a **WmsSystem** object is returned which contains specif
 [Set-WmsSystem](./Set-WmsSystem.md)
 
 [Stop-WmsSystem](./Stop-WmsSystem.md)
-

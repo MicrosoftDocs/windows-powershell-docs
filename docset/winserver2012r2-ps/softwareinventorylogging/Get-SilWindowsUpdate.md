@@ -141,4 +141,3 @@ That object includes the following properties:
 [Get-SilData](./Get-SilData.md)
 
 [Get-SilLogging](./Get-SilLogging.md)
-

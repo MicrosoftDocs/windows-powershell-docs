@@ -142,4 +142,3 @@ The input object specified by the *Results* parameter.
 [Invoke-BpaModel](./Invoke-BpaModel.md)
 
 [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
-

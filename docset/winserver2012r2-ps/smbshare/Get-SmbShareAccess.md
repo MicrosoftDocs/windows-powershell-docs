@@ -241,4 +241,3 @@ The MSFT_SmbShareAccessControlEntry object is returned for the specified share.
 [Revoke-SmbShareAccess](./Revoke-SmbShareAccess.md)
 
 [Unblock-SmbShareAccess](./Unblock-SmbShareAccess.md)
-

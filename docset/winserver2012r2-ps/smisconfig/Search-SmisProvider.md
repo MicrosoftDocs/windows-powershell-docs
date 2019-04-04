@@ -114,4 +114,3 @@ The URI represents the list of devices that the cmdlet discovered.
 [Register-SmisProvider](./Register-SmisProvider.md)
 
 [Unregister-SmisProvider](./Unregister-SmisProvider.md)
-

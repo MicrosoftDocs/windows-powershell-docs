@@ -410,4 +410,3 @@ This cmdlet returns a **MSFT_SmbShare** object that represents the modified shar
 [New-SmbShare](./New-SmbShare.md)
 
 [Remove-SmbShare](./Remove-SmbShare.md)
-

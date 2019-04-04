@@ -315,4 +315,3 @@ The MSFT_SmbOpenFile object represents the files opened on the SMB server.
 ## RELATED LINKS
 
 [Close-SmbOpenFile](./Close-SmbOpenFile.md)
-

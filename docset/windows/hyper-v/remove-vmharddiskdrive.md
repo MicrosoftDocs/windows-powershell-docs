@@ -242,8 +242,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.DriveController** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.DriveController
+If **-PassThru** is specified.
 
 ## NOTES
 

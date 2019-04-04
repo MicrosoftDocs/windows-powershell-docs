@@ -239,8 +239,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMSnapshot** if *PassThru* is specified.
+### None
+Default
+
+### VMSnapshot
+If **-PassThru** is specified.
 
 ## NOTES
 

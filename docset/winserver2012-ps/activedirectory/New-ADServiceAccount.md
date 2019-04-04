@@ -17,7 +17,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] -DNSHostName <String>
@@ -30,7 +30,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] [-Enabled <Boolean>]
@@ -41,7 +41,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
  [-DisplayName <String>] [-Enabled <Boolean>] [-HomePage <String>] [-Instance <ADServiceAccount>]
@@ -79,7 +79,7 @@ Then pass these objects through the pipeline to the New-ADServiceAccount cmdlet 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -DNSHostName service1.contoso.com -Enabled $true
 ```
 
@@ -90,7 +90,7 @@ Description
 Create a new enabled managed service account in AD DS.
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName service1.contoso.com
 ```
 
@@ -101,7 +101,7 @@ Description
 Create a new managed service account and register its service principal name.
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 ```
 
@@ -112,7 +112,7 @@ Description
 Create a new managed service account and restrict its use to only a single computer.
 
 ### -------------------------- EXAMPLE 4 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 

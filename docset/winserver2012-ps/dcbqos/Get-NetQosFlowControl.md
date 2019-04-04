@@ -3,6 +3,7 @@ external help file: DcbQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: C42A7FA6-75A9-4E20-8A8D-8F9F28A35C88
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

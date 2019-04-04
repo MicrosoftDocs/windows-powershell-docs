@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1BEB28C1-6E04-4C8E-91C1-10EB8AFBB42B
-ms.manager: dansimp
 ---
 
 # Get-IpamConfiguration

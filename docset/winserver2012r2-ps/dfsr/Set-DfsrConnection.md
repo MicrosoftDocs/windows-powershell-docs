@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BC0FCF1A-C165-4955-A20F-D545A162B3F0
-ms.manager: dansimp
 ---
 
 # Set-DfsrConnection

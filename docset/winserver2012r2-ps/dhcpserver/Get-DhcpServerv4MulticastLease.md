@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52C0346B-7A4A-4557-9F3F-E7AB5475F436
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4MulticastLease

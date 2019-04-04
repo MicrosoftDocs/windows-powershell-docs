@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B26D0DE7-0761-4AEB-B1AC-83DACF936CD5
-ms.manager: dansimp
 ---
 
 # Get-DfsrServiceConfiguration

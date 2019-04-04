@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CB1E7D0E-5EC6-45DA-81BF-53CEBED5D827
-ms.manager: dansimp
 ---
 
 # Add-ClusterDisk

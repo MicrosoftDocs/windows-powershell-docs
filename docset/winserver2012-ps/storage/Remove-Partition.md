@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FF22B6AD-BC44-41C2-9E32-5603800FB71A
+manager: dansimp
 ---
 
 # Remove-Partition

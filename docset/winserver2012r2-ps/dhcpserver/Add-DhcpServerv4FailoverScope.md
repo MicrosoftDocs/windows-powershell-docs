@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D62B04A2-C28C-482B-82B0-2C6240500859
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4FailoverScope

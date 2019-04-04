@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E10B9403-641A-4609-84A7-A423A0699883
-ms.manager: dansimp
 ---
 
 # Complete-VMFailover

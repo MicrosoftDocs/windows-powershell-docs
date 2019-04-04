@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A62ECA60-C9C0-4A12-B621-23A5CEE60F96
-ms.manager: dansimp
 ---
 
 # Get-RmsCertChain

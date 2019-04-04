@@ -4,6 +4,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 3E8534D7-0D92-42EB-BFDE-BB430C0C9CD0
+manager: dansimp
 ms.author: kenwith
 ms.mktglfcycl: manage
 ms.date: 12/20/2016
@@ -55,13 +56,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-**Disable-IISCentralCertProvider** does not accept pipelined input.
+### None
 
 ## OUTPUTS
 
-###  
-**Disable-IISCentralCertProvider** does not return any objects.
+### None
 
 ## NOTES
 

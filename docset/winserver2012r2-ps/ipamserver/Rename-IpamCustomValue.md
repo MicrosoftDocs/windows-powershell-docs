@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A471DAFC-FCA6-4EE7-BC2C-7E61DC2C49A2
-ms.manager: dansimp
 ---
 
 # Rename-IpamCustomValue

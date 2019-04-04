@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FD98B9EC-0249-45D9-B2AD-B3CD70A8639E
+manager: dansimp
 ---
 
 # Get-WssRemoteConnection

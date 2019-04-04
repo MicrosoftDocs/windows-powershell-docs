@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DD02CBB-CE03-49A3-AE33-8BC1A7DD3830
-ms.manager: dansimp
 ---
 
 # Test-ADDSDomainInstallation

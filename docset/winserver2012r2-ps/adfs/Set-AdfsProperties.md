@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 194346C5-785D-42E1-AD5F-22B1CD263967
-ms.manager: dansimp
 ---
 
 # Set-AdfsProperties

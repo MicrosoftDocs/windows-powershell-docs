@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E0AFADA5-E203-4170-9AA2-AF5F7D9E2458
+manager: dansimp
 ---
 
 # Get-NetIPsecQuickModeSA

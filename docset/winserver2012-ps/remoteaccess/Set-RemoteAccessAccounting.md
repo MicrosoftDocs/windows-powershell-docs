@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 10C62EE3-4BFA-416B-B89D-B7B6BD824A78
+manager: dansimp
 ---
 
 # Set-RemoteAccessAccounting

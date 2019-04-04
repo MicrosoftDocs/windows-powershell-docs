@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 83FAAF33-35BC-43BD-B72A-39E540DD952F
-ms.manager: dansimp
 ---
 
 # Rename-DhcpServerv4Superscope

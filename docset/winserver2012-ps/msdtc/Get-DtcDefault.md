@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 52539594-92A8-4E49-B96D-C0FD19BC165D
+manager: dansimp
 ---
 
 # Get-DtcDefault

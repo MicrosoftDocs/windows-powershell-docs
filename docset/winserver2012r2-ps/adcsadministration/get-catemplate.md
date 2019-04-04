@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26067498-C23B-4EAB-97D1-932508F43FCE
-ms.manager: dansimp
 ---
 
 # Get-CATemplate

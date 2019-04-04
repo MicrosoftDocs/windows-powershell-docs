@@ -1,6 +1,7 @@
 ---
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 ms.assetid: D72C061A-C5BE-4BEE-B4AE-4CC157E94E88
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith
@@ -235,8 +236,7 @@ This cmdlet accepts as input a CIM object which contains a DA site table entry.
 
 ## OUTPUTS
 
-###  
-This cmdlet returns no output.
+### None
 
 ## NOTES
 

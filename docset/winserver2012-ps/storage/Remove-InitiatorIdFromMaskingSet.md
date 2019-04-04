@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BB678E72-FCDF-48EF-8D92-AF8FB42EAE20
+manager: dansimp
 ---
 
 # Remove-InitiatorIdFromMaskingSet

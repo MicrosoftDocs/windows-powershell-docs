@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8E202634-15CB-436F-B240-041991ACFB81
+manager: dansimp
 ---
 
 # Get-WssBackupTarget

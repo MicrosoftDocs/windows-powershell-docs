@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FED049DD-C64A-4A46-8A4C-37DFF8458DD7
+manager: dansimp
 ---
 
 # Set-Printer

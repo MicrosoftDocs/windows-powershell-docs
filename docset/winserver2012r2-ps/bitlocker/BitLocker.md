@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09aea62d-54fa-458b-9b82-f13a8ed77fa6
-ms.manager: dansimp
 ---
 
 # BitLocker Module

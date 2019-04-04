@@ -1,6 +1,7 @@
 ---
 external help file: MsftUal_Admin.cdxml-help.xml
 ms.assetid: 2238EB3C-700E-4DDD-9550-FFF15924C4DA
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

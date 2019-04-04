@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 922D994A-079B-4C5A-84C7-5CC28688F240
+manager: dansimp
 ---
 
 # Get-WssGlobalClientBackupPolicy

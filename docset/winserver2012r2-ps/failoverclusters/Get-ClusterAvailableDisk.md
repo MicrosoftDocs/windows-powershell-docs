@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 837E6F97-3782-4170-9DC9-0D69619DD4AA
-ms.manager: dansimp
 ---
 
 # Get-ClusterAvailableDisk

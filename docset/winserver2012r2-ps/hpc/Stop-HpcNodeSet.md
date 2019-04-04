@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=205319
 schema: 2.0.0
 title: Stop-HpcNodeSet
 ms.assetid: AE2B2619-07AA-4A4F-AAFC-D0582C81E37A
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

@@ -43,8 +43,6 @@ Remove-NetworkControllerPublicIpAddress -ConnectionUri https://networkcontroller
 
 Description
 
-
-
 This example removes a public IP address resource called publicIp1 from the Network Controller.
 
 ## PARAMETERS

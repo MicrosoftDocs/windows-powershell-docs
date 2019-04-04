@@ -73,19 +73,11 @@ This example uses the **Multiple** parameter to configure the clustered resource
 ```
 PS C:\> $res = Get-ClusterResource -Name "IP Address"
 
-
-
 PS C:\> $param1 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,Address,10.55.88.46
-
-
 
 PS C:\> $param2 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,SubnetMask,255.0.0.0
 
-
-
 PS C:\> $params = $param1,$param2
-
-
 
 PS C:\> $params | Set-ClusterParameter
 ```
@@ -96,7 +88,6 @@ Because the new address and subnet mask are required, both parameters must be pa
 ## PARAMETERS
 
 ### -Cluster
-
 
 ```yaml
 Type: String
@@ -112,7 +103,6 @@ Accept wildcard characters: False
 
 ### -Create
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -126,7 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -Delete
-
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +131,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
@@ -156,7 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -Multiple
-
 
 ```yaml
 Type: Hashtable
@@ -172,7 +159,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-
 ```yaml
 Type: String
 Parameter Sets: Single Parameter
@@ -186,7 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-
 
 ```yaml
 Type: PSObject

@@ -40,7 +40,6 @@ The alias for this cmdlet is **Flush-SbecInstance**.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

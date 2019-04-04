@@ -36,7 +36,6 @@ The recovery process backs up the system volume and master boot record by copyin
 
 For more information about bare metal recovery, see [Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
-
 If you add the ability to perform a bare metal recovery to a policy, you also add the ability to perform a system state recovery.
 This is true even though the **SystemState** property of the bare metal recovery policy has a value of False.
 

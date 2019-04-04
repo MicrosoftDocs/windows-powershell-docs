@@ -49,13 +49,10 @@ VmGuid : 15F8DF27-183C-46BE-A037-2D8797E75C1C
 Item   : MsftSil_Computer (Name = "Contoso-01.Server.Test.Contoso...) 
 VmGuid : 15F8DF27-183C-46BE-A037-2D8797E75C1C
 
-
 PSComputerName : 
-
 
 ID          : KB999114
 InstallDate : 5/15/2013
-
 
 ChassisSerialNumber       : 7ZQ7TJ1
 CollectedDateTime         : 5/20/2013 3:20:09 PM
@@ -75,7 +72,6 @@ ProcessorName             : Intel(R) Xeon(R) CPU           E5440  @ 2.83GHz
 SystemManufacturer        : Dell Inc. 
 VmGuid                    : 
 
-
 ProductName             : Windows Server 2012 R2 Datacenter Preview
 RoleGuid                : 10a9226f-50ee-49d8-a393-9a501d47ce04
 RoleName                : File Server
@@ -83,14 +79,12 @@ SampleDate              : 5/18/2013
 UniqueDeviceAccessCount : 32
 UniqueUserAccessCount   : 55
 
-
 ProductName             : Windows Server 2012 R2 Datacenter Preview
 RoleGuid                : 7fb09bd3-7fe6-435e-8348-7d8aefb6cea3
 RoleName                : Print and Document Services
 SampleDate              : 5/18/2013
 UniqueDeviceAccessCount : 2
 UniqueUserAccessCount   : 6
-
 
 ID             : {6B6533BD-1680-4368-908E-D50977561A86}
 InstallDate    : 5/14/2013 12:00:00 AM

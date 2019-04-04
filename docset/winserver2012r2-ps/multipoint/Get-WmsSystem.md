@@ -40,93 +40,63 @@ The Get-WmsSystem cmdlet returns Windows MultiPoint Server system information or
 PS C:\> Get-WmsSystem
 WmsVersion                 : 2.0
 
-
 NetJoinStatus              : NetSetupDomainName
-
 
 DomainOrWorkgroupName      : TestDomain
 
-
 SystemMode                 : Normal
-
 
 IsIdentifyStarted          : False
 
-
 WMSConnectionString        : 
-
 
 MPMConnectionString        : 
 
-
 ConnectionCount            : 1
-
 
 LicenseCount               : 0
 
-
 State                      : Connected
-
 
 ConnectionError            : 0
 
-
 ComputerName               : Test1
-
 
 Sku                        : Oem
 
-
 WindowsEdition             : Windows MultiPoint Server 2011
-
 
 IsPremium                  : True
 
-
 MaxCombinedLicenseCount    : 24
-
 
 VLAcademicCalCount         : 0
 
-
 OemCalCount                : 0
-
 
 VLOpenCalCount             : 0
 
-
 IsSingleSessionPerUser     : True
-
 
 ManagedServers             : {}
 
-
 IsSQMOn                    : True
-
 
 IsWatsonOn                 : True
 
-
 IsIPPerSessionEnabled      : False
-
 
 NonLoopbackAdapterCount    : 1
 
-
 MacUsedForVirtualIP        : 
-
 
 IsDesktopMonitoringAllowed : True
 
-
 IsRemoteFxEnabled          : False
-
 
 IsWmsSvcRunning            : True
 
-
 ReservedAccount            : 
-
 
 ReservedAccountPassword    :
 ```

@@ -406,8 +406,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 * Ensure you run Windows PowerShell as an administrator. You can use the -f switch to bypass the prompt for confirmation.
 To see parameters, run the following command: install-AdcsNetworkDeviceEnrollmentService -?
 
-  
-
 ## RELATED LINKS
 
 [Uninstall-AdcsNetworkDeviceEnrollmentService](./Uninstall-AdcsNetworkDeviceEnrollmentService.md)

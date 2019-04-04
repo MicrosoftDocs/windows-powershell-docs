@@ -75,7 +75,6 @@ Accept wildcard characters: False
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
@@ -89,7 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-
 
 ```yaml
 Type: String
@@ -119,7 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
 
 ```yaml
 Type: Int32

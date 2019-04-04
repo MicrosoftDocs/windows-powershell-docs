@@ -184,7 +184,6 @@ Accept wildcard characters: False
 
 ### -PassInnerException
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

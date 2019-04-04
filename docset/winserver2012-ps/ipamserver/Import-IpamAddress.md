@@ -79,8 +79,7 @@ PS C:\>Import-IpamAddress -AddressFamily IPv4 -Path "C:\addressupdatev4.csv" -Ma
 Confirm 
  
 Imports a csv file as an update of all IP address records that belong to the specified IP address range. Along with adding new addresses and editing existing addresses, this operation also deletes addresses belonging to the specified IP address range from IPAM database, that are not present in the csv file update being imported. 
- 
- 
+
 Continue with this operation? 
  
 [Y] Yes  [N] No  [?] Help  :Y
@@ -144,7 +143,6 @@ Accept wildcard characters: False
 ### -ErrorPath
 Specifies the literal path, and not the name, of the error .csv file which are created if one or more records fail to get imported. 
 
-                        
 The file name is generated automatically by the computer running the IPAM server by pre-pending `Error_` and appending the timestamp of the operation to the file name specified in the **Path** parameter.
 The default value of this parameter is the Documents folder of the user.
 
@@ -303,7 +301,6 @@ The message can be one of the following:
 `Import of \<AddressFamily\> objects is complete.
 \<y\> out of \<y\> objects successfully imported.\<AddressFamily\>\<y\>\<y\>`
 
-                        
 OR 
 `Import of \<AddressFamily\> objects is complete.
 \<x\> out of \<y\> objects successfully imported.

@@ -149,10 +149,7 @@ This example disables all of the previously enabled outbound firewall rules in a
 ```
 PS C:\>$nfwRule = Get-NetFirewallRule -PolicyStore ActiveStore -PolicyStoreSourceType Dynamic
 
-
-
 PS C:\>Disable-NetFirewallRule -InputObject $nfwRule
-
 
 This is an alternate way to perform the same using only the pipeline.
 PS C:\>Get-NetFirewallRule -PolicyStore ActiveStore -PolicyStoreSourceType Dynamic | Disable-NetFirewallRule

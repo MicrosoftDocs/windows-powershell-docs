@@ -84,11 +84,7 @@ Since it is not able to find one it decides to create a self-signed certificate 
 ```
 PS C:\>$a = Get-ChildItem -Path cert:\localmachine\my
 
-
-
 PS C:\>$cert = $a | Where-Object -Property Subject -Value CN=edge1.corp.contoso.com -Clike
-
-
 
 PS C:\>Set-DANetworkLocationServer -NlsOnDAServer -Certificate $cert
 ```

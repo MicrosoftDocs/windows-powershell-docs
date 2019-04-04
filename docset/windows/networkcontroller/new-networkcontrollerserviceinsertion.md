@@ -60,8 +60,6 @@ $portmirr
 
 Description
 
-
-
 The above example creates a service insertion object that mirrors the traffic to the destination NIC specified by "Appliance_Ethernet1".
 This objet can be applied to a network interface so that the traffic from that network interface is mirrored to "Appliance_Enternet1".
 

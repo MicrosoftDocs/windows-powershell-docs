@@ -61,4 +61,3 @@ Installs an SSL certificate for a federation server proxy.
 ### [Update-WebApplicationProxyDeviceRegistration](./Update-WebApplicationProxyDeviceRegistration.md)
 Configures the AD FS SSL endpoint listeners that correspond to the UPN suffixes.
 
-

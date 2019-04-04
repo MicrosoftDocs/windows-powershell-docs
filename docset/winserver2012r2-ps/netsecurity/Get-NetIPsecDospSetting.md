@@ -62,10 +62,7 @@ This example gets the Dosp setting with the specified name.
 ```
 PS C:\>$netIPSDospSetting = Get-NetIPsecDospSetting
 
-
-
 PS C:\>Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } -InputObject $netIPSDospSetting
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecDospSetting | Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" }
@@ -77,14 +74,9 @@ This example gets all of the Dosp settings configured to the specified internal 
 ```
 PS C:\>$nIPSDospSetting = Get-NetIPsecDospSetting
 
-
-
 PS C:\>$nIPSDospSettingPubNet = Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } -InputObject $nIPSDospSetting
 
-
-
 PS C:\>Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2 -InputObject $nIPSDospSettingPubNet
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecDospSetting | Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } | Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2

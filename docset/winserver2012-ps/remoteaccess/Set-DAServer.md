@@ -95,18 +95,13 @@ This allows remote clients to connect to resources in the corporate network over
 ```
 PS C:\>$certs = Get-ChildItem -Path Cert:\LocalMachine\Root
 
-
-
 PS C:\>$IPSecRootCert = $certs[13]
-
-
 
 PS C:\>$IPSecRootCert
 Directory: Microsoft.PowerShell.Security\Certificate::localmachine\root 
 Thumbprint                                Subject 
 ----------                                ------- 
 65505D9CDD106DCC6D4C88D3D5FA0EE26B6A3C4F  CN=corp-contoso-dc1-ca 
-
 
 PS C:\>Set-DAServer -IPsecRootCertificate $IPsecRootCert -UserAuthentication "TwoFactor" -PassThru
 DAInstallType               : FullInstall 

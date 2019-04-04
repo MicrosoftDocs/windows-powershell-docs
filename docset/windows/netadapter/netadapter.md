@@ -217,4 +217,3 @@ Sets the SR-IOV properties of the network adapter, such as the number of virtual
 ### [Set-NetAdapterVmq](./Set-NetAdapterVmq.md)
 Sets the VMQ properties of a network adapter.
 
-

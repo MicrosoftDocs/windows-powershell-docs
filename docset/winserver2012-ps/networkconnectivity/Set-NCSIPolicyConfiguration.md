@@ -57,11 +57,7 @@ This example performs the same operation as EXAMPLE 1 using pipelining.
 ```
 PS C:\>$Object = Get-NCSIPolicyConfiguration -PolicyStore "contoso\User1"
 
-
-
 PS C:\>$Object.CorporateWebsiteProbe = http://ncsi.corp.microsoft.com
-
-
 
 PS C:\>Set-NCSIPolicyConfiguration -InputObject $Object
 ```

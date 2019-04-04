@@ -46,7 +46,6 @@ To specify a default naming context for an AD LDS environment, set the msDS-defa
 ```
 C:\PS>Remove-ADOrganizationalUnit -Identity "OU=Accounting,DC=FABRIKAM,DC=COM" -Recursive
 
-
 Are you sure you want to remove the item and all its children?
 Performing recursive remove on Target: 'OU=Accounting,DC=Fabrikam,DC=com'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help

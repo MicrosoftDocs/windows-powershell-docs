@@ -45,7 +45,6 @@ To specify a default naming context for an AD LDS environment, set the msDS-defa
 ```
 C:\PS>Remove-ADObject 'CN=AmyAl-LPTOP,CN=Computers,DC=FABRIKAM,DC=COM'
 
-
 Confirm
 Are you sure you want to perform this action?
 Performing operation "Remove" on Target "CN=AmyAl-LPTOP,CN=Computers,DC=FABRIKAM,DC=COM".
@@ -61,7 +60,6 @@ Remove the object identified by the DistinguishedName 'CN=AmyAl-LPTOP,CN=Compute
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>Remove-ADObject "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM" -Recursive
-
 
 Confirm
 Are you sure you want to perform this action?

@@ -43,12 +43,9 @@ Use the Get-BgpRouter cmdlet to see the current settings.
 ```
 PS C:\> Set-BgpRouter -LocalASN 64513 -PassThru
 
-
-
 Confirm
 One or more BGP peering sessions are active. Applying changes will restart these sessions. Do you want to continue?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
-
 
 RoutingDomain         :
 BgpIdentifier         : 192.168.1.10
@@ -70,8 +67,6 @@ The command includes the **PassThru** parameter, so the command sends a **BgpRou
 ```
 PS C:\> Set-BgpRouter -LocalASN 64513 -Force -PassThru
 
-
-
 RoutingDomain         :
 BgpIdentifier         : 192.168.1.10
 LocalASN              : 64513
@@ -90,9 +85,6 @@ The command does not prompt the user for confirmation before it modifies the con
 ### Example 3: Modify the configuration of a BGP router in a routing domain
 ```
 PS C:\> Set-BgpRouter -RoutingDomain "Rd_001" -BgpIdentifier 10.1.1.10 -LocalASN 64522 -PassThru
-
-
-
 
 RoutingDomain         : Rd_001
 BgpIdentifier         : 10.1.1.10

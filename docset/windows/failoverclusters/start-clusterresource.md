@@ -63,7 +63,6 @@ The Windows PowerShell® prompt returns as soon as the action has been initiated
 
 ### -ChooseBestNode
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

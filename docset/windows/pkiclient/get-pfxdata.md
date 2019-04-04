@@ -38,8 +38,6 @@ The **Get-PfxData** cmdlet extracts the content of a Personal Information Exchan
 ```
 PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
 
-
-
 PS C:\>$mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $mypwd
 ```
 
@@ -49,11 +47,7 @@ This example returns certificate information for the file mypfx.pfx located on t
 ```
 PS C:\>$NewPwd = ConvertTo-SecureString -String "abcd" -Force -AsPlainText
 
-
-
 PS C:\>$mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $Oldpwd
-
-
 
 PS C:\>Export-PfxCertificate -PfxData $mypfx -FilePath C:\mypfx.pfx -Password $NewPwd -Force
 ```

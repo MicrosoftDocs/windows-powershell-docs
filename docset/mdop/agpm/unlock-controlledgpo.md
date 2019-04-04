@@ -175,4 +175,3 @@ This cmdlet returns controlled GPO objects, if you specify the *PassThru* parame
 
 [Remove-ControlledGpo](./Remove-ControlledGpo.md)
 
-

@@ -56,7 +56,6 @@ DatabasePort     :
 DatabaseAuthType : Windows
 DatabaseUser     : 
 
-
 The second command sets the database configuration. The command includes the database name and database server name. The cmdlet prompts you before it continues.
 PS C:\>Set-IpamDatabase -DatabaseServer "ContosoDB04" -DatabaseName "IpamData01" -DatabasePort 1433 -DatabaseAuthType Windows
 Confirm

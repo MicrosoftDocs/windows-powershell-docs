@@ -33,7 +33,6 @@ Get-NetworkControllerConnectivityCheckResult [[-ResourceId] <String[]>] -Connect
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CertificateThumbprint

@@ -56,7 +56,6 @@ This example removes cluster configuration information from the local node after
 
 ### -CleanupDisks
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

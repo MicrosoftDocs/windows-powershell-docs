@@ -35,7 +35,6 @@ For example, you can use the Get-ADComputer cmdlet to retrieve a computer object
 ```
 C:\PS>Get-ADComputerServiceAccount -Identity ComputerAcct1
 
-
 Enabled           : True
 Name              : SvcAcct1
 UserPrincipalName :

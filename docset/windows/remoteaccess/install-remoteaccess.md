@@ -446,7 +446,6 @@ Accept wildcard characters: False
 
 ### -Legacy
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Vpn

@@ -96,7 +96,6 @@ UserVersion      : AD Version: 8, SysVol Version: 8
 ComputerVersion  : AD Version: 0, SysVol Version: 0 
 WmiFilter        : 
 
-
 DisplayName      : TestGPO-1 
 DomainName       : contoso.com 
 Owner            : CONTOSO\Domain Admins 

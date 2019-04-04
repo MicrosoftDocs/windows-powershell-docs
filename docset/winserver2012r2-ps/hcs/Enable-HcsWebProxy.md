@@ -37,7 +37,6 @@ The cmdlet applies all existing configuration settings for the proxy.
 ```
 PS C:\> Enable-HcsWebProxy
 
-
 ConnectionURI                                Authentication Username                                          IsEnabled
 -------------                                -------------- --------                                          ---------
 http://myproxy:8080                                   Basic enarvaez                                               True

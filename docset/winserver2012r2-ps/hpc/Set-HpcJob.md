@@ -1022,8 +1022,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 - ProgressMessage
 - JobEnv
 
-
-
 * Forhpcpack_gen, you can end a job that is set to run until it is canceled by using the **Set-HpcJob** cmdlet to set the RunUntilCanceled property to false. For more information about how to end a job that is set to run until it is canceled, see End a Run Until Canceled Job as Finishedhttps://technet.microsoft.com/en-us/library/dd796374(v=ws.10).aspx (https://technet.microsoft.com/en-us/library/dd796374(v=ws.10).aspx) in the TechNet library.
 
   Starting in Windows HPC Server 2008 R2, you can end a job that is set to run until it is canceled and set the state of that job to Finished by specifying the State parameter when you run the Stop-HpcJob cmdlet.

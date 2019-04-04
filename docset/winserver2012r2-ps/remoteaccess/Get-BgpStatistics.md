@@ -37,9 +37,6 @@ The **Get-BgpStatistics** cmdlet retrieves Border Gateway Protocol (BGP) peering
 ```
 PS C:\> Get-BgpStatistics
 
-
-
-
 PeerName                 : Tenant-01
 TcpConnectionEstablished : 14-03-2013 02:57:04
 TcpConnectionClosed      : 14-03-2013 02:56:34

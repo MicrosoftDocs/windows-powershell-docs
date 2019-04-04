@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancer -ConnectionUri https://networkcontroller -R
 
 Description
 
-
-
 This example removes a load balancer resource named lb1 from the Network Controller
 
 ## PARAMETERS

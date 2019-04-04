@@ -93,7 +93,6 @@ SessionIdentifier       : fffffa800d008430-4000013700000003
 TargetNodeAddress       : iqn.1991-05.com.contoso:testiscsi-deepcore-target 
 TargetSideIdentifier    : 0300 
 
-
 PS C:\>Unregister-IscsiSession -SessionIdentifier fffffa800d008430-4000013700000001
 ```
 
@@ -219,5 +218,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 
 [Get-iSCSISession](./Get-IscsiSession.md)
-
 

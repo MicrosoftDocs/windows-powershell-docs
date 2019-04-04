@@ -46,16 +46,12 @@ EntryPointName                 GslbIp                         Servers
 --------------                 ------                         ------- 
 Entry Point 2                  0.0.0.0                        {DA2.domain1.corp.contoso.com} 
 
-
 To validate the name of the GPO which was created by this cmdlet, the following script should be used.
 PS C:\>$daServer = Get-DAServer -EntrypointName "Entry Point 2"
-
-
 
 PS C:\>$daServer.ServerConfiguration.GpoName
 
 domain1.corp.contoso.com\DirectAccess Server Settings - Entry Point 2
-
 
 In addition, running the Get-DAMultiSite cmdlet displays the newly added entry point.
 PS C:\>Get-DAMultiSite
@@ -77,11 +73,8 @@ EntryPointName                 GslbIp                         Servers
 --------------                 ------                         ------- 
 Entry Point 2                  0.0.0.0                        {DA2.domain1.corp.contoso.com}
 
-
 To validate, the following script should be used.
 PS C:\>$daServer = Get-DAServer -EntrypointName "Entry Point 2"
-
-
 
 PS C:\>$daServer.ServerConfiguration.GpoName
 

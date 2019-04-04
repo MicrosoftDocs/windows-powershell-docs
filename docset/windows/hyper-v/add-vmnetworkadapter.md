@@ -150,7 +150,6 @@ Accept wildcard characters: False
 
 ### -DeviceNaming
 
-
 ```yaml
 Type: OnOffState
 Parameter Sets: (All)

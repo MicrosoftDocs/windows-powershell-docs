@@ -39,7 +39,6 @@ The **Get-AdfsGlobalAuthenticationPolicy** cmdlet displays the global authentica
 ```
 PS C:\> Get-AdfsGlobalAuthenticationPolicy
 
-
 AdditionalAuthenticationProvider      : {MultiFactorAuthentication}
 DeviceAuthenticationEnabled           : True
 PrimaryIntranetAuthenticationProvider : {WindowsAuthentication}

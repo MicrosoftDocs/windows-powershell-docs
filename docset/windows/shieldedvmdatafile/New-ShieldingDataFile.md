@@ -199,7 +199,6 @@ Microsoft.Windows.HardenedFabric.Cmdlets.Common.NamedFileContent[]
 Microsoft.Windows.HardenedFabric.Cmdlets.Common.Guardian[]
 Microsoft.Windows.HardenedFabric.Cmdlets.Common.FabricPolicyValue
 
-
 ## OUTPUTS
 
 ### System.Object

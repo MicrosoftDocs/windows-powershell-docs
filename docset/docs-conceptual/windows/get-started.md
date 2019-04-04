@@ -11,7 +11,6 @@ manager: dansimp
 ms.date: 09/26/2017
 ---
 
-
 # Windows 10 and Windows Server 2016
 
 This topic lists the Windows PowerShell modules included with Windows Server 2016 and Windows 10. The Windows PowerShell modules in the list support automating the features of those versions of the Windows operating system and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for Windows Server 2016 and Windows 10.

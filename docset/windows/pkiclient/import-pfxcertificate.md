@@ -42,8 +42,6 @@ Delegation may be required when using this cmdlet with Windows PowerShell® remo
 ```
 PS C:\>$mypwd = Get-Credential -UserName 'Enter password below' -Message 'Enter password below'
 
-
-
 PS C:\>Import-PfxCertificate -FilePath C:\mypfx.pfx -CertStoreLocation Cert:\LocalMachine\My -Password $mypwd.Password
 ```
 
@@ -60,8 +58,6 @@ The **Password** parameter is not required since this PFX file is not password p
 ### EXAMPLE 3
 ```
 PS C:\>Set-Location -Path cert:\localMachine\my
-
-
 
 PS C:\>Import-PfxCertificate -FilePath c:\mypfx.pfx
 ```

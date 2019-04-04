@@ -41,8 +41,6 @@ In a non-multitenant deployment, do not specify the **RoutingDomain** parameter.
 ```
 PS C:\> Get-BgpRouter
 
-
-
 RoutingDomain         :
 BgpIdentifier         : 192.168.1.10
 LocalASN              : 64513
@@ -59,9 +57,6 @@ This command gets the configuration information of the local BGP router.
 ### Example 2: Get configuration information of a router for a routing domain
 ```
 PS C:\> Get-BgpRouter -RoutingDomain "Rd_001"
-
-
-
 
 RoutingDomain         : Rd_001
 BgpIdentifier         : 172.22.226.39

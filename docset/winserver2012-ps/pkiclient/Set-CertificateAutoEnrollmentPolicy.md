@@ -66,7 +66,6 @@ This cmdlet also configures the Remote Desktop certificate store as an additiona
 The example in detail.
 PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreManagement -EnableTemplateCheck -EnableExpirationNotification -ExpirationPercentage 10 -Context User
 
-
 The concise version of the same example.
 PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
 ```

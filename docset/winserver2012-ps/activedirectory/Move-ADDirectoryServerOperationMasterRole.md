@@ -117,7 +117,6 @@ Seizes the specified roles (RID master, infrastructure master, domain naming mas
 ```
 PS C:\>$server = Get-ADDomainController -Identity "TK5-CORP-DC-10.fabrikam.com"
 
-
 PS C:\>Move-ADDirectoryServerOperationMasterRole -Identity $server -OperationMasterRole SchemaMaster,DomainNamingMaster,PDCEmulator,RIDMaster,InfrastructureMaster
 ```
 

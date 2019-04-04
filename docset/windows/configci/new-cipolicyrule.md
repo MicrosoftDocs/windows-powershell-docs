@@ -49,7 +49,6 @@ PS C:\> $DriverFiles = Get-SystemDriver -ScanPath '.\temp\' -UserPEs -OmitPaths 
 PS C:\> New-CIPolicyRule -Level FileName -DriverFiles $DriverFiles
 Scan completed successfully
 
-
 Name           : \\?\E:\cmdlets\temp\Microsoft.ConfigCI.Commands.dll FileRule
 Id             : ID_ALLOW_A_1
 TypeId         : Allow
@@ -97,7 +96,6 @@ For this example, we present only the first few rules.
 PS C:\> New-CIPolicyRule -Level Publisher -Fallback Hash -DriverFiles $DriverFiles
 "Scan completed successfully"
 
-
 Name           : \\?\E:\cmdlets\temp\Microsoft.ConfigCI.Commands.dll Hash Sha1
 Id             : ID_ALLOW_A_F
 TypeId         : Allow
@@ -143,7 +141,6 @@ For this example, we present only the first few rules.
 ```
 PS C:\> New-CIPolicyRule -DriverFilePath '.\temp\ConfigCITestBinaries\ci.dll' -Level Publisher
 Scan completed successfully
-
 
 Name           : MSIT Test CodeSign CA 3
 Id             : ID_SIGNER_S_B
@@ -272,7 +269,6 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFileNames
-
 
 ```yaml
 Type: SwitchParameter

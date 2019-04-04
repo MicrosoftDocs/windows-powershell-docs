@@ -55,14 +55,10 @@ The Get-NetFirewallRule cmdlet returns the rules associated with the filters and
 ```
 PS C:\>$nfServiceFilter = Get-FirewallRule -DisplayName "Wireless Portable Devices" | Get-NetFirewallServiceFilter
 
-
-
 PS C:\>Set-NetFirewallServiceFilter -Service Any -InputObject $nfServiceFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Wireless Portable Devices" | Get-NetFirewallServiceFilter | Set-NetFirewallServiceFilter -Service Any
-
 
 This cmdlet can be run without the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Wireless Portable Devices" -Service Any
@@ -74,10 +70,7 @@ This example modifies the user field of a particular firewall rule.
 ```
 PS C:\>$nfServiceFilter = Get-NetFirewallRule -Group "@FirewallAPI.dll,-30502" | Get-NetFirewallServiceFilter -Service Any
 
-
-
 PS C:\>Set-NetFirewallServiceFilter -Service Ssdpsrv -InputObject $nfServiceFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallRule -Group "@FirewallAPI.dll,-30502" | Get-NetFirewallServiceFilter -Service Any | Set-NetFirewallServiceFilter -Service Ssdpsrv

@@ -79,10 +79,7 @@ There are no active users and hence the TotalConnections , TotalDAConnections, T
 ```
 PS C:\>$startdate = Get-Date -Date "12/25/2011"
 
-
-
 PS C:\>$enddate = Get-Date -Date "01/10/2012"
-
 
 When the start date or end date are specified, this cmdlet retrieves the counters from accounting store.
 PS C:\>Get-RemoteAccessConnectionStatisticsSummary -StartDateTime $startdate -EndDateTime $enddate

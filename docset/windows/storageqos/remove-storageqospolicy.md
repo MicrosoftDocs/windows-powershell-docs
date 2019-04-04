@@ -54,8 +54,6 @@ For more information about Storage QoS, see Storage Quality of Servicehttps://te
 ```
 PS C:\>Get-StorageQosPolicy -Name "Policy02" | Remove-StorageQosPolicy
 
-
-
 Confirm
 
 Are you sure you want to perform this action? 

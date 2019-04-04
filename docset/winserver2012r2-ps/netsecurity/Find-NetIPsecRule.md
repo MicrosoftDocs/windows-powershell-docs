@@ -113,9 +113,7 @@ The cmdlet gets the IPSec rules that are matched to the IP address that you spec
 This parameter value is the first end point of an IPsec rule and specifies the computers that are subject to the requirements of the rule. 
 The acceptable values for this parameter are:an IPv4 or IPv6 address, host name, subnet, range, or the following keyword: Any. 
 
-
 The acceptable formats for this parameter are: 
-
 
  -- Single IPv4 Address: 1.2.3.4 
 
@@ -150,7 +148,6 @@ This parameter value is the first end point of an IPsec rule.
 The acceptable values for this parameter are:a port, range, and keyword.
 The value depends on the protocol. 
 
-
 Protocol is TCP or UDP. 
 The acceptable values for this parameter are:
 
@@ -158,15 +155,12 @@ The acceptable values for this parameter are:
 - Port number: 80
 - Keyword: Any
 
-
 Protocol is ICMPv4 or ICMPv6. 
 The acceptable values for this parameter are:
-
 
 - An ICMP type, code pair: 0, 8
 - Type and code: 0 through 255
 - Keyword: Any
-
 
 No protocol is set.
 The acceptable values for this parameter are:
@@ -175,7 +169,6 @@ The acceptable values for this parameter are:
 - RPC
 - RPC-EPMap
 - IPHTTPS
-
 
 Note: IPHTTPS is supported only on Windows Server 2012.
 
@@ -223,7 +216,6 @@ The acceptable values for this parameter are:an IPv4 or IPv6 address, host name,
 
 The acceptable formats for this parameter are: 
 
-
 - Single IPv4 Address: 1.2.3.4 
 
 - Single IPv6 Address: fe80::1 
@@ -257,24 +249,19 @@ This parameter value is the second end point of an IPsec rule.
 The acceptable values for this parameter are:a port, range, and keyword.
 The value depends on the protocol. 
 
-
 Protocol is TCP or UDP.
 The acceptable values for this parameter are:
-
 
 - Port range: 0 through 65535 
 - Port number: 80 
 - Keyword: Any 
 
-
 Protocol is ICMPv4 or ICMPv6.
 The acceptable values for this parameter are:
-
 
 - An ICMP type, code pair: 0, 8 
 - Type and code: 0 through 255 
 - Keyword: Any. 
-
 
 No protocol is set.
 The acceptable values for this parameter are:
@@ -283,7 +270,6 @@ The acceptable values for this parameter are:
 - RPC
 - RPC-EPMap
 - IPHTTPS. 
-
 
 Note: IPHTTPS is supported only on Windows Server 2012.
 

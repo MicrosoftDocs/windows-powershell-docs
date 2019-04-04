@@ -36,7 +36,6 @@ You must have administrator rights to run this cmdlet.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Confirm

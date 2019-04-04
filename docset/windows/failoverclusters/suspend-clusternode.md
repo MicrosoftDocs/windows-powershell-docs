@@ -127,7 +127,6 @@ Accept wildcard characters: False
 
 ### -ForceDrain
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

@@ -75,8 +75,7 @@ Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -StoragePoolFriendlyName <Str
 
 ## DESCRIPTION
 The **Remove-PhysicalDisk** cmdlet removes a physical disk from a specified storage pool. 
- 
-                      
+
 If sufficient space does not exist in the storage pool to tolerate this removal, then data loss can result (the user is warned about this).
 If the user configuration allows, then the user should add a replacement physical disk to the pool prior to removal of the old one.
 

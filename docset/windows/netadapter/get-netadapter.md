@@ -80,7 +80,6 @@ This command gets all of the physical network adapters.
 ```
 PS C:\> Get-NetAdapter -Name "Ethernet 2"
 
-
 This command is a version that uses wildcard characters.
 PS C:\> Get-NetAdapter -Name "E*2"
 ```

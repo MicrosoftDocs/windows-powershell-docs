@@ -48,14 +48,10 @@ The Get-NetFirewallRule or Get-NetIPsecrule cmdlet returns the rules associated 
 ```
 PS C:\>$nfPortFilter = Get-FirewallRule -DisplayName "Play To streaming server" | Get-NetFirewallPortFilter
 
-
-
 PS C:\>Set-NetFirewallPortFilter -LocalPort 10246 -InputObject $nfPortFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Play To streaming server" | Get-NetFirewallPortFilter | Set-NetFirewallPortFilter -LocalPort 10246
-
 
 This cmdlet can be run without the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Play To streaming server" -LocalPort 10246
@@ -67,14 +63,9 @@ This example modifies the **LocalPort** parameter value of the specified firewal
 ```
 PS C:\>$nfPortFilter = Get-NetFirewallPortFilter
 
-
-
 PS C:\>$nfPortFilter10246 = Where-Object -FilterScript { $_.LocalPort -Eq "10246" } -InputObject $nfPortFilter
 
-
-
 PS C:\>Set-NetFirewallPortFilter -LocalPort Any -InputObject $nfPortFilter10246
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallPortFilter | Where-Object -FilterScript { $_.LocalPort -Eq "10246" } | Set-NetFirewallPortFilter -LocalPort Any
@@ -86,14 +77,9 @@ This example modifies all of the rules associated with a specific port.
 ```
 PS C:\>$nfPortFilter = Get-NetFirewallRule -DisplayGroup "File and Printer Sharing" | Get-NetFirewallPortFilter
 
-
-
 PS C:\>$nfPortFilter137 = Where-Object -FilterScript { $_.RemotePort -Eq "137" } -InputObject $nfPortFilter
 
-
-
 PS C:\>Set-NetFirewallPortFilter -LocalPort Any -InputObject $nfPortFilter137
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallRule -DisplayGroup "File and Printer Sharing" | Get-NetFirewallPortFilter | Where-Object -FilterScript { $_.RemotePort -Eq "137" } | Set-NetFirewallPortFilter -LocalPort Any
@@ -304,7 +290,6 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
 
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-
 
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
 

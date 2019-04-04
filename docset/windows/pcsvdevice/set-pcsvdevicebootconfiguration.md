@@ -249,7 +249,6 @@ Accept wildcard characters: False
 
 ### -PersistentBootSource
 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)

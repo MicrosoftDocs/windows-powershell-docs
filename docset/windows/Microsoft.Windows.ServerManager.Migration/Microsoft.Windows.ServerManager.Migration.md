@@ -16,7 +16,6 @@ ms.reviewer:
 ms.technology: powershell-windows
 ---
 
-
 # Microsoft.Windows.ServerManager.Migration Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all Server Migration cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.

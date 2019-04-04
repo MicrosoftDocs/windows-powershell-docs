@@ -81,15 +81,9 @@ See the Get-NetIPsecMainModeSA and Get-NetIPsecQuickModeSA cmdlets for more info
 ```
 PS C:\>$cert1Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MSFT,CN=ꞌMicrosoft Root Authorityꞌ" -AuthorityType Root
 
-
-
 PS C:\>$cert2Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MYORG,CN='My Organizations Root Certificate'" -AuthorityType Root
 
-
-
 PS C:\>$certAuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Certificate Auth Set" -Proposal $cert1Proposal,$cert2Proposal
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Authenticate with Certificates Rule" -InboundSecurity Require -OutboundSecurity Request -Phase2AuthSet $certAuthSet.Name
 ```
@@ -101,31 +95,17 @@ The computer also requests authentication for outbound connections, but allows a
 ```
 PS C:\>$mkerbauthprop = New-NetIPsecAuthProposal -Machine -Kerberos
 
-
-
 PS C:\>$mntlmauthprop = New-NetIPsecAuthProposal -Machine -NTLM
-
-
 
 PS C:\>$p1Auth = New-NetIPsecPhase1AuthSet -DisplayName "First Machine Auth" -Proposal $mkerbauthprop,$mntlmauthprop
 
-
-
 PS C:\>$ukerbauthprop = New-NetIPsecAuthProposal -User -Kerberos
-
-
 
 PS C:\>$unentlmauthprop = New-NetIPsecAuthProposal -User -NTLM
 
-
-
 PS C:\>$anonyauthprop = New-NetIPsecAuthProposal -Anonymous
 
-
-
 PS C:\>$p2Auth = New-NetIPsecPhase2AuthSet -DisplayName "Second User Auth" -Proposal $ukerbauthprop,$unentlmauthprop,$anonyauthprop
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Authenticate Both Computer and User" -InboundSecurity Require -OutboundSecurity Require -Phase1AuthSet $p1Auth.Name -Phase2AuthSet $p2Auth.Name
 ```

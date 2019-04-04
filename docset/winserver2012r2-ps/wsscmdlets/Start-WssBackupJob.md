@@ -36,7 +36,6 @@ This is an asynchronous operation.
 ### -------------------------- EXAMPLE Example 1: Start a manual server backup --------------------------
 Example : Start a manual server backup
 
-
 ```
 PS C:\> Start-WssBackupJob
 ```

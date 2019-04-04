@@ -52,8 +52,6 @@ This example changes the authentication method used by the server for incoming c
 ```
 PS C:\>$cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
 
-
-
 PS C:\>Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
 ```
 

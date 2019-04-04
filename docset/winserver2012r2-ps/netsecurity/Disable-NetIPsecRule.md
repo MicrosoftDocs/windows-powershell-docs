@@ -154,8 +154,6 @@ This example disables all transport mode DA rules on the local computer.
 ```
 PS C:\>$phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Disable-NetIPsecRule -InputObject $phase1AuthSet
 ```
 
@@ -770,8 +768,7 @@ The local computer attempts to authenticate any outbound network connections tha
                          
  -- Require: Authentication is required for connections that match the rule.
 If the authentication is not successful, then the outbound network traffic is discarded.
-                         
-                         
+
 The default value is None. 
                          
 When the **InboundSecurity** parameter is also specified, the following configurations are valid: 
@@ -877,8 +874,7 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
                          
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-                         
-                         
+
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
  -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server 2012. 

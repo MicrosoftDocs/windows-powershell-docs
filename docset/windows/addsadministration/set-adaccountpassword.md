@@ -73,7 +73,6 @@ This command sets the password of the user account with SamAccountName elisada t
 ```
 PS C:\> Set-ADAccountPassword -Identity EvanNa
 
-
 Please enter the current password for 'CN=Evan Narvaez,CN=Users,DC=Fabrikam,DC=com'
 Password:********** 
 Please enter the desired password for 'CN=Evan Narvaez,CN=Users,DC=Fabrikam,DC=com'

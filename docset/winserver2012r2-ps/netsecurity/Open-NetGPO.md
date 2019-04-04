@@ -44,15 +44,9 @@ Note: An error will result for using this cmdlet when the user is not a domain a
 ```
 PS C:\>$gpoSession = Open-NetGPO -PolicyStore castle.contoso.com\Win8ClientFirewallPolicy
 
-
-
 PS C:\>Remove-NetFirewallRule -Name BlockIMAccess -GPOSession $gpoSession
 
-
-
 PS C:\>New-NetFirewallRule -Name LimitIMAccess -DisplayName "Contoso Messenger" -Program "%ProgramFiles(X86)%\Contoso Messenger\cmsg.exe" -Action Block -GPOSession $gpoSession
-
-
 
 PS C:\>Save-NetGPO -GPOSession $gpoSession
 ```
@@ -63,15 +57,9 @@ This example replaces one rule in a domain GPO with another using a cached copy 
 ```
 PS C:\>$domain = "corp.contoso.com"
 
-
-
 PS C:\>$gpo = "corp.contoso.com\FirewallPolicy"
 
-
-
 PS C:\>$pdc = Get-ADDomainController -Discover -Service PrimaryDC -DomainName $domain
-
-
 
 PS C:\>$session = Open-NetGPO -PolicyStore $gpo -DomainController $pdc.Hostname
 ```

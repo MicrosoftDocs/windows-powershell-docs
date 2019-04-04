@@ -28,4 +28,3 @@ This reference provides the cmdlet description and syntax for the Windows Update
 ### [Get-WindowsUpdateLog](./Get-WindowsUpdateLog.md)
 Merges Windows Update .etl files into a single log file.
 
-

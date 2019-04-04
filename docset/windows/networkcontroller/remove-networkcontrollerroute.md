@@ -47,8 +47,6 @@ Remove-NetworkControllerRoute -ConnectionUri https://networkcontroller -RouteTab
 
 Description
 
-
-
 The above cmdlet removes a route named "DefaultRoute" from a route table named Table1.
 
 ## PARAMETERS

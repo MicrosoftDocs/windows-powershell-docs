@@ -58,7 +58,6 @@ This example disables QoS on all network adapters and restarts the network adapt
 ```
 PS C:\>Disable-NetAdapterQos -Name "Ethernet 2"
 
-
 This is the cmdlet using wildcard characters.
 PS C:\>Disable-NetAdapterQos -Name E*2
 ```
@@ -69,10 +68,7 @@ This example disables QoS on a network adapter named Ethernet 2 and restarts the
 ```
 PS C:\>$netAdapterQoS1 = Get-NetAdapterQos -Name *
 
-
-
 PS C:\>Disable-NetAdapterQos -InputObject $netAdapterQoS1
-
 
 This is a version of the cmdlet that gets all of the network adapters that support QoS and disables QoS on all of them via the pipeline, then restarts the QoS network adapters.
 PS C:\>Get-NetAdapterQos -Name * | Disable-NetAdapterQos

@@ -69,7 +69,6 @@ Number IsHighlyAvailable IsClustered IsScaleOut
 ------ ----------------- ----------- ----------
      9              True        True       True
 
-
 The next command removes disk number 9 its failover cluster. The final command repeats the first command to display the new status of the disk. 
 PS C:\> Disable-StorageHighAvailability -DiskNumber 9
 PS C:\> Get-Disk -Number 9 | Format-Table Number,IsHighlyAvailable,IsClustered,IsScaleOut

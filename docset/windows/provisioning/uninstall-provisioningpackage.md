@@ -171,7 +171,6 @@ Accept wildcard characters: False
 
 ### Microsoft.Windows.Provisioning.ProvCommon.RuntimeProvPackageMetadata
 
-
 ## OUTPUTS
 
 ### System.Object

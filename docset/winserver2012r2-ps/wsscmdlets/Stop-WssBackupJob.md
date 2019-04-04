@@ -35,7 +35,6 @@ The **Stop-WssBackupJob** cmdlet cancels the currently running backup job.
 ### -------------------------- EXAMPLE Example 1: Stop a backup job --------------------------
 Example : Stop a backup job
 
-
 ```
 PS C:\> Stop-WssBackupJob
 ```

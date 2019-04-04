@@ -46,8 +46,6 @@ Performing the operation 'New-NetworkControllerGateway' on entities of type 'Mic
 want to continue? 
  [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): yes
 
-
-
 Tags             : 
 ResourceRef      : /Gateways/MTGW03
 InstanceId       : a856b20b-0009-4515-9d86-9a17cbda0733

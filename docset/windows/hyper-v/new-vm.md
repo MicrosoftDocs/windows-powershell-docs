@@ -185,7 +185,6 @@ Accept wildcard characters: False
 
 ### -Experimental
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -199,7 +198,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
 
 ```yaml
 Type: SwitchParameter
@@ -326,7 +324,6 @@ Accept wildcard characters: False
 
 ### -Prerelease
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -371,7 +368,6 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-
 
 ```yaml
 Type: Version

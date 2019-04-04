@@ -165,8 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * The application directories are removed from their respective instance folders in the file system. The uninstall command does not remove the Secure Sockets Layer/Transport Layer Security (SSL/TLS) or the secure hypertext transfer protocol (https) bindings.
 
-  
-
 ## RELATED LINKS
 
 [Install-AdcsEnrollmentWebService](./Install-AdcsEnrollmentWebService.md)

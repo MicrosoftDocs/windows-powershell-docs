@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerOutboundNatRule -ConnectionUri https://netwo
 
 Description
 
-
-
 This example removes an outbound NAT rule named OutNAt1 from a load balancer resource called lb1
 
 ## PARAMETERS

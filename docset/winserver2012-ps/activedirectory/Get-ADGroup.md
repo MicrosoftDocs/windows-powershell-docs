@@ -59,7 +59,6 @@ For more information about the how to determine the properties for group objects
 ```
 C:\PS>Get-ADGroup administrators
 
-
 DistinguishedName : CN=Administrators,CN=Builtin,DC=Fabrikam,DC=com
 GroupCategory     : Security
 GroupScope        : DomainLocal
@@ -79,7 +78,6 @@ Get the group with samAccountName administrators.
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>get-adgroup -Identity S-1-5-32-544 -Properties member
-
 
 DistinguishedName : CN=Administrators,CN=Builtin,DC=Fabrikam,DC=com
 GroupCategory     : Security

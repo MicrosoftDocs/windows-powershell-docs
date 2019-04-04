@@ -43,8 +43,6 @@ In a non-multitenant deployment, do not specify the **RoutingDomain** parameter.
 ```
 PS C:\> Add-BgpRouter -BgpIdentifier "192.168.1.10" -LocalASN 64522 -PassThru
 
-
-
 RoutingDomain         :
 BgpIdentifier         : 192.168.1.10
 LocalASN              : 64522
@@ -62,9 +60,6 @@ The command specifies the IP address and ASN of the local router.
 ### Example 2: Add a local BGP router for a routing domain
 ```
 PS C:\> Add-BgpRouter -RoutingDomain "Rd_001" -BgpIdentifier "10.1.1.10" -LocalASN 64522 -PassThru
-
-
-
 
 RoutingDomain         : Rd_001
 BgpIdentifier         : 10.1.1.10

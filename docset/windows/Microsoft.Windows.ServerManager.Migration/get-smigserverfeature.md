@@ -150,7 +150,6 @@ If a migration store is specified in the *Path* parameter, this cmdlet returns o
 ## NOTES
 * The Windows Server Migration Tools deployment log file is located in %windir%\Logs\SmigDeploy.log. Other Windows Server Migration Tools log files are created at the following locations: 
 
-
 - %windir%\Logs\ServerMigration.log
 
 - On Windows Server 2008 and later versions: %localappdata%\SvrMig\Log
@@ -163,7 +162,6 @@ If a migration store is specified in the *Path* parameter, this cmdlet returns o
 When the log file grows larger than the size specified in the registry key, the log file is deleted.
 Logging begins again in a new log file that uses the same file name and path.
 The default maximum log size is 200 MB. 
-
 
 - Key: HKLM\Software\Microsoft\ServerMigration
 

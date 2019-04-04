@@ -51,7 +51,6 @@ By default, DFS Replication creates connections with the recommended schedule an
 ```
 PS C:\> Set-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -ScheduleType Always
 
-
 GroupName               : RG24
 SourceComputerName      : SRV01
 DestinationComputerName : SRV02
@@ -75,7 +74,6 @@ The **ScheduleType** parameter specifies a full schedule that enables replicatio
 ### Example 2: Set a connection schedule
 ```
 PS C:\> Set-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV01" -Day Monday,Tuesday,Wednesday,Thursday,Friday - BandwidthDetail "ffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffff"
-
 
 GroupName               : RG 1
 SourceComputerName      : SRV1

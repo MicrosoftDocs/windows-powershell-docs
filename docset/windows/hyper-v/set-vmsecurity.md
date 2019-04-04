@@ -43,7 +43,6 @@ The **Set-VMSecurity** cmdlet configures security settings for a virtual machine
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

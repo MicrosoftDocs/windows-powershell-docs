@@ -47,7 +47,6 @@ IsHeaderDigest             : False
 TargetPortalAddress        : testiSCSI-deepcore 
 TargetPortalPortNumber     : 3260 
 
-
 PS C:\>Get-IscsiTargetPortal | Update-IscsiTargetPortal
 ```
 
@@ -88,7 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -InitiatorInstanceName
-
 
 ```yaml
 Type: String
@@ -136,7 +134,6 @@ Accept wildcard characters: False
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
 
-                        
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

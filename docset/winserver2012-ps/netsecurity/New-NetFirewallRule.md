@@ -88,8 +88,6 @@ Both memberships must be confirmed by authentication using a separate connection
 ```
 PS C:\>New-NetFirewallRule -Name "Block Wireless In" -Direction Inbound -InterfaceType Wireless -Action Block
 
-
-
 PS C:\>New-NetFirewallRule -Name "Block Wireless Out" -Direction Outbound -InterfaceType Wireless -Action Block
 ```
 

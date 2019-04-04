@@ -145,7 +145,6 @@ Accept wildcard characters: False
 Specifies the type of content to copy to the destination server.
 The following are acceptable values for this parameter: 
 
-
 - Data: Copies only files in the folder designated by the *SourcePath* parameter to the folder designated by the *DestinationPath* parameter.
 Subfolders and their content are not copied unless the *Recurse* parameter is added. 
 
@@ -267,7 +266,6 @@ A **MigrationResult** object contains basic information about the success or fai
 ## NOTES
 * The Windows Server Migration Tools deployment log file is located in %windir%\Logs\SmigDeploy.log. Other Windows Server Migration Tools log files are created at the following locations: 
 
-
 - %windir%\Logs\ServerMigration.log
 
 - On Windows Server 2008 and later versions: %localappdata%\SvrMig\Log
@@ -281,7 +279,6 @@ When the log file grows larger than the size specified in the registry key, the 
 Logging begins again in a new log file that uses the same file name and path.
 The default maximum log size is 200 MB. 
 
-
 - Key: HKLM\Software\Microsoft\ServerMigration
 
 - Value: MaxLogSize (REG_DWORD) 
@@ -291,7 +288,6 @@ The default maximum log size is 200 MB.
   The maximum connection time for **Send-SmigServerData** and **Receive-SmigServerData** cmdlet is stored in the following registry key.
 **Send-SmigServerData** and **Receive-SmigServerData** operations terminate if a connection cannot be established within the specified time.
 The default maximum connection time is 300 seconds, or five minutes. 
-
 
 - Key: HKLM\Software\Microsoft\ServerMigration
 

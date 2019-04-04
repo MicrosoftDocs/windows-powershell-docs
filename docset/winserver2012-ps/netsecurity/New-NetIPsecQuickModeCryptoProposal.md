@@ -37,11 +37,7 @@ A NetIPsecPhase2AuthSet object and a NetIPsecMainModeCryptoSet object get associ
 ```
 PS C:\>$QMProposal = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash SHA1 -Encryption AES128
 
-
-
 PS C:\>$QMCryptoSet = New-NetIPsecQuickModeCryptoSet -DisplayName "esp:sha1-des3" -Proposal $QMProposal
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Tunnel from HQ to Dallas Branch" -Mode Tunnel -LocalAddress 192.168.0.0/16 -RemoteAddress 192.157.0.0/16 -LocalTunnelEndpoint 1.1.1.1 -RemoteTunnelEndpoint 2.2.2.2 -InboundSecurity Require -OutboundSecurity Require -QuickModeCryptoSet $QMCryptoSet.Name
 ```
@@ -54,23 +50,16 @@ All traffic through the tunnel is integrity checked using ESP and SHA1, and encr
 This cmdlet illustrates how to include both AH and ESP protocols in a single suite.
 PS C:\>$AHandESPQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation AH,ESP -AHHash SHA1 -ESPHash SHA1 -Encryption DES3
 
-
 This cmdlet illustrates how to specify the use of the AH protocol only.
 PS C:\>$AHQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation AH -AHHash SHA1 -ESPHash None -Encryption None
-
 
 This cmdlet illustrates how to specify the use of the ESP protocol only, and uses the None keyword to specify not to include an encryption option, also known as "ESP null encryption".
 PS C:\>$ESPQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash SHA1 -Encryption None
 
-
 This cmdlet illustrates how to use the None keyword to specify that ESP is used with an encryption protocol, but with no integrity protocol. This cmdlet also illustrates how to set a custom SA timeout using both time and data amount values.
 PS C:\>$ESPnoAHQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash None -Encryption AES256 -MaxKiloBytes 50000 -MaxMinutes 30
 
-
-
 PS C:\>$QMCryptoSet = New-NetIPsecQuickModeCryptoSet -DisplayName "Custom Quick Mode" -Proposal $AHandESPQM,$AHQM,$ESPQM,$ESPnoAHQM
-
-
 
 PS C:\>New-NetIPsecRule -DisplayName "Domain Isolation Rule" -InboundSecurity Require Request -OutboundSecurity Request -QuickModeCryptoSet $QMCryptoSet.Name
 ```

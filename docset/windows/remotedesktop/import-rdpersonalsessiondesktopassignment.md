@@ -75,7 +75,6 @@ Accept wildcard characters: False
 
 ### -path
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)

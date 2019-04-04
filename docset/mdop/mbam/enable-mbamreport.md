@@ -185,4 +185,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Enable-MbamDatabase](enable-mbamdatabase.md)
 
-

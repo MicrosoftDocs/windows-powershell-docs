@@ -240,7 +240,6 @@ Accept wildcard characters: False
 
 ### -ShutdownType
 
-
 ```yaml
 Type: PossibleShutdownTypes
 Parameter Sets: (All)

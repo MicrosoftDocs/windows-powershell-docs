@@ -40,7 +40,6 @@ To start an ETW session in a simpler way with fewer parameters, use the **Start-
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BufferSize

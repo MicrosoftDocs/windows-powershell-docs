@@ -33,4 +33,3 @@ Enables LLDP on a network interface on a computer.
 ### [Get-NetLldpAgent](./Get-NetLldpAgent.md)
 Gets the settings of the LLDP agent on a network interface on a host computer.
 
-

@@ -66,7 +66,6 @@ Adds AIA for OCSP pointing to http://www.corp.contoso.com/ocsp
 ```
 PS C:\>$aia = Get-CAAuthorityInformationAccess
 
-
 PS C:\>$aia | remove-CAAuthorityInformationAccess
 ```
 

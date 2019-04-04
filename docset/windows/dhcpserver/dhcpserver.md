@@ -26,7 +26,6 @@ This reference provides cmdlet descriptions and syntax for all Dynamic Host Conf
 
 Also see [DHCP Classes](http://go.microsoft.com/FWLink/p/?LinkId=260590).
 
-
 ## DhcpServer Cmdlets
 ### [Add-DhcpServerInDC](./Add-DhcpServerInDC.md)
 Adds the computer that runs the DHCP server service to the list of authorized DHCP server services in Active Directory.
@@ -387,5 +386,4 @@ Modifies the properties of the IPv6 scope on the DHCP server service.
 
 ### [Set-DhcpServerv6StatelessStore](./Set-DhcpServerv6StatelessStore.md)
 Sets properties of IPv6 stateless store for an IPv6 prefix.
-
 

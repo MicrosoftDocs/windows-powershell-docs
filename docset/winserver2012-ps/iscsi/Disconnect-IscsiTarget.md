@@ -41,16 +41,12 @@ IsConnected NodeAddress
 ----------- ----------- 
 True iqn.1991-05.com.contoso:testiscsi-deepcore-target
 
-
 PS C:\>$Tar = Get-IscsiTarget
-
-
 
 PS C:\>Disconnect-IscsiTarget -NodeAddress $Tar.NodeAddress
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation '' on Target ''.
-
 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):Y
 ```
@@ -125,7 +121,6 @@ Accept wildcard characters: False
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
 
-                        
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

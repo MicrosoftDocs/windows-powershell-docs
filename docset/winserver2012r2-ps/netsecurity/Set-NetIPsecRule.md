@@ -116,11 +116,7 @@ This cmdlet modifies one or more authentication or cryptographic configurations 
 ```
 PS C:\>$kerbComputer = New-NetIPsecAuthProposal -Kerberos -Machine
 
-
-
 PS C:\>$Phase1AuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb Auth" -Proposal $kerbComputer
-
-
 
 PS C:\>Set-NetIPsecRule -DisplayName "SecureNet Rule" -Phase1AuthSet $Phase1AuthSet.Name
 ```
@@ -130,8 +126,6 @@ This example replaces the proposals of an existing IPsec rule.
 ### EXAMPLE 2
 ```
 PS C:\>Set-NetIPsecRule -DisplayGroup "DA Client" -Enabled True
-
-
 
 PS C:\>Enable-NetIPsecRule -DisplayGroup "DA Client"
 ```
@@ -149,11 +143,7 @@ This example changes the display name of an IPsec rule
 ```
 PS C:\>$rule = Get-NetIPsecRule -DisplayName "IPsec Rule"
 
-
-
 PS C:\>$rule.QuickModeCryptoSet = "Default"
-
-
 
 PS C:\>Set-NetIPsecRule -InputObject $rule
 ```

@@ -88,47 +88,26 @@ This example copies a quick mode cryptographic set, found by specifying the loca
 ```
 PS C:\>$iPsecRule = Get-NetIPsecRule -DisplayName "IPsec Rule: P2Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>Copy-NetIPsecPhase1AuthSet -ImportObject $iPsecRule -NewPolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>Copy-NetIPsecPhase2AuthSet -ImportObject $iPsecRule -NewPolicyStore domain.contoso.com\new_GPO
 
-
-
 PS C:\>Copy-NetIPsecQuickModeCryptoSet -ImportObject $iPsecRule -NewPolicyStore domain.contoso.com\new_GPO
 
-
-
 PS C:\>Copy-NetIPsecRule -ImportObject $iPsecRule -NewPolicyStore domain.contoso.com\new_GPO
-
 
 This accomplishes the same task but takes advantage of caching the GPO to apply the changes locally.
 PS C:\>$iPsecRule = Get-NetIPsecRule -DisplayName "IPsec Rule: P2Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>$newGPO = Open-NetGPO -PolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>Copy-NetIPsecPhase1AuthSet -ImportObject $iPsecRule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecPhase2AuthSet -ImportObject $iPsecRule -GPOSession $newGPO
-
-
 
 PS C:\>Copy-NetIPsecQuickModeCryptoSet -ImportObject $iPsecRule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecRule -ImportObject $iPsecRule -GPOSession $newGPO
-
-
 
 PS C:\>Save-NetGPO -GPOSession $newGPO
 ```

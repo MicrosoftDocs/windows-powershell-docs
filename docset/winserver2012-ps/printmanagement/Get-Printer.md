@@ -64,8 +64,6 @@ This command retrieves a list of printers from the computer named PrintServer.
 ```
 PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
 
-
-
 PS C:\>Rename-Printer -InputObject $printer "MXDW"
 ```
 

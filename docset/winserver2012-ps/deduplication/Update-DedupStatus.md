@@ -33,41 +33,32 @@ To run this cmdlet, you must start Windows PowerShell® with the **Run as admini
 
 This cmdlet returns the following metadata: 
 
-                      
  - DedupSavedSpace: Saved space is the difference between the logical size of the optimized files and the logical size of the store (the deduplicated user data plus data deduplication metadata).
 This number will change continually. 
 
-                      
  - DedupRate: Data deduplication rate is the ratio of data deduplication saved space to the logical size of all of the files on the volume and is expressed in percentage.
 This number will change continually. 
 
-                      
  - OptimizedFilesCount: Optimized files count is the number of optimized files on the specified volume.
 Note that this number will remain steady (instead of decrease) as users delete files from, or add files to, the volume-until a garbage collection job is run.
 This count is most accurate after a garbage collection job runs. 
 
-                      
  - OptimizedFilesSize: Optimized files size is the aggregate size of all optimized files on the specified volume.
 Note that this number will remain steady (instead of decrease) as users delete files from, or add new files to, the volume-until a garbage collection job is run.
 This number is most accurate after a garbage collection job runs. 
 
-                      
  - InPolicyFilesCount: In policy files count is the number of files that currently qualify for optimization.
 This number will stay relatively constant between optimization jobs. 
 
-                      
  - InPolicyFilesSize: In policy files size is the aggregate size of all files that currently qualify for optimization.
 This number will stay relatively constant between optimization jobs. 
 
-                      
  - LastOptimizationTime: Last optimization time specifies the data and time when an optimization job was run last on the specified volume.
 This date and time will stay constant between optimization jobs. 
 
-                      
  - LastGarbageCollectionTime: Last garbage collection time specifies the data and time when a garbage collection job was run last on the specified volume.
 This date and time will stay constant between optimization jobs. 
 
-                      
  - LastScrubbingTime: Last scrubbing time specifies the data and time when a scrubbing job was run last on the specified volume.
 This date and time will stay constant between optimization jobs.
 

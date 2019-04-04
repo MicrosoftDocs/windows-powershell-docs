@@ -74,7 +74,6 @@ Alternatively, piping the array of NetFirewallInterfaceTypeFilter objects direct
 ```
 PS C:\>Get-NetFirewallInterfaceTypeFilter -PolicyStore ActiveStore
 
-
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Get-NetFirewallInterfaceTypeFilter -PolicyStore ActiveStore | Format-Table
 ```
@@ -92,7 +91,6 @@ This example gets the interface aliases associated with a particular firewall ru
 ### Example 3
 ```
 PS C:\>Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceTypeFilter | Set-NetFirewallInterfaceTypeFilter -InterfaceType Any
-
 
 This cmdlet is an alternate method of performing the task.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -InterfaceType Any
@@ -273,8 +271,7 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
                          
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-                         
-                         
+
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
  -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 

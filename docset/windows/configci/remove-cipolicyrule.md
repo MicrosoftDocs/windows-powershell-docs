@@ -35,11 +35,9 @@ Do not use this cmdlet.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -FilePath
-
 
 ```yaml
 Type: String
@@ -54,7 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-
 
 ```yaml
 Type: String

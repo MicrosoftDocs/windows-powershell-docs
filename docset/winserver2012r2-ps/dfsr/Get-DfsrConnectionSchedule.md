@@ -42,7 +42,6 @@ DFS Replication schedules control the availability and bandwidth usage of replic
 ```
 PS C:\> Get-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV02" -DestinationComputerName "SRV01"
 
-
 GroupName               : RG24
 SourceComputerName      : SRV02
 DestinationComputerName : SRV1
@@ -59,7 +58,6 @@ Because the administrator has not specified a custom schedule for the connection
 ### Example 2: Get a custom connection schedule
 ```
 PS C:\> Get-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"
-
 
 GroupName               : RG24
 SourceComputerName      : SRV01

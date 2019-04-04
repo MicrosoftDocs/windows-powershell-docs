@@ -38,8 +38,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>$policy = Get-OBPolicy
 
-
-
 PS C:\>New-OBFileSpec -FileSpec "C:\testdata" -NonRecursive | Add-OBFileSpec -Policy $policy
 ```
 
@@ -48,8 +46,6 @@ This example adds a file specification.
 ### EXAMPLE 2
 ```
 PS C:\>$fspec = New-OBFileSpec -FileSpec C:\testdata -NonRecursive
-
-
 
 PS C:\>New-OBPolicy | Add-OBFileSpec -FileSpec $fspec
 ```

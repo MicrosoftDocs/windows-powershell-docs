@@ -74,7 +74,6 @@ Accept wildcard characters: False
 
 ### -Force
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -88,7 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -LanguageList
-
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.InternationalSettings.Commands.WinUserLanguage]

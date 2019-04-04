@@ -45,8 +45,6 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 ```
 PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacePool")
 
-
-
 PS C:\>Disable-PhysicalDiskIndication -StoragePool $stpool
 ```
 
@@ -55,8 +53,6 @@ This example assigns the storage pool named SpacePool to the $stpool variable, a
 ### Example 2: Disable the identification LED on all physical disks used by a virtual disk
 ```
 PS C:\>$vdisk = (Get-VirtualDisk -FriendlyName "Bruce's Music")
-
-
 
 PS C:\>Disable-PhysicalDiskIndication -VirtualDisk $vdisk
 ```

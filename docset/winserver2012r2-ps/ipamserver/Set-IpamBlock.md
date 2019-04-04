@@ -125,7 +125,6 @@ The command modifies the description for the child IP address ranges.
 ```
 PS C:\>Get-IpamBlock -NetworkId "10.11.0.0/16" -StartIPAddress 10.11.0.0 -EndIPAddress 10.11.255.255 | Set-IpamBlock -NewNetworkId 10.13.0.0/16 -NewStartIPAddress 10.13.0.0 -NewEndIpAddress 10.13.255.255
 
-
 Confirm
 
 Changing the NetworkId, StartIPAddress, EndIPAddress of an IP address block will reset its utilization trend information

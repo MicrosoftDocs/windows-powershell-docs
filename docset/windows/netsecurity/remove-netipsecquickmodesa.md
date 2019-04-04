@@ -69,11 +69,7 @@ This example removes all of the active quick mode cryptographic sets on the loca
 ```
 PS C:\>$computer1 = "RemoteMachineName"
 
-
-
 PS C:\>$ipsMMSA = Get-NetIPsecMainModeSA -Name "196511" -CimSession $computer1
-
-
 
 PS C:\>Remove-NetIPsecQuickModeSA -CimSession $computer1 -InputObject $ipsMMSA
 ```

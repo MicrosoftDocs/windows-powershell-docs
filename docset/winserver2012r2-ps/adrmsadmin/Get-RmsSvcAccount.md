@@ -31,8 +31,6 @@ Get-RmsSvcAccount [-Path] <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ## DESCRIPTION
 HelpLongDescription The Get-RmsSvcAccount cmdlet gets service account credentials for an Active Directory Rights Management Services (AD RMS) cluster.
 
-
-
 To get the service account credentials, set the Path parameter to "\<PSDrive\>:\" where \<PSDrive\> is the drive ID of the provider drive associated with AD RMS cluster.
 
 ## EXAMPLES

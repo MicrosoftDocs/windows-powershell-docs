@@ -45,7 +45,6 @@ Calculator                                                         4228         
 
 This command gets the applications that are running in session 3.
 
-
 ## PARAMETERS
 
 ### -Server

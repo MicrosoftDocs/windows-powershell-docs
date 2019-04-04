@@ -67,7 +67,6 @@ This command adds AIA for OCSP pointing to `http://www.corp.contoso.com/ocsp`.
 ```
 PS C:\> $AIA = Get-CAAuthorityInformationAccess
 
-
 PS C:\> $AIA | Remove-CAAuthorityInformationAccess
 ```
 

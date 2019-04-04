@@ -60,10 +60,7 @@ This example enables QoS on a network adapter named DCBNIC1 and restarts the net
 ```
 PS C:\>$netadapter1 = Get-NetAdapterQos -Name *
 
-
-
 PS C:\>Enable-NetAdapterQos -InputObject $netadapter1
-
 
 This is a version of the cmdlet that gets all network adapters that support QoS and enables QoS on all of them via the pipeline, then restarts the network adapter.
 PS C:\>Get-NetAdapterQos -Name * | Enable-NetAdapterQos

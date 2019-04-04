@@ -39,7 +39,6 @@ This includes parameters such as the default hop limit, the neighbor cache limit
 ```
 PS C:\>Get-NetIPv6Protocol
 
-
 The default output omits some properties. Run the cmdlet to display all fields (all properties of the object).
 PS C:\>Get-NetIPv6Protocol | Format-List -Property *
 ```

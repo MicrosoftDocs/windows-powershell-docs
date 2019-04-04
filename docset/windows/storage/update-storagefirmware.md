@@ -84,7 +84,6 @@ Accept wildcard characters: False
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
@@ -99,7 +98,6 @@ Accept wildcard characters: False
 
 ### -FriendlyName
 
-
 ```yaml
 Type: String
 Parameter Sets: ByName
@@ -113,7 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -ImagePath
-
 
 ```yaml
 Type: String
@@ -144,7 +141,6 @@ Accept wildcard characters: False
 
 ### -SlotNumber
 
-
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
@@ -158,7 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
 
 ```yaml
 Type: Int32

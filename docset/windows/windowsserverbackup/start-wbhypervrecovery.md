@@ -36,7 +36,6 @@ Use the application array from a **WBBackupSet** object to specify the virtual m
 
 For an overview of Hyper-V, see [Hyper-V Overview](http://technet.microsoft.com/en-us/library/hh831531.aspx) on TechNet.
 
-
 ## EXAMPLES
 
 ### Example 1: Recover a virtual machine to its original location

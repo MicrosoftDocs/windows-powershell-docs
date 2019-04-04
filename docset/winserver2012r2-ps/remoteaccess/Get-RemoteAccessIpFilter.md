@@ -37,7 +37,6 @@ The **Get-RemoteAccessIpFilter** cmdlet retrieves the existing IP filters on an 
 ```
 PS C:\> Get-RemoteAccessIpFilter -InterfaceAlias Interface1 -Direction Outbound
 
-
 InterfaceAlias   : Interface1
 Direction        : outbound
 Ipv4FilterAction : allow

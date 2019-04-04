@@ -55,7 +55,6 @@ If Duplicate Address Detection (DAD) is enabled on the interface, the new IP add
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24 -DefaultGateway 192.168.0.5
 
-
 The second command removes the IPv4 address. To remove the IPv4 address, use the Remove-NetIPAddress cmdlet.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1 -DefaultGateway 192.168.0.5
 ```

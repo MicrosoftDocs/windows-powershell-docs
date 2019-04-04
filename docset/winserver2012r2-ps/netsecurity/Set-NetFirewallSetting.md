@@ -58,10 +58,7 @@ This cmdlet allows the administrator to specify global firewall behavior.
 ```
 PS C:\>$nfSetting = Get-NetFirewallSetting -PolicyStore corp.contoso.com/gpo_name
 
-
-
 PS C:\>Set-NetFirewallSetting -Exemptions RouterDiscovery -InputObject $nfSetting
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallSetting -PolicyStore corp.contoso.com/gpo_name | Set-NetFirewallSetting -Exemptions RouterDiscovery
@@ -73,22 +70,13 @@ This example modifies the global firewall settings of a particular GPO policy st
 ```
 PS C:\>$computers = New-Object -Typename System.Security.Principal.NTAccount ("corp.contoso.com" "SecureMachineName1")
 
-
-
 PS C:\>$SIDofSecureComputerGroup = $computers.Translate([System.Security.Principal.SecurityIdentifier]).Value
-
-
 
 PS C:\>$SecureMachineGroupSDDL = "D:(A;;CC;;; $SIDofSecureComputerGroup)"
 
-
-
 PS C:\>$nfSetting = Get-NetFirewallSetting -PolicyStore corp.contoso.com/gpo_name
 
-
-
 PS C:\>Set-NetFirewallSetting -RemoteMachineTunnelAuthorizationList $SecureMachineGroupSDDL -InputObject $nfSetting
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallSetting -PolicyStore corp.contoso.com/gpo_name | Set-NetFirewallSetting -RemoteMachineTunnelAuthorizationList $SecureMachineGroupSDDL

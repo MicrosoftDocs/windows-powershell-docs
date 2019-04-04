@@ -98,12 +98,9 @@ Accept wildcard characters: False
 ### -CertificateStoreName
 Specifies the store name for the certificate. 
 
-
 This parameter defaults to MY for IP-based configurations. 
 
-
 This parameter is required. 
-
 
 You must store the certificate in the local system context.
 

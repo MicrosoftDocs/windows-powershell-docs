@@ -63,7 +63,6 @@ This command resumes the print job with an ID of 1,   which was suspended on the
 ```
 PS C:\>$printer = Get-Printer -PrinterName "PrinterName"
 
-
 PS C:\>Resume-PrintJob -PrinterObject $printer -ID 1
 ```
 
@@ -72,7 +71,6 @@ This set of commands retrieves a printer object into a variable ($printer) using
 ### Example 3: Resume a print job using a job object
 ```
 PS C:\>$printJob = Get-PrintJob - PrinterName "PrinterName" -ID 1
-
 
 PS C:\>Resume-PrintJob -InputObject $printJob
 ```

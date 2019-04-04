@@ -39,7 +39,6 @@ This command initializes the database, but retains the product keys.
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

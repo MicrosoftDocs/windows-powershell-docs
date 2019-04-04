@@ -38,7 +38,6 @@ You can also use **Get-HcsNetInterface** with no parameter to get configuration 
 ```
 PS C:\> Get-HcsNetInterface Data0
 
-
 InterfaceAlias         : Data0
 Controller0IPv4Address : 10.126.172.231
 Controller0IPv6Address : 
@@ -61,10 +60,6 @@ This command gets network interface configuration information for the network in
 ```
 PS C:\> Get-HcsNetInterface : 
 
-
-
-
-
 InterfaceAlias         : Data0
 Controller0IPv4Address : 10.126.172.231
 Controller0IPv6Address :
@@ -80,7 +75,6 @@ IsEnabled              : True
 IsCloudEnabled         : True
 IsiSCSIEnabled         : True
 [10.126.172.232]: Controller1>Get-HcsNetInterface
-
 
 InterfaceAlias         : Data0
 Controller0IPv4Address : 10.126.172.231

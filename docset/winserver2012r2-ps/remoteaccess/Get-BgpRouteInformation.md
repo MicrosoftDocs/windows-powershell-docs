@@ -39,8 +39,6 @@ If you do not specify the **Network** parameter, the cmdlet gets route informati
 ```
 PS C:\> Get-BgpRouteInformation
 
-
-
 DestinationNetwork      NextHop                 LearnedFromPeer         LocalPref               MED
 ------------------      -------                 ------                  ---------               ---
 172.23.90.0/28          172.23.90.9             BlueTenantSite1
@@ -52,8 +50,6 @@ This command gets information for all learned routes from the local BGP router.
 ### Example 2: Get BGP learned routes for a routing domain
 ```
 PS C:\> Get-BgpRouteInformation -RoutingDomain "Rd002"
-
-
 
 DestinationNetwork      NextHop                 LearnedFromPeer         LocalPref               MED
 ------------------      -------                 ------                  ---------               ---

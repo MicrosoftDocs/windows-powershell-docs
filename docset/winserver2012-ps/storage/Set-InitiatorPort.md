@@ -43,13 +43,10 @@ The **Set-InitiatorPort** cmdlet sets properties on the InitiatorPort object.
 ```
 PS C:\>$address = (Get-InitiatorPort)
 
-
-
 PS C:\>$address | Select NodeAddress
 NodeAddress 
 ----------- 
 iqn.1991-05.com.contoso:test-pc2.contoso.com 
-
 
 PS C:\>Set-InitiatorPort -NodeAddress $address.NodeAddress -NewNodeAddress "iqn.test2"
 ```
@@ -154,8 +151,7 @@ Accept wildcard characters: False
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
- 
-                        
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

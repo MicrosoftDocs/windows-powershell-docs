@@ -51,8 +51,6 @@ This example resets the state of a specific physical disk.
 ```
 PS C:\>$phydisk = (Get-Physicaldisk | Where-Object -FilterScript {$_.HealthStatus -Eq "Unhealthy"}
 
-
-
 PS C:\>Reset-PhysicalDisk -FriendlyName $phydisk.FriendlyName
 ```
 
@@ -127,8 +125,6 @@ Accept wildcard characters: False
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
 
-
-                        
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

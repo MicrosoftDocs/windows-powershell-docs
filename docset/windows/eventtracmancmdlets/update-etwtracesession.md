@@ -46,7 +46,6 @@ The **Update-EtwTraceSession** cmdlet modifies an existing Event Tracing for Win
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -AsJob

@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerBackendAddressPool -ConnectionUri https://ne
 
 Description
 
-
-
 This example removes a backend address pool resource named be1 from a load balancer resource named lb1
 
 ## PARAMETERS

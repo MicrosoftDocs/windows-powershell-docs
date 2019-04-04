@@ -87,39 +87,22 @@ This example gets all of the main mode cryptographic sets that do not use the Di
 ```
 PS C:\>$proposal1 = New-NetIPsecMainModeCryptoProposal -KeyExchange DH1
 
-
-
 PS C:\>$proposal2 = New-NetIPsecMainModeCryptoProposal -KeyExchange DH14
-
-
 
 PS C:\>$cryptoset1 = (New-NetIPsecMainModeCryptoSet -DisplayName MainModeCryptoSet -Proposal $proposal1.Name, $proposal2.Name)
 
-
-
 PS C:\>$mainModeRule = New-NetIPsecMainModeRule -DisplayName MainModeRule -MainModeCryptoSet $cryptoset1
-
-
 
 PS C:\>$mainModeCryptoSet = ($MainModeRule | Get-NetIPsecQuickModeCryptoSet)
 
-
-
 PS C:\>$mainModeCryptoSet.Proposal[1] = DH19
 
-
-
 PS C:\>$mainModeCryptoSet | Set-NetIPsecMainModeCryptoSet
-
 
 The following cmdlets shows an alternative method to the previous cmdlets. The main mode rule setup is the same.
 PS C:\>$mainModeRule = New-NetIPsecMainModeRule -DisplayName MainModeRule -MainModeCryptoSet  (New-NetIPsecMainModeCryptoSet -DisplayName MainModeCryptoSet -Proposal (New-NetIPsecMainModeCryptoProposal -KeyExchange DH1),(New-NetIPsecMainModeCryptoProposal -KeyExchange DH14)).Name
 
-
-
 PS C:\>$mainModeCryptoSet = ($mainModeRule | Get-NetIPsecQuickModeCryptoSet)
-
-
 
 PS C:\>$mainModeCryptoSet | Set-NetIPsecMainModeCryptoSet -Proposal (New-NetIPsecMainModeCryptoProposal -KeyExchange DH1),  (New-NetIPsecMainModeCryptoProposal -KeyExchange DH19)
 ```

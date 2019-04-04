@@ -48,7 +48,6 @@ The Remove-NetIPAddress cmdlet will also remove this route provided the **Defaul
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24 -DefaultGateway 192.168.0.5
 
-
 This command removes the IPv4 address. To remove the IPv4 address, use the Remove-NetIPAddress cmdlet.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1 -DefaultGateway 192.168.0.5
 ```

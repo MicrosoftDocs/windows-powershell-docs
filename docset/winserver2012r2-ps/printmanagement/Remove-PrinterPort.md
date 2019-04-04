@@ -59,7 +59,6 @@ This command removes the printer port named LocalPort: from the computer.
 ```
 PS C:\>$printerPort = Get-PrinterPort -Name "LocalPort:"
 
-
 PS C:\>Remove-PrinterPort -InputObject $printerPort
 ```
 

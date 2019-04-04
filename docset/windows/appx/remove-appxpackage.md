@@ -41,7 +41,6 @@ Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<Common
 ```
 > [!NOTE] The `AllUsers` parameter requires Windows 10 Build 1709 or later.
 
-
 ## DESCRIPTION
 The **Remove-AppxPackage** cmdlet removes an app package from a user account.
 An app package has an .appx file name extension.

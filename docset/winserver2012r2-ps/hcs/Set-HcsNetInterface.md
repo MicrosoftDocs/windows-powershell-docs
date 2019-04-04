@@ -68,7 +68,6 @@ This command sets the IPv4 configuration for the network interface specified by 
 ```
 PS C:\> Set-HcsNetInterface Data2 -IPv6Prefix 2001:4898:4010:3015::/64 -IPv6Gateway 2001:4898:4010:3015::1
 
-
 InterfaceAlias         : Data2
 Controller0IPv4Address :
 Controller0IPv6Address :
@@ -92,7 +91,6 @@ The IP address is automatically generated based on the **IPv6Prefix** parameter.
 ```
 PS C:\> Set-HcsNetInterface Data2 -ClearIPv6
 
-
 InterfaceAlias         : Data2
 Controller0IPv4Address :
 Controller0IPv6Address :
@@ -115,7 +113,6 @@ This command removes IPv6 settings from the network interface specified by the *
 ```
 PS C:\> Set-HcsNetInterface Data2 -IsCloudEnabled $True
 
-
 InterfaceAlias         : Data2
 Controller0IPv4Address :
 Controller0IPv6Address :
@@ -137,7 +134,6 @@ This command enables cloud access for the network interface specified by the **I
 ### Example 5: Enable iSCSI access for a network interface
 ```
 PS C:\> Set-HcsNetInterface Data2 -IsiSCSIEnabled $True
-
 
 InterfaceAlias         : Data2
 Controller0IPv4Address :

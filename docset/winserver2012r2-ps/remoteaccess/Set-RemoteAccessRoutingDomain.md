@@ -54,7 +54,6 @@ The **Set-RemoteAccessRoutingDomain** cmdlet configures site to site (S2S) virtu
 ```
 PS C:\> Set-RemoteAccessRoutingDomain -RoutingDomain Rd_01 -IPAddressRange @("10.0.0.1","10.0.0.10") -Passthru
 
-
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}
 RoutingStatus                  : Enabled and Available
@@ -71,7 +70,6 @@ This command modifies configuration settings for a specified routing domain in a
 ### Example 2: Modify configuration for IPv6 addresses and encryption
 ```
 PS C:\> Set-RemoteAccessRoutingDomain -RoutingDomain Rd_01 -IPAddressRange @("10.0.0.1","10.0.0.10") -IPv6Prefix 3ffe::/64   -EncryptionType OptionalEncryption    -Passthru
-
 
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}

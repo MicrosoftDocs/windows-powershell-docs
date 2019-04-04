@@ -84,8 +84,7 @@ PS C:\>Import-IpamAddress -AddressFamily IPv4 -Path "C:\addressupdatev4.csv" -Ma
 Confirm 
  
 Imports a csv file as an update of all IP address records that belong to the specified IP address range. Along with adding new addresses and editing existing addresses, this operation also deletes addresses belonging to the specified IP address range from IPAM database, that are not present in the csv file update being imported. 
- 
- 
+
 Continue with this operation? 
  
 [Y] Yes  [N] No  [?] Help  :Y
@@ -391,8 +390,7 @@ The message is one of the following:
                          
                          Import of \<AddressFamily\> objects is complete.
 \<y\> out of \<y\> objects successfully imported.
- 
-                         
+
 or 
                          
                          Import of \<AddressFamily\> objects is complete.

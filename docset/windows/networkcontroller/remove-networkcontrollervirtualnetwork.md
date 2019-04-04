@@ -43,8 +43,6 @@ Remove-NetworkControllerVirtualNetwork -ConnectionUri https://networkcontroller 
 
 Description
 
-
-
 The above cmdlet removes a virtual network named vnet1 from the Network Controller.
 
 ## PARAMETERS

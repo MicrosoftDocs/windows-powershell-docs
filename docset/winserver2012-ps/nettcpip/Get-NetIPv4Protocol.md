@@ -37,7 +37,6 @@ This includes parameters such as the default hop limit, the neighbor cache limit
 ```
 PS C:\>Get-NetIPv4Protocol
 
-
 The default output omits some properties. Run this cmdlet to display all fields (all properties of the object).
 PS C:\>Get-NetIPv4Protocol | Format-List -Property *
 ```

@@ -39,7 +39,6 @@ After the server has been added, the computer that runs the App-V client can use
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -GlobalRefreshEnabled

@@ -132,7 +132,6 @@ For example, to set the domain mode level to Windows Server 2008 R2, you can spe
 
 The following are the supported values: 
 
-
      -- Windows Server 2003: **2** or **Win2003**
 
      -- Windows Server 2008: **3** or **Win2008**
@@ -220,7 +219,6 @@ Specifies the forest functional level for the new forest.
 Supported values for this parameter can be either a valid integer or a corresponding enumerated string value.
 For example, to set the forest mode level to Windows Server 2008 R2, you can specify either a value of **4** or **Win2008R2**.
 The following are the supported values: 
-
 
      -- Windows Server 2003: **2** or **Win2003**
 

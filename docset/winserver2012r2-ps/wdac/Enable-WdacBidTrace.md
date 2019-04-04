@@ -316,4 +316,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-WdacBidTrace](./Get-WdacBidTrace.md)
 
-

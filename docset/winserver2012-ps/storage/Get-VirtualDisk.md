@@ -122,8 +122,6 @@ This example returns all VirtualDisk objects across all visible StoragePool obje
 ```
 PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacesPool")
 
-
-
 PS C:\>Get-VirtualDisk -StoragePool $stpool
 ```
 
@@ -139,8 +137,6 @@ This example lists all virtual disks, across all pools, and all providers, which
 ### EXAMPLE 4
 ```
 PS C:\>$part = (Get-Partition -DriveLetter Y)
-
-
 
 PS C:\>Get-VirtualDisk -Partition $part
 ```
@@ -339,7 +335,6 @@ Accept wildcard characters: False
 
 ### -PhysicalRangeMax
 
-
 ```yaml
 Type: UInt64
 Parameter Sets: UNNAMED_PARAMETER_SET_11
@@ -354,7 +349,6 @@ Accept wildcard characters: False
 
 ### -PhysicalRangeMin
 
-
 ```yaml
 Type: UInt64
 Parameter Sets: UNNAMED_PARAMETER_SET_11
@@ -368,7 +362,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceVirtualDisk
-
 
 ```yaml
 Type: CimInstance
@@ -431,7 +424,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetVirtualDisk
-
 
 ```yaml
 Type: CimInstance

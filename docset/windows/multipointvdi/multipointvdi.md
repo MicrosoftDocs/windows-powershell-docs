@@ -46,4 +46,3 @@ Create a virtual desktop template.
 ### [Open-WmsVirtualDesktop](./Open-WmsVirtualDesktop.md)
 Opens a window connected to a virtual desktop template.
 
-

@@ -68,7 +68,6 @@ For more information about the how to determine the properties for computer obje
 ```
 PS C:\> Get-ADComputer -Identity "User01-SRV1" -Properties *
 
-
 AccountExpirationDate              : 
 accountExpires                     : 9223372036854775807
 AccountLockoutTime                 : 

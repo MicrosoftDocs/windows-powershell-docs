@@ -41,7 +41,6 @@ For more information on TPM, see the Trusted Platform Module Technology Overview
 ```
 PS C:\> Enable-TpmAutoProvisioning
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full

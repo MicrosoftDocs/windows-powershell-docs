@@ -47,7 +47,6 @@ This cmdlet blocks the dynamic setting behavior.
 
 ### -OptOut
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

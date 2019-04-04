@@ -44,10 +44,8 @@ A network adapter must be enabled to connect to a network.
 ```
 PS C:\>Enable-NetAdapter -Name "Ethernet 2"
 
-
 A version of the cmdlet that uses position.
 PS C:\>Enable-NetAdapter "Ethernet 2"
-
 
 A version of the cmdlet that uses position and wildcard characters.
 PS C:\>Enable-NetAdapter E*2

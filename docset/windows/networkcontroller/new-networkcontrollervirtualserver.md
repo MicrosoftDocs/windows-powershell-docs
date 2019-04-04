@@ -53,8 +53,6 @@ New-NetworkControllerVirtualServer -ConnectionUri https://restserver -ResourceId
 
 Description
 
-
-
 The above cmdlet adds a virtual server with name VirtualServer1 to the Network Controller
 
 ## PARAMETERS

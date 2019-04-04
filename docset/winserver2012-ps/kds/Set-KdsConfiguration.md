@@ -51,9 +51,6 @@ This cmdlet also validates input by performing key derivation function tests and
 ```
 PS C:\>$config = Get-KdsConfiguration
 
-
-
-
 PS C:\>Set-KdsConfiguration -InputObject $config
 ```
 

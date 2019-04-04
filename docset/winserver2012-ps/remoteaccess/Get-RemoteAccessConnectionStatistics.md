@@ -54,12 +54,8 @@ ConnectionDuration(s) : 220
 ConnectionType        : Vpn 
 AccessStatus          : User Mode/Full Corp Access 
 
-
-
 PS C:\>Disconnect-VpnUser -HostIPAddress 10.1.1.11 -PassThru
 10.1.1.11
-
-
 
 PS C:\>Get-RemoteAccessConnectionStatistics | Format-List -Property *
 ```
@@ -79,7 +75,6 @@ This example gets a list of historic connections and export them to a .csv file.
 ### EXAMPLE 3
 ```
 PS C:\>$enddate = Get-Date -Date "12/23/2011"
-
 
 The data is exported from server start date to the specified end date. Note: The starting date does not need to be explicitly specified here.
 PS C:\>Get-RemoteAccessConnectionStatistics -EndDateTime $enddate | Export-Csv -Path "data.csv"

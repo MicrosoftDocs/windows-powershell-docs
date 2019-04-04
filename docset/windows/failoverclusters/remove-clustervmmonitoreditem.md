@@ -63,7 +63,6 @@ This example removes monitoring on the print spooler service on the virtual mach
 
 ### -Cluster
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -77,7 +76,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-
 
 ```yaml
 Type: Int32
@@ -93,7 +91,6 @@ Accept wildcard characters: False
 
 ### -EventLog
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -107,7 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -EventSource
-
 
 ```yaml
 Type: String
@@ -123,7 +119,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
@@ -137,7 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-
 
 ```yaml
 Type: StringCollection
@@ -153,7 +147,6 @@ Accept wildcard characters: False
 
 ### -VMId
 
-
 ```yaml
 Type: Guid
 Parameter Sets: VMId
@@ -168,7 +161,6 @@ Accept wildcard characters: False
 
 ### -VirtualMachine
 
-
 ```yaml
 Type: String
 Parameter Sets: VirtualMachine
@@ -182,7 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
 
 ```yaml
 Type: Int32

@@ -78,7 +78,6 @@ The third command gets the node view for the specified Storage node and physical
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession
 Parameter Sets: (All)

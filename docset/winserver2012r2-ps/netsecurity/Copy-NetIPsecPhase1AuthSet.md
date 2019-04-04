@@ -108,39 +108,22 @@ The localized **DisplayName** parameter value remains the same.
 ```
 PS C:\>$MMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>$MMrule | Copy-NetIPsecPhase1AuthSet -NewPolicyStore domain.contoso.com\new_GPO)
-
-
 
 PS C:\>$MMrule | Copy-NetIPsecMainModeCryptoSet -NewPolicyStore domain.contoso.com\new_GPO)
 
-
-
 PS C:\>$MMrule | Set-NetIPsecMainModeRule -Phase1AuthSet $CopiedCryptoSet.Name
-
 
 The following cmdlets accomplish the same task but take advantage of caching the GPO to apply the changes locally.
 PS C:\>$MMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>$NewGPO = Open-NetGPO -PolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>$MMrule | Copy-NetIPsecPhase1AuthSet -GPOSession $NewGPO
 
-
-
 PS C:\>$MMrule | Copy-NetIPsecMainModeCryptoSet -GPOSession $NewGPO
 
-
-
 PS C:\>$MMrule | Copy-NetIPsecMainModeRule -GPOSession $NewGPO
-
-
 
 PS C:\>Save-NetGPO -GPOSession $NewGPO
 ```

@@ -63,11 +63,7 @@ The default main mode negotiation uses Kerberos v5 for computer and user authent
 ```
 PS C:\>$qMProposal = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash SHA1 -Encryption DES3
 
-
-
 PS C:\>$qMCryptoSet = New-NetIPsecQuickModeCryptoSet -DisplayName "esp:sha1-des3" -Proposal $qMProposal
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Tunnel from HQ to Dallas Branch" -Mode Tunnel -LocalAddress 192.168.0.0/16 -RemoteAddress 192.157.0.0/16 -LocalTunnelEndpoint 1.1.1.1 -RemoteTunnelEndpoint 2.2.2.2 -InboundSecurity Require -OutboundSecurity Require -QuickModeCryptoSet $qMCryptoSet.Name
 ```
@@ -80,23 +76,16 @@ All traffic through the tunnel is integrity checked using ESP/SHA1, and encrypte
 This cmdlet illustrates how to include both AH and ESP protocols in a single suite.
 PS C:\>$aHandESPQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation AH,ESP -AHHash SHA1 -ESPHash SHA1 -Encryption DES3
 
-
 This cmdlet illustrates how to specify the use of the AH protocol only.
 PS C:\>$aHQM = New-NetipsecQuickModeCryptoProposal -Encapsulation AH -AHHash SHA1 -ESPHash None -Encryption None
-
 
 This cmdlet illustrates how to specify the use of the ESP protocol only, and uses the None keyword to specify not to include an encryption option.
 PS C:\>$eSPQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash SHA1 -Encryption None
 
-
 This cmdlet illustrates how to use the None keyword to specify that ESP is used with an encryption protocol, but with no integrity protocol. This cmdlet also illustrates how to set a custom SA timeout using both time and data amount values.
 PS C:\>$eSPnoAHQM = New-NetIPsecQuickModeCryptoProposal -Encapsulation ESP -ESPHash None -Encryption AES256 -MaxKiloBytes 50000 -MaxMinutes 30
 
-
-
 PS C:\>$qMCryptoSet = New-NetIPsecQuickModeCryptoSet -DisplayName "Custom Quick Mode" -Proposal $aHandESPQM,$aHQM,$eSPQM,$eSPnoAHQM
-
-
 
 PS C:\>New-NetIPsecRule -DisplayName "Domain Isolation Rule" -InboundSecurity Require Request -OutboundSecurity Request -QuickModeCryptoSet $qMCryptoSet.Name
 ```
@@ -609,7 +598,6 @@ The local computer attempts to authenticate any outbound network connections tha
 
  -- Require: Authentication is required for connections that match the rule.
 If the authentication is not successful, then the outbound network traffic is discarded.
-
 
 The default value is None. 
 

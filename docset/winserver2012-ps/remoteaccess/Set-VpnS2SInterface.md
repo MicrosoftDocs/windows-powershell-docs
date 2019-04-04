@@ -95,8 +95,6 @@ This example modifies the responder authentication method for edge1.
 ```
 PS C:\>$cert1 = ( Get-ChildItem -Path cert:LocalMachine\My | Where-Object -FilterScript { $_.Subject -Like "*CN=edge1.contoso.com" } )
 
-
-
 PS C:\>Set-VpnS2SInterface -Name 3-edge1 -AuthenticationMethod MachineCertificates -Certificate $cert1 -ResponderAuthenticationMethod MachineCertificates -PassThru
 Name                 Destination          AdminStatus  ConnectionState IPv4Subnet 
 ----                 -----------          -----------  --------------- ---------- 

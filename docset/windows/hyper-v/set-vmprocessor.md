@@ -86,9 +86,6 @@ PS C:\> Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
 
 Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
 
-
-
-
 ## PARAMETERS
 
 ### -CimSession
@@ -220,7 +217,6 @@ Accept wildcard characters: False
 ### -ExposeVirtualizationExtensions
 Specifies whether the hypervisor should expose the presence of virtualization extensions to the virtual machine, which enables support for nested virtualization,.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -235,7 +231,6 @@ Accept wildcard characters: False
 
 ### -HwThreadCountPerCore
 Specifies the number of virtual SMT threads exposed to the virtual machine. Setting this value to 0 indicates the virtual machine will inherit the host's number of threads per core. This setting may not exceed the host's number of threads per core.
-
 
 ```yaml
 Type: Int64

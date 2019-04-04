@@ -78,7 +78,6 @@ PS C:\> Set-ClusterQuorum -CloudWitness -AccountName <AzureStorageAccountName> -
 
 ### -AccessKey
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -93,7 +92,6 @@ Accept wildcard characters: False
 
 ### -AccountName
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -107,7 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -CloudWitness
-
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-
 
 ```yaml
 Type: String

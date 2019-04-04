@@ -52,10 +52,7 @@ This example deletes a network IPsec Dosp setting configuration.
 ```
 PS C:\>$nipDospSetting = Get-NetIPsecDospSetting
 
-
-
 PS C:\>Remove-NetIPsecDospSetting -InputObject $nipDospSetting
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecDospSetting | Remove-NetIPsecDospSetting

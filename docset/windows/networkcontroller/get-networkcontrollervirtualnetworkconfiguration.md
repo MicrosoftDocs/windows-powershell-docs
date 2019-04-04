@@ -33,7 +33,6 @@ Get-NetworkControllerVirtualNetworkConfiguration [-ConnectionUri <Uri>] [-Certif
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CertificateThumbprint

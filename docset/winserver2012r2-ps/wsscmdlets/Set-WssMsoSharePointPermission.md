@@ -76,7 +76,6 @@ Accept wildcard characters: False
 Specifies the permission for a sp_2013_2 principal to modify. 
 The acceptable values for this parameter are:
 
-
      -- NoAccess
 
      -- Read

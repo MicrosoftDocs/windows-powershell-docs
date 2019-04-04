@@ -91,8 +91,6 @@ This example deletes a set based on the localized name.
 ```
 PS C:\>$ipsMMRule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Authenticate Computer"
 
-
-
 PS C:\>Remove-NetIPsecPhase1AuthSet -InputObject $ipsMMRule
 ```
 

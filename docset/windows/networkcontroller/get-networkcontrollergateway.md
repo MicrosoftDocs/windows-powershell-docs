@@ -163,7 +163,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ###  
 This cmdlet returns one or more objects that contain the following fields: 
 
-
 - Resource reference URI
 - Created time of the resource
 - Instance ID of the resource.

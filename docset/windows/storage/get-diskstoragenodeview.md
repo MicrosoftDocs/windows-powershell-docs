@@ -42,10 +42,6 @@ StorageNodeObjectId: {1}\\Contoso-C1\ROOT/Microsoft/Windows/Storage/Providers_v2
 
 eb746-cb28-4a7e-90bb-3d124ffcb0f7}:SN:Contoso-04"
 
-
-
-
-
 DiskNumber        : 11
 
 HealthStatus      : Healthy

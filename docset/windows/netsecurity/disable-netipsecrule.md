@@ -155,8 +155,6 @@ This example disables all transport mode DA rules on the local computer.
 ```
 PS C:\>$phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Disable-NetIPsecRule -InputObject $phase1AuthSet
 ```
 

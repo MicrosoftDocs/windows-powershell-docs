@@ -49,7 +49,6 @@ The **Get-NfsNetgroup** cmdlet gets a netgroup from a configured netgroup store 
 ```
 PS C:\> Get-NfsNetgroup -LdapServer "Contoso.com" -NetGroupName "ExchangeServers"
 
-
 NetgroupName          : ExchangeServers
 NetgroupNamingContext : CN=mappedidentity,DC=Contoso,DC=com
 NetgroupMembers       : {}

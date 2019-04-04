@@ -96,8 +96,6 @@ RememberCredential    : False
 
 SplitTunneling        : False
 
-
-
 Name                  : Test4
 
 ServerAddress         : 10.1.1.2
@@ -125,7 +123,6 @@ NapState              : NotConnected
 RememberCredential    : True
 
 SplitTunneling        : True
-
 
 Name                  : Test5
 

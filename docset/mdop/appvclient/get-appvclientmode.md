@@ -58,4 +58,3 @@ This cmdlet generat **AppvClientMode** object that describes the current Appv Cl
 
 [Set-AppvClientMode](./Set-AppvClientMode.md)
 
-

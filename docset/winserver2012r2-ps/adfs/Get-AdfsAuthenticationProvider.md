@@ -38,7 +38,6 @@ The read-only list includes built-in and external authentication providers and a
 ```
 PS C:\> Get-AdfsAuthenticationProvider
 
-
 AdminName                          : Forms Authentication
 AllowedForPrimaryExtranet          : True
 AllowedForPrimaryIntranet          : True

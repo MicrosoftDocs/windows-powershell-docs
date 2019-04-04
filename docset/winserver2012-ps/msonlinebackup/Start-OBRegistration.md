@@ -43,7 +43,6 @@ PS C:\>$Cert = Get-OBCertificateListFromLocalStore
 The second command gets the list of backup vaults that can you use to register the current computer for the fifth certificate stored in **$Cert**. The command stores the result in the **$Item** variable.
 PS C:\>$Item = Get-OBRecoveryService -Certificate $Cert[4]
 
-
 The third command registers the current computer by using the first certificate stored in **$Item**.
 PS C:\>Start-OBRegistration -RecoveryService $Item[0]
 ```

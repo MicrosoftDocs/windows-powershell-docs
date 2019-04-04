@@ -45,7 +45,6 @@ A backlog indicates latency, and a backlog may be expected in your environment, 
 ```
 PS C:\> Get-DfsrBacklog -DestinationComputerName SRV1 -SourceComputerName SRV02 -GroupName RG01 -FolderName RF1 | format-table fullpathname,updatetime
 
-
 FullPathName                      UpdateTime
 ------------                      ----------
 c:\rf1a\imageres.dll       3/15/2013 5:28:45 PM

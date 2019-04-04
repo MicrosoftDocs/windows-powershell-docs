@@ -70,7 +70,6 @@ Get all users under the container 'OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM
 ```
 C:\PS>Get-ADUser -Filter 'Name -like "*SvcAccount"' | FT Name,SamAccountName -A
 
-
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -87,7 +86,6 @@ Get all users that have a name that ends with 'SvcAccount'.
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Get-ADUser GlenJohn -Properties *
-
 
 Surname           : John
 Name              : Glen John

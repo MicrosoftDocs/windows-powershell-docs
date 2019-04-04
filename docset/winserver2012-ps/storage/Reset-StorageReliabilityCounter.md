@@ -51,7 +51,6 @@ PS C:\>
 
 ### -AsJob
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -65,7 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-
 
 ```yaml
 Type: CimSession[]
@@ -81,7 +79,6 @@ Accept wildcard characters: False
 
 ### -Disk
 
-
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_1
@@ -95,7 +92,6 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
 
 ```yaml
 Type: CimInstance[]
@@ -111,7 +107,6 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -126,7 +121,6 @@ Accept wildcard characters: False
 
 ### -PhysicalDisk
 
-
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_2
@@ -140,7 +134,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
 
 ```yaml
 Type: Int32

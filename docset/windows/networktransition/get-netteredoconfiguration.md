@@ -115,7 +115,6 @@ Accept wildcard characters: False
 Specifies the policy store from which to retrieve the configuration.
 The acceptable values for this parameter are:
 
-
 - PersistentStore 
 
 - ActiveStore 

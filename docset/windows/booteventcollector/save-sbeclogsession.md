@@ -41,7 +41,6 @@ The session may be identified either by name or as an object.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Name

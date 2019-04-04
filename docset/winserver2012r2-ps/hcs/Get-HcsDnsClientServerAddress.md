@@ -36,7 +36,6 @@ The **Get-HcsDnsClientServerAddress** cmdlet gets the server addresses that a DN
 ```
 PS C:\> Get-HcsDnsClientServerAddress
 
-
 PrimaryIPv4                   PrimaryIPv6                   SecondaryIPv4                 SecondaryIPv6
 -----------                   -----------                   -------------                 -------------
 192.168.200.239                                            {192.168.10.29, 192.168.10.28} {}

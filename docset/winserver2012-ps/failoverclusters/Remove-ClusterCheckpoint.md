@@ -34,11 +34,8 @@ One way is to store configuration information in the registry on the local serve
 ```
 PS C:\>Get-ClusterResource "Cluster Name" | Remove-ClusterCheckpoint -RegistryCheckpoint
 
-
-
 PS C:\>Remove-ClusterCheckpoint
 Are you sure you want to remove registry checkpoint 'software\clusname' on resource 'Cluster Name'? 
-
 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
 ```

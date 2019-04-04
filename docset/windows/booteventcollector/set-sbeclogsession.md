@@ -55,7 +55,6 @@ The operating system may refuse to change some parameters or silently ignore the
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BufferSize

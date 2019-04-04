@@ -207,7 +207,6 @@ Accept wildcard characters: False
 
 ### -KerberosAuthenticationPort
 
-
 ```yaml
 Type: Int32
 Parameter Sets: UNNAMED_PARAMETER_SET_1

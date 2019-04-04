@@ -55,8 +55,6 @@ New-NetworkControllerRouteTable -ConnectionUri https://networkcontroller -Resour
 
 Description
 
-
-
 The above cmdlet creates a route table named Route1 with a single route named "0_0_0_0_0"
 
 ## PARAMETERS

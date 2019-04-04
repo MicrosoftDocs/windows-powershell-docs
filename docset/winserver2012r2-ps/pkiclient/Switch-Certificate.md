@@ -46,15 +46,9 @@ This example sets the renewal property of the certificate with the thumbprint E4
 ```
 PS C:\>Set-Location -Path cert:\LocalMachine\My
 
-
-
 PS C:\>$oldCert = (Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7)
 
-
-
 PS C:\>$newCert = (Get-ChildItem -Path 4A346B4385F139CA843912D358D765AB8DEE9FD4)
-
-
 
 PS C:\>Switch-Certificate -OldCert $oldCert -NewCert $newCert -NotifyOnly
 ```

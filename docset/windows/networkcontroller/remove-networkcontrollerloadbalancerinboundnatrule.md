@@ -44,8 +44,6 @@ Remove-NetworkControllerLoadBalancerInboundNatRule -ConnectionUri https://networ
 
 Description
 
-
-
 This example removes an inbound NAT Rule named InNat1 from a load balancer resource named lb1
 
 ## PARAMETERS

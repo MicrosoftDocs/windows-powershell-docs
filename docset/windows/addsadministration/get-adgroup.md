@@ -107,7 +107,6 @@ This command gets all groups that have a GroupCategory of Security but do not ha
 ```
 PS C:\> Get-ADGroup -Server localhost:60000 -Filter {GroupScope -eq "DomainLocal"} -SearchBase "DC=AppNC"
 
-
 DistinguishedName : CN=AlphaGroup,OU=AccountDeptOU,DC=AppNC
 GroupCategory     : Security
 GroupScope        : DomainLocal

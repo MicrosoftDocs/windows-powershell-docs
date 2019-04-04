@@ -79,16 +79,13 @@ Local User Account:
     john
     ComputerName\john
 
-                         
 Domain User Account:
     CONTOSO\john
     Contoso.com\john
 
-                         
 User Principal Name (UPN):
     john@contoso.com
 
-                         
 Security Identifier:
     S-1-5-21-3165297888-301567370-576410423-1103
 

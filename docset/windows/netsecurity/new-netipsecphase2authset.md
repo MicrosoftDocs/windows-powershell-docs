@@ -81,31 +81,17 @@ The default user authentication set is used with all IPsec rules, and specified 
 ```
 PS C:\>$mkerbauthprop = New-NetIPsecAuthProposal -Machine -Kerberos
 
-
-
 PS C:\>$mntlmauthprop = New-NetIPsecAuthProposal -Machine -NTLM
-
-
 
 PS C:\>$p1Auth = New-NetIPsecPhase1AuthSet -DisplayName "First Machine Auth" -Proposal $mkerbauthprop,$mntlmauthprop
 
-
-
 PS C:\>$ukerbauthprop = New-NetIPsecAuthProposal -User -Kerberos
-
-
 
 PS C:\>$unentlmauthprop = New-NetIPsecAuthProposal -User -NTLM
 
-
-
 PS C:\>$anonyauthprop = New-NetIPsecAuthProposal -Anonymous
 
-
-
 PS C:\>$p2Auth = New-NetIPsecPhase2AuthSet -DisplayName "Second User Auth" -Proposal $ukerbauthprop,$unentlmauthprop,$anonyauthprop
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Authenticate Both Computer and User" -InboundSecurity Require -OutboundSecurity Require -Phase1AuthSet $p1Auth.Name -Phase2AuthSet $p2Auth.Name
 ```

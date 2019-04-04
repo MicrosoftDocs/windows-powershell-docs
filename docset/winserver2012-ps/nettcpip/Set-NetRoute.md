@@ -71,8 +71,6 @@ This example sets the **RouteMetric** parameter to 257, making the route less pr
 ```
 PS C:\>$timespan = ( New-TimeSpan -Days 1 )
 
-
-
 PS C:\>Set-NetRoute -DestinationPrefix 192.168.0.0/24 -PreferredLifetime $timespan
 ```
 

@@ -55,7 +55,6 @@ The **Set-VMNetworkAdapterTeamMapping** cmdlet
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

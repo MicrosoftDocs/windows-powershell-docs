@@ -47,14 +47,10 @@ The Get-NetFirewallRule or Get-NetIPsecrule cmdlet returns the rules associated 
 ```
 PS C:\>$nfwInterfaceTypeFilter = ( Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceTypeFilter )
 
-
-
 PS C:\>Set-NetFirewallInterfaceTypeFilter -InterfaceType Any -InputObject $nfwInterfaceTypeFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceTypeFilter | Set-NetFirewallInterfaceTypeFilter -InterfaceType Any
-
 
 This cmdlet can be run without the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -InterfaceType Any
@@ -66,10 +62,7 @@ This example modifies the **InterfaceType** parameter value for a particular fir
 ```
 PS C:\>$nfwInterfaceTypeFilter = ( Get-NetFirewallInterfaceTypeFilter -InterfaceType Wired )
 
-
-
 PS C:\>Set-NetFirewallInterfaceTypeFilter -InterfaceType Any -InputObject $nfwInterfaceTypeFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallInterfaceTypeFilter -InterfaceType Wired | Set-NetFirewallInterfaceTypeFilter -InterfaceType Any
@@ -81,14 +74,9 @@ This example modifies the interface type for all of the rules previously associa
 ```
 PS C:\>$nfwInterfaceTypeFilter = ( Get-NetIPsecRule -Group DirectAccess | Get-NetFirewallInterfaceTypeFilter )
 
-
-
 PS C:\>$nfwInterfaceTypeFilterWired = Where-Object -Property { $_.InterfaceType -Eq "Wired" } -InputObject $nfwInterfaceTypeFilter
 
-
-
 PS C:\>Set-NetFirewallInterfaceTypeFilter -InterfaceType RemoteAccess -InputObject $nfwInterfaceTypeFilterWired
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecRule -Group DirectAccess | Get-NetFirewallInterfaceTypeFilter | Where-Object -Property { $_.InterfaceType -Eq "Wired" } | Set-NetFirewallInterfaceTypeFilter -InterfaceType RemoteAccess

@@ -45,7 +45,6 @@ The DFS Replication service does not support modifying connection bandwidth or s
 ```
 PS C:\> Set-DfsrConnection -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -DisableRDC $True -DisableCrossFileRDC $True
 
-
 GroupName               : rg 1
 SourceComputerName      : SRV01
 DestinationComputerName : SRV02

@@ -51,8 +51,6 @@ This command removes the printer named "Microsoft XPS Document Writer" from the 
 ```
 PS C:\>$printer = Get-Printer -Name "Microsoft XPS Document Writer"
 
-
-
 PS C:\>Remove-Printer -InputObject $printer
 ```
 

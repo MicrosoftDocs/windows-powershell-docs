@@ -54,7 +54,6 @@ To do that, use this cmdlet to reset the fields that no longer need to be config
 This command resets the NCSI configuration of the specified GPO.
 PS C:\>Reset-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew"
 
-
 This command performs an identical operation using the pipeline operator.
 PS C:\> Get-NCSIPolicyConfiguration -PolicyStore "contoso\davidchew" | Reset-NCSIPolicyConfiguration
 ```

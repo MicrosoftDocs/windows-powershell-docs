@@ -42,7 +42,6 @@ You must run this cmdlet from an elevated PowerShell session.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Id

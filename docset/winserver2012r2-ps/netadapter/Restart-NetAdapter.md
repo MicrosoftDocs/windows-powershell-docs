@@ -52,14 +52,11 @@ This may be needed for certain properties to take effect in a physical network a
 ```
 PS C:\>Restart-NetAdapter -Name "Ethernet 2"
 
-
 A version of the cmdlet that uses wildcard characters.
 PS C:\>Restart-NetAdapter -Name "E*2"
 
-
 A version of the cmdlet that uses position.
 PS C:\>Restart-NetAdapter "Ethernet 2"
-
 
 A version of the cmdlet that uses position and wildcard characters.
 PS C:\>Restart-NetAdapter E*2

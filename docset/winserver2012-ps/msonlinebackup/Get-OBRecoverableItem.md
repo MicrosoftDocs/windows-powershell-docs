@@ -44,8 +44,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>Get-OBRecoverableSource | Where-Object -FilterScript {$_.FriendlyName -like "C*"} | Get-OBRecoverableItem
 
-
-
 PS C:\>For($i = 0; $i -Lt $sources.Length; $i++) 
 { 
 Get-OBRecoverableItem -Source $sources[$i] 
@@ -58,8 +56,6 @@ This example returns a recoverable item from source.
 ```
 PS C:\>$parents = Get-OBRecoverableSource | Where-Object -FilterScript {$_.FriendlyName -like "C*"} | Get-OBRecoverableItem
 
-
-
 PS C:\>Get-OBRecoverableItem -SearchString stringToSearch* -Location R:\ -RecoveryPoint $parents[0]
 ```
 
@@ -69,11 +65,7 @@ This example returns a recoverable item based on a search criteria.
 ```
 PS C:\>$pc = New-OBPagingContext
 
-
-
 PS C:\>$parents = Get-OBRecoverableSource | Where-Object -FilterScript {$_.FriendlyName -like "C*"} | Get-OBRecoverableItem
-
-
 
 PS C:\>New-OBPagingContext | Get-OBRecoverableItem -ParentItem $parents[0] -Type FileOnly
 ```

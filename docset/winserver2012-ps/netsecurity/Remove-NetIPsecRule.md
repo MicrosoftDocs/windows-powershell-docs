@@ -147,8 +147,6 @@ This example removes all of the IPsec rules that are currently disabled on a GPO
 ```
 PS C:\>$nfProfile = Get-NetFirewallProfile -Profile Public
 
-
-
 PS C:\>Remove-NetIPsecRule -InputObject $nfProfile
 ```
 

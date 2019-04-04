@@ -120,8 +120,6 @@ This example removes all of the main mode rules that require the Diffie-Hellman 
 ```
 PS C:\>$ipsMMRule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Authenticate Computer"
 
-
-
 PS C:\>Remove-NetIPsecMainModeCryptoSet -InputObject $ipsMMRule
 ```
 

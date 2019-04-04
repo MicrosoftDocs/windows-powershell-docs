@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerMux -ConnectionUri https://networkcontroller
 
 Description
 
-
-
 This example removes a load balancer MUX with name Mux1 from the Network Controller.
 
 ## PARAMETERS

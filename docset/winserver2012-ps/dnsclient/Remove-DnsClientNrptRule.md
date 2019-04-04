@@ -65,7 +65,6 @@ NameEncoding                     : Disable
 DisplayName                      : 
 Comment                          : 
 
-
 This version of the cmdlet performs the task without user confirmation.
 PS C:\>Remove-DnsClientNrptRule -Name "DA-{274D94E4-E38B-4997-BA9F-84700712C09E}" -PassThru -Force
 

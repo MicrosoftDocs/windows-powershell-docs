@@ -45,7 +45,6 @@ This command sets the default input method override to English (United States) -
 
 ### -InputTip
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)

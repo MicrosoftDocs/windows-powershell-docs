@@ -62,8 +62,6 @@ The **New-StorageSubsystemVirtualDisk** cmdlet allows the creation of a VirtualD
 ```
 PS C:\>$stsubsys = (Get-StorageSubsystem)
 
-
-
 PS C:\>New-StorageSubsystemVirtualDisk -StorageSubsystemUniqueId $stsubsys.UniqueID -FriendlyName "VirtualDisk01" -Size "5GB" -ProvisioningType Fixed
 ```
 

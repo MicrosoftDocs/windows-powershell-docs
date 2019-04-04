@@ -107,5 +107,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-HpcJobCredential](./Get-HpcJobCredential.md)
 
-
 [Set-HpcJobCredential](./Set-HpcJobCredential.md)

@@ -59,7 +59,6 @@ Alternatively, piping the array of NetFirewallInterfaceFilter objects directly t
 ```
 PS C:\>Get-NetFirewallRule -PolicyStore ActiveStore
 
-
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Get-NetFirewallRule -PolicyStore ActiveStore | Format-Table
 ```
@@ -76,7 +75,6 @@ This example gets the interface aliases associated with a particular firewall ru
 ### EXAMPLE 3
 ```
 PS C:\>Get-NetFirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceFilter | Set-NetFirewallInterfaceFilter -InterfaceAlias Any
-
 
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -InterfaceAlias Any

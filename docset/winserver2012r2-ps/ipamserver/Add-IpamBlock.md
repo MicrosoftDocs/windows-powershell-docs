@@ -43,7 +43,6 @@ The **Rir** parameter is optional for private address blocks.
 ```
 PS C:\> Add-IpamBlock -NetworkId "10.0.0.0/8" -Description "IP block for Contoso" -PassThru
 
-
 Utilization        : Under
 
 NetworkId          : 10.0.0.0/8
@@ -83,7 +82,6 @@ The command includes the **PassThru** parameter, so it displays results to the c
 ```
 PS C:\>Add-IpamBlock -NetworkId "206.73.118.0/24" -Rir "APNIC" -PassThru
 
-
 Utilization        : Under
 
 NetworkId          : 206.73.118.0/24
@@ -121,7 +119,6 @@ You must specify the **Rir** parameter if the address category of the block you 
 ### Example 3: Add an IPv6 address block
 ```
 PS C:\>Add-IpamBlock -NetworkId 2001:DB8:ff00::/120 -PassThru
-
 
 Utilization        : Under
 

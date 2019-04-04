@@ -35,7 +35,6 @@ The valid values are Normal and Uninstall.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### CommonParameters

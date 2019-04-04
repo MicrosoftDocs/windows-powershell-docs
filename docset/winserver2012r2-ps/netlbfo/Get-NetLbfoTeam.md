@@ -71,7 +71,6 @@ PS C:\> Get-NetLbfoTeamMember NIC1 | Get-NetLbfoTeam
 
 Or
 
-
 PS C:\> $mObj = Get-NetLbfoTeamMember NIC1
 PS C:\> Get-NetLbfoTeam -MemberOfTheTeam $mObj
 ```
@@ -83,7 +82,6 @@ This command retrieves the NIC team associated with a particular member network 
 PS C:\> Get-NetLbfoTeamNic 'Team1 - VLAN 42' | Get-NetLbfoTeam
 
 Or
-
 
 PS C:\> $tNicObj = Get-NetLbfoTeamNic 'Team1 - VLAN 42'
 PS C:\> Get-NetLbfoTeam -TeamNicForTheTeam $tNicObj

@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancingRule -ConnectionUri https://networkcontroll
 
 Description
 
-
-
 This example removes a load balancing rule named Rule1 from a load balancer resource named lb1
 
 ## PARAMETERS

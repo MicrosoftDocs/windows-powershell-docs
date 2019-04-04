@@ -55,7 +55,6 @@ This example enables TCP/IPv4 on the network adapter named MyAdapter.
 ```
 PS C:\>Set-NetAdapterBinding -Name MyAdapter -DisplayName "Internet Protocol Version 4 (TCP/IPv4)" -Enabled $false
 
-
 This is a version of the cmdlet that disables TCP/IPv4 on the network adapter named MyAdapter using wildcard characters in the display name.
 PS C:\>Set-NetAdapterBinding -Name MyAdapter -DisplayName "Inter* (TCP/IPv4)" -Enabled $false
 ```

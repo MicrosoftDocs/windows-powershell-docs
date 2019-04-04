@@ -37,7 +37,6 @@ The name of the session is fixed as NT Kernel Logger and the GUID is fixed as {9
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BufferSize

@@ -37,7 +37,6 @@ The **Get-RemoteAccessRoutingDomain** cmdlet retrieves routing domain configurat
 ```
 PS C:\> Get-RemoteAccessRoutingDomain -Name Rd_01
 
-
 RoutingDomain                  : Rd_01
 RoutingDomainID                : {11111111-1111-1111-1111-111111111001}
 RoutingStatus                  : Enabled and Available

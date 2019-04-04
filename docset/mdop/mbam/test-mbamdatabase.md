@@ -67,7 +67,6 @@ The command uses the current Windows account credentials for authentication.
 ```
 PS C:\> Test-MbamDatabase -ComplianceAndAudit -ConnectionString "Integrated Security=SSPI;Data Source=MyDatabaseServer" -AccessAccount "MyDomain\MyAccessAccount" -ReportAccount "MyDomain\MyReportAccount" -DatabaseName "MyComplianceDatabaseName" -Detailed
 
-
 ID                              Type  Message
 --                              ----  -------
 ComplianceConnectionString      Error Cannot connect to the database with the provided connection string.
@@ -210,5 +209,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamWebApplication](enable-mbamwebapplication.md)
 
 [Microsoft BitLocker Administration and Monitoring](index.md)
-
 

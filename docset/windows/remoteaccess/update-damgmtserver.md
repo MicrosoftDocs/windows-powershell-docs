@@ -49,11 +49,8 @@ IP addresses in the list are updated in accordance with server name resolution.
 ```
 PS C:\>$x = Update-DAMgmtServer -PassThru
 
-
-
 PS C:\>$x.Summary
 ChangesDetected
-
 
 PS C:\>$x.Servers | Format-Table -AutoSize
 Change: Added 

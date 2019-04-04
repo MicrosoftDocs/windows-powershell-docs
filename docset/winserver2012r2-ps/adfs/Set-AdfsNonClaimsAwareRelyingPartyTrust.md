@@ -212,7 +212,6 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

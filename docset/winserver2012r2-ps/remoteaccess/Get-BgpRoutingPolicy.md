@@ -39,7 +39,6 @@ If you do not specify the **Name** and **PolicyType** parameters, the cmdlet ret
 ```
 PS C:\> Get-BgpRoutingPolicy -Name "RTPolicy01", "RTPolicy02", "RTPolicy04", "RTPolicy07"
 
-
 Get-BgpRoutingPolicy : Policy RTPolicy07 not found.
 At line:1 char:1
 + Get-BgpRoutingPolicy RTPolicy01, RTPolicy02, RTPolicy04, RTPolicy07
@@ -72,9 +71,6 @@ This command gets the BGP routing policies named RTPolicy01, RTPolicy02, RTPolic
 ### Example 2: Get all BGP routing policies
 ```
 PS C:\> Get-BgpRoutingPolicy
-
-
-
 
 PolicyName   : RTPolicy04
 PolicyType   : ModifyAttribute
@@ -112,9 +108,6 @@ This command gets all BGP Routing policies in the policy store.
 ```
 PS C:\> Get-BgpRoutingPolicy -PolicyType ModifyAttribute
 
-
-
-
 PolicyName   : RTPolicy04
 PolicyType   : ModifyAttribute
 MatchClauses : MatchPrefix  : {10.1.4.0/24}
@@ -144,8 +137,6 @@ This command gets the BGP Routing policies in the policy store that are a Modify
 ### Example 4: Get BGP Routing policies for a Routing Domain
 ```
 PS C:\> Get-BgpRoutingPolicy -RoutingDomain "Rd_001" | ft
-
-
 
 PolicyName                    PolicyType                    MatchClauses                  SetClauses
 ----------                    ----------                    ------------                  ----------

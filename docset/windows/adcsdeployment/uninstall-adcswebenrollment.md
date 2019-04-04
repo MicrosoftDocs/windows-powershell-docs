@@ -103,8 +103,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the *Force* parameter to bypass the prompt for confirmation.
 
-  
-
 ## RELATED LINKS
 
 [Install-AdcsWebEnrollment](./Install-AdcsWebEnrollment.md)

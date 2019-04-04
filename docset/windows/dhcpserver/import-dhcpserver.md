@@ -133,7 +133,6 @@ If the scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: are already presen
 The **Import-Csv** cmdlet gets the list of scopes to import and returns it in the variable named $ScopeIdList.
 PS C:\> $ScopeIdList = Import-Csv -Path ".\ScopeList.txt"
 
-
 This cmdlet imports the scopes using the variable named $ScopeIdList as input for the *ScopeId* parameter.
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Leases -ScopeId $ScopeIdList.ScopeId -BackupPath "C:\dhcpbackup\"
 ```

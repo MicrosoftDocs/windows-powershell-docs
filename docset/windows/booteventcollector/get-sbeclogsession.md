@@ -38,7 +38,6 @@ More details are available in the Trace property.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -KdOnly

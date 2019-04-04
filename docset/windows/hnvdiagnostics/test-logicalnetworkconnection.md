@@ -34,7 +34,6 @@ The **Test-LogicalNetworkConnection** cmdlet tests whether a logical network can
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### CommonParameters

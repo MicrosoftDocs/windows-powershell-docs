@@ -117,7 +117,6 @@ Accept wildcard characters: False
 Specifies the policy store that contains the configuration to get.
 The acceptable values for this parameter are:
 
-
 - PersistentStore 
 
 - ActiveStore 
@@ -170,7 +169,6 @@ This cmdlet accepts no input objects.
 ### Microsoft.Management.Infrastructure.CimInstance#root\StandardCimv2\MSFT_NetISATAPConfiguration
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
-
 
 This cmdlet returns an ISATAP configuration object.
 

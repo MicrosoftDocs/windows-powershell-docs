@@ -226,17 +226,12 @@ Since we are using Radius authentication, the **SharedSecret** parameter is mand
 ```
 PS C:\>ipmo ServerManager
 
-
-
 PS C:\>Add-WindowsFeature -Name routing -IncludeManagementTools
 Success Restart Needed Exit Code      Feature Result 
 ------- -------------- ---------      -------------- 
 True    No             Success        {Routing} 
 
-
 PS C:\>ipmo remoteaccess
-
-
 
 PS C:\>Install-RemoteAccess -VpnType S2SVPN -IPv6Prefix fe80::/64 -PassThru
 DAStatus           : Uninstalled 
@@ -251,7 +246,6 @@ IPAddressRangeList :
 IPv6Prefix         : fe80::/64 
 AuthenticationType : Windows 
 RadiusServerList   : 
-
 
 PS C:\>Add-VpnS2SInterface -Name EDGE1 -Destination 131.107.0.20 -Protocol IKEv2 -AuthenticationMethod PSKOnly -SharedSecret abc -IPv4Subnet 10.2.0.0/24:100 -IPv6Subnet 2001:db8:2::/64:100
 Name                 Destination          AdminStatus  ConnectionState IPv4Subnet 

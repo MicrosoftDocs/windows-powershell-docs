@@ -43,8 +43,6 @@ If you do not specify the **PeerName** parameter, the cmdlet adds the router pol
 ```
 PS C:\> Set-BgpRoutingPolicyForPeer -Direction Ingress -PeerName "TenantSite03" -PolicyName "RTPolicy02", "RTPolicy04", "RTPolicy05" 
 
-
-
 Confirm
 BGP peering session could currently be active for TenantSite03. Do you want to apply these policies and restart
 corresponding peering sessions?

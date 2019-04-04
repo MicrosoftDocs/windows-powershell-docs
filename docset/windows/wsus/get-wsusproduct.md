@@ -34,7 +34,6 @@ The **Get-WsusProduct** cmdlet gets the list of all Windows Server Update Servic
 
 This list can be filtered using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusProduct](./Set-WsusProduct.md) cmdlet.
 
-
 ## EXAMPLES
 
 ### Example 1: Get all products for a WSUS server

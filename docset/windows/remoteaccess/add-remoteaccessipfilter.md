@@ -48,7 +48,6 @@ Discard all traffic except for packets that are allowed by filters.
 ```
 PS C:\> Add-RemoteAccessIpFilter -InterfaceAlias Interface01 -Action Allow -List @("10.0.0.0/16:10.2.0.0/16:TCP:1234:4321") -Direction Outbound -AddressFamily IPv4 -Passthru
 
-
 InterfaceAlias   : Interface1
 Direction        : outbound
 Ipv4FilterAction : Allow

@@ -37,7 +37,6 @@ A office_365_1 site stores the SharePoint Online site configuration.
 ```
 PS C:\> Get-WssMSOSharePointSite
 
-
 Id                       : 0a2d5783-cfff-4ec2-bf34-539121f5fbbc
 Title                    : Contoso Team Site
 Description              :

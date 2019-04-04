@@ -40,7 +40,6 @@ The **Stop-ComputeProcess** cmdlet stops a running compute system in the Hyper-V
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -ComputeProcess

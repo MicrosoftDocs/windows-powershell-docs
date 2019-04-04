@@ -69,8 +69,6 @@ This example sets encryption passphrase for a computer.
 ```
 PS C:\>$spwd = ConvertTo-SecureString -String Notag00pa55word -AsPlainText -Force
 
-
-
 PS C:\>Set-OBMachineSetting -ProxyServer http://proxycontoso.com -ProxyPort <your proxy port> -ProxyUsername contoso\johnj99 -ProxyPassword $spwd
 ```
 
@@ -80,11 +78,7 @@ This example sets proxy settings for a server.
 ```
 PS C:\>$mon = [System.DayOfWeek]::Monday
 
-
-
 PS C:\>$tue = [System.DayOfWeek]::Tuesday
-
-
 
 PS C:\>Set-OBMachineSetting -WorkDay $mon, $tue -StartWorkHour "9:00:00" -EndWorkHour "18:00:00" -WorkHourBandwidth (512*1024) -NonWorkHourBandwidth (2048*1024)
 ```

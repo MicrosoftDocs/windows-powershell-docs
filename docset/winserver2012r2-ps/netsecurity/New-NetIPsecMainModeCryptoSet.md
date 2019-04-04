@@ -50,19 +50,11 @@ Additional main mode cryptographic sets can be used with IPsec main mode rules f
 ```
 PS C:\>$proposal1 = (New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH1)
 
-
-
 PS C:\>$proposal2 = (New-NetIPsecMainModeCryptoProposal -Encryption AES192 -Hash MD5 -KeyExchange DH14)
-
-
 
 PS C:\>$proposal3 = (New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH19)
 
-
-
 PS C:\>$mmCryptoSet = New-NetIPsecMainModeCryptoSet -DisplayName "Main Mode Crypto Set" -Proposal $proposal1, $proposal2, $proposal3
-
-
 
 PS C:\>New-NetIPsecMainModeRule -DisplayName "Main Mode Rule" -MainModeCryptoSet $mmCryptoSet.Name
 ```
@@ -73,15 +65,9 @@ This example creates a main mode rule linked to a cryptographic set that contain
 ```
 PS C:\>$dES3MD5DH1 = New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH1
 
-
-
 PS C:\>$aES192MD5DH14 = New-NetIPsecMainModeCryptoProposal -Encryption AES192 -Hash MD5 -KeyExchange DH14
 
-
-
 PS C:\>$dES3MD5DH19 = New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH19
-
-
 
 PS C:\>New-NetIPsecMainModeCryptoSet -DisplayName "Default Main Mode Crypto Set" -Proposal $dES3MD5DH1, $aES192MD5DH14, $dES3MD5DH19 -Default
 ```

@@ -129,7 +129,6 @@ Accept wildcard characters: False
 Specifies the forest mode for an Active Directory forest.
 The acceptable values for this parameter are:
 
-
 - Windows2000Forest or 0
 
 - Windows2003InterimForest or 1
@@ -163,7 +162,6 @@ Accept wildcard characters: False
 Specifies an Active Directory forest object by providing one of the following attribute values.
 The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
 The acceptable values for this parameter are:
-
 
 - A fully qualified domain name
 

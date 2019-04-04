@@ -101,7 +101,6 @@ For example, the user can enter a PIN or provide a USB drive that contains a key
 BitLocker decrypts the encryption key and uses it to read data from the drive.
 You can use one of the following methods or combinations of methods for a key protector: 
 
-
 - Trusted Platform Module (TPM) .
 BitLocker uses the computer's TPM to protect the encryption key.
 If you select this key protector, users can access the encrypted drive as long as it is connected to the system board that hosts the TPM and system boot integrity is intact.
@@ -246,7 +245,6 @@ Accept wildcard characters: False
 ### -EncryptionMethod
 Specifies an encryption method for the encrypted drive.
 The acceptable values for this parameter are:
-
 
 - Aes128
 

@@ -42,7 +42,6 @@ Software Inventory Logging collects the data at the point in time that you run t
 ```
 PS C:\> Get-SilWindowsUpdate
 
-
 ID             : KB280289
 InstallDate    : 4/1/2013
 ```

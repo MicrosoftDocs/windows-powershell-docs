@@ -59,7 +59,6 @@ This command removes the "Microsoft XPS Document Writer v4" driver.
 ```
 PS C:\>$PrinterDriver = Get-Printer -Name "Microsoft XPS Document Writer v4"
 
-
 PS C:\>Remove-PrinterDriver -InputObject $PrinterDriver
 ```
 

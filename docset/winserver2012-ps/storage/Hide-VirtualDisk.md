@@ -50,11 +50,7 @@ This is equivalent to masking.
 ```
 PS C:\>$iniport = (Get-InitiatorPort)
 
-
-
 PS C:\>$tarport = (Get-TargetPort)
-
-
 
 PS C:\>Hide-VirtualDisk -FriendlyName "SQLData_27a" -TargetPortAddresses $tarport.NodeAddress -InitiatorAddress $iniport.NodeAddress
 ```
@@ -161,8 +157,6 @@ Accept wildcard characters: False
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
 
-
-                        
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

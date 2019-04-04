@@ -41,7 +41,6 @@ Replicated folders are logical arrangements of replication that do not contain c
 ```
 PS C:\> Set-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF101" -Description "Branch Store #101, Data Collection for Backups"
 
-
 GroupName              : RG11
 FolderName             : RF101
 DomainName             : corp.contoso.com
@@ -59,7 +58,6 @@ This command sets a new description on the replicated folder named RF101 in the 
 ### Example 2: Exclude files on all replicated folders
 ```
 PS C:\> Set-DfsReplicatedFolder -GroupName "RG11" -FolderName * -FileNameToExclude "~*, *.bak, *.tmp, *.ned"
-
 
 GroupName              : RG11
 FolderName             : RF11

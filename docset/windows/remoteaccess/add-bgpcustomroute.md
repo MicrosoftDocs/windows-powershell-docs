@@ -44,9 +44,6 @@ Use the **RoutingDomain** parameter to specify the routing domain or tenant of t
 ```
 PS C:\> Add-BgpCustomRoute -Interface "Ethernet" -PassThru
 
-
-
-
 Interface : {Ethernet}
 Network   :
 ```
@@ -58,9 +55,6 @@ The cmdlet adds all the unicast IP addresses of the interface to the BGP router.
 ```
 PS C:\> Add-BgpCustomRoute -Network "172.23.90.0/29" -PassThru
 
-
-
-
 Interface : {Ethernet}
 Network   : {172.23.90.0/29}
 ```
@@ -70,9 +64,6 @@ This command adds the routing information from the network prefix 172.23.90.0/29
 ### Example 3: Add an interface and a network prefix to a BGP router for a routing domain
 ```
 PS C:\> Add-BgpCustomRoute -Interface "VS1" -Network "172.23.90/29" -RoutingDomain "Rd_001" -PassThru
-
-
-
 
 Interface : {Ethernet}
 Network   : {172.23.90.0/29}

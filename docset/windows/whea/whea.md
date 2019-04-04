@@ -31,4 +31,3 @@ Gets the WHEA memory policies for a computer.
 ### [Set-WheaMemoryPolicy](./Set-WheaMemoryPolicy.md)
 Sets the WHEA memory policy for a computer.
 
-

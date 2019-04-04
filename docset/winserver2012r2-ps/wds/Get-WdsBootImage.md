@@ -53,7 +53,6 @@ This is the architecture of the boot image.
 Because you can use the same image name for boot images in different architectures, specify this parameter to ensure that you return the correct image.
 The acceptable values for this parameter are:
 
-
      -- ARM
 
      -- ia64

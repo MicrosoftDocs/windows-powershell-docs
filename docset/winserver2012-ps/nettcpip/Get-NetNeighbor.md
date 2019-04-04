@@ -36,7 +36,6 @@ In IPv4, the neighbor cache is commonly known as an ARP cache.
 ```
 PS C:\>Get-NetNeighbor
 
-
 The default output omits some properties. Run this cmdlet to display all of the fields (all of the properties of the object).
 PS C:\>Get-NetNeighbor | Format-List -Property *
 ```

@@ -37,7 +37,6 @@ For more information on TPM, see the Trusted Platform Module Technology Overview
 ```
 PS C:\> Import-TpmOwnerAuth -OwnerAuthorization "Qn2sdCFQmvjf+tBtSWH4GT87sQs="
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -53,7 +52,6 @@ This command imports the specified owner authorization value to the registry.
 ### Example 2: Import an owner authorization value from a file
 ```
 PS C:\> Import-TpmOwnerAuth -File "OwnAuthFile.tpm"
-
 
 TpmReady           : False
 TpmPresent         : True

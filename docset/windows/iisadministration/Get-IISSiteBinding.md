@@ -100,7 +100,6 @@ Accept wildcard characters: False
 
 ### System.String
 
-
 ## OUTPUTS
 
 ### Microsoft.Web.Administration.BindingCollection

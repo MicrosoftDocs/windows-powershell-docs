@@ -41,7 +41,6 @@ If you do not install these updates on each controller before the device enters 
 ```
 PS C:\> Exit-HcsMaintenanceMode
 
-
 Before exiting maintenance mode, ensure that any updates that are required on both 
 controllers have been applied. Failure to install on each controller could result
 in data corruption. Exiting maintenance mode will reboot both controllers, which 

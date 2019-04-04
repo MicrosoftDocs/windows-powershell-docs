@@ -38,7 +38,6 @@ The cmdlet returns a list of UPN suffixes and indicates whether a UPN suffix was
 ```
 PS C:\> Get-AdfsDeviceRegistrationUpnSuffix | Format-List
 
-
 Upn               : contoso.com
 SslPort           : 443
 IsSetAsSslBinding : True

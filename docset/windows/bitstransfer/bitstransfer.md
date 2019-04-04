@@ -49,4 +49,3 @@ Creates a BITS transfer job.
 ### [Suspend-BitsTransfer](./Suspend-BitsTransfer.md)
 Suspends a BITS transfer job.
 
-

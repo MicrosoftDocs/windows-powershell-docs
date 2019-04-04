@@ -219,7 +219,6 @@ Accept wildcard characters: False
 
 ### -MaximumResponsesPerWindow
 
-
 ```yaml
 Type: UInt32
 Parameter Sets: (All)

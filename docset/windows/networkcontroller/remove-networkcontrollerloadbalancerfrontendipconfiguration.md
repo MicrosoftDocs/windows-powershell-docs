@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https
 
 Description
 
-
-
 This example removes a front end IP configuration resource named frontEnd1 from a load balancer resource named lb1
 
 ## PARAMETERS

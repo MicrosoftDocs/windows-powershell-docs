@@ -51,7 +51,6 @@ This command removes a specified computer from Active Directory.
 ```
 PS C:\> Get-ADComputer -Filter 'Location -eq "NA/HQ/Building A"' | Remove-ADComputer
 
-
 Confirm
 Are you sure you want to perform this action? Performing operation "Remove" on Target "CN=LabServer-01,CN=Computers,DC=Fabrikam,DC=com".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): a

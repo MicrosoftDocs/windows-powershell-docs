@@ -85,7 +85,6 @@ To search for all accounts that expire before December 31, 2012, set the DateTim
 ```
 C:\PS>Search-ADAccount -AccountDisabled | FT Name,ObjectClass -A
 
-
 Name            ObjectClass
 ----            -----------
 Guest           user
@@ -105,7 +104,6 @@ Returns all users, computers and service accounts that are disabled.
 ```
 C:\PS>Search-ADAccount -AccountDisabled -UsersOnly | FT Name,ObjectClass -A
 
-
 Name         ObjectClass
 ----         -----------
 Guest        user
@@ -122,7 +120,6 @@ Returns all users that are disabled.
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Search-ADAccount -AccountExpired | FT Name,ObjectClass -A
-
 
 Name            ObjectClass
 ----            -----------
@@ -141,7 +138,6 @@ Returns all users, computers and service accounts that are expired.
 ```
 C:\PS>Search-ADAccount -AccountExpiring -TimeSpan 6.00:00:00 | FT Name,ObjectClass -A
 
-
 Name           ObjectClass
 ----           -----------
 Iulian Calinov user
@@ -158,7 +154,6 @@ Returns all users, computers and service accounts that will expire in the next 6
 ### -------------------------- EXAMPLE 5 --------------------------
 ```
 C:\PS>Search-ADAccount -AccountInactive -TimeSpan 90.00:00:00 | FT Name,ObjectClass -A
-
 
 Name                        ObjectClass
 ----                        -----------
@@ -185,7 +180,6 @@ Returns all accounts that have been inactive for the last 90 days.
 ```
 C:\PS>Search-ADAccount -PasswordExpired | FT Name,ObjectClass -A
 
-
 Name                        ObjectClass
 ----                        -----------
 Stan Orme                   user
@@ -202,7 +196,6 @@ Returns all accounts where the password has expired.
 ### -------------------------- EXAMPLE 7 --------------------------
 ```
 C:\PS>Search-ADAccount -PasswordNeverExpires | FT Name,ObjectClass -A
-
 
 Name           ObjectClass
 ----           -----------

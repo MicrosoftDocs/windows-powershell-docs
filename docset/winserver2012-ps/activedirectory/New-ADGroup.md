@@ -63,7 +63,6 @@ Create a new group named 'RODC Admins' in the container 'CN=Users,DC=Fabrikam,DC
 ```
 C:\PS>Get-ADGroup FabrikamBranch1 -Properties Description | New-ADGroup  -Name Branch1Employees  -SamAccountName Branch1Employees -GroupCategory Distribution -PassThru
 
-
 GroupScope        : Universal
 Name              : Branch1Employees
 GroupCategory     : Distribution

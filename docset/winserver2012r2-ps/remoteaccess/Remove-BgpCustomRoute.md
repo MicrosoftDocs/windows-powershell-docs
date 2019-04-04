@@ -41,8 +41,6 @@ You must specify at least one of the **Interface** or **Network** parameters.
 ```
 PS C:\> Remove-BgpCustomRoute -Network "172.23.90.0/29"
 
-
-
 Confirm
 Removing specified custom networks from BGP router. Do you want to continue?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
@@ -53,8 +51,6 @@ This command removes the network prefix of a custom network from the BGP routing
 ### Example 2: Remove the interface for a routing domain
 ```
 PS C:\> Remove-BgpCustomRoute -Interface "VS01" -RoutingDomain Rd_002
-
-
 
 Confirm
 Removing specified custom networks from BGP router of Routing Domain Rd_002. Do you want to continue?

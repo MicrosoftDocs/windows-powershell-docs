@@ -60,7 +60,6 @@ Gets one or more disk image objects (virtual hard disk or ISO).
 
 ### [Get-FileIntegrity](./Get-FileIntegrity.md)
 
-
 ### [Get-InitiatorId](./Get-InitiatorId.md)
 Gets the InitiatorID objects for the specified iSCSI initiators.
 
@@ -105,9 +104,7 @@ Gets one or more StorageSubsystem objects.
 
 ### [Get-SupportedClusterSizes](./Get-SupportedClusterSizes.md)
 
-
 ### [Get-SupportedFileSystems](./Get-SupportedFileSystems.md)
-
 
 ### [Get-TargetPort](./Get-TargetPort.md)
 Returns a TargetPort object associated with a specific port address and connection type.
@@ -126,9 +123,7 @@ Gets the specified Volume object, or all Volume objects if no filter is provided
 
 ### [Get-VolumeCorruptionCount](./Get-VolumeCorruptionCount.md)
 
-
 ### [Get-VolumeScrubPolicy](./Get-VolumeScrubPolicy.md)
-
 
 ### [Hide-VirtualDisk](./Hide-VirtualDisk.md)
 Hides the virtual disk from the host when the Storage Management Provider in use does not support masking sets.
@@ -198,7 +193,6 @@ Renames an existing masking set.
 
 ### [Repair-FileIntegrity](./Repair-FileIntegrity.md)
 
-
 ### [Repair-VirtualDisk](./Repair-VirtualDisk.md)
 Performs repairs on a virtual disk that is unhealthy.
 
@@ -210,7 +204,6 @@ Resets the status of a physical disk.
 
 ### [Reset-StorageReliabilityCounter](./Reset-StorageReliabilityCounter.md)
 
-
 ### [Resize-Partition](./Resize-Partition.md)
 Resizes a partition and the underlying file system.
 
@@ -221,7 +214,6 @@ Resizes an existing virtual disk to be larger or smaller.
 Takes a Disk object or unique disk identifiers and a set of attributes, and updates the physical disk on the system.
 
 ### [Set-FileIntegrity](./Set-FileIntegrity.md)
-
 
 ### [Set-InitiatorPort](./Set-InitiatorPort.md)
 Sets properties on the InitiatorPort object.
@@ -251,7 +243,6 @@ Modifies the attributes of an existing virtual disk.
 Sets or changes the file system label of an existing volume.
 
 ### [Set-VolumeScrubPolicy](./Set-VolumeScrubPolicy.md)
-
 
 ### [Show-VirtualDisk](./Show-VirtualDisk.md)
 Makes a virtual disk available to a host.

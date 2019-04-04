@@ -121,7 +121,6 @@ Accept wildcard characters: False
 
 ### -NetworkDirectAcrossIPSubnets
 
-
 ```yaml
 Type: AllowedBlockedEnum[]
 Parameter Sets: (All)

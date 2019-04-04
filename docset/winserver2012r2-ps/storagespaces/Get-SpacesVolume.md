@@ -52,8 +52,6 @@ IsManualAttach            : False
 DetachedReason            : None
 SpaceUsageAlertPercentage : {70}
 
-
-
 OperationalStatus         : OK
 HealthStatus              : Healthy
 DiskUniqueID              : EBB5E72780C7E1119CC4F46D0439C015

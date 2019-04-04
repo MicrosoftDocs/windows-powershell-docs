@@ -53,9 +53,6 @@ The teaming mode is set to LACP and the load balancing algorithm is set to Hyper
 ```
 PS C:\>Set-VMNetworkAdapter -VMName <VMname> -AllowTeaming  
 
-
-
-
 PS C:\>New-NetLbfoTeam -Name Team2 -TeamMembers NIC1,NIC2
 ```
 

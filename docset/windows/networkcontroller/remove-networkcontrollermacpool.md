@@ -43,8 +43,6 @@ Remove-NetworkControllerMacPool -ConnectionUri https://networkcontroller -Resour
 
 Description
 
-
-
 This example removes a MAC pool named MAcPool1 from the Network Controller
 
 ## PARAMETERS

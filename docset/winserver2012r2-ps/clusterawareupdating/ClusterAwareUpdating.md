@@ -23,7 +23,6 @@ ms.assetid: a6771a5e-e72b-4188-9658-a5e07e3f5b7a
 This reference provides cmdlet descriptions and syntax for all Cluster-Aware Updating-specific cmdlets. 
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-
 ## ClusterAwareUpdating Cmdlets
 ### [Add-CauClusterRole](./Add-CauClusterRole.md)
 Adds the Cluster-Aware Updating (CAU) clustered role that provides the self-updating functionality to the specified cluster.

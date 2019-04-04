@@ -119,7 +119,6 @@ Accept wildcard characters: False
 
 ### -VMSwitch
 
-
 ```yaml
 Type: VMSwitch[]
 Parameter Sets: SwitchObject

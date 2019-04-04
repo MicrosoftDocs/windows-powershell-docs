@@ -47,7 +47,6 @@ Adds virtual switch Test to Ethernet resource pool Engineering Department.
 
 ### -ComputerName
 
-
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1

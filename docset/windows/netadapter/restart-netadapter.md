@@ -53,7 +53,6 @@ This may be needed for certain properties to take effect in a physical network a
 ```
 PS C:\> Restart-NetAdapter -Name "Ethernet 2"
 
-
 This command shows an alternate version of the above command that uses wildcard characters.
 PS C:\> Restart-NetAdapter -Name "E*2"
 ```

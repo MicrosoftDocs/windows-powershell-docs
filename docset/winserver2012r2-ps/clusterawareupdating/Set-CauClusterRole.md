@@ -141,7 +141,6 @@ For example:
                          
  - `@{name1=value1;name2=value2;name3=value3},@{name4=value4;name5=value5}`
 
-                         
 For the default **Microsoft.WindowsUpdatePlugin** plug-in, no arguments are needed.
 The following arguments are optional: 
                          
@@ -157,12 +156,10 @@ If not specified, then the **Microsoft.WindowsUpdatePlugin** plug-in by default 
                          
 For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see the topic about search criteria in the Windows Update Agent (WUA) API Referencehttp://go.microsoft.com/fwlink/p/?LinkId=223304. 
 
-                         
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required: 
                          
  - **HotfixRootFolderPath=\<Path\>**: The UNC path to a hotfix root folder in an SMB share with a structure that contains the updates to apply and that contains the hotfix configuration file  
 
-                         
 The following arguments are optional for the **Microsoft.HotfixPlugin** plug-in: 
                          
  - **RequireSmbEncryption=\<Value\>**: Boolean value to indicate that SMB Encryption will be enforced for accessing data from the SMB share.
@@ -174,8 +171,7 @@ If not specified, the default value is **'False'**.
                          
  - **HotfixInstallerTimeoutMinutes=\<Integer\>**: The length of time in minutes that the plug-in allows the hotfix installer process to return.
 If not specified, the default value is 30 minutes. 
-                         
-                         
+
  - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file.
 If not specified, the default name DefaultHotfixConfig.xml is used. 
 For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see the content about Cluster-Aware Updating plug-inshttp://go.microsoft.com/fwlink/p/?LinkId=235333.

@@ -44,7 +44,6 @@ Use **Remove-NetworkControllerNode** for that purpose.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Confirm

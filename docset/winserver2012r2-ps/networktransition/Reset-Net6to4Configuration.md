@@ -52,8 +52,6 @@ This IPv6 address can be used to connect to other 6to4 hosts or the IPv6 Interne
 ```
 PS C:\>$config = ( Get-NetIPInterface -InterfaceIndex 14 | Get-Net6to4Configuration )
 
-
-
 PS C:\>Reset-Net6to4Configuration -InputObject $config
 ```
 

@@ -72,19 +72,11 @@ This example uses the **Multiple** parameter to configure the clustered resource
 ```
 PS C:\>$res = Get-ClusterResource -Name "IP Address"
 
-
-
 PS C:\>$param1 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,Address,10.55.88.46
-
-
 
 PS C:\>$param2 = New-Object -ComObject Microsoft.FailoverClusters.PowerShell.ClusterParameter -Property $res,SubnetMask,255.0.0.0
 
-
-
 PS C:\>$params = $param1,$param2
-
-
 
 PS C:\>$params | Set-ClusterParameter
 ```

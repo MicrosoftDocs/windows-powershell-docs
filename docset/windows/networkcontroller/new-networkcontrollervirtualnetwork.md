@@ -57,8 +57,6 @@ New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri h
 
 Description
 
-
-
 The above cmdlet creates a virtual network called Contoso_Vnet1 with one virtual subnet
 
 ## PARAMETERS

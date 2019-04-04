@@ -152,8 +152,6 @@ Overwrites an existing AD FS configuration database and creates the first node i
 
 In this example, certificate thumbprint values are specified for the token signing certificate and for the token encryption certificate using the *SigningCertificateThumbprint* and *DecryptionCertificateThumbprint* parameters respectively.
 
-
-
 ## PARAMETERS
 
 ### -AdminConfiguration (Currently not supported)

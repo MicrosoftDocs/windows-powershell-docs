@@ -67,7 +67,6 @@ Accept wildcard characters: False
 
 ### -ADFSTokenAcceptanceDurationSec
 
-
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -257,7 +256,6 @@ Accept wildcard characters: False
 
 ### -UserIdleTimeoutAction
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -272,7 +270,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserIdleTimeoutSec
-
 
 ```yaml
 Type: UInt32

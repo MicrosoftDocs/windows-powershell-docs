@@ -41,19 +41,13 @@ This is because the store exists even when inbox accounting is later disabled.
 ```
 PS C:\>$startdate = Get-Date -Date "1/1/2011"
 
-
-
 PS C:\>$startdate
 Saturday, January 01, 2011 12:00:00AM
 
-
 PS C:\>$enddate = Get-Date -Date "1/3/2011"
-
-
 
 PS C:\>$enddate
 Tuesday, March 01, 2011 12:00:00AM
-
 
 PS C:\>Clear-RemoteAccessInboxAccountingStore -StartDateTime $startdate -EndDateTime $enddate -PassThru
 Confirm 

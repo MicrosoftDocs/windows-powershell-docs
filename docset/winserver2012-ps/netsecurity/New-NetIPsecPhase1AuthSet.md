@@ -40,15 +40,9 @@ The newly created authentication set can be associated with one or more IPsec ru
 ```
 PS C:\>$cert1Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MSFT,CN=Microsoft Root Authority" -AuthorityType Root
 
-
-
 PS C:\>$cert2Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MYORG,CN=\'My Organizations Root Certificate\'" -AuthorityType Root
 
-
-
 PS C:\>$certAuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Certificate Auth Set" -Proposal $cert1Proposal,$cert2Proposal
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Authenticate with Certificates Rule" -InboundSecurity Require -OutboundSecurity Request -Phase2AuthSet $certAuthSet.Name
 ```
@@ -60,31 +54,17 @@ The computer also requests authentication for outbound connections, but allows a
 ```
 PS C:\>$mkerbauthprop = New-NetIPsecAuthProposal -Machine -Kerberos
 
-
-
 PS C:\>$mntlmauthprop = New-NetIPsecAuthProposal -Machine -NTLM
-
-
 
 PS C:\>$p1Auth = New-NetIPsecPhase1AuthSet -DisplayName "First Computer Auth" -Proposal $mkerbauthprop,$mntlmauthprop
 
-
-
 PS C:\>$ukerbauthprop = New-NetIPsecAuthProposal -User -Kerberos
-
-
 
 PS C:\>$unentlmauthprop = New-NetIPsecAuthProposal -User -NTLM
 
-
-
 PS C:\>$anonyauthprop = New-NetIPsecAuthProposal -Anonymous
 
-
-
 PS C:\>$p2Auth = New-NetIPsecPhase2AuthSet -DisplayName "Second User Auth" -Proposal $ukerbauthprop,$unentlmauthprop,$anonyauthprop
-
-
 
 PS C:\>New-NetIPSecRule -DisplayName "Authenticate Both Computer and User" -InboundSecurity Require -OutboundSecurity Require -Phase1AuthSet $p1Auth.Name -Phase2AuthSet $p2Auth.Name
 ```
@@ -95,19 +75,11 @@ This example creates a rule that requires a first, or computer, authentication a
 ```
 PS C:\>$proposal1 = (New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH1)
 
-
-
 PS C:\>$proposal2 = (New-NetIPsecMainModeCryptoProposal -Encryption AES192 -Hash MD5 -KeyExchange DH14)
-
-
 
 PS C:\>$proposal3 = (New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH19)
 
-
-
 PS C:\>$mmCryptoSet = New-NetIPsecMainModeCryptoSet -DisplayName "Main Mode Crypto Set" -Proposal $proposal1,$proposal2,$proposal3
-
-
 
 PS C:\>New-NetIPsecMainModeRule -DisplayName "Custom Main Mode Rule" -MainModeCryptoSet $mmCryptoSet.Name
 ```
@@ -118,15 +90,9 @@ This example creates a main mode rule linked to a cryptographic set that contain
 ```
 PS C:\>$cert1Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MSFT,CN=Microsoft Root Authority" -AuthorityType Root
 
-
-
 PS C:\>$cert2Proposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MYORG,CN='My Organizations Root Certificate'" -AuthorityType Root
 
-
-
 PS C:\>$certAuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Certificate Auth Set" -Proposal $cert1Proposal,$Cert2Proposal
-
-
 
 PS C:\>New-NetIPsecMainModeRule -DisplayName "Main Mode Authenticate with Certificates Rule" -Phase1AuthSet $certAuthSet.Name
 ```
@@ -137,19 +103,11 @@ This example creates a main mode rule that requires that incoming connections ar
 ```
 PS C:\>$proposal1 = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MSFT,CN=Microsoft Root Authority" -AuthorityType Root
 
-
-
 PS C:\>$poAuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Certificate Auth Set" -Proposal $proposal1
-
-
 
 PS C:\>$proposal2 = New-NetIPsecMainModeCryptoProposal -Encryption DES3 -Hash MD5 -KeyExchange DH1
 
-
-
 PS C:\>$mmCryptoSet = New-NetIPsecMainModeCryptoSet -DisplayName "dhgroup2:3des-sha256,3des-sha384" -Proposal $proposal2
-
-
 
 PS C:\>New-NetIPsecMainModeRule -DisplayName "Alternate Main Mode Rule" -LocalAddress Any -RemoteAddress 192.168.0.5 -Phase1AuthSet $poAuthSet.Name -MainModeCryptoSet $mmCryptoSet.Name
 ```

@@ -57,7 +57,6 @@ This example removes the node named node4 from the local cluster without prompti
 
 ### -CleanupDisks
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

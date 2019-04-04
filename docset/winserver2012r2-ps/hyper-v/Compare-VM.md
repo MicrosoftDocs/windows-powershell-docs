@@ -85,7 +85,6 @@ At line:1 char:1
 Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
 PS C:\>$report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
 
-
 Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
 PS C:\>$report.Incompatibilities | Format-Table -AutoSize
 Message                                      MessageId Source
@@ -95,10 +94,8 @@ Could not find Ethernet switch 'Production'.     33012 Microsoft.HyperV.PowerShe
 Disconnects the virtual network adapter.
 PS C:\>$report.Incompatibilities[0].Source | Disconnect-VMNetworkAdapter
 
-
 Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
 PS C:\>Compare-VM -CompatibilityReport $report
-
 
 Displays the compatibility report.
 PS C:\>$report

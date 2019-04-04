@@ -49,7 +49,6 @@ To obtain an App-V Publishing Server object, use the **Get-AppvPublishingServer*
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -GlobalRefreshEnabled

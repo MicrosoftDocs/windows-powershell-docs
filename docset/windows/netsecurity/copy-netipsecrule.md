@@ -172,10 +172,7 @@ This example copies a group of IPsec rules that are currently disabled to a new 
 ```
 PS C:\>$nfwProfile = Get-NetFirewallProfile -Profile Domain -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>Copy-NetIPsecRule -InputObject $nfwProfile -NewPolicyStore domain.example.com\new_gpo
-
 
 This is an alternate way to perform the same using only the pipeline.
 PS C:\>Get-NetFirewallProfile -Profile Domain -PolicyStore domain.contoso.com\GPO_name | Copy-NetIPsecRule -NewPolicyStore domain.example.com\new_gpo
@@ -187,39 +184,22 @@ This example copies all domain IPsec rules to a new policy store.
 ```
 PS C:\>$mMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>Copy-NetIPsecPhase1AuthSet -InputObject $mMrule -NewPolicyStore domain.contoso.com\new_GPO)
-
-
 
 PS C:\>Copy-NetIPsecMainModeCryptoSet -InputObject $mMrule -NewPolicyStore domain.contoso.com\new_GPO)
 
-
-
 PS C:\>Set-NetIPsecMainModeRule -InputObject $mMrule -Phase1AuthSet $copiedCryptoSet.Name
-
 
 The following cmdlets accomplish the same task but take advantage of caching the GPO to apply the changes locally.
 PS C:\>$mMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>$newGPO = Open-NetGPO -PolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>Copy-NetIPsecPhase1AuthSet -InputObject $mMrule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecMainModeCryptoSet -InputObject $mMrule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecMainModeRule -InputObject $mMrule -GPOSession $newGPO
-
-
 
 PS C:\>Save-NetGPO -GPOSession $newGPO
 ```

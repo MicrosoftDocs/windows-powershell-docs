@@ -29,8 +29,6 @@ The **Get-StorageSetting** cmdlet returns the StorageSettings object.
 ```
 PS C:\>ipmo storage
 
-
-
 PS C:\>Get-StorageSetting
 NewDiskPolicy                                               PSComputerName 
 -------------                                               -------------- 

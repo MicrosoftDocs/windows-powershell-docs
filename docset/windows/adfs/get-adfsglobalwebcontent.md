@@ -40,7 +40,6 @@ If you do not specify the *Locale* parameter, the cmdlet gets global web content
 ```
 PS C:\> Get-AdfsGlobalWebContent
 
-
 Locale                                            :
 CompanyName                                       :
 HelpDeskLink                                      :

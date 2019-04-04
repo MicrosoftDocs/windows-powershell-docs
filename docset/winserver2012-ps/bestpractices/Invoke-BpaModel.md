@@ -78,7 +78,6 @@ This example gets all BPA models that are installed on the computer, and then pi
 ```
 PS C:\>$BPAObj =  Invoke-BPAModel ModelId1
 
-
 This cmdlet displays the results of any specific object in the previous cmdlet by calling the variable into which the results of the previous cmdlet were saved, and then specifying the object in the results that the administrator wants. The object is identified by its numerical order in the collection of results (the [CODE_Snippit]0[CODE_Snippit], or first, object). The cmdlet then identifies which field of the results in that object (for this example, the Detail field) the administrator wants to view. The cmdlet shown returns the properties of the Detail field from the first object in the results of the preceding line.
 PS C:\>$BPAObj[0].Detail
 ModelId             : ModelId1 

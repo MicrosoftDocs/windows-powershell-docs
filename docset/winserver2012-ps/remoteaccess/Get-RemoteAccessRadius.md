@@ -55,11 +55,9 @@ ServerName      Purpose         Score   Timeout(s)  Port    AccountingOnOffMsg M
 10.1.1.1        Authentication   30       5         1812                       Disabled 
 10.1.2.1        Authentication   30       5         1812                       Disabled 
 
-
 PS C:\>Remove-RemoteAccessRadius -ServerName 10.1.1.1 -Purpose Authentication -PassThru
 ServerName : 10.1.1.1 
 Purpose    : Authentication 
-
 
 PS C:\>Get-RemoteAccessRadius
 ServerName      Purpose         Score   Timeout(s)  Port    AccountingOnOffMsg MsgAuthenticator 

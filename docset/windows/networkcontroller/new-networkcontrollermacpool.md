@@ -48,7 +48,6 @@ $macpoolProperties.EndMacAddress = "40-1D-D8-F8-1D-FF"
 New-NetworkControllerMacPool -ConnectionUri https://networkcontroller -ResourceId "MacPool" -Properties $macpoolProperties
 ```
 
-
 ## PARAMETERS
 
 ### -CertificateThumbPrint

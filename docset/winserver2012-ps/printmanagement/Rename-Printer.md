@@ -51,8 +51,6 @@ This command renames the "Microsoft XPS Document Writer" printer name as "MXDW".
 ```
 PS C:\>$Printer = Get-Printer -Name "Microsoft XPS Document Writer"
 
-
-
 PS C:\>Rename-Printer -InputObject $Printer -NewName "MXDW"
 ```
 

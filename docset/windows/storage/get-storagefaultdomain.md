@@ -60,7 +60,6 @@ The Rack is stored in the $Rack variable.
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession
 Parameter Sets: (All)

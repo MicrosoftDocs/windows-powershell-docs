@@ -31,7 +31,6 @@ This tree provides information about the configuration and capabilities of the d
 ```
 C:\PS>Get-ADRootDSE
 
-
 configurationNamingContext    : CN=Configuration,DC=Fabrikam,DC=com
 currentTime                   : 3/18/2009 11:12:55 AM
 defaultNamingContext          : DC=Fabrikam,DC=com
@@ -65,7 +64,6 @@ Get the rooDSE from the default domain controller.
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>Get-ADRootDSE -Server Fabrikam-RODC1 -Properties supportedExtension
-
 
 configurationNamingContext    : CN=Configuration,DC=Fabrikam,DC=com
 currentTime                   : 3/18/2009 11:12:55 AM

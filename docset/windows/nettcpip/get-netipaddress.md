@@ -74,7 +74,6 @@ This display can help you find IP address information by interface index.
 ```
 PS C:\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Lt ([TimeSpan]::FromDays(1)) }
 
-
 Similarly, this cmdlet can be used to get information about IP address configuration for IP addresses that have an Infinite ValidLifetime.
 PS C:\>Get-NetIPAddress | Where-Object -FilterScript { $_.ValidLifetime -Eq ([TimeSpan]::MaxValue) }
 ```
@@ -87,7 +86,6 @@ This command gets IP address configuration for IP addresses that have a **ValidL
 Specifies an array of IP address families.
 The cmdlet gets the IP address configuration that matches the address families.
 The acceptable values for this parameter are:
-
 
  -- IPv4
  -- IPv6
@@ -109,7 +107,6 @@ Accept wildcard characters: False
 Specifies an array of duplicate address detection (DAD) state values for the IP address.
 Use this parameter to filter the output based on addresses that are valid and available for use.
 The acceptable values for this parameter are:
-
 
  -- Invalid.
 IP address configuration information for addresses that are not valid and will not be used. 
@@ -254,7 +251,6 @@ Accept wildcard characters: False
 Specifies a **PolicyStore** value. 
 The acceptable values for this parameter are:
 
-
  -- ActiveStore.
 The IP address information is valid. 
                          
@@ -262,7 +258,6 @@ The IP address information is valid.
 The computer saves IP address information across restarts.
 When the computer restarts, it copies the saved settings to the ActiveStore. 
 
-                         
 The default value is ActiveStore.
 
 ```yaml
@@ -315,7 +310,6 @@ IP addresses are divided into two parts, the prefix and the suffix.
 The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
 The acceptable values for this parameter are:
 
-
  -- Manual.
 The IP address prefix was manually specified. 
                          
@@ -363,7 +357,6 @@ Specifies an array of origins for address suffixes.
 IP addresses are divided into two parts, the prefix and the suffix.
 The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
 The acceptable values for this parameter are:
-
 
  -- Manual.
 The IP address suffix was manually specified. 
@@ -414,12 +407,10 @@ Accept wildcard characters: False
 Specifies an array of IP address types.
 The acceptable values for this parameter are:
 
-
  -- Unicast 
                          
  -- Anycast 
 
-                         
 The default value is Unicast.
 
 ```yaml

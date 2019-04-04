@@ -35,7 +35,6 @@ For example, you can use the Get-ADFineGrainedPasswordPolicy cmdlet to retrieve 
 ```
 C:\PS>Get-ADFineGrainedPasswordPolicySubject -Identity DomainUsersPSO | FT Name,ObjectClass,DistinguishedName -AutoSize
 
-
 Name         ObjectClass DistinguishedName
 ----         ----------- -----------------
 Domain Users group       CN=Domain Users,CN=Users,DC=FABRIKAM,DC=COM

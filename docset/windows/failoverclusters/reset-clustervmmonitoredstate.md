@@ -46,7 +46,6 @@ This example resets the state of the virtual machine and clears the critical sta
 
 ### -Wait
 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)

@@ -46,7 +46,6 @@ If any new providers are defined, they are added to the cache (and thus to the p
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Uncached

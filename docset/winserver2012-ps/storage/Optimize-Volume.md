@@ -49,72 +49,45 @@ Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReT
 ## DESCRIPTION
 The **Optimize-Volume** cmdlet optimizes a volume, performing such tasks as defragmentation and trim.
 
-
-
  If no parameter is specified, then the default operation will be performed per the drive type as follows.
-
-
 
 Defragment (drive type) : HDD
 
-
 Slab : YES
-
 
 Consolidation : NO
 
-
 TRIM : NO
-
-
 
 Defragment (drive type) : SSD
 
-
 Slab : NO
-
 
 Consolidation : NO
 
-
 TRIM : YES
-
-
 
 Defragment (drive type): VHD
 
-
 Slab : YES
 
-
 Consolidation : NO
-
 
 TRIM : NO
 
-
-
 Defragment (drive type): diff VHD
 
-
 Slab : NO
-
 
 Consolidation : NO
 
-
 TRIM : YES
-
-
 
 Defragment (drive type): Thinly Provisioned (Storage Spaces, thinly provisioned SAN Virtual Disk, Dynamic VHD)
 
-
 Slab : NO
 
-
 Consolidation : YES
-
 
 TRIM : YES
 

@@ -43,7 +43,6 @@ By default, the DFS Replication service performs a full poll every hour.
 ```
 PS C:\> Update-DfsrConfigurationFromAD -ComputerName "SRV01","SRV02" -Verbose
 
-
 VERBOSE: Performing operation "Update-DfsrConfigurationFromAD" on Target "SRV01".
 VERBOSE: Successfully updated the DFSR Active Directory Domain Service configuration on the computer named SRV01.
 VERBOSE: Performing operation "Update-DfsrConfigurationFromAD" on Target "SRV02".

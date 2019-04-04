@@ -34,7 +34,6 @@ The **Test-EncapOverheadSettings** cmdlet tests whether a network interface card
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### CommonParameters

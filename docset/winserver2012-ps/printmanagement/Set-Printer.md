@@ -61,13 +61,7 @@ This command configures the "Microsoft XPS Document Writer" printer to keep prin
 ```
 PS C:\>$printer = Get-Printer -Name "Microsoft XPS Document Writer"
 
-
-
-
 PS C:\>$printer.KeepPrintedJobs = $true
-
-
-
 
 PS C:\>Set-Printer -InputObject $printer
 ```

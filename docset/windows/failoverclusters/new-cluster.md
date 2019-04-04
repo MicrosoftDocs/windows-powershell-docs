@@ -218,7 +218,6 @@ Accept wildcard characters: False
 
 ### -S2D
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

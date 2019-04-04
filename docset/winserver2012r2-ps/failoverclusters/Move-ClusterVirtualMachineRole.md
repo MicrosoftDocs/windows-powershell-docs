@@ -76,8 +76,6 @@ This example cancels the live migration in progress for the clustered virtual ma
 ```
 PS C:\>$groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object -FilterScript {$_ | Get-ClusterResource | Where-Object -FilterScript {$_.ResourceType -Like "Virtual Machine"}}
 
-
-
 PS C:\>ForEach-Object -InputObject ($group in $groups) -Process { $group | Move-ClusterVirtualMachineRole -Node node2 }
 Name                       OwnerNode                           State 
 ----                       ---------                           ----- 

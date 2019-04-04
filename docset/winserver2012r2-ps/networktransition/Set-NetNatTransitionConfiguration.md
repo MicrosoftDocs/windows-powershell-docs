@@ -50,15 +50,9 @@ The **Set-NetNatTransitionConfiguration** sets the NAT64 configuration on a comp
 ```
 PS C:\>$nat64Prefix = "2009:1:2:3:4:5::/96"
 
-
-
 PS C:\>$prefixMapping = "$nat64Prefix,0.0.0.0/0"
 
-
-
 PS C:\>$portPool = "33.0.0.1,6000-10000"
-
-
 
 PS C:\>Set-NetNatTransitionConfiguration -InstanceName NAT64 OutboundInterface corpnet -PrefixMapping $prefixMapping -IPv4AddressPortPool $portPool
 ```

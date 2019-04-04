@@ -50,13 +50,10 @@ You can set the criteria by specifying the following parameters:
 ```
 PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy01" -PolicyType ModifyAttribute -NewMED 100 -PassThru
 
-
-
 Confirm
 BGP routing policy RTPolicy01 could currently be active. Do you want to apply these changes and restart corresponding
 peerings?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
-
 
 PolicyName   : RTPolicy01
 PolicyType   : ModifyAttribute
@@ -72,10 +69,6 @@ The command sets the ModifyAttribute policy type of the routing policy, and spec
 ```
 PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy06" -MatchCommunity 100:500 -Force -PassThru
 
-
-
-
-
 PolicyName   : RTPolicy06
 PolicyType   : Deny
 MatchClauses : MatchASNRange  : {64545, 64555}
@@ -90,13 +83,10 @@ Because the cmdlet uses the **Force** parameter, the cmdlet modifies the routing
 ```
 PS C:\> Set-BgpRoutingPolicy -Name "RTPolicy04" -RoutingDomain "Rd_001" -NewLocalPref 300 -PassThru
 
-
-
 Confirm
 BGP routing policy RTPolicy04 could currently be active. Do you want to apply these changes and restart corresponding
 peerings for routing domain Rd_001?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
-
 
 PolicyName   : RTPolicy04
 PolicyType   : ModifyAttribute
@@ -385,7 +375,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAllCommunities
-
 
 ```yaml
 Type: SwitchParameter

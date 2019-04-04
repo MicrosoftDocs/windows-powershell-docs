@@ -120,4 +120,3 @@ The settings location template ID.
 
 [Update-UevTemplate](./Update-UevTemplate.md)
 
-

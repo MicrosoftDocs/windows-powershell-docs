@@ -54,7 +54,6 @@ Cipher                : AES
 Name                  : TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
 Protocols             : {771}
 
-
 KeyType               : 0
 Certificate           : RSA
 MaximumExchangeLength : 65536

@@ -46,11 +46,7 @@ See the Get-DAPolicyChange cmdlet for more information.
 ```
 PS C:\>$IPv4list = 2.1.1.1,2.1.1.2
 
-
-
 PS C:\>$IPv6list = fefe:fefe::1,fefe:fefe::2
-
-
 
 PS C:\>Update-NetIPsecRule -IPsecRuleName "IPsec Rule" -Action Add -IPv4addresses $IPv4list -IPv6addresses $IPv6list -EndpointType Endpoint2 -PolicyStore domain.contoso.com/sample_gpo
 ```

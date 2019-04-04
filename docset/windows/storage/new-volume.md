@@ -116,7 +116,6 @@ PS C:\>New-Volume -StoragePoolFriendlyName "CompanyData" -FriendlyName "UserData
 ```
 This command creates new storage space in the CompanyData pool using the Mirror resiliency setting, fixed provisioning, a 20 GB SSD storage tier, and an 80 GB HDD storage tier, and then formats the volume with the NTFS file system and assigns drive letter M.
 
-
 ### Example 3: Create a volume on disk
 ```powershell
 PS C:\>Get-Disk | Where-Object OperationalStatus -eq 'Offline'| 

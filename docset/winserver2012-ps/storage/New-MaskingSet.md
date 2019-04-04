@@ -66,19 +66,11 @@ ps_storage_spacesubsystem_not_remark
 ```
 PS C:\>$StorageSubsystem = Get-StorageSubsystem
 
-
-
 PS C:\>$VirtualDisks = Get-VirtualDisk -Name "Virtual01,Virtual02"
-
-
 
 PS C:\>$Initiator = Get-InitiatorPort
 
-
-
 PS C:\>$Target = Get-TargetPort
-
-
 
 PS C:\>New-MaskingSet -StorageSubsystemFriendlyName $StorageSubsystem.FriendlyName -VirtualDiskNames $VirtualDisks.Name -FriendlyName "MyFirstMaskingSet" -InitiatorAddresses $Initiator.NodeAddress -TargetPortAddresses $Target.PortAddress
 ```

@@ -58,7 +58,6 @@ If you specify the **Root** parameter the cmdlet retrieves the trust anchors fro
 PS C:\>Get-DnsServerResourceRecord -ZoneName "sec.contoso.com" -RRType "dnskey" -ComputerName DNS1 | %{ $_.RecordData | Add-DnsServerTrustAnchor -PassThru -Verbose -Name "sec.contoso.com"}
 VERBOSE: Adding trust anchor for trust point sec.contoso.com of type DNSKEY on server Server01. 
 
-
 TrustAnchorName             TrustAnchorType      TrustAnchorState     TrustAnchorData
 
 ---------------              ---------------      ----------------     ---------------

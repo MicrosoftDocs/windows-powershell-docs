@@ -82,4 +82,3 @@ Changes DNS servers for an existing DNS suffix.
 ### [Set-VpnConnectionTriggerTrustedNetwork](./Set-VpnConnectionTriggerTrustedNetwork.md)
 Sets the trusted network list.
 
-

@@ -81,7 +81,6 @@ Specifies an array of devices.
 The boot order determines the order of the devices from which to boot. 
 The acceptable values for this parameter are:
 
-
   -- VMBootSource 
 
   -- VMNetworkAdapter 
@@ -89,7 +88,6 @@ The acceptable values for this parameter are:
   -- HardDiskDrive
 
   -- DVDDrive 
-
 
 The VMBootSource value describes a boot entry in firmware nonvolatile Random Access Memory (NVRAM).
 
@@ -139,11 +137,9 @@ Accept wildcard characters: False
 Specifies whether to enable secure boot.
 The acceptable values for this parameter are:
 
-
   -- On
 
   -- Off
-
 
 Secure boot uses a public key infrastructure that protects the integrity of the operating system.
 
@@ -164,7 +160,6 @@ Accept wildcard characters: False
 Specifies the device from which to attempt to boot from first.
 The acceptable values for this parameter are:
 
-
   -- VMBootSource 
 
   -- VMNetworkAdapter 
@@ -172,7 +167,6 @@ The acceptable values for this parameter are:
   -- HardDiskDrive
 
   -- DVDDrive 
-
 
 The VMBootSource value describes a boot entry in firmware NVRAM.
 

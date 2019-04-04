@@ -48,9 +48,6 @@ You can set the criteria by specifying the following parameters:
 ```
 PS C:\> Add-BgpRoutingPolicy -Name "RTPolicy04" -PolicyType ModifyAttribute -MatchPrefix 10.1.4.0/24 -IgnorePrefix 10.1.4.16/28 -NewLocalPref 400 -PassThru
 
-
-
-
 PolicyName   : RTPolicy04
 PolicyType   : ModifyAttribute
 MatchClauses : MatchPrefix  : {10.1.4.0/24}
@@ -67,9 +64,6 @@ The command specifies that the cmdlet does not modify the **Local-Pref** attribu
 ```
 PS C:\> Add-BgpRoutingPolicy -Name RTPolicy06 -PolicyType Deny -MatchASNRange 64545,64555 -PassThru
 
-
-
-
 PolicyName   : RTPolicy06
 PolicyType   : Deny
 MatchClauses : MatchASNRange : {64545, 64555}
@@ -82,8 +76,6 @@ The routing policy drops the routes that have an ASN in the range of 64545 to 64
 ### Example 3: Add a BGP routing policy for a routing domain
 ```
 PS C:\> Add-BgpRoutingPolicy -Name RTPolicy01 -RoutingDomain "Rd_001" -PolicyType ModifyAttribute -MatchPrefix 10.1.4.0/24 -IgnorePrefix 10.1.4.16/28 -NewLocalPref 400 -PassThru | Format-Table
-
-
 
 PolicyName                    PolicyType                    MatchClauses                  SetClauses
 ----------                    ----------                    ------------                  ----------

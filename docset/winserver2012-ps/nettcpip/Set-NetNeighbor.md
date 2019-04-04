@@ -41,7 +41,6 @@ It is only possible to modify neighbor cache entries in a permanent state on int
 ```
 PS C:\>Set-NetNeighbor -InterfaceIndex 12 -IPAddress 192.168.0.5 -MACaddress 00-00-12-00-00-ff
 
-
 This cmdlet is an alternative method.
 PS C:\>Get-NetNeighbor -InterfaceIndex 12 -IPAddress 192.168.0.5 | Set-NetNeighbor -MACAddress 00-00-12-00-00-ff
 ```

@@ -77,7 +77,6 @@ Gets all standard checkpoints of virtual machine TestVM.
 ```
 PS C:\>$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
 
-
 PS C:\>Get-VMSnapshot -ParentOf $snapshot
 ```
 
@@ -86,7 +85,6 @@ Gets the immediate parent of checkpoint Before applying updates of virtual machi
 ### Example 4
 ```
 PS C:\>$snapshot = Get-VMSnapshot -Name 'Before applying updates' -VMName TestVM
-
 
 PS C:\>Get-VMSnapshot -ChildOf $snapshot
 ```

@@ -43,8 +43,6 @@ Name                                          Value               PSComputerName
 ----                                          -----               --------------
 System.Storage.PhysicalDisk.AutoPool.BaseName S2D on Contoso-C1
 
-
-
 PS C:\>$StorageSubSystem | Remove-StorageHealthSetting -Name "System.Storage.PhysicalDisk.AutoPool.BaseName"
 PS C:\> $StorageSubSystem | Get-StorageHealthSetting -Name "System.Storage.PhysicalDisk.AutoPool.BaseName"
 ```

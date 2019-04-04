@@ -39,7 +39,6 @@ The **Get-AdfsDeviceRegistration** cmdlet gets the administrative polices that a
 ```
 PS C:\> Get-AdfsDeviceRegistration
 
-
 DrsObjectDN          : CN=DeviceRegistrationService,CN=Device Registration Services,CN=Device Registration Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com
 DevicesPerUser       : 10
 MaximumInactiveDays  : 90

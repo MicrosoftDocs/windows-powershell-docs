@@ -62,8 +62,6 @@ The **Get-TargetPort** cmdlet returns a TargetPort object associated with a spec
 ```
 PS C:\>$StorageSubsystem = Get-StorageSubsystem
 
-
-
 PS C:\>Get-Targetport -StorageSubsystem $StorageSubsystem
 ```
 

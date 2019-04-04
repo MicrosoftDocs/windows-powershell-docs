@@ -40,7 +40,6 @@ Applications that use protocols like WS-Trust will fail to obtain a security tok
 ```
 PS C:\> Get-AdfsAdditionalAuthenticationRule
 
-
 c:[Type == "http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser", Value == "false"]
 => issue(Type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn");
 

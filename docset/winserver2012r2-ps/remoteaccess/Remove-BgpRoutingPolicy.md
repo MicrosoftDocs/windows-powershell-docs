@@ -39,8 +39,6 @@ When you remove a routing policy, the BGP router no longer uses the policy to le
 ```
 PS C:\> Remove-BgpRoutingPolicy -Name "RTPolicy01", "RTPolicy02"
 
-
-
 Confirm
 BGP routing policy RTPolicy01, RTPolicy02 could currently be active. Do you want to remove policy and restart
 corresponding peerings?
@@ -62,8 +60,6 @@ Because the cmdlet uses the **Force** parameter, the cmdlet removes the routing 
 ### Example 3: Remove BGP routing policies for a routing domain
 ```
 PS C:\> Remove-BgpRoutingPolicy -Name "RTPolicy04" -RoutingDomain "Rd_001"
-
-
 
 Confirm
 BGP routing policy RTPolicy04 could currently be active. Do you want to remove policy and restart corresponding

@@ -37,7 +37,6 @@ For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount or
 ```
 C:\PS>Get-ADAccountAuthorizationGroup GlenJohn
 
-
 GroupScope        : DomainLocal
 objectGUID        : 00000000-0000-0000-0000-000000000000
 GroupCategory     : Security

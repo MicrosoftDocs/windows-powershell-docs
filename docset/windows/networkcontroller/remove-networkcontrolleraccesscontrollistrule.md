@@ -42,8 +42,6 @@ Remove-NetworkControllerAccessControlListRule -ConnectionUri https://networkcont
 
 Description
 
-
-
 The above example removes the "AllowAll" rule from the access control list named "Subnet1ACL"
 
 ## PARAMETERS

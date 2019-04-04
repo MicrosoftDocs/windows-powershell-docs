@@ -37,8 +37,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>$job = Get-OBJob
 
-
-
 PS C:\>Stop-OBJob -Job $job
 ```
 

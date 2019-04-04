@@ -39,7 +39,6 @@ To start a log session with more parameters, use Start-SbecLogSession.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BufferSize

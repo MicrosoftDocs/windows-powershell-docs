@@ -48,7 +48,6 @@ PS C:\> Disconnect-WmsSession -SessionId 3
 
 This command disconnects the session with the ID 3.
 
-
 ## PARAMETERS
 
 ### -All

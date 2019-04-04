@@ -63,7 +63,6 @@ The **Get-IscsiSession** cmdlet returns information about iSCSI sessions.
 
 Note: There is an association between the iSCSI session and the disk object, so it is possible to return all disks connected via a specific iSCSI session by running the following cmdlet. 
 
-                      
  - `Get-iSCSISession | Get-Disk`
 
 ## EXAMPLES

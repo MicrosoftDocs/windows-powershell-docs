@@ -293,7 +293,6 @@ Accept wildcard characters: False
 
 ### -PassInnerException
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -464,7 +463,6 @@ This cmdlet outputs the following information:
     ""DestinationIPAddress"" : """"
 
 }"
-
 
 ## NOTES
 

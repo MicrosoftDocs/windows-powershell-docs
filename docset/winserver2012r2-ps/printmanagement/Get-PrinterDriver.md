@@ -62,7 +62,6 @@ PS C:\>Get-PrinterDriver -Name "Microsoft XPS Document Writer" | Format-List
 ```
 
 **Get-PrinterDriver** displays a summarized view of each printer driver queried.
- 
 
 The following command displays the detailed information for each printer driver.
 

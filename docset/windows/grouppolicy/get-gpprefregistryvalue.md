@@ -98,8 +98,6 @@ Type               : String
 ValueName          : Valuetwo 
 HasValue           : True 
 
-
-
 KeyPath     : SOFTWARE\Microsoft\ExampleKey\Subkey1 
 FullKeyPath : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey\Subkey1 
 Hive        : LocalMachine 

@@ -38,37 +38,25 @@ The Get-WmsUser cmdlet returns all local user account information.
 PS C:\> Get-WmsUser
 Name         : Administrator
 
-
 Password     : 
 
-
 FullName     : 
-
 
 Description  : Built-in account for administering the computer/domain
 
-
 UserType     : Administrator
-
 
 ComputerName : Test1
 
-
-
 Name         : Guest
-
 
 Password     : 
 
-
 FullName     : 
-
 
 Description  : Built-in account for guest access to the computer/domain
 
-
 UserType     : Standard
-
 
 ComputerName : Test1
 ```

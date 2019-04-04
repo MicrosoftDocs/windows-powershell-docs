@@ -180,7 +180,6 @@ Accept wildcard characters: False
 If this parameter is set to **ValidateCertificate** then the browser sends a certificate with each request and validates that the device certificate thumbprint from the certificate is included in the token or the cookie.
 The acceptable values for this parameter are:
 
-
 - None
 
 - ValidateCertificate

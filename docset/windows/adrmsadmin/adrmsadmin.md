@@ -88,4 +88,3 @@ Updates the AD RMS cluster information.
 ### [Update-RmsMfgEnrollment](./Update-RmsMfgEnrollment.md)
 Updates enrollment information for an AD RMS server enrolled with the Microsoft Federation Gateway service.
 
-

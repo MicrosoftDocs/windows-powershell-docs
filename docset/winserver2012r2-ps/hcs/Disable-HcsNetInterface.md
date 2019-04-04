@@ -39,7 +39,6 @@ Note that you cannot disable the Data0 interface.
 ```
 PS C:\> Disable-HcsNetInterface Data2
 
-
 InterfaceAlias         : Data2
 Controller0IPv4Address :
 Controller0IPv6Address :

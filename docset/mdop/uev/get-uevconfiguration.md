@@ -57,7 +57,6 @@ If you specify the *CurrentComputerUser* parameter, the cmdlet gets the settings
 ```
 PS C:\> Get-UevConfiguration
 
-
 Key                                     Value
 ---                                     -----
 MaxPackageSizeInBytes                   700000
@@ -75,7 +74,6 @@ This command gets the active uev_tla configuration on the computer where you run
 ### Example 2: Get the computer-wide configuration
 ```
 PS C:\> Get-UevConfiguration -Computer
-
 
 Key                                     Value
 ---                                     -----
@@ -95,7 +93,6 @@ The command gets the HKey Local Machine (HKLM) configuration settings that are i
 ### Example 3: Get the user-specific configuration
 ```
 PS C:\> Get-UevConfiguration -CurrentComputerUser
-
 
 Key                                     Value
 ---                                     -----
@@ -180,5 +177,4 @@ Otherwise, this cmdlet generates a list of all of the settings.
 [Import-UevConfiguration](./Import-UevConfiguration.md)
 
 [Export-UevConfiguration](./Export-UevConfiguration.md)
-
 

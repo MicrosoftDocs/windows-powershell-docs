@@ -75,23 +75,13 @@ This example gets the list of IP addresses that need to be added and deleted to 
 ```
 PS C:\>$serverPolicyStore = domain.contoso.com/server_GPO
 
-
-
 PS C:\>$serverRuleDisplayName = "Any-Traffic-Win8DA-Rule"
-
-
 
 PS C:\>$domains = "corp.contoso.com", "corp.contoso2.com"
 
-
-
 PS C:\>$servers = "server2.corp.contoso.com"
 
-
-
 PS C:\>$primaryDns64 = 1.2.2.1
-
-
 
 PS C:\>Get-DAPolicyChange -PolicyStore $serverPolicyStore -DisplayName $serverRuleDisplayName -EndpointType Endpoint1 -Domains $domains -Servers $servers -DNSServers $primaryDns64 -AddressType IPv6 -PSLocation C:\Users\Administrator\Documents\PSscripts\dapolicychange.ps1
 ```

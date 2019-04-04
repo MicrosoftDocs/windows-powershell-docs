@@ -75,14 +75,9 @@ This example modifies the internal interface of an IPsec DosP setting by using t
 ```
 PS C:\>$nipDospSetting = Get-NetIPsecDospSetting
 
-
-
 PS C:\>$nipDospSettingPubNet = Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } -InputObject $nipSospSetting
 
-
-
 PS C:\>Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2 -InputObject $nipDospSettingPubNet
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecDospSetting | Where-Object -FilterScript { $_.PublicInterfaceAliases -Eq "PubNet" } | Set-NetIPsecDospSetting -PublicInterfaceAliases PubNet2
@@ -93,8 +88,6 @@ This example modifies the internal interface of an IPsec DosP setting by queryin
 ### EXAMPLE 3
 ```
 PS C:\>$dosPSetting = Get-NetIPsecDospSetting -Name PubNet-CorpNet
-
-
 
 PS C:\>$dosPSetting.IpV6IPsecUnauthDscp = "Disabled"
 ```

@@ -45,8 +45,6 @@ ps_storage_spacesubsystem_not_remark
 ```
 PS C:\>$initid = (Get-InitiatorID)
 
-
-
 PS C:\>Remove-InitiatorIDFromMaskingSet -InitiatorIDs $initid -MaskingSetFriendlyName "Server1A-MaskingSet"
 ```
 
@@ -151,8 +149,7 @@ Accept wildcard characters: False
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
- 
-                        
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

@@ -149,8 +149,6 @@ This example removes all of the firewall rules that are currently disabled on a 
 ```
 PS C:\>$fwAppFilter = Get-NetFirewallApplicationFilter -Program "C:\Program Files (x86)\Messenger\msmsgs.exe"
 
-
-
 PS C:\>Remove-NetFirewallRule -InputObject $fwAppFilter
 ```
 

@@ -70,7 +70,6 @@ IsRail       : False
 This command gets session information for all sessions.
 The session with ID 2 is a remote session, and the session with ID 3 is a session connected to a local Windows MultiPoint Server station.
 
-
 ## PARAMETERS
 
 ### -All

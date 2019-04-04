@@ -66,7 +66,6 @@ PartitionNumber  DriveLetter Offset                                        Size 
 Resize the partition to 900GB.
 PS C:\>Resize-Partition -DiskNumber 3 -PartitionNumber 2 -Size (900GB)
 
-
 The partition is now 900GB.
 PS C:\>Get-Partition -DiskNumber 3 -PartitionNumber 2
 Disk Number: 3 
@@ -77,7 +76,6 @@ PartitionNumber  DriveLetter Offset                                        Size 
 
 Get the partition sizes.
 PS C:\>$size = (Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2)
-
 
 Resize to the maximum size.
 PS C:\>Resize-Partition -DiskNumber 3 -PartitionNumber 2 -Size $size.SizeMax
@@ -228,8 +226,7 @@ Accept wildcard characters: False
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
- 
-                        
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

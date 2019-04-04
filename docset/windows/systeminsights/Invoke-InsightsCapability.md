@@ -19,7 +19,6 @@ ms.assetid: 38D3C664-40AB-4E45-944F-5AC57EEB55A7
 schema: 2.0.0
 ---
 
-
 # Invoke-InsightsCapability
 
 >[!IMPORTANT]

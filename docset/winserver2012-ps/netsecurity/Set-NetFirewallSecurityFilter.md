@@ -50,26 +50,16 @@ The Get-NetFirewallRule cmdlet returns the rules associated with the filters and
 ```
 PS C:\>$users = New-Object -TypeName System.Security.Principal.NTAccount ("corp.contoso.com\Administrators")
 
-
-
 PS C:\>$SIDofSecureUserGroup = $users.Translate([System.Security.Principal.SecurityIdentifier]).Value
-
-
 
 PS C:\>$SecureMachineGroupSDDL = "D:(A;;CC;;; $SIDofSecureUserGroup)"
 
-
-
 PS C:\>$nfSecurityFilter = Get-FirewallRule -DisplayName "Authorize Secure Computer" | Get-NetFirewallSecurityFilter
-
-
 
 PS C:\>Set-NetFirewallSecurityFilter -RemoteMachine $SecureMachineGroupSDDL -InputObject $nfSecurityFilter
 
-
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Authorize Secure Computer" | Get-NetFirewallSecurityFilter | Set-NetFirewallSecurityFilter -RemoteMachine $SecureMachineGroupSDDL
-
 
 This cmdlet can be run without the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Authorize Secure Computer" -RemoteMachine $SecureMachineGroupSDDL
@@ -81,10 +71,7 @@ This example modifies the user field of a particular firewall rule.
 ```
 PS C:\>$nfSecurityFilter = Get-NetFirewallRule -DisplayGroup "*Printer*" | Get-NetFirewallSecurityFilter
 
-
-
 PS C:\>Set-NetFirewallSecurityFilter -Authentication Request -InputObject $nfSecurityFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallRule -DisplayGroup "*Printer*" | Get-NetFirewallSecurityFilter | Set-NetFirewallSecurityFilter -Authentication Request

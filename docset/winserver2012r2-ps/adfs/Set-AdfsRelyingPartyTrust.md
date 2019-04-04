@@ -237,7 +237,6 @@ Accept wildcard characters: False
 
 ### -ClaimsProviderName
 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)

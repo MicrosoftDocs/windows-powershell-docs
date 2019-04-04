@@ -34,7 +34,6 @@ For more information on TPM, see the Trusted Platform Module Technology Overview
 ```
 PS C:\> Disable-TpmAutoProvisioning
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -50,7 +49,6 @@ You can use the **Enable-TpmAutoProvisioning** cmdlet to enable auto-provisionin
 ### Example 2: Disable auto-provisioning for next restart
 ```
 PS C:\> Disable-TpmAutoProvisioning -OnlyForNextRestart
-
 
 TpmReady           : False
 TpmPresent         : True

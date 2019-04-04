@@ -100,7 +100,6 @@ This example outputs all of the IPv4 addresses in the file C:\addresses.csv and 
 Specifies the address family of the IP address objects being exported.
 The acceptable values for this parameter are: IPv4 or IPv6. 
 
-                        
 This parameter specifies if IPv4 or IPv6 records need to be exported.
 Only one address family at a time can be specified with this cmdlet.
 
@@ -150,7 +149,6 @@ Accept wildcard characters: False
 ### -Path
 Specifies the literal path and name of the .csv file which are created during export. 
 
-                        
 This parameter is used to export all IP address objects in a .csv file format.
 
 ```yaml

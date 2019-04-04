@@ -52,7 +52,6 @@ This command sets the Windows UI language override to null for the current user 
 
 ### -Language
 
-
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)

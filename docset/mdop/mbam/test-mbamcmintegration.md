@@ -56,7 +56,6 @@ The MBAM reports are deployed on the default SQL Server Reporting Services insta
 ```
 PS C:\> Test-MbamCMIntegration -Detailed
 
-
 ID             Type  Message
 --             ----  -------
 CmInstallation Error This feature can be installed only on a server that is running System Center Configuration Manager.
@@ -209,5 +208,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Enable-MbamCMIntegration](enable-mbamcmintegration.md)
 
 [Get-MbamCMIntegration](get-mbamcmintegration.md)
-
 

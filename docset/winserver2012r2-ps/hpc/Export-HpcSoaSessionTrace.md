@@ -132,7 +132,6 @@ Accept wildcard characters: False
 ### -Scheduler
 Specifies the host name or IP address of the head node of the HPC cluster that ran the SOA session for which you want to collect the log files. The value must be a valid computer name or IP address. If you do not specify the Scheduler parameter, this cmdlet uses the scheduler on the head node that the CCP_SCHEDULER environment variable specifies. To set this environment variable, run the following cmdlet:
 
-
 `Set-Content Env:CCP_SCHEDULER <head_node_name>`
 
 ```yaml

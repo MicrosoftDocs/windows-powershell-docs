@@ -44,7 +44,6 @@ Note: Only the name, or interface alias, can be changed and not the interface de
 ```
 PS C:\>Rename-NetAdapter -Name Ethernet -NewName ManagementAdapter
 
-
 This cmdlet renames a network adapter from the current name, by matching the pattern e*t, to the new name ManagementAdapter. A typical match of e*t is the default name Ethernet.
 PS C:\>Rename-NetAdapter -Name E*t -NewName ManagementAdapter
 ```

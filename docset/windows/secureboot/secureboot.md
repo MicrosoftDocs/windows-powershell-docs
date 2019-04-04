@@ -40,4 +40,3 @@ Gets the UEFI variable values related to Secure Boot.
 ### [Set-SecureBootUEFI](./Set-SecureBootUEFI.md)
 Sets the Secure Boot-related UEFI variables.
 
-

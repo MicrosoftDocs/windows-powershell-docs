@@ -47,7 +47,6 @@ IsHeaderDigest             : False
 TargetPortalAddress        : testIscsi 
 TargetPortalPortNumber     : 3260 
 
-
 PS C:\>Remove-IscsiTargetPortal -TargetPortalAddress testIscsi
 ```
 

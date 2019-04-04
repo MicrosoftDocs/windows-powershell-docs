@@ -205,7 +205,6 @@ Accept wildcard characters: False
 Specifies the type of user accounts to export to the migration store.
 The following are acceptable values for this parameter: 
 
-
 - Enabled
 
 - Disabled
@@ -240,7 +239,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * The Windows Server Migration Tools deployment log file is located in %windir%\Logs\SmigDeploy.log. Other Windows Server Migration Tools log files are created at the following locations: 
 
-
 - %windir%\Logs\ServerMigration.log
 
 - On Windows Server 2008 and later versions: %localappdata%\SvrMig\Log
@@ -253,7 +251,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 When the log file grows larger than the size specified in the registry key, the log file is deleted.
 Logging begins again in a new log file that uses the same file name and path.
 The default maximum log size is 200 MB. 
-
 
 - Key: HKLM\Software\Microsoft\ServerMigration
 

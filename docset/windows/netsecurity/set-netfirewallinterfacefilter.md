@@ -55,14 +55,10 @@ The Get-NetFirewallRule or Get-NetIPsecRule cmdlet returns the rules objects ass
 ```
 PS C:\>$nfwInterfaceFilter = ( Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceFilter )
 
-
-
 PS C:\>Set-NetFirewallInterfaceFilter -InterfaceAlias Any -InputObject $nfwInterfaceFilter
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallInterfaceFilter | Set-NetFirewallInterfaceFilter -InterfaceAlias Any
-
 
 This cmdlet can be run without using the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -InterfaceAlias Any
@@ -74,14 +70,9 @@ This example modifies the *InterfaceAlias* parameter value of a particular firew
 ```
 PS C:\>$nfwInterfaceFilter = ( Get-NetIPsecRule -Group "Wired Rules" | Get-NetFirewallInterfaceFilter )
 
-
-
 PS C:\>$nfwInterfaceFilterWired2 = ( Where-Object -Property { $_.InterfaceAlias -Eq "Wired2" } -InputObject $nfwInterfaceFilter )
 
-
-
 PS C:\>Set-NetFirewallInterfaceFilter -InterfaceAlias Wired3 -InputObject $nfwInterfaceFilterWired2
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetIPsecRule -Group "Wired Rules" | Get-NetFirewallInterfaceFilter | Where-Object -Property { $_.InterfaceAlias -Eq "Wired2" } | Set-NetFirewallInterfaceFilter -InterfaceAlias Wired3

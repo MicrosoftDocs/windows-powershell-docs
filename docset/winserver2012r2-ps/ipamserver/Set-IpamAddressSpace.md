@@ -81,7 +81,6 @@ This command renames the address space named OneDataCenter to MainDataCenter.
 ```
 PS C:\>Get-IpamAddressSpace -Name "WoodgroveAddSpace" | Set-IpamAddressSpace -AssociatedProviderAddressSpace "MainDataCenter" -PassThru
 
-
 Name                           : WoodgroveAddSpace
 
 Type                           : CustomerAddressSpace

@@ -60,10 +60,7 @@ This example enables SR-IOV for the network adapter with the description Contoso
 ```
 PS C:\>$netAdapter = Get-NetAdapter -Name "Ethernet 2"
 
-
-
 PS C:\>Enable-NetAdapterSriov -InputObject $netAdapter
-
 
 This is a version of the cmdlet that selects the network adapter and pipes the network adapter object into this cmdlet.
 PS C:\>Get-NetAdapter -Name "Ethernet 2" | Enable-NetAdapterSriov

@@ -47,8 +47,6 @@ Group Policy settings have one of the following three states: not configured, en
 ```
 PS C:\>$config = Get-NetIPHttpsConfiguration
 
-
-
 PS C:\>Reset-NetIPHttpsConfiguration -InputObject $config
 ```
 

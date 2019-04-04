@@ -41,7 +41,6 @@ For more information on TPM, see the [Trusted Platform Module Technology Overvie
 ```
 PS C:\> Get-Tpm
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full

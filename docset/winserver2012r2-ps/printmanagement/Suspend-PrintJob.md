@@ -66,7 +66,6 @@ This command suspends the print job with an ID of 1 on the printer named Printer
 ```
 PS C:\>$printer = Get-Printer -Name "PrinterName:"
 
-
 PS C:\>Suspend-PrintJob -PrinterObject $printer -ID 1
 ```
 
@@ -75,7 +74,6 @@ This set of commands retrieves a printer object into a variable ($printer) using
 ### Example 3: Suspend a print job using a print job object
 ```
 PS C:\>$printJob = Get-PrintJob -PrinterName "Printer1" -ID 1
-
 
 PS C:\>Suspend-PrintJob -InputObject $printJob
 ```

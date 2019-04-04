@@ -570,7 +570,6 @@ RefreshTokenIssuanceDeviceTypes
   AllDevices = 2
 }
 
-
 ### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
 IsParameterized  bool
 Summary          string

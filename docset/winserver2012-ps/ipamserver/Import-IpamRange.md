@@ -189,7 +189,6 @@ Accept wildcard characters: False
 ### -ErrorPath
 Specifies the literal path, and not the name, of the error .csv file which are created if one or more records fail to get imported. 
 
-                        
 The file name is generated automatically by the computer running the IPAM server by pre-pending `Error_` and appending the timestamp of the operation to the file name specified in the **Path** parameter.
 The default value of this parameter is the Documents folder of the user.
 
@@ -307,14 +306,11 @@ Accept wildcard characters: False
 A detailed summary of the steps performed by this command.
 Message can be one of the following: 
 
-                        
 "`Import of \<AddressFamily\> objects is complete.
 \<y\> out of \<y\> objects successfully imported.\<AddressFamily\>\<y\>\<y\>`" 
 
-                        
 OR 
 
-                        
 "`Import of \<AddressFamily\> objects is complete.
 \<x\> out of \<y\> objects successfully imported.
 \<z\> out of \<y\> objects failed to get imported.

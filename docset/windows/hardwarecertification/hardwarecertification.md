@@ -46,4 +46,3 @@ Creates a test collection file from a project definition file.
 ### [New-HwCertTestCollectionExcelReport](./New-HwCertTestCollectionExcelReport.md)
 Creates an HCK test summary report.
 
-

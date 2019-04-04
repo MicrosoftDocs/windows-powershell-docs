@@ -159,4 +159,3 @@ The TPM owner password.
 
 [Microsoft BitLocker Administration and Monitoring](index.md)
 
-

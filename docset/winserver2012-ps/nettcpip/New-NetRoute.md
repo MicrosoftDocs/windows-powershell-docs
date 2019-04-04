@@ -56,7 +56,6 @@ For IP endpoints, the gateway specifies the forwarding or next hop IP address ov
 Used without parameters this cmdlet gets the IP route information for all of the interfaces.
 PS C:\>New-NetRoute -InterfaceIndex 12 -DestinationPrefix 10.0.0.0/24 -NextHop 192.168.0.1
 
-
 The default output omits some properties. Run this cmdlet to display all of the fields (all of the properties of the object).
 PS C:\>Get-NetRoute | Format-List -Property *
 ```
@@ -210,7 +209,6 @@ Accept wildcard characters: False
 Specifies a preferred lifetime for the IP routing table entry.
 When not specified this parameter is set as infinite.
 This parameter uses time as defined by the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure.
-
 
 ```yaml
 Type: TimeSpan

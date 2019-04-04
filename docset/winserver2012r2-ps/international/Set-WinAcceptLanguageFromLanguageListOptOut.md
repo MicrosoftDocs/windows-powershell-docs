@@ -47,7 +47,6 @@ This cmdlet deletes the current content of the HTTP Accept Language registry key
 
 ### -OptOut
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

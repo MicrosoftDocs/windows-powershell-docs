@@ -43,7 +43,6 @@ Other parameters will remove all IP addresses with the matching property.
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
 
-
 The remove cmdlet then removes it.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1
 ```

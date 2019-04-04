@@ -41,7 +41,6 @@ In addition, the other routers that added the router as a peer delete all the in
 ```
 PS C:\> Remove-BgpRouter
 
-
 Confirm
 Are you sure you want to remove the BGP router and stop any active BGP peering sessions?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
@@ -61,8 +60,6 @@ The command does not prompt the user for confirmation before removing BGP routin
 ### Example 3: Remove BGP routers for routing domains
 ```
 PS C:\> Remove-BgpRouter -RoutingDomain "Rd_001","Rd_002"
-
-
 
 Confirm
 Are you sure you want to remove the BGP router for routing domain Rd_001 and stop any active BGP peering sessions?

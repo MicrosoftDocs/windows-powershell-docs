@@ -132,7 +132,6 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
-
 ## OUTPUTS
 **Microsoft.SystemInsights.Management.PowerShell.CapabilityResult**
 

@@ -60,7 +60,6 @@ Alternatively, piping the address filter objects directly into the Set-NetFirewa
 This example gets all of the firewall rules configured to a specified program.
 PS C:\>Get-NetFirewallApplicationFilter -PolicyStore ActiveStore
 
-
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Get-NetFirewallApplicationFilter -PolicyStore ActiveStore | Format-Table
 ```
@@ -78,7 +77,6 @@ This example gets the application configurations associated with a particular fi
 ```
 PS C:\>Get-NetFirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallApplicationFilter | Set-NetFirewallApplicationFilter -Program %SystemRoot%\System32\messenger.exe
 
-
 An alternate method for performing the same action.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -Program %SystemRoot%\System32\messenger.exe
 ```
@@ -88,8 +86,6 @@ This example changes the application path associated with a particular firewall 
 ### EXAMPLE 4
 ```
 PS C:\>$NewPackageSDDL = "S-1-15-2-4292807980-2381230043-3108820062-1451069988-2614848061-670482394-695399705"
-
-
 
 PS C:\>Get-NetFirewallRule -Group Socialite | Get-NetFirewallApplicationFilter | Set-NetFirewallAddressFilter -Package $NewPackageSDDL
 ```

@@ -309,4 +309,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-AppvServerConnectionGroupPackage](./Remove-AppvServerConnectionGroupPackage.md)
 
-

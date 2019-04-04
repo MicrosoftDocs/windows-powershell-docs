@@ -40,7 +40,6 @@ You can specify the *ID* parameter and *Name* parameter to filter the installed 
 ```
 PS C:\> Get-SilSoftware
 
-
 ID             : {6B6533BD-1680-4368-908E-D50977561A86}
 InstallDate    : 4/1/2013 12:00:00 AM
 Name           : Microsoft Office Professional Plus 2010

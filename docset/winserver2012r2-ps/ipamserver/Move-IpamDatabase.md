@@ -89,7 +89,6 @@ DatabaseAuthType : Windows
 
 DatabaseUser     :
 
-
 The second command moves the IPAM data to a database named IpamDB1 on the server named ContosoDB22. The database uses port 1433. The command specifies Windows as the authentication type, so the command uses credentials for the IPAM server. The cmdlet prompts you for confirmation.
 PS C:\>Move-IpamDatabase -DatabaseServer "ContosoDB22" -DatabaseName "IpamDB1" -DatabasePort 1433 -DatabaseAuthType Windows
 Confirm
@@ -97,7 +96,6 @@ Confirm
 This command will migrate IPAM data to the specified MsSql Database. The cmdlet will create a new Ipam Schema, copy the data and configure IPAM to use the new database. Once this migration is completed successfully, you will not be able to revert to using Windows Internal Database. Do you want to continue?
 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
-
 
 The third command repeats the first command. The console displays configuration information, including the type of database, now MSSQL. The database now has values for **DatabaseServer**, **DatabaseName**, and **DatabasePort**, as specified in the second command.
 PS C:\>Get-IpamDatabase

@@ -92,8 +92,6 @@ This example creates a S2S VPN interface using custom encryption settings.
 ```
 PS C:\>$cert1 = Get-ChildItem -Path cert:LocalMachine\My | Where-Object -FilterScript { $_.Subject -Like "*CN=edge1.contoso.com*" }
 
-
-
 PS C:\>Add-VpnS2SInterface -Name e1 -Destination 1.1.1.1 -AuthenticationMethod MachineCertificates -Certificate $cert1 -ResponderAuthenticationMethod MachineCertificates -Protocol IKEv2
 ```
 

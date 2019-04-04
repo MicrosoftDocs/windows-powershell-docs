@@ -49,8 +49,6 @@ This example gets all of the global DNS client settings.
 ```
 PS C:\>$dnsCGSetting = Get-DnsClientGlobalSetting
 
-
-
 PS C:\>$dnsCGSetting.SuffixSearchList
 corp.contoso.com 
 na.corp.contoso.com

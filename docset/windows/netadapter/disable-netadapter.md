@@ -56,10 +56,8 @@ By default the user is prompted to confirm that the network adapter should be di
 ```
 PS C:\> Disable-NetAdapter -Name "Ethernet 2"
 
-
 A version of the cmdlet that uses position.
 PS C:\> Disable-NetAdapter "Ethernet 2"
-
 
 A version of the cmdlet that uses position and wildcard characters.
 PS C:\> Disable-NetAdapter E*2
@@ -89,9 +87,7 @@ Confirm
 Are you sure you want to perform this action? 
 Disable-NetAdapter ꞌMyAdapter' 
 
-
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):Y
-
 
 A version of the cmdlet that overrides the default confirmation prompt when disabling the network adapter named MyAdapter. For more information about changing the default confirmation prompt, see the $ConfirmPreference variable by running the [CODE_Snippit]Get-Help -Name about_Preference_Variables[CODE_Snippit] cmdlet.
 PS C:\> Disable-NetAdapter -Name "MyAdapter" -Confirm:$False

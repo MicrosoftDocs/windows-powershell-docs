@@ -123,7 +123,6 @@ Accept wildcard characters: False
 ### System.String
 System.Management.Automation.SwitchParameter
 
-
 ## OUTPUTS
 
 ### System.Object

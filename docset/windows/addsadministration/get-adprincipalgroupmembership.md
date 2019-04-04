@@ -62,7 +62,6 @@ This command gets all of the group memberships for the user CN=DavidChew,DC=AppN
 ```
 PS C:\> Get-ADPrincipalGroupMembership -Identity Administrator
 
-
 distinguishedName : CN=Domain Users,CN=Users,DC=Fabrikam,DC=com
 GroupCategory     : Security
 GroupScope        : Global
@@ -123,7 +122,6 @@ This command gets all the group memberships for the Administrator.
 ### Example 3: Get group memberships for an account in a resource domain
 ```
 PS C:\> Get-ADPrincipalGroupMembership -Identity Administrator -ResourceContextServer ChildDomain.Fabrikam.Com -ResourceContextPartition "DC=Fabrikam,DC=com"
-
 
 distinguishedName : CN=Domain Users,CN=Users,DC=Fabrikam,DC=com
 GroupCategory     : Security

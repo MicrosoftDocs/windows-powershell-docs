@@ -28,7 +28,6 @@ For information about using Windows PowerShell, see [Windows PowerShell (TechNet
 
 For information about built-in Windows PowerShell cmdlets, see [Windows PowerShell Core Cmdlets](http://go.microsoft.com/fwlink/?LinkId=113277) in TechNet.
 
-
 ## HPC Cmdlets
 ### [Add-HpcBatchPool](./Add-HpcBatchPool.md)
 Adds an Azure Batch pool to the HPC cluster.

@@ -159,7 +159,6 @@ For example, to set the domain mode level to Windows Server 2008 R2, you can spe
 
 The following are the supported values: 
 
-
      -- Windows Server 2003: **2** or **Win2003**
 
      -- Windows Server 2008: **3** or **Win2008**

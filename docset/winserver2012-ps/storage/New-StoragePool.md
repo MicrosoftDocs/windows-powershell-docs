@@ -71,8 +71,6 @@ This example creates a new storage pool named CompanyData using the Storage Spac
 ```
 PS C:\>$PhysicalDisks = (Get-PhysicalDisk -CanPool $True) 
 
-
-
 PS C:\>New-StoragePool -FriendlyName CompanyData -StorageSubsystemFriendlyName "Storage Spaces*" -PhysicalDisks $PhysicalDisks -ResiliencySettingNameDefault Mirror -ProvisioningTypeDefault Thin -Verbose
 ```
 

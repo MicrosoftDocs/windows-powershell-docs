@@ -34,7 +34,6 @@ The **Get-WsusClassification** cmdlet gets the list of all Windows Server Update
 
 You can filter this list using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusClassification](./Set-WsusClassification.md) cmdlet.
 
-
 ## EXAMPLES
 
 ### Example 1: Get classifications

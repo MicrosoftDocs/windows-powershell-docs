@@ -99,8 +99,6 @@ Name                                             IPV4Subnet                     
 ----                                             ----------                                       ----------
 AllowedSubnet                                    {172.21.33.0/24}
 
-
-
 Action                : Ignore
 AppliesOn             : ZoneTransfer
 Condition             : And

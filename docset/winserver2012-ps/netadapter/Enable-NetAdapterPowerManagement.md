@@ -57,10 +57,7 @@ This example enables power management on the network adapter named Ethernet 1 an
 ```
 PS C:\>$netAdapter3 = Get-NetAdapter -Name "Ethernet 3"
 
-
-
 PS C:\>Enable-NetAdapterPowerManagement -InputObject $netAdapter3
-
 
 This is a version of the cmdlet that uses the pipeline to select the network adapter named Ethernet 3 and pipes that object into this cmdlet.
 PS C:\>Get-NetAdapter -Name "Ethernet 3" | Enable-NetAdapterPowerManagement

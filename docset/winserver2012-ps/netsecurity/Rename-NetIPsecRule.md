@@ -835,7 +835,6 @@ The acceptable values for this parameter are:
 This policy is not from GPOs, and has been created manually or programmatically (during application installation) on the computer.
 Rules created in this store are attached to the ActiveStore and activated on the computer immediately. 
 
-
  -- ActiveStore: This store contains the currently active policy, which is the sum of all policy stores that apply to the computer.
 This is the resultant set of policy (RSOP) for the local computer (the sum of all GPOs that apply to the computer), and the local stores (the PersistentStore, the static Windows service hardening (WSH), and the configurable WSH). 
 

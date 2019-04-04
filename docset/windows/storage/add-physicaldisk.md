@@ -311,7 +311,6 @@ Accept wildcard characters: False
 
 ### -VirtualDiskName
 
-
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskName

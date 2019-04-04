@@ -263,7 +263,6 @@ Accept wildcard characters: False
 
 ### -VMSwitchExtensionFeature
 
-
 ```yaml
 Type: VMSwitchExtensionPortFeature[]
 Parameter Sets: (All)

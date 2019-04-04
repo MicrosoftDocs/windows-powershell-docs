@@ -118,39 +118,22 @@ The localized **DisplayName** parameter value remains the same.
 ```
 PS C:\>$mMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>Copy-NetIPsecPhase1AuthSet -InputObject $mMrule -NewPolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>Copy-NetIPsecMainModeCryptoSet -InputObject $mMrule -NewPolicyStore domain.contoso.com\new_GPO
 
-
-
 PS C:\>Set-NetIPsecMainModeRule -InputObject $mMrule -Phase1AuthSet $CopiedCryptoSet.Name
-
 
 The following cmdlets accomplish the same task but take advantage of caching the GPO to apply the changes locally.
 PS C:\>$mMrule = Get-NetIPsecMainModeRule -DisplayName "Main Mode Rule: P1Auth + Crypto" -PolicyStore domain.contoso.com\GPO_name
 
-
-
 PS C:\>$newGPO = Open-NetGPO -PolicyStore domain.contoso.com\new_GPO
-
-
 
 PS C:\>Copy-NetIPsecPhase1AuthSet -InputObject $mMrule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecMainModeCryptoSet -InputObject $mMrule -GPOSession $newGPO
 
-
-
 PS C:\>Copy-NetIPsecMainModeRule -InputObject $mMrule -GPOSession $newGPO
-
-
 
 PS C:\>Save-NetGPO -GPOSession $newGPO
 ```
@@ -604,7 +587,6 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
 
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-
 
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
 

@@ -81,7 +81,6 @@ This cmdlet should be considered a last resort, because some cluster configurati
 
 ### -ClearQuarantine
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

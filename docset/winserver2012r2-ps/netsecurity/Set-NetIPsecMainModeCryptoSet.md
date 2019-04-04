@@ -82,11 +82,7 @@ To move a set to a new GPO, copy the existing set by running the Copy-NetIPsecMa
 ```
 PS C:\>$EncAES128 = New-NetIPsecMainModeCryptoProposal -Encryption AES128
 
-
-
 PS C:\>$EncDES3 = New-NetIPsecMainModeCryptoProposal -Encryption DES3
-
-
 
 PS C:\>Set-NetIPsecMainModeCryptoSet -DisplayName "(DA Client) - Phase 2 Crypto Set" -Proposals $EncAES128,$EncDES3
 ```
@@ -104,39 +100,22 @@ This example modifies the maximum amount of time the security association is act
 ```
 PS C:\>$proposal1 = New-NetIPsecMainModeCryptoProposal -KeyExchange DH1
 
-
-
 PS C:\>$proposal2 = New-NetIPsecMainModeCryptoProposal -KeyExchange DH14
-
-
 
 PS C:\>$cryptoset1 = ( New-NetIPsecMainModeCryptoSet -DisplayName MainModeCryptoSet -Proposal $proposal1.Name, $proposal2.Name )
 
-
-
 PS C:\>$mainModeRule = New-NetIPsecMainModeRule -DisplayName MainModeRule -MainModeCryptoSet $cryptoset1
-
-
 
 PS C:\>$mainModeCryptoSet = ( $mainModeRule | Get-NetIPsecMainModeCryptoSet )
 
-
-
 PS C:\>$mainModeCryptoSet.Proposal[1] = DH19
 
-
-
 PS C:\>Set-NetIPsecMainModeCryptoSet -InputObject $mainModeCryptoSet
-
 
 This version of the cmdlet shows an alternative method to the previous example. Note: The main mode rule setup is the same.
 PS C:\>$mainModeRule = New-NetIPsecMainModeRule -DisplayName MainModeRule -MainModeCryptoSet ( New-NetIPsecMainModeCryptoSet -DisplayName MainModeCryptoSet -Proposal ( New-NetIPsecMainModeCryptoProposal -KeyExchange DH1 ),(New-NetIPsecMainModeCryptoProposal -KeyExchange DH14 ) ).Name
 
-
-
 PS C:\>$mainModeCryptoSet = ( $mainModeRule | Get-NetIPsecMainModeCryptoSet )
-
-
 
 PS C:\>$mainModeCryptoSet | Set-NetIPsecMainModeCryptoSet -Proposal ( New-NetIPsecMainModeCryptoProposal -KeyExchange DH1 ), ( New-NetIPsecMainModeCryptoProposal -KeyExchange DH19 )
 ```

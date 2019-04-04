@@ -75,7 +75,6 @@ Without parameters, this cmdlet gets all of the IP interface properties on the c
 Used without parameters gets IP interface information for the computer.
 PS C:\>Get-NetIPInterface
 
-
 The default output omits some properties. Use this cmdlet to display all fields (all properties of the object).
 PS C:\>Get-NetIPAddress | Format-List -Property *
 ```

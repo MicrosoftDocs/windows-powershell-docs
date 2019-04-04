@@ -40,8 +40,6 @@ If you do not specify the **PeerName** parameter, the cmdlet adds the router pol
 ```
 PS C:\> Add-BgpRoutingPolicyForPeer -PolicyName "RTPolicy01" -Direction Ingress -PeerName "TenantSite01"
 
-
-
 Confirm
 BGP peering session could currently be active for TenantSite01. Do you want to apply these policies and restart
 corresponding peering sessions?
@@ -54,8 +52,6 @@ The command specifies the direction of the route advertisement for the BGP peer.
 ### Example 2: Add a routing policy to a BGP peer in a routing domain
 ```
 PS C:\> Add-BgpRoutingPolicyForPeer -RoutingDomain "Rd_001" -PeerName "TenantSite01" -PolicyName "RoutingPolicy01" -Direction Ingress
-
-
 
 Confirm
 BGP peering session could currently be active for TenantSite01 for routing domain Rd_001. Do you want to apply these

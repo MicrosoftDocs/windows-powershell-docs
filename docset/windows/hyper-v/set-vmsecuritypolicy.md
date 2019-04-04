@@ -42,7 +42,6 @@ The **Set-VMSecurityPolicy** cmdlet configures the security policy for a virtual
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

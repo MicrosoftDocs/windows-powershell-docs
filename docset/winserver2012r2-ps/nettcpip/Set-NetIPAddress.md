@@ -271,7 +271,6 @@ The IP address information is valid.
 The computer saves IP address information across restarts.
 When the computer restarts, it copies the saved settings to the ActiveStore. 
 
-
 The default value is ActiveStore.
 Specify ActiveStore only.
 

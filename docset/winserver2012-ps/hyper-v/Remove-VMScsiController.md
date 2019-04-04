@@ -58,7 +58,6 @@ Accept wildcard characters: False
 
 ### -ControllerNumber
 
-
 ```yaml
 Type: Int32
 Parameter Sets: UNNAMED_PARAMETER_SET_1
@@ -87,7 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -VMName
-
 
 ```yaml
 Type: String[]

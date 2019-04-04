@@ -101,8 +101,6 @@ This example illustrates how to input user name values via the pipeline.
 ```
 PS C:\>$o = New-Object -TypeName PSObject | Add-Member -Type NoteProperty -Name "UserName" -Value "contoso\user1" -PassThru | Add-Member -Type NoteProperty -Name "ComputerName" -Value "srv2.contoso.com" -PassThru | Add-Member -Type NoteProperty -Name "ConfigurationName" -Value "Microsoft.PowerShell" -PassThru
 
-
-
 PS C:\>$o | Add-PswaAuthorizationRule
 ```
 

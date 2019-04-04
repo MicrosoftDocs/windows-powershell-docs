@@ -37,7 +37,6 @@ The **Start-EtwTraceSession** cmdlet starts an ETW session with the specified na
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BufferSize

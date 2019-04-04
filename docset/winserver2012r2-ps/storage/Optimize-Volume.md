@@ -57,8 +57,6 @@ Optimize-Volume -InputObject <CimInstance[]> [-ReTrim] [-Analyze] [-Defrag] [-Sl
 ## DESCRIPTION
 The **Optimize-Volume** cmdlet optimizes a volume, performing such tasks on supported volumes and system SKUs as defragmentation, trim, slab consolidation, and storage tier processing. 
 
- 
-                      
  If no parameter is specified, then the default operation will be performed per the drive type as follows.
 
 - HDD, Fixed VHD, Storage Space. -Analyze -Defrag.

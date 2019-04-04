@@ -16,7 +16,6 @@ author: kenwith
 This reference provides cmdlet descriptions and syntax for all DirectAccess Client Components-specific cmdlets. 
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-
 ## DirectAccessClientFIX Cmdlets
 ### [Disable-DAManualEntryPointSelection](./Disable-DAManualEntryPointSelection.md)
 Disables a manually selected DirectAccess site, and reverts the selection to the default.

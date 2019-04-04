@@ -57,8 +57,6 @@ This command restarts the print job with an ID of 1 on the printer named Printer
 ```
 PS C:\>$printer = Get-Printer -PrinterName "PrinterName"
 
-
-
 PS C:\>Restart-PrintJob -PrinterObject $printer -ID 1
 ```
 
@@ -67,8 +65,6 @@ This set of commands retrieves the printer object in to a variable ($printer) us
 ### Example 3: Restart print job using job object
 ```
 PS C:\>$printJob = Get-PrintJob -PrinterName "PrinterName:" -ID 1
-
-
 
 PS C:\>Restart-PrintJob -InputObject $printJob
 ```

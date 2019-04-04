@@ -38,13 +38,11 @@ The **Get-WebApplicationProxyHealth** cmdlet gets the health status of the Web A
 ```
 PS C:\> Get-WebApplicationProxyHealth
 
-
 Component          : AD FS Proxy
 RemoteAccessServer : TSQAProxy01
 HealthState        : OK
 Heuristics         : {Id: 0, ErrorDesc: , ErrorCause: , ErrorResoln: , OperationStatus: , Status: OK}
 TimeStamp          : 5/9/2013 6:03:03 PM
-
 
 Component          : Web Application Proxy Core
 RemoteAccessServer : TSQAProxy01

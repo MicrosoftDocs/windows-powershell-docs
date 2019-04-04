@@ -168,7 +168,6 @@ Accept wildcard characters: False
 
 ### -PassInnerException
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -237,7 +236,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tags
-
 
 ```yaml
 Type: PSObject

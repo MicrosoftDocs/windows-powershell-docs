@@ -53,8 +53,6 @@ The **Rename-NetIPHttpsConfiguration** cmdlet renames an IP-HTTPS profile, eithe
 ```
 PS C:\>$config = Get-NetIPHttpsConfiguration -PolicyStore "testdomain\GPOName"
 
-
-
 PS C:\>Rename-NetIPHttpsConfiguration -InputObject $config
 ```
 

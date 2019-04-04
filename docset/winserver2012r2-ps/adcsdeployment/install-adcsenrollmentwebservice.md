@@ -186,7 +186,6 @@ Accept wildcard characters: False
 
 ### -Force
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

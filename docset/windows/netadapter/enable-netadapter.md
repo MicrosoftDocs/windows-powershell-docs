@@ -53,7 +53,6 @@ A network adapter must be enabled to connect to a network.
 ```
 PS C:\> Enable-NetAdapter -Name "Ethernet 1"
 
-
 This command is another version of the cmdlet that uses position and wildcard characters.
 PS C:\> Enable-NetAdapter "E*2"
 ```

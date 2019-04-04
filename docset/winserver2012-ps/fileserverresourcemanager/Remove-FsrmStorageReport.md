@@ -77,7 +77,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 
-
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_2

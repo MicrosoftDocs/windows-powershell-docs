@@ -140,7 +140,6 @@ This parameter value is the first end point of an IPsec rule.
 The acceptable values for this parameter are:a port, range, and keyword.
 The value depends on the protocol. 
 
-
 Protocol is TCP or UDP. 
 The acceptable values for this parameter are:
 
@@ -248,7 +247,6 @@ The acceptable values for this parameter are:
 - An ICMP type, code pair: 0, 8 
 - Type and code: 0 through 255 
 - Keyword: Any. 
-
 
 No protocol is set.
 The acceptable values for this parameter are:

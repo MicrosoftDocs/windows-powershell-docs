@@ -73,8 +73,6 @@ This example returns all of the active main mode cryptographic sets on the local
 ```
 PS C:\>$computer1 = "RemoteMachineName"
 
-
-
 PS C:\>Get-NetIPsecMainModeSA -Name "196511" -CimSession $Computer1 | Remove-NetIPsecQuickModeSA -CimSession $computer1
 ```
 

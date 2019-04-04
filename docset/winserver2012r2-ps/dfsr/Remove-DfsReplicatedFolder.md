@@ -43,7 +43,6 @@ Use this cmdlet only when you decommission a replicated folder.
 ```
 PS C:\> Remove-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF22"
 
-
 Performing this operation will remove the replicated folder "RF22" and its memberships.
 Are you sure you want to continue to remove this replicated folder and its memberships?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y

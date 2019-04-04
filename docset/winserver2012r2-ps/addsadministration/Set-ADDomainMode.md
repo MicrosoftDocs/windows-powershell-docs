@@ -131,7 +131,6 @@ For example, to set the domain mode level to Windows Server 2008 R2, you can spe
 
 The following are the currently supported values: 
 
-
 - Windows Server 2000: **0** or **Windows2000Domain**
 
 - Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**

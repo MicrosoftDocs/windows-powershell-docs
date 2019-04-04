@@ -38,8 +38,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>$newpo = New-OBPolicy
 
-
-
 PS C:\>New-OBRetentionPolicy | Set-OBRetentionPolicy -Policy $newpo
 ```
 

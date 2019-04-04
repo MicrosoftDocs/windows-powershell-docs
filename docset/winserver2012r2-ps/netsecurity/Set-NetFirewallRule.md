@@ -116,7 +116,6 @@ This example changes a rule to match a different remote IP address of a web serv
 ```
 PS C:\>Set-NetFirewallRule -DisplayGroup "Windows Firewall Remote Management" -Enabled True
 
-
 This cmdlet shows an alternate way to enable all of the rules in a predefined group.
 PS C:\>Enable-NetFirewallRule -DisplayGroup "Windows Firewall Remote Management"
 ```

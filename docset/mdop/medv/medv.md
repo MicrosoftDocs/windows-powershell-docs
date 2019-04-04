@@ -32,5 +32,4 @@ Creates an object that contains the properties for a workspace Windows Installer
 
 ### [Export-medvconfiguration](./export-medvconfiguration.md)
 
-
 ### [New-medvconfiguration](./new-medvconfiguration.md)

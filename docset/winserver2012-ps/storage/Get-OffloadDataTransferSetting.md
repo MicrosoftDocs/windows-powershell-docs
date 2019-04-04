@@ -46,8 +46,6 @@ This example displays all storage subsystems on storage management providers tha
 ```
 PS C:\>$stsubsys = Get-StorageSubsystem -FriendlyName "Big Array"
 
-
-
 PS C:\>Get-OffloadDataTransferSetting -StorageSubsystem $stsubsys
 ```
 

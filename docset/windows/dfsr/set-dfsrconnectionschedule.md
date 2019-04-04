@@ -75,7 +75,6 @@ The *ScheduleType* parameter specifies a full schedule that enables replication 
 ```
 PS C:\> Set-DfsrConnectionSchedule -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV01" -Day Monday,Tuesday,Wednesday,Thursday,Friday - BandwidthDetail "ffffffffffffffffffffffffffffffffffff00000000000000000000000000000000ffffffffffffffffffffffffffff"
 
-
 GroupName               : RG 1
 SourceComputerName      : SRV1
 DestinationComputerName : SRV2

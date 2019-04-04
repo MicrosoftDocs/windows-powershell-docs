@@ -123,8 +123,6 @@ This example disables all of the main mode client DA rules on a local computer.
 ```
 PS C:\>$phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Disable-NetIPsecMainModeRule -InputObject $phase1AuthSet
 ```
 

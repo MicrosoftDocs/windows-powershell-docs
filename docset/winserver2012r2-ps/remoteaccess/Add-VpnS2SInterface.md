@@ -68,14 +68,11 @@ If the **AuthenticationMethod** parameter is set to pre-shared key (PSK), then o
 If the **AuthenticationMethod** parameter is set to user name or computer certificates (MachineCert), then only initiator policies are governed by what is specified per interface and responder policies are governed by what is specified on the server.
 
 For incoming connections: 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is set to PSK, the interface for which the destination IP matches the incoming IP is activated. 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is set to user name, then the name of the interface that matches the user name is activated. 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is set to certificates, then the name of the interface that matches the certificate subject name is activated.
 
 ## EXAMPLES
@@ -111,8 +108,6 @@ This example creates a S2S VPN interface using custom encryption settings.
 ### EXAMPLE 4
 ```
 PS C:\>$cert1 = Get-ChildItem -Path cert:LocalMachine\My | Where-Object -FilterScript { $_.Subject -Like "*CN=edge1.contoso.com*" }
-
-
 
 PS C:\>Add-VpnS2SInterface -Name e1 -Destination 1.1.1.1 -AuthenticationMethod MachineCertificates -Certificate $cert1 -ResponderAuthenticationMethod MachineCertificates -Protocol IKEv2
 ```
@@ -153,8 +148,7 @@ Accept wildcard characters: False
 
 ### -AuthenticationMethod
 Specifies the authentication method to be used by the S2S connection. 
- 
-                        
+
 If PSK is specified, then there can only be one active S2S VPN interface per destination IP address.
 
 ```yaml
@@ -583,8 +577,7 @@ Accept wildcard characters: False
 
 ### -NumberOfTries
 Specifies the number of connection attempts. 
- 
-                        
+
 If this parameter is specified as zero (0), then the connection is not retried if the first attempt fails.
 
 ```yaml

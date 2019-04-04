@@ -159,30 +159,21 @@ Set the mail and department properties on the user object with samAccountName Gl
 ```
 PS C:\># create a byte array for the M-F 8:00 am to 5 pm logon hours
 
-
 PS C:\>$hours = New-Object byte[] 21
-
 
 PS C:\>$hours[5] = 255; $hours[8] = 255; $hours[11] = 255; $hours[14] = 255; $hours[17] = 255;
 
-
 PS C:\>$hours[6] = 1; $hours[9] = 1; $hours[12] = 1; $hours[15] = 1; $hours[18] = 1;
-
 
 PS C:\># create a hashtable to update the logon hours and a description
 
-
 PS C:\>$replaceHashTable = New-Object HashTable
-
 
 PS C:\>$replaceHashTable.Add("logonHours", $hours)
 
-
 PS C:\>$replaceHashTable.Add("description", "Sarah Davis can only logon from Monday through Friday from 8:00 AM to 5:00 PM")
 
-
 PS C:\># set the value of the logonHours and description attributes
-
 
 PS C:\>Set-ADUser "SarahDavis" -Replace $replaceHashTable
 ```
@@ -197,7 +188,6 @@ It updates the "logonHours" attribute with the specified byte array and the desc
 ### -------------------------- EXAMPLE 7 --------------------------
 ```
 PS C:\>$manager = Get-ADUser GlenJohn -Server Corp-DC01
-
 
 PS C:\>Set-ADUser AntonioAl -Manager $manager -Server Branch-DC02
 ```

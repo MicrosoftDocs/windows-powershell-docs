@@ -202,7 +202,6 @@ Accept wildcard characters: False
 Imports the source server's basic IP configuration settings.
 The following are acceptable values for this parameter: 
 
-
 - NIC: network interface card (NIC) IP configuration settings such as connection-specific suffix, IPv4 settings and Disable IPv6 Component registry key.
 IP configuration can only be imported for a NIC if it is enabled and connected to the network.
 You must restart your computer for disabling IPv6 components to take effect. 
@@ -301,7 +300,6 @@ Accept wildcard characters: False
 Specify the type of local user accounts to import from the migration store.
 The following are acceptable values for this parameter: 
 
-
 - Enabled: import only enabled local users
 
 - Disabled: import only disabled local users
@@ -367,7 +365,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 * The Windows Server Migration Tools deployment log file is located in %windir%\Logs\SmigDeploy.log. Other Windows Server Migration Tools log files are created at the following locations: 
 
-
 - %windir%\Logs\ServerMigration.log
 
 - On Windows Server 2008 and later versions: %localappdata%\SvrMig\Log
@@ -380,7 +377,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 When the log file grows larger than the size specified in the registry key, the log file is deleted.
 Logging begins again in a new log file that uses the same file name and path.
 The default maximum log size is 200 MB. 
-
 
 - Key: HKLM\Software\Microsoft\ServerMigration
 

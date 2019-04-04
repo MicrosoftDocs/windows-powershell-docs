@@ -249,7 +249,6 @@ Accept wildcard characters: False
 
 ### -UseHttp
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

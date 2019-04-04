@@ -37,7 +37,6 @@ New-NetworkControllerAccessControlListRule -ConnectionUri <Uri> -Properties <Acl
 This cmdlet creates a new ACL rule to allow/deny traffic to/from a particular virtual subnet or network interface.
 Each rule consists of a name, protocol, source and destination port range, source and destination IP address range, action (Allow/deny), priority, type (inbound/outbound) and whether logging is enabled or disabled for the rule.
 
-
 ## EXAMPLES
 
 ### Example 1

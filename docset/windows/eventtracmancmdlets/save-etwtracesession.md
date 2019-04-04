@@ -35,7 +35,6 @@ The **Save-EtwTraceSession** cmdlet saves the events collected by the ETW sessio
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

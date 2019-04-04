@@ -65,7 +65,6 @@ This command gets the Files Collection for the system.webServer/defaultDocument 
 ```
 PS C:\> Get-IISConfigSection -SectionPath "system.webServer/defaultDocument" | Get-IISConfigElement -ChildElementName "files" | Get-IISConfigCollection
 
-
 Attributes      : {value}
 ChildElements   : {}
 ElementTagName  : add

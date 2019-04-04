@@ -154,7 +154,6 @@ ZoneName       : contoso.com
 ZoneScope      : NorthAmericaZoneScope
 PSComputerName : 
 
-
 FileName       : EuropeZoneScope.dns
 ZoneName       : contoso.com
 ZoneScope      : EuropeZoneScope
@@ -171,7 +170,6 @@ RecordType        : A
 Timestamp         : 
 TimeToLive        : 01:00:00
 PSComputerName    : 
-
 
 DistinguishedName : career
 HostName          : career
@@ -194,11 +192,9 @@ IsEnabled       : True
 Level           : Zone
 Name            : NorthAmericaPolicy
 
-
 ProcessingOrder : 1
 ZoneName        : contoso.com
 PSComputerName  : 
-
 
 Action          : Allow
 AppliesOn       : QueryProcessing

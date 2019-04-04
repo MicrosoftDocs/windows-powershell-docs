@@ -88,15 +88,9 @@ Modifying authentication or cryptographic configurations to use the default sett
 ```
 PS C:\>$EncAES128 = New-NetIPsecMainModeCryptoProposal -Encryption AES128
 
-
-
 PS C:\>$EncDES3 = New-NetIPsecMainModeCryptoProposal -Encryption DES3
 
-
-
 PS C:\>$cryptoset = New-NetIPsecMainModeCryptoSet -DisplayName "(DA Client) - Phase 2 Crypto Set" -Proposals $EncAES128,$EncDES3
-
-
 
 PS C:\>Set-NetIPsecMainModeRule -DisplayName MainModeRule -MainModeCryptoSet $cryptoset
 ```
@@ -106,8 +100,6 @@ This example replaces the proposals for an existing main mode rule.
 ### EXAMPLE 2
 ```
 PS C:\>Set-NetIPsecMainModeRule -DisplayGroup "DA Client" -Enabled True
-
-
 
 PS C:\>Enable-NetIPsecMainModeRule -DisplayGroup "DA Client"
 ```
@@ -125,11 +117,7 @@ This example changes the display name for a main mode rule
 ```
 PS C:\>$rule = Get-NetIPsecMainModeRule -DisplayName "Tunnel Mode - (DA Client)"
 
-
-
 PS C:\>$rule.MainModeModeCryptoSet = "Default"
-
-
 
 PS C:\>Set-NetIPsecMainModeRule -InputObject $rule
 ```

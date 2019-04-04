@@ -57,8 +57,6 @@ This command removes the print job with an ID of 1 on the printer named PrinterN
 ```
 PS C:\>$printer = Get-Printer -PrinterName "PrinterName"
 
-
-
 PS C:\>Remove-PrintJob -PrinterObject $printer -ID "1"
 ```
 
@@ -67,8 +65,6 @@ This set of commands retrieves the printer object into a variable ($printer) usi
 ### Example 3: Remove a print job using a print job object
 ```
 PS C:\>$printJob = Get-PrintJob - PrinterName "PrinterName" -ID 1
-
-
 
 PS C:\>Remove-PrintJob -InputObject $printJob
 ```

@@ -43,8 +43,6 @@ Remove-NetworkControllerAccessControlList -ConnectionUri https://networkcontroll
 
 Description
 
-
-
 The above cmdlet removes an access control list with the name "SubnetACL1" from the Network Controller.
 
 ## PARAMETERS

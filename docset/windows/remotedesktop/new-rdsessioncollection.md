@@ -72,7 +72,6 @@ Accept wildcard characters: False
 
 ### -CollectionDescription
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -87,7 +86,6 @@ Accept wildcard characters: False
 
 ### -CollectionName
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -101,7 +99,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionBroker
-
 
 ```yaml
 Type: String
@@ -133,7 +130,6 @@ Accept wildcard characters: False
 
 ### -PersonalUnmanaged
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalSessionCollection
@@ -148,7 +144,6 @@ Accept wildcard characters: False
 
 ### -PooledUnmanaged
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PooledSessionCollection
@@ -162,7 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -SessionHost
-
 
 ```yaml
 Type: String[]

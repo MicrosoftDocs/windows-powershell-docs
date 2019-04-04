@@ -91,4 +91,3 @@ Modifies the access rights of a queue manager.
 ### [Suspend-MsmqOutgoingQueue](./Suspend-MsmqOutgoingQueue.md)
 Pauses outgoing queues.
 
-

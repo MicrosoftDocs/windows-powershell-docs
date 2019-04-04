@@ -59,7 +59,6 @@ For more information about the how to determine the properties for FineGrainedPa
 ```
 C:\PS>Get-ADFineGrainedPasswordPolicy -Filter {Name -like "*"} | ft Name, Precedence,MaxPasswordAge,MinPasswordLength -A
 
-
 Name           Precedence MaxPasswordAge MinPasswordLength
 ----           ---------- -------------- -----------------
 DomainUsersPSO        500 60.00:00:00                    8
@@ -75,7 +74,6 @@ Description
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>Get-ADFineGrainedPasswordPolicy AdminsPSO
-
 
 Name                        : AdminsPSO
 ComplexityEnabled           : True
@@ -103,7 +101,6 @@ Get the Fine Grained Password Policy named 'AdminsPSO'.
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Get-ADFineGrainedPasswordPolicy 'CN=DlgtdAdminsPSO,CN=Password Settings Container,CN=System,DC=FABRIKAM,DC=COM' -Properties *
-
 
 msDS-LockoutDuration                     : -18000000000
 msDS-PasswordSettingsPrecedence          : 300

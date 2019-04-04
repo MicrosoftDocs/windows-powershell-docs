@@ -45,11 +45,7 @@ This cmdlet requires access to a Microsoft symbol server.
 PS C:\> Get-WindowsUpdateLog
 Converting C:\Windows\logs\WindowsUpdate into C:\Users\Admin\Desktop\WindowsUpdate.log 
 
-
-
-
     Directory: C:\Users\admin\AppData\Local\Temp\WindowsUpdateLog
-
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----

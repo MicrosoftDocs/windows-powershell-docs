@@ -141,8 +141,6 @@ This example enables all transport mode DA rules on the local computer.
 ```
 PS C:\>$Phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Enable-NetIPsecRule -InputObject $Phase1AuthSet
 ```
 
@@ -629,7 +627,6 @@ Accept wildcard characters: False
 
 ### -IPsecRuleName
 
-
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_3
@@ -727,7 +724,6 @@ The local computer attempts to authenticate any outbound network connections tha
 
  -- Require: Authentication is required for connections that match the rule.
 If the authentication is not successful, then the outbound network traffic is discarded.
-
 
 The default value is None. 
 

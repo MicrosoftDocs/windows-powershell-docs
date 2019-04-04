@@ -65,7 +65,6 @@ These rules are then piped into the Set-NetFirewallRule, Set-NetIPsecRule, or Se
 ```
 PS C:\>Get-NetIPsecRule -PolicyStore ActiveStore
 
-
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Get-NetIPsecRule -PolicyStore ActiveStore | Format-Table
 ```
@@ -83,7 +82,6 @@ This example gets the address configurations associated with a particular IPsec 
 ### EXAMPLE 3
 ```
 PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -FilterScript { $_.RemoteAddress -Eq "LocalSubnet6" } | Set-NetFirewallAddressFilter -RemoteAddress LocalSubnet4
-
 
 This is an alternate method with this cmdlet.
 PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -FilterScript { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewallRule -RemoteAddress LocalSubnet4

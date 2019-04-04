@@ -49,8 +49,6 @@ $cred.value="abcd"
 
 New-NetworkControllerCredential -ConnectionUri "https://restserver" -Properties $Cred -ResourceId "Cred1"
 
-
-
 Tags             : 
 
 ResourceRef      : /credentials/cred1

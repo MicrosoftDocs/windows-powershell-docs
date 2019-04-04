@@ -149,7 +149,6 @@ Hyper-V cannot shut down virtual machine print-VM1 because the Shutdown integrat
 potential data loss, you can pause or save the state of the virtual machine. The other option is to turn off the 
 virtual machine, but data loss might occur. 
 
-
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):Y
 ```
 

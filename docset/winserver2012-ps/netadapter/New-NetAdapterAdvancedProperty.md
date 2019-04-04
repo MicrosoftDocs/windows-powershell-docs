@@ -58,10 +58,7 @@ Note: Many advanced properties require restarting the network adapter before the
 ```
 PS C:\>$networkAdapter3 = Get-NetAdapter -Name "Ethernet 3"
 
-
-
 PS C:\>New-NetAdapterAdvancedProperty -InputObject $networkAdapter3 -RegistryKeyword "MyKeyword" -RegistryValue "1" -RegistryDataType REG_SZ
-
 
 This is a version of the cmdlet that creates a new advanced property on the network adapter named Ethernet 3 using wildcard characters and the pipeline. Note: Use of wildcard characters is not allowed for the network adapter identifier as part of this cmdlet, but can be used via the pipeline.
 PS C:\>Get-NetAdapter -Name "Ethernet 3" | New-NetAdapterAdvancedProperty -RegistryKeyword "MyKeyword" -RegistryValue "1" -RegistryDataType REG_SZ

@@ -31,4 +31,3 @@ Gets a connection profile.
 ### [Set-NetConnectionProfile](./Set-NetConnectionProfile.md)
 Changes the network category of a connection profile.
 
-

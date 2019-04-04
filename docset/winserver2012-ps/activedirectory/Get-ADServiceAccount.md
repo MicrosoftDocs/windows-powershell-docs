@@ -59,9 +59,6 @@ For more information about the how to determine the properties for service accou
 ```
 C:\PS>Get-ADServiceAccount -Identity service1
 
-
-
-
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -83,9 +80,6 @@ Retrieve Service-Account with samAccountName 'service1'.
 ```
 C:\PS>Get-ADServiceAccount -Identity S-1-5-21-159507390-2980359153-3438059098-29770
 
-
-
-
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -106,9 +100,6 @@ Retrieve the managed service account with SID S-1-5-21-159507390-2980359153-3438
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Get-ADServiceAccount -Filter {HostComputers -eq "CN=SQL-Server-1, DC=contoso,DC=com" }
-
-
-
 
 Enabled           : True
 Name              : service1

@@ -46,7 +46,6 @@ The query is performed every 5 seconds, as specified by the IntervalInSeconds pr
 The health probe must receive an HTTP response code of 200 for 8 consecutive queries for the probe to consider the backend IP to be healthy.
 If the backend IP is not healthy, the load balancer will not send traffic to the IP.
 
-
 ```
 $probe=New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
 $probe.protocol="HTTP"

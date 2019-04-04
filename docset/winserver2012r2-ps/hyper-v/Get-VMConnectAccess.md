@@ -94,18 +94,15 @@ Local User Account:
 
      ComputerName\john
 
-
 Domain User Account:
 
      CONTOSO\john
 
      Contoso.com\john
 
-
 User Principal Name (UPN):
 
      john@contoso.com
-
 
 Security Identifier:
 

@@ -70,9 +70,6 @@ This cmdlet supplies a path to the signed package to be authenticated.
 ```
 PS C:\>$objectFromFormat = ( Format-SecureBootUEFI -Name DB -SignatureOwner 12345678-1234-1234-1234-123456789abc -Time 2011-11-01T13:30:00Z -CertificateFilePath db.cer -FormatWithCert )
 
-
-
-
 PS C:\>$objectFromFormat | Set-SecureBootUEFI
 
 Name       : db 

@@ -74,7 +74,6 @@ Alternatively, piping the array of NetFirewallPortFilter objects directly into t
 ```
 PS C:\>Get-NetFirewallPortFilter -PolicyStore ActiveStore
 
-
 This cmdlet displays the same information in a dynamically sized formatted table.
 PS C:\>Get-NetFirewallPortFilter -PolicyStore ActiveStore | Format-Table -Property *
 ```
@@ -92,7 +91,6 @@ This example gets the port properties of a particular firewall rule.
 ### Example 3
 ```
 PS C:\>Get-FirewallRule -DisplayName "Play To streaming server" | Get-NetFirewallPortFilter | Set-NetFirewallPortFilter -LocalPort 10246
-
 
 This task can alternatively be done with this cmdlet.
 PS C:\>Set-NetFirewallRule -DisplayName "Play To streaming server" -LocalPort 10246
@@ -286,8 +284,7 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
                          
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-                         
-                         
+
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
  -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 

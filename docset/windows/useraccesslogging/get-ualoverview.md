@@ -49,8 +49,6 @@ For more information about UAL, see the [User Access Logging Overview](http://te
 ```
 PS C:\>Get-UalOverview -RoleName "DHCP Server"
 
-
-
 FirstSeen      : 8/17/2012 11:33:04 AM
 
 GUID           : 48eed6b2-9cdc-4358-b5a5-8dea3b2f3f6a

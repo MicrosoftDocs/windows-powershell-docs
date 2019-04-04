@@ -178,4 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Stop-AppvClientPackage](./Stop-AppvClientPackage.md)
 
-

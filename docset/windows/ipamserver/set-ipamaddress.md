@@ -109,7 +109,6 @@ The command adds the value Main to the custom field named ADSite.
 ```
 PS C:\> Set-IpamAddress -IpAddress 172.16.10.10 -AddressSpace "Default" -NetworkType NonVirtualized -NewNetworkType Provider
 
-
 IpAddress        : 172.16.10.10
 
 NetworkType      : Provider

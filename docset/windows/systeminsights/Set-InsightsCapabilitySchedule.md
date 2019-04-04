@@ -94,7 +94,6 @@ PS C:\> Set-InsightsCapabilitySchedule -Name "CPU Capacity Forecasting" -Default
 
 This example restores the default schedule for the **CPU capacity forecasting** capability.
 
-
 ## PARAMETERS
 
 ### -At

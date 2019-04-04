@@ -83,7 +83,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)

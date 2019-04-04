@@ -39,7 +39,6 @@ The **Get-AdfsProperties** cmdlet gets all the associated properties for the Act
 ```
 PS C:\> Get-AdfsProperties
 
-
 AcceptableIdentifiers                      : {}
 AddProxyAuthorizationRules                 : exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-32-544", Issuer =~ "^AD AUTHORITY$"]) =>
 issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");

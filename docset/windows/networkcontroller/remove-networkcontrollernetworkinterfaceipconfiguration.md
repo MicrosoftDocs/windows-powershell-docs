@@ -43,8 +43,6 @@ Remove-NetworkControllerNEtworkInterfaceIpConfiguration -ConnectionUri https://n
 
 Description
 
-
-
 This example removes an IP configuration resource named IpConfig1 from a network interface called nw1.
 
 ## PARAMETERS

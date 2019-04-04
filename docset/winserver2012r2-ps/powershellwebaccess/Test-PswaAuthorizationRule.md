@@ -39,8 +39,7 @@ Test-PswaAuthorizationRule [[-ConfigurationName] <String>] [-Credential <PSCrede
 ## DESCRIPTION
 The **Test-PswaAuthorizationRule** cmdlet verifies whether a rule exists for a specified user, computer, or endpoint.
 This cmdlet can also be used to test authorization rules to validate that a particular user, computer or endpoint access request is authorized. 
- 
-                      
+
 By default, this cmdlet evaluates all rules in the authorization file.
 However, you can specify a subset of rules to test.
 

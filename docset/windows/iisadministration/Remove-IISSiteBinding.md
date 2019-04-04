@@ -93,7 +93,6 @@ This is to ensure that the other existing bindings will still have access to the
 
 This parameter is ignored if you are removing a binding which does not have a certificate.
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

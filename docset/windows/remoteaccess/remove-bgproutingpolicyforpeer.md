@@ -43,8 +43,6 @@ When you remove a routing policy from a BGP peer, the BGP peer router no longer 
 ```
 PS C:\> Remove-BgpRoutingPolicyForPeer -PeerName "TenantSite04", "TenantSite05", "TenantSite06"
 
-
-
 Confirm
 BGP peering session could currently be active for TenantSite04, TenantSite05, TenantSite06. Do you want to remove
 these policies and restart corresponding peering sessions?
@@ -64,8 +62,6 @@ This command removes the routing policy named RTPolicy04 for only the Egress rou
 ### Example 3: Remove all routing policies for a routing domain
 ```
 PS C:\> Remove-BgpRoutingPolicyForPeer -PeerName "TenantSite01" -RoutingDomain "Rd_001"
-
-
 
 Confirm
 BGP peering session could currently be active for TenantSite01 for routing domain Rd_001. Do you want to remove these

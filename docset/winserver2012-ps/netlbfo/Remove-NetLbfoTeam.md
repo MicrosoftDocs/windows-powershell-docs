@@ -50,8 +50,6 @@ This command removes the team named Team1.
 ```
 PS C:\>$team = Get-NetLbfoTeam -Name Team1
 
-
-
 PS C:\>Remove-NetLbfoTeam -InputObject $team
 ```
 

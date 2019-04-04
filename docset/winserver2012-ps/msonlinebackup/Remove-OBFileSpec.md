@@ -40,8 +40,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>$policy = Get-OBPolicy
 
-
-
 PS C:\>Get-OBFileSpec -Policy $policy | Remove-OBFileSpec -Policy $policy
 ```
 

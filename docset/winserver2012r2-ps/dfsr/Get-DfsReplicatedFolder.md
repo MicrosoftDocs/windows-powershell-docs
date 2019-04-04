@@ -40,7 +40,6 @@ Replicated folders are logical arrangements of replication that do not contain c
 ```
 PS C:\> Get-DfsReplicatedFolder -GroupName "RG24" -FolderName "RF01"
 
-
 GroupName              : RG24
 DomainName             : corp.contoso.com
 FolderName             : RF01

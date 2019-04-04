@@ -87,7 +87,6 @@ Number IsHighlyAvailable IsClustered IsScaleOut
 ------ ----------------- ----------- ----------
      9             False       False      False
 
-
 The next command enables disk number 9. The command specifies a value of 0 for the *Scaleout* parameter. This command leaves the disk in available storage and not enabled. The final command repeats the first command to display the new status of the disk. 
 PS C:\>Enable-StorageHighAvailability -DiskNumber 9 -ScaleOut 0 
 PS C:\> Get-Disk -Number 9 | Format-Table Number,IsHighlyAvailable,IsClustered,IsScaleOut

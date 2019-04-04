@@ -51,7 +51,6 @@ If you do not specify an IPv4 or IPv6 address, the cmdlet will remove all IP add
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
 
-
 This command removes the IP address created by the previous command.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1
 ```
@@ -285,7 +284,6 @@ Accept wildcard characters: False
 Specifies a **PolicyStore** value.
 The acceptable values for this parameter are:
 
-
  -- ActiveStore.
 The IP address information is valid. 
  -- PersistentStore.
@@ -344,7 +342,6 @@ IP addresses are divided into two parts, the prefix and the suffix.
 The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
 The acceptable values for this parameter are:
 
-
  -- Manual.
 The IP address prefix was manually specified. 
  -- WellKnown.
@@ -390,7 +387,6 @@ Specifies an array of origins of address suffixes.
 IP addresses are divided into two parts, the prefix and the suffix.
 The address prefix identifies the network portion of an IP address, and the address suffix identifies the host portion.
 The acceptable values for this parameter are:
-
 
  -- Manual.
 The IP address prefix was manually specified. 

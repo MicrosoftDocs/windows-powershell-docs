@@ -246,7 +246,6 @@ Accept wildcard characters: False
 
 ### -DefaultQueueVmmqEnabled
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -261,7 +260,6 @@ Accept wildcard characters: False
 
 ### -DefaultQueueVmmqQueuePairs
 
-
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -275,7 +273,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultQueueVrssEnabled
-
 
 ```yaml
 Type: Boolean

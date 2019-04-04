@@ -184,7 +184,6 @@ c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt
 > [!NOTE]
 > First line of the file must include Source, Destination header as in the example.
 
-
 ### Example 9: Download a file from a server on a network to a client on a different network that are connected by a proxy server
 ```
 PS C:\> Start-BitsTransfer -Source .\Patch0416.msu -Destination $env:temp\Patch0416.msu -ProxyUsage Override -ProxyList BitsProxy:8080 -ProxyCredential Server01\Admin01

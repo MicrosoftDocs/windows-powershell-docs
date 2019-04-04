@@ -466,7 +466,6 @@ Specifies an array of values for Explicit Congestion Notification (ECN) marking.
 This parameter value controls the specific ECN marking in the ECN field of the IP header.
 The acceptable values for this parameter are:
 
-
  -- AppDecide.
 Allow an application or higher layer protocol, such as TCP, to decide how to apply ECN marking.
 In order for an application to fully control ECN capability value in the Network TCP value must also be set to enabled. 
@@ -476,7 +475,6 @@ Disable the ECN marking on the IP interface.
 Mark all of the egress IP packets on the IP interface with the Ect0 bit set. 
  -- UseEct1.
 Mark all of the egress IP packets on the IP interface with the Ect1 bit set. 
-
 
 The default value is AppDecide.
 

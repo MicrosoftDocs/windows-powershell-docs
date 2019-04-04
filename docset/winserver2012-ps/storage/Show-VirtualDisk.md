@@ -53,11 +53,7 @@ This cmdlet is equivalent to a VDS unmask operation.
 ```
 PS C:\>$initaddress = (Get-InitiatorPort)
 
-
-
 PS C:\>$tarport = (Get-TargetPort)
-
-
 
 PS C:\>Show-VirtualDisk -FriendlyName "SQLData_27a" -TargetPortAddresses $tarport.NodeAddress -InitiatorAddress $initaddress.NodeAddress
 ```

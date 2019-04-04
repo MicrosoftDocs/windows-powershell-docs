@@ -53,11 +53,7 @@ This example creates a self-signed SSL server certificate in the computer MY sto
 ```
 PS C:\>Set-Location -Path cert:\LocalMachine\My
 
-
-
 PS C:\>$copyOf = (Get-ChildItem -Path E42DBC3B3F2771990A9B3E35D0C3C422779DACD7)
-
-
 
 PS C:\>New-SelfSignedCertificate -CloneCert $copyOf
 ```

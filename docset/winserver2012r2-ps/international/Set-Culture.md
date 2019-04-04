@@ -46,7 +46,6 @@ This command sets the culture for the current user account to German (Germany).
 
 ### -CultureInfo
 
-
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)

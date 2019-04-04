@@ -45,8 +45,6 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 ```
 PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacePool")
 
-
-
 PS C:\> Enable-PhysicalDiskIndication -StoragePool $stpool
 ```
 
@@ -56,8 +54,6 @@ This is useful for identifying a specific virtual disk, when the LED on the disk
 ### Example 2: Enable the identification LED on all physical disks used by a virtual disk
 ```
 PS C:\> $vdisk = (Get-VirtualDisk -FriendlyName "Bruce's Music")
-
-
 
 PS C:\>Enable-PhysicalDiskIndication -VirtualDisk $vdisk
 ```

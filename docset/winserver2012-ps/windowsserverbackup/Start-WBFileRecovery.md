@@ -53,7 +53,6 @@ Mode                LastWriteTime     Length Name
 
 -a---        12/13/2011   2:35 PM          0 File1.txt PS C:\>Start-WBFileRecovery -BackupSet $Backup -FilePathToRecover \\Server01\WsbMountedVolumes\WsbMountedVolumeFile46_6fc68703-1c22-11e1-89cd-806e6f6e6963\Dir1\File1.txt -RecoveryTarget F:\Dir1
 
-
 Warning
 Start recovery of files from C:\Dir1\File1.txt to F:\Fir1 ?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y

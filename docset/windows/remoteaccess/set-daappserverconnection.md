@@ -122,7 +122,6 @@ Accept wildcard characters: False
 Specifies the type of connection to the corporate network.
 The acceptable values for this parameter are:
 
-
 - NoE2EAuth.
 Connection requires no end-to-end authentication. 
 
@@ -131,7 +130,6 @@ Connection requires end-to-end authentication only to the configured application
 
 - E2EAuthRequiredToAllServers.
 Connection permits access only to the configured application servers through end-to-end authentication and does not permit access to other servers in the corporate network. 
-
 
 If you specify NoE2EAuth, the cmdlet automatically removes all the application server security groups and Group Policy Objects from the DA deployment, and the user can access all the corporate network servers over a full tunnel to the DA server. 
 IPsec security traffic protection is not applicable for the connection if you specify NoE2EAuth as the connection type.
@@ -186,7 +184,6 @@ Accept wildcard characters: False
 Specifies the property of the IPsec connection to the application servers.
 IPsec traffic protection is not applicable for the connection if you specify NoE2EAuth for the **ConnectionType** parameter.
 The acceptable values for this parameter are:
-
 
 - Enabled.
 Traffic protection is enabled. 

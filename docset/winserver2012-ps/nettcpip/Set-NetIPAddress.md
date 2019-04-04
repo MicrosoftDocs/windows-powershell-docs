@@ -49,7 +49,6 @@ To create a new IPv6 address or IPv6 address, the New-NetIPAddress cmdlet must b
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
 
-
 Note: The **PrefixLength** parameter may also be specified as part of the New-NetIPAddress cmdlet.
 PS C:\>Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24
 ```
@@ -59,8 +58,6 @@ This example adds a new IP address, and uses this cmdlet to change the prefix le
 ### EXAMPLE 2
 ```
 PS C:\>$timesp = ( New-TimeSpan -Days 1 )
-
-
 
 PS C:\>Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PreferredLifetime $timesp
 ```

@@ -36,7 +36,6 @@ The next time you run the **Get-SbecTraceProviders** cmdlet, the cmdlet re-reads
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### CommonParameters

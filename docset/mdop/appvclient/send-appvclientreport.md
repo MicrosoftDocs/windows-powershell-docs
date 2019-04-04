@@ -141,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-AppvClientConfiguration](./Set-AppvClientConfiguration.md)
 
-

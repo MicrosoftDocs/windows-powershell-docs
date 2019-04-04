@@ -46,7 +46,6 @@ This command sets the system locale to Japanese (Japan).
 
 ### -SystemLocale
 
-
 ```yaml
 Type: CultureInfo
 Parameter Sets: (All)

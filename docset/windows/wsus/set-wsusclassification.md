@@ -37,7 +37,6 @@ To use this cmdlet without filtering results, the [Get-WsusClassification](./Get
 
 To use this cmdlet with filtered results, the Get-WsusClassification cmdlet must be run, then results are filtered using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet and passed into this cmdlet.
 
-
 ## EXAMPLES
 
 ### Example 1: Disable driver updates

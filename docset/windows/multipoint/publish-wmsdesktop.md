@@ -40,10 +40,6 @@ A published desktop can also optionally be remotely controlled.
 ```
 PS C:\> Publish-WmsDesktop -RemoteControl -MaxViewers 10 -SessionId 2 -TeacherName "PattiFuller"
 
-
-
-
-
 Invitation string
 ```
 

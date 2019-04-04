@@ -46,9 +46,7 @@ This command registers an SMI-S provider by using a URI.
 ```
 PS C:\>$password = ConvertTo-SecureString "p@ssword" -AsPlainText -Force 
 
-
 PS C:\>$cred = New-Object System.Management.Automation.PSCredential "admin", $password
-
 
 PS C:\>Register-SmisProvider -ConnectionUri ContosoServer1 -Credential $cred
 ```

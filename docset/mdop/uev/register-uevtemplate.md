@@ -167,4 +167,3 @@ An array of paths to the settings location templates.
 
 [Update-UevTemplate](./Update-UevTemplate.md)
 
-

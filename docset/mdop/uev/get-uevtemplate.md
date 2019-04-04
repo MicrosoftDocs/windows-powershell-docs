@@ -238,4 +238,3 @@ This cmdlet generates a **Template** object that contains the general informatio
 
 [Update-UevTemplate](./Update-UevTemplate.md)
 
-

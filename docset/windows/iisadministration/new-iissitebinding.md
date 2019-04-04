@@ -51,7 +51,6 @@ PS C:\> New-IISSiteBinding -Name "TestSite" "*:443:foo.com" -Protocol https -Ssl
 
 This command creates a new HTTPS binding of "*:443:foo.com" on a website named TestSite setting the SNI and CentralCertStore SSL flag settings
 
-
 ### Example 4: Create a new self signed certificate and use it for adding a new HTTPS binding for testing purpose
 ```
 $password = "string1"  # put your password on string1

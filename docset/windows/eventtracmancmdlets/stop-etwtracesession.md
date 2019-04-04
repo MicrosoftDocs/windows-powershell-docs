@@ -42,7 +42,6 @@ The **Stop-EtwTraceSession** cmdlet stops the specified Event Tracing for Window
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -AsJob

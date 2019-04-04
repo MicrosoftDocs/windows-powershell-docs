@@ -89,7 +89,6 @@ Sets the value of AllowedDNSSuffixes to {"fabrikam.com","corp.fabrikam.com"} in 
 ```
 C:\PS>Set-ADDomain -Identity FABRIKAM -AllowedDNSSuffixes @{Add="corp.fabrikam.com"}
 
-
 Adds the value "corp.fabrikam.com" to the AllowedDNSSuffixes in domain "FABRIKAM".
 ```
 

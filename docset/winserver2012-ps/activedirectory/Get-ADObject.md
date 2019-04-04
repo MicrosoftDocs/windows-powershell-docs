@@ -60,7 +60,6 @@ For more information about the how to determine the properties for computer obje
 ```
 C:\PS>Get-ADObject -LDAPFilter "(objectClass=site)" -SearchBase 'CN=Configuration,DC=Fabrikam,DC=Com' -Properties CanonicalName | FT Name,CanonicalName -A
 
-
 Name CanonicalName
 ---- -------------
 HQ   FABRIKAM.COM/Configuration/Sites/HQ
@@ -78,7 +77,6 @@ Displays a list of sites for Fabrikam using the LDAP filter syntax.
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>Get-ADObject -Filter 'ObjectClass -eq "site"' -SearchBase 'CN=Configuration,DC=Fabrikam,DC=Com' -Properties siteObjectBL | foreach {$_.siteObjectBL}
-
 
 CN=192.167.1.0/26,CN=Subnets,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM
 CN=192.166.1.0/26,CN=Subnets,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM

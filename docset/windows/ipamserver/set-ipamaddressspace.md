@@ -84,7 +84,6 @@ The command includes the *PassThru* parameter, so it displays results to the con
 ```
 PS C:\> Get-IpamAddressSpace -Name "WoodgroveAddSpace" | Set-IpamAddressSpace -AssociatedProviderAddressSpace "MainDataCenter" -PassThru
 
-
 Name                           : WoodgroveAddSpace
 
 Type                           : CustomerAddressSpace

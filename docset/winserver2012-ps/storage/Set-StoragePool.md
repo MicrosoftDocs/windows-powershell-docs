@@ -223,7 +223,6 @@ Accept wildcard characters: False
 
 ### -IsPowerProtected
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_5, UNNAMED_PARAMETER_SET_9, UNNAMED_PARAMETER_SET_12

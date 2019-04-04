@@ -64,8 +64,6 @@ The Get-DhcpServerv4Lease cmdlet returns the IP address lease object and pipes t
 ```
 PS C:\>$freeip = Get-DhcpServerv4FreeIPAddress -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0
 
-
-
 PS C:\>Add-DhcpServerv4Reservation -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -IPAddress $freeip -ClientId F0-DE-F1-7A-00-5E -Description "Reservation for Printer"
 ```
 

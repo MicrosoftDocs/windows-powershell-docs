@@ -115,7 +115,6 @@ By specifying the **Passthru** parameter, you can see the configuration of the V
 This command stores the result of the New-EapConfiguration cmdlet into the variable named $a.
 PS C:\>$a = New-EapConfiguration -Tls
 
-
 This command configures the VPN connection named Test4 in the global phone book to use the custom EAP configuration by: 
 
 -- Specifying the **AuthenticationMethod** parameter with the value EAP

@@ -37,7 +37,6 @@ PS C:\>
 
 ### -AsJob
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -51,7 +50,6 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-
 
 ```yaml
 Type: CimSession[]
@@ -67,7 +65,6 @@ Accept wildcard characters: False
 
 ### -FileName
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -81,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-
 
 ```yaml
 Type: Int32

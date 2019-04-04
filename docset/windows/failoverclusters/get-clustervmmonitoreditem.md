@@ -94,7 +94,6 @@ Accept wildcard characters: False
 
 ### -VMId
 
-
 ```yaml
 Type: Guid
 Parameter Sets: VMId
@@ -109,7 +108,6 @@ Accept wildcard characters: False
 
 ### -VirtualMachine
 
-
 ```yaml
 Type: String
 Parameter Sets: VirtualMachine
@@ -123,7 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
 
 ```yaml
 Type: Int32

@@ -37,4 +37,3 @@ Starts a BPA scan for a specific model that is installed on a computer.
 ### [Set-BpaResult](./Set-BpaResult.md)
 Excludes or includes existing results of a BPA scan to display only the specified scan results.
 
-

@@ -50,9 +50,6 @@ If the BGP router is not in a multitenant deployment, do not specify the **Routi
 ```
 PS C:\> Get-BgpCustomRoute
 
-
-
-
 Interface : {Ethernet}
 Network   : {172.23.90.0/29}
 ```
@@ -62,9 +59,6 @@ This command gets all the interfaces and network prefixes for all custom routes 
 ### Example 2: Get custom routes for a routing domain
 ```
 PS C:\> Get-BgpCustomRoute -RoutingDomain "Rd_001"
-
-
-
 
 Interface : {VS1}
 Network   :

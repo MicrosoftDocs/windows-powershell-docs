@@ -79,10 +79,8 @@ This example gets all of the physical network adapters.
 ```
 PS C:\>Get-NetAdapter -Name "Ethernet 2"
 
-
 A version of the cmdlet that uses wildcard characters.
 PS C:\>Get-NetAdapter -Name "E*2"
-
 
 A version of the cmdlet that uses position and wildcard characters.
 PS C:\>Get-NetAdapter "E*2"

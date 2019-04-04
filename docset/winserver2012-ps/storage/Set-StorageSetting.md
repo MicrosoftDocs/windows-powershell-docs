@@ -113,7 +113,6 @@ Accept wildcard characters: False
 
 ### -ScrubPolicy
 
-
 ```yaml
 Type: ScrubPolicy
 Parameter Sets: (All)

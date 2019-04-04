@@ -56,7 +56,6 @@ Enabling some adapter bindings can automatically disable other network adapter b
 ```
 PS C:\> Enable-NetAdapterBinding -Name "MyAdapter" -DisplayName "Internet Protocol Version 4 (TCP/IPv4)"
 
-
 This command is a version of the cmdlet that enables TCPv4 and IPv4 on the network adapter named MyAdapter using wildcard characters in the display name and restarts the network adapter.
 PS C:\> Enable-NetAdapterBinding -Name "MyAdapter" -DisplayName "Inter* (TCP/IPv4)"
 ```

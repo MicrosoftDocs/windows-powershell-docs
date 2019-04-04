@@ -57,8 +57,6 @@ Set-Volume -InputObject <CimInstance[]> [-NewFileSystemLabel <String>] [-CimSess
 ## DESCRIPTION
 The **Set-Volume** cmdlet sets or changes the file system label of an existing volume. 
 
- 
-                      
 This cmdlet returns either Success or Failure and corresponding error code as follows. 
 
 Type:   Volume 
@@ -222,8 +220,7 @@ Accept wildcard characters: False
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
 By default, this cmdlet does not generate any output. 
- 
-                        
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 

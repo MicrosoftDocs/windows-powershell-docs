@@ -41,7 +41,6 @@ The DFS Replication service uses the Remote Procedure Call (RPC) protocol to com
 ```
 PS C:\> Get-DfsrConnection -GroupName "RG24" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"
 
-
 GroupName               : RG24
 SourceComputerName      : SRV01
 DestinationComputerName : SRV02

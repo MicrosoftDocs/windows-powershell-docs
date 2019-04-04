@@ -354,7 +354,6 @@ Accept wildcard characters: False
 
 ### -IsShadowCopy
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes

@@ -371,7 +371,6 @@ Specifies the wake-up packet value for an IP interface.
 This parameter value determines if an IP interface is configured to wake up a computer with directed MAC packet patterns.
 The acceptable values for this parameter are:
 
-
  -- Enabled
                          
  -- Disabled
@@ -396,7 +395,6 @@ Specifies the value for Explicit Congestion Notification (ECN) marking.
 This parameter value controls the specific ECN marking in the ECN field of the IP header.
 The acceptable values for this parameter are:
 
-
  -- AppDecide.
 Allow an application or higher layer protocol, such as TCP, to decide how to apply ECN marking.
 In order for an application to fully control ECN capability value in the Network TCP setting must also be set to Enabled. 
@@ -406,7 +404,6 @@ Disable the ECN marking on the IP interface.
 Mark all of the egress IP packets on the IP interface with the Ect0 bit set. 
  -- UseEct1.
 Mark all of the egress IP packets on the IP interface with the Ect1 bit set. 
-
 
 The default value is AppDecide.
 
@@ -701,7 +698,6 @@ Accept wildcard characters: False
 ### -PolicyStore
 Specifies a **PolicyStore** value.
 The acceptable values for this parameter are:
-
 
  -- ActiveStore.
 The IP address information is valid. 

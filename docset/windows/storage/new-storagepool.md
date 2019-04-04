@@ -241,7 +241,6 @@ Accept wildcard characters: False
 
 ### -MediaTypeDefault
 
-
 ```yaml
 Type: MediaType
 Parameter Sets: (All)

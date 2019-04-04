@@ -43,8 +43,6 @@ Remove-NetworkControllerIpPool -ConnectionUri https://networkcontroller -Network
 
 Description
 
-
-
 The above command removes an IP pool which is created for subnet named subnet1.
 The subnet is present in a network called ln1.
 

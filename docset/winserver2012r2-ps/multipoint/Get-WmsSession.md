@@ -39,55 +39,37 @@ If no session is specified, it returns session information for all sessions.
 PS C:\> get-WmsSession
 Id           : 2
 
-
 State        : RemoteConnection
 
-
 IsAdmin      : True
-
 
 UserName     : Test
 
-
 StationId    : 0
 
-
 ComputerName : Test1
-
 
 ClientName   : Test2
 
-
 DomainName   : TestDomain
-
 
 IsRail       : False
 
-
-
 Id           : 3
-
 
 State        : ConnectedToStation
 
-
 IsAdmin      : True
-
 
 UserName     : Administrator
 
-
 StationId    : 1
-
 
 ComputerName : Test1
 
-
 ClientName   : Test1
 
-
 DomainName   : TestDomain
-
 
 IsRail       : False
 ```

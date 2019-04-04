@@ -53,7 +53,6 @@ This command modifies the current VLAN ID of the team interface named "Team1 - V
 ```
 PS C:\>Set-NetLbfoTeamNic -Name Team1 -VlanID 5
 
-
 This command changes the primary team interface, "Team1 - VLAN 5" to default mode.
 PS C:\>Set-NetLbfoTeamNic -Name "Team1 - VLAN 5" -Default
 ```

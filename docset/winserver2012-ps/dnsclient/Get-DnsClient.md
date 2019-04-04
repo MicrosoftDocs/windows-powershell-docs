@@ -39,10 +39,7 @@ This example gets configuration details of network interfaces on a computer.
 ```
 PS C:\>$dnsClient1 = Get-DnsClient -InterfaceAlias "Wired Ethernet Connection"
 
-
-
 PS C:\>Set-DnsClientServerAddress -InputObject $dnsClinet1 -ServerAddresses ("10.0.0.1","10.0.0.2")
-
 
 This is a version of the cmdlet using the pipeline.
 PS C:\>Get-DnsClient | Set-DnsClientServerAddress -ServerAddresses ("10.0.0.1","10.0.0.2")

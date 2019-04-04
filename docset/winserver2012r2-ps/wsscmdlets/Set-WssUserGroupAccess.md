@@ -49,7 +49,6 @@ The cmdlet grants the access that you specify to users in the user group.
 To grant more than one type of access, run the cmdlet for each type to grant.
 The acceptable values for this parameter are:
 
-
 - 1 RemoteAccess
 
 - 2 ShareAccess
@@ -98,7 +97,6 @@ Specifies the access to revoke.
 The cmdlet revokes the access that you specify to users in the user group.
 To revoke more than one type of access, use the cmdlet for each type to revoke.
 The acceptable values for this parameter are:
-
 
 - 1 RemoteAccess
 

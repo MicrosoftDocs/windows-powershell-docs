@@ -70,7 +70,6 @@ Stor1_FCTargetPort.0b 500A098487995A75
 Stor1_FCTargetPort.0c 500A098187995A75
 Stor1_FCTargetPort.0d 500A098287995A75
 
-
 PS C:\> $maskingSet | Add-TargetPortToMaskingSet -TargetPortAddresses "500A098187995A75"
 ```
 

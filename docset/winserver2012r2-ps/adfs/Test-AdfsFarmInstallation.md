@@ -326,4 +326,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Test-AdfsFarmJoin](./Test-AdfsFarmJoin.md)
 
-

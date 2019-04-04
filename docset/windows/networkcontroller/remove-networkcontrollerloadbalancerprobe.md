@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroll
 
 Description
 
-
-
 This cmdlet removes a health probe rule named probe1 from a load balancer resource named lb1
 
 ## PARAMETERS

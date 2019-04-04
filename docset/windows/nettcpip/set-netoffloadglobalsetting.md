@@ -68,13 +68,11 @@ Accept wildcard characters: False
 Specifies the TCP Chimney global state on the computer.
 The acceptable values for this parameter are:
 
-
 - Enabled
 
 - Disabled
 
 - Automatic
-
 
 The default value is Disabled.
 
@@ -143,11 +141,9 @@ Specifies the NetworkDirect Remote Direct Memory Access (RDMA) value on the comp
 Use this parameter only on servers.
 The acceptable values for this parameter are:
 
-
 - Enabled
 
 - Disabled
-
 
 The default value is Enabled.
 
@@ -190,11 +186,9 @@ To reduce the number of interrupts that a computer processes, the packet-coalesc
 Use this parameter only on client computers.
 The acceptable values for this parameter are:
 
-
 - Enabled 
 
 - Disabled 
-
 
 The default value is Enabled.
 
@@ -233,11 +227,9 @@ Receive Segment Coalescing parses small packets of data and combines the data in
 Coalescing small packets into a single packet reduces the overhead that is required to process packets.
 The acceptable values for this parameter are:
 
-
 - Enabled
 
 - Disabled
-
 
 The default value is Enabled.
 
@@ -259,11 +251,9 @@ Specifies the Receive Side Scaling settings on the computer.
 Receive Side Scaling distributes the network processing load across multiple processor cores.
 The acceptable values for this parameter are:
 
-
 - Enabled
 
 - Disabled
-
 
 The default value is Enabled.
 
@@ -287,11 +277,9 @@ These features reduce the overhead of per-packet processing by distributing pack
 A modification takes effect after a computer restarts or a network adapter restarts.
 The acceptable values for this parameter are:
 
-
 - Enabled 
 
 - Disabled 
-
 
 The default value is Enabled.
 

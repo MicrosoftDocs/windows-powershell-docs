@@ -40,15 +40,12 @@ The settings are applicable only for volume backups; these settings are not appl
 The settings apply globally to all volumes in a backup, or to specific volumes.
 The valid settings are: 
 
-
 - AlwaysFull:  The time to create a backup is proportional to the size of volume being backed up.
 This setting applies at a global level for all volumes or for specific volumes. 
-
 
 - AlwaysIncremental:  Increase the backup speed by just tracking the changes between the last and current backup.
 This option is not recommended for servers with disk-intensive operation which may experience reduced disk throughput on volumes included in the backup.
 This can be set at a global level for all volumes or specific for some volumes. 
-
 
 - Custom:  This is the global setting reported in case there is a specific volume level setting set.
 

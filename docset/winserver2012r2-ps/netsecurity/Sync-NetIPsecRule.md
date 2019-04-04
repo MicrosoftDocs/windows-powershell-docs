@@ -155,23 +155,13 @@ The resultant specified end point of the queried rule is immediately updated.
 ```
 PS C:\>$serverPolicyStore = domain.contoso.com/server_GPO
 
-
-
 PS C:\>$serverRuleName = "Any-Traffic-Win8DA-Rule"
-
-
 
 PS C:\>$domains = "corp.contoso.com", "corp.contoso2.com"
 
-
-
 PS C:\>$servers = "server2.corp.contoso.com"
 
-
-
 PS C:\>$primaryDns64 = 1.2.2.1
-
-
 
 PS C:\>Sync-NetIPsecRule -PolicyStore $serverPolicyStore -IPsecRuleName $serverRuleName -EndpointType endpoint1 -Domains $domains -Servers $servers -DnsServers $primaryDns64 -AddressType IPv6 -Confirm
 ```

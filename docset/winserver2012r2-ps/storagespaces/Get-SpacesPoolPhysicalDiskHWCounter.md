@@ -45,8 +45,6 @@ WriteErrorsTotal          :
 ReadLatencyMax            : 531
 WriteLatencyMax           : 30
 
-
-
 PhysicalDiskFriendlyName  : Hitachi HDS723030ALA640 ATA Device
 PhysicalDiskUniqueID      : IDE\DiskHitachi_HDS723030ALA640_________________MKAOA340\5&3c1a333&0&1.0.0:SpaceDock
 CurrentTemperatureCelsius : 34
@@ -64,8 +62,6 @@ ReadErrorsTotal           : 0
 WriteErrorsTotal          :
 ReadLatencyMax            : 440
 WriteLatencyMax           : 0
-
-
 
 PhysicalDiskFriendlyName  : WDC WD20EARS-00MVWB0
 PhysicalDiskUniqueID      : SCSI\Disk&Ven_WDC&Prod_WD20EARS-00MVWB0\4&14267af2&0&030000:SpaceDock

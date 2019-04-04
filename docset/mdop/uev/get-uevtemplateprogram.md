@@ -40,7 +40,6 @@ uev_1 monitors each program that is defined in the template for changes to the s
 ```
 PS C:\> Get-UevTemplate | Get-UevTemplateProgram | Format-Table -AutoSize
 
-
 TemplateId                          ProgramName      ProductVersionRange FileVersionRange
 ----------                          -----------      ------------------- ----------------
 MicrosoftCalculator6                CALC.EXE         6-6
@@ -71,7 +70,6 @@ For more information, type `Get-Help Format-Table`.
 ### Example 2: Get all defined programs for Office applications
 ```
 PS C:\> Get-UevTemplate -Application "office" | Get-UevTemplateProgram | Format-Table -AutoSize
-
 
 TemplateId                     ProgramName  ProductVersionRange FileVersionRange
 ----------                     -----------  ------------------- ----------------
@@ -143,5 +141,4 @@ This cmdlet generates an object that contains general information about a progra
 ## RELATED LINKS
 
 [Get-UevTemplate](./Get-UevTemplate.md)
-
 

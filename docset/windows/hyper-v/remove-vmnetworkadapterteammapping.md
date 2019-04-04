@@ -55,7 +55,6 @@ The **Remove-VMNetworkAdapterTeamMapping** cmdlet
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

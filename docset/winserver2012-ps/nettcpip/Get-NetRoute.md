@@ -49,7 +49,6 @@ Without parameters, this cmdlet returns the routing table for all routes on the 
 Used without parameters, this cmdlet gets IP route information for all interfaces.
 PS C:\>Get-NetRoute
 
-
 The default output omits some properties. Run this cmdlet to display all of the fields (all of the properties of the object).
 PS C:\>Get-NetRoute | Format-List -Property *
 ```
@@ -103,7 +102,6 @@ This example gets information about network adapters that have IP routes that ac
 ### EXAMPLE 7
 ```
 PS C:\>Get-NetRoute | Where-Object -FilterScript { $_.ValidLifetime -Eq ([TimeSpan]::MaxValue) }
-
 
 Similarly, this command gets information about IP Routes that do not have an infinite ValidLifetime.
 PS C:\>Get-NetRoute | Where-Object -FilterScript { $_.ValidLifetime -Ne ([TimeSpan]::MaxValue) }

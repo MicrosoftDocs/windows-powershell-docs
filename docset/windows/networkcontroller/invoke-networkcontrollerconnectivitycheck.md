@@ -35,7 +35,6 @@ Invoke-NetworkControllerConnectivityCheck [[-Tags] <PSObject>] [-Properties] <Co
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CertificateThumbprint

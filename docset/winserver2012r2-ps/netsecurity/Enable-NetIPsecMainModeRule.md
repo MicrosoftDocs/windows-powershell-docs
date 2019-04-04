@@ -116,8 +116,6 @@ This example enables all of the main mode client DA rules on the local computer.
 ```
 PS C:\>$Phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Enable-NetIPsecMainModeRule -InputObject $Phase1AuthSet
 ```
 

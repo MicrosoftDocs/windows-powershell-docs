@@ -97,7 +97,6 @@ Accept wildcard characters: False
 
 ### -InitiatorInstanceName
 
-
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1

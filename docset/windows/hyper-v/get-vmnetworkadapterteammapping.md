@@ -51,7 +51,6 @@ The **Get-VMNetworkAdapterTeamMapping** cmdlet
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CimSession

@@ -49,8 +49,6 @@ Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri https://networkco
 
 Description
 
-
-
 This example first creates a resource for QoS settings and sets the reservation mode to "Weight".
 Then, it sets the virtual switch manager settings with the QoS settings.
 

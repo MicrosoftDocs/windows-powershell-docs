@@ -44,11 +44,9 @@ Do not use this cmdlet.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -AddEkus
-
 
 ```yaml
 Type: String[]
@@ -64,7 +62,6 @@ Accept wildcard characters: False
 
 ### -AddExceptions
 
-
 ```yaml
 Type: String[]
 Parameter Sets: SignerRule
@@ -78,7 +75,6 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-
 
 ```yaml
 Type: String
@@ -94,7 +90,6 @@ Accept wildcard characters: False
 
 ### -FilePath
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -108,7 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -HashPath
-
 
 ```yaml
 Type: String
@@ -124,7 +118,6 @@ Accept wildcard characters: False
 
 ### -Id
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -138,7 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -Issuer
-
 
 ```yaml
 Type: String
@@ -154,7 +146,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -168,7 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -OemId
-
 
 ```yaml
 Type: String
@@ -211,7 +201,6 @@ Accept wildcard characters: False
 
 ### -RemoveEkus
 
-
 ```yaml
 Type: String[]
 Parameter Sets: SignerRule
@@ -225,7 +214,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveExceptions
-
 
 ```yaml
 Type: String[]
@@ -241,7 +229,6 @@ Accept wildcard characters: False
 
 ### -Root
 
-
 ```yaml
 Type: String
 Parameter Sets: SignerRule
@@ -255,7 +242,6 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-
 
 ```yaml
 Type: String

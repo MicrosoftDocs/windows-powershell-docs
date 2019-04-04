@@ -47,7 +47,6 @@ If there is more than one route with the same LPM match, then the user defined r
 The above cmdlet adds a new route to a route table named Table1.
 The next hop of this route is a virtual appliance.
 
-
 ```
 $route = new-object Microsoft.Windows.NetworkController.Route
 $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperties

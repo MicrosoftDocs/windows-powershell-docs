@@ -47,7 +47,6 @@ For example, you can use the Get-ADUser cmdlet to retrieve a user object and the
 ```
 C:\PS>Get-ADUserResultantPasswordPolicy BobKe
 
-
 Name                        : DomainUsersPSO
 ComplexityEnabled           : True
 LockoutThreshold            : 10

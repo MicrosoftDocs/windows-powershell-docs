@@ -68,14 +68,11 @@ If the **AuthenticationMethod** parameter is set to pre-shared key (PSK), then o
 If the **AuthenticationMethod** parameter is set to user name or computer certificates (machine certificates), then only the initiator policies are governed by what is specified for each interface and the responder policies are governed by what is specified on the server.
 
 For incoming connections. 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is set to PSK, then the interface for which the destination IP address matches the incoming IP address is activated. 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is set to user name, then the interface for which the name matches the user name is activated. 
- 
-                      
+
  -- If the **AuthenticationMethod** parameter is certificates, then the interface for which the name matches the certificate subject name is activated.
 
 ## EXAMPLES
@@ -113,8 +110,6 @@ This example modifies the responder authentication method for edge1.
 ### EXAMPLE 4
 ```
 PS C:\>$cert1 = ( Get-ChildItem -Path cert:LocalMachine\My | Where-Object -FilterScript { $_.Subject -Like "*CN=edge1.contoso.com" } )
-
-
 
 PS C:\>Set-VpnS2SInterface -Name 3-edge1 -AuthenticationMethod MachineCertificates -Certificate $cert1 -ResponderAuthenticationMethod MachineCertificates -PassThru
 Name                 Destination          AdminStatus  ConnectionState IPv4Subnet 
@@ -598,8 +593,7 @@ Accept wildcard characters: False
 
 ### -NumberOfTries
 Specifies the number of connection attempts. 
- 
-                        
+
 If this parameter is specified as zero (0), then the connection is not retried if the first attempt fails.
 
 ```yaml
@@ -632,8 +626,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password for the user name to be used for the connection. 
- 
-                        
+
 Applicable only if the **AuthenticationMethod** parameter is set to EAP.
 
 ```yaml

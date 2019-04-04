@@ -51,7 +51,6 @@ $config.NetworkVirtualizationProtocol="NVGRE"
 Set-NetworkControllerVirtualNetworkConfiguration -ConnectionUri https://networkcontroller -ResourceId vnetglobalconfig -Properties $config
 ```
 
-
 ## PARAMETERS
 
 ### -CertificateThumbPrint

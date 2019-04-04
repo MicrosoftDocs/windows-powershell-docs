@@ -45,10 +45,8 @@ The advanced property must have the **DisplayName** parameter value specified.
 ```
 PS C:\>Reset-NetAdapterAdvancedProperty -Name MyAdapter -DisplayName "Interrupt Moderation"
 
-
 This is a version of the cmdlet that resets the advanced property interrupt moderation to the default value, using wildcard characters in the property name.
 PS C:\>Reset-NetAdapterAdvancedProperty -Name MyAdapter -DisplayName "Interru*"
-
 
 This is a version of the cmdlet that resets all advanced properties with display names to the default values.
 PS C:\>Reset-NetAdapterAdvancedProperty -Name MyAdapter -DisplayName *
@@ -59,8 +57,6 @@ This example resets the advanced property interrupt moderation to the default va
 ### EXAMPLE 2
 ```
 PS C:\>Get-NetAdapterAdvancedProperty -Name MyAdapter | Format-List -Property Name, DisplayName, RegistryKeyword, Valid*;
-
-
 
 PS C:\>Reset-NetAdapterAdvancedProperty -Name MyAdapter -DisplayName *
 ```

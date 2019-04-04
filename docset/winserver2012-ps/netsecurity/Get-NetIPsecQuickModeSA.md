@@ -60,8 +60,6 @@ This example gets all of the IPsec quick mode SAs on the local computer.
 ```
 PS C:\>$computer1 = "RemoteMachineName"
 
-
-
 PS C:\>Get-NetIPsecMainModeSA -Name "196511" -CimSession $computer1 | Remove-NetIPsecQuickModeSA -CimSession $computer1
 ```
 

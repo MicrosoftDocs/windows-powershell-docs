@@ -71,7 +71,6 @@ Alternatively, piping the array of **NetFirewallSecurityFilter** objects directl
 ```
 PS C:\>Get-NetFirewallSecurityFilter -PolicyStore ActiveStore
 
-
 This cmdlet shows the same information in a dynamically-sized, formatted table.
 PS C:\>Get-NetFirewallSecurityFilter -PolicyStore ActiveStore | Format-Table -Property *
 ```

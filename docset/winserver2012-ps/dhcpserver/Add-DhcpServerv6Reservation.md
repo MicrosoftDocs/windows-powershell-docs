@@ -56,8 +56,6 @@ Prefix,IPAddress,Name,ClientDuid,Iaid,Description
 ```
 PS C:\>$freeip = Get-DhcpServerv6FreeIPAddress -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020::
 
-
-
 PS C:\>Add-DhcpServerv6Reservation -ComputerName dhcpserver.contoso.com -Prefix 2001:4898:7020:1020:: -IPAddress $freeip -ClientDuid 00-01-00-01-15-F9-7F-AB-F0-DE-F1-7A-00-5E -Iaid 234890455 -Description "Reservation for Printer"
 ```
 

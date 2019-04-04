@@ -110,7 +110,6 @@ Note that both deleted and non-deleted (and non-recycled) objects matching the f
 PS C:\>$ChangeDate = New-Object DateTime(2008, 11, 18, 1, 40, 02)
 PS C:\> Get-ADObject -Filter 'whenChanged -gt $ChangeDate -and isDeleted -eq $True -and -not (isRecycled -eq $True) -and name -ne "Deleted Objects"' -IncludeDeletedObjects
 
-
 ObjectGUID        : 98118958-91c7-437d-8ada-ba0b66db823b
 Deleted           : True
 DistinguishedName : CN=Andrew Ma\0ADEL:98118958-91c7-437d-8ada-ba0b66db823b,CN=Deleted Objects,DC=FABRIKAM,DC=COM
@@ -127,7 +126,6 @@ This example only returns objects that can be restored.
 ```
 PS C:\>$ChangeDate = New-Object DateTime(2008, 11, 18, 1, 40, 02)
 PS C:\> Get-ADObject -Filter 'whenChanged -gt $ChangeDate -and isDeleted -eq $True -and -not (isRecycled -eq $True) -and lastKnownParent -eq "OU=Accounting,DC=Fabrikam,DC=com"' -IncludeDeletedObjects
-
 
 ObjectGUID        : 12d53e7f-aaf7-4790-b41a-da19044504db
 Deleted           : True

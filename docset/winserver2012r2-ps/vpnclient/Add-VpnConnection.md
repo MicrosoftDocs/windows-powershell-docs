@@ -134,7 +134,6 @@ By specifying the **Passthru** parameter, you can see the configuration of the V
 This command stores the result of the New-EapConfiguration cmdlet into the variable named **$A**.
 PS C:\>$A = New-EapConfiguration
 
-
 This command adds a new VPN connection named Test5 to the server with an IP address of 10.1.1.1. This connection is configured to use the custom EAP authentication method specifying the **EapConfigXmlStream** parameter, and using the **EapConfigXmlStream** method of the **$A** variable created earlier. Additional parameters specify that the connection: 
 
 -- Uses split tunneling (the **SplitTunneling** parameter) 

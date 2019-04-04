@@ -50,8 +50,6 @@ This command retrieves a list of print jobs on the printer named PrinterName.
 ```
 PS C:\>$printer = Get-Printer -Name "PrinterName:"
 
-
-
 PS C:\>Get-PrintJob -InputObject $printer
 ```
 

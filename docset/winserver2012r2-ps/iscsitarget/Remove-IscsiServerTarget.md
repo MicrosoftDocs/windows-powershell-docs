@@ -53,8 +53,6 @@ This example deletes the target named TargetOne on the local server.
 ```
 PS C:\>$all = Get-IscsiServerTarget
 
-
-
 PS C:\>ForEach-Object -InputObject ($each in $all) -Process {Remove-IscsiServerTarget -InputObject $each}
 ```
 

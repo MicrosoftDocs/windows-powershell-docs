@@ -55,7 +55,6 @@ Note: The subject name of certificate must be same as the respective certificate
 Create a load balanced cluster using the Set-RemoteAccessLoadBalancer cmdlet.
 PS C:\>Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "131.107.0.20/255.255.255.0" -InternalDedicatedIPAddress @("3ffe::2/64","10.0.0.2/255.255.255.0") -InternetVirtualIPAddress @("131.107.0.5/255.255.255.0","131.107.0.15/255.255.255.0") -InternalVirtualIPAddress @("3ffe::5/64","10.0.0.5/255.255.255.0")
 
-
 Add the Edge2 server as a new node in this load balanced cluster.
 PS C:\>$RemoteAccessNLB = Add-RemoteAccessLoadBalancerNode -RemoteAccessServer Edge2.corp.contoso.com -PassThru
 Confirm 

@@ -57,4 +57,3 @@ Removes an attestation policy from HGS.
 ### [Remove-HgsAttestationTpmHost](Remove-HgsAttestationTpmHost.md)
 Removes a guarded host with TPM 2.0 from the Attestation service in HGS.
 
-

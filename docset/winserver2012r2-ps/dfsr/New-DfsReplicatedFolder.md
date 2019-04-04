@@ -40,7 +40,6 @@ Replicated folders are logical arrangements of replication that do not contain c
 ```
 PS C:\> New-DfsReplicatedFolder -GroupName "RG22" -FolderName "RF26"
 
-
 GroupName              : RG22
 FolderName             : RF26
 DomainName             : corp.contoso.com
@@ -60,9 +59,7 @@ The command does not alter the default settings for a replicated folder.
 ```
 PS C:\> New-DfsReplicatedFolder -GroupName "RG22" -FolderName "RF26" -DfsnPath \\corp.contoso.com\public\link1
 
-
 WARNING: The DfsnPath parameter is not validated. An incorrect path will not produce an error.
-
 
 GroupName              : RG22
 FolderName             : RF267
@@ -83,7 +80,6 @@ The cmdlet reminds the administrator that the DFSN path is cosmetic only and is 
 ### Example 3: Create a replicated folder that excludes specific file names
 ```
 PS C:\> New-DfsReplicatedFolder -GroupName "RG11" -FolderName "RF08" -FileNameToExclude "~*, *.bak, *.tmp, *.ned"
-
 
 GroupName              : RG11
 FolderName             : RF08
@@ -114,8 +110,6 @@ SRV03.corp.contoso.com Branch Office 1
 The second command creates a bidirectional replication connection between the computer named SRV01 and the computer named SRV02 in the replication group named Branch Office 1.
 PS C:\>Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName SRV01 -DestinationComputerName SRV02 | Format-Table *name -wrap -auto
 
-
-
 GroupName       SourceComputerName DestinationComputerName
 ---------       ------------------ -----------------------
 Branch Office 1 SRV01               SRV02
@@ -131,14 +125,12 @@ Branch Office 1 SRV03               SRV01
 The fourth command uses the Set-DfsrMembership cmdlet to configure membership settings for the primary member of the replication group named Branch Office 1. The command specifies that the computer named SRV01 is the primary member of the group. The command sets an appropriate quota size of the staging folder instead of the lower default.
 PS C:\>Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath c:\rf1 -ComputerName SRV01 -PrimaryMember $True -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
 
-
 DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
 ----------       ---------       ----------          ------------ ----------- -----------                -------------
 corp.contoso.com Branch Office 1 Data Distribution 1 SRV01         c:\rf1      c:\rf1\DfsrPrivate\Staging          True
 
 The last command uses the Set-DfsrMembership cmdlet to configure membership settings for the members of the replication group named Branch Office 1. The command specifies that the computers named SRV02 and SRV03 are members of the group. The command sets an appropriate quota size of the staging folder instead of the lower default.
 PS C:\>Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath c:\rf1 -ComputerName SRV02,SRV03 -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
-
 
 DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
 ----------       ---------       ----------          ------------ ----------- -----------                -------------

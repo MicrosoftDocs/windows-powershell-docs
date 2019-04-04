@@ -40,7 +40,6 @@ When a DNS suffix that you add to the VPN profile is present on the physical int
 PS C:\> Add-VpnConnectionTriggerTrustedNetwork -ConnectionName Contoso -DnsSuffix "newyork.contoso.com","washington.contoso.com" -PassThru
 ConnectionName : Contoso
 
-
 DnsSuffix      : {newyork.contoso.com, washington.contoso.com}
 ```
 

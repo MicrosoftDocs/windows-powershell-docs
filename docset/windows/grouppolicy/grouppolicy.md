@@ -26,7 +26,6 @@ This topic contains the brief descriptions of the Windows PowerShell� cmdlets 
 
 Each cmdlet in the table is linked to additional information about that cmdlet.
 
-
 ## GroupPolicy Cmdlets
 ### [Backup-GPO](./Backup-GPO.md)
 Backs up one GPO or all the GPOs in a domain.
@@ -105,5 +104,4 @@ Configures a Registry preference item under either Computer Configuration or Use
 
 ### [Set-GPRegistryValue](./Set-GPRegistryValue.md)
 Configures one or more registry-based policy settings under either Computer Configuration or User Configuration in a GPO.
-
 

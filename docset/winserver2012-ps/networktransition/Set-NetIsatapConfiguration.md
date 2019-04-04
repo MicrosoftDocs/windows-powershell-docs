@@ -46,10 +46,7 @@ This command modifies the router name.
 ```
 PS C:\>$config = ( Get-NetIPInterface -InterfaceIndex 14 | Get-NetIPISATAPConfiguration )
 
-
 PS C:\>$config.Router = "SuperIsatap"
-
-
 
 PS C:\>Set-NetIsatapConfiguration -InputObject $config
 ```

@@ -66,4 +66,3 @@ Sets the role of a member network adapter in a NIC team.
 ### [Set-NetLbfoTeamNic](./Set-NetLbfoTeamNic.md)
 Sets a new VLAN id on a team interface, or restores the interface to Default mode.
 
-

@@ -84,8 +84,6 @@ This example deletes a set based on the localized name.
 ```
 PS C:\>$ipsRule = Get-NetIPsecRule -DisplayName "Transport Mode - Extranet IPv4"
 
-
-
 PS C:\>Remove-NetIPsecPhase2AuthSet -InputObject $ipsRule
 ```
 

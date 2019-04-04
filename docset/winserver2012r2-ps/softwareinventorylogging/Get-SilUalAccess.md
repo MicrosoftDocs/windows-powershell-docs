@@ -44,14 +44,12 @@ The cmdlet returns totals for one calendar day, two days prior to when the cmdle
 ```
 PS C:\> Get-SilUalAccess
 
-
 ProductName             : Windows Server 2012 R2 Datacenter
 RoleGuid                : 10a9226f-50ee-49d8-a393-9a501d47ce04
 RoleName                : File Server
 SampleDate              : 3/30/2013 11:59:59 PM
 UniqueDeviceAccessCount : 45
 UniqueUserAccessCount   : 45
-
 
 ProductName             : Windows Server 2012 R2 Datacenter
 RoleGuid                : 7fb09bd3-7fe6-435e-8348-7d8aefb6cea3

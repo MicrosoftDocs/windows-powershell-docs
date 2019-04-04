@@ -47,8 +47,6 @@ Remove-NetworkControllerRouteTable -ConnectionUri https://networkcontroller -Res
 
 Description
 
-
-
 The above cmdlet removes a route table from the Network Controller with resource ID Route1.
 
 ## PARAMETERS

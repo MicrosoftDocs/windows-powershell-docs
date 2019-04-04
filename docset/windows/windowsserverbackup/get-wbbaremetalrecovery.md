@@ -36,7 +36,6 @@ The recovery process backs up the system volume and master boot record by copyin
 
 For more information about bare metal recovery, see [Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
-
 If a policy does not include the ability to perform bare metal recoveries from backups, use the [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md) cmdlet to add this ability.
 
 To use this cmdlet, you must be a member of the Administrators group or Backup Operators group.

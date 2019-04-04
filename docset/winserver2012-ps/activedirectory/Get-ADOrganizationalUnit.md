@@ -60,7 +60,6 @@ For more information about the how to determine the properties for computer obje
 ```
 C:\PS>Get-ADOrganizationalUnit -Filter 'Name -like "*"' | FT Name, DistinguishedName -A
 
-
 Name                 DistinguishedName
 ----                 -----------------
 Domain Controllers   OU=Domain Controllers,DC=FABRIKAM,DC=COM
@@ -92,7 +91,6 @@ Gets all the Organizational Units in the domain
 ```
 C:\PS>Get-ADOrganizationalUnit -Identity 'OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' | ft Name,Country,PostalCode,City,StreetAddress,State -A
 
-
 Name        Country PostalCode City     StreetAddress    State
 ----        ------- ---------- ----     -------------    -----
 AsiaPacific AU      4171       Balmoral 45 Martens Place QLD
@@ -107,7 +105,6 @@ Gets the Organizational Unit with DistinguishedName 'OU=AsiaPacific,OU=Sales,OU=
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Get-ADOrganizationalUnit -LDAPFilter '(name=*)' -SearchBase 'OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' -SearchScope OneLevel | ft Name,Country,PostalCode,City,StreetAddress,State
-
 
 Name                    Country                 PostalCode             City                   StreetAddress          State
 ----                    -------                 ----------             ----                   -------------          -----

@@ -55,7 +55,6 @@ $lbconfig.VipPools = $pool
 New-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://networkcontroller -ResourceId lbconfig1 -Properties $lbconfig
 ```
 
-
 ## PARAMETERS
 
 ### -CertificateThumbPrint

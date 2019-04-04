@@ -55,19 +55,12 @@ However, only one of these filters can be used at a time.
 ```
 PS C:\>$startdate = Get-Date -Date "12/16/2011"
 
-
-
 PS C:\>$startdate
 16 December 2011 00:00:00
 
-
 PS C:\>$enddate = Get-Date -Date "12/23/2011"
 
-
-
 PS C:\>$enddate
-
-
 
 PS C:\>Get-RemoteAccessUserActivity -StartDateTime $startdate -EndDateTime $enddate -UserName "corp.contoso.com\User1"
 ServerIpAddress                          ProtocolID                     ServerPort 
@@ -179,7 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -SessionId
-
 
 ```yaml
 Type: UInt64

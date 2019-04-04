@@ -78,9 +78,7 @@ This command sets the default paper size of the printer named "Microsoft XPS Doc
 ```
 PS C:\>$PrintConfiguration = Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
 
-
 PS C:\>$PrintConfiguration.paperSize = A4
-
 
 PS C:\>Set-PrintConfiguration -InputObject $PrintConfiguration
 ```
@@ -331,5 +329,4 @@ This cmdlet produces no output objects.
 ## RELATED LINKS
 
 [Get-PrintConfiguration](./Get-PrintConfiguration.md)
-
 

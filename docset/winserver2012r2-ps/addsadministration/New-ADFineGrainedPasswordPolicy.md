@@ -110,7 +110,6 @@ Accept wildcard characters: False
 Specifies whether password complexity is enabled for the password policy.
 If enabled, the password must contain three of the following four character types:
 
-
 - Uppercase characters (A, B, C, D, E, ...)
 
 - Lowercase characters (a, b, c, d, e, ...)

@@ -68,11 +68,7 @@ This example removes all of the active main mode cryptographic sets on the local
 ```
 PS C:\>$computer1 = "RemoteMachineName"
 
-
-
 PS C:\>$ipsQMSA = Get-NetIPsecQuickModeSA -Name "3456" -CimSession $computer1
-
-
 
 PS C:\>Remove-NetIPsecMainModeSA -CimSession $computer1 -InputObject $ipsQMSA
 ```

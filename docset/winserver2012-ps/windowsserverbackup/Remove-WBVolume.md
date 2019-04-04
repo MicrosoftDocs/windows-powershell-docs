@@ -117,8 +117,6 @@ The Remove-WBVolume cmdlet displays the list of **WBVolume** objects left in **W
 ## NOTES
 * The **WBPolicy** object must be in edit mode. To put the **WBPolicy** object in edit mode for a policy that you set as the scheduled backup policy, use the Get-WBPolicy cmdlet with the **Editable** parameter. The New-WBPolicy cmdlet creates a new **WBPolicy** object that is already in edit mode.
 
-  
-
 ## RELATED LINKS
 
 [Add-WBVolume](./Add-WBVolume.md)

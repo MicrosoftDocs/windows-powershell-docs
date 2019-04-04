@@ -34,7 +34,6 @@ For example, you can use the Get-ADServiceAccount to get a MSA object and then p
 ```
 C:\PS>Test-ADServiceAccount -Identity MSA1
 
-
 True
 ```
 
@@ -47,7 +46,6 @@ Tests that the specified service account ("MSA1") is ready for use (it is able b
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
 C:\PS>Test-ADServiceAccount -Identity MSA1
-
 
 False
 
@@ -63,7 +61,6 @@ Test results returned if MsaInfoCannotInstall
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
 C:\PS>Test-ADServiceAccount -Identity MSA1
-
 
 False
 

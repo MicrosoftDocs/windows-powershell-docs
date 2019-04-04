@@ -49,7 +49,6 @@ Instead, use the Get-AdfsDeviceRegistrationUpnSuffix cmdlet.
 
 ### -PassThru
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

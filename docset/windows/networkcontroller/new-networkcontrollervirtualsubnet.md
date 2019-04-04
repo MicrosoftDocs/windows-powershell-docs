@@ -47,8 +47,6 @@ New-NetworkControllerVirtualSubnet -ConnectionUri https://networkcontroller -Res
 
 Description
 
-
-
 The above cmdlet creates a virtual subnet with an address prefix of 24.30.1.0/24 in a virtual network called Contoso.
 
 ## PARAMETERS

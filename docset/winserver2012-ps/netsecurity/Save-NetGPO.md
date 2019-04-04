@@ -38,15 +38,9 @@ If any other changes were made by another administrator, or in a different Windo
 ```
 PS C:\>$gpoSession = Open-NetGPO -PolicyStore castle.contoso.com\Win8ClientFirewallPolicy
 
-
-
 PS C:\>Remove-NetFirewallRule -Name BlockIMAccess -GPOSession $gpoSession
 
-
-
 PS C:\>New-NetFirewallRule -Name LimitIMAccess -DisplayName "Contoso Messenger" -Program "%ProgramFiles(X86)%\Contoso Messenger\cmsg.exe" -Action Block -GPOSession $gpoSession
-
-
 
 PS C:\>Save-NetGPO -GPOSession $gpoSession
 ```

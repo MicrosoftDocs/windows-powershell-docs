@@ -41,7 +41,6 @@ If you regenerate a certificate, the existing certificate becomes invalid.
 ```
 PS C:\> Get-HcsRemoteManagementCert
 
-
 -----BEGIN CERTIFICATE-----
 MIIEIDCCAwigAwIBAgIQdPcK05gau6dNUMrOwzatvDANBgkqhkiG9w0BAQUFADCBpjEgMB4GA1UE
 CwwXSGNzUmVtb3RlTWFuYWdlbWVudENlcnQxHjAcBgNVBAoMFU1pY3Jvc29mdCBDb3Jwb3JhdGlv

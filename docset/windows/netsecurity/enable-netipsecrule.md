@@ -153,8 +153,6 @@ This example enables all transport mode DA rules on the local computer.
 ```
 PS C:\>$Phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Enable-NetIPsecRule -InputObject $Phase1AuthSet
 ```
 

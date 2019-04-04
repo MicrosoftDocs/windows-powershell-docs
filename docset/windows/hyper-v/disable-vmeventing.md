@@ -48,7 +48,6 @@ Disables virtual machine eventing, suppressing the confirmation prompt.
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
@@ -95,7 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-
 
 ```yaml
 Type: PSCredential[]

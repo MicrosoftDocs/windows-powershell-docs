@@ -42,7 +42,6 @@ If the *Uninstall* parameter is specified, the App-V Client prevents all client 
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Normal

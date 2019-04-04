@@ -41,7 +41,6 @@ If the name is not known, the cmdlet will throw an error.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Name

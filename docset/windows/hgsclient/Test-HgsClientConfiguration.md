@@ -90,7 +90,6 @@ Accept wildcard characters: False
 
 ### None
 
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance

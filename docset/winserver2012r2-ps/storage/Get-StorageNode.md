@@ -204,7 +204,6 @@ Accept wildcard characters: False
 
 ### -StorageEnclosure
 
-
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageEnclosure

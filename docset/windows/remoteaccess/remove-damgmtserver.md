@@ -44,8 +44,6 @@ The management server configuration is applicable globally to the entire DA depl
 ```
 PS C:\> $mgmt = Get-DAMgmtServer -Type Manual
 
-
-
 PS C:\>Remove-DAMgmtServer -MgmtServer $mgmt
 ```
 

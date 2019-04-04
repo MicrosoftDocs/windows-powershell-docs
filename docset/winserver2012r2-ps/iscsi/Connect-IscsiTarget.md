@@ -366,4 +366,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 
-

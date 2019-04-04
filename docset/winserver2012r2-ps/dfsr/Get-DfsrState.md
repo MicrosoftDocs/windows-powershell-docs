@@ -38,7 +38,6 @@ The cmdlet returns both inbound and outbound file replication information, such 
 ```
 PS C:\> Get-DfsrState -ComputerName "SRV01" | Format-Table filename,updatestate,inbound,source* -auto -wrap
 
-
 FileName                   UpdateState Inbound SourceComputerName
 --------                   ----------- ------- ------------------
 ntfrs - Copy.exe             Scheduled    True SRV02

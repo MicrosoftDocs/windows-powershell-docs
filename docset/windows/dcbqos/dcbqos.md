@@ -26,7 +26,6 @@ ms.assetid: 4ACBF941-38FF-485B-8919-22C594AC7788
 This reference provides cmdlet descriptions and syntax for all Data Center Bridging (DCB) Quality of Service (QoS)-specific cmdlets. 
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-
 ## DcbQoS Cmdlets
 ### [Disable-NetQosFlowControl](./Disable-NetQosFlowControl.md)
 Disables link level flow control based on the IEEE 802.1p priority.
@@ -60,11 +59,7 @@ Sets the traffic class settings.
 
 ### [Switch-NetQosDcbxSetting](./Switch-NetQosDcbxSetting.md)
 
-
 ### [Switch-NetQosFlowControl](./Switch-NetQosFlowControl.md)
 
-
 ### [Switch-NetQosTrafficClass](./Switch-NetQosTrafficClass.md)
-
-
 

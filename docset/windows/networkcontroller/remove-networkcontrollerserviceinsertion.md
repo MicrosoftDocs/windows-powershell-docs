@@ -43,8 +43,6 @@ Remove-NetworkControllerServiceInsertion -ConnectionUri https://networkcontrolle
 
 Description
 
-
-
 This example removes a service insertion resource named SI1 from the Network Controller.
 
 ## PARAMETERS

@@ -220,8 +220,6 @@ The Get-WBVolume cmdlet displays the array of volumes in the **WBPolicy** object
 ## NOTES
 * You can add the volumes that you get from  Get-WBVolume to the **WBPolicy** object by using the Add-WBVolume cmdlet to specify them as volumes to be backed up, or by using the New-WBBackupTarget cmdlet to specify them as backup storage locations.
 
-  
-
 ## RELATED LINKS
 
 [Add-WBVolume](./Add-WBVolume.md)

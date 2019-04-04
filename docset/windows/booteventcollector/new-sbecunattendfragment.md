@@ -50,7 +50,6 @@ See the description of the *FirstOrder* parameter for more information.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -BusParameters

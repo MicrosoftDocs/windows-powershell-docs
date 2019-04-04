@@ -37,15 +37,9 @@ ps_mob_user_group_remark
 ```
 PS C:\>$fspec = New-OBFileSpec -FileSpec C:\test\texttext1.txt
 
-
-
 PS C:\>$rpolicy = New-OBRetentionPolicy
 
-
-
 PS C:\>$sch = New-OBSchedule
-
-
 
 PS C:\>New-OBPolicy | Add-OBFileSpec -FileSPec $fspec | Set-OBRetentionPolicy -RetentionPolicy $rpolicy | Set-OBSchedule -Schedule $sch | Set-OBPolicy
 ```

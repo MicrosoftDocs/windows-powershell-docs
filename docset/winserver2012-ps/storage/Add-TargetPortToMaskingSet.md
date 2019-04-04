@@ -49,8 +49,6 @@ ps_storage_spacesubsystem_not_remark
 ```
 PS C:\> $TargetPortObject = Get-TargetPort
 
-
-
 PS C:\> $subSystem = Get-StorageSubSystem SANArray1
 PS C:\>$maskingSet = Get-MaskingSet "Cluster1MaskingSet"
 PS C:\>$subSystem | Get-TargetPort | Where-Object ConnectionType -eq "Fibre Channel" | Format-Table -AutoSize FriendlyName, PortAddress
@@ -65,8 +63,6 @@ Stor1_FCTargetPort.0b 500A098487995A75
 Stor1_FCTargetPort.0c 500A098187995A75
 
 Stor1_FCTargetPort.0d 500A098287995A75
-
-
 
 PS C:\>$maskingSet | Add-TargetPortToMaskingSet -TargetPortAddresses "500A098187995A75"
 ```

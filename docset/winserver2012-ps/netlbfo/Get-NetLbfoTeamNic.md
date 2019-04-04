@@ -37,7 +37,6 @@ The **Get-NetLbfoTeamNic** cmdlet retrieves a list of team interfaces as specifi
 ```
 PS C:\>Get-NetLbfoTeamNic -Team Team1
 
-
 Or
 PS C:\>$teamObj = Get-NetLbfoTeam -Name 'Team1'
 

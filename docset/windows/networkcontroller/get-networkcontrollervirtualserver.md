@@ -33,7 +33,6 @@ Get-NetworkControllerVirtualServer [[-ResourceId] <String[]>] -ConnectionUri <Ur
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CertificateThumbprint

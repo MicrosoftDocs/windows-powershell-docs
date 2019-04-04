@@ -67,11 +67,7 @@ This example sets the description for a target named TargetOne to Target for ini
 ```
 PS C:\> $password = ConvertTo-SecureString -String "passwordpass" -AsPlainText -Force
 
-
-
 PS C:\> $chap = New-Object -ComObject System.Management.Automation.PSCredential("user", $password)
-
-
 
 PS C:\> Set-IscsiServerTarget -TargetName "T1" -EnableChap $True -Chap $chap
 ```

@@ -122,8 +122,6 @@ This example disables all of the main mode client DA rules on a local computer.
 ```
 PS C:\>$phase1AuthSet = Get-NetIPsecPhase1AuthSet -DisplayName "Computer Kerb, CA Auth"
 
-
-
 PS C:\>Disable-NetIPsecMainModeRule -InputObject $phase1AuthSet
 ```
 
@@ -542,8 +540,7 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
                          
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-                         
-                         
+
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
  -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 

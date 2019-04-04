@@ -119,8 +119,6 @@ This command returns all users that are disabled.
 ```
 PS C:\>Search-ADAccount -AccountExpired | FT Name,ObjectClass -A
 
-
-
 Name            ObjectClass
 ----            -----------
 Evan Narvaez 
@@ -146,8 +144,6 @@ This command returns all users, computers, and service accounts that will expire
 ### Example 5: Get all accounts that have expire
 ```
 PS C:\>Search-ADAccount -PasswordExpired | FT Name,ObjectClass -A
-
-
 
 Name                        ObjectClass
 ----                        -----------

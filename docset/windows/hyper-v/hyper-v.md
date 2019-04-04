@@ -252,7 +252,6 @@ Gets members of a routing domain.
 
 ### [Get-VMNetworkAdapterTeamMapping](./Get-VMNetworkAdapterTeamMapping.md)
 
-
 ### [Get-VMNetworkAdapterVlan](./Get-VMNetworkAdapterVlan.md)
 Gets the virtual LAN settings configured on a virtual network adapter.
 
@@ -423,7 +422,6 @@ Removes a routing domain from a virtual network adapter.
 
 ### [Remove-VMNetworkAdapterTeamMapping](./Remove-VMNetworkAdapterTeamMapping.md)
 
-
 ### [Remove-VMRemoteFx3dVideoAdapter](./Remove-VMRemoteFx3dVideoAdapter.md)
 Removes a RemoteFX 3D video adapter from a virtual machine.
 
@@ -570,7 +568,6 @@ Sets virtual subnets on a routing domain.
 
 ### [Set-VMNetworkAdapterTeamMapping](./Set-VMNetworkAdapterTeamMapping.md)
 
-
 ### [Set-VMNetworkAdapterVlan](./Set-VMNetworkAdapterVlan.md)
 Configures the virtual LAN settings for the traffic through a virtual network adapter.
 
@@ -660,5 +657,4 @@ Tests the connection between a primary server and a Replica server.
 
 ### [Update-VMVersion](./Update-VMVersion.md)
 Updates the version of virtual machines.
-
 

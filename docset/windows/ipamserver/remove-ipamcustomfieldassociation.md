@@ -54,7 +54,6 @@ NetworkSite.Do you want to continue?
 
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 
-
 The second command uses the Get-IpamCustomFieldAssociation to get all associations. The associations that the first command removed do not appear.
 PS C:\> Get-IpamCustomFieldAssociation
 CustomFieldOne   : Region

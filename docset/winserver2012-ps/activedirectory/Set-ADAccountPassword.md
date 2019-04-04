@@ -102,7 +102,6 @@ Prompts the user for a new password that is stored in a temporary variable named
 ```
 PS C:\Users\administrator.FABRIKAM> set-adaccountpassword "CN=Molly Dempsey,OU=AccountDeptOU,DC=AppNC" -server "dsp13a24:60000"
 
-
 Please enter the current password for 'CN=mollyd,OU=AccountDeptOU,DC=AppNC'
 Password:**********
 Please enter the desired password for 'CN=mollyd,OU=AccountDeptOU,DC=AppNC'

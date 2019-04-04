@@ -139,7 +139,6 @@ It may denote the Storage subsystem of the local computer (on which the cmdlet i
 
 Selecting the local subsystem:
 
-
 - On a standalone machine, no remote subsystems: All logs are gathered for that computer. 
 
 - On a standalone machine, remote subsystems registered: All logs are gathered for the standalone machine, including the client-side remoting calls. 
@@ -147,18 +146,12 @@ Selecting the local subsystem:
 - On a cluster node: All logs for that particular cluster node are gathered, even ones that belong in the cluster subsystem for that node only.
 None of the other nodes are logged. 
 
-
-
 Selecting the cluster subsystem:
-
 
 - All logs are gathered for each node in that cluster.
 This includes and logs or tracing that may correspond to a node's local subsystem. 
 
-
-
 Selecting a remote subsystem:
-
 
 - Tracing and logs are only gathered for the remote endpoint.
 What logs and tracing are gathered depend on whether it is a cluster or a standalone machine (see above cases). 
@@ -186,7 +179,6 @@ It may denote the Storage subsystem of the local computer (on which the cmdlet i
 
 Selecting the local subsystem:
 
-
 - On a standalone machine, no remote subsystems: All logs are gathered for that computer. 
 
 - On a standalone machine, remote subsystems registered: All logs are gathered for the standalone machine, including the client-side remoting calls. 
@@ -194,18 +186,12 @@ Selecting the local subsystem:
 - On a cluster node: All logs for that particular cluster node are gathered, even ones that belong in the cluster subsystem for that node only.
 None of the other nodes are logged. 
 
-
-
 Selecting the cluster subsystem:
-
 
 - All logs are gathered for each node in that cluster.
 This includes and logs or tracing that may correspond to a node's local subsystem. 
 
-
-
 Selecting a remote subsystem:
-
 
 - Tracing and logs are only gathered for the remote endpoint.
 What logs and tracing are gathered depend on whether it is a cluster or a standalone machine (see above cases). 
@@ -233,7 +219,6 @@ It may denote the Storage subsystem of the local computer (on which the cmdlet i
 
 Selecting the local subsystem:
 
-
 - On a standalone machine, no remote subsystems: All logs are gathered for that computer. 
 
 - On a standalone machine, remote subsystems registered: All logs are gathered for the standalone machine, including the client-side remoting calls. 
@@ -241,18 +226,12 @@ Selecting the local subsystem:
 - On a cluster node: All logs for that particular cluster node are gathered, even ones that belong in the cluster subsystem for that node only.
 None of the other nodes are logged. 
 
-
-
 Selecting the cluster subsystem:
-
 
 - All logs are gathered for each node in that cluster.
 This includes and logs or tracing that may correspond to a node's local subsystem. 
 
-
-
 Selecting a remote subsystem:
-
 
 - Tracing and logs are only gathered for the remote endpoint.
 What logs and tracing are gathered depend on whether it is a cluster or a standalone machine (see above cases). 

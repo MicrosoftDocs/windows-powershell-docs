@@ -136,8 +136,6 @@ ComputerVersion  : AD Version: 0, SysVol Version: 0
 
 WmiFilter        : 
 
-
-
 DisplayName      : TestGPO-2 
 
 DomainName       : contoso.com 

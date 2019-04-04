@@ -152,7 +152,6 @@ Accept wildcard characters: False
 
 ### -Delay
 
-
 ```yaml
 Type: UInt16
 Parameter Sets: NameWait, VMObjectWait
@@ -166,7 +165,6 @@ Accept wildcard characters: False
 ```
 
 ### -For
-
 
 ```yaml
 Type: WaitVMTypes
@@ -228,7 +226,6 @@ Accept wildcard characters: False
 
 ### -Timeout
 
-
 ```yaml
 Type: Int32
 Parameter Sets: NameWait, VMObjectWait
@@ -257,7 +254,6 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
 
 ```yaml
 Type: SwitchParameter

@@ -41,7 +41,6 @@ For more information on TPM, see the Trusted Platform Module Technology Overview
 ```
 PS C:\> Clear-Tpm
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -59,7 +58,6 @@ The command uses the owner authorization value stored in the registry instead of
 ```
 PS C:\> Clear-Tpm -OwnerAuthorization "vjnuW6rToM41os3xxEpjLdIW2gA="
 
-
 TpmReady           : False
 TpmPresent         : True
 ManagedAuthLevel   : Full
@@ -74,7 +72,6 @@ This command resets the TPM by using the specified owner authorization value.
 ### Example 3: Reset TMP using authorization value from file
 ```
 PS C:\> Clear-Tpm -File "MyOwnerAuthFile.tpm"
-
 
 TpmReady           : False
 TpmPresent         : True

@@ -70,7 +70,6 @@ Get a Managed Service Account with name 'SQL-HR-svc-01' from the default directo
 ```
 C:\PS>Install-ADServiceAccount -Identity 'SQL-HR-svc-01' -PromptForPassword
 
-
 Please enter the current password for 'CN=SQL-HR-svc-01,CN=Managed Service Accounts,DC=contoso,DC=com'
 Password: *******
 ```

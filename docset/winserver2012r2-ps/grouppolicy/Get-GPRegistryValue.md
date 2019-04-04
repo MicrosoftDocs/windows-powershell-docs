@@ -97,7 +97,6 @@ Type        : String
 ValueName   : ValueTwo 
 HasValue    : True 
 
-
 KeyPath     : Software\Policies\Microsoft\ExampleKey\Subkey1 
 FullKeyPath : HKEY_CURRENT_USER\Software\Policies\Microsoft\ExampleKey\Subkey1 
 Hive        : CurrentUser 

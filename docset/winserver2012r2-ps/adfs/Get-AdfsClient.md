@@ -48,8 +48,6 @@ The **Get-AdfsClient** cmdlet retrieves registration information for an OAuth 2.
 ```
 PS C:\> Get-AdfsClient
 
-
-
 RedirectUri : {ms-app://windows.immersivecontrolpanel/}
 Name        : Device Registration Client
 Description : Client for the Device Registration Service
@@ -73,8 +71,6 @@ This command retrieves registration information for all OAuth 2.0 clients curren
 ```
 PS C:\> Get-AdfsClient -Name "Device Registration Client"
 
-
-
 RedirectUri : {ms-app://windows.immersivecontrolpanel/}
 Name        : Device Registration Client
 Description : Client for the Device Registration Service
@@ -89,8 +85,6 @@ This command retrieves registration information for the OAuth 2.0 client named D
 ### Example 3: Retrieve registration information by client ID
 ```
 PS C:\> Get-AdfsClient -ClientId "dd762716-544d-4aeb-a526-687b73838a22"
-
-
 
 RedirectUri : {ms-app://windows.immersivecontrolpanel/}
 Name        : Device Registration Client

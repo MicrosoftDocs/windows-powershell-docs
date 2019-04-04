@@ -39,8 +39,6 @@ ps_mob_user_group_remark
 ```
 PS C:\>$policy = Get-OBPolicy
 
-
-
 PS C:\>Get-OBSchedule $policy | Set-OBSchedule $policy
 ```
 
@@ -49,8 +47,6 @@ This example sets a protection policy.
 ### EXAMPLE 2
 ```
 PS C:\>$sch = New-OBSchedule -DaysOfWeek Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday -TimesOfDay 12:00,16:00,20:00
-
-
 
 PS C:\>New-OBPolicy | Set-OBSchedule -Schedule $sch
 ```

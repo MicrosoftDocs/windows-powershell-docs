@@ -52,11 +52,8 @@ This command retrieves a list of all team members of all NIC teams on the system
 ```
 PS C:\>Get-NetLbfoTeam -Name Team1 | Get-NetLbfoTeamMember
 
-
-
 Or
 PS C:\>$teamObj = Get-NetLbfoTeam -Name Team1
-
 
 PS C:\>Get-NetLbfoTeamMember -TeamOfTheMember $teamObj
 ```

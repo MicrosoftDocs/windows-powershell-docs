@@ -39,7 +39,6 @@ Microsoft User Experience Virtualization (UE-V) monitors each program that is de
 ```
 PS C:\> Get-UevTemplate | Get-UevTemplateProgram | Format-Table -AutoSize
 
-
 TemplateId                          ProgramName      ProductVersionRange FileVersionRange
 ----------                          -----------      ------------------- ----------------
 MicrosoftCalculator6                CALC.EXE         6-6
@@ -70,7 +69,6 @@ For more information, type `Get-Help Format-Table`.
 ### Example 2: Get all defined programs for Office applications
 ```
 PS C:\> Get-UevTemplate -Application "office" | Get-UevTemplateProgram | Format-Table -AutoSize
-
 
 TemplateId                     ProgramName  ProductVersionRange FileVersionRange
 ----------                     -----------  ------------------- ----------------

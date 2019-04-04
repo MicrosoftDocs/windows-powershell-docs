@@ -95,8 +95,6 @@ This example deletes a set based on the localized name.
 ```
 PS C:\>$ipsRule = Get-NetIPsecRule -DisplayName "Transport Mode - CorpNet IPv4 - AuthIP"
 
-
-
 PS C:\>Remove-NetIPsecQuickModeCryptoSet -InputObject $ipsRule
 ```
 

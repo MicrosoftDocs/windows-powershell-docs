@@ -148,7 +148,6 @@ Accept wildcard characters: False
 
 ### -EnableUpdates
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

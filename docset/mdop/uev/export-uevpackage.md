@@ -58,7 +58,6 @@ This command exports a settings package file for Microsoft calculator by using t
 ```
 PS C:\> Export-UevPackage -Path "*calc*.pkgx"
 
-
 <SettingsDocument>
 <registry>
 <Setting Type="VT_BINARY" Name="registry://HKCU\Software\Microsoft\Calc\Window_Placement" Action="Update">LAAAAAAAAAABAAAA/////////////////////60AAABQAAAAVAIAANQBAAA=</Setting>

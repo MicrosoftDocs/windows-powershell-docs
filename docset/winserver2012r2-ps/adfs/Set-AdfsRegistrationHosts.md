@@ -64,7 +64,6 @@ Accept wildcard characters: False
 
 ### -PassThru
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -78,7 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -UpnSuffixes
-
 
 ```yaml
 Type: String[]

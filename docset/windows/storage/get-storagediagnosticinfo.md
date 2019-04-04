@@ -74,7 +74,6 @@ This command gets all types of logs and dumps for the specified Storage cluster 
 
 ### -ActivityId
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -104,7 +103,6 @@ Accept wildcard characters: False
 
 ### -CimSession
 
-
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
@@ -118,7 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPath
-
 
 ```yaml
 Type: String
@@ -134,7 +131,6 @@ Accept wildcard characters: False
 
 ### -ExcludeDiagnosticLog
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -149,7 +145,6 @@ Accept wildcard characters: False
 
 ### -ExcludeOperationalLog
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -163,7 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeLiveDump
-
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +188,6 @@ Accept wildcard characters: False
 
 ### -StorageSubSystemFriendlyName
 
-
 ```yaml
 Type: String
 Parameter Sets: ByStorageSubSystemFriendlyName
@@ -208,7 +201,6 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystemName
-
 
 ```yaml
 Type: String
@@ -224,7 +216,6 @@ Accept wildcard characters: False
 
 ### -StorageSubSystemUniqueId
 
-
 ```yaml
 Type: String
 Parameter Sets: ByStorageSubSystemUniqueId
@@ -239,7 +230,6 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 
-
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -253,7 +243,6 @@ Accept wildcard characters: False
 ```
 
 ### -TimeSpan
-
 
 ```yaml
 Type: UInt32

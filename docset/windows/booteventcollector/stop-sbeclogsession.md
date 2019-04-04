@@ -40,7 +40,6 @@ The **Stop-SbecLogSession** cmdlet stops a log session.
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -Name

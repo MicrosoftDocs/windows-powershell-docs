@@ -55,4 +55,3 @@ Runs the prerequisites for adding a RODC account.
 ### [Uninstall-ADDSDomainController](./Uninstall-ADDSDomainController.md)
 Uninstalls a domain controller in Active Directory.
 
-

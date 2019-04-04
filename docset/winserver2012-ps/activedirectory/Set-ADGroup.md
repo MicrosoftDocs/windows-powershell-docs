@@ -79,7 +79,6 @@ Set-ADGroup -Instance $group.
 ```
 C:\PS>set-adgroup -server localhost:60000 -Identity "CN=AccessControl,DC=AppNC" -description "Access Group" -passthru
 
-
 DistinguishedName : CN=AccessControl,DC=AppNC
 GroupCategory     : Security
 GroupScope        : DomainLocal

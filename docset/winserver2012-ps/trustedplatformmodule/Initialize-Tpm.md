@@ -33,7 +33,6 @@ For more information on TPM, see the Trusted Platform Module Technology Overview
 ```
 PS C:\> Initialize-Tpm -ForceClearAllowed -PhysicalPresenceAllowed
 
-
 TpmReady                 : False
 RestartRequired          : True
 ShutdownRequired         : False

@@ -43,8 +43,6 @@ Remove-NetworkControllerNetworkInterface -ConnectionUri https://networkcontrolle
 
 Description
 
-
-
 This example removes a Network Interface called nw1 from the Network Controller.
 
 ## PARAMETERS

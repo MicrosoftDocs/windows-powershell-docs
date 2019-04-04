@@ -548,8 +548,7 @@ Computer GPOs can be specified as follows.
  -------- `-PolicyStore corp.contoso.com\FirewallPolicy`
                          
  ---- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
-                         
-                         
+
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
  -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 

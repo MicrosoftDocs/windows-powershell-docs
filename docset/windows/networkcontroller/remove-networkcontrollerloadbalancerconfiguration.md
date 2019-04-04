@@ -43,8 +43,6 @@ Remove-NetworkControllerLoadBalancerConfiguration -ConnectionUri https://network
 
 Description
 
-
-
 This cmdlet removes load balancer configuration from Network Controller whose REST endpoint is https://networkcontroller
 
 ## PARAMETERS

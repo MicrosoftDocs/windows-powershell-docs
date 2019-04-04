@@ -172,4 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-UevAppxPackage](./Get-UevAppxPackage.md)
 
-

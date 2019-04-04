@@ -77,8 +77,6 @@ To move a set to a new GPO, copy the existing set by running the Copy-NetIPsecPh
 ```
 PS C:\>$NewCertProposal = New-NetIPsecAuthProposal -Machine -Cert -Authority "C=US,O=MSFT,CN=Microsoft Root Authority" -AuthorityType Root
 
-
-
 PS C:\>Set-NetIPsecPhase1AuthSet -DisplayName "Authenticate with Certificates" -Proposal $NewCertProposal
 ```
 

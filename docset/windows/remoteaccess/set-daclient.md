@@ -63,15 +63,9 @@ This is a global setting and will be applied across clients.
 ```
 PS C:\>$certs = Get-ChildItem -Path Cert:\LocalMachine\Root
 
-
-
 PS C:\>$IPSecRootCert = $certs[13]
 
-
-
 PS C:\>Set-DAServer -IPSecRootCertificate $IPSecRootCert -UserAuthentication TwoFactor
-
-
 
 PS C:\>Set-DAClient -Downlevel "Enabled"
 OnlyRemoteComputers   : Enabled 

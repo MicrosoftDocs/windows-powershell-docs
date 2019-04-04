@@ -82,11 +82,7 @@ To move a set to a new GPO, copy the existing set by running the Copy-NetIPsecQu
 ```
 PS C:\>$crypto1 = New-NetIPsecQuickModeCryptoProposal -Encryption AES128 -ESPHash AESGMAC128
 
-
-
 PS C:\>$crypto2 = New-NetIPsecQuickModeCryptoProposal -Encryption DES -ESPHash MD5
-
-
 
 PS C:\>Set-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPAA Server, 80 <-> Any - Phase 2 Crypto Set" -Proposals $crypto1,$crypto2
 ```

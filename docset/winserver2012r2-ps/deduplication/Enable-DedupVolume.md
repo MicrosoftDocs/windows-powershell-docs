@@ -140,14 +140,12 @@ If you specify this parameter for a volume that already has data deduplication e
 If you run this cmdlet on a volume that already has data deduplication enabled but do not specify this parameter, the cmdlet does not change the usage type.
 The acceptable values for this parameter are:
 
-
      -- HyperV.
 A volume for Hyper-V storage. 
 
      -- Default.
 A general purpose volume.
 If you do not specify a value for this parameter, the cmdlet uses a value of Default.
-
 
 If you specify a value of HyperV, the computer that has data deduplication enabled cannot be the same computer that runs Hyper-V.
 The two computers must communicate remotely.

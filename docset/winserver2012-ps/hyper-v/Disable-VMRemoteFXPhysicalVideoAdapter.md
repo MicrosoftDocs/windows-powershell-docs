@@ -94,7 +94,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1

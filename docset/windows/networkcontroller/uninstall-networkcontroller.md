@@ -41,7 +41,6 @@ This command removes the network controller application.
 The computer Node01.Contoso.com must be a node in the network controller cluster.
 If you do not specify a computer name, this cmdlet removes the network controller application on the local computer.
 
-
 ```
 PS C:\> Uninstall-NetworkController -ComputerName "Node01.Contoso.com"
 ```

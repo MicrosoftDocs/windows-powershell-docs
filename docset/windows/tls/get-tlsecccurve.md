@@ -39,11 +39,9 @@ Get-TlsEccCurve
 
 This generates the following output:
 
-
 curve25519
 NistP256
 NistP384
-
 
 This command gets all ECC curves for the computer.
 
@@ -54,10 +52,8 @@ Get-TlsEccCurve -Name 'Nist'
 
 This generates the following output:
 
-
 NistP256
 NistP384
-
 
 This command gets all the ECC curves that have names that contain the string 'Nist' (case-sensitive).
 
@@ -84,7 +80,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 
 ## OUTPUTS
 

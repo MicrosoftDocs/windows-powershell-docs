@@ -33,7 +33,6 @@ Get-NetworkControllerConnectivityCheck [-ConnectionUri <Uri>] [-CertificateThumb
 
 ## EXAMPLES
 
-
 ## PARAMETERS
 
 ### -CertificateThumbprint

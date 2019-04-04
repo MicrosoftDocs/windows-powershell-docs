@@ -47,8 +47,6 @@ This example gets the state of checksum offload properties of the network adapte
 ```
 PS C:\>$networkAdapterCO1 = Get-NetAdapterChecksumOffload -Name MyAdapter
 
-
-
 PS C:\>$networkAdapterCO1.ChecksumOffloadHardwareCapabilities
 ```
 

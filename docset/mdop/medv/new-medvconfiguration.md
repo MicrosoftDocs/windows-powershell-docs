@@ -969,4 +969,3 @@ This cmdlet generates a **MedvConfiguration** object that contains configuration
 
 [Export-MedvConfiguration](./Export-MedvConfiguration.md)
 
-

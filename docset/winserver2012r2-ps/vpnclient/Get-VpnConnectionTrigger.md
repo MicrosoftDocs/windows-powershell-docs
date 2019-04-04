@@ -39,9 +39,7 @@ The **Get-VpnConnectionTrigger** cmdlet gets trigger properties of a virtual pri
 PS C:\> Get-VpnConnectionTrigger -ConnectionName "ContosoVPN"
 ConnectionName:           Contoso
 
-
 ApplicationID:            {microsoft.windowsphotos_8wekyb3d8bbwe, C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe}
-
 
 TrustedNetwork:           {newyork.contoso.com, washington.contoso.com}
 ```

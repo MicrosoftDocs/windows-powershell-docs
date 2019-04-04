@@ -46,27 +46,15 @@ ps_mob_user_group_remark
 ```
 PS C:\>$sources = Get-OBRecoverableSource
 
-
-
 PS C:\>$RP = Get-OBRecoverableItem -Source $sources[0]
-
-
 
 PS C:\>$passphrase = Read-Host -Prompt "Enter encryption passphrase" -AsSecureString
 
-
-
 PS C:\>$pwd = ConvertTo-SecureString -String Notag00dpa55word -AsPlainText -Force
-
-
 
 PS C:\>$cred = New-Object -TypeName System.Management.Automation.PsCredential -ArgumentList contoso\johnj99, $pwd
 
-
-
 PS C:\>$RO = New-OBRecoveryOption -DestinationPath C:\\test -OverwriteType Overwrite
-
-
 
 PS C:\>Start-OBRecovery -RecoverableItem $RP -RecoveryOption $RO -EncryptionPassphrase $passphrase -Credential $cred -Async
 ```

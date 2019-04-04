@@ -54,7 +54,6 @@ To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?Li
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

@@ -56,14 +56,10 @@ These rules are then piped to the Set-NetFirewallRule cmdlet where the applicati
 ```
 PS C:\>$nfwApplicationFilter = ( Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallApplicationFilter )
 
-
-
 PS C:\>Set-NetFirewallApplicationFilter -InputObject $nfwApplicationFilter -Program %SystemRoot%\System32\messenger.exe
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-FirewallRule -DisplayName "Contoso Messenger" | Get-NetFirewallApplicationFilter | Set-NetFirewallApplicationFilter -Program %SystemRoot%\System32\messenger.exe
-
 
 This cmdlet can be run without using the pipeline.
 PS C:\>Set-NetFirewallRule -DisplayName "Contoso Messenger" -Program %SystemRoot%\System32\messenger.exe
@@ -75,14 +71,9 @@ This example changes the application path associated with a particular firewall 
 ```
 PS C:\>$NewPackageSDDL = "S-1-15-2-4292807980-2381230043-3108820062-1451069988-2614848061-670482394-695399705"
 
-
-
 PS C:\>$nfwApplicationFilter = (Get-NetFirewallRule -Group Socialite | Get-NetFirewallApplicationFilter )
 
-
-
 PS C:\>Set-NetFirewallAddressFilter - InputObject $nfwApplicationFilter -Package $NewPackageSDDL
-
 
 This cmdlet can be run using only the pipeline.
 PS C:\>Get-NetFirewallRule -Group Socialite | Get-NetFirewallApplicationFilter | Set-NetFirewallAddressFilter -Package $NewPackageSDDL

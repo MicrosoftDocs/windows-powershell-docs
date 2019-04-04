@@ -38,15 +38,11 @@ The Get-WmsAlert cmdlet returns alert information from the Windows MultiPoint Se
 PS C:\> Get-WmsAlert
 TimeStampInUtc : 12/7/2010 12:17:15 AM
 
-
 AlertType      : HubMissingRequiredDevice
-
 
 AlertSeverity  : Warning
 
-
 ComputerName   : TEST
-
 
 StationId      : 1
 ```

@@ -94,7 +94,6 @@ Accept wildcard characters: False
 Specifies the client type.
 The acceptable values for this parameter are:
 
-- Unknown
 - Public
 - Confidential
 
@@ -102,7 +101,7 @@ The acceptable values for this parameter are:
 Type: ClientType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Unknown, Public, Confidential
+Accepted values: Public, Confidential
 
 Required: False
 Position: Named

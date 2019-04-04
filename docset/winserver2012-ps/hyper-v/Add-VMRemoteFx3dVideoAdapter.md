@@ -111,8 +111,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.RemoteFxVideoAdapter** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.RemoteFxVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

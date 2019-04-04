@@ -12,7 +12,7 @@ ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version:
+online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage
 schema: 2.0.0
 title: Remove-AppxPackage
 ms.reviewer:

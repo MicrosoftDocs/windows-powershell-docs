@@ -203,8 +203,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMResourcePool** if *PassThru* is specified.
+### None
+Default
+
+### VMResourcePool
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -21,7 +21,7 @@ Stop-WebAppPool [[-Name] <String>] [-Passthru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Stops the specified application pool.
+Stops the specified application pool. If the application pool is already stopped, an exception is thrown.
 
 ## EXAMPLES
 

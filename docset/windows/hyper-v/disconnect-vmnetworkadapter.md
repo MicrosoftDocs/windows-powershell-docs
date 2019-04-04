@@ -208,8 +208,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.VMNetworkAdapter** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VMNetworkAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

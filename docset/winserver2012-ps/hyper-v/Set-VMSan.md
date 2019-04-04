@@ -150,8 +150,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.PowerShell.SAN** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.PowerShell.SAN
+If **-PassThru** is specified.
 
 ## NOTES
 

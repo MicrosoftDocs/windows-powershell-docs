@@ -351,8 +351,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMRecoveryServer** if **-PassThru** is specified.
+### None
+Default
+
+### VMRecoveryServer
+If **-PassThru** is specified.
 
 ## NOTES
 

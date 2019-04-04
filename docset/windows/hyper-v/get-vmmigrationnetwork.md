@@ -146,7 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.MigrationNetwork
+### Microsoft.HyperV.PowerShell.VMMigrationNetwork
 
 ## NOTES
 

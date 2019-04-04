@@ -138,8 +138,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VMConnectAce** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VMConnectAce
+If **-PassThru** is specified.
 
 ## NOTES
 

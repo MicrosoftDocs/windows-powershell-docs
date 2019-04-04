@@ -230,8 +230,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.DvdDrive** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.DvdDrive
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 221ac730-e8bc-4bf8-92ef-06215136a55a
-ms.manager: dansimp
 ---
 
 # AppX Module

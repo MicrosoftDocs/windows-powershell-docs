@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F0EEF063-A47F-4D06-8BC4-332540CB3877
-ms.manager: dansimp
 ---
 
 # Unregister-CauPlugin

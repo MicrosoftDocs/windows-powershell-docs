@@ -209,8 +209,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.Bios** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.Bios
+If **-PassThru** is specified.
 
 ## NOTES
 

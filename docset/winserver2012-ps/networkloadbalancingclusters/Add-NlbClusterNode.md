@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5F7846FD-9073-4387-A2E2-82D9405EE2F2
+manager: dansimp
 ---
 
 # Add-NlbClusterNode

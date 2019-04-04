@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FDB720CC-4DC2-45E2-AB48-A04F069FCF76
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv4Policy

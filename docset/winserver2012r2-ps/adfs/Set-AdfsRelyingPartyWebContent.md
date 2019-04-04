@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0247F887-E1F9-47F5-A61E-64FA0B65ED08
-ms.manager: dansimp
 ---
 
 # Set-AdfsRelyingPartyWebContent

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3AE20759-18A2-49EC-9CF4-71B59B7DC9F6
+manager: dansimp
 ---
 
 # Get-NetAdapterIPsecOffload

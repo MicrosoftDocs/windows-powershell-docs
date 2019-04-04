@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 30DD9BEA-57E4-41F9-A418-0933E227381F
-ms.manager: dansimp
 ---
 
 # Get-DfsrConnection

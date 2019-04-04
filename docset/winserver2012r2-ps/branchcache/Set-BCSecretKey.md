@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A9FB4EF-F7B0-4907-AA14-21233F4153A1
-ms.manager: dansimp
 ---
 
 # Set-BCSecretKey

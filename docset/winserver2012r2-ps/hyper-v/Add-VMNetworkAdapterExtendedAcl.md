@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D00DA76A-7C44-4E66-9CFD-58D886B1F7A7
-ms.manager: dansimp
 ---
 
 # Add-VMNetworkAdapterExtendedAcl

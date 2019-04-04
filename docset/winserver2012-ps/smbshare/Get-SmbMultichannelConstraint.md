@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 828A3C72-A3B9-41B2-9315-28A818974E3B
+manager: dansimp
 ---
 
 # Get-SmbMultichannelConstraint

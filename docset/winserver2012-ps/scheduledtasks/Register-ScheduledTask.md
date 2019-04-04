@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
+manager: dansimp
 ---
 
 # Register-ScheduledTask

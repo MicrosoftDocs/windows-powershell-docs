@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 65C49328-C60F-4D05-8507-09CF56091982
-ms.manager: dansimp
 ---
 
 # Remove-ADGroup

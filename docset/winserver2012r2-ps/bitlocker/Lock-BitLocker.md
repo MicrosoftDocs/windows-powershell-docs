@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90042DB2-7289-4167-A7B3-245D316EF361
-ms.manager: dansimp
 ---
 
 # Lock-BitLocker

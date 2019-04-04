@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F6E226F7-FA6A-4FC6-A02E-518AB4939045
-ms.manager: dansimp
 ---
 
 # Get-BpaResult

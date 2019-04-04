@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C578971D-E720-40DE-8BBA-47414198C44B
-ms.manager: dansimp
 ---
 
 # Stop-IscsiVirtualDiskOperation

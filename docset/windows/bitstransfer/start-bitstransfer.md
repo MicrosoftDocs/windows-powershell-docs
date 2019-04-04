@@ -74,11 +74,15 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 
 The contents of the filelist.txt file resemble the following information:
 
-- **Source, Destination**
-- `http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt`
-- `http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt`
-- `http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt`
-- `http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
+```
+Source, Destination
+http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
+http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
+http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
+http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
+```
+> [!NOTE]
+> First line of the file must include Source, Destination header as in the example.
 
 ### Example 3: Create a BITS transfer job that uploads a file
 ```
@@ -139,12 +143,15 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 
 The contents of the filelist.txt file resemble the following information:
 
-- **Source, Destination**
-- `http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt`
-- `http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt`
-- `http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt`
-- `http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt`
-
+```
+Source, Destination
+http://server01/servertestdir/testfile1.txt, c:\clienttestdir\testfile1.txt
+http://server01/servertestdir/testfile2.txt, c:\clienttestdir\testfile2.txt
+http://server01/servertestdir/testfile3.txt, c:\clienttestdir\testfile3.txt
+http://server01/servertestdir/testfile4.txt, c:\clienttestdir\testfile4.txt
+```
+> [!NOTE]
+> First line of the file must include Source, Destination header as in the example.
 
 ### Example 7: Create a BITS transfer job that downloads multiple files 
 ```
@@ -168,11 +175,15 @@ The **Start-BitsTransfer** command creates a new BITS transfer job for each of t
 
 The contents of the filelist.txt file resemble the following information:
 
-- **Source, Destination**
-- `c:\clienttestdir\testfile1.txt, http://server01/servertestdir/testfile1.txt`
-- `c:\clienttestdir\testfile2.txt, http://server01/servertestdir/testfile2.txt`
-- `c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt`
-- `c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt`
+```Source, Destination
+c:\clienttestdir\testfile1.txt, http://server01/servertestdir/testfile1.txt
+c:\clienttestdir\testfile2.txt, http://server01/servertestdir/testfile2.txt
+c:\clienttestdir\testfile3.txt, http://server01/servertestdir/testfile3.txt
+c:\clienttestdir\testfile4.txt, http://server01/servertestdir/testfile4.txt
+```
+> [!NOTE]
+> First line of the file must include Source, Destination header as in the example.
+
 
 ### Example 9: Download a file from a server on a network to a client on a different network that are connected by a proxy server
 ```

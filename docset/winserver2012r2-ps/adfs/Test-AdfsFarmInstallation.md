@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8E7446F-C295-4652-8503-C0877549BD4F
-ms.manager: dansimp
 ---
 
 # Test-AdfsFarmInstallation

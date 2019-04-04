@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC4C1119-2255-4E52-85B0-DDF5270C2180
-ms.manager: dansimp
 ---
 
 # Update-ClusterVirtualMachineConfiguration

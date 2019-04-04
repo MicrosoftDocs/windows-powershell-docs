@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 35CB69C9-3C88-40BF-910F-73890EDE8C2F
+manager: dansimp
 ---
 
 # Disable-NetAdapterIPsecOffload

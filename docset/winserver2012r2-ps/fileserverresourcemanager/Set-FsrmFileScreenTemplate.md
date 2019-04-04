@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B432AB8C-7D92-45DA-9431-E84A80737112
-ms.manager: dansimp
 ---
 
 # Set-FsrmFileScreenTemplate

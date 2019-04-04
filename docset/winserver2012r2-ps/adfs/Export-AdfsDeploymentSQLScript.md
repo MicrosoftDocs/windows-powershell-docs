@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA4481D6-DBE1-4E28-8D2A-F1A1ECC75C29
-ms.manager: dansimp
 ---
 
 # Export-AdfsDeploymentSQLScript

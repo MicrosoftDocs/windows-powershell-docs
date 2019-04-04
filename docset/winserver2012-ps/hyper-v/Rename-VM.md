@@ -126,8 +126,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VirtualMachine** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VirtualMachine
+If **-PassThru** is specified.
 
 ## NOTES
 

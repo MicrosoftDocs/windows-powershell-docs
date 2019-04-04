@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9DE590E7-BC58-45D6-A630-2EE9344F3F26
-ms.manager: dansimp
 ---
 
 # Export-AdfsWebTheme

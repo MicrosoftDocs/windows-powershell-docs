@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9F95D964-20B5-484D-8EF8-E205E8DC3BBE
-ms.manager: dansimp
 ms.author: kenwith
 ms.reviewer: brianlic
 ---
@@ -167,8 +166,7 @@ The cmdlet uses the **FullName** property as the value of the **FileName** param
 
 ## OUTPUTS
 
-###  
-This cmdlet generates no output.
+### None
 
 ## NOTES
 

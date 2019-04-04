@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: D857E0BA-B523-493E-B463-67F84A8BEB73
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

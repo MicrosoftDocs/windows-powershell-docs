@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 417B52C3-55A2-4445-AED8-E9DD65E0EAAB
-ms.manager: dansimp
 ---
 
 # Get-DfsrGroupSchedule

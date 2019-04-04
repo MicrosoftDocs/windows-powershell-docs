@@ -185,8 +185,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.PowerShell.IntegrationService** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.PowerShell.IntegrationService
+If **-PassThru** is specified.
 
 ## NOTES
 

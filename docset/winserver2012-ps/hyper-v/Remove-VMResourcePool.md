@@ -130,8 +130,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMResourcePool** if **-PassThru** is specified.
+### None
+Default
+
+### VMResourcePool
+If **-PassThru** is specified.
 
 ## NOTES
 

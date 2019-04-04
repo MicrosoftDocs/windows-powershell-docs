@@ -133,8 +133,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMReplication** if **-PassThru** is specified.
+### None
+Default
+
+### VMReplication
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
 ms.assetid: F6E226F7-FA6A-4FC6-A02E-518AB4939045
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

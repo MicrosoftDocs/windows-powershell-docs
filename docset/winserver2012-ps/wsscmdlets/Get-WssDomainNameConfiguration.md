@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 72C2A513-95C6-4B8A-8B6E-8C310A17DBC4
+manager: dansimp
 ---
 
 # Get-WssDomainNameConfiguration

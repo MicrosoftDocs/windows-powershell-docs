@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B71074CC-52ED-4E73-A7A9-E3E92729F6BA
-ms.manager: dansimp
 ---
 
 # Enable-DnsServerSigningKeyRollover

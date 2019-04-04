@@ -392,8 +392,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VMNetworkAdapterFailoverConfiguration** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VMNetworkAdapterFailoverConfiguration
+If **-PassThru** is specified.
 
 ## NOTES
 

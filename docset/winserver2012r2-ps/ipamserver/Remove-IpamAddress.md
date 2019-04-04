@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F746A0B2-9522-4724-8DD4-99300C702114
-ms.manager: dansimp
 ---
 
 # Remove-IpamAddress

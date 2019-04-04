@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -114,8 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Disconnect-WmsSession.
+### None
 
 ## OUTPUTS
 

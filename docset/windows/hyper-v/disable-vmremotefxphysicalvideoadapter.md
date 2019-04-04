@@ -197,8 +197,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

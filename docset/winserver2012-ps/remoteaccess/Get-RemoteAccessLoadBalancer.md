@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 29EDECC7-DDDB-4880-9332-246DD3BA97E4
+manager: dansimp
 ---
 
 # Get-RemoteAccessLoadBalancer

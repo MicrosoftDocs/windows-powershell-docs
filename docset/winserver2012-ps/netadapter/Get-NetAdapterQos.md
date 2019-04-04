@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CF781957-2C2B-48AC-8028-D8D040EC039E
+manager: dansimp
 ---
 
 # Get-NetAdapterQos

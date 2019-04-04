@@ -12,7 +12,6 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182875
 schema: 2.0.0
 title: Submit-HpcJob
 ms.assetid: C00ED57D-B307-4221-8CA1-7D7C5F4C348F
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---

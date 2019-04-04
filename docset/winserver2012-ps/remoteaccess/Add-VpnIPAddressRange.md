@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5FB50005-2B96-4D3D-BE43-0AE72AB0E85F
+manager: dansimp
 ---
 
 # Add-VpnIPAddressRange

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 623064A6-E1A2-40C9-9A44-2EF6D22518CD
-ms.manager: dansimp
 ---
 
 # Remove-IscsiServerTarget

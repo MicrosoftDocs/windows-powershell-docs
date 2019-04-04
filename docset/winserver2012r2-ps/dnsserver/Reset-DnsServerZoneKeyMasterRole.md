@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F0E3BF5E-CE60-4923-B84E-909EFD6F4039
-ms.manager: dansimp
 ---
 
 # Reset-DnsServerZoneKeyMasterRole

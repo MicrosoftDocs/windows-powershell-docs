@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 814B1BD6-49C5-41E3-B345-D04D124C33C1
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4Class

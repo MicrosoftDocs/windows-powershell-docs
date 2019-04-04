@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70B14BDB-6F45-4A80-BB6A-02795A9A1919
-ms.manager: dansimp
 ---
 
 # Get-ADComputerServiceAccount

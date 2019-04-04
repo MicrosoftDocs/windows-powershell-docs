@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E232C383-76AF-4C75-89ED-F4E72BDD2B7D
+manager: dansimp
 ---
 
 # Set-DAClient

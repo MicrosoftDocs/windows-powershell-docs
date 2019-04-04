@@ -155,8 +155,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMSnapshot** if **-PassThru** is specified.
+### None
+Default
+
+### VMSnapshot
+If **-PassThru** is specified.
 
 ## NOTES
 

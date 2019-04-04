@@ -200,8 +200,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.MigrationNetwork** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.MigrationNetwork
+If **-PassThru** is specified.
 
 ## NOTES
 

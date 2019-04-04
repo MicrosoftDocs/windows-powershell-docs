@@ -201,8 +201,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.Powershell.VirtualMachine** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.Powershell.VirtualMachine
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -334,8 +334,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.Memory** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.Memory
+If **-PassThru** is specified.
 
 ## NOTES
 

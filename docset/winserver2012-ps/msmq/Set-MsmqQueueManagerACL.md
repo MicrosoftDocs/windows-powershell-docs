@@ -29,7 +29,7 @@ This cmdlet returns the updated **MsmqQueueManagerAcl** object.
 
 ### Example 1: Set the access rights of the local queue manager
 ```
-PS C:\>Set-MsmqQueueManagerAcl â€"UserName "CONTOSO\pattiful" â€"Allow DeleteMessage,PeekMessage â€"Deny TakeOwnership,SetPermissions
+PS C:\>Set-MsmqQueueManagerAcl -UserName "CONTOSO\pattiful" -Allow DeleteMessage,PeekMessage -Deny TakeOwnership,SetPermissions
 ```
 
 This command sets the access rights to Allow, DeleteMessage, and PeekMessage for the user named CONTOSO\pattiful on the default queue.

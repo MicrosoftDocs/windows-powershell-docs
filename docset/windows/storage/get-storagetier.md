@@ -64,7 +64,7 @@ This command gets the storage tier named StoreTier01.
 
 ### Example 2: Get a storage tier from a storage pool
 ```
-PS C:\> Get-StoragePool -StoragePoolFriendlyName "StorePool01" | Get-StorageTier
+PS C:\> Get-StoragePool -FriendlyName "StorePool01" | Get-StorageTier
 ```
 
 This command gets the object that contains the storage pool named StorePool01, and then passes the object to the Get-StorageTier cmdlet by using the pipeline operator.

@@ -148,8 +148,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMReplicationAuthorizationEntry** if **-PassThru** is specified.
+### None
+Default
+
+### VMReplicationAuthorizationEntry
+If **-PassThru** is specified.
 
 ## NOTES
 

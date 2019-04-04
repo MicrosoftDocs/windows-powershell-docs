@@ -59,8 +59,6 @@ The first command assigns a resource record named Host01 in the zone named conto
 
 The second command copies the variable **$OldObj** to a new variable **$NewObj** using the .Clone() method.
 
-(If we use **$NewObj = $OldObj Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"** it will create a **pointer** instead of a copy, which would then cause alters to **$NewObj** to also apply to **$OldObj** as an undesirable effect, which furthermore would cause the **Set-DnsServerResourceRecord** to throw an error about **"Resource record in OldInputObject not found"**.)
-
 The third command sets the TTL time span for **$NewObj** to 2 hours.
 
 The fourth command changes the properties of **$OldObj** to the settings specified for **$NewObj** in the previous command.

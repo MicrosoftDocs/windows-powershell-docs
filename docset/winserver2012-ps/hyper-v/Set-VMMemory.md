@@ -252,8 +252,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.Memory** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.Memory
+If **-PassThru** is specified.
 
 ## NOTES
 

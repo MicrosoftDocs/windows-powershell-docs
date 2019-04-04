@@ -98,8 +98,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Unregister-WmsEvent.
+### None
 
 ## OUTPUTS
 

@@ -28,7 +28,7 @@ The cmdlet has no return value.
 
 ### Example 1: Remove a queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Public | Remove-MsmqQueue
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Public | Remove-MsmqQueue
 ```
 
 This command removes all public queues that contain the wildcard name Order*.

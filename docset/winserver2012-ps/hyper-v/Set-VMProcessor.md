@@ -285,8 +285,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VMNetworkAdapterVlanSetting** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VMNetworkAdapterVlanSetting
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 83D4628E-A07E-4461-9B49-193B6CBFD289
-ms.manager: dansimp
 ---
 
 # Set-ADAccountExpiration

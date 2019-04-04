@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5BB80A43-60A6-41D1-B249-FFE7C4C8C3C9
-ms.manager: dansimp
 ---
 
 # Enable-VMIntegrationService

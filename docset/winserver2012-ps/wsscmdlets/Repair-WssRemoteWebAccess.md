@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 774509E5-6635-4381-80D6-4FD9E7B221BA
+manager: dansimp
 ---
 
 # Repair-WssRemoteWebAccess

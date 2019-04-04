@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D5978C27-2D47-4827-8146-F96F546B9362
-ms.manager: dansimp
 ---
 
 # Get-DnsClientServerAddress

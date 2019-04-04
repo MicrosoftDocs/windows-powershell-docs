@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
-ms.manager: dansimp
 ---
 
 # Get-AppxLog

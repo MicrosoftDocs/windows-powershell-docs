@@ -104,8 +104,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.ScsiController** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.ScsiController
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: aae2880b-f17e-44c3-b352-47eca09bcf71
-ms.manager: dansimp
 ---
 
 # BitsTransfer Module

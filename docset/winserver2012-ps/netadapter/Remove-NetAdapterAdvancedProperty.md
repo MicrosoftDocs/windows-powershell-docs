@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BB8B1B16-6946-4BF6-97F8-25265B7E0A20
+manager: dansimp
 ---
 
 # Remove-NetAdapterAdvancedProperty

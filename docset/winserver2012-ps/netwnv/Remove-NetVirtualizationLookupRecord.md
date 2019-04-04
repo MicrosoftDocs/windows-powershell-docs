@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C447D1DF-08C5-40A8-B6BA-C764FECD4E72
+manager: dansimp
 ---
 
 # Remove-NetVirtualizationLookupRecord

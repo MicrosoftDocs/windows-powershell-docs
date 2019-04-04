@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9B224E50-9571-4216-A938-7A448B9BC236
-ms.manager: dansimp
 ---
 
 # Checkpoint-VM

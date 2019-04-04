@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FF7A07D1-467C-4E4C-BEFE-83F034C43CD3
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6Binding

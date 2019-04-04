@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0A57ABC4-35A8-43B2-81C2-193EB5E1FDA7
+manager: dansimp
 ---
 
 # Unregister-ScheduledTask

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90284610-A8CF-452E-9F5E-ECE49F35D3A9
-ms.manager: dansimp
 ---
 
 # Set-AdfsWebConfig

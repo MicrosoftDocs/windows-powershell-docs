@@ -25,7 +25,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Website.
+Adds a new binding to an existing website.
 
 ## EXAMPLES
 

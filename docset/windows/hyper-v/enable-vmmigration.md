@@ -154,8 +154,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.Host** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.Host
+If **-PassThru** is specified.
 
 ## NOTES
 

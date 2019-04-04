@@ -267,8 +267,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.Bios** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.Bios
+If **-PassThru** is specified.
 
 ## NOTES
 

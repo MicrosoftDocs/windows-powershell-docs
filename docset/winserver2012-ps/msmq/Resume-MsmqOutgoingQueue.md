@@ -28,7 +28,7 @@ This cmdlet returns the resumed **MsmqOutgoingQueue** objects.
 
 ### Example 1: Resume an outgoing queue
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name "Order*" | Resume-MsmqOutgoingQueue
+PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Resume-MsmqOutgoingQueue
 ```
 
 This command resumes the outgoing queues that have wildcard named Order*.

@@ -79,13 +79,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-**Set-IISCentralCertProviderCredential** does not accept pipelined input.
+### None
 
 ## OUTPUTS
 
-###  
-**Set-IISCentralCertProviderCredential** does not return any objects.
+### None
 
 ## NOTES
 

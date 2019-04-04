@@ -115,8 +115,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

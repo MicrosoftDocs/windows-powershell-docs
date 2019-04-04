@@ -244,8 +244,7 @@ This cmdlet accepts as input a CIM object which contains a DA site table entry.
 
 ## OUTPUTS
 
-###  
-This cmdlet returns no output.
+### None
 
 ## NOTES
 

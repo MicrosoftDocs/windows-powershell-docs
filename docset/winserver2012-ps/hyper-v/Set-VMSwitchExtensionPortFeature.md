@@ -250,8 +250,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.HyperV.PowerShell.VMSwitchExtensionPortFeature** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VMSwitchExtensionPortFeature
+If **-PassThru** is specified.
 
 ## NOTES
 

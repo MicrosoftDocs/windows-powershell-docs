@@ -117,8 +117,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.HyperV.Powershell.VirtualMachine** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.HyperV.Powershell.VirtualMachine
+If **-PassThru** is specified.
 
 ## NOTES
 

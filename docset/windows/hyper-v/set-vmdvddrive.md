@@ -311,8 +311,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.DvdDrive** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.DvdDrive
+If **-PassThru** is specified.
 
 ## NOTES
 

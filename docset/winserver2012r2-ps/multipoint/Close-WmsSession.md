@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 299D02FC-4C37-44F9-863D-E2880EA533A3
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -114,8 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Close-WmsSession.
+### None
 
 ## OUTPUTS
 

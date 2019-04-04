@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2CC509E4-1633-4E92-86FE-9A420C700488
+manager: dansimp
 ---
 
 # Enable-NetAdapterVmq

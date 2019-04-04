@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0714E33E-71B1-4FDE-8B83-25F50135874B
-ms.manager: dansimp
 ---
 
 # Get-BitLockerVolume

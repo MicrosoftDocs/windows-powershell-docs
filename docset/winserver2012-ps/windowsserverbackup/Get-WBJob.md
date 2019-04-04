@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 08375C25-61AF-4928-B052-A9993DCACAD7
+manager: dansimp
 ---
 
 # Get-WBJob

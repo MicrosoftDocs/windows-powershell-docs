@@ -4,7 +4,6 @@ ms.sitesec: library
 ms.author: kenwith
 Module Name: NetLdpAgent
 Module Guid: 46F598E5-9907-42B2-AFBB-68EAF7E34604
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=808419
 Help Version: 5.0.1.1
 Locale: en-US
 title: NetLldpAgent

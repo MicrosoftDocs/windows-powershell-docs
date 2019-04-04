@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F4FD0A59-8C76-41FD-AA4B-8C19CF03D213
+manager: dansimp
 ---
 
 # Get-NetFirewallAddressFilter

@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: abd8d8e8-580a-4d3b-850c-4fbd7ae386e4
-ms.manager: dansimp
 ---
 
 # ActiveDirectory Module

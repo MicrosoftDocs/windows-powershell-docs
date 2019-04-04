@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: C245B3BC-7471-4BBD-88AD-B87E916FB0B3
+manager: dansimp
 ---
 
 # Set-NetIPv6Protocol

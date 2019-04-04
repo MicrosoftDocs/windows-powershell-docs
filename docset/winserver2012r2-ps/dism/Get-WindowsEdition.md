@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E195C42C-5048-488D-8BF4-0B14EB520A53
-ms.manager: dansimp
 ---
 
 # Get-WindowsEdition

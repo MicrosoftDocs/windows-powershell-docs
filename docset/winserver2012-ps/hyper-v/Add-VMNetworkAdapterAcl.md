@@ -335,8 +335,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VMNetworkAdapterAclSetting** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VMNetworkAdapterAclSetting
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EA301285-F439-438D-986D-1F12D79BD4ED
+manager: dansimp
 ---
 
 # Get-OBRecoveryService

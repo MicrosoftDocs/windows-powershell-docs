@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B16B8D37-9AF7-4F9C-B31E-F29155E2090F
+manager: dansimp
 ---
 
 # Remove-WBPolicy

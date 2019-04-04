@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 48F983FE-A8EA-4A2E-9CAF-A6B41B990EB9
+manager: dansimp
 ---
 
 # Search-SmisProvider

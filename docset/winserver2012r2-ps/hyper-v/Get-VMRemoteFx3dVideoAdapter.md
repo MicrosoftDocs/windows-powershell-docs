@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 082B9173-FC0C-4535-B034-DA69F03AA0C8
-ms.manager: dansimp
 ---
 
 # Get-VMRemoteFx3dVideoAdapter

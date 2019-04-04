@@ -234,8 +234,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMReplication** if *PassThru* is specified.
+### None
+Default
+
+### VMReplication
+If **-PassThru** is specified.
 
 ## NOTES
 

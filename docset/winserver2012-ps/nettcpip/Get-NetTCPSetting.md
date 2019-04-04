@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
+manager: dansimp
 ---
 
 # Get-NetTCPSetting

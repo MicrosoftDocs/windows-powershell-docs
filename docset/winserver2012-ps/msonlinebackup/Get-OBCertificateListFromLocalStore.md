@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0329C809-022A-4147-97C0-512A060FEFFA
+manager: dansimp
 ---
 
 # Get-OBCertificateListFromLocalStore

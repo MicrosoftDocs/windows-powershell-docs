@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 949B24F5-7276-49D1-8B12-AED0B3707CA1
-ms.manager: dansimp
 ---
 
 # Export-IscsiTargetServerConfiguration

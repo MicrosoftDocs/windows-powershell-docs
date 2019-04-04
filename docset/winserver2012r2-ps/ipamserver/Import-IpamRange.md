@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7D4A8A52-DB0E-46D1-BD49-16FF6042D02C
-ms.manager: dansimp
 ---
 
 # Import-IpamRange

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DCE74A4E-AF23-4DED-B15D-0A3A31B15E03
+manager: dansimp
 ---
 
 # Test-WssDrive

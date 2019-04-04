@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9C76B714-7FCD-4DF4-A988-F4E27113EB02
+manager: dansimp
 ---
 
 # Start-WBSystemStateRecovery

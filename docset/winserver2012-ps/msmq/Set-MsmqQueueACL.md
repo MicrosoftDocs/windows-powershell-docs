@@ -31,7 +31,7 @@ This cmdlet can be applied to private, public, journal, system journal, system d
 
 ### Example 1: Set the access rights for the specified queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private | Set-MsmqQueueAcl â€"UserName "REDMOND\pattiful" â€"Allow Delete,Peek,Receive,Send â€"Deny TakeOwnership
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueueAcl -UserName "REDMOND\pattiful" -Allow Delete,Peek,Receive,Send -Deny TakeOwnership
 ```
 
 This command sets Allow, Delete, Peek, Receive, and Send access rights for user pattiful on all queues that have the wildcard named Order*.

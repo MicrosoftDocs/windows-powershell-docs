@@ -205,8 +205,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMRemoteFxVideoAdapter** if *PassThru* is specified.
+### None
+Default
+
+### VMRemoteFxVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

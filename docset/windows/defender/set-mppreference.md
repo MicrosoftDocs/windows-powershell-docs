@@ -150,6 +150,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
+If you specify a value of $False or do not specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean

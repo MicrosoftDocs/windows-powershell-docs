@@ -114,7 +114,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VMReplicationServer
+### Microsoft.HyperV.PowerShell.VMReplicationServer
 
 ## NOTES
 

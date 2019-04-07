@@ -401,8 +401,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMRecoveryServer** if *PassThru* is specified.
+### None
+Default
+
+### VMRecoveryServer
+If **-PassThru** is specified.
 
 ## NOTES
 

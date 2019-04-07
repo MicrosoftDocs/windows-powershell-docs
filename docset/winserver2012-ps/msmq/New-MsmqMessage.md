@@ -29,7 +29,7 @@ The **New-MsmqMessage** cmdlet creates a **System.Messaging.Message** object.
 
 ### Example 1: Create a message object
 ```
-PS C:\>New-MsmqMessage â€"Body "Test Message" â€"Recoverable â€"AdminQueue ".\private$\adminqueue"
+PS C:\>New-MsmqMessage -Body "Test Message" -Recoverable -AdminQueue ".\private$\adminqueue"
 ```
 
 This command creates a message object with body text named Test Message.

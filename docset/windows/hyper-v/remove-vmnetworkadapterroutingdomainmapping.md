@@ -305,6 +305,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterRoutingDomainSetting
+
 ## NOTES
 
 ## RELATED LINKS

@@ -28,7 +28,7 @@ It returns an **MsmqOutgoingQueue** object that represents the cleared outgoing 
 
 ### Example 1: Purge all outgoing queues
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name "Order*" | Clear-MsmqOutgoingQueue
+PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Clear-MsmqOutgoingQueue
 ```
 
 This command gets all outgoing queue with a wildcard named Order and purges them.

@@ -232,6 +232,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.HyperV.PowerShell.VirtualMachine
+
 ## NOTES
 Shielded virtual machines do not support debugging or nonmaskable interrupts.
 **Debug-VM** will return an error if you try to debug a shielded VM.

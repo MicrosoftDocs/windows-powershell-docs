@@ -234,6 +234,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.Vhd.PowerShell.VirtualHardDisk
+
 ## NOTES
 
 ## RELATED LINKS

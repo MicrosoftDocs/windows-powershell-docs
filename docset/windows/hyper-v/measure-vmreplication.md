@@ -285,7 +285,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VMReplicationHealth
+### Microsoft.HyperV.PowerShell.VMReplicationHealth
 
 ## NOTES
 

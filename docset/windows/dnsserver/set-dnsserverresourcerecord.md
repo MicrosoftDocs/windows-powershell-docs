@@ -39,7 +39,7 @@ This cmdlet cannot change the Name or Type of a DNS server resource record objec
 
 ## EXAMPLES
 
-### Example 1: Change the settings of a resource record
+### Example 1: Change the timespan of a resource record
 ```
 PS C:\> $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
 PS C:\> $NewObj = $OldObj.Clone()
@@ -55,11 +55,13 @@ Host01                       A          0                    02:00:00        2.2
 
 In this example, the time to live (TTL) value of the resource record named Host01 in the zone named contoso.com is changed to 2 hours.
 
-The first command assigns a resource record named Host01 in the zone named contoso.com to the variables **$NewObj** and **$OldObj**.
+The first command assigns a resource record named Host01 in the zone named contoso.com to the variable **$OldObj**.
 
-The second command sets the TTL time span for **$NewObj** to 2 hours.
+The second command copies the variable **$OldObj** to a new variable **$NewObj** using the .Clone() method.
 
-The third command changes the properties of **$OldObj** to the settings specified for **$NewObj** in the previous command.
+The third command sets the TTL time span for **$NewObj** to 2 hours.
+
+The fourth command changes the properties of **$OldObj** to the settings specified for **$NewObj** in the previous command.
 
 ## PARAMETERS
 

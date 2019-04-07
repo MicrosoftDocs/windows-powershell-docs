@@ -150,6 +150,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
+If you specify a value of $False or do not specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean
@@ -180,6 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBlockAtFirstSeen
+Indicates whether to enable block at first seen.
+If you specify a value of $False or do not specify a value, Windows Defender enables block at first seen.
 
 ```yaml
 Type: Boolean
@@ -230,7 +233,7 @@ Accept wildcard characters: False
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
-If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True or do not specify a value, Windows Defender does not perform email scanning.
+If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender does not perform email scanning.
 
 ```yaml
 Type: Boolean
@@ -279,6 +282,7 @@ Accept wildcard characters: False
 ### -DisablePrivacyMode
 Indicates whether to disable privacy mode.
 Privacy mode prevents users, other than administrators, from displaying threat history.
+If you specify a value of $False or do not specify a value, privacy mode is enabled.
 
 ```yaml
 Type: Boolean
@@ -327,6 +331,7 @@ Accept wildcard characters: False
 
 ### -DisableRestorePoint
 Indicates whether to disable scanning of restore points.
+If you specify a value of $False or do not specify a value, Windows Defender restore point is enabled.
 
 ```yaml
 Type: Boolean
@@ -349,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningMappedNetworkDrivesForFullScan
-Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives.If you specify a value of $True, Windows Defender does not scan mapped network drives.
+Indicates whether to scan mapped network drives. If you specify a value of $False or do not specify a value, Windows Defender scans mapped network drives. If you specify a value of $True, Windows Defender does not scan mapped network drives.
 
 ```yaml
 Type: Boolean
@@ -364,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableScanningNetworkFiles
-Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True or do not specify a value, Windows Defender does not scan network files. We do not recommend that you scan network files.
+Indicates whether to scan for network files. If you specify a value of $False or do not specify a value, Windows Defender scans network files. If you specify a value of $True, Windows Defender does not scan network files. We do not recommend that you scan network files.
 
 ```yaml
 Type: Boolean
@@ -380,6 +385,7 @@ Accept wildcard characters: False
 
 ### -DisableScriptScanning
 Specifies whether to disable the scanning of scripts during malware scans.
+If you specify a value of $False or do not specify a value, Windows Defender does not scan scripts.
 
 ```yaml
 Type: Boolean
@@ -1197,4 +1203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Remove-MpPreference](./Remove-MpPreference.md)
-

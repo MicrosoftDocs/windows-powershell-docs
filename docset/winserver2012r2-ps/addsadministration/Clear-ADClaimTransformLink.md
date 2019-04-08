@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 19BEF7F8-7062-4525-AC80-D24964A9CD50
-ms.manager: dansimp
 ---
 
 # Clear-ADClaimTransformLink

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A584AF83-A2B0-4200-97B7-63C762946A49
-ms.manager: dansimp
 ---
 
 # Remove-WindowsPackage

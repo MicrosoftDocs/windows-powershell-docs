@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 34CA425A-4EED-42E9-8614-BBFF6C792393
+manager: dansimp
 ---
 
 # Disable-NetAdapterPowerManagement

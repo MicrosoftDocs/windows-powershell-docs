@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 970a4b60-76fa-43f7-bb39-e7f27b2d8d69
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -100,8 +99,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Stop-WmsSystem.
+### None
 
 ## OUTPUTS
 

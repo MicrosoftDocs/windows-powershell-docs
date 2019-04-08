@@ -220,8 +220,7 @@ The cmdlet uses the **FullName** property as the value of the *FileName* paramet
 
 ## OUTPUTS
 
-###  
-This cmdlet generates no output.
+### None
 
 ## NOTES
 

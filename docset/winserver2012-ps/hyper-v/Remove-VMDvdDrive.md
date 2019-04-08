@@ -144,8 +144,11 @@ Accept wildcard characters: True
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.DriveController** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.DriveController
+If **-PassThru** is specified.
 
 ## NOTES
 

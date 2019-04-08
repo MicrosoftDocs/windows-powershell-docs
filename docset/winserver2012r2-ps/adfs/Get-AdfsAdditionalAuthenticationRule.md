@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C48E0027-FDB7-4E1F-AF0A-76057FF592E3
-ms.manager: dansimp
 ---
 
 # Get-AdfsAdditionalAuthenticationRule

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A2DFD6D-168D-4757-AF70-8563D69DEA6A
-ms.manager: dansimp
 ---
 
 # Set-NetQosTrafficClass

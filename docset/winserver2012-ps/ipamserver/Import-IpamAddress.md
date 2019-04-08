@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 889E294A-FDD4-4F27-A256-BF45CB215D7C
+manager: dansimp
 ---
 
 # Import-IpamAddress

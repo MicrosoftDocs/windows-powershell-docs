@@ -117,7 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.VMSan
+### Microsoft.HyperV.PowerShell.VMSan
 
 ## NOTES
 

@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD4457AA-A27C-42DA-BCB0-F0BDBBB0C0E7
-ms.manager: dansimp
 ---
 
 # Remove-ADComputer

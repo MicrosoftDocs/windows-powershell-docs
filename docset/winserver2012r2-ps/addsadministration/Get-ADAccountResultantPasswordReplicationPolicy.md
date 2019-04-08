@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5E4878E5-A5BF-4F6A-86DF-1E573F8EB799
-ms.manager: dansimp
 ---
 
 # Get-ADAccountResultantPasswordReplicationPolicy

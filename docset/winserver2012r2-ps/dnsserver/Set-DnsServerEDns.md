@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA5012C8-2C10-4E44-BD05-122954970183
-ms.manager: dansimp
 ---
 
 # Set-DnsServerEDns

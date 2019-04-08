@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8037b3f8-e00e-4883-8fda-2dbd571f3de3
-ms.manager: dansimp
 ---
 
 # iSCSI Module

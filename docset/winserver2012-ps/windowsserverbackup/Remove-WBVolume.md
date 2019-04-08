@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 456F2FAD-E865-4499-A5AB-01DAF49DDACD
+manager: dansimp
 ---
 
 # Remove-WBVolume

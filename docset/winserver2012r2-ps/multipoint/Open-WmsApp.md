@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D02A1DD8-9D7D-4586-9655-6C3D566B6C4B
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -146,8 +145,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Open-WmsApp.
+### None
 
 ## OUTPUTS
 

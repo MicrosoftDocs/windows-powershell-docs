@@ -1,6 +1,7 @@
 ---
 external help file: 
 ms.assetid: EA5EDA09-8096-4751-9E37-5C848703B4FC
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

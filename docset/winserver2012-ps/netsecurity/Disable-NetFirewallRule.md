@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 064332BD-68EC-44E1-8A5A-E6C4F497D16A
+manager: dansimp
 ---
 
 # Disable-NetFirewallRule

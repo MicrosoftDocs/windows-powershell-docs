@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8581EE53-E8DD-4A77-8268-656868EB36B3
-ms.manager: dansimp
 ---
 
 # Clear-DnsServerCache

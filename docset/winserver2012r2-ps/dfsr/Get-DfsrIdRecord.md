@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5671A76F-5FDB-4661-B979-D47325E27A54
-ms.manager: dansimp
 ---
 
 # Get-DfsrIdRecord

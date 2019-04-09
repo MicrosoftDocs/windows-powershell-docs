@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BB2C6F39-B2E1-4E7E-BC0A-3A75D1D31F1F
-ms.manager: dansimp
 ---
 
 # Add-DhcpServerv4ExclusionRange

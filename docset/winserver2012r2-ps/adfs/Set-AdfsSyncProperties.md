@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1BEAFF02-DCDA-47CE-926A-04196927EFD6
-ms.manager: dansimp
 ---
 
 # Set-AdfsSyncProperties

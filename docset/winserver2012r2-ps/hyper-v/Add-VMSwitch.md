@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBDB65E2-F651-4FF0-9BB1-9A13C104056F
-ms.manager: dansimp
 ---
 
 # Add-VMSwitch

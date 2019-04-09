@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VMReplicationAuthorizationEntry
+### Microsoft.HyperV.PowerShell.VMReplicationAuthorizationEntry
 
 ## NOTES
 

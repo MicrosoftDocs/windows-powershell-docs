@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 50454F1E-D42E-48BD-94CA-AB3BD7EEA74C
-ms.manager: dansimp
 ---
 
 # Get-WindowsDriver

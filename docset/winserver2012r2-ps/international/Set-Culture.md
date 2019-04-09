@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D46BF01E-B43B-49DD-89EB-388C8F3CCB41
-ms.manager: dansimp
 ---
 
 # Set-Culture

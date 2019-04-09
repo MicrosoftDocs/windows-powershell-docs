@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 38AAFF5F-109C-4834-9D9E-53931EECC2CB
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -154,8 +153,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsSession.
+### None
 
 ## OUTPUTS
 

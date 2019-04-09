@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 59B423DF-65F7-4090-A853-9D8B98793314
-ms.manager: dansimp
 ---
 
 # Get-FsrmFileGroup

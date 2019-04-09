@@ -304,8 +304,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.HardDiskDrive** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.HardDiskDrive
+If **-PassThru** is specified.
 
 ## NOTES
 

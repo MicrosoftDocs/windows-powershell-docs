@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C4D3D777-7C98-4B3D-942C-088A7F11F5BD
-ms.manager: dansimp
 ---
 
 # Stop-FsrmFileManagementJob

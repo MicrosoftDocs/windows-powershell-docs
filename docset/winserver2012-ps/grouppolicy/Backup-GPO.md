@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: FEF0777A-CC17-4B94-8F81-4564CE511E74
+manager: dansimp
 ---
 
 # Backup-GPO

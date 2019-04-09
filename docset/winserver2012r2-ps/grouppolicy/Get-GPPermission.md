@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BCAE0807-FDFF-4F3F-A678-5885D9784C8D
-ms.manager: dansimp
 ---
 
 # Get-GPPermission

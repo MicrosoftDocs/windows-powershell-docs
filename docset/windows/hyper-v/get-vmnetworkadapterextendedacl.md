@@ -224,7 +224,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShellMicrosoft.HyperV.PowerShell.VMNetworkAdapterExtendedAclSetting
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterExtendedAclSetting
+
 
 ## NOTES
 

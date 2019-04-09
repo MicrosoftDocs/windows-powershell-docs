@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D39F712B-7DCC-4F4D-BE51-449D7F5647E6
-ms.manager: dansimp
 ---
 
 # Clear-BitLockerAutoUnlock

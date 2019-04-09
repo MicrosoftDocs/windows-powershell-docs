@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 091A4DD5-B207-4553-A934-E8A285310D4A
-ms.manager: dansimp
 ---
 
 # Get-BCDataCache

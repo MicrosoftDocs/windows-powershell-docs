@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 81E76D95-63B3-4BCF-B16D-051CB53B6185
-ms.manager: dansimp
 ---
 
 # Get-ADDefaultDomainPasswordPolicy

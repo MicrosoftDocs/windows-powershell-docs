@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 3358F893-793E-4493-B998-D49104083E7E
+manager: dansimp
 ---
 
 # Get-WssAlert

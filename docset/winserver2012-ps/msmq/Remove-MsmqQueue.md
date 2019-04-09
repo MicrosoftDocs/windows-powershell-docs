@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 65884D1F-717E-4B91-96D3-3BA21329D1DC
+manager: dansimp
 ---
 
 # Remove-MsmqQueue
@@ -27,7 +28,7 @@ The cmdlet has no return value.
 
 ### Example 1: Remove a queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Public | Remove-MsmqQueue
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Public | Remove-MsmqQueue
 ```
 
 This command removes all public queues that contain the wildcard name Order*.

@@ -108,6 +108,96 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -EAFModules
+Modules to be added to the EAF+ mitigation.
+
+```yaml
+Type: String
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Overrides a system setting either on or off depending on the level this is set at. Will force "on"/"off" all mitigations provided in the -Enable list
+
+```yaml
+Type: String
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsValid
+Set to check the given XML file for validity. Requires local .xsd
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Remove
+Removes a mitigation entry from the registry.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reset
+Resets a specific mitigation entry to defer.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -System
+Used to configure system defaults rather than individual apps.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PolicyFilePath
 {{Fill PolicyFilePath Description}}```yaml
 Type: String

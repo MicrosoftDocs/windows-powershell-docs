@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 0BDF6C5E-F391-4B3C-A661-23CDE7EEA82B
+manager: dansimp
 ---
 
 # New-SmbMultichannelConstraint

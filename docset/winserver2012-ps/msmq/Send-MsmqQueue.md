@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2E58878E-A50D-4CB5-8F94-522BD77EBBC3
+manager: dansimp
 ---
 
 # Send-MsmqQueue
@@ -39,14 +40,14 @@ It returns a **System.Messaging.Message** object that represents the message sen
 
 ### Example 1: Send a test message to a queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "a04bm10\private$\order_queue" | Send-MsmqQueue â€"Recoverable â€"Transactional â€"AdminQueuePath ".\private$\admin_queue"
+PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Send-MsmqQueue -Recoverable -Transactional -AdminQueuePath ".\private$\admin_queue"
 ```
 
 This command sends a recoverable and transactional test message to the queue named a04bm10\private$\order_queue.
 
 ### Example 2: Send a test message to a queue with a label
 ```
-PS C:\>Get-MsmqQueue â€"Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue"| Send-MsmqQueue â€"Transactional â€"Label "From Windows PowerShell"
+PS C:\>Get-MsmqQueue -Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue"| Send-MsmqQueue -Transactional -Label "From Windows PowerShell"
 ```
 
 This command sends a transactional test message to the queue named FormatName:DIRECT=TCP:10.199.37.61\order_queue with the label named From Windows PowerShell.

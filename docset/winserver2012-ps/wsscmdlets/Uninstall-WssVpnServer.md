@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 79BF1EAA-BAFC-4400-880A-55CC59A95FD3
+manager: dansimp
 ---
 
 # Uninstall-WssVpnServer

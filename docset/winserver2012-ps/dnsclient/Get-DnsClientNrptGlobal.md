@@ -1,6 +1,7 @@
 ---
 external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
 ms.assetid: AE7B2DEE-7132-4CCA-90D0-8BA1A1D885AB
+manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 author: kenwith

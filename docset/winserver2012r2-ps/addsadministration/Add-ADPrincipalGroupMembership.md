@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DBC77DD9-901F-4339-B43F-B769D45C4248
-ms.manager: dansimp
 ---
 
 # Add-ADPrincipalGroupMembership

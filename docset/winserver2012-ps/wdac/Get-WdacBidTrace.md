@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4814CE74-7218-4396-935E-25F3C483A081
+manager: dansimp
 ---
 
 # Get-WdacBidTrace

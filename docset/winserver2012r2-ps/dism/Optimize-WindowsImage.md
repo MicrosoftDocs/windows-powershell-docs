@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 109D170C-2DBF-4838-BBE5-F2A39C49D384
-ms.manager: dansimp
 ---
 
 # Optimize-WindowsImage

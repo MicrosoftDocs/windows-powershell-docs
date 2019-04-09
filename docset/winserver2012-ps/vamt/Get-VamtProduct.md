@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 7962B7C4-B722-428A-AB8C-5050975EDBAF
+manager: dansimp
 ---
 
 # Get-VamtProduct

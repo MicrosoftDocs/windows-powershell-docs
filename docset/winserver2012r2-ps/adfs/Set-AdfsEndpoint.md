@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 75224749-4526-468D-B6CA-EB366DC6AAE5
-ms.manager: dansimp
 ---
 
 # Set-AdfsEndpoint

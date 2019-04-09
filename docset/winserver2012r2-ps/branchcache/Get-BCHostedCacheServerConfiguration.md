@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64B1F603-57F4-476D-AB00-DF0554402944
-ms.manager: dansimp
 ---
 
 # Get-BCHostedCacheServerConfiguration

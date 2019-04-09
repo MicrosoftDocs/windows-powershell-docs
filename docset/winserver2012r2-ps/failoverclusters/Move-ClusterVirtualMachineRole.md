@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A8EB04E2-0323-4A81-922A-4ED227A5450D
-ms.manager: dansimp
 ---
 
 # Move-ClusterVirtualMachineRole

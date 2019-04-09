@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B0AB4484-ED67-49B2-9462-AC1838D8C356
+manager: dansimp
 ---
 
 # New-MsmqQueue
@@ -29,14 +30,14 @@ If the queue type parameter is not explicitly provided, the cmdlet defaults to a
 
 ### Example 1: Create a public MsmqQueue
 ```
-PS C:\>New-MsmqQueue â€"Name "OrderQueue" â€"QueueType Public
+PS C:\>New-MsmqQueue -Name "OrderQueue" -QueueType Public
 ```
 
 This command creates a public MsmqQueue named OrderQueue.
 
 ### Example 2: Create a private MsmqQueue with a quota and multicast address
 ```
-PS C:\>New-MsmqQueue â€"Name "OrderQueue" â€"Authenticate True â€"QueueQuota 200000 â€"MulticastAddress "234.12.3:8001"
+PS C:\>New-MsmqQueue -Name "OrderQueue" -Authenticate True -QueueQuota 200000 -MulticastAddress "234.12.3:8001"
 ```
 
 This command creates a private MsmqQueue named OrderQueue that has a quota of 200000 and a specific multicast address.

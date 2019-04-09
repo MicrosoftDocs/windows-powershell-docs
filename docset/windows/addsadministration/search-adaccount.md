@@ -539,11 +539,11 @@ The following examples show how to set this parameter.
 
 Set the time to 2 days
 
-`-TimeSpan "2"` 
+`-TimeSpan "2.00:00:00"` 
 
   Set the time span to the previous 2 days
 
-`-TimeSpan "-2"` 
+`-TimeSpan "-2.00:00.00"` 
 
   Set the time to 4 hours
 
@@ -551,7 +551,7 @@ Set the time to 2 days
 
 For example, to search for all accounts that are expiring in 10 days, specify the *AccountExpiring* and *TimeSpan* parameters as follows.
 
-  `-AccountExpiring -TimeSpan "10"`
+  `-AccountExpiring -TimeSpan "10.00:00.00"`
 
 ```yaml
 Type: TimeSpan

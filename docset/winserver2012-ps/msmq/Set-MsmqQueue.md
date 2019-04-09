@@ -31,7 +31,7 @@ This cmdlet returns an **MsmqQueue** object that represents the modified queue.
 
 ### Example 1: Set the properties of a specified queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private | Set-MsmqQueue â€"QueueQuota 500000 â€"Journaling
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -QueueQuota 500000 -Journaling
 ```
 
 This command sets the queue quota to 500000 on all queues that have the   wildcard named Order*.

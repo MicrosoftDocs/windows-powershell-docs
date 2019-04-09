@@ -825,6 +825,8 @@ Accept wildcard characters: False
 Specifies the accounts which can act on the behalf of users to services running as this computer account.
 This parameter sets the **msDS-AllowedToActOnBehalfOfOtherIdentity** attribute of a computer account object.
 
+`Running Set-ADComputer without specifying the first principal will cause it to get overridden`
+
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Identity

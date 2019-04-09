@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 81DD991F-CE5E-45DC-9BBB-37EC40D0D69D
-ms.manager: dansimp
 ---
 
 # Get-FsrmEffectiveNamespace

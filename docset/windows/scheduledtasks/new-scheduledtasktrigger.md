@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{Fill CimSession Description}}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a Common Information Model (CIM) session object that represents a connection to a local computer or a remote computer, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

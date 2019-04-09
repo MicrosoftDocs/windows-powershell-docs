@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B3A453AA-AB78-4DA7-9931-1436F854C5EC
+manager: dansimp
 ---
 
 # Set-WssClientBackupVolumeExcludedFolder

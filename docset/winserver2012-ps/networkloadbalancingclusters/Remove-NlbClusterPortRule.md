@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 8DB15162-B7F4-44E5-B9F0-9305EFEE57FD
+manager: dansimp
 ---
 
 # Remove-NlbClusterPortRule

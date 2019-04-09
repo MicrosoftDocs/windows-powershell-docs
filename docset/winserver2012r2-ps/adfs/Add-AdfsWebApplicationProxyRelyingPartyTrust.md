@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BF5095D4-806A-4394-A964-8299D351D909
-ms.manager: dansimp
 ---
 
 # Add-AdfsWebApplicationProxyRelyingPartyTrust

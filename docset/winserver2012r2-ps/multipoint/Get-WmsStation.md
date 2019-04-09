@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F523F1F9-74B5-42BD-B155-A7220B300ECA
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -155,8 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsStation.
+### None
 
 ## OUTPUTS
 

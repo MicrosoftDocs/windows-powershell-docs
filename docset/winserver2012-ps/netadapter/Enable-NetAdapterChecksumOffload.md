@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: E2A16CFE-C881-4F1C-8704-286766490629
+manager: dansimp
 ---
 
 # Enable-NetAdapterChecksumOffload

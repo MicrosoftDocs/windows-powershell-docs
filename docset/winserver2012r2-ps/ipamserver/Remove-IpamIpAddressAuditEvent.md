@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B6206257-6557-42E1-8579-1F9C00D0EA0E
-ms.manager: dansimp
 ---
 
 # Remove-IpamIpAddressAuditEvent

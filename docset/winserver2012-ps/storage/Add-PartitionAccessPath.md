@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: DA859E65-3EFD-4C3D-95F0-9C0F4687D302
+manager: dansimp
 ---
 
 # Add-PartitionAccessPath

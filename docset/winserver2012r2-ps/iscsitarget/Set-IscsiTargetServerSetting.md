@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 29BBED01-2919-446A-A81E-34E4E2BEB79C
-ms.manager: dansimp
 ---
 
 # Set-IscsiTargetServerSetting

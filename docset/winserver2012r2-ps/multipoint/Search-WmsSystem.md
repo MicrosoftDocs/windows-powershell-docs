@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8954DC2F-5DEF-4B55-A9E7-9BBCD01D5435
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -88,8 +87,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Search-WmsSystem.
+### None
 
 ## OUTPUTS
 

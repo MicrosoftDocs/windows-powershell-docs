@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9A49BDA-8BA0-41AC-A479-E7469E9DE0F1
-ms.manager: dansimp
 ---
 
 # Disable-VMEventing

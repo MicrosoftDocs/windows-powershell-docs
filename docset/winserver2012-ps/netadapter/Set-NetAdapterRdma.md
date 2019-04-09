@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 9EC9C0E0-0F32-4C3F-944D-F36085CB7947
+manager: dansimp
 ---
 
 # Set-NetAdapterRdma

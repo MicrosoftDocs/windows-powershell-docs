@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 5735D84D-4C83-4350-A91B-5C0A0F009638
+manager: dansimp
 ---
 
 # Get-MsmqQueue
@@ -39,7 +40,7 @@ If you do not specify any parameters this cmdlet will return all Public, Private
 
 ### Example 1: Get an array of MsmqQueue objects
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private
 ```
 
 This command gets an array of private MsmqQueue objects that are have the name Order.

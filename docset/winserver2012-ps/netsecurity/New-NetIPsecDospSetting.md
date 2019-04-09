@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 2CCD4FED-F1F6-41E4-A9C4-9DEB3F0CD69D
+manager: dansimp
 ---
 
 # New-NetIPsecDospSetting

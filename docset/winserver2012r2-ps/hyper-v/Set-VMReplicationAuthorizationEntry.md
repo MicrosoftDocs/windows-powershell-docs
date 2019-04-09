@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 595A0328-221D-419D-A8BC-5E55CC4B91F1
-ms.manager: dansimp
 ---
 
 # Set-VMReplicationAuthorizationEntry

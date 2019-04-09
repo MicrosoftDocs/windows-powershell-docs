@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 1D5EE754-8135-453C-B6B7-4E0C1F0B35DF
+manager: dansimp
 ---
 
 # New-OBRecoverableItem

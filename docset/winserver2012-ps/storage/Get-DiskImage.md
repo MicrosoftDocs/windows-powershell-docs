@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 70223CAA-40F9-44B3-B0C4-A0CA2CEC7B61
+manager: dansimp
 ---
 
 # Get-DiskImage

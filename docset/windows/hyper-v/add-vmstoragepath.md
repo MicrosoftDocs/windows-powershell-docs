@@ -196,8 +196,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **System.String** if *PassThru* is specified.
+### None
+Default
+
+### System.String
+If **-PassThru** is specified.
 
 ## NOTES
 

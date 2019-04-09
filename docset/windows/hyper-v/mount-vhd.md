@@ -224,7 +224,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.Vhd.PowerShell.VirtualHardDisk
+
 ## NOTES
 
 ## RELATED LINKS
-
+[Mount-DiskImage](https://docs.microsoft.com/powershell/module/storage/mount-diskimage)

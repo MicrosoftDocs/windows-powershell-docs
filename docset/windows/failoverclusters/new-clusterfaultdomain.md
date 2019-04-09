@@ -123,7 +123,6 @@ Specifies the type of the fault domain that this cmdlet creates.
 
 The acceptable values for this parameter are:
 
-- Unknown
 - Site
 - Rack
 - Chassis
@@ -133,7 +132,7 @@ The acceptable values for this parameter are:
 Type: FaultDomainType
 Parameter Sets: (All)
 Aliases: Type
-Accepted values: Unknown, Site, Rack, Chassis, Node
+Accepted values: Site, Rack, Chassis, Node
 
 Required: True
 Position: Named

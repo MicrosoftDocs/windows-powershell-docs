@@ -209,7 +209,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.ResourcePool
+### Microsoft.HyperV.PowerShell.VMResourcePool
 
 ## NOTES
 

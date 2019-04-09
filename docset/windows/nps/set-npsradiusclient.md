@@ -41,7 +41,7 @@ For more information about RADIUS client options, see [Managing RADIUS Clients](
 
 ### Example 1: Set a RADIUS client settings
 ```
-PS C:\>Set-NpsRadiusClient -Name "WirelessAP" -Address "10.0.0.201" $False -SharedSecret "1234567890"
+PS C:\>Set-NpsRadiusClient -Name "WirelessAP" -Address "10.0.0.201" -Enabled $False -SharedSecret "1234567890"
 ```
 
 This command changes settings for the RADIUS client named WirelessAP.

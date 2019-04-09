@@ -27,12 +27,12 @@ Exports the layout of the Start screen.
 
 ### Non-literal
 ```
-Export-StartLayout [-Path] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Export-StartLayout [-Path] <String> [-UseDesktopApplicationID] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Literal
 ```
-Export-StartLayout -LiteralPath <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+Export-StartLayout -LiteralPath <String> [-UseDesktopApplicationID] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,6 +95,22 @@ Aliases:
 Required: True
 Position: 1
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseDesktopApplicationID
+Specifies that the layout file should export the DesktopApplicationID value instead of DesktopApplicationLinkPath which is the default.
+DesktopApplicationID is the application's ID and DesktopApplicationLinkPath is a path to a shortcut link (.lnk file) to a Windows desktop application.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

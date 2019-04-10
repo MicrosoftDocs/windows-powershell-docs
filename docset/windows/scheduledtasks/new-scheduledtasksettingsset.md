@@ -404,7 +404,11 @@ Accept wildcard characters: False
 ```
 
 ### -MultipleInstances
-Specifies the policy that defines how Task Scheduler handles multiple instances of the task.
+Specifies the policy that defines how Task Scheduler handles multiple instances of the task. The acceptable values for this parameter are:
+
+IgnoreNew. The new task instance is ignored.
+Parallel. The new task instance starts immediately.
+Queue. The new task instance starts as soon as the current instance completes.
 
 ```yaml
 Type: MultipleInstancesEnum

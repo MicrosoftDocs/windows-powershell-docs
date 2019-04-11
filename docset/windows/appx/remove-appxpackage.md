@@ -124,6 +124,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+> [!NOTE] -user parameter requires sid information
+See [whoami syntax](./windows-commands/whoami.md)
+
+```
+whoami /user
+whoami /groups
+```
+
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 

@@ -33,6 +33,7 @@ Get-RDSessionCollection [[-CollectionName] <String>] [-ConnectionBroker <String>
 The **Get-RDSessionCollection** cmdlet gets session collections in a Remote Desktop deployment.
 A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
 Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+User needs to be a member of the machine Administrator group to run this command. 
 
 ## EXAMPLES
 

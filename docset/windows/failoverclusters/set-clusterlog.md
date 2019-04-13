@@ -104,6 +104,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+| Level  | Error  | Warning  | Info  | Verbose | Debug |
+|:-----|:-----|:-----|:-----|:-----|:-----|
+|0 (Disabled)  <br/> ||||||
+|1  <br/> |&#x2714;||||
+|2 <br/> |&#x2714;|&#x2714;|||
+|3 (Default) <br/> |&#x2714;|&#x2714;|&#x2714;||
+|4 <br/> |&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+|5  <br/> |&#x2714;|&#x2714;|&#x2714;|&#x2714;|&#x2714;|
 
 ### -Size
 Specifies the log size to set for the cluster.

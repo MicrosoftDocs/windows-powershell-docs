@@ -403,7 +403,14 @@ Accept wildcard characters: False
 ```
 
 ### -DNSHostName
-Specifies the Domain Name System (DNS) host name.
+Specifies the DNS (Domain Name System) host name of the Service Account.
+
+This parameter sets the value of the FQDN (Fully Quilified Domain Name) for the Service Account created.
+
+The following example shows how to set this parameter for a Service Account called service1 in the domain contoso.com
+
+-DNSHostName service1.contoso.com
+
 
 ```yaml
 Type: String

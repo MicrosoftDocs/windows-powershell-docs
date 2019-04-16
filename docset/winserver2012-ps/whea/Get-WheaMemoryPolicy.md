@@ -1,6 +1,7 @@
 ---
 external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
 ms.assetid: A9175E75-42E5-4E39-9DD5-8C37F7761214
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:

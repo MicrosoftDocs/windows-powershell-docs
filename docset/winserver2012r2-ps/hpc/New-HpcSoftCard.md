@@ -1,4 +1,4 @@
-ms.manager: dansimp
+---
 author: kenwith
 ms.author: kenwith
 description:

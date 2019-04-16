@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: F5362DCF-C01B-437E-866D-29D63C540F16
+manager: dansimp
 ---
 
 # Get-NlbCluster

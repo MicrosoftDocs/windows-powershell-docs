@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BCAE0807-FDFF-4F3F-A678-5885D9784C8D
+manager: dansimp
 ---
 
 # Get-GPPermission

@@ -130,7 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter[]
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
 
 ## NOTES
 

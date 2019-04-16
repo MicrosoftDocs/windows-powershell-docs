@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9DC4027-5A1F-4679-816B-C0039F02AC2C
-ms.manager: dansimp
 ---
 
 # Resolve-DnsName

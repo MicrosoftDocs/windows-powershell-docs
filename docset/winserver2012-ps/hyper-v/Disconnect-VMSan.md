@@ -135,8 +135,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMSan** if **-PassThru** is specified.
+### None
+Default
+
+### VMSan
+If **-PassThru** is specified.
 
 ## NOTES
 

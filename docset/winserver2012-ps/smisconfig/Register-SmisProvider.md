@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: BA892703-88F4-45C9-AFD3-29B2E3389742
+manager: dansimp
 ---
 
 # Register-SmisProvider

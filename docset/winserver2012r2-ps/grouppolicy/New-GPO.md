@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BFF99644-7AC6-40A0-97A0-48E161363338
-ms.manager: dansimp
 ---
 
 # New-GPO

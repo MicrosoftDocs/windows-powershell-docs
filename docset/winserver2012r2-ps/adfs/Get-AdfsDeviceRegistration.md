@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7ED241AD-D285-493E-AF6B-F529D8E8F577
-ms.manager: dansimp
 ---
 
 # Get-AdfsDeviceRegistration

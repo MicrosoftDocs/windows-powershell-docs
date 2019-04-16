@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE02463D-DF40-4E7F-A92C-E641A8CCB47D
-ms.manager: dansimp
 ---
 
 # Revoke-AdfsProxyTrust

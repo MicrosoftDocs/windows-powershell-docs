@@ -16,7 +16,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: e2a5768c-acfe-4697-a636-ac975b62d532
-ms.manager: dansimp
 ---
 
 # AppBackgroundTask Module

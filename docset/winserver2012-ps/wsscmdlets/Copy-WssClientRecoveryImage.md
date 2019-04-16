@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: A4B221E3-618D-4C48-9983-AFD3974E0A36
+manager: dansimp
 ---
 
 # Copy-WssClientRecoveryImage

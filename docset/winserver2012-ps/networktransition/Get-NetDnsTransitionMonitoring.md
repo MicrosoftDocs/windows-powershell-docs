@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 06FD4F67-5A4E-4A73-847E-909482BC5539
+manager: dansimp
 ---
 
 # Get-NetDnsTransitionMonitoring

@@ -13,7 +13,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF10CF86-649C-441A-BFD3-A8C56C690080
-ms.manager: dansimp
 ms.reviewer:
 ms.author: kenwith
 ---
@@ -103,8 +102,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Clear-WmsStation.
+### None
 
 ## OUTPUTS
 

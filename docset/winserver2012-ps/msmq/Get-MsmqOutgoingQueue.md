@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 33D16DB3-A890-478C-B0C5-B874FA584AAB
+manager: dansimp
 ---
 
 # Get-MsmqOutgoingQueue
@@ -28,7 +29,7 @@ Without parameters, this cmdlet returns all outgoing queues of the host machine.
 
 ### Example 1: Get an array of Outgoing queue objects specified by name
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name Order*
+PS C:\>Get-MsmqOutgoingQueue -Name Order*
 ```
 
 This command gets an array of outgoing queue objects that have the wildcard named Order.

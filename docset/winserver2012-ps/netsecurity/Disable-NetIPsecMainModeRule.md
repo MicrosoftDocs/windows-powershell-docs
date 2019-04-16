@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 4DC0A3E7-F1F0-48B0-B7E1-3EA7E9E7A91C
+manager: dansimp
 ---
 
 # Disable-NetIPsecMainModeRule

@@ -62,7 +62,7 @@ The **Get-DedupProperties** cmdlet gets Data Deduplication information.
 
 ### Example 1: Get Data Deduplication information.
 ```
-PS C:\>Get-DedupProperties -DriveLetter C\:
+PS C:\>Get-DedupProperties -DriveLetter C
 ```
 
 This command gets Data Deduplication information for the C\: drive.

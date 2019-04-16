@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BB77517D-2A1A-42B6-8D5E-CB99D5D463FE
-ms.manager: dansimp
 ---
 
 # Set-ADReplicationConnection

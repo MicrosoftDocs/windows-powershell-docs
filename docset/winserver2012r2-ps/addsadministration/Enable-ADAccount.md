@@ -15,7 +15,6 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 82DB3C7E-6CC4-468C-94EB-B2E146FC980F
-ms.manager: dansimp
 ---
 
 # Enable-ADAccount

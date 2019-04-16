@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: 93E2E92B-F9CB-4FFF-AAD3-62773A2F193B
+manager: dansimp
 ---
 
 # Get-WssFolder

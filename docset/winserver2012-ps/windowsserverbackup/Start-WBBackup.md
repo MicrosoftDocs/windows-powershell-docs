@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: CC220AF8-1BFE-4D6D-B64E-C712831A213E
+manager: dansimp
 ---
 
 # Start-WBBackup

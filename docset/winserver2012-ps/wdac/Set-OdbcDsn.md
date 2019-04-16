@@ -6,6 +6,7 @@ ms.reviewer:
 ms.author: kenwith
 author: kenwith
 ms.assetid: B71531B3-876B-4EA8-A07A-030075F3F003
+manager: dansimp
 ---
 
 # Set-OdbcDsn

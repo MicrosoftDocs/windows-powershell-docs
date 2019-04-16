@@ -41,7 +41,7 @@ If you specify a journal queue, system journal queue, system dead-letter queue, 
 
 ### Example 1: Modify properties of queues
 ```
-PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -Journaling -QueueQuota 500000
+PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -Journaling:$true -QueueQuota 500000
 ```
 
 This command gets private queues that have names that start with Order by using the **Get-MsmqQueue** cmdlet.

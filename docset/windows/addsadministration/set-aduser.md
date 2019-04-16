@@ -1216,7 +1216,7 @@ To modify an object property, you must use the LDAP display name.
 You can modify more than one property by specifying a comma-separated list.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value[],   Attribute2LDAPDisplayName=value[]}`
+`-Replace @{Attribute1LDAPDisplayName=value[];   Attribute2LDAPDisplayName=value[]}`
 
 When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 

@@ -54,7 +54,10 @@ PS C:\>Add-KdsRootKey -EffectiveImmediately
 ```
 
 This example generates a new root key and will be usable after 10 hours of creation and adds it to the Microsoft Group KdsSvc.
->[!TIP] This inmediate use is conditioned to wait 10 hours from creation time to allow all DCs to converge AD replication befure you can create gMSA. This time prevents password generation from occurring before all DCs in environment capable of answering gMSA request.>
+
+>[!NOTE]
+>There is a 10 hour waiting period from creation, to allow all DCs to converge with AD replication, before you can create gMSA. This prevents password generation before all DCs in the environment have answered the gMSA request.
+
 
 >[!TIP] For inmediate use please use:
 >```Powershell 
@@ -64,7 +67,7 @@ This example generates a new root key and will be usable after 10 hours of creat
 
 ### Example 3: Generate a new root key which takes effect on a specific date
 ```powershell
-PS C:\> Add-KdsRootKey -EffectiveTime 03/06/2013
+PS C:\>Add-KdsRootKey -EffectiveTime 03/06/2013
 ```
 
 This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/06/2013.
@@ -72,7 +75,7 @@ Use the mm/dd/yyyy format.
 
 ### Example 4: Generate a new root key on the local host only
 ```powershell
-PS C:\> Add-KdsRootKey -LocalTestOnly
+PS C:\>Add-KdsRootKey -LocalTestOnly
 ```
 
 This command generates a new root key on the local host only.

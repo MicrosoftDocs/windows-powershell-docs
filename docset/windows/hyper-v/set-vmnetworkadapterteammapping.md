@@ -268,6 +268,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterTeamMappingSetting
+
 ## NOTES
 
 ## RELATED LINKS

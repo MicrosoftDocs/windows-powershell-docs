@@ -5,7 +5,7 @@ _site/
 _themes*/
 
 *.suo
-*.vs/
+.vs/
 
 .openpublishing.buildcore.ps1
 

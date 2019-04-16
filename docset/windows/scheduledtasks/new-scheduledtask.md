@@ -222,6 +222,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-ScheduledTaskSettingsSet](./New-ScheduledTaskSettingsSet.md)
 
+[New-ScheduledTaskPrincipal](./New-ScheduledTaskPrincipal.md)
+
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
 
 [Register-ScheduledTask](./Register-ScheduledTask.md)

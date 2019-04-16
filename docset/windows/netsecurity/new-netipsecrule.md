@@ -768,9 +768,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteAddress
-Specifies that network packets with matching IP addresses match this rule. 
-This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
-This parameter value is an IPv4 or IPv6 address, host name, subnet, range, or the following keyword: Any. 
+Specifies that network packets with matching IP addresses match this rule.
+This parameter value is an IPv4 or IPv6 address, subnet, range, or keyword. 
 The acceptable formats for this parameter are: 
 - Single IPv4 Address: 1.2.3.4 
 - Single IPv6 Address: fe80::1 
@@ -781,6 +780,7 @@ The acceptable formats for this parameter are:
 - IPv6 Range: fe80::1 through fe80::9 
 Querying for rules with this parameter can only be performed using filter objects.
 See the Get-NetFirewallAddressFilter cmdlet for more information.
+- Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice.
 
 ```yaml
 Type: String[]

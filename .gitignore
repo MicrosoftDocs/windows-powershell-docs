@@ -4,6 +4,8 @@ _site/
 .optemp/
 _themes*/
 
+*.suo
+
 .openpublishing.buildcore.ps1
 
 .vscode/*

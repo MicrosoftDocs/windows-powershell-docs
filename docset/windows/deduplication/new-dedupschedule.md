@@ -78,7 +78,7 @@ The **DurationHours** parameter specifies that the server cancels the job after 
 
 ### Example 3: Create a data deduplication schedule for an optimization job
 ```
-PS C:\> New-DedupSchedule -Name "MyWeekendOptimization" -Type Optimization -Days Mon,Tues,Wed,Thurs,Fri -Start 08:00 -DurationHours 9
+PS C:\> New-DedupSchedule -Name "MyWeekdayOptimization" -Type Optimization -Days Mon,Tues,Wed,Thurs,Fri -Start 08:00 -DurationHours 9
 ```
 
 This command creates a data deduplication schedule for an optimization job named MyWeekdayOptimization.

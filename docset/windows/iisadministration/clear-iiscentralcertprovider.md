@@ -66,13 +66,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-**Clear-IISCentralCertProvider** does not accept pipelined input.
+### None
 
 ## OUTPUTS
 
-###  
-**Clear-IISCentralCertProvider** does not return any objects.
+### None
 
 ## NOTES
 

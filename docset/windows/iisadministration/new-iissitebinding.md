@@ -14,7 +14,7 @@ keywords: powershell, cmdlet
 # New-IISSiteBinding
 
 ## SYNOPSIS
-Adds a new binding to an existing Website.
+Adds a new binding to an existing Website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Website.
+Adds a new binding to an existing website.
 
 ## EXAMPLES
 

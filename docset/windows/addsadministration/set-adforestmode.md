@@ -137,6 +137,7 @@ The acceptable values for this parameter are:
 - Windows2008R2Forest or 4
 - Windows2012Forest or 5
 - Windows2012R2Forest or 6
+- Windows2016Forest or 7
 
 The values are listed in order of functionality from least to most.
 

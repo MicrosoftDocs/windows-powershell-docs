@@ -14,7 +14,7 @@ keywords: powershell, cmdlet
 # Remove-IISSiteBinding
 
 ## SYNOPSIS
-Removes a binding from an IIS website.
+Removes a binding from an IIS website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 
 ## SYNTAX
 

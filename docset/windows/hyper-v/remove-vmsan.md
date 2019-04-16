@@ -163,8 +163,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.Powershell.VMSan** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.Powershell.VMSan
+If **-PassThru** is specified.
 
 ## NOTES
 

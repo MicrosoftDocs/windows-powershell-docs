@@ -759,19 +759,24 @@ This parameter uses the following syntax to add remove, replace or clear service
 
 To add values:
 
-`-ServicePrincipalNames @{Add=value1,value2,...}`
+```Powershell
+-ServicePrincipalNames @{Add=value1,value2,...}
+```
 
 To remove values:
-
-`-ServicePrincipalNames @{Remove=value3,value4,...}`
+```Powershell
+-ServicePrincipalNames @{Remove=value1,value2,...}
+```
 
 To replace values:
-
-`-ServicePrincipalNames @{Replace=value1,value2,...}`
+```Powershell
+-ServicePrincipalNames @{Replace=value1,value2,...}
+```
 
 To clear all values:
-
-`-ServicePrincipalNames $Null`
+```Powershell
+-ServicePrincipalNames $null
+```
 
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
@@ -783,6 +788,7 @@ The operators are applied in the following sequence:
 - Remove
 - Add
 - Replace
+
 
 ```yaml
 Type: String[]

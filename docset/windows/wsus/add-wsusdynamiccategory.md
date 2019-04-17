@@ -169,6 +169,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+This cmdlet is used to add Dynamic Categories to WSUS, based on the types needed (Computer Model, Device or Application).  The definition of Dynamic Categories in a WSUS implementation, helps to categorize the appliying of the updates to the diferent types availables. 
+
+In some cases the user needs advanced automation when Dynamic Categories are used, for example if the user wants to download a specific device driver for a specific group of computers in the physical network, this problem needs more advanced automation on the use of Dynamic Categories and in this case the use of [System Center Configurations Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager) is needed, configuring the [Software Update Point](https://docs.microsoft.com/en-us/sccm/sum/get-started/install-a-software-update-point) feature.
+
 ## RELATED LINKS
 
 [Get-WsusDynamicCategory](./Get-WsusDynamicCategory.md)

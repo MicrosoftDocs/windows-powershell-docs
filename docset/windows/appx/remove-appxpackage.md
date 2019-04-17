@@ -112,6 +112,14 @@ If you specify this parameter, the cmdlet removes the app package for only the u
 - user_name
 - SID-string
 
+> [!NOTE] -user parameter requires sid information
+See [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami)
+
+```
+whoami /user
+whoami /groups
+```
+
 ```yaml
 Type: String
 Parameter Sets: UserSet
@@ -123,15 +131,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-> [!NOTE] -user parameter requires sid information
-See [whoami syntax](./windows-commands/whoami.md)
-
-```
-whoami /user
-whoami /groups
-```
-
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.

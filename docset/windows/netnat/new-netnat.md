@@ -60,7 +60,7 @@ From the above, 10.0.0.0/24 will be used as an example.
 For this example, run the following to set up the NAT network:
 
 ```
-New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddressPrefix "10.0.0.0/24"
+PS C:\> New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddressPrefix "10.0.0.0/24"
 ```
 ## PARAMETERS
 

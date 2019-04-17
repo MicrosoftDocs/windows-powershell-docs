@@ -189,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VHDObject[]
+### Microsoft.Vhd.PowerShell.VirtualHardDisk
 
 ## NOTES
 

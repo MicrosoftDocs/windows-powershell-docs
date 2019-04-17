@@ -252,7 +252,7 @@ A directory server object is received by the *Identity* parameter.
 ## NOTES
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* This cmdlet does not work with a read-only domain controller.
+
 
 ## RELATED LINKS
 

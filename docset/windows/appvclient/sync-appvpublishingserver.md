@@ -61,6 +61,8 @@ This command starts publishing refresh for the current user for the server named
 ### -Force
 Indicates that the cmdlet forces all publishes and unpublishes of packages.
 
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

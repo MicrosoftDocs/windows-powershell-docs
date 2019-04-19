@@ -121,6 +121,19 @@ This example registers a scheduled task that runs only when a network is availab
 
 The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
 
+### Example 6: Register a scheduled task that has a time limit to complete the task
+```
+PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
+
+The second command creates scheduled task settings that specify if the task is not finished after 1 hour, it is considered as failed. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
+$Stset = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 1)
+
+The third command registers the scheduled task Task01 to run the task action named Cmd only then finish the task after 1 hour.
+PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
+```
+Without the ExecutionTimeLimit setting defined the time limit set to it's default of 3 days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan?view=powershell-6).
+
+
 ## PARAMETERS
 
 ### -AllowStartIfOnBatteries

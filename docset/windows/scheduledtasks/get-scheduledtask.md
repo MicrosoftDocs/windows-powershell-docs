@@ -37,7 +37,7 @@ The **Get-ScheduledTask** cmdlet gets the task definition object of a scheduled 
 
 ### Example 1: Get a scheduled task definition object
 ```
-PS C:\> Get-ScheduledTask -TaskName "SystemScan"
+PS C:\> Get-ScheduledTask -TaskName "SystemScan*"
 TaskPath                          TaskName                        State
 --------                          --------                        --------
 \                                 SystemScan                      Ready
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskName
-Specifies an array of one or more names of a scheduled task.
+Specifies an array of one or more names of a scheduled task. You can use "*" for a wildcard character query.
 
 ```yaml
 Type: String[]

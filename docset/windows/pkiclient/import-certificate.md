@@ -147,3 +147,4 @@ The output is an array of **X509Certificate2\[\]** objects.
 
 [Export-Certificate](./Export-Certificate.md)
 
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)

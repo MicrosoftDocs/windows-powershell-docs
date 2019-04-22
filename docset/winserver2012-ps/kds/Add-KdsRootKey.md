@@ -49,7 +49,7 @@ This example generates a new root key and will be usable after 10 hours of creat
 >[!NOTE]
 >There is a 10 hour waiting period from creation, to allow all DCs to converge with AD replication, before you can create gMSA. This prevents password generation before all DCs in the environment have answered the gMSA request.
 
->[!TIP] For inmediate use please use:
+>[!TIP] For immediate use please use:
 >```Powershell 
 >Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))  
 >``` 

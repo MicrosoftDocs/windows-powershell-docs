@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1DEC3646-9E71-4E64-A9DD-1DAE65C8591B
+manager: dansimp
 ---
 
 # Set-DtcTransactionsTraceSession

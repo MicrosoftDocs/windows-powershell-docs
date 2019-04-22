@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: DB52B2F9-16B3-401F-9814-8A9C026C8EE6
+manager: dansimp
 ---
 
 # Get-WssBackupSet

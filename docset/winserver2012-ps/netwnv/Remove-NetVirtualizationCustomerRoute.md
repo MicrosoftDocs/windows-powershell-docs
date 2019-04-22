@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B3F7199E-ABD2-4D9C-BACD-30582E312C32
+manager: dansimp
 ---
 
 # Remove-NetVirtualizationCustomerRoute

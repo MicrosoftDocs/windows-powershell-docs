@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-Website
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64E1E8E9-5041-4CBF-A3EB-AC41B2DD42A9
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Remove-Website
@@ -31,7 +33,7 @@ The **Remove-Website** cmdlet removes a website from an Internet Information Ser
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Removeing a wWeb Ssite --------------ews
+### Example 1: Removing a web site
 ```
 IIS:\>Remove-WebSite -Name "TestSite"
 ```

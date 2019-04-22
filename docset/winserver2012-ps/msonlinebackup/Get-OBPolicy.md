@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 32BF3229-650F-4BCA-A587-4275CE671964
+manager: dansimp
 ---
 
 # Get-OBPolicy

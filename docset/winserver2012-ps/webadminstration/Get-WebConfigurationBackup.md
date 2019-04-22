@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 7A959FA4-63F7-4DA7-A39B-20076FD83F99
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WebConfigurationBackup

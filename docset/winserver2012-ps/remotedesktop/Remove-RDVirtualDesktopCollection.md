@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 3D302194-29FA-471E-B574-EAA5AC0DB413
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-RDVirtualDesktopCollection

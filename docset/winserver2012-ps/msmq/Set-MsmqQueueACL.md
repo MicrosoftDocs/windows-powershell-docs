@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 4DAF0FE1-6D1E-4F47-8441-78DEFDB24512
+manager: dansimp
 ---
 
 # Set-MsmqQueueACL
@@ -27,7 +31,7 @@ This cmdlet can be applied to private, public, journal, system journal, system d
 
 ### Example 1: Set the access rights for the specified queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private | Set-MsmqQueueAcl â€"UserName "REDMOND\pattiful" â€"Allow Delete,Peek,Receive,Send â€"Deny TakeOwnership
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueueAcl -UserName "REDMOND\pattiful" -Allow Delete,Peek,Receive,Send -Deny TakeOwnership
 ```
 
 This command sets Allow, Delete, Peek, Receive, and Send access rights for user pattiful on all queues that have the wildcard named Order*.

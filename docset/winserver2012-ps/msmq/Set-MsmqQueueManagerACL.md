@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B0D7C113-9A7F-4C83-93BE-06BF8795F19E
+manager: dansimp
 ---
 
 # Set-MsmqQueueManagerACL
@@ -25,7 +29,7 @@ This cmdlet returns the updated **MsmqQueueManagerAcl** object.
 
 ### Example 1: Set the access rights of the local queue manager
 ```
-PS C:\>Set-MsmqQueueManagerAcl â€"UserName "CONTOSO\pattiful" â€"Allow DeleteMessage,PeekMessage â€"Deny TakeOwnership,SetPermissions
+PS C:\>Set-MsmqQueueManagerAcl -UserName "CONTOSO\pattiful" -Allow DeleteMessage,PeekMessage -Deny TakeOwnership,SetPermissions
 ```
 
 This command sets the access rights to Allow, DeleteMessage, and PeekMessage for the user named CONTOSO\pattiful on the default queue.
@@ -77,7 +81,7 @@ The acceptable values for this parameter are:
 - CreateQueue: Create a queue with the specified queue manager. 
 - Delete: Delete queues of the specified queue manager. 
 - DeleteChildObjects: Delete child objects from the specified queue manager. 
---FullControl: Full control of the specified queue manager. 
+- FullControl: Full control of the specified queue manager. 
 - GetPermissions: Get the permissions of the specified queue manager. 
 - GetProperties: Get the properties of the specified queue manager. 
 - ListContent: List content stored in the queues of the specified queue manager. 

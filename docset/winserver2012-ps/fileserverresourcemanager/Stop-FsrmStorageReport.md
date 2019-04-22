@@ -3,6 +3,10 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Stop-FsrmStorageReport

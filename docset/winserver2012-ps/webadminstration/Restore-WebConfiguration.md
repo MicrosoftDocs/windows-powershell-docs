@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 81C2DCCF-49AF-4948-97B3-EE9EEE723B64
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Restore-WebConfiguration

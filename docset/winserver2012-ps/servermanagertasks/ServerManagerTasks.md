@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=252257
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: A97F254E-658B-4B70-9B0D-6BEC29434DA3
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # ServerManagerTasks Module

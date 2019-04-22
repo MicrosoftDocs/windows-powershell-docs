@@ -6,13 +6,15 @@ schema: 2.0.0
 title: ConvertTo-WebApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09B401A9-4E53-4CEC-AC08-419B9EE87BB2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # ConvertTo-WebApplication
@@ -32,7 +34,7 @@ The **ConvertTo-WebApplication** cmdlet converts an Internet Information Service
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Convert a Virtual virtual Directory directory to a Web web Application application --------------virtual directory web application
+### Example 1: Convert a virtual directory to a web application
 ```
 IIS:\> Md $Env:systemdrive\inetpub\Contoso 
 IIS:\> New-WebVirtualDirectory -Site "Default Web Site" -Name "ContosoVDir" -PhysicalPath "$Env:systemdrive\inetpub\Contoso" 

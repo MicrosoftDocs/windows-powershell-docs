@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamServerProvisioning.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Invoke-IpamServerProvisioning
+ms.reviewer:
 ms.assetid: 0D803E57-68C1-4767-AB40-827E80DBC5BF
 ---
 
@@ -44,26 +45,20 @@ The **Invoke-IpamServerProvisioning** cmdlet installs and configures IP Address 
 When you run the cmdlet locally on IPAM server or remotely from an RSAT, the cmdlet installs and configures IPAM components on the IPAM server to which the session is connected.
 As a part of installation, the cmdlet performs the following functions:
 
-1.
-Configures the WCF and WSMan settings, such as Port and App Pool configuration.
+1. Configures the WCF and WSMan settings, such as Port and App Pool configuration.
 
-2.
-Creates and connects to an IPAM database.
-The cmdlet attempts to create a database by using authentication credentials that the user specifies.
-An error occurs if the database that you specify does not exist or the chosen credentials do not include permissions to create a database.
+2. Creates and connects to an IPAM database.
+   The cmdlet attempts to create a database by using authentication credentials that the user specifies.
+   An error occurs if the database that you specify does not exist or the chosen credentials do not include permissions to create a database.
 
-3.
-Creates IPAM Tasks to get data for IPAM views.
+3. Creates IPAM Tasks to get data for IPAM views.
 
-4.
-Creates default user roles for access control.
-This includes RBAC roles in the database and any local security groups.
+4. Creates default user roles for access control.
+   This includes RBAC roles in the database and any local security groups.
 
-5.
-Configures a provisioning method.
+5. Configures a provisioning method.
 
-6.
-By default, the cmdlet enables all available IPAM optional capabilities. 
+6. By default, the cmdlet enables all available IPAM optional capabilities. 
 
 You can choose to manually or automatically provision access to managed servers.
 If you provisioned the managed servers by using group policy, make sure to create the corresponding GPOs in every managed domain by using the **Invoke-IpamGpoProvisioning** cmdlet.

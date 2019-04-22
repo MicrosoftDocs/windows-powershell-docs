@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216900
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 8008D3A6-4E97-4977-92F7-795EF45B4A27
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # PKIClient Module

@@ -3,6 +3,10 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: D12E5246-2D94-48AB-97B7-9B2FF0B8A58A
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ClusterServerRole

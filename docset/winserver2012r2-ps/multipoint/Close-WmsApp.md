@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 050C6E96-D91B-4020-B752-859BEA975416
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Close-WmsApp
@@ -148,13 +150,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Close-WmsApp.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 375E3D0B-2D6F-4A19-BA51-527E56D4C1A3
+manager: dansimp
 ---
 
 # Add-WssUser

@@ -1,8 +1,12 @@
 ---
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 ms.assetid: 526AB39C-AC87-4484-BFC8-48D3FCA7648A
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-NetConnectionProfile

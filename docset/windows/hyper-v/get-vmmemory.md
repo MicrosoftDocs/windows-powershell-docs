@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VMMemory
+ms.reviewer:
 ms.assetid: E3B88D90-4168-40E6-A57E-FE69F4490A48
 ---
 
@@ -157,7 +158,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.Memory
+### Microsoft.HyperV.PowerShell.VMMemory
 
 ## NOTES
 

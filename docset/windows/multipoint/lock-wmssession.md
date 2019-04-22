@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MultiPoint.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Lock-WmsSession
+ms.reviewer:
 ms.assetid: B4D13723-44A5-455A-97A8-88C4C46523E7
 ---
 
@@ -115,13 +116,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-None.
+### None
 
 ## NOTES
 

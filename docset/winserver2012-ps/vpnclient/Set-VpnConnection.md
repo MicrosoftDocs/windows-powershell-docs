@@ -2,7 +2,11 @@
 external help file: VpnClient_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 9B034F66-76F5-4FB7-BC70-B641B354C734
+manager: dansimp
 ---
 
 # Set-VpnConnection

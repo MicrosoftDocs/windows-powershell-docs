@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-VMSwitchTeamMember
+ms.reviewer:
 ms.assetid: 17055220-FEE8-42F4-85C4-F2289092AF61
 ---
 
@@ -60,7 +61,7 @@ The **Remove-VMSwitchTeamMember** cmdlet removes virtual network adapters from a
 ### Example 1: Remove network adapters from a switch team
 ```
 PS C:\> $VMSwitch = Get-VMSwitch -Name "Switch03"
-PS C:\> Removed-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
+PS C:\> Remove-VMSwitchTeamMember -VMSwitch $VMSwitch -NetAdapterName "Adapter01","Adapter04"
 ```
 
 The first command gets the virtual switch named Switch03, and then stores that object in the **$VMSwitch** variable.

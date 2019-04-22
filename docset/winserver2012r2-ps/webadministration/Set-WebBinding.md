@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WebBinding
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AC422DFB-2D9E-4C1E-810E-20642482982C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WebBinding
@@ -39,7 +41,7 @@ The **Set-WebBinding** cmdlet changes a property of an existing Internet Informa
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Changing Change a Wweb site binding property --------------Change w
+### Example 1: Changing a web site binding property
 ```
 IIS:\>Set-WebBinding -Name 'Default Web Site' -BindingInformation "*:80:" -PropertyName "Port" -Value "1234"
 ```

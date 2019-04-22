@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EA364A0B-06D6-4653-B41C-BE69B8038B54
+manager: dansimp
 ---
 
 # Get-StorageSubsystem

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 16DE7EBE-DA79-41E5-A2FF-04B20252D992
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Expand-IscsiVirtualDisk

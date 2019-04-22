@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 37504AB6-22BD-495A-81BC-032541BD594B
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-RDRemoteDesktop

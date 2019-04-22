@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: F0EEF063-A47F-4D06-8BC4-332540CB3877
+manager: dansimp
 ---
 
 # Unregister-CauPlugin

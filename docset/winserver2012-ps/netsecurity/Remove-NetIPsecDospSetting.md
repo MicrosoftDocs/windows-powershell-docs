@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EC1F98C4-4B51-4124-ACF0-918DBC82BAB0
+manager: dansimp
 ---
 
 # Remove-NetIPsecDospSetting

@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 916110E9-5C95-4CFB-906D-D827924D4469
+manager: dansimp
 ---
 
 # Enable-NetAdapterSriov

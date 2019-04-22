@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 3FB5BEE8-B432-4FB1-B5DD-3FC2209D7191
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADAccountPassword

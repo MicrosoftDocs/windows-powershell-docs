@@ -132,13 +132,14 @@ For example, to set the domain mode level to Windows Server 2008 R2, you can spe
 
 The following are the currently supported values: 
 
---Windows Server 2000: **0** or **Windows2000Domain**
---Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**
---Windows Server 2003: **2** or **Windows2003Domain**
---Windows Server 2008: **3** or **Windows2008Domain**
---Windows Server 2008 R2: **4** or **Windows2008R2Domain**
---Windows Server 2012: **5** or **Windows2012Domain**
---Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+- Windows Server 2000: **0** or **Windows2000Domain**
+- Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**
+- Windows Server 2003: **2** or **Windows2003Domain**
+- Windows Server 2008: **3** or **Windows2008Domain**
+- Windows Server 2008 R2: **4** or **Windows2008R2Domain**
+- Windows Server 2012: **5** or **Windows2012Domain**
+- Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+- Windows Server 2016: **7** or **WinThreshold**
 
 The domain functional level cannot be lower than the forest functional level, but it can be higher.
 The functional level can be increased, and also decreased as long as no feature that requires that functional level is in use, such as the Active Directory Recycle Bin.

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-MSDSMSupportedHW
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B5C4D790-55E1-45DB-9DA0-4B2371E6576A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Clear-MSDSMSupportedHW

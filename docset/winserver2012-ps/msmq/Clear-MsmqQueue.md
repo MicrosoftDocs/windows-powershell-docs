@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 826F3112-17C3-4A68-BED5-C0E14B9AEA80
+manager: dansimp
 ---
 
 # Clear-MsmqQueue
@@ -24,7 +28,7 @@ It returns a **MessageQueue** object that represents the cleared outgoing queue.
 
 ### Example 1: Clear all queues under a specified wildcard
 ```
-PS C:\>Get-MessageQueue â€"Name Order* | Clear-MessageQueue
+PS C:\>Get-MessageQueue -Name Order* | Clear-MessageQueue
 ```
 
 This command gets all queue under the wildcard named Order, then clears them.

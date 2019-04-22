@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 527473BA-7372-41F3-A75B-93211FBCC8DE
+manager: dansimp
 ---
 
 # Get-WssMediaServerEnabled

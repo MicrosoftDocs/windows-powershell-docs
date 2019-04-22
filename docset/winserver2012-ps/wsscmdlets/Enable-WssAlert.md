@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 18DC4007-1043-48D5-B6A1-68D74F97C0E6
+manager: dansimp
 ---
 
 # Enable-WssAlert

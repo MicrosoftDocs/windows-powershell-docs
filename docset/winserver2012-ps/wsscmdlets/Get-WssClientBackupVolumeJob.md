@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 4F453538-A753-4F08-BCB7-176993E618DF
+manager: dansimp
 ---
 
 # Get-WssClientBackupVolumeJob

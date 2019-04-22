@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Reset-DAClientExperienceConfiguration
+ms.reviewer:
 ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
 ---
 
@@ -390,8 +391,7 @@ This cmdlet accepts as input a CIM object that contains a DA client experience c
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

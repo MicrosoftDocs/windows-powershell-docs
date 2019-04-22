@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 5F7B7FB1-A749-4637-87CF-AC1E8DD7C588
+manager: dansimp
 ---
 
 # Move-MsmqMessage
@@ -27,9 +31,9 @@ You can get subqueues with the Get-MsmqQueue cmdlet.
 
 ### Example 1: Move a message between two queues
 ```
-PS C:\>$SrcQueue = Get-MSMQQueue â€"Private â€"Name "MyQueue" 
-PS C:\> $DstQueue = Get-Message = $SrcQueue | Receive-MSMQQueue -Peek -MSMQQueue â€"Private â€"Name "MyQueue" â€"SubQueue "MySubQueue"
-PS C:\> $SrcQueue | Move-MSMQMessage â€"DestinationQueue $DstQueue â€"Message $Message
+PS C:\>$SrcQueue = Get-MSMQQueue -Private -Name "MyQueue" 
+PS C:\> $DstQueue = Get-Message = $SrcQueue | Receive-MSMQQueue -Peek -MSMQQueue -Private -Name "MyQueue" -SubQueue "MySubQueue"
+PS C:\> $SrcQueue | Move-MSMQMessage -DestinationQueue $DstQueue -Message $Message
 ```
 
 The first command gets a private queue named MyQueue and stores it in the variable named $SrcQueue.

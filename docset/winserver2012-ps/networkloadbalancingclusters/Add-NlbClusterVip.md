@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8C7A190F-CE1C-43D5-8C33-C9CE0EDA73D0
+manager: dansimp
 ---
 
 # Add-NlbClusterVip

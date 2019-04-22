@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 89E1F016-9E38-4553-AE4B-569FACDDD265
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DhcpServerv4OptionDefinition

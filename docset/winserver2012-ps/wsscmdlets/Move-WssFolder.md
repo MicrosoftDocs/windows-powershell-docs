@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3835B800-FC6F-4DE5-9008-24698615C552
+manager: dansimp
 ---
 
 # Move-WssFolder

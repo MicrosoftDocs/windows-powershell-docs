@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 074377D0-848E-48B0-AF94-D1E9A7A75BDA
+manager: dansimp
 ---
 
 # Get-NetIsatapConfiguration

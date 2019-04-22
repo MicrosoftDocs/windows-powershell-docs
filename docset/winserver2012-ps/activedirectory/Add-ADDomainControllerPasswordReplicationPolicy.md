@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 9272C202-13CA-4248-AC58-D2D38A9F1608
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ADDomainControllerPasswordReplicationPolicy

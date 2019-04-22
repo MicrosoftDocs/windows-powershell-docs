@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerv4Failover_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-DhcpServerv4Failover
+ms.reviewer:
 ms.assetid: 0A1F0811-FE87-473A-815A-285BDC2A0CEF
 ---
 

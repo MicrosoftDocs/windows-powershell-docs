@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 2908AB37-D587-494A-B1A4-D57D594927B4
+manager: dansimp
 ---
 
 # Rename-NetAdapter

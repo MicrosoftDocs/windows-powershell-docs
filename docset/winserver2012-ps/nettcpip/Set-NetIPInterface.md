@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3268460C-920A-4E06-9A45-4A2BFFD63E3C
+manager: dansimp
 ---
 
 # Set-NetIPInterface

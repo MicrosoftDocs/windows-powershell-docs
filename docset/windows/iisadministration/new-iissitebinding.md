@@ -4,6 +4,9 @@ online version:
 schema: 2.0.0
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 title: New-IISSiteBinding
+ms.author: kenwith
+author: kenwith
+ms.reviewer:
 online version:
 keywords: powershell, cmdlet
 ---
@@ -11,7 +14,7 @@ keywords: powershell, cmdlet
 # New-IISSiteBinding
 
 ## SYNOPSIS
-Adds a new binding to an existing Website.
+Adds a new binding to an existing Website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 
 ## SYNTAX
 
@@ -22,7 +25,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Website.
+Adds a new binding to an existing website.
 
 ## EXAMPLES
 

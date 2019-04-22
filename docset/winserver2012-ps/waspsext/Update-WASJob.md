@@ -2,7 +2,11 @@
 external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D4AC7EAE-B33B-458A-8007-C4A4F9034C56
+manager: dansimp
 ---
 
 # Update-WASJob

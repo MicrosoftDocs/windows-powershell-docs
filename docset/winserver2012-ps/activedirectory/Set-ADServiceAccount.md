@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 0ED2B430-F6D2-4763-B1C5-6D606213F3EC
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADServiceAccount
@@ -13,7 +17,7 @@ Modifies an Active Directory managed service account or group managed service ac
 ## SYNTAX
 
 ### Identity
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-Add <Hashtable>] [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Clear <String[]>]
  [-CompoundIdentitySupported <Boolean>] [-Credential <PSCredential>] [-Description <String>]
@@ -26,7 +30,7 @@ Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### Instance
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
  -Instance <ADServiceAccount> [-PassThru] [-Server <String>] [<CommonParameters>]
 ```
@@ -77,7 +81,7 @@ Set-ADServiceAccount -Instance $serviceAccount.
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount service1 -Description "Secretive Data Server"
 ```
 
@@ -88,7 +92,7 @@ Description
 Set the description of Managed Service Account 'service1' to "Secretive Data Server"
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount Mongol01ADAM -ServicePrincipalNames @{replace="ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"}
 ```
 
@@ -99,9 +103,16 @@ Description
 Replace the value of property ServicePrincipalNames with "ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
+```Powershell
 C:\PS>Set-ADServiceAccount service1 -PrincipalsAllowedToRetrieveManagedPassword "MsaAdmins.corp.contoso.com"
 ```
+
+### -------------------------- EXAMPLE 4 --------------------------
+```Powershell
+C:\PS>Set-ADServiceAccount service1 -ServicePrincipalNames @{add="ADAMwdb/a.contoso.com"}
+```
+
+This Cmdlet adds a new principalname to the service, ADAMwdb/a.contoso.com, make sure that a.contoso.com is unique domain wide.
 
 Description
 

@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 89F435A4-2771-4245-A44C-16F79EE2AB0E
+manager: dansimp
 ---
 
 # Disable-NetAdapterRsc

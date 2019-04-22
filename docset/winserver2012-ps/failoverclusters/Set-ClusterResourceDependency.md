@@ -3,6 +3,10 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 5FAC612B-9B3C-491B-A7D8-DE723160DB57
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ClusterResourceDependency

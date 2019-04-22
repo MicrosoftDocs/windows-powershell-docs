@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 68FBCC1F-6623-48AF-BF3A-BCB86311EEF1
+manager: dansimp
 ---
 
 # Disconnect-NfsSession

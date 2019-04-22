@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A6335CDC-6AA0-4A7D-9E6D-42275AD25FAC
+manager: dansimp
 ---
 
 # Set-NetIPsecPhase2AuthSet

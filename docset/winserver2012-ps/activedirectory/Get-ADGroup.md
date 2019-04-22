@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 12898C9F-D1E4-4E70-AA1A-C376E702049C
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-ADGroup

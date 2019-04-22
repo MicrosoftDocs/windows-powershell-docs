@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
 ms.assetid: 32BF5E0D-3213-4479-9C55-76C94E6051C4
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Confirm-SecureBootUEFI

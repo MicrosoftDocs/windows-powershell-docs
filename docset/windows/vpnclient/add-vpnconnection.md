@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_VpnConnection_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-VpnConnection
+ms.reviewer:
 ms.assetid: 9E500D0B-AD09-463E-A5B7-E2986476BC58
 ---
 
@@ -200,6 +201,7 @@ The acceptable values for this parameter are:
 - CHAP
 - MSCHAPv2
 - EAP
+- MachineCertificate
 
 ```yaml
 Type: String[]
@@ -299,6 +301,7 @@ The acceptable values for this parameter are:
 - Optional 
 - Required 
 - Maximum
+- Custom
 
 ```yaml
 Type: String

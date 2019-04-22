@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-VMRemoteFx3dVideoAdapter
@@ -121,8 +124,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMRemoteFxVideoAdapter** if **-PassThru** is specified.
+### None
+Default
+
+### VMRemoteFxVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

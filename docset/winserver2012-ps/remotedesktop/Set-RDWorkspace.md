@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: EA0B41A7-7083-4F56-B752-70AEAC0D117D
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-RDWorkspace

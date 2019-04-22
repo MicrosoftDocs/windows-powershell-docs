@@ -4,9 +4,11 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Get-DfsnRoot
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -176,8 +178,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 

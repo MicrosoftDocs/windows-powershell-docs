@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-Volume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 038D0DAD-E00B-479C-BEE8-6D163BBA7C1C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-Volume
@@ -132,10 +134,10 @@ Specifies the file system to use for the volume.
 The cmdlet formats the volume with the file system you specify.
 The acceptable values for this parameter are:
 
--  NTFS 
--  ReFS 
--  CSVFS_NTFS 
--  CSVFS_ReFS
+- NTFS 
+- ReFS 
+- CSVFS_NTFS 
+- CSVFS_ReFS
 
 ```yaml
 Type: FileSystem

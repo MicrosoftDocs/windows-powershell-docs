@@ -7,13 +7,15 @@ Locale: en-US
 title: WebAdministration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ca95ebfd-5440-4dca-a9c2-34da802e484d
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # WebAdministration Module

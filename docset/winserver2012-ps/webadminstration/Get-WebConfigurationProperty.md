@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: CC399FA8-2684-41E9-A487-2329460E1829
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WebConfigurationProperty

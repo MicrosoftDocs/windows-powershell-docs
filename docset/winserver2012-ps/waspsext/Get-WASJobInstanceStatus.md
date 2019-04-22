@@ -2,7 +2,11 @@
 external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3DD2E5D5-B7DC-47E1-9F2E-8C40D8BEFEFB
+manager: dansimp
 ---
 
 # Get-WASJobInstanceStatus

@@ -2,7 +2,11 @@
 external help file: NetSwitchTeam_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 10898514-4FF4-4C40-832B-F3190AF58088
+manager: dansimp
 ---
 
 # Remove-NetSwitchTeam

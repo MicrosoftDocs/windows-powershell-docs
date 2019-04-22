@@ -6,6 +6,7 @@ Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Get-InsightsCapability
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: JasonGerend
@@ -116,6 +117,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The cmdlet returns one or more objects that represent the specified capabilities.
 
 ## RELATED LINKS
-[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)<br>
-[Get-InsightsCapabilityAction](get-insightscapabilityaction.md)<br>
+[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)
+
+[Get-InsightsCapabilityAction](get-insightscapabilityaction.md)
+
 [Get-InsightsCapabilityResult](get-insightscapabilityresult.md)

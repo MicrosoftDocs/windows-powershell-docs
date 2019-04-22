@@ -14,6 +14,10 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-HpcJob
@@ -393,14 +397,14 @@ Accept wildcard characters: False
 Specifies the operator for the NodeGroups list.
 Valid operators are:
 
--   Intersect (the default).
-Creates a list of nodes that belong to all of the specified node groups
+- Intersect (the default).
+  Creates a list of nodes that belong to all of the specified node groups
 - Uniform.
-Creates a list of nodes that belong to only one of the specified node groups.
-The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
-If enough resources are not found in a single group, the job remains queued.
+  Creates a list of nodes that belong to only one of the specified node groups.
+  The groups are tested in the order listed to identify a group that has sufficient resources to run the job.
+  If enough resources are not found in a single group, the job remains queued.
 - Union.
-Creates a list of nodes that belong to any of the specified node groups
+  Creates a list of nodes that belong to any of the specified node groups
 
 This parameter was introduced in HPC Pack 2012.
 It is not available in previous versions.

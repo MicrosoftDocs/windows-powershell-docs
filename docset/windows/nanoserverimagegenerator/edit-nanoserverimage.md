@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NanoServerImageGenerator-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Edit-NanoServerImage
+ms.reviewer:
 ms.assetid: 544FB377-8C33-467E-864B-AC7D0F94C570
 ---
 
@@ -763,13 +764,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-None.
+### None
 
 ## NOTES
 

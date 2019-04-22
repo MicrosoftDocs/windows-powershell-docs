@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: A1305ECB-EC4B-4580-8667-1554C7B746BA
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-RDVirtualDesktopADMachineAccountReuse

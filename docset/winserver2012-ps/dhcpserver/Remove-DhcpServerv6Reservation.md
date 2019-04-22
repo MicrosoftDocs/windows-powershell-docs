@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: F11C6412-7CDB-4398-85C8-C599E963F3D8
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DhcpServerv6Reservation

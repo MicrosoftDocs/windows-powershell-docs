@@ -2,7 +2,11 @@
 external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0352DFC2-5F5D-49A1-9B78-E1C460945DC2
+manager: dansimp
 ---
 
 # Resume-WASComputer

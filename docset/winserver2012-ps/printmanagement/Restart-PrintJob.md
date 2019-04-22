@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: FB356190-BD19-4BFD-9089-72C65065C776
+manager: dansimp
 ---
 
 # Restart-PrintJob

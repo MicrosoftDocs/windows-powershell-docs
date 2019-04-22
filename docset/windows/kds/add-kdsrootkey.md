@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-KdsRootKey
+ms.reviewer:
 ms.assetid: 2E649F25-5050-492D-8A49-662B73B4C7B5
 ---
 
@@ -25,12 +26,12 @@ Generates a new root key for the Microsoft Group KdsSvc within Active Directory.
 ## SYNTAX
 
 ### EffectiveTime (Default)
-```
+```powershell
 Add-KdsRootKey [-LocalTestOnly] [[-EffectiveTime] <DateTime>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EffectiveImmediately
-```
+```powershell
 Add-KdsRootKey [-LocalTestOnly] [-EffectiveImmediately] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,30 +42,39 @@ The Microsoft Group KdsSvc generates new group keys from the new root key.
 ## EXAMPLES
 
 ### Example 1: Generate a new root key
-```
+```powershell
 PS C:\> Add-KdsRootKey
 ```
 
 This command generates a new root key for the Microsoft Group KdsSvc within Active Directory.
 
 ### Example 2: Generate a new root key for immediate use
-```
-PS C:\> Add-KdsRootKey -EffectiveImmediately
+```powershell
+PS C:\>Add-KdsRootKey -EffectiveImmediately
 ```
 
-This command generates a new root key immediately and adds it to the Microsoft Group KdsSvc.
+This example generates a new root key and adds it to the Microsoft Group KdsSvc.
+
+>[!IMPORTANT]
+>There is a ten hour waiting period from creation to allow all DCs to converge with AD replication. this time prevents password generation before all DCs have answered the gMSA request.
+
+>[!TIP] For immediate use please use:
+>```Powershell 
+>Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))  
+>``` 
+>*Allows using gMSAs **immediately**, because it sets the start time 10 hours in past.*
 
 ### Example 3: Generate a new root key which takes effect on a specific date
-```
-PS C:\> Add-KdsRootKey -EffectiveTime 03/06/2013
+```powershell
+PS C:\>Add-KdsRootKey -EffectiveTime 03/06/2013
 ```
 
 This command generates a new root key for the Microsoft Group KdsSvc which takes effect on the date 03/06/2013.
 Use the mm/dd/yyyy format.
 
 ### Example 4: Generate a new root key on the local host only
-```
-PS C:\> Add-KdsRootKey -LocalTestOnly
+```powershell
+PS C:\>Add-KdsRootKey -LocalTestOnly
 ```
 
 This command generates a new root key on the local host only.

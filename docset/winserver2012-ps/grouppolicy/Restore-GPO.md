@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 42FB7C23-BB1C-4AD9-8172-5B8DDB9BA8EA
+manager: dansimp
 ---
 
 # Restore-GPO

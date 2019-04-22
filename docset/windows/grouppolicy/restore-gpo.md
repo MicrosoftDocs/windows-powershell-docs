@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.GroupPolicy.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Restore-GPO
+ms.reviewer:
 ms.assetid: 42FB7C23-BB1C-4AD9-8172-5B8DDB9BA8EA
 ---
 
@@ -120,7 +121,7 @@ Specifies the backup ID of a GPO backup.
 The backup ID is a globally unique identifier (GUID) that uniquely identifies the backup.
 You can use this parameter to specify a particular version of a backed-up GPO in the backup directory.
 
-The backup ID is different from the ID of the GPO that was backed up (specified by the *Guid* parameter).
+The backup ID is different from the ID of the GPO that was backed up (specified by the *Guid* parameter), you can find the backup ID in the backup directory.
 
 ```yaml
 Type: Guid

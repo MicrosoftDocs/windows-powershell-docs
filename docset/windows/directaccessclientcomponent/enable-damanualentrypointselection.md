@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-DAManualEntryPointSelection
+ms.reviewer:
 ms.assetid: E0662F30-27FF-4182-87A0-567CAB097C51
 ---
 
@@ -159,13 +160,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

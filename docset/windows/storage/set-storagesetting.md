@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-StorageSetting
+ms.reviewer:
 ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
 ---
 
@@ -127,12 +128,9 @@ Accept wildcard characters: False
 Specifies the policy for the files that the automatic data integrity scanner scrubs.
 The acceptable values for this parameter are:
 
-- 0.
-Off: No files are scrubbed.
-- 1.
-Integrity Streams: Only files with integrity streams are scrubbed.
-- 2.
-All: All files are scrubbed.
+- Off: No files are scrubbed.
+- Integrity Streams: Only files with integrity streams are scrubbed.
+- All: All files are scrubbed.
 
 ```yaml
 Type: ScrubPolicy

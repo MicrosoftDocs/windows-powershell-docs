@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: DC53E5DC-08A3-48F1-94DF-7BFCEDE21209
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DnsServerSigningKey

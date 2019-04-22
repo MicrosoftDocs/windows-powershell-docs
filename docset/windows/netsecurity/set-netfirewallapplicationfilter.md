@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallApplicationFilter.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetFirewallApplicationFilter
+ms.reviewer:
 ms.assetid: C2E2CD98-48F8-4A08-81BE-A1518D2ED1E1
 ---
 

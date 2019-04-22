@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 630524E4-7523-43E3-A140-808537F8F98F
+manager: dansimp
 ---
 
 # Receive-MsmqQueue
@@ -35,7 +39,7 @@ If the **Peek** parameter is supplied, the number of messages returned by this c
 
 ### Example 1: Peek at a MsmqQueue message instead of doing a destructive read
 ```
-PS C:\>Get-MsmqMessage â€"Name "a04bm10\private$\order_queue" | Receive-MsmqQueue â€"Transactional -Peek
+PS C:\>Get-MsmqMessage -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional -Peek
 ```
 
 This command peeks at the queue named a04bm10\private$\order_queue and does not perform a destructive read.

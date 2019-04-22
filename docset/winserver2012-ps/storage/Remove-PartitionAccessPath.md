@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B93780DE-7FBB-4C98-B2DC-8B4AA4CDE0CA
+manager: dansimp
 ---
 
 # Remove-PartitionAccessPath

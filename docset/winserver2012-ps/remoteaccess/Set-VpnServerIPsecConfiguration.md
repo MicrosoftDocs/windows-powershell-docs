@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0DF4F48E-D526-4A77-BC9C-4F5AED6469E3
+manager: dansimp
 ---
 
 # Set-VpnServerIPsecConfiguration

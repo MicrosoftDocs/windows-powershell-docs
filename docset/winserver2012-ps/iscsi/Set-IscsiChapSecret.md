@@ -2,7 +2,11 @@
 external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 98C6A7C9-CDFE-49B9-896F-14DD979DF05C
+manager: dansimp
 ---
 
 # Set-IscsiChapSecret

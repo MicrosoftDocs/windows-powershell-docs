@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-WebRequestTracing
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7DA8AEFC-8965-437B-8720-4DC6B702A825
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Disable-WebRequestTracing
@@ -31,7 +33,7 @@ The **Disable-WebRequestTracing** cmdlet disables request tracing for the specif
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Disableling Request request Tracing tracing for the "Default default Web webSitesite" --------------lerequest tracing default website
+### Example 1: Disabling request tracing for the "Default Web Site"
 ```
 IIS:\>Disable-WebRequestTracing -Name "Default Web Site"
 ```

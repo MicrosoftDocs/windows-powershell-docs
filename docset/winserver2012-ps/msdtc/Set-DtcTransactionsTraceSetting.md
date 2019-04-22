@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: FB2F0685-6D63-4745-B68A-423EF189C193
+manager: dansimp
 ---
 
 # Set-DtcTransactionsTraceSetting

@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 76561CB9-A585-4301-A70B-86B148473492
+manager: dansimp
 ---
 
 # New-OBRecoveryOption
@@ -21,9 +25,9 @@ The **New-OBRecoveryOption** specifies the recovery options that will apply to a
 These include the Destination Path, Overwrite flag (for use in case if the object already exists), and Security settings for the object
 
 If no Recovery Option is specified, the following default options will be used during recovery. 
-  1)  Restore to original location. 
-  2)  Create copies in case of conflict. 
-  3)  Restore ACLs of the files.
+1) Restore to original location. 
+2) Create copies in case of conflict. 
+3) Restore ACLs of the files.
 
 ps_mob_user_group_remark
 

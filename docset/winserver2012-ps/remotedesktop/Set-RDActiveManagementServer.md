@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 973B1B3B-5265-4359-8360-F481A4C450B7
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-RDActiveManagementServer

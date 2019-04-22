@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 2664F7E9-259B-4179-A247-7E1943CB3D21
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WebFilePath

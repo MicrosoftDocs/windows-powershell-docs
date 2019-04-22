@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 76DFAAB3-FCF4-4707-9E74-3F38D457B68F
+manager: dansimp
 ---
 
 # Get-GPOReport

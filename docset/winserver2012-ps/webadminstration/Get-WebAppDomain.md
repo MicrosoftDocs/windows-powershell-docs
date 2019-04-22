@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 089DFEB5-D3C7-42E6-A304-A8F1DA9BC837
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WebAppDomain

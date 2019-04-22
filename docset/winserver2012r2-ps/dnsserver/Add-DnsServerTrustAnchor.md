@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Add-DnsServerTrustAnchor
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -350,13 +352,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerTrustAnchor
 The DnsServerTrustAnchor object contains the following fields:
 
---EnteredStateTime
---KeyTag
---NextStateTime
---TrustAnchorData
---TrustAnchorName
---TrustAnchorState
---TrustAnchorType
+- EnteredStateTime
+- KeyTag
+- NextStateTime
+- TrustAnchorData
+- TrustAnchorName
+- TrustAnchorState
+- TrustAnchorType
 
 ## NOTES
 

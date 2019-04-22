@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: ADC87872-8715-4158-A891-FB552685718B
+manager: dansimp
 ---
 
 # Set-NetIPv4Protocol

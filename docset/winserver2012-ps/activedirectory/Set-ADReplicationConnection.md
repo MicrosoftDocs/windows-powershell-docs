@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: BB77517D-2A1A-42B6-8D5E-CB99D5D463FE
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADReplicationConnection
@@ -388,26 +392,23 @@ For more information on how replication topology works, go to http://go.microsof
 
 To specify the replication schedule,
 
-1.
-Create a new Active Directory schedule object.
+1. Create a new Active Directory schedule object.
 
-Example:
+   Example:
 
-$schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule;
+   `$schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule;`
 
-2.
-Edit the schedule on the Active Directory schedule object.
+2. Edit the schedule on the Active Directory schedule object.
 
-Example:
+   Example:
 
-$schedule.ResetSchedule();
+   `$schedule.ResetSchedule();`
 
-$schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");
+   `$schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");`
 
-3.
-Using the Active Directory schedule object, set the replication schedule of the connection
+3. Using the Active Directory schedule object, set the replication schedule of the connection
 
-Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $schedule
+   `Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $schedule`
 
 For more information on the ActiveDirectorySchedule class, go to http://go.microsoft.com/fwlink/?LinkId=223933.
 

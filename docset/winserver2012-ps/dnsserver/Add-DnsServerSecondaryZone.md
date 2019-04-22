@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 99374013-D3CB-4754-99A9-7C6D02B126DA
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-DnsServerSecondaryZone

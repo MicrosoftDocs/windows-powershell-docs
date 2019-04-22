@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-VMSwitch
+ms.reviewer:
 ms.assetid: 0449AFFC-E6C3-48DB-BFB3-61CBF52DC0C2
 ---
 
@@ -314,7 +315,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.EthernetSwitch
+### Microsoft.HyperV.PowerShell.VMSwitch
 
 ## NOTES
 

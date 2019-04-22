@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-VMNetworkAdapter
+ms.reviewer:
 ms.assetid: 638F9A16-DF77-4313-8886-1318AFFD0139
 ---
 
@@ -350,6 +351,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterConnectionTestResult
 
 ## NOTES
 

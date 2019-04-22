@@ -4,9 +4,11 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Set-GPPrefRegistryValue
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -56,9 +58,9 @@ It does not modify existing Registry preference items.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
+- You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
 
---You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
+- You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
 
 ## EXAMPLES
 

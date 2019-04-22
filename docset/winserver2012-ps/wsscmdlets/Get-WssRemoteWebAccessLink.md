@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3DDFCA4C-CF8C-4BBB-83C7-BD6BC1A9A2B8
+manager: dansimp
 ---
 
 # Get-WssRemoteWebAccessLink

@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B6372E82-9666-4E79-984A-65B9138D8477
+manager: dansimp
 ---
 
 # New-NetVirtualizationCustomerRoute

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restore-WebConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 81C2DCCF-49AF-4948-97B3-EE9EEE723B64
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Restore-WebConfiguration
@@ -31,7 +33,7 @@ The **Restore-WebConfiguration** cmdlet restores an Internet Information Service
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Restoreing a backup --------------e
+### Example 1: Restoring a backup
 ```
 IIS:\>Restore-WebConfiguration -Name "MyBackup"
 ```

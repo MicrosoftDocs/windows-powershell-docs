@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CFBB5074-C881-44B0-AA1B-7EF0D7308497
+manager: dansimp
 ---
 
 # Get-CauRun

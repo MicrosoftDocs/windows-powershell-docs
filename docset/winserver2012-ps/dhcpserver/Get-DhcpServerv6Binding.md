@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: FF7A07D1-467C-4E4C-BEFE-83F034C43CD3
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DhcpServerv6Binding

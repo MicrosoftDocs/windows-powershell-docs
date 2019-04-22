@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-BitLockerKeyProtector
+ms.reviewer:
 ms.assetid: 4AB130BF-4F93-492A-9AE9-B8406FD9D181
 ---
 
@@ -132,7 +133,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 ### Example 1: Add key protector
 ```
 PS C:\>$SecureString = ConvertTo-SecureString "1234" -AsPlainText -Force
-PS C:\>Add-BitLockerProtector -MountPoint "C:" -Pin $SecureString -TPMandPinProtector
+PS C:\>Add-BitLockerKeyProtector -MountPoint "C:" -Pin $SecureString -TPMandPinProtector
 ```
 
 This example adds a combination of the TPM and a PIN as key protector for the BitLocker volume identified with the drive letter C:.
@@ -149,7 +150,7 @@ PS C:\>Get-BitLockerVolume | Add-BitLockerKeyProtector -RecoveryKeyPath "E:\Reco
 ```
 
 This command gets all the BitLocker volumes for the current computer and passes them to the **Add-BitLockerKeyProtector** cmdlet by using the pipe operator.
-This cmdlet specifies a path to a recovery key and indicates that these volumes use a recovery key as a key protector.
+This cmdlet specifies a path to a folder where the randomly generated recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
 
 ### Example 3: Add credentials as a key protector
 ```
@@ -273,8 +274,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies a path to a recovery key.
-This cmdlet adds the recovery key stored in the specified path as a protector for the volume encryption key.
+Specifies a path to a folder.
+This cmdlet adds a randomly generated recovery key as a protector for the volume encryption key and stores it in the specified path.
 
 ```yaml
 Type: String

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerServiceInsertion
+ms.reviewer:
 ms.assetid: 255B584B-C53D-471F-891F-842C7F1EE20A
 ---
 
@@ -126,19 +127,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### 
 
 Following properties for service insertion can be retrieved:
-For each service insertion rule, the following can be specified:    
-1. Description of rule    
-2. Protocol    
-3. Starting source port    
-4. Ending source port    
-5. Starting destination port    
-6. Ending destination port    
-7. Source subnet(s)    
+For each service insertion rule, the following can be specified: 
+1. Description of rule 
+2. Protocol 
+3. Starting source port 
+4. Ending source port 
+5. Starting destination port 
+6. Ending destination port 
+7. Source subnet(s) 
 8. Destination subnet(s)
 
-For each destination element where service insertion has to be applied:    
-1. Description    
-2. Destination network interface    
+For each destination element where service insertion has to be applied: 
+1. Description 
+2. Destination network interface 
 3. Order of the element
 
 ## NOTES

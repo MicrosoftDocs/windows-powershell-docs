@@ -3,6 +3,10 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 188158B2-1000-46CE-BBF0-13D0A8191AD4
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-ClusterGenericServiceRole

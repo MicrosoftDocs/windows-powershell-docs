@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: C8601E78-CD62-4A06-ABE3-418DEC56838F
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-ADFSRelyingPartyTrust

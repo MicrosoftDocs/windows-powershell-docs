@@ -2,7 +2,11 @@
 external help file: NetLbfo_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CF89FA2A-ECCA-406A-A43B-4D94D452724D
+manager: dansimp
 ---
 
 # Set-NetLbfoTeamMember

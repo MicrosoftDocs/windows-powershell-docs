@@ -2,7 +2,11 @@
 external help file: VpnClient_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 7AC7839A-38B7-46F9-AC6D-55E522C4F112
+manager: dansimp
 ---
 
 # New-EapConfiguration
@@ -69,7 +73,7 @@ PS C:\> $a = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
 This command creates a customized EAP configuration object and stores it in the variable named $a.
 The EAP configuration object is customized by specifying the following parameters: 
 
---The **Tls** parameter, which indicates that this configuration object uses EAP-TLS
+- The **Tls** parameter, which indicates that this configuration object uses EAP-TLS
 - The **VerifyServerIdentity** parameter, which indicates that the identity of the server to which the client connects is validated
 - The **UserCertificate** parameter, which indicates that the EAP-TLS authentication method uses a user certificate.
 

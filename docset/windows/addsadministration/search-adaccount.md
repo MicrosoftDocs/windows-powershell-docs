@@ -415,7 +415,7 @@ The default is $Null.
 
 The following example shows how to set this parameter so that you receive all of the returned objects: 
 
-`  -ResultSetSize $Null`
+`-ResultSetSize $Null`
 
 ```yaml
 Type: Int32
@@ -441,7 +441,7 @@ If no default naming context has been specified for the target AD LDS instance, 
 
 The following example shows how to set this parameter to search under an organizational unit. 
 
-`  -SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"`
+`-SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"`
 
 When the value of the *SearchBase* parameter is set to an empty string and you are connected to a global catalog port, all partitions are searched.
 If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a global catalog port, an error is generated.
@@ -539,11 +539,11 @@ The following examples show how to set this parameter.
 
 Set the time to 2 days
 
-`-TimeSpan "2"` 
+`-TimeSpan "2.00:00:00"` 
 
   Set the time span to the previous 2 days
 
-`-TimeSpan "-2"` 
+`-TimeSpan "-2.00:00.00"` 
 
   Set the time to 4 hours
 
@@ -551,7 +551,7 @@ Set the time to 2 days
 
 For example, to search for all accounts that are expiring in 10 days, specify the *AccountExpiring* and *TimeSpan* parameters as follows.
 
-  `-AccountExpiring -TimeSpan "10"`
+  `-AccountExpiring -TimeSpan "10.00:00.00"`
 
 ```yaml
 Type: TimeSpan

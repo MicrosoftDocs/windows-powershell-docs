@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A4145239-080D-48A1-81E1-F574440CCB67
+manager: dansimp
 ---
 
 # Get-OBFileSpec

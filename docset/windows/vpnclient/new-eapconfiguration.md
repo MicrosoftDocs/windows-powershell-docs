@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_EapConfiguration_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-EapConfiguration
+ms.reviewer:
 ms.assetid: 7AC7839A-38B7-46F9-AC6D-55E522C4F112
 ---
 
@@ -81,7 +82,7 @@ PS C:\> $A = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
 This command creates a customized EAP configuration object and stores it in the variable named $A.
 The EAP configuration object is customized by specifying the following parameters: 
 
---The *Tls* parameter, which indicates that this configuration object uses EAP-TLS
+- The *Tls* parameter, which indicates that this configuration object uses EAP-TLS
 - The *VerifyServerIdentity* parameter, which indicates that the identity of the server to which the client connects is validated
 - The *UserCertificate* parameter, which indicates that the EAP-TLS authentication method uses a user certificate.
 

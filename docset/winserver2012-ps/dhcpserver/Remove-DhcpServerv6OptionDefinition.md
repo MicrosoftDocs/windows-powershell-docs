@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: FC463EC2-AE40-4181-BAE6-D0EB6C329647
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-DhcpServerv6OptionDefinition

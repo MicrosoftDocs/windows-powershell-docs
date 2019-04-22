@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-WBBackup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC220AF8-1BFE-4D6D-B64E-C712831A213E
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Start-WBBackup
@@ -23,7 +25,7 @@ Starts a one-time backup operation.
 ## SYNTAX
 
 ```
-Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DonotVerifyMedia]
+Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DoNotVerifyMedia]
  [<CommonParameters>]
 ```
 
@@ -132,7 +134,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DonotVerifyMedia
+### -DoNotVerifyMedia
 Do not use.
 This parameter is not implemented in this version of the module.
 

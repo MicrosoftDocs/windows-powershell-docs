@@ -2,7 +2,11 @@
 external help file: WDAC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3A39F5C4-6AC1-4B3E-A4CB-4D6C876BA4B4
+manager: dansimp
 ---
 
 # Enable-WdacBidTrace

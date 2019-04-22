@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BAE102D6-B4DD-4818-81DA-92538547B1CD
+manager: dansimp
 ---
 
 # Start-WBFileRecovery

@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A54B4A6B-98E2-48CE-9814-67BCC78CB796
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Get-WmsApp
@@ -132,8 +134,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsApp.
+### None
 
 ## OUTPUTS
 

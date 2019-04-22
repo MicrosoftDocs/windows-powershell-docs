@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 02BEFEEE-443C-4A15-AA58-4497B9C344A2
+manager: dansimp
 ---
 
 # Get-MsmqCertificate

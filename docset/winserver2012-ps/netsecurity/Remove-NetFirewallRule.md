@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B8BFD366-3112-4415-B235-2B7B45D5C9E3
+manager: dansimp
 ---
 
 # Remove-NetFirewallRule

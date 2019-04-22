@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-Printer
+ms.reviewer:
 ms.assetid: 33B5D1BD-674C-4F36-BF92-8EFF864ACD63
 ---
 
@@ -524,13 +525,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet takes no input objects.
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

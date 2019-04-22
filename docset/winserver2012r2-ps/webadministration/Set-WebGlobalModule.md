@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WebGlobalModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52001509-E658-458F-A729-B34C655743AA
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WebGlobalModule
@@ -32,7 +34,7 @@ The **Set-WebGlobalModule** cmdlet specifies configuration settings for an Inter
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Changeing a property of a global module --------------e
+### Example 1: Changing a property of a global module
 ```
 IIS:\>Set-WebGlobalModule -Name "UriCacheModule" -Image "c:\test.dll"
 ```

@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EA0F915C-DBBA-48FA-8138-BC5C05BFBBC2
+manager: dansimp
 ---
 
 # Set-Partition

@@ -2,7 +2,11 @@
 external help file: WDAC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3EE28C63-5790-490B-8BFD-1A895C014C90
+manager: dansimp
 ---
 
 # Get-OdbcPerfCounter

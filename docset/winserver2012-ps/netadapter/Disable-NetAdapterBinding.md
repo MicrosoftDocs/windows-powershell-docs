@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 305CF732-2A47-4D45-A97C-9694B7B5F1B3
+manager: dansimp
 ---
 
 # Disable-NetAdapterBinding

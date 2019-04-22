@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITarget.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Connect-IscsiTarget
+ms.reviewer:
 ms.assetid: 111BFAA7-332B-472F-A8F7-90DCF181AF1C
 ---
 
@@ -108,11 +109,11 @@ Accept wildcard characters: False
 Specifies the type of authentication to use when logging into the target.
 The acceptable values for this parameter are:
 
-- None 
-- OneWayCHAP 
-- MutualCHAP
+- NONE 
+- ONEWAYCHAP
+- MUTUALCHAP
 
-The default value is None.
+The default value is None. Authentication type must be in uppercase.
 
 ```yaml
 Type: String

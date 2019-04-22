@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 72B9E0E4-F92B-419F-93C3-1B1FBD595E4D
+manager: dansimp
 ---
 
 # Get-WssBackupSchedule

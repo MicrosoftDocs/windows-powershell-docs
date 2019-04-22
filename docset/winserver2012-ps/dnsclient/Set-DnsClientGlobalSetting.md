@@ -1,6 +1,10 @@
 ---
 external help file: MSFT_DnsClientGlobalSetting.cdxml-help.xml
 ms.assetid: 73E5376E-DD75-4771-8F03-C91E1C736DB5
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 online version: 
 schema: 2.0.0
 ---

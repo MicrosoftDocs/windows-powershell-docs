@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
 ms.assetid: 2107F75F-CCE3-4214-9D04-5A9174D5D8F8
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-AdfsProxy

@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 7DC5D0D6-85A0-467A-A41D-17755FEEAA6A
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DhcpServerv6OptionDefinition

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssUserGroupAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7F535BC6-C4F0-4D22-A35F-D86FAB70F433
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-WssUserGroupAccess

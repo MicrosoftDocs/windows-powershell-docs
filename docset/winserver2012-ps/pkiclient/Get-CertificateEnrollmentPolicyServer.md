@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 0129619B-6FDE-44E0-9BD4-5C96326B76BC
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-CertificateEnrollmentPolicyServer

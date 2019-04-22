@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: 669C0C9E-37E4-474C-BC4C-465AE06EAFA3
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WinHomeLocation

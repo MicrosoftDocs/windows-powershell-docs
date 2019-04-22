@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebAppPoolState
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DB6C2AC0-0C2C-4897-A23D-4BA2E92E72B4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WebAppPoolState

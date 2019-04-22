@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Close-SmbSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0DF6F39E-EEB5-459D-A3BF-BA827D443F4F
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Close-SmbSession

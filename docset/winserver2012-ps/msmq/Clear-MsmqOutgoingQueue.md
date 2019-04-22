@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 67BE94A0-781F-4AA1-8CAC-43E03BC71C4A
+manager: dansimp
 ---
 
 # Clear-MsmqOutgoingQueue
@@ -24,7 +28,7 @@ It returns an **MsmqOutgoingQueue** object that represents the cleared outgoing 
 
 ### Example 1: Purge all outgoing queues
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name "Order*" | Clear-MsmqOutgoingQueue
+PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Clear-MsmqOutgoingQueue
 ```
 
 This command gets all outgoing queue with a wildcard named Order and purges them.

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 37F67A48-9CE1-44B5-9796-7D0827488B3B
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-ADFSCertificate

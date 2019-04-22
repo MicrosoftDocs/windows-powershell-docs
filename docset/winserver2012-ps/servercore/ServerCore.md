@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=247822
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: ECA5B1BF-C761-4D9B-A8B3-CCA27F1A3E5F
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # ServerCore Module

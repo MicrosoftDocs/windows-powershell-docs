@@ -3,6 +3,10 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: DD8807A5-3CD5-4A73-B372-979696936C6D
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-FsrmFileGroup

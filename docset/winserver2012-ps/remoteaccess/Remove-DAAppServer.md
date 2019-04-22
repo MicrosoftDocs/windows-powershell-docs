@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 44B5D5FB-1FA8-445F-81BA-DB10C95938BB
+manager: dansimp
 ---
 
 # Remove-DAAppServer

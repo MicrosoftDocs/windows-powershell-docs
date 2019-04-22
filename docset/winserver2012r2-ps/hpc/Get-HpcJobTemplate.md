@@ -14,6 +14,10 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-HpcJobTemplate

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: C2471CFF-73E2-4296-8DE8-B27A8F5FB9CB
+manager: dansimp
 ---
 
 # Get-WssSpacesPool

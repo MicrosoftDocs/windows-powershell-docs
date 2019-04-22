@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 0E552072-0B57-4C15-A5E7-4004D45568F0
+manager: dansimp
 ---
 
 # Add-PrinterDriver

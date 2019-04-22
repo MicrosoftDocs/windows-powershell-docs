@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Export-Certificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Export-Certificate

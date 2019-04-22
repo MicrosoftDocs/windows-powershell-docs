@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D2D0AA6A-7B24-4D1D-BEE2-ED13B039B2B2
+manager: dansimp
 ---
 
 # Reset-DtcLog

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetFirewallRule
+ms.reviewer:
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
 ---
 
@@ -806,8 +807,7 @@ Accept wildcard characters: False
 
 ### -RemoteAddress
 Specifies that network packets with matching IP addresses match this rule. 
-This parameter value is the second end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
-This parameter value is an IPv4 or IPv6 address, hostname, subnet, range or keyword. 
+This parameter value is an IPv4 or IPv6 address, subnet, range or keyword. 
 The acceptable formats for this parameter are: 
 
 - Single IPv4 Address: 1.2.3.4 

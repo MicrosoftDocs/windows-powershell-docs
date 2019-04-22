@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ScheduledTaskTrigger
+ms.reviewer:
 ms.assetid: B653E721-E267-436D-893F-FED53A6D3EE7
 ---
 
@@ -215,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-{{Fill CimSession Description}}
+Runs the cmdlet in a remote session or on a remote computer. Enter a computer name or a Common Information Model (CIM) session object that represents a connection to a local computer or a remote computer, such as the output of a New-CimSession or Get-CimSession cmdlet. The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]

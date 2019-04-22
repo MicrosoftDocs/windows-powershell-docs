@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D16B99D0-29BC-4A04-A644-0AE63D8FEF58
+manager: dansimp
 ---
 
 # Get-NetFirewallProfile

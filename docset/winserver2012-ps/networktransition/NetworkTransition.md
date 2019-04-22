@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=232920
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 4FF8EEDB-5AB8-4C70-8290-4B11A6D04791
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # NetworkTransition Module

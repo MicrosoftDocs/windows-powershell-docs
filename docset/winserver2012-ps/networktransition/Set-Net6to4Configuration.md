@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1DDC482E-D30A-4684-85DE-DBC421803C3C
+manager: dansimp
 ---
 
 # Set-Net6to4Configuration

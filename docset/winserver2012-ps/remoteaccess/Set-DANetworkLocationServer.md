@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8A16968E-1C61-4E0A-BDB9-278E6C05797F
+manager: dansimp
 ---
 
 # Set-DANetworkLocationServer

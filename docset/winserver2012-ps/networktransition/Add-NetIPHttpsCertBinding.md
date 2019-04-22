@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 2F79CD8C-FF12-4BBB-ACC4-5600BF8318BF
+manager: dansimp
 ---
 
 # Add-NetIPHttpsCertBinding

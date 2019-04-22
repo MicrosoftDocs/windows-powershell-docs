@@ -14,6 +14,10 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-HpcJobCredential
@@ -49,7 +53,7 @@ The cmdlet stores these credentials in the credential cache of the user who ran 
 
 ### Example 1: Set credentials to submit jobs
 ```
-PS C:\>Set-HpcJobCrendential
+PS C:\>Set-HpcJobCredential
 ```
 
 This command sets the credentials for submitting jobs on the cluster.
@@ -59,7 +63,7 @@ After you enter this information, the **Set-HpcJobCredential** cmdlet sets the c
 ### Example 2: Get credentials and set them to submit jobs
 ```
 PS C:\>$Credential = Get-Credential
-PS C:\> Set-HpcJobCrendential -Credential $Credential
+PS C:\> Set-HpcJobCredential -Credential $Credential
 ```
 
 This command gets a **PSCredential** object, and then sets the credentials for submitting jobs on the cluster to the credentials that the **PSCredential** object represents.

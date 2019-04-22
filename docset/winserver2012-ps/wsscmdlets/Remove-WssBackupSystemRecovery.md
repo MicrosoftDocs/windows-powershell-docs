@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8746A218-B3BC-4FBB-8258-4393D157426D
+manager: dansimp
 ---
 
 # Remove-WssBackupSystemRecovery

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 8552EF80-21C4-49C9-9914-CFC30B4E5911
+manager: dansimp
 ---
 
 # Stop-WssClientBackup

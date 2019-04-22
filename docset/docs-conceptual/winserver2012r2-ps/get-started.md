@@ -2,7 +2,11 @@
 title: Windows 8.1 and Windows Server 2012 R2
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 ms.assetid: fb041404-841c-4986-8e04-58da7d313f11
+manager: dansimp
 ms.date: 01/10/2018
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Windows Server 2012 R2 and Windows 8.1
@@ -93,7 +97,7 @@ The table below also shows the latest published version of the Help for each mod
 | SMISConfig | [SMI-S Cmdlets](/powershell/module/smisconfig) |
 | SoftwareInventoryLogging | [Software Inventory Logging Cmdlets](/powershell/module/softwareinventorylogging) |
 | StartScreen | [Start Screen Configuration Cmdlets](/powershell/module/startscreen) |
-| Storage | [Storage Cmdlets](/powershell/module/stroage) |
+| Storage | [Storage Cmdlets](/powershell/module/storage) |
 | StorageSpaces | [Storage Spaces Cmdlets](/powershell/module/storagespaces) |
 | SyncShare | [Sync Share Cmdlets](/powershell/module/syncshare) |
 | TLS | [Transport Layer Security (TLS) Authentication Cmdlets](/powershell/module/tls) |

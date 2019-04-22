@@ -3,6 +3,10 @@ external help file: DcbQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 4CFFA115-7B8C-4C21-BA63-6DC4751A98E0
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-NetQosTrafficClass

@@ -317,8 +317,8 @@ This parameter can also get this object through the pipeline or you can set this
 Derived types, such as the following, are also accepted:
 
 - **Microsoft.ActiveDirectory.Management.ADGroup**
--  **Microsoft.ActiveDirectory.Management.ADUser**
--  **Microsoft.ActiveDirectory.Management.ADComputer**
+- **Microsoft.ActiveDirectory.Management.ADUser**
+- **Microsoft.ActiveDirectory.Management.ADComputer**
 - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
 - **Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy**
 - **Microsoft.ActiveDirectory.Management.ADDomain**
@@ -503,7 +503,7 @@ For example, if you want to replace the value 555-222-2222 with the values 555-2
 When you use the *Add*, *Replace*, *Clear*, and *Remove* parameters together, the operations are performed in the following order:
 
 - **Remove**
--  **Add**
+- **Add**
 - **Replace**
 - **Clear**
 

@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 9EC9C0E0-0F32-4C3F-944D-F36085CB7947
+manager: dansimp
 ---
 
 # Set-NetAdapterRdma

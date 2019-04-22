@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 5049969E-A8AE-433F-A1F0-31EDCC3B2213
+manager: dansimp
 ---
 
 # Add-WssBackupTarget

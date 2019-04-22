@@ -2,7 +2,11 @@
 external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 686A3960-380E-4E4D-A6A4-24F9DFCC793E
+manager: dansimp
 ---
 
 # Get-IscsiTarget

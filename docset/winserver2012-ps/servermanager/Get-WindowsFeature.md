@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 ms.assetid: 49B3C89A-8395-4638-802A-451B56019188
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-WindowsFeature

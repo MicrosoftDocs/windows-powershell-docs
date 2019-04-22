@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0389557C-29E2-4592-BB5C-59E56C2DCB6E
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Set-WmsStation
@@ -233,13 +235,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Set-WmsStation.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 Throws SecurityException if the specified autologon user is an administrative user.
 This exception is not thrown if the OverrideAdminWarning option is specified for administrative users.
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-VMHardDiskDrive
+ms.reviewer:
 ms.assetid: C1A0A105-91AC-4A3E-BB5F-D526A6E96747
 ---
 
@@ -241,8 +242,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.DriveController** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.DriveController
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CF255861-15F4-4F28-A3C0-8A9E2C129BF6
+manager: dansimp
 ---
 
 # Show-NetFirewallRule

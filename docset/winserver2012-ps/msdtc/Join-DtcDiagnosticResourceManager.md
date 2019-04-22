@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 68A0664C-705E-48D4-8A80-F036FA000ECE
+manager: dansimp
 ---
 
 # Join-DtcDiagnosticResourceManager

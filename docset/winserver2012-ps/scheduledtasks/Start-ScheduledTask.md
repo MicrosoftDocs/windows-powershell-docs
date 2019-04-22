@@ -2,7 +2,11 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A95C9523-FFAF-4E16-9020-BEF0A605E47D
+manager: dansimp
 ---
 
 # Start-ScheduledTask

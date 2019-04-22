@@ -4,6 +4,9 @@ online version:
 schema: 2.0.0
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 title: Remove-IISSiteBinding
+ms.author: kenwith
+author: kenwith
+ms.reviewer:
 online version:
 keywords: powershell, cmdlet
 ---
@@ -11,7 +14,7 @@ keywords: powershell, cmdlet
 # Remove-IISSiteBinding
 
 ## SYNOPSIS
-Removes a binding from an IIS website.
+Removes a binding from an IIS website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 
 ## SYNTAX
 

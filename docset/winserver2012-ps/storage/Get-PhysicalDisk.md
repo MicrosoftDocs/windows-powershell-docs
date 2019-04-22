@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A204DCDE-BFAC-43AC-9B79-D81384F255BE
+manager: dansimp
 ---
 
 # Get-PhysicalDisk

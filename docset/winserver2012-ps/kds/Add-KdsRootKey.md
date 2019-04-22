@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
 ms.assetid: 2E649F25-5050-492D-8A49-662B73B4C7B5
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Add-KdsRootKey
@@ -13,12 +17,12 @@ Generates a new root key for the Microsoft Group Key Distribution Service (KdsSv
 ## SYNTAX
 
 ### EffectiveTime (Default)
-```
+```powershell
 Add-KdsRootKey [-LocalTestOnly] [[-EffectiveTime] <DateTime>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### EffectiveImmediately
-```
+```powershell
 Add-KdsRootKey [-LocalTestOnly] [-EffectiveImmediately] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,28 +33,37 @@ The Microsoft Group KdsSvc generates new group keys from the new root key.
 ## EXAMPLES
 
 ### Example 1: Generate a new root key
-```
+```powershell
 PS C:\>Add-KdsRootKey
 ```
 
 This example generates a new root key for the Microsoft Group KdsSvc within AD.
 
 ### Example 2: Generate a new root key for immediate use
-```
+```powershell
 PS C:\>Add-KdsRootKey -EffectiveImmediately
 ```
 
-This example generates a new root key immediately and adds it to the Microsoft Group KdsSvc.
+This example generates a new root key and will be usable after 10 hours of creation and adds it to the Microsoft Group KdsSvc.
+
+>[!NOTE]
+>There is a 10 hour waiting period from creation, to allow all DCs to converge with AD replication, before you can create gMSA. This prevents password generation before all DCs in the environment have answered the gMSA request.
+
+>[!TIP] For immediate use please use:
+>```Powershell 
+>Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))  
+>``` 
+>*Allows using gMSAs **immediately**, because it sets the start time 10 hours in past.*
 
 ### Example 3: Generate a new root key which takes effect on a specific date
-```
+```powershell
 PS C:\>Add-KdsRootKey -EffectiveTime "03/06/2013"
 ```
 
 This example generates a new root key for the Microsoft Group KdsSvc which takes effect on the specified date 03/06/2013 using the mm/dd/yyyy format.
 
 ### Example 4: Generate a new root key on the local host only
-```
+```powershell
 PS C:\>Add-KdsRootKey -LocalTestOnly
 ```
 

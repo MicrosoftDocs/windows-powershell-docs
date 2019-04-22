@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Resume-PrintJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 207632BA-A5A0-4D2E-B3FA-7CEBFE61E9E2
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Resume-PrintJob
@@ -245,8 +247,7 @@ This cmdlet accepts one print job object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

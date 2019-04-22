@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: CC220AF8-1BFE-4D6D-B64E-C712831A213E
+manager: dansimp
 ---
 
 # Start-WBBackup
@@ -13,7 +17,7 @@ Starts a one-time backup operation.
 ## SYNTAX
 
 ```
-Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DonotVerifyMedia]
+Start-WBBackup [-Policy] <WBPolicy> [-Async] [-Force] [-AllowDeleteOldBackups] [-DoNotVerifyMedia]
 ```
 
 ## DESCRIPTION
@@ -124,7 +128,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DonotVerifyMedia
+### -DoNotVerifyMedia
 Do not use.
 This parameter is not implemented in this version of the module.
 

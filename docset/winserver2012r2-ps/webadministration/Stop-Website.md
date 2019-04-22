@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Stop-Website
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70B6FEA0-E95A-42FA-9699-7B665FF42FC8
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Stop-Website
@@ -31,7 +33,7 @@ The **Stop-Website** cmdlet stops the specified Internet Information Services (I
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Stopping a wWeb Ssite --------------ws
+### Example 1: Stopping a web site
 ```
 IIS:\>Stop-WebSite -Name "Default Web Site"
 ```

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MultiPointVdi.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Open-WmsVirtualDesktop
+ms.reviewer:
 ms.assetid: 58D32C41-4B77-4C82-A1F2-021449E21F6E
 ---
 
@@ -110,13 +111,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-None.
+### None
 
 ## NOTES
 

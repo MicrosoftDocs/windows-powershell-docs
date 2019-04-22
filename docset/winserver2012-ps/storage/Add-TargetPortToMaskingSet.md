@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 196E0BF1-8FE2-452C-8D7A-258443DCEDA1
+manager: dansimp
 ---
 
 # Add-TargetPortToMaskingSet

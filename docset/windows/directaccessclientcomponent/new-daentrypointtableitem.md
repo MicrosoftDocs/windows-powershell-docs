@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-DAEntryPointTableItem
+ms.reviewer:
 ms.assetid: 34867B6B-0AEF-40A2-B34E-76F0B6A55CB8
 ---
 
@@ -304,8 +305,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 

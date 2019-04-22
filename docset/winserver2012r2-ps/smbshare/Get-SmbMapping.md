@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SmbMapping
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F7E6F380-A274-4326-B121-49128FF2A37B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SmbMapping

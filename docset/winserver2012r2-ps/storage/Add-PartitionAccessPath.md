@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-PartitionAccessPath
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA859E65-3EFD-4C3D-95F0-9C0F4687D302
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-PartitionAccessPath

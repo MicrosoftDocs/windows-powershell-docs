@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: D6C1F900-9AB6-4864-9DDC-82A8670D5C5B
+manager: dansimp
 ---
 
 # Get-WssRecoveryItem

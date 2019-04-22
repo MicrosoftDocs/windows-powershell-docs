@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WASComputer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 218EEA5E-8675-4879-B5BC-F9F600D28B4C
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-WASComputer

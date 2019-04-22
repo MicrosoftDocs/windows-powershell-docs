@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 844EBBCB-9448-458F-B29D-197E1B1DB9A3
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # New-RDCertificate

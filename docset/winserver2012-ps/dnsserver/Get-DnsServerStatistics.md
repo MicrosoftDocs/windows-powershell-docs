@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 2A334FDC-433C-4EE8-8626-09A0AA38D702
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-DnsServerStatistics

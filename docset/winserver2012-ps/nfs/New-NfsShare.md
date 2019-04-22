@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: AB5738D5-E393-4C34-835F-2BBDB97CB4D1
+manager: dansimp
 ---
 
 # New-NfsShare

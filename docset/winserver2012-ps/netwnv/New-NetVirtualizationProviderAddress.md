@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 70B81AF5-345B-4140-B820-ACF8A5A31F2D
+manager: dansimp
 ---
 
 # New-NetVirtualizationProviderAddress

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-VpnConnectionTriggerApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CFA95D4F-E6F7-4D78-AE37-6399DF5B9F9A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-VpnConnectionTriggerApplication

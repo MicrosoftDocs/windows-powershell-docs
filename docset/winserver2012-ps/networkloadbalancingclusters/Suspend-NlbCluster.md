@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B67E9CB4-15B0-4BB2-8DDC-8946AB42C757
+manager: dansimp
 ---
 
 # Suspend-NlbCluster

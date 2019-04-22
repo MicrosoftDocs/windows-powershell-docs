@@ -3,6 +3,9 @@ external help file: HgsClient-help.xml
 Module Name: HgsClient
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Test-HgsClientConfiguration

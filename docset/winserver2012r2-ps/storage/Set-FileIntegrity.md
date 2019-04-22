@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-FileIntegrity
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CDC219C7-0117-4923-8720-E9F3332588A5
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-FileIntegrity
@@ -217,8 +219,7 @@ The cmdlet uses the **FullName** property as the value of the **FileName** param
 
 ## OUTPUTS
 
-###  
-This cmdlet generates no output.
+### None
 
 ## NOTES
 

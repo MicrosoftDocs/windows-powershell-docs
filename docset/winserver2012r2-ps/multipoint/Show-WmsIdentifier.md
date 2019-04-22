@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C281BBA8-F498-4A9B-8D88-1143EEEBFEF7
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Show-WmsIdentifier
@@ -134,13 +136,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Show-WmsIdentifier.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

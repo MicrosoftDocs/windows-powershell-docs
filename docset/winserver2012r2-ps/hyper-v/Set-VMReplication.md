@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Set-VMReplication
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -238,10 +240,10 @@ Specify the thumbprint of a valid computer certificate from the Personal store.
 
 The certificate must have all of the following properties to be valid:
 
---It must not be expired.
---It must include both client and server authentication extensions for extended key usage (EKU), and an associated private key.
---It must terminate at a valid root certificate.
---The requirement for the subject common name (CN) differs depending on whether the virtual machine belongs to a cluster. For virtual machines that do not belong to a cluster, the subject common name (CN) must be equal to, or subject alternative name (DNS Name) should contain, the FQDN of the host. For virtual machines that belong to a cluster, the subject common name (CN) must be equal to, or subject alternative name (DNS Name) must contain, the and fully-qualified domain name (FQDN) of the Hyper-V Replica Broker.
+- It must not be expired.
+- It must include both client and server authentication extensions for extended key usage (EKU), and an associated private key.
+- It must terminate at a valid root certificate.
+- The requirement for the subject common name (CN) differs depending on whether the virtual machine belongs to a cluster. For virtual machines that do not belong to a cluster, the subject common name (CN) must be equal to, or subject alternative name (DNS Name) should contain, the FQDN of the host. For virtual machines that belong to a cluster, the subject common name (CN) must be equal to, or subject alternative name (DNS Name) must contain, the and fully-qualified domain name (FQDN) of the Hyper-V Replica Broker.
 
 To display a list of certificates in the computer's My store and the thumbprint of each certificate, type the following:
 

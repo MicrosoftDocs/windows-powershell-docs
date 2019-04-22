@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
+manager: dansimp
 ---
 
 # Set-GPPrefRegistryValue
@@ -46,9 +50,9 @@ It does not modify existing Registry preference items.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
+- You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
 
---You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
+- You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
 
 ## EXAMPLES
 

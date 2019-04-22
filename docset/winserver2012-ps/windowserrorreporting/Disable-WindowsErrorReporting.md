@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
 ms.assetid: 42D79D03-3D10-4D4C-9102-0A3F7C784B24
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Disable-WindowsErrorReporting

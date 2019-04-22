@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: DB27F5A1-52BF-4F0B-93B4-99D0CDF40C26
+manager: dansimp
 ---
 
 # Set-VpnIPAddressAssignment

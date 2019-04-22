@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-ScheduledTaskSettingsSet
+ms.reviewer:
 ms.assetid: FBC4B2C5-A56C-4D97-B1AC-20C0A62F8D07
 ---
 
@@ -403,7 +404,11 @@ Accept wildcard characters: False
 ```
 
 ### -MultipleInstances
-Specifies the policy that defines how Task Scheduler handles multiple instances of the task.
+Specifies the policy that defines how Task Scheduler handles multiple instances of the task. The acceptable values for this parameter are:
+
+IgnoreNew. The new task instance is ignored.
+Parallel. The new task instance starts immediately.
+Queue. The new task instance starts as soon as the current instance completes.
 
 ```yaml
 Type: MultipleInstancesEnum

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 653A1F66-1391-4E6B-8649-B97CB6B2A901
+manager: dansimp
 ---
 
 # Clear-WssAlert

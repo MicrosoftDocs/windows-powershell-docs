@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BD405858-44E3-4186-B586-B5308DEFF011
+manager: dansimp
 ---
 
 # Enable-NetDnsTransitionConfiguration

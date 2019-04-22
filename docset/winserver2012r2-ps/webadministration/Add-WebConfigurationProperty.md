@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WebConfigurationProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4FD9596E-88F3-4A3F-A341-11B6BEEDF013
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Add-WebConfigurationProperty
@@ -34,7 +36,7 @@ Globbing is supported.
 
 ## EXAMPLES
 
-### Example-------------- Example 1: Adding a Default default Document document --------------default document
+### Example 1: Adding a Default default
 ```
 IIS:\>Add-WebConfigurationProperty -Filter "//defaultDocument/files" -PSPath "IIS:\sites\Default Web Site" -AtIndex 0 -Name "Collection" -Value "new-index.html"
 ```

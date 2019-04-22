@@ -5,6 +5,10 @@ Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ms.assetid: D1DAE87F-87F4-417F-A5F2-69CAA548E1E8
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # International_Cmdlets Module

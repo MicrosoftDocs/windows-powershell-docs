@@ -14,6 +14,10 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-HpcClusterProperty
@@ -1183,7 +1187,7 @@ Accept wildcard characters: False
 Specifies the number of heartbeats a compute node can miss before the job scheduler declares the node unreachable.
 A compute node misses a heartbeat if there is no reply from the health probes.
 
-Before HPC Pack 2012 with Service Pack 1 (SP1), the *InactivtyCount* parameter applies to both on-premises compute nodes and Azure nodes.
+Before HPC Pack 2012 with Service Pack 1 (SP1), the *InactivityCount* parameter applies to both on-premises compute nodes and Azure nodes.
 Starting with HPC Pack 2012 with SP1, the *InactivityCount* parameter applies only to on-premises compute nodes.
 The *InactivityCountAzure* parameter is introduced to configure Azure nodes separately.
 

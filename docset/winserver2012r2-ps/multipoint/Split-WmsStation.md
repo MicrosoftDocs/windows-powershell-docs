@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8943916B-321A-404E-B004-130EAD0FB89F
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Split-WmsStation
@@ -127,13 +129,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Split-WmsStation.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

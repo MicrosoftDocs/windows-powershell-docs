@@ -2,7 +2,11 @@
 external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 6207A305-EFCA-40EE-B997-2A939DD9BE7A
+manager: dansimp
 ---
 
 # Set-WsusClassification

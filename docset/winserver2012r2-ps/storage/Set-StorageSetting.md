@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-StorageSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Set-StorageSetting
@@ -122,12 +124,9 @@ Accept wildcard characters: False
 Specifies the policy for the files that the automatic data integrity scanner scrubs.
 The acceptable values for this parameter are:
 
-- 0.
-Off: No files are scrubbed.
-- 1.
-Integrity Streams: Only files with integrity streams are scrubbed.
-- 2.
-All: All files are scrubbed.
+- Off: No files are scrubbed.
+- Integrity Streams: Only files with integrity streams are scrubbed.
+- All: All files are scrubbed.
 
 ```yaml
 Type: ScrubPolicy

@@ -4,8 +4,8 @@ online version:
 schema: 2.0.0
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
 title: Set-RDCertificate
+ms.reviewer:
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
 ---
 

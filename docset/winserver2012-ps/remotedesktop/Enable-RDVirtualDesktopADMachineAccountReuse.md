@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 33D5210F-CA52-4E43-AA55-859E2C7C5D13
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Enable-RDVirtualDesktopADMachineAccountReuse

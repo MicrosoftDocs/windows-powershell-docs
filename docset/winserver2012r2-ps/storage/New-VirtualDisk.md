@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A351B38-1E4B-451C-A66B-EF97683646F4
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # New-VirtualDisk
@@ -529,30 +531,21 @@ The cmdlet creates the write-back cache of the size that you specify when the cm
 
 The following describes the behavior of this parameter based on the value that you specify: 
 
-- 1.
-If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool. 
+1. If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool. 
 
-- 2.
-The default setting of **WriteCacheSizeDefault** for a storage pool is Auto, which specifies that Windows Server® 2012 R2 automatically selects the optimal write-back cache size for your configuration.
+1. The default setting of **WriteCacheSizeDefault** for a storage pool is Auto, which specifies that Windows Server® 2012 R2 automatically selects the optimal write-back cache size for your configuration.
 You can change the value of **WriteCacheSizeDefault** to a concrete value at any time. 
 
-- 3.
-The Auto setting for **WriteCacheSize** functions as follows: 
-     a.
-If any of the following is true, Auto is set to 1 GB: 
-      i.
-The storage pool contains at least N drives with enough capacity and you set the **Usage** parameter to Journal.
-(N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
-      ii.
-The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
-     b.
-Otherwise, Auto is set to 0 (no log) for simple and mirror spaces, and 32 MB for parity spaces.
+1. The Auto setting for **WriteCacheSize** functions as follows: 
+    1. If any of the following is true, Auto is set to 1 GB: 
+        1. The storage pool contains at least N drives with enough capacity and you set the **Usage** parameter to Journal.
+        (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
+        1. The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
+    1. Otherwise, Auto is set to 0 (no log) for simple and mirror spaces, and 32 MB for parity spaces.
 
-- 4.
-If you specify Auto or 0 (zero) for this parameter and the storage space is not a parity space, the cmdlet verifies that either 3.a.i or 3.a.ii is true.
+1. If you specify Auto or 0 (zero) for this parameter and the storage space is not a parity space, the cmdlet verifies that either 3.a.i or 3.a.ii is true.
 If either 3.a.i or 3.a.ii is not true, you cannot set **WriteCacheSize** to Auto or 0. 
-     a.
-The objective of these conditions is to help you avoid scenarios in which you force the creation of a write-back cache in situations that result in slower performance.
+    1. The objective of these conditions is to help you avoid scenarios in which you force the creation of a write-back cache in situations that result in slower performance.
 
 ```yaml
 Type: UInt64

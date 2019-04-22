@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A67A3E90-8591-415C-8610-C3B55B38AE1D
+manager: dansimp
 ---
 
 # Add-WBBareMetalRecovery

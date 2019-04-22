@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 70777F8F-A443-455A-943A-EAE563D79CFB
+manager: dansimp
 ---
 
 # Get-VpnS2SInterface

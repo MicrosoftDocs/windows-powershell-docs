@@ -3,6 +3,10 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 16FC6506-C379-44F7-BBA5-D98E743EDE94
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Reset-FsrmQuota

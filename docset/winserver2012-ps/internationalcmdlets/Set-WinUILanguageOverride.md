@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: 98AB3AF3-4EC2-40B6-9F76-4481FB63EC92
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-WinUILanguageOverride

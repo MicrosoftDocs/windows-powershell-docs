@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: E7D3765D-0BBD-4D0C-A8F7-54C656A746FD
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Show-DnsServerKeyStorageProvider

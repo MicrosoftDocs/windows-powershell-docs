@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 4408599B-F19A-4CF3-86C3-BDBEEE191999
+manager: dansimp
 ---
 
 # Get-NetUDPEndpoint

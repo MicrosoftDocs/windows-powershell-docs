@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1E5CAB93-9961-42FC-A689-676847C41FC8
+manager: dansimp
 ---
 
 # Get-DtcAdvancedHostSetting

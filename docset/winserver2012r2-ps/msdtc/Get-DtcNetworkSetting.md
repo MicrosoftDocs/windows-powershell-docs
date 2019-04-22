@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-DtcNetworkSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0D446E62-AC43-4B9C-BFA3-A2CFB9C9DF40
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-DtcNetworkSetting

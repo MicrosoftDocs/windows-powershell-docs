@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: CE29854D-A353-4DEC-AE0B-57AA79472CE1
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-DnsServerStubZone

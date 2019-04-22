@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-StartApps
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A0DC75B1-0BAB-4642-B9D2-FFD135355966
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-StartApps

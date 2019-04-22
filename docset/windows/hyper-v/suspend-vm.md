@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Suspend-VM
+ms.reviewer:
 ms.assetid: 21C83EE8-10FB-4FC1-9CF5-1E9681ACA4BC
 ---
 
@@ -206,8 +207,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.VirtualMachine** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VirtualMachine
+If **-PassThru** is specified.
 
 ## NOTES
 

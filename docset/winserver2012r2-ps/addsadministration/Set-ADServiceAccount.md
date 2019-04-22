@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADServiceAccount
+ms.author: kenwith
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -23,7 +25,7 @@ Modifies an Active Directory managed service account or group managed service ac
 ## SYNTAX
 
 ### Identity
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-Add <Hashtable>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
  [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
@@ -37,7 +39,7 @@ Set-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### Instance
-```
+```yaml
 Set-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
  -Instance <ADServiceAccount> [-PassThru] [-Server <String>] [<CommonParameters>]
 ```
@@ -61,28 +63,28 @@ For more information about the **Instance** parameter, see the **Instance** para
 ## EXAMPLES
 
 ### Example 1: Set the description for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Service1 -Description "Secretive Data Server"
 ```
 
 This command sets the description of the MSA identified as Service1 to Secretive Data Server.
 
 ### Example 2: Replace the value of a property for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Mongol01ADAM -ServicePrincipalNames @{replace="ADAMwdb/a.contoso.com", "ADAMbdb/a.contoso.com"}
 ```
 
 This command replaces the value of property **ServicePrincipalNames** with ADAMwdb/a.contoso.com, ADAMbdb/a.contoso.com.
 
 ### Example 3: Set the principals allowed to retrieve the password for an MSA
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity Service1 -PrincipalsAllowedToRetrieveManagedPassword "MsaAdmins.corp.contoso.com"
 ```
 
 This command sets the principals allowed to retrieve the password for this MSA to be limited to members of the specified Active Directory group account.
 
 ### Example 4: Set the ServicePrincipalNames property
-```
+```Powershell
 PS C:\>Set-ADServiceAccount -Identity AccessTSQA -ServicePrincipalNames @{Add=ACCESSAPP/TSQA.contoso.com}
 ```
 
@@ -105,6 +107,13 @@ PS C:\> Set-ADServiceAccount -Instance $ServiceAccount
 
 This example modifies the **ServicePrincipalNames** property for the AccessTSQA MSA.
 The example modifies a local instance of the AccessTSQA MSA, and then specifies the **Instance** parameter for the current cmdlet as the local instance.
+
+### Example 7: Add a new servicePrincipalName into the list object
+```Powershell
+C:\PS>Set-ADServiceAccount service1 -ServicePrincipalNames @{add="ADAMwdb/a.contoso.com"}
+```
+
+This Cmdlet adds a new principalname to the service, ADAMwdb/a.contoso.com, make sure that a.contoso.com is unique domain wide.
 
 ## PARAMETERS
 
@@ -749,15 +758,15 @@ This parameter uses the following syntax to add remove, replace or clear service
 
 To add values:
 
-`-ServicePrincipalNames @{Add=value1,value2,...} `
+`-ServicePrincipalNames @{Add=value1,value2,...}`
 
 To remove values:
 
-`-ServicePrincipalNames @{Remove=value3,value4,...} `
+`-ServicePrincipalNames @{Remove=value3,value4,...}`
 
 To replace values:
 
-`-ServicePrincipalNames @{Replace=value1,value2,...} `
+`-ServicePrincipalNames @{Replace=value1,value2,...}`
 
 To clear all values:
 
@@ -766,7 +775,7 @@ To clear all values:
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
 
-`@{Add=value1,value2,...};@{Remove=value3,value4,...} `
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators are applied in the following sequence: 
 

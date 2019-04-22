@@ -1,5 +1,6 @@
 ---
-author:
+author: kenwith
+ms.author: kenwith
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -11,7 +12,8 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217207
 schema: 2.0.0
 title: New-HpcSoftCard
-ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CEexternal help file:
+ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CE
+external help file:
 Module Name: hpc
 online version:
 schema: 2.0.0
@@ -26,6 +28,7 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+ms.reviewer:
 ---
 
 # New-HpcSoftCard
@@ -104,5 +107,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-HpcJobCredential](./Get-HpcJobCredential.md)
+
 
 [Set-HpcJobCredential](./Set-HpcJobCredential.md)

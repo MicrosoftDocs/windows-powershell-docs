@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 5C473200-9364-4C8E-AC45-5600F1CBF343
+manager: dansimp
 ---
 
 # New-GPLink

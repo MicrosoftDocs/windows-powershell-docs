@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 1F14280F-2E37-4AEB-A08C-70BC1C7731F3
+manager: dansimp
 ---
 
 # New-NfsMappedIdentity

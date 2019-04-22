@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageTier.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-StorageTier
+ms.reviewer:
 ms.assetid: 620540D9-1E94-4E25-954D-A9B21E83C60E
 ---
 
@@ -63,7 +64,7 @@ This command gets the storage tier named StoreTier01.
 
 ### Example 2: Get a storage tier from a storage pool
 ```
-PS C:\> Get-StoragePool -StoragePoolFriendlyName "StorePool01" | Get-StorageTier
+PS C:\> Get-StoragePool -FriendlyName "StorePool01" | Get-StorageTier
 ```
 
 This command gets the object that contains the storage pool named StorePool01, and then passes the object to the Get-StorageTier cmdlet by using the pipeline operator.

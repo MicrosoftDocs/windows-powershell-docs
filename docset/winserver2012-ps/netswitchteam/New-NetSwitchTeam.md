@@ -2,7 +2,11 @@
 external help file: NetSwitchTeam_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 7B228D01-31D0-45D8-A672-5C6A7CCA26A7
+manager: dansimp
 ---
 
 # New-NetSwitchTeam

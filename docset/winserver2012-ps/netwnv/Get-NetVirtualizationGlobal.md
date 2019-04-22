@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EC058249-902C-4DCE-A252-6BE4077D537C
+manager: dansimp
 ---
 
 # Get-NetVirtualizationGlobal

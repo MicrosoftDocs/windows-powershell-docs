@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 2B4BA841-DD58-4384-A6E4-70909BDD77A1
+manager: dansimp
 ---
 
 # Get-GPInheritance

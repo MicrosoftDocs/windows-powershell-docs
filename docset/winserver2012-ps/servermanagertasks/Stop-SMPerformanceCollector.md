@@ -2,7 +2,11 @@
 external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 121F78B7-458C-4E8D-8C82-64045C27ADF0
+manager: dansimp
 ---
 
 # Stop-SMPerformanceCollector

@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: BCAE0807-FDFF-4F3F-A678-5885D9784C8D
+manager: dansimp
 ---
 
 # Get-GPPermission

@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 66A4E053-129E-4218-90DF-C84F1B3E2AB0
+manager: dansimp
 ---
 
 # Disable-NlbClusterPortRule

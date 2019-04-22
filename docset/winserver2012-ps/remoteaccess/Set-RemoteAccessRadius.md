@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A93DE235-B2A7-4DC0-8F64-282A90E3ACEB
+manager: dansimp
 ---
 
 # Set-RemoteAccessRadius

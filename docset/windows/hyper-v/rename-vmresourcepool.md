@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Rename-VMResourcePool
+ms.reviewer:
 ms.assetid: C7A1B012-C75D-49FD-B054-A975C7710BA2
 ---
 
@@ -194,8 +195,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMResourcePool** if *PassThru* is specified.
+### None
+Default
+
+### VMResourcePool
+If **-PassThru** is specified.
 
 ## NOTES
 

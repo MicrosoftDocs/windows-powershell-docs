@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: DA59CF8F-6554-47FD-9691-DFC1E3E93E10
+manager: dansimp
 ---
 
 # Remove-NetIPHttpsConfiguration

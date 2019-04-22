@@ -2,7 +2,11 @@
 external help file: NetQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 7ED74C03-8727-4956-86D3-E389EDCE72CF
+manager: dansimp
 ---
 
 # New-NetQosPolicy

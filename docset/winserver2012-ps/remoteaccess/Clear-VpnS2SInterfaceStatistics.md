@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EBA1933F-2D9D-4CEB-BB0A-41B6AC3C98A8
+manager: dansimp
 ---
 
 # Clear-VpnS2SInterfaceStatistics

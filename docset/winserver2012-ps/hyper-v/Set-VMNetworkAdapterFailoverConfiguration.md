@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-VMNetworkAdapterFailoverConfiguration
@@ -389,8 +392,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.Virtualization.Powershell.VMNetworkAdapterFailoverConfiguration** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.Virtualization.Powershell.VMNetworkAdapterFailoverConfiguration
+If **-PassThru** is specified.
 
 ## NOTES
 

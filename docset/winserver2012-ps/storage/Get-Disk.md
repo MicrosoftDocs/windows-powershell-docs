@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
+manager: dansimp
 ---
 
 # Get-Disk
@@ -86,7 +90,7 @@ Get-IscsiSession | Format-Table
 ```
 
 This example gets all disks attached via the iSCSI bus by piping the output of Get-Disk to the **Where-Object** cmdlet, and filtering by the iSCSI value of the Bustype property.
-It then passes the Disk objects in the pipeline to the **Get-IscisSession** cmdlet, which gets the associated iSCSI sessions, and then pipes the output to the **Format-Table** cmdlet for simplified display.
+It then passes the Disk objects in the pipeline to the **Get-IscsiSession** cmdlet, which gets the associated iSCSI sessions, and then pipes the output to the **Format-Table** cmdlet for simplified display.
 
 ## PARAMETERS
 

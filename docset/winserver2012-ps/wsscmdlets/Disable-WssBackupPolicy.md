@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: EFB4B84F-A21E-41B8-956D-5FC700220CB3
+manager: dansimp
 ---
 
 # Disable-WssBackupPolicy

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 98F5EC0F-5604-4ECB-B88B-62942BA5D949
+manager: dansimp
 ---
 
 # Get-WssRemoteWebAccessBackgroundImage

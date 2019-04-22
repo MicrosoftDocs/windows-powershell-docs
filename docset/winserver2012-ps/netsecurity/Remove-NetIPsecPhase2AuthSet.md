@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 203318BF-AC77-4F70-A074-250CF9389C51
+manager: dansimp
 ---
 
 # Remove-NetIPsecPhase2AuthSet

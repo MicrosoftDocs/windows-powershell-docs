@@ -6,6 +6,7 @@ Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Set-InsightsCapabilitySchedule
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 author: JasonGerend
@@ -322,7 +323,10 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 **None**
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)<br>
-[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)
+
+[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)
+
 [Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)

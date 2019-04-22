@@ -1,6 +1,10 @@
 ---
 external help file: PS_DnsClientNRPTRule_v1.0.0.cdxml-help.xml
 ms.assetid: 40DEA51A-DF5A-4FD7-8705-B69CFEF339E9
+manager: dansimp
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 online version: 
 schema: 2.0.0
 ---

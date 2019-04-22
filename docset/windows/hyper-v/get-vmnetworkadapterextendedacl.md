@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VMNetworkAdapterExtendedAcl
+ms.reviewer:
 ms.assetid: B1C28EC5-01FD-412A-A429-04BB096764B1
 ---
 
@@ -223,7 +224,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShellMicrosoft.HyperV.PowerShell.VMNetworkAdapterExtendedAclSetting
+### Microsoft.HyperV.PowerShell.VMNetworkAdapterExtendedAclSetting
+
 
 ## NOTES
 

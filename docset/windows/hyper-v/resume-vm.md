@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: kenwith
+author: kenwith
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Resume-VM
+ms.reviewer:
 ms.assetid: 86D6A675-C51E-419F-8E39-6D26EE26D2F7
 ---
 
@@ -200,8 +201,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.Powershell.VirtualMachine** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.Powershell.VirtualMachine
+If **-PassThru** is specified.
 
 ## NOTES
 

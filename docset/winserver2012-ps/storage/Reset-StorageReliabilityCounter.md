@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 76FFF486-BBD6-462E-94C0-02F292601FA2
+manager: dansimp
 ---
 
 # Reset-StorageReliabilityCounter

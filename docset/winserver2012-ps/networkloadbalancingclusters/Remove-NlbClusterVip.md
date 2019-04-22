@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: B2176720-D908-4C14-AB07-6D28F3590D53
+manager: dansimp
 ---
 
 # Remove-NlbClusterVip

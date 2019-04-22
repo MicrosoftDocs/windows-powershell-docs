@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: A084B59C-7054-4C96-B4CD-0354E8783862
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Remove-ADFSClaimsProviderTrust

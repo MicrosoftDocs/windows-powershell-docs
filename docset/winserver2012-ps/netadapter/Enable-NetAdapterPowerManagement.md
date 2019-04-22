@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A7F0BE9D-5454-4B6D-A11F-4B158FEBB6AD
+manager: dansimp
 ---
 
 # Enable-NetAdapterPowerManagement

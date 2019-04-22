@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: F5043B28-1212-4C0F-802C-E26EBECD8576
+manager: dansimp
 ---
 
 # Add-WssBackupSystemRecovery

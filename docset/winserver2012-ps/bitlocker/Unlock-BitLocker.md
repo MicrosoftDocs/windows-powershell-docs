@@ -2,7 +2,11 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: A2806C1A-0703-4800-9356-7F3B4ADE9659
+manager: dansimp
 ---
 
 # Unlock-BitLocker
@@ -116,8 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies the path to a recovery key.
-The key stored in the specified path acts as a protector for the volume encryption.
+Specifies the path to a folder where recovery keys are stored.
+The key stored in the specified path, if found, acts as a protector for the volume encryption.
 
 ```yaml
 Type: String

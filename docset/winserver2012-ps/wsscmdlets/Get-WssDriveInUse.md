@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 9C4607C0-4DFD-408D-AA76-E40F914CC7B5
+manager: dansimp
 ---
 
 # Get-WssDriveInUse

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Copy-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0FAB7846-3E4F-4F22-9060-597A3EE680CB
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Copy-NetIPsecRule

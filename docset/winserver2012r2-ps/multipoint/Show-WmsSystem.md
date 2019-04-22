@@ -13,6 +13,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA04627A-F13A-49A4-8872-C0CBF89A09C2
+ms.reviewer:
+ms.author: kenwith
 ---
 
 # Show-WmsSystem
@@ -113,13 +115,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Show-WmsSystem.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

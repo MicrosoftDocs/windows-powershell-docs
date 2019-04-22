@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SecureBootPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: kenwith
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5825E1DE-2EBE-4063-8BCA-68B770468D1B
+ms.author: kenwith
+ms.reviewer: brianlic
 ---
 
 # Get-SecureBootPolicy

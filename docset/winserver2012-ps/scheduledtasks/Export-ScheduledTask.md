@@ -2,7 +2,11 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ms.assetid: 5F4C5E2A-6769-44D9-AA6D-049D59ADED4B
+manager: dansimp
 ---
 
 # Export-ScheduledTask

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: D20E4C03-E13D-4D8C-B4FF-D6ADC62A8511
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: kenwith
+author: kenwith
 ---
 
 # Get-IscsiVirtualDiskSnapshot

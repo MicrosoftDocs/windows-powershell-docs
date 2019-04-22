@@ -6,5 +6,5 @@ _themes*/
 
 .openpublishing.buildcore.ps1
 
-.vscode/*
+
 !/.vscode/extensions.json

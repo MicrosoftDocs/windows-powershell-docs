@@ -57,7 +57,7 @@ This example generates a new root key and adds it to the Microsoft Group KdsSvc.
 >[!IMPORTANT]
 >There is a ten hour waiting period from creation to allow all DCs to converge with AD replication. this time prevents password generation before all DCs have answered the gMSA request.
 
->[!TIP] For inmediate use please use:
+>[!TIP] For immediate use please use:
 >```Powershell 
 >Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))  
 >``` 

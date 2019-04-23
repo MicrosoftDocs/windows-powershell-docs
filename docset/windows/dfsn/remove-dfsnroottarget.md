@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.  The default value is **True** and ask for confirmation, if you do not want to confirm the operation, you must use the switch with the **False** value, as shown in this example:
+Prompts you for confirmation before running the cmdlet.  The default value is **True** and asks for confirmation. If you do not want to confirm the operation, you must use the switch with the **False** value, as shown in this example:
 
 **-Confirm:$False**
 

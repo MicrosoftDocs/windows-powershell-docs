@@ -86,7 +86,7 @@ Accept wildcard characters: False
 Specifies the type of compression used for the initial capture operation: 
 
 - max = the best compression, but takes more time to capture the image. 
-- fast = faster image compression, but the resulting files are larger than those compressed by using the maximum option.
+- fast = faster image compression, but the resulting files are larger than those compressed using the maximum option.
 This is also the default compression type that is used if you do not specify the argument. 
 - none = does not compress the captured image at all. 
 

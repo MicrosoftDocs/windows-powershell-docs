@@ -244,7 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutoConnectEnabled
-{{Fill AutoConnectEnabled Description}}
+Specifies the activation of auto-reconnection.
+The acceptable values for this parameter are: true (1), and false (0).
 
 ```yaml
 Type: Boolean

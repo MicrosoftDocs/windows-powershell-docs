@@ -26,17 +26,17 @@ Gets physical allocations for a physical disk, storage tier, or virtual disk.
 ## SYNTAX
 
 ### ByVirtualDisk
-```
+```yaml
 Get-PhysicalExtent -VirtualDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### ByStorageTier
-```
+```yaml
 Get-PhysicalExtent -StorageTier <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### ByPhysicalDisk
-```
+```yaml
 Get-PhysicalExtent -PhysicalDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
@@ -45,12 +45,27 @@ The **Get-PhysicalExtent** cmdlet gets the physical allocations for a physical d
 
 ## EXAMPLES
 
-### Example 1: Get all physical extents on a disk
+### Example 1: Get all physical extents on all physical disks
+```Powershell
+PS C:\>Get-PhysicalExtent -PhysicalDisk $(Get-PhysicalDisk)
 ```
+
+This command gets all physical extents on all physical disks on the computer.
+
+### Example 2: Get extents on a specific disk 
+```Powershell
 PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "PhysicalDisk4")
 ```
 
 This command gets all physical extents on the physical disk named PhysicalDisk4.
+The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
+
+### Example 3: Get all physical extents on a disk (Other Version)
+```Powershell
+PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
+```
+
+This command gets all physical extents on the physical disk named PhysicalDisk4, using powershell pipe.
 The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 
 ## PARAMETERS

@@ -649,7 +649,8 @@ Computer GPOs can be specified as follows.
 Optional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS. 
 - ConfigurableServiceStore: This read-write store contains all the service restrictions that are added for third-party services.
 In addition, network isolation rules that are created for Windows Store application containers will appear in this policy store. 
-The default value is PersistentStore. 
+The default value is PersistentStore.
+This will also appear in regedit : HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedServices\AppIso\FirewallRules but this is not accessible by get-netfirewallrule. 
 The Set-NetFirewallRule cmdlet cannot be used to add an object to a policy store.
 An object can only be added to a policy store at creation time with the Copy-NetFirewallRule or with the New-NetFirewallRule cmdlet.
 

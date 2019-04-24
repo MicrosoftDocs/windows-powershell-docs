@@ -342,7 +342,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleLimit
-{{Fill ThrottleLimit Description}}
+Specifies the maximum number of concurrent connections that can be established to run this command.
 
 ```yaml
 Type: Int32

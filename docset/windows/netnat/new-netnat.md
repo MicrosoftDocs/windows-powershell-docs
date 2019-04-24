@@ -56,6 +56,12 @@ PS C:\> New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddressPrefix "a.b.c.0
 This command creates a NAT object named AllTenants for all the computers in the specified subnet.
 This example uses the placeholder a.b.c.0/24 to represent a public Internet address prefix.
 
+From the above, 10.0.0.0/24 will be used as an example.
+For this example, run the following to set up the NAT network:
+
+```
+PS C:\> New-NetNat -Name "AllTenants" -ExternalIPInterfaceAddressPrefix "10.0.0.0/24"
+```
 ## PARAMETERS
 
 ### -AsJob

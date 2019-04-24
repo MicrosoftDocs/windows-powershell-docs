@@ -85,12 +85,11 @@ Accept wildcard characters: False
 ### -CompressionType
 Specifies the type of compression used for the initial capture operation: 
 
-- max = the best compression, but takes more time to capture the image. 
-- fast = faster image compression, but the resulting files are larger than those compressed using the maximum option.
-This is also the default compression type that is used if you do not specify the argument. 
-- none = does not compress the captured image at all. 
+- **Max** = This option provides the best compression but takes more time to capture the image. 
+- **Fast** = This option provides faster image compression but the resulting files are larger than those compressed using the maximum (max) option.
+- **None** = This option does not compress the captured image at all. 
 
-the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
 
 ```yaml
 Type: String
@@ -99,7 +98,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Fast
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

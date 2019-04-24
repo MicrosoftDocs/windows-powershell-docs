@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDrain
-The -ForceDrain switch, used in conjunction with the -Drain switch, specifies that all of the workloads are gracefully moved to other nodes, while maintaining the highest levels of availability and using the best placement logic.
+The -ForceDrain switch, used in conjunction with the -Drain switch, allows all the workloads to be safely moved to other nodes, while maintaining the highest levels of availability and using the best placement logic.
 
 If a graceful move can't be done for some or all workloads, any workload that failed to gracefully move will be stopped and moved  to other node as failed role. After that, the node will forcedly pause.
 

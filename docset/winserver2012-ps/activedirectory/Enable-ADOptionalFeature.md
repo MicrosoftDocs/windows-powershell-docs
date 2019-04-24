@@ -63,18 +63,6 @@ Description
 Enable the optional feature 'Recycle Bin Feature' for the AD LDS instance lds.fabrikam.com. 
 This operation must be performed on the AD LDS instance that holds the naming master FSMO role.
 
-### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Set-ADObject -Identity "CN=Partitions,CN=Configuration,CN={4F971828-5BE4-4E94-B532-58F2BFB6A3A5}" -Replace @{"msDS-Behavior-Version"=4} -Server lds.fabrikam.com:50000
-```
-
-Description
-
------------
-
-Sets the ForestMode (Forest Functional Level) to Windows2008R2Forest on an AD LDS instance.
-The ForestMode must be Windows2008R2Forest or higher in order to enable the Recycle Bin Feature for AD LDS.
-
 ## PARAMETERS
 
 ### -AuthType

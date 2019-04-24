@@ -21,7 +21,7 @@ ms.assetid: 65DD9798-9AF5-4E64-AA66-421AA98F8704
 # Get-PhysicalExtent
 
 ## SYNOPSIS
-Gets physical allocations for a physical disk, storage tier, or virtual disk.
+This cmdlet gets physical allocations for a physical disk, storage tier, or virtual disk. An "extent" is the area of space on a pooled disk that contains one fragment of the data for storage space,  also can be synonymous of "allocation" or as a "slab."
 
 ## SYNTAX
 

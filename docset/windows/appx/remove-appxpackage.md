@@ -55,6 +55,13 @@ PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
 
 This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
 
+### Example 2: Search using wildcards then remove the specific app package
+```
+PS C:\> Get-appxpackage *package*
+PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" 
+```
+This command will show all application that has a word * package * then copy the PackageFullName you want to remove, and use it in the Remove-AppxPackage command.
+
 ## PARAMETERS
 
 ### -AllUsers

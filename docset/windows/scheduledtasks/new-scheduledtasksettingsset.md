@@ -131,7 +131,7 @@ $Stset = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 1
 The third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
-Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan?view=powershell-6).
+Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan).
 
 
 ## PARAMETERS

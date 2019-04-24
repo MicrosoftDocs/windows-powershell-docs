@@ -106,11 +106,17 @@ Accept wildcard characters: False
 ```
 
 ### -User
-If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. The user name can be in one of these formats:
-- domain\user_name
-- user_name@fqn.domain.tld
-- user_name
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. 
 - SID-string
+
+> [!NOTE]
+- User "parameter of the "Remove-AppxPackage" command only accepts SID 
+- Use **whoami** command to display the current SID of a user, see [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami)
+
+```
+whoami /user
+whoami /groups
+```
 
 ```yaml
 Type: String

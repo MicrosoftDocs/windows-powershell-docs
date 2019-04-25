@@ -172,8 +172,14 @@ Accept wildcard characters: False
 ```
 
 ### -HealthStatus
-Gets only physical disks in the specified state.
-Valid values are **Healthy**, **Unhealthy**, **Unknown**, or **Warning**.
+Specifies the **health status** of physical disks.
+The acceptable values for this parameter are:
+
+- Healthy 
+- Unhealthy 
+- Unknown 
+- Warning
+- 
 
 ```yaml
 Type: HealthStatus[]

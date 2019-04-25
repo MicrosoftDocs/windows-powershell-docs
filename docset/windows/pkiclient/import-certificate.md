@@ -38,8 +38,6 @@ The **Import-Certificate** cmdlet imports one or more certificates into a certif
 ```
 PS C:\>$file = ( Get-ChildItem -Path C:\files\root.cer )
 
-
-
 PS C:\>$file | Import-Certificate -CertStoreLocation cert:\CurrentUser\Root
 ```
 
@@ -48,8 +46,6 @@ This example imports the certificate from the file into the root store of the cu
 ### EXAMPLE 2
 ```
 PS C:\>Set-Location -Path cert:\CurrentUser\My
-
-
 
 PS C:\>Import-Certificate -Filepath "C:\files\intermediate.cert"
 ```

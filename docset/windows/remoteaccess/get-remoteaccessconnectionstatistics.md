@@ -79,7 +79,7 @@ The output of this cmdlet is piped to the [Format-List](http://go.microsoft.com/
 
 ### EXAMPLE 2
 ```
-@{navigationLink=System.Management.Automation.PSObject[]; #text=System.Management.Automation.PSObject[]}
+PS C:\>Get-RemoteAccessConnectionStatistics | Export-Csv -Path "data.csv"
 ```
 
 This example gets a list of historic connections and export them to a .csv file.

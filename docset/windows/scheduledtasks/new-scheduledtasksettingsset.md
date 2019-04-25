@@ -50,10 +50,10 @@ You can use the scheduled task settings to register a new scheduled task or upda
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that use the default settings and assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that use the default settings and assigns the **ScheduledTaskSettings** object to the $Stset variable.
 PS C:\>$STSet = New-ScheduledTaskSettingsSet
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the default task settings.
+#The third command registers the scheduled task Task01 to run the task action named Cmd and to use the default task settings.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
@@ -65,10 +65,10 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the $Stset variable.
 PS C:\>$STSet = New-ScheduledTaskSettingsSet -Priority 5
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
+#The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
 
@@ -80,10 +80,10 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that specify that Task Scheduler attempts three restarts of the task at sixty minute intervals. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that specify that Task Scheduler attempts three restarts of the task at sixty minute intervals. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
 PS C:\>$Stset = New-ScheduledTaskSettingsSet -RestartCount 3 -RestartInterval 60
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
+#The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
 
@@ -95,10 +95,10 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that specify that Task Scheduler runs the task only when the computer is idle for 2 minutes and waits for 2 hours and 30 minutes for an idle condition. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that specify that Task Scheduler runs the task only when the computer is idle for 2 minutes and waits for 2 hours and 30 minutes for an idle condition. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
 PS C:\>$Stset = New-ScheduledTaskSettingsSet -RunOnlyIfIdle -IdleDuration 00:02:00 -IdleWaitTimeout 02:30:00
 
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
+#The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
 
@@ -110,10 +110,10 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that specify that Task Scheduler runs the task only when a network is available. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that specify that Task Scheduler runs the task only when a network is available. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
 PS C:\>$Stset = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable
 
-The third command registers the scheduled task Task01 to run the task action named Cmd only when a network is available.
+#The third command registers the scheduled task Task01 to run the task action named Cmd only when a network is available.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
 
@@ -125,10 +125,10 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-The second command creates scheduled task settings that specify if the task is not finished after one hour, it is considered as failed. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
+#The second command creates scheduled task settings that specify if the task is not finished after one hour, it is considered as failed. This command assigns the **ScheduledTaskSettings** object to the $Stset variable.
 $Stset = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Hours 1)
 
-The third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.
+#The third command registers the scheduled task Task01 to run the task action named Cmd, only then finish the task after one hour.
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 ```
 Without the ExecutionTimeLimit setting defined, the time limit set to it's default of three days for the Task Scheduler is allowed to complete the task. To configure the time limit, see [New-TimeSpan](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-timespan).

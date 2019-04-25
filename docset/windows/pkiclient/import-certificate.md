@@ -62,7 +62,7 @@ This example imports the certificate from the file into the current store.
 Specifies the path to the certificate store where the certificates will be imported.
 If the path to the certificate store is not specified, then the current store is used.
 
-`In order to get a list of valid CertStoreLocation values, open Powershell (as admin) and run "set-location cert:". Afterwards type "dir" or "dir LocalMachine".`
+In order to get a list of valid CertStoreLocation values, open Powershell and run "cd cert:". Afterwards type "dir".
 
 ```yaml
 Type: String

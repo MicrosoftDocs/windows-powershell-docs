@@ -65,7 +65,7 @@ The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
 ```
 
-This command gets all physical extents on the physical disk named PhysicalDisk4, using powershell pipe.
+This command gets all physical extents on the physical disk named PhysicalDisk4, using PowerShell pipe.
 The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 
 ## PARAMETERS

@@ -17,7 +17,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] -DNSHostName <String>
@@ -30,7 +30,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] [-Enabled <Boolean>]
@@ -41,7 +41,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
  [-DisplayName <String>] [-Enabled <Boolean>] [-HomePage <String>] [-Instance <ADServiceAccount>]
@@ -79,7 +79,7 @@ Then pass these objects through the pipeline to the New-ADServiceAccount cmdlet 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -DNSHostName service1.contoso.com -Enabled $true
 ```
 
@@ -90,7 +90,7 @@ Description
 Create a new enabled managed service account in AD DS.
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName service1.contoso.com
 ```
 
@@ -101,7 +101,7 @@ Description
 Create a new managed service account and register its service principal name.
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 ```
 
@@ -112,7 +112,7 @@ Description
 Create a new managed service account and restrict its use to only a single computer.
 
 ### -------------------------- EXAMPLE 4 --------------------------
-```
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 
@@ -297,11 +297,9 @@ For example, use the following syntax to add and remove Certificate values
 
 The operators will be applied in the following sequence:
 
-..Remove
-
-..Add
-
-..Replace
+- Remove
+- Add
+- Replace
 
 The following example shows how to create a certificate by using the New-Object cmdlet, and then add it to a user account.
 When this cmdlet is run, \<certificate password\> is replaced by the password used to add the certificate.
@@ -885,32 +883,38 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalNames
 Specifies the service principal names for the account.
-This parameter sets the ServicePrincipalNames property of the account.
-The LDAP display name (ldapDisplayName) for this property is servicePrincipalName.
+This parameter sets the **ServicePrincipalNames** property of the account.
+The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
 This parameter uses the following syntax to add remove, replace or clear service principal name values.
 
 Syntax:
 
 To add values:
 
--ServicePrincipalNames @{Add=value1,value2,...}
+ ```Powershell
+-ServicePrincipalNames @{Add=value1,value2,...}	
+```
 
-To remove values:
+ To remove values:	To remove values:
+ ```Powershell
+-ServicePrincipalNames @{Remove=value3,value4,...}	
+```
 
--ServicePrincipalNames @{Remove=value3,value4,...}
+ To replace values:	To replace values:
+ ```Powershell
+-ServicePrincipalNames @{Replace=value1,value2,...}	
+```
 
-To replace values:
 
--ServicePrincipalNames @{Replace=value1,value2,...}
-
-To clear all values:
-
--ServicePrincipalNames $null
+ To clear all values:	To clear all values:
+ ```Powershell
+-ServicePrincipalNames $null	
+```
 
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
 
-@{Add=value1,value2,...};@{Remove=value3,value4,...}
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators will be applied in the following sequence:
 

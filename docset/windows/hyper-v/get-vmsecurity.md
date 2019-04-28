@@ -138,6 +138,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.HyperV.PowerShell.VMSecurity
+
 ## NOTES
 
 ## RELATED LINKS

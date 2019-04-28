@@ -151,13 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-Specifies the maximum output level shown in the logs.
-The default log level is 3.
-The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
+Specifies the maximum output level shown in the logs. 
+The default log level is WarningsInfo.  
+The accepted values are as follows:        
+
+- Errors = Errors only
+- Warnings = Errors and warnings            
+- WarningsInfo = Errors, warnings, and information 
 
 ```yaml
 Type: LogLevel

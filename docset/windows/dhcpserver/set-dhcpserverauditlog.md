@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMBFileSize
-Specifies the maximum size of the audit log, in megabytes (MB).
+Specifies the maximum disk space available for all DHCP service audit log files, in megabytes (MB).
 
 ```yaml
 Type: UInt32

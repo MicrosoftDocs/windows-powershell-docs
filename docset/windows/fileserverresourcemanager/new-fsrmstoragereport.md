@@ -51,7 +51,7 @@ PS C:\> $d = Get-Date "12:00am"
 
 # This second command returns a **FsrmScheduledTask** object that describes a schedule that runs the task at midnight on the first day
 # of the month. The command stores results in the $task variable.
-PS C:\> $task = New-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+PS C:\> $task = New-FsrmScheduledTask -Time $d -Monthly 1
 
 # The third command creates a LargeFiles storage report named "Find large files" on C:\Shares. 
 # The command sets the schedule for the report stored in the $task variable, and limits the 
@@ -69,7 +69,7 @@ PS C:\> $d = get-date "12:00am"
 # This second command returns an **FsrmScheduledTask** object that describes a schedule 
 # that runs the task at midnight on the first day of the month. The command stores results in 
 # the $task variable.
-PS C:\> $task = new-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+PS C:\> $task = new-FsrmScheduledTask -Time $d -Monthly 1
 
 # The third command creates a LargeFiles storage report named "Find large files" that generates a
 # Large Files report on any folders whose Folder Usage property includes the User Data value. 
@@ -88,7 +88,7 @@ PS C:\> $d = get-date "12:00am"
 # This second command returns a **FsrmScheduledTask** object that describes a schedule that 
 # runs the task at midnight on the first day of the month. The command stores results in 
 # the $task variable.
-PS C:\> $task = new-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+PS C:\> $task = new-FsrmScheduledTask -Time $d -Monthly 1
 
 # The third command creates a storage report named "Find large files" and file groups on th
 # folder C:\Shares. The command sets the schedule for the report stored in the $task variable, 

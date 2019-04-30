@@ -50,7 +50,7 @@ This command finds a computer by looking for the specified computer name.
 PS C:\>Find-VamtManagedMachine -QueryType ActiveDirectory -QueryValue "DomainName" -MachineFilter "labcomp*"
 ```
 
-This command searches in the specified Active Directory domain.
+This command searches the specified Active Directory domain.
 The search results are restricted to the computers that have LabComp in their name.
 
 ### Example 3: Search a workgroup
@@ -75,7 +75,7 @@ PS C:\>Find-VamtManagedMachine -QueryType ActiveDirectory -QueryValue "DomainNam
 ```
 
 This command searches the specified Active Directory domain.
-The search results are restricted to the computers that have LabComp in their name, and the results are stored in Local SQLEXPRESS instance.
+The search results are restricted to the computers that have LabComp in their name, and the results are stored in the local SQLEXPRESS instance.
 
 ## PARAMETERS
 

@@ -423,6 +423,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## NOTES
 
+It is necessary to know, that property **AllowComputerToTurnOffDevice** is not configurable with the **Set-NetAdapterPowermanagement** command, this property is only shown as a result of the application of the **Get-NetAdapterPowermanagement** command, but it can not be established as a value to be configured.
+
 ## RELATED LINKS
 
 [Disable-NetAdapterPowerManagement](./Disable-NetAdapterPowerManagement.md)

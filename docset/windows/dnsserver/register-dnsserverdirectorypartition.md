@@ -44,6 +44,13 @@ PS C:\> Register-DnsServerDirectoryPartition -Name "ADpart"
 
 This command adds the local DNS server to the directory application partition named ADpart.
 
+### Example 2: Register a remote DNS server to a directory application partition using FQDN
+```
+PS C:\> Register-DnsServerDirectoryPartition -Name ADPart.fabrikam.com -ComputerName dc02.contoso.net
+```
+
+This command adds remote DNS server dc02.contoso.net to the directory application partition named ADPart.fabrikam.com.
+
 ## PARAMETERS
 
 ### -AsJob

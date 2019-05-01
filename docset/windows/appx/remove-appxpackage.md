@@ -60,7 +60,7 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 PS C:\> Get-appxpackage *package*
 PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" 
 ```
-This command will show all application that has a word * package * then copy the PackageFullName you want to remove, and use it in the Remove-AppxPackage command.
+This command will show all applications with the word "package". Copy the PackageFullName that you want to remove, then use it in the Remove-AppxPackage command.
 
 ## PARAMETERS
 

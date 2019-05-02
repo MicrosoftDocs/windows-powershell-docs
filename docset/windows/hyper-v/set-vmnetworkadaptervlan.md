@@ -71,7 +71,7 @@ PS C:\> Set-VMNetworkAdapterVlan -VMName Redmond -Access -VlanId 121
 ```
 
 Sets the virtual network adapter(s) in virtual machine Redmond to the Access mode.
-Traffic sent by this virtual machine  is tagged with VLAN ID 121.
+Traffic sent by this virtual machine is tagged with VLAN ID 121.
 
 ### Example 2
 ```
@@ -102,6 +102,14 @@ PS C:\> Get-VM Redmond | Set-VMNetworkAdapterVlan -Untagged
 ```
 
 Gets virtual machine Redmond and sets the virtual network adapters in the virtual machine to the untagged mode.
+
+### Example 5
+```
+PS C:\> Set-VMNetworkAdapterVlan -ManagementOS -Access -VlanID 20
+```
+
+Sets the virtual switch in the management OS to the Access mode.
+Traffic sent by this virtual switch is tagged with VLAN ID 20.
 
 ## PARAMETERS
 
@@ -488,4 +496,4 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-
+[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)

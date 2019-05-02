@@ -26,7 +26,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
@@ -40,7 +40,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
  [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
@@ -52,7 +52,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
@@ -92,28 +92,28 @@ Then pass these objects through the pipeline to the **New-ADServiceAccount** cmd
 ## EXAMPLES
 
 ### Example 1: Create an enabled managed service account
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.com" -Enabled $True
 ```
 
 This command creates an enabled managed service account in Active Directory Domain Services (AD DS).
 
 ### Example 2: Create a managed service account and register its service principal name
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName "Service01.contoso.com"
 ```
 
 This command creates a managed service account and registers its service principal name.
 
 ### Example 3: Create a managed service account for a single computer
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToSingleComputer
 ```
 
 This command creates a managed service account and restricts its use to a single computer.
 
 ### Example 4: Create a managed service account for outbound authentication only
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthenticationOnly
 ```
 
@@ -755,30 +755,34 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values.
 
 To add values:
 
-`-ServicePrincipalNames @{Add=value1,value2,...}`
+ ```Powershell
+-ServicePrincipalNames @{Add=value1,value2,...}
+```
 
-To remove values:
+ To remove values:
+```Powershell
+-ServicePrincipalNames @{Remove=value1,value2,...}
+```
 
-`-ServicePrincipalNames @{Remove=value3,value4,...}`
+ To replace values:
+```Powershell
+-ServicePrincipalNames @{Replace=value1,value2,...}
+```
 
-To replace values:
+ To clear all values:
+```Powershell
+-ServicePrincipalNames $null
+```
 
-`-ServicePrincipalNames @{Replace=value1,value2,...}`
-
-To clear all values:
-
-`-ServicePrincipalNames $Null`
-
-You can specify more than one change by using a list separated by semicolons.
+ You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
 
-`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
+ `@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
-The operators are applied in the following sequence: 
+ The operators are applied in the following sequence: 
 
 - Remove
 - Add

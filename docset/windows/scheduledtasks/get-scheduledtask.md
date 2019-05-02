@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskName
-Specifies an array of one or more names of a scheduled task. You can use **"*"** for a wildcard character query.
+Specifies an array of one or more names of a scheduled task.
 
 ```yaml
 Type: String[]
@@ -105,11 +105,11 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TaskPath
-Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace.
 You can use ***\\\*** for the root folder.
 If you do not specify a path, the cmdlet uses the root folder.
 

@@ -357,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trunk
-Specifies **Trunk** mode for the virtual machine network adapter. This parameter configures a tagged virtual port that passes all allowed VLANId tags to the VM adapter, traffic with the NativeVLANId is passed untagged to the VM adapter.
+Specifies **Trunk** mode for the virtual machine network adapter. This parameter configures a tagged virtual port that passes all allowed VLANId tags to the VM adapter. Traffic with the NativeVLANId is passed untagged to the VM adapter.
 This parameter must be used in conjunction with parameters **AllowedVlanIdList** and **NativeVlanId**.
 
 ```yaml

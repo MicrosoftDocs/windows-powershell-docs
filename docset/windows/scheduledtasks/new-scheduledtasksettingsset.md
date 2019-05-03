@@ -139,8 +139,6 @@ The third command registers the scheduled task Task01 to run the task action nam
 
 This example registers a scheduled task that runs only when a network is available.
 
-The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the $Sta variable.
-
 ### Example 6: Register a scheduled task that has a time limit to complete the task
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"

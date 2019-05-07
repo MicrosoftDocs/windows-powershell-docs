@@ -1012,3 +1012,4 @@ An **X509Certificate2** object for the certificate that has been created.
 
 ## RELATED LINKS
 
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)

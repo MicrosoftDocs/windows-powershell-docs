@@ -21,7 +21,7 @@ ms.assetid: 65DD9798-9AF5-4E64-AA66-421AA98F8704
 # Get-PhysicalExtent
 
 ## SYNOPSIS
-This cmdlet gets physical allocations for a physical disk, storage tier, or virtual disk. An "extent" is the area of space on a pooled disk that contains one fragment of the data for storage space,  also can be synonymous of "allocation" or as a "slab."
+This cmdlet gets physical allocations for a physical disk, storage tier, or virtual disk. The "extent" (also known as "allocation" or "slab)  is the area on a pooled disk containing one fragment of data for storage space,
 
 ## SYNTAX
 
@@ -65,7 +65,7 @@ The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
 ```
 
-This command gets all physical extents on the physical disk named PhysicalDisk4, using powershell pipe.
+This command gets all physical extents on the physical disk named PhysicalDisk4, using PowerShell pipe.
 The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 
 ## PARAMETERS

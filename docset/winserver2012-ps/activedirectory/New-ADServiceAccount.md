@@ -85,8 +85,6 @@ C:\PS>New-ADServiceAccount service1 -DNSHostName service1.contoso.com -Enabled $
 
 Description
 
------------
-
 Create a new enabled managed service account in AD DS.
 
 ### -------------------------- EXAMPLE 2 --------------------------
@@ -95,8 +93,6 @@ C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "MSSQLSVC/Machine3.co
 ```
 
 Description
-
------------
 
 Create a new managed service account and register its service principal name.
 
@@ -107,8 +103,6 @@ C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 
 Description
 
------------
-
 Create a new managed service account and restrict its use to only a single computer.
 
 ### -------------------------- EXAMPLE 4 --------------------------
@@ -117,8 +111,6 @@ C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 
 Description
-
------------
 
 Create a new managed service account and restrict its use to only outbound authentication.
 
@@ -135,48 +127,38 @@ Time is assumed to be local time unless otherwise specified.
 When a time value is not specified, the time is assumed to 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.
 The following examples show commonly-used syntax to specify a DateTime object.
-```Powershell
-"4/17/2006"
-``` 
-```Powershell 
-"Monday, April 17, 2006"
-```
-```Powershell
-"2:22:45 PM"
-```
-```Powershell
-"Monday, April 17, 2006 2:22:45 PM"
-```
+`"4/17/2006"` 
+
+`"Monday, April 17, 2006"`
+
+`"2:22:45 PM"`
+
+`"Monday, April 17, 2006 2:22:45 PM"`
+
 These examples specify the same date and the time without the seconds.
 
 
-```Powershell
-"4/17/2006 2:22 PM"
-```
+`"4/17/2006 2:22 PM"`
 
-```Powershell
-"Monday, April 17, 2006 2:22 PM"
-```
+`"Monday, April 17, 2006 2:22 PM"`
 
-```Powershell
-"2:22 PM"
-```
+`"2:22 PM"`
 
 
 The following example shows how to specify a date and time by using the RFC1123 standard.
 This example defines time by using Greenwich Mean Time (GMT).
-```Powershell
-"Mon, 17 Apr 2006 21:22:48 GMT"
-```
+
+`"Mon, 17 Apr 2006 21:22:48 GMT"`
+
 The following example shows how to specify a round-trip value as Coordinated Universal Time (UTC).
 This example represents Monday, April 17, 2006 at 2:22:48 PM UTC.
-```Powershell
-"2006-04-17T14:22:48.0000000"
-```
+
+`"2006-04-17T14:22:48.0000000"`
+
 The following example shows how to set this parameter to the date May 1, 2012 at 5 PM.
-```Powershell
--AccountExpirationDate "05/01/2012 5:00:00 PM"
-```
+
+`-AccountExpirationDate "05/01/2012 5:00:00 PM"`
+
 ```yaml
 Type: DateTime
 Parameter Sets: (All)

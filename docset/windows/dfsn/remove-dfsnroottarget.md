@@ -106,7 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+Prompts you for confirmation before running the cmdlet.  The default value is **True** and asks for confirmation. If you do not want to confirm the operation, you must use the switch with the **False** value, as shown in this example:
+
+**-Confirm:$False**
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +117,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: True 
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

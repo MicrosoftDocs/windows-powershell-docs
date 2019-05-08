@@ -97,7 +97,7 @@ Description
 
 -----------
 
-Get a global catalog in the current forest using Discovery. Domain type id is used in this scenario. Possible values are 1 = PrimaryDC, 2 = GlobalCatalog, 3 = KDC, 4 = TimeService, 5 = ReliableTimeService or 6 = ADWS. 
+Get a global catalog in the current forest using Discovery. Domain type id is used in this scenario. 
 
 ### -------------------------- EXAMPLE 5 --------------------------
 ```

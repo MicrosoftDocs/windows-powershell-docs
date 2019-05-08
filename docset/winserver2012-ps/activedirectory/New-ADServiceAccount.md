@@ -79,40 +79,32 @@ Then pass these objects through the pipeline to the New-ADServiceAccount cmdlet 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
+Create a new enabled managed service account in AD DS.
+
 ```Powershell
 C:\PS>New-ADServiceAccount service1 -DNSHostName service1.contoso.com -Enabled $true
 ```
 
-Description
-
-Create a new enabled managed service account in AD DS.
-
 ### -------------------------- EXAMPLE 2 --------------------------
+Create a new managed service account and register its service principal name.
+
 ```Powershell
 C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName service1.contoso.com
 ```
 
-Description
-
-Create a new managed service account and register its service principal name.
-
 ### -------------------------- EXAMPLE 3 --------------------------
+Create a new managed service account and restrict its use to only a single computer.
+
 ```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 ```
-
-Description
-
-Create a new managed service account and restrict its use to only a single computer.
-
+ 
 ### -------------------------- EXAMPLE 4 --------------------------
+Create a new managed service account and restrict its use to only outbound authentication.
+
 ```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
-
-Description
-
-Create a new managed service account and restrict its use to only outbound authentication.
 
 ## PARAMETERS
 

@@ -54,7 +54,7 @@ This command gets physical extents on all physical disks on the computer.
 ### Example 2: Get all physical extents on all physical disks 
 
 ```Powershell
-PS C:\>Get-PhysicalDisk | foreach{Get-PhysicalExtent -PhysicalDisk $_}
+PS C:\>Get-PhysicalDisk | Get-PhysicalExtent 
 ```
 
 This command gets all physical extents on all physical disks on the computer.

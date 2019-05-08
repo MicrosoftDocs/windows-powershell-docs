@@ -45,14 +45,22 @@ The **Get-PhysicalExtent** cmdlet gets the physical allocations for a physical d
 
 ## EXAMPLES
 
-### Example 1: Get all physical extents on all physical disks
+### Example 1: Get physical extents on one physical disks
+```Powershell
+PS C:\>Get-PhysicalExtent -PhysicalDisk Get-PhysicalDisk
+```
+This command gets physical extents on all physical disks on the computer.
+
+### Example 2: Get all physical extents on all physical disks 
+
 ```Powershell
 PS C:\>Get-PhysicalExtent -PhysicalDisk $(Get-PhysicalDisk)
 ```
 
 This command gets all physical extents on all physical disks on the computer.
 
-### Example 2: Get extents on a specific disk 
+
+### Example 3: Get extents on a specific disk 
 ```Powershell
 PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "PhysicalDisk4")
 ```
@@ -60,7 +68,7 @@ PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "Physica
 This command gets all physical extents on the physical disk named PhysicalDisk4.
 The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 
-### Example 3: Get all physical extents on a disk (Other Version)
+### Example 4: Get all physical extents on a disk (Other Version)
 ```Powershell
 PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
 ```

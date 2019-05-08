@@ -144,7 +144,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-When you use this switch, to indicate for example the mount path to the folder **C:\Images**, the command inidcates that a folder **C:\ImagesUsers** does not exist and  generates an error when executes, the correct expected folder is **C:\Images\Users**.  To solve this problem you can use the [Junction](https://docs.microsoft.com/sysinternals/downloads/junction) function, to create the expected **C:\ImagesUsers** junction targeted to the folder **C:\Images\Users**
+When you use this switch, for example to find the mount path to the folder **C:\Images**, the command indicates that a folder **C:\ImagesUsers** does not exist and generates an error when executed, because the correct folder is **C:\Images\Users**.  To resolve this, download [Junction](https://docs.microsoft.com/sysinternals/downloads/junction) and use it to create the expected **C:\ImagesUsers** junction, targeted to the folder **C:\Images\Users**.
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.

@@ -52,7 +52,6 @@ An app package has an .appx file name extension.
 ```
 PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
 ```
-
 This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
 
 ### Example 2: Search using wildcards then remove the specific app package
@@ -61,6 +60,13 @@ PS C:\> Get-appxpackage *package*
 PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" 
 ```
 This command will show all applications with the word "package". Copy the PackageFullName that you want to remove, then use it in the Remove-AppxPackage command.
+
+### Example 3: Search using wildcards then remove all app package
+```
+PS C:\> Get-appxpackage *package*| Remove-AppxPackage
+```
+This command will delete all applications with the word "package".
+
 
 ## PARAMETERS
 

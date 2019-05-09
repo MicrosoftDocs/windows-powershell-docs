@@ -46,10 +46,10 @@ This command adds the local DNS server to the directory application partition na
 
 ### Example 2: Register a remote DNS server to a directory application partition using FQDN
 ```
-PS C:\> Register-DnsServerDirectoryPartition -Name "DomainDnsZones.dept.contoso.com"
+PS C:\> Register-DnsServerDirectoryPartition -Name "hr.dept.contoso.com"
 ```
 
-This command adds the local DNS server to the directory application partition named DomainDnsZones.dept.contoso.com.
+This command adds the local DNS server to the directory application partition named hr.dept.contoso.com.
 
 ## PARAMETERS
 

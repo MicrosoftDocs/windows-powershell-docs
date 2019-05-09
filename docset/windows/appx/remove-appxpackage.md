@@ -63,7 +63,7 @@ This command will show all applications with the word "package". Copy the Packag
 
 ### Example 3: Search using wildcards then remove all app package
 ```
-PS C:\> Get-appxpackage *package*| Remove-AppxPackage
+PS C:\> Get-appxpackage *package*| Remove-AppxPackage
 ```
 This command will delete all applications with the word "package".
 

@@ -80,7 +80,7 @@ PS C:\>$startDate = Get-Date -Date "12/23/2011"
 
 PS C:\>$endDate = Get-Date -Date "05/23/2012"
 
-PS C:\>Get-RemoteAccessConnectionStatistics -StartDateTime -EndDateTime | Export-Csv -Path "data.csv"
+PS C:\>Get-RemoteAccessConnectionStatistics -StartDateTime $startDate -EndDateTime $endDate | Export-Csv -Path "data.csv"
 ```
 
 This example gets a list of historic connections and export them to a .csv file.

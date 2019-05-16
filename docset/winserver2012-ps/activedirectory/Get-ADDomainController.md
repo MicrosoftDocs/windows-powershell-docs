@@ -84,9 +84,9 @@ C:\PS>Get-ADDomainController -Discover -Service "GlobalCatalog"
 
 Description
 
------------
-
 Get a global catalog in the current forest using Discovery. Domain type name is used in this scenario.
+
+-----------
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```

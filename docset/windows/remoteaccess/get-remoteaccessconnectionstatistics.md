@@ -39,7 +39,7 @@ Get-RemoteAccessConnectionStatistics [-ComputerName <String>] [[-StartDateTime] 
 ```
 
 ## DESCRIPTION
-The **Get-RemoteAccessConnectionStatistics** cmdlet displays the statistics of the real-time, currently active DirectAccess (DA) and VPN connections and the statistics of DA and VPN historical connections for a specified time duration
+The **Get-RemoteAccessConnectionStatistics** cmdlet displays the statistics of the real-time, currently active DirectAccess (DA) and VPN connections and the statistics of DA and VPN historical connections for a specified time duration.
 
 The statistics for active and historical connections starting or ending on a Remote Access (RA) server are stored in the inbox accounting store on that server.
 This cmdlet retrieves statistics for a specific server.
@@ -64,10 +64,7 @@ ConnectionDuration(s) : 220
 ConnectionType        : Vpn 
 AccessStatus          : User Mode/Full Corp Access 
 
-
 PS C:\>Disconnect-VpnUser -HostIPAddress 10.1.1.11 -PassThru10.1.1.11
-
-
 
 PS C:\>Get-RemoteAccessConnectionStatistics | Format-List -Property *
 ```
@@ -79,7 +76,11 @@ The output of this cmdlet is piped to the [Format-List](http://go.microsoft.com/
 
 ### EXAMPLE 2
 ```
-@{navigationLink=System.Management.Automation.PSObject[]; #text=System.Management.Automation.PSObject[]}
+PS C:\>$startDate = Get-Date -Date "12/23/2011"
+
+PS C:\>$endDate = Get-Date -Date "05/23/2012"
+
+PS C:\>Get-RemoteAccessConnectionStatistics -StartDateTime $startDate -EndDateTime $endDate | Export-Csv -Path "data.csv"
 ```
 
 This example gets a list of historic connections and export them to a .csv file.
@@ -87,7 +88,6 @@ This example gets a list of historic connections and export them to a .csv file.
 ### EXAMPLE 3
 ```
 PS C:\>$enddate = Get-Date -Date "12/23/2011"
-
 
 The data is exported from server start date to the specified end date. Note: The starting date does not need to be explicitly specified here.
 PS C:\>Get-RemoteAccessConnectionStatistics -EndDateTime $enddate | Export-Csv -Path "data.csv"

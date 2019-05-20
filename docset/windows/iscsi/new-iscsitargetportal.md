@@ -80,9 +80,11 @@ Accept wildcard characters: False
 Specifies the type of authentication to use when logging into the target.
 The acceptable values for this parameter are:
 
-- None 
-- OneWayCHAP 
-- MutualCHAP
+- NONE 
+- ONEWAYCHAP 
+- MUTUALCHAP
+
+Note: These values are case sensitive.
 
 ```yaml
 Type: String

@@ -24,7 +24,7 @@ ms.assetid: 8AD46969-D3B0-4DE9-81D3-D485B99CB93F
 ## Description
 The Active Directory module for Windows PowerShell is a PowerShell module that consolidates a group of cmdlets. You can use these cmdlets to manage your Active Directory domains, Active Directory Lightweight Directory Services (AD LDS) configuration sets, and Active Directory Database Mounting Tool instances in a single, self-contained package.
 
-If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running Windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt.
+If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running Windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt. For more details on RSAT, see [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
 
 ## ActiveDirectory Cmdlets
 ### [Add-ADCentralAccessPolicyMember](./Add-ADCentralAccessPolicyMember.md)

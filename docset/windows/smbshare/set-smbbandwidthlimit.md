@@ -91,6 +91,7 @@ The acceptable values for this parameter are:
 - Default
 - VirtualMachine
 - LiveMigration
+- StorageReplication
 
 ```yaml
 Type: BandwidthLimitCategory

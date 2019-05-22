@@ -114,7 +114,7 @@ Traffic sent by this virtual switch is tagged with VLAN ID 20.
 ## PARAMETERS
 
 ### -Access
-Specifies **Access** mode for the virtual machine network adapter. This parameter configures an untagged virtual port with the VLANId (port based VLAN), for this reason must be specified in conjunction with parameter **VlanId**.
+Specifies **Access** mode for the virtual machine network adapter. This parameter configures an untagged virtual port with the VLANId (port based VLAN), so it must be specified together with **VlanId**.
 
 ```yaml
 Type: SwitchParameter

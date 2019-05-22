@@ -52,6 +52,13 @@ IIS:\>set-webconfigurationproperty '/system.applicationHost/sites/site[@name="De
 The cmdlet sets new bindings on an existing Web site.
 The original bindings are replaced.
 
+### -------------- EXAMPLE 3: Setting authentication parameters on an existing Web site --------------
+```
+IIS:\>set-webconfigurationproperty 'system.webserver/security/authentication/basicauthentication' -PSPath 'IIS:\sites\default web site\' -Name defaultlogondomain -Value 'contoso.com'
+```
+
+The cmdlet sets the default domain of Basic Authentication settings on an existing Web site. Note that for this example to work, Custom Site Delegation for this type of Authentication must be set to Read/Write at the site level.
+
 ## PARAMETERS
 
 ### -AtElement

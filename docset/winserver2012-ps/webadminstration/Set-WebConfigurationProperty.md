@@ -31,7 +31,7 @@ Set-WebConfigurationProperty -Name <String> -InputObject <Object> [-Clr <String>
 ```
 
 ## DESCRIPTION
-TheSet-WebConfigurationPropertycmdlet changes the value of an IIS configuration property.
+The Set-WebConfigurationProperty cmdlet changes the value of an IIS configuration property.
 The element can be specified as a configuration section or an XPath query.
 Globbing, the use of wildcards, is supported.
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If theForceparameter is used it causes the configuration property setting to be set at a level in the configuration hierarchy above a lock in the configuration.
+If the Force parameter is used it causes the configuration property setting to be set at a level in the configuration hierarchy above a lock in the configuration.
 
 ```yaml
 Type: SwitchParameter

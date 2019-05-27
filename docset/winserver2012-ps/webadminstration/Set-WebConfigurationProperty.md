@@ -37,14 +37,14 @@ Globbing, the use of wildcards, is supported.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Change the extension of all handlers mapped to .aspx --------------
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 IIS:\>Set-WebConfigurationProperty "//handlers/add[@path='*.aspx']" -PSPath IIS:\ -Name path -Value "*.mspx"
 ```
 
 The cmdlet changes all handler paths to *.mspx that were mapped to *.aspx.
 
-### -------------- EXAMPLE 2: Setting new Bindings on an existing Web site --------------
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 IIS:\>set-webconfigurationproperty '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath IIS:\ -Name Bindings -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```
@@ -52,7 +52,7 @@ IIS:\>set-webconfigurationproperty '/system.applicationHost/sites/site[@name="De
 The cmdlet sets new bindings on an existing Web site.
 The original bindings are replaced.
 
-### -------------- EXAMPLE 3: Setting authentication parameters on an existing Web site --------------
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 IIS:\>set-webconfigurationproperty 'system.webserver/security/authentication/basicauthentication' -PSPath 'IIS:\sites\default web site\' -Name defaultlogondomain -Value 'contoso.com'
 ```

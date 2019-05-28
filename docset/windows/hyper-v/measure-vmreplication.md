@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -ReplicationMode
 Specifies the replication mode of the virtual machines whose replication statistics you want to get.
-Valid values are "None", "Primary", "Replica" and "TestReplica".
+Valid values are "None", "Primary", "Replica", "TestReplica" and "ExtendedReplica"
 
 ```yaml
 Type: VMReplicationMode

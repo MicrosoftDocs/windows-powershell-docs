@@ -20,7 +20,7 @@ ms.reviewer:
 # Export-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Extract the contents of a provisioning package.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Export-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-Out
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Extract the contents of a provisioning package to the specified folder.
 
 ## EXAMPLES
 

@@ -211,18 +211,20 @@ Accept wildcard characters: False
 ```
 
 ### -GptType
-Specifies the type of GPT partition to create (by GUID).
+Specifies the type of GPT partition to create (by GUID). 
+The format should be 32 digits separated by hyphens, enclosed in braces:
+{00000000-0000-0000-0000-000000000000}
 By default, the **New-Partition** cmdlet creates a basic GPT data partition.
 
 The GUIDs of valid types are: 
                          
- -- System Partition (c12a7328-f81f-11d2-ba4b-00a0c93ec93b) 
+ -- System Partition {c12a7328-f81f-11d2-ba4b-00a0c93ec93b}
                          
- -- Microsoft Reserved (e3c9e316-0b5c-4db8-817d-f92df00215ae)
+ -- Microsoft Reserved {e3c9e316-0b5c-4db8-817d-f92df00215ae}
                          
- -- Basic data (ebd0a0a2-b9e5-4433-87c0-68b6b72699c7) 
+ -- Basic data {ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}
                          
- -- Microsoft Recovery (de94bba4-06d1-4d40-a16a-bfd50179d6ac)
+ -- Microsoft Recovery {de94bba4-06d1-4d40-a16a-bfd50179d6ac}
 
 ```yaml
 Type: String

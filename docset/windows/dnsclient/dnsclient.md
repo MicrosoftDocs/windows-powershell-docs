@@ -58,6 +58,9 @@ Registers all of the IP addresses on the computer onto the configured DNS server
 ### [Remove-DnsClientNrptRule](./Remove-DnsClientNrptRule.md)
 Removes the specified DNS client NRPT rule.
 
+### [Resolve-DnsName](./Resolve-DnsName.md)
+Performs a DNS name query resolution for the specified name.
+
 ### [Set-DnsClient](./Set-DnsClient.md)
 Sets the interface-specific DNS client configurations on the computer.
 

@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditSmb1Access
-{{Fill AuditSmb1Access Description}}
+Enables auditing of SMB version 1 protocol in Windows Event Log.
 
 ```yaml
 Type: Boolean

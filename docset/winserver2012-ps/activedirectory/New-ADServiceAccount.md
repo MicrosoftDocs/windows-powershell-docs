@@ -880,46 +880,38 @@ This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
 This parameter uses the following syntax to add remove, replace or clear service principal name values.
 
-Syntax:
-
 To add values:
 
- ```Powershell
--ServicePrincipalNames @{Add=value1,value2,...}	
-```
+`-ServicePrincipalNames @{Add=value1,value2,...}`
 
- To remove values:	To remove values:
- ```Powershell
--ServicePrincipalNames @{Remove=value3,value4,...}	
-```
+To remove values:
 
- To replace values:	To replace values:
- ```Powershell
--ServicePrincipalNames @{Replace=value1,value2,...}	
-```
+`-ServicePrincipalNames @{Remove=value3,value4,...}`
 
+To replace values:
 
- To clear all values:	To clear all values:
- ```Powershell
--ServicePrincipalNames $null	
-```
+`-ServicePrincipalNames @{Replace=value1,value2,...}`
+
+To clear all values:
+
+`-ServicePrincipalNames $Null`
 
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove service principal names.
 
 `@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
-The operators will be applied in the following sequence:
+The operators are applied in the following sequence: 
 
-..Remove
-
-..Add
-
-..Replace
+- Remove
+- Add
+- Replace
 
 The following example shows how to add and remove service principal names.
 
--ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```powershell
+ -ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
 
 ```yaml
 Type: String[]

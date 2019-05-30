@@ -745,22 +745,44 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalNames
-Use the **DateTime** syntax when you specify this parameter.
-Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to 12:00:00 AM local time.
-When a date is not specified, the date is assumed to be the current date.
+Specifies the service principal names for the account.
+This parameter sets the **ServicePrincipalNames** property of the account.
+The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
+This parameter uses the following syntax to add remove, replace or clear service principal name values.
 
-```yaml
-Type: Hashtable
-Parameter Sets: Identity
-Aliases: 
+To add values:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
+`-ServicePrincipalNames @{Add=value1,value2,...}`
+
+To remove values:
+
+`-ServicePrincipalNames @{Remove=value3,value4,...}`
+
+To replace values:
+
+`-ServicePrincipalNames @{Replace=value1,value2,...}`
+
+To clear all values:
+
+`-ServicePrincipalNames $Null`
+
+You can specify more than one change by using a list separated by semicolons.
+For example, use the following syntax to add and remove service principal names.
+
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
+
+The operators are applied in the following sequence: 
+
+- Remove
+- Add
+- Replace
+
+The following example shows how to add and remove service principal names.
+
+```powershell
+ -ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
 ```
+
 
 ### -TrustedForDelegation
 Indicates whether an account is trusted for Kerberos delegation.

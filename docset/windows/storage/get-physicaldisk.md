@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -HealthStatus
-Specifies the health status of physical disks to get.
+Specifies the **health status** of physical disks.
 The acceptable values for this parameter are:
 
 - Healthy 

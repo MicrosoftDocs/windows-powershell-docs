@@ -108,6 +108,8 @@ Protocols             : {771, 65277}
 ```
 
 This command gets all the cipher suites that have names that contain the string AES.
+The output includes a protocols field that represent the TLS/SSL protocol versions for which that cipher is available. See [Supported Cipher Suites and Protocols in the Schannel SSP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786419(v=ws.11)) and [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
+
 
 ## PARAMETERS
 

@@ -35,11 +35,9 @@ The table below also shows the latest published version of the Help for each mod
 | BitLocker | [BitLocker Cmdlets](/powershell/module/bitlocker) |
 | BitsTransfer | [Background Intelligent Transfer Service (BITS) Cmdlets](/powershell/module/bitstransfer) |
 | BranchCache | [BranchCache Cmdlets](/powershell/module/branchcache) |
-<!-- | CisAgent | [StorSimple Microsoft Azure management agent (CisAgent) Cmdlets]("https://technet.microsoft.com/library/dn715784(v=wps.630).aspx") | -->
 | ClusterAwareUpdating | [Cluster-Aware Updating Cmdlets](/powershell/module/clusterawareupdating) |
 | DcbQoS | [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets](/powershell/module/dcbqos) |
 | Deduplication | [Deduplication Cmdlets](/powershell/module/deduplication) |
-<!-- | Defender | [Defender Cmdlets]("https://technet.microsoft.com/library/00797342-0aac-4fff-84fe-4749da9242d6%20(v=wps.630).aspx") | -->
 | DFSN | [DFSN Cmdlets](/powershell/module/dfsn) |
 | Dfsr | [Distributed File System (DFS) Replication Cmdlets](/powershell/module/dfsn) |
 | DhcpServer | [DHCP Server Cmdlets](/powershell/module/dhcpserver) |
@@ -50,7 +48,6 @@ The table below also shows the latest published version of the Help for each mod
 | FailoverClusters | [Failover Clusters Cmdlets](/powershell/module/failoverclusters) |
 | FileServerResourceManager | [FSRM Cmdlets](/powershell/module/fsrm) |
 | GroupPolicy | [Group Policy Cmdlets](/powershell/module/grouppolicy) |
-<!-- | Hardware Certification | [Hardware Certification Cmdlets]("https://technet.microsoft.com/library/dn296620(v=wps.630).aspx") | -->
 | HCS | [High Performance Computing Pack](/powershell/module/hpc) |
 | HPC | [StorSimple Hybrid Cloud Storage (HCS) Cmdlets](/powershell/module/hcs) |
 | Hyper-V | [Hyper-V Cmdlets](/powershell/module/hyper-v) |
@@ -61,8 +58,7 @@ The table below also shows the latest published version of the Help for each mod
 | KDS | [KDS Cmdlets](/powershell/module/kds) |
 | MMAgent | [Memory Management Agent (MMAgent) Cmdlets](/powershell/module/mmagent) |
 | Mpio | [MultiPath I/O (MPIO) Cmdlets](/powershell/module/mpio) |
-| MsDtc | [Distributed Transaction Coordinator (MSDTC) Cmdl
-<!-- | MsOnlineBackup | [Windows Azure Backup Cmdlets]("https://technet.microsoft.com/library/hh770400(v=wps.630).aspx") | -->
+| MsDtc | [Distributed Transaction Coordinator (MSDTC) Cmdlets](/powershell/module/msdtc) |
 | NetAdapter | [Network Adapter Cmdlets](/powershell/module/netadapter) |
 | NetConnection | [Network Connection Profile Cmdlets](/powershell/module/netconnection) |
 | NetEventPacketCapture | [Network Event Packet Capture Cmdlets](/powershell/module/neteventpacketcapture) |
@@ -105,7 +101,6 @@ The table below also shows the latest published version of the Help for each mod
 | TrustedPlatformModule | [Trusted Platform Module (TPM) Cmdlets](/powershell/module/trustedplatformmodule) |
 | UpdateServices | [Windows Server Update Services (WSUS) Cmdlets](/powershell/module/updateservices) |
 | UserAccessLogging | [User Access Logging (UAL) Cmdlets](/powershell/module/useraccesslogging) |
-<!-- | VAMT | [VAMT Cmdlets](/powershell/module/vamt) | -->
 | VPNClient | [VPN Client Cmdlets](/powershell/module/vpnclient) |
 | WDAC | [Windows Data Access Components (WDAC) Cmdlets](/powershell/module/wdac) |
 | Wds | [Windows Deployment Services Cmdlets](/powershell/module/wds) |

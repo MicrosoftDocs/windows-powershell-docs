@@ -44,7 +44,7 @@ Specify properties to add or modify by using the **SetPropertyValue** parameter.
 Specify properties to remove by using the **RemovePropertyValue** parameter.
 
 Use the driver installation program to install and uninstall a driver.
-You cannot install or uninstall a driver by using Windows PowerShell� cmdlets.
+You cannot install or uninstall a driver by using Windows PowerShell cmdlets.
 
 For more information about ODBC and drivers, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx) and [Drivers](http://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell� calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

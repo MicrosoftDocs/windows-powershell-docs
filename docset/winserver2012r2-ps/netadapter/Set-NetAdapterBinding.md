@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -ComponentID
 Specifies the underlying name of the transport or filter in the following form. 
-  �?  `ms_xxxx`, such as `ms_tcpip`.
+  ?  `ms_xxxx`, such as `ms_tcpip`.
 
 ```yaml
 Type: String[]

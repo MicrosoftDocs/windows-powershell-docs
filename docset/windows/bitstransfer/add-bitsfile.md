@@ -34,6 +34,8 @@ Add-BitsFile [-BitsJob] <BitsJob[]> [[-Destination] <String[]>] [-Source] <Strin
 The **Add-BitsFile** cmdlet adds files to a Background Intelligent Transfer Service (BITS) transfer job.
 You can specify the files to add to the BITS transfer job by name at the command prompt or in a comma-separated value (CSV) file.
 
+BITS supports throttled and asynchronously transferring large files between a client and a server using idle network bandwidth. BITS intelligently pick which transfer jobs to run, increase or decrease the rate at which files are transferred based on the amount of idle network bandwidth available. See [Adding a file to a job](https://docs.microsoft.com/windows/desktop/bits/background-intelligent-transfer-service-portal) and [About BITS](https://docs.microsoft.com/windows/desktop/bits/using-bits) to learn more. 
+
 Important: An upload job can contain only one file.
 To upload more than one file, use the **Import-Csv** cmdlet, and pipe the output to the **Add-BitsFile** cmdlet.
 For more information, see example 3 in this Help topic.

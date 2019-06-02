@@ -17,7 +17,7 @@ Removes an IIS virtual directory.
 ## SYNTAX
 
 ```
-Remove-WebVirtualDirectory [-Site <String>] [-Application <String>] [-Name] <String> [-WhatIf] [-Confirm]
+Remove-WebVirtualDirectory -Site <String> -Application <String> [-Name] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -88,7 +88,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

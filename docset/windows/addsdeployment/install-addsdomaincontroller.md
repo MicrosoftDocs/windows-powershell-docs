@@ -634,6 +634,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.DirectoryServices.Deployment.Types.Result
+
 ## NOTES
 * By default, this cmdlet always prompts for confirmation. To bypass confirmation, you need to include the *Confirm* parameter and specify a value of $false. For example, `-Confirm:$false`.
 * By default, this cmdlet is always run when executed. To see what will happen if the cmdlet runs without executing or committing installation changes, first run the cmdlet using the *WhatIf* parameter to show what would happen.

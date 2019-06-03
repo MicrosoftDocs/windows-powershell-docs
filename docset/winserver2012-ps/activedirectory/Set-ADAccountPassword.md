@@ -412,8 +412,11 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The cmdlet will not be executed. 
 
+> [!NOTE]
+> -WhatIf command works in Windows Server 2016 and the accompanying Remote Server Administration Tools (RSAT) package.  
+ 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

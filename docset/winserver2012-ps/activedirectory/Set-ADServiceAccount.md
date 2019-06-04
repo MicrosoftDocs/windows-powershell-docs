@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: kenwith
+author: kenwith
 ---
 
 # Set-ADServiceAccount
@@ -925,13 +925,14 @@ The operators are applied in the following sequence:
 The following example shows how to add and remove service principal names.
 
 ```powershell
- -ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
 ```
 
+<br>
 
 ```yaml
-Type: Hashtable
-Parameter Sets: Identity
+Type: String[]
+Parameter Sets: (All)
 Aliases: 
 
 Required: False

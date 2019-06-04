@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disable-WssBranchCache
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DDAC0A0-DC44-4C8E-BA02-81EF1328D320
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

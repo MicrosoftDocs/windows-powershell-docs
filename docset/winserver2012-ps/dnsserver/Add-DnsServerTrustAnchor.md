@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: ED7F144C-6527-4504-852E-AEC1BD575111
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DnsServerTrustAnchor

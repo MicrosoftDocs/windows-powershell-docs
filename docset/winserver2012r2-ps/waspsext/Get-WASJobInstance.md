@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WASJobInstance
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2EE9F05-FF43-41DD-9270-ABCB6D4DADD4
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

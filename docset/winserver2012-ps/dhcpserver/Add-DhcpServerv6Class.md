@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0D2B4570-DB8C-4A43-B513-65AFB91AE578
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DhcpServerv6Class

@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: BA0E9FC6-6949-4BF6-A231-B45FC76F66B9
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetWNV Module

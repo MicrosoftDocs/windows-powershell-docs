@@ -748,7 +748,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values.
+This parameter uses the following syntax to add, remove, replace, or clear service principal name values.
 
 To add values:
 

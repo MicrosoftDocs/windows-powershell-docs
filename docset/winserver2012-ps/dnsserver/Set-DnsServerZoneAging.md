@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EF02C0C6-10AA-449F-A6D8-98A08D309DCA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DnsServerZoneAging

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Stop-DtcDiagnosticResourceManager
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5ACAD949-DA35-4E3B-97AF-3AA9FB44A307
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

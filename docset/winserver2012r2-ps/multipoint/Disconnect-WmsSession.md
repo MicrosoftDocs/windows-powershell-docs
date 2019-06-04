@@ -6,7 +6,7 @@ schema: 2.0.0
 title: Disconnect-WmsSession
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
@@ -14,7 +14,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Disconnect-WmsSession

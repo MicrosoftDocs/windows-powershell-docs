@@ -131,8 +131,7 @@ Accept wildcard characters: False
 ### -DfsnPath
 Specifies the DFS Namespace folder path of the replicated folder.
 
-The DFS Namespace folder path has no effect on replication.
-This property exists only as a descriptive convenience to administrators and DFS Replication service does not validate the value of this property.
+This parameter is used to connect replication group to the replicated folder.
 
 ```yaml
 Type: String

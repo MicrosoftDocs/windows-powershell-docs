@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WBSummary
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E84ED988-6EFD-4B9B-BFD2-0C4A3D214BB0
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

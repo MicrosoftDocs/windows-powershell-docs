@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-RDVirtualDesktopTemplateExportPath
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 905E45A7-F7D0-4408-B360-B39591190CB4
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

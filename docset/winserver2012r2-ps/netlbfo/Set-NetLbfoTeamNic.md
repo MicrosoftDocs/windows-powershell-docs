@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetLbfoTeamNic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BCCBF362-4851-4AD1-B235-B9E223368231
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

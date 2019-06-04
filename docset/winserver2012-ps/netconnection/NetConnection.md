@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: DAAD0289-056C-4259-ADA4-2245C2EEE4AA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetConnection Module

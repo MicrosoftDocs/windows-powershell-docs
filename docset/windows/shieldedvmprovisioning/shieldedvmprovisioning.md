@@ -2,8 +2,8 @@
 Module Name: ShieldedVMProvisioning
 Module Guid: 20ACB5FB-7322-411F-A933-49A79B25F2C1
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=615565
 Help Version: 5.0.1.1
 Locale: en-US

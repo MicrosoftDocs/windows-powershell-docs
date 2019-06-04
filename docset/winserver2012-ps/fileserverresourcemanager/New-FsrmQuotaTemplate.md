@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0953D1D4-FDE2-4742-A15D-DC94931FCF91
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-FsrmQuotaTemplate

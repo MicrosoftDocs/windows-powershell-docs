@@ -412,7 +412,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet will not be executed. 
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 > [!NOTE]
 > -WhatIf command works in Windows Server 2016 and the accompanying Remote Server Administration Tools (RSAT) package.  

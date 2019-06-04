@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Specifies values to add to an object property.
 Use this parameter to add one or more values to a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
 `-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`

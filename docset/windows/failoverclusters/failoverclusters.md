@@ -22,7 +22,7 @@ ms.assetid: 1149AB0F-CE0C-4F56-8352-15D29814411F
 
 # FailoverClusters Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all failover cluster-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all failover cluster-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.  If these cmdlets aren't available in your PowerShell session, you may need to add the `Failover Cluster Module for Windows PowerShell` Feature, using the following PowerShell cmd: `Add-WindowsFeature RSAT-Clustering-PowerShell`.
 
 ## FailoverClusters Cmdlets
 ### [Add-ClusterCheckpoint](./Add-ClusterCheckpoint.md)

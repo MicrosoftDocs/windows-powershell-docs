@@ -65,7 +65,8 @@ PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
 SizeMin                                                 SizeMax 
 -----------                                             -----------
 ```
-This command will show the actual value to see the minimum and maximum size for the partition (SizeMin and SizeMax).
+
+This command will show the actual minimum and maximum size of the partition (SizeMin and SizeMax).
 
 ## PARAMETERS
 

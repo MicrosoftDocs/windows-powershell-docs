@@ -416,7 +416,7 @@ Specifies the ICMP type codes.
 The key encoding is specified by running the Set-NetFirewallSetting cmdlet with the *KeyEncoding* parameter. 
 The acceptable values for this parameter are:
 
-- ICMP type code: 0 through 255. 
+- ICMP type code: 0-255. 
 - ICMP type code pairs: 3:4. 
 - Keyword: Any. 
 A rule can be queried for this condition, modified by using the security filter object, or both.
@@ -483,8 +483,8 @@ The acceptable formats for this parameter are:
 - IPv4 Subnet (by network bit count):  1.2.3.4/24 
 - IPv6 Subnet (by network bit count):  fe80::1/48 
 - IPv4 Subnet (by network mask):  1.2.3.4/255.255.255.0 
-- IPv4 Range: 1.2.3.4 through 1.2.3.7 
-- IPv6 Range: fe80::1 through fe80::9 
+- IPv4 Range: 1.2.3.4-1.2.3.7 
+- IPv6 Range: fe80::1-fe80::9 
 Querying for rules with this parameter can only be performed using filter objects.
 See the Get-NetFirewallAddressFilter cmdlet for more information.
 
@@ -528,12 +528,12 @@ Accept wildcard characters: False
 Specifies that network packets with matching IP local port numbers match this rule. 
 The acceptable value is a port, range, or keyword and depends on the protocol. 
 If the *Protocol* parameter value is TCP or UDP, then the acceptable values for this parameter are: 
-- Port range: 0 through 65535. 
+- Port range: 0-65535. 
 - Port number: 80. 
 - Keyword: PlayToDiscovery or Any. 
 If the *Protocol* parameter value is ICMPv4 or ICMPv6, then the acceptable values for this parameter are: 
 - An ICMP type, code pair: 0, 8. 
-- Type and code: 0 through 255. 
+- Type and code: 0-255. 
 - Keyword: Any. 
 If the *Protocol* parameter is not specified, then the acceptable values for this parameter are: RPC, RPCEPMap, Teredo, IPHTTPSIn, IPHTTPSOut, or Any. 
 IPHTTPS is only supported on Windows Server 2012. 
@@ -784,7 +784,7 @@ Specifies that network packets with matching IP addresses match this rule.
 This parameter specifies the protocol for an IPsec rule. 
 The acceptable values for this parameter are:
 
-- Protocols by number:  0 through 255. 
+- Protocols by number:  0-255. 
 - Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
 If a port number is identified by using port1 or port2, then this parameter must be set to TCP or UDP. 
 The values ICMPv4 and ICMPv6 create a rule that exempts ICMP network traffic from the IPsec requirements of another rule. 
@@ -815,8 +815,8 @@ The acceptable formats for this parameter are:
 - IPv4 Subnet (by network bit count):  1.2.3.4/24 
 - IPv6 Subnet (by network bit count):  fe80::1/48 
 - IPv4 Subnet (by network mask):  1.2.3.4/255.255.255.0 
-- IPv4 Range: 1.2.3.4 through 1.2.3.7 
-- IPv6 Range: fe80::1 through fe80::9 
+- IPv4 Range: 1.2.3.4-1.2.3.7 
+- IPv6 Range: fe80::1-fe80::9 
 - Keyword: Any, LocalSubnet, DNS, DHCP, WINS, DefaultGateway, Internet, Intranet, IntranetRemoteAccess, PlayToDevice. NOTE: Keywords can be restricted to IPv4 or IPv6 by appending a 4 or 6 (for example, keyword "LocalSubnet4" means that all local IPv4 addresses are matching this rule).
 
 Querying for rules with this parameter can only be performed using filter objects.
@@ -859,12 +859,12 @@ This parameter value is the second end point of an IPsec rule.
 The acceptable value is a port, range, or keyword and depends on the protocol. 
 If the protocol is TCP or UDP, then the acceptable values for this parameter are: 
 
-- Port range: 0 through 65535 
+- Port range: 0-65535 
 - Port number: 80 
 - Keyword: Any 
 If the protocol is ICMPv4 or ICMPv6, then the acceptable values for this parameter are: 
 - An ICMP type, code pair: 0, 8 
-- Type and code: 0 through 255 
+- Type and code: 0-255 
 - Keyword: Any. 
 
 If a protocol is not specified, then the acceptable values for this parameter are: Any, RPC, RPC-EPMap, or IPHTTPS. 

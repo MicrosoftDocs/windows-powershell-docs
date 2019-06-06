@@ -49,10 +49,10 @@ Extract the contents of a provisioning package to the specified folder.
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Export-ProvisioningPackage -PackageId {e2ea11f5-d8b0-4db9-bf96-8c909dc2fed5} -OutputFolder D:\Package
 ```
 
-{{ Add example description here }}
+This example extracts the content of a Package specifying it's PackageId to the specified folder.
 
 ## PARAMETERS
 
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFileOnly
-{{Fill AnswerFileOnly Description}}
+Only exports the Windows provisioning answer file
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies a path to store logs files resulting from the export operation
 
 ```yaml
 Type: String
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-{{Fill OutputFolder Description}}
+Specifies the path to the output directory
 
 ```yaml
 Type: String
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Id of the Package to be extracted
 
 ```yaml
 Type: String
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Path to the package to be extracted
 
 ```yaml
 Type: String

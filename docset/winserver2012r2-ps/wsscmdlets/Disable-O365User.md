@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disable-O365User
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEBF208E-FB2C-4A70-B6D0-754D419C080C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

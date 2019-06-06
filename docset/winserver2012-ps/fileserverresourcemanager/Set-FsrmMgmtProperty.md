@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 52A981E1-F159-4D93-BF63-ACD0F26E74B4
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-FsrmMgmtProperty

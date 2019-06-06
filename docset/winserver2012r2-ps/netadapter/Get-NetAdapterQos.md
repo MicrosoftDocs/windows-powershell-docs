@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NetAdapterQos
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF781957-2C2B-48AC-8028-D8D040EC039E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

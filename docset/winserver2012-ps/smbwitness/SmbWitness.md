@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4F0AD55F-79C7-4918-B66D-D337FC3DBB99
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # SmbWitness Module

@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 5881494F-DCEB-422C-8009-80D0630946B2
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WHEA Module

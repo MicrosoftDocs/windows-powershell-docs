@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4ABFF348-0669-4EDA-8B88-9C4F2A9BA5DE
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DhcpServer Module

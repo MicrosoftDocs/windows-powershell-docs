@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: WindowsUpdate
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=614995
@@ -11,7 +11,7 @@ title: WindowsUpdate
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3EC04CE3-FEBF-4DE6-83A3-5DFC5091029B
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DnsServerDnsSecZoneSetting

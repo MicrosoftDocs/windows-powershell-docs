@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 558598BD-965C-4FFD-A3C3-BF862221C5CB
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-ClusterGroup

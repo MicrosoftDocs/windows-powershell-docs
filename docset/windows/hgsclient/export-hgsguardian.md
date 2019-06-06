@@ -1,12 +1,12 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsClient-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
 ms.assetid: 54809486-1104-45F8-B108-1EE07863B1AD
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

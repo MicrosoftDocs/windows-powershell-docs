@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3D6FE616-2674-444A-BA26-832FC93B3CBD
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Grant-ClusterAccess

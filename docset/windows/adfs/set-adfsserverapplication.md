@@ -1,12 +1,12 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: DFC2C7D5-9238-4EB9-8BE6-FC5A61FBE73C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 09/19/2017
 ms.mktglfcycl: manage
 ms.prod: w10

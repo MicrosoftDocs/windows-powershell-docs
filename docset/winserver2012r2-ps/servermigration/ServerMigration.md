@@ -7,7 +7,7 @@ Locale: en-US
 title: ServerMigration
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
@@ -15,7 +15,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f26a956e-b0fa-4e44-b11e-553d97b25f1d
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # ServerMigration Module

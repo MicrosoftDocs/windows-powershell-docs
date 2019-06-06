@@ -6,7 +6,7 @@ schema: 2.0.0
 title: New-WmsUser
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
@@ -14,7 +14,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 33DAEC0D-DC28-48F8-84B7-E1F8BAC16B6C
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # New-WmsUser

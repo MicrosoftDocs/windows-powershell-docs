@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 118DBE0D-E0D2-45C5-A99B-B272EE6494AD
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DnsServerResourceRecordA

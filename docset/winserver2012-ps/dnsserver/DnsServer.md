@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DnsServer Module

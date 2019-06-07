@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-ADServiceAccount
@@ -53,7 +53,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ## DESCRIPTION
 The New-ADServiceAccount cmdlet creates a new Active Directory managed service account (MSA).
 By default a group MSA is created.
-To create a standalone MSA which is linked to a specific computer, the -Standalone parameter is used. 
+To create a standalone MSA which is linked to a specific computer, the -RestrictToSingleComputer parameter is used. 
 To create a group MSA which can only be used in client roles, the -Agent parameter is used.
 This creates a group MSA which can be used for outbound connections only and attempts to connect to services using this account will fail since the account does not have enough information for authentication to be successful.
 You can set commonly used MSA property values by using the cmdlet parameters.

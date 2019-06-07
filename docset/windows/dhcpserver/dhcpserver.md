@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: DhcpServer
 Module Guid: 90EAA9DF-133A-450C-8728-91055CD946A1
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390765
@@ -11,7 +11,7 @@ title: DhcpServer
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

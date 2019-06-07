@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 82DC3326-DE1C-49DA-AA2C-737582231D8B
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Enable-NetQosFlowControl

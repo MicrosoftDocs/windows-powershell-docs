@@ -2,8 +2,8 @@
 Module Name: HgsKeyProtection
 Module Guid: 651CE3CF-BA16-4933-B656-7CD7BD64C3A8
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519075
 Help Version: 5.0.0.1
 Locale: en-US

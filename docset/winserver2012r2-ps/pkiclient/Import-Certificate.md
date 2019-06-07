@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Import-Certificate
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5BACC9D9-2D47-40AE-B70D-2CC8A788310D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NfsNetgroupStore
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7550B515-D26D-49CE-A09A-579817C138C7
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

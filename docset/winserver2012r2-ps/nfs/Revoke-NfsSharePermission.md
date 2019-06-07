@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Revoke-NfsSharePermission
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 13FD01AB-B3C0-45A6-AB65-41ED6AEDDEFE
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

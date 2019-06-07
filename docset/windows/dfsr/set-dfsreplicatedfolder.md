@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ### -DfsnPath
 Specifies the DFS Namespace folder path of the replicated folder.
 
-This parameter is used to connect replication group to the replicated folder.
+This parameter is used to connect the replication group to the replicated folder.
 
 ```yaml
 Type: String

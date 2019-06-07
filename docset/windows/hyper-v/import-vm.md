@@ -51,7 +51,7 @@ The **Import-VM** cmdlet imports a virtual machine from a file.
 
 ### Example 1
 ```
-PS C:\> Import-VM -Path 'D:\Test\VirtualMachines\5AE40946-3A98-428E-8C83-081A3C6BD18C.XML'
+PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
 ```
 
 Imports the virtual machine from its configuration file.
@@ -59,7 +59,7 @@ The virtual machine is registered in-place, so its files are not copied.
 
 ### Example 2
 ```
-PS C:\> Import-VM -Path 'D:\Test2\Virtual Machines\8F148B6D-C674-413E-9FCC-4FBED185C52D.XML' -Copy -GenerateNewId
+PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
 ```
 
 Imports the virtual machine by copying its files to the default virtual machine and virtual hard drive storage locations of the Hyper-V host.
@@ -69,7 +69,7 @@ This is useful when you want to import multiple copies of a virtual machine, sin
 ### Example 3
 ```
 Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
-PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.VCMX'
 Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.
 At line:1 char:1
 + import-vm -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XM ...
@@ -78,7 +78,7 @@ At line:1 char:1
     + FullyQualifiedErrorId : Microsoft.HyperV.PowerShell.Commands.ImportVMCommand 
 
 Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
-PS C:\> $report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
+PS C:\> $report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.VCMX'
 
 
 Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
@@ -100,7 +100,7 @@ PS C:\> $report
 VM                 : Microsoft.HyperV.PowerShell.VirtualMachine
 OperationType      : ImportVirtualMachine
 Destination        : HYPER-V-1
-Path               : D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML
+Path               : D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.vcmx
 SnapshotPath       : D:\vm1\Snapshots
 VhdDestinationPath :
 VhdSourcePath      :

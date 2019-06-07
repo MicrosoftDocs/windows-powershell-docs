@@ -144,15 +144,15 @@ Accept wildcard characters: False
 ```
 
 ### -CaptureType
-Specifies the capture type.
+Specifies whether the packet capture is enabled for physical network adapters, virtual switches, or both. The acceptable values for this parameter are:
 The acceptable values for this parameter are:
 
-- SaveToFile.
-Writes events to a local .etl file. 
-- RealtimeRPC.
-Creates a real-time capture session and forwards the events to a remote host as they are recorded. 
-- RealtimeLocal.
-Creates a real-time capture session and forwards the events to a local Event Tracing for Windows (ETW) listener as they are recorded.
+- Physical.
+Captures packets from physical network adapters.
+- Switch.
+Captures packets from the virtual machine switch(es) on Hyper-V hosts.
+- BothPhysicalAndSwitch.
+Captures packets from both the physical network adapters and the virtual machine switch(es).
 
 ```yaml
 Type: CaptureType

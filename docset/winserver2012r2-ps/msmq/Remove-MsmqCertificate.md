@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-MsmqCertificate
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 43423EEE-4176-4736-A3B6-874A31BA0D15
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: DcbQoS
 Module Guid: B57D41F8-8B6B-4012-912F-B08109101281
 Download Help Link: na
@@ -11,7 +11,7 @@ title: DcbQoS
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

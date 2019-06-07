@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Add-DAEntryPoint
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 60DA8775-E477-45FB-9F25-A2B42EA4A97C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

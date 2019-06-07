@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 19A98182-1FEF-4524-A204-677D41A78D19
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DnsServerConditionalForwarderZone

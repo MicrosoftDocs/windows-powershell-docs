@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 969AF3A6-0C60-4790-94D9-9E4920052551
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ScheduledTasks Module

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-WebHandler
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6760B8EB-35D3-4D87-9FB2-64AA0B647B48
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WdsDriverPackage
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 200D7010-B952-4C35-AD92-5003E8DA2A67
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

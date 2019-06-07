@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3AF7FC33-3723-48ED-97BB-903A1814E1EA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-ClusterGroup

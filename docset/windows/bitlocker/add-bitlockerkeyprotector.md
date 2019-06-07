@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -120,7 +120,7 @@ You can use the **ConvertTo-SecureString** cmdlet to create a secure string.
 You can use secure strings in a script and still maintain confidentiality of passwords.
 
 This cmdlet returns a BitLocker volume object.
-If you choose recovery password as your key protector but do not specify a 48-digit recovery password, this cmdlet creates a random 48-bit recovery password.
+If you choose recovery password as your key protector but do not specify a 48-digit recovery password, this cmdlet creates a random 48-digit recovery password.
 The cmdlet stores the password as the **RecoveryPassword** field of the **KeyProtector** attribute of the BitLocker volume object.
 
 If you use startup key or recovery key as part of your key protector, provide a path to store the key.

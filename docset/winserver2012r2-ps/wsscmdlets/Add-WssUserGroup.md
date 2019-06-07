@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Add-WssUserGroup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66D04608-F0DE-4358-8F33-2489584E6BC7
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

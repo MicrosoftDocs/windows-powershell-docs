@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 4CD15454-796D-4250-B830-73150342D1BE
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Sync-DnsServerZone

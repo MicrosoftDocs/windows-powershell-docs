@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Enable-WssAlert
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18DC4007-1043-48D5-B6A1-68D74F97C0E6
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

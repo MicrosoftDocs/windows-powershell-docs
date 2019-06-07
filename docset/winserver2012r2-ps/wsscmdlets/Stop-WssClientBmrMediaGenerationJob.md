@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Stop-WssClientBmrMediaGenerationJob
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 696C306D-1FD4-492B-BC6A-671699C84651
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

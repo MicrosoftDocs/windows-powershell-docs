@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Enable-ExchangeIntegration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F2C9C822-B6B9-4075-9877-96D2D7D943D4
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

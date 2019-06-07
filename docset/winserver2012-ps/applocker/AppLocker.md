@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4BB540B4-DE3E-4ADF-B306-5E714C527017
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # AppLocker Module

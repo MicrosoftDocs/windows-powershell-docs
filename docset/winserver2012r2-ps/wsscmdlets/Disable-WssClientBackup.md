@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disable-WssClientBackup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD55D534-9E4C-42E1-B950-054DB4B0A777
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

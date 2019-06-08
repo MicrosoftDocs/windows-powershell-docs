@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 27686EC7-B75D-496D-962F-4019D790BBCE
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DhcpServerv4FilterList

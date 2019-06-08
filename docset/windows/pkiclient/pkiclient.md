@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: PKIClient
 Module Guid: CMDLETS
 Help Version: 5.0.0.1
@@ -10,7 +10,7 @@ title: PKIClient
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

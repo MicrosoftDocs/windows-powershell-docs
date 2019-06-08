@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: D4DCA601-168D-4943-9778-1975F870BAA9
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # SmbShare Module

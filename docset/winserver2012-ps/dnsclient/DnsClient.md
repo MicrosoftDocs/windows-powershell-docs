@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 5B9BD6D4-1894-4173-8801-D433B8EE6EE8
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DnsClient Module

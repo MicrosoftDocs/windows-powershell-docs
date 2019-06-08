@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Restart-WebItem
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7FC110AC-BFF2-4303-B579-CA891840AE3D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

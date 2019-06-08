@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 2E018228-3ABE-4901-B33D-92C2D16262CC
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetTCPIP Module

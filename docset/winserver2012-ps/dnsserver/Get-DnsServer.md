@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AB325C11-CDA0-4071-A573-30FFBD46760D
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DnsServer

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EFE27260-9B24-49E8-9906-0249FBD81AFA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-ClusterResourceDependency

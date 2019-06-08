@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-WebConfigurationLocation
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 859BCA01-DD47-4DD2-A8A9-E32D648C648E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

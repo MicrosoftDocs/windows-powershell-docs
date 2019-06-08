@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -189,7 +189,7 @@ For a list of supported types for \<value\>, type `Get-Help about_ActiveDirector
 
 Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks: **Get-ADUser -Filter "Name -like '$UserName'"**. On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
 
-Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
+Note: PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 

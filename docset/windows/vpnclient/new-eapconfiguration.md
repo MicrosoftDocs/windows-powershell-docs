@@ -75,7 +75,7 @@ This command creates an EAP configuration object, customized by the *UseWinlogon
 By specifying the *UseWinlogonCredential* parameter, the EAP configuration object is configured to use MSCHAPv2 as the authentication method, and that Windows logon credentials are used automatically when connecting with the VPN connection profile.
 
 See [VPN authentication options](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-authentication) 
-and [Add connectivity profiles](https://docs.microsoft.com/windows/configuration/wcd/wcd-connectivityprofiles#vpn-1) to learn more about VPN authentication method.
+and [Add connectivity profiles](https://docs.microsoft.com/windows/configuration/wcd/wcd-connectivityprofiles#vpn-1) to learn more about VPN authentication methods.
 
 ### Example 3: Create a TLS customized EAP configuration object
 ```

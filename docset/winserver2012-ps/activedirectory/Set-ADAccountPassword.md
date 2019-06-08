@@ -415,7 +415,7 @@ Shows what would happen if the cmdlet runs.
 The WhatIf switch causes the command to simulate its results. Using this switch allows you to view changes that would occur, without having to commit those changes.
 
 > [!NOTE]
-> -WhatIf command works in Windows Server 2016 and the accompanying Remote Server Administration Tools (RSAT) package.  
+> -WhatIf command functionality was first fixed in the Windows 1607 RSAT package. If using an RSAT package prior to the Windows 1607 RSAT package, this parameter will not function. 
  
 ```yaml
 Type: SwitchParameter

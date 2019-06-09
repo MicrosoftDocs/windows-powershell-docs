@@ -931,7 +931,7 @@ The following example shows how to add and remove service principal names.
 <br>
 
 ```yaml
-Type: String[]
+Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
 

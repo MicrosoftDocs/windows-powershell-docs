@@ -66,7 +66,7 @@ SizeMin                                                 SizeMax
 -----------                                             -----------
 ```
 
-This example is not fully implemented and does not include size values.
+This command will show the minimum and maximum size of the partition (SizeMin and SizeMax).
 
 ## PARAMETERS
 

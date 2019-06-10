@@ -65,7 +65,7 @@ PS C:\> Set-GPInheritance -Target "dc=northwest, dc=contoso, dc=com" -IsBlocked 
 This command unblocks inheritance for the northwest.contoso.com domain.
 GPOs linked to higher-level sites or domains are applied to this domain when Group Policy is processed on the client.
 
-### Example 3: Block inheritance for an OU in a domain
+### Example 3: Unblock inheritance for an OU in a domain
 ```
 PS C:\> Set-GPInheritance -Target "ou=MyOU,dc=contoso,dc=com" -IsBlocked No 
 
@@ -77,7 +77,7 @@ GpoLinks              : {TestGPO-1, TestGPO-2}
 InheritedGpoLinks     : {TestGPO-1, TestGPO-2, Default Domain Policy}
 ```
 
-This command blocks inheritance for the OU named MyOU in the contoso.com domain.
+This command unblocks inheritance for the OU named MyOU in the contoso.com domain.
 GPOs that are linked to higher-level sites or domains, or to OUs that are parent OUs of the OU named MyOU, are applied when Group Policy is processed for the OU on the client.
 
 Because inheritance is not blocked, GPOs that are inherited from higher-level containers appear in the InheritedGpoLinks list (together with GPOs that are linked directly to the OU).

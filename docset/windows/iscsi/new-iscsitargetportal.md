@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITargetPortal.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -80,9 +80,11 @@ Accept wildcard characters: False
 Specifies the type of authentication to use when logging into the target.
 The acceptable values for this parameter are:
 
-- None 
-- OneWayCHAP 
-- MutualCHAP
+- NONE 
+- ONEWAYCHAP 
+- MUTUALCHAP
+
+Note: These values are case sensitive.
 
 ```yaml
 Type: String

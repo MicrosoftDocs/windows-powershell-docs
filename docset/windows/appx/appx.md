@@ -1,5 +1,5 @@
 ---
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: Appx
 Module Guid: AEEF2BEF-EBA9-4A1D-A3D2-D0B52DF76DEB
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=525624
@@ -9,7 +9,7 @@ title: Appx
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-05-19
 ms.topic: reference

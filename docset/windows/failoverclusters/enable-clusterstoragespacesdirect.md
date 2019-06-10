@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Storage Spaces Direct with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet

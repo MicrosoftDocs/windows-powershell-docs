@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetDnsTransitionConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F02B991B-500F-48E8-B6FC-2B05848B593E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 16FC6506-C379-44F7-BBA5-D98E743EDE94
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Reset-FsrmQuota

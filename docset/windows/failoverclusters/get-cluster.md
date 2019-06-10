@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -72,6 +72,8 @@ IgnorePersistentStateOnStartup          : 0
 LogResourceControls                     : 0 
 PlumbAllCrossSubnetRoutes               : 0 
 PreventQuorum                           : 0 
+QuarantineDuration                      : 7200
+QuarantineThreshold                     : 3
 QuorumArbitrationTimeMax                : 20 
 RequestReplyTimeout                     : 60 
 RootMemoryReserved                      : 4294967295 
@@ -131,6 +133,19 @@ PS C:\> (Get-Cluster).DynamicQuorum = 1
 ```
 
 This example enables the Dynamic Quorum feature for the cluster.
+
+### Example 6
+```
+PS C:\> Get-Cluster | Format-List -Property Quarantine*
+QuarantineDuration  : 7200
+QuarantineThreshold : 3
+```
+
+This example shows default values for QuarantineThreshold and QuarantineDuration for the local cluster.
+
+ -- QuarantineThreshold: This is the number of times that a node can become isolated in an hour before the cluster will be quarantined. This is set to 3 by default.
+
+ --QuarantineDuration: This setting, set to 7200 seconds or 2 hours by default, controls how long a host will remain quarantined.
 
 ## PARAMETERS
 

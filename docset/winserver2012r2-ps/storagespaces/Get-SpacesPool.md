@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-SpacesPool
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E6606122-2004-4D79-90AC-4EF56A6627FF
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

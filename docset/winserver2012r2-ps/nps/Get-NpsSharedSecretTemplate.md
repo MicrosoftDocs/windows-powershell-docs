@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NpsSharedSecretTemplate
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70DFEF1B-FA97-4700-92A9-C4A698551DE6
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-SilWindowsUpdate
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1E2C863D-B427-4523-90D4-1366CAE097D7
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

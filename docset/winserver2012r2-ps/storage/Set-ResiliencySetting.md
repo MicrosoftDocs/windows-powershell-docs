@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-ResiliencySetting
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 96270725-4A06-4893-9D86-036C7345F78F
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

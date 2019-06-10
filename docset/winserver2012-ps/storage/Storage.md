@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: DF62E18F-255B-4AD9-A6B8-05DA00853242
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Storage Module

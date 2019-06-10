@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 639DAD91-9062-4005-A4B9-A9BCD71FD1D4
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetworkConnectiviFIX Module

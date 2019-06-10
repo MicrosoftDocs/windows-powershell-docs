@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Reset-NetIPHttpsConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7B6E7F84-4021-445C-A976-797351F7AC1A
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

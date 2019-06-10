@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 85AAA420-97F3-423E-AE94-080BC32A8A27
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MSMQ_Cmdlets Module

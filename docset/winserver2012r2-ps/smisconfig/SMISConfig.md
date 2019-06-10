@@ -7,14 +7,14 @@ Locale: en-US
 title: SMISConfig
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: d3c1ca0e-1f09-4e9e-ac82-0ed3736020df
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

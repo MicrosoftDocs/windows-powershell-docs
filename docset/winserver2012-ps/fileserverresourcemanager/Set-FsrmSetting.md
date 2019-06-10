@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CD6DF9A0-1E07-4E0E-93FF-BFFEC729C900
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-FsrmSetting

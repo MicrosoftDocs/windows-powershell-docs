@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 71B470A7-DC58-4A30-9F5E-AB0B25A64625
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # VpnClient Module

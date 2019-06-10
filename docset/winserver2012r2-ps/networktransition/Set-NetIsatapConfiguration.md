@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetIsatapConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BA799DEA-5F13-4831-BA31-16D8C2F5A5ED
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

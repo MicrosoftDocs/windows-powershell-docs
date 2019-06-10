@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: ADDSDeployment
 Module Guid: DF736400-2E72-4A7B-8EDA-D5B28421881F
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
@@ -11,7 +11,7 @@ title: ADDSDeployment
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

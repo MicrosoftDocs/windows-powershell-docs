@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: ServerCore
 Module Guid: 21B0D06C-E02A-46CC-849B-11C36EC94FB8
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390824
@@ -11,7 +11,7 @@ title: ServerCore
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

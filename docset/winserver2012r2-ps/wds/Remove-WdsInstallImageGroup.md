@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-WdsInstallImageGroup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C09D8B54-6768-434D-A840-D47868CBD3DB
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

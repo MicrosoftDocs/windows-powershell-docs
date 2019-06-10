@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 7F1FAA42-ECF3-4C09-B95D-961C5E18453A
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADDSDeployment Module

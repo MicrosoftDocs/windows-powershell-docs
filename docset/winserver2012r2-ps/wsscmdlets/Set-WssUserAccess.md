@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-WssUserAccess
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8994BB4-0248-4B58-9FB7-F85BD7A53672
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

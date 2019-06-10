@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Open-NetGPO
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78D22B3A-37E0-4D0F-82C5-F7EF52853BA0
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

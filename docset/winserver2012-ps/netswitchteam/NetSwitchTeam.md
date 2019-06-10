@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 195E80D5-EC10-425B-B7D9-F5322AE491A7
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetSwitchTeam Module

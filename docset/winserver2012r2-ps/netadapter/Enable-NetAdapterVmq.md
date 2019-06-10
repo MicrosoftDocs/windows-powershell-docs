@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Enable-NetAdapterVmq
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2CC509E4-1633-4E92-86FE-9A420C700488
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

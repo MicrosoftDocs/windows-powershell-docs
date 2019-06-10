@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: BitLocker
 Module Guid: 0FF02BB8-300A-4262-AC08-E06DD810F1B6
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390755
@@ -11,7 +11,7 @@ title: BitLocker
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

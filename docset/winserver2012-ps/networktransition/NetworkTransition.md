@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4FF8EEDB-5AB8-4C70-8290-4B11A6D04791
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetworkTransition Module

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 6762B45C-8406-4749-A66F-3ED22F076FF6
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Move-ClusterResource

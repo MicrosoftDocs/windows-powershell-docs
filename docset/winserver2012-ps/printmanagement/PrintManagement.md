@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 8C40FD13-5AE8-4410-850F-839841C1B9DB
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # PrintManagement Module

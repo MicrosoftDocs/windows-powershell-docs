@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 38F04AF5-A148-4756-8FE6-D6B911319565
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DhcpServerv6StatelessStore

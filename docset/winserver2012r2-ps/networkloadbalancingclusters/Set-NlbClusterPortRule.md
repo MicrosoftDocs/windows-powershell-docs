@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NlbClusterPortRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 51E2120E-4079-47D2-8A89-721D4530CEE9
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

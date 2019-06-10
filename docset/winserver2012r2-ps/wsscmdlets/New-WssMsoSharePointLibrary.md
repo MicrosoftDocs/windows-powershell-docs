@@ -5,14 +5,14 @@ schema: 2.0.0
 title: New-WssMsoSharePointLibrary
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 917D347A-DCBB-41CB-8837-3B73B05BB750
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

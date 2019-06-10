@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-RemoteAccessInboxAccountingStore
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B7E754E-0EF5-433E-9BDE-28E87137B305
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

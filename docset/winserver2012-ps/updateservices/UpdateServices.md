@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # UpdateServices Module

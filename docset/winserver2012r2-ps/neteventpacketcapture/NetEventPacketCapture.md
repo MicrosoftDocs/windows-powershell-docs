@@ -7,14 +7,14 @@ Locale: en-US
 title: NetEventPacketCapture
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: df241ef0-5fcf-4dc6-a7cf-a37bf951f254
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

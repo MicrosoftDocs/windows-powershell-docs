@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-WssMediaStreamingVideoQuality
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BE287B3C-8A92-4037-9B26-D3B4F9302C8E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

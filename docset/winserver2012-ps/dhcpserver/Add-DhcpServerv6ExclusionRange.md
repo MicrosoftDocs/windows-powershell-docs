@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3D982C0F-E185-4ED7-B5EB-6CB26E35AB84
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DhcpServerv6ExclusionRange

@@ -68,7 +68,6 @@ This is useful when you want to import multiple copies of a virtual machine, sin
 
 ### Example 3
 ```
-Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
 PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.VCMX'
 Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.
 At line:1 char:1
@@ -76,22 +75,29 @@ At line:1 char:1
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (:) [Import-VM], VirtualizationOperationFailedException
     + FullyQualifiedErrorId : Microsoft.HyperV.PowerShell.Commands.ImportVMCommand 
+```
+Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
 
-Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
+```
 PS C:\> $report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.VCMX'
+```
+Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
 
-
-Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
+```
 PS C:\> $report.Incompatibilities | Format-Table -AutoSize
 Message                                      MessageId Source
 -------                                      --------- ------
 Could not find Ethernet switch 'Production'.     33012 Microsoft.HyperV.PowerShell.VMNetworkAdapter 
+```
+Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
 
-Disconnects the virtual network adapter.
+```
 PS C:\> $report.Incompatibilities[0].Source | Disconnect-VMNetworkAdapter
+```
+Disconnects the virtual network adapter.
 
 
-Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
+```
 PS C:\> Compare-VM -CompatibilityReport $report
 
 
@@ -105,15 +111,17 @@ SnapshotPath       : D:\vm1\Snapshots
 VhdDestinationPath :
 VhdSourcePath      :
 Incompatibilities  :
+```
+Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
 
+```
 Imports the virtual machine.
 PS C:\> import-vm -CompatibilityReport $report
 Name State CPUUsage(%) MemoryAssigned(M) MemoryDemand(M) MemoryStatus Uptime   Status             ReplicationState
 ---- ----- ----------- ----------------- --------------- ------------ ------   ------             ----------------
 VM1  Off   0           0                 0                            00:00:00 Operating normally Disabled
 ```
-
-Imports a virtual machine whose configuration is not compatible with the Hyper-V host.
+Imports a virtual machine whose configuration is now compatible with the Hyper-V host.
 
 ## PARAMETERS
 

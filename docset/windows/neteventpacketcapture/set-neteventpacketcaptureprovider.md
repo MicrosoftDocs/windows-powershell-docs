@@ -161,7 +161,7 @@ Aliases:
 Accepted values: Physical, Switch, BothPhysicalAndSwitch
 
 Required: False
-Position: 4007
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -209,7 +209,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4010
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -241,7 +241,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4011
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -257,7 +257,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4012
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -290,7 +290,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4004
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -306,7 +306,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4009
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -321,7 +321,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4006
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -338,7 +338,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4005
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -354,7 +354,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4008
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -385,7 +385,7 @@ Parameter Sets: BySessionName
 Aliases: 
 
 Required: False
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -418,7 +418,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 4013
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -440,7 +440,7 @@ Aliases:
 Accepted values: Ingress, Egress, IngressAndEgress
 
 Required: False
-Position: 4014
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

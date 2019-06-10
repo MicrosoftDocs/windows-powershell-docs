@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 6F49F904-E04D-4B90-AFBC-84BC45D4D30D
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # BitLocker Module

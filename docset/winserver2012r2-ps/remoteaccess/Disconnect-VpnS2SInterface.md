@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disconnect-VpnS2SInterface
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BBC9FA01-8BCD-4254-80BF-70F5BA0E4F9A
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

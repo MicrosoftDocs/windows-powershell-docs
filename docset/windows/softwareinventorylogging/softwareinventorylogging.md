@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: SoftwareInventoryLogging
 Module Guid: 421A5B89-0F16-4DF7-B607-FFFD66107510
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390830
@@ -11,7 +11,7 @@ title: SoftwareInventoryLogging
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-01-24
 ms.topic: reference

@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 186C3096-479F-4044-A9E8-43C964056B04
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # iSCSI Module

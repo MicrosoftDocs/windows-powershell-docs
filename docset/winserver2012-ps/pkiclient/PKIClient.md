@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 8008D3A6-4E97-4977-92F7-795EF45B4A27
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # PKIClient Module

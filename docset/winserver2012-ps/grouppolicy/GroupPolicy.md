@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # GroupPolicy Module

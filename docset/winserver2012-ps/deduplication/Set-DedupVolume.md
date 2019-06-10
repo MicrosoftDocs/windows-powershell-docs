@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0B685E39-EB13-4047-AB85-1442AB2BED01
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DedupVolume

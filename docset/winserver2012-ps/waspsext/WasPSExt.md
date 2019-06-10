@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 5B1B0758-8039-4C2C-974A-8FE94E72A9D2
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WasPSExt Module

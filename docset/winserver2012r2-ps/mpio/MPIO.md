@@ -7,14 +7,14 @@ Locale: en-US
 title: MPIO
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9b0e0c5d-43a9-4aae-b1bd-e32f23ba31c2
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

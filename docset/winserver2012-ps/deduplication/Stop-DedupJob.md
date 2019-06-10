@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0E612593-0BB2-4977-9D90-8F98E1D042D2
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Stop-DedupJob

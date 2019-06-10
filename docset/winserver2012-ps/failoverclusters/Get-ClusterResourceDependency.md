@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 6342B4AA-8AF6-47C5-81F8-4C21B708CF43
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-ClusterResourceDependency

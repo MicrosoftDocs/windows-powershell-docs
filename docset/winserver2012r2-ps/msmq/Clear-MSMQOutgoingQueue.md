@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Clear-MSMQOutgoingQueue
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 67BE94A0-781F-4AA1-8CAC-43E03BC71C4A
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

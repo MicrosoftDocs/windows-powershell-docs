@@ -6,7 +6,7 @@ schema: 2.0.0
 title: Lock-WmsSession
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
@@ -14,7 +14,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B4D13723-44A5-455A-97A8-88C4C46523E7
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Lock-WmsSession

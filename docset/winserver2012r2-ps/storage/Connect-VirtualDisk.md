@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Connect-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 04D4A72C-44A3-41DC-B346-869C4123FFA5
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

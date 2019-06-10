@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Clear-WebCentralCertProvider
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CA1E32A8-6037-4828-984C-0C3A73ED4F3B
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

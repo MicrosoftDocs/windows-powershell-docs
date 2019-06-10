@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 0D218C17-08CF-4334-AFAA-94FDC14BB2B6
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ServerManager Module

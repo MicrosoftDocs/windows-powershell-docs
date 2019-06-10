@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 1CC7729F-B905-4461-A895-3E6A612953AA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADRMS Module

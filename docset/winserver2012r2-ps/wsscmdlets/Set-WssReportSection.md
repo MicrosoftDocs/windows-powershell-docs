@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-WssReportSection
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 613B028A-60E9-49B4-BE33-283BFCA4087E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

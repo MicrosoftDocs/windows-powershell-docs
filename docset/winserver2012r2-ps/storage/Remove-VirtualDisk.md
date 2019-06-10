@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42EAD0A2-60B2-4ACC-8836-5D815BCF3D2D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

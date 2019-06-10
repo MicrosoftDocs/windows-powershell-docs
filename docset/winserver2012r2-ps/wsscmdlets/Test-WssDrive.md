@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Test-WssDrive
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DCE74A4E-AF23-4DED-B15D-0A3A31B15E03
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

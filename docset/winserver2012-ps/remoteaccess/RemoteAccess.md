@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 6A012DA3-8BD5-4EC5-8CF6-75A3F1C00430
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # RemoteAccess Module

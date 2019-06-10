@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-VpnConnectionTriggerTrustedNetwork
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 494182F1-0078-4748-BB5B-0882C5A7A3DD
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

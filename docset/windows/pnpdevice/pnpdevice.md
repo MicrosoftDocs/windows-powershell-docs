@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: PnpDevice
 Module Guid: AD34BC8B-1CF8-47D8-BD82-F681C5358E1C
 Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524801
@@ -11,7 +11,7 @@ title: PnpDevice
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

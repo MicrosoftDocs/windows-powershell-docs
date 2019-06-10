@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: CD5BB115-897D-406C-B649-5B5F75E4FC84
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # FileServerResourceManager Module

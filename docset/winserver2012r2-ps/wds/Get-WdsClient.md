@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WdsClient
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8C2066B5-B37D-4FC1-8B52-8C139D854DD8
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

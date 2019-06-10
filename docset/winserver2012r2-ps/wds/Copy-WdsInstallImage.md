@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Copy-WdsInstallImage
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 600994B2-F6D9-42AF-9691-0ED76208FF5C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

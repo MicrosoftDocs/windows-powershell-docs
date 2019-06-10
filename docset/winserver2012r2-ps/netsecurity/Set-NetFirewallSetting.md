@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetFirewallSetting
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7633DD5F-7D1F-4773-B39B-7DC647D606CF
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

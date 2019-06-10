@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: C1D9BE44-72F2-443E-B550-D6D9AA7B213E
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetAdapter Module

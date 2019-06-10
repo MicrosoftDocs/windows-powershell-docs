@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: UserAccessLogging
 Module Guid: E507509A-EB81-4AF2-A141-B50CB24000F0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390840
@@ -11,7 +11,7 @@ title: UserAccessLogging
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

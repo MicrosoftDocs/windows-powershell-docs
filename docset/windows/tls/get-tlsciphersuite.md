@@ -34,6 +34,8 @@ The **Get-TlsCipherSuite** cmdlet gets the ordered list of cipher suites for a c
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 
+For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
+
 ## EXAMPLES
 
 ### Example 1: Get all cipher suites
@@ -109,8 +111,6 @@ Protocols             : {771, 65277}
 
 This command gets all the cipher suites that have names that contain the string AES.
 The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
-
-For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
 
 
 ## PARAMETERS

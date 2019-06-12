@@ -23,6 +23,7 @@ ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
 # DnsServer Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all DNS Server cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+DnsServer Module can be obtained either by installing DNS Server role or adding the DNS Server Tools part of Remote Server Administration Tools (RSAT) feature.
 
 ## DnsServer Cmdlets
 ### [Add-DnsServerClientSubnet](./Add-DnsServerClientSubnet.md)

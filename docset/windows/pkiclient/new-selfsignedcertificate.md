@@ -529,7 +529,7 @@ The acceptable values for this parameter are:
 - None (default) 
 - NonRepudiation
 
-The default value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
+The value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
 
 ```yaml
 Type: KeyUsage[]
@@ -539,7 +539,7 @@ Accepted values: None, EncipherOnly, CRLSign, CertSign, KeyAgreement, DataEnciph
 
 Required: False
 Position: Named
-Default value: None
+Default value: DigitalSignature,KeyEncipherment
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

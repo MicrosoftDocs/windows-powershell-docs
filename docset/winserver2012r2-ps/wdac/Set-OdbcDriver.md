@@ -44,9 +44,9 @@ Specify properties to add or modify by using the **SetPropertyValue** parameter.
 Specify properties to remove by using the **RemovePropertyValue** parameter.
 
 Use the driver installation program to install and uninstall a driver.
-You cannot install or uninstall a driver by using Windows PowerShell cmdlets.
+You cannot install or uninstall a driver using Windows PowerShell cmdlets.
 
-For more information about ODBC and drivers, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx) and [Drivers](http://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
+For more information about ODBC and drivers, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/library/ms710252.aspx) and [Drivers](http://msdn.microsoft.com/library/ms715383.aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 

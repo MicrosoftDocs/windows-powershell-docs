@@ -34,8 +34,6 @@ Add-BitsFile [-BitsJob] <BitsJob[]> [[-Destination] <String[]>] [-Source] <Strin
 The **Add-BitsFile** cmdlet adds files to a Background Intelligent Transfer Service (BITS) transfer job.
 You can specify the files to add to the BITS transfer job by name at the command prompt or in a comma-separated value (CSV) file.
 
-BITS supports throttled and asynchronously transferring large files between a client and a server using idle network bandwidth. BITS intelligently pick which transfer jobs to run, increase or decrease the rate at which files are transferred based on the amount of idle network bandwidth available. See [Adding a file to a job](https://docs.microsoft.com/windows/desktop/bits/background-intelligent-transfer-service-portal) and [About BITS](https://docs.microsoft.com/windows/desktop/bits/using-bits) to learn more. 
-
 Important: An upload job can contain only one file.
 To upload more than one file, use the **Import-Csv** cmdlet, and pipe the output to the **Add-BitsFile** cmdlet.
 For more information, see example 3 in this Help topic.
@@ -80,8 +78,7 @@ The first command creates a new BitsJob object and then stores it in the $Bits v
 
 The second command uses the **Import-CSV** cmdlet to import a text file that contains a list of files to be transferred.
 The text file is converted to an array of objects (one per line) and passed through the pipeline to the **Add-BitsFile** cmdlet.
-The *BitsJob* parameter is used to pass the **BitsJob** object (the transfer job) that is stored in the $Bits variable to the **Add-BitsFile** cmdlet.
-This command also updates the transfer job with the list of files to be transferred.
+The *BitsJob* parameter is used to pass the **BitsJob** object (the transfer job) that is stored in the $Bits variable to the **Add-BitsFile** cmdlet. These array of objects, adds BITS transfer job for each of the file to be downloaded and then transfers them concurrently to the client. This command also updates the transfer job with the list of files to be transferred.
 
 The third command passes the **BitsJob** object that is stored in the $Bits variable to the **Resume-BitsTransfer** cmdlet.
 The BITS transfer job is restarted, and the files that are specified in the Filelist.txt file are transferred from the source to the destination.

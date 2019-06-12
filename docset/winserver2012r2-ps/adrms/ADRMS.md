@@ -20,7 +20,7 @@ ms.assetid: 9451ee96-965a-4221-9403-9c2e760912a2
 
 # ADRMS Module
 ## Description
-This topic contains brief descriptions of the Windows PowerShell cmdlets that are for use in deploying in Windows Server 2012. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets give you the ability to install, upgrade, or remove a cluster using Windows PowerShell.
+This topic contains brief descriptions of the Windows PowerShell cmdlets used to deploy in Windows Server 2012. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets allow you to install, upgrade, or remove a cluster using Windows PowerShell.
 
 ## ADRMS Cmdlets
 ### [Install-ADRMS](./Install-ADRMS.md)

@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-This parameter specifies the thumbprint of the certificate to use.
+This parameter specifies the thumbprint of the certificate to use. Currently, it is only available in Windows Server 2019.
 
 ```yaml
 Type: String

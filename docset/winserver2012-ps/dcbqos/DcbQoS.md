@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4ACBF941-38FF-485B-8919-22C594AC7788
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DcbQoS Module

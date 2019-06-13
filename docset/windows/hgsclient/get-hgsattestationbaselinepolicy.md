@@ -1,12 +1,12 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.RemoteAttestation.Client.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
 ms.assetid: DA6DCACE-2582-43B8-B127-83885C6D8095
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

@@ -4,11 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: New-ADServiceAccount
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -782,6 +782,12 @@ The operators are applied in the following sequence:
 - Remove
 - Add
 - Replace
+
+The following example shows how to add and remove service principal names:
+
+```powershell
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
 
 ```yaml
 Type: String[]

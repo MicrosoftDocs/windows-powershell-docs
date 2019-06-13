@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F50E80E8-B275-484D-895E-7ADB02A9C15B
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Export-DnsServerZone

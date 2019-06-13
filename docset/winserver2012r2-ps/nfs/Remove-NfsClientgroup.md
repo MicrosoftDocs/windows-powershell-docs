@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-NfsClientgroup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 523F6F80-A2A1-4934-886B-140E126792D4
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

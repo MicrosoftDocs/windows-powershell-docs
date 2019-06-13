@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 90D337A9-9489-4D50-9F27-A154ABBBADBF
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DnsServerDiagnostics

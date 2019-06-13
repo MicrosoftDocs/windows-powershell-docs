@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 3CC98C40-7578-4C90-9F53-A5CD7DDA1574
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADRMSAdmin Module

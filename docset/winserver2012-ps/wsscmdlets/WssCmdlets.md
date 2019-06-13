@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 47AE3C34-CFD1-464E-A172-7FD9CC746E1D
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WssCmdlets Module

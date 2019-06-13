@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: MsDtc
 Module Guid: 52923875-F2E3-4AD2-8E0C-96C7B10E2E3D
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390791
@@ -11,7 +11,7 @@ title: MsDtc
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

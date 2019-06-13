@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-BgpRouteInformation
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 80CC2EA1-1FEC-48DF-9819-7076ED8F578E
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

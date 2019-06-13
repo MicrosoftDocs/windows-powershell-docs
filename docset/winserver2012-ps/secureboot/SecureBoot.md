@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 5069B711-43A1-412B-B7CC-249C39814FD4
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # SecureBoot Module

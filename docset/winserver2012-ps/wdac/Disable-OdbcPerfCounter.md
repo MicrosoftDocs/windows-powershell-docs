@@ -3,8 +3,8 @@ external help file: WDAC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 631FD972-CCC6-4D8D-AACF-B5D16AB968DB
 manager: dansimp
 ---

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 4D72D695-B53C-4E9A-ADB0-613E56A69395
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DhcpServerv4Reservation

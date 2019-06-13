@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: E3FDBFD8-19FB-42FE-B426-B83DAC1CCC08
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # IpamServer Module

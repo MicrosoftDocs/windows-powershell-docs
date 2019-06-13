@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WBBackupVolumeBrowsePath
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9DEE7DCE-FB0D-4F98-A390-EA66BC151976
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-DAMultiSite
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B7FB3B05-39C8-44BC-8107-AF26E0FB3528
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

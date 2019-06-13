@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: C8A2C20B-27E4-4A1B-BFEB-12B4C3BC6133
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADCSDeployment Module

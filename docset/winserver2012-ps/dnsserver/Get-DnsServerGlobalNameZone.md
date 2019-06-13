@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 674E481E-00CA-4895-98A0-33FBECB36688
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DnsServerGlobalNameZone

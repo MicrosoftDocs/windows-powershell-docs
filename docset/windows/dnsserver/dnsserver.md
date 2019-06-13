@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: DnsServer
 Module Guid: 46F598E5-9907-42B2-AFBB-68E5F7E34604
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390769
@@ -11,7 +11,7 @@ title: DnsServer
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
@@ -23,6 +23,7 @@ ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
 # DnsServer Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all DNS Server cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+DnsServer Module can be obtained either by installing DNS Server role or adding the DNS Server Tools part of Remote Server Administration Tools (RSAT) feature.
 
 ## DnsServer Cmdlets
 ### [Add-DnsServerClientSubnet](./Add-DnsServerClientSubnet.md)

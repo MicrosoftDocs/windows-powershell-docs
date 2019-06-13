@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Partition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -66,7 +66,7 @@ SizeMin                                                 SizeMax
 -----------                                             -----------
 ```
 
-This example is not fully implemented and does not include size values.
+This command will show the minimum and maximum size of the partition (SizeMin and SizeMax).
 
 ## PARAMETERS
 

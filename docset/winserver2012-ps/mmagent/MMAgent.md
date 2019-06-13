@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 52420F30-6CDF-4123-A5F6-DA377A7C386A
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MMAgent Module

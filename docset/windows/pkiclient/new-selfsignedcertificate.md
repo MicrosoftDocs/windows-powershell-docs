@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -529,7 +529,7 @@ The acceptable values for this parameter are:
 - None (default) 
 - NonRepudiation
 
-The default value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
+The value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
 
 ```yaml
 Type: KeyUsage[]
@@ -539,7 +539,7 @@ Accepted values: None, EncipherOnly, CRLSign, CertSign, KeyAgreement, DataEnciph
 
 Required: False
 Position: Named
-Default value: None
+Default value: DigitalSignature,KeyEncipherment
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

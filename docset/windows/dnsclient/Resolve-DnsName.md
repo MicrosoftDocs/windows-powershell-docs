@@ -4,11 +4,11 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Resolve-DnsName
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2019-05-20
 ms.topic: reference

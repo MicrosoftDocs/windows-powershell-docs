@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Clear-WebConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 00539C2C-98C6-4E16-A1D9-4DB348332895
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: C362E2E9-6D95-4A7F-A526-C553D116023B
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MsDTC Module

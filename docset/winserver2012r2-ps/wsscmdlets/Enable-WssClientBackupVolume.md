@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Enable-WssClientBackupVolume
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 22317BC1-28CC-4081-85E0-33FA4E8C7E05
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

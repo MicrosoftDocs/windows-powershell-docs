@@ -3,8 +3,8 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EB5C55D0-F158-4BAD-8363-7C7CDA8E882C
 manager: dansimp
 ---

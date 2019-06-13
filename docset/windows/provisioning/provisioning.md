@@ -1,9 +1,9 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10

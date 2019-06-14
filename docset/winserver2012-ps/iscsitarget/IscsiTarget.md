@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 701252C5-688B-4916-B563-2D6E9563E743
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # IscsiTarget Module

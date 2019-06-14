@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CA0843CE-8334-40B8-BC03-049AD4B61929
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-DhcpServerv4FailoverScope

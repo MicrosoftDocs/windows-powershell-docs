@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 798F7B26-5EB8-4B1D-BBD2-DD529E722BD8
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Suspend-ClusterResource

@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Remove-WssBackupConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2FBA1E22-43F0-4E00-9002-CE754550AB97
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

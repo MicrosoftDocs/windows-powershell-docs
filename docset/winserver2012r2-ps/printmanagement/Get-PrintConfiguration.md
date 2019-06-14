@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-PrintConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 30CB719D-EA8F-436E-BFB2-33CE458EA63B
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

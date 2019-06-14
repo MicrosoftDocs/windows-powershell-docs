@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -787,6 +787,12 @@ For example, use the following syntax to add and remove service principal names.
 - Remove
 - Add
 - Replace
+
+The following example shows how to add and remove service principal names:
+
+```powershell
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
 
 ```yaml
 Type: String[]

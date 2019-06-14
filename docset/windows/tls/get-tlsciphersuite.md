@@ -1,11 +1,11 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: BE7DBA03-4544-4996-BEFA-0DF041BFFE86
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -33,6 +33,8 @@ Get-TlsCipherSuite [[-Name] <String>] [<CommonParameters>]
 The **Get-TlsCipherSuite** cmdlet gets the ordered list of cipher suites for a computer that Transport Layer Security (TLS) can use.
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
+
+For more information about protocol versions , see [BCRYPT_KDF_TLS_PRF (L"TLS_PRF")](https://docs.microsoft.com/windows/desktop/api/bcrypt/nf-bcrypt-bcryptderivekey#bcrypt_kdf_tls_prf-ltls_prf) .
 
 ## EXAMPLES
 
@@ -108,6 +110,8 @@ Protocols             : {771, 65277}
 ```
 
 This command gets all the cipher suites that have names that contain the string AES.
+The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
+
 
 ## PARAMETERS
 

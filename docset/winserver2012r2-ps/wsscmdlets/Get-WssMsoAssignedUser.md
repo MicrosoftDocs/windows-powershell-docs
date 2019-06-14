@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WssMsoAssignedUser
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5B6A0CF-1FA1-4ABC-BD68-4E44BE3806CF
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

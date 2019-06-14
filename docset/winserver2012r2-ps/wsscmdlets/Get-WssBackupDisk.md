@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WssBackupDisk
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C23AC990-B422-4923-B01F-07D3C7E49D1F
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Copy-NetIPsecPhase1AuthSet
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CB953D49-0297-4C2B-8308-6E208250C6B9
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

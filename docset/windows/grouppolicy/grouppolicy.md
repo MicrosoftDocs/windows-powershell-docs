@@ -22,7 +22,7 @@ ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
 
 # GroupPolicy Module
 ## Description
-This topic contains the brief descriptions of the Windows PowerShell� cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
+This topic contains the brief descriptions of the Windows PowerShell cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
 
 Each cmdlet in the table is linked to additional information about that cmdlet.
 

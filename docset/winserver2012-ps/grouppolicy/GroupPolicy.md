@@ -13,7 +13,7 @@ author: andreabarr
 
 # GroupPolicy Module
 ## Description
-This topic contains the brief descriptions of the Windows PowerShell� cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
+This topic contains brief descriptions of the Windows PowerShell cmdlets that are used to administer Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets).
 
 Each cmdlet in the table is linked to additional information about that cmdlet.
 

@@ -22,7 +22,7 @@ ms.assetid: AC9B47F4-19F7-4EB5-B5FE-70790B7A825D
 
 # UEV Module
 ## Description
-The following list contains links to the help topics for the Microsoft User Experience Virtualization (UE-V) for Windows 10� Anniversary edition and Windows Server 2016 Microsoft User Experience Virtualization (UE-V) cmdlets.
+The following list contains links to the help topics for the Microsoft User Experience Virtualization (UE-V) for Windows 10 Anniversary edition and Windows Server 2016 Microsoft User Experience Virtualization (UE-V) cmdlets.
 
 ## UEV Cmdlets
 ### [Clear-UevAppxPackage](./Clear-UevAppxPackage.md)

@@ -34,11 +34,11 @@ Disables access for one or more standard, non-Administrator users to event, serv
 The cmdlet restores the default, administrator-only access to this data, and must be run locally on the server that is being managed by using Server Manager.
 The cmdlet works by performing the following actions:
 
-�? Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
+? Deletes access rights for specified standard users to the root\cimv2 namespace on the local server (for access to role and feature inventory information).
 
-�? Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
+? Removes specified standard users from user groups (Remote Management Users, Event Log Readers, and Performance Log Readers) that allow remote access to event and performance counter logs on the local server.
 
-�? Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
+? Removes access rights in the Service Control Manager for specified standard users who have access to the status of services on the local server.
 
 ## EXAMPLES
 

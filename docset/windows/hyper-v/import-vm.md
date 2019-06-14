@@ -51,7 +51,7 @@ The **Import-VM** cmdlet imports a virtual machine from a file.
 
 ### Example 1
 ```
-PS C:\> Import-VM -Path 'D:\Test\VirtualMachines\5AE40946-3A98-428E-8C83-081A3C6BD18C.XML'
+PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
 ```
 
 Imports the virtual machine from its configuration file.
@@ -59,61 +59,12 @@ The virtual machine is registered in-place, so its files are not copied.
 
 ### Example 2
 ```
-PS C:\> Import-VM -Path 'D:\Test2\Virtual Machines\8F148B6D-C674-413E-9FCC-4FBED185C52D.XML' -Copy -GenerateNewId
+PS C:\> Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' -Copy -GenerateNewId
 ```
 
 Imports the virtual machine by copying its files to the default virtual machine and virtual hard drive storage locations of the Hyper-V host.
 The imported virtual machine will be given a new unique identifier, not the one in the configuration file.
 This is useful when you want to import multiple copies of a virtual machine, since each virtual machine must have a unique identifier.
-
-### Example 3
-```
-Attempts import of a virtual machine; the attempt fails due to incompatibilities with the Hyper-V host.
-PS C:\> Import-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
-Import-VM : Unable to import virtual machine due to configuration errors.  Please use Compare-VM to repair the virtual machine.
-At line:1 char:1
-+ import-vm -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XM ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (:) [Import-VM], VirtualizationOperationFailedException
-    + FullyQualifiedErrorId : Microsoft.HyperV.PowerShell.Commands.ImportVMCommand 
-
-Gets a compatibility report that describes the attempted import and lists the virtual machine's incompatibilities with the Hyper-V host.
-PS C:\> $report = Compare-VM -Path 'D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML'
-
-
-Displays the compatibility report, revealing that the virtual network adapter was connected to switch Production. The Hyper-V host has no switch by that name.
-PS C:\> $report.Incompatibilities | Format-Table -AutoSize
-Message                                      MessageId Source
--------                                      --------- ------
-Could not find Ethernet switch 'Production'.     33012 Microsoft.HyperV.PowerShell.VMNetworkAdapter 
-
-Disconnects the virtual network adapter.
-PS C:\> $report.Incompatibilities[0].Source | Disconnect-VMNetworkAdapter
-
-
-Generates a new compatibility report to determine if the virtual machine is compatible with the Hyper-V host.
-PS C:\> Compare-VM -CompatibilityReport $report
-
-
-Displays the compatibility report.
-PS C:\> $report
-VM                 : Microsoft.HyperV.PowerShell.VirtualMachine
-OperationType      : ImportVirtualMachine
-Destination        : HYPER-V-1
-Path               : D:\vm1\Virtual Machines\53EAE599-4D3B-4923-B173-6AEA29CB7F42.XML
-SnapshotPath       : D:\vm1\Snapshots
-VhdDestinationPath :
-VhdSourcePath      :
-Incompatibilities  :
-
-Imports the virtual machine.
-PS C:\> import-vm -CompatibilityReport $report
-Name State CPUUsage(%) MemoryAssigned(M) MemoryDemand(M) MemoryStatus Uptime   Status             ReplicationState
----- ----- ----------- ----------------- --------------- ------------ ------   ------             ----------------
-VM1  Off   0           0                 0                            00:00:00 Operating normally Disabled
-```
-
-Imports a virtual machine whose configuration is not compatible with the Hyper-V host.
 
 ## PARAMETERS
 

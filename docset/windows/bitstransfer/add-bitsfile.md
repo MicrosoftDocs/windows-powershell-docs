@@ -78,8 +78,7 @@ The first command creates a new BitsJob object and then stores it in the $Bits v
 
 The second command uses the **Import-CSV** cmdlet to import a text file that contains a list of files to be transferred.
 The text file is converted to an array of objects (one per line) and passed through the pipeline to the **Add-BitsFile** cmdlet.
-The *BitsJob* parameter is used to pass the **BitsJob** object (the transfer job) that is stored in the $Bits variable to the **Add-BitsFile** cmdlet.
-This command also updates the transfer job with the list of files to be transferred.
+The *BitsJob* parameter is used to pass the **BitsJob** object (the transfer job) that is stored in the $Bits variable to the **Add-BitsFile** cmdlet. These array of objects, adds BITS transfer job for each of the file to be downloaded and then transfers them concurrently to the client. This command also updates the transfer job with the list of files to be transferred.
 
 The third command passes the **BitsJob** object that is stored in the $Bits variable to the **Resume-BitsTransfer** cmdlet.
 The BITS transfer job is restarted, and the files that are specified in the Filelist.txt file are transferred from the source to the destination.

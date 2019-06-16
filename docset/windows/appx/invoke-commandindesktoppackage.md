@@ -43,8 +43,11 @@ This command invokes the demo.exe that can be found in '29270sandstorm.AppPackag
 
 ### -AppId
 AppId is the Application ID from the package manifest.
-    <Application Id="blah" ... />
-    </Application>
+
+```xml
+<Application Id="blah" ... />
+</Application>
+```
 
 ```yaml
 Type: String

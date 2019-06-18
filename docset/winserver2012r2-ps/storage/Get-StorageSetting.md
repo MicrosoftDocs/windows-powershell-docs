@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 # Get-StorageSetting
 
 ## SYNOPSIS
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Get-StorageSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns the StorageSettings object.
+The **Get-StorageSetting** cmdlet returns the StorageSetting object.
 
 ## EXAMPLES
 

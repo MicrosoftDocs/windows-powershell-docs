@@ -43,13 +43,13 @@ The **Add-WindowsCapability** cmdlet acquires a Windows capability package from 
 
 ## EXAMPLES
 
-### Example 1: Add a Windows capability package to the running OS via Windows Update client
+### Example 1: Add a Windows capability package to the running OS via the Windows Update client
 ```
 PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0"
 ```
 This command adds a Windows capability package to the running operating system. Because no source is specified, the Windows Update client will download the necessary package. It requires either an active Internet connection or an active network connection to the local Windows Server Update Services (WSUS) server.
 
-### Example 2: Add a Windows capability package to the running OS using a locally stored package file.
+### Example 2: Add a Windows capability package to the running OS using a locally stored package file
 ```
 PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\" -LimitAccess
 ```
@@ -255,7 +255,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-As of Windows 10 version 1709, you cannot use Windows Server Update Services (WSUS) to host Features on Demand (FOD) and language packs for Windows 10 clients locally. Instead, you can enforce a Group Policy setting that tells the clients to pull them directly from Windows Update. You can also host FOD and language packs on a network share, but starting with Windows 10 version 1809, FOD and language packs can only be installed from Windows Update. For more information, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)
+As of Windows 10 version 1709, you cannot use Windows Server Update Services (WSUS) to host Features on Demand (FOD) and language packs for Windows 10 clients. Instead, you can enforce a Group Policy setting that tells the clients to download them directly from Windows Update. You can also host FOD and language packs on a network share, but starting with Windows 10 version 1809, FOD and language packs can only be installed from Windows Update. For more information, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs)
 
 ## RELATED LINKS
 

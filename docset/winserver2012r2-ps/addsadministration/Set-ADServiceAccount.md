@@ -776,9 +776,17 @@ The operators are applied in the following sequence:
 - Add
 - Replace
 
+The following example shows how to add and remove service principal names.
+
+```powershell
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
+
+<br>
+
 ```yaml
 Type: Hashtable
-Parameter Sets: Identity
+Parameter Sets: (All)
 Aliases: 
 
 Required: False

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: A85AAD1E-A992-46B1-B836-9B9E3FA52F14
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DhcpServerv6Statistics

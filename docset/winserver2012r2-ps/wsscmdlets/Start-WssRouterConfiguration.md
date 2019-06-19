@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Start-WssRouterConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FD92EDE0-1DDD-4BF9-A7F9-89A8BF8BFDE6
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

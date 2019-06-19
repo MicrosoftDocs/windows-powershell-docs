@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Search-ADAccount
@@ -290,7 +290,7 @@ Returns all users, computers and service accounts that are disabled in the LDS i
 ## PARAMETERS
 
 ### -AccountDisabled
-{{Fill AccountDisabled Description}}
+Returns account objects that are disabled.
 
 ```yaml
 Type: SwitchParameter
@@ -305,7 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountExpired
-{{Fill AccountExpired Description}}
+Returns account objects that are expired.
 
 ```yaml
 Type: SwitchParameter
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountExpiring
-{{Fill AccountExpiring Description}}
+Returns account objects that will expire in the specified TimeSpan.
 
 ```yaml
 Type: SwitchParameter
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -AccountInactive
-{{Fill AccountInactive Description}}
+Returns all accounts that have been inactive in the specified TimeSpan.
 
 ```yaml
 Type: SwitchParameter
@@ -350,7 +350,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthType
-{{Fill AuthType Description}}
+The type of authentication to run the cmdlet. Allowed values are
+Negotiate
+Basic
 
 ```yaml
 Type: ADAuthType
@@ -366,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputersOnly
-{{Fill ComputersOnly Description}}
+Limits the search only to computer objects.
 
 ```yaml
 Type: SwitchParameter
@@ -381,7 +383,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{Fill Credential Description}}
+PSCredential object representing the credentials of the user to use to run the cmdlet.
 
 ```yaml
 Type: PSCredential
@@ -396,7 +398,7 @@ Accept wildcard characters: False
 ```
 
 ### -DateTime
-{{Fill DateTime Description}}
+Enter a DateTime object, such as one that the Get-Date cmdlet returns, or a string that can be converted to a date and time, such as "April 19, 2012 15:00", "12/31", or "3am". DateTime objects, and strings that are converted to DateTime objects, are automatically adjusted to be compatible with the date and time formats selected for the local computer in Region and Language in Control Panel.
 
 ```yaml
 Type: DateTime
@@ -411,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -LockedOut
-{{Fill LockedOut Description}}
+Returns all account objects that have been locked out.
 
 ```yaml
 Type: SwitchParameter
@@ -426,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordExpired
-{{Fill PasswordExpired Description}}
+Returns all account objects that have expired password.
 
 ```yaml
 Type: SwitchParameter
@@ -441,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordNeverExpires
-{{Fill PasswordNeverExpires Description}}
+Returns all account objects which password never expires.
 
 ```yaml
 Type: SwitchParameter
@@ -456,7 +458,9 @@ Accept wildcard characters: False
 ```
 
 ### -ResultPageSize
-{{Fill ResultPageSize Description}}
+Specifies the number of objects to include in one page for an Active Directory Domain Services query.
+
+The default is 256 objects per page.
 
 ```yaml
 Type: Int32
@@ -471,7 +475,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSetSize
-{{Fill ResultSetSize Description}}
+Specifies the maximum number of objects to return for an Active Directory Domain Services query. If you want to receive all of the objects, set this parameter to $Null (null value). You can use Ctrl+C to stop the query and return of objects.
 
 ```yaml
 Type: Int32
@@ -486,7 +490,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchBase
-{{Fill SearchBase Description}}
+Specifies an Active Directory path to search under.
+
+When you run a cmdlet from an Active Directory provider drive, the default value of this parameter is the current path of the drive.
+
+When you run a cmdlet outside of an Active Directory provider drive against an AD DS target, the default value of this parameter is the default naming context of the target domain.
+
+When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target LDS instance if one has been specified by setting the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance. If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
+
+When the value of the SearchBase parameter is set to an empty string and you are connected to a GC port, all partitions will be searched. If the value of the SearchBase parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
+
 
 ```yaml
 Type: String
@@ -501,7 +514,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchScope
-{{Fill SearchScope Description}}
+Specifies the scope of an Active Directory search.
+The acceptable values for this parameter are:
+
+- Base or 0
+- OneLevel or 1
+- Subtree or 2
+
+A Base query searches only the current path or object.
+A OneLevel query searches the immediate children of that path or object.
+A Subtree query searches the current path or object and all children of that path or object.
 
 ```yaml
 Type: ADSearchScope
@@ -517,7 +539,25 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-{{Fill Server Description}}
+Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory Snapshot instance.
+
+Domain name values:
+
+- Fully qualified domain name (FQDN)
+- NetBIOS name
+
+Directory server values:
+
+- Fully qualified directory server name
+- NetBIOS name
+- Fully qualified directory server name and port
+
+The default value for the *Server* parameter is determined by one of the following methods in the order that they are listed:
+
+- By using *Server* value from objects passed through the pipeline. 
+- By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive. 
+- By using the domain of the computer running PowerShell.
 
 ```yaml
 Type: String
@@ -532,7 +572,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeSpan
-{{Fill TimeSpan Description}}
+Enter a timespan object, such as one that the New-TimeSpan cmdlet returns or a string that can be converted to a timespan object, such as "30:00:00".
 
 ```yaml
 Type: TimeSpan
@@ -547,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -UsersOnly
-{{Fill UsersOnly Description}}
+Limits the search to only user objects.
 
 ```yaml
 Type: SwitchParameter

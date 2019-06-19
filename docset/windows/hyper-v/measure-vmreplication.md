@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 
 ### -ReplicationMode
 Specifies the replication mode of the virtual machines whose replication statistics you want to get.
-Valid values are "None", "Primary", "Replica" and "TestReplica".
+Valid values are "None", "Primary", "Replica", "TestReplica" and "ExtendedReplica"
 
 ```yaml
 Type: VMReplicationMode

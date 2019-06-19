@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerAuditLog_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMBFileSize
-Specifies the maximum size of the audit log, in megabytes (MB).
+Specifies the maximum disk space available for all DHCP service audit log files, in megabytes (MB).
 
 ```yaml
 Type: UInt32

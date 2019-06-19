@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 6E108A49-889B-47B0-8537-FEC153F66809
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DirectAccessClientFIX Module

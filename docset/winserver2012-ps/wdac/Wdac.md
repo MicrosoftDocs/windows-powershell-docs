@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 517B5AA8-5FAF-41F1-BA11-2C87D3E78FC1
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Wdac Module

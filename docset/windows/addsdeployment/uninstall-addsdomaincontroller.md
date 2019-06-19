@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
@@ -256,9 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDnsDelegation
-Specifies whether to preserve DNS delegations that point to this DNS server from the parent DNS zone.
 
-By default, this parameter is set to False, which means DNS delegations that point to this server from the parent DNS zone will not be retained after uninstallation of the domain controller.
+Specifies whether to preserve DNS delegation that point to this DNS server from the parent DNS Zone. If you use this parameter, DNS delegations that point to this server from the parent DNS zone will not be retained after uninstallation of the domain controller.
 This setting corresponds to the earlier Dcpromo.exe parameter default of /RemoveDNSDelegation:Yes.
 
 ```yaml

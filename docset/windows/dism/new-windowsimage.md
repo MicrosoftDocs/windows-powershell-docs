@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -85,12 +85,11 @@ Accept wildcard characters: False
 ### -CompressionType
 Specifies the type of compression used for the initial capture operation: 
 
-- The maximum option provides the best compression, but takes more time to capture the image. 
-- The fast option provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
-This is also the default compression type that is used if you do not specify the argument. 
-- The none option does not compress the captured image at all. 
+- **Max** = This option provides the best compression but takes more time to capture the image. 
+- **Fast** = This option provides faster image compression but the resulting files are larger than those compressed using the maximum (max) option.
+- **None** = This option does not compress the captured image at all. 
 
-the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
 
 ```yaml
 Type: String
@@ -99,7 +98,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Fast
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

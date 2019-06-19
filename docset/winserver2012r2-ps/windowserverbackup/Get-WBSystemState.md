@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WBSystemState
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD09EDAF-39BB-44B4-A8AE-3971D818CC4B
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

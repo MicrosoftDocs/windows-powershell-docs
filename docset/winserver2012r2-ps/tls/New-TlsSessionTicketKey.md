@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-TlsSessionTicketKey
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1B64E8FA-A404-4C5F-8FE7-230B5E717F08
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

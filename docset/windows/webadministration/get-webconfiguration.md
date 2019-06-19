@@ -48,7 +48,7 @@ This command queries for all authentication settings specified under the default
 Specifies the version of the .NET Framework in the form vn.n, such as v4.0 or v2.0.
 The default is v4.0.
 Specify this parameter only when the *PSPath* parameter is set to either Machine or Machine/Webroot.
-If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell� ignores the value of *Clr* and returns a warning.
+If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell ignores the value of *Clr* and returns a warning.
 
 ```yaml
 Type: String

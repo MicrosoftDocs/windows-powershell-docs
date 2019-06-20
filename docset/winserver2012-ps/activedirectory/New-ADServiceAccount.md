@@ -2,7 +2,7 @@
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
 manager: dansimp
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -53,7 +53,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ## DESCRIPTION
 The New-ADServiceAccount cmdlet creates a new Active Directory managed service account (MSA).
 By default a group MSA is created.
-To create a standalone MSA which is linked to a specific computer, the -RestrictToSingleComputer parameter is used. 
+To create a standalone MSA which is linked to a specific computer, the -RestrictToSingleComputer parameter is used.
 To create a group MSA which can only be used in client roles, the -Agent parameter is used.
 This creates a group MSA which can be used for outbound connections only and attempts to connect to services using this account will fail since the account does not have enough information for authentication to be successful.
 You can set commonly used MSA property values by using the cmdlet parameters.
@@ -98,7 +98,7 @@ Create a new managed service account and restrict its use to only a single compu
 ```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 ```
- 
+
 ### -------------------------- EXAMPLE 4 --------------------------
 Create a new managed service account and restrict its use to only outbound authentication.
 
@@ -119,7 +119,7 @@ Time is assumed to be local time unless otherwise specified.
 When a time value is not specified, the time is assumed to 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.
 The following examples show commonly-used syntax to specify a DateTime object.
-`"4/17/2006"` 
+`"4/17/2006"`
 
 `"Monday, April 17, 2006"`
 
@@ -154,7 +154,7 @@ The following example shows how to set this parameter to the date May 1, 2012 at
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ The following example shows how to set this parameter so that the security conte
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ This command will prompt you to enter the password.
 ```yaml
 Type: SecureString
 Parameter Sets: RestrictedToSingleComputer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ The following example shows how to set this parameter to Basic.
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -300,7 +300,7 @@ Set-ADServiceAccount Service1  -Certificates @{Add= \[Byte\[\]\](0xC5,0xEE,0x53,
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -310,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompoundIdentitySupported
-Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device. 
+Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device.
 This value sets the compound identity supported flag of the Active Directory msDS-SupportedEncryptionTypes attribute.
 Possible values for this parameter are:
 
@@ -328,7 +328,7 @@ Therefore any changes to the flag on the msDS-SupportedEncryptionTypes attribute
 ```yaml
 Type: Boolean
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -376,7 +376,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ The following example shows how to set this parameter for a Service Account call
 ```yaml
 Type: String
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -419,7 +419,7 @@ The following example shows how to set this parameter to a sample description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -440,7 +440,7 @@ New-ADServiceAccount -DisplayName "Service Account for use with Contoso LOB Appl
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -467,7 +467,7 @@ New-ADServiceAccount -Enabled $true
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -488,7 +488,7 @@ New-ADServiceAccount -HomePage "http://accounts.contoso.com/Service1"
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -500,7 +500,7 @@ Accept wildcard characters: False
 ### -Instance
 Specifies an instance of a service account object to use as a template for a new service account object.
 
-You can use an instance of an existing service account object as a template or you can construct a new service account object for template use. 
+You can use an instance of an existing service account object as a template or you can construct a new service account object for template use.
 You can construct a new service account using the Windows PowerShell command line or by using a script.
 The following examples show how to use these two methods to create service account object templates.
 
@@ -526,7 +526,7 @@ Note: Specified attributes are not validated, so attempting to set attributes th
 ```yaml
 Type: ADServiceAccount
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -KerberosEncryptionType
-Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets. 
+Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets.
 This value sets the encryption types supported flags of the Active Directory msDS-SupportedEncryptionTypes attribute.
 Possible values for this parameter are:
 
@@ -564,7 +564,7 @@ Therefore any changes to the flag on the msDS-SupportedEncryptionTypes attribute
 ```yaml
 Type: ADKerberosEncryptionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, DES, RC4, AES128, AES256
 
 Required: False
@@ -588,7 +588,7 @@ The following example shows how to specify a 90 day password changes interval:
 ```yaml
 Type: Int32
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -609,7 +609,7 @@ The following example shows how to set this parameter to a name string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -634,7 +634,7 @@ To specify multiple values for an attribute
 ```Powershell
 -OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}
 ```
-You can specify values for more than one attribute by using semicolons to separate attributes. 
+You can specify values for more than one attribute by using semicolons to separate attributes.
 The following syntax shows how to set values for multiple attributes:
 ```Powershell
 -OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}
@@ -652,7 +652,7 @@ To set values for favColors and dateOfBirth simultaneously, use the following sy
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -669,7 +669,7 @@ if -PassThru is not specified), this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -681,8 +681,8 @@ Accept wildcard characters: False
 ### -Path
 Specifies the X.500 path of the Organizational Unit (OU) or container where the new object is created.
 
-In many cases, a default value will be used for the Path parameter if no value is specified. 
-The rules for determining the default value are given below. 
+In many cases, a default value will be used for the Path parameter if no value is specified.
+The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
 In AD DS environments, a default value for Path will be set in the following cases:
@@ -708,7 +708,7 @@ However, for the provider cmdlets, the Path parameter identifies the path of the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -724,7 +724,7 @@ This parameter sets the msDS-AllowedToActOnBehalfOfOtherIdentity attribute of th
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -742,7 +742,7 @@ This parameter should be set to the principals allowed to use this group managed
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -758,7 +758,7 @@ This allows creating a group managed service account without the parameters requ
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RestrictedToOutboundAuthenticationOnly
-Aliases: 
+Aliases:
 Accepted values: true
 
 Required: True
@@ -775,7 +775,7 @@ These managed service accounts which are linked to a single computer account wer
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RestrictedToSingleComputer
-Aliases: 
+Aliases:
 Accepted values: true
 
 Required: True
@@ -801,7 +801,7 @@ Note: If the SAMAccountName string provided, does not end with a '$', one will b
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -857,7 +857,7 @@ New-ADServiceAccount -Server "corp-DC12.corp.contoso.com"
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -872,28 +872,28 @@ This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
 This parameter uses the following syntax to add remove, replace or clear service principal name values.
 
-Syntax:
-
 To add values:
 
- ```Powershell
--ServicePrincipalNames @{Add=value1,value2,...}	
+```Powershell
+-ServicePrincipalNames @{Add=value1,value2,...}
 ```
 
- To remove values:	To remove values:
- ```Powershell
--ServicePrincipalNames @{Remove=value3,value4,...}	
+To remove values:
+
+```Powershell
+-ServicePrincipalNames @{Remove=value3,value4,...}
 ```
 
- To replace values:	To replace values:
- ```Powershell
--ServicePrincipalNames @{Replace=value1,value2,...}	
+To replace values:
+
+```Powershell
+-ServicePrincipalNames @{Replace=value1,value2,...}
 ```
 
+To clear all values:
 
- To clear all values:	To clear all values:
- ```Powershell
--ServicePrincipalNames $null	
+```Powershell
+-ServicePrincipalNames $null
 ```
 
 You can specify more than one change by using a list separated by semicolons.
@@ -901,22 +901,22 @@ For example, use the following syntax to add and remove service principal names.
 
 `@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
-The operators will be applied in the following sequence:
+The operators are applied in the following sequence: 
 
-..Remove
+- Remove
+- Add
+- Replace
 
-..Add
+The following example shows how to add and remove service principal names:
 
-..Replace
+```powershell
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
 
-The following example shows how to add and remove service principal names.
- ```Powershell
--ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
- ```
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -943,7 +943,7 @@ The following example shows how to specify that an account is trusted for Kerber
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1003,4 +1003,3 @@ For more information on how to create the KDS root key using Windows PowerShell,
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

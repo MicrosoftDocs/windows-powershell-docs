@@ -106,6 +106,13 @@ Create a new managed service account and restrict its use to only outbound authe
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 
+### -------------------------- EXAMPLE 5 --------------------------
+Create a new managed service account and register multiple service principal names.
+
+```Powershell
+C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
+```
+
 ## PARAMETERS
 
 ### -AccountExpirationDate
@@ -870,6 +877,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
+This parameter can be used to set multiple Service Principal Names, specifying each one separated with commas.
 
 ```yaml
 Type: String[]

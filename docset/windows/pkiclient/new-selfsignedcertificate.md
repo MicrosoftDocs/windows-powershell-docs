@@ -72,7 +72,7 @@ PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.c
 This example creates a self-signed S/MIME certificate in the user MY store.
 The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
 The certificate uses an RSA asymmetric key with a key size of 2048 bits.
-This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com.
+This certificate has the subject alternative names of patti.fuller@contoso.com as RFC822 and pattifuller@contoso.com as Principal Name.
 
 This command does not specify the **NotAfter** parameter.
 Therefore, the certificate expires in one year.
@@ -125,6 +125,19 @@ The subject alternative name is pattifuller@contoso.com.
 
 This command specifies a value for **NotAfter**.
 The certificate expires in six months.
+
+### EXAMPLE 8
+```
+PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&email=pattifuller@contoso.com") -KeyUsage DataEncipherment -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
+```
+
+This example creates a self-signed S/MIME certificate in the user MY store.
+The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com both as RFC822.
+
+This command does not specify the **NotAfter** parameter.
+Therefore, the certificate expires in one year.
 
 ## PARAMETERS
 

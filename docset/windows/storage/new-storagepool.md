@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResiliencySettingNameDefault
-Specifies the default resiliency setting name for virtual disks created in this pool.
+Specifies the default resiliency setting (also known as storage layout) to use for virtual disks the created in the specified storage pool. The supported resiliency settings vary by storage subsystem. Acceptable values for the Windows Storage subsystem are Mirror, Parity, and Simple.
 
 ```yaml
 Type: String

@@ -55,13 +55,13 @@ For more information about Storage QoS, see Storage Quality of Service in Window
 PS C:\>
 Get-StorageQoSFlow -FilePath "C:\ClusterStorage\Volume01\TEST"
 
-InitiatorName FilePath                       InitiatorIOPS InitiatorLatency PSComputerName
+InitiatorName FilePath                       InitiatorIOPS InitiatorLatency InitiatorBandwidth PSComputerName
 
-------------- --------                       ------------- ---------------- --------------
+------------- --------                       ------------- ---------------- ------------------ --------------
+                                                                       
+storqosclient C:\ClusterStorage\Volume01\TEST 104           8.0921 ms        0.2 MB/s
 
-storqosclient C:\ClusterStorage\Volume01\TEST 104           8.0921
-
-storqosclient C:\ClusterStorage\Volume01\TEST 31            8.9741
+storqosclient C:\ClusterStorage\Volume01\TEST 31            8.9741 ms        0.5 MB/s
 ```
 
 This command gets information about all flow initiators accessing C:\ClusterStorage\Volume01\TEST.

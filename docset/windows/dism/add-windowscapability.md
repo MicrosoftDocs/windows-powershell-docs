@@ -54,7 +54,7 @@ This command adds a Windows capability package to the running operating system. 
 PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\" -LimitAccess
 ```
 
-This command adds a Windows capability package specified by the *Name* parameter, to the running operating system. The *Source* parameter specifies the location of required files. For instance, if the running OS is a copy of Windows 10 version 1809, the `Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab` file must present at `E:\`.
+This command adds a Windows capability package specified by the *Name* parameter, to the running operating system. The *Source* parameter specifies the location of required files. For instance, if the running OS is a copy of Windows 10 version 1809, the `Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab` file must be present at `E:\`.
 
 If the package specified by the *Name* parameter is already installed, this command does not return an error message, regardless of whether the required files are present at `E:\`.
 

@@ -11,7 +11,7 @@ ms.date: 12/21/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: https://docs.microsoft.com/en-us/powershell/module/dism/add-windowscapability?view=win10-ps
+online version: https://docs.microsoft.com/powershell/module/dism/add-windowscapability?view=win10-ps
 schema: 2.0.0
 title: Add-WindowsCapability
 ms.reviewer:

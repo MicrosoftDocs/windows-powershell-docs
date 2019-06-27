@@ -106,6 +106,13 @@ Create a new managed service account and restrict its use to only outbound authe
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 
+### -------------------------- EXAMPLE 5 --------------------------
+Create a new managed service account and register multiple service principal names.
+
+```Powershell
+C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
+```
+
 ## PARAMETERS
 
 ### -AccountExpirationDate
@@ -870,48 +877,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values.
-
-To add values:
-
-```Powershell
--ServicePrincipalNames @{Add=value1,value2,...}
-```
-
-To remove values:
-
-```Powershell
--ServicePrincipalNames @{Remove=value3,value4,...}
-```
-
-To replace values:
-
-```Powershell
--ServicePrincipalNames @{Replace=value1,value2,...}
-```
-
-To clear all values:
-
-```Powershell
--ServicePrincipalNames $null
-```
-
-You can specify more than one change by using a list separated by semicolons.
-For example, use the following syntax to add and remove service principal names.
-
-`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
-
-The operators are applied in the following sequence: 
-
-- Remove
-- Add
-- Replace
-
-The following example shows how to add and remove service principal names:
-
-```powershell
- -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
-```
+This parameter can be used to set multiple Service Principal Names, specifying each one separated with commas.
 
 ```yaml
 Type: String[]

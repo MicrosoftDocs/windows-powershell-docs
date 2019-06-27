@@ -38,7 +38,7 @@ If this cmdlet is not successful, it indicates that a restart is required.
 
 ### Example 1: Attempt to claim devices
 ```
-PS C:\> Update-MPIOClaimedDisk
+PS C:\> Update-MPIOClaimedHW
 ```
 
 This example attempts to claim devices that are currently in the MSDSM supported hardware list.

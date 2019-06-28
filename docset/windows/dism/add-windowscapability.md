@@ -68,7 +68,7 @@ This command adds a Windows capability package specified by the *Name* parameter
 ## PARAMETERS
 
 ### -LimitAccess
-Indicates that this cmdlet does not access Windows Update for the source package. Only applies when `-Online` switch is specified; otherwise, ignored.
+Indicates that this cmdlet does not query Windows Update for source packages when servicing a live OS. Only applies when the `-Online` switch is specified.
 
 ```yaml
 Type: SwitchParameter

@@ -82,6 +82,89 @@ The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack 
 The second command invokes the troubleshooting pack stored in $Audio in unattended mode.
 The command specifies an answer file, previously created by using the **Get-TroubleshootingPack** cmdlet.
 
+### Troubleshooting commands  for all the components or devices and save all reports in C:\Diagresult
+make a folder "DiagResult" in C:\
+then open powershell application with administrator right, type the following 
+
+01. Apps
+**$Apps = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Apps"**
+**Invoke-TroubleshootingPack -Pack $Apps -Result "C:\DiagResult"**
+
+02. Audio
+**$Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"**
+**Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"**
+
+03. BITS
+**$BITS = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\BITS"**
+**Invoke-TroubleshootingPack -Pack $BITS -Result "C:\DiagResult"**
+
+04. Bluetooth
+**$Bluetooth = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Bluetooth"**
+**Invoke-TroubleshootingPack -Pack $Bluetooth -Result "C:\DiagResult"**
+
+05. Device
+**$Device = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Device"**
+Invoke-TroubleshootingPack -Pack $Device -Result "C:\DiagResult"**
+
+06. DeviceCenter
+**$DeviceCenter = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\DeviceCenter"**
+**Invoke-TroubleshootingPack -Pack $DeviceCenter -Result "C:\DiagResult"**
+
+07. Internet Explorer WebBrowser
+**$IEBrowseWeb = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\IEBrowseWeb"**
+**Invoke-TroubleshootingPack -Pack $IEBrowseWeb -Result "C:\DiagResult"**
+
+08. Internet Explorer Security
+**$IESecurity = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\IESecurity"**
+**Invoke-TroubleshootingPack -Pack $IESecurity -Result "C:\DiagResult"**
+
+09. Keyboard
+**$Keyboard = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Keyboard"**
+**Invoke-TroubleshootingPack -Pack $Keyboard -Result "C:\DiagResult"**
+
+10. Networking 
+**$Networking = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Networking"**
+**Invoke-TroubleshootingPack -Pack $Networking -Result "C:\DiagResult"**
+
+11. PCW
+**$PCW = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\PCW"**
+**Invoke-TroubleshootingPack -Pack $PCW -Result "C:\DiagResult"**
+
+12. Power
+**$Power = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Power"**
+**Invoke-TroubleshootingPack -Pack $Power -Result "C:\DiagResult"**
+
+13. Printer
+**$Printer = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Printer"**
+**Invoke-TroubleshootingPack -Pack $Printer -Result "C:\DiagResult"**
+
+14. Search
+**$Search = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Search**
+**Invoke-TroubleshootingPack -Pack $Search -Result "C:\DiagResult"**
+
+15. Speech
+**$Speech = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Speech"**
+**$SpeInvoke-TroubleshootingPack -Pack $Speech -Result "C:\DiagResult"**
+
+16. Video
+**$Video = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Video"**
+**Invoke-TroubleshootingPack -Pack $Video -Result "C:\DiagResult"**
+
+17. WindowsmediaPlayerConfiguartion
+**$WindowsMediaPlayerConfiguration = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\WindowsMediaPlayerConfiguration"**
+**Invoke-TroubleshootingPack -Pack $WindowsMediaPlayerConfiguration -Result "C:\DiagResult"**
+
+18. WindowsMediaPlayerMediaLibrary
+**$WindowsMediaPlayerMediaLibrary = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\WindowsMediaPlayerMediaLibrary"**
+**Invoke-TroubleshootingPack -Pack $WindowsMediaPlayerMediaLibrary -Result "C:\DiagResult"**
+
+19. WindowsMediaPlayerPlayDVD
+**$WindowsMediaPlayerPlayDVD = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\WindowsMediaPlayerPlayDVD"**
+**Invoke-TroubleshootingPack -Pack $WindowsMediaPlayerPlayDVD -Result "C:\DiagResult"**
+
+
+**Note**:: All Troubleshooting reports will be  stored under this folder  **C:\DiagResult\**
+
 ## PARAMETERS
 
 ### -AnswerFile

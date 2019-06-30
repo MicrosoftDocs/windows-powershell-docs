@@ -247,7 +247,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocalASN
-Specifies the local AS Number of the BGP Router instance.
+Specifies the local AS Number of the BGP Router instance, see [AS numbers by IANA](
+https://www.iana.org/assignments/as-numbers/as-numbers.xhtml) for the list of 32 bit AS numbers.
 
 ```yaml
 Type: UInt32

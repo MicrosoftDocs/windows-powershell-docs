@@ -163,7 +163,8 @@ Invoke-TroubleshootingPack -Pack $Device -Result "C:\DiagResult"**
 **Invoke-TroubleshootingPack -Pack $WindowsMediaPlayerPlayDVD -Result "C:\DiagResult"**
 
 
-**Note**:: All Troubleshooting reports will be  stored under this folder  **C:\DiagResult\**
+> [!NOTE]
+>  All Troubleshooting reports will be  stored in the folder  **C:\DiagResult\**
 
 ## PARAMETERS
 

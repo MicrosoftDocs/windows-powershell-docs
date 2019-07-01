@@ -84,7 +84,7 @@ The command specifies an answer file, previously created by using the **Get-Trou
 
 ### Troubleshooting commands for all the components or devices and save all reports in C:\Diagresult
 Make a folder "DiagResult" in C:\
-then open powershell application with administrator right, type the following 
+Then open PowerShell with administrator permissions and use one of the following.
 
 01. Apps
 **$Apps = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Apps"**

@@ -82,7 +82,7 @@ The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack 
 The second command invokes the troubleshooting pack stored in $Audio in unattended mode.
 The command specifies an answer file, previously created by using the **Get-TroubleshootingPack** cmdlet.
 
-### Troubleshooting commands  for all the components or devices and save all reports in C:\Diagresult
+### Troubleshooting commands for all the components or devices and save all reports in C:\Diagresult
 make a folder "DiagResult" in C:\
 then open powershell application with administrator right, type the following 
 

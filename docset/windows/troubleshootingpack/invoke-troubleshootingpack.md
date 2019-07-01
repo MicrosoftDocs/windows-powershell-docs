@@ -83,7 +83,7 @@ The second command invokes the troubleshooting pack stored in $Audio in unattend
 The command specifies an answer file, previously created by using the **Get-TroubleshootingPack** cmdlet.
 
 ### Troubleshooting commands for all the components or devices and save all reports in C:\Diagresult
-make a folder "DiagResult" in C:\
+Make a folder "DiagResult" in C:\
 then open powershell application with administrator right, type the following 
 
 01. Apps

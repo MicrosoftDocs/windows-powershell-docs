@@ -38,7 +38,6 @@ You should not use the **Set-WindowsEdition** on an image that has already been 
 It is recommended that you use this option on the lowest edition available in the edition family.
 
 You can only change the edition on a running operating system for Windows Server images, not online Windows client images.
-The *ProductKey* parameter is required for changing online Server images.
 
 ## EXAMPLES
 

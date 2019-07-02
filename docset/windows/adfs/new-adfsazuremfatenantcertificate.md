@@ -52,6 +52,9 @@ PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f4
 
 These commands create a certificate for Azure MFA, register the certificate in a tenant, and enable Azure MFA on an AD FS farm.
 
+> [!NOTE]
+> Customers are encouraged to use the newer Azure Active Directory V2 PowerShell module. For more information about the V2 module please see [Azure Active Directory V2 PowerShell](https://docs.microsoft.com/en-us/powershell/module/Azuread/?view=azureadps-2.0).
+
 ### Example 2: Determine which certificate Azure MFA is using
 ```
 PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> -out-file amfacert.cer

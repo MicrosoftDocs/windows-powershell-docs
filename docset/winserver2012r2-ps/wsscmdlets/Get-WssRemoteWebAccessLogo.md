@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WssRemoteWebAccessLogo
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7DBE5E22-F552-401B-96E2-DB0E40EAFCB8
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -4,11 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Test-DnsServer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -50,7 +50,7 @@ If you also specify a zone name, the cmdlet validates that the DNS server can re
 PS C:\>Test-DnsServer -IPAddress "10.123.183.155"
 IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
 ---------               --------                 ------------           --------                --------
-10.123.183.155           Success                 00:00:11                True                    True
+10.123.183.155           Success                 00:00:11                False                    True
 ```
 
 This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server.
@@ -60,7 +60,7 @@ This command tests whether the computer that has an IP address of 10.123.183.155
 PS C:\>Test-DnsServer -IPAddress "10.123.183.155" -Context Forwarder
 IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
 ---------               --------                 ------------           --------                --------
-10.123.183.155           Success                 00:00:11                True                    True
+10.123.183.155           Success                 00:00:11                False                    True
 ```
 
 This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server that has valid configured forwarders.

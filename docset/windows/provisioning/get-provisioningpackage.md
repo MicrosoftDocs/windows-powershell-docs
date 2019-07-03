@@ -1,10 +1,10 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -20,7 +20,7 @@ ms.reviewer:
 # Get-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Gets information about the installed provisioning package.
 
 ## SYNTAX
 
@@ -43,21 +43,22 @@ Get-ProvisioningPackage [-AllInstalledPackages] [-LogsDirectoryPath <String>] [-
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The **Get-ProvisioningPackage** cmdlet gets information about the installed provisioning package.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Get-ProvisioningPackage -PackagePath c:\test\testppkg.ppkg
 ```
 
-{{ Add example description here }}
+This command gets information about the testppkg.ppkg provisioning package.
 
 ## PARAMETERS
 
 ### -AllInstalledPackages
-{{Fill AllInstalledPackages Description}}
+
+Gets all the installed packages information.
 
 ```yaml
 Type: SwitchParameter
@@ -72,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+Gets the connected device information.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -102,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Specifies the Id of a package.
 
 ```yaml
 Type: String
@@ -117,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Specifies the package path.
 
 ```yaml
 Type: String
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the name of a wprp file.
 
 ```yaml
 Type: String

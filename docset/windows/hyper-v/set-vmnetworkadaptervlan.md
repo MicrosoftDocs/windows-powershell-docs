@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -71,7 +71,7 @@ PS C:\> Set-VMNetworkAdapterVlan -VMName Redmond -Access -VlanId 121
 ```
 
 Sets the virtual network adapter(s) in virtual machine Redmond to the Access mode.
-Traffic sent by this virtual machine  is tagged with VLAN ID 121.
+Traffic sent by this virtual machine is tagged with VLAN ID 121.
 
 ### Example 2
 ```
@@ -103,11 +103,18 @@ PS C:\> Get-VM Redmond | Set-VMNetworkAdapterVlan -Untagged
 
 Gets virtual machine Redmond and sets the virtual network adapters in the virtual machine to the untagged mode.
 
+### Example 5
+```
+PS C:\> Set-VMNetworkAdapterVlan -ManagementOS -Access -VlanID 20
+```
+
+Sets the virtual switch in the management OS to the Access mode.
+Traffic sent by this virtual switch is tagged with VLAN ID 20.
+
 ## PARAMETERS
 
 ### -Access
-Specifies **Access** mode for the virtual machine network adapter.
-This parameter must be specified in conjunction with parameter **VlanId**.
+Specifies **Access** mode for the virtual machine network adapter. This parameter configures an untagged virtual port with the VLANId (port based VLAN), so it must be specified together with **VlanId**.
 
 ```yaml
 Type: SwitchParameter
@@ -350,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trunk
-Specifies **Trunk** mode for the virtual machine network adapter.
+Specifies **Trunk** mode for the virtual machine network adapter. This parameter configures a tagged virtual port that passes all allowed VLANId tags to the VM adapter. Traffic with the NativeVLANId is passed untagged to the VM adapter.
 This parameter must be used in conjunction with parameters **AllowedVlanIdList** and **NativeVlanId**.
 
 ```yaml
@@ -488,4 +495,4 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-
+[Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/configure-and-view-vlan-settings-on-hyper-v-virtual-switch-ports)

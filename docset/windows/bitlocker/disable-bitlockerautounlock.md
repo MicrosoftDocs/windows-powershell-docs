@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -46,7 +46,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 
 ### Example 1: Disable automatic unlocking for a volume
 ```
-PS C:\> Disable-AutoUnlock -MountPoint "E:"
+PS C:\> Disable-BitLockerAutoUnlock -MountPoint "E:"
 ```
 
 This command disables automatic unlocking for the specified BitLocker volume.

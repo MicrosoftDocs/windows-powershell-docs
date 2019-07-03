@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -38,7 +38,6 @@ You should not use the **Set-WindowsEdition** on an image that has already been 
 It is recommended that you use this option on the lowest edition available in the edition family.
 
 You can only change the edition on a running operating system for Windows Server images, not online Windows client images.
-The *ProductKey* parameter is required for changing online Server images.
 
 ## EXAMPLES
 

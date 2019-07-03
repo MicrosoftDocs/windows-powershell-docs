@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-NetIPsecAuthProposal
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

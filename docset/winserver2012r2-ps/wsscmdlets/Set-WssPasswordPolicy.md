@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-WssPasswordPolicy
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6384C39B-000A-463B-A3EF-7379C90C1E1A
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

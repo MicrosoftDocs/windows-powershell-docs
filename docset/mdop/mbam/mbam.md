@@ -1,7 +1,7 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: kenwith
+ms.author: v-anbarr
 ms.prod: w10
 ms.sitesec: library
 Module Name: MBAM
@@ -13,7 +13,7 @@ title: MBAM
 ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro 
 ms.date: 2016-12-05
 ms.topic: reference

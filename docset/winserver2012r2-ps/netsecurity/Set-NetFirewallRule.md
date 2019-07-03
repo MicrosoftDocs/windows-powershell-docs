@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBD6CC37-2EE3-42E7-A062-9BEABEB3DB88
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

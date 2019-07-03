@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Grant-NfsSharePermission
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 902EB319-C201-48E2-8A30-C1057B9047F7
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

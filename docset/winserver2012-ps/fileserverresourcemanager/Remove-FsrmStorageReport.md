@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CC3E89C0-2370-415C-8E38-E5598264DECE
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-FsrmStorageReport

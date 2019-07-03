@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DedupSchedule.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -78,7 +78,7 @@ The **DurationHours** parameter specifies that the server cancels the job after 
 
 ### Example 3: Create a data deduplication schedule for an optimization job
 ```
-PS C:\> New-DedupSchedule -Name "MyWeekendOptimization" -Type Optimization -Days Mon,Tues,Wed,Thurs,Fri -Start 08:00 -DurationHours 9
+PS C:\> New-DedupSchedule -Name "MyWeekdayOptimization" -Type Optimization -Days Mon,Tues,Wed,Thurs,Fri -Start 08:00 -DurationHours 9
 ```
 
 This command creates a data deduplication schedule for an optimization job named MyWeekdayOptimization.

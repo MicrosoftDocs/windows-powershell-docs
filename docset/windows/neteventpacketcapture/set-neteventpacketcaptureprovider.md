@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -CaptureType
-Specifies whether the packet capture is enabled for physical network adapters, virtual switches, or both. The acceptable values for this parameter are:
+Specifies whether the packet capture is enabled for physical network adapters, virtual switches, or both.
 The acceptable values for this parameter are:
 
 - Physical.

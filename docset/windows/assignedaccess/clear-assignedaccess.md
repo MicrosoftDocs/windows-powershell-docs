@@ -21,7 +21,7 @@ ms.assetid: DDA49653-B37F-4CB6-90DC-B5B4BB9E6886
 # Clear-AssignedAccess
 
 ## SYNOPSIS
-Removes the user account from assigned access.
+Clears assigned access configured account settings.
 
 ## SYNTAX
 
@@ -30,18 +30,18 @@ Clear-AssignedAccess [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Clear-AssignedAccess** cmdlet removes the specified user account from assigned access and returns the user to default settings.
+The **Clear-AssignedAccess** cmdlet clears assigned access configured account settings and returns the user to default settings.
 
 If a user is signed-in or the computer has a PS/2 keyboard, you must restart the computer to apply the changes.
 
 ## EXAMPLES
 
-### Example 1: Remove the user account from assigned access
+### Example 1: Clear assigned access configured settings
 ```
 PS C:\> Clear-AssignedAccess
 ```
 
-This command removes the user account from assigned access and returns the user to default settings.
+This command assigned access configured account settings  and returns the user to default settings.
 
 ## PARAMETERS
 

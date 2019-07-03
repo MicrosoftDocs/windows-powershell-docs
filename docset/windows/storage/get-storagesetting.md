@@ -21,7 +21,7 @@ ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
 # Get-StorageSetting
 
 ## SYNOPSIS
-Gets a StorageSettings object.
+Gets a StorageSetting object.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Get-StorageSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns a StorageSettings object.
+The **Get-StorageSetting** cmdlet returns a StorageSetting object.
 
 ## EXAMPLES
 

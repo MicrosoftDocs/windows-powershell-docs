@@ -30,34 +30,34 @@ Set-StorageSetting [-NewDiskPolicy <NewDiskPolicy>] [-ScrubPolicy <ScrubPolicy>]
 ```
 
 ## DESCRIPTION
-The **Set-StorageSettings** cmdlet adjusts or configures current storage settings of the StorageSetting object.
+The **Set-StorageSetting** cmdlet adjusts or configures current storage settings of the StorageSetting object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineAll
 ```
 
 This example changes the new disk policy so that all newly attached disks remain offline.
 
 ### EXAMPLE 2
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineInternal
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineInternal
 ```
 
 This example changes the new disk policy so that all newly attached disks on a local bus remain offline.
 
 ### EXAMPLE 3
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineShared
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineShared
 ```
 
 This example changes the new disk policy so that all new shared bus disks remain offline and all new local bus disks remain online.
 
 ### EXAMPLE 4
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OnlineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OnlineAll
 ```
 
 This example changes the new disk policy so that all new disks are brought online, regardless of whether the disk are on a local or shared bus.

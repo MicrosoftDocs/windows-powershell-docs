@@ -46,7 +46,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 
 ### Example 1: Disable automatic unlocking for a volume
 ```
-PS C:\> Disable-AutoUnlock -MountPoint "E:"
+PS C:\> Disable-BitLockerAutoUnlock -MountPoint "E:"
 ```
 
 This command disables automatic unlocking for the specified BitLocker volume.

@@ -22,8 +22,8 @@ ms.assetid: 00797342-0AAC-4FFF-84FE-4749DA9242D6
 
 # Defender Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Defender-specific cmdlets. 
-It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides functions descriptions and syntax for all Defender-specific functions. 
+It lists the functions in alphabetical order based on the verb at the beginning of the functions.
 
 ## Defender Cmdlets
 ### [Add-MpPreference](./Add-MpPreference.md)

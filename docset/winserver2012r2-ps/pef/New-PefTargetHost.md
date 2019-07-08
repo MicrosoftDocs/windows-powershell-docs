@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-PefTargetHost
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4CCF83B8-9D8F-4E95-B0E7-57EB1B0C493F
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

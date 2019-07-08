@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 1149AB0F-CE0C-4F56-8352-15D29814411F
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # FailoverClusters Module

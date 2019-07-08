@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Remove-O365Domain
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A6800E10-0933-41A3-B6E6-F16B322A3E1C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

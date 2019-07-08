@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Remove-WssRemoteWebAccessLink
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B68093A2-1860-4972-A4A5-97CE2AEBFA13
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

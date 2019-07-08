@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: NetSecurity
 Module Guid: 4B26FF51-7AEE-4731-9CF7-508B82532CBF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=285764
@@ -11,7 +11,7 @@ title: NetSecurity
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

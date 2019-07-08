@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Start-HpcNodeSet
 ms.assetid: 383CE8F0-810D-4C87-B415-B405E67F960F
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Start-HpcNodeSet

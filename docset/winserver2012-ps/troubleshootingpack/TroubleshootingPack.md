@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 4F9928C1-F895-4015-8C58-BB0DA8A99EF7
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # TroubleshootingPack Module

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -236,6 +236,7 @@ Accept wildcard characters: False
 ### -HwThreadCountPerCore
 Specifies the number of virtual SMT threads exposed to the virtual machine. Setting this value to 0 indicates the virtual machine will inherit the host's number of threads per core. This setting may not exceed the host's number of threads per core.
 
+Note: Windows Server 2016 does not support setting HwThreadCountPerCore to 0. For more details, see [Configuring VM SMT settings using PowerShell](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection#configuring-vm-smt-settings-using-powershell).
 
 ```yaml
 Type: Int64

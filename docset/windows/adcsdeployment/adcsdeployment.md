@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: ADCSDeployment
 Module Guid: 5919A3CB-977E-464F-A221-421C270218B4
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285733
@@ -11,7 +11,7 @@ title: ADCSDeployment
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

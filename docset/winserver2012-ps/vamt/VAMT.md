@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 38E37D22-F0CF-4EBC-8E1D-8F75A0376C6A
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # VAMT Module

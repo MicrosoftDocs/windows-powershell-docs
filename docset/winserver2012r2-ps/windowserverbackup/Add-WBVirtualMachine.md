@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Add-WBVirtualMachine
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4F9AFA05-30C3-481C-9820-023C325F4C0D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

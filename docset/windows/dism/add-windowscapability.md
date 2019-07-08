@@ -11,7 +11,7 @@ ms.date: 12/21/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/dism/add-windowscapability?view=win10-ps
 schema: 2.0.0
 title: Add-WindowsCapability
 ms.reviewer:
@@ -43,25 +43,32 @@ The **Add-WindowsCapability** cmdlet acquires a Windows capability package from 
 
 ## EXAMPLES
 
-### Example 1: Add a Windows capability package to an image
+### Example 1: Add a Windows capability package to the running OS via the Windows Update client
 ```
-PS C:\> Add-WindowsCapability -Name "Language.TextToSpeech~~~fr-FR~0.0.1.0" -Path "C:\offline" -Source "C:\Windows\winsxs"
+PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0"
+```
+This command adds a Windows capability package to the running operating system. Because no source is specified, the Windows Update client will download the necessary package. It requires either an active Internet connection or an active network connection to the local Windows Server Update Services (WSUS) server.
+
+### Example 2: Add a Windows capability package to the running OS using a locally stored package file
+```
+PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\" -LimitAccess
 ```
 
-This command adds a Windows capability package to the operating system image specified by the *Name* parameter at the path C:\offline.
-The *Source* parameter specifies the location of required files.
+This command adds a Windows capability package specified by the *Name* parameter, to the running operating system. The *Source* parameter specifies the location of required files. For instance, if the running OS is a copy of Windows 10 version 1809, the `Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab` file must be present at `E:\`.
 
-### Example 2: Add a Windows capability package to the local host
+If the package specified by the *Name* parameter is already installed, this command does not return an error message, regardless of whether the required files are present at `E:\`.
+
+### Example 3: Add a Windows capability package to an image
 ```
-PS C:\> Add-WindowsCapability -Name "Language.TextToSpeech~~~fr-FR~0.0.1.0" -Online -LimitAccess -Source "C:\Windows\winsxs"
+PS C:\> Add-WindowsCapability -Path "C:\mount\Windows" -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\"
 ```
 
-This command adds a windows capabilities package the local host while the operating system continues to run.
+This command adds a Windows capability package specified by the *Name* parameter,  to the operating system image at the path C:\mount\Windows. The *Source* parameter specifies the location of required files. For instance, if the mount point contains a copy of Windows 10 version 1809, the `Msix-PackagingTool-Driver-Package~31bf3856ad364e35~amd64~~.cab` file must present at `E:\`.
 
 ## PARAMETERS
 
 ### -LimitAccess
-Indicates that this cmdlet does not access Windows Update for the source package.
+Indicates that this cmdlet does not query Windows Update for source packages when servicing a live OS. Only applies when the `-Online` switch is specified.
 
 ```yaml
 Type: SwitchParameter
@@ -92,14 +99,14 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: 3
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
 ### -LogPath
 Specifies the full path and file name to log to.
-If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+If not set, the default is `$env:WINDIR\Logs\Dism\dism.log`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
@@ -185,13 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Specifies the location of the files that are required to add a Windows capability package to an image.
-You can specify the Windows directory of a mounted image or a running Windows installation that is shared on the network.
+Specifies the location of the files that are required to add a Windows capability package to an image. If you specify multiple *Source* arguments, the files are gathered from the first location where they are found and the rest of the locations are ignored. Separate source locations with a comma.
 
-If you specify multiple *Source* arguments, the files are gathered from the first location where they are found and the rest of the locations are ignored.
-Separate source locations with a comma.
-
-If you do not specify a *Source*, the default location set by Group Policy is used. If that fails, Windows Update is also used for online images, if *LimitAccess* is not specified. When all fail, the cmdlet fails silently; no exceptions are thrown.
+If you do not specify a *Source*, the default location set by Group Policy is used. If that fails, Windows Update is also used for online images, unless *LimitAccess* is specified. When all fail, the cmdlet fails silently; no exceptions are thrown.
 
 *Source* can only be used when servicing images that are running at least Windows® 8 or Windows Server® 2012.
 
@@ -252,9 +255,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+As of Windows 10 version 1709, you cannot use Windows Server Update Services (WSUS) to host Features on Demand (FOD) and language packs for Windows 10 clients. Instead, you can enforce a Group Policy setting that tells the clients to download them directly from Windows Update. You can also host FOD and language packs on a network share, but starting with Windows 10 version 1809, FOD and language packs can only be installed from Windows Update. For more information, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](https://docs.microsoft.com/windows/deployment/update/fod-and-lang-packs).
+
 ## RELATED LINKS
 
-[Get-WindowsCapability](./Get-WindowsCapability.md)
-
-[Remove-WindowsCapability](./Remove-WindowsCapability.md)
+- [Get-WindowsCapability](./Get-WindowsCapability.md)
+- [Remove-WindowsCapability](./Remove-WindowsCapability.md)
 

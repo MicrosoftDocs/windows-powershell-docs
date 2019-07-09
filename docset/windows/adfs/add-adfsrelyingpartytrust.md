@@ -50,8 +50,8 @@ Add-AdfsRelyingPartyTrust -Name <String> -Identifier <String[]> [-EncryptClaims 
 
 ### MetadataFile
 ```
-Add-AdfsRelyingPartyTrust -Name <String> [-EncryptClaims <Boolean>] [-Enabled <Boolean>]
- [-MetadataFile <String>] [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>]
+Add-AdfsRelyingPartyTrust -Name <String> -MetadataFile <String> [-EncryptClaims <Boolean>] 
+ [-Enabled <Boolean>] [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>]
  [-SignedSamlRequestsRequired <Boolean>] [-Notes <String>] [-SignatureAlgorithm <String>]
  [-SigningCertificateRevocationCheck <String>] [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication]
  [-RequestMFAFromClaimsProviders] [-AllowedAuthenticationClassReferences <String[]>]
@@ -70,7 +70,7 @@ Add-AdfsRelyingPartyTrust -Name <String> [-EncryptClaims <Boolean>] [-Enabled <B
 
 ### MetadataUrl
 ```
-Add-AdfsRelyingPartyTrust -Name <String> [-EncryptClaims <Boolean>] [-Enabled <Boolean>] [-MetadataUrl <Uri>]
+Add-AdfsRelyingPartyTrust -Name <String> -MetadataUrl <Uri> [-EncryptClaims <Boolean>] [-Enabled <Boolean>] 
  [-AutoUpdateEnabled <Boolean>] [-EncryptedNameIdRequired <Boolean>] [-SignedSamlRequestsRequired <Boolean>]
  [-Notes <String>] [-SignatureAlgorithm <String>] [-SigningCertificateRevocationCheck <String>]
  [-TokenLifetime <Int32>] [-AlwaysRequireAuthentication] [-RequestMFAFromClaimsProviders]
@@ -543,7 +543,7 @@ Type: String
 Parameter Sets: MetadataFile
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -558,7 +558,7 @@ Type: Uri
 Parameter Sets: MetadataUrl
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

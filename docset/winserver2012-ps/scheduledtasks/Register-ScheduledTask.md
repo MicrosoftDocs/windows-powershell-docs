@@ -57,7 +57,7 @@ PS C:\>$Time = New-ScheduledTaskTrigger -At 12:00 -Once
 
 PS C:\>$User = "Contoso\Administrator"
 
-PS C:\>$PS = PowerShell.exe
+PS C:\>$PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
 
 PS C:\>Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
 ```

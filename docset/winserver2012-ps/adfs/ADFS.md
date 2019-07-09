@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: D45D3A6B-876A-4733-B855-ACCF1C2121BA
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADFS Module

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -190,3 +190,4 @@ The imported **X509Certificate2** object contained in the PFX file that is assoc
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)

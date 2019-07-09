@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: DF62E18F-255B-4AD9-A6B8-05DA00853242
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Storage Module
@@ -98,7 +98,7 @@ Returns a list of the storage providers available on the local computer.
 Gets the storage reliability counters for the disk or physical disk that you specify.
 
 ### [Get-StorageSetting](./Get-StorageSetting.md)
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ### [Get-StorageSubsystem](./Get-StorageSubsystem.md)
 Gets one or more StorageSubsystem objects.

@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 2A1924D6-3934-48B8-807D-D4E417625396
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DFSN Module

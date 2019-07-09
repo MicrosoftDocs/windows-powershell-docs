@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 1B4E2CDA-BA8A-47CE-8DA3-8D349D12DC38
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MPIO Module

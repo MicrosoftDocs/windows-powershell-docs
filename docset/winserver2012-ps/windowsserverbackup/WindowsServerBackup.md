@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 0F8EB40C-4481-4DA7-9D60-62847E2BD367
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WindowsServerBackup Module

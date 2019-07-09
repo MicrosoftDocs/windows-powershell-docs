@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -126,6 +126,10 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDrain
+The -ForceDrain switch, used in conjunction with the -Drain switch, allows all the workloads to be safely moved to other nodes, while maintaining the highest levels of availability and using the best placement logic.
+
+If some or all of the workloads can't be moved safely, any workload that failed will be stopped and moved to another node as a failed role. Thereafter, the node will be forced to pause.
+
 
 
 ```yaml

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSubSystem.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResiliencySettingNameDefault
-Specifies the default resiliency setting name for virtual disks created in this pool.
+Specifies the default resiliency setting (also known as storage layout) to use for virtual disks created in the specified storage pool. The supported resiliency settings vary by storage subsystem. Acceptable values for the Windows Storage subsystem are Mirror, Parity, and Simple.
 
 ```yaml
 Type: String

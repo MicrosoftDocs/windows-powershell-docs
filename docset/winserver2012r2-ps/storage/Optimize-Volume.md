@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Optimize-Volume
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5FA44E53-C2D4-4870-A934-62430AF19BC6
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

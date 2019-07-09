@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MPIOClaimedHW.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -38,7 +38,7 @@ If this cmdlet is not successful, it indicates that a restart is required.
 
 ### Example 1: Attempt to claim devices
 ```
-PS C:\> Update-MPIOClaimedDisk
+PS C:\> Update-MPIOClaimedHW
 ```
 
 This example attempts to claim devices that are currently in the MSDSM supported hardware list.

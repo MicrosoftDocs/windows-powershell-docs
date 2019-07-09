@@ -1,11 +1,11 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -39,7 +39,7 @@ Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<Com
 ```
 Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-> [!NOTE] The `AllUsers` parameter requires Windows 10 Build 1709 or later.
+> [!NOTE] The `AllUsers` parameter requires Windows 10 Build 1809 or later.
 
 
 ## DESCRIPTION
@@ -52,8 +52,21 @@ An app package has an .appx file name extension.
 ```
 PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
 ```
-
 This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
+
+### Example 2: Search using wildcards then remove the specific app package
+```
+PS C:\> Get-appxpackage *package*
+PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" 
+```
+This command will show all applications with the word "package". Copy the PackageFullName that you want to remove, then use it in the Remove-AppxPackage command.
+
+### Example 3: Search using wildcards then remove all app package
+```
+PS C:\> Get-appxpackage *package*| Remove-AppxPackage
+```
+This command will delete all applications with the word "package".
+
 
 ## PARAMETERS
 
@@ -106,11 +119,17 @@ Accept wildcard characters: False
 ```
 
 ### -User
-If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. The user name can be in one of these formats:
-- domain\user_name
-- user_name@fqn.domain.tld
-- user_name
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. 
 - SID-string
+
+> [!NOTE]
+- User "parameter of the "Remove-AppxPackage" command only accepts SID 
+- Use **whoami** command to display the current SID of a user, see [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami)
+
+```
+whoami /user
+whoami /groups
+```
 
 ```yaml
 Type: String

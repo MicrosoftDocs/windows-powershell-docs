@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Specifies values to add to an object property.
 Use this parameter to add one or more values to a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
 `-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -953,7 +953,7 @@ Accept wildcard characters: False
 ### -Office
 Specifies the location of the user's office or place of business.
 This parameter sets the **Office** property of a user object.
-The LDAP display name (**ldapDisplayName**) of this property is office.
+The LDAP display name (**ldapDisplayName**) of this property is physicalDeliveryOfficeName.
 
 ```yaml
 Type: String
@@ -1185,10 +1185,10 @@ Accept wildcard characters: False
 Specifies that the cmdlet remove values of an object property.
 Use this parameter to remove one or more values of a property that cannot be modified using a cmdlet parameter.
 To remove an object property, you must use the LDAP display name.
-You can remove more than one property by specifying a semicolon-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Remove @{Attribute1LDAPDisplayName=value[];   Attribute2LDAPDisplayName=value[]}`
+`-Remove @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
 When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the parameters are applied in the following sequence:
 
@@ -1213,10 +1213,10 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value[];   Attribute2LDAPDisplayName=value[]}`
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
 When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
@@ -1312,10 +1312,39 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalNames
-Use the **DateTime** syntax when you specify this parameter.
-Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to 12:00:00 AM local time.
-When a date is not specified, the date is assumed to be the current date.
+Specifies the service principal names for the account. This parameter sets the ServicePrincipalNames property of the account. The LDAP display name (ldapDisplayName) for this property is servicePrincipalName. This parameter uses the following syntax to add, remove, replace or clear service principal name values.
+
+Syntax:
+
+To add values:
+
+`-ServicePrincipalNames @{Add=value1,value2,...}`
+
+To remove values:
+
+`-ServicePrincipalNames @{Remove=value3,value4,...}`
+
+To replace values:
+
+`-ServicePrincipalNames @{Replace=value1,value2,...}`
+
+To clear all values:
+
+`-ServicePrincipalNames $null`
+
+You can specify more than one change by using a list separated by semicolons. For example, use the following syntax to add and remove service principal names.
+
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
+
+The operators will be applied in the following sequence:
+
+- Remove
+- Add
+- Replace
+
+The following example shows how to add and remove service principal names.
+
+`-ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}`
 
 ```yaml
 Type: Hashtable

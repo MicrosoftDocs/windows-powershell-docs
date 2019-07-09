@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-WsusClassification
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6207A305-EFCA-40EE-B997-2A939DD9BE7A
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

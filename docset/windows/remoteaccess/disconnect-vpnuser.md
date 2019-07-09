@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_VPNUser_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -54,7 +54,7 @@ Note: Only one of these methods can be used at a time.
 
 ### EXAMPLE 1
 ```
-@{navigationLink=@{uri=http://go.microsoft.com/fwlink/p/?LinkId=113302; linkText=Format-List}; #text=System.Management.Automation.PSObject[]}
+Disconnect-VpnUser -HostIPAddress 10.1.1.11 -PassThru 10.1.1.11
 ```
 
 This example disconnects a VPN connection by specifying the host address.

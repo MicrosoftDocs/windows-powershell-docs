@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -65,7 +65,7 @@ You can register a task to run any of the following application or file types: W
 ```
 PS C:\> $Time = New-ScheduledTaskTrigger -At 12:00 -Once 
 PS C:\> $User = "Contoso\Administrator"
-PS C:\> $PS = PowerShell.exe
+PS C:\> $PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
 PS C:\> Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
 ```
 

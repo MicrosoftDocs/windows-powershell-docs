@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 05AD9108-DE76-4F8C-B0AC-DFB2E99ADD66
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # BranchCache Module

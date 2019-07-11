@@ -33,6 +33,10 @@ Get-WindowsFeature [[-Name] <String[]>] [-Vhd <String>] [-ComputerName <String>]
 ## DESCRIPTION
 The **Get-WindowsFeature** cmdlet gets information about rrsandf_plural that are both available for installation and already installed on a computer that is running Windows Server 2012 R2 or an offline virtual hard disk (VHD) that is running Windows Server 2012 R2.
 
+
+> [!Note]
+> Get-WindowsFeature is a Server-Manager cmdlets that are only available on servers and when the remote administration tools on a workstation is install, see [Windows Server: Installing roles and features in different ways](https://social.technet.microsoft.com/wiki/contents/articles/52780.windows-server-installing-roles-and-features-in-different-ways.aspx)
+
 ## EXAMPLES
 
 ### Example 1: Get a list of features that are available and installed on the specified computer

@@ -200,7 +200,7 @@ Returns a list of the storage providers available on the local computer.
 Gets storage reliability counters.
 
 ### [Get-StorageSetting](./Get-StorageSetting.md)
-Gets a StorageSettings object.
+Gets a StorageSetting object.
 
 ### [Get-StorageSubsystem](./Get-StorageSubsystem.md)
 Gets one or more StorageSubsystem objects.

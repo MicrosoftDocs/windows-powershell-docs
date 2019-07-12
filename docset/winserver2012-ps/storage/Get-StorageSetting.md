@@ -12,7 +12,7 @@ manager: dansimp
 # Get-StorageSetting
 
 ## SYNOPSIS
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-StorageSetting [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns the StorageSettings object.
+The **Get-StorageSetting** cmdlet returns the StorageSetting object.
 
 ## EXAMPLES
 

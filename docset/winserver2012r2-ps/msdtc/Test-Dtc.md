@@ -38,6 +38,16 @@ The cmdlet performs the following tests:
 - Checks whether the two computers can ping each other.
 - Checks whether a transaction can be propagated between the two computers.
 
+To run this cmdlet, you must first enable the firewall rule for Distributed Transaction Coordinator on both computers by using the Netsh utility run the following command: 
+
+`netsh advfirewall firewall set rule group="Distributed Transaction Coordinator" new enable=yes`
+
+For more information, see [Netsh Command Syntax, Contexts, and Formatting](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts).
+
+To enable the rule using PowerShell run the following command:
+
+`Enable-NetFirewallRule -DisplayGroup "Distributed Transaction Coordinator"`
+
 ## EXAMPLES
 
 ### Example 1: Test MSDTC on the local computer

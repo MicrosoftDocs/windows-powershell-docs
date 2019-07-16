@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 ### -LogPath
 Specifies the full path and file name to log to.
-If not set, the default is `$env:WINDIR\Logs\Dism\dism.log`.
+If not set, the default is `"$env:WINDIR\Logs\Dism\dism.log"`.
 In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
 The log file will automatically be archived.
 The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 ### -ScratchDirectory
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
-If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+If not specified, the `"$env:Temp"` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
 Items in the scratch directory are deleted after each operation. 
 You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
 The directory used for extracting files for temporary usage during servicing should be a local directory.

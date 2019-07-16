@@ -48,7 +48,7 @@ Mode                LastWriteTime     Length Name
 -a---          9/4/2008   3:53 PM    1261025 Cluster.log
 ```
 
-This command creates a log file for the local cluster in the cluster reports folder on each node of the cluster.
+This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
 
 ### Example 2: Create log files for each node and save them locally
 ```
@@ -70,7 +70,7 @@ Mode                LastWriteTime     Length Name
 -a---          9/4/2008   4:01 PM     104181 Cluster.log
 ```
 
-This command creates a log file for the local cluster in the cluster reports folder on each node of the cluster.
+This command creates a log file for the local cluster in the cluster reports folder (C:\Windows\Cluster\Reports) on each node of the cluster.
 The log covers the last 5 minutes.
 
 ## PARAMETERS
@@ -94,6 +94,7 @@ Accept wildcard characters: False
 ### -Destination
 Specifies the location to which to copy one or more cluster logs.
 To copy to the current folder, use `.` for this parameter input.
+Default location is C:\Windows\Cluster\Reports.
 
 ```yaml
 Type: String

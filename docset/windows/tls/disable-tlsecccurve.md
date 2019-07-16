@@ -20,7 +20,7 @@ ms.reviewer:
 # Disable-TlsEccCurve
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables the TLS ECC Curve.
 
 ## SYNTAX
 
@@ -29,21 +29,21 @@ Disable-TlsEccCurve [-Name] <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Command disables the TLS ECC Curve.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Disable-TlsEccCurve -Name curve25519
 ```
 
-{{ Add example description here }}
+This will disable the ECC Curve "curve25519".
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ECC curve to disable.
 
 ```yaml
 Type: String

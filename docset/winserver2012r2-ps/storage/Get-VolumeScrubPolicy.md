@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-VolumeScrubPolicy
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC70E560-3E22-4F13-99BD-7028F13E9FF6
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

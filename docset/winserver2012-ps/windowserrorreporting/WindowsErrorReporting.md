@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 7710FA9C-A106-4C4A-BC8F-0EB352538B04
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WindowsErrorReporting Module

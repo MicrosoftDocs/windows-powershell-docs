@@ -1,10 +1,10 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 2017-05-19
 ms.prod: w10
 ms.technology: powershell-windows
@@ -43,8 +43,11 @@ This command invokes the demo.exe that can be found in '29270sandstorm.AppPackag
 
 ### -AppId
 AppId is the Application ID from the package manifest.
-    <Application Id="blah" ... />
-    </Application>
+
+```xml
+<Application Id="blah" ... />
+</Application>
+```
 
 ```yaml
 Type: String

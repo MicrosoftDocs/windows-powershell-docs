@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -21,22 +21,22 @@ ms.assetid: 65DD9798-9AF5-4E64-AA66-421AA98F8704
 # Get-PhysicalExtent
 
 ## SYNOPSIS
-Gets physical allocations for a physical disk, storage tier, or virtual disk.
+This cmdlet gets physical allocations for a physical disk, storage tier, or virtual disk. The "extent" (also known as "allocation" or "slab")  is the area on a pooled disk containing one fragment of data for storage space.
 
 ## SYNTAX
 
 ### ByVirtualDisk
-```
+```yaml
 Get-PhysicalExtent -VirtualDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### ByStorageTier
-```
+```yaml
 Get-PhysicalExtent -StorageTier <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### ByPhysicalDisk
-```
+```yaml
 Get-PhysicalExtent -PhysicalDisk <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
@@ -45,12 +45,34 @@ The **Get-PhysicalExtent** cmdlet gets the physical allocations for a physical d
 
 ## EXAMPLES
 
-### Example 1: Get all physical extents on a disk
+### Example 1: Get physical extents on one specific physical disks
+```Powershell
+PS C:\>Get-PhysicalExtent -PhysicalDisk $(Get-PhysicalDisk)[0]
 ```
+This command gets physical extents on all physical disks on the computer.
+
+### Example 2: Get all physical extents on all physical disks 
+
+```Powershell
+PS C:\>Get-PhysicalDisk | Get-PhysicalExtent 
+```
+
+This command gets all physical extents on all physical disks on the computer.
+
+### Example 3: Get extents on a specific disk 
+```Powershell
 PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "PhysicalDisk4")
 ```
 
 This command gets all physical extents on the physical disk named PhysicalDisk4.
+The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
+
+### Example 4: Get all physical extents on a disk (Other Version)
+```Powershell
+PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk4" | Get-PhysicalExtent
+```
+
+This command gets all physical extents on the physical disk named PhysicalDisk4, using PowerShell pipe.
 The command uses **Get-PhysicalDisk** to obtain PhysicalDisk4.
 
 ## PARAMETERS

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-SilUalAccess
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8CBB24B2-388D-484F-BFA4-72E8A20C94ED
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

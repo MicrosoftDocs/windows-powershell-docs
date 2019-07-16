@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -42,7 +42,7 @@ This cmdlet is similar to the `netsh http add sslcert` command, but the cmdlet s
 
 ### Example 1: Add an SSL certificate
 ```
-PS C:\>Add-NetIPHttpsCertBinding -IpPort "10.1.1.1:443" -CertificateHash "0102030405060708090A0B0C0D0E0F1011121314" -CertifcateStoreName "My" -ApplicationId "{3F2504E0-4F89-11D3-9A0C-0305E82C3301}" -NullEncryption $false
+PS C:\>Add-NetIPHttpsCertBinding -IpPort "10.1.1.1:443" -CertificateHash "0102030405060708090A0B0C0D0E0F1011121314" -CertificateStoreName "My" -ApplicationId "{3F2504E0-4F89-11D3-9A0C-0305E82C3301}" -NullEncryption $false
 ```
 
 This command binds an SSL certificate with the specified IP port 10.1.1.1:443, SHA hash 0102030405060708090A0B0C0D0E0F1011121314, application ID {3F2504E0-4F89-11D3-9A0C-0305E82C3301}, and store name My to the IP-HTTPS server.

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Search-SmisProvider
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 48F983FE-A8EA-4A2E-9CAF-A6B41B990EB9
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

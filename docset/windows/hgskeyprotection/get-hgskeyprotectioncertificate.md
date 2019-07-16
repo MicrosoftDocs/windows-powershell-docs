@@ -1,12 +1,12 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
 ms.assetid: BBB61EA6-74AB-4DE2-A51C-6C74C8E8958D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

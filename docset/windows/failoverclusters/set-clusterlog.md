@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -95,12 +95,12 @@ The acceptable values for this parameter are:`0` to `5`.
 
 | Level  | Error  | Warning  | Info  | Verbose | Debug |
 |:-----|:-----|:-----|:-----|:-----|:-----|
-|0 (Disabled)  <br/> ||||||
-|1  <br/> |&#x2714;||||
-|2 <br/> |&#x2714;|&#x2714;|||
-|3 (Default) <br/> |&#x2714;|&#x2714;|&#x2714;||
-|4 <br/> |&#x2714;|&#x2714;|&#x2714;|&#x2714;|
-|5  <br/> |&#x2714;|&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+|0 (Disabled) ||||||
+|1 |&#x2714;||||
+|2 |&#x2714;|&#x2714;|||
+|3 (Default) |&#x2714;|&#x2714;|&#x2714;||
+|4 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+|5 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|&#x2714;|
 
 ```yaml
 Type: Int32

@@ -1,11 +1,11 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.assetid: 9F4A31F1-9110-4A66-BF20-961CC447DFC8
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10

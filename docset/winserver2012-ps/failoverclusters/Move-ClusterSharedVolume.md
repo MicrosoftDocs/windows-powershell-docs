@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 848467EE-2F72-4680-8540-08A86DB12916
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Move-ClusterSharedVolume

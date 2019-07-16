@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: TestDtc-help.xml
 keywords: powershell, cmdlet
@@ -39,12 +39,15 @@ The cmdlet performs the following tests:
 - Checks whether the two computers can ping each other.
 - Checks whether a transaction can be propagated between the two computers.
 
-To run this cmdlet, you must first enable the firewall rule for WMI on both computers by using the Netsh utility.
-Run the following command: 
+To run this cmdlet, you must first enable the firewall rule for Distributed Transaction Coordinator on both computers by using the Netsh utility run the following command: 
 
-`netsh advfirewall firewall set rule group="Windows Management Instrumentation (WMI)" new enable=yes`
+`netsh advfirewall firewall set rule group="Distributed Transaction Coordinator" new enable=yes`
 
-For more information, see [The Netsh Command-Line Utility](https://technet.microsoft.com/library/cc785383.aspx) (https://technet.microsoft.com/library/cc785383.aspx) in the TechNet library.
+For more information, see [Netsh Command Syntax, Contexts, and Formatting](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts).
+
+To enable the rule using PowerShell run the following command:
+
+`Enable-NetFirewallRule -DisplayGroup "Distributed Transaction Coordinator"`
 
 ## EXAMPLES
 

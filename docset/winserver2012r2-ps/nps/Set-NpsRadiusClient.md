@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NpsRadiusClient
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7F1A33E9-8C0A-4A20-9A13-C6A7AF157236
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

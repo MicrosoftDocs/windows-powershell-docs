@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Test-Dtc
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 170C623D-6B36-4297-8235-DD65A594871C
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 
@@ -37,6 +37,16 @@ The cmdlet performs the following tests:
 - Checks whether the Microsoft Distributed Transaction Coordinator (MSDTC) network security settings are correctly configured for network transactions.
 - Checks whether the two computers can ping each other.
 - Checks whether a transaction can be propagated between the two computers.
+
+To run this cmdlet, you must first enable the firewall rule for Distributed Transaction Coordinator on both computers by using the Netsh utility run the following command: 
+
+`netsh advfirewall firewall set rule group="Distributed Transaction Coordinator" new enable=yes`
+
+For more information, see [Netsh Command Syntax, Contexts, and Formatting](https://docs.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts).
+
+To enable the rule using PowerShell run the following command:
+
+`Enable-NetFirewallRule -DisplayGroup "Distributed Transaction Coordinator"`
 
 ## EXAMPLES
 

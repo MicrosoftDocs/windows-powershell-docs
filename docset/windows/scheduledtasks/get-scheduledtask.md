@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_ScheduledTask_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -47,7 +47,7 @@ This command gets the definition object of the SystemScan scheduled task in the 
 
 ### Example 2: Get an array of scheduled task definition objects
 ```
-PS C:\> Get-ScheduledTask -TaskPath "\UpdateTasks\"
+PS C:\> Get-ScheduledTask -TaskPath "\UpdateTasks\*"
 TaskPath                          TaskName                        State
 --------                          --------                        --------
 \UpdateTasks                      UpdateApps                      Ready 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -TaskName
-Specifies an array of one or more names of a scheduled task.
+Specifies an array of one or more names of a scheduled task. You can use **"*"** for a wildcard character query.
 
 ```yaml
 Type: String[]
@@ -105,12 +105,12 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -TaskPath
-Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use ***\\\*** for the root folder.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
@@ -122,12 +122,12 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer. 
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

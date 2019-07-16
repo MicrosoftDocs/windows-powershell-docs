@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Add-NetEventVmSwitch
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C7AE6775-63FC-40E1-AB60-9B814E303793
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

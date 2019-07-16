@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageTier.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -72,7 +72,7 @@ The **Get-StorageTier** cmdlet gets the storage tier from the storage pool objec
 
 ### Example 3: Get a storage tier from a virtual disk
 ```
-PS C:\>Get-VirtualDisk-FriendlyName "VDisk01" | Get-StorageTier
+PS C:\>Get-VirtualDisk -FriendlyName "VDisk01" | Get-StorageTier
 ```
 
 This command uses the Get-VirtualDisk cmdlet to get the tiered virtual disk named VDisk01.

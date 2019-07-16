@@ -215,7 +215,7 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
+Note: PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 

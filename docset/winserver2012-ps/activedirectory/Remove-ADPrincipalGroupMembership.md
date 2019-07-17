@@ -107,7 +107,7 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
-Required: False
+Required: True
 Position: Named
 Default value: False
 Accept pipeline input: False

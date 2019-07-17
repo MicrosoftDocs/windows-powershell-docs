@@ -28,7 +28,7 @@ Gets the IIS configuration element at the specified location.
 
 ### -------------- EXAMPLE 1: Querying authentication settings --------------
 ```
-IIS:\>Get-WebConfiguration system.webServer/security/authentication/* /* -Recurse | where {$_.enabled -eq $true} | format-list
+IIS:\>Get-WebConfiguration system.webServer/security/authentication/* -Recurse | where {$_.enabled -eq $true} | format-list
 ```
 
 This example queries for all authentication settings specified under the Default Web Site.

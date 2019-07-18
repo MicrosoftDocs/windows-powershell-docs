@@ -49,13 +49,13 @@ Get-PartitionSupportedSize -InputObject <CimInstance[]> [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-The **Get-PartitionSupportedSizes** cmdlet returns information on supported partition sizes for the specified Disk object.
+The **Get-PartitionSupportedSize** cmdlet returns information on supported partition sizes for the specified Disk object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-PartitionSupportedSizes -DiskNumber 3 -PartitionNumber 2
+PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
 MinimumSize                                                 MaximumSize 
 -----------                                                 -----------
 ```

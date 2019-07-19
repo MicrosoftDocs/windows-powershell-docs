@@ -1098,7 +1098,7 @@ The acceptable values for this parameter are:
 - 1: Clean 
 - 2: Quarantine 
 - 3: Remove 
-- 4: Allow 
+- 6: Allow 
 - 8: UserDefined 
 - 9: NoAction 
 - 10: Block

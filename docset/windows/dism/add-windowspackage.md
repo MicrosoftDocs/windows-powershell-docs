@@ -41,6 +41,7 @@ Add-WindowsPackage -PackagePath <String> [-IgnoreCheck] [-PreventPending] [-NoRe
 
 ## DESCRIPTION
 The **Add-WindowsPackage** cmdlet installs a specified .cab or .msu package in the image.
+See also (Add or remove packages offline by using DISM)[https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options#add-package].
 
 ## EXAMPLES
 

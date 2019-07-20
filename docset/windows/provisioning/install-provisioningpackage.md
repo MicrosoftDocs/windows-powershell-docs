@@ -108,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuietInstall
-Quietly installs the package with no end user interaction
+Quietly installs the package without any customer interaction.
 
 ```yaml
 Type: SwitchParameter

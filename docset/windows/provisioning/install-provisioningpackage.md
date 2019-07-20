@@ -43,7 +43,7 @@ The default is an interactive install.
 PS C:\> Install-ProvisioningPackage -PackagePath C:\mypackage.ppkg -QuietInstall  
 ```
 
-The snippet above will install the mypackage.ppkg file quietly without user interaction.
+This will install the mypackage.ppkg file silently without customer interaction.
 
 ## PARAMETERS
 

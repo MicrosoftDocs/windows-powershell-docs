@@ -30,7 +30,7 @@ Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInsta
 ```
 
 ## DESCRIPTION
-This cmdlet is used to instlled exported .ppkg files that can be generated and exported from the [Windows Configuration Designer Tool](https://docs.microsoft.com/en-us/windows/configuration/provisioning-packages/provisioning-install-icd).
+This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd).
 
 You can direct this cmdlet to install a PPKG file interactively or silently by specifying the -QuietInstall Switch.
 

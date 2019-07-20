@@ -47,9 +47,9 @@ You can also use this cmdlet to view the following information about a BitLocker
 - Protection Status - Whether BitLocker currently uses a key protector to encrypt the volume encryption key.
 - EncryptionMethod - Indicates the encryption algorithm and key size used on the volume.
 
-For an overview of BitLocker, see [BitLocker Overview](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview)
+See [BitLocker Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview) for more information.
 
-For an overview of Encryption methods, see [GetEncryptionMethod method](https://docs.microsoft.com/en-us/windows/win32/secprov/getencryptionmethod-win32-encryptablevolume)
+For an overview of encryption methods, see [GetEncryptionMethod method](https://docs.microsoft.com/windows/win32/secprov/getencryptionmethod-win32-encryptablevolume).
 
 ## EXAMPLES
 

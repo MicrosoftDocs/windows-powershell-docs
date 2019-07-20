@@ -100,7 +100,7 @@ CapacityGB           : 218,2344
 KeyProtector         : {RecoveryPassword, Tpm}
 ```
 
-This command lists all Bitlocker related attributes for C drive.
+This command lists all BitLocker related attributes for C drive.
 
 ## PARAMETERS
 

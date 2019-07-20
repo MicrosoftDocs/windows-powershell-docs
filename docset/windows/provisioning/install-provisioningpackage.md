@@ -34,7 +34,7 @@ This cmdlet is used to instlled exported .ppkg files that can be generated and e
 
 You can direct this cmdlet to install a PPKG file interactively or silently by specifying the -QuietInstall Switch.
 
-The default is an interactive install
+The default is an interactive install.
 
 ## EXAMPLES
 

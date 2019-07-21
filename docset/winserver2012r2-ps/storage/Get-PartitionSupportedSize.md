@@ -56,8 +56,8 @@ The **Get-PartitionSupportedSize** cmdlet returns information on supported parti
 ### EXAMPLE 1
 ```
 PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
-MinimumSize                                                 MaximumSize 
------------                                                 -----------
+SizeMin                                                 SizeMax 
+-----------                                             -----------
 ```
 
 This example is not fully implemented and does not include size values.

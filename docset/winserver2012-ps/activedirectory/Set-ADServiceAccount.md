@@ -928,8 +928,6 @@ The following example shows how to add and remove service principal names.
  -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
 ```
 
-<br>
-
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)

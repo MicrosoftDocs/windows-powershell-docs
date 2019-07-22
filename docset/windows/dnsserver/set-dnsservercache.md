@@ -167,8 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxNegativeTtl
-Specifies how many seconds (0x1-0xFFFFFFFF) an entry that records a negative answer to a query remains stored in the DNS cache.
-The default setting is 0x384 (900) seconds
+Specifies how many seconds (1 to 4294967294 seconds) an entry that records a negative answer to a query remains stored in the DNS cache.
+The default setting is 15 minutes (900 seconds).
 
 ```yaml
 Type: TimeSpan
@@ -183,9 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTtl
-Specifies how many seconds (0x0-0xFFFFFFFF) a record is saved in cache.
-If you use the 0x0 setting, the DNS server does not cache records.
-The default setting is 0x15180 (86,400 seconds, or one day).
+Specifies how long (0 to 4294967294 seconds) a record is saved in cache.
+If the timespan is set to 0 seconds, the DNS server does not cache records.
+The default setting is one day (86,400 seconds).
 
 ```yaml
 Type: TimeSpan
@@ -246,9 +246,7 @@ Accept wildcard characters: False
 
 ### -StoreEmptyAuthenticationResponse
 Specifies whether a DNS server stores empty authoritative responses in the cache (RFC-2308).
-We recommend that you limit this value to either 0x00000000 or 0x00000001, but you can specify any value.
-The default value is 0x00000001.
-You must allow and treat literally the value zero.
+The default value is True.
 
 ```yaml
 Type: Boolean

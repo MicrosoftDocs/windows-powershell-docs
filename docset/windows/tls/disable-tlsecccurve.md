@@ -20,7 +20,7 @@ ms.reviewer:
 # Disable-TlsEccCurve
 
 ## SYNOPSIS
-Disables the TLS ECC Curve.
+Disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Disable-TlsEccCurve [-Name] <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-This Command disables the TLS ECC Curve.
+This Command disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
 
 ## EXAMPLES
 

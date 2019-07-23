@@ -74,7 +74,7 @@ This command gets the specified BitLocker volume.
 
 ### Example 3: Get all attributes for a specific BitLocker volume
 ```
-PS C:\> (Get-BitLockerVolume -MountPoint C) | Format-List
+PS C:\> Get-BitLockerVolume -MountPoint C | Format-List
 ComputerName         : DESKTOP-XXXXXXX
 MountPoint           : C:
 EncryptionMethod     : XtsAes128

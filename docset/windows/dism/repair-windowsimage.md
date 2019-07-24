@@ -69,7 +69,7 @@ This command scans the specified image for component store corruption.
 
 ### Example 2: Check an image for corruption and whether to repair the image
 ```
-PS C:\> Repair-WindowsImage -Path "C:\offline\Mount" -CheckHealth
+PS C:\> Repair-WindowsImage -Path "C:\offline\Mount" -CheckHealth 
 ```
 
 This command checks whether the specified image has been flagged as corrupted by a failed process and whether the corruption can be repaired.

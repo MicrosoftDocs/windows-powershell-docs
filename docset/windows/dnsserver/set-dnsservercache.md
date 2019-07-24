@@ -44,6 +44,13 @@ PS C:\> Set-DnsServerCache -MaxKBSize 10240 -ComputerName "Win12S-05.DNSServer-0
 
 This command sets the maximum cache size to 10,240 KB on a DNS server that has an FQDN of Win12S-05.DNSServer-01.Contoso.com.
 
+### Example 2: Set maximum Time-To-Live durations
+```
+PS C:\> Set-DnsServerCache -MaxTTL 02.00:00:00 -MaxNegativeTtl 00.00:20:00
+```
+
+This command sets the the maximum TTL to 2 days and the maximum negative TTL to 20 minutes.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -167,8 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxNegativeTtl
-Specifies how many seconds (1 to 4294967294 seconds) an entry that records a negative answer to a query remains stored in the DNS cache.
-The default setting is 15 minutes (900 seconds).
+Specifies how long (1 to 2592000 seconds) an entry that records a negative answer to a query remains stored in the DNS cache. The value must be provided as a TimeSpan.
+The default setting is 15 minutes.
 
 ```yaml
 Type: TimeSpan
@@ -183,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTtl
-Specifies how long (0 to 4294967294 seconds) a record is saved in cache.
+Specifies how long (0 to 2592000 seconds) a record is saved in cache. The value must be provided as a TimeSpan.
 If the TimeSpan is set to 0 seconds, the DNS server does not cache records.
 The default setting is one day (86,400 seconds).
 

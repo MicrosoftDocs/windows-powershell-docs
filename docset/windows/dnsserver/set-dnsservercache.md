@@ -184,7 +184,7 @@ Accept wildcard characters: False
 
 ### -MaxTtl
 Specifies how long (0 to 4294967294 seconds) a record is saved in cache.
-If the timespan is set to 0 seconds, the DNS server does not cache records.
+If the TimeSpan is set to 0 seconds, the DNS server does not cache records.
 The default setting is one day (86,400 seconds).
 
 ```yaml

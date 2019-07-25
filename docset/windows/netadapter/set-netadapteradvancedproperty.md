@@ -64,7 +64,7 @@ This command sets the value of the Flow Control advanced property on the network
 
 ### Example 2: Set the value of an registry value on the specified network adapter
 ```
-PS C:\> Set-NetAdapterAdvancedProperty -Name "MyAdapter" -RegistryKeyword "*Flo*rol" -RegistryType "REG_SZ" -RegistryValue "Disable"
+PS C:\> Set-NetAdapterAdvancedProperty -Name "MyAdapter" -RegistryKeyword "*Flo*rol" -RegistryValue "Disable"
 ```
 
 This command sets the value of the Flow Control registry value on the network adapter named MyAdapter using wildcard characters in the keyword name.

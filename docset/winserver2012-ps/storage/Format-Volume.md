@@ -1,6 +1,6 @@
 ---
 external help file: Storage2_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -81,7 +81,7 @@ This example performs a format of the D volume.
 
 ### Example 2: Full format using FAT32
 ```
-PS C:\>Format-Volume -DriveLetter C -FileSystem FAT32 -FullFormat -Force
+PS C:\>Format-Volume -DriveLetter D -FileSystem FAT32 -FullFormat -Force
 ```
 
 This example performs a full format of the D volume using the FAT32 file system.
@@ -109,7 +109,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Enables compression on all files and folders created on the specified NTFS volum
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Specifies the drive letter of the volume to format.
 ```yaml
 Type: Char[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -172,7 +172,7 @@ The acceptable values for this parameter are:NTFS, ReFS, exFAT, FAT32, and FAT.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Specifies the label to use for the volume.
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_4
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,7 +202,7 @@ Specifies the override switch.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ A full format writes to every sector of the disk, takes much longer to perform t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ Enter one or more Volume CIM objects, which is output by the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -249,7 +249,7 @@ Specifies a new label to use for the volume.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ Enter a Partition CIM object, which is exposed by the Get-Partition and New-Part
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Specifies the path of the volume to format.
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_6
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -310,7 +310,7 @@ Enables integrity streams on the volume to be formatted.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ Specifies that support for short file names should be enabled on this volume.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +357,7 @@ Specifies that large File Record Segment (FRS) should be used.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +372,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +388,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

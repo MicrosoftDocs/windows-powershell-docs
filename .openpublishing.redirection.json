@@ -1,11 +1,6 @@
 {
 "redirections": [
         {
-        "source_path": "docset/windows/servermanager/get-windowsfeature.md",
-        "redirect_url": "docset/windows/Microsoft.Windows.ServerManager.Migration/get-windowsfeature.md",
-        "redirect_document_id": false
-        },
-        {
         "source_path": "docset/docs-conceptual/windows/index.md",
         "redirect_url": "/powershell/windows/get-started",
         "redirect_document_id": false

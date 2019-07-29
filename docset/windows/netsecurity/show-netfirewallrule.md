@@ -21,7 +21,7 @@ ms.assetid: CF255861-15F4-4F28-A3C0-8A9E2C129BF6
 # Show-NetFirewallRule
 
 ## SYNOPSIS
-Displays all of the existing IPsec rules and associated objects in a fully expanded view.
+Displays all of the existing firewall rules and associated objects in a fully expanded view.
 
 ## SYNTAX
 

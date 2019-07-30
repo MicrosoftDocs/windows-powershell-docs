@@ -20,7 +20,7 @@ ms.reviewer:
 # Install-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Install .PPKG package onto the local machine.
 
 ## SYNTAX
 
@@ -30,16 +30,20 @@ Install-ProvisioningPackage [-PackagePath] <String> [-ForceInstall] [-QuietInsta
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet is used to install .ppkg files that are generated and exported by the [Windows Configuration Designer tool](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd).
+
+You can use this cmdlet to install a .ppkg file interactively or silently by specifying the -QuietInstall switch parameter.
+
+The default is an interactive install.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Install-ProvisioningPackage -PackagePath C:\mypackage.ppkg -QuietInstall  
 ```
 
-{{ Add example description here }}
+This will install the mypackage.ppkg file silently without customer interaction.
 
 ## PARAMETERS
 
@@ -104,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuietInstall
-{{Fill QuietInstall Description}}
+Quietly installs the package without any customer interaction.
 
 ```yaml
 Type: SwitchParameter

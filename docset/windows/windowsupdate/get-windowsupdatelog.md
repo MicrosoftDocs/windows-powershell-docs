@@ -36,7 +36,7 @@ Windows Update Agent uses Event Tracing for Windows (ETW) to generate diagnostic
 Windows Update no longer directly produces a WindowsUpdate.log file.
 Instead, it produces .etl files that are not immediately readable as written.
 
-This cmdlet requires access to a Microsoft symbol server.
+For Windows 10 versions prior to 1709 (OS Build 16299), this cmdlet requires access to a Microsoft symbol server, and log decoding must be run from a Windows 10 version earlier than 1709. Logs from Windows 10, version 1709 onward do not require a Microsoft symbol server, and need to be decoded from Windows 10, versions 1709 or higher.
 
 ## EXAMPLES
 
@@ -180,6 +180,8 @@ Accept wildcard characters: False
 ### -SymbolServer
 Specifies the URL of Microsoft Symbol Server.
 By default, this value is the Microsoft public symbol server.
+
+This switch is deprecated for Windows 1709 (OS Build 16299) and higher.
 
 ```yaml
 Type: String

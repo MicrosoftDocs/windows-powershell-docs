@@ -74,9 +74,9 @@ PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Directio
 
 This command creates a stateful inbound ACL that allows a remote device to connect to the virtual machine on port 3389, which is the port for Remote Desktop Protocol.
 
-### Example 2: Create an ACL to initiate a connection with timeout
+### Example 2: Create an ACL to initiate a connection with idle session timeout
 ```
-PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -Timeout 3600 -Stateful $True
+PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -IdleSessionTimeout 3600 -Stateful $True
 ```
 
 This command creates a stateful ACL that allows outbound packets to a remote device by using TCP.

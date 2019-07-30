@@ -44,6 +44,13 @@ PS C:\> Set-DnsServerCache -MaxKBSize 10240 -ComputerName "Win12S-05.DNSServer-0
 
 This command sets the maximum cache size to 10,240 KB on a DNS server that has an FQDN of Win12S-05.DNSServer-01.Contoso.com.
 
+### Example 2: Set maximum Time-To-Live durations
+```
+PS C:\> Set-DnsServerCache -MaxTTL 02.00:00:00 -MaxNegativeTtl 00.00:20:00
+```
+
+This command sets the the maximum TTL to 2 days and the maximum negative TTL to 20 minutes.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -167,8 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxNegativeTtl
-Specifies how many seconds (0x1-0xFFFFFFFF) an entry that records a negative answer to a query remains stored in the DNS cache.
-The default setting is 0x384 (900) seconds
+Specifies how long (1 to 2592000 seconds) an entry that records a negative answer to a query remains stored in the DNS cache. The value must be provided as a TimeSpan.
+The default setting is 15 minutes.
 
 ```yaml
 Type: TimeSpan
@@ -183,9 +190,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTtl
-Specifies how many seconds (0x0-0xFFFFFFFF) a record is saved in cache.
-If you use the 0x0 setting, the DNS server does not cache records.
-The default setting is 0x15180 (86,400 seconds, or one day).
+Specifies how long (0 to 2592000 seconds) a record is saved in cache. The value must be provided as a TimeSpan.
+If the TimeSpan is set to 0 seconds, the DNS server does not cache records.
+The default setting is one day (86,400 seconds).
 
 ```yaml
 Type: TimeSpan
@@ -246,9 +253,7 @@ Accept wildcard characters: False
 
 ### -StoreEmptyAuthenticationResponse
 Specifies whether a DNS server stores empty authoritative responses in the cache (RFC-2308).
-We recommend that you limit this value to either 0x00000000 or 0x00000001, but you can specify any value.
-The default value is 0x00000001.
-You must allow and treat literally the value zero.
+The default value is True.
 
 ```yaml
 Type: Boolean

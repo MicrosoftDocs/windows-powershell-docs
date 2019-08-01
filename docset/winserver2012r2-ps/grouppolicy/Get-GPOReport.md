@@ -4,18 +4,17 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Get-GPOReport
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 76DFAAB3-FCF4-4707-9E74-3F38D457B68F
-ms.manager: dansimp
 ---
 
 # Get-GPOReport

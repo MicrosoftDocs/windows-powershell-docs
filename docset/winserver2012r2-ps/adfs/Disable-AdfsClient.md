@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Disable-AdfsClient
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6E389AE4-80D4-474B-988B-A31A4F06C9D4
-ms.manager: dansimp
 ---
 
 # Disable-AdfsClient

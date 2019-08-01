@@ -1,11 +1,12 @@
 ---
 external help file: BranchCacheOrchestrator.cdxml-help.xml
 ms.assetid: 33797D2F-9126-4AE2-9A52-0E293EA02710
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Enable-BCDowngrading

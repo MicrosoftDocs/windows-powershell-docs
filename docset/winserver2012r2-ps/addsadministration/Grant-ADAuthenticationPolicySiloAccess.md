@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Grant-ADAuthenticationPolicySiloAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5127BBE7-39FA-4169-B93C-E567032F6894
-ms.manager: dansimp
 ---
 
 # Grant-ADAuthenticationPolicySiloAccess

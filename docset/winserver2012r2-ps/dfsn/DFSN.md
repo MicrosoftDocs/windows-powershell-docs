@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?Linkid=285545
 Help Version: 4.0.2.0
 Locale: en-US
 title: DFSN
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f2f787ee-8a15-498e-bba7-2742234d975c
-ms.manager: dansimp
 ---
 
 # DFSN Module

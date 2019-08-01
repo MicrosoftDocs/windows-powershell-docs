@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerResourceRecordAging
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5AD1594-6D98-42E2-8C37-3860912ED276
-ms.manager: dansimp
 ---
 
 # Set-DnsServerResourceRecordAging

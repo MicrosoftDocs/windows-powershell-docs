@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-RDDatabaseConnectionString

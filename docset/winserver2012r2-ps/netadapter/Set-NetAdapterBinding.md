@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Set-NetAdapterBinding
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A2360AAE-2FCF-4C8A-8063-923162B47F90
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 
@@ -129,7 +128,7 @@ Accept wildcard characters: False
 
 ### -ComponentID
 Specifies the underlying name of the transport or filter in the following form. 
-  �?  `ms_xxxx`, such as `ms_tcpip`.
+  ?  `ms_xxxx`, such as `ms_tcpip`.
 
 ```yaml
 Type: String[]

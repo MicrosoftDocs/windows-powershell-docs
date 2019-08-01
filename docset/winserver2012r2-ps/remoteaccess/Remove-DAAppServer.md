@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Remove-DAAppServer
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 44B5D5FB-1FA8-445F-81BA-DB10C95938BB
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

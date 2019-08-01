@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-RemoteAccess
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 21CEC6E3-B94E-49CA-AA51-14848A9E57B5
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

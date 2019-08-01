@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Get-VMNetworkAdapterExtendedAcl
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B1C28EC5-01FD-412A-A429-04BB096764B1
-ms.manager: dansimp
 ---
 
 # Get-VMNetworkAdapterExtendedAcl

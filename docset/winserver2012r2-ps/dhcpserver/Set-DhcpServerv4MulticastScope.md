@@ -4,18 +4,17 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Set-DhcpServerv4MulticastScope
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C04A93CB-34AD-4CA6-9A70-57D178755C68
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4MulticastScope

@@ -4,18 +4,17 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Invoke-DhcpServerv4FailoverReplication
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E042C485-C67A-4386-8EF5-11D23B798B5B
-ms.manager: dansimp
 ---
 
 # Invoke-DhcpServerv4FailoverReplication

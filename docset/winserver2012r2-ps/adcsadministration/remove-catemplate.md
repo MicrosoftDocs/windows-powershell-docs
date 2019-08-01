@@ -4,18 +4,17 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Remove-CATemplate
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6545F6DF-6593-4DD4-9391-98DBDCE63F64
-ms.manager: dansimp
 ---
 
 # Remove-CATemplate

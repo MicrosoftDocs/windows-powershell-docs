@@ -3,9 +3,10 @@ external help file: WDAC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EF357356-FDCE-4016-AB5E-34F841B412CB
+manager: dansimp
 ---
 
 # Disable-WdacBidTrace

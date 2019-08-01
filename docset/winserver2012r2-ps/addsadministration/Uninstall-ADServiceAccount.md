@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Uninstall-ADServiceAccount
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DAD65075-81BC-4F91-83DE-33B7877A86BA
-ms.manager: dansimp
 ---
 
 # Uninstall-ADServiceAccount

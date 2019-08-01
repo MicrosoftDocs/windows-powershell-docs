@@ -3,18 +3,17 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Restart-HcsController
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 634CE6BB-B9E6-4B1F-B358-C07698E8AA5F
-ms.manager: dansimp
 ---
 
 # Restart-HcsController

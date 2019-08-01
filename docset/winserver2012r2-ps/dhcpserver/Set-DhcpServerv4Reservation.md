@@ -4,18 +4,17 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Set-DhcpServerv4Reservation
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4D72D695-B53C-4E9A-ADB0-613E56A69395
-ms.manager: dansimp
 ---
 
 # Set-DhcpServerv4Reservation

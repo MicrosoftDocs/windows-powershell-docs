@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-SyncServerSetting
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 54E37A9D-424B-4657-8C8E-BE7101D30A10
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-WBBareMetalRecovery
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D13531F1-43DE-4CDD-95B8-D93961005D4E
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

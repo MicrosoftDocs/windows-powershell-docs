@@ -4,18 +4,17 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Remove-DhcpServerv4MulticastExclusionRange
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 80A1A094-7313-468F-951A-03325A1A9626
-ms.manager: dansimp
 ---
 
 # Remove-DhcpServerv4MulticastExclusionRange

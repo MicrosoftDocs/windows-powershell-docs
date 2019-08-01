@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EB85F576-0780-4BA6-A1C8-E738BC032732
+manager: dansimp
 ---
 
 # Repair-WssAlert

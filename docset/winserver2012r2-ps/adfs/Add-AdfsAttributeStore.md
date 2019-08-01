@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Add-AdfsAttributeStore
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF1CC3F4-3E87-4B6D-9729-CFA1FA552DDB
-ms.manager: dansimp
 ---
 
 # Add-AdfsAttributeStore

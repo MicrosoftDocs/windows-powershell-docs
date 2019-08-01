@@ -4,18 +4,17 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Set-IpamRange
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EAD9FE7C-ACB7-416B-A016-C34AEDCE9892
-ms.manager: dansimp
 ---
 
 # Set-IpamRange

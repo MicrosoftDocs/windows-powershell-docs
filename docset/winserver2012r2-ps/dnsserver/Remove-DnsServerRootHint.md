@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Remove-DnsServerRootHint
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 965DC972-9B2E-48BA-90BA-214198AA2B4C
-ms.manager: dansimp
 ---
 
 # Remove-DnsServerRootHint

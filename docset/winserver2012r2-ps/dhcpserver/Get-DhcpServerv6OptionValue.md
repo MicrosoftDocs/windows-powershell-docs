@@ -4,18 +4,17 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Get-DhcpServerv6OptionValue
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B2BC5204-A6A7-4BBC-9AE8-BAF7AD2DBB56
-ms.manager: dansimp
 ---
 
 # Get-DhcpServerv6OptionValue

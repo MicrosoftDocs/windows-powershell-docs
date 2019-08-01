@@ -1,9 +1,10 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: EE455D93-D6E6-4118-828B-0F6684D46C0E
+manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
@@ -11,7 +12,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-IISSite
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer:
 ---
 

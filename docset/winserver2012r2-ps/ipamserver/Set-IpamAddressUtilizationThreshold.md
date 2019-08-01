@@ -4,18 +4,17 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Set-IpamAddressUtilizationThreshold
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7BFBFA8C-37D8-43BD-9EA7-ABB5C6CD166F
-ms.manager: dansimp
 ---
 
 # Set-IpamAddressUtilizationThreshold

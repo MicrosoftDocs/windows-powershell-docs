@@ -4,18 +4,17 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Set-FsrmQuotaTemplate
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1517E303-B084-4BE8-BF3B-89808FA98777
-ms.manager: dansimp
 ---
 
 # Set-FsrmQuotaTemplate

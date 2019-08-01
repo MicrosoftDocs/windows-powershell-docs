@@ -4,18 +4,17 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Remove-DedupSchedule
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ED2C90F6-5605-4041-93CD-CF179D010631
-ms.manager: dansimp
 ---
 
 # Remove-DedupSchedule

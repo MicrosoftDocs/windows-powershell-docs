@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285544
 Help Version: 4.0.2.0
 Locale: en-US
 title: DcbQoS
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: f505fbc5-031f-4480-8446-121defda6f16
-ms.manager: dansimp
 ---
 
 # DcbQoS Module

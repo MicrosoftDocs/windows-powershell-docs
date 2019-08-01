@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 15C9F651-79E7-4DFC-8C1B-56E69744EE54
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-RDSessionHost

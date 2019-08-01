@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Enable-WebCentralCertProvider
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A754C45F-542A-452B-8059-D848E9AE99AE
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

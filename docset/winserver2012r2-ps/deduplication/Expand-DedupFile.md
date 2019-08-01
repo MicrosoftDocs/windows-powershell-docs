@@ -4,18 +4,17 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Expand-DedupFile
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9B4B3EAB-DDC6-45C4-B183-8AEF0D07260E
-ms.manager: dansimp
 ---
 
 # Expand-DedupFile

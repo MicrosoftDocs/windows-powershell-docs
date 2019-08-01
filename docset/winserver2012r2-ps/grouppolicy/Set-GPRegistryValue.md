@@ -4,18 +4,17 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Set-GPRegistryValue
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5E59DF66-59BF-4CBA-BBCF-9D1C7AEED414
-ms.manager: dansimp
 ---
 
 # Set-GPRegistryValue

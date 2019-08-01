@@ -4,18 +4,17 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Get-DnsClient
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F89AA7EE-5BD8-4548-8672-7CA0852B32F9
-ms.manager: dansimp
 ---
 
 # Get-DnsClient

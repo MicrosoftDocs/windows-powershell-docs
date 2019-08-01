@@ -3,9 +3,10 @@ external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 23496DD7-37FC-4D22-8060-ED3B25045451
+manager: dansimp
 ---
 
 # Get-WsusComputer

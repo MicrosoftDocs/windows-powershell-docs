@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Invoke-PefCustomAction
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AFA141E3-A3FA-441A-9D4B-714F78BCD351
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

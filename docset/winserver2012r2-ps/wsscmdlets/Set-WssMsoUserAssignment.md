@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-WssMsoUserAssignment
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1EA5FB24-7BB7-4325-9249-E20222D09B62
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

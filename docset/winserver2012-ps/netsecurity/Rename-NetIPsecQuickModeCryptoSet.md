@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FF3485CE-29A1-4A8B-AFFF-1B9FA0B15898
+manager: dansimp
 ---
 
 # Rename-NetIPsecQuickModeCryptoSet

@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 52E2B0C7-6155-4C5C-A6BA-383866CAB770
+manager: dansimp
 ---
 
 # Get-WssBackupVolume

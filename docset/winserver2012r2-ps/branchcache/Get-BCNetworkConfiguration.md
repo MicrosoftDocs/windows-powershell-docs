@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Get-BCNetworkConfiguration
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
-ms.manager: dansimp
 ---
 
 # Get-BCNetworkConfiguration

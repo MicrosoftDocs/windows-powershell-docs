@@ -3,9 +3,10 @@ external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DD6541F4-5EAD-4360-A26E-FCADCBB6DADF
+manager: dansimp
 ---
 
 # Remove-GPPrefRegistryValue

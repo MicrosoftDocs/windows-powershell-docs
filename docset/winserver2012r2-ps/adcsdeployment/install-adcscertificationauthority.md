@@ -4,18 +4,17 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Install-AdcsCertificationAuthority
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
-ms.manager: dansimp
 ---
 
 # Install-AdcsCertificationAuthority

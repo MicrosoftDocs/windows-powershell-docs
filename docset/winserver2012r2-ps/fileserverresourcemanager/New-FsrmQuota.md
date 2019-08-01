@@ -4,18 +4,17 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: New-FsrmQuota
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A5E7519-DAB9-4289-BD9B-2D72AC0F48DB
-ms.manager: dansimp
 ---
 
 # New-FsrmQuota

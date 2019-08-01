@@ -4,18 +4,17 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Uninstall-RmsMfgSupport
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 559C4856-F2A2-411C-A41F-B1B079DA1486
-ms.manager: dansimp
 ---
 
 # Uninstall-RmsMfgSupport

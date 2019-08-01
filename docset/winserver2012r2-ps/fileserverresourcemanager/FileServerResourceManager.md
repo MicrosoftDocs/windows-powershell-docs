@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285746
 Help Version: 4.0.2.0
 Locale: en-US
 title: FileServerResourceManager
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: cb17fcb8-cff7-4d03-b9d4-bd7c299876aa
-ms.manager: dansimp
 ---
 
 # FileServerResourceManager Module

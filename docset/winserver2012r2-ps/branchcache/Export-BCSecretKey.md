@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Export-BCSecretKey
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 94140170-8217-4C25-A899-82B5BE694E17
-ms.manager: dansimp
 ---
 
 # Export-BCSecretKey

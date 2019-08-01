@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Add-DnsServerSigningKey
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1D1D194D-EB8C-4B53-949C-2AA9E19EA793
-ms.manager: dansimp
 ---
 
 # Add-DnsServerSigningKey

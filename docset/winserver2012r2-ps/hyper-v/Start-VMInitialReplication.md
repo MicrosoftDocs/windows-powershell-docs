@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Start-VMInitialReplication
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E9EE3CD9-273A-41C1-918A-CEE0CBA99772
-ms.manager: dansimp
 ---
 
 # Start-VMInitialReplication

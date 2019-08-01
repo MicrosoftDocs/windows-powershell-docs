@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Connect-VMSan
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA01E844-1462-4284-B2BA-CC9BCB9E0990
-ms.manager: dansimp
 ---
 
 # Connect-VMSan

@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Get-DnsServerZoneAging
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5577F641-EC20-4F17-AAF9-601CE33C522C
-ms.manager: dansimp
 ---
 
 # Get-DnsServerZoneAging

@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-WssFileHistoryManagementStatus
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 896C4B21-95AA-4BE0-B8FA-F727222C47AC
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

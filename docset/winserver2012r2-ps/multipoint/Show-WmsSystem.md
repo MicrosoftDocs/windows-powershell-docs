@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Show-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA04627A-F13A-49A4-8872-C0CBF89A09C2
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Show-WmsSystem
@@ -116,8 +115,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Show-WmsSystem.
+### None
 
 ## OUTPUTS
 

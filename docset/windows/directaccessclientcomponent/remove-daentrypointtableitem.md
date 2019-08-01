@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -252,8 +252,7 @@ This cmdlet accepts as input a CIM object which contains a DA site table entry.
 
 ## OUTPUTS
 
-###  
-This cmdlet returns no output.
+### None
 
 ## NOTES
 

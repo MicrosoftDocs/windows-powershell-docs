@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Add-NetEventVmNetworkAdapter
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1AD40AD9-FD84-4E19-AF1C-F4DAC2651D67
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

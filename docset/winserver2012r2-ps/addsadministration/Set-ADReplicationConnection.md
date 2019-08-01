@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADReplicationConnection
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BB77517D-2A1A-42B6-8D5E-CB99D5D463FE
-ms.manager: dansimp
 ---
 
 # Set-ADReplicationConnection

@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: E1C9D6D3-933A-40A4-A2DB-B0763B82363B
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Import-RmsTUD

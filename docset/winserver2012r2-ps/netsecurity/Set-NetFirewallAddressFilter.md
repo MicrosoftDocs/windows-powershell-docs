@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Set-NetFirewallAddressFilter
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7C45BC61-6CEB-4F27-903D-837BCAC4709A
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

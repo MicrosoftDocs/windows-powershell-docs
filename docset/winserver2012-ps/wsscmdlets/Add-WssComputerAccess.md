@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: CC660DCC-301B-434F-AB10-BD4203A38FC7
+manager: dansimp
 ---
 
 # Add-WssComputerAccess

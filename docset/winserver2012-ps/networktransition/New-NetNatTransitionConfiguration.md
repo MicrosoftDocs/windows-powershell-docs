@@ -3,9 +3,10 @@ external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 23D2511A-F9FA-478C-89AD-A621A3C4FC63
+manager: dansimp
 ---
 
 # New-NetNatTransitionConfiguration

@@ -4,18 +4,17 @@ Module Name: BitsTransfer
 online version: 
 schema: 2.0.0
 title: Complete-BitsTransfer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7D1241E4-79D4-408B-8F95-2250E940C250
-ms.manager: dansimp
 ---
 
 # Complete-BitsTransfer

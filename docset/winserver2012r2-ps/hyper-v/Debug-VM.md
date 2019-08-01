@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Debug-VM
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3ACDD2AC-5C11-47FC-8DF8-3BF9F73C1DD8
-ms.manager: dansimp
 ---
 
 # Debug-VM

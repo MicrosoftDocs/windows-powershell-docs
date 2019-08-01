@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADClaimTransformLink
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4516CC61-1A65-4BF6-A1E3-0707ADE8E107
-ms.manager: dansimp
 ---
 
 # Set-ADClaimTransformLink

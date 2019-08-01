@@ -4,18 +4,17 @@ Module Name: AppBackgroundTask
 online version: 
 schema: 2.0.0
 title: Disable-AppBackgroundTaskDiagnosticLog
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68CCA324-C329-44B5-BC42-E2FEE9256C9E
-ms.manager: dansimp
 ---
 
 # Disable-AppBackgroundTaskDiagnosticLog

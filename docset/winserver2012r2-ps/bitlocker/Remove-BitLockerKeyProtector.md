@@ -4,18 +4,17 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Remove-BitLockerKeyProtector
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09CDDA63-9E82-44F0-8755-878974B0010B
-ms.manager: dansimp
 ---
 
 # Remove-BitLockerKeyProtector

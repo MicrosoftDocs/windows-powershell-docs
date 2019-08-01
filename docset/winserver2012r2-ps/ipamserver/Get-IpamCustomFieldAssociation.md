@@ -4,18 +4,17 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Get-IpamCustomFieldAssociation
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8DDBEC3-DAFF-44EB-8B92-9AB1B89B5395
-ms.manager: dansimp
 ---
 
 # Get-IpamCustomFieldAssociation

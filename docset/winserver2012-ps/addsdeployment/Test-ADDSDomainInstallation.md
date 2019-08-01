@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: 1DD02CBB-CE03-49A3-AE33-8BC1A7DD3830
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Test-ADDSDomainInstallation

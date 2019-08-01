@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Start-VMFailover
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AA20DD94-653B-428D-BDD5-6756830B9C49
-ms.manager: dansimp
 ---
 
 # Start-VMFailover

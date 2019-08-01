@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Disable-NetAdapterIPsecOffload
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 35CB69C9-3C88-40BF-910F-73890EDE8C2F
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

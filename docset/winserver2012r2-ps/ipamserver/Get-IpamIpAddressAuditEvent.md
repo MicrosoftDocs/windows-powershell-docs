@@ -4,18 +4,17 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Get-IpamIpAddressAuditEvent
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EF169672-28E8-444C-8FAE-572725C85C8A
-ms.manager: dansimp
 ---
 
 # Get-IpamIpAddressAuditEvent

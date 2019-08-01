@@ -4,18 +4,17 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Add-CATemplate
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C8A5382D-23F3-4DDE-9661-EAF69E65B2AB
-ms.manager: dansimp
 ---
 
 # Add-CATemplate

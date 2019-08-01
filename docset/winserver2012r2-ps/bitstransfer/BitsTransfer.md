@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=279550
 Help Version: 4.0.3.0
 Locale: en-US
 title: BitsTransfer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: aae2880b-f17e-44c3-b352-47eca09bcf71
-ms.manager: dansimp
 ---
 
 # BitsTransfer Module

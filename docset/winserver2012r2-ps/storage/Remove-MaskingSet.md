@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-MaskingSet
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AC1D03CA-DAF1-4617-A22B-4A8B9A7A6CF2
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

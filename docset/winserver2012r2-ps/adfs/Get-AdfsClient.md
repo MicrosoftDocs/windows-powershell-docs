@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Get-AdfsClient
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66EF6F05-971C-4D89-9D5E-00F6A3802ED4
-ms.manager: dansimp
 ---
 
 # Get-AdfsClient

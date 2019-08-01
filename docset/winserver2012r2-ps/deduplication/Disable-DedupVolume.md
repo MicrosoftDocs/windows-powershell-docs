@@ -4,18 +4,17 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Disable-DedupVolume
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 35CD5640-538A-4957-B87D-A59BB87C34B1
-ms.manager: dansimp
 ---
 
 # Disable-DedupVolume

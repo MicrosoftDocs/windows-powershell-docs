@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 40676510-8371-4728-8667-670E301CC593
+manager: dansimp
 ---
 
 # Add-WssFolder

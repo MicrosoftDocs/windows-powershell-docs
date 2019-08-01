@@ -4,18 +4,17 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Set-FsrmAutoQuota
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42A7295C-D673-4ED6-9F8B-71234A980F54
-ms.manager: dansimp
 ---
 
 # Set-FsrmAutoQuota

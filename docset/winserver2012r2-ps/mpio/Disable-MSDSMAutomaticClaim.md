@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Disable-MSDSMAutomaticClaim
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 18902AAE-5A6D-4E05-99AA-9B6AC326A97E
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

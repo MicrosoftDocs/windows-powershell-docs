@@ -4,18 +4,17 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Get-WinAcceptLanguageFromLanguageListOptOut
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD5F0FA6-1F7D-482D-B386-C9E8C8CF868F
-ms.manager: dansimp
 ---
 
 # Get-WinAcceptLanguageFromLanguageListOptOut

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
 Help Version: 4.0.7.0
 Locale: en-US
 title: ActiveDirectory
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: abd8d8e8-580a-4d3b-850c-4fbd7ae386e4
-ms.manager: dansimp
 ---
 
 # ActiveDirectory Module

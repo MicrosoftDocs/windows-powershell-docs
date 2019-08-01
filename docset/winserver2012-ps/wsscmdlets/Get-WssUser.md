@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B54B8194-0A30-4705-BB5F-57F413DEBD08
+manager: dansimp
 ---
 
 # Get-WssUser

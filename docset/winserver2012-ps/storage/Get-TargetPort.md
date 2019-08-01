@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4C139739-CDA3-4379-B87B-60B1B4DB8CD2
+manager: dansimp
 ---
 
 # Get-TargetPort

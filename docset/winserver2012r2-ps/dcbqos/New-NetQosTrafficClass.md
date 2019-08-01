@@ -4,18 +4,17 @@ Module Name: DcbQos
 online version: 
 schema: 2.0.0
 title: New-NetQosTrafficClass
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3416A4E-86BF-4853-A6B6-1D4A287C3686
-ms.manager: dansimp
 ---
 
 # New-NetQosTrafficClass

@@ -4,18 +4,17 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Set-WinDefaultInputMethodOverride
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1AD0FD7D-D466-400A-AD3D-196B714B8330
-ms.manager: dansimp
 ---
 
 # Set-WinDefaultInputMethodOverride

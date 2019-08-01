@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285740
 Help Version: 4.0.3.0
 Locale: en-US
 title: Deduplication
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72144cf9-f9f5-43b3-be84-5c959089c28f
-ms.manager: dansimp
 ---
 
 # Deduplication Module

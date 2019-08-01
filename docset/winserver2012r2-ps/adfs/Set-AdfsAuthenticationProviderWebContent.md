@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsAuthenticationProviderWebContent
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BB65C63B-1F7A-409B-BED6-253D5C74067B
-ms.manager: dansimp
 ---
 
 # Set-AdfsAuthenticationProviderWebContent

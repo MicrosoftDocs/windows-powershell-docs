@@ -4,18 +4,17 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Import-RmsTPD
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 40463418-5B82-42E6-86E0-396B31E01EA8
-ms.manager: dansimp
 ---
 
 # Import-RmsTPD

@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version:
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5FA44E53-C2D4-4870-A934-62430AF19BC6
+manager: dansimp
 ---
 
 # Optimize-Volume

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerResourceRecord_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -39,9 +39,10 @@ This cmdlet cannot change the Name or Type of a DNS server resource record objec
 
 ## EXAMPLES
 
-### Example 1: Change the settings of a resource record
+### Example 1: Change the timespan of a resource record
 ```
-PS C:\> $NewObj = $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
+PS C:\> $OldObj = Get-DnsServerResourceRecord -Name "Host01" -ZoneName "contoso.com" -RRType "A"
+PS C:\> $NewObj = $OldObj.Clone()
 PS C:\> $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 PS C:\> Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 
@@ -54,11 +55,13 @@ Host01                       A          0                    02:00:00        2.2
 
 In this example, the time to live (TTL) value of the resource record named Host01 in the zone named contoso.com is changed to 2 hours.
 
-The first command assigns a resource record named Host01 in the zone named contoso.com to the variables **$NewObj** and **$OldObj**.
+The first command assigns a resource record named Host01 in the zone named contoso.com to the variable **$OldObj**.
 
-The second command sets the TTL time span for **$NewObj** to 2 hours.
+The second command copies the variable **$OldObj** to a new variable **$NewObj** using the .Clone() method.
 
-The third command changes the properties of **$OldObj** to the settings specified for **$NewObj** in the previous command.
+The third command sets the TTL time span for **$NewObj** to 2 hours.
+
+The fourth command changes the properties of **$OldObj** to the settings specified for **$NewObj** in the previous command.
 
 ## PARAMETERS
 

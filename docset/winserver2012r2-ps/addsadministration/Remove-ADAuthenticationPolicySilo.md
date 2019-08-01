@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Remove-ADAuthenticationPolicySilo
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F6B161CD-79C1-48AD-AE24-7D47BAA7F033
-ms.manager: dansimp
 ---
 
 # Remove-ADAuthenticationPolicySilo

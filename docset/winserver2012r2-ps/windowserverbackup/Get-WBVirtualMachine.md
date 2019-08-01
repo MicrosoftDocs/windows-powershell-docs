@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-WBVirtualMachine
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 861E1FC3-13D5-4D49-ABE3-0769B0C688FB
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

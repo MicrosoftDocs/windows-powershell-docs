@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Disable-NetAdapterRsc
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 89F435A4-2771-4245-A44C-16F79EE2AB0E
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

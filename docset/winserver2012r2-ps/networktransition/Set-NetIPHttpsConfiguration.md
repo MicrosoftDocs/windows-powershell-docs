@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Set-NetIPHttpsConfiguration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70F6EA7A-C6E8-4AD1-AFC7-07EA8FF091C9
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

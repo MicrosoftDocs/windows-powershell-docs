@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Enable-BCLocal
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 37869BE1-F2D1-4C2D-BCC0-106DE7ADE2C4
-ms.manager: dansimp
 ---
 
 # Enable-BCLocal

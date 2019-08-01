@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285736
 Help Version: 4.0.4.0
 Locale: en-US
 title: AppX
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 221ac730-e8bc-4bf8-92ef-06215136a55a
-ms.manager: dansimp
 ---
 
 # AppX Module

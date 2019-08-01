@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A0C09899-6C8F-43A3-8D64-8243BC96A4C5
+manager: dansimp
 ---
 
 # New-DtcDiagnosticTransaction

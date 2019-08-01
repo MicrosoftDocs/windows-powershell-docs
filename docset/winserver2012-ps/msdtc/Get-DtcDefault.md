@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 52539594-92A8-4E49-B96D-C0FD19BC165D
+manager: dansimp
 ---
 
 # Get-DtcDefault

@@ -3,9 +3,10 @@ external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5A41B2D7-EBF8-4D3D-94C8-2996716E10FC
+manager: dansimp
 ---
 
 # Get-SMServerInventory

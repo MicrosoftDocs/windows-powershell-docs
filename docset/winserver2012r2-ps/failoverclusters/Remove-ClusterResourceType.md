@@ -4,18 +4,17 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Remove-ClusterResourceType
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BC4F51A9-B0EC-4908-B251-C2469FA470A4
-ms.manager: dansimp
 ---
 
 # Remove-ClusterResourceType

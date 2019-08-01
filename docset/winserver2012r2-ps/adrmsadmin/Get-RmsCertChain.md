@@ -4,18 +4,17 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Get-RmsCertChain
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A62ECA60-C9C0-4A12-B621-23A5CEE60F96
-ms.manager: dansimp
 ---
 
 # Get-RmsCertChain

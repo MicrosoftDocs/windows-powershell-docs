@@ -4,18 +4,17 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Remove-ClusterAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A86B6D12-3F22-4124-A654-AA0EF4F28ED0
-ms.manager: dansimp
 ---
 
 # Remove-ClusterAccess

@@ -4,18 +4,17 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Rename-IpamCustomValue
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A471DAFC-FCA6-4EE7-BC2C-7E61DC2C49A2
-ms.manager: dansimp
 ---
 
 # Rename-IpamCustomValue

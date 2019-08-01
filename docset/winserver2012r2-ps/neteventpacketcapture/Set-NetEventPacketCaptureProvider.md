@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Set-NetEventPacketCaptureProvider
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7F5561F6-91D2-4B8B-ABD2-2D01C8B74966
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

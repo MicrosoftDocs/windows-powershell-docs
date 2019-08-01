@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Get-WmsThumbnail
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE3B8DB9-C081-48CE-A1D1-43BA7244F329
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Get-WmsThumbnail
@@ -169,8 +168,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsThumbnail.
+### None
 
 ## OUTPUTS
 

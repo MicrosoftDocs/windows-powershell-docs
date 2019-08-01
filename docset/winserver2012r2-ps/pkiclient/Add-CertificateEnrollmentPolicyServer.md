@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Add-CertificateEnrollmentPolicyServer
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A9CB80EA-5180-423E-A007-074C6F371366
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -273,6 +273,27 @@ For a list of supported types for \<value\>, type `Get-Help about_ActiveDirector
 Note: Windows PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
+
+### Example 6: Get all computers with a name starting with User01 or User02
+```
+PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -or Name -like "User02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+name        dnshostname            ipv4address
+----        -----------            -----------
+User01-SRV1 User01-SRV1.User01.com 10.194.99.181
+User01-SRV2 User02-SRV2.User02.com 10.194.100.3
+```
+
+### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
+```
+PS C:\> $Date = [DateTime]::Today.AddDays(-30)
+PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+name        dnshostname            ipv4address
+----        -----------            -----------
+User01-SRV1 User01-SRV1.User01.com 10.194.99.181
+User02-SRV2 User02-SRV2.User02.com 10.194.100.3
+```
+
+This command shows the name, dns hostname, and IPv4 address.
 
 ```yaml
 Type: String

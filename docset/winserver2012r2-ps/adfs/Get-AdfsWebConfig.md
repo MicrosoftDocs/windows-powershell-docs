@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Get-AdfsWebConfig
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 130209C7-E07A-4926-B58B-E0AF7F027B32
-ms.manager: dansimp
 ---
 
 # Get-AdfsWebConfig

@@ -5,6 +5,7 @@ Download Help Link: na
 Help Version: 5.0.0.0
 Locale: en-US
 title: HPC
+author: andreabarr
 description:
 keywords: powershell, cmdlet
 author:
@@ -14,9 +15,8 @@ ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B6B0222C-CEA1-425E-86FE-EC9F67683011
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Microsoft HPC Pack 2012 R2

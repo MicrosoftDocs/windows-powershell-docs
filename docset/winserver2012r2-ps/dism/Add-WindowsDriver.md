@@ -4,18 +4,17 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Add-WindowsDriver
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FF7615FF-C6D5-4EA5-A227-675775C24DB6
-ms.manager: dansimp
 ---
 
 # Add-WindowsDriver

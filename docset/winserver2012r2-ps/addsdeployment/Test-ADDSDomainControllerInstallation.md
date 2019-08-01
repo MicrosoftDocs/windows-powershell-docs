@@ -4,18 +4,17 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Test-ADDSDomainControllerInstallation
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E65920A5-9158-4832-B973-403C6AD3892A
-ms.manager: dansimp
 ---
 
 # Test-ADDSDomainControllerInstallation

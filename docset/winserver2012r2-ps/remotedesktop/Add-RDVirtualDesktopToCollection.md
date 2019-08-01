@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Add-RDVirtualDesktopToCollection
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9780A261-DF3C-4FC4-8A02-3A2110094EA5
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

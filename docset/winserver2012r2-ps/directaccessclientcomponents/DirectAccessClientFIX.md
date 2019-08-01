@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?Linkid=285546
 Help Version: 4.0.3.0
 Locale: en-US
 title: DirectAccessClientFIX
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5936eef3-8e31-44d7-b070-eb716de98d4a
-ms.manager: dansimp
 ---
 
 # DirectAccessClientFIX Module

@@ -4,18 +4,17 @@ Module Name: AppBackgroundTask
 online version: 
 schema: 2.0.0
 title: Enable-AppBackgroundTaskDiagnosticLog
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 02D467DC-414B-41B1-A5DB-7650A2E8B8AC
-ms.manager: dansimp
 ---
 
 # Enable-AppBackgroundTaskDiagnosticLog

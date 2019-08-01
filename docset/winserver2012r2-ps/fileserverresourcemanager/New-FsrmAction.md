@@ -4,18 +4,17 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: New-FsrmAction
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0B4B9F8D-D43E-4054-88B4-0E16B9058762
-ms.manager: dansimp
 ---
 
 # New-FsrmAction

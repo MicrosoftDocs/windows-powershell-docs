@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerGlobalQueryBlockList
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 21FC15F6-CFE9-44FE-9F00-1FB4B50D0632
-ms.manager: dansimp
 ---
 
 # Set-DnsServerGlobalQueryBlockList

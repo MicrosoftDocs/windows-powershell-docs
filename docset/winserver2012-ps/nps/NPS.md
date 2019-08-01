@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=214112
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 320D8BC5-D906-4FB4-9713-75CECABDBAA4
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NPS Module

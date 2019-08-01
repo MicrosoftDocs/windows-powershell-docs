@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -68,6 +68,14 @@ PS C:\>Find-VamtManagedMachine -QueryType ldap -QueryValue "ldap://domainname/??
 
 This command searches for computers by using an LDAP query.
 The search results are restricted to the computers that have LabComp in their name.
+
+### Example 5: Search in a domain and store results in specified database
+```
+PS C:\>Find-VamtManagedMachine -QueryType ActiveDirectory -QueryValue "DomainName" -MachineFilter "labcomp*" -DbConnectionString "Data Source=localhost\SQLEXPRESS;Initial Catalog=VAMT;Integrated Security=True;MultipleActiveResultSets=True"
+```
+
+This command searches the specified Active Directory domain.
+The search results are restricted to the computers that have LabComp in their name, and the results are stored in the local SQLEXPRESS instance.
 
 ## PARAMETERS
 

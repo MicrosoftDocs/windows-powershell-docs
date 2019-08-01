@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Enable-AdfsDeviceRegistration
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CCFC562A-AF1E-488E-B85D-1F12A6D8C9C5
-ms.manager: dansimp
 ---
 
 # Enable-AdfsDeviceRegistration

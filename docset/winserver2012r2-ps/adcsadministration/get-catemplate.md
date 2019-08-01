@@ -4,18 +4,17 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Get-CATemplate
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26067498-C23B-4EAB-97D1-932508F43FCE
-ms.manager: dansimp
 ---
 
 # Get-CATemplate

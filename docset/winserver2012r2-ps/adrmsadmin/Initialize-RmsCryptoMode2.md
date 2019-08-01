@@ -4,18 +4,17 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Initialize-RmsCryptoMode2
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D2E65B69-E9E6-40D4-B5EF-0674CFC51205
-ms.manager: dansimp
 ---
 
 # Initialize-RmsCryptoMode2

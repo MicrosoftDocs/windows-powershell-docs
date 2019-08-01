@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Update-RDVirtualDesktopCollection
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 935B633B-91C9-4ABE-8646-F32DDD0DDFC9
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

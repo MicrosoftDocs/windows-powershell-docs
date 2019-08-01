@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9B539128-39E2-479D-9255-916BE6CE0392
+manager: dansimp
 ---
 
 # Set-WssMediaLibraryName

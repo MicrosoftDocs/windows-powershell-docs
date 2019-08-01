@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: F727BBC2-04C3-4845-8946-DE1B0064D963
+manager: dansimp
 ---
 
 # Get-OBAlternateBackupServer

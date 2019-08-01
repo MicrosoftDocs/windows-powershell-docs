@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=225876
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: 2DCC3D8E-4155-44FC-AF0E-DC6608D33D8D
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # RemoteDesktop Module

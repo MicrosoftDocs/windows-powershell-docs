@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Add-DnsServerResourceRecordAAAA
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E9733443-E45A-42AE-88D3-327F7EF59F87
-ms.manager: dansimp
 ---
 
 # Add-DnsServerResourceRecordAAAA

@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Publish-BCWebContent
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 074BF1F8-4995-4DD2-83E6-384FDBF19F12
-ms.manager: dansimp
 ---
 
 # Publish-BCWebContent

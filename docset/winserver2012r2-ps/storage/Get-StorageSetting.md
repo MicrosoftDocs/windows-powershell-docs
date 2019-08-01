@@ -6,22 +6,21 @@ schema: 2.0.0
 title: Get-StorageSetting
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 
 # Get-StorageSetting
 
 ## SYNOPSIS
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ## SYNTAX
 
@@ -30,7 +29,7 @@ Get-StorageSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns the StorageSettings object.
+The **Get-StorageSetting** cmdlet returns the StorageSetting object.
 
 ## EXAMPLES
 

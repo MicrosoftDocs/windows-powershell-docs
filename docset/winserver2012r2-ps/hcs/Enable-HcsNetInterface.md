@@ -3,18 +3,17 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Enable-HcsNetInterface
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8FA13E2E-7558-4491-8EB6-EF836384A2D0
-ms.manager: dansimp
 ---
 
 # Enable-HcsNetInterface

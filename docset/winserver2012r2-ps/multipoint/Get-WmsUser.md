@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Get-WmsUser
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA8744D5-B53A-4C3E-AE80-5D4A9252E6FB
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Get-WmsUser
@@ -118,8 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsUser.
+### None
 
 ## OUTPUTS
 

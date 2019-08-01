@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Set-IscsiServerTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 957B9B1F-D7E2-4FDE-8F7D-25FC27293F6A
-ms.manager: dansimp
 ---
 
 # Set-IscsiServerTarget

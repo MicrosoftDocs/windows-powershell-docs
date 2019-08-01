@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: New-VMReplicationAuthorizationEntry
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA339689-B8DF-4ABF-957B-DD143E46C3DB
-ms.manager: dansimp
 ---
 
 # New-VMReplicationAuthorizationEntry

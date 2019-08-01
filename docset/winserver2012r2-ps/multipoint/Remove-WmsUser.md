@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Remove-WmsUser
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D633D175-85E6-4ECA-8BFB-65FBBA9240C4
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Remove-WmsUser
@@ -84,8 +83,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Remove-WmsUser.
+### None
 
 ## OUTPUTS
 

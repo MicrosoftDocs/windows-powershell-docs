@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 ms.assetid: 25524D99-C1CA-410F-B168-482AE0E7C66F
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Install-AdcsNetworkDeviceEnrollmentService

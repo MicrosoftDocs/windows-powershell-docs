@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C178CF8E-932E-42CE-831A-1D6450C33437
+manager: dansimp
 ---
 
 # Get-OBSchedule

@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 7F8BD30F-62B9-49C0-984A-59D735A181FC
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDSessionHost

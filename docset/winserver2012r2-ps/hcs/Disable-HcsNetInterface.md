@@ -3,18 +3,17 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Disable-HcsNetInterface
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE85BFD9-0EE1-44A2-B856-BC1B2A959C79
-ms.manager: dansimp
 ---
 
 # Disable-HcsNetInterface

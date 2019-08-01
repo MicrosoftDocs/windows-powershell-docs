@@ -4,18 +4,17 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Get-WindowsPackage
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A7D915B2-0AE9-4315-95DF-4E74958CF947
-ms.manager: dansimp
 ---
 
 # Get-WindowsPackage

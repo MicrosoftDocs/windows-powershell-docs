@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NPS.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -41,7 +41,7 @@ For more information about RADIUS client options, see [Managing RADIUS Clients](
 
 ### Example 1: Set a RADIUS client settings
 ```
-PS C:\>Set-NpsRadiusClient -Name "WirelessAP" -Address "10.0.0.201" $False -SharedSecret "1234567890"
+PS C:\>Set-NpsRadiusClient -Name "WirelessAP" -Address "10.0.0.201" -Enabled $False -SharedSecret "1234567890"
 ```
 
 This command changes settings for the RADIUS client named WirelessAP.

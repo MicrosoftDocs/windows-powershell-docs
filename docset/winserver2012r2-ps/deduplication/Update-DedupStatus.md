@@ -4,18 +4,17 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Update-DedupStatus
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D56A51BB-0B15-4BF9-AF3D-1EB96C1BFC3B
-ms.manager: dansimp
 ---
 
 # Update-DedupStatus

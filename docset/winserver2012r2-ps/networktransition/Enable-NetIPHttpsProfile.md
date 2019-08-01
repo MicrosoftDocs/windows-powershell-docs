@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Enable-NetIPHttpsProfile
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2D03CC4A-89CB-47B1-ABDE-7AB4E2DA0232
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

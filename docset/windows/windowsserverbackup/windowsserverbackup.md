@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: WindowsServerBackup
 Module Guid: D27A5D7A-8B1D-4B0A-809D-65EF33EE2F2D
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285580
@@ -11,7 +11,7 @@ title: WindowsServerBackup
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

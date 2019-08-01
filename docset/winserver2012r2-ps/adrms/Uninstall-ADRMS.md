@@ -4,18 +4,17 @@ Module Name: ADRMS
 online version: 
 schema: 2.0.0
 title: Uninstall-ADRMS
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8D3160C9-85B2-4401-8927-A4E6846947F3
-ms.manager: dansimp
 ---
 
 # Uninstall-ADRMS

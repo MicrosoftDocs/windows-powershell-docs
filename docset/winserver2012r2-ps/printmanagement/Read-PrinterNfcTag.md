@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Read-PrinterNfcTag
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8CCCE06D-8B66-4AB3-8EF9-A5D44D93E2CD
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285745
 Help Version: 4.0.1.0
 Locale: en-US
 title: FailoverClusters
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 62e0ebe3-243c-40b5-8797-e82888103ee3
-ms.manager: dansimp
 ---
 
 # FailoverClusters Module

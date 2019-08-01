@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Rename-NetIPsecMainModeRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72FA6C6C-0597-4C8C-BEA6-84198727B6BA
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

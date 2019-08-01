@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 577D95A4-08D4-46E5-B50B-756FBC0CAA14
+manager: dansimp
 ---
 
 # Enable-DAOtpAuthentication

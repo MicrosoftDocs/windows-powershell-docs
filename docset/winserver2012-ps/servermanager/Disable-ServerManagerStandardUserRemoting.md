@@ -1,11 +1,12 @@
 ---
 external help file: ServerManager-help.xml
 ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Disable-ServerManagerStandardUserRemoting

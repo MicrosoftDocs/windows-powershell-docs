@@ -4,18 +4,17 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Stop-ClusterGroup
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BE89DFE6-70CF-4A30-BE4F-DC8679C8776E
-ms.manager: dansimp
 ---
 
 # Stop-ClusterGroup

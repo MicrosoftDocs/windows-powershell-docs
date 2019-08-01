@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 39B45E28-2934-416F-8D44-E23CCED252C4
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-ADGroupMember
@@ -47,7 +48,7 @@ To specify a default naming context for an AD LDS environment, set the msDS-defa
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>remove-adgroupmember -Identity "DocumentReaders" -Member "WilsonPais"
+C:\PS>remove-adgroupmember -Identity "DocumentReaders" -Members "WilsonPais"
 
 Confirm
 Are you sure you want to perform this action?
@@ -74,7 +75,7 @@ Remove the users with samAccountNames 'administrator' and 'WilsonPais' from the 
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>get-adgroup -server localhost:60000 "CN=AccessControl,DC=AppNC" | remove-adgroupmember -member "CN=GlenJohns,DC=AppNC"
+C:\PS>get-adgroup -server localhost:60000 "CN=AccessControl,DC=AppNC" | remove-adgroupmember -Members "CN=GlenJohns,DC=AppNC"
 
 Confirm
 Are you sure you want to perform this action?

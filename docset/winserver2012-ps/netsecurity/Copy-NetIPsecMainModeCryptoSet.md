@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 981F01BD-59C3-4837-9D09-FEFBEB8B0E5B
+manager: dansimp
 ---
 
 # Copy-NetIPsecMainModeCryptoSet

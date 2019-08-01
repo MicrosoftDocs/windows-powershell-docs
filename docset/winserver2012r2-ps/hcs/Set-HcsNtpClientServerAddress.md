@@ -3,18 +3,17 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Set-HcsNtpClientServerAddress
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5646FED8-7205-446C-8B53-E72E4ACDA1A9
-ms.manager: dansimp
 ---
 
 # Set-HcsNtpClientServerAddress

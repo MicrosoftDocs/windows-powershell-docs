@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-NetVirtualizationProviderRoute
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BC4274F1-F6DC-4344-9A1B-DC68163248B0
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

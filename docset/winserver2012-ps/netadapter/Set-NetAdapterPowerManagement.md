@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3012D70A-6A32-4A1A-BFF0-8B937B3C6FFB
+manager: dansimp
 ---
 
 # Set-NetAdapterPowerManagement

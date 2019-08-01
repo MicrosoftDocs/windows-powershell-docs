@@ -3,9 +3,10 @@ external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 456F2FAD-E865-4499-A5AB-01DAF49DDACD
+manager: dansimp
 ---
 
 # Remove-WBVolume

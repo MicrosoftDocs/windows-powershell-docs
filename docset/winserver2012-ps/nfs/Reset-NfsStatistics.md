@@ -3,9 +3,10 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9C46C907-6F14-4C50-92EC-00FEB36A56D5
+manager: dansimp
 ---
 
 # Reset-NfsStatistics

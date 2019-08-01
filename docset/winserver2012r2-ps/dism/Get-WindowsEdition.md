@@ -4,18 +4,17 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Get-WindowsEdition
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E195C42C-5048-488D-8BF4-0B14EB520A53
-ms.manager: dansimp
 ---
 
 # Get-WindowsEdition

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285748
 Help Version: 4.0.11.0
 Locale: en-US
 title: Hyper-V
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 34d88f07-de09-4c08-b82d-651bcc869128
-ms.manager: dansimp
 ---
 
 # Hyper-V Module

@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7F79A4D3-08FB-4A2A-871B-C994F351B635
+manager: dansimp
 ---
 
 # Uninstall-Dtc

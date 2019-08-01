@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9161E619-5D1F-4880-9F4C-7F78F411491C
+manager: dansimp
 ---
 
 # New-OBPagingContext

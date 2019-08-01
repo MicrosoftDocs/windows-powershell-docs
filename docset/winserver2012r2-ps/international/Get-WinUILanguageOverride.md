@@ -4,18 +4,17 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Get-WinUILanguageOverride
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EBDDEED1-79CD-4383-B4C3-6C7E1E0F4967
-ms.manager: dansimp
 ---
 
 # Get-WinUILanguageOverride

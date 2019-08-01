@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-WBBackupTarget
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ACA6C36A-26F7-4C71-A7DC-ED5AB30BBBBD
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

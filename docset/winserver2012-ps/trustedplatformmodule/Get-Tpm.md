@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 8A2DF9AD-A0C9-4559-97E9-8E1267DC68FD
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-Tpm

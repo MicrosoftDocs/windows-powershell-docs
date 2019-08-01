@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Enable-WebRequestTracing
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 56F8DEDD-69B2-42D9-B55C-C83208EBBA8E
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

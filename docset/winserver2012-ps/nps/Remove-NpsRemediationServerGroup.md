@@ -3,9 +3,10 @@ external help file: NPS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B7DC72E8-0566-4193-BC73-8F71DAC4D404
+manager: dansimp
 ---
 
 # Remove-NpsRemediationServerGroup

@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Get-WssMsoSharePointLibrary
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECF528B5-96CD-4147-8B25-C9DD43EB16BC
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9E730A08-ADD3-4539-B638-3B18757F88AE
+manager: dansimp
 ---
 
 # Disable-NetAdapterChecksumOffload

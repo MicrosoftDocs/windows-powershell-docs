@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5314BD55-B77B-43F0-8680-DC3012F87440
+manager: dansimp
 ---
 
 # Update-StorageProviderCache

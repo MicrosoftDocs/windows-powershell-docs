@@ -1,11 +1,12 @@
 ---
 external help file: MsftUal_Admin.cdxml-help.xml
 ms.assetid: CC8814A6-01A1-471A-B5D6-A6FC68B9F33C
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Enable-Ual

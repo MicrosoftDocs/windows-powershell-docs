@@ -3,9 +3,10 @@ external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: BFF99644-7AC6-40A0-97A0-48E161363338
+manager: dansimp
 ---
 
 # New-GPO

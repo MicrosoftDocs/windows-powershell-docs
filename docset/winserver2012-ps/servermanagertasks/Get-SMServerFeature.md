@@ -3,9 +3,10 @@ external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E23F771C-BC12-4F3D-849A-7926203F8566
+manager: dansimp
 ---
 
 # Get-SMServerFeature

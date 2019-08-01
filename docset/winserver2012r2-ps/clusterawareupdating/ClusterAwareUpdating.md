@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285543
 Help Version: 4.0.1.0
 Locale: en-US
 title: ClusterAwareUpdating
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: a6771a5e-e72b-4188-9658-a5e07e3f5b7a
-ms.manager: dansimp
 ---
 
 # ClusterAwareUpdating Module

@@ -5,14 +5,15 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216171
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # GroupPolicy Module
 ## Description
-This topic contains the brief descriptions of the Windows PowerShell� cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
+This topic contains brief descriptions of the Windows PowerShell cmdlets that are used to administer Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets).
 
 Each cmdlet in the table is linked to additional information about that cmdlet.
 

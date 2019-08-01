@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 3FB5BEE8-B432-4FB1-B5DD-3FC2209D7191
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-ADAccountPassword
@@ -411,8 +412,11 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The WhatIf switch causes the command to simulate its results. Using this switch allows you to view changes that would occur, without having to commit those changes.
 
+> [!NOTE]
+> -WhatIf command functionality was first fixed in the Windows 1607 RSAT package. If using an RSAT package prior to the Windows 1607 RSAT package, this parameter will not function. 
+ 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

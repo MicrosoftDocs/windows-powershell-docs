@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Set-BCSecretKey
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A9FB4EF-F7B0-4907-AA14-21233F4153A1
-ms.manager: dansimp
 ---
 
 # Set-BCSecretKey

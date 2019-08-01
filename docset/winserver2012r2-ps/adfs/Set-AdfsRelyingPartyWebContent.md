@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsRelyingPartyWebContent
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0247F887-E1F9-47F5-A61E-64FA0B65ED08
-ms.manager: dansimp
 ---
 
 # Set-AdfsRelyingPartyWebContent

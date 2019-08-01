@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5E8EAF0B-3F5E-4F60-B985-0CAC45FDD192
+manager: dansimp
 ---
 
 # Get-NetAdapterVmq

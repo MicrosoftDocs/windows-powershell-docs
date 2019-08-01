@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: F93D8BCF-286B-4D9B-864D-A732C75857EE
+manager: dansimp
 ---
 
 # Disable-FolderRedirection

@@ -4,18 +4,17 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Remove-GPPrefRegistryValue
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DD6541F4-5EAD-4360-A26E-FCADCBB6DADF
-ms.manager: dansimp
 ---
 
 # Remove-GPPrefRegistryValue

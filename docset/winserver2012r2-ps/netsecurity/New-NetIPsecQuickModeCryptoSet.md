@@ -6,15 +6,14 @@ schema: 2.0.0
 title: New-NetIPsecQuickModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B87E3ACD-8BDD-471A-AC43-D444F2A0C3D5
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

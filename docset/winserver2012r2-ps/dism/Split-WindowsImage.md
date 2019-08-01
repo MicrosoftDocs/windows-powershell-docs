@@ -4,18 +4,17 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Split-WindowsImage
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7000153A-08BA-4781-B9BE-2CD9EAC6FE19
-ms.manager: dansimp
 ---
 
 # Split-WindowsImage

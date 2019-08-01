@@ -3,9 +3,10 @@ external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4ACF3C94-5AA5-45A5-9E0F-A57EDA1AA5E7
+manager: dansimp
 ---
 
 # Stop-NlbCluster

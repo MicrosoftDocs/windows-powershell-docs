@@ -4,18 +4,17 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Uninstall-AdcsNetworkDeviceEnrollmentService
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD14AF56-FE90-4C77-BA1C-27DC49E11FA1
-ms.manager: dansimp
 ---
 
 # Uninstall-AdcsNetworkDeviceEnrollmentService

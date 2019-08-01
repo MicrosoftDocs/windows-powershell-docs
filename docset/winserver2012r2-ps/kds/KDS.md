@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285550
 Help Version: 4.0.4.0
 Locale: en-US
 title: KDS
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52cdbc8f-6bd0-4f77-951c-ff94db16a00b
-ms.manager: dansimp
 ---
 
 # KDS Module

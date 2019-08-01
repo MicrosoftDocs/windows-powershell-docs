@@ -4,18 +4,17 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Set-CauClusterRole
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3EE6EC5-BA2A-4734-897A-ACD4DB9CC4B5
-ms.manager: dansimp
 ---
 
 # Set-CauClusterRole

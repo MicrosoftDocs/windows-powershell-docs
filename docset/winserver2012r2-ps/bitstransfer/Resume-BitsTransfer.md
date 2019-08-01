@@ -4,18 +4,17 @@ Module Name: BitsTransfer
 online version: 
 schema: 2.0.0
 title: Resume-BitsTransfer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C83A2E91-B3CD-4E4F-8276-2B95769E3443
-ms.manager: dansimp
 ---
 
 # Resume-BitsTransfer

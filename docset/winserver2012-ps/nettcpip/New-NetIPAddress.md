@@ -3,9 +3,10 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E7BA1290-44FA-49D6-900F-2198B0564ECB
+manager: dansimp
 ---
 
 # New-NetIPAddress

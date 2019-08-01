@@ -3,9 +3,10 @@ external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 42A5CB1C-50F8-4AB1-B699-9B51A54B02D4
+manager: dansimp
 ---
 
 # Update-SmbMultichannelConnection

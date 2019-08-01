@@ -3,9 +3,10 @@ external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8B5FF5C0-5D2F-4030-8F8E-C2C3B3E8906E
+manager: dansimp
 ---
 
 # Set-SmbServerConfiguration

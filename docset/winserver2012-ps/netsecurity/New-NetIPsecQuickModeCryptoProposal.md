@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5C6C43AA-F785-4EA5-88C7-39A8DAF38DCA
+manager: dansimp
 ---
 
 # New-NetIPsecQuickModeCryptoProposal

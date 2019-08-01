@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 529941C3-ED92-44D1-9A08-A2426D99652A
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDFileTypeAssociation

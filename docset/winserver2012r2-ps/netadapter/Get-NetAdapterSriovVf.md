@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-NetAdapterSriovVf
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DF76ED0C-3811-4C2B-9783-0DE952EC5841
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

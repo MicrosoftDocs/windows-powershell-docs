@@ -4,18 +4,17 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Suspend-ClusterNode
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6BE0D49E-A27C-4640-AE0D-0B1E47B2999E
-ms.manager: dansimp
 ---
 
 # Suspend-ClusterNode

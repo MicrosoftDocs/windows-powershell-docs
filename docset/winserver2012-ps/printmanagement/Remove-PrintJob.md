@@ -3,9 +3,10 @@ external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B439E3E1-29A5-4B94-9A6A-07639FBE28A2
+manager: dansimp
 ---
 
 # Remove-PrintJob

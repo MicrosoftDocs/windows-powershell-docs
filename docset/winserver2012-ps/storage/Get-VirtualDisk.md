@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0EEBA53F-6468-485F-A680-49260B4C83F0
+manager: dansimp
 ---
 
 # Get-VirtualDisk

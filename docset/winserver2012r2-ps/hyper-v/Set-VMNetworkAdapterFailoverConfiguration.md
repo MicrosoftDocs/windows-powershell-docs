@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Set-VMNetworkAdapterFailoverConfiguration
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 13B6E5DA-9EB8-4B05-AEB5-C905334712EA
-ms.manager: dansimp
 ---
 
 # Set-VMNetworkAdapterFailoverConfiguration

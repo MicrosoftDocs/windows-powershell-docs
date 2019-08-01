@@ -1,9 +1,10 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 6154557C-CFC4-4D97-91B4-A06646F50F2B
+manager: dansimp
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -13,7 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Clear-IISConfigCollection
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer:
 ---
 

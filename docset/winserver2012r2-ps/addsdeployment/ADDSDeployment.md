@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
 Help Version: 4.0.3.0
 Locale: en-US
 title: ADDSDeployment
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2759d4b3-632c-4a20-9692-c410595e839e
-ms.manager: dansimp
 ---
 
 # ADDSDeployment Module

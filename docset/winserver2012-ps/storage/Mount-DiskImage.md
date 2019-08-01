@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E10B4E05-1D98-4EAA-A6BE-2D3F4A885746
+manager: dansimp
 ---
 
 # Mount-DiskImage

@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Checkpoint-IscsiVirtualDisk
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6854D819-70B6-488B-A2C6-6001BBCBD344
-ms.manager: dansimp
 ---
 
 # Checkpoint-IscsiVirtualDisk

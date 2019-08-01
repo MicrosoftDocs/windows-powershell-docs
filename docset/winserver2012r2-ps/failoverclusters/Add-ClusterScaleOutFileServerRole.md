@@ -4,18 +4,17 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Add-ClusterScaleOutFileServerRole
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8DAC6B1C-D6DF-4F00-85F4-ABADA50E78A1
-ms.manager: dansimp
 ---
 
 # Add-ClusterScaleOutFileServerRole

@@ -3,9 +3,10 @@ external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 32991B3D-41BF-4DB9-8096-8D5847C7F75A
+manager: dansimp
 ---
 
 # New-NetIPHttpsConfiguration

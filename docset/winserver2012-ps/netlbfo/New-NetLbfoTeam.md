@@ -3,9 +3,10 @@ external help file: NetLbfo_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7FB6DF2E-5E77-4118-AB5F-D09E6C57D763
+manager: dansimp
 ---
 
 # New-NetLbfoTeam

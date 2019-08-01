@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Unregister-DnsServerDirectoryPartition
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 28F4646E-A4E7-4C9B-A195-69E733F55D7E
-ms.manager: dansimp
 ---
 
 # Unregister-DnsServerDirectoryPartition

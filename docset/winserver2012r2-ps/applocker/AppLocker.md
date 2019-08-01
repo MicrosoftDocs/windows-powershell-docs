@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285540
 Help Version: 4.0.2.0
 Locale: en-US
 title: AppLocker
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1aeef434-5587-4ec1-9854-222d707bc362
-ms.manager: dansimp
 ---
 
 # AppLocker Module

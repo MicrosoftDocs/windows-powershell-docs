@@ -4,18 +4,17 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Get-DedupVolume
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B95430BE-3433-4A31-9442-EDCE96C3DB89
-ms.manager: dansimp
 ---
 
 # Get-DedupVolume

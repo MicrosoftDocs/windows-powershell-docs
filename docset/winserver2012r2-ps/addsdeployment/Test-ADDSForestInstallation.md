@@ -4,18 +4,17 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Test-ADDSForestInstallation
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4BAB511B-0000-4AC1-8258-F945353FA10E
-ms.manager: dansimp
 ---
 
 # Test-ADDSForestInstallation

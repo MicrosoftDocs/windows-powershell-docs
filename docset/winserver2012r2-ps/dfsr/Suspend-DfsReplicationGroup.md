@@ -4,18 +4,17 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Suspend-DfsReplicationGroup
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 634E4EA6-F41F-459D-9295-4FB158141F15
-ms.manager: dansimp
 ---
 
 # Suspend-DfsReplicationGroup

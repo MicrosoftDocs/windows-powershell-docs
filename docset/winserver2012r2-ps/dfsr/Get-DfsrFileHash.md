@@ -4,18 +4,17 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Get-DfsrFileHash
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6F7A9B63-557E-456B-95EE-30F1E03716F9
-ms.manager: dansimp
 ---
 
 # Get-DfsrFileHash

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285751
 Help Version: 4.0.4.0
 Locale: en-US
 title: IscsiTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5e639b6b-8be5-4abe-859f-ce842558e3de
-ms.manager: dansimp
 ---
 
 # IscsiTarget Module

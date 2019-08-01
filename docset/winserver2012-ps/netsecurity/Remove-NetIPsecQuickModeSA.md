@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 1727469C-6634-4165-AFD1-CA0916C828FC
+manager: dansimp
 ---
 
 # Remove-NetIPsecQuickModeSA

@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Move-ADDirectoryServerOperationMasterRole
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C779A4F5-0BB8-4E7B-B91C-FC44E2DBE160
-ms.manager: dansimp
 ---
 
 # Move-ADDirectoryServerOperationMasterRole

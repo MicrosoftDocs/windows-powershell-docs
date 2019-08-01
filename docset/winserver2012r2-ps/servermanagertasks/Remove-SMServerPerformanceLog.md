@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-SMServerPerformanceLog
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E51A8BAD-CD34-4423-9274-466A52A86B0D
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

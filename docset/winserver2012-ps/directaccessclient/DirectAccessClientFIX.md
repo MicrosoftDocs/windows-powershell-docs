@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?Linkid=206776
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 6E108A49-889B-47B0-8537-FEC153F66809
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DirectAccessClientFIX Module

@@ -3,9 +3,10 @@ external help file: NPS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 1BE74D0B-12D7-4E3C-99B3-F0F3764F658F
+manager: dansimp
 ---
 
 # New-NpsRadiusClient

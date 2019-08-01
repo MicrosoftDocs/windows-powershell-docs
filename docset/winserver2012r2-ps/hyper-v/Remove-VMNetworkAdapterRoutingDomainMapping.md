@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Remove-VMNetworkAdapterRoutingDomainMapping
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D97174BE-9438-4DBD-8820-9C8F87E00047
-ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterRoutingDomainMapping

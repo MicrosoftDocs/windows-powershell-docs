@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-WindowsDeveloperLicense
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 73687EB6-DAF8-4003-BDB3-5599E543F67E
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -4,18 +4,17 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Set-GPPermission
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2096B6E1-DF11-4864-92D1-FB9371BE4C99
-ms.manager: dansimp
 ---
 
 # Set-GPPermission

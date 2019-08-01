@@ -4,18 +4,17 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Disable-WindowsOptionalFeature
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D52352EC-49DD-4FD7-B83A-1060EE80A089
-ms.manager: dansimp
 ---
 
 # Disable-WindowsOptionalFeature

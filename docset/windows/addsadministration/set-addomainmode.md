@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -139,6 +139,7 @@ The following are the currently supported values:
 - Windows Server 2008 R2: **4** or **Windows2008R2Domain**
 - Windows Server 2012: **5** or **Windows2012Domain**
 - Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+- Windows Server 2016: **7** or **WinThreshold**
 
 The domain functional level cannot be lower than the forest functional level, but it can be higher.
 The functional level can be increased, and also decreased as long as no feature that requires that functional level is in use, such as the Active Directory Recycle Bin.

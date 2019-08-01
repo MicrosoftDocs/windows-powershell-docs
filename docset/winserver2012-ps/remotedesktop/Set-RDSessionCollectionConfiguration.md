@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 12AFAB28-DFFC-4E61-A0BD-637C517A71FD
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-RDSessionCollectionConfiguration

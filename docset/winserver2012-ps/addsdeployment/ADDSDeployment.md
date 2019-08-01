@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206728
 Help Version: 3.2.0.0
 Locale: en-US
 ms.assetid: 7F1FAA42-ECF3-4C09-B95D-961C5E18453A
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADDSDeployment Module

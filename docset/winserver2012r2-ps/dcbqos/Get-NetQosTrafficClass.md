@@ -4,18 +4,17 @@ Module Name: DcbQos
 online version: 
 schema: 2.0.0
 title: Get-NetQosTrafficClass
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E6A3602-4064-47B5-B326-20BC5D3393D0
-ms.manager: dansimp
 ---
 
 # Get-NetQosTrafficClass
@@ -31,7 +30,7 @@ Get-NetQosTrafficClass [[-Name] <String[]>] [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Get-NetQosTrafficClass** cmdlet retrieves network traffic classes configured in Windows Server� 2012 and later.
+The **Get-NetQosTrafficClass** cmdlet retrieves network traffic classes configured in Windows Server 2012 and later.
 A traffic class contains one or more types of traffic, each of which is differentiated by the IEEE 802.1p priority.
 
 For more information on the traffic class, see the New-NetQosTrafficClass cmdlet.
@@ -104,7 +103,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell� calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A4B221E3-618D-4C48-9983-AFD3974E0A36
+manager: dansimp
 ---
 
 # Copy-WssClientRecoveryImage

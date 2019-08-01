@@ -4,18 +4,17 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Clear-DnsClientCache
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0511A109-5A9D-4EC6-B315-F5DB1EB2F512
-ms.manager: dansimp
 ---
 
 # Clear-DnsClientCache

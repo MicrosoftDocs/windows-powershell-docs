@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Remove-VMRemoteFx3dVideoAdapter
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2477E914-4CF4-4A90-9268-DF440FB6ADD5
-ms.manager: dansimp
 ---
 
 # Remove-VMRemoteFx3dVideoAdapter

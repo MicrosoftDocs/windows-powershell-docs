@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerDnsSecZoneSetting
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DFCFB200-78E7-4921-BBB6-A99572D6548A
-ms.manager: dansimp
 ---
 
 # Set-DnsServerDnsSecZoneSetting

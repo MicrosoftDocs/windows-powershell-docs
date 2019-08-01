@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Reset-Net6to4Configuration
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 24F71EF7-BA39-4434-A1EE-E43FFFCB1319
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

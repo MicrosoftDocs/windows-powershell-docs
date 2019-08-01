@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-TargetPortFromMaskingSet
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 83281073-2D64-4CFC-BC83-DDB493FA43F3
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -4,18 +4,17 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Enable-CauClusterRole
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9CFEB42-ED01-4197-937F-BEAFE0C236A7
-ms.manager: dansimp
 ---
 
 # Enable-CauClusterRole

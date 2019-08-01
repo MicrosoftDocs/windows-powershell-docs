@@ -4,18 +4,17 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Add-BitLockerKeyProtector
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4AB130BF-4F93-492A-9AE9-B8406FD9D181
-ms.manager: dansimp
 ---
 
 # Add-BitLockerKeyProtector

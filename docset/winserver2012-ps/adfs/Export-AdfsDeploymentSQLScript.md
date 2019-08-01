@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
 ms.assetid: 320C54A6-D0D1-44F5-B1C3-7846E684DB7D
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Export-AdfsDeploymentSQLScript

@@ -4,18 +4,17 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Get-DfsrConnectionSchedule
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BF13E026-9450-4B10-8A69-0CB198623BE3
-ms.manager: dansimp
 ---
 
 # Get-DfsrConnectionSchedule

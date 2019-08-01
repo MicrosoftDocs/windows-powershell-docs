@@ -4,18 +4,17 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Install-RmsMfgEnrollment
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E26F3B1F-75A9-47C1-A175-DC5A77AEE7B7
-ms.manager: dansimp
 ---
 
 # Install-RmsMfgEnrollment

@@ -4,18 +4,17 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Confirm-CAEndorsementKeyInfo
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CCC599DA-19B6-4AC9-87E5-8283B35A6EF5
-ms.manager: dansimp
 ---
 
 # Confirm-CAEndorsementKeyInfo

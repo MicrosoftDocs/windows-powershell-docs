@@ -3,18 +3,17 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Get-HcsWebProxy
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CEC8E385-7D00-4BCD-A504-4FE804F22CC7
-ms.manager: dansimp
 ---
 
 # Get-HcsWebProxy

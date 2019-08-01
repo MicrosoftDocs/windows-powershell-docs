@@ -3,9 +3,10 @@ external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2096B6E1-DF11-4864-92D1-FB9371BE4C99
+manager: dansimp
 ---
 
 # Set-GPPermission

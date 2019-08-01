@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DfsrPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -48,7 +48,7 @@ The term downstream refers to the non-authoritative server that is a clone of th
 
 ### Example 1: Clone and import a DFS Replication database
 ```
-PS C:\> Import-DfsrClone -Volume "C:" -Path "C:\DfsRClone"
+PS C:\> Import-DfsrClone -Volume "C:" -Path C:\DfsRClone
 This operation will import the database and clone DFSR. It can take a long time to complete. Use Get-DfsrCloneState or
 DFSR event 2404 to determine when the import has succeeded. Volume: 
 c:\ Path: C:\Dfsrclone
@@ -59,7 +59,7 @@ This command clones and imports the DFS Replication database and volume configur
 
 ### Example 2: Import a DFS Replication database and periodically check status
 ```
-PS C:\> Import-DfsrClone -Volume "C:" -Path "C:\DfsRClone"
+PS C:\> Import-DfsrClone -Volume "C:" -Path C:\DfsRClone
 PS C:\> Get-DfsrCloneState
 PS C:\> Get-DfsrCloneState
 PS C:\> Get-DfsrCloneState
@@ -82,12 +82,12 @@ The output indicates that the import succeeded.
 PS C:\> New-DfsReplicationGroup "RG05" | New-DfsReplicatedFolder -FolderName "RF05" | Add-DfsrMember -ComputerName "SRV01"
 PS C:\> Set-DfsrMembership -ComputerName "SRV01" -ContentPath "C:\Rf05" -PrimaryMember $True -FolderName "RF05"
 PS C:\> Update-DfsrConfigurationFromAD
-PS C:\> New-Item -Path "C:\DfsRClone" -Type Directory
+PS C:\> New-Item -Path C:\DfsRClone -Type Directory
 PS C:\> Export-DfsrClone -Volume "C:" -Path "C:\DfsRClone"
 PS C:\> Robocopy.exe C:\Rf05 \\srv02\c$\Rf5 /E /B /COPYALL /R:6 /W:5 /MT:64 /XD DfsrPrivate /TEE /LOG+:preseed.log
 PS C:\> Robocopy.exe C:\DfsRClone \\srv02\c$\DfsRClone /B
 PS C:\> RD "C:\system volume information\dfsr" -Force -Recurse
-PS C:\> Import-DfsrClone -Volume "C:" -Path "C:\DfsRClone"
+PS C:\> Import-DfsrClone -Volume "C:" -Path C:\DfsRClone
 PS C:\> Get-DfsrCloneState
 PS C:\> Add-DfsrMember -GroupName "RG05" -ComputerName "SRV02" | Set-DfsrMembership -FolderName "RF05" -ContentPath "C:\Rf05"
 PS C:\> Add-DfsrConnection -GroupName "RG05" -SourceComputerName "SRV01" -DestinationComputerName "SRV02"

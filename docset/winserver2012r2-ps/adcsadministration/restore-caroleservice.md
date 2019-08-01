@@ -4,18 +4,17 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Restore-CARoleService
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6AB4E278-DA57-44BD-AC5E-6E0BECE6A574
-ms.manager: dansimp
 ---
 
 # Restore-CARoleService

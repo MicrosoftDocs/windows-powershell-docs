@@ -4,18 +4,17 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Invoke-CauScan
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B579FEB7-574E-4039-8F0C-F713BC160B9B
-ms.manager: dansimp
 ---
 
 # Invoke-CauScan

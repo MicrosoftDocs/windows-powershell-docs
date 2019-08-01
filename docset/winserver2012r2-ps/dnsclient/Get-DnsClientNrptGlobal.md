@@ -4,18 +4,17 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Get-DnsClientNrptGlobal
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE7B2DEE-7132-4CCA-90D0-8BA1A1D885AB
-ms.manager: dansimp
 ---
 
 # Get-DnsClientNrptGlobal

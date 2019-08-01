@@ -4,18 +4,17 @@ Module Name: BestPractices
 online version: 
 schema: 2.0.0
 title: Get-BpaModel
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC4D5797-49C2-4842-94CE-7509EE977374
-ms.manager: dansimp
 ---
 
 # Get-BpaModel

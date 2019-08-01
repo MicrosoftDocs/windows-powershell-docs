@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Rename-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FFC11F6E-7DDA-4C46-AA49-8A3C7B8C2F89
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285738
 Help Version: 4.0.5.0
 Locale: en-US
 title: BitLocker
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 09aea62d-54fa-458b-9b82-f13a8ed77fa6
-ms.manager: dansimp
 ---
 
 # BitLocker Module

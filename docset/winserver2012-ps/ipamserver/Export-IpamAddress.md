@@ -3,9 +3,10 @@ external help file: IpamServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2F4086C5-54C3-4AC2-B5EA-BF2F6108301A
+manager: dansimp
 ---
 
 # Export-IpamAddress

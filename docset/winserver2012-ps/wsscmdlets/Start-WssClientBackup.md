@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: D6532B58-32E7-4A6B-8574-A6B9E082B863
+manager: dansimp
 ---
 
 # Start-WssClientBackup

@@ -4,18 +4,17 @@ Module Name: AssignedAccess
 online version: 
 schema: 2.0.0
 title: Clear-AssignedAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DDA49653-B37F-4CB6-90DC-B5B4BB9E6886
-ms.manager: dansimp
 ---
 
 # Clear-AssignedAccess

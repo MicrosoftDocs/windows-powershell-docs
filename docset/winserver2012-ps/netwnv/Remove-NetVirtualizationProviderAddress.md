@@ -3,9 +3,10 @@ external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4F575423-EADD-46EA-BE65-8D10FE47C957
+manager: dansimp
 ---
 
 # Remove-NetVirtualizationProviderAddress

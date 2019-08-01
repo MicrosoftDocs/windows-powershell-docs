@@ -6,15 +6,14 @@ schema: 2.0.0
 title: New-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AF68BBAE-B01E-49A0-A9A6-10600E6FD9F6
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

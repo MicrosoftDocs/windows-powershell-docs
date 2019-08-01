@@ -4,18 +4,17 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Get-DnsClientCache
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 50AA93EA-4AE7-4DB1-B210-F0EF080F95BD
-ms.manager: dansimp
 ---
 
 # Get-DnsClientCache

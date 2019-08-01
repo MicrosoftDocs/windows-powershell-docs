@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A2A63CBE-B973-469C-BC23-82A0E3763C7C
+manager: dansimp
 ---
 
 # Get-StorageReliabilityCounter

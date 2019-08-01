@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Remove-ADDomainControllerPasswordReplicationPolicy
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DAE1C8E0-DCB8-4E66-856E-4647DA065B22
-ms.manager: dansimp
 ---
 
 # Remove-ADDomainControllerPasswordReplicationPolicy

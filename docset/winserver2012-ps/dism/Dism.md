@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285743
 Help Version: 3.0.2.0
 Locale: en-US
 ms.assetid: 3DD32417-9E7D-41FE-BB76-8F24D96B835A
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Dism Module

@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Get-IscsiServerTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7986B201-F96E-4822-9C5E-380E933ABF60
-ms.manager: dansimp
 ---
 
 # Get-IscsiServerTarget

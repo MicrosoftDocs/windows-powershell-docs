@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285733
 Help Version: 4.0.2.0
 Locale: en-US
 title: ADCSDeployment
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3454c4c0-c216-477b-99ee-2e879c3ae018
-ms.manager: dansimp
 ---
 
 # ADCSDeployment Module

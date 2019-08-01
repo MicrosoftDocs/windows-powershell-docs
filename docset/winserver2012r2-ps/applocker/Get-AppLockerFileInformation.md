@@ -4,18 +4,17 @@ Module Name: AppLocker
 online version: 
 schema: 2.0.0
 title: Get-AppLockerFileInformation
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 32575D8C-9F70-4090-BAB9-2486C30186FB
-ms.manager: dansimp
 ---
 
 # Get-AppLockerFileInformation

@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 066EB53D-003C-4AF4-B5C1-51D5BAEBFE81
+manager: dansimp
 ---
 
 # Start-OBRegistration

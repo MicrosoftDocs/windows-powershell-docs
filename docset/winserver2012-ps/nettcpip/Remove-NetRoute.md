@@ -3,9 +3,10 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3252B6F3-7908-47F2-BEAB-BFE265B7C985
+manager: dansimp
 ---
 
 # Remove-NetRoute

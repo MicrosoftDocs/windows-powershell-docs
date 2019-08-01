@@ -3,15 +3,16 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
+manager: dansimp
 ---
 
 # Get-StorageSetting
 
 ## SYNOPSIS
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ## SYNTAX
 
@@ -20,7 +21,7 @@ Get-StorageSetting [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns the StorageSettings object.
+The **Get-StorageSetting** cmdlet returns the StorageSetting object.
 
 ## EXAMPLES
 

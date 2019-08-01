@@ -4,18 +4,17 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Set-DfsrMember
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0CCE753F-DFA2-4C7F-B700-A923549533B7
-ms.manager: dansimp
 ---
 
 # Set-DfsrMember

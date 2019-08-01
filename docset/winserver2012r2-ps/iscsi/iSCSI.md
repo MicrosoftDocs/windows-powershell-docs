@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285750
 Help Version: 4.0.4.0
 Locale: en-US
 title: iSCSI
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8037b3f8-e00e-4883-8fda-2dbd571f3de3
-ms.manager: dansimp
 ---
 
 # iSCSI Module

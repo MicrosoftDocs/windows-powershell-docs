@@ -4,18 +4,17 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Set-DfsnFolder
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7AC0201-4475-401E-B192-FD8E41EAB0FE
-ms.manager: dansimp
 ---
 
 # Set-DfsnFolder

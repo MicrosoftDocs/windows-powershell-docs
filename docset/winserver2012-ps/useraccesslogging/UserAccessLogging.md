@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/p/?LinkID=16989
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 40047A3B-9473-49D1-B164-84FA6CCC9AFA
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # UserAccessLogging Module

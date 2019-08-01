@@ -4,18 +4,17 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Unregister-CauPlugin
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F0EEF063-A47F-4D06-8BC4-332540CB3877
-ms.manager: dansimp
 ---
 
 # Unregister-CauPlugin

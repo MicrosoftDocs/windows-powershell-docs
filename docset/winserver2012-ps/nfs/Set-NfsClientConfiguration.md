@@ -3,9 +3,10 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EDA0D84A-B35E-4CB8-9EE3-17EBE0B3A875
+manager: dansimp
 ---
 
 # Set-NfsClientConfiguration

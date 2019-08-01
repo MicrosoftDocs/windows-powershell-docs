@@ -3,9 +3,10 @@ external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2C57BC34-F9B7-419A-80E6-563465BCCF2A
+manager: dansimp
 ---
 
 # Get-SMServerClusterName

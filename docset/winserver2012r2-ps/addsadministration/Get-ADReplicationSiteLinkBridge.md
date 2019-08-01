@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADReplicationSiteLinkBridge
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CD39D594-441F-4EE4-A666-C2DD7B7CF10D
-ms.manager: dansimp
 ---
 
 # Get-ADReplicationSiteLinkBridge

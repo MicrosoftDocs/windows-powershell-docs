@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Set-NlbClusterNodeDip
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5A066C9E-94AF-43F4-A87C-7FD781F9BFAF
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

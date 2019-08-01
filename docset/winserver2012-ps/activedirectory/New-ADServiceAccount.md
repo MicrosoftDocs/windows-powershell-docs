@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
-online version: 
+manager: dansimp
+online version:
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-ADServiceAccount
@@ -16,7 +17,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] -DNSHostName <String>
@@ -29,7 +30,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>] [-Enabled <Boolean>]
@@ -40,7 +41,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
  [-DisplayName <String>] [-Enabled <Boolean>] [-HomePage <String>] [-Instance <ADServiceAccount>]
@@ -52,7 +53,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ## DESCRIPTION
 The New-ADServiceAccount cmdlet creates a new Active Directory managed service account (MSA).
 By default a group MSA is created.
-To create a standalone MSA which is linked to a specific computer, the -Standalone parameter is used. 
+To create a standalone MSA which is linked to a specific computer, the -RestrictToSingleComputer parameter is used.
 To create a group MSA which can only be used in client roles, the -Agent parameter is used.
 This creates a group MSA which can be used for outbound connections only and attempts to connect to services using this account will fail since the account does not have enough information for authentication to be successful.
 You can set commonly used MSA property values by using the cmdlet parameters.
@@ -78,48 +79,39 @@ Then pass these objects through the pipeline to the New-ADServiceAccount cmdlet 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
+Create a new enabled managed service account in AD DS.
+
+```Powershell
 C:\PS>New-ADServiceAccount service1 -DNSHostName service1.contoso.com -Enabled $true
 ```
 
-Description
-
------------
-
-Create a new enabled managed service account in AD DS.
-
 ### -------------------------- EXAMPLE 2 --------------------------
-```
+Create a new managed service account and register its service principal name.
+
+```Powershell
 C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName service1.contoso.com
 ```
 
-Description
-
------------
-
-Create a new managed service account and register its service principal name.
-
 ### -------------------------- EXAMPLE 3 --------------------------
-```
+Create a new managed service account and restrict its use to only a single computer.
+
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToSingleComputer
 ```
 
-Description
-
------------
-
-Create a new managed service account and restrict its use to only a single computer.
-
 ### -------------------------- EXAMPLE 4 --------------------------
-```
+Create a new managed service account and restrict its use to only outbound authentication.
+
+```Powershell
 C:\PS>New-ADServiceAccount service1 -RestrictToOutboundAuthenticationOnly
 ```
 
-Description
+### -------------------------- EXAMPLE 5 --------------------------
+Create a new managed service account and register multiple service principal names.
 
------------
-
-Create a new managed service account and restrict its use to only outbound authentication.
+```Powershell
+C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
+```
 
 ## PARAMETERS
 
@@ -134,41 +126,42 @@ Time is assumed to be local time unless otherwise specified.
 When a time value is not specified, the time is assumed to 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.
 The following examples show commonly-used syntax to specify a DateTime object.
+`"4/17/2006"`
 
-"4/17/2006"
+`"Monday, April 17, 2006"`
 
-"Monday, April 17, 2006"
+`"2:22:45 PM"`
 
-"2:22:45 PM"
-
-"Monday, April 17, 2006 2:22:45 PM"
+`"Monday, April 17, 2006 2:22:45 PM"`
 
 These examples specify the same date and the time without the seconds.
 
-"4/17/2006 2:22 PM"
 
-"Monday, April 17, 2006 2:22 PM"
+`"4/17/2006 2:22 PM"`
 
-"2:22 PM"
+`"Monday, April 17, 2006 2:22 PM"`
+
+`"2:22 PM"`
+
 
 The following example shows how to specify a date and time by using the RFC1123 standard.
 This example defines time by using Greenwich Mean Time (GMT).
 
-"Mon, 17 Apr 2006 21:22:48 GMT"
+`"Mon, 17 Apr 2006 21:22:48 GMT"`
 
 The following example shows how to specify a round-trip value as Coordinated Universal Time (UTC).
 This example represents Monday, April 17, 2006 at 2:22:48 PM UTC.
 
-"2006-04-17T14:22:48.0000000"
+`"2006-04-17T14:22:48.0000000"`
 
 The following example shows how to set this parameter to the date May 1, 2012 at 5 PM.
 
--AccountExpirationDate "05/01/2012 5:00:00 PM"
+`-AccountExpirationDate "05/01/2012 5:00:00 PM"`
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,13 +182,13 @@ $false or 0
 $true or 1
 
 The following example shows how to set this parameter so that the security context of the account is not delegated to a service.
-
+```Powershell
 -AccountNotDelegated $true
-
+```
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,13 +214,13 @@ There is no way to create an enabled service account object with a password that
 
 The following example shows how to set this parameter.
 This command will prompt you to enter the password.
-
+```Powershell
 -AccountPassword (Read-Host -AsSecureString "AccountPassword")
-
+```
 ```yaml
 Type: SecureString
 Parameter Sets: RestrictedToSingleComputer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,13 +242,13 @@ The default authentication method is Negotiate.
 A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
 
 The following example shows how to set this parameter to Basic.
-
+```Powershell
 -AuthType Basic
-
+```
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -274,49 +267,47 @@ The LDAP Display Name (ldapDisplayName) for this property is "userCertificate".
 Syntax:
 
 To add values:
-
+```Powershell
 -Certificates @{Add=value1,value2,...}
-
+```
 To remove values:
-
+```Powershell
 -Certificates @{Remove=value3,value4,...}
-
+```
 To replace values:
-
+```Powershell
 -Certificates @{Replace=value1,value2,...}
-
+```
 To clear all values:
-
+```Powershell
 -Certificates $null
-
+```
 You can specify more than one operation by using a list separated by semicolons.
 For example, use the following syntax to add and remove Certificate values
-
+```Powershell
 -Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}
-
+```
 The operators will be applied in the following sequence:
 
-..Remove
-
-..Add
-
-..Replace
+- Remove
+- Add
+- Replace
 
 The following example shows how to create a certificate by using the New-Object cmdlet, and then add it to a user account.
 When this cmdlet is run, \<certificate password\> is replaced by the password used to add the certificate.
-
+```Powershell
 $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate certificate1.cer  \<certificate password\>
 
 Set-ADServiceAccount Service1  -Certificates @{Add=$cert}
-
+```
 The following example shows how to add a certificate that is specified as a byte array.
-
+```Powershell
 Set-ADServiceAccount Service1  -Certificates @{Add= \[Byte\[\]\](0xC5,0xEE,0x53,...)}
-
+```
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompoundIdentitySupported
-Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device. 
+Specifies whether an account supports Kerberos service tickets which includes the authorization data for the user's device.
 This value sets the compound identity supported flag of the Active Directory msDS-SupportedEncryptionTypes attribute.
 Possible values for this parameter are:
 
@@ -335,16 +326,16 @@ $false or 0
 $true or 1
 
 The following example shows how to specify that an account supports compound identity.
-
+```Powershell
 -CompoundIdentitySupported $true
-
+```
 Warning: Domain-joined Windows systems and services such as clustering manage their own msDS-SupportedEncryptionTypes attribute.
 Therefore any changes to the flag on the msDS-SupportedEncryptionTypes attribute will be overwritten by the service or system which manages the setting.
 
 ```yaml
 Type: Boolean
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -380,19 +371,19 @@ You can also create a PSCredential object by using a script or by using the Get-
 You can then use it to specify the Credential parameter to the ADServiceAccount object.
 
 The following example shows how to create credentials.
-
+```Powershell
 $AdminCredentials = Get-Credential "Contoso\Admin1"
-
+```
 The following shows how to use the PSCredential object to specify administrative credentials when creating a new ADServiceAccount object by using the Credential parameter.
-
+```Powershell
 New-ADServiceAccount -Credential $AdminCredentials
-
+```
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -402,12 +393,19 @@ Accept wildcard characters: False
 ```
 
 ### -DNSHostName
-Specifies the Domain Name System (DNS) host name.
+Specifies the DNS (Domain Name System) host name of the Service Account.
+
+This parameter sets the value of the FQDN (Fully Qualified Domain Name) for the Service Account created.
+
+The following example shows how to set this parameter for a Service Account called service1 in the domain contoso.com
+```Powershell
+-DNSHostName service1.contoso.com
+```
 
 ```yaml
 Type: String
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -422,13 +420,13 @@ This parameter sets the value of the Description property for the object.
 The LDAP Display Name (ldapDisplayName) for this property is "description".
 
 The following example shows how to set this parameter to a sample description.
-
+```Powershell
 -Description "Description of the object"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -443,13 +441,13 @@ This parameter sets the DisplayName property of the object.
 The LDAP Display Name (ldapDisplayName) for this property is "displayName".
 
 The following example shows how to include this parameter when creating a new service account.
-
+```Powershell
 New-ADServiceAccount -DisplayName "Service Account for use with Contoso LOB Application"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -470,13 +468,13 @@ $false or 0
 $true or 1
 
 The following example shows how to set this parameter to enable the service account when creating it.
-
+```Powershell
 New-ADServiceAccount -Enabled $true
-
+```
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -491,13 +489,13 @@ This parameter sets the homePage property of an Active Directory object.
 The LDAP Display Name (ldapDisplayName) for this property is "wWWHomePage".
 
 The following example shows how to set this parameter to a URL when creating the service account.
-
+```Powershell
 New-ADServiceAccount -HomePage "http://accounts.contoso.com/Service1"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -509,7 +507,7 @@ Accept wildcard characters: False
 ### -Instance
 Specifies an instance of a service account object to use as a template for a new service account object.
 
-You can use an instance of an existing service account object as a template or you can construct a new service account object for template use. 
+You can use an instance of an existing service account object as a template or you can construct a new service account object for template use.
 You can construct a new service account using the Windows PowerShell command line or by using a script.
 The following examples show how to use these two methods to create service account object templates.
 
@@ -517,25 +515,25 @@ Method 1: Use an existing service account object as a template for a new object.
 To retrieve an instance of an existing service account object, use a cmdlet such as Get-ADServiceAccount.
 Then provide this object to the Instance parameter of the New-ADServiceAccount cmdlet to create a new service account object.
 You can override property values of the new object by setting the appropriate parameters.
-
+```Powershell
 $serviceAccountInstance = Get-ADServiceAccount -Identity
 
 New-ADServiceAccount -Name "ServiceAdmin2" -Instance $serviceAccountInstance   -Description "Service Account 2"
-
+```
 Method 2: Create a new ADServiceAccount object and set the property values by using the Windows PowerShell command line interface.
 Then pass this object to the Instance parameter of the New-ADServiceAccount cmdlet to create the new Active Directory service account object.
-
+```Powershell
 $serviceAccountInstance = new-object Microsoft.ActiveDirectory.Management.ADServiceAccount
 
 $serviceAccountInstance.
 Description "Service Account 2"
-
+```
 Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
 
 ```yaml
 Type: ADServiceAccount
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -545,7 +543,7 @@ Accept wildcard characters: False
 ```
 
 ### -KerberosEncryptionType
-Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets. 
+Specifies whether an account supports Kerberos encryption types which are used during creation of service tickets.
 This value sets the encryption types supported flags of the Active Directory msDS-SupportedEncryptionTypes attribute.
 Possible values for this parameter are:
 
@@ -564,16 +562,16 @@ None, will remove all encryption types from the account may result in the KDC be
 DES is a weak encryption type which is not supported by default since Windows 7 and Windows Server 2008 R2.
 
 The following example shows how to specify that an account supports service tickets with device authorization data.
-
+```Powershell
 -KerberosEncryptionTypes RC4,AES128,AES256
-
+```
 Warning: Domain-joined Windows systems and services such as clustering manage their own msDS-SupportedEncryptionTypes attribute.
 Therefore any changes to the flag on the msDS-SupportedEncryptionTypes attribute will be overwritten by the service or system which manages the setting.
 
 ```yaml
 Type: ADKerberosEncryptionType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, DES, RC4, AES128, AES256
 
 Required: False
@@ -591,13 +589,13 @@ After that the setting is read only.
 This value returns the msDS-ManagedPasswordInterval of the group managed service account object.
 
 The following example shows how to specify a 90 day password changes interval:
-
+```Powershell
 -ManagedPasswordIntervalInDays 90
-
+```
 ```yaml
 Type: Int32
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -612,13 +610,13 @@ This parameter sets the Name property of the Active Directory object.
 The LDAP Display Name (ldapDisplayName) of this property is "name".
 
 The following example shows how to set this parameter to a name string.
-
+```Powershell
 -Name "Service1"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -636,32 +634,32 @@ To identify an attribute, specify the LDAPDisplayName (ldapDisplayName) defined 
 Syntax:
 
 To specify a single value for an attribute:
-
+```Powershell
 -OtherAttributes @{'AttributeLDAPDisplayName'=value}
-
+```
 To specify multiple values for an attribute
-
+```Powershell
 -OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}
-
-You can specify values for more than one attribute by using semicolons to separate attributes. 
+```
+You can specify values for more than one attribute by using semicolons to separate attributes.
 The following syntax shows how to set values for multiple attributes:
-
+```Powershell
 -OtherAttributes @{'Attribute1LDAPDisplayName'=value; 'Attribute2LDAPDisplayName'=value1,value2;...}
-
+```
 The following examples show how to use this parameter.
 
 To set the value of a custom attribute called favColors that takes a set of Unicode strings, use the following syntax:
-
+```Powershell
 -OtherAttributes @{'favColors'="pink","purple"}
-
+```
 To set values for favColors and dateOfBirth simultaneously, use the following syntax:
-
+```Powershell
 -OtherAttributes @{'favColors'="pink","purple"; 'dateOfBirth'=" 01/01/1960"}
-
+```
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -678,7 +676,7 @@ if -PassThru is not specified), this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -690,8 +688,8 @@ Accept wildcard characters: False
 ### -Path
 Specifies the X.500 path of the Organizational Unit (OU) or container where the new object is created.
 
-In many cases, a default value will be used for the Path parameter if no value is specified. 
-The rules for determining the default value are given below. 
+In many cases, a default value will be used for the Path parameter if no value is specified.
+The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
 In AD DS environments, a default value for Path will be set in the following cases:
@@ -717,7 +715,7 @@ However, for the provider cmdlets, the Path parameter identifies the path of the
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -733,7 +731,7 @@ This parameter sets the msDS-AllowedToActOnBehalfOfOtherIdentity attribute of th
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -751,7 +749,7 @@ This parameter should be set to the principals allowed to use this group managed
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: Group
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -767,7 +765,7 @@ This allows creating a group managed service account without the parameters requ
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RestrictedToOutboundAuthenticationOnly
-Aliases: 
+Aliases:
 Accepted values: true
 
 Required: True
@@ -784,7 +782,7 @@ These managed service accounts which are linked to a single computer account wer
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RestrictedToSingleComputer
-Aliases: 
+Aliases:
 Accepted values: true
 
 Required: True
@@ -802,15 +800,15 @@ This parameter sets the SAMAccountName for an account object.
 The LDAP display name (ldapDisplayName) for this property is "sAMAccountName".
 
 The following example shows how to specify this parameter.
-
+```Powershell
 -SAMAccountName "Service1"
-
+```
 Note: If the SAMAccountName string provided, does not end with a '$', one will be appended if needed.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -856,17 +854,17 @@ The default value for the Server parameter is determined by one of the following
 -By using the domain of the computer running Powershell.
 
 The following example shows how to specify a full qualified domain name as the parameter value.
-
+```Powershell
 New-ADServiceAccount -Server "corp.contoso.com"
-
+```
 The following example shows how to specify a full qualified directory server name as the parameter value.
-
+```Powershell
 New-ADServiceAccount -Server "corp-DC12.corp.contoso.com"
-
+```
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -877,49 +875,14 @@ Accept wildcard characters: False
 
 ### -ServicePrincipalNames
 Specifies the service principal names for the account.
-This parameter sets the ServicePrincipalNames property of the account.
-The LDAP display name (ldapDisplayName) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values.
-
-Syntax:
-
-To add values:
-
--ServicePrincipalNames @{Add=value1,value2,...}
-
-To remove values:
-
--ServicePrincipalNames @{Remove=value3,value4,...}
-
-To replace values:
-
--ServicePrincipalNames @{Replace=value1,value2,...}
-
-To clear all values:
-
--ServicePrincipalNames $null
-
-You can specify more than one change by using a list separated by semicolons.
-For example, use the following syntax to add and remove service principal names.
-
-@{Add=value1,value2,...};@{Remove=value3,value4,...}
-
-The operators will be applied in the following sequence:
-
-..Remove
-
-..Add
-
-..Replace
-
-The following example shows how to add and remove service principal names.
-
--ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+This parameter sets the **ServicePrincipalNames** property of the account.
+The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
+This parameter can be used to set multiple Service Principal Names, specifying each one separated with commas.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -940,13 +903,13 @@ $false or 0
 $true or 1
 
 The following example shows how to specify that an account is trusted for Kerberos delegation.
-
+ ```Powershell
 -TrustedForDelegation $true
-
+ ```
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1006,4 +969,3 @@ For more information on how to create the KDS root key using Windows PowerShell,
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

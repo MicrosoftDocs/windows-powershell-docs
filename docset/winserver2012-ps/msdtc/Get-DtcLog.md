@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 98B9E36F-285E-45AF-BA09-9049F0AD2852
+manager: dansimp
 ---
 
 # Get-DtcLog

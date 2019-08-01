@@ -4,18 +4,17 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Grant-DfsnAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 956730DE-562C-46BB-817C-3949CDDB6E4F
-ms.manager: dansimp
 ---
 
 # Grant-DfsnAccess

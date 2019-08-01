@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Remove-IscsiServerTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 623064A6-E1A2-40C9-9A44-2EF6D22518CD
-ms.manager: dansimp
 ---
 
 # Remove-IscsiServerTarget

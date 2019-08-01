@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Resolve-NfsMappedIdentity
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F6A9C8A9-6899-45F1-8CD6-B0B50BC5CBBD
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

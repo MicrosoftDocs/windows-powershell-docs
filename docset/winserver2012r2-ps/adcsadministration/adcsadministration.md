@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285732
 Help Version: 4.0.3.0
 Locale: en-US
 title: ADCSAdministration
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: c51c7f98-8cc5-46ef-aa0f-9f65764b94dd
-ms.manager: dansimp
 ---
 
 # ADCSAdministration Module

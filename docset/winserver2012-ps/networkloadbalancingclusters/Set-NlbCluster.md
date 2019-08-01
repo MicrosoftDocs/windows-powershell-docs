@@ -3,9 +3,10 @@ external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 57ACC3ED-7420-4EFE-A21A-474837243932
+manager: dansimp
 ---
 
 # Set-NlbCluster

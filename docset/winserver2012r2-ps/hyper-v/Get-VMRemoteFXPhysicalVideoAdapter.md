@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Get-VMRemoteFXPhysicalVideoAdapter
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AC3EC4E0-60E7-43FE-8A6A-72071FB45433
-ms.manager: dansimp
 ---
 
 # Get-VMRemoteFXPhysicalVideoAdapter

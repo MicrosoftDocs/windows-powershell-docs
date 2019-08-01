@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCF143CF-9F44-4AA0-A8C0-6E348044D05D
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

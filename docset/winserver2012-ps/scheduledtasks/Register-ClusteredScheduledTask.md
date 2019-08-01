@@ -3,9 +3,10 @@ external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0A5CFE1C-B960-4293-940E-A4B7DA6505AE
+manager: dansimp
 ---
 
 # Register-ClusteredScheduledTask

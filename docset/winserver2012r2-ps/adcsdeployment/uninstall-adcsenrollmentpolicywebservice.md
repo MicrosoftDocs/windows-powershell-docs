@@ -4,18 +4,17 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Uninstall-AdcsEnrollmentPolicyWebService
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3EDD4F25-41F2-4F11-BD20-3BE143D6FD3E
-ms.manager: dansimp
 ---
 
 # Uninstall-AdcsEnrollmentPolicyWebService

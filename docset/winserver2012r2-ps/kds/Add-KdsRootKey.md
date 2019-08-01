@@ -4,18 +4,17 @@ Module Name: Kds
 online version: 
 schema: 2.0.0
 title: Add-KdsRootKey
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2E649F25-5050-492D-8A49-662B73B4C7B5
-ms.manager: dansimp
 ---
 
 # Add-KdsRootKey

@@ -4,18 +4,17 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Install-AdcsNetworkDeviceEnrollmentService
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 25524D99-C1CA-410F-B168-482AE0E7C66F
-ms.manager: dansimp
 ---
 
 # Install-AdcsNetworkDeviceEnrollmentService

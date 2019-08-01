@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Enable-ScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AD79DF6E-F302-4CEE-8FDE-BCDD224A5A25
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

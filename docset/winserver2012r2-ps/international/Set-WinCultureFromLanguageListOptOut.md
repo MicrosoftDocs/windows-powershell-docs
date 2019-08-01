@@ -4,18 +4,17 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Set-WinCultureFromLanguageListOptOut
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3383B8A3-16DF-45A9-848F-B6A76FFAB900
-ms.manager: dansimp
 ---
 
 # Set-WinCultureFromLanguageListOptOut

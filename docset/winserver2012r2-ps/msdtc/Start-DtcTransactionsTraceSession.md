@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Start-DtcTransactionsTraceSession
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B1B2EAD-FE95-4E7F-B7EA-DE5A1F1FFC35
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

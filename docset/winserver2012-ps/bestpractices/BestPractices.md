@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?Linkid=206723
 Help Version: 3.2.0.0
 Locale: en-US
 ms.assetid: F8643E33-1240-44C1-A3E3-08A355A4E190
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # BestPractices Module

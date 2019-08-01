@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Remove-VMNetworkAdapterExtendedAcl
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B5D0B3C0-9E2D-44F8-A6F2-B5FDCD6D5949
-ms.manager: dansimp
 ---
 
 # Remove-VMNetworkAdapterExtendedAcl

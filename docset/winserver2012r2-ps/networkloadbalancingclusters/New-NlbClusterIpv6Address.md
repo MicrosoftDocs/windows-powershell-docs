@@ -6,15 +6,14 @@ schema: 2.0.0
 title: New-NlbClusterIpv6Address
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3A379E5D-C44B-44FF-A609-C6DF837AE844
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

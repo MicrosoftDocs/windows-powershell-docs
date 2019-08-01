@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Disable-AdfsRelyingPartyTrust
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C51A92A1-8994-4D65-8618-DAA35DD61815
-ms.manager: dansimp
 ---
 
 # Disable-AdfsRelyingPartyTrust

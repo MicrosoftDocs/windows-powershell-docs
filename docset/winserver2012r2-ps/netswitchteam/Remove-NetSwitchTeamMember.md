@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-NetSwitchTeamMember
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4EB6E1D3-0A83-4610-A4BF-041F16ED11DB
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

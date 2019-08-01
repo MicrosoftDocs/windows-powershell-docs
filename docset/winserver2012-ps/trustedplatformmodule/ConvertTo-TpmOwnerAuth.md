@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 1BF5CA4A-9E9B-4C8C-8B7D-ECC6FF0716EF
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ConvertTo-TpmOwnerAuth

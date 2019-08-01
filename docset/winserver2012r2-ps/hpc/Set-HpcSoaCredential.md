@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,9 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=185166
 schema: 2.0.0
 title: Set-HpcSoaCredential
 ms.assetid: 49A52A04-AEE2-43DB-B239-DD2BF8E6E0CE
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Set-HpcSoaCredential

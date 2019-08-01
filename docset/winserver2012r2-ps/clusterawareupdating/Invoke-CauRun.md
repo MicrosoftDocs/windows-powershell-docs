@@ -4,18 +4,17 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Invoke-CauRun
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5EA6D174-445B-4FAD-9E82-6CF62CD1E314
-ms.manager: dansimp
 ---
 
 # Invoke-CauRun

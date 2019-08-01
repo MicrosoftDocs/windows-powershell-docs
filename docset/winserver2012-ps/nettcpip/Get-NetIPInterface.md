@@ -3,9 +3,10 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8215EF05-BA8C-4476-B394-A0A4FA917924
+manager: dansimp
 ---
 
 # Get-NetIPInterface

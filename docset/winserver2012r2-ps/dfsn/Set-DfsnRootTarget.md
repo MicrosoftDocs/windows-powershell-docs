@@ -4,18 +4,17 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Set-DfsnRootTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B9018A4-5B74-40D4-BD6F-04B08A0B2AD5
-ms.manager: dansimp
 ---
 
 # Set-DfsnRootTarget

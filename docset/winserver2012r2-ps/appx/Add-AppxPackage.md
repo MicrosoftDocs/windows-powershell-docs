@@ -4,18 +4,17 @@ Module Name: Appx
 online version: 
 schema: 2.0.0
 title: Add-AppxPackage
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
-ms.manager: dansimp
 ---
 
 # Add-AppxPackage

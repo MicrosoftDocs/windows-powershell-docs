@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -66,13 +66,13 @@ This example creates a copy of the certificate specified by the **CloneCert** pa
 
 ### EXAMPLE 3
 ```
-PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&upn=pattifuller@contoso.com") -KeyUsage DataEncipherment -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
+PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&upn=pattifuller@contoso.com") -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
 ```
 
 This example creates a self-signed S/MIME certificate in the user MY store.
 The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
 The certificate uses an RSA asymmetric key with a key size of 2048 bits.
-This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com.
+This certificate has the subject alternative names of patti.fuller@contoso.com as RFC822 and pattifuller@contoso.com as Principal Name.
 
 This command does not specify the **NotAfter** parameter.
 Therefore, the certificate expires in one year.
@@ -125,6 +125,19 @@ The subject alternative name is pattifuller@contoso.com.
 
 This command specifies a value for **NotAfter**.
 The certificate expires in six months.
+
+### EXAMPLE 8
+```
+PS C:\>New-SelfSignedCertificate -Type Custom -Subject "E=patti.fuller@contoso.com,CN=Patti Fuller" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.4","2.5.29.17={text}email=patti.fuller@contoso.com&email=pattifuller@contoso.com") -KeyAlgorithm RSA -KeyLength 2048 -SmimeCapabilities -CertStoreLocation "Cert:\CurrentUser\My"
+```
+
+This example creates a self-signed S/MIME certificate in the user MY store.
+The certificate uses the default provider, which is the Microsoft Software Key Storage Provider.
+The certificate uses an RSA asymmetric key with a key size of 2048 bits.
+This certificate has the subject alternative names of patti.fuller@contoso.com and pattifuller@contoso.com both as RFC822.
+
+This command does not specify the **NotAfter** parameter.
+Therefore, the certificate expires in one year.
 
 ## PARAMETERS
 
@@ -529,7 +542,7 @@ The acceptable values for this parameter are:
 - None (default) 
 - NonRepudiation
 
-The default value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
+The value, **None**, indicates that this cmdlet does not include the **KeyUsage** extension in the new certificate.
 
 ```yaml
 Type: KeyUsage[]
@@ -539,7 +552,7 @@ Accepted values: None, EncipherOnly, CRLSign, CertSign, KeyAgreement, DataEnciph
 
 Required: False
 Position: Named
-Default value: None
+Default value: DigitalSignature,KeyEncipherment
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1012,3 +1025,4 @@ An **X509Certificate2** object for the certificate that has been created.
 
 ## RELATED LINKS
 
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)

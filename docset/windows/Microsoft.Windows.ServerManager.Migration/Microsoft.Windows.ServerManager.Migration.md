@@ -1,12 +1,12 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Module Name: Microsoft.Windows.ServerManager.Migration
 ms.topic: reference
 manager: jasgro
-author: kenwith
+author: andreabarr
 ms.prod: w10
 ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
 keywords: powershell, cmdlet

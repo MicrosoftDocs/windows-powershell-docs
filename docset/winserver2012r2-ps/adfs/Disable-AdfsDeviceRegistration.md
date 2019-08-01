@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Disable-AdfsDeviceRegistration
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 64A40824-4DCD-4DF8-8EFC-0CE756ACE8C8
-ms.manager: dansimp
 ---
 
 # Disable-AdfsDeviceRegistration

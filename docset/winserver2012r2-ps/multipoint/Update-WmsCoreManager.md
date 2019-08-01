@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Update-WmsCoreManager
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6AA79EA1-36AB-471B-BA21-F97C845FDED3
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Update-WmsCoreManager
@@ -99,8 +98,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Update-WmsCoreManager.
+### None
 
 ## OUTPUTS
 

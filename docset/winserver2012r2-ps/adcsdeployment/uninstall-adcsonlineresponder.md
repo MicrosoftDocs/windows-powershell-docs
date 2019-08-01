@@ -4,18 +4,17 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Uninstall-AdcsOnlineResponder
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DB15EC96-69EF-4303-BD9B-254619C02C4C
-ms.manager: dansimp
 ---
 
 # Uninstall-AdcsOnlineResponder

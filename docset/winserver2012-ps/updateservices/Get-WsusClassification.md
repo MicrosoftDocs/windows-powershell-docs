@@ -3,9 +3,10 @@ external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B2379176-301C-490D-8FE1-75C2B71C05B5
+manager: dansimp
 ---
 
 # Get-WsusClassification

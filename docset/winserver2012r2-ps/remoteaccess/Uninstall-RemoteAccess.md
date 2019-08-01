@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Uninstall-RemoteAccess
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 514EA24C-98AE-4DDD-8927-3A6648376DB3
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

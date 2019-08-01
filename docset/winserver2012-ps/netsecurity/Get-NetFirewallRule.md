@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2B905211-BBB2-40C8-8BA9-DF9FB90CA27D
+manager: dansimp
 ---
 
 # Get-NetFirewallRule

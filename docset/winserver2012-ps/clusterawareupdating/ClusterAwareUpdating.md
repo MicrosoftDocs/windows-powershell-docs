@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216168
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: 58543A60-45DE-4020-95FE-803B65203C2C
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ClusterAwareUpdating Module

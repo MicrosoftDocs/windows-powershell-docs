@@ -4,18 +4,17 @@ Module Name: AppLocker
 online version: 
 schema: 2.0.0
 title: Set-AppLockerPolicy
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A5B91C2A-73C3-417C-84B1-D430B42860A3
-ms.manager: dansimp
 ---
 
 # Set-AppLockerPolicy

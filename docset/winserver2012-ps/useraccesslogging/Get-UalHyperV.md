@@ -1,11 +1,12 @@
 ---
 external help file: MsftUal_HyperV.cdxml-help.xml
 ms.assetid: 6E40728A-94B7-4F1E-B1DC-CDF87656B190
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-UalHyperV

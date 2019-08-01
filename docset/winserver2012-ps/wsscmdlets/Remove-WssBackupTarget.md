@@ -3,9 +3,10 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 717C6443-5DD2-4126-A895-FCF31EEEA627
+manager: dansimp
 ---
 
 # Remove-WssBackupTarget

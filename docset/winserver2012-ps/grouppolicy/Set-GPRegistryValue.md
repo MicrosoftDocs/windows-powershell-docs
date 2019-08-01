@@ -3,9 +3,10 @@ external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5E59DF66-59BF-4CBA-BBCF-9D1C7AEED414
+manager: dansimp
 ---
 
 # Set-GPRegistryValue

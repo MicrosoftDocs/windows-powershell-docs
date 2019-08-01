@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -137,6 +137,7 @@ The acceptable values for this parameter are:
 - Windows2008R2Forest or 4
 - Windows2012Forest or 5
 - Windows2012R2Forest or 6
+- Windows2016Forest or 7
 
 The values are listed in order of functionality from least to most.
 

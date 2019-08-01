@@ -4,18 +4,17 @@ Module Name: DcbQos
 online version: 
 schema: 2.0.0
 title: Remove-NetQosTrafficClass
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4CFFA115-7B8C-4C21-BA63-6DC4751A98E0
-ms.manager: dansimp
 ---
 
 # Remove-NetQosTrafficClass

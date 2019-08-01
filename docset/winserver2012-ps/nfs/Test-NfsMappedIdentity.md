@@ -3,9 +3,10 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 59A2473C-C672-403A-9DF1-A831247D6022
+manager: dansimp
 ---
 
 # Test-NfsMappedIdentity

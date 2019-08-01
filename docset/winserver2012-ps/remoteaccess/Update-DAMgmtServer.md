@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4AE61538-A4A2-4747-AAC7-C7C3154ECE07
+manager: dansimp
 ---
 
 # Update-DAMgmtServer

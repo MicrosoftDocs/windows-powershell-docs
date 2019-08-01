@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285547
 Help Version: 4.0.4.0
 Locale: en-US
 title: DnsClient
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: d19ff3d3-67d3-4d67-b96d-8a777bc379d0
-ms.manager: dansimp
 ---
 
 # DnsClient Module

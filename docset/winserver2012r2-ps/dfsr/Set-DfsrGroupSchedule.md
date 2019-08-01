@@ -4,18 +4,17 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Set-DfsrGroupSchedule
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2A1E565B-2090-4713-83E2-70F3F98C7055
-ms.manager: dansimp
 ---
 
 # Set-DfsrGroupSchedule

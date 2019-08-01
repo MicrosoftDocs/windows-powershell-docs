@@ -3,8 +3,8 @@ external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-VMScsiController
@@ -151,8 +151,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMScsiController** if **-PassThru** is specified.
+### None
+Default
+
+### VMScsiController
+If **-PassThru** is specified.
 
 ## NOTES
 

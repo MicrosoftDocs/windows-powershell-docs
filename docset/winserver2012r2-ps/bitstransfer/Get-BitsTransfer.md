@@ -4,18 +4,17 @@ Module Name: BitsTransfer
 online version: 
 schema: 2.0.0
 title: Get-BitsTransfer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7C9B7506-B22B-4566-AED1-96C3B9C73638
-ms.manager: dansimp
 ---
 
 # Get-BitsTransfer

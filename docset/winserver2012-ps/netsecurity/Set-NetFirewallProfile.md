@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C79BA415-AF74-4BCA-A4F4-E0B746D26511
+manager: dansimp
 ---
 
 # Set-NetFirewallProfile

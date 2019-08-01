@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: ECE6EC80-B77D-4087-9BE7-A38FC05FBE73
+manager: dansimp
 ---
 
 # Set-VirtualDisk

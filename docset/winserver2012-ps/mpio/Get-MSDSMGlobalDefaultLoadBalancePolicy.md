@@ -3,9 +3,10 @@ external help file: MPIO_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 38B5EFB4-24BF-4695-8E4A-62ABBDF09667
+manager: dansimp
 ---
 
 # Get-MSDSMGlobalDefaultLoadBalancePolicy

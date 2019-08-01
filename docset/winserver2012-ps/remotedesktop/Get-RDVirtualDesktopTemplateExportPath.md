@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 905E45A7-F7D0-4408-B360-B39591190CB4
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDVirtualDesktopTemplateExportPath

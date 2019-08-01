@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: New-IscsiServerTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D4BE91EF-0071-41C1-8452-AC2FFEB5B62E
-ms.manager: dansimp
 ---
 
 # New-IscsiServerTarget

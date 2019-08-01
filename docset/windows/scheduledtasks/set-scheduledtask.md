@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -70,7 +70,7 @@ The second command adds (or replaces) the $Time trigger in the scheduled task So
 ```
 PS C:\> $Act1 = New-ScheduledTaskAction -Execute "Notepad.exe"
 PS C:\> $Act2 = New-ScheduledTaskAction -Execute "Calc.exe"
-PS C:\> Set-ScheduledTask "DeployTools" -Action $A1,$A2
+PS C:\> Set-ScheduledTask "DeployTools" -Action $Act1,$Act2
 TaskPath                          TaskName 
 --------                          -------- 
 \                                 DeployTools
@@ -78,9 +78,9 @@ TaskPath                          TaskName
 
 In this example, the set of commands uses cmdlets and variables to modify a scheduled task.
 
-In this example, the first command uses the New-ScheduledTaskAction cmdlet to define an action, to which the $A1 variable is assigned.
+The first command uses the **New-ScheduledTaskAction** cmdlet to define an action, to which the $Act1 variable is assigned.
 
-The second command uses the **New-ScheduledTaskAction** cmdlet to define a second action, to which the $A2 variable is assigned.
+The second command uses the **New-ScheduledTaskAction** cmdlet to define a second action, to which the $Act2 variable is assigned.
 
 The third command adds the two actions to the scheduled task DeployTools.
 

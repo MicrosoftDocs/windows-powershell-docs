@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-RemoteAccessAccounting
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 10C62EE3-4BFA-416B-B89D-B7B6BD824A78
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Get-WssRemoteWebAccessLink
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3DDFCA4C-CF8C-4BBB-83C7-BD6BC1A9A2B8
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

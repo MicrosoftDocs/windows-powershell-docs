@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=229087
 Help Version: 3.3.0.0
 Locale: en-US
 ms.assetid: 38D3C333-40AB-4E35-943F-6AC57DEB55A7
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADCSAdministration Module

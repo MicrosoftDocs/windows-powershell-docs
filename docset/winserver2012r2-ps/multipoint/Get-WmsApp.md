@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Get-WmsApp
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A54B4A6B-98E2-48CE-9814-67BCC78CB796
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Get-WmsApp
@@ -135,8 +134,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsApp.
+### None
 
 ## OUTPUTS
 

@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285742
 Help Version: 4.0.3.0
 Locale: en-US
 title: DhcpServer
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9e6d983a-3172-499b-a3ce-468c62134af7
-ms.manager: dansimp
 ---
 
 # DhcpServer Module

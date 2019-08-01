@@ -3,9 +3,10 @@ external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 23E1821E-E8CD-4F71-B672-968D83192FD3
+manager: dansimp
 ---
 
 # Remove-NetNatTransitionConfiguration

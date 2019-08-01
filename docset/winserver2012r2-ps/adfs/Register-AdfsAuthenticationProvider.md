@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Register-AdfsAuthenticationProvider
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 443CB55A-AE1D-4A9B-90D7-2BD339100AC1
-ms.manager: dansimp
 ---
 
 # Register-AdfsAuthenticationProvider

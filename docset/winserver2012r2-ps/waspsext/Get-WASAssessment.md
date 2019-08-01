@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Get-WASAssessment
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3C7C5EE3-8FF9-4A7B-AF75-F0EAAFE6FD08
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

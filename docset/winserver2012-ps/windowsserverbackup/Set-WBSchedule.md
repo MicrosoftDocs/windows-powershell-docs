@@ -3,9 +3,10 @@ external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2F91AF99-2E20-4040-A9BD-4A6BDC6319C0
+manager: dansimp
 ---
 
 # Set-WBSchedule

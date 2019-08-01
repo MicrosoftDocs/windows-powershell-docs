@@ -4,18 +4,17 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADPrincipalGroupMembership
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8BA52D68-6406-43B7-B3AE-D2F8FC4A0E5B
-ms.manager: dansimp
 ---
 
 # Get-ADPrincipalGroupMembership

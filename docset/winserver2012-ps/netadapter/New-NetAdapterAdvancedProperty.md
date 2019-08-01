@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 560F5230-ED7F-4E59-A480-E4B04E3DB328
+manager: dansimp
 ---
 
 # New-NetAdapterAdvancedProperty

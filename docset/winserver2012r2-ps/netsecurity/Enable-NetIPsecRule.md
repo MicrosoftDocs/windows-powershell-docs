@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Enable-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F76F9347-6C95-4F5D-B688-26DD84CB9CA3
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

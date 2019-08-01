@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285743
 Help Version: 4.0.4.0
 Locale: en-US
 title: DISM
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 05584e32-4e39-43bf-973b-afa4e1fb9c9b
-ms.manager: dansimp
 ---
 
 # DISM Module

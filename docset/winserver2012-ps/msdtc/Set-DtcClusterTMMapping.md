@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2D041197-FE10-4FFD-B97B-7EBA7081574C
+manager: dansimp
 ---
 
 # Set-DtcClusterTMMapping

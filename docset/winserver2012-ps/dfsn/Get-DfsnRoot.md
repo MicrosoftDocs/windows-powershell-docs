@@ -1,9 +1,10 @@
 ---
 external help file: DfsNamespace.cdxml-help.xml
 ms.assetid: 84D5BCCD-62CA-4469-87DE-179EE26A8B76
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 online version: 
 schema: 2.0.0
 ---
@@ -169,8 +170,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 

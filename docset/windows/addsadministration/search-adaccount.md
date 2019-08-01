@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -218,7 +218,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet searches for accounts that have not logged in within a given time period or since a specified time.
 To specify a time period, use the *TimeSpan* parameter.
 To specify a specific time, use the *DateTime* parameter.
-Note that this attribute is only used when the domain is in Windows Server 2003 Domain Functional Level, so this parameter will only work in that mode.
+Note that this attribute is only used when the domain is in Windows Server 2003 Domain Functional Level or higher, so this parameter will only work in that mode.
 
 ```yaml
 Type: SwitchParameter
@@ -539,11 +539,11 @@ The following examples show how to set this parameter.
 
 Set the time to 2 days
 
-`-TimeSpan "2"` 
+`-TimeSpan "2.00:00:00"` 
 
   Set the time span to the previous 2 days
 
-`-TimeSpan "-2"` 
+`-TimeSpan "-2.00:00.00"` 
 
   Set the time to 4 hours
 
@@ -551,7 +551,7 @@ Set the time to 2 days
 
 For example, to search for all accounts that are expiring in 10 days, specify the *AccountExpiring* and *TimeSpan* parameters as follows.
 
-  `-AccountExpiring -TimeSpan "10"`
+  `-AccountExpiring -TimeSpan "10.00:00.00"`
 
 ```yaml
 Type: TimeSpan

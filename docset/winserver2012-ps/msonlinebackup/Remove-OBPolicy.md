@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 6B0CD195-2EB7-4A54-B356-590E6ECAF2FE
+manager: dansimp
 ---
 
 # Remove-OBPolicy

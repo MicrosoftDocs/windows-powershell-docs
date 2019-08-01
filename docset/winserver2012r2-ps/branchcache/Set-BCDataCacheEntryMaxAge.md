@@ -4,18 +4,17 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Set-BCDataCacheEntryMaxAge
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D0F100E8-FE3C-4718-B8D6-3F1A1597F22E
-ms.manager: dansimp
 ---
 
 # Set-BCDataCacheEntryMaxAge

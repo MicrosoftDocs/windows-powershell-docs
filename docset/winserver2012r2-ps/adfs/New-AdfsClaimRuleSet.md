@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: New-AdfsClaimRuleSet
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5108E6A1-37A4-4EA9-AA8A-FFBEAB0B8CBD
-ms.manager: dansimp
 ---
 
 # New-AdfsClaimRuleSet

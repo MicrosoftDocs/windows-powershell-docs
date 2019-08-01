@@ -3,9 +3,10 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 21EF01B6-7129-4F10-87CE-FBA1F5B0D960
+manager: dansimp
 ---
 
 # Get-NfsNetgroup

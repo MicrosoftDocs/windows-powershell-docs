@@ -3,9 +3,10 @@ external help file: MPIO_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B5C4D790-55E1-45DB-9DA0-4B2371E6576A
+manager: dansimp
 ---
 
 # Clear-MSDSMSupportedHW

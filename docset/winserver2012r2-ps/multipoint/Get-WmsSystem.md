@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Get-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 15AFB3B5-F1B5-4AD6-84A2-BA793DAA2CBB
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Get-WmsSystem
@@ -326,8 +325,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsSystem.
+### None
 
 ## OUTPUTS
 

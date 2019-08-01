@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-NfsNetgroup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6693227A-DACA-4F56-B8E1-3FE684DB06AC
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

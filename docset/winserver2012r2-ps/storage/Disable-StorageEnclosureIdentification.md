@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Disable-StorageEnclosureIdentification
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9E1E84BE-96CA-49D9-9748-D3B90EF01267
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

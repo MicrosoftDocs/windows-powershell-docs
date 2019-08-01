@@ -3,9 +3,10 @@ external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9FB0B515-DE34-4B43-A8FA-A4E970C3F895
+manager: dansimp
 ---
 
 # Set-OBPolicyState

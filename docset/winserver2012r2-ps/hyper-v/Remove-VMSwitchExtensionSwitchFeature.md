@@ -4,18 +4,17 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Remove-VMSwitchExtensionSwitchFeature
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DB59FAF-A0A6-4D74-9190-20CC734B4B77
-ms.manager: dansimp
 ---
 
 # Remove-VMSwitchExtensionSwitchFeature

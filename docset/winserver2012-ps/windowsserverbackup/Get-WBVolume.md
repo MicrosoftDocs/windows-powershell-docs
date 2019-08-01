@@ -3,9 +3,10 @@ external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7C118C1F-7616-48DA-AE69-4E7B80CAE748
+manager: dansimp
 ---
 
 # Get-WBVolume

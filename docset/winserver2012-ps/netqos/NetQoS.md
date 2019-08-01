@@ -5,9 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216150
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: C7CB3606-F583-4B89-BAAB-C0FEA48D0678
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetQoS Module

@@ -4,18 +4,17 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Set-DfsnRoot
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D4FF78B3-73BB-4F07-A1BC-08229B029BBD
-ms.manager: dansimp
 ---
 
 # Set-DfsnRoot

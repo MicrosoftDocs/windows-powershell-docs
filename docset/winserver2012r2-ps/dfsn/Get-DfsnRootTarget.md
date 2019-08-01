@@ -4,18 +4,17 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Get-DfsnRootTarget
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6380961C-9497-472E-99EA-C328EC2D7344
-ms.manager: dansimp
 ---
 
 # Get-DfsnRootTarget

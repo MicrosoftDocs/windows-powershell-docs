@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: 35443D32-EFDE-4F01-8028-D30B281120B0
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDSessionCollection

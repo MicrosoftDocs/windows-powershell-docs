@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 2A4DB4A4-BE0B-4371-A625-C9D27492AF3F
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-WebVirtualDirectory
@@ -16,7 +17,7 @@ Removes an IIS virtual directory.
 ## SYNTAX
 
 ```
-Remove-WebVirtualDirectory [-Site <String>] [-Application <String>] [-Name] <String> [-WhatIf] [-Confirm]
+Remove-WebVirtualDirectory -Site <String> -Application <String> [-Name] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -42,7 +43,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -87,7 +88,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

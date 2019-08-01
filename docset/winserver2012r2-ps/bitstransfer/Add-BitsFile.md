@@ -4,18 +4,17 @@ Module Name: BitsTransfer
 online version: 
 schema: 2.0.0
 title: Add-BitsFile
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 47F7036C-40E0-443A-B9EA-787AFA287121
-ms.manager: dansimp
 ---
 
 # Add-BitsFile

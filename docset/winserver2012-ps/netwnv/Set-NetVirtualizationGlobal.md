@@ -3,9 +3,10 @@ external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 887FB74B-DC18-4183-A3E1-72E41F61072D
+manager: dansimp
 ---
 
 # Set-NetVirtualizationGlobal

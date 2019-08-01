@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 95308A85-ED24-47A2-9388-81FB12BD7D55
+manager: dansimp
 ---
 
 # Get-RemoteAccess

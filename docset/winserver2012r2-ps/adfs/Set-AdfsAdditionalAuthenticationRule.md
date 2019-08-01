@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsAdditionalAuthenticationRule
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7DC79EE4-19C0-4DEC-A8D7-D35BB7C037C6
-ms.manager: dansimp
 ---
 
 # Set-AdfsAdditionalAuthenticationRule

@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Disable-WdsDriverPackage
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E3B7C85A-2D44-4700-A31A-D3FBBD8B91EC
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

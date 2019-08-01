@@ -3,9 +3,10 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FD9EAA13-FD1A-4C95-A03E-842DBD1604BE
+manager: dansimp
 ---
 
 # New-Partition

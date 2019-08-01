@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7226812F-0BF6-4315-83F8-294CFF4F85D2
+manager: dansimp
 ---
 
 # Disable-NetAdapterRss

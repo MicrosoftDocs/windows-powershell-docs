@@ -1,11 +1,12 @@
 ---
 external help file: 
 ms.assetid: FAF3EE07-CB81-4BB1-BB2B-437C1B15D367
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDVirtualDesktopCollectionConfiguration

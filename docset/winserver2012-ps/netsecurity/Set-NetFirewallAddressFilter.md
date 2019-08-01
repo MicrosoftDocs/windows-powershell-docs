@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7C45BC61-6CEB-4F27-903D-837BCAC4709A
+manager: dansimp
 ---
 
 # Set-NetFirewallAddressFilter

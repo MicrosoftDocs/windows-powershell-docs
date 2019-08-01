@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-DAPolicyChange
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5A75228C-5B7E-4E55-A3D1-E82EBD6DE2ED
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

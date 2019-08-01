@@ -3,9 +3,10 @@ external help file: DcbQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 7A2DFD6D-168D-4757-AF70-8563D69DEA6A
+manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-NetQosTrafficClass

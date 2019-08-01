@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E232C383-76AF-4C75-89ED-F4E72BDD2B7D
+manager: dansimp
 ---
 
 # Set-DAClient

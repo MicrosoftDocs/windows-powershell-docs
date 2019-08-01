@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-SmbMultichannelConstraint
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 382A020C-5DD3-49CE-BBC4-7095E8EF7B48
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

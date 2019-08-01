@@ -4,18 +4,17 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Get-IscsiVirtualDiskSnapshot
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D20E4C03-E13D-4D8C-B4FF-D6ADC62A8511
-ms.manager: dansimp
 ---
 
 # Get-IscsiVirtualDiskSnapshot

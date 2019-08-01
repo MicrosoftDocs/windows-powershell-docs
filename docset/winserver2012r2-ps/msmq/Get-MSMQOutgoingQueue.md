@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-MSMQOutgoingQueue
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 33D16DB3-A890-478C-B0C5-B874FA584AAB
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

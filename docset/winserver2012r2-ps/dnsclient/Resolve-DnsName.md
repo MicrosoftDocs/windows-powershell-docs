@@ -4,18 +4,17 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Resolve-DnsName
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9DC4027-5A1F-4679-816B-C0039F02AC2C
-ms.manager: dansimp
 ---
 
 # Resolve-DnsName

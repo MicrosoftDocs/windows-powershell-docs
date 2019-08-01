@@ -3,9 +3,10 @@ external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
+manager: dansimp
 ---
 
 # Suspend-PrintJob

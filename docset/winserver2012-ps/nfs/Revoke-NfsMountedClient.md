@@ -3,9 +3,10 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 034AE8BF-2EAC-498F-8B82-785F494573C5
+manager: dansimp
 ---
 
 # Revoke-NfsMountedClient

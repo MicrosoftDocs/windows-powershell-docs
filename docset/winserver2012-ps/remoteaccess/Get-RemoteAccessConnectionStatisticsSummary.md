@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 49D6356B-B46D-4781-8C55-0E33A3060AB8
+manager: dansimp
 ---
 
 # Get-RemoteAccessConnectionStatisticsSummary

@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,9 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182874
 schema: 2.0.0
 title: Stop-HpcTestResult
 ms.assetid: 9F1C6289-461C-4A62-A0A8-41119258C682
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Stop-HpcTestResult

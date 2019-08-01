@@ -4,18 +4,17 @@ Module Name: DcbQos
 online version: 
 schema: 2.0.0
 title: Get-NetQosFlowControl
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C42A7FA6-75A9-4E20-8A8D-8F9F28A35C88
-ms.manager: dansimp
 ---
 
 # Get-NetQosFlowControl

@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Add-AdfsRelyingPartyTrust
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 330DAC91-5FBF-4D6B-8B3E-02F579E61A2C
-ms.manager: dansimp
 ---
 
 # Add-AdfsRelyingPartyTrust

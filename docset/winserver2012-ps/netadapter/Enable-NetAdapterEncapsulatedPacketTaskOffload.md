@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 30F56653-A9A8-4DC9-AD47-9D061178D5A4
+manager: dansimp
 ---
 
 # Enable-NetAdapterEncapsulatedPacketTaskOffload

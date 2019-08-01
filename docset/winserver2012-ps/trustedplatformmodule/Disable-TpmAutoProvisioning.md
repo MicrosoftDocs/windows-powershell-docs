@@ -1,11 +1,12 @@
 ---
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
 ms.assetid: 1D4F82DB-0AF0-4DE5-8587-46037ED3BCDE
+manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Disable-TpmAutoProvisioning

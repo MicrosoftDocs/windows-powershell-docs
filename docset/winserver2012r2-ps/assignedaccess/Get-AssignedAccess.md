@@ -4,18 +4,17 @@ Module Name: AssignedAccess
 online version: 
 schema: 2.0.0
 title: Get-AssignedAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9BCF8CA4-5B35-48F5-AF23-D4BD83B2BB0B
-ms.manager: dansimp
 ---
 
 # Get-AssignedAccess

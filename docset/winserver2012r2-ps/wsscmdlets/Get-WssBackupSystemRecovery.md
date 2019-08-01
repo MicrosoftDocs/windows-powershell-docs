@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Get-WssBackupSystemRecovery
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CB510903-AAE1-4B1E-B16A-95EEA8F684AF
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

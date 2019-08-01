@@ -6,15 +6,14 @@ schema: 2.0.0
 title: New-StorageSubsystemVirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6D5C5FFD-47E0-4B8C-8366-149D8D36B456
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

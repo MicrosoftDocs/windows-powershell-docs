@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,9 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182867
 schema: 2.0.0
 title: Set-HpcNodeState
 ms.assetid: 7DC6022D-942F-43EB-846F-609EE83B6F23
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Set-HpcNodeState

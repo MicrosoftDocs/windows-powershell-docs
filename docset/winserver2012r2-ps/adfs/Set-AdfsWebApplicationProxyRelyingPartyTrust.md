@@ -4,18 +4,17 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsWebApplicationProxyRelyingPartyTrust
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 256AD730-53E8-4ACA-8783-FB95BD0DB5BE
-ms.manager: dansimp
 ---
 
 # Set-AdfsWebApplicationProxyRelyingPartyTrust

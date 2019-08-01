@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Test-NfsMappingStore
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E4F5B4D8-B6B7-4EF0-9A70-DF830000D0BD
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

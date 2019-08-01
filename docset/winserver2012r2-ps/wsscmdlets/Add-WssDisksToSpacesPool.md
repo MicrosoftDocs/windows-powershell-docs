@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Add-WssDisksToSpacesPool
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 12BCAEC2-0F98-4EC1-ACC0-68A62763F3BB
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

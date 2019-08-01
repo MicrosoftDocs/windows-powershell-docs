@@ -6,15 +6,14 @@ schema: 2.0.0
 title: New-NfsClientgroup
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE9F7C4F-D326-4DD5-B6FF-7EE2E14AD002
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

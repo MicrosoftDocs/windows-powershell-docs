@@ -3,9 +3,10 @@ external help file: UnifiedRA_Cmdlets.xml
 online version:
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C1529F8C-0C72-4A73-90E6-66F4278E7825
+manager: dansimp
 ---
 
 # Add-RemoteAccessRadius

@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Remove-NetIPHttpsCertBinding
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A0B842F3-74DA-404A-A1CB-92F278813694
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

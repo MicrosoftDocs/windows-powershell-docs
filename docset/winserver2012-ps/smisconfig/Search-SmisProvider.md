@@ -3,9 +3,10 @@ external help file: SMISConfig_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 48F983FE-A8EA-4A2E-9CAF-A6B41B990EB9
+manager: dansimp
 ---
 
 # Search-SmisProvider

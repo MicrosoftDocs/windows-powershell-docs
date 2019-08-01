@@ -4,18 +4,17 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Disable-BitLockerAutoUnlock
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C6846F1-173B-4DFE-B175-1D2FA486A1C9
-ms.manager: dansimp
 ---
 
 # Disable-BitLockerAutoUnlock

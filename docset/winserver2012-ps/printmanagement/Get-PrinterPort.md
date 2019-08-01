@@ -3,9 +3,10 @@ external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B6173813-10C8-4649-B116-FC2AD2C63059
+manager: dansimp
 ---
 
 # Get-PrinterPort

@@ -5,15 +5,14 @@ schema: 2.0.0
 title: Set-WssUserDashboardVisibility
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6DC188C0-EC56-443D-9F16-3DA9FD60BA6B
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

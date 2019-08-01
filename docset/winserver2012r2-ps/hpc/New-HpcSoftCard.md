@@ -1,6 +1,6 @@
-ms.manager: dansimp
-author: kenwith
-ms.author: kenwith
+---
+author: andreabarr
+ms.author: v-anbarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet

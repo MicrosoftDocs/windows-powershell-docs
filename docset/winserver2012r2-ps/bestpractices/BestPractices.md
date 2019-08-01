@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285737
 Help Version: 4.0.2.0
 Locale: en-US
 title: BestPractices
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1ca8a602-4787-4461-9550-3b3fd30fbdab
-ms.manager: dansimp
 ---
 
 # BestPractices Module

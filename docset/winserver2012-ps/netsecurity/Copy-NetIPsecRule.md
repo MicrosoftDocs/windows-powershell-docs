@@ -3,9 +3,10 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0FAB7846-3E4F-4F22-9060-597A3EE680CB
+manager: dansimp
 ---
 
 # Copy-NetIPsecRule

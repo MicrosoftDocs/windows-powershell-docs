@@ -3,9 +3,10 @@ external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: D0052C35-1789-4FF7-A349-AE9D98A13946
+manager: dansimp
 ---
 
 # Get-SmbServerNetworkInterface

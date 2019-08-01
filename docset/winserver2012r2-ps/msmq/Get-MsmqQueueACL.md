@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-MsmqQueueACL
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4450171C-8FBA-4A3F-B118-31FBDC9D2DCA
-ms.manager: dansimp
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

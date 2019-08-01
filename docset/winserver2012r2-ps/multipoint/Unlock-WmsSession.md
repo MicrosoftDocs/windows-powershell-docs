@@ -6,16 +6,15 @@ schema: 2.0.0
 title: Unlock-WmsSession
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A8D291D9-4EE4-4EE9-965F-D06D0C02BFAC
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Unlock-WmsSession
@@ -117,8 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Unlock-WmsSession.
+### None
 
 ## OUTPUTS
 

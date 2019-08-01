@@ -4,18 +4,17 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Show-DnsServerKeyStorageProvider
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7D3765D-0BBD-4D0C-A8F7-54C656A746FD
-ms.manager: dansimp
 ---
 
 # Show-DnsServerKeyStorageProvider

@@ -3,9 +3,10 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4450171C-8FBA-4A3F-B118-31FBDC9D2DCA
+manager: dansimp
 ---
 
 # Get-MsmqQueueACL

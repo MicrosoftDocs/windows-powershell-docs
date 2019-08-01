@@ -1,12 +1,12 @@
 ---
-author: kenwith
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: EBCFDB37-EEFE-4170-8D48-DE418D74B19D
-ms.author: kenwith
+ms.author: v-anbarr
 ms.date: 09/19/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -94,7 +94,6 @@ Accept wildcard characters: False
 Specifies the client type.
 The acceptable values for this parameter are:
 
-- Unknown
 - Public
 - Confidential
 
@@ -102,7 +101,7 @@ The acceptable values for this parameter are:
 Type: ClientType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Unknown, Public, Confidential
+Accepted values: Public, Confidential
 
 Required: False
 Position: Named

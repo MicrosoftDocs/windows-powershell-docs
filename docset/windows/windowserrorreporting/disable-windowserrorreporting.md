@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -37,7 +37,7 @@ Windows Error Reporting generates reports in response to system events, such as 
 
 To get the current WER status, use the [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md) cmdlet.
 If you disable WER, you can use the [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md) cmdlet to re-enable it.
-After you run this cmdlet, WER again sends information about application failures to Microsoft.
+After you run this cmdlet, WER again sends information about application failures to Microsoft. To customize the settings of Windows Error Reporting, use registry keys described in [WER Settings](https://docs.microsoft.com/windows/desktop/wer/wer-settings) article.
 
 ## EXAMPLES
 

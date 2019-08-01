@@ -3,9 +3,10 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DF770A5C-F4DF-46B6-A756-1C27EEF542DC
+manager: dansimp
 ---
 
 # New-NetRoute

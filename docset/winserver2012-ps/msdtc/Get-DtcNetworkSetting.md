@@ -3,9 +3,10 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0D446E62-AC43-4B9C-BFA3-A2CFB9C9DF40
+manager: dansimp
 ---
 
 # Get-DtcNetworkSetting

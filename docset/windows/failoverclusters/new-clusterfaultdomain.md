@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterFaultDomain.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -123,7 +123,6 @@ Specifies the type of the fault domain that this cmdlet creates.
 
 The acceptable values for this parameter are:
 
-- Unknown
 - Site
 - Rack
 - Chassis
@@ -133,7 +132,7 @@ The acceptable values for this parameter are:
 Type: FaultDomainType
 Parameter Sets: (All)
 Aliases: Type
-Accepted values: Unknown, Site, Rack, Chassis, Node
+Accepted values: Site, Rack, Chassis, Node
 
 Required: True
 Position: Named

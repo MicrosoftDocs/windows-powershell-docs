@@ -5,18 +5,17 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=311962
 Help Version: 4.0.1.0
 Locale: en-US
 title: AssignedAccess
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 896407a5-7e36-404c-bfc1-79e247c9b396
-ms.manager: dansimp
 ---
 
 # AssignedAccess Module

@@ -3,9 +3,10 @@ external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 30471E44-2018-4F6E-BF60-D5C21240D3EF
+manager: dansimp
 ---
 
 # Remove-NlbCluster

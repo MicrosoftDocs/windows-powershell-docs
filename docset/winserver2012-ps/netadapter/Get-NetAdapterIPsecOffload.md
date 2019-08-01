@@ -3,9 +3,10 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3AE20759-18A2-49EC-9CF4-71B59B7DC9F6
+manager: dansimp
 ---
 
 # Get-NetAdapterIPsecOffload

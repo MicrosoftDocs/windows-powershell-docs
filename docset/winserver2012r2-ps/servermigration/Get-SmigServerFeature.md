@@ -5,16 +5,15 @@ schema: 2.0.0
 title: Get-SmigServerFeature
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DDB21AFA-CAF9-481C-9E65-2513595D2DB0
-ms.manager: dansimp
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Get-SmigServerFeature

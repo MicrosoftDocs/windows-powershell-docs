@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 ms.assetid: 9801D051-0445-4245-BCEA-1805848AF9AA
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Install-WindowsFeature
@@ -269,16 +273,16 @@ Specify the path by using a local relative path, or by using built-in environmen
 The path specified in this parameter is only used if the command cannot find feature files in the local side-by-side store of the specified target computer or VHD.
 The command searches for feature files in the following order:
 
-1)   On the target computer or offline VHD. 
+1) On the target computer or offline VHD. 
 
-  2)   Path specified as the value of this parameter.
+2) Path specified as the value of this parameter.
 If you add a UNC path, verify that the computer account of the target server has Read permissions on the share.
 The computer account should be in one of the following formats: DOMAIN\SERVERNAME$ or SERVER$ 
 
-  3)   Repository path specified by the Group Policy Object (GPO), Specify settings for optional component installation and component repair, located in Computer Configuration/Administrative Templates/System in Local Group Policy Editor.
+3) Repository path specified by the Group Policy Object (GPO), Specify settings for optional component installation and component repair, located in Computer Configuration/Administrative Templates/System in Local Group Policy Editor.
 This Group Policy setting controls the following Windows Registry setting: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Servicing\LocalSourcePath. 
 
-  4)   Windows Update.
+4) Windows Update.
 
 This parameter is optional.
 

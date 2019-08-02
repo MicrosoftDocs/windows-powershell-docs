@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285735
 Help Version: 4.0.3.0
 Locale: en-US
 title: ADFS
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

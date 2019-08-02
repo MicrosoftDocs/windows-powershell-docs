@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Export-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0EFEE34D-E0BC-46C6-9AB5-A20157ACB821
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Export-WdsBootImage
@@ -52,7 +54,7 @@ The **Force** parameter specifies that the cmdlet overwrites a file that has the
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to ensure that you export the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to ensure that you export the correct image.
 The acceptable values for this parameter are:
 
 - ARM

@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: CB313464-2C56-422B-91B7-9C8B47636B1E
+manager: dansimp
 ---
 
 # Get-TargetPortal

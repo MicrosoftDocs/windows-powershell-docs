@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Policy-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-StorageQoSFlow
+ms.reviewer:
 ms.assetid: 9B861C50-1E79-466D-BEE3-6171D44DD458
 ---
 
@@ -54,13 +55,13 @@ For more information about Storage QoS, see Storage Quality of Service in Window
 PS C:\>
 Get-StorageQoSFlow -FilePath "C:\ClusterStorage\Volume01\TEST"
 
-InitiatorName FilePath                       InitiatorIOPS InitiatorLatency PSComputerName
+InitiatorName FilePath                       InitiatorIOPS InitiatorLatency InitiatorBandwidth PSComputerName
 
-------------- --------                       ------------- ---------------- --------------
+------------- --------                       ------------- ---------------- ------------------ --------------
+                                                                       
+storqosclient C:\ClusterStorage\Volume01\TEST 104           8.0921 ms        0.2 MB/s
 
-storqosclient C:\ClusterStorage\Volume01\TEST 104           8.0921
-
-storqosclient C:\ClusterStorage\Volume01\TEST 31            8.9741
+storqosclient C:\ClusterStorage\Volume01\TEST 31            8.9741 ms        0.5 MB/s
 ```
 
 This command gets information about all flow initiators accessing C:\ClusterStorage\Volume01\TEST.

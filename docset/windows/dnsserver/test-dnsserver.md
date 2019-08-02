@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServer_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-DnsServer
+ms.reviewer:
 ms.assetid: B93531FB-2130-428B-8DAA-66027AA2488B
 ---
 
@@ -25,13 +26,13 @@ Tests that a specified computer is a functioning DNS server.
 ## SYNTAX
 
 ### Context (Default)
-```
+```yaml
 Test-DnsServer [-IPAddress] <IPAddress[]> [-ComputerName <String>] [[-Context] <String>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ZoneMaster
-```
+```yaml
 Test-DnsServer [-IPAddress] <IPAddress[]> [-ComputerName <String>] -ZoneName <String>
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
@@ -46,29 +47,29 @@ If you also specify a zone name, the cmdlet validates that the DNS server can re
 ## EXAMPLES
 
 ### Example 1: Test whether a DNS server is functional
-```
+```Powershell
 PS C:\> Test-DnsServer -IPAddress 10.123.183.155
 
 IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
 ---------               --------                 ------------           --------                --------
-10.123.183.155           Success                 00:00:11                True                    True
+10.123.183.155           Success                 00:00:11                False                  True
 ```
 
 This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server.
 
 ### Example 2: Test whether a DNS server is functional and has valid configured forwarders
-```
+```Powershell
 PS C:\> Test-DnsServer -IPAddress 10.123.183.155 -Context Forwarder
 
 IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
 ---------               --------                 ------------           --------                --------
-10.123.183.155           Success                 00:00:11                True                    True
+10.123.183.155           Success                 00:00:11                False                    True
 ```
 
 This command tests whether the computer that has an IP address of 10.123.183.155 is a functional DNS server that has valid configured forwarders.
 
 ### Example 3: Test whether a DNS server is functional and has valid configured root hints
-```
+```Powershell
 PS C:\> Test-DnsServer -IPAddress 10.123.183.155 -Context RootHints
 
 IPAddress               Result                  RoundTripTime           TcpTried                UdpTried
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies a DNSserver.
+Specifies a DNS server.
 The acceptable values for this parameter are: an IPv4 address; an IPv6 address; any other value that resolves to an IP address, such as a fully qualified domain name (FQDN), host name, or NETBIOS name.
 
 ```yaml

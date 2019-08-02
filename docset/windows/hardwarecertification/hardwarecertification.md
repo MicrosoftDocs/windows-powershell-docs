@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: HardwareCertification
 Module Guid: 3A1FCD12-4C5B-4E54-81E8-547D545A2C50
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390773
 Help Version: 5.0.0.1
 Locale: en-US
 title: HardwareCertification
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

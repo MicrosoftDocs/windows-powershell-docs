@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DhcpServerMigration-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Import-DhcpServer
+ms.reviewer:
 ms.assetid: 00E203F4-D1F7-49CF-AC07-2630E820DC3E
 ---
 
@@ -319,7 +320,7 @@ The server level configuration includes of (both v4 and v6):
 - Option values. 
 - Server level Policies (DHCPv4). 
 - MAC address filters (DHCPv4). 
-- Other Server Properties (ConflicDetectionAttempts, DHCPv6 stateless store).
+- Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
 
 ```yaml
 Type: SwitchParameter

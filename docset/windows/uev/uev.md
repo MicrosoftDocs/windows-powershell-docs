@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: UEV
 Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=826061
 Help Version: 5.0.1.1
 Locale: en-US
 title: UEV
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
@@ -21,7 +22,7 @@ ms.assetid: AC9B47F4-19F7-4EB5-B5FE-70790B7A825D
 
 # UEV Module
 ## Description
-The following list contains links to the help topics for the Microsoft User Experience Virtualization (UE-V) for Windows 10� Anniversary edition and Windows Server 2016 Microsoft User Experience Virtualization (UE-V) cmdlets.
+The following list contains links to the help topics for the Microsoft User Experience Virtualization (UE-V) for Windows 10 Anniversary edition and Windows Server 2016 Microsoft User Experience Virtualization (UE-V) cmdlets.
 
 ## UEV Cmdlets
 ### [Clear-UevAppxPackage](./Clear-UevAppxPackage.md)

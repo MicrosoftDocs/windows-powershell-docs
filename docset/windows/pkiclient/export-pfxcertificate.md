@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-PfxCertificate
+ms.reviewer:
 ms.assetid: 7E97BC6B-B6E0-4BCA-98CE-E83D307FA3A6
 ---
 
@@ -83,7 +84,7 @@ This example exports a certificate from the current user store with no chain and
 ### EXAMPLE 4
 ```
 PS C:\>$a = Get-ChildItem -Path cert:\localMachine\my 
-Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99, contoso\johnj99"
+Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99"
 ```
 
 This example exports a certificate from the current machine store.
@@ -100,7 +101,7 @@ PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
 
 
 
-PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99, contoso\johnj99" -Password $mypwd
+PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99" -Password $mypwd
 ```
 
 This example exports a certificate from the current machine store.

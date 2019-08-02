@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetQosPolicy.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetQosPolicy
+ms.reviewer:
 ms.assetid: 7ED74C03-8727-4956-86D3-E389EDCE72CF
 ---
 
@@ -772,7 +773,7 @@ Accept wildcard characters: False
 
 ### -UserMatchCondition
 Specifies the user or group name in Active Directory, such as `contoso\DavidChew`.
-This parameter is usually specified with another filtering parameter such as the *AppPathNameMatchCondtion* parameter.
+This parameter is usually specified with another filtering parameter such as the *AppPathNameMatchCondition* parameter.
 
 ```yaml
 Type: String

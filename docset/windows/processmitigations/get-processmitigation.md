@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ProcessMitigations.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 2017-03-29
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ProcessMitigation
+ms.reviewer:
 ---
 
 # Get-ProcessMitigation
@@ -204,7 +205,7 @@ System.Int32\[\]
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Samples.PowerShell.Commands.AppMitigations
 
 ## NOTES
 

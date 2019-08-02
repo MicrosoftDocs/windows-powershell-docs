@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 ms.assetid: 9D5ED315-FFAB-406A-BB4C-8D9DF7975B36
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Uninstall-AdcsEnrollmentWebService

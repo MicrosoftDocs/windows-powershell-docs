@@ -4,8 +4,8 @@ online version:
 schema: 2.0.0
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
 title: Set-RDCertificate
+ms.reviewer:
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
 ---
 
@@ -55,7 +56,7 @@ The following example imports a certificate to use with an RDS role.
 PS C:\> $Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
-The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/convertto-securestring?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
+The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/ConvertTo-SecureString?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
 
 The second part of the example specifies the file name of the certificate to use for the redirector role for the RD Connection Broker named RDCB.Contoso.com. The cmdlet uses the secure string stored in the **$Password** variable to help secure the certificate.
 
@@ -169,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-This parameter specifies the thumbprint of the certificate to use.
+This parameter specifies the thumbprint of the certificate to use. Currently, it is only available in Windows Server 2019.
 
 ```yaml
 Type: String

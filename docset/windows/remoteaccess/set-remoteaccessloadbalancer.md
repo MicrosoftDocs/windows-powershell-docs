@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_RemoteAccessLoadBalancer_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RemoteAccessLoadBalancer
+ms.reviewer:
 ms.assetid: D30C2588-A8E4-4A42-9885-5C450C84426E
 ---
 
@@ -325,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyLoadBalancer
-Specifie the enabled state of a third-party external load balancer.
+Specifies the enabled state of a third-party external load balancer.
 The acceptable values for this parameter are:
                          
  -- Enabled. 

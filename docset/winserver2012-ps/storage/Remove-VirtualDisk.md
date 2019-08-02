@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 42EAD0A2-60B2-4ACC-8836-5D815BCF3D2D
+manager: dansimp
 ---
 
 # Remove-VirtualDisk

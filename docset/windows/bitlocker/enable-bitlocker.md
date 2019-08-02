@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-BitLocker
+ms.reviewer:
 ms.assetid: 736C312A-623F-482E-9B87-340E5B4614BC
 ---
 
@@ -139,7 +140,7 @@ You can use the **ConvertTo-SecureString** cmdlet to create a secure string.
 You can use secure strings in a script and still maintain confidentiality of passwords.
 
 This cmdlet returns a BitLocker volume object.
-If you choose recovery password as your key protector but do not specify a 48-digit recovery password, this cmdlet creates a random 48-bit recovery password.
+If you choose recovery password as your key protector but do not specify a 48-digit recovery password, this cmdlet creates a random 48-digit recovery password.
 The cmdlet stores the password as the **RecoveryPassword** field of the **KeyProtector** attribute of the BitLocker volume object.
 
 If you use startup key or recovery key as part of your key protector, provide a path to store the key.
@@ -176,14 +177,14 @@ The command also specifies that this volume uses a combination of the TPM and th
 The command also specifies to encrypt the used space data on the disk, instead of the entire volume.
 When the system writes data to the volume in the future, that data is encrypted.
 
-### Example 2: Enable BitLocker with a specified recovery key
+### Example 2: Enable BitLocker with a recovery key
 ```
 PS C:\> Get-BitLockerVolume | Enable-BitLocker -EncryptionMethod Aes128 -RecoveryKeyPath "E:\Recovery\" -RecoveryKeyProtector
 ```
 
 This command gets all the BitLocker volumes for the current computer and passes pipes them to the **Enable-BitLocker** cmdlet by using the pipe operator.
 This cmdlet specifies an encryption algorithm for the volume or volumes.
-This command also specifies a path to a recovery key and indicates that these volumes use a recovery key as a key protector.
+This cmdlet specifies a path to a folder where the randomly generated recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
 
 ### Example 3: Enable BitLocker with a specified user account
 ```
@@ -345,8 +346,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies a path to a recovery key.
-The key stored in the specified path acts as a protector for the volume encryption key.
+Specifies a path to a folder.
+This cmdlet adds a randomly generated recovery key as a protector for the volume encryption key and stores it in the specified path.
 
 ```yaml
 Type: String

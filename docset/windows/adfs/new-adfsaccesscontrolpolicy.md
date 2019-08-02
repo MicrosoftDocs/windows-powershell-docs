@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: F96B9B82-1B50-49AF-926F-8A894F7453D7
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-AdfsAccessControlPolicy
+ms.reviewer:
 ---
 
 # New-AdfsAccessControlPolicy
@@ -96,14 +97,14 @@ This command changes the relying party to use a new template.
 
 ### Example 9: Complicated conditions with specific claims
 ```
-PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName DemoRP -AccessControlPolicyParameters `
+PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName DemoRP -AccessControlPolicyParameters`
     @{"SPParameter"= @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value="Redmond"}}
 ```
 
 ### Example 10: Two specific claims for single parameter
 ```
-PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName "DemoRP" -AccessControlPolicyParameters `
-    @{"SPParameter"= (@{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value=("Redmond","DC")}, `
+PS C:\> Set-AdfsRelyingPartyTrust -TargetName "DemoRP1" -AccessControlPolicyName "DemoRP" -AccessControlPolicyParameters`
+    @{"SPParameter"= (@{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/OfficeLocation"; Operator="Equals"; Value=("Redmond","DC")},`
                       @{ClaimType="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/Department"; Operator="Equals"; Value="Azure"})}
 ```
 

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DCFAA816-E8C7-4DD0-B324-19F03597DD23
+manager: dansimp
 ---
 
 # Remove-WssComputer

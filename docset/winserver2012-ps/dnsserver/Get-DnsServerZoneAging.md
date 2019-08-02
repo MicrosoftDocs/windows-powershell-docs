@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 5577F641-EC20-4F17-AAF9-601CE33C522C
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DnsServerZoneAging

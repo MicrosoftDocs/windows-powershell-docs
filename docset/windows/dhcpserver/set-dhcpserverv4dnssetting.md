@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerv4DnsSetting_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-DhcpServerv4DnsSetting
+ms.reviewer:
 ms.assetid: C04BC137-7A78-4CA8-8CB5-C9118046BB02
 ---
 
@@ -83,7 +84,7 @@ This cmdlet clears all of the properties other than the property that is specifi
 PS C:\> Set-DhcpServerv4DnsSetting -ComputerName "dhcpserver.contoso.com" -DisableDnsPtrRRUpdates $True -PolicyName "WorkgroupDevices"
 ```
 
-This example sets DNS update configuration settings for the sever policy WorkgroupDevices to disable DNS dynamic updates for PTR records.
+This example sets DNS update configuration settings for the server policy WorkgroupDevices to disable DNS dynamic updates for PTR records.
 The command specifies the computer, named dhcpserver.contoso.com, that runs the DHCP server service.
 
 ### Example 5: Set update configuration settings for a server policy
@@ -91,7 +92,7 @@ The command specifies the computer, named dhcpserver.contoso.com, that runs the 
 PS C:\> Set-DhcpServerv4DnsSetting -ComputerName "dhcpserver.contoso.com" -DnsSuffix "guestdomain.com" -PolicyName "ForeignDevices"
 ```
 
-This example sets DNS update configuration settings for the sever policy ForeignDevices to enable DNS registration of clients under the DNS suffix guestdomain.com.
+This example sets DNS update configuration settings for the server policy ForeignDevices to enable DNS registration of clients under the DNS suffix guestdomain.com.
 The command specifies the computer, named dhcpserver.contoso.com, that runs the DHCP server service.
 
 ## PARAMETERS

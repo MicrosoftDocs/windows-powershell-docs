@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Set-IpamRange
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -236,9 +238,9 @@ Specifies the address assignment type from this range.
 The acceptable values for this parameter are:
 
 - Static 
--  Dynamic 
--  Auto 
--  VIP 
+- Dynamic 
+- Auto 
+- VIP 
 - Reserved
 
 ```yaml
@@ -433,8 +435,8 @@ Specifies an array of network types for the addresses to modify.
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
 If you do not specify a value, the cmdlet modifies all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
 

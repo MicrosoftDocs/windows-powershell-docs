@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: F76E414E-5562-4E98-9413-67D00AFE5878
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-DhcpServerv4Lease

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-RDOUAccess
+ms.reviewer:
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
 ---
 
@@ -37,7 +38,7 @@ The RD Connection Broker must have Read access to an OU to query user account in
 
 ### Example 1: Verify access to an OU
 ```
-PS C:\> Test-RDOUaccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
 ```
 
 This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.

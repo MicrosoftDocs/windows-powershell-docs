@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Mount-WindowsImage
+ms.reviewer:
 ms.assetid: D58BC86F-AAC1-4BCF-A1B7-13152A50ECB4
 ---
 
@@ -77,7 +78,7 @@ This command mounts the Windows image contained in the install.vhd file to the c
 PS C:\> Mount-WindowsImage -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -ReadOnly
 ```
 
-This command mounts the Windows image at index 2 of the install.wim file to the c:\offline ddirectory with read-only privileges.
+This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with read-only privileges.
 
 ### Example 3: Mount an image at an index of a file
 ```

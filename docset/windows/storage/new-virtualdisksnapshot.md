@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: VirtualDisk.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-VirtualDiskSnapshot
+ms.reviewer:
 ms.assetid: B5414111-13A8-44ED-8AF0-83F6A8192DB0
 ---
 
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 
 ```yaml
 Type: String

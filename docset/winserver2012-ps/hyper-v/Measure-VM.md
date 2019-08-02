@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Measure-VM
@@ -69,7 +72,7 @@ Notes:
 
  -- Resource utilization is not reported for disks attached through a virtual Fiber Channel connection or network adapters configured to use single-root I/O virtualization (SR-IOV). 
 
- -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaxiumumMemoryUsage metrics equals the memory amount configured for the virtual machine.
+ -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaximumMemoryUsage metrics equals the memory amount configured for the virtual machine.
 
 The default display of a resource pool resource utilization report includes the following columns: 
 

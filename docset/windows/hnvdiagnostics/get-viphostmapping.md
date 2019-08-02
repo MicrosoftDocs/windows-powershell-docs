@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Get-VipConnectivityInfo-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VipHostMapping
+ms.reviewer:
 ms.assetid: 0A4F1A7A-CA27-4B3D-8F21-9408944D9520
 ---
 
@@ -37,7 +38,7 @@ The **Get-VipHostMapping** cmdlet gets information for a virtual IP (VIP) host, 
 ### Example 1: Get a VIP host mapping
 ```
 PS C:\> $Password = ConvertTo-SecureString -String $Pass -AsPlainText -Force
-PS C:\> $Cred = New-Object pscredential -ArgumentList (".\administrator", $Password) 
+PS C:\> $Cred = New-Object PSCredential -ArgumentList (".\administrator", $Password) 
 PS C:\> $ncIPAddress = 55.1.1.3
 PS C:\> $NCInfo = Get-NetworkControllerDeploymentInfo -NetworkController $ncIPAddress -Credential $Cred
 PS C:\> $vipInfo = Get-NetworkControllerVipResource -RestURI $NCInfo.NetworkControllerURI -ClientCertificate $NCInfo.ClientCertificate -IPAddress "72.1.12" -DstPort "2003" -Protocol "Tcp"

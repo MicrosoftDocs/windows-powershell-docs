@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 ms.assetid: 459FC3FA-77AD-47BD-9F02-B113A87FD347
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-CACrlDistributionPoint
@@ -31,7 +35,7 @@ Description
 
 -----------
 
-Removes all URIs for all distribition points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
+Removes all URIs for all distribution points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

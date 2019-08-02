@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,13 +14,14 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-StorageSetting
+ms.reviewer:
 ms.assetid: 8E14EBFD-07B2-4C67-A093-F0E3FF824210
 ---
 
 # Get-StorageSetting
 
 ## SYNOPSIS
-Gets a StorageSettings object.
+Gets a StorageSetting object.
 
 ## SYNTAX
 
@@ -29,7 +30,7 @@ Get-StorageSetting [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob
 ```
 
 ## DESCRIPTION
-The **Get-StorageSetting** cmdlet returns a StorageSettings object.
+The **Get-StorageSetting** cmdlet returns a StorageSetting object.
 
 ## EXAMPLES
 

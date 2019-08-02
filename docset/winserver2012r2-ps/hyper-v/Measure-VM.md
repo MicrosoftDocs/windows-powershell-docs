@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Measure-VM
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -82,7 +84,7 @@ Notes:
 
  -- Resource utilization is not reported for disks attached through a virtual Fiber Channel connection or network adapters configured to use single-root I/O virtualization (SR-IOV). 
 
- -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaxiumumMemoryUsage metrics equals the memory amount configured for the virtual machine.
+ -- If the virtual machine is configured with static memory rather than Dynamic Memory, then AverageMemoryUsage, MinimumMemoryUsage, and MaximumMemoryUsage metrics equals the memory amount configured for the virtual machine.
 
 The default display of a resource pool resource utilization report includes the following columns: 
 

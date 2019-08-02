@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Dismount-IscsiVirtualDiskSnapshot
+ms.reviewer:
 ms.assetid: DD9E2F24-B4CE-46DD-834F-22B80C76EDC4
 ---
 
@@ -48,7 +49,7 @@ This cmdlet operates on snapshots in the virtual disk 1.0 (VHD) format only.
 
 ### Example 1: Dismount all snapshots
 ```
-PS C:\> Get-IscsiVirtualDiskSnasphot | Dismount-IscsiVirtualDiskSnasphot
+PS C:\> Get-IscsiVirtualDiskSnapshot | Dismount-IscsiVirtualDiskSnapshot
 ```
 
 This example gets all of the snapshot and dismounts them.

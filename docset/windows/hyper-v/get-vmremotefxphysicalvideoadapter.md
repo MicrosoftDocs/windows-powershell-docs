@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VMRemoteFXPhysicalVideoAdapter
+ms.reviewer:
 ms.assetid: AC3EC4E0-60E7-43FE-8A6A-72071FB45433
 ---
 
@@ -129,7 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter[]
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
 
 ## NOTES
 

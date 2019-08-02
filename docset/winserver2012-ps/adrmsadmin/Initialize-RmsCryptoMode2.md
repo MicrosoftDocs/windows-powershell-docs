@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
 ms.assetid: D2E65B69-E9E6-40D4-B5EF-0674CFC51205
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Initialize-RmsCryptoMode2

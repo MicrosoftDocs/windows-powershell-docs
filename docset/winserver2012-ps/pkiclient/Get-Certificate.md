@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 6DA3EEBC-7B3F-4130-B266-9B2AD6DF4318
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-Certificate

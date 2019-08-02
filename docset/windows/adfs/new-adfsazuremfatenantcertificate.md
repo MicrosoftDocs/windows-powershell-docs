@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 4AD386AF-8910-443F-9D7A-F0C85A9D3E41
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-AdfsAzureMfaTenantCertificate
+ms.reviewer:
 ---
 
 # New-AdfsAzureMfaTenantCertificate
@@ -45,11 +46,14 @@ If it does not find one, it generates it.
 ### Example 1: Create a certificate and enable Azure MFA on an AD FS farm
 ```
 PS C:\> $certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID>
-PS C:\> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
+PS C:\> New-AzureADServicePrincipalKeyCredential -ObjectId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type asymmetric -Usage verify -Value $certBase64
 PS C:\> Set-AdfsAzureMfaTenant -TenantId <your tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
 These commands create a certificate for Azure MFA, register the certificate in a tenant, and enable Azure MFA on an AD FS farm.
+
+> [!NOTE]
+> Customers are encouraged to use the newer Azure Active Directory PowerShell 2.0 module. For more information about the v2.0 module please see [AzureAD PowerShell 2.0](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0).
 
 ### Example 2: Determine which certificate Azure MFA is using
 ```

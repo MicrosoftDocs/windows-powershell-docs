@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Start-WssClientBackup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D6532B58-32E7-4A6B-8574-A6B9E082B863
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-WssClientBackup

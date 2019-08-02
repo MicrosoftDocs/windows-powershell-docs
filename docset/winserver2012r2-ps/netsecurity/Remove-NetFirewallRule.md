@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B8BFD366-3112-4415-B235-2B7B45D5C9E3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-NetFirewallRule

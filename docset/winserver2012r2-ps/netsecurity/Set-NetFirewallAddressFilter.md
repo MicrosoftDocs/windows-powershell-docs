@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetFirewallAddressFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7C45BC61-6CEB-4F27-903D-837BCAC4709A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetFirewallAddressFilter
@@ -83,7 +85,7 @@ PS C:\>Set-NetFirewallAddressFilter -InputObject $nfwAddressFilterLS6 -RemoteAdd
 
 
 This task can be alternatively done with the following cmdlet.
-PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -Property { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewalllRule -RemoteAddress LocalSubnet4
+PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -Property { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewallRule -RemoteAddress LocalSubnet4
 ```
 
 This example gets the filter objects associated with the firewall rules with a particular remote, or second, end point belonging to the Core Networking group and modifies the second endpoint of those rules.

@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 775D3DB5-F7E7-4954-B2DA-9CC2E73009EE
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DnsServerZoneDelegation

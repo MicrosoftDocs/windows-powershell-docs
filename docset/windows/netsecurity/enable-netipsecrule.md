@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-NetIPsecRule
+ms.reviewer:
 ms.assetid: F76F9347-6C95-4F5D-B688-26DD84CB9CA3
 ---
 
@@ -336,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be enabled. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be enabled. 
 A **NetIPsecPhase1AuthSet** object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 
 Alternatively, the *Phase2AuthSet* parameter can be used for the same purpose, but does not allow the authentication set to be piped into the cmdlet and the set must be specified with the *IPsecRuleName* parameter.

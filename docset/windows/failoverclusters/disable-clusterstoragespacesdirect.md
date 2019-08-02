@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-ClusterStorageSpacesDirect
+ms.reviewer:
 ms.assetid: 5D847187-2CA7-48C4-9D76-7F32D6D27773
 ---
 
@@ -36,19 +37,10 @@ The **Disable-ClusterStorageSpacesDirect** cmdlet disables highly available Stor
 
 ### Example 1: Disable Storage Spaces Direct
 ```
-PS C:\> Disable-ClusterStorageSpacesDirect -Cluster "Contoso19-C2.production.contoso.com"
+PS C:\> Disable-ClusterStorageSpacesDirect
 ```
 
-This command disables S2D on the cluster named Contoso19-C2.production.contoso.com.
-
-### Example 2: Disable Storage Spaces Direct by using the pipeline
-```
-PS C:\> Get-Cluster -Cluster "Contoso19-C2.production.contoso.com" | Disable-ClusterStorageSpacesDirect
-```
-
-This command gets the cluster named Contoso19-C2.production.contoso.com by using the **Get-Cluster** cmdlet.
-The command passes that cluster to the current cmdlet by using the pipeline operator.
-That cmdlet rnables Storage Spaces Direct on the cluster.
+This command disables S2D on the cluster.
 
 ## PARAMETERS
 

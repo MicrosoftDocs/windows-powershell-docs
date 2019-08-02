@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 ms.assetid: 8A3ABA4F-7422-48DD-AA60-A943E8D31474
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-CAAuthorityInformationAccess
@@ -31,7 +35,7 @@ The Remove-CAAuthorityInformationAccess cmdlet removes the Authority Information
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAIA
+C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.contoso.com/pki/orca1.crt" -AddToCertificateAia
 ```
 
 Description
@@ -42,7 +46,7 @@ Removes Authority Information Access (AIA) for the specified uniform resource id
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.cpandl.com/ocsp/" -AddToCertificateOCSP
+C:\PS>Remove-CAAuthorityInformationAccess -uri "http://www.cpandl.com/ocsp/" -AddToCertificateOcsp
 ```
 
 Description

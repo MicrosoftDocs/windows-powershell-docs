@@ -2,7 +2,11 @@
 external help file: VpnClient_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9E500D0B-AD09-463E-A5B7-E2986476BC58
+manager: dansimp
 ---
 
 # Add-VpnConnection
@@ -25,7 +29,7 @@ If errors occur when you create the VPN profile, the error information is return
 
 ## EXAMPLES
 
-### EXAMPLExample 1: Add a VPN connectionxample: Add a VPN connection
+### Example 1: Add a VPN connection
 ```
 PS C:\> Add-VpnConnection -Name "Test1" -ServerAddress "10.1.1.1" -PassThru
 Name                  : Test1

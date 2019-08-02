@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 2017-05-19
 ms.prod: w10
 ms.technology: powershell-windows
@@ -12,6 +12,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Invoke-CommandInDesktopPackage
+ms.reviewer:
 ---
 
 # Invoke-CommandInDesktopPackage
@@ -42,8 +43,11 @@ This command invokes the demo.exe that can be found in '29270sandstorm.AppPackag
 
 ### -AppId
 AppId is the Application ID from the package manifest.
-    <Application Id="blah" ... />
-    </Application>
+
+```xml
+<Application Id="blah" ... />
+</Application>
+```
 
 ```yaml
 Type: String
@@ -103,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventBreakaway
-Switch that causes the entire process tree to stay in the pacakge context.
+Switch that causes the entire process tree to stay in the package context.
 
 ```yaml
 Type: SwitchParameter

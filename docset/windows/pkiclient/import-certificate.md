@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Import-Certificate
+ms.reviewer:
 ms.assetid: 5BACC9D9-2D47-40AE-B70D-2CC8A788310D
 ---
 
@@ -37,8 +38,6 @@ The **Import-Certificate** cmdlet imports one or more certificates into a certif
 ```
 PS C:\>$file = ( Get-ChildItem -Path C:\files\root.cer )
 
-
-
 PS C:\>$file | Import-Certificate -CertStoreLocation cert:\CurrentUser\Root
 ```
 
@@ -47,8 +46,6 @@ This example imports the certificate from the file into the root store of the cu
 ### EXAMPLE 2
 ```
 PS C:\>Set-Location -Path cert:\CurrentUser\My
-
-
 
 PS C:\>Import-Certificate -Filepath "C:\files\intermediate.cert"
 ```
@@ -60,6 +57,7 @@ This example imports the certificate from the file into the current store.
 ### -CertStoreLocation
 Specifies the path to the certificate store where the certificates will be imported.
 If the path to the certificate store is not specified, then the current store is used.
+In order to get a list of valid CertStoreLocation values, open Powershell and run "cd cert:". Afterwards type "dir".
 
 ```yaml
 Type: String
@@ -144,3 +142,4 @@ The output is an array of **X509Certificate2\[\]** objects.
 
 [Export-Certificate](./Export-Certificate.md)
 
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-CertificateAutoEnrollmentPolicy
+ms.reviewer:
 ms.assetid: 37D54E2D-3003-4889-B8A6-78BFA3798342
 ---
 
@@ -76,7 +77,7 @@ PS C:\>Set-CertificateAutoEnrollmentPolicy -PolicyState Enabled -EnableMyStoreMa
 
 
 The concise version of the same example.
-PS C:\>Set-ACertificateutoEnrollmentPolicy -EnableAll -Context User
+PS C:\>Set-CertificateAutoEnrollmentPolicy -EnableAll -Context User
 ```
 
 This example performs the same task in two ways.

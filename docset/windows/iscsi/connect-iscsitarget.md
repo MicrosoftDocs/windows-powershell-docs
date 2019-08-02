@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITarget.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Connect-IscsiTarget
+ms.reviewer:
 ms.assetid: 111BFAA7-332B-472F-A8F7-90DCF181AF1C
 ---
 
@@ -108,11 +109,11 @@ Accept wildcard characters: False
 Specifies the type of authentication to use when logging into the target.
 The acceptable values for this parameter are:
 
-- None 
-- OneWayCHAP 
-- MutualCHAP
+- NONE 
+- ONEWAYCHAP
+- MUTUALCHAP
 
-The default value is None.
+The default value is None. Authentication type must be in uppercase.
 
 ```yaml
 Type: String
@@ -369,7 +370,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiSession
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
@@ -377,7 +378,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 

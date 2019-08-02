@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-DANetworkLocationServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8A16968E-1C61-4E0A-BDB9-278E6C05797F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-DANetworkLocationServer

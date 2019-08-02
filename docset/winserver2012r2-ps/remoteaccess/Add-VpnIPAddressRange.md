@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-VpnIPAddressRange
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5FB50005-2B96-4D3D-BE43-0AE72AB0E85F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-VpnIPAddressRange

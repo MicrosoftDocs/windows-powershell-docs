@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 81E2B06C-0E1E-4637-A893-4D3913FB850B
+manager: dansimp
 ---
 
 # Stop-OBJob

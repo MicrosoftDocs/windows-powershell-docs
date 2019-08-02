@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Approve-WdsClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B779046-40BB-4D5F-9B8C-A9ABF78D9F5E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Approve-WdsClient
@@ -258,7 +260,7 @@ Accept wildcard characters: False
 
 ### -RequestId
 Specifies the request ID that the server that runs Windows Deployment Services allocates to a device in the Pending Device database.
-If you do not specify this parameter, the cmdlet approves all all clients in the Pending Device database.
+If you do not specify this parameter, the cmdlet approves all clients in the Pending Device database.
 
 ```yaml
 Type: UInt32

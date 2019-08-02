@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
 ms.assetid: A3DCAD26-A475-4E46-9163-2E8D3084E182
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-HgsKeyProtectionAttestationSignerCertificate
+ms.reviewer:
 ---
 
 # Add-HgsKeyProtectionAttestationSignerCertificate

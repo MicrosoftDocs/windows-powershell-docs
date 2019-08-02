@@ -1,8 +1,12 @@
 ---
 external help file: UnifiedRA_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C1529F8C-0C72-4A73-90E6-66F4278E7825
+manager: dansimp
 ---
 
 # Add-RemoteAccessRadius
@@ -20,36 +24,36 @@ Add-RemoteAccessRadius [-ServerName] <String> [-Purpose] <String> [-SharedSecret
 ```
 
 ## DESCRIPTION
-The **Add-RemoteAccessRadius** cmdlet adds a new external RADIUS server for one of the following purposes: 
+The **Add-RemoteAccessRadius** cmdlet adds a new external RADIUS server for one of the following purposes:
 
- -- Accounting Radius configuration applies to both DirectAccess (DA) and VPN. 
+ -- Accounting Radius configuration applies to both DirectAccess (DA) and VPN.
 
- -- One-time password (OTP) RADIUS configuration applies only to DA. 
+ -- One-time password (OTP) RADIUS configuration applies only to DA.
 
  -- Authentication Radius configuration applies only to VPN.
 
 Radius server configuration for Accounting and OTP are global in nature, such as the configurations apply to the entire Remote Access deployment.
 RADIUS server configuration for VPN applies only to a specific VPN server, and all servers in a load balancing cluster, or if multi-site is deployed, to all VPN servers at a site.
 
-Following describes aspects of this cmdlet behavior. 
+Following describes aspects of this cmdlet behavior.
 
- -- If a RADIUS server is currently being used for a specific purpose, then it can be added for additional purpose using this cmdlet. 
+ -- If a RADIUS server is currently being used for a specific purpose, then it can be added for additional purpose using this cmdlet.
 
- -- The RADIUS server properties for authentication and accounting are the same except for the **AccountingOnOffMsg** parameter which is applicable only to accounting RADIUS and the ** MsgAuthenticator** parameter which is applicable only to authentication RADIUS.
-These properties are not relevant for DA OTP authentication. 
+ -- The RADIUS server properties for authentication and accounting are the same except for the **AccountingOnOffMsg** parameter which is applicable only to accounting RADIUS and the **MsgAuthenticator** parameter which is applicable only to authentication RADIUS.
+These properties are not relevant for DA OTP authentication.
 
  -- If a user tries to add a RADIUS server for a particular purpose but specifies a parameter that is not applicable to that purpose, then this cmdlet will still run but the parameter will be ignored and a warning message will be issued.
-When adding a RADIUS server for OTP authentication both the above described parameters are ignored if specified. 
+When adding a RADIUS server for OTP authentication both the above described parameters are ignored if specified.
 
- -- If the accounting configuration is Windows Server® 2012 accounting, then a user can switch to external RADIUS accounting by adding an external RADIUS server for the purpose of accounting. 
+ -- If the accounting configuration is Windows Server® 2012 accounting, then a user can switch to external RADIUS accounting by adding an external RADIUS server for the purpose of accounting.
 
- -- Following are some pre-requisites for adding a RADIUS server. 
+ -- Following are some pre-requisites for adding a RADIUS server.
 
- ---- A RADIUS server cannot be added for authentication when VPN is not even installed. 
+ ---- A RADIUS server cannot be added for authentication when VPN is not even installed.
 
- ---- A RADIUS server cannot be added for authentication when the authentication type is Windows or when local NPS is installed. 
+ ---- A RADIUS server cannot be added for authentication when the authentication type is Windows or when local NPS is installed.
 
- ---- A RADIUS server cannot be added for the purpose of accounting when external RADIUS accounting is not enabled. 
+ ---- A RADIUS server cannot be added for the purpose of accounting when external RADIUS accounting is not enabled.
 
  ---- A RADIUS server cannot be added for purpose of OTP authentication if OTP authentication is not enabled.
 
@@ -58,8 +62,8 @@ When adding a RADIUS server for OTP authentication both the above described para
 ### EXAMPLE 1
 ```
 PS C:\>Add-RemoteAccessRadius -ServerName 10.1.2.1 Authentication "s3cr3t2" -PassThru
-ServerName   Purpose         Score  Timeout(s)  Port   AccountingOnOffMsg MsgAuthenticator 
-----------   -------         -----  ----------  ----   ------------------ ---------------- 
+ServerName   Purpose         Score  Timeout(s)  Port   AccountingOnOffMsg MsgAuthenticator
+----------   -------         -----  ----------  ----   ------------------ ----------------
 10.1.2.1     Authentication  30     5           1812                      Disabled
 ```
 
@@ -68,8 +72,8 @@ This example adds the RADIUS server named 10.1.2.1 for the purpose of VPN authen
 ### EXAMPLE 2
 ```
 PS C:\>Add-RemoteAccessRadius -ServerName 10.1.3.1 Accounting "s3cr3t5" -PassThru
-ServerName   Purpose         Score  Timeout(s)  Port   AccountingOnOffMsg MsgAuthenticator 
-----------   -------         -----  ----------  ----   ------------------ ---------------- 
+ServerName   Purpose         Score  Timeout(s)  Port   AccountingOnOffMsg MsgAuthenticator
+----------   -------         -----  ----------  ----   ------------------ ----------------
 10.1.3.1     Accounting      30     5           1813   Disabled
 ```
 
@@ -81,16 +85,16 @@ This example adds the RADIUS server named 10.1.3.1 for the purpose of accounting
 Indicates the enabled state for sending of accounting on or off messages.
 The acceptable values for this parameter are:
 
- -- Enabled. 
+ -- Enabled.
 
  -- Disabled.
-This is the default value. 
+This is the default value.
 This parameter is applicable only when the RADIUS server is being added for Remote Access accounting.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +109,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +126,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +142,7 @@ If this parameter is specified when adding a RADIUS server for authentication, t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,19 +154,19 @@ Accept wildcard characters: False
 ### -EntrypointName
 Specifies the identity of a site in a multi-site deployment.
 This parameter is applicable only to RADIUS server configuration for VPN authentication.
-It is not applicable to RADIUS accounting and OTP and hence is ignored when a user tries to add a radius server for these purposes. 
+It is not applicable to RADIUS accounting and OTP and hence is ignored when a user tries to add a radius server for these purposes.
 
-When this parameter is specified it indicates that the RADIUS server for VPN authentication should be added for that site. 
+When this parameter is specified it indicates that the RADIUS server for VPN authentication should be added for that site.
 
 If this parameter is not specified in a multi-site deployment, then this parameter value for the server on which the cmdlet is run is used.
-The server could also be represented by using the **ComputerName** parameter. 
+The server could also be represented by using the **ComputerName** parameter.
 
 If this parameter and **ComputerName** parameter are specified and the **ComputerName** parameter value does not belong to the site represented by this parameter value, then this parameter takes precedence and the RADIUS server is added to it.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +179,7 @@ Accept wildcard characters: False
 Specifies the enabled state for the usage of message authenticator.
 The acceptable values for this parameter are:
 
- -- Enabled. 
+ -- Enabled.
 
  -- Disabled.
 This is the default value.
@@ -185,7 +189,7 @@ This parameter is applicable only when the RADIUS server is being added for VPN 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +205,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +221,7 @@ The default value is `1813`.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,16 +234,16 @@ Accept wildcard characters: False
 Specifies the purpose for which the external RADIUS server is being added.
 The acceptable values for this parameter are:
 
- -- Authentication. 
+ -- Authentication.
 
- -- Accounting. 
+ -- Accounting.
 
  -- Otp.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -255,7 +259,7 @@ The default value is 30.
 ```yaml
 Type: Byte
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,7 +274,7 @@ Specifies the IPv4 or IPv6 address, or host name, of the external RADIUS server.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -286,7 +290,7 @@ Note: The secret is specified in clear text.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -303,7 +307,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +323,7 @@ The default value is 5 (seconds).
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -334,7 +338,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -350,7 +354,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -369,21 +373,21 @@ Accept wildcard characters: False
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-The RemoteAccessRadiusServer object array consists of the following properties: 
+The RemoteAccessRadiusServer object array consists of the following properties:
 
- -- IPv4 or IPv6 address, or host name, of the RADIUS server that was added. 
+ -- IPv4 or IPv6 address, or host name, of the RADIUS server that was added.
 
- -- The **Purpose for which the server was added** property: the RADIUS server can be added for VPN authentication, accounting or OTP. 
+ -- The **Purpose for which the server was added** property: the RADIUS server can be added for VPN authentication, accounting or OTP.
 
- -- Radius initial score. 
+ -- Radius initial score.
 
- -- Radius timeout in seconds. 
+ -- Radius timeout in seconds.
 
- -- Radius port number. 
+ -- Radius port number.
 
- -- For added security, the **Radius shared secret** property is never populated; it will always show as blank. 
+ -- For added security, the **Radius shared secret** property is never populated; it will always show as blank.
 
- -- The **Status of accounting on and off messages** property is always blank if the RADIUS server was added for authentication or OTP. 
+ -- The **Status of accounting on and off messages** property is always blank if the RADIUS server was added for authentication or OTP.
 
  -- The **Status of message authenticator property** is always blank if the RADIUS server was added for accounting or OTP.
 

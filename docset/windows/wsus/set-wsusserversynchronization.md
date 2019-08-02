@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-WsusServerSynchronization
+ms.reviewer:
 ms.assetid: A0BF19F2-ABD9-47E3-B833-4C09D9B76F83
 ---
 
@@ -42,7 +43,7 @@ This cmdlet allows you to specify settings such as the upstream server name, the
 
 ## EXAMPLES
 
-### Example 1: Synchonize from a specified server
+### Example 1: Synchronize from a specified server
 ```
 PS C:\> Set-WsusServerSynchronization -UssServerName "Test" -PortNumber 42 -UseSSL
 ```

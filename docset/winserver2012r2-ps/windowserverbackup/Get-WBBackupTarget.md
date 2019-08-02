@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WBBackupTarget
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 899D9201-3001-4885-AAA3-EFCC2AF766C2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WBBackupTarget

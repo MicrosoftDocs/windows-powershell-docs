@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssReportSection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7C50DE04-27FB-4A42-9DBE-F1CB949658C2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssReportSection

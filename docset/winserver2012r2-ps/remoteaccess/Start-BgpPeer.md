@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Start-BgpPeer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECED1D43-9CE2-4B06-907A-9BEC72A0B235
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-BgpPeer
@@ -41,7 +43,7 @@ PS C:\> Start-BgpPeer -Name "Site17"
 
 This command starts a BGP routing session for the BGP router named Site17.
 
-### Example 2: Start a routing session in a multitenant evironment
+### Example 2: Start a routing session in a multitenant environment
 ```
 PS C:\> Start-BgpPeer -Name "Tenant22" -RoutingDomain "Rd001"
 ```

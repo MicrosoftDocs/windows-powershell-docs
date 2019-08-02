@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RDDatabaseConnectionString
+ms.reviewer:
 ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
 ---
 
@@ -90,7 +91,7 @@ Specifies the database connection string.
 The database connection string supports both high availability configurations: 
 
 - Dedicated database server.
-Uses Windows Authentication to connect to the databse.
+Uses Windows Authentication to connect to the database.
 - Shared database server.
 Uses database authentication (such as SQL authentication) with a user name and password to connect to the database.
 

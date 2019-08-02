@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Remove-VMNetworkAdapterExtendedAcl
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -179,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -VM
-Specifies an array of virtual machines as **VirutalMachine** objects.
+Specifies an array of virtual machines as **VirtualMachine** objects.
 The cmdlet removes an ACL for network adapters that belong to the virtual machines that you specify.
 To obtain a virtual machine object, use the Get-VM cmdlet.
 

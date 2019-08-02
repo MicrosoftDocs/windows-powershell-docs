@@ -4,9 +4,11 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Use-WindowsUnattend
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference

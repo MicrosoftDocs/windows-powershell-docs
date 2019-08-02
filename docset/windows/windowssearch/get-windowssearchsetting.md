@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsSearch.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-WindowsSearchSetting
+ms.reviewer:
 ms.assetid: 78952B7B-4460-4213-9194-A5D9A26AE654
 ---
 
@@ -67,14 +68,14 @@ The value of SafeSearch that Windows Search uses for queries.
 
 **SearchExperienceSetting** has the following possible values: 
 
-- PersonlizedAndLocation.
+- PersonalizedAndLocation.
 Personalize Windows Search and other Microsoft experiences by using search history, some Microsoft account information, and specific location of the user. 
 - Personalized.
 Personalize Windows Search and other Microsoft experiences by using search history and some Microsoft account information, but do not use specific location of the user. 
 - NotPersonalized.
 Do not personalize Windows Search and other Microsoft experiences or use specific location of the user.
 
-******WindowsSafeSearchSetting** has the following possible values: 
+**WindowsSafeSearchSetting** has the following possible values: 
 
 - Off.
 Windows Search does not remove adult content from results. 

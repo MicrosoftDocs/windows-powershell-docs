@@ -7,13 +7,15 @@ Locale: en-US
 title: WDS
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 876b597d-8d88-448d-8659-989511b1423c
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # WDS Module

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetTCPSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetTCPSetting
+ms.reviewer:
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
 ---
 
@@ -464,7 +465,7 @@ Accept wildcard characters: False
 
 ### -MaxSynRetransmissions
 Specifies the maximum number of times the computers sends SYN packets without receiving a response.
-The cmdlet gets settings that have the maxium values that you specify.
+The cmdlet gets settings that have the maximum values that you specify.
 
 ```yaml
 Type: Byte[]

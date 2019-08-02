@@ -1,14 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: jgerend
+ms.author: v-anbarr
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Set-InsightsCapabilitySchedule
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: JasonGerend
+author: andreabarr
 manager: elizapo
 ms.date: 6/18/18
 ms.topic: reference
@@ -172,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -DaysInterval
-Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capabiility every other day.
+Specifies the interval between days in the schedule. An interval of 1 produces a daily schedule. An interval of 2 runs the capability every other day.
 
 ```yaml
 Type: UInt16
@@ -322,7 +323,10 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 **None**
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)<br>
-[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Get-InsightsCapabilitySchedule](get-insightscapabilityschedule.md)
+
+[Enable-InsightsCapabilitySchedule](enable-insightscapabilityschedule.md)
+
 [Disable-InsightsCapabilitySchedule](disable-insightscapabilityschedule.md)

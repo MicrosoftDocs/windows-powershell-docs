@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disconnect-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D1FD0E42-ED79-41CC-A37A-C9D1A8721ABF
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disconnect-VirtualDisk

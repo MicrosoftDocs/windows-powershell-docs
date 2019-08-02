@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Find-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D409B5BE-03D1-4852-8DDB-88B3DF6F30A1
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Find-NetIPsecRule
@@ -279,7 +281,7 @@ The acceptable values for this parameter are:
 
 - Any
 - RPC
--  RPC-EPMap
+- RPC-EPMap
 - IPHTTPS. 
 
 

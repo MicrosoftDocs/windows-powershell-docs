@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Start-DnsServerScavenging
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -116,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Notifies the DNS server to attempt an scavange without prompting you for confirmation.
+Notifies the DNS server to attempt an scavenge without prompting you for confirmation.
 By default, the cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml

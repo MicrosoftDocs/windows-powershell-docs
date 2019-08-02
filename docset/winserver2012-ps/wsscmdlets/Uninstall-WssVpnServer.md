@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 79BF1EAA-BAFC-4400-880A-55CC59A95FD3
+manager: dansimp
 ---
 
 # Uninstall-WssVpnServer

@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7550B515-D26D-49CE-A09A-579817C138C7
+manager: dansimp
 ---
 
 # Get-NfsNetgroupStore

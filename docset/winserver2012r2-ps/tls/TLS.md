@@ -7,13 +7,15 @@ Locale: en-US
 title: TLS
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ba7ebe54-dd05-466b-addc-107ac492d04e
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # TLS Module

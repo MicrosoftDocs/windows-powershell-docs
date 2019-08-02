@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-CertificateNotificationTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 51E52DB2-3187-4EB5-9AC6-319EAF7AE11A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-CertificateNotificationTask

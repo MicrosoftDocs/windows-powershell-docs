@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285749
 Help Version: 4.0.4.0
 Locale: en-US
 title: IpamServer
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

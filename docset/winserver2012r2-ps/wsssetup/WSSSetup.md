@@ -7,13 +7,15 @@ Locale: en-US
 title: WSSSetup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 67521ced-e4a1-42af-89f7-45b7ed4f146c
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # WSSSetup Module

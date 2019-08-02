@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-VMNetworkAdapter
@@ -413,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -StaticMacAddress
-Assigns a specific a MAC addresss to the virtual network adapter.
+Assigns a specific a MAC address to the virtual network adapter.
 
 ```yaml
 Type: String

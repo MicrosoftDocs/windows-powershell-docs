@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 67C45D4A-2D6A-4AB9-A96E-B425558FAD11
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Enable-ADOptionalFeature
@@ -37,7 +41,7 @@ You can identify the domain or forest by its fully-qualified domain name (FQDN),
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target 'fabrikam.com' -server dc1
+C:\PS>Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target 'fabrikam.com' -Server dc1
 ```
 
 Description
@@ -49,7 +53,7 @@ This operation must be performed on the Domain Controller that holds the naming 
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Enable-ADOptionalFeature 'Feature 1' -Scope ForestOrConfigurationSet -Target 'CN=Configuration,CN={0241853A-6BBF-48AA-8AE0-9C35D0C91B7B}' -server lds.fabrikam.com:50000
+C:\PS>Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target 'CN=Configuration,CN={0241853A-6BBF-48AA-8AE0-9C35D0C91B7B}' -Server lds.fabrikam.com:50000
 ```
 
 Description
@@ -58,18 +62,6 @@ Description
 
 Enable the optional feature 'Recycle Bin Feature' for the AD LDS instance lds.fabrikam.com. 
 This operation must be performed on the AD LDS instance that holds the naming master FSMO role.
-
-### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Set-ADObject -Identity "CN=Partitions,CN=Configuration,CN={4F971828-5BE4-4E94-B532-58F2BFB6A3A5}" -replace @{"msDS-Behavior-Version"=4}
-```
-
-Description
-
------------
-
-Sets the ForestMode (Forest Functional Level) to Windows2008R2Forest on an AD LDS instance.
-The ForestMode must be Windows2008R2Forest or higher in order to enable the Recycle Bin Feature for AD LDS.
 
 ## PARAMETERS
 

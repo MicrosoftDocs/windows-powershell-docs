@@ -7,13 +7,15 @@ Locale: en-US
 title: PrintManagement
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: c15dc324-8378-465b-a853-eb5b90cf84e6
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # PrintManagement Module

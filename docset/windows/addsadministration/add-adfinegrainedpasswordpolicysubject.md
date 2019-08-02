@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-ADFineGrainedPasswordPolicySubject
+ms.reviewer:
 ms.assetid: 90E7590E-093B-43DD-BA65-2095AB99FA96
 ---
 
@@ -69,7 +70,7 @@ This command applies the fine-grained password policy named DlgtdAdminsPSO to th
 
 ### Example 4: Apply a fine-grained password policy to users with a specified name
 ```
-PS C:\> Get-ADGroup -Filter {lastname -eq "Fuller"} | Add-ADFineGrainedPasswordPolicySubject -Identity DlgtdAdminsPSO
+PS C:\> Get-ADUser -Filter {lastname -eq "Fuller"} | Add-ADFineGrainedPasswordPolicySubject -Identity DlgtdAdminsPSO
 ```
 
 This command applies the fine-grained password policy named DlgtdAdminsPSO to any users whose last name is Fuller.

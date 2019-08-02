@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Move-WssFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3835B800-FC6F-4DE5-9008-24698615C552
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Move-WssFolder

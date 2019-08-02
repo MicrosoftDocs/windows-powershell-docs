@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-SystemDriver
+ms.reviewer:
 ms.assetid: 04B442D9-0968-48A5-85CD-00F7687C256A
 ---
 
@@ -106,7 +107,7 @@ Signers      : {}
 
 This command scans the specified folder, just like the previous example.
 This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder.
-The command specifies the **NoScript** parameterso that it gets information for only PE files.
+The command specifies the **NoScript** parameter so that it gets information for only PE files.
 
 ## PARAMETERS
 

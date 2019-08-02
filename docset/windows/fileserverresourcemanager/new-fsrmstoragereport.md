@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FsrmStorageReport.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-FsrmStorageReport
+ms.reviewer:
 ms.assetid: 3C59457D-F193-4FA3-8332-B70051EC4270
 ---
 
@@ -44,28 +45,35 @@ You can configure report jobs to run according to a schedule or on demand.
 ## EXAMPLES
 
 ### Example 1: Create a large files storage report
-```
-The first command gets a **DateTime** object and stores it in the $d variable.
+```powershell
+# The first command gets a **DateTime** object and stores it in the $d variable.
 PS C:\> $d = Get-Date "12:00am"
 
-This second command returns a **FsrmScheduledTask** object that describes a schedule that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
-PS C:\> $task = New-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+# This second command returns a **FsrmScheduledTask** object that describes a schedule that runs the task at midnight on the first day
+# of the month. The command stores results in the $task variable.
+PS C:\> $task = New-FsrmScheduledTask -Time $d -Monthly 1
 
-The third command creates a LargeFiles storage report named "Find large files" on C:\Shares. The command sets the schedule for the report stored in the $task variable, and limits the report to files larger than 10MB.
+# The third command creates a LargeFiles storage report named "Find large files" on C:\Shares. 
+# The command sets the schedule for the report stored in the $task variable, and limits the 
+# report to files larger than 10MB.
 PS C:\> New-FsrmStorageReport -Name "Find large files" -Namespace @("C:\Shares") -Schedule $task -ReportType @("LargeFiles") -LargeFileMinimum 10MB
 ```
 
 This example creates a LargeFiles storage report that the server runs monthly and restricts the report to files larger than 10MB.
 
 ### Example 2: Create a large files storage report by using a namespace condition
-```
-The first command gets a **DateTime** object and stores it in the $d variable.
+```powershell
+# The first command gets a **DateTime** object and stores it in the $d variable.
 PS C:\> $d = get-date "12:00am"
 
-This second command returns an **FsrmScheduledTask** object that describes a schedule that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
-PS C:\> $task = new-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+# This second command returns an **FsrmScheduledTask** object that describes a schedule 
+# that runs the task at midnight on the first day of the month. The command stores results in 
+# the $task variable.
+PS C:\> $task = new-FsrmScheduledTask -Time $d -Monthly 1
 
-The third command creates a LargeFiles storage report named "Find large files" that generates a Large Files report on any folders whose Folder Usage property includes the User Data value. The command sets the schedule for the report stored in the $task variable.
+# The third command creates a LargeFiles storage report named "Find large files" that generates a
+# Large Files report on any folders whose Folder Usage property includes the User Data value. 
+# The command sets the schedule for the report stored in the $task variable.
 PS C:\> New-FsrmStorageReport -Name "Find large files" -Namespace @("[FolderUsage=User Data]") -Schedule $task -ReportType @("LargeFiles")
 ```
 
@@ -73,26 +81,33 @@ This example creates a LargeFiles storage report that the server runs monthly an
 This example creates a LargeFiles storage report that the server runs monthly and restricts the report to files larger than 10MB.
 
 ### Example 3: Create a storage report for files from a file group
-```
-The first command gets a **DateTime** object and stores it in the $d variable.
+```powershell
+# The first command gets a **DateTime** object and stores it in the $d variable.
 PS C:\> $d = get-date "12:00am"
 
-This second command returns a **FsrmScheduledTask** object that describes a schedule that runs the task at midnight on the first day of the month. The command stores results in the $task variable.
-PS C:\> $task = new-FsrmScheduledTask -Time $d.ToFileTimeUtc() -Monthly 1
+# This second command returns a **FsrmScheduledTask** object that describes a schedule that 
+# runs the task at midnight on the first day of the month. The command stores results in 
+# the $task variable.
+PS C:\> $task = new-FsrmScheduledTask -Time $d -Monthly 1
 
-The third command creates a storage report named "Find large files" and file groups on the folder C:\Shares. The command sets the schedule for the report stored in the $task variable, set the report type to LargeFiles and a FilesByFileGroup, limits the report to files larger than 10MB, and restricts the FilesByFileGroup report to include only files from the "Text files file" group.
+# The third command creates a storage report named "Find large files" and file groups on th
+# folder C:\Shares. The command sets the schedule for the report stored in the $task variable, 
+# set the report type to LargeFiles and a FilesByFileGroup, limits the report to files larger 
+# than 10MB, and restricts the FilesByFileGroup report to include only files from the 
+# "Text files file" group.
 PS C:\> New-FsrmStorageReport -Name "Find large files and file groups" -Namespace @("C:\Shares") -Schedule $task -ReportType @("LargeFiles", "FilesByFileGroup") -LargeFileMinimum 10MB -FileGroupIncluded "Text files"
 ```
 
 This example creates a storage report that the server runs monthly and generates a LargeFiles and a FilesByFileGroup report.
 
 ### Example 4: Create an interactive storage report
-```
+```powershell
 PS C:\> New-FsrmStorageReport -Name "Find large files" -Namespace @("C:\Shares") -Interactive -ReportType @("LargeFiles")
 ```
 
 This command creates a storage report named "Find large files" that the server runs immediately.
 The command creates a LargeFile storage report for the folder C:\Shares.
+The LargeFile storage report is saved to the **C:\StorageReports\Interactive** folder
 
 ## PARAMETERS
 

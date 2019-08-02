@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 104F9A14-DBE9-4C5B-9F66-54E2A1C95761
+manager: dansimp
 ---
 
 # Set-DtcNetworkSetting

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-VMGroup
+ms.reviewer:
 ms.assetid: 81602AAB-1EF9-4F52-A89F-BD9203EA8A2F
 ---
 
@@ -124,7 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Specifies the unique ID of an empty virtual machine group that this cmldet removes.
+Specifies the unique ID of an empty virtual machine group that this cmdlet removes.
 
 ```yaml
 Type: Guid

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7A13CE3C-D9E3-4E2F-B09D-815634A55511
+manager: dansimp
 ---
 
 # Set-WssWinSatCpuScore

@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: WDS
 Module Guid: 95B28FD4-92C3-41E8-B338-2DF356BA9ECA
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=280236
 Help Version: 4.0.3.1
 Locale: en-US
 title: WDS
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference

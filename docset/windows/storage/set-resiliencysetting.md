@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ResiliencySetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ResiliencySetting
+ms.reviewer:
 ms.assetid: 96270725-4A06-4893-9D86-036C7345F78F
 ---
 
@@ -86,7 +87,7 @@ The value ranges are:
 
 - Mirror.
 The minimum is two for two-way mirror or three for three-way mirror.
-The maxmium is eight times the number of data copies. 
+The maximum is eight times the number of data copies. 
 - Parity.
 The minimum is three for single parity and seven for dual parity.
 The maximum is eight for single parity and 17 for dual parity. 

@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8FA4EB50-F97F-4B69-A582-005B103E3A3E
+manager: dansimp
 ---
 
 # Revoke-SmbShareAccess

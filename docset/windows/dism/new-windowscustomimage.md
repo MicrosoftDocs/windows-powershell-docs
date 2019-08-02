@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-WindowsCustomImage
+ms.reviewer:
 ms.assetid: 052253A0-39BD-48C8-ADD6-8ADDC6ACEE4D
 ---
 
@@ -84,7 +85,7 @@ Accept wildcard characters: False
 
 ### -ConfigFilePath
 Specifies the location of a configuration file that lists exclusions for image capture and compress commands.
-For more information, see [DISM Configuration List and WimScrit.ini Files](http://go.microsoft.com/fwlink/?LinkID=313768).
+For more information, see [DISM Configuration List and WimScript.ini Files](http://go.microsoft.com/fwlink/?LinkID=313768).
 
 ```yaml
 Type: String

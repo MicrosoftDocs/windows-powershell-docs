@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_RemoteAccessLoadBalancerNode_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-RemoteAccessLoadBalancerNode
+ms.reviewer:
 ms.assetid: 90AA4EC8-09C9-4B77-BFB2-0E68AF04B3E5
 ---
 
@@ -80,7 +81,7 @@ This example creates a NLB Cluster and adding a new server to a load balanced cl
 
 ### EXAMPLE 2
 ```
-If VPN is enabled, define a static address range for VPN. If this is being used in in a script and the prompts are to be suppressed, then run this cmdlet with the **Force** parameter.
+If VPN is enabled, define a static address range for VPN. If this is being used in a script and the prompts are to be suppressed, then run this cmdlet with the **Force** parameter.
 PS C:\>Add-RemoteAccessLoadBalancerNode -RemoteAccessServer edge3 -VpnIPAddressRange @("192.168.1.1","192.168.1.100") -PassThru
 Confirm 
 Certificate Iphttps cannot be located on the Remote Access server. Do you want DirectAccess to create and use a self-signed certificate? 

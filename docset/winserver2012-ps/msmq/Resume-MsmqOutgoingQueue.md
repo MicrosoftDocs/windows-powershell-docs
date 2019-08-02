@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FEBE380E-6798-417D-A3BC-79CD6BB13D64
+manager: dansimp
 ---
 
 # Resume-MsmqOutgoingQueue
@@ -24,7 +28,7 @@ This cmdlet returns the resumed **MsmqOutgoingQueue** objects.
 
 ### Example 1: Resume an outgoing queue
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name "Order*" | Resume-MsmqOutgoingQueue
+PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Resume-MsmqOutgoingQueue
 ```
 
 This command resumes the outgoing queues that have wildcard named Order*.

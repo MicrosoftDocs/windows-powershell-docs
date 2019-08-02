@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 57FDC808-82C1-44C0-AB5C-5CBAB8F41E54
+manager: dansimp
 ---
 
 # Get-OBMachineSetting

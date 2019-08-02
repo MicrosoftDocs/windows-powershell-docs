@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E92DABAF-87C0-487D-8DA3-9D1C52587855
+manager: dansimp
 ---
 
 # Set-MsmqQueue
@@ -27,7 +31,7 @@ This cmdlet returns an **MsmqQueue** object that represents the modified queue.
 
 ### Example 1: Set the properties of a specified queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private | Set-MsmqQueue â€"QueueQuota 500000 â€"Journaling
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -QueueQuota 500000 -Journaling
 ```
 
 This command sets the queue quota to 500000 on all queues that have the   wildcard named Order*.

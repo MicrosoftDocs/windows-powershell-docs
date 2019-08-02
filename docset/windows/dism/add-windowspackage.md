@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-WindowsPackage
+ms.reviewer:
 ms.assetid: D1871FB1-D599-4997-A992-8F5F7BC84A82
 ---
 
@@ -161,10 +162,10 @@ Specifies the location of the package to add to the image.
 
 Valid values are:
 
---A single .cab or .msu file.
---A folder that contains a single expanded .cab file.
---A folder that contains a single .msu file.
---A folder that contains multiple .cab or .msu files.
+- A single .cab or .msu file.
+- A folder that contains a single expanded .cab file.
+- A folder that contains a single .msu file.
+- A folder that contains multiple .cab or .msu files.
 
 If *PackagePath* is a folder that contains a .cab or .msu files at its root, any subfolders will also be recursively checked for .cab and .msu files.
 

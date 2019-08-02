@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E417C2FF-13CC-4290-A833-9EB73EC4DAF9
+manager: dansimp
 ---
 
 # Rename-OBVolume

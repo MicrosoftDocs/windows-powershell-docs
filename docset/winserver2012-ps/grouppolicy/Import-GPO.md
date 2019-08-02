@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: ABCBB483-2A0D-4380-83A0-B5F8D4AD13CA
+manager: dansimp
 ---
 
 # Import-GPO

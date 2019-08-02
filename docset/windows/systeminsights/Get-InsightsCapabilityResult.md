@@ -1,14 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: jgerend
+ms.author: v-anbarr
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Get-InsightsCapabilityResult
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: JasonGerend
+author: andreabarr
 manager: elizapo
 ms.date: 6/18/18
 ms.topic: reference
@@ -135,8 +136,9 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 ## OUTPUTS
 **Microsoft.SystemInsights.Management.PowerShell.CapabilityResult**
 
-The cmdlet returns one or more objects that represent the specified capbility results.
+The cmdlet returns one or more objects that represent the specified capability results.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
 [Invoke-InsightsCapability](invoke-insightscapability.md)

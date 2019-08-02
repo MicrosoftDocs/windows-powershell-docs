@@ -3,6 +3,10 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: C7B09260-DC16-4759-B849-BF9D98A4C151
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-FsrmFileManagementJob
@@ -337,7 +341,7 @@ Accept wildcard characters: False
 Specifies an array of report types that the file management job generates.
 The acceptable values for this parameter are:
 - Information
--  Error
+- Error
 - Audit
 
 ```yaml

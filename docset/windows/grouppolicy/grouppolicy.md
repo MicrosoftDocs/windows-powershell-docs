@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: GroupPolicy
 Module Guid: 03E49E3A-BE77-4422-9D97-8FE355C2284C
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390772
 Help Version: 5.0.0.1
 Locale: en-US
 title: GroupPolicy
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
@@ -21,7 +22,7 @@ ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
 
 # GroupPolicy Module
 ## Description
-This topic contains the brief descriptions of the Windows PowerShell� cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
+This topic contains the brief descriptions of the Windows PowerShell cmdlets that are for use in administering Group Policy in Windows Server and Windows client with Remote Server Administration Tools (RSAT) installed. (RSAT includes the GPMC and the Group Policy cmdlets.)
 
 Each cmdlet in the table is linked to additional information about that cmdlet.
 

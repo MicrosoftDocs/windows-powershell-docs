@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FileIntegrity.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-FileIntegrity
+ms.reviewer:
 ms.assetid: CDC219C7-0117-4923-8720-E9F3332588A5
 ---
 
@@ -219,8 +220,7 @@ The cmdlet uses the **FullName** property as the value of the *FileName* paramet
 
 ## OUTPUTS
 
-###  
-This cmdlet generates no output.
+### None
 
 ## NOTES
 

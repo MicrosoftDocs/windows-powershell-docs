@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Suspend-VMReplication
+ms.reviewer:
 ms.assetid: 0A08BCF1-F451-445F-9EAA-E71FF781901B
 ---
 
@@ -231,8 +232,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **VMReplication** if *PassThru* is specified.
+### None
+Default
+
+### VMReplication
+If **-PassThru** is specified.
 
 ## NOTES
 

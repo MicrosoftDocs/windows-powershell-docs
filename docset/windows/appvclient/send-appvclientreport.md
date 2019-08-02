@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Send-AppvClientReport
+ms.reviewer:
 ms.assetid: BD6C1D47-24C2-453C-859F-9FA27B5AB241
 ---
 
@@ -52,7 +53,7 @@ If there is no valid location specified, the cmdlet fails.
 ### Example 1: Send data to previously configured location
 ```
 PS C:\> Send-AppVClientReport
-The Application Virtualization Client Report was sent sucessfully
+The Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location that is configured in the client and does not delete the data after it is sent.
@@ -60,7 +61,7 @@ This command sends the data to the location that is configured in the client and
 ### Example 2: Send data to previously configured location and delete data
 ```
 PS C:\> Send-AppVClientReport -DeleteOnSuccess
-Tee Application Virtualization Client Report was sent sucessfully
+Tee Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location that is configured in the client and deletes the data after it is sent.
@@ -68,7 +69,7 @@ This command sends the data to the location that is configured in the client and
 ### Example 3: Send data to specified location and delete data
 ```
 PS C:\> Send-AppVClientReport -URL "http://myreportingserver:port" -DeleteOnSuccess
-The Application Virtualization Client Report was sent sucessfully
+The Application Virtualization Client Report was sent successfully
 ```
 
 This command sends the data to the location specified by the URL parameter and deletes the data after it is sent.

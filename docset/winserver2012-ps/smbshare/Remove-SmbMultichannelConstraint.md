@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 382A020C-5DD3-49CE-BBC4-7095E8EF7B48
+manager: dansimp
 ---
 
 # Remove-SmbMultichannelConstraint

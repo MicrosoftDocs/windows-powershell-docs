@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-DAEntryPoint
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8ACC3C62-9C15-4433-A5D0-41C338CDB4FB
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-DAEntryPoint

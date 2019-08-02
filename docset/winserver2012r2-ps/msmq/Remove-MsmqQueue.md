@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-MsmqQueue
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 65884D1F-717E-4B91-96D3-3BA21329D1DC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-MsmqQueue

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Reset-DAClientExperienceConfiguration
+ms.reviewer:
 ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
 ---
 
@@ -126,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomCommands
-Reseets the CustomCommands property of the specified configuration to a non-configured state.
+Resets the CustomCommands property of the specified configuration to a non-configured state.
 
 ```yaml
 Type: SwitchParameter
@@ -385,13 +386,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperianceConfiguration
+### Microsoft.Management.Infrastructure.CimInstance#root/StandardCimv2/MSFT_DAClientExperienceConfiguration
 This cmdlet accepts as input a CIM object that contains a DA client experience configuration.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

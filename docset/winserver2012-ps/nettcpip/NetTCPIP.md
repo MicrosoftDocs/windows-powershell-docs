@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=230560
 Help Version: 3.4.0.0
 Locale: en-US
 ms.assetid: 2E018228-3ABE-4901-B33D-92C2D16262CC
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetTCPIP Module

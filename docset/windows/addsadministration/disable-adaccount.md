@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-ADAccount
+ms.reviewer:
 ms.assetid: 70167D4B-09FF-42A2-BFF8-09450F8DBC14
 ---
 
@@ -42,7 +43,7 @@ For Active Directory Lightweight Directory Services (AD LDS) environments, the *
 
 - The cmdlet is run from an Active Directory provider drive.
 - A default naming context or partition is defined for the AD LDS environment.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNaminIontext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 
 ## EXAMPLES
 

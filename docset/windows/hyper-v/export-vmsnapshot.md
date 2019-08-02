@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-VMSnapshot
+ms.reviewer:
 ms.assetid: 6B839212-BB3E-4321-92C1-A32FFC38FDFD
 ---
 
@@ -266,8 +267,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.Snapshot** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.Snapshot
+If **-PassThru** is specified.
 
 ## NOTES
 

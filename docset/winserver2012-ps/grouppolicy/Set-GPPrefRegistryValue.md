@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
+manager: dansimp
 ---
 
 # Set-GPPrefRegistryValue
@@ -46,9 +50,9 @@ It does not modify existing Registry preference items.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
+- You can pipe GPO objects to this cmdlet to set a specified Registry preference item on one or more GPOs.
 
---You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
+- You can pipe PreferenceRegistrySetting objects to this cmdlet to set one or more Registry preference items on a specified GPO.
 
 ## EXAMPLES
 
@@ -174,7 +178,7 @@ Description
 -----------
 
 This command copies all Registry preference items that configure (first-level) values under the registry key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ExampleKey" from User Configuration in a source GPO (TestGPO) to Computer Configuration in destination GPO (TestGPO-1).
-A copy of the destination GPO (TestGPO-1) is returned for each Registration preference item set (in this examlpe, 2).
+A copy of the destination GPO (TestGPO-1) is returned for each Registration preference item set (in this example, 2).
 
 The Get-GPPrefRegistryValue command gets all the Registry preference items that configure values under User Configuration in the source GPO.
 This command also returns all first level subkeys that have values configured (though not the Registry preference items for the values themselves).

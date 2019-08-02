@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Install-WindowsFeature
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9801D051-0445-4245-BCEA-1805848AF9AA
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Install-WindowsFeature
@@ -45,8 +47,8 @@ Install-WindowsFeature -ConfigurationFilePath <String> [-Vhd <String>] [-Restart
 ```
 
 ## DESCRIPTION
-The `Install-WindowsFeature` cmdlet installs the specified rrsandf_plural on a computer that is running Windows Server 2012 R2, or on an offline virtual hard disk (VHD) on which Windows Server 2012 R2 is installed.
-This cmdlet works similarly to the arfw in Server Manager, with an important exception:  the cmdlet does not install management tools for rrsandf_plural by default.
+The `Install-WindowsFeature` cmdlet installs the specified features on a computer that is running Windows Server 2012 R2, or on an offline virtual hard disk (VHD) on which Windows Server 2012 R2 is installed.
+This cmdlet works similarly to the installation of roles and features in Server Manager, with an important exception:  the cmdlet does not install management tools for the features by default.
 To install management tools such as snap-ins on a target server, you must add the `IncludeManagementTools` parameter to your command.
 
 This cmdlet requires elevation; you must be running a Windows PowerShell session as an administrator to use this cmdlet.
@@ -106,7 +108,7 @@ The computer account of the local computer must have Read permissions on the spe
 ## PARAMETERS
 
 ### -ComputerName
-Installs one or more available rrsandf_plural on a specified remote computer.
+Installs one or more available features on a specified remote computer.
 This parameter accepts only one computer name.
 If this parameter is not added, or no computer name is specified, the default target is the local computer.
 
@@ -168,13 +170,13 @@ If the parameter is not added, or no value is specified, the default value of th
 Enter a user name in one of the following formats.
 Quotation marks are optional.
 
-â—?  "UserName"
+"UserName"
 
-â—?  "Domain\User"
+"Domain\User"
 
-â—?  "User@Domain.com"
+"User@Domain.com"
 
-â—?   A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
+A Credential object returned by the Get-Credentialhttp://go.microsoft.com/fwlink/p/?LinkID=113311 cmdlet.
 
 If a user name is entered, then a prompt for a password is displayed.
 

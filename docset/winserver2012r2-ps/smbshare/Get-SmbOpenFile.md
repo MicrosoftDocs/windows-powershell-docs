@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SmbOpenFile
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 20AA3A6F-38D3-4692-98E5-4F510B9BE782
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SmbOpenFile

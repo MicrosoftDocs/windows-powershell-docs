@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcDefault
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3FA71004-D5B6-41AA-8EF4-618A55A41DDB
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-DtcDefault

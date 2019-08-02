@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_BgpPeer_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Start-BgpPeer
+ms.reviewer:
 ms.assetid: ECED1D43-9CE2-4B06-907A-9BEC72A0B235
 ---
 
@@ -44,7 +45,7 @@ PS C:\> Start-BgpPeer -Name "Site17"
 
 This command starts a BGP routing session for the BGP router named Site17.
 
-### Example 2: Start a routing session in a multitenant evironment
+### Example 2: Start a routing session in a multitenant environment
 ```
 PS C:\> Start-BgpPeer -Name "Tenant22" -RoutingDomain "Rd001"
 ```

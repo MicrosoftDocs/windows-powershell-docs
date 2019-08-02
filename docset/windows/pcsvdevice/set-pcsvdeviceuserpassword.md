@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: CIM_PhysicalComputerSystemView.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-PcsvDeviceUserPassword
+ms.reviewer:
 ms.assetid: 388A2A1B-1267-49A4-BABA-BF0372D3AB0B
 ---
 
@@ -270,7 +271,7 @@ Accept wildcard characters: False
 
 ### -SkipCACheck
 Indicates that the client connects by using HTTPS without validating that a trusted certification authority (CA) signed the server certificate.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Do not specify this parameter unless you can establish trust in another way, such as if the remote computer is part of a network that is physically secure and isolated, or if the remote computer is a trusted host in a Windows Remote Management (WinRM) configuration.
 
@@ -288,7 +289,7 @@ Accept wildcard characters: False
 
 ### -SkipCNCheck
 Indicates that the certificate common name (CN) of the server does not need to match the host name of the server.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Specify this parameter only for managing devices by using WSMAN over HTTPS.
 Be sure to specify this parameter only for trusted computers.

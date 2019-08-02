@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Resize-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 39435A9B-804E-4F3E-92E7-EFB7C6404F05
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Resize-VirtualDisk

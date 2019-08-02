@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetTCPSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetTCPSetting
+ms.reviewer:
 ms.assetid: 686DF988-37EE-46A5-9D83-96AE147D53B7
 ---
 
@@ -57,13 +58,16 @@ The **Set-NetTCPSetting** cmdlet modifies a TCP setting.
 TCP settings are optimized for different network conditions including latency and congestion.
 To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
 
-You can only modify the Custom TCP setting.
+> [!Note] 
+>1) You can modify Custom and Non-Custom settings on windows server 2016 and 2019.
+>2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
+>3) You cannot modify the NetTCPsetting on Client Operating systems(Windows 7, 8.1 and 10) as they are Read-Only.
 
 ## EXAMPLES
 
 ### Example 1: Change the custom TCP setting
 ```
-PS C:\>Set-NetTCPSetting -SettingName "Custom" -CongestionProvider CTCP -InitialCongestionWindowMss 6
+PS C:\>Set-NetTCPSetting -SettingName "InternetCustom" -CongestionProvider CTCP -InitialCongestionWindowMss 6
 ```
 
 This command changes the custom TCP setting to have a value of 6 for the initial congestion window and use compound TCP.

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Unlock-BitLocker
+ms.reviewer:
 ms.assetid: A2806C1A-0703-4800-9356-7F3B4ADE9659
 ---
 
@@ -123,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifes a secure string that contains a password.
+Specifies a secure string that contains a password.
 The password specified acts as a protector for the volume encryption key.
 
 ```yaml
@@ -139,8 +140,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies the path to a recovery key.
-The key stored in the specified path acts as a protector for the volume encryption.
+Specifies the path to a folder where recovery keys are stored.
+The key stored in the specified path, if found, acts as a protector for the volume encryption.
 
 ```yaml
 Type: String

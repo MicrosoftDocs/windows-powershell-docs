@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Export-PfxCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7E97BC6B-B6E0-4BCA-98CE-E83D307FA3A6
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Export-PfxCertificate

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 09E773E8-6F39-409D-9113-AF501C421755
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-ADDomain
@@ -35,19 +39,19 @@ You can also set the parameter to a domain object variable, such as $\<localDoma
 To get the domain of the local computer or current logged on user (CLU) set the Current parameter to LocalComputer or LoggedOnUser. 
 When you set the Current parameter, you do not need to set the Identity parameter.
 
-When the Current parameter is set to LocalComputer or LogedOnUser, the cmdlet uses the Server and Credential parameters according to the following rules.
+When the Current parameter is set to LocalComputer or LoggedOnUser, the cmdlet uses the Server and Credential parameters according to the following rules.
 
 -If both the Server and Credential parameters are not specified:
 
---The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. The credentials of the current logged on user are used to get the domain.
+- The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. The credentials of the current logged on user are used to get the domain.
 
 -If the Server parameter is specified and the Credential parameter is not specified:
 
---The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser. Then the credentials of the current logged on user are used to get the domain. An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
+- The domain is set to the domain of the specified server and the cmdlet checks to make sure that the server is in the domain of the LocalComputer or LoggedOnUser. Then the credentials of the current logged on user are used to get the domain. An error is returned when the server is not in the domain of the LocalComputer or LoggedOnUser.
 
 -If the Server parameter is not specified and the Credential parameter is specified:
 
---The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. Then the credentials specified by the Credential parameter are used to get the domain.
+- The domain is set to the domain of the LocalComputer or LoggedOnUser and a server is located in this domain. Then the credentials specified by the Credential parameter are used to get the domain.
 
 If the Server and Credential parameters are specified:
 

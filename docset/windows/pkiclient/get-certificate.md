@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-Certificate
+ms.reviewer:
 ms.assetid: 6DA3EEBC-7B3F-4130-B266-9B2AD6DF4318
 ---
 
@@ -296,4 +297,6 @@ The EnrollmentResult object contains the results of enrollment.
 [Get-Credential](http://go.microsoft.com/fwlink/p/?LinkId=293936)
 
 [Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=293912)
+
+[System Store Locations](https://docs.microsoft.com/windows/desktop/seccrypto/system-store-locations)
 

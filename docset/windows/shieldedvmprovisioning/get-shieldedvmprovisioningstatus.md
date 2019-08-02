@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ShieldedVmCmdlets-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ShieldedVMProvisioning
 ms.assetid: D9667F1A-FD59-4B14-A612-61C99BE0D4EB
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ShieldedVMProvisioningStatus
+ms.reviewer:
 ---
 
 # Get-ShieldedVMProvisioningStatus

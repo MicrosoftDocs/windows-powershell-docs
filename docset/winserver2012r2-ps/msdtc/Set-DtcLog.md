@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcLog
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 22C59C9B-811A-4811-8855-3AB02F9553A3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-DtcLog

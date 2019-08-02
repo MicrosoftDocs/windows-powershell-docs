@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssRemoteWebAccessLink
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3DDFCA4C-CF8C-4BBB-83C7-BD6BC1A9A2B8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssRemoteWebAccessLink
@@ -50,7 +52,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Collections.Generic.Dictionary<System.String, Microsoft.WindowsServerSolutions.Web.Admin.RemoteAccessLinkItem>
-This cmdlet generates a dictionary object where each value represents a link in Eemote Web Access.
+This cmdlet generates a dictionary object where each value represents a link in Remote Web Access.
 
 ## NOTES
 

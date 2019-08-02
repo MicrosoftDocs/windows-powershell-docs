@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
 ms.assetid: 71E25122-3197-4BA4-8750-6109ABCD6AB1
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-ADFSClaimsProviderTrust
@@ -380,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamlAuthenticationRequestParameters
-Specifies which of the parameters (AssertionConsumerServiceIndex, AssertitionConsumerServiceUrl, ProtocolBinding) will be used in SAML authentication requests to the claims provider.
+Specifies which of the parameters (AssertionConsumerServiceIndex, AssertionConsumerServiceUrl, ProtocolBinding) will be used in SAML authentication requests to the claims provider.
 Specify a value from the set: {None, Index, Url, ProtocolBinding, UrlWithProtocolBinding}
 
 ```yaml

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Resume-WBBackup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5FBD4A20-C137-478D-825D-8202E4492D5B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Resume-WBBackup

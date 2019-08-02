@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Install-WssVpnServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 048C2958-E203-448F-ABB1-1D11FFBA4DA1
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Install-WssVpnServer

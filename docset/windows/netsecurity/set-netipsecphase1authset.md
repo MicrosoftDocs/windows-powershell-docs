@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecPhase1AuthSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetIPsecPhase1AuthSet
+ms.reviewer:
 ms.assetid: 8D843BB8-8F79-4E1E-A6F9-5AD9615CB526
 ---
 
@@ -62,7 +63,7 @@ Set-NetIPsecPhase1AuthSet -InputObject <CimInstance[]> [-NewDisplayName <String>
 ## DESCRIPTION
 The **Set-NetIPsecPhase2AuthSet** cmdlet modifies cryptographic set properties of existing main mode cryptographic sets.
 
-This cmdlet returns one or more phase 1 authentication sets to be modified with the *Name* (default), *DisplayName* or or by association using the *DisplayGroup*, or *Group* cmdlet.
+This cmdlet returns one or more phase 1 authentication sets to be modified with the *Name* (default), *DisplayName* or by association using the *DisplayGroup*, or *Group* cmdlet.
 The sets cannot be queried by property in this cmdlet.
 The Get-NetIPsecPhase1AuthSet cmdlet returns queried rules and pipes the rules into this cmdlet.
 The remaining parameters specify the properties of this cmdlet to be modified.

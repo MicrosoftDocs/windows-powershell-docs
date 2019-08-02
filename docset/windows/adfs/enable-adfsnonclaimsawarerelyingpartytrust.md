@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 633045E2-52BF-4C8A-B332-71E2DCD887A4
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-AdfsNonClaimsAwareRelyingPartyTrust
+ms.reviewer:
 ---
 
 # Enable-AdfsNonClaimsAwareRelyingPartyTrust
@@ -64,7 +65,7 @@ This command enables the non-claims-aware relying party trust for the applicatio
 
 ### Example 2: Enable a non-claims-aware relying party trust by using an identifier
 ```
-PS C:\> Enable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIndentifier "http://Contosoexpense/"
+PS C:\> Enable-AdfsNonClaimsAwareRelyingPartyTrust -TargetIdentifier "http://Contosoexpense/"
 ```
 
 This command enables the non-claims-aware relying party trust for the expense report application that has the identifier http://Contosoexpense.

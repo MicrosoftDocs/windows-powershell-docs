@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterPowerManagement
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 85E56DA8-8A5A-4BFF-BF13-30A923379E1A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterPowerManagement
@@ -55,7 +57,7 @@ This example gets the power management properties of the network adapter named E
 
 ### EXAMPLE 3
 ```
-PS C:\> Get-NetAdapterPowerManagment -Name Ethernet | Format-List -Property *
+PS C:\> Get-NetAdapterPowerManagement -Name Ethernet | Format-List -Property *
 ```
 
 This example displays all of the power management properties of the network adapter named Ethernet.

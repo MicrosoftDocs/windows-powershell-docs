@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 551F2F60-AF48-4341-A11A-30150D27861B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WdsBootImage
@@ -82,7 +84,7 @@ The **Force** parameter specifies that the cmdlet disconnects any clients connec
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to ensure that you modify the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to ensure that you modify the correct image.
 The acceptable values for this parameter are:
 
 - ARM

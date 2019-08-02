@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F3C0BC03-FC91-4DF9-B258-CE95FF25548E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WdsBootImage
@@ -48,7 +50,7 @@ This command gets properties of the boot image named Fabrikam LOB setup (x86) fo
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to ensure that you return the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to ensure that you return the correct image.
 The acceptable values for this parameter are:
 
 

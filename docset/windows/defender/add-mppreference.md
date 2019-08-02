@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-MpPreference
+ms.reviewer:
 ms.assetid: 0E8BFEF8-4BCB-4BC1-9210-6E77C1153A86
 ---
 
@@ -158,7 +159,7 @@ The acceptable values for this parameter are:
 - 1: Clean 
 - 2: Quarantine 
 - 3: Remove 
-- 4: Allow 
+- 6: Allow 
 - 8: UserDefined 
 - 9: NoAction 
 - 10: Block

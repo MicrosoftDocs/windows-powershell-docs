@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 ms.assetid: 790D41BC-782A-4917-8BA5-BD978556479D
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Restore-IscsiVirtualDisk

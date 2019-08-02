@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E23A375D-129B-43F2-AEFB-BEE4ADA76282
+manager: dansimp
 ---
 
 # Start-OBBackup

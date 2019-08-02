@@ -4,9 +4,11 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Suspend-BitLocker
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -91,7 +93,7 @@ Specifies the number of computer restarts before BitLocker restores protection.
 The acceptable values for this parameter are:integers from 0 to 15.
 Specify zero to suspend protection indefinitely until you resume it by using the Resume-BitLocker cmdlet.
 
-If you do not inclue this parameter, the cmdlet uses a value of one.
+If you do not include this parameter, the cmdlet uses a value of one.
 
 ```yaml
 Type: Int32

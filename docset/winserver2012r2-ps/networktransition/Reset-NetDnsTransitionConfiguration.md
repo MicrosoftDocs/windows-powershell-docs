@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Reset-NetDnsTransitionConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 23BD4FA5-B1E8-44C9-B1DF-308A2F9CFAC0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Reset-NetDnsTransitionConfiguration

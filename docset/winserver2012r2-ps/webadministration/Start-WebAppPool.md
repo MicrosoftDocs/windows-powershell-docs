@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-WebAppPool
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA40251C-40A4-4AA8-B7D7-728775713F9E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-WebAppPool
@@ -31,14 +33,14 @@ The **Start-WebAppPool** cmdlet starts the specified application pool.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Starting an Application application Pool pool --------------application pool
+### Example 1: Starting an application pool
 ```
 IIS:\>Start-WebAppPool -Name "DefaultAppPool"
 ```
 
 This command starts the application pool named DefaultAppPool.
 
-### Example -------------- EXAMPLE Example 2: Starting stopped Application application Pools pools --------------application pools
+### Example 2: Starting stopped application pools
 ```
 IIS:\>Get-ChildItem IIS:\AppPools | where {$_.state -eq "Started"} | Start-WebAppPool
 ```

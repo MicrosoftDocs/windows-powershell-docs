@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Restore-ADObject
+ms.reviewer:
 ms.assetid: E2A4F2E6-DABB-4277-9FB6-A1579687F08E
 ---
 
@@ -82,6 +83,22 @@ PS C:\> Get-ADObject -Filter 'msds-lastknownrdn -eq "user1"' -Server server1:500
 ```
 
 This command restores an AD LDS object using the **msds-LastKnownRDN** attribute.
+
+### Example 6: Restore deleted Configuration objects in a certain date/time range
+```
+PS C:\> $ChangeDate = New-Object DateTime(2008, 11, 18, 1, 40, 02)
+PS C:\> Get-ADObject -Filter 'whenChanged -gt $ChangeDate -and isDeleted -eq $True -and -not (isRecycled -eq $True) -and lastKnownParent -eq "OU=Accounting,DC=Fabrikam,DC=com"' -IncludeDeletedObjects -SearchBase "CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com" | Restore-ADObject
+```
+
+This command restores deleted configuration objects in a certain date/time range. This will be Helpful if you know when these objects were deleted.
+
+### Example 7: Restore all deleted Configuration objects
+
+```
+Get-ADObject -filter 'isdeleted -eq $true -and name -ne "Deleted Objects"' -includeDeletedObjects -property * -SearchBase "CN=Deleted Objects,CN=Configuration,DC=contoso,DC=com" | Restore-ADObject
+```
+
+This command restores all deleted configuration objects.
 
 ## PARAMETERS
 

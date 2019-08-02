@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0B8B0A93-ED16-4E01-9140-5F8386D8803D
+manager: dansimp
 ---
 
 # Get-WBVssBackupOption

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADGroupMember
+ms.reviewer:
 ms.assetid: 39B45E28-2934-416F-8D44-E23CCED252C4
 ---
 
@@ -118,7 +119,7 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: False
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -176,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Members
-Specifies an array of user, group, and computer objects in a comma-separated list to add to a group.
+Specifies an array of user, group, and computer objects in a comma-separated list to remove from a group.
 To identify each object, use one of the following property values.
 Note: The identifier in parentheses is the LDAP display name.
 The acceptable values for this parameter are:
@@ -190,7 +191,7 @@ You can also provide objects to this parameter directly.
 
 The following examples show how to specify this parameter.
 
-This example specifies a user and group to add by specifying the distinguished name and the SAM account name properties.
+This example specifies a user and group to remove by specifying the distinguished name and the SAM account name properties.
 
 `-Members "CN=SaraDavis,CN=employees,CN=Users,DC=contoso,DC=com", "saradavisreports"`
 

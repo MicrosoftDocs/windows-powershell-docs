@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerStatistics
+ms.reviewer:
 ms.assetid: 4D06BF6F-B920-496E-BA38-D14EB91CB372
 ---
 
@@ -113,16 +114,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 Following properties are displayed by the cmdlet:
 
-Resource health (for virtual networks, Gateways and Load balancers)    
-1. Count of total resources    
-2. Count of healthy resources    
-3. Count of unhealthy resources    
-4. Count of resources in warning state    
+Resource health (for virtual networks, Gateways and Load balancers) 
+1. Count of total resources 
+2. Count of healthy resources 
+3. Count of unhealthy resources 
+4. Count of resources in warning state 
 5. Count of resources with unknown health state
 
-Usage statistics    
-1. Public IP utilization - Total resource count and count of resources in use    
-2. Backend IP utilization - Total resource count and count of resources in use    
+Usage statistics 
+1. Public IP utilization - Total resource count and count of resources in use 
+2. Backend IP utilization - Total resource count and count of resources in use 
 3. MAC pool utilization - Total resource count and count of resources in use
 
 ## NOTES

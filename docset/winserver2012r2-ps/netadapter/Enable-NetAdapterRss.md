@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetAdapterRss
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 11368008-F0DA-460E-9400-BD142B953830
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-NetAdapterRss

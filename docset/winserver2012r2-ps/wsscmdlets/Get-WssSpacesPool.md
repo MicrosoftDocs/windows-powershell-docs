@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssSpacesPool
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C2471CFF-73E2-4296-8DE8-B27A8F5FB9CB
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssSpacesPool

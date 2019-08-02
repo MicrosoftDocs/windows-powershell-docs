@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-RemoteAccessUserActivity
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7D4B7537-C100-425D-BBAA-4EE7586803B5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RemoteAccessUserActivity

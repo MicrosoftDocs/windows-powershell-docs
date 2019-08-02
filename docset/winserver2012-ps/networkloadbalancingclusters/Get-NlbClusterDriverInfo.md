@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 38BA9F98-BA31-4B71-A5F3-19AB8782BA06
+manager: dansimp
 ---
 
 # Get-NlbClusterDriverInfo

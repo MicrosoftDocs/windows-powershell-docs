@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Open-WmsApp
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D02A1DD8-9D7D-4586-9655-6C3D566B6C4B
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Open-WmsApp
@@ -32,19 +34,16 @@ The Open-WmsApp cmdlet launches an application in the specified session based on
 
 ## EXAMPLES
 
-### Example
+### Example 1:
 ```
-PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("notepad.exe")) | Write-OutputbgBvAHQAZQBwAGEAZAAuAGUAeABlAA==PS C:\> open-wmsapp -sessionid 3 -FileToRun bgBvAHQAZQBwAGEAZAAuAGUAeABlAA==
+PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("notepad.exe")) | Write-Output bgBvAHQAZQBwAGEAZAAuAGUAeABlAA==
+
+PS C:\> open-wmsapp -sessionid 3 -FileToRun bgBvAHQAZQBwAGEAZAAuAGUAeABlAA==
 0
 ```
 
 A value of 0 equals success.
 In this example, Notepad.exe was launched.
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
@@ -146,13 +145,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Open-WmsApp.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

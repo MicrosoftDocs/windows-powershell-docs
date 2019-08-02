@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-PhysicalDisk
+ms.reviewer:
 ms.assetid: A204DCDE-BFAC-43AC-9B79-D81384F255BE
 ---
 
@@ -192,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -HealthStatus
-Specifies the health status of physical disks to get.
+Specifies the **health status** of physical disks.
 The acceptable values for this parameter are:
 
 - Healthy 

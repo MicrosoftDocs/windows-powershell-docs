@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ADAccountResultantPasswordReplicationPolicy
+ms.reviewer:
 ms.assetid: 5E4878E5-A5BF-4F6A-86DF-1E573F8EB799
 ---
 
@@ -42,13 +43,13 @@ The policy is one of the following values:
 
 The *Identity* parameter specifies the account.
 You can identify a user, computer, or service account object by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the *Identity* parameter to an account object variable, such as `$<localAccountobject>`, or pass an account object through the pipeline to the *Identity* parameter.
+You can also set the *Identity* parameter to an account object variable, such as `$<localAccountObject>`, or pass an account object through the pipeline to the *Identity* parameter.
 For example, you can use the Get-ADUser, Get-ADComputer, Get-ADServiceAccount, or Search-ADAccount cmdlets to retrieve an account object and then pass the object through the pipeline to the Get-ADAccountResultantPasswordReplicationPolicy cmdlet.
 
 The **DomainController** parameter specifies the read-only domain controller.
 You can identify a domain controller by its IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the distinguished name of the NT Directory Services (NTDS) settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name, SamAccountName, GUID, SID of the computer object that represents the domain controller.
-You can also set the *DomainController* parameter to a domain controller object variable, such as `$<localDomainControllerobject>`.
+You can also set the *DomainController* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`.
 
 ## EXAMPLES
 

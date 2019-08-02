@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-MsmqQueue
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5735D84D-4C83-4350-A91B-5C0A0F009638
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-MsmqQueue

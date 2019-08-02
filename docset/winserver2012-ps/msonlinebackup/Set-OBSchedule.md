@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3F5386E3-4AD6-43DF-BE21-9837265355C3
+manager: dansimp
 ---
 
 # Set-OBSchedule

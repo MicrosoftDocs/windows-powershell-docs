@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Resume-MsmqOutgoingQueue
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEBE380E-6798-417D-A3BC-79CD6BB13D64
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Resume-MsmqOutgoingQueue

@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4F9AFA05-30C3-481C-9820-023C325F4C0D
+manager: dansimp
 ---
 
 # Add-WBVirtualMachine

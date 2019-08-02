@@ -7,13 +7,15 @@ Locale: en-US
 title: WSSCmdlets
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1a33adf2-6f03-4353-b167-87fa8c0e9f48
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # WSSCmdlets Module

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-BitLockerKeyProtector
+ms.reviewer:
 ms.assetid: 09CDDA63-9E82-44F0-8755-878974B0010B
 ---
 
@@ -48,7 +49,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 ### Example 1: Remove a key protector for a volume
 ```
 PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
-PS C:\> Remove-BitlockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1]
+PS C:\> Remove-BitlockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
 ```
 
 This example removes a key protector for a specified BitLocker volume.
@@ -76,9 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyProtectorId
-Specifies the ID for a key protector or a **KeyProtector** object.
+Specifies the ID for a key protector.
 A BitLocker volume object includes a **KeyProtector** object.
-You can specify the key protector object itself, or you can specify the ID.
+You have to specify the key protector ID.
 See the Examples section.
 To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 

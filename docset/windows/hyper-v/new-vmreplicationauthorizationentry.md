@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-VMReplicationAuthorizationEntry
+ms.reviewer:
 ms.assetid: EA339689-B8DF-4ABF-957B-DD143E46C3DB
 ---
 
@@ -195,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### VMReplicationAuthorizationEntry
+### Microsoft.HyperV.PowerShell.VMReplicationAuthorizationEntry
 
 ## NOTES
 

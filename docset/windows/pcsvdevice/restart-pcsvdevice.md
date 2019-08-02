@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: CIM_PhysicalComputerSystemView.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Restart-PcsvDevice
+ms.reviewer:
 ms.assetid: 2371F425-650C-4AAE-AA00-3FE6947C3D77
 ---
 
@@ -276,7 +277,7 @@ Indicates that the certificate common name of the server does not need to match 
 
 Specify this parameter only for managing devices by using WS-Management over HTTPS.
 Be sure to specify this parameter only for trusted computers.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -292,7 +293,7 @@ Accept wildcard characters: False
 
 ### -SkipRevocationCheck
 Indicates that the cmdlet skips the revocation check of server certificates.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Be sure to specify this parameter only for trusted computers.
 

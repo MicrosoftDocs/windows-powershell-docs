@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8215EF05-BA8C-4476-B394-A0A4FA917924
+manager: dansimp
 ---
 
 # Get-NetIPInterface
@@ -410,14 +414,14 @@ Accept wildcard characters: False
 ```
 
 ### -DirectedMacWolPattern
-Gets IP interface properties only for interfaces by if they have DirecteMacWolPattern enabled or disabled.
-DirecteMacWolPattern determines if an IP interface is configured to wake up a computer with directed MAC packet patterns.
-By default, IP interface properties have DirecteMacWolPattern set to disabled.
+Gets IP interface properties only for interfaces by if they have DirectedMacWolPattern enabled or disabled.
+DirectedMacWolPattern determines if an IP interface is configured to wake up a computer with directed MAC packet patterns.
+By default, IP interface properties have DirectedMacWolPattern set to disabled.
 The acceptable values for this parameter are:
 
- -- Enabled: IP Interface properties for interfaces that have DirecteMacWolPattern enabled. 
+ -- Enabled: IP Interface properties for interfaces that have DirectedMacWolPattern enabled. 
 
- -- Disabled: IP Interface properties for interfaces that have DirecteMacWolPattern disabled.
+ -- Disabled: IP Interface properties for interfaces that have DirectedMacWolPattern disabled.
 
 ```yaml
 Type: DirectedMacWolPattern[]

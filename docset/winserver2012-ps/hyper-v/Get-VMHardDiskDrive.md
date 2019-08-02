@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-VMHardDiskDrive
@@ -150,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMDriveController
-Specifies the drive controller from which the virtual hard disk drives are to be retreived.
+Specifies the drive controller from which the virtual hard disk drives are to be retrieved.
 
 ```yaml
 Type: VMDriveController[]

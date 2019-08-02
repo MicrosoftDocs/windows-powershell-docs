@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: v-anbarr
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: andreabarr
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.AppV.Modernizer.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstalledFilesPath
-Speicife the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
+Specifies the location of the already installed files used to create a new App-V package with the aid of an App-V Accelerator.
 
 ```yaml
 Type: String

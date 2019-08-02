@@ -5,11 +5,15 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=285577
 Help Version: 4.0.1.0
 Locale: en-US
 ms.assetid: 5881494F-DCEB-422C-8009-80D0630946B2
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # WHEA Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Windows Hardware Error Architecuture (WHEA) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Windows Hardware Error Architecture (WHEA) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## WHEA Cmdlets
 ### [Get-WheaMemoryPolicy](./Get-WheaMemoryPolicy.md)

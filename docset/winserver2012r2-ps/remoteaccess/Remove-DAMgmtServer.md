@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-DAMgmtServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 538962B5-D9D9-4031-9688-20A6B62CE244
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-DAMgmtServer

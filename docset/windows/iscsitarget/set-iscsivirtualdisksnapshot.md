@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-IscsiVirtualDiskSnapshot
+ms.reviewer:
 ms.assetid: 57CA5EDD-80DF-4FDD-AC2E-7BEA137969A4
 ---
 
@@ -43,7 +44,7 @@ The **Set-IscsiVirtualDiskSnapshot** cmdlet sets the description for a snapshot.
 
 ### Example 1: Modify a snapshot description
 ```
-PS C:\> Set-IscsiVirtualDiskSnasphot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
+PS C:\> Set-IscsiVirtualDiskSnapshot -SnapshotId "{E9A5BA03-85B9-40CA-85DF-DC1695690B40}" -Description "before upgrade"
 ```
 
 This example sets a snapshot with the ID {E9A5BA03-85B9-40CA-85DF-DC1695690B40} to have the description before upgrade.

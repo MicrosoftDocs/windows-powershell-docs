@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-AppxProvisionedPackage
+ms.reviewer:
 ms.assetid: C32BA440-73EB-4D09-9C3C-68C2239B013B
 ---
 
@@ -73,7 +74,7 @@ The package will be installed for the current user and any new user account crea
 
 ### Example 2: Add an app package an operating system image
 ```
-PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
+PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```
 
 This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.

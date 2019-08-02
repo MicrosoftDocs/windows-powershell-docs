@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 19FC93CC-753E-463A-BE43-738B6A31EE95
+manager: dansimp
 ---
 
 # Get-Dtc

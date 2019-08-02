@@ -5,13 +5,15 @@ schema: 2.0.0
 title: New-WssBackupConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A6570E7-2AB6-4F51-BE12-276FE5C80E19
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-WssBackupConfiguration

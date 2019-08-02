@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamRange.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-IpamRange
+ms.reviewer:
 ms.assetid: D110122B-2F95-42FF-82F4-E37BB7E01F5E
 ---
 
@@ -231,13 +232,13 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Specifies an array of of network types for the addresses to remove.
+Specifies an array of network types for the addresses to remove.
 
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
 If you do not specify a value, the cmdlet deletes all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
 

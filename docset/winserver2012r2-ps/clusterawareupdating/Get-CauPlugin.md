@@ -4,9 +4,11 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Get-CauPlugin
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -27,7 +29,7 @@ Get-CauPlugin [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-Cauplugin** cmdlet retrieves information about one or more software updating plug-ins that are registered on the local computer.
+The **Get-CauPlugin** cmdlet retrieves information about one or more software updating plug-ins that are registered on the local computer.
 A plug-in can be specified or information can be retrieved about all registered plug-ins. 
 
 CAU always uses a plug-in when performing updates.

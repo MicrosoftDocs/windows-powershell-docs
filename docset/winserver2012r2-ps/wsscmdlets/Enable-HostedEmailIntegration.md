@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-HostedEmailIntegration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 98C2E743-5361-4386-8B81-A5E3F409978F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-HostedEmailIntegration
@@ -35,7 +37,7 @@ The third-party hosted email provider builds the hosted email add-in on the Host
 
 ### Example 1: Enable the hosted email integration module
 ```
-PS C:\> $SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Enable-HostedEmailIntegration -AddId 26a21bda-a627-11d7-9931-806e6f6e6963 -AdminAccount "HEadmin01" -Password $SecureString_pwd -EnablePasswordSync
 ```
 

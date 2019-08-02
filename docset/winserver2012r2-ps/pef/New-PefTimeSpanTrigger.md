@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-PefTimeSpanTrigger
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 25222180-5B21-4287-9853-31C1EE56636D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-PefTimeSpanTrigger

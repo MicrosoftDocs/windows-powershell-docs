@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADDomain
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -377,7 +379,7 @@ The format for this parameter is:
 
 `-Remove @{Attribute1LDAPDisplayName=value\[\];   Attribute2LDAPDisplayName=value\[\]}`
 
-When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the operations wilol be performed in the following order:
+When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**

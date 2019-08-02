@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-VirtualDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECE6EC80-B77D-4087-9BE7-A38FC05FBE73
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-VirtualDisk

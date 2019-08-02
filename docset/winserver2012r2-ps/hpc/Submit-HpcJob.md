@@ -1,5 +1,5 @@
 ---
-author:
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182875
 schema: 2.0.0
 title: Submit-HpcJob
 ms.assetid: C00ED57D-B307-4221-8CA1-7D7C5F4C348F
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Submit-HpcJob
@@ -51,7 +53,7 @@ This command submits the job with job ID 35 on the cluster that has a head node 
 
 ### -Credential
 Specifies a **PSCredential** object for the credentials you want to use to submit the jobs.
-You can use the Get-Credential cmdlet to get a **PSCrendential** object.
+You can use the Get-Credential cmdlet to get a **PSCredential** object.
 If you do not specify this parameter, then the cmdlet submits the jobs with the Windows credentials of the user currently logged in.
 
 ```yaml

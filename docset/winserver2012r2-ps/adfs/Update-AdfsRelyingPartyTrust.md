@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Update-AdfsRelyingPartyTrust
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -48,7 +50,7 @@ The cmdlet updates claims, endpoints, and certificates.
 
 ### Example 1: Update a relying party trust
 ```
-PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FarikamApp"
+PS C:\> Update-ADFSRelyingPartyTrust -TargetName "FabrikamApp"
 ```
 
 This command updates the relying party trust named FabrikamApp.

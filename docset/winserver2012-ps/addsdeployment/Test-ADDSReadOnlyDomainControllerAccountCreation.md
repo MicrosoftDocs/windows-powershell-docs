@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Test-ADDSReadOnlyDomainControllerAccountCreation
@@ -27,7 +31,7 @@ It differs from using the **-WhatIf** parameter with the Add-ADDSReadOnlyDomainC
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-C:\PS>Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccuntName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
+C:\PS>Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
 ```
 
 Description

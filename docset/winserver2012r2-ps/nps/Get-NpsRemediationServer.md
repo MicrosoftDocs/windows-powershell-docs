@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NpsRemediationServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42367CB1-3ACA-49EB-B893-B2C80D2E4285
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NpsRemediationServer

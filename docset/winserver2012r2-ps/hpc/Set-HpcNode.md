@@ -1,5 +1,5 @@
 ---
-author:
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182866
 schema: 2.0.0
 title: Set-HpcNode
 ms.assetid: 66FED634-CA0F-40CD-8447-2375F9764FA7
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Set-HpcNode
@@ -225,7 +227,7 @@ Valid values are:
 - BrokerNode
 - WorkstationNode
 
-You muset take a node offline before you can change the role of the node.
+You must take a node offline before you can change the role of the node.
 Use the Set-HpcNodeState cmdlet to take nodes offline.
 
 ```yaml

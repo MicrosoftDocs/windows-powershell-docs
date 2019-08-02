@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerVirtualGatewayBgpRouter
+ms.reviewer:
 ms.assetid: 5C9F3E9C-3F54-4604-8441-C4DB95FE591F
 ---
 
@@ -180,13 +181,13 @@ This cmdlet returns object(s) that contain the following fields:
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a virtual/tenant gateway's BGP router): 
- - Provisioning state.
- - BGP router identifier.
- - BGP router's local IP address(es). 
- - BGP router's extended AS number.
- - Router connection state. 
- - Whether the BGP peer is automatically generated. 
- - Array of BGP peers configured on this router.
+  - Provisioning state.
+  - BGP router identifier.
+  - BGP router's local IP address(es). 
+  - BGP router's extended AS number.
+  - Router connection state. 
+  - Whether the BGP peer is automatically generated. 
+  - Array of BGP peers configured on this router.
 
 ## NOTES
 

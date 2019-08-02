@@ -7,13 +7,15 @@ Locale: en-US
 title: PCSVDevice
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4ac305e6-508a-4942-8ef4-378bd8069c90
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # PCSVDevice Module

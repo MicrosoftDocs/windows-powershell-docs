@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerCache_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-DnsServerCache
+ms.reviewer:
 ms.assetid: C860935E-5A0D-4BBB-B154-31E11CA7D84F
 ---
 
@@ -30,7 +31,7 @@ Get-DnsServerCache [-ComputerName <String>] [-CimSession <CimSession[]>] [-Throt
 ```
 
 ## DESCRIPTION
-The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: **MaxTTL**, **MaxNegativeTTL**, **MaxKBSize**, **EnablePollutionProtection**, **LockingPercent**, and **StoreEmptyAuthenticationReponse**.
+The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DNS) server cache settings: **MaxTTL**, **MaxNegativeTTL**, **MaxKBSize**, **EnablePollutionProtection**, **LockingPercent**, and **StoreEmptyAuthenticationResponse**.
 
 ## EXAMPLES
 

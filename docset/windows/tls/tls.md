@@ -1,6 +1,9 @@
 ---
 Module Name: TLS
 Module Guid: CMDLETS
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390836
 Help Version: 5.0.0.1
 Locale: en-US

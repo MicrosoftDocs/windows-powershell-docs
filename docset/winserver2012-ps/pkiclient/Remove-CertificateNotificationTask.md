@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 3E0D9B0B-766A-4EF6-B4C7-1CF6D1FF0FF5
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-CertificateNotificationTask

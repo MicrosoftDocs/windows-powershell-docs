@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: D1FD0E42-ED79-41CC-A37A-C9D1A8721ABF
+manager: dansimp
 ---
 
 # Disconnect-VirtualDisk

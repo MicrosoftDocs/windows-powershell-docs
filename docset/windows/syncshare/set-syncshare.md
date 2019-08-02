@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: jgerend
-author: JasonGerend
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SyncShare.cdxml-help.xml
 keywords: powershell, cmdlet, work folders
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-SyncShare
+ms.reviewer:
 ms.assetid: CB08AA46-CB10-40BF-976A-B930C2E98658
 ---
 

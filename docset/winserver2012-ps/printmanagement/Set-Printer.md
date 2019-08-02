@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FED049DD-C64A-4A46-8A4C-37DFF8458DD7
+manager: dansimp
 ---
 
 # Set-Printer
@@ -45,7 +49,7 @@ You need administrator privileges to use **Set-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Set printer to keep printed jobs -------------------------- 
+### -------------------------- Example 1: Set printer to keep printed jobs -------------------------- 
 xample: Set printer to keep printed jobs
 ```
 PS C:\> Set-Printer -Name "Microsoft XPS Document Writer" -KeepPrintedJobs $true

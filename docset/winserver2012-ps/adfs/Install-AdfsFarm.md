@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
 ms.assetid: 58B222D8-94BC-4243-94A7-9692EF2EA7EE
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Install-AdfsFarm

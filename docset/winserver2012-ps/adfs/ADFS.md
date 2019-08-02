@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216848
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: D45D3A6B-876A-4733-B855-ACCF1C2121BA
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # ADFS Module

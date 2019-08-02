@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ConfigCI.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-CIPolicy
+ms.reviewer:
 ms.assetid: 324A9B4A-16E4-4555-B0AF-1F8338F56ED7
 ---
 
@@ -54,7 +55,7 @@ If you specify the **Audit** parameter, this cmdlet scans the Code Integrity Aud
 
 ### Example 1: Create a policy
 ```
-The first command scans for driver information and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameterso that it gets information for only PE files.
+The first command scans for driver information and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
 PS C:\> New-CIPolicy -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript -FilePath '.\Policy.xml' -Level Publisher
 Scan completed successfully
 

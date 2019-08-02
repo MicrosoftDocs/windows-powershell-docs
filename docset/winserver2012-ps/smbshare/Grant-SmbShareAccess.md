@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
+manager: dansimp
 ---
 
 # Grant-SmbShareAccess

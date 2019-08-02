@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: F89D88FF-6E47-41CF-BF03-BE5AE61F27BD
+manager: dansimp
 ---
 
 # Copy-NetFirewallRule

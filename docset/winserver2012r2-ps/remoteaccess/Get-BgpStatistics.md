@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-BgpStatistics
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FBB7D88E-F379-4884-BFEE-653C8C61D4FA
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-BgpStatistics

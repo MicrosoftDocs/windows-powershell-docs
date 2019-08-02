@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 ms.assetid: 4BAB511B-0000-4AC1-8258-F945353FA10E
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Test-ADDSForestInstallation

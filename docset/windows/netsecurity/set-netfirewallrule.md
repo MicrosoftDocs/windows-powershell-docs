@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetFirewallRule
+ms.reviewer:
 ms.assetid: CBD6CC37-2EE3-42E7-A062-9BEABEB3DB88
 ---
 
@@ -354,7 +355,7 @@ This option applies to inbound rules only.
 The acceptable values for this parameter are: Block, Allow, DeferToUser, or DeferToApp. 
 
 - Block: Prevents applications from receiving unsolicited traffic from the Internet through a NAT edge device. 
---Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
+- Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
 - DeferToUser: Allows the user to decide whether to allow unsolicited traffic from the Internet through a NAT edge device when an application requests it. 
 - DeferToApp: Allows each application to determine whether to allow unsolicited traffic from the Internet through a NAT edge device. 
 

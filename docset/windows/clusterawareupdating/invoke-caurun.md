@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Invoke-CauRun
+ms.reviewer:
 ms.assetid: 5EA6D174-445B-4FAD-9E82-6CF62CD1E314
 ---
 
@@ -431,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -SeparateReboots
-Indicates that that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an Updating Run.
+Indicates that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an Updating Run.
 By default, during an updating run, all plug-ins complete the installation of updates on a cluster node before the node restarts one time.
 
 The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.

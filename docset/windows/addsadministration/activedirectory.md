@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: ActiveDirectory
 Module Guid: 43C15630-959C-49E4-A977-758C5CC93408
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
 Help Version: 4.0.6.1
 Locale: en-US
 title: ActiveDirectory
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/27/2016
 ms.topic: reference
@@ -23,7 +24,7 @@ ms.assetid: 8AD46969-D3B0-4DE9-81D3-D485B99CB93F
 ## Description
 The Active Directory module for Windows PowerShell is a PowerShell module that consolidates a group of cmdlets. You can use these cmdlets to manage your Active Directory domains, Active Directory Lightweight Directory Services (AD LDS) configuration sets, and Active Directory Database Mounting Tool instances in a single, self-contained package.
 
-If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt.
+If you don't have the Active Directory module installed on your machine, you need to download the correct Remote Server Administration Tools (RSAT) package for your OS.  If you're running Windows 7, you will also need to run the `import-module ActiveDirectory` command from an elevated PowerShell prompt. For more detail, see [RSAT for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). Starting with Windows 10 October 2018 Update, RSAT is included as a set of Features on Demand right from Windows 10. Now, instead of downloading an RSAT package you can just go to Manage optional features in Settings and click Add a feature to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the Back button to view status on the Manage optional features page.
 
 ## ActiveDirectory Cmdlets
 ### [Add-ADCentralAccessPolicyMember](./Add-ADCentralAccessPolicyMember.md)

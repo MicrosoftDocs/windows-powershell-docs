@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-Dtc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5E605BD-7C7B-45A0-BDEC-2943E971735F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-Dtc

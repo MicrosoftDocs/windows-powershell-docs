@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 60DA8775-E477-45FB-9F25-A2B42EA4A97C
+manager: dansimp
 ---
 
 # Add-DAEntryPoint

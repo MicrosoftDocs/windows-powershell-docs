@@ -7,13 +7,15 @@ Locale: en-US
 title: PEF
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68bca658-97e5-42b1-944d-f174bdfa77f1
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # PEF Module

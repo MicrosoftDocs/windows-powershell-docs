@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WdsBootImage_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-WdsBootImage
+ms.reviewer:
 ms.assetid: A0E9892E-F4AA-45B7-B88D-908670FE1F31
 ---
 
@@ -51,7 +52,7 @@ This command removes the boot image named Fabrikam LOB setup (x86) for the x86 a
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to make sure that you remove the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that you remove the correct image.
 The acceptable values for this parameter are:
 
 - ARM

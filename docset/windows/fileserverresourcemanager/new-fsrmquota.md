@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FsrmQuota.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-FsrmQuota
+ms.reviewer:
 ms.assetid: 1A5E7519-DAB9-4289-BD9B-2D72AC0F48DB
 ---
 
@@ -33,7 +34,7 @@ New-FsrmQuota [-Path] <String> [-Description <String>] [-Template <String>] [-Si
 ## DESCRIPTION
 The **New-FsrmQuota** cmdlet creates a File Server Resource Manager (FSRM) quota on the server.
 The quota applies to the directory and all its subdirectories (recursively).
-Quotas that you specify on folders higher in the heirarchy further restrict the quota specified on a folder.
+Quotas that you specify on folders higher in the hierarchy further restrict the quota specified on a folder.
 
 ## EXAMPLES
 

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-PefDateTimeTrigger
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 325863B7-C9D9-4053-93B7-2ABE21AA4D4E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-PefDateTimeTrigger
@@ -46,7 +48,7 @@ PS C:\> Start-PefTraceSession -PEFSession $TraceSession01
 This example adds a Trace Filter to a Trace Session at 3am on January 31, 2013.
 The first command uses the New-PefTraceSession cmdlet to create a PEF Trace Session object and store it in the **$TraceSession01** variable.
 
-The second command uses the Get-Datehttp://go.microsoft.com/fwlink/?LinkID=293966 cmdlet to create a **DateTime** object, and then stores in in the **$TriggerTime** variable.
+The second command uses the Get-Datehttp://go.microsoft.com/fwlink/?LinkID=293966 cmdlet to create a **DateTime** object, and then stores in the **$TriggerTime** variable.
 For more information, type `Get-Help Get-Date`.
 You can specify a future time, but no more than 25 days in the future.
 

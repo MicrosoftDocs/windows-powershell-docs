@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebGlobalModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C6C4C8B2-C767-4E0A-A39E-97ACB9EE153E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WebGlobalModule

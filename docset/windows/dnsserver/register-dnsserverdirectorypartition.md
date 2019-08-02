@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerDirectoryPartition_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Register-DnsServerDirectoryPartition
+ms.reviewer:
 ms.assetid: 9CED1F64-FBB4-45C4-A0C3-3D1CFB827199
 ---
 
@@ -42,6 +43,13 @@ PS C:\> Register-DnsServerDirectoryPartition -Name "ADpart"
 ```
 
 This command adds the local DNS server to the directory application partition named ADpart.
+
+### Example 2: Register a remote DNS server to a directory application partition using FQDN
+```
+PS C:\> Register-DnsServerDirectoryPartition -Name "hr.dept.contoso.com"
+```
+
+This command adds the local DNS server to the directory application partition named hr.dept.contoso.com.
 
 ## PARAMETERS
 

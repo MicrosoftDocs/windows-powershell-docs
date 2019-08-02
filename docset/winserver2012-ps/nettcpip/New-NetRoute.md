@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DF770A5C-F4DF-46B6-A756-1C27EEF542DC
+manager: dansimp
 ---
 
 # New-NetRoute
@@ -206,6 +210,7 @@ Accept wildcard characters: False
 Specifies a preferred lifetime for the IP routing table entry.
 When not specified this parameter is set as infinite.
 This parameter uses time as defined by the [TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx) structure.
+
 
 ```yaml
 Type: TimeSpan

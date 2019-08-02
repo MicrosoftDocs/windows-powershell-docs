@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Disable-VMRemoteFXPhysicalVideoAdapter
@@ -112,8 +115,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.VMRemoteFXPhysicalVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-RDSessionCollection
+ms.reviewer:
 ms.assetid: 35443D32-EFDE-4F01-8028-D30B281120B0
 ---
 
@@ -32,6 +33,7 @@ Get-RDSessionCollection [[-CollectionName] <String>] [-ConnectionBroker <String>
 The **Get-RDSessionCollection** cmdlet gets session collections in a Remote Desktop deployment.
 A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
 Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
+The user needs to be a member of the local computer Administrator group to run this command. 
 
 ## EXAMPLES
 

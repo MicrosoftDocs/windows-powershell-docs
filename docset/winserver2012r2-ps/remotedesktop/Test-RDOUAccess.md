@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Test-RDOUAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Test-RDOUAccess
@@ -35,7 +37,7 @@ The RD Connection Broker must have Read access to an OU to query user account in
 
 ### Example 1: Verify access to an OU
 ```
-PS C:\> Test-RDOUaccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
+PS C:\> Test-RDOUAccess -ConnectionBroker "Rdcb.Contoso.com" -OU "Computers"
 ```
 
 This command tests access to an OU named Computers by the RD Connection Broker server named Rdcb.Contoso.com.

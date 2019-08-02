@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 6DC5AA3F-2D0A-4F9C-BCE0-B3F53F77A1C0
+manager: dansimp
 ---
 
 # Get-NetAdapterStatistics

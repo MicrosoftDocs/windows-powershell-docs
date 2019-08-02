@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetFirewallInterfaceTypeFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 474E8416-0B17-4360-8BDF-AAF17BCA4036
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetFirewallInterfaceTypeFilter

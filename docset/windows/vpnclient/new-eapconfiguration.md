@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_EapConfiguration_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-EapConfiguration
+ms.reviewer:
 ms.assetid: 7AC7839A-38B7-46F9-AC6D-55E522C4F112
 ---
 
@@ -32,8 +33,8 @@ New-EapConfiguration [-UseWinlogonCredential] [-CimSession <CimSession[]>] [-Thr
 
 ### EapTtlsAuth
 ```
-New-EapConfiguration [-UseWinlogonCredential] [-Ttls] [-TunnledNonEapAuthMethod <String>]
- [[-TunnledEapAuthMethod] <XmlDocument>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+New-EapConfiguration [-UseWinlogonCredential] [-Ttls] [-TunneledNonEapAuthMethod <String>]
+ [[-TunneledEapAuthMethod] <XmlDocument>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -45,7 +46,7 @@ New-EapConfiguration [-Tls] [-UserCertificate] [-VerifyServerIdentity] [-CimSess
 
 ### PeapAuth
 ```
-New-EapConfiguration [-VerifyServerIdentity] [[-TunnledEapAuthMethod] <XmlDocument>] [-Peap] [-EnableNap]
+New-EapConfiguration [-VerifyServerIdentity] [[-TunneledEapAuthMethod] <XmlDocument>] [-Peap] [-EnableNap]
  [-FastReconnect <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -73,6 +74,9 @@ PS C:\> $A = New-EapConfiguration -UseWinlogonCredential
 This command creates an EAP configuration object, customized by the *UseWinlogonCredential* parameter, and stores it in the variable named $A.
 By specifying the *UseWinlogonCredential* parameter, the EAP configuration object is configured to use MSCHAPv2 as the authentication method, and that Windows logon credentials are used automatically when connecting with the VPN connection profile.
 
+See [VPN authentication options](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-authentication) 
+and [Add connectivity profiles](https://docs.microsoft.com/windows/configuration/wcd/wcd-connectivityprofiles#vpn-1) to learn more about VPN authentication methods.
+
 ### Example 3: Create a TLS customized EAP configuration object
 ```
 PS C:\> $A = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
@@ -81,7 +85,7 @@ PS C:\> $A = New-EapConfiguration -Tls -VerifyServerIdentity -UserCertificate
 This command creates a customized EAP configuration object and stores it in the variable named $A.
 The EAP configuration object is customized by specifying the following parameters: 
 
---The *Tls* parameter, which indicates that this configuration object uses EAP-TLS
+- The *Tls* parameter, which indicates that this configuration object uses EAP-TLS
 - The *VerifyServerIdentity* parameter, which indicates that the identity of the server to which the client connects is validated
 - The *UserCertificate* parameter, which indicates that the EAP-TLS authentication method uses a user certificate.
 
@@ -95,7 +99,7 @@ The configuration object is stored in the variable named $A.
 
 ### Example 5: Create a TTLS EAP configuration object with MSCHAPv2 as the client authentication method
 ```
-PS C:\> $A = New-EapConfiguration -Ttls -TunnledNonEapAuthMethod "MSChapv2" -UseWinlogonCredential
+PS C:\> $A = New-EapConfiguration -Ttls -TunneledNonEapAuthMethod "MSChapv2" -UseWinlogonCredential
 ```
 
 This command creates a new EAP configuration object and stores it in the variable named $A.
@@ -110,8 +114,8 @@ The EAP configuration object is customized by specifying the following parameter
 This command creates an EAP configuration object configured to use an EAP-TLS authentication method and to verify the server identity. The configuration object is stored in a variable named $B.
 PS C:\>$B = New-EapConfiguration -Tls -VerifyServerIdentity
 
-This command creates an EAP configuration object configured to use the TTLS authentication method, and specifies the *TunnledEapAuthMethod* parameter to use the EapConfigXmlStream created by the first EAP configuration object as the tunnel EAP authentication method.
-PS C:\>$A = New-EapConfiguration -Ttls -TunnledEapAuthMethod $B.EapConfigXmlStream
+This command creates an EAP configuration object configured to use the TTLS authentication method, and specifies the *TunneledEapAuthMethod* parameter to use the EapConfigXmlStream created by the first EAP configuration object as the tunnel EAP authentication method.
+PS C:\>$A = New-EapConfiguration -Ttls -TunneledEapAuthMethod $B.EapConfigXmlStream
 ```
 
 This set of commands creates an EAP configuration object customized with a TTLS authentication method which uses EAP-TLS as the tunneled client authentication method.
@@ -129,8 +133,8 @@ The configuration object is stored in a variable named $A.
 This command creates the EAP configuration object and stores it in the variable named $B. The EAP configuration object is customized to use the TLS authentication method by the *Tls* parameter, and configured to verify the identity of the server by the *VerifyServerIdentity* parameter.This command implicitly configures a smart card to be used for authentication.
 PS C:\>$B = New-EapConfiguration -Tls -VerifyServerIdentity
 
-This command uses the *EapConfigXmlStream* method of the EAP configuration object created in the previous command to specify the value for the *TunnledEapAuthMethod* parameter. This command also specifies that PEAP is the authentication method, as specified by the *Peap* parameter; that NAP is enabled for PEAP, as specified by the *EnableNap* parameter; and that *FastReconnect* is enabled, as specified by the *FastReconnect* parameter. 
-PS C:\>$a = New-EapConfiguration -Peap -EnableNap -FastReconnect $True -VerifyServerIdentity -TunnledEapAuthMethod $b.EapConfigXmlStream
+This command uses the *EapConfigXmlStream* method of the EAP configuration object created in the previous command to specify the value for the *TunneledEapAuthMethod* parameter. This command also specifies that PEAP is the authentication method, as specified by the *Peap* parameter; that NAP is enabled for PEAP, as specified by the *EnableNap* parameter; and that *FastReconnect* is enabled, as specified by the *FastReconnect* parameter. 
+PS C:\>$a = New-EapConfiguration -Peap -EnableNap -FastReconnect $True -VerifyServerIdentity -TunneledEapAuthMethod $b.EapConfigXmlStream
 ```
 
 This set of commands creates an EAP configuration object customized with the TLS authentication method, and then uses its EapConfigXmlStream object as the tunneled authentication method.
@@ -277,7 +281,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TunnledEapAuthMethod
+### -TunneledEapAuthMethod
 Specifies the configuration XML for tunneled EAP, EAP-TTLS, or PEAP authentication.
 
 ```yaml
@@ -304,7 +308,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -TunnledNonEapAuthMethod
+### -TunneledNonEapAuthMethod
 Specifies the simple EAP-TTLS client authentication methods.
 The acceptable values for this parameter are:
 

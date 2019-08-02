@@ -4,9 +4,11 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: New-FsrmQuotaTemplate
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -44,14 +46,17 @@ The command adds a description for the quota template and configures a hard size
 A hard limit quota prevents users from saving files after the space limit is reached and generates notifications when the volume of data reaches each threshold.
 
 ### Example 2: Create a soft limit quota template that runs a command
-```
+
 The first command creates an FSRM action object and stores the results in the **$Action** variable. The action indicates that when an associated event occurs, the server run Cmd.exe with the specified parameters. The command specifies that server record errors codes from the executed command in the error log.
+```
 PS C:\>$Action = New-FsrmAction -Type Command -Command "c:\windows\system32\cmd.exe" -CommandParameters "echo [source file path] >> c:\log.txt" -ShouldLogError
-
+```
 The second command creates a threshold object and stores the results in the **$Threshold** variable. The command specifies the percentage of the quota limit at which to execute the action, and specifies the action stored in the **$Action** variable.
+```
 PS C:\>$Threshold = New-FsrmQuotaThreshold -Percentage 90 -Action $action
-
-The third command creates a quota template named "128MB limit" and specifies the threshold stored in the **$Threshold** variable. The **Softlimit** paramater indicates the quota reports on the disk usage with respect to the size limit and run thresholds, but does not enforce the size limit.
+```
+The third command creates a quota template named "128MB limit" and specifies the threshold stored in the **$Threshold** variable. The **Softlimit** parameter indicates the quota reports on the disk usage with respect to the size limit and run thresholds, but does not enforce the size limit.
+```
 PS C:\>New-FsrmQuotaTemplate -Name "128MB limit" -Size 128MB -Threshold $Threshold -Softlimit
 ```
 

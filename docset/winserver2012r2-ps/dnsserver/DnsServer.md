@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285744
 Help Version: 4.0.9.0
 Locale: en-US
 title: DnsServer
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -19,6 +21,7 @@ ms.assetid: 31826370-741a-4ca3-923f-b36fb2ffbf25
 # DnsServer Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all DNS Server cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+DnsServer Module can be obtained either by installing DNS Server role or adding the DNS Server Tools part of Remote Server Administration Tools (RSAT) feature.
 
 ## DnsServer Cmdlets
 ### [Add-DnsServerConditionalForwarderZone](./Add-DnsServerConditionalForwarderZone.md)
@@ -118,7 +121,7 @@ Gets DNSSEC settings for a zone.
 Retrieves DNS Server Active Directory settings
 
 ### [Get-DnsServerEDns](./Get-DnsServerEDns.md)
-Gets EDNS configuration settings on a DNS sever.
+Gets EDNS configuration settings on a DNS server.
 
 ### [Get-DnsServerForwarder](./Get-DnsServerForwarder.md)
 Gets forwarder configuration settings on a DNS server.

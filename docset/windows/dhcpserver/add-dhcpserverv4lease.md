@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerv4Lease_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-DhcpServerv4Lease
+ms.reviewer:
 ms.assetid: 1928007D-0C76-4A8A-B6AD-AD0B380E6A3F
 ---
 
@@ -212,13 +213,13 @@ Indicates the status of the DNS registration of the lease.
 The acceptable values for this parameter are:
 
 - Complete.
- - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is complete. 
- - For an expired lease, deletion of the required records is complete. 
+  - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is complete. 
+  - For an expired lease, deletion of the required records is complete. 
 - Pending. 
- - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is pending. 
- - For an expired lease, deletion of the required records is pending. 
+  - For an active lease, registration of the required records, as specified by the *DnsRR* parameter value of PTR or AandPTR, is pending. 
+  - For an expired lease, deletion of the required records is pending. 
 - Not applicable. 
- - If the *DnsRR* parameter is set to NoRegistration, such as when no dynamic DNS registration is to be performed by the DHCP server service, this parameter is set to Not applicable.
+  - If the *DnsRR* parameter is set to NoRegistration, such as when no dynamic DNS registration is to be performed by the DHCP server service, this parameter is set to Not applicable.
 
 ```yaml
 Type: String

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Partition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-PartitionSupportedSize
+ms.reviewer:
 ms.assetid: E4E2A9D1-9E80-463C-BA10-435A45E1040B
 ---
 
@@ -54,18 +55,18 @@ Get-PartitionSupportedSize -InputObject <CimInstance[]> [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-The **Get-PartitionSupportedSizes** cmdlet returns information on supported partition sizes for the specified Disk object.
+The **Get-PartitionSupportedSize** cmdlet returns information on supported partition sizes for the specified Disk object.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\>Get-PartitionSupportedSizes -DiskNumber 3 -PartitionNumber 2
-MinimumSize                                                 MaximumSize 
------------                                                 -----------
+PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
+SizeMin                                                 SizeMax 
+-----------                                             -----------
 ```
 
-This example is not fully implemented and does not include size values.
+This command will show the minimum and maximum size of the partition (SizeMin and SizeMax).
 
 ## PARAMETERS
 

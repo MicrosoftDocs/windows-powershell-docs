@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecPhase1AuthSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-NetIPsecPhase1AuthSet
+ms.reviewer:
 ms.assetid: 1A6061FD-6EA3-4B49-9F59-79109E54BD5C
 ---
 
@@ -95,7 +96,7 @@ This cmdlet is useful for removing any policy that conflicts with the domain GPO
 PS C:\>Remove-NetIPsecPhase1AuthSet -DisplayName "(DA Client) - Phase 1 Auth Set"
 ```
 
-This example deletes a set based on theee localized name.
+This example deletes a set based on the localized name.
 
 ### EXAMPLE 3
 ```

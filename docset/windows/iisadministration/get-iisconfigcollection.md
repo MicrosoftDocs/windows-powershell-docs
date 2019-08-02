@@ -1,9 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: A8957835-831C-497B-BC59-EAFCF2D5470A
+manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
 ms.sitesec: library
@@ -12,6 +13,8 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IISConfigCollection
+ms.author: v-anbarr
+ms.reviewer:
 ---
 
 # Get-IISConfigCollection
@@ -30,7 +33,7 @@ Get-IISConfigCollection [-ConfigElement] <ConfigurationElement> [[-CollectionNam
 The **Get-IISConfigCollection** cmdlet gets a **ConfigurationCollection** object from either a ConfigurationSection or a ConfigurationElement. 
 
 It is advisable to not to assign this value to a parameter and pass it in the pipeline to the next cmdlet since Windows PowerShell cannot interpret this object.
-This is due to the fact that **ConfigurationCollection** implements IEnumarable and the pipeline processor enumrates each single element when used this way.
+This is due to the fact that **ConfigurationCollection** implements IEnumerable and the pipeline processor enumerates each single element when used this way.
 Instead either pass the whole **Get-IISConfigCollection** cmdlet in the pipeline or pass it as a parameter.
 
 ## EXAMPLES

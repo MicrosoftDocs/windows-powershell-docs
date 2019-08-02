@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetIPsecPhase1AuthSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1A6061FD-6EA3-4B49-9F59-79109E54BD5C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-NetIPsecPhase1AuthSet
@@ -93,7 +95,7 @@ This cmdlet is useful for removing any policy that conflicts with the domain GPO
 PS C:\>Remove-NetIPsecPhase1AuthSet -DisplayName "(DA Client) - Phase 1 Auth Set"
 ```
 
-This example deletes a set based on theee localized name.
+This example deletes a set based on the localized name.
 
 ### EXAMPLE 3
 ```

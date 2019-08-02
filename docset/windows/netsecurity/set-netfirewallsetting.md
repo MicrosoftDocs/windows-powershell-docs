@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallSetting.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetFirewallSetting
+ms.reviewer:
 ms.assetid: 7633DD5F-7D1F-4773-B39B-7DC647D606CF
 ---
 
@@ -237,7 +238,7 @@ A typical firewall on the FTP server would block this new incoming data connecti
 When this parameter is True, the firewall examines the PORT and PASV requests for these other port numbers and then allows the corresponding data connection to the port number that was requested. 
 - True: The firewall tracks the port numbers specified in PORT command requests and in the responses to PASV requests, and then allows the incoming FTP data traffic entering on the requested port number. 
 - False: The firewall does not track outgoing PORT commands or PASV responses, and so incoming data connections on the PORT or PASV requested port is blocked as an unsolicited incoming connection. 
- - NotConfigured: Valid only when configuring a GPO.
+- NotConfigured: Valid only when configuring a GPO.
 Removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 The default value is False. 
 The default value when managing a computer running firstref_vista or firstref_client_7 is True. 

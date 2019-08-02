@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 1A6061FD-6EA3-4B49-9F59-79109E54BD5C
+manager: dansimp
 ---
 
 # Remove-NetIPsecPhase1AuthSet
@@ -81,7 +85,7 @@ This cmdlet is useful for removing any policy that conflicts with the domain GPO
 PS C:\>Remove-NetIPsecPhase1AuthSet -DisplayName "(DA Client) - Phase 1 Auth Set"
 ```
 
-This example deletes a set based on theee localized name.
+This example deletes a set based on the localized name.
 
 ### EXAMPLE 3
 ```

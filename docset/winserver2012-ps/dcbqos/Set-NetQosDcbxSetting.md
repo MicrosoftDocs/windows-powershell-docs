@@ -3,6 +3,10 @@ external help file: DcbQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 5340F8AF-66D3-40F4-A9E7-E30511B7C5D3
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-NetQosDcbxSetting

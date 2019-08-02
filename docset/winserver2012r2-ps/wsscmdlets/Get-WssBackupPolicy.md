@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssBackupPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A8231A90-0A08-46D7-A01F-FC691605B16D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssBackupPolicy

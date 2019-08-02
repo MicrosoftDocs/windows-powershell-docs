@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: wsbcmdlet.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Restore-WBCatalog
+ms.reviewer:
 ms.assetid: 577E6C4C-DE75-444F-B3A0-0BAD00620895
 ---
 
@@ -87,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, SwitchParamter
+### WBBackupTarget, SwitchParameter
 Specifies a backup target object from which to restore the catalog.
 Use the *Force* parameter to suppress the confirmation message.
 

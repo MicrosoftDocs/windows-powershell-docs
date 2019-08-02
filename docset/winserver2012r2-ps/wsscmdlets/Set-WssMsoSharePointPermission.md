@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssMsoSharePointPermission
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B87F110D-93D5-4513-9A14-C02DB0D8196E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssMsoSharePointPermission

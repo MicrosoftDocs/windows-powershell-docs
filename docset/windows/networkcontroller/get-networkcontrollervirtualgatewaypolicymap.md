@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerVirtualGatewayPolicyMap
+ms.reviewer:
 ms.assetid: ECE0277A-15A1-4C32-AEC3-DE2C1D24C584
 ---
 
@@ -163,11 +164,11 @@ This cmdlet returns object(s) that contain the following fields:
 - Resource metadata.
 - Resource ID. 
 - Properties of the resource (a virtual/tenant gateway's BGP router):
- - Provisioning state. 
- - List of policy map entries.
+  - Provisioning state. 
+  - List of policy map entries.
 Each entry has the policy type, list of match criteria, and list of set actions.
- - List of resource references to the BGP peers that have this policy map applied in ingress.
- - List of resource references to the BGP peers that have this policy map applied in egress.
+- List of resource references to the BGP peers that have this policy map applied in ingress.
+- List of resource references to the BGP peers that have this policy map applied in egress.
 
 ## NOTES
 

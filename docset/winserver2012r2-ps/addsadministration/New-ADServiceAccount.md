@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: New-ADServiceAccount
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -23,7 +25,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
@@ -37,7 +39,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
  [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
@@ -49,7 +51,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```
+```yaml
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
@@ -89,28 +91,28 @@ Then pass these objects through the pipeline to the **New-ADServiceAccount** cmd
 ## EXAMPLES
 
 ### Example 1: Create an enabled managed service account
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.com" -Enabled $True
 ```
 
 This command creates an enabled managed service account in Active Directory Domain Services (AD DS).
 
 ### Example 2: Create a managed service account and register its service principal name
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName "Service01.contoso.com"
 ```
 
 This command creates a managed service account and registers its service principal name.
 
 ### Example 3: Create a managed service account for a single computer
-```
+```Powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToSingleComputer
 ```
 
 This command creates a managed service account and restricts its use to a single computer.
 
 ### Example 4: Create a managed service account for outbound authentication only
-```
+```Powershell
 PS C:\>New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthenticationOnly
 ```
 
@@ -173,7 +175,7 @@ Random password is set and the account is enabled unless it is requested to be d
 Password is set and the account is enabled unless it is requested to be disabled, unless the password you provided does not meet password policy or was not set for other reasons, at which point the account is disabled.
 
 The new **ADServiceAccount** object will always either be disabled or have a user-requested or randomly-generated password.
-There is no way to create an enabled service account account object with a password that violates domain password policy, such as an empty password.
+There is no way to create an enabled service account object with a password that violates domain password policy, such as an empty password.
 
 ```yaml
 Type: SecureString
@@ -780,6 +782,12 @@ The operators are applied in the following sequence:
 - Remove
 - Add
 - Replace
+
+The following example shows how to add and remove service principal names:
+
+```powershell
+ -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+```
 
 ```yaml
 Type: String[]

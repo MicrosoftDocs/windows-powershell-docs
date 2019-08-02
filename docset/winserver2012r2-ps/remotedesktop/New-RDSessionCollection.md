@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-RDSessionCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B59F93B4-115B-44BB-A349-8D915D281FC7
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-RDSessionCollection

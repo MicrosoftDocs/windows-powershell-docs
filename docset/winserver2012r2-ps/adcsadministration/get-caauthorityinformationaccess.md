@@ -4,9 +4,11 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Get-CAAuthorityInformationAccess
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -61,9 +63,9 @@ Name: Type
 
 Uri: String
 
-AddtoCertificateAIA: Boolean
+AddToCertificateAia: Boolean
 
-AddtoCertificateOCSP: Boolean
+AddToCertificateOcsp: Boolean
 
 ## NOTES
 

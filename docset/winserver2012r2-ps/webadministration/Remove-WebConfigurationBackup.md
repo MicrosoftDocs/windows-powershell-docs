@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebConfigurationBackup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6186AB69-EFC1-4CFD-A170-41DB868A559E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WebConfigurationBackup
@@ -31,7 +33,7 @@ The **Remove-WebConfigurationBackup** cmdlet removes an Internet Information Ser
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Adding and removeing an IIS configuration backup --------------e
+### Example 1: Adding and removing an IIS configuration backup
 ```
 IIS:\>Backup-WebConfiguration -Name "MyNewBackup" 
 IIS:\> Get-WebConfigurationBackup -Name "MyNewBackup" 

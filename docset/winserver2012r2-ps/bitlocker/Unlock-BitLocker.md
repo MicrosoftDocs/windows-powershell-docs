@@ -4,9 +4,11 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Unlock-BitLocker
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -121,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifes a secure string that contains a password.
+Specifies a secure string that contains a password.
 The password specified acts as a protector for the volume encryption key.
 
 ```yaml
@@ -137,8 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies the path to a recovery key.
-The key stored in the specified path acts as a protector for the volume encryption.
+Specifies the path to a folder where recovery keys are stored.
+The key stored in the specified path, if found, acts as a protector for the volume encryption.
 
 ```yaml
 Type: String

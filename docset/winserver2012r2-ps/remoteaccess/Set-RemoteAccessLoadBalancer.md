@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-RemoteAccessLoadBalancer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D30C2588-A8E4-4A42-9885-5C450C84426E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RemoteAccessLoadBalancer
@@ -322,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -ThirdPartyLoadBalancer
-Specifie the enabled state of a third-party external load balancer.
+Specifies the enabled state of a third-party external load balancer.
 The acceptable values for this parameter are:
                          
  -- Enabled. 

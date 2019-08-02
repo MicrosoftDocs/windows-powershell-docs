@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetworkControllerLoadBalancerBackendAddressPool
+ms.reviewer:
 ms.assetid: 2A3E3173-627F-4DC5-953F-6DA4DF5E1302
 ---
 
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer with with the backend address pool is associated
+Specifies the load balancer with which the backend address pool is associated
 
 ```yaml
 Type: string

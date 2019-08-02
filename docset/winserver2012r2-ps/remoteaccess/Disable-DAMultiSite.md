@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-DAMultiSite
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7009111B-1464-4D08-81D5-0B68462C428D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-DAMultiSite

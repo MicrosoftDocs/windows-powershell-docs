@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: SecureBoot
 Module Guid: A5BD98E1-E44C-44FB-B88F-5AF9BDE66FDF
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390823
 Help Version: 5.0.0.1
 Locale: en-US
 title: SecureBoot
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

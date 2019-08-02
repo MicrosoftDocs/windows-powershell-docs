@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamServerInventory.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IpamServerInventory
+ms.reviewer:
 ms.assetid: 79DFE776-5CA2-43C5-BAFC-ADC6596C5F66
 ---
 
@@ -56,7 +57,7 @@ ServerType : DC
 
 This command gets all IPv4 servers in the IPAM server inventory.
 
-### Example 2: Get all IPv4 DHSP servers in the IPAM server inventory
+### Example 2: Get all IPv4 DHCP servers in the IPAM server inventory
 ```
 PS C:\> Get-IpamServerInventory -AddressFamily IPv4 -ServerType DHCP| Format-List Name, ServerType
 Name       : dhcp1.contoso.com

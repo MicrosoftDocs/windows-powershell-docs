@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-DtcAdvancedSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 139B40CB-DEC5-49ED-BDFA-B1856A6A57DA
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-DtcAdvancedSetting
@@ -29,7 +31,7 @@ Get-DtcAdvancedSetting [-DtcName <String>] [-Subkey <String>] -Name <String> [-C
 
 ## DESCRIPTION
 The **Get-DtcAdvancedSetting** cmdlet gets the advanced setting for Microsoft Distributed Transaction Coordinator (MSDTC).
-Use this cmdlet to queury the advanced setting information stored in the registry.
+Use this cmdlet to query the advanced setting information stored in the registry.
 You can query only one registry value at one time.
 Specify a DTC instance by using the **DtcName** parameter.
 If you do not specify an instance, the default value is Local.

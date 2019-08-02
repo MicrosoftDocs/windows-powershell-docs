@@ -4,9 +4,11 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Set-DhcpServerv4DnsSetting
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -81,7 +83,7 @@ This cmdlet clears all of the properties other than the property that is specifi
 PS C:\>Set-DhcpServerv4DnsSetting -ComputerName dhcpserver.contoso.com -DisableDnsPtrRRUpdates $True -PolicyName WorkgroupDevices
 ```
 
-This example sets DNS update configuration settings for the sever policy WorkgroupDevices to disable DNS dynamic updates for PTR records.
+This example sets DNS update configuration settings for the server policy WorkgroupDevices to disable DNS dynamic updates for PTR records.
 The command specifies the computer, named dhcpserver.contoso.com, that runs the DHCP server service.
 
 ### EXAMPLE 5
@@ -89,7 +91,7 @@ The command specifies the computer, named dhcpserver.contoso.com, that runs the 
 PS C:\>Set-DhcpServerv4DnsSetting -ComputerName dhcpserver.contoso.com -DnsSuffix guestdomain.com -PolicyName ForeignDevices
 ```
 
-This example sets DNS update configuration settings for the sever policy ForeignDevices to enable DNS registration of clients under the DNS suffix guestdomain.com.
+This example sets DNS update configuration settings for the server policy ForeignDevices to enable DNS registration of clients under the DNS suffix guestdomain.com.
 The command specifies the computer, named dhcpserver.contoso.com, that runs the DHCP server service.
 
 ## PARAMETERS

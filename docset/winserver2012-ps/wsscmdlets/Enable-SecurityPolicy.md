@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C07A0E06-13F1-4CF5-95CB-6894459E75FA
+manager: dansimp
 ---
 
 # Enable-SecurityPolicy

@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EF593C1C-5927-4E90-982D-35C9F9F386F8
+manager: dansimp
 ---
 
 # Send-DtcDiagnosticTransaction

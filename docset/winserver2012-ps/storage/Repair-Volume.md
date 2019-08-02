@@ -1,8 +1,17 @@
 ---
 external help file: Storage2_Cmdlets.xml
+Module Name: Storage
 online version: 
 schema: 2.0.0
+title: Repair-Volume
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+ms.sitesec: library
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
+manager: dansimp
 ---
 
 # Repair-Volume
@@ -12,34 +21,34 @@ Performs repairs on a volume.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### ByDriveLetter (Default)
 ```
-Repair-Volume [-DriveLetter] <Char[]> [-AsJob] [-CimSession <CimSession[]>] [-OfflineScanAndFix] [-Scan]
- [-SpotFix] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
-```
-
-### UNNAMED_PARAMETER_SET_2
-```
-Repair-Volume [-AsJob] [-CimSession <CimSession[]>] [-OfflineScanAndFix] [-Scan] [-SpotFix]
- [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
+Repair-Volume [-DriveLetter] <Char[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### ById
 ```
-Repair-Volume [-AsJob] [-CimSession <CimSession[]>] [-OfflineScanAndFix] [-Scan] [-SpotFix]
- [-ThrottleLimit <Int32>] -Path <String[]> [-Confirm] [-WhatIf]
-```
-
-### UNNAMED_PARAMETER_SET_4
-```
-Repair-Volume [-AsJob] [-CimSession <CimSession[]>] [-OfflineScanAndFix] [-Scan] [-SpotFix]
- [-ThrottleLimit <Int32>] -ObjectId <String[]> [-Confirm] [-WhatIf]
+Repair-Volume -ObjectId <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_5
+### ByPaths
 ```
-Repair-Volume [-AsJob] [-CimSession <CimSession[]>] [-OfflineScanAndFix] [-Scan] [-SpotFix]
- [-ThrottleLimit <Int32>] -FileSystemLabel <String[]> [-Confirm] [-WhatIf]
+Repair-Volume -Path <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ByLabel
+```
+Repair-Volume -FileSystemLabel <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### InputObject (cdxml)
+```
+Repair-Volume -InputObject <CimInstance[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,26 +68,39 @@ SpotFix: Takes the volume briefly offline and then fixes only issues that are lo
 PS C:\>Repair-Volume -DriveLetter H -Scan
 ```
 
-This example scans drive H and reports errors only.
+This example scans the volume H: and reports errors only. It uses the `-DriveLetter` switch to designate the volume by its drive letter and `-Scan` to indicate the scanning action.
 
 ### EXAMPLE 2
 ```
-PS C:\>Repair-Volume -DriveLetter H -OfflineScanAndFix
+PS C:\>Repair-Volume -DriveLetter GHI -SpotFix
 ```
 
-This example takes drive H offline, and fixes all issues.
+This example uses the spot verifier functionality to quickly fix volumes designation G:, H: and I:. It uses the `-DriveLetter` switch to designate multiple volumes by their drive letters and `SpotFix` to indicate the quick fixing action.
 
 ### EXAMPLE 3
 ```
-PS C:\>Repair-Volume -DriveLetter H -SpotFix
+PS C:\> Get-Volume
+
+DriveLetter FriendlyName             FileSystemType DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- ------------             -------------- --------- ------------ ----------------- -------------      ----
+            System Reserved          NTFS           Fixed     Healthy      OK                    178.47 MB    550 MB
+C           Contoso - C              NTFS           Fixed     Healthy      OK                     41.28 GB  98.89 GB
+                                     NTFS           Fixed     Healthy      OK                     89.03 MB    481 MB
+                                     FAT32          Fixed     Healthy      OK                      70.8 MB     96 MB
+D           Contoso - D              NTFS           Fixed     Healthy      OK                     29.13 GB  67.68 GB
+E           Contoso - E              NTFS           Fixed     Healthy      OK                    148.44 GB 465.76 GB
+F           Archives                 NTFS           Fixed     Healthy      OK                    324.13 GB 465.76 GB
+
+
+PS C:\> Repair-Volume -FileSystemLabel "System Reserved" -OfflineScanAndFix
 ```
 
-This example uses the spot verifier functionality to quickly fix drive H.
+This example takes the System Reserved volume offline, and fixes all issues. This volume has no drive letters assigned to it. The first command, `Get-Volume` gives an overview of the volumes on the local computer. As the output indicates, the volume bearing the "System Reserved" label has no drive letters. Next, the `Repair-Volume` cmdlet uses the `-FileSystemLabel` switch to designate the "System Reserved" volume and the `-OfflineScanAndFix` switch indicates the volume should be taken offline and scanned in full.
 
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -94,7 +116,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -109,16 +131,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DriveLetter
 Specifies a letter used to identify a drive or volume in the system.
 
 ```yaml
 Type: Char[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: ByDriveLetter
 Aliases: 
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -129,7 +166,7 @@ Specifies the volume to scan based on the file system label (the volume name).
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_5
+Parameter Sets: ByLabel
 Aliases: 
 
 Required: True
@@ -145,7 +182,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: InputObject (cdxml)
 Aliases: 
 
 Required: True
@@ -161,7 +198,7 @@ The ID is not globally unique.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_4
+Parameter Sets: ById
 Aliases: Id
 
 Required: True
@@ -191,7 +228,7 @@ Contains valid path information.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: ByPaths
 Aliases: 
 
 Required: True
@@ -248,21 +285,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -270,7 +292,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases: wi
 
 Required: False
 Position: Named
@@ -278,6 +300,9 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -300,4 +325,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Optimize-Volume](./Optimize-Volume.md)
 
 [Set-Volume](./Set-Volume.md)
-

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
@@ -13,6 +13,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-SmigServerSetting
+ms.reviewer:
 ms.assetid: ACDA05AE-6AD0-4F38-8448-DDC2D7D3025F
 ---
 
@@ -165,7 +166,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the migration store encryption password as a secure string.
-The secure string can be obtained by entering the command `Read-Host -AsSecureString` or `Convertto-Securestring`.
+The secure string can be obtained by entering the command `Read-Host -AsSecureString` or `ConvertTo-SecureString`.
 Because the *Password* parameter is required, if it is not added to your command, you are prompted to create a password after entering your command.
 The password length must be a minimum of six characters and a maximum of 260 characters.
 

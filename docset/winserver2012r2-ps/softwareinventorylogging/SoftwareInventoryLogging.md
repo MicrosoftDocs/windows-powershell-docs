@@ -7,13 +7,15 @@ Locale: en-US
 title: SoftwareInventoryLogging
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8552b19d-8db7-4722-b04e-960053720b71
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # SoftwareInventoryLogging Module

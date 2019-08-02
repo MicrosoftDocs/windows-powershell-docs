@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Stop-WssBackupJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5F4D478E-F86B-4558-A41C-8C2B2A629B69
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Stop-WssBackupJob

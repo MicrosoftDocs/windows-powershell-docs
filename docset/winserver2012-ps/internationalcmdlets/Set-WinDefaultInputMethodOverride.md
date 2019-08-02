@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: F8C3B107-1E88-445D-8C51-D9EAED20A0C2
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-WinDefaultInputMethodOverride
@@ -27,7 +31,7 @@ If no override setting is used, the input method is dynamically determined from 
 PS C:\>Set-WinDefaultInputMethodOverride -InputTip "0409:00000409"
 ```
 
-This command sets the default input method override to English (United States) â€" US.
+This command sets the default input method override to English (United States) - US.
 
 ## PARAMETERS
 

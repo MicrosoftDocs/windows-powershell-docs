@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Disk.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-Disk
+ms.reviewer:
 ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
 ---
 
@@ -21,6 +22,9 @@ ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
 
 ## SYNOPSIS
 Gets one or more disks visible to the operating system.
+
+> [!NOTE]
+> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](https://docs.microsoft.com/windows/desktop/FileIO/basic-and-dynamic-disks).
 
 ## SYNTAX
 
@@ -122,7 +126,7 @@ Get-IscsiSession | Format-Table
 ```
 
 This example gets all disks attached via the iSCSI bus by piping the output of Get-Disk to the **Where-Object** cmdlet, and filtering by the iSCSI value of the Bustype property.
-It then passes the Disk objects in the pipeline to the **Get-IscisSession** cmdlet, which gets the associated iSCSI sessions, and then pipes the output to the **Format-Table** cmdlet for simplified display.
+It then passes the Disk objects in the pipeline to the **Get-IscsiSession** cmdlet, which gets the associated iSCSI sessions, and then pipes the output to the **Format-Table** cmdlet for simplified display.
 
 ## PARAMETERS
 

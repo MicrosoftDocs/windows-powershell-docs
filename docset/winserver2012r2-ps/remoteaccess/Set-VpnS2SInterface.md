@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-VpnS2SInterface
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 542F8548-9E57-40FB-96C4-5146BC806DCE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-VpnS2SInterface
@@ -176,10 +178,10 @@ The acceptable values for this parameter are:
 
 - SHA256128
 - MD596
--  SHA196
+- SHA196
 - GCMAES128
--  GCMAES192
--  GCMAES256
+- GCMAES192
+- GCMAES256
 
 ```yaml
 Type: AuthenticationTransformConstants

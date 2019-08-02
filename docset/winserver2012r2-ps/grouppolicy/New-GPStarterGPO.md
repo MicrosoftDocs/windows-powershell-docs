@@ -4,9 +4,11 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: New-GPStarterGPO
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -49,7 +51,7 @@ The Starter GPO is annotated with the specified comment.
 
 ### -Comment
 Includes a comment for the new Starter GPO.
-The comment string must be enclosed in double-quoatation marks or single-quotation marks and can contain 2,047 characters.
+The comment string must be enclosed in double-quotation marks or single-quotation marks and can contain 2,047 characters.
 
 ```yaml
 Type: String

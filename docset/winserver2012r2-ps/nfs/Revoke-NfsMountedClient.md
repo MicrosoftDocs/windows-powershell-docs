@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Revoke-NfsMountedClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 034AE8BF-2EAC-498F-8B82-785F494573C5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Revoke-NfsMountedClient

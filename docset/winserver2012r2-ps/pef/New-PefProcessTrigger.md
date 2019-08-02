@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-PefProcessTrigger
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A593E47C-3410-4AD9-BF42-A10D537BA6DF
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-PefProcessTrigger

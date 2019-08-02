@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E4E2A9D1-9E80-463C-BA10-435A45E1040B
+manager: dansimp
 ---
 
 # Get-PartitionSupportedSize
@@ -37,15 +41,15 @@ Get-PartitionSupportedSize [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit
 ```
 
 ## DESCRIPTION
-The **Get-PartitionSupportedSizes** cmdlet returns information on supported partition sizes for the specified Disk object.
+The **Get-PartitionSupportedSize** cmdlet returns information on supported partition sizes for the specified Disk object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-PartitionSupportedSizes -DiskNumber 3 -PartitionNumber 2
-MinimumSize                                                 MaximumSize 
------------                                                 -----------
+PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
+SizeMin                                                 SizeMax 
+-----------                                             -----------
 ```
 
 This example is not fully implemented and does not include size values.

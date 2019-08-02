@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-VMRemoteFx3dVideoAdapter
+ms.reviewer:
 ms.assetid: 7E4468EA-18F3-4FFD-BAC9-879AF8CB9A10
 ---
 
@@ -36,7 +37,7 @@ Add-VMRemoteFx3dVideoAdapter [-VM] <VirtualMachine[]> [-Passthru] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemovteFX video adapter in a virtual machine.
+The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemoteFX video adapter in a virtual machine.
 
 ## EXAMPLES
 
@@ -190,8 +191,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.RemoteFxVideoAdapter** if *PassThru* is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.RemoteFxVideoAdapter
+If **-PassThru** is specified.
 
 ## NOTES
 

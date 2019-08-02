@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Reset-NfsStatistics
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C46C907-6F14-4C50-92EC-00FEB36A56D5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Reset-NfsStatistics
@@ -28,7 +30,7 @@ Reset-NfsStatistics [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJo
 ```
 
 ## DESCRIPTION
-The **Reset-NfsStatistics** cmdlet resets (to zero) all remote procedure call (RPC) statistics that a Network File System (NFS) sever maintains.
+The **Reset-NfsStatistics** cmdlet resets (to zero) all remote procedure call (RPC) statistics that a Network File System (NFS) server maintains.
 The NFS server maintains call statistics for all RPC requests that it services.
 
 ## EXAMPLES

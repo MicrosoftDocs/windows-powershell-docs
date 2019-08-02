@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-WindowsImage
+ms.reviewer:
 ms.assetid: 75607231-B3B6-4BE8-A7E2-40AADAE54C94
 ---
 
@@ -78,12 +79,14 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionType
-Specifies the type of compression used for the initial capture operation: 
+Specifies the type of compression used for the initial capture operation. Acceptable values are:
 
-- The maximum option provides the best compression, but takes more time to capture the image. 
-- The fast option provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
-This is also the default compression type that is used if you do not specify the argument. 
-- The none option does not compress the captured image at all. 
+- **"max" or "maximum":** Provides the high compression, but takes more time to capture the image
+- **"fast:"** Provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
+- **"none":** No compression is used at all. This is the default. 
+
+> [!NOTE]
+> This cmdlet does not support the "recovery" compression type. Use `dism.exe` instead.
 
 the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
 
@@ -94,7 +97,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: "none"
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -146,7 +149,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: 3
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -210,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceImagePath
-Specifies the location of the source image file.
+Specifies the location of the source image file. Must be used in conjunction with `-SourceIndex` or `-SourceName`. If the source file is a SWM file, `-SplitImageFilePattern` is also required.
 
 ```yaml
 Type: String

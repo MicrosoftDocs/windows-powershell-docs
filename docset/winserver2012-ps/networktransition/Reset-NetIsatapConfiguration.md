@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E3DD318C-D385-403B-B029-E65EEB275579
+manager: dansimp
 ---
 
 # Reset-NetIsatapConfiguration

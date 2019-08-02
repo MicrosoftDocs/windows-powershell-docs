@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MaskingSet.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-InitiatorIdFromMaskingSet
+ms.reviewer:
 ms.assetid: BB678E72-FCDF-48EF-8D92-AF8FB42EAE20
 ---
 
@@ -58,7 +59,7 @@ PS C:\> $initid = (Get-InitiatorID)
 PS C:\> Remove-InitiatorIDFromMaskingSet -InitiatorIDs $initid -MaskingSetFriendlyName "Server1A-MaskingSet"
 ```
 
-This example removes an initator ID from a masking set.
+This example removes an initiator ID from a masking set.
 This cmdlet prevents the specified initiator ID from accessing any of the resources defined in the masking set
 
 ## PARAMETERS

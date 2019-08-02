@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDWorkspace
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EA0B41A7-7083-4F56-B752-70AEAC0D117D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RDWorkspace

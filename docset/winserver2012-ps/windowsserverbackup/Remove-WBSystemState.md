@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B07897FC-4CAF-4F23-AD01-6D960775C421
+manager: dansimp
 ---
 
 # Remove-WBSystemState

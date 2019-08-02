@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Send-WssReport
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 106663E3-27E4-4357-AD60-9AFFC667F794
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Send-WssReport

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-O365User
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2DB68198-49CB-4441-8900-1BE69F0BDF20
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-O365User

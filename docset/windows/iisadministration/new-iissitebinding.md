@@ -1,17 +1,20 @@
 ---
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-online version: 
+online version:
 schema: 2.0.0
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-title: Get-IISSiteBinding
-online version: 
+title: New-IISSiteBinding
+ms.author: v-anbarr
+author: andreabarr
+ms.reviewer:
+online version:
 keywords: powershell, cmdlet
 ---
 
 # New-IISSiteBinding
 
 ## SYNOPSIS
-Adds a new binding to an existing Website.
+Adds a new binding to an existing Website. This cmdlet has been introduced in version 1.1.0.0 of IISAdministration module.
 
 ## SYNTAX
 
@@ -22,7 +25,7 @@ New-IISSiteBinding [-Name] <String> [-BindingInformation] <String> [[-Protocol] 
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Website.
+Adds a new binding to an existing website.
 
 ## EXAMPLES
 
@@ -38,7 +41,7 @@ This command creates a new HTTP binding of "*:8080:" on a website named TestSite
 PS C:\> New-IISSiteBinding -Name "TestSite" -BindingInformation "*:443:" -CertificateThumbPrint "D043B153FCEFD5011B9C28E186A60B9F13103363" -CertStoreLocation "Cert:\LocalMachine\Webhosting" -Protocol https
 ```
 
-This command creates a new HTTPS binding of "*:443:" bindingInformation on a website named TestSite using an existing certificate which has a thumbprint of D043B153FCEFD5011B9C28E186A60B9F13103363 and 
+This command creates a new HTTPS binding of "*:443:" bindingInformation on a website named TestSite using an existing certificate which has a thumbprint of D043B153FCEFD5011B9C28E186A60B9F13103363 and
 is placed at the Cert:\LocalMachine\Webhosting certificate store
 
 ### Example 3: Create a new HTTPS binding and set it with Sni and CentralCertStore SSL flag settings
@@ -65,21 +68,21 @@ Import-PfxCertificate -FilePath "C:\temp\temp.pfx" -CertStoreLocation "Cert:\Loc
 New-IISSiteBinding -Name "TestSite" -BindingInformation $bindingInformation -CertificateThumbPrint $thumbPrint -CertStoreLocation $storeLocation -Protocol https
 ```
 
-This powershell script example shows how to create a self-signed certificate on Personal store. Export the certificate to ROOT store to make the certificate considered as a trusted certificate 
+This powershell script example shows how to create a self-signed certificate on Personal store. Export the certificate to ROOT store to make the certificate considered as a trusted certificate
 in the local machine and add a new HTTPS binding on a website named TestSite for testing purposes.
 
 ## PARAMETERS
 
 ### -BindingInformation
-Specifies the binding information string to use for the new site. The binding information of the form 
-IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which 
-is equivalent to using a wildcard character such as *:443:. In this representation *  indicates all IP 
+Specifies the binding information string to use for the new site. The binding information of the form
+IP:Port:hostname such as 192.168.0.1:80:www.contoso.com and one or more of the fields can be left blank, which
+is equivalent to using a wildcard character such as \*:443:. In this representation \*  indicates all IP
 addresses and all hostnames are indicated by leaving the corresponding field blank.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -94,7 +97,7 @@ Specifies a certificate thumbprint, which is used to add a new HTTPS binding.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -109,7 +112,7 @@ Specifies the certificate store path of the certificate, which is used to add a 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Cert:\LocalMachine\My, Cert:\LocalMachine\WebHosting, My, WebHosting
 
 Required: False
@@ -125,7 +128,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +143,7 @@ Specifies the name of the IIS website.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -155,7 +158,7 @@ Returns an object representing the item with which you are working. By default, 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -170,7 +173,7 @@ The protocol for which the binding is configured, usually http, https or ftp.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -185,7 +188,7 @@ Specifies the SSL Flag(s) of the new binding.
 ```yaml
 Type: SslFlags
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Sni, CentralCertStore
 
 Required: False

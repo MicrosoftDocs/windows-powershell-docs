@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 2CE776E1-DC7B-4030-AE84-07D8BB97AFFD
+manager: dansimp
 ---
 
 # Get-NetIPv6Protocol
@@ -502,7 +506,7 @@ The acceptable values for this parameter are:
  -- Always: IPv6 protocol configuration that contains the UseTemporaryAddresses set to Always. 
 
  -- Counter: IPv6 protocol configuration that contains the UseTemporaryAddresses set to Counter.
-Typically used for for test purposes.
+Typically used for test purposes.
 
 ```yaml
 Type: UseTemporaryAddresses[]

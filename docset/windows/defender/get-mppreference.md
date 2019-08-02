@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-MpPreference
+ms.reviewer:
 ms.assetid: 85FEE931-660A-44F2-AC41-00F585BE5E70
 ---
 
@@ -29,7 +30,7 @@ Get-MpPreference [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] 
 ```
 
 ## DESCRIPTION
-The **Get-MpPreference** cmdlet gets preferences for the Windows Defender scans and updates.
+The **Get-MpPreference** cmdlet gets preferences for the Windows Defender scans and updates. For more information about the preferences that this cmdlet retrieves, see [Windows Defender Preferences Class](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/dn455323(v=vs.85))
 
 ## EXAMPLES
 

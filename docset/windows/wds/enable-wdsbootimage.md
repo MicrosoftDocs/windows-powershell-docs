@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WdsBootImage_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-WdsBootImage
+ms.reviewer:
 ms.assetid: F8047CCD-48F7-4716-AC03-399E898D1529
 ---
 
@@ -50,7 +51,7 @@ This command enables the boot image named Fabrikam LOB setup (x86) for the x86 a
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to make sure that that you enable the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to make sure that you enable the correct image.
 The acceptable values for this parameter are:
 
 - ARM

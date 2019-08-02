@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-WindowsDriver
+ms.reviewer:
 ms.assetid: 91DDC66F-4BAA-4C71-B280-1C0D22C8D579
 ---
 
@@ -42,7 +43,7 @@ The **Export-WindowsDriver** cmdlet exports all third-party drivers from a Windo
 
 ## EXAMPLES
 
-### Example 1: Export drivers from the running operationg system
+### Example 1: Export drivers from the running operating system
 ```
 PS C:\> Export-WindowsDriver -Online -Destination d:\drivers
 ```

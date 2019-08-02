@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285538
 Help Version: 4.0.2.0
 Locale: en-US
 title: ADRMS
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -18,7 +20,7 @@ ms.assetid: 9451ee96-965a-4221-9403-9c2e760912a2
 
 # ADRMS Module
 ## Description
-This topic contains brief descriptions of the Windows PowerShell� cmdlets that are for use in deploying in Windows Server� 2012. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets give you the ability to install, upgrade, or remove an cluster using Windows PowerShell.
+This topic contains brief descriptions of the Windows PowerShell cmdlets used to deploy in Windows Server 2012. Each cmdlet in the table is linked to additional information about that cmdlet. These cmdlets allow you to install, upgrade, or remove a cluster using Windows PowerShell.
 
 ## ADRMS Cmdlets
 ### [Install-ADRMS](./Install-ADRMS.md)

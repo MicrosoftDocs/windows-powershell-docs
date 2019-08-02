@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-WebRequestTracingSettings
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D4CBAE62-5E57-4122-9FF8-242C6DA44186
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Clear-WebRequestTracingSettings
@@ -33,7 +35,7 @@ This cmdlet is identical to Clear-WebRequestTracingSetting, which is preferred.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Removing Remove Request request Tracing tracing from the Default default Web webSite site --------------Remove request tracing default website
+### Example 1: Removing request tracing from the default web site
 ```
 IIS:\>Clear-WebRequestTracingSettings -Name "Default Web Site"
 ```

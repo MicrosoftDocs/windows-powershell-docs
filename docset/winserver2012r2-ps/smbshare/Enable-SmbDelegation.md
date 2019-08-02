@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-SmbDelegation
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D93C2271-CED0-4B41-9E60-767F1086FEDF
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-SmbDelegation

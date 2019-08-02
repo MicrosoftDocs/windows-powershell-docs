@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Register-ScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Register-ScheduledTask
@@ -62,7 +64,7 @@ You can register a task to run any of the following application or file types: W
 ```
 PS C:\> $Time = New-ScheduledTaskTrigger -At 12:00 -Once 
 PS C:\> $User = "Contoso\Administrator"
-PS C:\> $PS = PowerShell.exe
+PS C:\> $PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
 PS C:\> Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
 ```
 

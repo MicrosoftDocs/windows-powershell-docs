@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-VirtualDiskSnapshot
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B5414111-13A8-44ED-8AF0-83F6A8192DB0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-VirtualDiskSnapshot
@@ -129,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStoragePoolName
-Specifiess the name of the target storage pool.
+Specifies the name of the target storage pool.
 
 ```yaml
 Type: String

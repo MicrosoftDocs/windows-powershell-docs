@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-StorageSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-StorageSetting
@@ -28,34 +30,34 @@ Set-StorageSetting [-NewDiskPolicy <NewDiskPolicy>] [-ScrubPolicy <ScrubPolicy>]
 ```
 
 ## DESCRIPTION
-The **Set-StorageSettings** cmdlet adjusts or configures current storage settings of the StorageSetting object.
+The **Set-StorageSetting** cmdlet adjusts or configures current storage settings of the StorageSetting object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineAll
 ```
 
 This example changes the new disk policy so that all newly attached disks remain offline.
 
 ### EXAMPLE 2
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineInternal
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineInternal
 ```
 
 This example changes the new disk policy so that all newly attached disks on a local bus remain offline.
 
 ### EXAMPLE 3
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OfflineShared
+PS C:\> Set-StorageSetting -NewDiskPolicy OfflineShared
 ```
 
 This example changes the new disk policy so that all new shared bus disks remain offline and all new local bus disks remain online.
 
 ### EXAMPLE 4
 ```
-PS C:\> Set-StorageSettings -NewDiskPolicy OnlineAll
+PS C:\> Set-StorageSetting -NewDiskPolicy OnlineAll
 ```
 
 This example changes the new disk policy so that all new disks are brought online, regardless of whether the disk are on a local or shared bus.
@@ -122,12 +124,9 @@ Accept wildcard characters: False
 Specifies the policy for the files that the automatic data integrity scanner scrubs.
 The acceptable values for this parameter are:
 
-- 0.
-Off: No files are scrubbed.
-- 1.
-Integrity Streams: Only files with integrity streams are scrubbed.
-- 2.
-All: All files are scrubbed.
+- Off: No files are scrubbed.
+- Integrity Streams: Only files with integrity streams are scrubbed.
+- All: All files are scrubbed.
 
 ```yaml
 Type: ScrubPolicy

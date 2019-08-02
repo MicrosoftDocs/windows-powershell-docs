@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerResponseRateLimitingExceptionlist_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-DnsServerResponseRateLimitingExceptionlist
+ms.reviewer:
 ms.assetid: F5576612-4CB5-4F90-B480-335CC0AE0208
 ---
 
@@ -130,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Condition
-Specifies a logical operator for combining multiple values of the **ClientSubnet**, **Fdqn** and **ServerIp** parameters.
+Specifies a logical operator for combining multiple values of the **ClientSubnet**, **Fqdn** and **ServerIp** parameters.
 The values for the parameters are combined using the *Condition* parameter as a logical operator.
 The same operator is also used for combining EQ and NE expressions within a value.
 The default value is AND.

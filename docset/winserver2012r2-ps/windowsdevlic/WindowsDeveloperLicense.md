@@ -7,13 +7,15 @@ Locale: en-US
 title: WindowsDeveloperLicense
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: a32e896c-8a77-40f1-a5b6-6874400d5df3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # WindowsDeveloperLicense Module

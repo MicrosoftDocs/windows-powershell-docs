@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetworkControllerLoadBalancerFrontendIpConfiguration
+ms.reviewer:
 ms.assetid: 69EADC55-F391-4179-B0CB-701B3D6E2A9E
 ---
 
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancerId
-Specifies the load balancer with with the resource is associated
+Specifies the load balancer with which the resource is associated
 
 ```yaml
 Type: string

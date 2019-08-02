@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Volume.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-DedupProperties
+ms.reviewer:
 ms.assetid: C6F9086E-7DF5-4A0F-9BA9-BEF95E0A9040
 ---
 
@@ -61,7 +62,7 @@ The **Get-DedupProperties** cmdlet gets Data Deduplication information.
 
 ### Example 1: Get Data Deduplication information.
 ```
-PS C:\>Get-DedupProperties -DriveLetter C\:
+PS C:\>Get-DedupProperties -DriveLetter C
 ```
 
 This command gets Data Deduplication information for the C\: drive.

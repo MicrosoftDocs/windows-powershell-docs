@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NetworkControllerVirtualGateway
+ms.reviewer:
 ms.assetid: 5C5B39A6-FF55-4A21-9B0E-D13247E6EF12
 ---
 
@@ -166,12 +167,12 @@ This cmdlet returns objects that contain the following fields.
 - Resource metadata.
 - Resource ID.
 - Properties of the resource (a virtual gateway/tenant gateway):
- - Reference to the virtual network IP subnet used for routing between gateway and virtual network.
- - Array of network connections configured in the virtual gateway.
- - Routing type configured for CA space routing.
- - Array of CA space BGP routers configured in the virtual gateway and their configurations.
- - Array of BGP routing policy maps configured for the tenant. 
- - Array of references to gateway pools where the virtual gateway is configured.
+  - Reference to the virtual network IP subnet used for routing between gateway and virtual network.
+  - Array of network connections configured in the virtual gateway.
+  - Routing type configured for CA space routing.
+  - Array of CA space BGP routers configured in the virtual gateway and their configurations.
+  - Array of BGP routing policy maps configured for the tenant. 
+  - Array of references to gateway pools where the virtual gateway is configured.
 
 ## NOTES
 

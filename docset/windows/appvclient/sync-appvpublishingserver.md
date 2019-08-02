@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Sync-AppvPublishingServer
+ms.reviewer:
 ms.assetid: 2182F850-DB9B-48E7-9F48-D0398A3D4176
 ---
 
@@ -59,6 +60,8 @@ This command starts publishing refresh for the current user for the server named
 
 ### -Force
 Indicates that the cmdlet forces all publishes and unpublishes of packages.
+
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter

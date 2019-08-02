@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZone_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Sync-DnsServerZone
+ms.reviewer:
 ms.assetid: 4CD15454-796D-4250-B830-73150342D1BE
 ---
 
@@ -40,7 +41,7 @@ The persistent storage can be Active Directory® Domain Services or a file.
 PS C:\> Sync-DnsServerZone -Name "west02.contoso.com" -PassThru -Verbose
 ```
 
-This command synchronizes the contents of the zone named west02.conotoso.com.
+This command synchronizes the contents of the zone named west02.contoso.com.
 
 ## PARAMETERS
 

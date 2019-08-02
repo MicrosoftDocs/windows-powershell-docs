@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetAdapterQos
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 207DEA46-20E6-46EC-9317-538D56ED19D9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-NetAdapterQos
@@ -49,7 +51,7 @@ Otherwise, the network adapter will enable the QoS features based on either the 
 
 To configure traffic class bandwidth allocation and priority based flow control on the computer, users can run the New-NetQosTrafficClass and the Enable-NetQosFlowControl cmdlets.
 
-Some switches expect end stations, such as computers running Windows Server® 2012 or later, to accept configurations from the switches.
+Some switches expect end stations, such as computers running Windows Server 2012 or later, to accept configurations from the switches.
 If the switches detect a mismatched configuration via the data center bridging exchange (DCBX) protocol, then the switches disable the DCB functionalities.
 To overcome this limitation, users can disable DCBX on either the switches or the network adapters and manually configure the features on either end.
 
@@ -219,7 +221,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

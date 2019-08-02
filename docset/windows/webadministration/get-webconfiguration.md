@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-WebConfiguration
+ms.reviewer:
 ms.assetid: 8C81A2E6-D85C-4368-B228-C3743F2A24D3
 ---
 
@@ -47,7 +48,7 @@ This command queries for all authentication settings specified under the default
 Specifies the version of the .NET Framework in the form vn.n, such as v4.0 or v2.0.
 The default is v4.0.
 Specify this parameter only when the *PSPath* parameter is set to either Machine or Machine/Webroot.
-If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell� ignores the value of *Clr* and returns a warning.
+If *PSPath* is not set to one of these values and the *Clr* parameter is set, Windows PowerShell ignores the value of *Clr* and returns a warning.
 
 ```yaml
 Type: String

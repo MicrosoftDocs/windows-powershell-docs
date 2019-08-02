@@ -5,13 +5,15 @@ schema: 2.0.0
 title: New-WssPersonalFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3638ED0D-628C-482F-8BB5-025BD6DD7F75
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-WssPersonalFolder

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Rename-Printer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9B460E62-2F2F-43F9-89F3-D296D6F1F0D2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Rename-Printer
@@ -199,8 +201,7 @@ This cmdlet accepts one printer object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

@@ -3,6 +3,10 @@ external help file: FSRM_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 81DD991F-CE5E-45DC-9BBB-37EC40D0D69D
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-FsrmEffectiveNamespace

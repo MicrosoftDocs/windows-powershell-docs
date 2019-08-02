@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7684C7AF-DFCE-409F-B8D4-7E62D1F90780
+manager: dansimp
 ---
 
 # Disable-NetAdapterVmq

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-CauClusterRole
+ms.reviewer:
 ms.assetid: F3EE6EC5-BA2A-4734-897A-ACD4DB9CC4B5
 ---
 
@@ -473,7 +474,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunPluginsSerially
-Indicates that that CAU scans each cluster node for applicable updates and stage the updates for each plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are used during an updating run.
+Indicates that CAU scans each cluster node for applicable updates and stage the updates for each plug-in in the plug-in order passed into the*CauPluginName* parameter, when multiple plug-ins are used during an updating run.
 
 By default, CAU scans and stages the applicable updates for all plug-ins in parallel.
 Regardless of the configuration of this parameter, CAU installs the applicable updates for each plug-in sequentially.

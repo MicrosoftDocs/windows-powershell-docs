@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Unregister-WmsEvent
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5CA610CB-38AA-408B-A4E6-C056548E100E
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Unregister-WmsEvent
@@ -96,13 +98,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Unregister-WmsEvent.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

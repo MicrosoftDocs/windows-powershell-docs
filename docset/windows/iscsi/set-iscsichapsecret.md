@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSISession.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-IscsiChapSecret
+ms.reviewer:
 ms.assetid: 98C6A7C9-CDFE-49B9-896F-14DD979DF05C
 ---
 
@@ -129,7 +130,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 

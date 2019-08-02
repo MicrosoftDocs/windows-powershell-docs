@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsNetgroup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 21EF01B6-7129-4F10-87CE-FBA1F5B0D960
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NfsNetgroup

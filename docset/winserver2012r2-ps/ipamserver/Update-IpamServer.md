@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Update-IpamServer
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -34,13 +36,13 @@ An error occurs if there is no update available.
 
 As part of an IPAM server update, this cmdlet performs the following steps:
 
--  Applies IPAM schema updates.
-The cmdlet performs data and schema validation of the existing IPAM database, and returns an error if the validation fails.
-A log is generated on the server in the %SystemDrive%\Windows\System32\IPAM\logs folder.
-If you specify the **DeleteSystemCheckFailureRows** parameter, the cmdlet proceeds to automatically delete the error rows.
+- Applies IPAM schema updates.
+  The cmdlet performs data and schema validation of the existing IPAM database, and returns an error if the validation fails.
+  A log is generated on the server in the %SystemDrive%\Windows\System32\IPAM\logs folder.
+  If you specify the **DeleteSystemCheckFailureRows** parameter, the cmdlet proceeds to automatically delete the error rows.
 
 - Completes any required data format transformation.
-This will not result in any loss of existing data.
+  This will not result in any loss of existing data.
 
 - Applies changes in security groups and roles.
 

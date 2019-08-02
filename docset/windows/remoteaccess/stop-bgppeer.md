@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_BgpPeer_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-BgpPeer
+ms.reviewer:
 ms.assetid: 66F31195-7E41-4594-9B57-A00C827CABBD
 ---
 
@@ -56,7 +57,7 @@ This command gets all the peers by using the Get-BgpPeer cmdlet, and then passes
 The command stops the sessions for all the peers.
 This command does not specify the **Force** parameter, so it prompts the user for confirmation of each session to stop.
 
-### Example 3: Stop a routing session in a multitenant evironment
+### Example 3: Stop a routing session in a multitenant environment
 ```
 PS C:\> Stop-BgpPeer -Name "TenantSite22" -RoutingDomain "Rd001"
 Confirm

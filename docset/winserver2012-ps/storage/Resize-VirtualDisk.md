@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 39435A9B-804E-4F3E-92E7-EFB7C6404F05
+manager: dansimp
 ---
 
 # Resize-VirtualDisk

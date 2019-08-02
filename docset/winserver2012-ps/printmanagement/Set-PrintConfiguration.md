@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A9EFA7D4-8043-43D5-B54F-52CC94EFF962
+manager: dansimp
 ---
 
 # Set-PrintConfiguration
@@ -55,7 +59,7 @@ You need administrator privileges to use **Set-PrintConfiguration**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Set the default paper size -------------------------- xample:Set the default paper size
+### -------------------------- Example 1: Set the default paper size -------------------------- xample:Set the default paper size
 ```
 PS C:\> Set-PrintConfiguration -PrinterName "Microsoft XPS Document Writer" -PaperSize A4
 ```

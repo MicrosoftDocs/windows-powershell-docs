@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Add-DnsServerResourceRecord
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -678,7 +680,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostNameAlias
-Specifies a a canonical name target for a CNAME record.
+Specifies a canonical name target for a CNAME record.
 This must be a fully qualified domain name (FQDN).
 
 ```yaml

@@ -7,13 +7,15 @@ Locale: en-US
 title: NetSwitchTeam
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0b4d26a2-29a7-4dd1-9151-6073068c756f
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # NetSwitchTeam Module

@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.RemoteAttestation.Server.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsAttestation
 ms.assetid: A0BA9FED-90DF-4B72-B6BD-49D2B2B7027D
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-HgsAttestationHostGroup
+ms.reviewer:
 ---
 
 # Get-HgsAttestationHostGroup

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-PefTraceFilter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D9101F93-B8D1-41B1-8E4B-E183E0BBC665
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-PefTraceFilter

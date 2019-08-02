@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Rename-MaskingSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4F91AE4E-7229-4C64-9CE8-8C3A53FA71BC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Rename-MaskingSet

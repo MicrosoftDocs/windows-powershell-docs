@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Export-Certificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Export-Certificate
@@ -67,7 +69,7 @@ PS C:\>$cert = ( Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538B
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
 ```
 
-This example exports a certificate to the file system as a PKCS#7-fomatted .p7b file without its private key.
+This example exports a certificate to the file system as a PKCS#7-formatted .p7b file without its private key.
 
 ### EXAMPLE 4
 ```

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDPersonalVirtualDesktopPatchSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70F30CA6-41F3-4676-8806-90BB9173AA98
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RDPersonalVirtualDesktopPatchSchedule

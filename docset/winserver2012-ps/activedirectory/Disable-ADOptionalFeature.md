@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 3CF6B1D8-DA88-45F2-9520-34B11CAA3928
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Disable-ADOptionalFeature
@@ -60,7 +64,7 @@ This operation should be performed against the DC that holds the naming master F
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Disable-ADOptionaFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
+C:\PS>Disable-ADOptionalFeature -Identity '54ec6e43-75a8-445b-aa7b-346a1e096659' -Scope Domain -Target 'DC=fabrikam,DC=com' -Server DC1
 ```
 
 Description

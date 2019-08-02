@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerEdns_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,13 +14,14 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-DnsServerEDns
+ms.reviewer:
 ms.assetid: 64D5384C-D67A-459E-8DAF-20C426CAFC09
 ---
 
 # Get-DnsServerEDns
 
 ## SYNOPSIS
-Gets EDNS configuration settings on a DNS sever.
+Gets EDNS configuration settings on a DNS server.
 
 ## SYNTAX
 
@@ -40,7 +41,7 @@ This cmdlet gets the EDNS settings for **CacheTimeout**, **EnableProbes**, and *
 PS C:\> Get-DnsServerEDns
 ```
 
-This command gets the EDNS settings on a local DNS sever.
+This command gets the EDNS settings on a local DNS server.
 
 ## PARAMETERS
 

@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Remove-IpamRange
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -222,12 +224,12 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Specifies an array of of network types for the addresses to remove. 
+Specifies an array of network types for the addresses to remove. 
 The acceptable values for this parameter are:
 
 - Provider 
--  Customer 
--  NonVirtualized
+- Customer 
+- NonVirtualized
 
 If you do not specify a value, the cmdlet deletes all matching IP address ranges of network type Provider, Customer, and NonVirtualized.
 

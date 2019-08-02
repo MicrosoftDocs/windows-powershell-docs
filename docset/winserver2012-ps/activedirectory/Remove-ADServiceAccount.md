@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 6991EAF5-CCE9-4081-901C-C55765011D6A
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-ADServiceAccount
@@ -24,7 +28,7 @@ After this operation, the MSA no longer exists in the directory, but computers w
 
 The Identity parameter specifies the Active Directory MSA to remove.
 You can identify a MSA by its distinguished name (DN), GUID, security identifier (SID) or security accounts manager (SAM) account name.
-You can also set the Identity parameter to a MSA object variable, such as $\<localSerivceAccountObject\>, or you can pass a MSA object through the pipeline to the Identity parameter.
+You can also set the Identity parameter to a MSA object variable, such as $\<localServiceAccountObject\>, or you can pass a MSA object through the pipeline to the Identity parameter.
 For example, you can use the Get-ADServiceAccount cmdlet to retrieve a MSA object and then pass the object through the pipeline to the Remove-ADServiceAccount cmdlet.
 
 Note: Removing the service account is a different operation than uninstalling the service account locally.

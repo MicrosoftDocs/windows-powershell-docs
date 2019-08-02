@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-ADServiceAccount
+ms.reviewer:
 ms.assetid: 6991EAF5-CCE9-4081-901C-C55765011D6A
 ---
 
@@ -36,7 +37,7 @@ After this operation, the managed service account no longer exists in the direct
 
 The *Identity* parameter specifies the Active Directory managed service account to remove.
 You can identify a managed service account by its distinguished name (DN), GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the *Identity* parameter to a managed service account object variable, such as `$<localSerivceAccountObject>`, or you can pass a managed service account object through the pipeline to the *Identity* parameter.
+You can also set the *Identity* parameter to a managed service account object variable, such as `$<localServiceAccountObject>`, or you can pass a managed service account object through the pipeline to the *Identity* parameter.
 For example, you can use the **Get-ADServiceAccount** cmdlet to retrieve a managed service account object and then pass the object through the pipeline to the **Remove-ADServiceAccount** cmdlet.
 
 Note: Removing the service account is a different operation than uninstalling the service account locally.

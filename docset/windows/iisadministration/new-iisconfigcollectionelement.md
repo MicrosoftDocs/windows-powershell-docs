@@ -1,9 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 01C24596-30E3-43F2-B7DF-F5F127C87D70
+manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
@@ -11,6 +12,8 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-IISConfigCollectionElement
+ms.author: v-anbarr
+ms.reviewer:
 ---
 
 # New-IISConfigCollectionElement

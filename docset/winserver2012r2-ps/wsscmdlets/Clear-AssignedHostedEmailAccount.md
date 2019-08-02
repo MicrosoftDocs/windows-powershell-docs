@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Clear-AssignedHostedEmailAccount
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A63F86EC-E9AE-4707-B839-95501A10CA54
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Clear-AssignedHostedEmailAccount

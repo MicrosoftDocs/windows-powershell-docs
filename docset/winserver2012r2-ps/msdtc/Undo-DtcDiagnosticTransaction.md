@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Undo-DtcDiagnosticTransaction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F93A43CE-6DBD-4CBA-B8EE-970858959D7E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Undo-DtcDiagnosticTransaction

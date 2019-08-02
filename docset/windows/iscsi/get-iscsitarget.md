@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITarget.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IscsiTarget
+ms.reviewer:
 ms.assetid: 686A3960-380E-4E4D-A6A4-24F9DFCC793E
 ---
 
@@ -211,25 +212,25 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_InitiatorPort
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_InitiatorPort
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiConnection
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiConnection
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiSession
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiSession
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTarget
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTarget
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
@@ -237,7 +238,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
 

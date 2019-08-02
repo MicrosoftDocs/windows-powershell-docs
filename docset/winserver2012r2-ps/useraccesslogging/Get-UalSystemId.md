@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-UalSystemId
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6595F712-6714-497D-A95D-18C7043EA8E8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-UalSystemId
@@ -271,10 +273,8 @@ Accept wildcard characters: False
 Specifies an array of values.
 Each value represents an operating system platform.
 The acceptable values for this parameter are:
-- 1.
-An unsupported Windows system.
-- 2.
-A supported Windows system.
+- 1 - An unsupported Windows system.
+- 2 - A supported Windows system.
 
 ```yaml
 Type: UInt32[]
@@ -292,10 +292,8 @@ Accept wildcard characters: False
 Specifies an array of values.
 Each value represents an operating system product type.
 The acceptable values for this parameter are:
-- 1.
-Standard Edition of a server product. 
-- 2.
-Enterprise Edition of a server product.
+- 1 - Standard Edition of a server product. 
+- 2 - Enterprise Edition of a server product.
 
 ```yaml
 Type: UInt32[]

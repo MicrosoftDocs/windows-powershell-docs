@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 30C0E331-8926-48D7-9169-EB0EEC09369B
+manager: dansimp
 ---
 
 # Set-NetIPsecMainModeRule
@@ -54,7 +58,7 @@ Set-NetIPsecMainModeRule [-AsJob] [-CimSession <CimSession[]>] [-Description <St
 ```
 
 ## DESCRIPTION
-The **Set-NetIPsecMainModeRule** cmdlet modifies firewall properties of exsisting main mode rules.
+The **Set-NetIPsecMainModeRule** cmdlet modifies firewall properties of existing main mode rules.
 This cmdlet gets one or more main mode rules to be modified with the **Name** parameter (default), the **DisplayName** parameter, or by group association using the **DisplayGroup** or **Group** parameters.
 The rules cannot be queried by property in this cmdlet.
 The Get-NetIPsecMainModeRule cmdlet returns the queried objects and pipes the objects into this cmdlet.

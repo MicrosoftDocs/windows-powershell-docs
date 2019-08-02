@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Lock-BitLocker
+ms.reviewer:
 ms.assetid: 90042DB2-7289-4167-A7B3-245D316EF361
 ---
 
@@ -42,7 +43,7 @@ For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://t
 
 ### Example 1: Lock a volume
 ```
-PS C:\> Lock-Volume -MountPoint "E:" -ForceDismount
+PS C:\> Lock-BitLocker -MountPoint "E:" -ForceDismount
 ```
 
 This command locks the BitLocker volume specified with the *MountPoint* parameter.

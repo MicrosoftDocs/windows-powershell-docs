@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssMsoGroup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3B8EE9F4-DE35-424A-ACF7-58037935AFAC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssMsoGroup

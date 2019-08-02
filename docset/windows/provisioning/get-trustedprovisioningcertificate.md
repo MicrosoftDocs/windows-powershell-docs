@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-TrustedProvisioningCertificate
+ms.reviewer:
 ---
 
 # Get-TrustedProvisioningCertificate

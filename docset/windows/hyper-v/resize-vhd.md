@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Resize-VHD
+ms.reviewer:
 ms.assetid: 958902EA-0FBB-474D-82BD-4FA8B44017F2
 ---
 
@@ -41,7 +42,8 @@ The **Resize-VHD** cmdlet resizes a virtual hard disk.
 This cmdlet lets you shrink or expand the size of a virtual hard disk, but the shrink operation is allowed only on VHDX virtual hard disks.
 The shrink operation fails if it would shrink the virtual disk to less than its minimum size (available through the VHDX object's **MinimumSize** property).
 
-**Resize-VHD** is an offline operation; the virtual hard disk must not be attached when the operation is initiated.
+If the VHD belongs to the virtual IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.
+If the VHD belongs to the virtual SCSI chain, you **can** resize the virtual disk while the virtual machine is online.
 
 ## EXAMPLES
 
@@ -231,6 +233,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
+
+### Microsoft.Vhd.PowerShell.VirtualHardDisk
 
 ## NOTES
 

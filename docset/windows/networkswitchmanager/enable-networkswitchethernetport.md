@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetworkSwitchEthernetPort-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-NetworkSwitchEthernetPort
+ms.reviewer:
 ms.assetid: 45423D8F-EB62-41F7-A09F-49584C273C23
 ---
 
@@ -47,7 +48,7 @@ The **Enable-NetworkSwitchEthernetPort** cmdlet enables an Ethernet port on a ne
 
 ## EXAMPLES
 
-### Example 1: Enable a ports by using a device IDthe pipelinesa device ID
+### Example 1: Enable a port by using a device ID
 ```
 PS C:\>$Session = New-CimSession -ComputerName "NetworkSwitch08"
 PS C:\> Enable-NetworkSwitchEthernetPort -DeviceID "Ethernet17" -CimSession $Session

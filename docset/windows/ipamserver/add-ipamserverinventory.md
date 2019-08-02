@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamServerInventory.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-IpamServerInventory
+ms.reviewer:
 ms.assetid: AF009726-6606-406E-AA06-85754D59F724
 ---
 
@@ -150,7 +151,7 @@ Specifies the manageability status of a server.
 The acceptable values for this parameter are:
 
 - Unspecified
--  Managed
+- Managed
 - Unmanaged 
 
 IPAM gathers data from the server if this parameter is set to Managed.
@@ -220,8 +221,8 @@ The acceptable values for this parameter are:
 
 - DC 
 - DHCP 
--  DNS 
--  NPS
+- DNS 
+- NPS
 
 ```yaml
 Type: ServerRole[]

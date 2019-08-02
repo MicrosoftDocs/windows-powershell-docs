@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageCmdlets.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-StorageReliabilityCounter
+ms.reviewer:
 ms.assetid: A2A63CBE-B973-469C-BC23-82A0E3763C7C
 ---
 
@@ -44,7 +45,7 @@ These counters include information about such things as the device temperature, 
 
 ### Example 1: Get the counters for a specified physical disk
 ```
-PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk8" | Get-StorageReliabilityCounter
+PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk8" | Get-StorageReliabilityCounter | Format-List
 
 ObjectId                : {e24dbc00-a448-11e1-a100-806e6f6e6963}:reliabilitycounter
 PassThroughClass        : 
@@ -71,7 +72,7 @@ WriteErrorsUncorrected  : 0
 PSComputerName          :
 ```
 
-This command gets the physical disk named PhysicalDisk8, and uses the pipeline operator to pass it to Get-StorageReliabilityCounter, which gets its storage reliability counters.
+This command gets the physical disk named PhysicalDisk8, and uses the pipeline operator to pass it to Get-StorageReliabilityCounter, which gets all of its storage reliability counters through another pipeline with Format-List.
 
 ## PARAMETERS
 

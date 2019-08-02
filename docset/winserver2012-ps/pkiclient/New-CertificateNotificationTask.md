@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 51E52DB2-3187-4EB5-9AC6-319EAF7AE11A
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-CertificateNotificationTask

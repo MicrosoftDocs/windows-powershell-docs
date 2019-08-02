@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C35EB814-5C83-490B-9BF8-4437F7975E3C
+manager: dansimp
 ---
 
 # Get-NlbClusterNodeNetworkInterface

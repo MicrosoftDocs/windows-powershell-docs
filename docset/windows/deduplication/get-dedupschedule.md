@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DedupSchedule.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-DedupSchedule
+ms.reviewer:
 ms.assetid: AF82B937-D34A-4F57-B281-3C3E570FCCCF
 ---
 
@@ -135,8 +136,8 @@ Specifies an array of types of data deduplication job schedules for which to ret
 The acceptable values for this parameter are:
 
 - Optimization
--   GarbageCollection
--  Scrubbing
+- GarbageCollection
+- Scrubbing
 - Unoptimization
 
 ```yaml

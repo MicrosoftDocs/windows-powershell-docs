@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Grant-ADAuthenticationPolicySiloAccess
+ms.reviewer:
 ms.assetid: 5127BBE7-39FA-4169-B93C-E567032F6894
 ---
 
@@ -192,7 +193,7 @@ Domain name values:
 Directory server values:  
 - A Fully qualified directory server name
 - A NetBIOS name
---A Fully qualified directory server name and port
+- A Fully qualified directory server name and port
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 

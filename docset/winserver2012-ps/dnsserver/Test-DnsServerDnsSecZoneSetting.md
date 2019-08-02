@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: FC8C0AAD-52D8-4DD8-9E54-1C1D9D57611B
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Test-DnsServerDnsSecZoneSetting

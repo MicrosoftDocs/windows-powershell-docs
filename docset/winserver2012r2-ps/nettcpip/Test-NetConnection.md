@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Test-NetConnection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F76921D4-3657-40BF-A99F-2E83609EA048
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Test-NetConnection
@@ -137,10 +139,10 @@ This command tests a network connection to a remote host named www.contoso.com.
 Specifies the common service TCP port number.
 The acceptable values for this parameter are:
 
--  SMB 
--  HTTP 
--  RDP
--  PING
+- SMB 
+- HTTP 
+- RDP
+- PING
 
 ```yaml
 Type: String

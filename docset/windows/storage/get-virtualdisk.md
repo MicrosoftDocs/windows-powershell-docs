@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: VirtualDisk.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-VirtualDisk
+ms.reviewer:
 ms.assetid: 0EEBA53F-6468-485F-A680-49260B4C83F0
 ---
 
@@ -633,7 +634,7 @@ You can use the pipeline operator to pass an MSFT_TargetVirtualDisk object to th
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_VirtualDisk
-This cmdlet outputs an object that represents the specified virtual disk.
+This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, please see [MSFT_VirtualDisk class](https://docs.microsoft.com/previous-versions/windows/desktop/stormgmt/msft-virtualdisk)
 
 ## NOTES
 

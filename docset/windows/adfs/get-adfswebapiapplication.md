@@ -1,21 +1,22 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: CC8998A0-12E0-4CBA-A56B-FBFC5F399AA2
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AdfsWebApiApplication
+ms.reviewer:
 ---
 
 # Get-AdfsWebApiApplication
@@ -68,7 +69,7 @@ Specifies a Web API application to get.
 ```yaml
 Type: WebApiApplication
 Parameter Sets: ApplicationObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -83,7 +84,7 @@ Specifies an application group for which to get Web API applications.
 ```yaml
 Type: ApplicationGroup
 Parameter Sets: ApplicationGroupObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -98,7 +99,7 @@ Specifies the ID of an application group for which to get Web API applications.
 ```yaml
 Type: String
 Parameter Sets: ApplicationGroupIdentifier
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -113,7 +114,7 @@ Specifies an ID of a Web API application to get.
 ```yaml
 Type: String[]
 Parameter Sets: Identifier
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -128,7 +129,7 @@ Specifies an array of names of Web API applications to get.
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -143,7 +144,7 @@ Specifies the prefix identifier of Web API applications to get.
 ```yaml
 Type: String
 Parameter Sets: PrefixIdentifier
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -165,72 +166,72 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.WebApiApplication
-	AccessControlPolicyName               string
-	AccessControlPolicyParameters         System.Object
-	AdditionalAuthenticationRules         string
-	AllowedAuthenticationClassReferences  string[]
-	AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-	AlwaysRequireAuthentication           bool
-	ApplicationGroupId                    string
-	ApplicationGroupIdentifier            string
-	ClaimsProviderName                    string[]
-	DelegationAuthorizationRules          string
-	Description                           string
-	Enabled                               bool
-	Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
-	ImpersonationAuthorizationRules       string
-	IssuanceAuthorizationRules            string
-	IssuanceTransformRules                string
-	IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-	Name                                  string
-	NotBeforeSkew                         int
-	PublishedThroughProxy                 bool
-	RefreshTokenProtectionEnabled         bool
-	RequestMFAFromClaimsProviders         bool
-	ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	TokenLifetime                         int
+AccessControlPolicyName               string
+AccessControlPolicyParameters         System.Object
+AdditionalAuthenticationRules         string
+AllowedAuthenticationClassReferences  string[]
+AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
+AlwaysRequireAuthentication           bool
+ApplicationGroupId                    string
+ApplicationGroupIdentifier            string
+ClaimsProviderName                    string[]
+DelegationAuthorizationRules          string
+Description                           string
+Enabled                               bool
+Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
+ImpersonationAuthorizationRules       string
+IssuanceAuthorizationRules            string
+IssuanceTransformRules                string
+IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
+Name                                  string
+NotBeforeSkew                         int
+PublishedThroughProxy                 bool
+RefreshTokenProtectionEnabled         bool
+RequestMFAFromClaimsProviders         bool
+ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
+TokenLifetime                         int
 
 ### Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-	
-	AllowedClientTypes
-	{
-	  None = 0,
-	  Public = 2,
-	  Confidential=4,
-	}
+
+AllowedClientTypes
+{
+  None = 0,
+  Public = 2,
+  Confidential=4,
+}
 
 ### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-	
-	RefreshTokenIssuanceDeviceTypes
-	{
-	  NoDevice = 0,
-	  WorkplaceJoinedDevices = 1,
-	  AllDevices = 2
-	}
-	
+
+RefreshTokenIssuanceDeviceTypes
+{
+  NoDevice = 0,
+  WorkplaceJoinedDevices = 1,
+  AllDevices = 2
+}
+
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-	IsParameterized  bool
-	Summary          string
-	Serialized       string
+IsParameterized  bool
+Summary          string
+Serialized       string
 
 ## NOTES
 Microsoft.IdentityServer.Management.Resources.WebApiApplication inherits from Microsoft.IdentityServer.Management.Resources.ClientApplication object and implements the Microsoft.IdentityServer.Management.Resources.IApplication interface.
 
-		Microsoft.IdentityServer.Management.Resources.ClientApplication
-		
-		ApplicationGroupIdentifier                        string
-		Description                                       string
-		Enabled                                           bool
-		Identifier                                        string
-		Name                                              string
-		RedirectUri                                       string[]
-		
-		Microsoft.IdentityServer.Management.Resources.IApplication
-		
-		ApplicationGroupIdentifier                        string
-		Enabled                                           bool
-		Name                                              string
+Microsoft.IdentityServer.Management.Resources.ClientApplication
+
+ApplicationGroupIdentifier                        string
+Description                                       string
+Enabled                                           bool
+Identifier                                        string
+Name                                              string
+RedirectUri                                       string[]
+
+Microsoft.IdentityServer.Management.Resources.IApplication
+
+ApplicationGroupIdentifier                        string
+Enabled                                           bool
+Name                                              string
 
 ## RELATED LINKS
 
@@ -239,4 +240,3 @@ Microsoft.IdentityServer.Management.Resources.WebApiApplication inherits from Mi
 [Remove-AdfsWebApiApplication](./Remove-AdfsWebApiApplication.md)
 
 [Set-AdfsWebApiApplication](./Set-AdfsWebApiApplication.md)
-

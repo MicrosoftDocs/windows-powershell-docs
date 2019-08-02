@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FB356190-BD19-4BFD-9089-72C65065C776
+manager: dansimp
 ---
 
 # Restart-PrintJob
@@ -42,7 +46,7 @@ You do not need administrator privileges to use **Restart-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Restart a selected print job  -------------------------- xample: Restart a selected print job
+### -------------------------- Example 1: Restart a selected print job  -------------------------- xample: Restart a selected print job
 ```
 PS C:\> Restart-PrintJob -PrinterName "PrinterName" -ID 1
 ```

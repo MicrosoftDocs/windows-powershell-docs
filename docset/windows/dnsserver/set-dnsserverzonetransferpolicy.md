@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZoneTransferPolicy_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-DnsServerZoneTransferPolicy
+ms.reviewer:
 ms.assetid: 397B46D4-FBAD-41DC-91FB-DF7EDB5A980D
 ---
 
@@ -58,7 +59,7 @@ PS C:\> Set-DnsServerZoneTransferPolicy -Name "InternalTransfers" -TransportProt
 ```
 
 This command updates the zone transfer policy named InternalTransfers.
-The command modifies the transport protocol and the server interface IP address criterial.
+The command modifies the transport protocol and the server interface IP address criteria.
 For the server interface IP address, the command specifies $Null, which removes the previously set criterion.
 
 ## PARAMETERS

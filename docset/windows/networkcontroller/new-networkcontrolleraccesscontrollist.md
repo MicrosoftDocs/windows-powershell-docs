@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-NetworkControllerAccessControlList
+ms.reviewer:
 ms.assetid: 5040E9B9-D832-47A5-BB62-4B20C54760D1
 ---
 
@@ -40,26 +41,26 @@ The **New-NetworkControllerAccessControlList** cmdlet creates a new access contr
 
 This example creates an access control list with two rules. The first rule allows all inbound network traffic. The second rule allows all outbound network traffic.
 ```
-$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
-$ruleproperties.Protocol = "All"  
-$ruleproperties.SourcePortRange = "0-65535"  
-$ruleproperties.DestinationPortRange = "0-65535"  
-$ruleproperties.Action = "Allow"  
-$ruleproperties.SourceAddressPrefix = "*"  
-$ruleproperties.DestinationAddressPrefix = "*"  
-$ruleproperties.Priority = "100"  
-$ruleproperties.Type = "Inbound"  
-$ruleproperties.Logging = "Enabled"  
-$aclrule1 = new-object Microsoft.Windows.NetworkController.AclRule  
-$aclrule1.Properties = $ruleproperties  
-$aclrule1.ResourceId = "AllowAll_Inbound"  
-$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties  
-$ruleproperties.Protocol = "All"  
-$ruleproperties.SourcePortRange = "0-65535"  
-$ruleproperties.DestinationPortRange = "0-65535"  
-$ruleproperties.Action = "Allow"  
-$ruleproperties.SourceAddressPrefix = "*"  
-$ruleproperties.DestinationAddressPrefix = "*"  
+$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties 
+$ruleproperties.Protocol = "All" 
+$ruleproperties.SourcePortRange = "0-65535" 
+$ruleproperties.DestinationPortRange = "0-65535" 
+$ruleproperties.Action = "Allow" 
+$ruleproperties.SourceAddressPrefix = "*" 
+$ruleproperties.DestinationAddressPrefix = "*" 
+$ruleproperties.Priority = "100" 
+$ruleproperties.Type = "Inbound" 
+$ruleproperties.Logging = "Enabled" 
+$aclrule1 = new-object Microsoft.Windows.NetworkController.AclRule 
+$aclrule1.Properties = $ruleproperties 
+$aclrule1.ResourceId = "AllowAll_Inbound" 
+$ruleproperties = new-object Microsoft.Windows.NetworkController.AclRuleProperties 
+$ruleproperties.Protocol = "All" 
+$ruleproperties.SourcePortRange = "0-65535" 
+$ruleproperties.DestinationPortRange = "0-65535" 
+$ruleproperties.Action = "Allow" 
+$ruleproperties.SourceAddressPrefix = "*" 
+$ruleproperties.DestinationAddressPrefix = "*" 
 $ruleproperties.Priority = "110"
 $ruleproperties.Type = "Outbound"  
 $ruleproperties.Logging = "Enabled"  

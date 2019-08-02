@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterAdvancedProperty.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-NetAdapterAdvancedProperty
+ms.reviewer:
 ms.assetid: 78FD4A08-1D00-4D41-85AA-ABD1EAC6E46D
 ---
 
@@ -63,7 +64,7 @@ This command sets the value of the Flow Control advanced property on the network
 
 ### Example 2: Set the value of an registry value on the specified network adapter
 ```
-PS C:\> Set-NetAdapterAdvancedProperty -Name "MyAdapter" -RegistryKeyword "*Flo*rol" -RegistryType "REG_SZ" -RegistryValue "Disable"
+PS C:\> Set-NetAdapterAdvancedProperty -Name "MyAdapter" -RegistryKeyword "*Flo*rol" -RegistryValue "Disable"
 ```
 
 This command sets the value of the Flow Control registry value on the network adapter named MyAdapter using wildcard characters in the keyword name.

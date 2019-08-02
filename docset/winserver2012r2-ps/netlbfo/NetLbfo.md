@@ -7,13 +7,15 @@ Locale: en-US
 title: NetLbfo
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3f3c6acc-3d5a-4d36-86ed-948cd39970fa
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # NetLbfo Module

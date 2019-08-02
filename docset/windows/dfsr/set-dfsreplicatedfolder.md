@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DfsrPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-DfsReplicatedFolder
+ms.reviewer:
 ms.assetid: 8816AFEA-8785-49C5-A433-6A90F53E0D47
 ---
 
@@ -130,8 +131,7 @@ Accept wildcard characters: False
 ### -DfsnPath
 Specifies the DFS Namespace folder path of the replicated folder.
 
-The DFS Namespace folder path has no effect on replication.
-This property exists only as a descriptive convenience to administrators and DFS Replication service does not validate the value of this property.
+This parameter is used to connect the replication group to the replicated folder.
 
 ```yaml
 Type: String

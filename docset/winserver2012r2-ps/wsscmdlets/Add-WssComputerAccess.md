@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssComputerAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC660DCC-301B-434F-AB10-BD4203A38FC7
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-WssComputerAccess

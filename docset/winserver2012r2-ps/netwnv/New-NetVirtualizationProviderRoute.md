@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetVirtualizationProviderRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FE9179A0-8B60-41C2-89C5-7A71ACA3E9D9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetVirtualizationProviderRoute

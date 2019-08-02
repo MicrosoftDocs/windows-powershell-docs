@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 896A7FBB-B98F-4B26-AC42-0811C232B5ED
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-WebApplicationProxyApplication

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Import-RDPersonalVirtualDesktopAssignment
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB66E4F3-2B4A-4717-B674-59238F0C5A34
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Import-RDPersonalVirtualDesktopAssignment

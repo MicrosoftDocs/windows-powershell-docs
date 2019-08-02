@@ -1,21 +1,22 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 592B5570-5A73-48AB-B438-68E7BDD299FE
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AdfsApplicationGroup
+ms.reviewer:
 ---
 
 # Get-AdfsApplicationGroup
@@ -53,7 +54,7 @@ Specifies an application group.
 ```yaml
 Type: ApplicationGroup
 Parameter Sets: ApplicationGroupObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -68,7 +69,7 @@ Specifies the ID of an application group.
 ```yaml
 Type: String[]
 Parameter Sets: ApplicationGroupIdentifier
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -83,7 +84,7 @@ Specifies an array of names of application groups.
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -103,37 +104,37 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
-	ApplicationGroupIdentifier  string
-	Applications                Microsoft.IdentityServer.Management.Resources.IApplication[]
-	Description                 string
-	Enabled                     bool
-	Name                        string
+ApplicationGroupIdentifier  string
+Applications                Microsoft.IdentityServer.Management.Resources.IApplication[]
+Description                 string
+Enabled                     bool
+Name                        string
 
 ### Microsoft.IdentityServer.Management.Resources.IApplication
-	ADUserPrincipalName                   string
-	ApplicationGroupIdentifier            string
-	ClientSecret                          string
-	Description                           string
-	Enabled                               bool
-	Identifier                            string
-	JWKSUri                               uri
-	JWTSigningCertificateRevocationCheck  Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	JWTSigningKeys                        System.Collections.Generic.IDictionary[string,System.Object]
-	Name                                  string
-	RedirectUri                           string[]
+ADUserPrincipalName                   string
+ApplicationGroupIdentifier            string
+ClientSecret                          string
+Description                           string
+Enabled                               bool
+Identifier                            string
+JWKSUri                               uri
+JWTSigningCertificateRevocationCheck  Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
+JWTSigningKeys                        System.Collections.Generic.IDictionary[string,System.Object]
+Name                                  string
+RedirectUri                           string[]
 
 ### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-	
-	RevocationSetting
-	{
-	   None = 0,
-	   CheckEndCert = 1,
-	   CheckEndCertCacheOnly = 2,
-	   CheckChain = 3,
-	   CheckChainCacheOnly = 4,
-	   CheckChainExcludeRoot = 5,
-	   CheckChainExcludeRootCacheOnly = 6,
-	}
+
+RevocationSetting
+{
+   None = 0,
+   CheckEndCert = 1,
+   CheckEndCertCacheOnly = 2,
+   CheckChain = 3,
+   CheckChainCacheOnly = 4,
+   CheckChainExcludeRoot = 5,
+   CheckChainExcludeRootCacheOnly = 6,
+}
 
 ## NOTES
 
@@ -148,4 +149,3 @@ Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 [Remove-AdfsApplicationGroup](./Remove-AdfsApplicationGroup.md)
 
 [Set-AdfsApplicationGroup](./Set-AdfsApplicationGroup.md)
-

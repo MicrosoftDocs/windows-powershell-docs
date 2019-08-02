@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetIPv4Protocol
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ADC87872-8715-4158-A891-FB552685718B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetIPv4Protocol

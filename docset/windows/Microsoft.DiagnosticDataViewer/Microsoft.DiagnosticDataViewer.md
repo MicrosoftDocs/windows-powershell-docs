@@ -1,6 +1,9 @@
 ---
 Module Name: Microsoft.DiagnosticDataViewer
 Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US

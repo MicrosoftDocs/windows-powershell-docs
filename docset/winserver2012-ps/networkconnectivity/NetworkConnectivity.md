@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=232919
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 639DAD91-9062-4005-A4B9-A9BCD71FD1D4
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetworkConnectiviFIX Module

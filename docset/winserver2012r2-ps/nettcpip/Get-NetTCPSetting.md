@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetTCPSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetTCPSetting
@@ -458,7 +460,7 @@ Accept wildcard characters: False
 
 ### -MaxSynRetransmissions
 Specifies the maximum number of times the computers sends SYN packets without receiving a response.
-The cmdlet gets settings that have the maxium values that you specify.
+The cmdlet gets settings that have the maximum values that you specify.
 
 ```yaml
 Type: Byte[]

@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Add-IpamServerInventory
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -126,7 +128,7 @@ Specifies the manageability status of a server.
 The acceptable values for this parameter are:
 
 - Unspecified
--  Managed
+- Managed
 - Unmanaged 
 
 IPAM gathers data from the server if this parameter is set to Managed.
@@ -196,8 +198,8 @@ The acceptable values for this parameter are:
 
 - DC 
 - DHCP 
--  DNS 
--  NPS
+- DNS 
+- NPS
 
 ```yaml
 Type: ServerRole[]

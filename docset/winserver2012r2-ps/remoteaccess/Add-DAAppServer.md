@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-DAAppServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7553CE46-74B9-4B56-BDBE-2A4FDFB964D9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-DAAppServer
@@ -108,7 +110,7 @@ Additionally, a GPO is created with default name DirectAccess Application Server
 
 ### EXAMPLE 2
 ```
-PS C:\>Add-DAAppServer -Name da-test-0807 -SecuirtyGroupName daAppServerGrp
+PS C:\>Add-DAAppServer -Name da-test-0807 -SecurityGroupName daAppServerGrp
 SecurityGroupNameList: {corp.contoso.com\daappservergrp} 
 GpoName              : {corp.contoso.com\DirectAccess Application Server Settings} 
 ConnectionType       : E2EAuthOnlyToAppServer 

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-NetAdapterSriov
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC6BD443-FDEB-4B8A-B897-725FE316B809
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-NetAdapterSriov

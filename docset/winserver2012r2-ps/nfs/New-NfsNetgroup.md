@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NfsNetgroup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9F7475B3-86F8-4FCB-A9E2-747FA4FC5FF2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NfsNetgroup

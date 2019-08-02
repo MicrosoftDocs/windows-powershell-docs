@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 9148844F-816B-4F27-BB55-A38F4F353241
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-WebConfigurationProperty
@@ -27,26 +31,33 @@ Set-WebConfigurationProperty -Name <String> -InputObject <Object> [-Clr <String>
 ```
 
 ## DESCRIPTION
-TheSet-WebConfigurationPropertycmdlet changes the value of an IIS configuration property.
+The Set-WebConfigurationProperty cmdlet changes the value of an IIS configuration property.
 The element can be specified as a configuration section or an XPath query.
 Globbing, the use of wildcards, is supported.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Change the extension of all handlers mapped to .aspx --------------
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 IIS:\>Set-WebConfigurationProperty "//handlers/add[@path='*.aspx']" -PSPath IIS:\ -Name path -Value "*.mspx"
 ```
 
 The cmdlet changes all handler paths to *.mspx that were mapped to *.aspx.
 
-### -------------- EXAMPLE 2: Setting new Bindings on an existing Web site --------------
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 IIS:\>set-webconfigurationproperty '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath IIS:\ -Name Bindings -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```
 
 The cmdlet sets new bindings on an existing Web site.
 The original bindings are replaced.
+
+### -------------------------- EXAMPLE 3 -------------------------- 
+```
+IIS:\>set-webconfigurationproperty 'system.webserver/security/authentication/basicauthentication' -PSPath 'IIS:\sites\default web site\' -Name defaultlogondomain -Value 'contoso.com'
+```
+
+The cmdlet sets the default domain of Basic Authentication settings on an existing Web site. Note that for this example to work, Custom Site Delegation for this type of Authentication must be set to Read/Write at the site level.
 
 ## PARAMETERS
 
@@ -144,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-If theForceparameter is used it causes the configuration property setting to be set at a level in the configuration hierarchy above a lock in the configuration.
+If the Force parameter is used it causes the configuration property setting to be set at a level in the configuration hierarchy above a lock in the configuration.
 
 ```yaml
 Type: SwitchParameter

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetQosPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7E4D1383-2439-4F10-A86D-AA2BD4EC54E6
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetQosPolicy

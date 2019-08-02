@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 1D5EE754-8135-453C-B6B7-4E0C1F0B35DF
+manager: dansimp
 ---
 
 # New-OBRecoverableItem

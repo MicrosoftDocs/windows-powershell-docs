@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DBD70482-0849-404E-825C-A848EC84D2D4
+manager: dansimp
 ---
 
 # Set-NetVirtualizationCustomerRoute
@@ -37,7 +41,7 @@ You can use the Get-NetVirtualizationCustomerRoute cmdlet to get routes to modif
 - Destination prefix.
 A range of IP addresses as an IP prefix.
 - Next hop.
-A next hop gateway for the specified destionation addresses.
+A next hop gateway for the specified destination addresses.
 - Routing domain ID.
 An ID for a virtual network that can include multiple virtual subnets. 
 - Virtual subnet ID.
@@ -52,7 +56,7 @@ PS C:\>Set-NetVirtualizationCustomerRoute -DestinationPrefix "172.16.0.0/16" -Me
 
 This command changes the metric value to 3 for a Customer Route that has the specified destination prefix.
 
-### Example 2: Change a metric value for mulitple Customer Routes
+### Example 2: Change a metric value for multiple Customer Routes
 ```
 PS C:\>Get-NetVirtualizationCustomerRoute -NextHop "172.16.0.1" | Set-NetVirtualizationCustomerRoute -Metric 3
 ```

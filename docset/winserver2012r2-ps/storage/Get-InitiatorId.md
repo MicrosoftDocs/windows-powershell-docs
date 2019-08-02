@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-InitiatorId
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 56C96B69-33C0-402B-8813-D64A4434011D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-InitiatorId
@@ -71,7 +73,7 @@ PS C:\>Get-InitiatorId | Get-StorageSubSystem | Get-StorageProvider
 
 This example gets and displays the storage providers for each InitiatorID by piping the output from the **Get-InitiatorId** cmdlet to the **Get-StorageSubSystem** cmdlet, and then piping that cmdlet's output to the **Get-StorageProvider** cmdlet.
 
-### Example 3:Get the InitatorID objects for a masking set
+### Example 3:Get the InitiatorID objects for a masking set
 ```
 PS C:\>Get-InitiatorId -MaskingSet (Get-MaskingSet -FriendlyName *EQLV1)
 ```

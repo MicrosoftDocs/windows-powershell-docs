@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssBackupConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 07332E8C-8710-4F19-B6C3-FA64EEDE0FE0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssBackupConfiguration

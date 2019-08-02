@@ -1,8 +1,12 @@
 ---
 external help file: Storage2_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5FA44E53-C2D4-4870-A934-62430AF19BC6
+manager: dansimp
 ---
 
 # Optimize-Volume
@@ -43,75 +47,75 @@ Optimize-Volume [-Analyze] [-AsJob] [-CimSession <CimSession[]>] [-Defrag] [-ReT
 ```
 
 ## DESCRIPTION
-The **Optimize-Volume** cmdlet optimizes a volume, performing such tasks as defragmentation and trim. 
+The **Optimize-Volume** cmdlet optimizes a volume, performing such tasks as defragmentation and trim.
 
- 
-                      
- If no parameter is specified, then the default operation will be performed per the drive type as follows. 
 
- 
-                      
-Defragment (drive type) : HDD 
- 
-                      
-Slab : YES 
- 
-                      
-Consolidation : NO 
- 
-                      
-TRIM : NO 
 
- 
-                      
-Defragment (drive type) : SSD 
- 
-                      
-Slab : NO 
- 
-                      
-Consolidation : NO 
- 
-                      
-TRIM : YES 
+ If no parameter is specified, then the default operation will be performed per the drive type as follows.
 
- 
-                      
-Defragment (drive type): VHD 
- 
-                      
-Slab : YES 
- 
-                      
-Consolidation : NO 
- 
-                      
-TRIM : NO 
 
- 
-                      
-Defragment (drive type): diff VHD 
- 
-                      
-Slab : NO 
- 
-                      
-Consolidation : NO 
- 
-                      
-TRIM : YES 
 
- 
-                      
-Defragment (drive type): Thinly Provisioned (Storage Spaces, thinly provisioned SAN Virtual Disk, Dynamic VHD) 
- 
-                      
-Slab : NO 
- 
-                      
-Consolidation : YES 
- 
-                      
+Defragment (drive type) : HDD
+
+
+Slab : YES
+
+
+Consolidation : NO
+
+
+TRIM : NO
+
+
+
+Defragment (drive type) : SSD
+
+
+Slab : NO
+
+
+Consolidation : NO
+
+
+TRIM : YES
+
+
+
+Defragment (drive type): VHD
+
+
+Slab : YES
+
+
+Consolidation : NO
+
+
+TRIM : NO
+
+
+
+Defragment (drive type): diff VHD
+
+
+Slab : NO
+
+
+Consolidation : NO
+
+
+TRIM : YES
+
+
+
+Defragment (drive type): Thinly Provisioned (Storage Spaces, thinly provisioned SAN Virtual Disk, Dynamic VHD)
+
+
+Slab : NO
+
+
+Consolidation : YES
+
+
 TRIM : YES
 
 ## EXAMPLES
@@ -154,7 +158,7 @@ Performs analysis only and reports the current optimization state of the volume.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +173,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +205,7 @@ Runs the defragment function on the specified volume, consolidating fragmented f
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +220,7 @@ Specifies the drive letter of the volume to optimize.
 ```yaml
 Type: Char[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -231,7 +235,7 @@ Specifies the file system label of the volume to optimize.
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_5
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -246,7 +250,7 @@ Accepts an object from the pipeline as input.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -276,7 +280,7 @@ Specifies the path of the volume to optimize.
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_4
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -292,7 +296,7 @@ This can recover unused capacity on thinly provisioned drives and on solid state
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,12 +307,12 @@ Accept wildcard characters: False
 
 ### -SlabConsolidate
 Optimizes the volume per the supplied slab size and alignment to reduce the number of slabs on which the volumes is mounted.
-Perfoms slab consolidation on the storage to optimize slab allocations.
+Performs slab consolidation on the storage to optimize slab allocations.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +329,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +344,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,7 +360,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

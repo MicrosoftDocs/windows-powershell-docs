@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-HostedEmailAccount
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1844324C-1177-45C5-9EFA-E06C8A578B17
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-HostedEmailAccount
@@ -76,19 +78,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String,Microsoft.WindowsServerSolutions.HostedEmail.EmailAccountInfo
+### System.String
 LocalAccountName
 Type: System.String
 Description: local user name
 
+### Microsoft.WindowsServerSolutions.HostedEmail.EmailAccountInfo
 EmailAccount
 Type: Microsoft.WindowsServerSolutions.HostedEmail.EmailAccountInfo
 Description: email account information
 AccountId Property System.String
-AdditionalEmailAddresses Property System.Collections.Generic.IList\<System.String\>
+AdditionalEmailAddresses Property System.Collections.Generic.IList<System.String>
 DisplayNameProperty System.String
 Enabled Property System.Boolean
-ExtendedProperties Property System.Collections.Generic.IDictionary\<System.String,System.String\>
+ExtendedProperties Property System.Collections.Generic.IDictionary<System.String,System.String>
 FirstName Property System.String
 LastName Property System.String
 PrimaryEmailAddress Property System.String

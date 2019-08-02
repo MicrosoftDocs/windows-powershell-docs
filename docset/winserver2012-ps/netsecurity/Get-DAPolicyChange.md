@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5A75228C-5B7E-4E55-A3D1-E82EBD6DE2ED
+manager: dansimp
 ---
 
 # Get-DAPolicyChange

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RDCertificate
@@ -36,7 +38,7 @@ Set-RDCertificate [-Role] <RDCertificateRole> [-ImportPath <String>] [-Password 
 
 ## DESCRIPTION
 The **Set-RDCertificate** cmdlet imports a certificate to use with a Remote Desktop Services (RDS) role.
-The cmldet helps secure a certificate by using a secure string supplied by the user.
+The cmdlet helps secure a certificate by using a secure string supplied by the user.
 You can use this cmdlet to apply a new secure string for an existing certificate.
 
 ## EXAMPLES

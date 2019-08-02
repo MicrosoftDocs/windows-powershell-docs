@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPHttpsConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E3DB6861-8AC4-43D7-96A7-E832280B9A10
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPHttpsConfiguration

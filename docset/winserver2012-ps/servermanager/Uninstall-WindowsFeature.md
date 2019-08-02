@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 ms.assetid: FF3743EB-D209-44B9-93EC-7118ABE14EDE
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Uninstall-WindowsFeature

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssMediaSharedFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5A68C6C7-30DD-4564-811A-AE8967340503
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssMediaSharedFolder

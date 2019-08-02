@@ -2,7 +2,11 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 7426C09E-EA80-4C42-8F3A-0DEBB5C2B655
+manager: dansimp
 ---
 
 # Set-ScheduledTask

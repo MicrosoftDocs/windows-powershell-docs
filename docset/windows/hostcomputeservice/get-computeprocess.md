@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HostCompute.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ComputeProcess
+ms.reviewer:
 ms.assetid: 58A45E50-7BD0-4F5E-80E9-0BE0447A18F9
 ---
 
@@ -36,6 +37,8 @@ Get-ComputeProcess [-Id] <String[]> [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-ComputeProcess** cmdlet gets a list of running compute systems from the Hyper-V Host Compute Service, including virtual machines and containers.
+
+You must run this cmdlet from an elevated PowerShell session.
 
 ## EXAMPLES
 

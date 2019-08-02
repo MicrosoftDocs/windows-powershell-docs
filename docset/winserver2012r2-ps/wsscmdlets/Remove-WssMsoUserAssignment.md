@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-WssMsoUserAssignment
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4E2BEE0E-2960-4BDB-BA39-FAC5D727466E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WssMsoUserAssignment

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-RemoteAccessConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 53B62E18-5F03-4245-A3F9-6EF45C0290E9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RemoteAccessConfiguration

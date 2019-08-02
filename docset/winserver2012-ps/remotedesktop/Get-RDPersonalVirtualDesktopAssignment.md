@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 9E44FA3F-AD00-43B5-B5CE-D10F4DD4C9B6
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDPersonalVirtualDesktopAssignment

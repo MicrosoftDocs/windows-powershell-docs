@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: D64F31FE-AAE2-4364-8DF4-88065DFFEE40
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-WinUserLanguageList
@@ -56,9 +60,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### List<WinUserLanguage>
-A list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user accountâ€™s language list.
-For more information about the *Generic.List* object, see List\<T\> Classhttp://go.microsoft.com/fwlink/?LinkID=243342.
+### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
+A list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
+For more information about the *Generic.List* object, see System.Collections.Generic.List<T\> Classhttp://go.microsoft.com/fwlink/?LinkID=243342.
 
 The generic list object supports the following methods:
 

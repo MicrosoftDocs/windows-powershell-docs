@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-WinUserLanguageList
+ms.reviewer:
 ms.assetid: 58651E0A-B9DE-4895-9655-1117CF3D29C9
 ---
 
@@ -36,9 +37,9 @@ For more information, see [CultureInfo Class](http://go.microsoft.com/fwlink/?Li
 ## EXAMPLES
 
 ### Example 1: Create and set a language list
-```
+```powershell
 PS C:\> $UserLanguageList = New-WinUserLanguageList -Language "en-US"
-PS C:\> $UserLanguageList1.Add("fr-FR")
+PS C:\> $UserLanguageList.Add("fr-FR")
 PS C:\> Set-WinUserLanguageList -LanguageList $UserLanguageList
 ```
 
@@ -73,7 +74,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### List<WinUserLanguage>
+### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
 A list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
 For more information about the **Generic.List** object, see [System.Collections.Generic.List(Of T)](http://go.microsoft.com/fwlink/?LinkID=243342).
 

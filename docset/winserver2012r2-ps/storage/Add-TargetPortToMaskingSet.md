@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-TargetPortToMaskingSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 196E0BF1-8FE2-452C-8D7A-258443DCEDA1
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-TargetPortToMaskingSet

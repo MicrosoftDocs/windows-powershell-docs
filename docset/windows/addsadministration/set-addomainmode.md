@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ADDomainMode
+ms.reviewer:
 ms.assetid: 92758097-3F16-45CF-9434-3046C50BD5AF
 ---
 
@@ -131,13 +132,14 @@ For example, to set the domain mode level to Windows Server 2008 R2, you can spe
 
 The following are the currently supported values: 
 
---Windows Server 2000: **0** or **Windows2000Domain**
---Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**
---Windows Server 2003: **2** or **Windows2003Domain**
---Windows Server 2008: **3** or **Windows2008Domain**
---Windows Server 2008 R2: **4** or **Windows2008R2Domain**
---Windows Server 2012: **5** or **Windows2012Domain**
---Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+- Windows Server 2000: **0** or **Windows2000Domain**
+- Windows Server 2003 Interim Domain: **1** or **Windows2003InterimDomain**
+- Windows Server 2003: **2** or **Windows2003Domain**
+- Windows Server 2008: **3** or **Windows2008Domain**
+- Windows Server 2008 R2: **4** or **Windows2008R2Domain**
+- Windows Server 2012: **5** or **Windows2012Domain**
+- Windows Server 2012 R2: **6** or **Windows2012R2Domain**
+- Windows Server 2016: **7** or **WinThreshold**
 
 The domain functional level cannot be lower than the forest functional level, but it can be higher.
 The functional level can be increased, and also decreased as long as no feature that requires that functional level is in use, such as the Active Directory Recycle Bin.

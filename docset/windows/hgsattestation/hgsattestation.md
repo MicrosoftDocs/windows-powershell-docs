@@ -1,6 +1,9 @@
 ---
 Module Name: HgsAttestation
 Module Guid: B0121942-ED2D-4A2B-959E-F0CFA64B48A9
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519073
 Help Version: 5.0.0.2
 Locale: en-US

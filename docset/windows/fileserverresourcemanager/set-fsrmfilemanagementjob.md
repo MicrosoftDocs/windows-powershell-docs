@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FSRMFileManagementJob.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-FsrmFileManagementJob
+ms.reviewer:
 ms.assetid: C7B09260-DC16-4759-B849-BF9D98A4C151
 ---
 
@@ -376,7 +377,7 @@ Specifies an array of report types that the file management job generates.
 The acceptable values for this parameter are:
 
 - Information
--  Error
+- Error
 - Audit
 
 ```yaml

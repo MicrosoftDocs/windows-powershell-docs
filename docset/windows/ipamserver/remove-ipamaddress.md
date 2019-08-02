@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamAddress.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-IpamAddress
+ms.reviewer:
 ms.assetid: F746A0B2-9522-4724-8DD4-99300C702114
 ---
 
@@ -43,7 +44,7 @@ The cmdlet removes the specified IP address records permanently from the IPAM da
 Specify the IP addresses to remove or use the *InputObject* parameter to specify an **IpamAddress** object to remove.
 
 The cmdlet does not remove any reservations on the Dynamic Host Configuration Protocol (DHCP) server or Domain Name System (DNS) records.
-You can use Windows PowerShell for DHCP Server to remove a reservation from the DCHP server.
+You can use Windows PowerShell for DHCP Server to remove a reservation from the DHCP server.
 You can use Windows PowerShell for DNS to remove the DNS records associated with the IP addresses that you remove.
 
 ## EXAMPLES

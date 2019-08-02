@@ -1,9 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 52526FB4-E253-46F2-A4FC-CADFA8ED9D44
+manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
@@ -11,6 +12,8 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Remove-IISSite
+ms.author: v-anbarr
+ms.reviewer:
 ---
 
 # Remove-IISSite

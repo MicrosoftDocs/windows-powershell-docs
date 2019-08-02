@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Send-RDUserMessage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F22E8EB8-2A09-4D79-9D8C-01B2FF72777C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Send-RDUserMessage

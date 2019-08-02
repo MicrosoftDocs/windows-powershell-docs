@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Set-AdfsGlobalAuthenticationPolicy
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -37,7 +39,7 @@ You can also use the cmdlet to enable an external provider in the global policy.
 
 ### Example 1: Set the primary extranet authentication policy
 ```
-PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthenticaton')
+PS C:\> Set-AdfsGlobalAuthenticationPolicy -PrimaryExtranetAuthenticationProvider @('FormsAuthentication', 'CertificateAuthentication')
 ```
 
 This command sets the primary extranet authentication policy to forms-based or certificate-based authentication.

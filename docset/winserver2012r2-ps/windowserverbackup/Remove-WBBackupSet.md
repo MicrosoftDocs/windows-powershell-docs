@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WBBackupSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E057BEDD-F281-4463-9E4A-29DA9D8E171C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WBBackupSet

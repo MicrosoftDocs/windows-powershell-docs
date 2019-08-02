@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetNatSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 368F5A0E-2F50-45EC-A17F-A1710E40CEF9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetNatSession

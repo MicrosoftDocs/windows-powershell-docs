@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetIPsecPhase1AuthSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8D843BB8-8F79-4E1E-A6F9-5AD9615CB526
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetIPsecPhase1AuthSet
@@ -60,7 +62,7 @@ Set-NetIPsecPhase1AuthSet -InputObject <CimInstance[]> [-NewDisplayName <String>
 ## DESCRIPTION
 The **Set-NetIPsecPhase2AuthSet** cmdlet modifies cryptographic set properties of existing main mode cryptographic sets.
 
-This cmdlet returns one or more phase 1 authentication sets to be modified with the **Name** (default), **DisplayName** or or by association using the **DisplayGroup**, or **Group** cmdlet.
+This cmdlet returns one or more phase 1 authentication sets to be modified with the **Name** (default), **DisplayName** or by association using the **DisplayGroup**, or **Group** cmdlet.
 The sets cannot be queried by property in this cmdlet.
 The Get-NetIPsecPhase1AuthSet cmdlet returns queried rules and pipes the rules into this cmdlet.
 The remaining parameters specify the properties of this cmdlet to be modified.

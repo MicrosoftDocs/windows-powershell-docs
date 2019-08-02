@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Partition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-Partition
+ms.reviewer:
 ms.assetid: 85BB3C53-536E-408F-B159-28E91AFEB1A1
 ---
 
@@ -237,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystem
-Specifies the storage subsystem from which to get paritions.
+Specifies the storage subsystem from which to get partitions.
 To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
 
 ```yaml

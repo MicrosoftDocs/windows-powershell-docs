@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebConfigurationLocation
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 859BCA01-DD47-4DD2-A8A9-E32D648C648E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WebConfigurationLocation
@@ -32,7 +34,7 @@ The **Remove-WebConfigurationLocation** cmdlet removes an Internet Information S
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Add and remove a configuration location --------------
+### Example 1: Add and remove a configuration location
 ```
 IIS:\>Set-WebConfigurationProperty -PSPath "IIS:\" -Filter "//windowsAuthentication" -Location "Default Web Site/mypage.htm" -Name "enabled" -Value $True 
 IIS:\> Get-WebConfigurationLocation -Name "Default Web Site" -PSPath "IIS:\" "Sleep 5 seconds before removing the configuration location"; Sleep 5 

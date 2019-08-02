@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-ADDomainControllerPasswordReplicationPolicy
+ms.reviewer:
 ms.assetid: 9272C202-13CA-4248-AC58-D2D38A9F1608
 ---
 
@@ -44,7 +45,7 @@ The **Add-ADDomainControllerPasswordReplicationPolicy** cmdlet adds one or more 
 The *Identity* parameter specifies the read-only domain controller (RODC) that uses the allowed and denied lists to apply the password replication policy.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object of the server object, the GUID of the NTDS settings object of the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
-You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerobject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
 For example, you can use the **Get-ADDomainController** cmdlet to get a domain controller object and then pass the object through the pipeline to the **Add-ADDomainControllerPasswordReplicationPolicy** cmdlet.
 You must specify a read-only domain controller.
 If you specify a writeable domain controller for this parameter, the cmdlet returns a non-terminating error.
@@ -59,7 +60,7 @@ If a specified user, computer, or group is not on the allowed or denied list, th
 
 ## EXAMPLES
 
-### Example 1: Add user accounts with specified SamAcountNames to the allowed list
+### Example 1: Add user accounts with specified SamAccountNames to the allowed list
 ```
 PS C:\> Add-ADDomainControllerPasswordReplicationPolicy -Identity "USER01-RODC1" -AllowedList "PattiFuller", "DavidChew"
 ```

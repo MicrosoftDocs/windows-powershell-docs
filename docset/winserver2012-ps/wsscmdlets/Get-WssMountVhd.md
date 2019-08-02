@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 07D67763-DB64-47D6-ADA2-BADD3714A4F8
+manager: dansimp
 ---
 
 # Get-WssMountVhd

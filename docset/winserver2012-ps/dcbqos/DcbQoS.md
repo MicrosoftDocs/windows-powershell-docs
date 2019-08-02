@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216148
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 4ACBF941-38FF-485B-8919-22C594AC7788
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # DcbQoS Module

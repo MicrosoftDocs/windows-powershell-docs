@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4F91AE4E-7229-4C64-9CE8-8C3A53FA71BC
+manager: dansimp
 ---
 
 # Rename-MaskingSet

@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Export-IpamSubnet
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -72,7 +74,7 @@ Specifies an address family of IP address range objects to retrieve.
 The acceptable values for this parameter are:
 
 - IPv4
--  IPv6
+- IPv6
 
 ```yaml
 Type: AddressFamily

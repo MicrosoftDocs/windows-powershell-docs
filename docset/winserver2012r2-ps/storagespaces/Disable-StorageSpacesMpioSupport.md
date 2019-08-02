@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-StorageSpacesMpioSupport
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8A8433A6-1E8B-4229-938D-103452DEF6BC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-StorageSpacesMpioSupport

@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: provcmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -14,12 +14,13 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Export-ProvisioningPackage
+ms.reviewer:
 ---
 
 # Export-ProvisioningPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Extract the contents of a provisioning package.
 
 ## SYNTAX
 
@@ -42,16 +43,16 @@ Export-ProvisioningPackage [-RuntimeMetadata] <RuntimeProvPackageMetadata> [-Out
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Extract the contents of a provisioning package to the specified folder.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Export-ProvisioningPackage -PackageId {e2ea11f5-d8b0-4db9-bf96-8c909dc2fed5} -OutputFolder D:\Package
 ```
 
-{{ Add example description here }}
+This example extracts the content of a Package specifying it's PackageId to the specified folder.
 
 ## PARAMETERS
 
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnswerFileOnly
-{{Fill AnswerFileOnly Description}}
+Only exports the Windows provisioning answer file
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies a path to store logs files resulting from the export operation
 
 ```yaml
 Type: String
@@ -116,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-{{Fill OutputFolder Description}}
+Specifies the path to the output directory
 
 ```yaml
 Type: String
@@ -131,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackageId
-{{Fill PackageId Description}}
+Id of the Package to be extracted
 
 ```yaml
 Type: String
@@ -146,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -PackagePath
-{{Fill PackagePath Description}}
+Path to the package to be extracted
 
 ```yaml
 Type: String

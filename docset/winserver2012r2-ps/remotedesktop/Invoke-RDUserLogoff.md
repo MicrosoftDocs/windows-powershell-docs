@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Invoke-RDUserLogoff
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5C117FBB-2D76-4F8D-A434-E6539E28C25D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Invoke-RDUserLogoff

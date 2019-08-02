@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
+manager: dansimp
 ---
 
 # Get-NetTCPSetting

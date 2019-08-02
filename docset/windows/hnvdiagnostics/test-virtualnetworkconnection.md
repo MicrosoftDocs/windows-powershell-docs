@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Test-VirtualNetworkConnection-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-VirtualNetworkConnection
+ms.reviewer:
 ms.assetid: D646963C-057A-416D-8B76-154EEDD17929
 ---
 
@@ -51,7 +52,7 @@ The second command tests the specified virtual network connection.
 ### Example 2: Test a virtual network connection by receiving
 ```
 PS C:\> $password = ConvertTo-SecureString -String "password" -AsPlainText -Force
-PS C:\> $cred = New-Object pscredential -ArgumentList (".\administrator", $password) 
+PS C:\> $cred = New-Object PSCredential -ArgumentList (".\administrator", $password) 
 PS C:\> Test-VirtualNetworkConnection -OperationId "27" -HostName "host2.corp.com" -MgmtIP "192.10.10.12" -Creds $cred -VMName "TennantVM2" -VMNetworkAdapterName "Tennant1VMAdapter2" -SenderCAIP "10.123.176.108" -SenderVSID 6001 -ListenerCAIP "10.123.176.109" -ListenerVSID 6001
 ```
 

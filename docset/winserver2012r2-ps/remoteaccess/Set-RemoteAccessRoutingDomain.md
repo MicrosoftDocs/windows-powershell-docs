@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-RemoteAccessRoutingDomain
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 872E1D3F-B79C-40AD-A714-AF93151F1985
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RemoteAccessRoutingDomain
@@ -106,11 +108,11 @@ Specifies a transform constant.
 The acceptable values for this parameter are:
 
 - MD596
--  SHA196
+- SHA196
 - SHA256128
 - GCMAES128
--  GCMAES192
--  GCMAES256
+- GCMAES192
+- GCMAES256
 - None
 
 ```yaml

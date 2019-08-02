@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADObject
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -135,7 +137,7 @@ To modify an object property, you must use the Lightweight Directory Access Prot
 You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...} `
+`-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
 For example, if you want to remove the value 555-222-2222 and add the values 555-222-1111 and 555-222-3333 to Phone-Office-Other attribute (LDAP display name otherTelephone), and add the value 555-222-9999 to Phone-Mobile-Other (LDAP display name otherMobile), set the **Add** and **Remove** parameters as follows:
 
@@ -314,8 +316,8 @@ This parameter can also get this object through the pipeline or you can set this
 Derived types, such as the following, are also accepted:
 
 - **Microsoft.ActiveDirectory.Management.ADGroup**
--  **Microsoft.ActiveDirectory.Management.ADUser**
--  **Microsoft.ActiveDirectory.Management.ADComputer**
+- **Microsoft.ActiveDirectory.Management.ADUser**
+- **Microsoft.ActiveDirectory.Management.ADComputer**
 - **Microsoft.ActiveDirectory.Management.ADServiceAccount**
 - **Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy**
 - **Microsoft.ActiveDirectory.Management.ADDomain**
@@ -500,7 +502,7 @@ For example, if you want to replace the value 555-222-2222 with the values 555-2
 When you use the **Add**, **Remove**, **Replace** and **Clear** parameters together, the operations are performed in the following order:
 
 - **Remove**
--  **Add**
+- **Add**
 - **Replace**
 - **Clear**
 

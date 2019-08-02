@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-O365EmailAddresses
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 44D63EA5-59C4-4B49-B8C3-75DC6284F013
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-O365EmailAddresses
@@ -72,7 +74,7 @@ Description: local user name
 
 ## OUTPUTS
 
-### System.Collections.Generic.List<string>
+### System.Collections.Generic.List<System.String>
 This cmdlet returns a list of email addresses for a user.
 
 ## NOTES

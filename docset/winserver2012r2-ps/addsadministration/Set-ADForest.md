@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADForest
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -199,7 +201,7 @@ This parameter uses the following syntax to add remove, replace, or clear SPN su
 
 To add values:
 
-`-SPNSuffixes @{Add=value1,value2,...} `
+`-SPNSuffixes @{Add=value1,value2,...}`
 
 To remove values:
 
@@ -207,7 +209,7 @@ To remove values:
 
 To replace values:
 
-`-SPNSuffixes @{Replace=value1,value2,...} `
+`-SPNSuffixes @{Replace=value1,value2,...}`
 
 To clear all values:
 
@@ -216,7 +218,7 @@ To clear all values:
 You can specify more than one change by using a list separated by semicolons.
 For example, use the following syntax to add and remove SPN suffix values:
 
-`@{Add=value1,value2,...};@{Remove=value3,value4,...} `
+`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
 The operators are applied in the following sequence:
 

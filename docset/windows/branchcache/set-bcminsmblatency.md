@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BranchCacheOrchestrator.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-BCMinSMBLatency
+ms.reviewer:
 ms.assetid: AA728517-3C09-455C-8285-B7C5F8A1DEA5
 ---
 
@@ -38,7 +39,7 @@ For example, if the round trip network latency value is set to zero (0), the cli
 In another example, if the round trip network latency value is set to 100 milliseconds, then the clients do not cache content that they receive before 100 milliseconds pass, but they do begin to cache content that they receive after 100 milliseconds pass.
 
 By default, the value of this setting is `80` milliseconds.
-To make sure that that client computers always cache content, set the network latency value to 0.
+To make sure that client computers always cache content, set the network latency value to 0.
 
 To prevent caching except in circumstances where network latency is very long, set the latency value to a very high value.
 If a high value is used, however, then it is possible that network latency will not reach this long a delay, in which case BranchCache is disabled on your network.

@@ -1,10 +1,10 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -14,12 +14,13 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Disable-TlsCipherSuite
+ms.reviewer:
 ---
 
 # Disable-TlsEccCurve
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
 
 ## SYNTAX
 
@@ -28,21 +29,21 @@ Disable-TlsEccCurve [-Name] <String> [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This Command disables the Elliptic Curve Cryptography (ECC) cipher suites available for TLS(Transport Layer Security) for a computer.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Disable-TlsEccCurve -Name curve25519
 ```
 
-{{ Add example description here }}
+This will disable the ECC Curve "curve25519".
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the ECC curve to disable.
 
 ```yaml
 Type: String

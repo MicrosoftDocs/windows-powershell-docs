@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebConfigurationLock
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2240A329-67C4-4F6E-8C4E-F22C16D4DEB9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WebConfigurationLock

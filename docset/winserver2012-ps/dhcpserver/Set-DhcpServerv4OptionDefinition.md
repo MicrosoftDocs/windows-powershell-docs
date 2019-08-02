@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: AA161AD0-FA16-4F73-A274-6FC3F35FDAFB
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DhcpServerv4OptionDefinition
@@ -125,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptionId
-Speciifes the numeric identifier (ID) of the option definition being modified.
+Specifies the numeric identifier (ID) of the option definition being modified.
 
 ```yaml
 Type: UInt32

@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 55A6114A-DA95-4D70-8007-6826DE0756B9
+manager: dansimp
 ---
 
 # Remove-PrinterPort
@@ -36,7 +40,7 @@ You do not need administrator privileges to use **Remove-PrinterPort**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1:  -------------------------- RemoveDelete a specificspecified printer port on a computer
+### -------------------------- Example 1:  -------------------------- RemoveDelete a specificspecified printer port on a computer
 xample: Remove a specified printer port
 ```
 PS C:\> Remove-PrinterPort -Name "LocalPort:"

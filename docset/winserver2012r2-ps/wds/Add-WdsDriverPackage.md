@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-WdsDriverPackage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E428148C-66F6-4543-831A-D3C677A517CE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-WdsDriverPackage
@@ -65,7 +67,7 @@ After you inject a driver package into a boot image, Windows Deployment Services
 PS C:\> Add-WdsDriverPackage -Id 32d78628-07fb-4e18-adc4-f0ecf8b41bbe -GroupName "Drivers for Fabrikam Devices"
 ```
 
-This command adds a driver package to the group named Drivers for Frabrikam Devices.
+This command adds a driver package to the group named Drivers for Fabrikam Devices.
 The command specifies the ID of the driver package.
 
 ### Example 2: Add a driver package to a group by using the package name
@@ -73,7 +75,7 @@ The command specifies the ID of the driver package.
 PS C:\>Add-WdsDriverPackage -GroupName "Drivers for Fabrikam Devices" -Name "Fabrikam Device Driver (x64)"
 ```
 
-This command adds a driver package to the group named Drivers for Frabrikam Devices.
+This command adds a driver package to the group named Drivers for Fabrikam Devices.
 The command specifies Fabrikam Device Driver (x64) as the name of the driver package.
 
 ### Example 3: Inject a driver package into a boot image by using the package ID

@@ -1,14 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: jgerend
+ms.author: v-anbarr
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Remove-InsightsCapability
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: JasonGerend
+author: andreabarr
 manager: elizapo
 ms.date: 6/18/18
 ms.topic: reference
@@ -140,6 +141,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 The **Remove-InsightsCapability** can't remove the default System Insights capabilities.
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Add-InsightsCapability](add-insightscapability.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Add-InsightsCapability](add-insightscapability.md)
+
 [Update-InsightsCapability](update-insightscapability.md)

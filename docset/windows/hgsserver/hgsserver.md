@@ -1,6 +1,9 @@
 ---
 Module Name: HgsServer
 Module Guid: FDA18D7C-B57D-47D7-801C-14832537A1BA
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519072
 Help Version: 5.0.0.3
 Locale: en-US

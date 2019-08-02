@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FsrmSetting.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-FsrmSetting
+ms.reviewer:
 ms.assetid: CD6DF9A0-1E07-4E0E-93FF-BFFEC729C900
 ---
 
@@ -62,7 +63,7 @@ This command specifies the address "john@contoso.com" for the recipient of email
 PS C:\> Set-FsrmSetting -CommandNotificationLimit 80
 ```
 
-This command specifies 80 as the minimum number of seconds between individual running events of a command-type notification.
+This command specifies 80 as the minimum number of minutes between individual running events of a command-type notification.
 
 ### Example 3: Change the FSRM setting for report classification format
 ```
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -CommandNotificationLimit
-Specifies the minimum number of seconds between individual running events of a command-type notification.
+Specifies the minimum number of minutes between individual running events of a command-type notification.
 If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
 
 ```yaml
@@ -182,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -EmailNotificationLimit
-Specifies the minimum number of seconds between individual running events of an email-type notification.
+Specifies the minimum number of minutes between individual running events of an email-type notification.
 If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
 
 ```yaml
@@ -198,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventNotificationLimit
-Specifies the minimum number of seconds between individual running events of an event-type notification.
+Specifies the minimum number of minutes between individual running events of an event-type notification.
 If multiple command notifications occur, the server runs the command notification only if at least this amount of time has passed since the server last performed this action.
 
 ```yaml
@@ -724,7 +725,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReportNotificationLimit
-Specifies the minimum number of seconds between individual running events of a report notification.
+Specifies the minimum number of minutes between individual running events of a report notification.
 If multiple report notifications occur, the server runs the report notification only if at least this amount of time have passed since the server last performed this action.
 
 ```yaml

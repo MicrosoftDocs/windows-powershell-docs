@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-ClusterLog
+ms.reviewer:
 ms.assetid: EF07AF65-FB1F-4777-AA29-9213E52AB423
 ---
 
@@ -92,6 +93,15 @@ Accept wildcard characters: False
 Specifies the log level to set for the cluster.
 The acceptable values for this parameter are:`0` to `5`.
 
+| Level  | Error  | Warning  | Info  | Verbose | Debug |
+|:-----|:-----|:-----|:-----|:-----|:-----|
+|0 (Disabled) ||||||
+|1 |&#x2714;||||
+|2 |&#x2714;|&#x2714;|||
+|3 (Default) |&#x2714;|&#x2714;|&#x2714;||
+|4 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+|5 |&#x2714;|&#x2714;|&#x2714;|&#x2714;|&#x2714;|
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -103,6 +113,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -Size
 Specifies the log size to set for the cluster.

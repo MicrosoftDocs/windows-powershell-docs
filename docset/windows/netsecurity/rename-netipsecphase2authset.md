@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecPhase2AuthSet.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Rename-NetIPsecPhase2AuthSet
+ms.reviewer:
 ms.assetid: 75C04B9E-DEBF-4026-B7B2-A52937E0C221
 ---
 
@@ -445,7 +446,7 @@ Accept wildcard characters: False
 ### -PrimaryStatus
 Indicates that phase 2 authentication sets that match the indicated primary status are renamed. 
 This parameter describes the overall status of the rule. 
- - OK: Indicates that the rule will work as specified. 
+- OK: Indicates that the rule will work as specified. 
 - Degraded: Indicates that one or more parts of the rule will not be enforced. 
 - Error: Indicates that the computer is unable to use the rule at all. 
 See the Status and StatusCode fields of the object for more detailed status information.

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WebGlobalModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5745A29B-5B07-4ACC-BD4D-D0DB0EF94C75
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-WebGlobalModule
@@ -31,7 +33,7 @@ The **New-WebGlobalModule** cmdlet creates an Internet Information Services (IIS
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Adding a new module --------------
+### Example 1: Adding a new module
 ```
 IIS:\>New-WebGlobalModule -Name "testGlobalModule" -Image "c:\test\test.dll"
 ```

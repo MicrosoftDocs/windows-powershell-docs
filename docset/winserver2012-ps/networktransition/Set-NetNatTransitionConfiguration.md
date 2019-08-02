@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 872CC020-5367-4B61-8C88-E2351EBF0FB9
+manager: dansimp
 ---
 
 # Set-NetNatTransitionConfiguration

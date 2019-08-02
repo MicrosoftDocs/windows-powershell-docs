@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetIPsecMainModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 16B043BD-9048-4E86-B8F0-C60777D0D5D3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-NetIPsecMainModeCryptoSet
@@ -517,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStoreSourceType
-Specifies that the main mode cryptographic sets that match the indicated policy store source type are removied. 
+Specifies that the main mode cryptographic sets that match the indicated policy store source type are removed. 
                          
 This parameter describes the type of policy store where the rule originated if the object is retrieved from the ActiveStore with the TracePolicyStoreSource option set.
 This parameter value is automatically generated and should not be modified. 

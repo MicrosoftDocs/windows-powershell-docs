@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Repair-ClusterStorageSpacesDirect
+ms.reviewer:
 ms.assetid: 360D41D6-49A6-4C22-8E0D-D22D4E96B2BA
 ---
 
@@ -123,7 +124,7 @@ Accept wildcard characters: False
 
 ### -Node
 Specifies a node on which the cmdlet performs the operation.
-If you do not specifiy a value, all nodes are used.
+If you do not specify a value, all nodes are used.
 
 ```yaml
 Type: String

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Import-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E0C73A87-062B-477C-8020-76386400867C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Import-WdsBootImage

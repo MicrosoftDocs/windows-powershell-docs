@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SlbDatapathTracing-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Debug-SlbDatapath
+ms.reviewer:
 ms.assetid: EB7D701C-4687-4FBB-B622-DA7B8FBBF95C
 ---
 
@@ -30,7 +31,7 @@ Debug-SlbDatapath [[-OperationId] <String>] [-SourceIP] <String> [-TargetVIP] <S
 ```
 
 ## DESCRIPTION
-The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Muliplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
+The **Debug-SlbDatapath** cmdlet collects logs from the Software Load Balancing (SLB) Multiplexer (MUX) and dynamic IP address (DIP) host traversed by packets in the specified flow.
 
 ## EXAMPLES
 

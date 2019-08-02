@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Test-ADDSReadOnlyDomainControllerAccountCreation
+ms.reviewer:
 ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
 ---
 
@@ -39,7 +40,7 @@ It differs from using the *WhatIf* parameter with the **Add-ADDSReadOnlyDomainCo
 
 ### Example 1: Test adding an RODC account to confirm it is possible
 ```
-PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccuntName RODC1 -DomainName "corp.contoso.com" -SiteName "NorthAmerica"
+PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName RODC1 -DomainName "corp.contoso.com" -SiteName "NorthAmerica"
 ```
 
 This command runs the prerequisites for adding an RODC account to the corp.contoso.com domain that would use the North America site as the source site for the replication source domain controller.

@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 8D843BB8-8F79-4E1E-A6F9-5AD9615CB526
+manager: dansimp
 ---
 
 # Set-NetIPsecPhase1AuthSet
@@ -50,7 +54,7 @@ Set-NetIPsecPhase1AuthSet [-AsJob] [-CimSession <CimSession[]>] [-Description <S
 ## DESCRIPTION
 The **Set-NetIPsecPhase2AuthSet** cmdlet modifies cryptographic set properties of existing main mode cryptographic sets.
 
-This cmdlet returns one or more phase 1 authentication sets to be modified with the **Name** (default), **DisplayName** or or by association using the **DisplayGroup**, or **Group** cmdlet.
+This cmdlet returns one or more phase 1 authentication sets to be modified with the **Name** (default), **DisplayName** or by association using the **DisplayGroup**, or **Group** cmdlet.
 The sets cannot be queried by property in this cmdlet.
 The Get-NetIPsecPhase1AuthSet cmdlet returns queried rules and pipes the rules into this cmdlet.
 The remaining parameters specify the properties of this cmdlet to be modified.

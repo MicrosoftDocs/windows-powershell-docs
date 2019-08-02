@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Licensing.VolumeActivation.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Find-VamtManagedMachine
+ms.reviewer:
 ms.assetid: 9F511857-9418-4742-989E-D2B39FA829C0
 ---
 
@@ -39,7 +40,7 @@ You can use this process to determine whether any new computers are present in t
 
 ### Example 1: Get a computer by computer name
 ```
-PS C:\>Find-VamtManagedMachine -QqueryType Manual -QueryValue "MachineName"
+PS C:\>Find-VamtManagedMachine -QueryType Manual -QueryValue "MachineName"
 ```
 
 This command finds a computer by looking for the specified computer name.
@@ -67,6 +68,14 @@ PS C:\>Find-VamtManagedMachine -QueryType ldap -QueryValue "ldap://domainname/??
 
 This command searches for computers by using an LDAP query.
 The search results are restricted to the computers that have LabComp in their name.
+
+### Example 5: Search in a domain and store results in specified database
+```
+PS C:\>Find-VamtManagedMachine -QueryType ActiveDirectory -QueryValue "DomainName" -MachineFilter "labcomp*" -DbConnectionString "Data Source=localhost\SQLEXPRESS;Initial Catalog=VAMT;Integrated Security=True;MultipleActiveResultSets=True"
+```
+
+This command searches the specified Active Directory domain.
+The search results are restricted to the computers that have LabComp in their name, and the results are stored in the local SQLEXPRESS instance.
 
 ## PARAMETERS
 

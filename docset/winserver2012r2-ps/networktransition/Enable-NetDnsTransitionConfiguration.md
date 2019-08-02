@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetDnsTransitionConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BD405858-44E3-4186-B586-B5308DEFF011
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-NetDnsTransitionConfiguration

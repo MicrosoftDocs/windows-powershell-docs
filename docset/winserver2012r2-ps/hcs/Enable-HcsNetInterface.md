@@ -3,9 +3,11 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Enable-HcsNetInterface
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
@@ -53,7 +55,7 @@ IsCloudEnabled         : False
 IsiSCSIEnabled         : False
 ```
 
-This command specifes the **InterfaceAlias** parameter to enable the Data2 network interface.
+This command specifies the **InterfaceAlias** parameter to enable the Data2 network interface.
 
 ## PARAMETERS
 

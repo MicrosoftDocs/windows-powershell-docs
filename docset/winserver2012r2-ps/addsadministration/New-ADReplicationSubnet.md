@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: New-ADReplicationSubnet
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -205,7 +207,7 @@ To specify a single value for an attribute:
 
 To specify multiple values for an attribute:
 
-`-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...} `
+`-OtherAttributes @{'AttributeLDAPDisplayName'=value1,value2,...}`
 
 You can specify values for more than one attribute by using semicolons to separate attributes.
 The following syntax shows how to set values for multiple attributes:

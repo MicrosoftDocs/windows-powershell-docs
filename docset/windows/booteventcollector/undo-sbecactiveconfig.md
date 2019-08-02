@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BootEventCollector-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Undo-SbecActiveConfig
+ms.reviewer:
 ms.assetid: FCAA8BCA-A4CC-481D-8014-6CB5FD88AF2F
 ---
 
@@ -42,7 +43,7 @@ You can use the *OldTimestamp* parameter to modify the configuration atomically.
 
 The restored configuration is re-checked for validity, and refused if it has become corrupted.
 
-You must have the Builtin Adminstrator privilege to run this command.
+You must have the Builtin Administrator privilege to run this command.
 
 ## EXAMPLES
 

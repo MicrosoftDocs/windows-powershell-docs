@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Add-ADDSReadOnlyDomainControllerAccount
+ms.reviewer:
 ms.assetid: 3946BA04-13FB-482D-9824-89F8994FBF03
 ---
 
@@ -111,7 +112,7 @@ Accept wildcard characters: False
 
 ### -DenyPasswordReplicationAccountName
 Specifies the names of user accounts, group accounts, and computer accounts whose passwords are not to be replicated to this RODC.
-Use Noneif you do not want to deny the replication of credentials of any users or computers.
+Use None if you do not want to deny the replication of credentials of any users or computers.
 By default, Administrators, Server Operators, Backup Operators, Account Operators, and the Denied RODC Password Replication Group are denied.
 By default, the Denied RODC Password Replication Group includes Cert Publishers, Domain Admins, Enterprise Admins, Enterprise Domain Controllers, Enterprise Read-Only Domain Controllers, Group Policy Creator Owners, the krbtgt account, and Schema Admins.
 

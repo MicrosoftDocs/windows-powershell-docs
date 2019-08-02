@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
+manager: dansimp
 ---
 
 # Set-StorageSubsystem
@@ -37,7 +41,7 @@ Set-StorageSubsystem [-AsJob] [-CimSession <CimSession[]>] [-Description <String
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
+The **Set-StorageSubsystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
 
 ## EXAMPLES
 

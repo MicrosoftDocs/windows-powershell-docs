@@ -5,9 +5,11 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285748
 Help Version: 4.0.11.0
 Locale: en-US
 title: Hyper-V
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

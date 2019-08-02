@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Switch-Certificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEC58154-D4DF-4F65-9FF5-D26ADE2AA7B7
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Switch-Certificate

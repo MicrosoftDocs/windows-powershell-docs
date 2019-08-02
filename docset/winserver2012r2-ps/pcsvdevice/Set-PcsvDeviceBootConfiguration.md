@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-PcsvDeviceBootConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EB00236F-A1CF-4937-AF76-8538DF2A7476
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-PcsvDeviceBootConfiguration
@@ -49,7 +51,7 @@ The **StructuredBootString** property of the returned instance lists the valid b
 ### Example 1 Modify the device boot configuration to use PXE boot
 ```
 PS C:\> $MyCred = Get-Credential
-PS C:\> Set-PCSVDeviceBootConfiguration -TargetAdress 10.1.12.43 -ManagementProtocol WSMan -Credential $MyCred -UseSSL -OneTimeBootSource "CIM:Network:1"
+PS C:\> Set-PCSVDeviceBootConfiguration -TargetAddress 10.1.12.43 -ManagementProtocol WSMan -Credential $MyCred -UseSSL -OneTimeBootSource "CIM:Network:1"
 ```
 
 This example configures the boot source to use Pre-Boot Execution Environment (PXE) boot the next time the system boots.
@@ -262,7 +264,7 @@ Accept wildcard characters: False
 
 ### -SkipCACheck
 Indicates that the client connects by using HTTPS without validating that a trusted CA signed the server certificate.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Do not specify this parameter unless you can establish trust in another way, such as if the remote computer is part of a network that is physically secure and isolated, or if the remote computer is a trusted host in a Windows Remote Management (WinRM) configuration.
 
@@ -280,7 +282,7 @@ Accept wildcard characters: False
 
 ### -SkipCNCheck
 Indicates that the certificate common name of the server does not need to match the hostname of the server.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Specify this parameter only for remote operations with WS-Management devices that use the HTTPS protocol.
 Use this parameter only for trusted computers.
@@ -299,7 +301,7 @@ Accept wildcard characters: False
 
 ### -SkipRevocationCheck
 Indicates that the cmdlet skips the revocation check of server certificates.
-Do not specify this parameter if you specify a value of IPMI for the **ManagmentProtocol** parameter.
+Do not specify this parameter if you specify a value of IPMI for the **ManagementProtocol** parameter.
 
 Be sure to specify this parameter only for trusted computers.
 

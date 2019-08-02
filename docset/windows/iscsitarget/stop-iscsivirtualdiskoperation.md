@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Stop-IscsiVirtualDiskOperation
+ms.reviewer:
 ms.assetid: C578971D-E720-40DE-8BBA-47414198C44B
 ---
 
@@ -38,7 +39,7 @@ Stop-IscsiVirtualDiskOperation -InputObject <IscsiVirtualDisk> [-ComputerName <S
 
 ## DESCRIPTION
 The **Stop-IscsiVirtualDiskOperation** cmdlet stops a long-running operation in progress on an iSCSI virtual disk.
-If you cancel an operation, that operation might finish before the cancelation takes effect.
+If you cancel an operation, that operation might finish before the cancellation takes effect.
 Always re-enumerate or recheck objects affected by an operation after this cmdlet finishes.
 
 Stopping a create operation can remove a created file, or can leave the file intact but not zero it out.

@@ -1,10 +1,11 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: 23E94844-DF20-457A-A28E-8194A4D692EE
-ms.author: coreyp
+manager: dansimp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
@@ -12,6 +13,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-IISCentralCertProvider
+ms.reviewer:
 ---
 
 # Enable-IISCentralCertProvider
@@ -136,13 +138,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-**Enable-IISCentralCertProvider** does not accept pipelined input.
+### None
 
 ## OUTPUTS
 
-###  
-**Enable-IISCentralCertProvider** does not return any objects.
+### None
 
 ## NOTES
 

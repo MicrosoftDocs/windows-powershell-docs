@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WebBinding
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DAB869BC-1192-4261-81FA-8EFB92367EC5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WebBinding
@@ -45,7 +47,7 @@ The **Remove-WebBinding** cmdlet removes a binding from an Internet Information 
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Adding and removeing a site binding --------------e
+### Example 1: Adding and removing a site binding
 ```
 IIS:\>New-WebBinding -Name "Default Web Site" -Port 1234 -IPAddress "*" -HostHeader "testsite" "Sleep 5 seconds before removing the binding"; Sleep 5 
 IIS:\> Get-WebBinding -Port 1234 -Name "Default Web Site" | Remove-WebBinding

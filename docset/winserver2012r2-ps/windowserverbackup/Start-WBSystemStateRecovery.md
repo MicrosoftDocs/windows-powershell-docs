@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Start-WBSystemStateRecovery
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9C76B714-7FCD-4DF4-A988-F4E27113EB02
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-WBSystemStateRecovery

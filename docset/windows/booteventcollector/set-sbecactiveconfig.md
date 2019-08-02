@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BootEventCollector-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-SbecActiveConfig
+ms.reviewer:
 ms.assetid: 0D9E3E5F-2E41-4695-82A3-420DCAD727EF
 ---
 
@@ -37,12 +38,10 @@ The previous configuration is saved in a backup file, which enables you to undo 
 
 You can use Get-SbecActiveConfig and **Set-SbecActiveConfig** to modify the configuration atomically, as follows: 
 
-1.
-Get the old configuration text and timestamp with **Get-SbecActiveConfig**. 
-2.
-Modify the configuration text. 
-3.
-Pass the text and timestamp (using the *OldTimestamp* parameter) to **Set-SbecActiveConfig**.
+1. Get the old configuration text and timestamp with **Get-SbecActiveConfig**. 
+2. Modify the configuration text. 
+3. Pass the text and timestamp (using the *OldTimestamp* parameter) to **Set-SbecActiveConfig**.
+
 If the *OldTimestamp* parameter is specified, the Collector checks whether the active configuration was changed in between.
 
 If this check succeeds, the new configuration is applied; otherwise, an error is returned.

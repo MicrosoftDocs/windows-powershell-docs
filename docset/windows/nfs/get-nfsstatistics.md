@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NfsStatistics.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-NfsStatistics
+ms.reviewer:
 ms.assetid: E1C01056-F069-4160-8AF9-F25046671F31
 ---
 
@@ -30,7 +31,7 @@ Get-NfsStatistics [-Protocol <String[]>] [-Name <String[]>] [-Version <UInt32[]>
 ```
 
 ## DESCRIPTION
-The **Get-NfsStatistics** cmdlet gets remote procedure call (RPC) statistics that a Network File System (NFS) sever maintains for requests served over the following protocols:
+The **Get-NfsStatistics** cmdlet gets remote procedure call (RPC) statistics that a Network File System (NFS) server maintains for requests served over the following protocols:
 
 - Mount v1 protocol
 - Mount v3 protocol
@@ -139,8 +140,8 @@ Accept wildcard characters: False
 Specifies the type of protocol for which to get NFS statistics.
 Valid values are: 
 
---NFS
---Mount
+- NFS
+- Mount
 
 ```yaml
 Type: String[]

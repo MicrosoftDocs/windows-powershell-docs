@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Enable-NetworkControllerNode
+ms.reviewer:
 ms.assetid: 84D99E59-64D1-4BBA-9343-997723493C34
 ---
 
@@ -190,8 +191,8 @@ The output for this cmdlet contains the following fields:
 - Name of the node
 - Hostname, fully qualified domain name (FQDN), or IP address of the node
 - Fault domain of the node
--  Name of interface to be used for representational state transfer (REST) operations on the node
--  Node certificate
+- Name of interface to be used for representational state transfer (REST) operations on the node
+- Node certificate
 - Status of the node
 
 ## NOTES

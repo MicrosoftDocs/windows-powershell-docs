@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216862
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 68C7868F-B038-4DBC-8EC0-744F671B3BA7
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NFS Module

@@ -2,7 +2,11 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: D39F712B-7DCC-4F4D-BE51-449D7F5647E6
+manager: dansimp
 ---
 
 # Clear-BitLockerAutoUnlock

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-RDVirtualDesktopFromCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCB82045-2029-4874-BEEA-F0653C4B46B0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-RDVirtualDesktopFromCollection

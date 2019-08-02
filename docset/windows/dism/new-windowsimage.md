@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: New-WindowsImage
+ms.reviewer:
 ms.assetid: 48C44DEE-EE4C-4040-9B42-297EAAD5E4E4
 ---
 
@@ -84,12 +85,11 @@ Accept wildcard characters: False
 ### -CompressionType
 Specifies the type of compression used for the initial capture operation: 
 
-- The maximum option provides the best compression, but takes more time to capture the image. 
-- The fast option provides faster image compression, but the resulting files are larger than those compressed by using the maximum option.
-This is also the default compression type that is used if you do not specify the argument. 
-- The none option does not compress the captured image at all. 
+- **Max** = This option provides the best compression but takes more time to capture the image. 
+- **Fast** = This option provides faster image compression but the resulting files are larger than those compressed using the maximum (max) option.
+- **None** = This option does not compress the captured image at all. 
 
-the *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
+The *CompressionType* parameter does not apply when you export an image to an existing .wim file, you can only use this CompressionType when you export an image to a new .wim file.
 
 ```yaml
 Type: String
@@ -98,7 +98,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Fast
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -150,13 +150,13 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-Specifies the maximum output level shown in the logs.
-The default log level is 3.
-The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
+Specifies the maximum output level shown in the logs. 
+The default log level is WarningsInfo.  
+The accepted values are as follows:        
+
+- Errors = Errors only
+- Warnings = Errors and warnings            
+- WarningsInfo = Errors, warnings, and information 
 
 ```yaml
 Type: LogLevel

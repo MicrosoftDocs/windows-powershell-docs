@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-TargetPort
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4C139739-CDA3-4379-B87B-60B1B4DB8CD2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-TargetPort

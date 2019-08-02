@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285762
 Help Version: 3.2.0.0
 Locale: en-US
 ms.assetid: 28BAF54D-1B3B-4284-B4AD-537CD44483A5
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MSOnlineBackup Module

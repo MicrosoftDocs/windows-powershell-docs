@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 9BB36BDF-2405-420E-BCC5-DDC79A675567
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Start-DnsServerScavenging
@@ -91,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Notifies the DNS server to attempt an scavange without prompting you for confirmation.
+Notifies the DNS server to attempt an scavenge without prompting you for confirmation.
 By default, the cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml

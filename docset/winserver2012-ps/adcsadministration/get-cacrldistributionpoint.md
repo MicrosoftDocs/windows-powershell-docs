@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
 ms.assetid: 64E481BE-BDD5-4E27-95AD-5DC930E55453
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-CACrlDistributionPoint

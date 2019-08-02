@@ -1,12 +1,12 @@
 ---
-author: coreyp-at-msft
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
 ms.assetid: EBEF3085-017F-4094-A007-CDBCA600DCD7
-ms.author: coreyp
+ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-HgsKeyProtectionAttestationSignerCertificatePolicy
+ms.reviewer:
 ---
 
 # Set-HgsKeyProtectionAttestationSignerCertificatePolicy
@@ -40,7 +41,7 @@ The Key Protection Service rejects health certificates signed by the specified a
 ### Example 1: Modify the date on all attestation signer certificates
 ```
 PS C:\> $DenyTime = Get-Date
-PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificateIssuedBefore $DenyTime
+PS C:\> Set-HgsKeyProtectionAttestationSignerCertificatePolicy -DenyHealthCertificatesIssuedBefore $DenyTime
 ```
 
 The first command creates a **DateTime** object by using the **Get-Date** cmdlet, and then stores it in the **$DenyTime** variable.

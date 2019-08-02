@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageScripts-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-StorageHealthAction
+ms.reviewer:
 ms.assetid: 949CF731-2B08-4770-9167-5CA69A7DD4CD
 ---
 
@@ -37,7 +38,7 @@ Get-StorageHealthAction [-InputObject <CimInstance>] [-CimSession <CimSession>] 
 ```
 
 ## DESCRIPTION
-The **Get-StorageHealthAction** cmdlet gets health-related system activities for Storage subystems, file shares, and volumes.
+The **Get-StorageHealthAction** cmdlet gets health-related system activities for Storage subsystems, file shares, and volumes.
 
 ## EXAMPLES
 

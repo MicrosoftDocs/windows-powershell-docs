@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_RemoteAccessRoutingDomain_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-RemoteAccessRoutingDomain
+ms.reviewer:
 ms.assetid: 872E1D3F-B79C-40AD-A714-AF93151F1985
 ---
 
@@ -109,11 +110,11 @@ Specifies a transform constant.
 The acceptable values for this parameter are:
 
 - MD596
--  SHA196
+- SHA196
 - SHA256128
 - GCMAES128
--  GCMAES192
--  GCMAES256
+- GCMAES192
+- GCMAES256
 - None
 
 ```yaml

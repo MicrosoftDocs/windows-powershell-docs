@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-WindowsFeature
+ms.reviewer:
 ms.assetid: 49B3C89A-8395-4638-802A-451B56019188
 ---
 
@@ -30,7 +31,7 @@ Get-WindowsFeature [[-Name] <String[]>] [-Vhd <String>] [-ComputerName <String>]
 ```
 
 ## DESCRIPTION
-The **Get-WindowsFeature** cmdlet gets information about rrsandf_plural that are both available for installation and already installed on a computer that is running Windows Server 2012 R2 or an offline virtual hard disk (VHD) that is running Windows Server 2012 R2.
+The **Get-WindowsFeature** cmdlet gets information about features that are both available for installation and already installed on a computer that is running Windows Server 2012 R2 or an offline virtual hard disk (VHD) that is running Windows Server 2012 R2.
 
 ## EXAMPLES
 

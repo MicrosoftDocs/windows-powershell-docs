@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
@@ -13,6 +13,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Import-SmigServerSetting
+ms.reviewer:
 ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
 ---
 

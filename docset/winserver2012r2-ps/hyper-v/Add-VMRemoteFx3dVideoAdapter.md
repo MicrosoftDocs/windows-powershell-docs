@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Add-VMRemoteFx3dVideoAdapter
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -34,7 +36,7 @@ Add-VMRemoteFx3dVideoAdapter [-Passthru] [-VM] <VirtualMachine[]> [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemovteFX video adapter in a virtual machine.
+The **Add-VMRemoteFx3dVideoAdapter** cmdlet adds a RemoteFX video adapter in a virtual machine.
 
 ## EXAMPLES
 

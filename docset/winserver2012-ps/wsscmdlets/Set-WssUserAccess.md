@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: F8994BB4-0248-4B58-9FB7-F85BD7A53672
+manager: dansimp
 ---
 
 # Set-WssUserAccess

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Set-MsmqQueue
+ms.reviewer:
 ms.assetid: E92DABAF-87C0-487D-8DA3-9D1C52587855
 ---
 
@@ -40,7 +41,7 @@ If you specify a journal queue, system journal queue, system dead-letter queue, 
 
 ### Example 1: Modify properties of queues
 ```
-PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -Journaling -QueueQuota 500000
+PS C:\> Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueue -Journaling:$true -QueueQuota 500000
 ```
 
 This command gets private queues that have names that start with Order by using the **Get-MsmqQueue** cmdlet.

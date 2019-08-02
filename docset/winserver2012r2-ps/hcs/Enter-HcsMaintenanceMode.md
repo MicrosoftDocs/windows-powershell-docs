@@ -3,9 +3,11 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Enter-HcsMaintenanceMode
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
@@ -38,7 +40,7 @@ Updates to disk firmware require you to disable I/O.
 PS C:\> Enter-HcsMaintenanceMode
 
 
-Maintenance mode will disrupt all IOs and sever the connection to the 
+Maintenance mode will disrupt all IOs and server the connection to the 
 azure_1 Management Portal. Entering maintenance mode will reboot both 
 controllers, which takes a few minutes to complete. Are you sure you want to enter 
 maintenance mode? 

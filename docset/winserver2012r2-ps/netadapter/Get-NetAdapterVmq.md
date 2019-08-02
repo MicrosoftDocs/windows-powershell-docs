@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterVmq
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5E8EAF0B-3F5E-4F60-B985-0CAC45FDD192
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterVmq
@@ -35,7 +37,7 @@ Get-NetAdapterVmq -InterfaceDescription <String[]> [-IncludeHidden] [-CimSession
 ```
 
 ## DESCRIPTION
-The **Get-NetAdapterVmq** cmdlet gets the virtual machine queue (VMQ) properties of of VMQ-capable network adapters.
+The **Get-NetAdapterVmq** cmdlet gets the virtual machine queue (VMQ) properties of VMQ-capable network adapters.
 VMQ is a scaling networking technology for vmswitch that hashes incoming packets based on the destination MAC address.
 
 ## EXAMPLES

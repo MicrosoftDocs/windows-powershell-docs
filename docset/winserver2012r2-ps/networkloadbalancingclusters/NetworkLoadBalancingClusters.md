@@ -7,13 +7,15 @@ Locale: en-US
 title: NetworkLoadBalancingClusters
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4da033d4-091b-429d-9d63-73ca250b1fee
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # NetworkLoadBalancingClusters Module

@@ -1,16 +1,17 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
+ms.author: v-anbarr
 Module Name: BitsTransfer
 Module Guid: 8FA5064B-8479-4C5C-86EA-0D311FE48875
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390756
 Help Version: 5.0.0.1
 Locale: en-US
 title: BitsTransfer
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: coreyp-at-msft
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

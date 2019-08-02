@@ -1,6 +1,10 @@
 ---
 external help file: DfsNamespaceRootTarget.cdxml-help.xml
 ms.assetid: E84B8448-420D-4784-B444-EFFDAFFB5069
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 online version: 
 schema: 2.0.0
 ---

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetLbfoTeam
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 15D7041C-D5BD-4F55-833F-0F25B1E5445A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetLbfoTeam

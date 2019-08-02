@@ -7,13 +7,15 @@ Locale: en-US
 title: RemoteDesktop
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4ac56204-319e-425b-b261-91dc105b4dea
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # RemoteDesktop Module

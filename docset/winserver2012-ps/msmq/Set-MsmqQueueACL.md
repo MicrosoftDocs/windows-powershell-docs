@@ -2,7 +2,11 @@
 external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4DAF0FE1-6D1E-4F47-8441-78DEFDB24512
+manager: dansimp
 ---
 
 # Set-MsmqQueueACL
@@ -27,7 +31,7 @@ This cmdlet can be applied to private, public, journal, system journal, system d
 
 ### Example 1: Set the access rights for the specified queue
 ```
-PS C:\>Get-MsmqQueue â€"Name "Order*" â€"QueueType Private | Set-MsmqQueueAcl â€"UserName "REDMOND\pattiful" â€"Allow Delete,Peek,Receive,Send â€"Deny TakeOwnership
+PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueueAcl -UserName "REDMOND\pattiful" -Allow Delete,Peek,Receive,Send -Deny TakeOwnership
 ```
 
 This command sets Allow, Delete, Peek, Receive, and Send access rights for user pattiful on all queues that have the wildcard named Order*.
@@ -95,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifeis an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
+Specifies an array of **MsmqQueue** objects that represent the queues for which permissions are updated.
 This parameter accepts pipelined input.
 
 ```yaml
@@ -119,7 +123,7 @@ The acceptable values for this parameter are:
 - FullControl: Full control of the specified queue. 
 - GetPermissions: Get the permissions of the specified queue. 
 - GetProperties: Get the properties of the specified queue. 
-- JournalReceive: Receive a message from the specified queueâ€™s journal queue. 
+- JournalReceive: Receive a message from the specified queue's journal queue. 
 - Peek: Peek a message from the specified queue. 
 - Receive: Receive a message from the specified queue. 
 - Send: Send a message to the specified queue. 

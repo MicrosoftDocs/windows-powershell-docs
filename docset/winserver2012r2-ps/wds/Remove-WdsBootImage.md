@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A0E9892E-F4AA-45B7-B88D-908670FE1F31
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WdsBootImage
@@ -48,7 +50,7 @@ This command removes the boot image named Fabrikam LOB setup (x86) for the x86 a
 ### -Architecture
 Specifies an architecture.
 This is the architecture of the boot image.
-Because you can use the same image name for boot images in different architectures, specify this this parameter to ensure that you remove the correct image.
+Because you can use the same image name for boot images in different architectures, specify this parameter to ensure that you remove the correct image.
 The acceptable values for this parameter are:
 
 - ARM

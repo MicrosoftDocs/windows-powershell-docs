@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Add-IpamSubnet
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -282,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkType
-Specifies an array of of network types for the addresses to add.
+Specifies an array of network types for the addresses to add.
 The acceptable values for this parameter are:
 
 - Provider

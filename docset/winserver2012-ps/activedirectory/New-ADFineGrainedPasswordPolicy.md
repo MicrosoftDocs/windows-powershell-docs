@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 43249562-90DC-4535-9160-4E38621B5DA7
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-ADFineGrainedPasswordPolicy
@@ -54,7 +58,7 @@ Description
 
 -----------
 
-Create a new Fine Grained Password Policy object named 'DomainUsersPSO' and set the Precedence, ComplexityEnabled, Description, DisplayName, LockoutDuration, LockoutObservationWindw, and LockoutThreshold properties on the object.
+Create a new Fine Grained Password Policy object named 'DomainUsersPSO' and set the Precedence, ComplexityEnabled, Description, DisplayName, LockoutDuration, LockoutObservationWindow, and LockoutThreshold properties on the object.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

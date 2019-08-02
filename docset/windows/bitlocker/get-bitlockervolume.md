@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: coreyp
-author: coreyp-at-msft
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
@@ -14,6 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-BitLockerVolume
+ms.reviewer:
 ms.assetid: 0714E33E-71B1-4FDE-8B83-25F50135874B
 ---
 
@@ -36,24 +37,19 @@ If you do not specify a drive letter, this cmdlet gets all volumes for the curre
 You can use this cmdlet to get BitLocker volumes to use with other cmdlets, such as the **Enable-BitLocker** cmdlet or the **Add-BitLockerKeyProtector** cmdlet.
 You can also use this cmdlet to view the following information about a BitLocker volume: 
 
-- VolumeType.
-Data or Operating System.
-- Mount Point.
-Drive letter.
-- CapacityGB.
-Size of drive.
-- VolumeStatus.
-Whether BitLocker currently protects some, all, or none of the data on the volume. 
-- Encryption Percentage.
-Percent of the volume protected by BitLocker.
-- KeyProtector.
-Type of key protector or protectors.
-- AutoUnlock Enabled.
-Whether BitLocker uses automatic unlocking for the volume.
-- Protection Status.
-Whether BitLocker currently uses a key protector to encrypt the volume encryption key.
+- VolumeType - Data or Operating System.
+- Mount Point - Drive letter.
+- CapacityGB - Size of drive.
+- VolumeStatus - Whether BitLocker currently protects some, all, or none of the data on the volume. 
+- Encryption Percentage - Percent of the volume protected by BitLocker.
+- KeyProtector - Type of key protector or protectors.
+- AutoUnlock Enabled - Whether BitLocker uses automatic unlocking for the volume.
+- Protection Status - Whether BitLocker currently uses a key protector to encrypt the volume encryption key.
+- EncryptionMethod - Indicates the encryption algorithm and key size used on the volume.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+See [BitLocker Overview](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview) for more information.
+
+For an overview of encryption methods, see [GetEncryptionMethod method](https://docs.microsoft.com/windows/win32/secprov/getencryptionmethod-win32-encryptablevolume).
 
 ## EXAMPLES
 
@@ -84,6 +80,27 @@ Data            E:        928.83 FullyDecrypted         0          {}           
 ```
 
 This command gets the specified BitLocker volume.
+
+### Example 3: Get all attributes for a specific BitLocker volume
+```
+PS C:\> Get-BitLockerVolume -MountPoint C | Format-List
+ComputerName         : DESKTOP-XXXXXXX
+MountPoint           : C:
+EncryptionMethod     : XtsAes128
+AutoUnlockEnabled    : 
+AutoUnlockKeyStored  : False
+MetadataVersion      : 2
+VolumeStatus         : FullyEncrypted
+ProtectionStatus     : On
+LockStatus           : Unlocked
+EncryptionPercentage : 100
+WipePercentage       : 0
+VolumeType           : OperatingSystem
+CapacityGB           : 218,2344
+KeyProtector         : {RecoveryPassword, Tpm}
+```
+
+This command lists all BitLocker related attributes for C drive.
 
 ## PARAMETERS
 

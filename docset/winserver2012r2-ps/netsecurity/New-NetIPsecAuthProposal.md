@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetIPsecAuthProposal
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetIPsecAuthProposal
@@ -497,7 +499,7 @@ Accept wildcard characters: False
 
 ### -User
 Specifies that the computer should authenticate as the user account, rather than the computer.
-This parameter is valid with NLTM, Kerberos, Cert, or Proxy.
+This parameter is valid with NTLM, Kerberos, Cert, or Proxy.
 
 ```yaml
 Type: SwitchParameter

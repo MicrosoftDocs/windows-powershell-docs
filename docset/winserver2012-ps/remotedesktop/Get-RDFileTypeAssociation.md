@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 529941C3-ED92-44D1-9A08-A2426D99652A
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDFileTypeAssociation
@@ -18,7 +22,7 @@ Get-RDFileTypeAssociation [[-CollectionName] <String>] [-AppAlias <String>] [-Ap
 ```
 
 ## DESCRIPTION
-The **Get-RDFileTypeAssocation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
+The **Get-RDFileTypeAssociation** cmdlet displays the file extensions that are associated with a firstref_server_7 RemoteApp program in the Remote Desktop deployment.
 
 ## EXAMPLES
 

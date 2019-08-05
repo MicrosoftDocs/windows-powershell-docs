@@ -23,6 +23,9 @@ ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
 ## SYNOPSIS
 Gets one or more disks visible to the operating system.
 
+> [!NOTE]
+> This cmdlet returns physical disk objects like basic disks and partitioned drive partitions.  Dynamic disks can span multiple pieces of physical media, so they will not be returned by Get-Disk. For more information, see [Basic and Dynamic Disks](https://docs.microsoft.com/windows/desktop/FileIO/basic-and-dynamic-disks).
+
 ## SYNTAX
 
 ### ByNumber (Default)

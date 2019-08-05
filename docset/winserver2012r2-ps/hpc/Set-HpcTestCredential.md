@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Set-HpcTestCredential
 ms.assetid: AB026CFE-2A4B-4C26-8356-120FB03EF458
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Set-HpcTestCredential

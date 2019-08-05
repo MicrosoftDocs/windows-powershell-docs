@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -150,6 +150,7 @@ Accept wildcard characters: False
 
 ### -DisableAutoExclusions
 Indicates whether to disable the Automatic Exclusions feature for the server.
+If you specify a value of $False or do not specify a value, Windows Defender enables the Automatic Exclusions feature for the server.
 
 ```yaml
 Type: Boolean

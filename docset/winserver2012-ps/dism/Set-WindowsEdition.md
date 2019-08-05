@@ -3,8 +3,8 @@ external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 ms.assetid: B3873C21-D66E-4EC1-A5F9-BEB62256930F
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 online version: 
 schema: 2.0.0
 ---
@@ -29,7 +29,6 @@ You should not use the **Set-WindowsEdition** on an image that has already been 
 It is recommended that you use this option on the lowest edition available in the edition family.
 
 You can only change the edition on a running operating system for Windows Server images, not online Windows client images.
-The *ProductKey* parameter is required for changing online Server images.
 
 ## EXAMPLES
 

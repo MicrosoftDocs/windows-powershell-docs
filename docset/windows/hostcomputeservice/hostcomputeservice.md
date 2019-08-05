@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: HostComputeService
 Module Guid: D19D4F4C-6CA6-4071-ABCF-3AB62544A1A1
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=627287
@@ -11,7 +11,7 @@ title: HostComputeService
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/21/2016
 ms.topic: reference

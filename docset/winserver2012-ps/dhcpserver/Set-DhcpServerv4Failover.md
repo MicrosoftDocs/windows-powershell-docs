@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: E7BD1B54-7B45-4AD7-8944-ECCBB7043AD3
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DhcpServerv4Failover

@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Remove-RemoteAccessIpFilter
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 14A29C07-7D6C-452A-8B55-BCA7BC8732DF
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

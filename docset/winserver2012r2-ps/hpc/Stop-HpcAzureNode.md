@@ -1,5 +1,5 @@
 ---
-author: kenwith
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Stop-HpcAzureNode
 ms.assetid: 9CD5FC86-8C82-4247-8DE0-228AC18890C7
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Stop-HpcAzureNode

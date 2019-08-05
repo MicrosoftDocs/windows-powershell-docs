@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -67,6 +67,13 @@ PS C:\> Grant-NfsSharePermission -Name "Export" -ClientName "contoso-clientgroup
 ```
 
 This command grants read-only access to a share named Export for a client group named contoso-clientgroup.
+
+### Example 3: Grant NFS share permissions to a specific UNIX computer with root user access
+```
+PS C:\> Grant-NfsSharePermission -Name "Export" -ClientName "192.168.1.8" -ClientType "host" -Permission "readonly" -AllowRootAccess:$true
+```
+
+This command grants read access to a share named Export for a computer specifying its IP address, and also grants UNIX root user access.
 
 ## PARAMETERS
 

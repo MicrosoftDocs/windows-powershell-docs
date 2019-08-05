@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Disconnect-WdsMulticastClient
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6844AAD1-7C35-4C4F-9D55-FE60358CBFF0
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: WSUS
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390839
@@ -11,7 +11,7 @@ title: WSUS
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference
@@ -23,6 +23,9 @@ ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
 # WSUS Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all Windows Server Update Services (WSUS) Administration-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+> [!NOTE]
+> All cmdlets except the ones referencing "DynamicCategory" are included in the **UpdateServices** module.
 
 ## WSUS Cmdlets
 ### [Add-WsusComputer](./Add-WsusComputer.md)

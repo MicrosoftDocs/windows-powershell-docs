@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-RoutingProtocolPreference
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C3CE59A3-464C-4715-A289-2A2B35C6FAEC
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 

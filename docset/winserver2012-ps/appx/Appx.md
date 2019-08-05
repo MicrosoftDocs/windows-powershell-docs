@@ -7,8 +7,8 @@ Locale: en-US
 ms.assetid: 1848DCF8-9EA3-4E54-9DFC-C40A6CC14BB6
 manager: dansimp
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Appx Module

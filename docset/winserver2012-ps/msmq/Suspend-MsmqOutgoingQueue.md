@@ -3,8 +3,8 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9798E2C3-2CB1-403F-8FF0-82DAE207D842
 manager: dansimp
 ---
@@ -27,7 +27,7 @@ The **Suspend-MsmqOutgoingQueue** cmdlet suspends all outgoing queues that are r
 
 ### Example 1: Suspend an outgoing queue
 ```
-PS C:\>Get-MsmqOutgoingQueue â€"Name "Order*" | Suspend-MsmqOutgoingQueue
+PS C:\>Get-MsmqOutgoingQueue -Name "Order*" | Suspend-MsmqOutgoingQueue
 ```
 
 This command suspends all outgoing queues that have the wildcard named Order*.

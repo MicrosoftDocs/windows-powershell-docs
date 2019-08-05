@@ -7,14 +7,14 @@ Locale: en-US
 title: Storage
 description: 
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8156049d-614d-434a-85df-d55a8c96653e
-ms.author: kenwith
+ms.author: v-anbarr
 ms.reviewer: brianlic
 ---
 
@@ -126,7 +126,7 @@ Returns a list of the storage providers available on the local computer.
 Gets the storage reliability counters for the disk or physical disk that you specify.
 
 ### [Get-StorageSetting](./Get-StorageSetting.md)
-Returns the StorageSettings object.
+Returns the StorageSetting object.
 
 ### [Get-StorageSubsystem](./Get-StorageSubsystem.md)
 Gets one or more StorageSubsystem objects.

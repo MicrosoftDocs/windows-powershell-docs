@@ -3,8 +3,8 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 261EF2F0-A0F8-4398-8A42-FD9A9F53AF59
 manager: dansimp
 ---
@@ -29,7 +29,7 @@ The **New-MsmqMessage** cmdlet creates a **System.Messaging.Message** object.
 
 ### Example 1: Create a message object
 ```
-PS C:\>New-MsmqMessage â€"Body "Test Message" â€"Recoverable â€"AdminQueue ".\private$\adminqueue"
+PS C:\>New-MsmqMessage -Body "Test Message" -Recoverable -AdminQueue ".\private$\adminqueue"
 ```
 
 This command creates a message object with body text named Test Message.

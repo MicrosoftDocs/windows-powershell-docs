@@ -3,8 +3,8 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A327DEB3-B1F6-43F4-93B8-A73B5A78DF13
 manager: dansimp
 ---
@@ -43,7 +43,7 @@ This cmdlet returns a **QueueManager** object that represents the modified local
 
 ### Example 1: Specify properties for the specified queue manager
 ```
-PS C:\>Set-MsmqQueueManager â€"MessageQuota 2048576 â€"MsgStoreLocation "c:\MSMQ\MessageFiles" â€"TransactionLogStore "c:\MSMQ\XactLogs"
+PS C:\>Set-MsmqQueueManager -MessageQuota 2048576 -MsgStoreLocation "c:\MSMQ\MessageFiles" -TransactionLogStore "c:\MSMQ\XactLogs"
 ```
 
 This command specifies the message quota, message store location, and transaction log store for the default queue.

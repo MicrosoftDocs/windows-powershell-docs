@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
+ms.author: v-anbarr
 Module Name: TrustedPlatformModule
 Module Guid: 17FC1F02-CFF3-45FB-AC4F-126594C70B1E
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390838
@@ -11,7 +11,7 @@ title: TrustedPlatformModule
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: kenwith
+author: andreabarr
 manager: jasgro
 ms.date: 12/20/2016
 ms.topic: reference

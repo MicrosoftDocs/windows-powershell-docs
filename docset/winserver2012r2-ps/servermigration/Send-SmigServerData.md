@@ -5,7 +5,7 @@ schema: 2.0.0
 title: Send-SmigServerData
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
 ms.reviewer:
-ms.author: kenwith
+ms.author: v-anbarr
 ---
 
 # Send-SmigServerData

@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuditSmb1Access
-{{Fill AuditSmb1Access Description}}
+Enables auditing of SMB version 1 protocol in Windows Event Log.
 
 ```yaml
 Type: Boolean

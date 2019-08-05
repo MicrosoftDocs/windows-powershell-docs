@@ -3,8 +3,8 @@ external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Import-VMInitialReplication

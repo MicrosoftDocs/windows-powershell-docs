@@ -1,8 +1,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: kenwith
-author: kenwith
+ms.author: v-anbarr
+author: andreabarr
 description: Use this topic to help manage Storage Spaces Direct with Windows PowerShell.
 external help file: ClusterStorageSpacesDirect.cdxml-help.xml
 keywords: powershell, cmdlet
@@ -56,26 +56,17 @@ The **Enable-ClusterStorageSpacesDirect** cmdlet enables highly available Storag
 
 ### Example 1: Enable Storage Spaces Direct
 ```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect -Cluster "Contoso19-C2.production.contoso.com"
+PS C:\> Enable-ClusterStorageSpacesDirect
 ```
 
-This command enables S2D on the cluster named Contoso19-C2.production.contoso.com.
+This command enables S2D on the cluster.
 
-### Example 2: Enable Storage Spaces Direct by using the pipeline
+### Example 2: Enable Storage Spaces Direct specifying a Friendly Name
 ```powershell
-PS C:\> Get-Cluster -Cluster "Contoso19-C2.production.contoso.com" | Enable-ClusterStorageSpacesDirect
+PS C:\> Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
 ```
 
-This command gets the cluster named Contoso19-C2.production.contoso.com by using the **Get-Cluster** cmdlet.
-The command passes that cluster to the current cmdlet by using the pipeline operator.
-That cmdlet enables Storage Spaces Direct on the cluster.
-
-### Example 3: Enable Storage Spaces Direct and avoid being prompted
-```powershell
-PS C:\> Enable-ClusterStorageSpacesDirect -Cluster 'Contoso19-C3.production.contoso.com -PoolFriendlyName 'Sales'
-```
-
-This command enables S3d on the cluster named Contoso19-C3.production.contoso.com and avoids being prompted. The command also sets a friendly name for the Storage Spaces Direct pool. 
+This command enables S2d on the cluster and sets a friendly name for the Storage Spaces Direct pool. 
 
 ## PARAMETERS
 

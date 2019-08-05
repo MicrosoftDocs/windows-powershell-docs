@@ -42,9 +42,6 @@ Similarly, you can use Get-ADUser, Get-ADComputer, or Get-ADServiceAccount, for 
 
 Note: Group MSAs cannot set password since they are changed at predetermined intervals.
 
-You must set the **OldPassword** and the **NewPassword** parameters to set the password unless you specify the **Reset** parameter.
-When you specify the **Reset** parameter, the password is set to the **NewPassword** value that you provide and the **OldPassword** parameter is not required.
-
 For Active Directory Lightweight Directory Services (AD LDS) environments, the Partition parameter must be specified except in the following two conditions:
 
 - The cmdlet is run from an Active Directory provider drive.
@@ -67,6 +64,7 @@ PS C:\>Set-ADAccountPassword -Identity elisada -OldPassword (ConvertTo-SecureStr
 ```
 
 This command sets the password of the user account with SamAccountName elisada to qwert@12345.
+Using -NewPassword with a value without providing an -OldPassword parameter value will also reset the password.
 
 ### Example 3: Prompt a specified user to change their password
 ```

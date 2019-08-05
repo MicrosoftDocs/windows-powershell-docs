@@ -374,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -DNSHostName
-Specifies the Domain Name System (DNS) host name.
+Specifies the DNS host name of Service Account.
 
 ```yaml
 Type: String

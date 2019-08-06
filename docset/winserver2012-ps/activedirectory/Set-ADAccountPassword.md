@@ -34,7 +34,7 @@ Similarly, you can use Get-ADUser, Get-ADComputer or Get-ADServiceAccount, for s
 
 Note: Group MSAs cannot set password since they are changed at predetermined intervals.
 
-For  Active Directory Lightweight Directory Services (AD LDS) environments, the Partition parameter must be specified except in the following two conditions:
+For Active Directory Lightweight Directory Services (AD LDS) environments, the Partition parameter must be specified except in the following two instances:
 
 -The cmdlet is run from an Active Directory provider drive.
 
@@ -64,7 +64,7 @@ Description
 -----------
 
 Sets the password of the user account with SamAccountName: tmakovec to 'qwert@12345'.
-Using -NewPassword with a value without providing an -OldPassword parameter value will also reset the password.
+Using -NewPassword with a value, without providing an -OldPassword parameter value, will also reset the password.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```

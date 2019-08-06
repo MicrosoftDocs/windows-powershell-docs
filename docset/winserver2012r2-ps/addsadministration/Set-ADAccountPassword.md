@@ -64,7 +64,7 @@ PS C:\>Set-ADAccountPassword -Identity elisada -OldPassword (ConvertTo-SecureStr
 ```
 
 This command sets the password of the user account with SamAccountName elisada to qwert@12345.
-Using -NewPassword with a value without providing an -OldPassword parameter value will also reset the password.
+Using -NewPassword with a value, without providing an -OldPassword parameter value, will also reset the password.
 
 ### Example 3: Prompt a specified user to change their password
 ```

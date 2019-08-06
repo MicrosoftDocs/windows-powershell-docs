@@ -25,6 +25,8 @@ ms.assetid: 00797342-0AAC-4FFF-84FE-4749DA9242D6
 This reference provides functions descriptions and syntax for all Defender-specific functions. 
 It lists the functions in alphabetical order based on the verb at the beginning of the functions.
 
+[!NOTE] You might also hear these functions referred to as cmdlets. These functions were designed to feel like cmdlets even though they were developed as PowerShell functions.
+
 ## Defender Cmdlets
 ### [Add-MpPreference](./Add-MpPreference.md)
 Modifies settings for Windows Defender.

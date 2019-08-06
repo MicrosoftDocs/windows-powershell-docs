@@ -21,7 +21,7 @@ ms.assetid: 9DB96E25-63EC-4F0F-AF2A-A763F128EED3
 # Disable-MuxEchoResponder
 
 ## SYNOPSIS
-Disables an ICMP echo responder. This command has been deprecated.
+Disables an ICMP echo responder. This cmdlet has been deprecated.
 
 ## SYNTAX
 

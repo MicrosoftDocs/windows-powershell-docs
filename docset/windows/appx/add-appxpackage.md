@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-AppxPackage
-ms.reviewer:
 ---
 
 # Add-AppxPackage
@@ -28,28 +29,44 @@ Adds a signed app package to a user account.
 ### AddSet (Default)
 ```
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
- [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Volume <AppxVolume>]
- [-ExternalPackages <String[]>] [-OptionalPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+ [-RetainFilesOnFailure] [-InstallAllResources] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
+ [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddByAppInstallerSet
+```
+Add-AppxPackage [-Path] <String> [-RequiredContentGroupOnly] [-AppInstallerFile]
+ [-ForceTargetApplicationShutdown] [-InstallAllResources] [-LimitToExistingPackages] [-Volume <AppxVolume>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RegisterSet
 ```
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-Register] [-DisableDevelopmentMode]
- [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+ [-InstallAllResources] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateSet
 ```
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
- [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-InstallAllResources] [-Update] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
+ [-RetainFilesOnFailure] [-InstallAllResources] [-Update] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### StageSet
+```
+Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly] [-Stage]
+ [-ForceUpdateFromAnyVersion] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
+ [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RegisterByPackageFullNameSet
 ```
 Add-AppxPackage [-Register] -MainPackage <String> [-DependencyPackages <String[]>] [-ForceApplicationShutdown]
- [-ForceTargetApplicationShutdown] [-InstallAllResources] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion] [-InstallAllResources] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RegisterByPackageFamilyNameSet
@@ -82,6 +99,7 @@ This command adds an app package that the package contains.
 PS C:\> $ManifestPath = (Get-AppxPackage -Name "*WindowsCalculator*").InstallLocation + "\Appxmanifest.xml"
 PS C:\> Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
 ```
+
 This command gets the full path of the package manifest file of an installed Windows Store app, and then registers that package.
 You can use *DisableDevelopmentMode* to register an application that is staged by the **StagePackageAsync** API, has been disabled, or has become corrupted during testing.
 
@@ -91,12 +109,14 @@ PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -Externa
 
 PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
 ```
+
 This command adds an app package along with its optional packages. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
 
 ### Example 4: Install only the required section of a streaming app
 ```
 PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -RequiredContentGroupOnly
 ```
+
 This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml
 
 ## PARAMETERS
@@ -107,7 +127,7 @@ Specifies the dependency package full name or dependency package bundle full nam
 ```yaml
 Type: String[]
 Parameter Sets: RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,8 +143,8 @@ If a package is already installed for a user, you can skip adding it to the Depe
 
 ```yaml
 Type: String[]
-Parameter Sets: AddSet, RegisterSet, UpdateSet
-Aliases: 
+Parameter Sets: AddSet, RegisterSet, UpdateSet, StageSet
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +162,7 @@ Use the *Register* parameter to specify the location of the app package manifest
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,8 +176,8 @@ Specifies an array of optional packages that must be installed along with the ap
 
 ```yaml
 Type: String[]
-Parameter Sets: AddSet
-Aliases: 
+Parameter Sets: AddSet, StageSet
+Aliases:
 
 Required: False
 Position: Named
@@ -172,8 +192,8 @@ If you specify this parameter, do not specify the *ForceTargetApplicationShutdow
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: AddSet, RegisterSet, UpdateSet, RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
+Aliases:
 
 Required: False
 Position: Named
@@ -188,8 +208,8 @@ If you specify this parameter, do not specify the *ForceApplicationShutdown* par
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: AddSet, AddByAppInstallerSet, RegisterSet, UpdateSet, RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
+Aliases:
 
 Required: False
 Position: Named
@@ -205,8 +225,8 @@ This parameter can only be used when specifying a resource bundle or resource bu
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: AddSet, AddByAppInstallerSet, RegisterSet, UpdateSet, RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +241,7 @@ Specifies the main package full name or bundle full name to register.
 ```yaml
 Type: String
 Parameter Sets: RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,8 +255,8 @@ Specifies the PackageFamilyName of the optional packages that are in a related s
 
 ```yaml
 Type: String[]
-Parameter Sets: AddSet, RegisterByPackageFamilyNameSet
-Aliases: 
+Parameter Sets: AddSet, StageSet, RegisterByPackageFamilyNameSet
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +271,7 @@ An app package has an .appx or .appxbundle file name extension.
 
 ```yaml
 Type: String
-Parameter Sets: AddSet, RegisterSet, UpdateSet
+Parameter Sets: AddSet, AddByAppInstallerSet, RegisterSet, UpdateSet, StageSet
 Aliases: PSPath
 
 Required: True
@@ -271,7 +291,7 @@ In order to specify dependency packages, specify the *DependencyPath* parameter 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -283,7 +303,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterByPackageFullNameSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +318,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterByPackageFamilyNameSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -312,8 +332,8 @@ Specifies that only the required content group that is specified in the AppxCont
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: AddSet, UpdateSet
-Aliases: 
+Parameter Sets: AddSet, AddByAppInstallerSet, UpdateSet, StageSet
+Aliases:
 
 Required: False
 Position: Named
@@ -331,7 +351,7 @@ To update an already installed package, the new package must have the same packa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UpdateSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -346,8 +366,8 @@ The volume also specifies the default location for user **AppData**.
 
 ```yaml
 Type: AppxVolume
-Parameter Sets: AddSet
-Aliases: 
+Parameter Sets: AddSet, AddByAppInstallerSet, StageSet
+Aliases:
 
 Required: False
 Position: Named
@@ -383,6 +403,96 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppInstallerFile
+{{Fill AppInstallerFile Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddByAppInstallerSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceUpdateFromAnyVersion
+{{Fill ForceUpdateFromAnyVersion Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet, RegisterSet, UpdateSet, StageSet, RegisterByPackageFullNameSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LimitToExistingPackages
+{{Fill LimitToExistingPackages Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddByAppInstallerSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RelatedPackages
+{{Fill RelatedPackages Description}}
+
+```yaml
+Type: String[]
+Parameter Sets: AddSet, StageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetainFilesOnFailure
+{{Fill RetainFilesOnFailure Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet, UpdateSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Stage
+{{Fill Stage Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StageSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

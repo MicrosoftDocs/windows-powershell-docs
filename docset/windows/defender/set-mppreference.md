@@ -336,15 +336,7 @@ If you specify a value of $False or do not specify a value, Windows Defender res
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: drp
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```False
-Aliases: dsnf
+Aliases: drp, dsnf
 
 Required: False
 Position: Named

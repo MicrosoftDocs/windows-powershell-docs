@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: A226A166-0FD5-44CE-8540-E2415F2F5ED5
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-AppxDefaultVolume
-ms.reviewer:
 ---
 
 # Set-AppxDefaultVolume
@@ -59,7 +60,7 @@ This cmdlet sets the volume that this parameter specifies to be the default depl
 ```yaml
 Type: AppxVolume
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

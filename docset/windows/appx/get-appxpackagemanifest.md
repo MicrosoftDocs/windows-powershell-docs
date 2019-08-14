@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 9F4A31F1-9110-4A66-BF20-961CC447DFC8
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AppxPackageManifest
-ms.reviewer:
 ---
 
 # Get-AppxPackageManifest
@@ -67,7 +68,7 @@ Wildcards are permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -90,7 +91,7 @@ The user name can be in one of these formats:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2

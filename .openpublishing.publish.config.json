@@ -7,12 +7,24 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      },
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
     }
   ],
   "notification_subscribers": [],
@@ -20,7 +32,9 @@
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://cpubwin.visualstudio.com/_git/powershell",
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
+  "need_preview_pull_request": true,
+  "enable_incremental_build": true,
+  "resolve_user_profile_using_github": true,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
@@ -31,5 +45,23 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "targets": {},
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ]
 }

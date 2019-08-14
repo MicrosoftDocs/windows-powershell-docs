@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 4D2BE4AE-EBBD-4225-8EF1-ECA25C58411E
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AppxVolume
-ms.reviewer:
 ---
 
 # Get-AppxVolume
@@ -82,7 +83,7 @@ Indicates that this cmdlet returns only volumes that are currently dismounted.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OfflineParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +98,7 @@ Indicates that this cmdlet returns only volumes that are currently mounted.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: OnlineParameterSet
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -113,7 +114,7 @@ This cmdlet gets a volume at the location that this parameter specifies.
 ```yaml
 Type: String
 Parameter Sets: DefaultParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -125,7 +126,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: OnlineParameterSet, OfflineParameterSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

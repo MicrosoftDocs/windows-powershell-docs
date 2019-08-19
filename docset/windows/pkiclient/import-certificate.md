@@ -52,6 +52,15 @@ PS C:\>Import-Certificate -Filepath "C:\files\intermediate.cert"
 
 This example imports the certificate from the file into the current store.
 
+### EXAMPLE 3
+```
+PS C:\>$file = ( Get-ChildItem -Path C:\files\root.cer )
+
+PS C:\>$file | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+```
+
+This example imports the certificate from the file into the root store of the Local Machine.
+
 ## PARAMETERS
 
 ### -CertStoreLocation

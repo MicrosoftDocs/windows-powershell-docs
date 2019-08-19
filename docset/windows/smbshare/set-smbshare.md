@@ -277,6 +277,28 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+### -LeasingMode
+Allow admins to stop leases & oplocks.
+
+- Full = default SMB3
+- Shared = grant read-caching lease but not write or handle-caching
+- None = no oplocks or leases, like modified SMB1/3
+
+> [!IMPORTANT]
+> Disabling Oplocks is not recommended by Microsoft and should never be used, but required by some older software, often due to using legacy database technology. Oplock disable is only a workaround - and your vendor should update to not require it. 
+For more information, see [SMB1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008) .
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Specifies the name of one or more SMB shares.

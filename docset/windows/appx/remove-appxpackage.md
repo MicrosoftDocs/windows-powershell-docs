@@ -19,73 +19,31 @@ schema: 2.0.0
 title: Remove-AppxPackage
 ---
 
-# Move-AppxPackage
+# Remove-AppxPackage
 
 ## SYNOPSIS
-Moves a package from its current location to another appx volume.
+Removes an app package from a user account.
 
 ## SYNTAX
 
 ```
-Move-AppxPackage [-Package] <String[]> [-Volume] <AppxVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AppxPackage [-Package] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Move-AppxPackage** cmdlet moves a package from its current location to another **AppxVolume**.
-The new location must be a volume that Package Manager knows about and that is mounted.
-This cmdlet also moves your application data to the specified volume.
+The **Remove-AppxPackage** cmdlet removes an app package from a user account.
+An app package has an .appx file name extension.
 
 ## EXAMPLES
 
-### Example 1: Move a package to a volume specified by a path
+### Example 1: Remove an app package
 ```
-PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume F:\
-```
-
-This command moves package that has the specified name to volume F:\.
-This cmdlet also moves your app data.
-
-### Example 2: Move a package to a volume specified by an ID
-```
-PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume {d2a4d1f4-f45a-46f3-a419-160ab52af091}
+PS C:\>Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
 ```
 
-This command moves package that has the specified name to the volume that has the specified media ID.
-This cmdlet also moves your app data.
+This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
 
 ## PARAMETERS
-
-### -Package
-Specifies an **AppxPackage** object or the full name of a package.
-This cmdlet moves the package that this parameter specifies.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -Volume
-Specifies an **AppxVolume** object.
-The cmdlet moves the package to the volume that this parameter specifies.
-
-```yaml
-Type: AppxVolume
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
@@ -97,13 +55,29 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Package
+Specifies an **AppxPackage** object or the full name of a package.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +86,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -122,15 +96,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage
+An **AppxPackage** object that contain information, including the full name of the app package.
+
 ## OUTPUTS
+
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-AppxPackage](./Add-AppxPackage.md)
+[PackageManager class](http://go.microsoft.com/fwlink/?LinkId=245447)
 
-[Get-AppxPackage](./Get-AppxPackage.md)
-
-[Remove-AppxPackage](./Remove-AppxPackage.md)
-
+[Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)

@@ -100,8 +100,8 @@ This example creates a new 1 TB VHDX-format dynamic virtual hard disk at the spe
 ### Example 5
 ```
 PS C:\> $vhdpath = "C:\VHDs\Test.vhdx"
-PS C:\> $vhdsize = 127GB
-PS C:\> New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -Passthru |Initialize-Disk -Passthru |New-Partition -AssignDriveLetter -UseMaximumSize |Format-Volume -FileSystem NTFS -Confirm:$false -Force
+PS C:\> $vhdsize = (127*[Math]::Pow(1024,3))
+PS C:\> New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -Passthru | Initialize-Disk -Passthru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -Confirm:$false -Force
 ```
 
 This example creates a new 127GB VHD and then mounts, initializes, and formats it so the drive is ready to use.

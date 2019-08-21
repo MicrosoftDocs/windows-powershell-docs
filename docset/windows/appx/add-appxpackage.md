@@ -408,7 +408,8 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstallerFile
-{{Fill AppInstallerFile Description}}
+Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
+See, [Create an App Installer file manually](msix-src/app-installer/how-to-create-appinstaller-file.md).
 
 ```yaml
 Type: SwitchParameter

@@ -22,7 +22,7 @@ title: Remove-AppxPackage
 # Remove-AppxPackage
 
 ## SYNOPSIS
-Removes an app package from a user account.
+Removes an app package from one or more user accounts.
 
 ## SYNTAX
 
@@ -30,6 +30,17 @@ Removes an app package from a user account.
 Remove-AppxPackage [-Package] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+```
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+```
+Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+```
+Remove-AppxPackage [-Package] <String> -User <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+```
 ## DESCRIPTION
 The **Remove-AppxPackage** cmdlet removes an app package from a user account.
 An app package has an .appx file name extension.
@@ -90,6 +101,9 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -PreserveApplicationData
+{{Fill in description}}
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).

@@ -483,7 +483,7 @@ Accepted values: Any, Wired, Wireless, RemoteAccess
 
 Required: False
 Position: Named
-Default value: None
+Default value: Any
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

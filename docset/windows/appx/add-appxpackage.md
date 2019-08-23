@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegisterByFamilyName
-{{Fill RegisterByFamilyName Description}}
+Specifies the parameter -MainPackage that define the family name or full name to register.
 
 ```yaml
 Type: SwitchParameter

@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegisterByFamilyName
-Specifies the parameter -MainPackage that define the family name or full name to register.
+Specifies the parameter -MainPackage that defines the family name or full name to be registered.
 
 ```yaml
 Type: SwitchParameter
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 
 ### -AppInstallerFile
 Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
-See, [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
+For more information, see [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
 
 ```yaml
 Type: SwitchParameter

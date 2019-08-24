@@ -488,7 +488,7 @@ Accept wildcard characters: False
 Specifies how to log the allowed packets in the location specified by the *LogFileName* parameter.
 The acceptable values for this parameter are: False, True, or NotConfigured. 
 
-- True: Windows writes an entry to the log whenever an incoming or outgoing connection is Allowed by the policy. 
+- True: Windows writes an entry to the log whenever an incoming or outgoing connection is allowed by the policy. 
 - False: No logging for allowed connections.
 - NotConfigured: Valid only when configuring a Group Policy Object (GPO). This parameter removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 

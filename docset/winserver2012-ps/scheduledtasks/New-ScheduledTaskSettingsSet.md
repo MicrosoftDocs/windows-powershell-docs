@@ -37,89 +37,69 @@ You can use the scheduled task settings to register a new scheduled task or upda
 ## EXAMPLES
 
 ### Example 1: Register a scheduled task that uses default task settings
-
-The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-```
-The second command creates scheduled task settings that use the default settings and assigns the **ScheduledTaskSettings** object to the STSet variable.
-```
 PS C:\>$STSet = New-ScheduledTaskSettingsSet
-```
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the default task settings.
-```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
 This example registers a scheduled task that uses default task settings.
 
-### Example 2: Set the priority of a scheduled task
-
 The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
+The second command creates scheduled task settings that use the default settings and assigns the **ScheduledTaskSettings** object to the STSet variable.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the default task settings.
+
+### Example 2: Set the priority of a scheduled task
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-```
-The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the STSet variable.
-```
 PS C:\>$STSet = New-ScheduledTaskSettingsSet -Priority 5
-```
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
-```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
 This example sets the priority of a scheduled task.
 
-### Example 3: Set restart settings for a scheduled task
-
 The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
+The second command creates scheduled task settings that sets a higher priority for the scheduled task, and assigns the **ScheduledTaskSettings** object to the STSet variable.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that have a priority setting of 9.
+
+### Example 3: Set restart settings for a scheduled task
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-```
-The second command creates scheduled task settings that specify that Task Scheduler attempts three restarts of the task at sixty minute intervals. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
-```
 PS C:\>$STSet = New-ScheduledTaskSettingsSet -RestartCount 3 -RestartInterval 60
-```
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
-```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
 This example sets restart settings for a scheduled task.
 
-### Example 4: Set idle settings for a scheduled task
-
 The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
+The second command creates scheduled task settings that specify that Task Scheduler attempts three restarts of the task at sixty minute intervals. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
+
+### Example 4: Set idle settings for a scheduled task
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-```
-The second command creates scheduled task settings that specify that Task Scheduler runs the task only when the computer is idle for 2 minutes and waits for 2 hours and 30 minutes for an idle condition. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
-```
 PS C:\>$STSet = New-ScheduledTaskSettingsSet -RunOnlyIfIdle -IdleDuration 00:02:00 -IdleWaitTimeout 02:30:00
-```
-The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
-```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
 This example sets idle settings for a scheduled task.
 
-### Example 5: Register a scheduled task that runs only when a network is available
-
 The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
+The second command creates scheduled task settings that specify that Task Scheduler runs the task only when the computer is idle for 2 minutes and waits for 2 hours and 30 minutes for an idle condition. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
+The third command registers the scheduled task Task01 to run the task action named Cmd and to use the task settings that the **ScheduledTaskSettings** object defines.
+
+### Example 5: Register a scheduled task that runs only when a network is available
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
-```
-The second command creates scheduled task settings that specify that Task Scheduler runs the task only when a network is available. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
-```
 PS C:\>$STSet = New-ScheduledTaskSettingsSet -RunOnlyIfNetworkAvailable
-```
-The third command registers the scheduled task Task01 to run the task action named Cmd only when a network is available.
-```
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $STSet
 ```
 
 This example registers a scheduled task that runs only when a network is available.
+
+The first command creates a scheduled task action named Cmd and assigns the **ScheduledTaskAction** object to the Sta variable.
+The second command creates scheduled task settings that specify that Task Scheduler runs the task only when a network is available. This command assigns the **ScheduledTaskSettings** object to the STSet variable.
+The third command registers the scheduled task Task01 to run the task action named Cmd only when a network is available.
 
 ## PARAMETERS
 

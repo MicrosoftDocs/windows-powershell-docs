@@ -1,18 +1,19 @@
 ---
 author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.author: v-anbarr
 ms.date: 2017-05-19
 ms.prod: w10
+ms.reviewer:
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Invoke-CommandInDesktopPackage
-ms.reviewer:
 ---
 
 # Invoke-CommandInDesktopPackage
@@ -23,8 +24,8 @@ Runs a command in the context of a specified app package.
 ## SYNTAX
 
 ```
-Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [-AppId] <String> [-Command] <String>
- [[-Args] <String>] [-PreventBreakaway]
+Invoke-CommandInDesktopPackage [-PackageFamilyName] <String> [[-AppId] <String>] [-Command] <String>
+ [[-Args] <String>] [-PreventBreakaway] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,17 +45,17 @@ This command invokes the demo.exe that can be found in '29270sandstorm.AppPackag
 ### -AppId
 AppId is the Application ID from the package manifest.
 
-```xml
+
+
 <Application Id="blah" ... />
 </Application>
-```
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
-Required: True
+Required: False
 Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
@@ -67,7 +68,7 @@ Optional arguments that should be passed to the Command (e.g. "/od")
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -82,7 +83,7 @@ An executable to invoke (e.g. "cmd.exe")
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -97,7 +98,7 @@ Family Name of the package. You can retrieve this by calling [Get-AppxPackage](.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -112,7 +113,7 @@ Switch that causes the entire process tree to stay in the package context.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -121,11 +122,13 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### System.String
 System.Management.Automation.SwitchParameter
-
 
 ## OUTPUTS
 

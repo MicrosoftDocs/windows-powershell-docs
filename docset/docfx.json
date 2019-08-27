@@ -188,7 +188,7 @@
       "keywords": "powershell, cmdlet",
       "ms.mktglfcycl": "manage",
       "ms.sitesec": "library",
-      "feedback_system": "none"
+      "feedback_system": "none",
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "MSDN.powershell-windows"

@@ -88,7 +88,7 @@ This example uses five cmdlets and the pipeline to get all disks, filter them fo
 
 ## PARAMETERS
 > [!NOTE]
-> We can use only one paramter between -AssignDriveLetter or -DriveLetter while creating a new-partition.
+> You can use either -AssignDriveLetter parameter or -DriveLetter parameter, but not both at the same time, while creating a new partition.
 
 ### -Alignment
 Specifies the alignment boundary in bytes.

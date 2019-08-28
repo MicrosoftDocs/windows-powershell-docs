@@ -13,6 +13,10 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+      },
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
     }
   ],
   "notification_subscribers": [],

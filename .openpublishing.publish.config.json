@@ -12,9 +12,17 @@
         "Conceptual": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
       },
-      "monikerPath": [
+     "monikerPath": [
         "mapping/monikerMapping.json"
       ]
     }
@@ -36,5 +44,20 @@
   ],
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
-  "targets": {}
+  "targets": {},
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/azurecli.plugins",
+      "id": "opbuild.templates.azurecli",
+      "version": "latest",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    },
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ]
 }

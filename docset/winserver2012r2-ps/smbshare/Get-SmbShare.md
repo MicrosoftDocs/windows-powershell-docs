@@ -148,6 +148,19 @@ VMS2                          Contoso-FS                    J:\VMS
 
 This example retrieves the SMB shares on the computer that are connect to the SMB server named Contoso-FS.
 
+### EXAMPLE 7
+```
+PS C:\>Get-SmbShare -Smbinstance Default
+
+Name                          ScopeName                     Path                          Description 
+----                          ---------                     ----                          ----------- 
+VMS1                          Contoso-FS                    I:\VMS
+VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
+VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
+```
+
+This example retrieves the SMB shares on the computer which has the Smbinstance value set as Default.
+
 ## PARAMETERS
 
 ### -AsJob

@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -LacpTimer
-{{Fill LacpTimer Description}}
+How often  inter-connected devices exchange LACP PDUs or control messages.
 
 ```yaml
 Type: LacpTimers

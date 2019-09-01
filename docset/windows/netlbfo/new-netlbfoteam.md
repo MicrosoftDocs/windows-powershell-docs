@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -LacpTimer
-How often  inter-connected devices exchange LACP PDUs or control messages.
+How often inter-connected devices exchange LACP protocol data units (PDUs) or control messages.
 
 ```yaml
 Type: LacpTimers

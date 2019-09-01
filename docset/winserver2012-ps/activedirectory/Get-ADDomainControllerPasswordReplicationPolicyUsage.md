@@ -127,12 +127,12 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies the user account credentials to use to perform this task.
-The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
+The default credentials are the credentials of the user who is currently signed in unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
 Specifies the credentials for the security context under which the task is performed.
 If this security context doesn't have directory level permissions to perform the task, then an error is returned by the directory.
-If running under the context of an Active Directory module for Windows PowerShell provider drive, the credentials information associated with the drive is used as the default value; otherwise, the currently logged on user security context is used.
+If running under the context of an Active Directory module for Windows PowerShell provider drive, the credentials information associated with the drive is used as the default value; otherwise, the security context of the user who is currently signed in is used.
 
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01, or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.

@@ -36,35 +36,40 @@ The **Reset-IISServerManager** cmdlet resets the IISAdministration view of the I
 ```
 PS C:\> $Sites = (Get-IISServerManager).Sites
 PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
 IsInheritedFromDefaultValue : True
-
 IsProtected                 : False
-
 Name                        : serverAutoStart
-
 Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+Value                       : True
 
-Value                       : True PS C:\> $Sites["default web site"].Attributes["serverAutoStart"].value = $false
+
+PS C:\> $Sites["default web site"].Attributes["serverAutoStart"].value = $false
 PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
 IsInheritedFromDefaultValue : False
-
 IsProtected                 : False
-
 Name                        : serverAutoStart
-
 Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
+Value                       : False
 
-Value                       : False PS C:\> Reset-IISServerManager
+
+PS C:\> Reset-IISServerManager
+
+Confirm
+Are you sure you want to perform this action?
+Performing the operation "Reset-IISServerManager" on target "ServerManager".
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
 PS C:\> $Sites = (Get-IISServerManager).Sites
 PS C:\> $Sites["default web site"].Attributes["serverAutoStart"]
+
+
 IsInheritedFromDefaultValue : True
-
 IsProtected                 : False
-
 Name                        : serverAutoStart
-
 Schema                      : Microsoft.Web.Administration.ConfigurationAttributeSchema
-
 Value                       : True
 ```
 

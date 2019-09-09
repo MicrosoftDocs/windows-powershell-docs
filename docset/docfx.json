@@ -188,7 +188,14 @@
       "keywords": "powershell, cmdlet",
       "ms.mktglfcycl": "manage",
       "ms.sitesec": "library",
-      "feedback_system": "none"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/windows-powershell-docs",
+      "feedback_product_url": "https://windowsserver.uservoice.com/forums/301869-powershell",
+      "_op_documentIdPathDepotMapping": {
+        "./": {
+          "depot_name": "MSDN.powershell-windows"
+        }
+      }
     },
     "fileMetadata": {},
     "template": [],

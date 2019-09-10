@@ -146,7 +146,7 @@ VMS1                          Contoso-FS                    I:\VMS
 VMS2                          Contoso-FS                    J:\VMS
 ```
 
-This example retrieves the SMB shares on the computer that are connect to the SMB server named Contoso-FS.
+This example retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
 
 ### EXAMPLE 7
 ```

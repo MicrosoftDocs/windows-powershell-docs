@@ -34,7 +34,7 @@ Disable-DedupVolume [-Volume] <String[]> [-DataAccess] [-CimSession <CimSession[
 The **Disable-DedupVolume** cmdlet disables further data deduplication activity on one or more volumes.
 After you disable data deduplication, the volume remains in a deduplicated state and the existing deduplicated data is accessible.
 The server stops running data deduplication jobs for the volume and new data is not deduplicated.
-To undo data deduplication on a volume, use the **Start-DedupJob** cmdlet and specify Unoptimization for the **Type** parameter.
+To undo data deduplication on a volume, use the **Start-DedupJob** cmdlet and specify Unoptimization for the *Type* parameter.
 
 After you disable data deduplication on a volume, you can perform all read-only deduplication cmdlet operations on the volume.
 For example, you can use the **Get-DedupStatus** cmdlet to get deduplication status for a volume that has data deduplication metadata.
@@ -57,14 +57,14 @@ PS C:\> Disable-DedupVolume -Volume "\\?\Volume{26a21bda-a627-11d7-9931-806e6f6e
 
 This command disables data deduplication for the volume that has the GUID 26a21bda-a627-11d7-9931-806e6f6e6963.
 
-### Example 3: Suspend I/O activity for a specified volume/
+### Example 3: Suspend I/O activity for a specified volume
 ```
 PS C:\> Disable-DedupVolume -Volume "X:" -DataAccess
 ```
 
 This command suspends I/O activity for data deduplication on the specified volume.
 Effectively, this command causes the data deduplication file system mini-filter to detach from the specified volume. 
-After this command completes, I/O to data deduplication files fails with an ERROR_INVALID_FUNCTION error until either the `Enable-DedupVolume -DataAccess` command runs, or the restarts.
+After this command completes, I/O to data deduplication files fails with an ERROR_INVALID_FUNCTION error until either the `Enable-DedupVolume -DataAccess` command runs, or the server restarts.
 
 ## PARAMETERS
 
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 Specifies an array of system volumes for which to disable data deduplication.
 Specify one or more volume IDs, drive letters, or volume GUID paths.
 For drive letters, use the format D:.
-For volume GUID paths, use the format \\\\?\Volume{{GUID}}\.
+For volume GUID paths, use the format `\\\\?\Volume{{GUID}}\`.
 Separate multiple volumes with a comma.
 
 ```yaml

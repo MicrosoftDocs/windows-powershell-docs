@@ -386,7 +386,7 @@ Specifies the input to this cmdlet. You can use this parameter, or you can pipe 
 Type: SmbInstance
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

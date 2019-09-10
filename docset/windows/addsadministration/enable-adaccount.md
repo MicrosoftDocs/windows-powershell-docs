@@ -36,7 +36,7 @@ The **Enable-ADAccount** cmdlet enables an Active Directory user, computer, or s
 The *Identity* parameter specifies the Active Directory user, computer, or service account that you want to enable.
 You can identify an account by its distinguished name, GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.
 You can also set the *Identity* parameter to an object variable such as `$<localADAccountObject>`, or you can pass an account object through the pipeline to the *Identity* parameter.
-For example, you can use the **Get-ADUser** cmdlet to retrieve an account object and then pass the object through the pipeline to the Enable-ADAccount cmdlet.
+For example, you can use the **Get-ADUser** cmdlet to retrieve an account object and then pass the object through the pipeline to the **Enable-ADAccount** cmdlet.
 Similarly, you can use **Get-ADComputer** and **Search-ADAccount** to retrieve account objects.
 
 ## EXAMPLES

@@ -19,71 +19,128 @@ schema: 2.0.0
 title: Remove-AppxPackage
 ---
 
-# Move-AppxPackage
+# Remove-AppxPackage
 
 ## SYNOPSIS
-Moves a package from its current location to another appx volume.
+Removes an app package from a user account.
 
 ## SYNTAX
 
+### RemoveByPackageSet (Default)
 ```
-Move-AppxPackage [-Package] <String[]> [-Volume] <AppxVolume> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### UserSet
+```
+Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AllUsersSet
+```
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+> [!NOTE] The `AllUsers` parameter requires Windows 10 Build 1809 or later.
+
+
 ## DESCRIPTION
-The **Move-AppxPackage** cmdlet moves a package from its current location to another **AppxVolume**.
-The new location must be a volume that Package Manager knows about and that is mounted.
-This cmdlet also moves your application data to the specified volume.
+The **Remove-AppxPackage** cmdlet removes an app package from a user account.
+An app package has an .appx file name extension.
 
 ## EXAMPLES
 
-### Example 1: Move a package to a volume specified by a path
+### Example 1: Remove an app package
 ```
-PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume F:\
+PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe"
 ```
+This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbwe from the account of the current user.
 
-This command moves package that has the specified name to volume F:\.
-This cmdlet also moves your app data.
-
-### Example 2: Move a package to a volume specified by an ID
+### Example 2: Search using wildcards then remove the specific app package
 ```
-PS C:\> Move-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" -Volume {d2a4d1f4-f45a-46f3-a419-160ab52af091}
+PS C:\> Get-appxpackage *package*
+PS C:\> Remove-AppxPackage -Package "package1_1.0.0.0_neutral__8wekyb3d8bbwe" 
 ```
+This command will show all applications with the word "package". Copy the PackageFullName that you want to remove, then use it in the Remove-AppxPackage command.
 
-This command moves package that has the specified name to the volume that has the specified media ID.
-This cmdlet also moves your app data.
+### Example 3: Search using wildcards then remove all app package
+```
+PS C:\> Get-appxpackage *package*| Remove-AppxPackage
+```
+This command will delete all applications with the word "package".
+
 
 ## PARAMETERS
 
-### -Package
-Specifies an **AppxPackage** object or the full name of a package.
-This cmdlet moves the package that this parameter specifies.
+### -AllUsers
+This cmdlet removes the app package for all user accounts on the computer. This cmdlet works off the parent package type. If it is a bundle, use -PackageTypeFilter and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
 
 ```yaml
-Type: String[]
+Type: SwitchParameter
+Parameter Sets: AllUsersSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Package
+Specifies an **AppxPackage** object or the full name of a package.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Volume
-Specifies an **AppxVolume** object.
-The cmdlet moves the package to the volume that this parameter specifies.
+### -PreserveApplicationData
+Specifies that the cmdlet preserves the application data during the package removal.
+The application data is available for later use. Note that this is only applicable
+for apps that are under development so this option can only be specified for apps
+that are registered from file layout (Loose file registered).
 
 ```yaml
-Type: AppxVolume
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: RemoveByPackageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -User
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions. 
+- SID-string
+
+> [!NOTE]
+- User "parameter of the "Remove-AppxPackage" command only accepts SID 
+- Use **whoami** command to display the current SID of a user, see [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami)
+
+```
+whoami /user
+whoami /groups
+```
+
+```yaml
+Type: String
+Parameter Sets: UserSet
 Aliases:
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -97,13 +154,14 @@ Aliases: cf
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs. The cmdlet is not run.
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -112,7 +170,7 @@ Aliases: wi
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -122,15 +180,31 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String[]
+
+### Microsoft.Windows.Appx.PackageManager.Commands.AppxPackage
+An **AppxPackage** object that contain information, including the full name of the app package.
+
 ## OUTPUTS
+
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Add-AppxPackage](./Add-AppxPackage.md)
+[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+
+[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
 
 [Get-AppxPackage](./Get-AppxPackage.md)
 
-[Remove-AppxPackage](./Remove-AppxPackage.md)
+[Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
 
+[Add-AppxPackage](./Add-AppxPackage.md)
+
+[Move-AppxPackage](./Move-AppxPackage.md)
+
+[Get-AppxLog](./Get-AppxLog.md)
+
+[Get-AppxLastError](./Get-AppxLastError.md)

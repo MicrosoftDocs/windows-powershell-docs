@@ -48,17 +48,16 @@ A connection profile represents a network connection.
 
 ### Example 1: Change the network category of a connection profile
 ```
-This first command gets the connection profile for the network adapter named Ethernet1. The command stores the results in the $Profile variable.
-PS C:\> $Profile = Get-NetConnectionProfile -InterfaceAlias Ethernet1
 
-This second command assigns the value of Public to the **NetworkCategory** property of the connection profile stored in the $Profile variable.
-PS C:\> $Profile.NetworkCategory = Public
+PS C:\> $NetworkProfile = Get-NetConnectionProfile -InterfaceAlias Ethernet1
 
-This third command sets the network category of the connection profile stored in the $Profile variable.
-PS C:\> Set-NetConnectionProfile -InputObject $Profile
+PS C:\> $NetworkProfile.NetworkCategory = Public
+
+PS C:\> Set-NetConnectionProfile -InputObject $NetworkProfile
 ```
-
-This example changes the network category of a connection profile.
+This first command gets the connection profile for the network adapter named Ethernet1. The command stores the results in the $NetworkProfile variable.
+This second command assigns the value of Public to the **NetworkCategory** property of the connection profile stored in the $NetworkProfile variable.
+This third command sets the network category of the connection profile stored in the $NetworkProfile variable.
 
 ## PARAMETERS
 

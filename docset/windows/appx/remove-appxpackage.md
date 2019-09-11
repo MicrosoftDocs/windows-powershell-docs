@@ -56,6 +56,21 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 
 ## PARAMETERS
 
+### -AllUsers
+This cmdlet removes the app package for all user accounts on the computer. This cmdlet works off the parent package type. If it is a bundle, use -PackageTypeFilter and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AllUsersSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -103,7 +118,41 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveApplicationData
-{{Fill in description}}
+Specifies that the cmdlet preserves the application data during the package removal.
+The application data is available for later use. Note that this is only applicable
+for apps that are under development so this option can only be specified for apps
+that are registered from file layout (Loose file registered).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveByPackageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -User
+If you specify this parameter, the cmdlet removes the app package for only the user that this cmdlet specifies. To remove a package for a user profile other than the profile of the current user, you must run this command by using administrator permissions.
+
+Note:
+- User "parameter of the "Remove-AppxPackage" command only accepts SID 
+- Use **whoami** command to display the current SID of a user, see [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami).
+
+```yaml
+Type: String
+Parameter Sets: UserSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).

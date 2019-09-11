@@ -87,8 +87,6 @@ PS C:\>Format-Volume
 This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then format them.
 
 ## PARAMETERS
-> [!NOTE]
-> You can use either -AssignDriveLetter parameter or -DriveLetter parameter, but not both at the same time, while creating a new partition.
 
 ### -Alignment
 Specifies the alignment boundary in bytes.
@@ -380,6 +378,8 @@ You can pipe a Disk object to the **InputObject** parameter.
 This cmdlet outputs an object that represents the newly created partition.
 
 ## NOTES
+
+You can use either -AssignDriveLetter parameter or -DriveLetter parameter, but not both at the same time, while creating a new partition.
 
 ## RELATED LINKS
 

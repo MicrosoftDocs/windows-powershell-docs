@@ -28,28 +28,28 @@ Creates a new partition on an existing Disk object.
 ### ByNumber (Default)
 ```
 New-Partition [-DiskNumber] <UInt32[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>]
- [-Alignment <UInt32>] [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
+ [-Alignment <UInt32>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
  [-IsHidden] [-IsActive] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
 New-Partition -DiskId <String[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>] [-Alignment <UInt32>]
- [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
+ [-DriveLetter <Char>] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByPath
 ```
 New-Partition -DiskPath <String[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>] [-Alignment <UInt32>]
- [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
+ [-DriveLetter <Char>] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
 New-Partition -InputObject <CimInstance[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>]
- [-Alignment <UInt32>] [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
+ [-Alignment <UInt32>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
  [-IsHidden] [-IsActive] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -87,6 +87,8 @@ PS C:\>Format-Volume
 This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then format them.
 
 ## PARAMETERS
+> [!NOTE]
+> You can use either -AssignDriveLetter parameter or -DriveLetter parameter, but not both at the same time, while creating a new partition.
 
 ### -Alignment
 Specifies the alignment boundary in bytes.

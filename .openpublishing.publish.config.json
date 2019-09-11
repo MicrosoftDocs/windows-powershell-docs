@@ -1,20 +1,15 @@
 {
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "powershell-windows",
+      "docset_name": "windows-powershell",
       "build_source_folder": "docset",
-      "build_output_subfolder": "powershell-windows",
+      "build_output_subfolder": "windows-powershell",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePSModulePage": "Content"
+        "Conceptual": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -27,11 +22,31 @@
           "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       },
-        "monikerPath": ["mapping/monikerMapping.json"]
+     "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
     }
   ],
+  "notification_subscribers": [],
+  "sync_notification_subscribers": [],
+  "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://cpubwin.visualstudio.com/_git/powershell",
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "contribution_branch_mappings": {},
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "targets": {},
   "dependent_packages": [
-  {
+    {
       "path_to_root": "_dependentPackages/azurecli.plugins",
       "id": "opbuild.templates.azurecli",
       "version": "latest",
@@ -44,23 +59,5 @@
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
-  ],
-  "notification_subscribers": ["brianlic@microsoft.com"],
-  "git_repository_url_open_to_public_contributors": "https://cpubwin.visualstudio.com/_git/powershell",
-  "branches_to_filter": [],
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": true,
-  "enable_incremental_build": true,
-  "contribution_branch_mappings": {},
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    }
-  ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "resolve_user_profile_using_github": true
+  ]
 }

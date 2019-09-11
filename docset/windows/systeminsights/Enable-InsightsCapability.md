@@ -5,7 +5,7 @@ ms.author: v-anbarr
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
-title: # Enable-InsightsCapability
+title: Enable-InsightsCapability
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet

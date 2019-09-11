@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 658F6689-4A9E-4EF1-8C2F-F06BBD0947BD
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AppxLastError
-ms.reviewer:
 ---
 
 # Get-AppxLastError

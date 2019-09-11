@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: D656EADB-79C4-4057-B933-2F8019BA4681
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackage
 schema: 2.0.0
 title: Get-AppxPackage
-ms.reviewer:
 ---
 
 # Get-AppxPackage
@@ -60,7 +61,7 @@ To use this parameter, you must run the command by using administrator permissio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -77,7 +78,7 @@ Wildcards are permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -101,7 +102,7 @@ By default, this cmdlet returns only packages of types Main and Framework.
 ```yaml
 Type: PackageTypes
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Main, Framework, Resource, Bundle, Xap
 
 Required: False
@@ -119,7 +120,7 @@ Wildcards are permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -142,7 +143,7 @@ The user name can be in one of these formats:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +159,7 @@ If you specify this parameter, this cmdlet returns only packages that are relati
 ```yaml
 Type: AppxVolume
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

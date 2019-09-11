@@ -160,10 +160,8 @@ Specifies an Active Directory group object by providing one of the following val
 The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
-- A distinguished name
-- A GUID (objectGUID) 
-- A security identifier (objectSid) 
-- A security accounts manager account name (sAMAccountName)
+-A distinguished name
+-A GUID (objectGUID)
 
 The cmdlet searches the default naming context or partition to find the object.
 If two or more objects are found, the cmdlet returns a non-terminating error.

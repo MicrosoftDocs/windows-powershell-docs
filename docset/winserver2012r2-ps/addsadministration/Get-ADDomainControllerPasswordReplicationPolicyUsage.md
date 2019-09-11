@@ -145,7 +145,7 @@ If running under the context of an Active Directory module for Windows PowerShel
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
 You can then set the **Credential** parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
@@ -167,21 +167,21 @@ Specifies an Active Directory domain controller object by providing one of the f
 The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
 The acceptable values for this parameter are:
 
-- A GUID (objectGUID) 
-- An IPV4Address
-- A Global IPV6Address 
-- A DNS Host Name (dNSHostName) 
-- A name of the server object
-- A distinguished name of the NTDS Settings object
-- A distinguished name of the server object that represents the domain controller
-- A GUID of NTDS settings object under the configuration partition
-- A GUID of server object under the configuration partition
+- A GUID (objectGUID).
+- An IPV4Address.
+- A Global IPV6Address.
+- A DNS Host Name (dNSHostName).
+- A name of the server object.
+- A distinguished name of the NTDS Settings object.
+- A distinguished name of the server object that represents the domain controller.
+- A GUID of NTDS settings object under the configuration partition.
+- A GUID of server object under the configuration partition.
 - A distinguished name of the computer object that represents the domain controller.
 
 The cmdlet searches the default naming context or partition to find the object.
 If two or more objects are found, the cmdlet returns a non-terminating error.
 
-This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+This parameter can also get the object through the pipeline or you can set this parameter to an object instance.
 
 ```yaml
 Type: ADDomainController
@@ -211,27 +211,27 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+Specifies the Active Directory Domain Services instance to connect to by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways:  
 
  Domain name values:
 
-- Fully qualified domain name
-- NetBIOS name
+- Fully qualified domain name.
+- NetBIOS name.
 
  Directory server values: 
 
-- Fully qualified directory server name
-- NetBIOS name
-- Fully qualified directory server name and port
+- Fully qualified directory server name.
+- NetBIOS name.
+- Fully qualified directory server name and port.    
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
-- By using the domain of the computer running Windows PowerShell
+- By using the **Server** value from objects passed through the pipeline.
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive when the cmdlet runs in that drive.
+- By using the domain of the computer running Windows PowerShell.
 
 ```yaml
 Type: String

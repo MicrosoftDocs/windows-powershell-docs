@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-AppxLog
-ms.reviewer:
 ---
 
 # Get-AppxLog
@@ -69,7 +70,7 @@ This cmdlet uses the ID to get the log for a particular app package installation
 ```yaml
 Type: String
 Parameter Sets: ActivityId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -85,7 +86,7 @@ You can get additional information when you run this cmdlets from Windows PowerS
 ```yaml
 Type: SwitchParameter
 Parameter Sets: All
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -259,6 +259,6 @@ As of Windows 10 version 1709, you cannot use Windows Server Update Services (WS
 
 ## RELATED LINKS
 
-- [Get-WindowsCapability](./Get-WindowsCapability.md)
-- [Remove-WindowsCapability](./Remove-WindowsCapability.md)
+[Get-WindowsCapability](./Get-WindowsCapability.md)
+[Remove-WindowsCapability](./Remove-WindowsCapability.md)
 

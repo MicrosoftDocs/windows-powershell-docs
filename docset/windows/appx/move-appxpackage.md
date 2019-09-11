@@ -4,18 +4,19 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Appx
 ms.assetid: 87F623C4-258B-45DA-82C4-F3662C1CB4F5
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Move-AppxPackage
-ms.reviewer:
 ---
 
 # Move-AppxPackage
@@ -61,7 +62,7 @@ This cmdlet moves the package that this parameter specifies.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,7 +78,7 @@ The cmdlet moves the package to the volume that this parameter specifies.
 ```yaml
 Type: AppxVolume
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2

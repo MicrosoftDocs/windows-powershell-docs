@@ -336,8 +336,10 @@ The acceptable values for this parameter are:
 
 - None 
 - Hash 
-- FileName 
+- FileName
+- FilePath
 - SignedVersion 
+- PFN
 - Publisher 
 - FilePublisher 
 - LeafCertificate 

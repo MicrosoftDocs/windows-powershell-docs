@@ -306,7 +306,7 @@ If you specify multiple fallback levels, this cmdlet tries them in order.
 Type: RuleLevel[]
 Parameter Sets: Drivers
 Aliases: 
-Accepted values: None, Hash, FileName, SignedVersion, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
+Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
 Required: False
 Position: Named
@@ -336,7 +336,7 @@ The acceptable values for this parameter are:
 
 - None 
 - Hash 
-- FileName
+- FileName 
 - FilePath
 - SignedVersion 
 - PFN
@@ -353,7 +353,7 @@ The acceptable values for this parameter are:
 Type: RuleLevel
 Parameter Sets: Drivers
 Aliases: l
-Accepted values: None, Hash, FileName, SignedVersion, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
+Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
 Required: True
 Position: Named

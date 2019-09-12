@@ -232,7 +232,7 @@ If you specify multiple fallback levels, this cmdlet tries them in order.
 Type: RuleLevel[]
 Parameter Sets: (All)
 Aliases: 
-Accepted values: None, Hash, FileName, SignedVersion, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
+Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
 Required: False
 Position: Named
@@ -247,7 +247,7 @@ The acceptable values for this parameter are:
 
 - None 
 - Hash 
-- FileName
+- FileName 
 - FilePath
 - SignedVersion 
 - PFN

@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Removes a record or records without prompting you for confirmation. By default, the cmdlet prompts you for confirmation before it proceeds.
 
 ```yaml
 Type: SwitchParameter

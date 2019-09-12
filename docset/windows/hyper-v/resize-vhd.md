@@ -45,18 +45,21 @@ The shrink operation fails if it would shrink the virtual disk to less than its 
 If the VHD belongs to the virtual IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.
 If the VHD belongs to the virtual SCSI chain, you **can** resize the virtual disk while the virtual machine is online.
 
+> [!NOTE]
+> SizeBytes acceptes only Uint64 values and cannot accept strings in TB or GB. The value needs to be specified in Uint64 format which is 1099511627776 for 1 TB.
+
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1TB
+PS C:\> Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1099511627776
 ```
 
 Expands the VHDX to 1 terabyte (assuming that the previous size was less than the new size prior to the command).
 
 ### Example 2
 ```
-PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 1TB
+PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 1099511627776
 ```
 
 Shrinks the VHDX to one terabyte (assuming that the virtual hard disk object associated with the file path has a **MinimumSize** less than or equal to 1TB).

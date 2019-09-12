@@ -36,9 +36,7 @@ The **Import-Certificate** cmdlet imports one or more certificates into a certif
 
 ### EXAMPLE 1
 ```
-PS C:\>$file = ( Get-ChildItem -Path C:\files\root.cer )
-
-PS C:\>$file | Import-Certificate -CertStoreLocation cert:\CurrentUser\Root
+Import-Certificate -FilePath "C:\Users\xyz\Desktop\BackupCert.Cer" -CertStoreLocation cert:\CurrentUser\Root
 ```
 
 This example imports the certificate from the file into the root store of the current user.
@@ -51,6 +49,13 @@ PS C:\>Import-Certificate -Filepath "C:\files\intermediate.cert"
 ```
 
 This example imports the certificate from the file into the current store.
+
+### EXAMPLE 3
+```
+Import-Certificate -FilePath "C:\Users\Xyz\Desktop\BackupCert.Cer" -CertStoreLocation Cert:\LocalMachine\Root
+```
+
+This example imports the certificate from the file into the root store of the Local Machine.
 
 ## PARAMETERS
 

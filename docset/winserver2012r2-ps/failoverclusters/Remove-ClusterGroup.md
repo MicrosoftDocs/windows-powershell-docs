@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-{{Fill VMId Description}}
+Specifies the virtual machine identifier (ID).
 
 ```yaml
 Type: Guid

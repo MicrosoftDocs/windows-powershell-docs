@@ -41,13 +41,13 @@ Get-ADDomainControllerPasswordReplicationPolicyUsage [-AuthenticatedAccounts] [-
 The **Get-ADDomainControllerPasswordReplicationPolicyUsage** cmdlet gets the user or computer accounts that are authenticated by a read-only domain controller (RODC) or that have passwords that are stored on that RODC.
 The list of accounts that are stored on a RODC is known as the revealed list.
 
-To get accounts that are authenticated by the RODC, use the *AuthenticatedAccounts* parameter.
-To get the accounts that have passwords stored on the RODC, use the *RevealedAccounts* parameter.
+To get accounts that are authenticated by the RODC, use the **AuthenticatedAccounts** parameter.
+To get the accounts that have passwords stored on the RODC, use the **RevealedAccounts** parameter.
 
-The *Identity* parameter specifies the RODC.
+The **Identity** parameter specifies the RODC.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name distinguished name of the NTDS settings object of the server object, the GUID of the NTDS settings object of the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
-You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
+You can also set the **Identity** parameter to a domain controller object variable, such as **$\<localDomainControllerObject\>**, or pass a domain controller object through the pipeline to the **Identity** parameter.
 For example, you can use the Get-ADDomainController  cmdlet to retrieve a domain controller object and then pass the object through the pipeline to the **Get-ADDomainControllerPasswordReplicationPolicyUsage** cmdlet.
 If you specify a writeable domain controller for this cmdlet, the cmdlet returns a non-terminating error.
 
@@ -58,7 +58,7 @@ If you specify a writeable domain controller for this cmdlet, the cmdlet returns
 PS C:\> Get-ADDomainControllerPasswordReplicationPolicyUsage -Identity "USER01-RODC1" -AuthenticatedAccounts | ft Name,ObjectClass -A
 ```
 
-This command gets the authenticated accounts for the RODC specified by the *Identity* parameter.
+This command gets the authenticated accounts for the RODC specified by the **Identity** parameter.
 The command displays the name and object class of each.
 
 ### Example 2: Get revealed accounts for a specified RODC
@@ -66,7 +66,7 @@ The command displays the name and object class of each.
 PS C:\> Get-ADDomainControllerPasswordReplicationPolicyUsage -Identity "USER01-RODC1" -RevealedAccounts | ft Name,ObjectClass -A
 ```
 
-This command gets the revealed accounts for the RODC specified by the *Identity* parameter.
+This command gets the revealed accounts for the RODC specified by the **Identity** parameter.
 The command displays the name and object class of each account returned.
 
 ### Example 3: Get a list of accounts cached across all RODCs
@@ -147,7 +147,7 @@ To specify this parameter, you can type a user name, such as User1 or Domain01\U
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
 You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
-You can then set the *Credential* parameter to the **PSCredential** object.
+You can then set the **Credential** parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -168,21 +168,21 @@ Specifies an Active Directory domain controller object by providing one of the f
 The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.
 The acceptable values for this parameter are:
 
-- A GUID (objectGUID) 
-- An IPV4Address
-- A Global IPV6Address 
-- A DNS Host Name (dNSHostName) 
-- A name of the server object
-- A distinguished name of the NTDS Settings object
-- A distinguished name of the server object that represents the domain controller
-- A GUID of NTDS settings object under the configuration partition
-- A GUID of server object under the configuration partition
+- A GUID (objectGUID).
+- An IPV4Address.
+- A Global IPV6Address.
+- A DNS Host Name (dNSHostName).
+- A name of the server object.
+- A distinguished name of the NTDS Settings object.
+- A distinguished name of the server object that represents the domain controller.
+- A GUID of NTDS settings object under the configuration partition.
+- A GUID of server object under the configuration partition.
 - A distinguished name of the computer object that represents the domain controller.
 
 The cmdlet searches the default naming context or partition to find the object.
 If two or more objects are found, the cmdlet returns a non-terminating error.
 
-This parameter can also get this object through the pipeline or you can set this parameter to an object instance.
+This parameter can also get the object through the pipeline or you can set this parameter to an object instance.
 
 ```yaml
 Type: ADDomainController
@@ -212,27 +212,27 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+Specifies the Active Directory Domain Services instance to connect to by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways: 
 
 Domain name values:
 
-- Fully qualified domain name
-- NetBIOS name
+- Fully qualified domain name.
+- NetBIOS name.
 
 Directory server values: 
 
-- Fully qualified directory server name
-- NetBIOS name
-- Fully qualified directory server name and port
+- Fully qualified directory server name.
+- NetBIOS name.
+- Fully qualified directory server name and port.
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
-- By using the domain of the computer running Windows PowerShell
+- By using the **Server** value from objects passed through the pipeline.
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive when the cmdlet runs in that drive.
+- By using the domain of the computer running Windows PowerShell.
 
 ```yaml
 Type: String

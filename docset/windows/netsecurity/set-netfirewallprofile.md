@@ -488,9 +488,9 @@ Accept wildcard characters: False
 Specifies how to log the allowed packets in the location specified by the *LogFileName* parameter.
 The acceptable values for this parameter are: False, True, or NotConfigured. 
 
-- True: Windows writes an entry to the log whenever an incoming or outgoing connection is prevented by the policy. 
-- False: No logging for dropped connections.
-This parameter removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
+- True: Windows writes an entry to the log whenever an incoming or outgoing connection is allowed by the policy. 
+- False: No logging for allowed connections.
+- NotConfigured: Valid only when configuring a Group Policy Object (GPO). This parameter removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 
 The default setting when managing a computer is False.
 When managing a GPO, the default setting is NotConfigured.
@@ -559,8 +559,8 @@ Accept wildcard characters: False
 Specifies how to log the ignored packets in the location specified by the *LogFileName* parameter.
 The acceptable values for this parameter are: False, True, or NotConfigured. 
 
-- True: Windows writes an entry to the log whenever an incoming or outgoing connection is prevented by policy. 
-- False: No logging for dropped connections. 
+- True: Windows writes an entry to the log whenever an incoming or outgoing connection is ignored by policy.
+- False: No logging for ignored connections. 
 - NotConfigured: Valid only when configuring a Group Policy Object (GPO).
 This parameter removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 

@@ -277,6 +277,27 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+### -LeasingMode
+Allow admins to stop leases and oplocks.
+
+- Full = default SMB3
+- Shared = grant read-caching lease but not write or handle-caching
+- None = no oplocks or leases, like modified SMB1/3
+
+> [!IMPORTANT]
+> We do not recommend disabling oplocks, but may be required in some scenarios. For more information, see [SMB1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Name
 Specifies the name of one or more SMB shares.
@@ -410,4 +431,3 @@ This cmdlet returns a **MSFT_SmbShare** object that represents the modified shar
 [New-SmbShare](./New-SmbShare.md)
 
 [Remove-SmbShare](./Remove-SmbShare.md)
-

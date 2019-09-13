@@ -71,6 +71,21 @@ VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow   
 
 This example removes all of the deny ACEs for the trustee from the security descriptor of the SMB share without user confirmation.
 
+### EXAMPLE 3
+```
+PS C:\>Unblock-SmbShareAccess -Smbinstance Default
+Confirm 
+Are you sure you want to perform this action? 
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y 
+ 
+Name                    ScopeName               AccountName             AccessControlType       AccessRight 
+----                    ---------               -----------             -----------------       ----------- 
+VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full 
+VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow                   Full
+```
+
+This example removes all of the deny ACEs for all Smbinstance's which has the value set as Default..
+
 ## PARAMETERS
 
 ### -AccountName
@@ -198,13 +213,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

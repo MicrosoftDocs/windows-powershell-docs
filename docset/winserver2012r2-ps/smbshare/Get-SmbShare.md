@@ -146,7 +146,20 @@ VMS1                          Contoso-FS                    I:\VMS
 VMS2                          Contoso-FS                    J:\VMS
 ```
 
-This example retrieves the SMB shares on the computer that are connect to the SMB server named Contoso-FS.
+This example retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
+
+### EXAMPLE 7
+```
+PS C:\>Get-SmbShare -Smbinstance Default
+
+Name                          ScopeName                     Path                          Description 
+----                          ---------                     ----                          ----------- 
+VMS1                          Contoso-FS                    I:\VMS
+VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
+VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
+```
+
+This example retrieves the SMB shares on the computer which has the Smbinstance value set as Default.
 
 ## PARAMETERS
 
@@ -367,13 +380,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

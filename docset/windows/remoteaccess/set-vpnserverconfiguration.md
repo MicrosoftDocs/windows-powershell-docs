@@ -63,7 +63,7 @@ PS C:\>Set-VpnServerConfiguration -IdleDisconnectSeconds 1000 -PassThru
 
 ```
 
-This command changes the idle disconnect time to 1000 seconds for the VPN server. The command includes the PassThru parameter, so the command sends a VpnServerIPsecConfiguration object to the console.
+This command changes the idle disconnect time of the VPN server to 1000 seconds. The command includes the PassThru parameter, so it sends a VpnServerIPsecConfiguration object to the console.
 
 ### Example 2: Configure a custom IPsec policy
 ```

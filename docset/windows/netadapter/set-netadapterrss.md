@@ -55,7 +55,7 @@ Set-NetAdapterRss -InputObject <CimInstance[]> [-NumberOfReceiveQueues <UInt32>]
 ## DESCRIPTION
 The **Set-NetAdapterRss** cmdlet sets the receive side scaling (RSS) properties on a network adapter.
 RSS is a scalability technology that distributes the receive network traffic among multiple processors by hashing the header of the incoming packet.
-Without RSS in firstref_longhorn, firstref_server_7, and Windows Server® 2012; network traffic is received on the first processor which can quickly reach full utilization limiting receive network throughput.
+Without RSS in Windows Server® 2008, Windows Server® 2008 R2, and Windows Server® 2012; network traffic is received on the first processor which can quickly reach full utilization limiting receive network throughput.
 Many properties can be configured using the parameters to optimize the performance of RSS.
 The selection of the processors to use for RSS is an important aspect of load balancing.
 Most of the parameters for this cmdlet help to determine the processors used by RSS.
@@ -356,7 +356,7 @@ Specifies the RSS profile.
 
 The acceptable values for this parameter are:
 
-- Closest: Behavior is consistent with the behavior of firstref_server_7. 
+- Closest: Behavior is consistent with the behavior of Windows Server® 2008 R2. 
 - ClosestStatic: No dynamic load balancing, such as distributing but not load balancing at runtime. 
 - NUMA: Assigns RSS processors in a round robin basis across every NUMA node to enable applications that are running on NUMA servers to scale well. 
 - NUMAStatic: Default behavior.

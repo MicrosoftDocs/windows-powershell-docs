@@ -66,7 +66,7 @@ The **Enable-NetAdapterEncapsulatedPacketTaskOffload** cmdlet is the preferred c
 
 ### Example 2: Disable encapsulated packet task offload on the specified network adapter
 ```
-PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter"  -VxlanEncapsulatedPacketTaskOffloadEnabled $False
+PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter" -VxlanEncapsulatedPacketTaskOffloadEnabled $False
 ```
 
 This command disables VXLAN encapsulated packet task offload on the network adapter named MyAdapter and restarts the network adapter.

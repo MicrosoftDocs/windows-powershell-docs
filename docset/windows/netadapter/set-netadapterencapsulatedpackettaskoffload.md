@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -VxlanUDPPortNumber
-The port number to use for the VXLAN UDP destination port.
+Specifies the port number to use for the VXLAN UDP destination port.
 
 ```yaml
 Type: UInt16

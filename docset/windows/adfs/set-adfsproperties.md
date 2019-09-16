@@ -494,7 +494,7 @@ Accept wildcard characters: False
 ```
 
 ### - EnableOAuthDeviceFlow
-Enables the OAuth device flow.
+Enables the OAuth Device Flow.
 
 ```yaml
 Type: Boolean

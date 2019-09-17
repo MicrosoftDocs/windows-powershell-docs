@@ -45,7 +45,7 @@ Enable-NetAdapterRss -InputObject <CimInstance[]> [-NoRestart] [-PassThru] [-Cim
 ## DESCRIPTION
 The **Enable-NetAdapterRss** cmdlet enables receive side scaling (RSS) on the network adapter.
 RSS is a scalability technology that distributes the receive network traffic among multiple processors by hashing the header of the incoming packet.
-Without RSS in Windows Server 2008 and later, network traffic is received on the first processor which can quickly reach full utilization limiting receive network throughput.
+If RSS is disabled, network traffic is processed on a single processor core. This may impact network performance as the processor utilization increases.
 
 ## EXAMPLES
 

@@ -177,6 +177,10 @@ The command also specifies that this volume uses a combination of the TPM and th
 The command also specifies to encrypt the used space data on the disk, instead of the entire volume.
 When the system writes data to the volume in the future, that data is encrypted.
 
+> [!IMPORTANT]
+> if you enable BitLocker this way, the password will be stored in the following location as plain text:
+%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+
 ### Example 2: Enable BitLocker with a recovery key
 ```
 PS C:\> Get-BitLockerVolume | Enable-BitLocker -EncryptionMethod Aes128 -RecoveryKeyPath "E:\Recovery\" -RecoveryKeyProtector

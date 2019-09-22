@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 
 # PowerShellWebAccess Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Windows PowerShell® Web Access-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## PowerShellWebAccess Cmdlets
 ### [Add-PswaAuthorizationRule](./Add-PswaAuthorizationRule.md)

@@ -493,7 +493,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### - EnableOAuthDeviceFlow
+### -EnableOAuthDeviceFlow
 Enables the OAuth Device Flow.
 
 ```yaml

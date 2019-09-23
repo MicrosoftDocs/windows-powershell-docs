@@ -57,41 +57,21 @@ By Specifying CustomPolicy, IPsec parameters can be customized.
 
 ## EXAMPLES
 
-### Example 1: Modify the idle disconnect seconds of a VPN server
+### Example 1: Change the idle disconnect time
 ```
-PS C:\>Set-VpnServerIPsecConfiguration -IdleDisconnectSeconds 1000 -PassThru
-WARNING: Configuration parameters will be modified after the Remote Access service is restarted. 
+PS C:\>Set-VpnServerConfiguration -IdleDisconnectSeconds 1000 -PassThru
 
-EncryptionType                 : OptionalEncryption
-Ikev2Ports                     : 5
-IdleDisconnect(s)              : 1000
-L2tpPorts                      : 5
-SADataSizeForRenegotiation(KB) : 102400
-SALifeTime(s)                  : 28800
 ```
 
-This command modifies the idle disconnect seconds of the VPN server.
+This command changes the idle disconnect time of the VPN server to 1000 seconds. The command includes the PassThru parameter, so it sends a VpnServerIPsecConfiguration object to the console.
 
-### Example 2: Plumb custom IPsec policy for incoming VPN connections
+### Example 2: Configure a custom IPsec policy
 ```
-PS C:\>Set-VpnServerIPsecConfiguration -CustomPolicy -EncryptionMethod "AES128" -DhGroup "Group2" -PfsGroup "PFS2" -CipherTransformConstants "AES128"  -IntegrityCheckMethod "SHA256" -AuthenticationTransformConstants "SHA256128" -PassThru
-WARNING: Configuration parameters will be modified after the Remote Access service is restarted. 
+PS C:\>Set-VpnServerConfiguration -CustomPolicy -EncryptionMethod "AES128" -DhGroup "Group2" -PfsGroup "PFS2" -CipherTransformConstants "AES128"  -IntegrityCheckMethod "SHA256" -AuthenticationTransformConstants "SHA256128" -PassThru
 
-AuthenticationTransformConstants : SHA256128
-CipherTransformConstants         : AES128
-CustomPolicy                     : True
-DHGroup                          : Group2
-EncryptionMethod                 : AES128
-Ikev2Ports                       : 5
-IdleDisconnect(s)                : 1000
-IntegrityCheckMethod             : SHA256
-L2tpPorts                        : 5
-PFSgroup                         : PFS2
-SADataSizeForRenegotiation(KB)   : 102400
-SALifeTime(s)                    : 28800
 ```
 
-This command plumbs custom IPsec policy for incoming VPN connections and site to site VPN connections whose authentication method is not pre shared key.
+This command configures a custom IPsec policy for incoming VPN connections and S2S protocol VPN connections that do not use a pre-shared key as an authentication method.
 
 ## PARAMETERS
 

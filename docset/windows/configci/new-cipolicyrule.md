@@ -242,23 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Specifies the primary level of detail for generated rules.
-The acceptable values for this parameter are:
-
-- None 
-- Hash 
-- FileName 
-- FilePath
-- SignedVersion 
-- PFN
-- Publisher 
-- FilePublisher 
-- LeafCertificate 
-- PcaCertificate 
-- RootCertificate 
-- WHQL 
-- WHQLPublisher 
-- WHQLFilePublisher
+Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
 ```yaml
 Type: RuleLevel

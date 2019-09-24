@@ -38,15 +38,15 @@ Get-ADDomainControllerPasswordReplicationPolicy [-AuthType <ADAuthType>] [-Crede
 
 ## DESCRIPTION
 The **Get-ADDomainControllerPasswordReplicationPolicy** cmdlet gets the users, computers, service accounts and groups that are members of the applied list or denied list for a read-only domain controller's (RODC) password replication policy.
-To get the members of the applied list, specify the **AppliedList** parameter.
-To get the members of the denied list, specify the **DeniedList** parameter.
+To get the members of the applied list, specify the *AppliedList* parameter.
+To get the members of the denied list, specify the *DeniedList* parameter.
 
-The **Identity** parameter specifies the RODC that uses the allowed and denied lists to apply the password replication policy.
+The *Identity* parameter specifies the RODC that uses the allowed and denied lists to apply the password replication policy.
 You can identify a domain controller by its GUID, IPV4Address, IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
 
-You can also set the **Identity** parameter to a domain controller object variable, such as **$\<localDomainControllerObject\>**, or pass a domain controller object through the pipeline operator to the **Identity** parameter.
-For example, you can use the Get-ADDomainController cmdlet to retrieve a domain controller object and then pass the object through the pipeline operator to the **Get-ADDomainControllerPasswordReplicationPolicy** cmdlet.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline operator to the *Identity* parameter.
+For example, you can use the **Get-ADDomainController** cmdlet to retrieve a domain controller object and then pass the object through the pipeline operator to the **Get-ADDomainControllerPasswordReplicationPolicy** cmdlet.
 
 If you specify a writeable domain controller for this cmdlet, the cmdlet returns a non-terminating error.
 
@@ -61,17 +61,13 @@ This command gets from an RODC domain controller password replication policy the
 
 ### Example 2: Get the password replication policy allowed list from all RODCs in the domain
 ```
-PS C:\> Get-ADDomainController -Filter {IsReadOnly -eq $true} | Get-ADDomainControllerPasswordReplicationPolicy -Allowed
-DistinguishedName : CN=Allowed RODC Password Replication Group,CN=Users,DC=User01,DC=com
+C:\PS>Get-ADDomainController -Filter {IsReadOnly -eq $true} | Get-ADDomainControllerPasswordReplicationPolicy -Allowed
 
+DistinguishedName : CN=Allowed RODC Password Replication Group,CN=Users,DC=Fabrikam,DC=com
 Name              : Allowed RODC Password Replication Group
-
 ObjectClass       : group
-
 ObjectGUID        : 239b0470-7f49-472d-8fcb-4911e90b2c5e
-
 SamAccountName    : Allowed RODC Password Replication Group
-
 SID               : S-1-5-21-41432690-3719764436-1984117282-571
 ```
 
@@ -126,8 +122,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -204,16 +200,16 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways: 
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+Directory server values: 
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -221,8 +217,8 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the *Server* value from objects passed through the pipeline
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
@@ -238,12 +234,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADDomainController
-A domain controller object is received by the **Identity** parameter.
+A domain controller object is received by the *Identity* parameter.
 
 ## OUTPUTS
 

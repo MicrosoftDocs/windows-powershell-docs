@@ -41,19 +41,19 @@ Add-ADDomainControllerPasswordReplicationPolicy [-WhatIf] [-Confirm] [-AuthType 
 ## DESCRIPTION
 The **Add-ADDomainControllerPasswordReplicationPolicy** cmdlet adds one or more users, computers, and groups to the allowed or denied list of a read-only domain controller (RODC) password replication policy.
 
-The **Identity** parameter specifies the read-only domain controller (RODC) that uses the allowed and denied lists to apply the password replication policy.
+The *Identity* parameter specifies the read-only domain controller (RODC) that uses the allowed and denied lists to apply the password replication policy.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object of the server object, the GUID of the NTDS settings object of the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
-You can also set the **Identity** parameter to a domain controller object variable, such as **$\<localDomainControllerObject\>**, or pass a domain controller object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADDomainController cmdlet to get a domain controller object and then pass the object through the pipeline to the **Add-ADDomainControllerPasswordReplicationPolicy** cmdlet.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADDomainController** cmdlet to get a domain controller object and then pass the object through the pipeline to the **Add-ADDomainControllerPasswordReplicationPolicy** cmdlet.
 You must specify a read-only domain controller.
 If you specify a writeable domain controller for this parameter, the cmdlet returns a non-terminating error.
 
-The **AllowedList** parameter specifies the users, computers, and groups to add to the allowed list.
-Similarly, the **DeniedList** parameter specifies the users, computers, and groups to add to the denied list.
-You must specify either one or both of the **AllowedList** and **DeniedList** parameters.
+The *AllowedList* parameter specifies the users, computers, and groups to add to the allowed list.
+Similarly, the *DeniedList* parameter specifies the users, computers, and groups to add to the denied list.
+You must specify either one or both of the *AllowedList* and *DeniedList* parameters.
 You can identify a user, computer, or group by distinguished name, GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.
-You can also specify user, computer, or group variables, such as **$\<localUserObject\>**.
+You can also specify user, computer, or group variables, such as `$<localUserObject>`.
 If you are specifying more than one item, use a comma-separated list.
 If a specified user, computer, or group is not on the allowed or denied list, the cmdlet does not return an error.
 
@@ -64,14 +64,14 @@ If a specified user, computer, or group is not on the allowed or denied list, th
 PS C:\> Add-ADDomainControllerPasswordReplicationPolicy -Identity "USER01-RODC1" -AllowedList "PattiFuller", "DavidChew"
 ```
 
-This command adds user accounts with the specified SamAccountNames to the Allowed list on the RODC specified by the **Identity** parameter.
+This command adds user accounts with the specified SamAccountNames to the Allowed list on the RODC specified by the *Identity* parameter.
 
 ### Example 2: Add user accounts with specified SamAccountNames to the denied list
 ```
 PS C:\> Add-ADDomainControllerPasswordReplicationPolicy -Identity "USER02-RODC1" -DeniedList "ElisaDaugherty ", "EvanNarvaez"
 ```
 
-This command adds user accounts with the specified SamAccountNames to the Denied list on the RODC specified by the **Identity** parameter.
+This command adds user accounts with the specified SamAccountNames to the Denied list on the RODC specified by the *Identity* parameter.
 
 ## PARAMETERS
 
@@ -144,8 +144,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -216,7 +216,7 @@ Aliases:
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -224,14 +224,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways: 
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+Directory server values: 
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -240,7 +240,7 @@ Specify the Active Directory Domain Services instance in one of the following wa
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
 - By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer that runs Windows PowerShell
 
 ```yaml
@@ -272,12 +272,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADDomainController
-An RODC object is received by the **Identity** parameter.
+An RODC object is received by the *Identity* parameter.
 
 ## OUTPUTS
 

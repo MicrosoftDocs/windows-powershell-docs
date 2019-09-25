@@ -83,7 +83,7 @@ This example gets the port properties of a particular firewall rule.
 
 ### Example 3
 ```
-PS C:\>Get-FirewallRule -DisplayName "Play To streaming server" | Get-NetFirewallPortFilter | Set-NetFirewallPortFilter -LocalPort 10246
+PS C:\>Get-NetFirewallRule -DisplayName "Play To streaming server" | Get-NetFirewallPortFilter | Set-NetFirewallPortFilter -LocalPort 10246
 
 
 This task can alternatively be done with this cmdlet.

@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLoadBalanceScaleOut
-{{Fill EnableLoadBalanceScaleOut Description}}
+Indicates whether load balance scale out is enabled.
 
 ```yaml
 Type: Boolean

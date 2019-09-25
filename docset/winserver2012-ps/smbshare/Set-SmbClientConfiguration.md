@@ -34,7 +34,7 @@ The **Set-SmbClientConfiguration** cmdlet sets the Server Message Block (SMB) cl
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Set the SMB client configuration
 ```
 PS C:\>Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 8
 Confirm 
@@ -43,14 +43,14 @@ Performing operation 'Modify' on Target 'SMB Client Configuration'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-This example sets the SMB client configuration.
+This command sets the SMB client configuration.
 
-### EXAMPLE 2
+### Example 2: Set the SMB client configuration without confirmation
 ```
 PS C:\>Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 4 -Force
 ```
 
-This example sets the SMB client configuration without user confirmation.
+This command sets the SMB client configuration without user confirmation.
 
 ## PARAMETERS
 

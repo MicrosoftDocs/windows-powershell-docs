@@ -38,7 +38,7 @@ The settings that control the possible or preferred owners affect the way the cl
 
 ### Example 1
 ```
-PS C:\> Get-ClusterResource -Name "Cluster Disk 3" | Set-ClusterOwnerNode -Owners node1,node2
+PS C:\> Get-ClusterResource -Resource "Cluster Virtual Disk (Volume03)" | Set-ClusterOwnerNode -Owners node1,node2
 ```
 
 This example sets the possible owners for cluster named Cluster Disk 3 on the local cluster to the nodes named node1 and node2.

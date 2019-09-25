@@ -58,18 +58,18 @@ The **Enable-NetAdapterEncapsulatedPacketTaskoffload** and **Disable-NetAdapterE
 
 ### Example 1: Enable encapsulated packet task offload on the specified network adapter
 ```
-PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter" -EncapsulatedPacketTaskOffloadEnabled $True
+PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter" -VxlanEncapsulatedPacketTaskOffloadEnabled $True
 ```
 
-This command enables encapsulated packet task offload on the network adapter named MyAdapter and restarts the network adapter.
+This command enables VXLAN encapsulated packet task offload on the network adapter named MyAdapter and restarts the network adapter.
 The **Enable-NetAdapterEncapsulatedPacketTaskOffload** cmdlet is the preferred cmdlet to perform this operation.
 
 ### Example 2: Disable encapsulated packet task offload on the specified network adapter
 ```
-PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter"  -EncapsulatedPacketTaskOffloadEnabled $False
+PS C:\> Set-NetAdapterEncapsulatedPacketTaskOffload -Name "MyAdapter" -VxlanEncapsulatedPacketTaskOffloadEnabled $False
 ```
 
-This command disables encapsulated packet task offload on the network adapter named MyAdapter and restarts the network adapter.
+This command disables VXLAN encapsulated packet task offload on the network adapter named MyAdapter and restarts the network adapter.
 The **Disable-NetAdapterEncapsulatedPacketTaskOffload** cmdlet is the preferred cmdlet to perform this operation.
 
 ## PARAMETERS
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -NvgreEncapsulatedPacketTaskOffloadEnabled
-{{Fill NvgreEncapsulatedPacketTaskOffloadEnabled Description}}
+Specifies the enabled state of the Network Virtualization Generic Routing Encapsulation (NVGRE) encapsulated packet task offload in the network adapter. The acceptable values for this parameter are: $true or $false.
 
 ```yaml
 Type: Boolean
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -VxlanEncapsulatedPacketTaskOffloadEnabled
-{{Fill VxlanEncapsulatedPacketTaskOffloadEnabled Description}}
+Specifies the enabled state of the Virtual eXtensible Local Area Network (VXLAN) encapsulated packet task offload in the network adapter. The acceptable values for this parameter are: $true or $false.
 
 ```yaml
 Type: Boolean
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -VxlanUDPPortNumber
-{{Fill VxlanUDPPortNumber Description}}
+Specifies the port number to use for the VXLAN UDP destination port.
 
 ```yaml
 Type: UInt16

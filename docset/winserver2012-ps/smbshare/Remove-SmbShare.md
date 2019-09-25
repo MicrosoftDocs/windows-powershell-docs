@@ -16,13 +16,13 @@ Deletes the specified Server Message Block (SMB) shares.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Remove-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
  [-PassThru] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Remove-SmbShare [-AsJob] [-CimSession <CimSession[]>] [-Force] [-PassThru] [-ThrottleLimit <Int32>]
  -InputObject <CimInstance[]> [-Confirm] [-WhatIf]

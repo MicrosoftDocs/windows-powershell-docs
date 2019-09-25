@@ -206,6 +206,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableLoadBalanceScaleOut
+Indicates whether load balance scale out is enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableMultiChannel
 Indicates that multi-channel is enabled.
 

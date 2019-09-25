@@ -120,6 +120,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AuditSmb1Access
+Enables auditing of SMB version 1 protocol in Windows Event Log.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -AutoDisconnectTimeout
 Specifies the auto disconnect timeout.
 

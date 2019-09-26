@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeniedList
-Specifies the users, computers, groups or other accounts to add to the list of accounts that are denied the right to replicate their passwords to this RODC.
+Specifies the users, computers, groups, or other accounts to add to the list of accounts that are denied the right to replicate their passwords to this RODC.
 You can specify more than one value by using a comma-separated list.
 The acceptable values for this parameter are:
 
@@ -227,8 +227,8 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+Specifies the Active Directory Domain Services instance to connect to by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways: 
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

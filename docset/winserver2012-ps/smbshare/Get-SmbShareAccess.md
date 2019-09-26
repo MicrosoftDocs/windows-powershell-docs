@@ -16,7 +16,7 @@ Retrieves the access control list (ACL) of the Server Message Block (SMB) share.
 
 ## SYNTAX
 
-#### Query (cdxml) (Default)
+### Query (cdxml) (Default)
 ```
 Get-SmbShareAccess [-Name] <String[]> [[-ScopeName] <String[]>] [-SmbInstance <SmbInstance>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]

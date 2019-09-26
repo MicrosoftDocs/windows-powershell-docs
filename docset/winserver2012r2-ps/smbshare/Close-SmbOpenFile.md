@@ -44,7 +44,7 @@ This cmdlet should be used with care as it may result in data loss to the client
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Close an open file
 ```
 PS C:\>Close-SmbOpenFile -FileId 4415226383589
 Confirm 
@@ -53,45 +53,46 @@ Performing operation 'Close-File' on Target '4415226383589'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
 ```
 
-This example closes a file identified as 4415226383589 that is open by one of the clients of the SMB server.
+This command closes a file identified as 4415226383589 that is open by one of the clients of the SMB server.
 
-### EXAMPLE 2
+### Example 2: Close open files for a session
 ```
 PS C:\>Close-SmbOpenFile -SessionId 4415226380393
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383589'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N 
- 
+
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383529'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N 
- 
+
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383517'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N 
- 
+
 Confirm 
-Are you sure you want to perform this action?
+Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383521'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N 
- 
+
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383569'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
 ```
 
-This example closes one or more files that are open by one of the client identified with the session identifier (ID) 4415226380393 of the SMB server.
+This command closes one or more files that are open by one of the client identified with the session ID 4415226380393 of the SMB server.
 
-### EXAMPLE 3
+### Example 3: Close open files that match a file name extension
 ```
 PS C:\>Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match ".DOCX" | Close-SmbOpenFile -Force
 ```
 
-This example closes, without user confirmation, one or more files that are open by one of the clients of the SMB server and that match the file extension ".DOCX".
+This command closes, without user confirmation, one or more files that are open by one of the clients of the SMB server and that match the file name extension .DOCX.
+
 
 ## PARAMETERS
 
@@ -281,13 +282,14 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query (cdxml)
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

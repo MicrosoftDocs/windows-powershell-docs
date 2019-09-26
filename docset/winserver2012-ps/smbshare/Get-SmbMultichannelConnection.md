@@ -27,7 +27,7 @@ This cmdlet provides information about how the SMB multi-channel pairs the clien
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get connections
 ```
 PS C:\>Get-SmbMultichannelConnection
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA 
@@ -42,11 +42,11 @@ Contoso-FS1    True           192.168.102.13 192.168.102.22 15             15   
 Contoso-FS1    True           192.168.101.13 192.168.101.22 12             12             False          True
 ```
 
-This example retrieves the SMB connections made between the SMB client network interfaces and the SMB server network interfaces.
+This command retrieves the SMB connections made between the SMB client network interfaces and the SMB server network interfaces.
 
-### EXAMPLE 2
+### Example 2: Get connections for a specific server
 ```
-PS C:\>Get-SmbMultichannelConnection -ServerName Contoso-SO
+PS C:\>Get-SmbMultichannelConnection -ServerName "Contoso-SO"
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA 
                                                             Interface      Interface      Capable        Capable
                                                             Index          Index 
@@ -55,11 +55,11 @@ Contoso-SO     True           192.168.102.13 192.168.102.11 15             15   
 Contoso-SO     True           192.168.101.13 192.168.101.11 12             12             False          True
 ```
 
-This example retrieves the SMB connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
+This command retrieves the SMB connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
 
-### EXAMPLE 3
+### Example 3: Get properties for connections for a specific server
 ```
-PS C:\>Get-SmbMultichannelConnection -ServerName Contoso-SO | Select -Property *
+PS C:\>Get-SmbMultichannelConnection -ServerName "Contoso-SO" | Select -Property *
 ClientInterfaceFriendlyName : RDMA2 
 ClientInterfaceIndex        : 15 
 ClientIpAddress             : 192.168.102.13 
@@ -81,7 +81,7 @@ PSComputerName              :
 CimClass                    : ROOT/Microsoft/Windows/SMB:MSFT_SmbMultichannelConnection 
 CimInstanceProperties       : {ClientInterfaceFriendlyName, ClientInterfaceIndex, ClientIpAddress, ClientLinkSpeed...} 
 CimSystemProperties         : Microsoft.Management.Infrastructure.CimSystemProperties 
- 
+
 ClientInterfaceFriendlyName : RDMA1 
 ClientInterfaceIndex        : 12 
 ClientIpAddress             : 192.168.101.13 
@@ -105,12 +105,11 @@ CimInstanceProperties       : {ClientInterfaceFriendlyName, ClientInterfaceIndex
 CimSystemProperties         : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This example retrieves all of the information about the SMB connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
+This command retrieves all of the information about the SMB connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
 
-### EXAMPLE 4
+### Example 4: Get all connections for a specific server
 ```
-PS C:\>Get-SmbMultichannelConnection -ServerName Contoso-SO -IncludeNotSelected
-
+PS C:\>Get-SmbMultichannelConnection -ServerName "Contoso-SO" -IncludeNotSelected
 Server Name    Selected       Client IP      Server IP      Client         Server         Client RSS     Client RDMA
                                                             Interface      Interface      Capable        Capable
                                                             Index          Index
@@ -127,7 +126,7 @@ Contoso-SO     False          172.30.182.10  192.168.101.11 32             12   
 Contoso-SO     False          172.30.182.10  192.168.101.11 32             12             False          False
 ```
 
-This example retrieves the all of the connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
+This command retrieves the all of the connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
 
 ## PARAMETERS
 
@@ -188,6 +187,23 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

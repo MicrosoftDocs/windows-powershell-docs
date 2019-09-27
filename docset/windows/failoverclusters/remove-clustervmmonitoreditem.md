@@ -62,7 +62,8 @@ This example removes monitoring on the print spooler service on the virtual mach
 ## PARAMETERS
 
 ### -Cluster
-
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -77,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-
+Specifies the event identifier (ID) of the Event Tracing for Windows (ETW) event to be removed from monitoring.
 
 ```yaml
 Type: Int32
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventLog
-
+Specifies the event log of the event to be removed from monitoring.
 
 ```yaml
 Type: String
@@ -107,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventSource
-
+Specifies the event source of the event to be removed from monitoring.
 
 ```yaml
 Type: String
@@ -122,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the cluster on which to run the cmdlet, the clustered virtual machine from which to remove monitoring, or the clustered virtual machine monitored item object to stop monitoring
 
 ```yaml
 Type: PSObject
@@ -137,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-
+Specifies the name of the service to be removed from monitoring.
 
 ```yaml
 Type: StringCollection
@@ -152,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-
+Specifies the virtual machine identifier (ID).
 
 ```yaml
 Type: Guid
@@ -167,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-
+Specifies the name of the clustered virtual machine from which to remove monitoring.
+When this parameter is specified, this cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -182,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

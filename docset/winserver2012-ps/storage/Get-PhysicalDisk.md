@@ -78,7 +78,14 @@ This example returns an array of PhysicalDisk objects that are available for add
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+You can continue to work in the session while the job completes. 
+To manage the job, use the `*-Job` cmdlets. 
+To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -109,7 +116,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -126,7 +133,7 @@ Accept wildcard characters: False
 
 ### -Description
 Gets the physical disks that contain the specified description.
-Enter a description, or use wildcard characters to enter a description pattern.
+Enter a description or use wildcard characters to enter a description pattern.
 
 ```yaml
 Type: String[]
@@ -142,7 +149,7 @@ Accept wildcard characters: False
 
 ### -FriendlyName
 Gets the physical disk with the specified friendly name.
-Enter a friendly name, or use wildcard characters to enter a name pattern.
+Enter a friendly name or use wildcard characters to enter a name pattern.
 
 ```yaml
 Type: String[]
@@ -157,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -HasAllocations
-
+Indicates whether the cmdlet gets a list of physical disks that host the extents of the virtual disk that you specify by using the *VirtualDisk* parameter.
 
 ```yaml
 Type: Boolean
@@ -178,8 +185,7 @@ The acceptable values for this parameter are:
 - Healthy 
 - Unhealthy 
 - Unknown 
-- Warning
-- 
+- Warning 
 
 ```yaml
 Type: HealthStatus[]
@@ -195,7 +201,7 @@ Accept wildcard characters: False
 
 ### -Manufacturer
 Gets the physical disks with the specified manufacturer.
-Enter a manufacturer string, or use wildcard characters to enter a pattern.
+Enter a manufacturer string or use wildcard characters to enter a pattern.
 
 ```yaml
 Type: String[]
@@ -226,7 +232,8 @@ Accept wildcard characters: False
 ```
 
 ### -SelectedForUse
-
+Indicates whether the cmdlet gets a list of physical disks to host the extents that belong to the virtual disk specified by the *VirtualDisk* parameter.
+Specify the physical disks to host the extents of a virtual disk by using the *PhysicalDisksToUse* parameter of the **New-VirtualDisk** cmdlet.
 
 ```yaml
 Type: Boolean
@@ -242,7 +249,7 @@ Accept wildcard characters: False
 
 ### -StoragePool
 Accepts a StoragePool object as input and gets the physical disks that belong to the pool.
-The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
+The Storage Pool CIM object is exposed by the **Get-StoragePool** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -257,8 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -StorageSubSystem
-Accepts a StorageSubsystem object as input and gets the physical disks attached to the storage subsystem.
-The Storage Subsystem CIM object is exposed by the Get-StorageSubSystem cmdlet.
+Specifies a storage subsystem.
+This cmdlet gets physical disks attached to the storage subsystem that you specify.
+To obtain a **StorageSubsystem** object, use the **Get-StorageSubSystem** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -306,8 +314,16 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-Gets only the physical disks with the specified allocation method (usage) of the disk.
-Valid values are AutoSelect, HotSpare, Journal, ManualSelect, Retired, and Unknown.
+Specifies an allocation method or usage.
+This cmdlet gets the physical disks that have the specified allocation method.
+The acceptable values for this parameter are:
+
+- AutoSelect 
+- HotSpare 
+- Journal 
+- ManualSelect 
+- Retired 
+- Unknown
 
 ```yaml
 Type: Usage[]
@@ -323,7 +339,7 @@ Accept wildcard characters: False
 
 ### -VirtualDisk
 Accepts a VirtualDisk object as input and gets the physical disks used by the virtual disk.
-The VirtualDisk object is exposed by the Get-VirtualDisk cmdlet.
+The VirtualDisk object is exposed by the **Get-VirtualDisk** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -338,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualRangeMax
-
+This parameter is reserved for future use.
 
 ```yaml
 Type: UInt64
@@ -353,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualRangeMin
-
+This parameter is reserved for future use.
 
 ```yaml
 Type: UInt64

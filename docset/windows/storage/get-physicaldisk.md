@@ -113,7 +113,7 @@ This example returns an array of PhysicalDisk objects that are available for add
 ## PARAMETERS
 
 ### -CanPool
-Indicates that this cmdlet gets physical disks that are available for use in a storage pool.
+Gets physical disks that are available for use in a storage pool.
 
 ```yaml
 Type: Boolean
@@ -145,9 +145,8 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Specifies a description.
-The cmdlet gets the physical disks that contain the description.
-You can use wildcard characters to enter a description pattern.
+Gets the physical disks that contain the specified description.
+Enter a description or use wildcard characters to enter a description pattern.
 
 ```yaml
 Type: String
@@ -163,7 +162,7 @@ Accept wildcard characters: False
 
 ### -FriendlyName
 Gets the physical disk with the specified friendly name.
-Enter a friendly name, or use wildcard characters to enter a name pattern.
+Enter a friendly name or use wildcard characters to enter a name pattern.
 
 ```yaml
 Type: String
@@ -230,9 +229,8 @@ Accept wildcard characters: False
 ```
 
 ### -Manufacturer
-Specifies a manufacturer.
-The cmdlet gets the physical disks that match the value.
-You can use wildcard characters to enter a pattern.
+Gets the physical disks with the specified manufacturer.
+Enter a manufacturer string or use wildcard characters to enter a pattern.
 
 ```yaml
 Type: String
@@ -247,9 +245,8 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Specifies a model.
-The cmdlet gets the physical disks that match the value.
-You can use wildcard characters to enter a pattern.
+Gets the physical disks of the specified model.
+Enter a model string or use wildcard characters to enter a pattern.
 
 ```yaml
 Type: String
@@ -310,7 +307,7 @@ Accept wildcard characters: False
 
 ### -SelectedForUse
 Indicates whether the cmdlet gets a list of physical disks to host the extents that belong to the virtual disk specified by the *VirtualDisk* parameter.
-Specify the physical disks to host the extents of a virtual disk by using the *PhysicalDisksToUse* parameter of the New-VirtualDisk cmdlet.
+Specify the physical disks to host the extents of a virtual disk by using the *PhysicalDisksToUse* parameter of the **New-VirtualDisk** cmdlet.
 
 ```yaml
 Type: Boolean
@@ -341,7 +338,7 @@ Accept wildcard characters: False
 
 ### -StorageEnclosure
 Specifies a storage enclosure associated with the physical disk that this cmdlet gets.
-To obtain a **StorageEnclosure** object, use the Get-StorageEnclosure cmdlet.
+To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -358,7 +355,7 @@ Accept wildcard characters: False
 ### -StorageNode
 Specifies a storage node as a **CimInstance** object.
 The cmdlet gets the physical disk connected to the node that you specify.
-To obtain a storage node object, use the Get-StorageNode cmdlet.
+To obtain a storage node object, use the **Get-StorageNode** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -374,7 +371,7 @@ Accept wildcard characters: False
 
 ### -StoragePool
 Accepts a StoragePool object as input and gets the physical disks that belong to the pool.
-The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
+The Storage Pool CIM object is exposed by the **Get-StoragePool** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -391,7 +388,7 @@ Accept wildcard characters: False
 ### -StorageSubsystem
 Specifies a storage subsystem.
 This cmdlet gets physical disks attached to the storage subsystem that you specify.
-To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
+To obtain a **StorageSubsystem** object, use the **Get-StorageSubSystem** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -448,7 +445,7 @@ Accept wildcard characters: False
 
 ### -VirtualDisk
 Accepts a VirtualDisk object as input and gets the physical disks used by the virtual disk.
-The VirtualDisk object is exposed by the Get-VirtualDisk cmdlet.
+The VirtualDisk object is exposed by the **Get-VirtualDisk** cmdlet.
 
 ```yaml
 Type: CimInstance

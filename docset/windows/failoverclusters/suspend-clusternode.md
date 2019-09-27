@@ -130,8 +130,6 @@ The -ForceDrain switch, used in conjunction with the -Drain switch, allows all t
 
 If some or all of the workloads can't be moved safely, any workload that failed will be stopped and moved to another node as a failed role. Thereafter, the node will be forced to pause.
 
-
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -208,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter

@@ -45,7 +45,9 @@ This example resets the state of the virtual machine and clears the critical sta
 ## PARAMETERS
 
 ### -Wait
-
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

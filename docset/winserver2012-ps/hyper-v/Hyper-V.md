@@ -390,13 +390,13 @@ Restarts a virtual machine.
 Restores a virtual machine checkpoint.
 
 ### [Resume-VMReplication](./Resume-VMReplication.md)
-Resumes a virtual machine replication that is in a state of Paused, Error, Resynchronization Required, or Suspended.
+Resumes a virtual machine replication that is in a Paused, Error, Resynchronization Required, or Suspended state.
 
 ### [Resume-VM](./Resume-VM.md)
 Resumes a suspended (paused) virtual machine.
 
 ### [Revoke-VMConnectAccess](./Revoke-VMConnectAccess.md)
-Revokes access for one or more users to connect to a one or more virtual machines.
+Revokes access for one or more users to connect to one or more virtual machines.
 
 ### [Save-VM](./Save-VM.md)
 Saves a virtual machine.
@@ -498,7 +498,7 @@ Shuts down, turns off, or saves a virtual machine.
 Suspends replication of a virtual machine.
 
 ### [Suspend-VM](./Suspend-VM.md)
-Suspends, or pauses, a virtual machine.
+Suspends or pauses a virtual machine.
 
 ### [Test-VHD](./Test-VHD.md)
 Tests a virtual hard disk for any problems that would make it unusable.

@@ -126,7 +126,7 @@ Contoso-SO     False          172.30.182.10  192.168.101.11 32             12   
 Contoso-SO     False          172.30.182.10  192.168.101.11 32             12             False          False
 ```
 
-This command retrieves the all of the connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
+This command retrieves all of the connections made between the SMB client network interfaces and the SMB server network interfaces for the SMB server named Contoso-SO.
 
 ## PARAMETERS
 

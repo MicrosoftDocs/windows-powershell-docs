@@ -131,11 +131,11 @@ Accept wildcard characters: False
 Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
 To be configured for monitoring the following conditions need to be met: 
 
- -- None of the service recovery actions are set to Restart the computer. 
+- None of the service recovery actions are set to Restart the computer. 
 
- ---- AND 
+AND 
 
- -- At least one of the service recovery actions are set to Take no action.
+- At least one of the service recovery actions are set to Take no action.
 
 ```yaml
 Type: SwitchParameter

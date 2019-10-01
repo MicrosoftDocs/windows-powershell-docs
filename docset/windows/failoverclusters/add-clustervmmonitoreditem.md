@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-
+Specifies the virtual machine identifier (ID).
 
 ```yaml
 Type: Guid
@@ -206,7 +206,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-
+Specifies the name of the clustered virtual machine on which to perform monitoring.
+When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -221,7 +222,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32

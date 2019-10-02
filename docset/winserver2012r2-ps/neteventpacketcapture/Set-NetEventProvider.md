@@ -75,7 +75,7 @@ The third command modifies the logging level for the provider named Microsoft-Wi
 ## PARAMETERS
 
 ### -AsJob
-{{Fill AsJob Description}}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]

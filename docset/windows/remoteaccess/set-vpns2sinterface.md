@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoConnectEnabled
-{{Fill AutoConnectEnabled Description}}
+Specifies a value that indicates whether auto-connect is enabled.
 
 ```yaml
 Type: Boolean

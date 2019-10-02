@@ -13,7 +13,7 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Disable-TlsCipherSuite
+title: Disable-TlsEccCurve
 ms.reviewer:
 ---
 

@@ -7,6 +7,7 @@ author: andreabarr
 Download Help Link: {{Please enter FwLink manually}}
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+title: Microsoft.DiagnosticsDataViewer
 ---
 
 # Microsoft.DiagnosticDataViewer Module

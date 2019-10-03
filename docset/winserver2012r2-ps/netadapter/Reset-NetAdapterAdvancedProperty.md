@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Reset-NetAdapterAdvancedProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 15F492BB-A750-4FF5-8BF2-23B7728D7CB2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Reset-NetAdapterAdvancedProperty

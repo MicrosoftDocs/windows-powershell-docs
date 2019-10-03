@@ -2,7 +2,11 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0A57ABC4-35A8-43B2-81C2-193EB5E1FDA7
+manager: dansimp
 ---
 
 # Unregister-ScheduledTask

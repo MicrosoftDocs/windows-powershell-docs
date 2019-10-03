@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
+manager: dansimp
 ---
 
 # New-NetFirewallRule
@@ -451,7 +455,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Any
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

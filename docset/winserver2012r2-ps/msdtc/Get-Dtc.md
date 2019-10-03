@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-Dtc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 19FC93CC-753E-463A-BE43-738B6A31EE95
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-Dtc

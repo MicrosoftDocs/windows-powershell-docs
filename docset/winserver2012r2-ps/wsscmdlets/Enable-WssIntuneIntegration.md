@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-WssIntuneIntegration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 25702D92-3F70-4682-8C48-35605AE4A0BC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-WssIntuneIntegration

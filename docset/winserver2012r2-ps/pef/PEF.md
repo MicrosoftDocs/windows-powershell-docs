@@ -7,18 +7,20 @@ Locale: en-US
 title: PEF
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 68bca658-97e5-42b1-944d-f174bdfa77f1
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # PEF Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Protocol Engineering Framework (PEF) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## PEF Cmdlets
 ### [Add-PefMessageSource](./Add-PefMessageSource.md)

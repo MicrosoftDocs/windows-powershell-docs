@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-VirtualDiskToMaskingSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A5FB0F31-C3E6-4A3C-881A-86591D914406
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-VirtualDiskToMaskingSet

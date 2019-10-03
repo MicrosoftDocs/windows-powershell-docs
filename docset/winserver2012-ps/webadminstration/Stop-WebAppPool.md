@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 2B77C48E-AEEA-486D-9B67-88A3B6BB8996
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Stop-WebAppPool
@@ -17,7 +21,7 @@ Stop-WebAppPool [[-Name] <String>] [-Passthru] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Stops the specified application pool.
+Stops the specified application pool. If the application pool is already stopped, an exception is thrown.
 
 ## EXAMPLES
 

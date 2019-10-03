@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetIPsecMainModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4E2BEDDA-E2AB-4901-9EB2-5718641C5858
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetIPsecMainModeCryptoSet

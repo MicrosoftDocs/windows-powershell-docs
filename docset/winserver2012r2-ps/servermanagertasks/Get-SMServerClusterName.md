@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SMServerClusterName
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2C57BC34-F9B7-419A-80E6-563465BCCF2A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SMServerClusterName

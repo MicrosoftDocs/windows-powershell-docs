@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterSriov
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CD0DD608-637C-4E2F-A465-92C683337BB2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterSriov
@@ -94,7 +96,7 @@ This example displays the SR-IOV properties for network adapter named Ethernet 2
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-NetAdpaterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
+PS C:\>Get-NetAdapterSriov -InterfaceDescription "Contoso 12345 Gigabit Network Device"
 ```
 
 This example displays the SR-IOV properties for the network adapter with the interface description Contoso 12345 Gigabit Network Device.

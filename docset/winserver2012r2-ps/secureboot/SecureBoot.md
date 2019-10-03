@@ -7,13 +7,15 @@ Locale: en-US
 title: SecureBoot
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 52fb92c0-691b-4f78-afa1-dba0a7988728
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # SecureBoot Module

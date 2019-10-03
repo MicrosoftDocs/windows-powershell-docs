@@ -1,8 +1,12 @@
 ---
 external help file: BranchCacheStatus.cdxml-help.xml
 ms.assetid: 2E68D4DA-55B8-46D1-A48C-5BD155CE6558
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-BCStatus

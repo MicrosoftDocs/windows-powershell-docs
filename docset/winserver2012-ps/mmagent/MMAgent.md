@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkID=232887
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: 52420F30-6CDF-4123-A5F6-DA377A7C386A
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MMAgent Module

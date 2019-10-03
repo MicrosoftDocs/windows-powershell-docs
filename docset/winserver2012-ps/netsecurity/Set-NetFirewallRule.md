@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: CBD6CC37-2EE3-42E7-A062-9BEABEB3DB88
+manager: dansimp
 ---
 
 # Set-NetFirewallRule

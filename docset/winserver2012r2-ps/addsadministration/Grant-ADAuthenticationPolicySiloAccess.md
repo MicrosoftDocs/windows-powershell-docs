@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Grant-ADAuthenticationPolicySiloAccess
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -190,7 +192,7 @@ Specify the Active Directory Domain Services instance in one of the following wa
  Directory server values:  
 - A Fully qualified directory server name
 - A NetBIOS name
---A Fully qualified directory server name and port
+- A Fully qualified directory server name and port
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 

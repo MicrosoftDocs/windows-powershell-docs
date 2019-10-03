@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E07DE336-00CB-4639-A0B9-DC810DDA9E2D
+manager: dansimp
 ---
 
 # Add-NlbClusterPortRule

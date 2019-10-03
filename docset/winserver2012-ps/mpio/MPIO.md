@@ -5,11 +5,15 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=215803
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: 1B4E2CDA-BA8A-47CE-8DA3-8D349D12DC38
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # MPIO Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Mulitpath I/O (MPIO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides cmdlet descriptions and syntax for all Multipath I/O (MPIO)-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## MPIO Cmdlets
 ### [Clear-MSDSMSupportedHW](./Clear-MSDSMSupportedHW.md)

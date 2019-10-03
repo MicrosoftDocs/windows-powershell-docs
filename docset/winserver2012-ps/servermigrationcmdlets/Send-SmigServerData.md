@@ -2,7 +2,11 @@
 external help file: ServerMig_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
+manager: dansimp
 ---
 
 # Send-SmigServerData
@@ -38,7 +42,7 @@ For online Help about the Windows Server Migration Tools cmdlets, see http://go.
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> Send-SmigServerData -include Data -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Verbose
+PS C:\> Send-SmigServerData -Include Data -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Verbose
 ```
 
 Description
@@ -56,9 +60,9 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
 
-C:\PS>Send-SmigServerData -include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
+C:\PS>Send-SmigServerData -Include Share -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password $pass -Verbose
 ```
 
 Description
@@ -76,7 +80,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-PS C:\> Send-SmigServerData -include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
+PS C:\> Send-SmigServerData -Include All -ComputerName "Server2" -SourcePath "c:\users" -DestinationPath "d:\shares\users" -Recurse -Password (Read-Host "Enter a Password:" -AsSecureString) -Verbose
 ```
 
 Description
@@ -167,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Password
 Specifies the password, as a secure string, to encrypt the data transfer by using the 256-bit advanced encryption standard (AES).
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 
 You must specify a password to protect your data because transferred data is broadcast over a network.
 If the Password parameter is not added to your command, you are prompted to specify a password after entering your command.

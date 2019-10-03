@@ -2,7 +2,11 @@
 external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A963DBC6-1005-4514-BA59-FDBE82F7E441
+manager: dansimp
 ---
 
 # Update-IscsiTargetPortal
@@ -198,7 +202,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.Ciminstance#MSFT_IscsiTargetPortal
+### Microsoft.Management.Infrastructure.CimInstance#MSFT_IscsiTargetPortal
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
@@ -210,7 +214,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](HYPERLINK "http://www.microsoft.com/iSCSI" http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](HYPERLINK "/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10)" /previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](HYPERLINK "http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx" http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx)
 

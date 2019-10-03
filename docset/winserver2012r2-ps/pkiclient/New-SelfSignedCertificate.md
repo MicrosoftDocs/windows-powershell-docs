@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-SelfSignedCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 72FCDAEA-BB33-40C6-AFCE-E7C33CF622D0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-SelfSignedCertificate

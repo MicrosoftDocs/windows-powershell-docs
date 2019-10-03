@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Deny-WsusUpdate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 695E1A58-E77F-46C8-85BF-7127443ED598
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Deny-WsusUpdate

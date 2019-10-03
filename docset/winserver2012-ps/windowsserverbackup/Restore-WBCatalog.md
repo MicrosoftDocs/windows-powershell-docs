@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 577E6C4C-DE75-444F-B3A0-0BAD00620895
+manager: dansimp
 ---
 
 # Restore-WBCatalog
@@ -74,7 +78,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### WBBackupTarget, SwitchParamter
+### WBBackupTarget, SwitchParameter
 Specifies a backup target object from which to restore the catalog.
 Use the **Force** parameter to suppress the confirmation message.
 

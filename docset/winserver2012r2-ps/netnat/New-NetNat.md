@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetNat
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B64A451E-9D59-46A5-86B6-07DF85C6228E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetNat

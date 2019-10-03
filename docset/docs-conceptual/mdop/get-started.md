@@ -1,12 +1,15 @@
 ---
 ms.technology: powershell-mdop
-author: jamiejdt
+author: andreabarr
+ms.author: v-anbarr
+ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 title: Microsoft Desktop Optimization Pack Automation with Windows PowerShell
+manager: dansimp
 ---
 
 # Microsoft Desktop Optimization Pack

@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Export-AdfsDeploymentSQLScript
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -34,7 +36,7 @@ The **Export-AdfsDeploymentSQLScript** cmdlet generates the SQL scripts that you
 
 ### Example 1: Export SQL deployment scripts
 ```
-PS C:\> Export-AdfsDeploymentSQLScript -ScriptDestinationFolder ".\ScriptFolder" -ServiceAccountName "ContosoDomain\AdfsUser"
+PS C:\> Export-AdfsDeploymentSQLScript -DestinationFolder ".\ScriptFolder" -ServiceAccountName "ContosoDomain\AdfsUser"
 ```
 
 This command exports SQL deployment scripts for AD FS installation on behalf of the specified AD FS service account.

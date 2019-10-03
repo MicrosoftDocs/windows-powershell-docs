@@ -4,9 +4,11 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Test-ADDSReadOnlyDomainControllerAccountCreation
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -37,7 +39,7 @@ It differs from using the **-WhatIf** parameter with the Add-ADDSReadOnlyDomainC
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccuntName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
+PS C:\> Test-ADDSReadOnlyDomainControllerAccountCreation -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName NorthAmerica
 ```
 
 Description

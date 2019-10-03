@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Add-WssUserGroupMembership
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6EBE9B73-6ECF-44BE-A11B-94F9A66CD755
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-WssUserGroupMembership

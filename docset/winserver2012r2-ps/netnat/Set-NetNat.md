@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetNat
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 43F71E6B-EC90-487A-94B4-4456B81A2F44
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetNat
@@ -194,20 +196,20 @@ Accept wildcard characters: False
 Specifies filtering behavior for TCP connections.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named
-Default value: EndpointIndepedentFiltering
+Default value: EndpointIndependentFiltering
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -249,20 +251,20 @@ Accept wildcard characters: False
 Specifies filtering behavior for UDP sessions.
 The acceptable values for this parameter are:
 
-- EndpointIndepedentFiltering
+- EndpointIndependentFiltering
 - AddressDependentFiltering
 
-The default value is EndpointIndepedentFiltering.
+The default value is EndpointIndependentFiltering.
 
 ```yaml
 Type: FilteringBehaviorType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: EndpointIndepedentFiltering, AddressDependentFiltering
+Accepted values: EndpointIndependentFiltering, AddressDependentFiltering
 
 Required: False
 Position: Named
-Default value: EndpointIndepedentFiltering
+Default value: EndpointIndependentFiltering
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

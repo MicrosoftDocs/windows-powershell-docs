@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-RDPersonalVirtualDesktopAssignment
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E1FDA538-4A2A-4B25-99D2-4846977505E5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-RDPersonalVirtualDesktopAssignment
@@ -42,7 +44,7 @@ This removal makes the virtual desktop available for another user.
 
 ### 1: Remove a personal virtual desktop assignment
 ```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -PersonalVirtualDesktop "PVD-12"
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
 ```
 
 This command removes a personal virtual desktop assignment.

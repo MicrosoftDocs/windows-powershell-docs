@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-InitiatorIdToMaskingSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 71993626-1CD8-4187-BE8E-AFD54B280F4E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-InitiatorIdToMaskingSet

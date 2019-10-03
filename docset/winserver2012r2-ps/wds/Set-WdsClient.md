@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WdsClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E694C93B-F4A5-4E83-A1D4-88FCE5D4435C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WdsClient

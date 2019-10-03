@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restore-WBCatalog
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 577E6C4C-DE75-444F-B3A0-0BAD00620895
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Restore-WBCatalog
@@ -86,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### WBBackupTarget, SwitchParamter
+### WBBackupTarget, SwitchParameter
 Specifies a backup target object from which to restore the catalog.
 Use the **Force** parameter to suppress the confirmation message.
 

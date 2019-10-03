@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4DA932F6-052A-4310-832E-33121E213BDD
+manager: dansimp
 ---
 
 # Get-NetTeredoConfiguration

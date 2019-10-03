@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: v-anbarr
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: andreabarr
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -51,7 +51,7 @@ The **Set-AppvServerPackage** cmdlet applies a dynamic deployment or user config
 
 Only one deployment configuration can be entitled to a package.
 
-Multiple user configuration files can be applied to a package to specific Active Direcotry group entitlements.
+Multiple user configuration files can be applied to a package to specific Active Directory group entitlements.
 
 ## EXAMPLES
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicDeploymentConfigurationPath
-pecifies the path to a dynamic deployment configuration file for the specified Microsoft Application Virtualization (App-V) package.
+Specifies the path to a dynamic deployment configuration file for the specified Microsoft Application Virtualization (App-V) package.
 The cmdlet uses the dynamic deployment configuration file to override the default behavior provided in the package's manifest.
 
 If you do not specify this parameter, the App-V agent assign the Default Machine Policy to the App-V package to be added.
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ### -Version
 Specifies the version of an App-V package in one specific lineage.
-If you do not specify a version, the cmdlet acts on all versions saved oncomputer.
+If you do not specify a version, the cmdlet acts on all versions saved on the computer.
 
 ```yaml
 Type: String

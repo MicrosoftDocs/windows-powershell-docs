@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-SmbServerConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8B5FF5C0-5D2F-4030-8F8E-C2C3B3E8906E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-SmbServerConfiguration

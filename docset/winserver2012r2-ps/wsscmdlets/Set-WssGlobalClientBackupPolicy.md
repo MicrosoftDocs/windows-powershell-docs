@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssGlobalClientBackupPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3BB18E1A-2ABA-4B39-BFD5-FAB91CA3C0C3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssGlobalClientBackupPolicy

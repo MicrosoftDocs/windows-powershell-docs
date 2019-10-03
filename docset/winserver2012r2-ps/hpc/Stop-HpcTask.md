@@ -1,5 +1,5 @@
 ---
-author:
+author: andreabarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -12,6 +12,8 @@ online version: http://go.microsoft.com/fwlink/?LinkId=185208
 schema: 2.0.0
 title: Stop-HpcTask
 ms.assetid: 57671188-D973-4EB2-84AE-79688779E2DF
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Stop-HpcTask
@@ -57,7 +59,7 @@ This command cancels the task with a task ID of 2 in the job with a job ID of 12
 PS C:\>Stop-HpcTask -JobId 46 -TaskId 3 -SubTaskId 12 -Message "Clearing space for other tasks that need to run immediately." -Force
 ```
 
-This command cancels the subtask with a subtask ID of 12 for the task with a task ID of 3 in the job with a job ID of 46 without using the grace period for task cancelation, and then sets the message that explains the reason for the cancelation to "Clearing space for other tasks that need to run immediately."
+This command cancels the subtask with a subtask ID of 12 for the task with a task ID of 3 in the job with a job ID of 46 without using the grace period for task cancellation, and then sets the message that explains the reason for the cancellation to "Clearing space for other tasks that need to run immediately."
 
 ### Example 3: Get a task by ID and stop it
 ```
@@ -76,8 +78,8 @@ This command cancels the subtask with a subtask ID of 5 for the task with a task
 ## PARAMETERS
 
 ### -Force
-Stops the task immediately without using the grace period for task cancelation.
-Only tasks that respond when the user types CTRL+BREAK can use the grace period for task cancelation.
+Stops the task immediately without using the grace period for task cancellation.
+Only tasks that respond when the user types CTRL+BREAK can use the grace period for task cancellation.
 
 ```yaml
 Type: SwitchParameter

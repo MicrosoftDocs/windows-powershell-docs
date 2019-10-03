@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Revoke-SmbShareAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8FA4EB50-F97F-4B69-A582-005B103E3A3E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Revoke-SmbShareAccess
@@ -196,13 +198,14 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

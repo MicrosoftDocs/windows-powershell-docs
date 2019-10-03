@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Unregister-StorageSubsystem
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 07048C7F-39AD-4C98-B700-7CA2B3933ABC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Unregister-StorageSubsystem

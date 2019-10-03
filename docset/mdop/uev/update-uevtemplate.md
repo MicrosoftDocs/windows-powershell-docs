@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: v-anbarr
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: andreabarr
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Uev.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -16,6 +16,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Update-UevTemplate
+ms.reviewer:
 ---
 
 # Update-UevTemplate
@@ -37,7 +38,7 @@ Update-UevTemplate -LiteralPath <String[]> [-WhatIf] [-Confirm] [<CommonParamete
 
 ## DESCRIPTION
 The **Update-UevTemplate** cmdlet updates settings location templates in uev_1.
-In order for the cmdlet to update a template, the new template must have a higher value for template verison.
+In order for the cmdlet to update a template, the new template must have a higher value for template version.
 
 You must have administrative credentials to run this cmdlet.
 

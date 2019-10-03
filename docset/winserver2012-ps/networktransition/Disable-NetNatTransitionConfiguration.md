@@ -2,7 +2,11 @@
 external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FFDA0575-BC77-4953-B73F-16C0B19F6570
+manager: dansimp
 ---
 
 # Disable-NetNatTransitionConfiguration

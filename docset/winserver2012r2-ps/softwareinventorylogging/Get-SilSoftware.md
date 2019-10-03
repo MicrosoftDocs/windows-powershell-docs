@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SilSoftware
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECD586AB-7035-4A35-8FBD-C4B26DAA502D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SilSoftware

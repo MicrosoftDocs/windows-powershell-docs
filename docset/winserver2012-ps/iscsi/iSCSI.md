@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?linkid=209168
 Help Version: 3.3.0.0
 Locale: en-US
 ms.assetid: 186C3096-479F-4044-A9E8-43C964056B04
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # iSCSI Module

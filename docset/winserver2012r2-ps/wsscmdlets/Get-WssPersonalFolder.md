@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssPersonalFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1B93B0A8-A34C-4AD6-82BD-733737EF07F2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssPersonalFolder

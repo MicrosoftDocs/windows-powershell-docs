@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-NetAdapterBinding
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 305CF732-2A47-4D45-A97C-9694B7B5F1B3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-NetAdapterBinding

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-WdsBootImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F8047CCD-48F7-4716-AC03-399E898D1529
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-WdsBootImage

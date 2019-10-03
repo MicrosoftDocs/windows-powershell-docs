@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 72FA6C6C-0597-4C8C-BEA6-84198727B6BA
+manager: dansimp
 ---
 
 # Rename-NetIPsecMainModeRule

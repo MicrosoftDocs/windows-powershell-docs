@@ -5,11 +5,15 @@ Download Help Link: http://go.microsoft.com/fwlink/?Linkid=216858
 Help Version: 3.1.0.0
 Locale: en-US
 ms.assetid: D93886EE-21C3-470A-B4A5-54F64A74A491
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Deduplication Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Data Deduplication-specific cmdlets. 
+This reference provides cmdlet descriptions and syntax for all Windows Server Data Deduplication-specific cmdlets. 
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Deduplication Cmdlets

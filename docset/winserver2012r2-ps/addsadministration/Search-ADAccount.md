@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Search-ADAccount
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -222,7 +224,7 @@ Accept wildcard characters: False
 Indicates that this cmdlet searches for accounts that have not logged in within a given time period or since a specified time.
 To specify a time period, use the **TimeSpan** parameter.
 To specify a specific time, use the **DateTime** parameter.
-Note that this attribute is only used when the domain is in Windows Server 2003 Domain Functional Level, so this parameter will only work in that mode.
+Note that this attribute is only used when the domain is in Windows Server 2003 Domain Functional Level or higher, so this parameter will only work in that mode.
 
 ```yaml
 Type: SwitchParameter

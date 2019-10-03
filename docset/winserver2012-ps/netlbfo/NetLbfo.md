@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=225664
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 7C63E721-88B9-415B-953C-77FCEDA47F90
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetLbfo Module

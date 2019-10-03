@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetIPAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC34B04A-06B8-4D11-908B-AEA0457680C5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetIPAddress

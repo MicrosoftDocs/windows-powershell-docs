@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 6EB7B0F5-F3FF-40EB-8189-EEC2FDC940C8
+manager: dansimp
 ---
 
 # Disable-NetAdapterLso

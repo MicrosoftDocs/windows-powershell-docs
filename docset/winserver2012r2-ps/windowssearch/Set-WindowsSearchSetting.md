@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WindowsSearchSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 97D00349-0E6B-4326-817E-EC401505F2F3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WindowsSearchSetting

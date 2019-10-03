@@ -3,6 +3,10 @@ external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 Module Name: ShieldedVMDataFile
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
+title: Save-ShieldedVMRecoveryKey
 ---
 
 # Save-ShieldedVMRecoveryKey

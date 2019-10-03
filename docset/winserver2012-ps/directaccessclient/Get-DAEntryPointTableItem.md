@@ -1,6 +1,10 @@
 ---
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 ms.assetid: E47810FF-1046-4C1D-BD9B-692667C9B996
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 online version: 
 schema: 2.0.0
 ---
@@ -170,8 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-This cmdlet has no input objects.
+### None
 
 ## OUTPUTS
 

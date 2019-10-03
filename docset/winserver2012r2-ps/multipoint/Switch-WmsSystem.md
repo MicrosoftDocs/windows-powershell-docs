@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Switch-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FC447764-D439-4A80-9791-8C40D56D006C
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Switch-WmsSystem
@@ -96,13 +98,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Switch-WmsSystem.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

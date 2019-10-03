@@ -3,9 +3,11 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Export-HcsSupportPackage
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
@@ -33,7 +35,7 @@ The **Export-HcsSupportPackage** cmdlet bundles the logs of each controller devi
 This cmdlet creates one .zip file per controller.
 Microsoft Customer Service and Support uses these logs to help troubleshoot the device.
 
-This cmldet uses an encryption passphrase to encrypt the package.
+This cmdlet uses an encryption passphrase to encrypt the package.
 Share this passphrase with Customer Service and Support.
 
 ## EXAMPLES

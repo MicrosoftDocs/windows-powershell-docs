@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-NetNeighbor
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E2F572BF-EA80-4967-93D3-643CD4BEF85C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-NetNeighbor

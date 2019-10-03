@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
 ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Install-AdcsCertificationAuthority
@@ -508,7 +512,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 * Ensure you run Windows PowerShell as an administrator. You can use the -f switch to bypass the prompt for confirmation.
-To see parameters, run the following command: install-adcscertificationauthority -?
+To see parameters, run the following command: Install-AdcsCertificationAuthority -?
 If you have installation issues, try using the -verbose switch to get verbose output and review the information in the %windir%\cerocm.log.
 
 ## RELATED LINKS

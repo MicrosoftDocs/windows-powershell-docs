@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPsecQuickModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AB2A3A95-6027-4D3D-8C6F-AC7D61491CE4
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPsecQuickModeCryptoSet
@@ -75,14 +77,14 @@ Running this cmdlet without specifying the policy store retrieves the persistent
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPPA Server, 80 <-> Any - Phase 2 Crypto Set"
+PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPAA Server, 80 <-> Any - Phase 2 Crypto Set"
 ```
 
 This example gets a phase 1 authentication set and displays the parameters specified by the localized rule name.
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-NetIPsecQuickModeCryptoSet -DiplayGroup "DirectAccess-Traffic"
+PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayGroup "DirectAccess-Traffic"
 ```
 
 This example gets all the quick mode cryptographic sets associated to a specified group.
@@ -231,7 +233,7 @@ Accept wildcard characters: False
 Specifies the network GPO from which to retrieve the sets to be retrieved. 
                          
 This parameter is used in the same way as the **PolicyStore** parameter.
-When modifying Group Policy objects (GPOs) in Windows PowerShell®, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
+When modifying Group Policy objects (GPOs) in Windows PowerShell, each change to a GPO requires the entire GPO to be loaded, modified, and saved back.
 On a busy Domain Controller (DC), this can be a slow and resource-heavy operation.
 A GPO Session loads a domain GPO onto the local computer and makes all changes in a batch, before saving it back.
 This reduces the load on the DC and speeds up the Windows PowerShell cmdlets.
@@ -352,7 +354,7 @@ Computer GPOs can be specified as follows.
                          
  -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
                          
- -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 
+ -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server 2012. 
                          
  -- StaticServiceStore: This read-only store contains all the service restrictions that ship with Windows Server 2012.
 Optional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS. 
@@ -478,7 +480,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

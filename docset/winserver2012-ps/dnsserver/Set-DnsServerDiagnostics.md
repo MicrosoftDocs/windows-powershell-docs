@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 90D337A9-9489-4D50-9F27-A154ABBBADBF
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DnsServerDiagnostics
@@ -45,31 +49,23 @@ The **Set-DnsServerDiagnostics** cmdlet sets debugging and logging parameters on
 
 If you enable debug logging (set the **FullPackets** parameter to $True), you must satisfy the following conditions:
 
-1.
-Set the **ReceivePackets** parameter or the **SendPackets** parameter to $True., and:
+1. Set the **ReceivePackets** parameter or the **SendPackets** parameter to $True., and:
 
-2.
-Set the **TcpPackets** parameter or the **UdpPackets** parameter to $True, and:
+2. Set the **TcpPackets** parameter or the **UdpPackets** parameter to $True, and:
 
-3.
-Set the **Notifications** parameter, the **Queries** parameter, or the **Updates** parameter to $True, and:
+3. Set the **Notifications** parameter, the **Queries** parameter, or the **Updates** parameter to $True, and:
 
-4.
-Set the **QuestionTransactions** parameter or the **Answers** parameter to $True.
+4. Set the **QuestionTransactions** parameter or the **Answers** parameter to $True.
 
 If you use the first parameter set, you must specify at least one of the options in each of the following entries: 
 
-1.
-**ReceivePackets**, **SendPackets**
+1. **ReceivePackets**, **SendPackets**
 
-2.
-**TcpPackets**, **UdpPackets**
+2. **TcpPackets**, **UdpPackets**
 
-3.
-**Notifications**, **Updates**, **Queries**
+3. **Notifications**, **Updates**, **Queries**
 
-4.
-**QuestionTransactions**, **Answers**
+4. **QuestionTransactions**, **Answers**
 
 The **All** parameter set enables all options except for the following: **LogFilePath**, **MaxMBFileSize**, **EventLogLevel**, **FilterIpAddrList**, **UseSystemEventLog**, and **EnableLogFileRollover**.
 

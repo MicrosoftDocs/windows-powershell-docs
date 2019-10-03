@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssRemoteWebAccessTitle
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 61B1BBAC-9B38-439F-AADF-63832296BFE7
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssRemoteWebAccessTitle

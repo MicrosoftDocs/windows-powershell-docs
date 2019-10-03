@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A4E0066E-561E-4BD7-AA7F-3CF742AB36B2
+manager: dansimp
 ---
 
 # Remove-GPO

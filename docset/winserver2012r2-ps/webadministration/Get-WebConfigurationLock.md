@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebConfigurationLock
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9B0D4DDB-F6AB-4986-90A7-600F5EBE5B86
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WebConfigurationLock

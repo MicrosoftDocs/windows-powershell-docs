@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-Volume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5B8170FE-9B23-47A6-9976-0E33220ED118
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-Volume

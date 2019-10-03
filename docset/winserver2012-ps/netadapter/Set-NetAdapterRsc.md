@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 6B7B6811-1BFD-46E4-9F7A-D4D80C30F86C
+manager: dansimp
 ---
 
 # Set-NetAdapterRsc

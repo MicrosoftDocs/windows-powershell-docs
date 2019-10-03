@@ -3,6 +3,10 @@ external help file: DhcpServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 08DE836C-462A-4E59-9E3B-1D3D22C61135
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-DhcpServerv4Binding
@@ -25,7 +29,7 @@ The **Set-DhcpServerv4Binding** cmdlet sets the binding state of the specified I
 
 ### EXAMPLE 1
 ```
-PS C:\>Set-DhcpServerv4Binding -BindingState True -InterfaceAlias "Wired Ethernet Connection"
+PS C:\>Set-DhcpServerv4Binding -BindingState $True -InterfaceAlias "Wired Ethernet Connection"
 ```
 
 This example binds the DHCPv4 server service to the network interface named Wired Ethernet Connection.

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Reset-WASComputer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBBA788E-2BC9-448F-8CC6-B5DD4F2B727E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Reset-WASComputer

@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5EA6D174-445B-4FAD-9E82-6CF62CD1E314
+manager: dansimp
 ---
 
 # Invoke-CauRun

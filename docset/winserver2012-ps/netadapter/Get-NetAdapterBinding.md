@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: EF6C7427-DD59-4F5F-8176-6CCF551D7824
+manager: dansimp
 ---
 
 # Get-NetAdapterBinding

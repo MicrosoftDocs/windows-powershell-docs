@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetEventSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA2C76D4-665E-45EF-93AD-10F31F5B5801
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetEventSession

@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: D1AF1DE6-F925-4926-9911-2C53B7D1568E
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-RDSessionDeployment

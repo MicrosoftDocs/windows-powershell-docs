@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Install-WebApplicationProxy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FDEC245A-F5E7-496A-A302-638E2E2000A4
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Install-WebApplicationProxy

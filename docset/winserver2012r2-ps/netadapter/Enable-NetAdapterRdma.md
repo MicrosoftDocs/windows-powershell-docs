@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetAdapterRdma
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C7EE08C5-60D3-4CC3-AFE8-08E590148B5C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-NetAdapterRdma

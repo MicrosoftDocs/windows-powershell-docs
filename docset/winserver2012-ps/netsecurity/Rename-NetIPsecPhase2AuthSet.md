@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 75C04B9E-DEBF-4026-B7B2-A52937E0C221
+manager: dansimp
 ---
 
 # Rename-NetIPsecPhase2AuthSet

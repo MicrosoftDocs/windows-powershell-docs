@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-DAOtpAuthentication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 577D95A4-08D4-46E5-B50B-756FBC0CAA14
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-DAOtpAuthentication

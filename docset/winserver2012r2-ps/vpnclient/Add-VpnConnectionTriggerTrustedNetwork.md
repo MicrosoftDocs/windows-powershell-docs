@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-VpnConnectionTriggerTrustedNetwork
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 05F15031-FB69-4603-AE1D-078C5930F14B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-VpnConnectionTriggerTrustedNetwork
@@ -125,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter

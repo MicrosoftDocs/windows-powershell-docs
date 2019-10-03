@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=217864
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 6A012DA3-8BD5-4EC5-8CF6-75A3F1C00430
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # RemoteAccess Module

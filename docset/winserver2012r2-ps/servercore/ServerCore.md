@@ -7,13 +7,15 @@ Locale: en-US
 title: ServerCore
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9fc79994-7fb7-401c-a1c0-6afb7d907d8d
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # ServerCore Module

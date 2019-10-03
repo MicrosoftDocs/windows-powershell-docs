@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPsecQuickModeSA
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E0AFADA5-E203-4170-9AA2-AF5F7D9E2458
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPsecQuickModeSA

@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0B25A6D2-2FEB-468B-A8AC-9970D818FCA8
+manager: dansimp
 ---
 
 # Remove-CauClusterRole

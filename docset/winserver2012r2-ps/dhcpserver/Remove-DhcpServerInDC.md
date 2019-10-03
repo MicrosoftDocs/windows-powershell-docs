@@ -1,12 +1,14 @@
 ---
 external help file: PS_DhcpServerInDC_v1.0.0.cdxml-help.xml
 Module Name: DhcpServer
-online version: 
+online version:
 schema: 2.0.0
 title: Remove-DhcpServerInDC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -42,25 +44,22 @@ In addition to removing the computer running the DHCP server service in DC, this
 
 The trigger for authorization check will be done even if the removal of computer running the DHCP server service fails with an object already exists error.
 
-The following warning will be displayed if the computer running the DHCP server service does not exist in AD and the trigger for the server authorization check succeeded: 
-                       
- - `The DHCP server is already de-authorized in Active Directory.
-The authorization check on the DHCP server has been initiated.
-`
+The following warning will be displayed if the computer running the DHCP server service does not exist in AD and the trigger for the server authorization check succeeded:
 
-The following warning will be displayed if the computer running the DHCP server service does not exist in AD, but the trigger for the server authorization check failed: 
-                       
+ - `The DHCP server is already de-authorized in Active Directory.
+The authorization check on the DHCP server has been initiated.`
+
+The following warning will be displayed if the computer running the DHCP server service does not exist in AD, but the trigger for the server authorization check failed:
+
  - `The DHCP server is already de-authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
-The following warning will be displayed if the deletion of the computer running the DHCP server service in AD succeeded, but the trigger for the server authorization check failed: 
-                       
+The following warning will be displayed if the deletion of the computer running the DHCP server service in AD succeeded, but the trigger for the server authorization check failed:
+
  - `The DHCP server has been successfully de-authorized in Active Directory.
 Failed to initiate the authorization check on the DHCP server.
-Error code: %d
-`
+Error code: %d`
 
 If the deletion of computer running the DHCP server service to AD fails with an error other than object_does not already_exists_error, then an error is returned and authorization check on the server is not triggered.
 
@@ -96,7 +95,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +142,7 @@ Specifies the DNS name of the computer, on which the DHCP server service is runn
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -158,7 +157,7 @@ Specifies the IP address of the computer, on which the DHCP server service is ru
 ```yaml
 Type: IPAddress
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -174,7 +173,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +190,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

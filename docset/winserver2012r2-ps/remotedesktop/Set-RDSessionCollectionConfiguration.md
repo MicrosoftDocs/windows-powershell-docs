@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDSessionCollectionConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 12AFAB28-DFFC-4E61-A0BD-637C517A71FD
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RDSessionCollectionConfiguration

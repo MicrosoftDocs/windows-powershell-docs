@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-Certificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6DA3EEBC-7B3F-4130-B266-9B2AD6DF4318
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-Certificate

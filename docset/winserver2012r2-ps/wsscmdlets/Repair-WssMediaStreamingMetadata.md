@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Repair-WssMediaStreamingMetadata
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C94D8EAA-BE45-469B-84C6-3C4E94299458
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Repair-WssMediaStreamingMetadata

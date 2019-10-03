@@ -4,9 +4,11 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Remove-CACrlDistributionPoint
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -41,7 +43,7 @@ Description
 
 -----------
 
-Removes all URIs for all distribition points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
+Removes all URIs for all distribution points that contain the specified URI value ("http://corp.contoso.com/rootca.crl").
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```

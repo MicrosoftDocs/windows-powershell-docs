@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 44986B77-C8F3-49AB-952B-D0C18B737288
+manager: dansimp
 ---
 
 # Stop-DtcTransactionsTraceSession

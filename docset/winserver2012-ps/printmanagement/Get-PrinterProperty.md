@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 162FC687-2EDA-4C4A-B17F-E9DEEAF748B0
+manager: dansimp
 ---
 
 # Get-PrinterProperty
@@ -27,7 +31,7 @@ You need administrator privileges to use **Get-PrinterProperty**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Get printer properties-------------------------- 
+### -------------------------- Example 1: Get printer properties-------------------------- 
 xample:Get printer properties
 ```
 PS C:\> Get-PrinterProperty -PrinterName "Printer name"

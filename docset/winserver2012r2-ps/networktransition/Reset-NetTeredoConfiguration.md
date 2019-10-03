@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Reset-NetTeredoConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 122D37C5-678E-4190-A1FB-9E4E37BBA4A9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Reset-NetTeredoConfiguration

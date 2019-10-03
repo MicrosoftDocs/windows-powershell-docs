@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDWorkspace
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90CAD965-2E03-4472-B5CE-CA541312882A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RDWorkspace

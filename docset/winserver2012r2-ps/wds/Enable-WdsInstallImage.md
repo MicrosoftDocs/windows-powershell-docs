@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-WdsInstallImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D7000FD7-5ADC-4326-99C6-BCE1DBBE924B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-WdsInstallImage

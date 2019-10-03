@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WdsInstallImageGroup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 338E586F-0F15-47C7-B344-1C0C2481965F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WdsInstallImageGroup

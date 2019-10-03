@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 71993626-1CD8-4187-BE8E-AFD54B280F4E
+manager: dansimp
 ---
 
 # Add-InitiatorIdToMaskingSet

@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DF236D57-F8CE-496C-A003-9FD868BFC1BC
+manager: dansimp
 ---
 
 # Stop-CauRun

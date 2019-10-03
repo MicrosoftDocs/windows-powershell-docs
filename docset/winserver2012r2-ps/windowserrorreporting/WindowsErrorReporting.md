@@ -7,13 +7,15 @@ Locale: en-US
 title: WindowsErrorReporting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 34efbe6a-fe4f-4fe2-b32d-2861531a4054
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # WindowsErrorReporting Module

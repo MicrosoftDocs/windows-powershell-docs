@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: A5D81755-6799-41FE-8AAF-FB42F9A697F5
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-ADDomainController
@@ -80,9 +84,9 @@ C:\PS>Get-ADDomainController -Discover -Service "GlobalCatalog"
 
 Description
 
------------
+Get a global catalog in the current forest using Discovery. Domain type name is used in this scenario.
 
-Get a global catalog in the current forest using Discovery.
+-----------
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```
@@ -93,7 +97,7 @@ Description
 
 -----------
 
-Get a global catalog in the current forest using Discovery.
+Get a global catalog in the current forest using Discovery. Domain type id is used in this scenario. 
 
 ### -------------------------- EXAMPLE 5 --------------------------
 ```

@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 4BFB5183-9F7C-4D70-AB21-26018218D57D
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-RDAvailableApp

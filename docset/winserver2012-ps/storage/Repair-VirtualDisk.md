@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: A4087758-148D-4404-9414-987812E52991
+manager: dansimp
 ---
 
 # Repair-VirtualDisk

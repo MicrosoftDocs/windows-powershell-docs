@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: D3E968CD-FE13-47B9-AB3C-A9CA0DFBADD8
+manager: dansimp
 ---
 
 # Block-SmbShareAccess

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Test-RDOUAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Test-RDOUAccess

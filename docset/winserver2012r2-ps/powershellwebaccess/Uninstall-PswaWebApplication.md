@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Uninstall-PswaWebApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 762A4AAC-7202-4778-9D35-ABD479E1E839
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Uninstall-PswaWebApplication

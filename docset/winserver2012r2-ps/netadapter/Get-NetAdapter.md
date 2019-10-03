@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 265FB18B-0065-469F-88C4-55D6C7CF54D3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapter

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WindowsFeature
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 49B3C89A-8395-4638-802A-451B56019188
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WindowsFeature
@@ -59,7 +61,7 @@ This example returns a list of available and installed features that have a comm
 PS C:\> Get-WindowsFeature -ComputerName Server01 | Where Installed
 ```
 
-This example returns a list of features that is installed on a specified server, Server01.
+This example returns a list of features installed on a specified server, Server01.
 
 ### EXAMPLE 5
 ```

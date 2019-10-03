@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-RDUserSession
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D25A387A-2DF6-417E-9BCB-CA33895F5087
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RDUserSession

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Test-WssConfigurationOption
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4EB4FCD5-6CB3-4E15-B41B-5FFD93E203A8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Test-WssConfigurationOption

@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 0C8EF139-A219-4678-ABF0-7A44CD543B5F
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-RDPersonalVirtualDesktopPatchSchedule

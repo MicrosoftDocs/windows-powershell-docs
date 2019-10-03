@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B0046458-D023-444D-A17D-4A4BCB10AC5D
+manager: dansimp
 ---
 
 # Get-VirtualDiskSupportedSize
@@ -227,8 +231,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResiliencySetting
-Accepts a ResilencySetting object as input.
-The Resilency Setting CIM object is exposed by the com/library/ea364a0b-06d6-4653-b41c-be69b8038b54" \t "_blank" Get-ResilencySetting cmdlet.
+Accepts a ResiliencySetting object as input.
+The Resiliency Setting CIM object is exposed by the com/library/ea364a0b-06d6-4653-b41c-be69b8038b54" \t "_blank" Get-ResiliencySetting cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -343,7 +347,7 @@ Accept wildcard characters: False
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_ResilencySetting
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_ResiliencySetting
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 

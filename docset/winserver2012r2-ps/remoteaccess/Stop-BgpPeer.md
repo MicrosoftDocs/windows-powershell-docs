@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Stop-BgpPeer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66F31195-7E41-4594-9B57-A00C827CABBD
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Stop-BgpPeer

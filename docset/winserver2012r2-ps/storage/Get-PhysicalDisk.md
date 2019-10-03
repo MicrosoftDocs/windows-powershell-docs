@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-PhysicalDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A204DCDE-BFAC-43AC-9B79-D81384F255BE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-PhysicalDisk
@@ -200,8 +202,14 @@ Accept wildcard characters: False
 ```
 
 ### -HealthStatus
-Gets only physical disks in the specified state.
-Valid values are **Healthy**, **Unhealthy**, **Unknown**, or **Warning**.
+Specifies the **health status** of physical disks.
+The acceptable values for this parameter are:
+
+- Healthy 
+- Unhealthy 
+- Unknown 
+- Warning
+
 
 ```yaml
 Type: HealthStatus[]

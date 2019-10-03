@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebApplication
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 76C3A941-6AAB-4F53-ACE4-F7FDA7244E7D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WebApplication
@@ -31,7 +33,7 @@ The **Get-WebApplication** cmdlet gets the web applications associated with a sp
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Gets the Web web applications associated with the Default default Web websSite --------------web default webs
+### Example 1: Gets the web applications associated with the default web site
 ```
 IIS:\>Get-WebApplication -Site "Default Web Site"
 ```

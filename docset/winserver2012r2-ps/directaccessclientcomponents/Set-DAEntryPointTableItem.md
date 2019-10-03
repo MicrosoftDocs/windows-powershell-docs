@@ -4,9 +4,11 @@ Module Name: DirectAccessClientComponents
 online version: 
 schema: 2.0.0
 title: Set-DAEntryPointTableItem
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
@@ -48,7 +50,7 @@ Set-DAEntryPointTableItem -InputObject <CimInstance[]> [-ADSite <String>] [-Entr
 
 ## DESCRIPTION
 **Set-DAEntryPointTableItem** modifies an entry point configuration that is stored in a Group Policy object (GPO).
-You must specifiy the name of the GPO in which the DirectAccess entry point configuration is stored.
+You must specify the name of the GPO in which the DirectAccess entry point configuration is stored.
 
 ## EXAMPLES
 
@@ -348,8 +350,7 @@ This cmdlet returns a CIM object which contains the DA entry point table item.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

@@ -3,6 +3,10 @@ external help file: ClearWindowsDiagnosticData.psm1-help.xml
 Module Name: WindowsDiagnosticData
 online version:
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
+title: Clear-WindowsDiagnosticData
 ---
 
 # Clear-WindowsDiagnosticData

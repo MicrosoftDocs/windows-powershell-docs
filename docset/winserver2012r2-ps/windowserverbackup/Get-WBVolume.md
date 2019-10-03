@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WBVolume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7C118C1F-7616-48DA-AE69-4E7B80CAE748
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WBVolume

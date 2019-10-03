@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 3875B931-5D6D-4E60-AFA2-01AFDD09F95C
+manager: dansimp
 ---
 
 # Set-NfsClientgroup

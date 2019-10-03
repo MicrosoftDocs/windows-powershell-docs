@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-RDVirtualDesktopDeployment
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AD750689-1B3C-4918-9BD0-F180F2770515
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-RDVirtualDesktopDeployment

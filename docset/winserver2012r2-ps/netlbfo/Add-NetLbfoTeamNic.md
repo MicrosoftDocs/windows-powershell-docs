@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-NetLbfoTeamNic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9A3B0C96-B22D-4544-82BE-D7A0B10775E8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-NetLbfoTeamNic

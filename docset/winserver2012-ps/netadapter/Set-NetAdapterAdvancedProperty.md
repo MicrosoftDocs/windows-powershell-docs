@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 78FD4A08-1D00-4D41-85AA-ABD1EAC6E46D
+manager: dansimp
 ---
 
 # Set-NetAdapterAdvancedProperty
@@ -70,7 +74,7 @@ This example sets the value of the Flow Control advanced property on the network
 
 ### EXAMPLE 3
 ```
-PS C:\>Set-NetAdapterAdvancedProperty -Name MyAdapter -RegistryKeyword "*Flo*rol" -RegistryType "REG_SZ" -RegistryValue "Disable"
+PS C:\>Set-NetAdapterAdvancedProperty -Name MyAdapter -RegistryKeyword "*Flo*rol" -RegistryValue "Disable"
 ```
 
 This example sets the value of the Flow Control advanced property on the network adapter named MyAdapter using wildcard characters in the keyword name.

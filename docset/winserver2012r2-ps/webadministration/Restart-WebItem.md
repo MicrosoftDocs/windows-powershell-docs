@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restart-WebItem
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7FC110AC-BFF2-4303-B579-CA891840AE3D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Restart-WebItem
@@ -31,7 +33,7 @@ The **Restart-WebItem** cmdlet restarts an application pool or a website.
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Recycle Restart an Application application Pool pool --------------Restart application pool
+### Example 1: Restart an application pool
 ```
 IIS:\>Restart-WebItem -PSPath 'IIS:\AppPools\DefaultAppPool'
 ```

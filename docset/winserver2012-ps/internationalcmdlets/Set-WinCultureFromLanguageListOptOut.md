@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 ms.assetid: 5BBCC3EF-8176-4EB3-8F33-02A79AFB75B6
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-WinCultureFromLanguageListOptOut

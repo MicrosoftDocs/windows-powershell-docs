@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-UalServerUser
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3781A1E1-B43D-4F5A-836D-923B8581C271
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-UalServerUser

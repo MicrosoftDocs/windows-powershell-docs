@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 19BEF7F8-7062-4525-AC80-D24964A9CD50
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Clear-ADClaimTransformLink
@@ -141,7 +145,7 @@ The identifier in parentheses is the LDAP display name for the attribute.
 
 Distinguished Name
 
-Example: CN=fabikam.com,DC=corp,DC=contoso,DC=com
+Example: CN=fabrikam.com,DC=corp,DC=contoso,DC=com
 
 GUID (objectGUID)
 

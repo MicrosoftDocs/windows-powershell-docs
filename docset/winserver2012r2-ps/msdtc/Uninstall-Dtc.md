@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Uninstall-Dtc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7F79A4D3-08FB-4A2A-871B-C994F351B635
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Uninstall-Dtc

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-PrinterProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 28E76B8B-6F8F-4554-A8F7-B0375A1D8D9D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-PrinterProperty
@@ -239,8 +241,7 @@ This cmdlet accepts one printer object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

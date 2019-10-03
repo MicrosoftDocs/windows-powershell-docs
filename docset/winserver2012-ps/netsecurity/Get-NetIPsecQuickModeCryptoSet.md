@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: AB2A3A95-6027-4D3D-8C6F-AC7D61491CE4
+manager: dansimp
 ---
 
 # Get-NetIPsecQuickModeCryptoSet
@@ -64,14 +68,14 @@ Running this cmdlet without specifying the policy store retrieves the persistent
 
 ### EXAMPLE 2
 ```
-PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPPA Server, 80 <-> Any - Phase 2 Crypto Set"
+PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayName "Exchange HIPAA Server, 80 <-> Any - Phase 2 Crypto Set"
 ```
 
 This example gets a phase 1 authentication set and displays the parameters specified by the localized rule name.
 
 ### EXAMPLE 3
 ```
-PS C:\>Get-NetIPsecQuickModeCryptoSet -DiplayGroup "DirectAccess-Traffic"
+PS C:\>Get-NetIPsecQuickModeCryptoSet -DisplayGroup "DirectAccess-Traffic"
 ```
 
 This example gets all the quick mode cryptographic sets associated to a specified group.

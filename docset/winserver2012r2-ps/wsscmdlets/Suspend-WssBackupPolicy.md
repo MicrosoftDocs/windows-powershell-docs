@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Suspend-WssBackupPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C1A93E15-CFC5-4E18-995E-A9715C52DC60
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Suspend-WssBackupPolicy

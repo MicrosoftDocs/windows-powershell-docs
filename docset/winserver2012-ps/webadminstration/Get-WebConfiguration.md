@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 8C81A2E6-D85C-4368-B228-C3743F2A24D3
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-WebConfiguration
@@ -24,7 +28,7 @@ Gets the IIS configuration element at the specified location.
 
 ### -------------- EXAMPLE 1: Querying authentication settings --------------
 ```
-IIS:\>Get-WebConfiguration system.webServer/security/authentication/* /* -Recurse | where {$_.enabled -eq $true} | format-list
+IIS:\>Get-WebConfiguration system.webServer/security/authentication/* -Recurse | where {$_.enabled -eq $true} | format-list
 ```
 
 This example queries for all authentication settings specified under the Default Web Site.

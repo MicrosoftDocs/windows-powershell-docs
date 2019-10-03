@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 17BC819F-5550-4290-BCF7-07CBC205C054
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Set-WmsSystem
@@ -497,8 +499,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Set-WmsSystem.
+### None
 
 ## OUTPUTS
 

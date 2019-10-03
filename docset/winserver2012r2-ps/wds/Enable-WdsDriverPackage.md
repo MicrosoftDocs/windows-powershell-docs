@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-WdsDriverPackage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8B8B9CBC-9FBF-43EC-8CE7-31BFA34DCAB2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-WdsDriverPackage

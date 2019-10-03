@@ -4,9 +4,11 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Get-IpamIpAddressAuditEvent
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -61,7 +63,7 @@ Narrow the search criteria to limit the results.
 
 ### Example 1: Get all IP address audit events
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth = $Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today
+PS C:\> $Today = Get-DatePS C:\>$LastMonth = $Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today
 ```
 
 This command gets all IP address audit events between a start date and an end date.
@@ -70,7 +72,7 @@ The command stores the results in the variable named .**$IpamIpAddressAuditEvent
 
 ### Example 2: Get all IP address audit events for an end date and a start date
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -IpAddress 10.10.1.1
+PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -IpAddress 10.10.1.1
 ```
 
 This command gets all IP address audit events for a given IP address, between a start date and an end date.
@@ -79,7 +81,7 @@ The command stores the results in the variable named **$IpamIpAddressAuditEvents
 
 ### Example 3: Get all IP address audit events, user events, and logon events for an end date and a start date
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth=$today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $lastMonth -EndDate $today -IpAddress 10.10.1.1 -CorrelateLogonEvents
+PS C:\> $Today = Get-DatePS C:\>$LastMonth=$today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $lastMonth -EndDate $today -IpAddress 10.10.1.1 -CorrelateLogonEvents
 ```
 
 This command gets all IP address audit events for a given IP address, between a start date and an end date.
@@ -88,7 +90,7 @@ The command stores the results in the variable named **$IpamIpAddressAuditEvents
 
 ### Example 4: Get all IP address audit events by MAC address
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -ClientId "AA:BB:CC:DD:EE:FF" -CorrelateLogonEvents
+PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -ClientId "AA:BB:CC:DD:EE:FF" -CorrelateLogonEvents
 ```
 
 This command gets all IP address audit events for a client ID, between a start date and an end date.
@@ -97,7 +99,7 @@ The command stores the results in the variable named **$IpamIpAddressAuditEvents
 
 ### Example 5: Get all IP address audit events by hostname
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -HostName client1.contoso.com -CorrelateLogonEvents
+PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -HostName client1.contoso.com -CorrelateLogonEvents
 ```
 
 This command gets all IP address audit events for a given hostname, between a start date and an end date.
@@ -106,7 +108,7 @@ The command stores the results in the variable named **$IpamIpAddressAuditEvents
 
 ### Example 6: Get all IP address audit events by username
 ```
-PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -HostName client1.contoso.com
+PS C:\> $Today = Get-DatePS C:\>$LastMonth=$Today.AddDays(-30)PS C:\>$IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -HostName client1.contoso.com
 ```
 
 This command gets all IP address audit events for a username, between a start date and an end date.

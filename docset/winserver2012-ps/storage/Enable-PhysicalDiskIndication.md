@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 53CD2A50-15FB-4ACE-991C-87F2E102E653
+manager: dansimp
 ---
 
 # Enable-PhysicalDiskIndication
@@ -43,7 +47,7 @@ PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacePool")
 
 
 
-PS C:\> Enable-PhsicalDiskIndication -StoragePool $stpool
+PS C:\> Enable-PhysicalDiskIndication -StoragePool $stpool
 ```
 
 This example enables the identification LED on all physical disks associated with the Storage Pool SpacePool.

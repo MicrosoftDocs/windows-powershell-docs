@@ -14,6 +14,10 @@ online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 title: Add-HpcDriver
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-HpcSoaSessionTrace
@@ -23,12 +27,12 @@ This cmdlet is deprecated and was removed in HPC Pack 2012. Removes the Windows 
 
 ## SYNTAX
 
-###ID
+### ID
 ```
 Remove-HpcSoaSessionTrace [-Id] <Int32> [-Scheduler <String> ] [-Confirm] [-WhatIf] [ <CommonParameters>]
 ```
 
-###Job
+### Job
 ```
 Remove-HpcSoaSessionTrace -Job <HpcJob> [-Scheduler <String> ] [-Confirm] [-WhatIf] [ <CommonParameters>]
 ```
@@ -143,7 +147,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###HpcJob
+### HpcJob
 
 ### None
 

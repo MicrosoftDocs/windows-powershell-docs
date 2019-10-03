@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SmbShare
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3EC4687D-4FCB-4C2A-A221-8D5320DE24B2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SmbShare
@@ -144,7 +146,20 @@ VMS1                          Contoso-FS                    I:\VMS
 VMS2                          Contoso-FS                    J:\VMS
 ```
 
-This example retrieves the SMB shares on the computer that are connect to the SMB server named Contoso-FS.
+This example retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
+
+### EXAMPLE 7
+```
+PS C:\>Get-SmbShare -Smbinstance Default
+
+Name                          ScopeName                     Path                          Description 
+----                          ---------                     ----                          ----------- 
+VMS1                          Contoso-FS                    I:\VMS
+VMS3                          Contoso-SO                    C:\ClusterStorage\Volume1\VMS 
+VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
+```
+
+This example retrieves the SMB shares on the computer which has the Smbinstance value set as Default.
 
 ## PARAMETERS
 
@@ -365,13 +380,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

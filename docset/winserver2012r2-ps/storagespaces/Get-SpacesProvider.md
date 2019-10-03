@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-SpacesProvider
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 87D360C3-20F3-4AD8-BD14-81034EE239F6
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SpacesProvider

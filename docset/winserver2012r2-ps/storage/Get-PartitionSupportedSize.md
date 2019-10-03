@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-PartitionSupportedSize
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E4E2A9D1-9E80-463C-BA10-435A45E1040B
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-PartitionSupportedSize
@@ -47,15 +49,15 @@ Get-PartitionSupportedSize -InputObject <CimInstance[]> [-CimSession <CimSession
 ```
 
 ## DESCRIPTION
-The **Get-PartitionSupportedSizes** cmdlet returns information on supported partition sizes for the specified Disk object.
+The **Get-PartitionSupportedSize** cmdlet returns information on supported partition sizes for the specified Disk object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\>Get-PartitionSupportedSizes -DiskNumber 3 -PartitionNumber 2
-MinimumSize                                                 MaximumSize 
------------                                                 -----------
+PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
+SizeMin                                                 SizeMax 
+-----------                                             -----------
 ```
 
 This example is not fully implemented and does not include size values.

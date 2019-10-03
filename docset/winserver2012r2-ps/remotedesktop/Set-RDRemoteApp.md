@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-RDRemoteApp
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D10DC087-CD53-4671-9010-11BE95E2B846
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-RDRemoteApp

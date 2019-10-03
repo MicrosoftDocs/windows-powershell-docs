@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C897EB1C-04F1-4CDF-8891-9B2C13F7151D
+manager: dansimp
 ---
 
 # Set-NfsServerConfiguration

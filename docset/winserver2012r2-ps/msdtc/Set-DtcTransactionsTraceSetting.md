@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-DtcTransactionsTraceSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB2F0685-6D63-4745-B68A-423EF189C193
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-DtcTransactionsTraceSetting

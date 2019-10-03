@@ -2,7 +2,11 @@
 external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E057BEDD-F281-4463-9E4A-29DA9D8E171C
+manager: dansimp
 ---
 
 # Remove-WBBackupSet

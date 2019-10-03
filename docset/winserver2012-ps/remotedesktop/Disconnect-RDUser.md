@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 2D60E839-014C-4D8D-9BF9-C6ABEA237B6E
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Disconnect-RDUser

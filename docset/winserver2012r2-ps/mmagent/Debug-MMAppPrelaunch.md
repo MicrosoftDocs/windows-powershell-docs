@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Debug-MMAppPrelaunch
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 01B55FF9-63D9-4B4A-A249-3EF16E68F12E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Debug-MMAppPrelaunch
@@ -161,8 +163,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 

@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: 9447CF73-4CD4-495F-8757-DA8156325BCC
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-RDSessionHost
@@ -26,7 +30,7 @@ Users can connect to a RD Session Host server to run programs, save files, and u
 
 ### Example 1: Set values for an RD  Session Host server
 ```
-PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed $True -ConnectionBroker "rdcb.contoso.com"
+PS C:\> Set-RDSessionHost -SessionHost "rdsh.contoso.com" -NewConnectionAllowed Yes -ConnectionBroker "rdcb.contoso.com"
 ```
 
 This command specifies values for an RD Session Host server named rdsh.contoso.com.

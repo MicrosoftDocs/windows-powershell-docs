@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-FileIntegrity
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C6163BC8-F560-48B2-893E-4A840C64B2C3
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-FileIntegrity

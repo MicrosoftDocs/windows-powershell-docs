@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Stop-SMPerformanceCollector
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 121F78B7-458C-4E8D-8C82-64045C27ADF0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Stop-SMPerformanceCollector

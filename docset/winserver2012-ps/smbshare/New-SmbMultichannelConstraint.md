@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0BDF6C5E-F391-4B3C-A661-23CDE7EEA82B
+manager: dansimp
 ---
 
 # New-SmbMultichannelConstraint

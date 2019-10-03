@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 6693227A-DACA-4F56-B8E1-3FE684DB06AC
+manager: dansimp
 ---
 
 # Remove-NfsNetgroup
@@ -35,7 +39,7 @@ PS C:\> Remove-NfsNetgroup -NetGroupName "AppServers" -LdapInstanceName "Contoso
 
 This command removes an NFS netgroup that is named AppServers from a netgroup store in Contoso.com.
 
-### Example 2: Remove an NFS netgroup from aconfigured store
+### Example 2: Remove an NFS netgroup from a configured store
 ```
 PS C:\>Remove-NfsNetgroup -NetGroupName "AppServers"
 ```

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-WBPolicy
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DF2D77CE-FECB-45DE-A057-8BE4D9EBC1FE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-WBPolicy

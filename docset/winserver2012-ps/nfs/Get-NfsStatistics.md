@@ -2,7 +2,11 @@
 external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E1C01056-F069-4160-8AF9-F25046671F31
+manager: dansimp
 ---
 
 # Get-NfsStatistics
@@ -117,8 +121,8 @@ Accept wildcard characters: True
 Specifies the type of protocol for which to get NFS statistics.
 Valid values are: 
 
---NFS
---Mount
+- NFS
+- Mount
 
 ```yaml
 Type: String[]

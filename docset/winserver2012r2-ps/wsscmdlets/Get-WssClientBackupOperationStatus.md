@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssClientBackupOperationStatus
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4DDE34B9-2074-40B4-A81D-82EB4BF5113E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssClientBackupOperationStatus

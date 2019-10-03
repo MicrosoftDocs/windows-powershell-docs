@@ -7,13 +7,15 @@ Locale: en-US
 title: ServerManagerTasks
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3febea63-5191-49af-8523-6e6fdf58df80
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # ServerManagerTasks Module

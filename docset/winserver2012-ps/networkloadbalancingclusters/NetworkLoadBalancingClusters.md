@@ -5,6 +5,10 @@ Download Help Link: http://go.microsoft.com/fwlink/?LinkId=214655
 Help Version: 3.0.0.0
 Locale: en-US
 ms.assetid: 5633F599-8F57-4452-B083-B79D0E68C11E
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # NetworkLoadBalancingClusters Module

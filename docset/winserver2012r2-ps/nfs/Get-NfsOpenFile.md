@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NfsOpenFile
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8B6D787-7615-4DF0-A7E9-90311AA2BAAD
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NfsOpenFile
@@ -47,7 +49,7 @@ PS C:\> Get-NfsOpenFile -ClientId 101
 
 This command gets all open files on an NFS server for a client computer that has the ID 101.
 
-### Example 3: Get all open files on an NFS server by path and file name by using a wildcarda
+### Example 3: Get all open files on an NFS server by path and file name by using a wildcard
 ```
 PS C:\> Get-NfsOpenFile -Path "C:\Windows\Setup*"
 ```

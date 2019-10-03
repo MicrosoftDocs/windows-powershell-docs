@@ -7,13 +7,15 @@ Locale: en-US
 title: MMAgent
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 01c95e48-9fd0-4165-9931-5c37afb2e113
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # MMAgent Module

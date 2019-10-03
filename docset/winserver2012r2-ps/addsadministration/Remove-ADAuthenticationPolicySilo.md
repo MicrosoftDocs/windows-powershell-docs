@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Remove-ADAuthenticationPolicySilo
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -155,12 +157,12 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
  Domain name values: 
 
--  Fully qualified domain name
--   NetBIOS name
+- Fully qualified domain name
+- NetBIOS name
 
  Directory server values:  
 
--  Fully qualified directory server name
+- Fully qualified directory server name
 - NetBIOS name
 - Fully qualified directory server name and port
 

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Enable-NetAdapter
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 38EC2D89-53B1-4709-B776-9ACE2C64CAF8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-NetAdapter

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Suspend-PrintJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Suspend-PrintJob
@@ -146,7 +148,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to suspend on the specified printer. 
-You can use wildcard characters.
+You cannot use wildcard characters.
 
 ```yaml
 Type: UInt32
@@ -248,8 +250,7 @@ This cmdlet accepts one print job object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

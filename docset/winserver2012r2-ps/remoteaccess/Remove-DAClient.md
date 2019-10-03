@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-DAClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B0F23FD5-86D0-4102-A91D-6C75D6A24CBF
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-DAClient
@@ -81,7 +83,7 @@ The use of the cmdlet to restrict users and laptops in DirectAccessMobileClients
 PS C:\>Remove-DAClient -DomainName "child.corp.contoso.com"
 ```
 
-This example displays the deployment that contains two domains viz.corp.contoso.com and child.corp.contoso.com and the cmdlet removes the DA client GPO in child.corp.cotoso.com domain.
+This example displays the deployment that contains two domains viz.corp.contoso.com and child.corp.contoso.com and the cmdlet removes the DA client GPO in child.corp.contoso.com domain.
 This cmdlet automatically locates the client GPO in the domain and removes it.
 
 ### EXAMPLE 3

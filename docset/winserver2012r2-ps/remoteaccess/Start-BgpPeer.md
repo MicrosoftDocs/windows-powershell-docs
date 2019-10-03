@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Start-BgpPeer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: ECED1D43-9CE2-4B06-907A-9BEC72A0B235
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Start-BgpPeer

@@ -2,6 +2,9 @@
 external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-VMReplicationServer
@@ -124,11 +127,11 @@ Specifies the certificate to use for mutual authentication of the replication da
 This parameter is required only when Certificate is specified as the type of authentication.
 Specify the thumbprint of a valid computer certificate from the Personal store.
 
---The certificate must have all of the following properties to be valid:
---It must not be expired.
---It must include both client and server authentication extensions for extended key usage (EKU), and an associated private key.
---It must terminate at a valid root certificate.
---Meet the requirements for the subject common name (CN):
+- The certificate must have all of the following properties to be valid:
+- It must not be expired.
+- It must include both client and server authentication extensions for extended key usage (EKU), and an associated private key.
+- It must terminate at a valid root certificate.
+- Meet the requirements for the subject common name (CN):
 
 For servers that are not clustered, the subject common name (CN) must be equal to, or subject alternative name (DNS Name) should contain, the FQDN of the host.
 
@@ -348,8 +351,11 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
-None by default; **VMRecoveryServer** if **-PassThru** is specified.
+### None
+Default
+
+### VMRecoveryServer
+If **-PassThru** is specified.
 
 ## NOTES
 

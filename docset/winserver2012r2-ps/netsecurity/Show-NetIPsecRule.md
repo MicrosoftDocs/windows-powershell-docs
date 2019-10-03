@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Show-NetIPsecRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5A385B78-AB09-4DFF-86AD-12FFA0B54756
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Show-NetIPsecRule

@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 ms.assetid: 72FCDAEA-BB33-40C6-AFCE-E7C33CF622D0
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-SelfSignedCertificate

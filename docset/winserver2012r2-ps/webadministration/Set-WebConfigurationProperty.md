@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WebConfigurationProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9148844F-816B-4F27-BB55-A38F4F353241
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WebConfigurationProperty
@@ -43,14 +45,14 @@ Globbing, or the use of wildcards, is supported.
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Change the extension of all handlers mapped to .aspx --------------
+### Example 1: Change the extension of all handlers mapped to .aspx
 ```
 IIS:\>Set-WebConfigurationProperty -Filter "//handlers/add[@path='*.aspx']" -PSPath "IIS:\" -Name "path" -Value "*.mspx"
 ```
 
 This command changes all handler paths to *.mspx that were mapped to *.aspx.
 
-### Example-------------- EXAMPLEExample 2: Setting new Bindings bindings on an existing Wweb site --------------bindings w
+### Example 2: Setting new bindings on an existing web site
 ```
 IIS:\>Set-WebConfigurationProperty -Filter '/system.applicationHost/sites/site[@name="DemoSite"]' -PSPath "IIS:\" -Name "Bindings" -Value (@{protocol="http";bindingInformation="*:80:DemoSite1"},@{protocol="http";bindingInformation="*:80:DemoSite2"})
 ```

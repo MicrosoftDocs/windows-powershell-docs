@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebManagedModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66CD73CB-B5A3-4AFE-BEF1-77B47822B968
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WebManagedModule
@@ -31,7 +33,7 @@ The **Get-WebManagedModule** cmdlet gets the managed modules that are configured
 
 ## EXAMPLES
 
-### Example -------------- EXAMPLE Example 1: Get modules for the Default default Web webSsite --------------default webs
+### Example 1: Get modules for the default web site
 ```
 IIS:\>Get-WebManagedModule -PSPath 'IIS:\sites\Default Web Site'
 ```

@@ -2,7 +2,11 @@
 external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 78345E36-259A-4D81-BEF1-9CB69C043427
+manager: dansimp
 ---
 
 # Get-WsusServer

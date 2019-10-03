@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 3FB5BEE8-B432-4FB1-B5DD-3FC2209D7191
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Set-ADAccountPassword
@@ -30,10 +34,7 @@ Similarly, you can use Get-ADUser, Get-ADComputer or Get-ADServiceAccount, for s
 
 Note: Group MSAs cannot set password since they are changed at predetermined intervals.
 
-You must set the OldPassword and the NewPassword parameters to set the password unless you specify the Reset parameter.
-When you specify the Reset parameter, the password is set to the NewPassword value that you provide and the OldPassword parameter is not required.
-
-For AD LDS environments, the Partition parameter must be specified except in the following two conditions:
+For Active Directory Lightweight Directory Services (AD LDS) environments, the Partition parameter must be specified except in the following two instances:
 
 -The cmdlet is run from an Active Directory provider drive.
 
@@ -63,6 +64,7 @@ Description
 -----------
 
 Sets the password of the user account with SamAccountName: tmakovec to 'qwert@12345'.
+Using -NewPassword with a value, without providing an -OldPassword parameter value, will also reset the password.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
@@ -408,8 +410,11 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+The WhatIf switch causes the command to simulate its results. Using this switch allows you to view changes that would occur, without having to commit those changes.
 
+> [!NOTE]
+> -WhatIf command functionality was first fixed in the Windows 1607 RSAT package. If using an RSAT package prior to the Windows 1607 RSAT package, this parameter will not function. 
+ 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

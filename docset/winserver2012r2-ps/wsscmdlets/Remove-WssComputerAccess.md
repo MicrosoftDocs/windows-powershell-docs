@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Remove-WssComputerAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26FEDD30-5883-40FF-9383-082E38113C67
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WssComputerAccess

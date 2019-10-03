@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-O365DnsRecord
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0E7A6D25-2B7F-448D-80F7-0927A713CD66
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-O365DnsRecord

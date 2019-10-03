@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-SmbClientConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B239F11D-1F32-4D2E-8663-965AF7FED24A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-SmbClientConfiguration
@@ -229,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLoadBalanceScaleOut
-{{Fill EnableLoadBalanceScaleOut Description}}
+Indicates whether load balance scale out is enabled.
 
 ```yaml
 Type: Boolean

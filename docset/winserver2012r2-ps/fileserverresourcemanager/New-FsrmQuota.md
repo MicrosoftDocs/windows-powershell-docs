@@ -4,9 +4,11 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: New-FsrmQuota
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -31,7 +33,7 @@ New-FsrmQuota [-Path] <String> [-Description <String>] [-Template <String>] [-Si
 ## DESCRIPTION
 The **New-FsrmQuota** cmdlet creates a File Server Resource Manager (FSRM) quota on the server.
 The quota applies to the directory and all its subdirectories (recursively).
-Quotas that you specify on folders higher in the heirarchy further restrict the quota specified on a folder.
+Quotas that you specify on folders higher in the hierarchy further restrict the quota specified on a folder.
 
 ## EXAMPLES
 
@@ -55,17 +57,16 @@ The quota is configured as a hard limit at 100 MB in size that does not have any
 
 ### Example 3: Create a soft limit quota that runs a command
 ```
-The first command creates an FSRM action object and stores the results in the **$Action** variable. The action indicates that when an associated event occurs, the server run Cmd.exe with the specified parameters. The command specifies that server record errors codes from the executed command in the error log.
 PS C:\>$Action = New-FsrmAction -Type Command -Command "c:\windows\system32\cmd.exe" -CommandParameters "echo [source file path] >> c:\log.txt" -ShouldLogError
-
-The second command creates a threshold object and stores the results in the **$Threshold** variable. The command specifies the percentage of the quota limit at which to execute the action, and specifies the action stored in the **$Action** variable.
 PS C:\>$Threshold = New-FsrmQuotaThreshold -Percentage 90 -Action $action
-
-The third command creates a quota on C:\Shares and specifies the threshold stored in the **$Threshold** variable. The Softlimit paramater indicates  the quota reports on the disk usage with respect to the size limit and run thresholds, but does not enforce the size limit.
 PS C:\>New-FsrmQuota -Path "C:\Shares" -Size 128MB -Threshold $Threshold -Softlimit
 ```
 
 This example creates a new quota on C:\Shares that has a soft limit at 128MB, a threshold at 90% usage, and that runs a custom command.
+
+The first command creates an FSRM action object and stores the results in the **$Action** variable. The action indicates that when an associated event occurs, the server run Cmd.exe with the specified parameters. The command specifies that server record errors codes from the executed command in the error log.
+The second command creates a threshold object and stores the results in the **$Threshold** variable. The command specifies the percentage of the quota limit at which to execute the action, and specifies the action stored in the **$Action** variable.
+The third command creates a quota on C:\Shares and specifies the threshold stored in the **$Threshold** variable. The Softlimit parameter indicates  the quota reports on the disk usage with respect to the size limit and run thresholds, but does not enforce the size limit.
 
 ## PARAMETERS
 

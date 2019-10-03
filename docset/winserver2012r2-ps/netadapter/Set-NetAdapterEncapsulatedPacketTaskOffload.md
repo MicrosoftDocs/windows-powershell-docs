@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NetAdapterEncapsulatedPacketTaskOffload
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B2CA6038-C801-4CD6-A037-63560CDF6AE7
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NetAdapterEncapsulatedPacketTaskOffload

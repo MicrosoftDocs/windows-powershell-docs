@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Register-WmsEvent
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F1ED493B-FDD7-4F95-9820-36550B5AEB99
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Register-WmsEvent
@@ -96,13 +98,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Register-WmsEvent.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

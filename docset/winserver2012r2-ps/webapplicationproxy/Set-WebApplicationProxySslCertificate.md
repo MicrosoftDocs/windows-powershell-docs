@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WebApplicationProxySslCertificate
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A268DE0E-ADB2-482F-AE8B-EB218D423B67
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WebApplicationProxySslCertificate

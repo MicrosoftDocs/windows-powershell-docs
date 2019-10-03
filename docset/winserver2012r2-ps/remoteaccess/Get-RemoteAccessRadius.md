@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-RemoteAccessRadius
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E7DC401D-B13D-4E13-9815-5962B581905E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-RemoteAccessRadius

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-SyncShare
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 696CBD26-2DF1-4FC5-8C8B-B43E5FC0AFB2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-SyncShare

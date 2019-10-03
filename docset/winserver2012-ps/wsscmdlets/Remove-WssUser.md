@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5ED73E5D-95B5-40AD-848A-68E95D4F5F67
+manager: dansimp
 ---
 
 # Remove-WssUser

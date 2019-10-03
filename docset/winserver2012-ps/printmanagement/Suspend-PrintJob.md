@@ -2,7 +2,11 @@
 external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
+manager: dansimp
 ---
 
 # Suspend-PrintJob
@@ -12,19 +16,19 @@ Suspends a print job on the specified printer.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### jobObject
 ```
 Suspend-PrintJob [-PrinterName] <String> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
  [-ComputerName <String>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### printerName
 ```
 Suspend-PrintJob [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
  [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### printerObject
 ```
 Suspend-PrintJob [-PrinterObject] <CimInstance> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
  [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
@@ -43,7 +47,7 @@ You do not need administrator privileges to use **Suspend-PrintJob**.
 
 ## EXAMPLES
 
-### -------------------------- ExampleXAMPLE 1: Suspends a specificlected print job in a print queue  -------------------------- xample: Suspend a specific print job
+### -------------------------- Example 1: Suspend a specific print job
 ```
 PS C:\> Suspend-PrintJob -PrinterName "PrinterName" -ID 1
 ```
@@ -123,7 +127,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to suspend on the specified printer. 
-You can use wildcard characters.
+You cannot use wildcard characters.
 
 ```yaml
 Type: UInt32

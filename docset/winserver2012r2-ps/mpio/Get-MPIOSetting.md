@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-MPIOSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8B410DD8-9F6C-4077-A087-40771E19E468
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-MPIOSetting

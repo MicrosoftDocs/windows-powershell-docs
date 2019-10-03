@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetNeighbor
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2D6535B1-74DA-47A1-8787-2A23CBBAA322
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetNeighbor

@@ -2,7 +2,11 @@
 external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 901BD906-798D-4C09-9C84-4FD2B1E19260
+manager: dansimp
 ---
 
 # Get-SmbConnection

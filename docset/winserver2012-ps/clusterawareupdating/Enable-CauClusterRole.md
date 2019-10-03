@@ -2,7 +2,11 @@
 external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: C9CFEB42-ED01-4197-937F-BEAFE0C236A7
+manager: dansimp
 ---
 
 # Enable-CauClusterRole

@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 07360F88-D6FE-4421-8642-292DB9879574
+manager: dansimp
 ---
 
 # Get-NetIPsecMainModeCryptoSet

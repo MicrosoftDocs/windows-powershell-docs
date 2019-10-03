@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetAdapterChecksumOffload
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 16B3752C-513D-4336-9D04-655C2C10C5EA
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetAdapterChecksumOffload

@@ -7,13 +7,15 @@ Locale: en-US
 title: ScheduledTasks
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 95f6725a-dafe-421e-8d9e-448e58397293
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # ScheduledTasks Module

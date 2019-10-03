@@ -2,7 +2,11 @@
 external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 33D18FAD-241B-4963-A0DB-A5988F6EFA19
+manager: dansimp
 ---
 
 # Get-NetVirtualizationLookupRecord

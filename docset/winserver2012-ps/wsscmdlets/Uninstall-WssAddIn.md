@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 14DEA680-C4B6-43FD-B49B-CECD615A08E2
+manager: dansimp
 ---
 
 # Uninstall-WssAddIn

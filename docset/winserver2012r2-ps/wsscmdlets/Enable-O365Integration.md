@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Enable-O365Integration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 61898A41-878C-4297-86C3-84CDE7A098C4
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Enable-O365Integration
@@ -33,7 +35,7 @@ After you enable the office_365_2 Integration Module, you can manage office_365_
 
 ### Example 1: Enable the Office 365 Integration Module
 ```
-PS C:\> $SecureString_pwd = convertto-securestring "P@ssW0rD!" -Asplaintext -Force
+PS C:\> $SecureString_pwd = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
 PS C:\> Enable-O365Integration -O365AccountUPN "Admin@Contoso.onmicrosoft.com" -Password $SecureString_pwd
 Office 365 is now integrated with the server.
 ```

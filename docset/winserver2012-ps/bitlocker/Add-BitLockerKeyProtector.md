@@ -2,7 +2,11 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4AB130BF-4F93-492A-9AE9-B8406FD9D181
+manager: dansimp
 ---
 
 # Add-BitLockerKeyProtector
@@ -135,7 +139,7 @@ PS C:\>Get-BitLockerVolume | Add-BitLockerKeyProtector -RecoveryKeyPath "E:\Reco
 ```
 
 This command gets all the BitLocker volumes for the current computer and passes them to the Add-BitLockerKeyProtector**** cmdlet by using the pipe operator.
-This cmdlet specifies a path to a recovery key and indicates that these volumes use a recovery key as a key protector.
+This cmdlet specifies a path to a folder where the randomly generated recovery key will be stored and indicates that these volumes use a recovery key as a key protector.
 
 ### Example 3: Add credentials as a key protector
 ```
@@ -244,8 +248,8 @@ Accept wildcard characters: False
 ```
 
 ### -RecoveryKeyPath
-Specifies a path to a recovery key.
-This cmdlet adds the recovery key stored in the specified path as a protector for the volume encryption key.
+Specifies a path to a folder.
+This cmdlet adds a randomly generated recovery key as a protector for the volume encryption key and stores it in the specified path.
 
 ```yaml
 Type: String

@@ -3,6 +3,10 @@ external help file: Dedup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 0E612593-0BB2-4977-9D90-8F98E1D042D2
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Stop-DedupJob
@@ -30,7 +34,7 @@ Stop-DedupJob [-AsJob] [-CimSession <CimSession[]>] [-Id <String[]>] [-PassThru]
 ```
 
 ## DESCRIPTION
-The **Stop-DedupJob** cmdlet cancels ojne or more specified data deduplication jobs.
+The **Stop-DedupJob** cmdlet cancels one or more specified data deduplication jobs.
 
 To run this cmdlet, you must start Windows PowerShell® with the **Run as administrator** option.
 

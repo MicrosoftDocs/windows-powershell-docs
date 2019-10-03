@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-BgpRoutingPolicyForPeer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9E03FAFB-682F-4FB5-9D16-448A072DA3BF
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-BgpRoutingPolicyForPeer

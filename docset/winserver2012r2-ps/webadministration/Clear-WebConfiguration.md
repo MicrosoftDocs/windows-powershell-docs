@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-WebConfiguration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 00539C2C-98C6-4E16-A1D9-4DB348332895
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Clear-WebConfiguration
@@ -32,7 +34,7 @@ The **Clear-WebConfiguration** cmdlet removes configuration settings from the sp
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Removeing ASP configuration on the root node --------------e
+### Example 1: Removing ASP configuration on the root node
 ```
 C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath 'IIS:\'
 ```
@@ -46,7 +48,7 @@ C:\PS>Clear-WebConfiguration -Filter "/system.webServer/asp/@lcid" -PSPath 'IIS:
 
 This command removes the **lcid** property from the IIS configuration root node.
 
-### Example-------------- EXAMPLEExample 3: Removeing configuration from the site node --------------e
+### Example 3: Removing configuration from the site node
 ```
 IIS:\>Clear-WebConfiguration -Filter "/system.webServer/asp" -PSPath 'IIS:\sites\Default Web Site'
 ```

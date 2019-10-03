@@ -2,7 +2,11 @@
 external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 98C6A7C9-CDFE-49B9-896F-14DD979DF05C
+manager: dansimp
 ---
 
 # Set-IscsiChapSecret
@@ -106,7 +110,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](HYPERLINK "http://www.microsoft.com/iSCSI" http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](HYPERLINK "/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10)" /previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
 [Storage on TechNet](HYPERLINK "http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx" http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx)
 

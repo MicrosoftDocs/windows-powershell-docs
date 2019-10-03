@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-RDServer
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F6ED71F5-3DB1-406F-B2BF-7DE7CB435DEE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-RDServer

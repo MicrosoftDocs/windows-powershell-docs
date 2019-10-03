@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-WmsStation
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF10CF86-649C-441A-BFD3-A8C56C690080
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Clear-WmsStation
@@ -100,13 +102,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Clear-WmsStation.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

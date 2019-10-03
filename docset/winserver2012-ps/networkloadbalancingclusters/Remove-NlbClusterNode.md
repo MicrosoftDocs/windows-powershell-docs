@@ -2,7 +2,11 @@
 external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 06DE5A4D-D9AC-4AFA-BF79-04E32AE3EE12
+manager: dansimp
 ---
 
 # Remove-NlbClusterNode

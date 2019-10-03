@@ -1,8 +1,12 @@
 ---
 external help file: 
 ms.assetid: E1FDA538-4A2A-4B25-99D2-4846977505E5
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Remove-RDPersonalVirtualDesktopAssignment
@@ -32,7 +36,7 @@ This removal makes the virtual desktop available for another user.
 
 ### 1: Remove a personal virtual desktop assignment
 ```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -PersonalVirtualDesktop "PVD-12"
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
 ```
 
 This command removes a personal virtual desktop assignment.

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WmsSession
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 38AAFF5F-109C-4834-9D9E-53931EECC2CB
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Get-WmsSession
@@ -151,8 +153,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Get-WmsSession.
+### None
 
 ## OUTPUTS
 

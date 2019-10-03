@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetIPsecPhase1AuthSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 332EB5C5-D965-4504-B4EE-016C6C0F427C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetIPsecPhase1AuthSet

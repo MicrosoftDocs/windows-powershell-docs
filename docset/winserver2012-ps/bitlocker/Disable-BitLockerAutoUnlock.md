@@ -2,7 +2,11 @@
 external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9C6846F1-173B-4DFE-B175-1D2FA486A1C9
+manager: dansimp
 ---
 
 # Disable-BitLockerAutoUnlock

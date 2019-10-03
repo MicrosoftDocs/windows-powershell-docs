@@ -4,9 +4,11 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Remove-GPPrefRegistryValue
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -41,18 +43,18 @@ You must specify the Context parameter (User or Computer) to indicate whether to
 
 You can specify either a key or a value:
 
---If you specify a key, all Registry preference items that configure that registry key or any of its (first-level) values are removed from the specified configuration in the GPO.
+- If you specify a key, all Registry preference items that configure that registry key or any of its (first-level) values are removed from the specified configuration in the GPO.
 Registry preference items that configure subkeys of that key (or their values) are not affected.
 For a key, specify the Key parameter without the ValueName parameter.
 
---If you specify a value, all Registry preference items that configure that registry value are removed from the specified configuration in the GPO.
+- If you specify a value, all Registry preference items that configure that registry value are removed from the specified configuration in the GPO.
 For a value, specify the Key parameter without the ValueName parameter.
 
 This cmdlet can take input from the pipeline:
 
---You can pipe GPO objects to this cmdlet to remove a specified Registry preference item from one or more GPOs.
+- You can pipe GPO objects to this cmdlet to remove a specified Registry preference item from one or more GPOs.
 
---You can pipe PreferencRegistrySetting objects to this cmdlet to remove one or more Registry preference items from a specified GPO.
+- You can pipe PreferencRegistrySetting objects to this cmdlet to remove one or more Registry preference items from a specified GPO.
 
 ## EXAMPLES
 
@@ -232,9 +234,9 @@ Any of these hives can be specified for Registry preference items in both Comput
 
 The Key parameter can be specified with or without the ValueName parameter:
 
---If the ValueName parameter is specified, all Registry preference items that configure the registry value are removed.
+- If the ValueName parameter is specified, all Registry preference items that configure the registry value are removed.
 
---If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are removed.
+- If the ValueName parameter is not specified, all Registry preference items that configure the registry key and any of its (first-level) values are removed.
 
 You can also refer to the Key parameter by its built-in alias, "FullKeyPath".
 For more information, see about_Aliases.

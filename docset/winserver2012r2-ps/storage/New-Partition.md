@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-Partition
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FD9EAA13-FD1A-4C95-A03E-842DBD1604BE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-Partition

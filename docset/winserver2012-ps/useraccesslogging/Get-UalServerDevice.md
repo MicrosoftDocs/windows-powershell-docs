@@ -1,8 +1,12 @@
 ---
 external help file: MsftUal_ServerDevice.cdxml-help.xml
 ms.assetid: 72F77C6E-41D5-4305-BC19-7C8C8FB2965F
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Get-UalServerDevice

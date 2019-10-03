@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 580A19CF-26D1-45BB-AD34-A6265E2EFACF
+manager: dansimp
 ---
 
 # Get-InitiatorPort

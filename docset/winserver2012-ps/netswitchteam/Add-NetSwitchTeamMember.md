@@ -2,7 +2,11 @@
 external help file: NetSwitchTeam_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: ED76A9C8-B2F3-4F12-9615-0BD8F067307E
+manager: dansimp
 ---
 
 # Add-NetSwitchTeamMember

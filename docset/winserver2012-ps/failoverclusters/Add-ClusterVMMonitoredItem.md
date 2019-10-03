@@ -3,6 +3,10 @@ external help file: Failoverv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-ClusterVMMonitoredItem
@@ -127,11 +131,11 @@ Accept wildcard characters: False
 Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
 To be configured for monitoring the following conditions need to be met: 
 
- -- None of the service recovery actions are set to Restart the computer. 
+- None of the service recovery actions are set to Restart the computer. 
 
- ---- AND 
+AND 
 
- -- At least one of the service recovery actions are set to Take no action.
+- At least one of the service recovery actions are set to Take no action.
 
 ```yaml
 Type: SwitchParameter

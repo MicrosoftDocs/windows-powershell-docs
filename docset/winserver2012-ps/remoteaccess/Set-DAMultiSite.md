@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: B7FB3B05-39C8-44BC-8107-AF26E0FB3528
+manager: dansimp
 ---
 
 # Set-DAMultiSite

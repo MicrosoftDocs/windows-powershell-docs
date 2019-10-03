@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 474E8416-0B17-4360-8BDF-AAF17BCA4036
+manager: dansimp
 ---
 
 # Get-NetFirewallInterfaceTypeFilter

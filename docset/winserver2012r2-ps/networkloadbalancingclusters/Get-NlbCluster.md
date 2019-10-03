@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NlbCluster
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F5362DCF-C01B-437E-866D-29D63C540F16
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NlbCluster

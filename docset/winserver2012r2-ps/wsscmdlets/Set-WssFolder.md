@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssFolder
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 66EB6CDE-BE53-4CEC-BCBA-20A4CDE91411
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssFolder
@@ -42,12 +44,12 @@ The **Set-WssFolder** cmdlet changes the settings of a server folder.
 
 ### Example 1: Change the settings of a server folder
 ```
-PS C:\>$Folder = Get-WssFolder -Name "ProjectsWest"PS C:\> Set-WssFolder -Folder $Folder -NewName "ProjectsSoutwest01" -UserName "SarahJones" -Permission Full
+PS C:\>$Folder = Get-WssFolder -Name "ProjectsWest"PS C:\> Set-WssFolder -Folder $Folder -NewName "ProjectsSouthwest01" -UserName "SarahJones" -Permission Full
 ```
 
 The first command gets the folder named ProjectsWest and stores it in the **$Folder** variable.
 
-The second command changes the name of the folder stored in the **$Folder** variable to ProjectsSoutwest01, and grants the user named SarahJones full access to ProjectsSoutwest01.
+The second command changes the name of the folder stored in the **$Folder** variable to ProjectsSouthwest01, and grants the user named SarahJones full access to ProjectsSouthwest01.
 
 ## PARAMETERS
 

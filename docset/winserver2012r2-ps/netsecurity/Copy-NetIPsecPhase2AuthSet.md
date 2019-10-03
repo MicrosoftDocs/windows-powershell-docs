@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Copy-NetIPsecPhase2AuthSet
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FCBED665-C210-423C-BF7B-C38E3EF47725
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Copy-NetIPsecPhase2AuthSet

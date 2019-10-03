@@ -2,7 +2,11 @@
 external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0550DC8B-73FE-4758-9B62-6342880F43BD
+manager: dansimp
 ---
 
 # Remove-GPLink

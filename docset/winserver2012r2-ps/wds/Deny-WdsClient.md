@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Deny-WdsClient
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 78F41FE8-47AE-43AE-800E-CA1119CF99AC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Deny-WdsClient

@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADAuthenticationPolicySilo
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -137,7 +139,7 @@ The Windows PowerShell expression language syntax provides rich type-conversion 
 
 Specify the **Filter** parameter in one of the following formats: 
 
--  To match a single filter element: {Attributeoperator  "value"} 
+- To match a single filter element: {Attributeoperator  "value"} 
 - To match multiple filter elements: {(Attribute1operator1 "value1") joinOperator (Attribute2operator2 "value2")}
 
 Windows PowerShell wildcards other than "*", such as "?" are not supported by the **Filter** syntax.

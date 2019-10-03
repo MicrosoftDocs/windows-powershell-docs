@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-NfsClientgroup
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3875B931-5D6D-4E60-AFA2-01AFDD09F95C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-NfsClientgroup

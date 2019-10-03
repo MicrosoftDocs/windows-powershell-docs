@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: DCE74A4E-AF23-4DED-B15D-0A3A31B15E03
+manager: dansimp
 ---
 
 # Test-WssDrive

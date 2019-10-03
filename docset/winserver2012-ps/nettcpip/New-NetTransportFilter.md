@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0161539F-3282-4E58-AD56-972C7F411C2E
+manager: dansimp
 ---
 
 # New-NetTransportFilter

@@ -7,13 +7,15 @@ Locale: en-US
 title: NetworkConnectivityStatus
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90bd79e4-44b9-4c0e-ab6b-94ce60b41c10
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # NetworkConnectivityStatus Module

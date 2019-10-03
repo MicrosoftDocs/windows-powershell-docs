@@ -1,6 +1,10 @@
 ---
 external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 ms.assetid: FA89F034-4EE8-4A14-ADD0-62810A5BF7ED
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 online version: 
 schema: 2.0.0
 ---
@@ -38,7 +42,7 @@ Set-DAEntryPointTableItem -InputObject <CimInstance[]> [-ADSite <String>] [-Entr
 
 ## DESCRIPTION
 **Set-DAEntryPointTableItem** modifies an entry point configuration that is stored in a Group Policy object (GPO).
-You must specifiy the name of the GPO in which the DirectAccess entry point configuration is stored.
+You must specify the name of the GPO in which the DirectAccess entry point configuration is stored.
 
 ## EXAMPLES
 
@@ -337,8 +341,7 @@ This cmdlet returns a CIM object which contains the DA entry point table item.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

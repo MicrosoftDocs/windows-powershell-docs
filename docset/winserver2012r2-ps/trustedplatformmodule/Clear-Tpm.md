@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Clear-Tpm
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F9F98617-959C-4C4F-9ED2-4CD25662A493
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Clear-Tpm

@@ -4,9 +4,11 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Remove-DnsServerZone
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -29,7 +31,7 @@ Remove-DnsServerZone [-Name] <String> [-ComputerName <String>] [-PassThru] [-For
 
 ## DESCRIPTION
 The **Remove-DnsServerZone** removes a zone from a Domain Name System (DNS) server.
-You can use this cmdlet to remove any type of zone, primary, seconday, stub, or conditional forwarder.
+You can use this cmdlet to remove any type of zone, primary, secondary, stub, or conditional forwarder.
 
 ## EXAMPLES
 

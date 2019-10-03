@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Initialize-WssBackupDisk
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 10357DDB-98F1-4554-8CF8-7877C733E8E5
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Initialize-WssBackupDisk

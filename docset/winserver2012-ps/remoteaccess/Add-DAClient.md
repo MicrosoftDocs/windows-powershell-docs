@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: E8A3CC4E-45FD-49F6-A79B-D1DF25CB8B05
+manager: dansimp
 ---
 
 # Add-DAClient
@@ -141,7 +145,7 @@ DownlevelGpoName               : child.corp.contoso.com\DownLevelClientsGPO
 
 This example provisions DA for firstref_client_7 clients present in the domain child.corp.contoso.com enabling them to connect to site 2-Edge-Site. 
 2-Edge-Site is the site configured for the child domain.
-A new GPO (**DownlevelClientsGPO**) can be added to the DiretAccessConfiguration.
+A new GPO (**DownlevelClientsGPO**) can be added to the DirectAccessConfiguration.
 This GPO is filtered on DownlevelClients SG which contains Windows® 7 clients in the child domain.
 Note: The Windows® 7 clients can only connect access the site specified in the **EntrypointName** parameter.
 

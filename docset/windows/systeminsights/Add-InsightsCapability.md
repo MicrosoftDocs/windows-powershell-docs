@@ -1,14 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: jgerend
+ms.author: v-anbarr
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
 title: Add-InsightsCapability
+ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: JasonGerend
+author: andreabarr
 manager: lizapo
 ms.date: 6/18/18
 ms.topic: reference
@@ -153,6 +154,8 @@ You can use the pipeline operator to pass a capability object to the *Name* para
 **None**
 
 ## RELATED LINKS
-[Get-InsightsCapability](get-insightscapability.md)<br>
-[Update-InsightsCapability](update-insightscapability.md)<br>
+[Get-InsightsCapability](get-insightscapability.md)
+
+[Update-InsightsCapability](update-insightscapability.md)
+
 [Remove-InsightsCapability](remove-insightscapability.md)

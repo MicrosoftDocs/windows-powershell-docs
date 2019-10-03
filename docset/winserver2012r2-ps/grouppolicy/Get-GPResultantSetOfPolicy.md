@@ -4,9 +4,11 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Get-GPResultantSetOfPolicy
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -28,13 +30,13 @@ Get-GPResultantSetOfPolicy [-Computer <String>] [-User <String>] -ReportType <Re
 ```
 
 ## DESCRIPTION
-The Get-GPResultantSetofPolicy cmdlet outputs the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
+The Get-GPResultantSetOfPolicy cmdlet outputs the Resultant Set of Policy (RSoP) information for a user, a computer, or both to a file.
 
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
 ```
-PS C:\> get-gpresultantsetofpolicy -reporttype xml -path c:\reports\LocalUserAndComputerReport.xml 
+PS C:\> get-GPResultantSetOfPolicy -reporttype xml -path c:\reports\LocalUserAndComputerReport.xml 
 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02-PC\Root\Rsop\NS2BBE3F29_794F_4EAE_B9DB_0A2310622534 
@@ -71,7 +73,7 @@ The report is generated in XML format, and is written to the specified file.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-PS C:\> Get-GPResultantSetofPolicy -user contoso\someuser -reporttype html -path c:\reports\UserReport.html 
+PS C:\> Get-GPResultantSetOfPolicy -user contoso\someuser -reporttype html -path c:\reports\UserReport.html 
 
 RsopMode        : Logging 
 Namespace       : \\COMPUTER-02\Root\Rsop\NS78355E76_C754_41B5_8F5E_B61551837A62 
@@ -203,7 +205,7 @@ This cmdlet does not take any object as input.
 Get-GPResultantSetOfPolicy returns an RSoP object.
 
 ## NOTES
-* The Get-GPResultantSetofPolicy cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
+* The Get-GPResultantSetOfPolicy cmdlet provides only the logging results for a specified computer and user. You must use the GPMC to generate RSoP modeling information.
 
 ## RELATED LINKS
 

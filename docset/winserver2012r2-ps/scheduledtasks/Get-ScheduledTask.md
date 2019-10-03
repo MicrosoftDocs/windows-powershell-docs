@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-ScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2B7F5F72-48E5-480B-913F-E8AEF0B2B13C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-ScheduledTask

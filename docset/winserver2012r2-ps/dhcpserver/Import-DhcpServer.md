@@ -4,9 +4,11 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Import-DhcpServer
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -318,7 +320,7 @@ The server level configuration comprises of (both v4 and v6):
                          
  -- MAC address filters (DHCPv4). 
                          
- -- Other Server Properties (ConflicDetectionAttempts, DHCPv6 stateless store).
+ -- Other Server Properties (ConflictDetectionAttempts, DHCPv6 stateless store).
 
 ```yaml
 Type: SwitchParameter

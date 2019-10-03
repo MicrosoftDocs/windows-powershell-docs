@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 ms.assetid: 78A09E46-FAC1-4CBC-BE30-B17148D7CA14
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-WebConfigurationLock
@@ -24,7 +28,11 @@ Locks an IIS configuration section, element, or attribute.
 
 ### -------------- EXAMPLE 1: Adding and removing configuration locks --------------
 ```
-IIS:\>Add-WebConfigurationLock -Type general -Filter //asp Remove-WebConfigurationLock -Filter //asp Add-WebConfigurationLock -Type inclusive -Filter //asp/@lcid Remove-WebConfigurationLock -Filter //asp/@lcid Add-WebConfigurationLock -Type exclusive -Filter //asp/@lcid
+IIS:\>Add-WebConfigurationLock -Type general -Filter //asp 
+IIS:\>Remove-WebConfigurationLock -Filter //asp
+IIS:\>Add-WebConfigurationLock -Type inclusive -Filter //asp/@lcid 
+IIS:\>Remove-WebConfigurationLock -Filter //asp/@lcid 
+IIS:\>Add-WebConfigurationLock -Type exclusive -Filter //asp/@lcid
 ```
 
 This example demonstrates how to add and remove inclusive and exclusive locks using a filter.

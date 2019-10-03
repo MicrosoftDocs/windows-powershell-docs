@@ -2,7 +2,11 @@
 external help file: OnlineBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4484E174-9C4B-40AF-AA2B-134B0E2D0B80
+manager: dansimp
 ---
 
 # Set-OBMachineSetting
@@ -63,7 +67,7 @@ This example sets encryption passphrase for a computer.
 
 ### EXAMPLE 2
 ```
-PS C:\>$spwd = ConvertTo-SecureString -String Notag00pa55word -AsplainText -Force
+PS C:\>$spwd = ConvertTo-SecureString -String Notag00pa55word -AsPlainText -Force
 
 
 

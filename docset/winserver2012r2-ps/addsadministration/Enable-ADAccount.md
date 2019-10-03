@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Enable-ADAccount
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -30,11 +32,11 @@ Enable-ADAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSC
 ## DESCRIPTION
 The **Enable-ADAccount** cmdlet enables an Active Directory user, computer, or service account.
 
-The **Identity** parameter specifies the Active Directory user, computer, or service account that you want to enable.
+The *Identity* parameter specifies the Active Directory user, computer, or service account that you want to enable.
 You can identify an account by its distinguished name, GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.
-You can also set the **Identity** parameter to an object variable such as **$\<localADAccountObject\>**, or you can pass an account object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADUser cmdlet to retrieve an account object and then pass the object through the pipeline to the Enable-ADAccount cmdlet.
-Similarly, you can use Get-ADComputer and Search-ADAccount to retrieve account objects.
+You can also set the *Identity* parameter to an object variable such as `$<localADAccountObject>`, or you can pass an account object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADUser** cmdlet to retrieve an account object and then pass the object through the pipeline to the **Enable-ADAccount** cmdlet.
+Similarly, you can use **Get-ADComputer** and **Search-ADAccount** to retrieve account objects.
 
 ## EXAMPLES
 
@@ -108,8 +110,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -161,25 +163,25 @@ Accept wildcard characters: False
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the **Identity** parameter.
+The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-In many cases, a default value is used for the **Partition** parameter if no value is specified.
+In many cases, a default value is used for the *Partition* parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for **Partition** is set in the following cases: 
+In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If none of the previous cases apply, the default value of **Partition** is set to the default partition or naming context of the target domain.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
-In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for **Partition** is set in the following cases:
+In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive.
-- If the target AD LDS instance has a default naming context, the default value of **Partition** is set to the default naming context.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
+- If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the **Partition** parameter will not take any default value.
+- If none of the previous cases apply, the *Partition* parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -213,14 +215,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways: 
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+Directory server values: 
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -229,7 +231,7 @@ Specify the Active Directory Domain Services instance in one of the following wa
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
 - By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
@@ -261,12 +263,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.ActiveDirectory.Management.ADAccount
-An account object is received by the **Identity** parameter.
+An account object is received by the *Identity* parameter.
 
 Derived types, such as the following, are also accepted:
 

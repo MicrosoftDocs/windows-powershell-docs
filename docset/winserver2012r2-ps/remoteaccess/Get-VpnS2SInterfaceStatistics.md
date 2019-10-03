@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-VpnS2SInterfaceStatistics
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3175F8EC-8CB3-43B7-9634-3C5C3BE15496
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-VpnS2SInterfaceStatistics

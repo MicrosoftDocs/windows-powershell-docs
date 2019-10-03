@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Restart-PrintJob
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FB356190-BD19-4BFD-9089-72C65065C776
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Restart-PrintJob
@@ -247,8 +249,7 @@ This cmdlet accepts one print job object.
 
 ## OUTPUTS
 
-###  
-This cmdlet produces no output.
+### None
 
 ## NOTES
 

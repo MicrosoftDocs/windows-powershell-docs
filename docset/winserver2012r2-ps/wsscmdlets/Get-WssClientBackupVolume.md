@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-WssClientBackupVolume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 73476D36-C62C-484B-B674-9D549686C92C
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WssClientBackupVolume

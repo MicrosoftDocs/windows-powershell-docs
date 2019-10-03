@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-UalDeviceAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7E8FA628-D4F8-44B1-BFEE-AAD7891A8BBC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-UalDeviceAccess

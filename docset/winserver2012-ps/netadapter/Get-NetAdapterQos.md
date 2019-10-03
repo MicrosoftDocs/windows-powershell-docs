@@ -2,7 +2,11 @@
 external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: CF781957-2C2B-48AC-8028-D8D040EC039E
+manager: dansimp
 ---
 
 # Get-NetAdapterQos

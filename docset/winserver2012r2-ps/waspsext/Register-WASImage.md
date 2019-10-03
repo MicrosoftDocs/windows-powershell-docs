@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Register-WASImage
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F690C460-A4BC-4D4C-8636-1DD8A61AB23D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Register-WASImage

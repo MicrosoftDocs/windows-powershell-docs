@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Update-MPIOClaimedHW
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1E060953-FA34-4BF1-891E-249A1DBAC3FB
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Update-MPIOClaimedHW

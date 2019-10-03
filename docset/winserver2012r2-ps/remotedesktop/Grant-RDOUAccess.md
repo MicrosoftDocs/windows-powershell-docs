@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Grant-RDOUAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36DA4B9D-062C-4A8B-8B05-64E17F8EFC72
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Grant-RDOUAccess

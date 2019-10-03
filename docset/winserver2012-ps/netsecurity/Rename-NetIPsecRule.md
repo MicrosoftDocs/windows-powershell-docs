@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 4A8F1048-9AF8-4195-BB1E-E161CB9E805C
+manager: dansimp
 ---
 
 # Rename-NetIPsecRule
@@ -330,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be renamed. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be renamed. 
 
 A NetIPsecPhase1AuthSet object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Update-WebApplicationProxyDeviceRegistration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 966F0141-96E7-40D2-AEFD-31F568867464
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Update-WebApplicationProxyDeviceRegistration

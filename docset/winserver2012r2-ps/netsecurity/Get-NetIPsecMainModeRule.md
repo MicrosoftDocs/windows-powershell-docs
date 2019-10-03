@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPsecMainModeRule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1BC393A5-0E77-40A1-A974-1CB5CD2D1442
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPsecMainModeRule

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Test-WssVpnServerInstallation
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 48AC36E2-CE64-4EF6-B827-A1CC0EE0DE3D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Test-WssVpnServerInstallation

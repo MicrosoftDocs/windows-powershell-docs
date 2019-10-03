@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Clear-VpnS2SInterfaceStatistics
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EBA1933F-2D9D-4CEB-BB0A-41B6AC3C98A8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Clear-VpnS2SInterfaceStatistics

@@ -2,7 +2,11 @@
 external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: FD187EA6-C72B-477C-AE92-44A1FBBD9FFD
+manager: dansimp
 ---
 
 # Get-VpnAuthProtocol

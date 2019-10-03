@@ -2,7 +2,11 @@
 external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5EBC9066-0159-4753-88C2-F4E116861997
+manager: dansimp
 ---
 
 # Stop-Dtc

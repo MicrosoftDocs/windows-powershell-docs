@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 6F61C2CC-6821-4F0F-B6AB-805A1B8C0FD9
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-ADComputer
@@ -927,7 +931,7 @@ In AD DS environments, a default value for Path will be set in the following cas
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
 - If the cmdlet has a default path, this will be used.  For example: in New-ADUser, the Path parameter would default to the Users container.
--  If none of the previous cases apply, the default value of Path will be set to the default partition or naming context of the target domain.
+- If none of the previous cases apply, the default value of Path will be set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for Path will be set in the following cases:
 

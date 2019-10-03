@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssMsoUserLicense
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E1446E19-F80B-4E35-A034-EF9924C687D2
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssMsoUserLicense

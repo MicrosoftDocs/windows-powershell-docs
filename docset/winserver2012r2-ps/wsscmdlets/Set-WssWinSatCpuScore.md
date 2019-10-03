@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Set-WssWinSatCpuScore
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 7A13CE3C-D9E3-4E2F-B09D-815634A55511
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WssWinSatCpuScore

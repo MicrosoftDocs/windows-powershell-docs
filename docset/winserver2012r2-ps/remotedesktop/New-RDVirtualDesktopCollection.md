@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-RDVirtualDesktopCollection
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 231B2762-17FD-4607-B4ED-53B949AEEC38
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-RDVirtualDesktopCollection
@@ -66,11 +68,11 @@ The **New-RDVirtualDesktopCollection** cmdlet creates a new virtual desktop coll
 
 ### Example 1: Create a managed pooled virtual desktop collection
 ```
-PS C:\> New-RDVirtualDesktopCollection -CollectionName "Virtual Desktop Pool" -PooledManaged -VirtualDesktopTemplateName "RDS-Template" -VirtualDesktopTemplateHostServer "rdvh-1.contoso.com" -VirtualDesktopAllocation @{"RDS-WKS-A26.contoso.com"=1;" RDS-WKS-A27.contoso.com"=2} -StorageType LocalStorage -Description "PowerShell created Virtual Desktop Pool" -UserGroups "contoso\domain users" -ConnectionBroker "rdcb.contoso.com" -VirtualDesktopNamePrefix "RDS-WKS-A" -VirtualDesktopPasswordAge 31 -UserProfileDiskPath "\\RDS-WKS-A26.contoso.com\uvhd" -MaxUserProfileDiskSizeGB 10
+PS C:\> New-RDVirtualDesktopCollection -CollectionName "Virtual Desktop Pool" -PooledManaged -VirtualDesktopTemplateName "RDS-Template" -VirtualDesktopTemplateHostServer "rdvh-1.contoso.com" -VirtualDesktopAllocation @{"RDS-WKS-A26.vdi.contoso.com"=1;" RDS-WKS-A27.vdi.contoso.com"=2} -StorageType LocalStorage -Description "PowerShell created Virtual Desktop Pool" -UserGroups "contoso\domain users" -ConnectionBroker "rdcb.contoso.com" -VirtualDesktopNamePrefix "RDS-WKS-A" -VirtualDesktopPasswordAge 31 -UserProfileDiskPath "\\RDS-WKS-A26.contoso.com\uvhd" -MaxUserProfileDiskSizeGB 10
 ```
 
 This command creates a managed pooled virtual desktop collection and specifies configuration settings for the virtual desktop collection.
-The command specifies the LocalStorage type for the collection, and specifies the virtual desktop template named "RDS-Template" for the collection.
+The command specifies the LocalStorage type for the collection, and specifies the virtual desktop template named "RDS-Template" for the collection. The VirtualDesktopAllocation parameter specifies that one virtual desktop is created on the host servers named "RDS-WKS-A26.vdi.contoso.com" and two virtual desktops are created on the host server named "RDS-WKS-A27.vdi.contoso.com".
 
 ## PARAMETERS
 

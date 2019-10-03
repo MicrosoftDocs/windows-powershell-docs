@@ -4,9 +4,11 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Test-AdfsFarmInstallation
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -256,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAccountCredential
-Specifies a **PSCredential** object based on a user name and password for the service account in Active Directory® Domain Services under which the AD FS service runs.
+Specifies a **PSCredential** object based on a user name and password for the service account in Active Directory Domain Services under which the AD FS service runs.
 To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
 For more information, type `Get-Help Get-Credential`.
 

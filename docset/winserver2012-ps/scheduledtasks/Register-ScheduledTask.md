@@ -2,7 +2,11 @@
 external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
+manager: dansimp
 ---
 
 # Register-ScheduledTask
@@ -53,7 +57,7 @@ PS C:\>$Time = New-ScheduledTaskTrigger -At 12:00 -Once
 
 PS C:\>$User = "Contoso\Administrator"
 
-PS C:\>$PS = PowerShell.exe
+PS C:\>$PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
 
 PS C:\>Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
 ```

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-SmbShare
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EFEB7C1D-EBC2-4DB0-958A-FE922AE516B8
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-SmbShare
@@ -336,7 +338,8 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance

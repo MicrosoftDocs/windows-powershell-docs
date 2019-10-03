@@ -2,7 +2,11 @@
 external help file: NPS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: ECFA9FCE-617C-408B-B4D8-C53CB4835522
+manager: dansimp
 ---
 
 # Import-NpsConfiguration

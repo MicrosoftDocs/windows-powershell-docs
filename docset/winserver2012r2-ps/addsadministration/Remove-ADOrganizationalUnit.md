@@ -4,9 +4,11 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Remove-ADOrganizationalUnit
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -153,14 +155,12 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an Active Directory group object by providing one of the following values.
-The identifier in parentheses is the LDAP display name for the attribute.
+Specifies the identity of an Active Directory organizational unit object. 
 The acceptable values for this parameter are:
 
 - A distinguished name
 - A GUID (objectGUID) 
-- A security identifier (objectSid) 
-- A security accounts manager account name (sAMAccountName)
+
 
 The cmdlet searches the default naming context or partition to find the object.
 If two or more objects are found, the cmdlet returns a non-terminating error.

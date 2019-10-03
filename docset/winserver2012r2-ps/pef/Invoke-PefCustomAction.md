@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Invoke-PefCustomAction
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AFA141E3-A3FA-441A-9D4B-714F78BCD351
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Invoke-PefCustomAction
@@ -32,7 +34,7 @@ Specify a script block to run and a trigger for the action.
 
 ## EXAMPLES
 
-### Example 1: Create an ICMP trigger actionn
+### Example 1: Create an ICMP trigger action
 ```
 PS C:\> $T = New-PefKeyDownTrigger -CtrlC
 PS C:\> $Sb = { $Host.UI.WriteErrorLine("ICMP found") }

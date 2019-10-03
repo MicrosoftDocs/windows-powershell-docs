@@ -4,9 +4,11 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Test-ADDSDomainInstallation
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -254,7 +256,7 @@ Accept wildcard characters: False
 
 ### -NewDomainName
 If the value set for **-DomainType** is set to "TreeDomain", this parameter can be used to specify the fully qualified domain name (FQDN) for the new domain tree (for example, "contoso.com").
-If the value set for **-DomainType** is set to "ChildDomain", this parameter can be used to specify a single label domain name for the child domain (for example, specify "corp" to make a new doman "corp.contoso.com" if the new domain is in the contoso.com domain tree).
+If the value set for **-DomainType** is set to "ChildDomain", this parameter can be used to specify a single label domain name for the child domain (for example, specify "corp" to make a new domain "corp.contoso.com" if the new domain is in the contoso.com domain tree).
 
 ```yaml
 Type: String

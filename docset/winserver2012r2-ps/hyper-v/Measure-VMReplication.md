@@ -4,9 +4,11 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Measure-VMReplication
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -169,18 +171,18 @@ Accept wildcard characters: False
 Specifies the replication state of the virtual machines for which you want to get replication statistics.
 Valid values are:
 
---Error
---FailOverWaitingCompletion
---FailedOver
---NotApplicable
---ReadyForInitialReplication
---Replicating
---Resynchronizing
---ResynchronizeSuspended
---Suspended
---SyncedReplicationComplete
---WaitingForInitialReplication
---WaitingForStartResynchronize
+- Error
+- FailOverWaitingCompletion
+- FailedOver
+- NotApplicable
+- ReadyForInitialReplication
+- Replicating
+- Resynchronizing
+- ResynchronizeSuspended
+- Suspended
+- SyncedReplicationComplete
+- WaitingForInitialReplication
+- WaitingForStartResynchronize
 
 ```yaml
 Type: VMReplicationState

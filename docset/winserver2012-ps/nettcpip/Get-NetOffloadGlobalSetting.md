@@ -2,7 +2,11 @@
 external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 68E1CC66-8A5C-4BD3-B7A5-3ED958FC4A3C
+manager: dansimp
 ---
 
 # Get-NetOffloadGlobalSetting

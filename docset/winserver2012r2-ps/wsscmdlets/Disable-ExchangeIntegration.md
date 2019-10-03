@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-ExchangeIntegration
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2F3DE7FE-52D0-4406-ADC6-A135E565D9CC
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-ExchangeIntegration

@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-PrinterDriver
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1CBF356C-E2C6-4D56-AA74-99DF5A6B170A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-PrinterDriver

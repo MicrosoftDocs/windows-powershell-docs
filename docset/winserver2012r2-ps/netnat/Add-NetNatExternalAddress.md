@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Add-NetNatExternalAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 836A2249-5D84-4CDC-B446-1C98DF9E756E
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Add-NetNatExternalAddress

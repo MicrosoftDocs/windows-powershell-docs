@@ -7,13 +7,15 @@ Locale: en-US
 title: NPS
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 036cbded-6934-4827-bd6a-54dec539e0da
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # NPS Module

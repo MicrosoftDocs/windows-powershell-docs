@@ -4,9 +4,11 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Set-GPLink
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -71,7 +73,7 @@ The Enforced and Order properties are not changed.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-PS C:\> Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabeled Yes -Enforced Yes -Order 1
+PS C:\> Set-GPLink -Name TestGPO -Domain north.contoso.com -Target "dc=south, dc=contoso, dc=com" -LinkEnabled Yes -Enforced Yes -Order 1
 ```
 
 Description

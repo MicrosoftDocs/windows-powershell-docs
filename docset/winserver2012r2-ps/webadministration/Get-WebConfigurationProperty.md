@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-WebConfigurationProperty
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CC399FA8-2684-41E9-A487-2329460E1829
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-WebConfigurationProperty
@@ -33,7 +35,7 @@ This cmdlet is similar to the Get-WebConfiguration cmdlet, but the current cmdle
 
 ## EXAMPLES
 
-### Example-------------- EXAMPLEExample 1: Return the Ddefault Ddocuments for the dDefault Wweb Ssite --------------dddws
+### Example 1: Return the default documents for the default web site
 ```
 C:\PS>Get-WebConfigurationProperty -Filter "//defaultDocument/files/add" -PSPath 'IIS:\Sites\Default Web Site' -Name "value" | select value
 Default.htm

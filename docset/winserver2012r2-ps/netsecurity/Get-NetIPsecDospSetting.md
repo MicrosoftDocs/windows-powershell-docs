@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Get-NetIPsecDospSetting
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 29CC6099-8372-4283-B9D2-CB9B4F101F5D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Get-NetIPsecDospSetting

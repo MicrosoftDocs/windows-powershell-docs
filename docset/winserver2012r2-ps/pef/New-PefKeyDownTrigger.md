@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-PefKeyDownTrigger
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 81E1A346-2F17-45D4-8AC4-2D8BF71F016F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-PefKeyDownTrigger

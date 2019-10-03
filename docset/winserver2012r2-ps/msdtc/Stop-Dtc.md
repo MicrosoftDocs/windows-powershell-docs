@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Stop-Dtc
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5EBC9066-0159-4753-88C2-F4E116861997
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Stop-Dtc

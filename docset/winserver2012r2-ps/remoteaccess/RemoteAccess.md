@@ -7,13 +7,15 @@ Locale: en-US
 title: RemoteAccess
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: c2ec7e10-1e49-4321-8bc6-2e57d0b0b237
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # RemoteAccess Module

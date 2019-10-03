@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Disable-TlsSessionTicketKey
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC246652-9911-45B8-BC1B-1CCF9D0EB73F
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-TlsSessionTicketKey

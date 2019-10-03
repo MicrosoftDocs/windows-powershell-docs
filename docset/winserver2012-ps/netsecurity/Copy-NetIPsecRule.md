@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0FAB7846-3E4F-4F22-9060-597A3EE680CB
+manager: dansimp
 ---
 
 # Copy-NetIPsecRule
@@ -395,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedNetIPsecPhase2AuthSet
-Gets the IPsec rules that are associated, via the pileline, with the input phase 2 authentication set to be copied. 
+Gets the IPsec rules that are associated, via the pipeline, with the input phase 2 authentication set to be copied. 
 
 A NetIPsecPhase1AuthSet object represents the phase 2 authorization set conditions associated with a rule.
 See the Get-NetIPsecPhase2AuthSet cmdlet for more information. 

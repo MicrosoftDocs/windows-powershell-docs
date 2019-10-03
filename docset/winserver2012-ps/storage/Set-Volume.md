@@ -2,7 +2,11 @@
 external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 5B8170FE-9B23-47A6-9976-0E33220ED118
+manager: dansimp
 ---
 
 # Set-Volume

@@ -2,7 +2,11 @@
 external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 9CC442EE-64AC-4E7D-8D17-79CDCA9980FC
+manager: dansimp
 ---
 
 # Get-WssAddIn

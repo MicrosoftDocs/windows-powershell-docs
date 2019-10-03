@@ -1,10 +1,10 @@
 ---
 ms.technology: powershell-mdop
 ms.mktglfcycl: manage
-ms.author: coreyp
+ms.author: v-anbarr
 ms.prod: w10
 ms.sitesec: library
-author: jamiejdt
+author: andreabarr
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
@@ -46,7 +46,7 @@ Set-AppvServerConnectionGroup [[-AppvServerPackage] <PackageVersion[]>] [-Priori
 
 ## DESCRIPTION
 The **Set-AppvServerConnectionGroup** cmdlet sets the packages within the Microsoft Application Virtualization (App-V) specified package group.
-The cmldet modifies the packages in the group, as well as the order of those packages.
+The cmdlet modifies the packages in the group, as well as the order of those packages.
 
 The cmdlet returns an **AppvServerConnectionGroup** object.
 

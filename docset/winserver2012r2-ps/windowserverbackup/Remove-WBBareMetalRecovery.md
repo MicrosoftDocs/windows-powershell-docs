@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-WBBareMetalRecovery
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C9F83CE2-82E8-4492-9879-717128970A4A
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-WBBareMetalRecovery

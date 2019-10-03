@@ -3,6 +3,10 @@ external help file: DnsServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.assetid: 91911E6C-6CEF-4B83-8712-E9F551B652F6
+manager: dansimp
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # Add-DnsServerStubZone
@@ -57,7 +61,7 @@ PS C:\> Add-DnsServerStubZone -Name "west02.contoso.com" -MasterServers "172.23.
 This command adds west02.contoso.com as a file-backed stub zone.
 The command specifies a master server and uses the **PassThru** parameter to produce output.
 
-### Example 2: Add an Active Directory-integerated stub zone
+### Example 2: Add an Active Directory-integrated stub zone
 ```
 PS C:\>Add-DnsServerStubZone -Name "west03.contoso.com" -MasterServers 172.23.90.124 -PassThru -ReplicationScope "Forest"
 ```

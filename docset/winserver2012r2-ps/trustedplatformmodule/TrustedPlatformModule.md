@@ -7,13 +7,15 @@ Locale: en-US
 title: TrustedPlatformModule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: d594cc86-60b9-495b-922b-af956489a7a9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # TrustedPlatformModule Module

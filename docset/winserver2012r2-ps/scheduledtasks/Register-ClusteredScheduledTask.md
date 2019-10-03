@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Register-ClusteredScheduledTask
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A5CFE1C-B960-4293-940E-A4B7DA6505AE
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Register-ClusteredScheduledTask

@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Get-SmigServerFeature
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DDB21AFA-CAF9-481C-9E65-2513595D2DB0
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Get-SmigServerFeature
@@ -85,7 +87,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### EXAMPLE 5
 ```
-PS C:\> $pass = convertto-securestring -string "password" -asplaintext -force
+PS C:\> $pass = ConvertTo-SecureString -String "password" -AsPlainText -Force
 PS C:\> Get-SmigServerFeature -Path "c:\temp\store" -Password $pass |Import-SmigServerSetting -Path "c:\temp\store" -Password $pass -Verbose
 ```
 
@@ -102,7 +104,7 @@ By using the -Verbose parameter, the command also displays detailed information 
 
 ### -Password
 Specifies the password, as a secure string, to decrypt the migration store.
-The secure string can be obtained by entering the command Read-Host -AsSecureString or Convertto-Securestring.
+The secure string can be obtained by entering the command Read-Host -AsSecureString or ConvertTo-SecureString.
 
 ```yaml
 Type: SecureString

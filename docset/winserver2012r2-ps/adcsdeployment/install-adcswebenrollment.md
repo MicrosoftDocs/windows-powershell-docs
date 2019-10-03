@@ -4,9 +4,11 @@ Module Name: ADCSDeployment
 online version: 
 schema: 2.0.0
 title: Install-AdcsWebEnrollment
+ms.author: v-anbarr
+ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
@@ -58,7 +60,7 @@ Description
 
 -----------
 
-This command isntalls the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
+This command installs the Web Enrollment role service to a CA specified by \<CAComputerName\>\\\<CACommonName\> without requiring user confirmation.
 Replace the computer name of the certification authority (CA) for \<CAComputerName\> and replace the CA common name for \<CACommonName\> when running the command.
 
 ## PARAMETERS

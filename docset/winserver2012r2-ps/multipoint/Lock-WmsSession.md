@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Lock-WmsSession
 description: 
 keywords: powershell, cmdlet
-author: biranlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B4D13723-44A5-455A-97A8-88C4C46523E7
+ms.reviewer:
+ms.author: v-anbarr
 ---
 
 # Lock-WmsSession
@@ -33,18 +35,15 @@ You can specify a message to be displayed on the user's screen.
 
 ## EXAMPLES
 
-### Example
+### Example 1:
 ```
-PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("Your station is locked")) | Write-OutputWQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=PS C:\> Lock-WmsSession -SessionId 3 -LockMessage WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
+PS C:\> [System.Convert]::ToBase64String([System.Text.Encoding]::UNICODE.GetBytes("Your station is locked")) | Write-Output WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
+
+PS C:\> Lock-WmsSession -SessionId 3 -LockMessage WQBvAHUAcgAgAHMAdABhAHQAaQBvAG4AIABpAHMAIABsAG8AYwBrAGUAZAA=
 No output.
 ```
 
 The station is locked, and the screen shows the message, "Your station is locked".
-
-### 1:
-```
-PS C:\>
-```
 
 ## PARAMETERS
 
@@ -131,13 +130,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-You cannot pipe objects to Lock-WmsSession.
+### None
 
 ## OUTPUTS
 
-###  
-No output.
+### None
 
 ## NOTES
 

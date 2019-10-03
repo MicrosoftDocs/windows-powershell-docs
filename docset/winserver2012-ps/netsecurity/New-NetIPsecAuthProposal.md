@@ -2,7 +2,11 @@
 external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ms.assetid: 0D071190-8D63-441A-9BCC-BF681C535076
+manager: dansimp
 ---
 
 # New-NetIPsecAuthProposal
@@ -485,7 +489,7 @@ Accept wildcard characters: False
 
 ### -User
 Specifies that the computer should authenticate as the user account, rather than the computer.
-This parameter is valid with NLTM, Kerberos, Cert, or Proxy.
+This parameter is valid with NTLM, Kerberos, Cert, or Proxy.
 
 ```yaml
 Type: SwitchParameter

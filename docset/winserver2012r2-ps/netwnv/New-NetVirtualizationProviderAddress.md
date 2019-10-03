@@ -6,13 +6,15 @@ schema: 2.0.0
 title: New-NetVirtualizationProviderAddress
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 70B81AF5-345B-4140-B820-ACF8A5A31F2D
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # New-NetVirtualizationProviderAddress

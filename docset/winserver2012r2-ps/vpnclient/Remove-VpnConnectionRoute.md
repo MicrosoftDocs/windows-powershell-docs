@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Remove-VpnConnectionRoute
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D1492AE3-97D6-4D06-9846-49E842F50DF9
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Remove-VpnConnectionRoute

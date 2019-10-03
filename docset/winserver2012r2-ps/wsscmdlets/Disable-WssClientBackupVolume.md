@@ -5,13 +5,15 @@ schema: 2.0.0
 title: Disable-WssClientBackupVolume
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-12-05
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2825A6B0-A54E-4A38-881C-A998F84DA4AA
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Disable-WssClientBackupVolume

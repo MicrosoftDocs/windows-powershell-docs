@@ -6,13 +6,15 @@ schema: 2.0.0
 title: Set-WBSchedule
 description: 
 keywords: powershell, cmdlet
-author: brianlic
+author: andreabarr
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2F91AF99-2E20-4040-A9BD-4A6BDC6319C0
+ms.author: v-anbarr
+ms.reviewer: brianlic
 ---
 
 # Set-WBSchedule

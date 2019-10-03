@@ -1,8 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: 375BEA74-E632-41FA-9090-2C4F9D10584B
+manager: dansimp
 online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-anbarr
+author: andreabarr
 ---
 
 # New-ADClaimType
@@ -268,20 +272,15 @@ For claim types to be considered identical across forests, their ID must be the 
 
 To specify the ID, the ID string must conform to the following format:
 
-1. 
-It must have a maximum of 37 characters.
+1. It must have a maximum of 37 characters.
 
-2. 
-It must have at least one slash (/).
+2. It must have at least one slash (/).
 
-3. 
-It must have at least one colon before the first slash.
+3. It must have at least one colon before the first slash.
 
-4. 
-It must not have the slash as the last character.
+4. It must not have the slash as the last character.
 
-5. 
-It must contain valid file characters only.
+5. It must contain valid file characters only.
 
 An example is "ad://ext/BusinessImpact".
 

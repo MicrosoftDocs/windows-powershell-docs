@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 
 # StartScreen Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Start Screen-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## StartScreen Cmdlets
 ### [Export-StartLayout](./Export-StartLayout.md)

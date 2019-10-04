@@ -1,12 +1,21 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
-manager: dansimp
-ms.reviewer:
+ms.mktglfcycl: manage
+ms.sitesec: library
 ms.author: v-anbarr
 author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+keywords: powershell, cmdlet
+manager: jasgro
+ms.date: 12/20/2016
+ms.prod: w10
+ms.technology: powershell-windows
+ms.topic: reference
+online version: 
+schema: 2.0.0
+title: Add-ClusterVMMonitoredItem
+ms.reviewer:
+ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
 ---
 
 # Add-ClusterVMMonitoredItem
@@ -16,10 +25,25 @@ Configures monitoring for a service or an Event Tracing for Windows (ETW) event 
 
 ## SYNTAX
 
+### VirtualMachine (Default)
 ```
-Add-ClusterVMMonitoredItem [[-VirtualMachine] <String>] [-Cluster <String>] [-EventId <Int32>]
- [-EventLog <String>] [-EventSource <String>] [-InputObject <PSObject>] [-OverrideServiceRecoveryActions]
- [-Service <StringCollection>]
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [[-VirtualMachine] <String>] [-Wait <Int32>]
+ [-Cluster <String>] [<CommonParameters>]
+```
+
+### VMId
+```
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
+ [<CommonParameters>]
+```
+
+### InputObject
+```
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-Wait <Int32>] [-InputObject <PSObject>]
+ [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,7 +55,7 @@ For example, the configuration might specify that the virtual machine be restart
 
 ### Example 1
 ```
-PS C:\>Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
+PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
 Name 
 ---- 
 Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708
@@ -41,7 +65,7 @@ This example adds monitoring for the ETW event ID 4708.
 
 ### Example 2
 ```
-PS C:\>Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
+PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
 Name 
 ---- 
 Spooler
@@ -117,7 +141,7 @@ Specifies the cluster on which to run the cmdlet, the clustered virtual machine 
 
 ```yaml
 Type: PSObject
-Parameter Sets: (All)
+Parameter Sets: InputObject
 Aliases: 
 
 Required: False
@@ -166,21 +190,56 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VMId
+Specifies the virtual machine identifier (ID).
+
+```yaml
+Type: Guid
+Parameter Sets: VMId
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -VirtualMachine
 Specifies the name of the clustered virtual machine on which to perform monitoring.
 When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: VirtualMachine
+Aliases: VM
 
 Required: False
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Wait
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

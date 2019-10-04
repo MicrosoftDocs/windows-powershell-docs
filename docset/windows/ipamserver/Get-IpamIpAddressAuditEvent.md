@@ -66,7 +66,7 @@ You can avoid this situation if you narrow the search criteria to limit the resu
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.
@@ -79,7 +79,7 @@ The command stores the results in the variable named $IpamIpAddressAuditEvents.
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -IpAddress 10.10.1.1
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -IpAddress 10.10.1.1
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.
@@ -91,7 +91,7 @@ This command searches only DHCP lease events.
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $lastMonth -EndDate $Today -IpAddress 10.10.1.1 -CorrelateLogonEvents
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $lastMonth -EndDate $Today -IpAddress 10.10.1.1 -CorrelateLogonEvents
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.
@@ -104,7 +104,7 @@ The command stores the results in the variable named $IpamIpAddressAuditEvents.
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -ClientId "AA:BB:CC:DD:EE:FF" -CorrelateLogonEvents
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -ClientId "AA:BB:CC:DD:EE:FF" -CorrelateLogonEvents
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.
@@ -117,7 +117,7 @@ The command then stores the results in the variable named $IpamIpAddressAuditEve
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -HostName "client1.contoso.com" -CorrelateLogonEvents
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -HostName "client1.contoso.com" -CorrelateLogonEvents
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.
@@ -130,7 +130,7 @@ The command stores the results in the variable named $IpamIpAddressAuditEvents.
 ```
 PS C:\> $Today = Get-Date
 PS C:\> $LastMonth = $Today.AddDays(-30)
-PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAuditEvent -StartDate $LastMonth -EndDate $Today -HostName "client1.contoso.com"
+PS C:\> $IpamIpAddressAuditEvents = Get-IpamIpAddressAuditEvent -StartDate $LastMonth -EndDate $Today -HostName "client1.contoso.com"
 ```
 
 The first command gets the current date and stores the result in the variable named $Today.

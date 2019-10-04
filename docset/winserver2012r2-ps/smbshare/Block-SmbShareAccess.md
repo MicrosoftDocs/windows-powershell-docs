@@ -42,14 +42,14 @@ The **Block-SmbShareAccess** cmdlet adds a deny access control entry (ACE) to th
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Add a deny ACS
 ```
 PS C:\>Block-SmbShareAccess -Name VMFiles -AccountName Contoso\Guest
 Confirm
 Are you sure you want to perform this action? 
 Performing operation 'Modify' on Target 'Contoso-SO,VMFiles'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
- 
+
 Name                    ScopeName               AccountName             AccessControlType       AccessRight 
 ----                    ---------               -----------             -----------------       ----------- 
 VMFiles                 Contoso-SO              Contoso\Guest           Deny                    Full 
@@ -59,12 +59,11 @@ VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow   
 VMFiles                 Contoso-SO              Contoso\Domain Admins   Allow                   Change
 ```
 
-This example adds a deny ACE for a trustee to the security descriptor of an SMB share named VMFiles.
+This command adds a deny ACE for a trustee to the security descriptor of an SMB share named VMFiles.
 
-### EXAMPLE 2
+### Example 2: Add a deny ACS without confirmation
 ```
 PS C:\>Block-SmbShareAccess -Name VMFiles -AccountName "Guest Users" -Force
-
 Name                    ScopeName               AccountName             AccessControlType       AccessRight 
 ----                    ---------               -----------             -----------------       ----------- 
 VMFiles                 Contoso-SO              Contoso\Guest           Deny                    Full 
@@ -74,7 +73,7 @@ VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow   
 VMFiles                 Contoso-SO              Contoso\Domain Admins   Allow                   Change
 ```
 
-This example adds a deny ACE for a trustee to the security descriptor of an SMB share named VMFiles without confirmation from the user.
+This command adds a deny ACE for a trustee to the security descriptor of an SMB share named VMFiles without confirmation from the user.
 
 ## PARAMETERS
 
@@ -203,13 +202,14 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

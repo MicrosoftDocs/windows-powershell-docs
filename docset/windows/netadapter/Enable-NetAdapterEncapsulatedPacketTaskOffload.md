@@ -122,7 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -EncapsulationType
-{{Fill EncapsulationType Description}}
+Specifies the encapsulation type. The acceptable values for this parameter are:
+ - NVGRE: Network Virtualization Generic Routing Encapsulation.
+ - VXLAN: Virtual eXtensible Local Area Network.
 
 ```yaml
 Type: EncapsulationType

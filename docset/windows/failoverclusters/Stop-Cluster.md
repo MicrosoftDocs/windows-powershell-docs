@@ -89,7 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Forces the command to run without asking for user confirmation.
+Runs the cmdlet without prompting for confirmation.
+By default the cmdlet will ask for confirmation from the user before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-{{Fill Wait Description}}
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -149,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

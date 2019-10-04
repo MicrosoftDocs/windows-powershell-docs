@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519073
 Help Version: 5.0.0.2
 Locale: en-US
-title: HgsAttestation
 ---
 
 # HgsAttestation Module

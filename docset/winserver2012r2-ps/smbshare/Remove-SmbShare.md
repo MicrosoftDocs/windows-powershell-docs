@@ -192,14 +192,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+{{Fill SmbInstance Description}}
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV, SBL, SR
+Accepted values: Default, CSV
 
 Required: False
 Position: Named

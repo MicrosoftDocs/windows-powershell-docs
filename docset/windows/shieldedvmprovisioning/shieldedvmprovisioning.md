@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=615565
 Help Version: 5.0.1.1
 Locale: en-US
-title: ShieldedVMProvisioning
 ---
 
 # ShieldedVMProvisioning Module

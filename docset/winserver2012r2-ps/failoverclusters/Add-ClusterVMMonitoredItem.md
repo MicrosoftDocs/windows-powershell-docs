@@ -154,11 +154,11 @@ Accept wildcard characters: False
 Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
 To be configured for monitoring the following conditions need to be met: 
 
-- None of the service recovery actions are set to Restart the computer. 
+ -- None of the service recovery actions are set to Restart the computer. 
 
-AND 
+ ---- AND 
 
-- At least one of the service recovery actions are set to Take no action.
+ -- At least one of the service recovery actions are set to Take no action.
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-Specifies the virtual machine identifier (ID).
+{{Fill VMId Description}}
 
 ```yaml
 Type: Guid
@@ -221,9 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+{{Fill Wait Description}}
 
 ```yaml
 Type: Int32
@@ -238,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

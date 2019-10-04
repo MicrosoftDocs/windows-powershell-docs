@@ -6,7 +6,6 @@ schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
 author: andreabarr
-title: Disable-DiagnosticDataViewing
 ---
 
 # Disable-DiagnosticDataViewing

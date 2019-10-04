@@ -7,7 +7,7 @@ Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
 Download Help Link: http://go.microsoft.com
 Help Version: 5.0.0.1
 Locale: en-US
-title: SystemInsights
+title: Add-InsightsCapability
 ms.author: v-anbarr
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
@@ -21,7 +21,7 @@ ms.technology: powershell-windows
 ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
 ---
 
-# SystemInsights Module
+# systeminsights Module
 
 >[!IMPORTANT]
 >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.

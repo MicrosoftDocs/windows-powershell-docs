@@ -35,7 +35,7 @@ The **Get-SmbSession** cmdlet retrieves basic information about the Server Messa
 
 ## EXAMPLES
 
-### Example 1: Get session information
+### EXAMPLE 1
 ```
 PS C:\>Get-SmbSession
 SessionId                     ClientComputerName            ClientUserName                NumOpens 
@@ -60,9 +60,9 @@ SessionId                     ClientComputerName            ClientUserName      
 8813272891621                 192.168.101.13                Contoso\Administrator         0
 ```
 
-This command retrieves information about the SMB sessions that are currently established between the SMB server and the associated clients.
+This example retrieves information about the SMB sessions that are currently established between the SMB server and the associated clients.
 
-### Example 2: Get information for a specific session
+### EXAMPLE 2
 ```
 PS C:\>Get-SmbSession -SessionId 8813272891621
 SessionId                     ClientComputerName            ClientUserName                NumOpens 
@@ -70,11 +70,11 @@ SessionId                     ClientComputerName            ClientUserName      
 8813272891621                 192.168.101.13                Contoso\Administrator         0
 ```
 
-This command retrieves information about the SMB session identified as 8813272891621 that is currently established between the SMB server and the associated clients.
+This example retrieves information about the SMB session identified as 8813272891621 that is currently established between the SMB server and the associated clients.
 
-### Example 3: Get session information for a specific client
+### EXAMPLE 3
 ```
-PS C:\>Get-SmbSession -ClientComputerName "192.168.102.14"
+PS C:\>Get-SmbSession -ClientComputerName 192.168.102.14
 SessionId                     ClientComputerName            ClientUserName                NumOpens 
 ---------                     ------------------            --------------                -------- 
 4415226380377                 192.168.102.14                Contoso\Contoso-HV2$          1 
@@ -85,11 +85,11 @@ SessionId                     ClientComputerName            ClientUserName      
 8813272891517                 192.168.102.14                Contoso\Contoso-HV2$          5
 ```
 
-This command retrieves information about the SMB sessions that are currently established between the SMB server and the SMB client at the IP address 192.168.102.14.
+This example retrieves information about the SMB sessions that are currently established between the SMB server and the SMB client at the IP address 192.168.102.14.
 
-### Example 4: Get session information for a client
+### EXAMPLE 4
 ```
-PS C:\>Get-SmbSession -ClientUserName "Contoso\Contoso-HV1$"
+PS C:\>Get-SmbSession -ClientUserName Contoso\Contoso-HV1$
 SessionId                     ClientComputerName            ClientUserName                NumOpens 
 ---------                     ------------------            --------------                -------- 
 8813272891441                 192.168.101.13                Contoso\Contoso-HV1$          1 
@@ -103,9 +103,9 @@ SessionId                     ClientComputerName            ClientUserName      
 8813272891613                 192.168.101.13                Contoso\Contoso-HV1$          2
 ```
 
-This command retrieves information about the SMB sessions that are currently established between the SMB server and the SMB client that has the user name Contoso\Contoso-HV1$.
+This example retrieves information about the SMB sessions that are currently established between the SMB server and the SMB client with the user name Contoso\Contoso-HV1$.
 
-### Example 5: Get all information for a session
+### EXAMPLE 5
 ```
 PS C:\>Get-SmbSession -SessionId 8813272891441 | Select-Object -Property *
 ClientComputerName    : 192.168.101.13 
@@ -124,7 +124,7 @@ CimInstanceProperties : {ClientComputerName, ClientUserName, ClusterNodeName, Di
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command retrieves all of the information about the SMB session identified as 8813272891441 that are currently established between the SMB server and the SMB client.
+This example retrieves all of the information about the SMB session identified as 8813272891441 that are currently established between the SMB server and the SMB client.
 
 ## PARAMETERS
 
@@ -251,14 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+{{Fill SmbInstance Description}}
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Default, CSV, SBL, SR
+Accepted values: Default, CSV
 
 Required: False
 Position: Named

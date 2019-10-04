@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 
 # PEF Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Protocol Engineering Framework (PEF) cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+{{Manually Enter Description Here}}
 
 ## PEF Cmdlets
 ### [Add-PefMessageSource](./Add-PefMessageSource.md)

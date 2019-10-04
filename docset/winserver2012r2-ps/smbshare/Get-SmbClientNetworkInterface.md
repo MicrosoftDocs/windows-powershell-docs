@@ -34,7 +34,7 @@ The **Get-SmbClientNetworkInterface** cmdlets retrieves the network interfaces u
 
 ## EXAMPLES
 
-### Example 1: Get network interfaces used by an SMB client
+### EXAMPLE 1
 ```
 PS C:\>Get-SmbClientNetworkInterface
 Interface Index     RSS Capable         RDMA Capable        Speed               IpAddresses         Friendly Name 
@@ -50,9 +50,9 @@ Interface Index     RSS Capable         RDMA Capable        Speed               
 14                  False               False               1  Gbps             {192.168.100.13}    Internal
 ```
 
-This command retrieves the network interfaces used by the SMB client.
+This example retrieves the network interfaces used by the SMB client.
 
-### Example 2: Get network interfaces used by an SMB client for a specified link speed
+### EXAMPLE 2
 ```
 PS C:\>Get-SmbClientNetworkInterface | Where-Object -Property LinkSpeed -Gt 10GB
 Interface Index     RSS Capable         RDMA Capable        Speed               IpAddresses         Friendly Name 
@@ -61,9 +61,9 @@ Interface Index     RSS Capable         RDMA Capable        Speed               
 15                  True                True                32 Gbps             {192.168.102.13}    RDMA2
 ```
 
-This command retrieves the network interfaces used by the SMB client that match the link speed of 10 gigabits or more.
+This example retrieves the network interfaces used by the SMB client that match the link speed of 10 gigabits or more.
 
-### Example 3: Display details for network interfaces
+### EXAMPLE 3
 ```
 PS C:\>Get-SmbClientNetworkInterface | Where-Object -Property LinkSpeed -Gt 10GB | Select-Object -Property *
 FriendlyName          : RDMA1 
@@ -76,7 +76,7 @@ PSComputerName        :
 CimClass              : ROOT/Microsoft/Windows/SMB:MSFT_SmbClientNetworkInterface 
 CimInstanceProperties : {FriendlyName, InterfaceIndex, IpAddresses, LinkSpeed...} 
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties 
-
+ 
 FriendlyName          : RDMA2 
 InterfaceIndex        : 15 
 IpAddresses           : {192.168.102.13} 
@@ -89,7 +89,7 @@ CimInstanceProperties : {FriendlyName, InterfaceIndex, IpAddresses, LinkSpeed...
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command displays all of the information retrieved from the network interfaces used by the SMB client that match the link speed of 10 gigabits or more.
+This example displays all of the information retrieved from the network interfaces used by the SMB client that match the link speed of 10 gigabits or more.
 
 ## PARAMETERS
 

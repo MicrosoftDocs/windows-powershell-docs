@@ -1,19 +1,20 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
-Module Name: FailoverClusters
+keywords: powershell, cmdlet
+manager: jasgro
+ms.date: 12/20/2016
+ms.prod: w10
+ms.technology: powershell-windows
+ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-ClusterVMMonitoredItem
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
-manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
+ms.reviewer:
 ms.assetid: B2157CE4-2A94-4536-BA4A-22A79B2D7C6E
 ---
 
@@ -49,7 +50,7 @@ For example, the configuration might specify that the virtual machine be restart
 
 ### Example 1
 ```
-PS C:\>Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
+PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
 Name 
 ---- 
 Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
@@ -71,7 +72,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Local Cluster
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-{{Fill VMId Description}}
+
 
 ```yaml
 Type: Guid
@@ -107,8 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-Specifies the name of the clustered virtual machine on which to perform monitoring.
-When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-{{Fill Wait Description}}
+
 
 ```yaml
 Type: Int32
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

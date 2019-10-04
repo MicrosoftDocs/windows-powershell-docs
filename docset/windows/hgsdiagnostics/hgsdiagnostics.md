@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=760404
 Help Version: 5.0.0.1
 Locale: en-US
-title: HgsDiagnostics
 ---
 
 # HgsDiagnostics Module

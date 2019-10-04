@@ -87,8 +87,8 @@ Get-StorageNode [-OperationalStatus <OperationalStatus[]>] [-Disk <CimInstance>]
 
 ## DESCRIPTION
 The **Get-StorageNode** cmdlet gets objects that represent storage nodes and their operational statuses.
-Use this cmdlet to get storage nodes to pass to the Get-PhysicalDisk cmdlet or the Get-VirtualDisk cmdlet to get the physical or virtual disks connected to storage nodes.
-Use the current cmdlet with the Get-StoragePool cmdlet to get the storage pools that storage nodes own.
+Use this cmdlet to get storage nodes to pass to the **Get-PhysicalDisk** cmdlet or the **Get-VirtualDisk** cmdlet to get the physical or virtual disks connected to storage nodes.
+Use the current cmdlet with the **Get-StoragePool** cmdlet to get the storage pools that storage nodes own.
 
 ## EXAMPLES
 
@@ -104,7 +104,7 @@ This command gets a storage node named StorageNode21.
 PS C:\>Get-PhysicalDisk | Get-StorageNode
 ```
 
-This command uses the Get-PhysicalDisk cmdlet to obtain all the physical disks, and then passes them to the current cmdlet by using the pipeline operator.
+This command uses the **Get-PhysicalDisk** cmdlet to obtain all the physical disks, and then passes them to the current cmdlet by using the pipeline operator.
 The cmdlet gets the storage nodes and operational statuses for the physical disks.
 
 ## PARAMETERS
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -Disk
 Specifies a disk for which this cmdlet gets storage notes.
-To obtain a **Disk** object, use the Get-Disk cmdlet.
+To obtain a **Disk** object, use the **Get-Disk** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ### -PhysicalDisk
 Specifies a physical disk as a **CimInstance** object.
 The cmdlet gets the storage nodes that correspond to the disk that you specify.
-To obtain a physical disk object, use the Get-PhysicalDisk cmdlet.
+To obtain a physical disk object, use the **Get-PhysicalDisk** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ### -StoragePool
 Specifies a storage pool as a **CimInstance** object.
 The cmdlet gets storage node associated with storage pool that you specify.
-To obtain a storage pool object, use the Get-StoragePool cmdlet.
+To obtain a storage pool object, use the **Get-StoragePool** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ### -StorageSubSystem
 Specifies a storage subsystem as a **CimInstance** object.
 The cmdlet gets the storage nodes that belong to the subsystem that you specify.
-To obtain a storage subsystem object, use the Get-StorageSubSystem cmdlet.
+To obtain a storage subsystem object, use the **Get-StorageSubSystem** cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -332,7 +332,7 @@ Accept wildcard characters: False
 ### -VirtualDisk
 Specifies a virtual disk as a **CimInstance** object.
 The cmdlet gets the storage nodes that correspond to the disk that you specify.
-To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
+To obtain a virtual disk object, use the **Get-VirtualDisk** cmdlet.
 
 ```yaml
 Type: CimInstance

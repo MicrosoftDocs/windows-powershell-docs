@@ -41,18 +41,18 @@ Remove-ADDomainControllerPasswordReplicationPolicy [-WhatIf] [-Confirm] [-AuthTy
 ## DESCRIPTION
 The **Remove-ADDomainControllerPasswordReplicationPolicy** cmdlet removes one or more users, computers, and groups from the allowed or denied list of a read-only domain controller (RODC) password replication policy.
 
-The **Identity** parameter specifies the RODC that uses the allowed and denied lists to apply the password replication policy.
+The *Identity* parameter specifies the RODC that uses the allowed and denied lists to apply the password replication policy.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
 You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
-You can also set the **Identity** parameter to a domain controller object variable, such as **$\<localDomainControllerObject\>**, or pass a domain controller object through the pipeline operator to the **Identity** parameter.
-For example, you can use the Get-ADDomainController cmdlet to retrieve a domain controller object and then pass the object through the pipeline operator to the **Remove-ADDomainControllerPasswordReplicationPolicy** cmdlet.
+You can also set the *Identity* parameter to a domain controller object variable, such as `$<localDomainControllerObject>`, or pass a domain controller object through the pipeline operator to the *Identity* parameter.
+For example, you can use the **Get-ADDomainController** cmdlet to retrieve a domain controller object and then pass the object through the pipeline operator to the **Remove-ADDomainControllerPasswordReplicationPolicy** cmdlet.
 You must provide a read-only domain controller.
 
-The **AllowedList** parameters specify the users, computers and groups to remove from the allowed list.
-Similarly, the **DeniedList** parameter specifies the users, computers and groups to remove from the denied list.
-You must specify either one or both of the **AllowedList** and **DeniedList** parameters.
-You can identify a user, computer or group by distinguished name, GUID, security identifier (SID) or security accounts manager (SAM) account name.
-You can also specify user, computer or group variables, such as **$\<localUserObject\>**.
+The *AllowedList* parameters specify the users, computers and groups to remove from the allowed list.
+Similarly, the *DeniedList* parameter specifies the users, computers and groups to remove from the denied list.
+You must specify either one or both of the *AllowedList* and *DeniedList* parameters.
+You can identify a user, computer or group by distinguished name (DN), GUID, security identifier (SID) or security accounts manager (SAM) account name.
+You can also specify user, computer or group variables, such as `$<localUserObject>`.
 If you are specifying more than one item, use a comma-separated list.
 
 ## EXAMPLES
@@ -142,8 +142,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credential cmdlet.
-You can then set the Credential parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -236,16 +236,16 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+The service may be any of the following: Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways: 
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+Directory server values: 
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -253,8 +253,8 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the *Server* value from objects passed through the pipeline
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
@@ -286,24 +286,24 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [About CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADDomainController
-A read-only domain controller object is received by the **Identity** parameter.
+A read-only domain controller object is received by the *Identity* parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADDomainController
-This cmdlet returns the modified read-only domain controller object when the **PassThru** parameter is specified.
+This cmdlet returns the modified read-only domain controller object when the *PassThru* parameter is specified.
 By default, this cmdlet does not generate any output.
 
 ## NOTES
 * This cmdlet does not work with Active Directory Lightweight Directory Services (AD LDS).
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* By default, this cmdlet has the **Confirm** parameter set, which prompts you to confirm before a removal of the specified object type can occur. To bypass prompting for confirmation before removal, you can specify `-Confirm:$False` when using this cmdlet.
+* By default, this cmdlet has the *Confirm* parameter set, which prompts you to confirm before a removal of the specified object type can occur. To bypass prompting for confirmation before removal, you can specify `-Confirm:$False` when using this cmdlet.
 
 ## RELATED LINKS
 

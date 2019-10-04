@@ -16,16 +16,16 @@ Retrieves the access control list (ACL) of the Server Message Block (SMB) share.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query (cdxml) (Default)
 ```
-Get-SmbShareAccess [-Name] <String[]> [[-ScopeName] <String[]>] [-AsJob] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
+Get-SmbShareAccess [-Name] <String[]> [[-ScopeName] <String[]>] [-SmbInstance <SmbInstance>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
-Get-SmbShareAccess [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]>
- [-Confirm] [-WhatIf]
+Get-SmbShareAccess -InputObject <CimInstance[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -138,6 +138,23 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: Query (cdxml)
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

@@ -62,8 +62,9 @@ This command gets from an RODC domain controller password replication policy the
 
 ### Example 2: Get the password replication policy allowed list from all RODCs in the domain
 ```
-PS C:\> Get-ADDomainController -Filter {IsReadOnly -eq $True} | Get-ADDomainControllerPasswordReplicationPolicy -Allowed
-DistinguishedName : CN=Allowed RODC Password Replication Group,CN=Users,DC=User01,DC=com
+C:\PS>Get-ADDomainController -Filter {IsReadOnly -eq $true} | Get-ADDomainControllerPasswordReplicationPolicy -Allowed
+
+DistinguishedName : CN=Allowed RODC Password Replication Group,CN=Users,DC=Fabrikam,DC=com
 Name              : Allowed RODC Password Replication Group
 ObjectClass       : group
 ObjectGUID        : 239b0470-7f49-472d-8fcb-4911e90b2c5e

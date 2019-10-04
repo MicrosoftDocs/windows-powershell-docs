@@ -14,495 +14,494 @@ ms.reviewer:
 This reference provides cmdlet descriptions and syntax for all Hyper-V-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Hyper-V Cmdlets
-### [Add-VMDvdDrive](Add-VMDvdDrive.md)
-{{Manually Enter Add-VMDvdDrive Description Here}}
+### [Add-VMDvdDrive](./Add-VMDvdDrive.md)
+Adds a DVD drive to a virtual machine.
 
-### [Add-VMFibreChannelHba](Add-VMFibreChannelHba.md)
-{{Manually Enter Add-VMFibreChannelHba Description Here}}
+### [Add-VMFibreChannelHba](./Add-VMFibreChannelHba.md)
+Adds a virtual Fibre Channel host bus adapter to a virtual machine.
 
-### [Add-VMHardDiskDrive](Add-VMHardDiskDrive.md)
-{{Manually Enter Add-VMHardDiskDrive Description Here}}
+### [Add-VMHardDiskDrive](./Add-VMHardDiskDrive.md)
+Adds a hard disk drive to a virtual machine.
 
-### [Add-VMMigrationNetwork](Add-VMMigrationNetwork.md)
-{{Manually Enter Add-VMMigrationNetwork Description Here}}
+### [Add-VMMigrationNetwork](./Add-VMMigrationNetwork.md)
+Adds a network for virtual machine migration on one or more virtual machine hosts.
 
-### [Add-VMNetworkAdapterAcl](Add-VMNetworkAdapterAcl.md)
-{{Manually Enter Add-VMNetworkAdapterAcl Description Here}}
+### [Add-VMNetworkAdapterAcl](./Add-VMNetworkAdapterAcl.md)
+Creates an ACL to apply to the traffic through a virtual machine network adapter.
 
-### [Add-VMNetworkAdapter](Add-VMNetworkAdapter.md)
-{{Manually Enter Add-VMNetworkAdapter Description Here}}
+### [Add-VMNetworkAdapter](./Add-VMNetworkAdapter.md)
+Adds a virtual network adapter to a virtual machine.
 
-### [Add-VMRemoteFx3dVideoAdapter](Add-VMRemoteFx3dVideoAdapter.md)
-{{Manually Enter Add-VMRemoteFx3dVideoAdapter Description Here}}
+### [Add-VMRemoteFx3dVideoAdapter](./Add-VMRemoteFx3dVideoAdapter.md)
+Adds a RemoteFX video adapter in a virtual machine.
 
-### [Add-VMScsiController](Add-VMScsiController.md)
-{{Manually Enter Add-VMScsiController Description Here}}
+### [Add-VMScsiController](./Add-VMScsiController.md)
+Adds a SCSI controller in a virtual machine.
 
-### [Add-VMStoragePath](Add-VMStoragePath.md)
-{{Manually Enter Add-VMStoragePath Description Here}}
+### [Add-VMStoragePath](./Add-VMStoragePath.md)
+Adds a path to a storage resource pool.
 
-### [Add-VMSwitchExtensionPortFeature](Add-VMSwitchExtensionPortFeature.md)
-{{Manually Enter Add-VMSwitchExtensionPortFeature Description Here}}
+### [Add-VMSwitchExtensionPortFeature](./Add-VMSwitchExtensionPortFeature.md)
+Adds a feature to a virtual network adapter.
 
-### [Add-VMSwitchExtensionSwitchFeature](Add-VMSwitchExtensionSwitchFeature.md)
-{{Manually Enter Add-VMSwitchExtensionSwitchFeature Description Here}}
+### [Add-VMSwitchExtensionSwitchFeature](./Add-VMSwitchExtensionSwitchFeature.md)
+Adds a feature to a virtual switch.
 
-### [Add-VMSwitch](Add-VMSwitch.md)
-{{Manually Enter Add-VMSwitch Description Here}}
+### [Add-VMSwitch](./Add-VMSwitch.md)
+Adds a virtual switch to an Ethernet resource pool.
 
-### [Checkpoint-VM](Checkpoint-VM.md)
-{{Manually Enter Checkpoint-VM Description Here}}
+### [Checkpoint-VM](./Checkpoint-VM.md)
+Creates a checkpoint of a virtual machine.
 
-### [Compare-VM](Compare-VM.md)
-{{Manually Enter Compare-VM Description Here}}
+### [Compare-VM](./Compare-VM.md)
+Compares a virtual machine and a virtual machine host for compatibility, returning a compatibility report.
 
-### [Complete-VMFailover](Complete-VMFailover.md)
-{{Manually Enter Complete-VMFailover Description Here}}
+### [Complete-VMFailover](./Complete-VMFailover.md)
+Completes a virtual machine's failover process on the Replica server.
 
-### [Connect-VMNetworkAdapter](Connect-VMNetworkAdapter.md)
-{{Manually Enter Connect-VMNetworkAdapter Description Here}}
+### [Connect-VMNetworkAdapter](./Connect-VMNetworkAdapter.md)
+Connects a virtual network adapter to a virtual switch.
 
-### [Connect-VMSan](Connect-VMSan.md)
-{{Manually Enter Connect-VMSan Description Here}}
+### [Connect-VMSan](./Connect-VMSan.md)
+Associates a host bus adapter with a virtual storage area network (SAN).
 
-### [Convert-VHD](Convert-VHD.md)
-{{Manually Enter Convert-VHD Description Here}}
+### [Convert-VHD](./Convert-VHD.md)
+Converts the format, version type, and block size of a virtual hard disk file.
 
-### [Disable-VMEventing](Disable-VMEventing.md)
-{{Manually Enter Disable-VMEventing Description Here}}
+### [Disable-VMEventing](./Disable-VMEventing.md)
+Disables virtual machine eventing.
 
-### [Disable-VMIntegrationService](Disable-VMIntegrationService.md)
-{{Manually Enter Disable-VMIntegrationService Description Here}}
+### [Disable-VMIntegrationService](./Disable-VMIntegrationService.md)
+Disables an integration service on a virtual machine.
 
-### [Disable-VMMigration](Disable-VMMigration.md)
-{{Manually Enter Disable-VMMigration Description Here}}
+### [Disable-VMMigration](./Disable-VMMigration.md)
+Disables migration on one or more virtual machine hosts.
 
-### [Disable-VMRemoteFXPhysicalVideoAdapter](Disable-VMRemoteFXPhysicalVideoAdapter.md)
-{{Manually Enter Disable-VMRemoteFXPhysicalVideoAdapter Description Here}}
+### [Disable-VMRemoteFXPhysicalVideoAdapter](./Disable-VMRemoteFXPhysicalVideoAdapter.md)
+Disables one or more RemoteFX physical video adapters from use with RemoteFX-enabled virtual machines.
 
-### [Disable-VMResourceMetering](Disable-VMResourceMetering.md)
-{{Manually Enter Disable-VMResourceMetering Description Here}}
+### [Disable-VMResourceMetering](./Disable-VMResourceMetering.md)
+Disables collection of resource utilization data for a virtual machine or resource pool.
 
-### [Disable-VMSwitchExtension](Disable-VMSwitchExtension.md)
-{{Manually Enter Disable-VMSwitchExtension Description Here}}
+### [Disable-VMSwitchExtension](./Disable-VMSwitchExtension.md)
+Disables one or more extensions on one or more virtual switches.
 
-### [Disconnect-VMNetworkAdapter](Disconnect-VMNetworkAdapter.md)
-{{Manually Enter Disconnect-VMNetworkAdapter Description Here}}
+### [Disconnect-VMNetworkAdapter](./Disconnect-VMNetworkAdapter.md)
+Disconnects a virtual network adapter from a virtual switch or Ethernet resource pool.
 
-### [Disconnect-VMSan](Disconnect-VMSan.md)
-{{Manually Enter Disconnect-VMSan Description Here}}
+### [Disconnect-VMSan](./Disconnect-VMSan.md)
+Removes a host bus adapter from a virtual storage area network (SAN).
 
-### [Dismount-VHD](Dismount-VHD.md)
-{{Manually Enter Dismount-VHD Description Here}}
+### [Dismount-VHD](./Dismount-VHD.md)
+Dismounts a virtual hard disk.
 
-### [Enable-VMEventing](Enable-VMEventing.md)
-{{Manually Enter Enable-VMEventing Description Here}}
+### [Enable-VMEventing](./Enable-VMEventing.md)
+Enables virtual machine eventing.
 
-### [Enable-VMIntegrationService](Enable-VMIntegrationService.md)
-{{Manually Enter Enable-VMIntegrationService Description Here}}
+### [Enable-VMIntegrationService](./Enable-VMIntegrationService.md)
+Enables an integration service on a virtual machine.
 
-### [Enable-VMMigration](Enable-VMMigration.md)
-{{Manually Enter Enable-VMMigration Description Here}}
+### [Enable-VMMigration](./Enable-VMMigration.md)
+Enables migration on one or more virtual machine hosts.
 
-### [Enable-VMRemoteFXPhysicalVideoAdapter](Enable-VMRemoteFXPhysicalVideoAdapter.md)
-{{Manually Enter Enable-VMRemoteFXPhysicalVideoAdapter Description Here}}
+### [Enable-VMRemoteFXPhysicalVideoAdapter](./Enable-VMRemoteFXPhysicalVideoAdapter.md)
+Enables one or more RemoteFX physical video adapters for use with RemoteFX-enabled virtual machines.
 
-### [Enable-VMReplication](Enable-VMReplication.md)
-{{Manually Enter Enable-VMReplication Description Here}}
+### [Enable-VMReplication](./Enable-VMReplication.md)
+Enables replication of a virtual machine.
 
-### [Enable-VMResourceMetering](Enable-VMResourceMetering.md)
-{{Manually Enter Enable-VMResourceMetering Description Here}}
+### [Enable-VMResourceMetering](./Enable-VMResourceMetering.md)
+Collects resource utilization data for a virtual machine or resource pool.
 
-### [Enable-VMSwitchExtension](Enable-VMSwitchExtension.md)
-{{Manually Enter Enable-VMSwitchExtension Description Here}}
+### [Enable-VMSwitchExtension](./Enable-VMSwitchExtension.md)
+Enables one or more extensions on one or more switches.
 
-### [Export-VMSnapshot](Export-VMSnapshot.md)
-{{Manually Enter Export-VMSnapshot Description Here}}
+### [Export-VMSnapshot](./Export-VMSnapshot.md)
+Exports a virtual machine checkpoint to disk.
 
-### [Export-VM](Export-VM.md)
-{{Manually Enter Export-VM Description Here}}
+### [Export-VM](./Export-VM.md)
+Exports a virtual machine to disk.
 
-### [Get-VHD](Get-VHD.md)
-{{Manually Enter Get-VHD Description Here}}
+### [Get-VHD](./Get-VHD.md)
+Gets the virtual hard disk object associated with a virtual hard disk.
 
-### [Get-VMBios](Get-VMBios.md)
-{{Manually Enter Get-VMBios Description Here}}
+### [Get-VMBios](./Get-VMBios.md)
+Gets the BIOS of a virtual machine or snapshot.
 
-### [Get-VMComPort](Get-VMComPort.md)
-{{Manually Enter Get-VMComPort Description Here}}
+### [Get-VMComPort](./Get-VMComPort.md)
+Gets the COM ports of a virtual machine or snapshot.
 
-### [Get-VMConnectAccess](Get-VMConnectAccess.md)
-{{Manually Enter Get-VMConnectAccess Description Here}}
+### [Get-VMConnectAccess](./Get-VMConnectAccess.md)
+Gets entries showing users and the virtual machines to which they can connect on one or more Hyper-V hosts.
 
-### [Get-VMDvdDrive](Get-VMDvdDrive.md)
-{{Manually Enter Get-VMDvdDrive Description Here}}
+### [Get-VMDvdDrive](./Get-VMDvdDrive.md)
+Gets the DVD drives attached to a virtual machine or snapshot.
 
-### [Get-VMFibreChannelHba](Get-VMFibreChannelHba.md)
-{{Manually Enter Get-VMFibreChannelHba Description Here}}
+### [Get-VMFibreChannelHba](./Get-VMFibreChannelHba.md)
+Gets the Fibre Channel host bus adapters associated with one or more virtual machines.
 
-### [Get-VMFloppyDiskDrive](Get-VMFloppyDiskDrive.md)
-{{Manually Enter Get-VMFloppyDiskDrive Description Here}}
+### [Get-VMFloppyDiskDrive](./Get-VMFloppyDiskDrive.md)
+Gets the floppy disk drives of a virtual machine or snapshot.
 
-### [Get-VMHardDiskDrive](Get-VMHardDiskDrive.md)
-{{Manually Enter Get-VMHardDiskDrive Description Here}}
+### [Get-VMHardDiskDrive](./Get-VMHardDiskDrive.md)
+Gets the virtual hard disk drives attached to one or more virtual machines.
 
-### [Get-VMHostNumaNodeStatus](Get-VMHostNumaNodeStatus.md)
-{{Manually Enter Get-VMHostNumaNodeStatus Description Here}}
+### [Get-VMHostNumaNodeStatus](./Get-VMHostNumaNodeStatus.md)
+Gets the status of the virtual machines on the non-uniform memory access (NUMA) nodes of a virtual machine host or hosts.
 
-### [Get-VMHostNumaNode](Get-VMHostNumaNode.md)
-{{Manually Enter Get-VMHostNumaNode Description Here}}
+### [Get-VMHostNumaNode](./Get-VMHostNumaNode.md)
+Gets the NUMA topology of a virtual machine host.
 
-### [Get-VMHost](Get-VMHost.md)
-{{Manually Enter Get-VMHost Description Here}}
+### [Get-VMHost](./Get-VMHost.md)
+Gets a Hyper-V host.
 
-### [Get-VMIdeController](Get-VMIdeController.md)
-{{Manually Enter Get-VMIdeController Description Here}}
+### [Get-VMIdeController](./Get-VMIdeController.md)
+Gets the IDE controllers of a virtual machine or snapshot.
 
-### [Get-VMIntegrationService](Get-VMIntegrationService.md)
-{{Manually Enter Get-VMIntegrationService Description Here}}
+### [Get-VMIntegrationService](./Get-VMIntegrationService.md)
+Gets the integration services of a virtual machine or snapshot.
 
-### [Get-VMMemory](Get-VMMemory.md)
-{{Manually Enter Get-VMMemory Description Here}}
+### [Get-VMMemory](./Get-VMMemory.md)
+Gets the memory of a virtual machine or snapshot.
 
-### [Get-VMMigrationNetwork](Get-VMMigrationNetwork.md)
-{{Manually Enter Get-VMMigrationNetwork Description Here}}
+### [Get-VMMigrationNetwork](./Get-VMMigrationNetwork.md)
+Gets the networks added for migration to one or more virtual machine hosts.
 
-### [Get-VMNetworkAdapterAcl](Get-VMNetworkAdapterAcl.md)
-{{Manually Enter Get-VMNetworkAdapterAcl Description Here}}
+### [Get-VMNetworkAdapterAcl](./Get-VMNetworkAdapterAcl.md)
+Gets the ACLs configured for a virtual machine network adapter.
 
-### [Get-VMNetworkAdapterFailoverConfiguration](Get-VMNetworkAdapterFailoverConfiguration.md)
-{{Manually Enter Get-VMNetworkAdapterFailoverConfiguration Description Here}}
+### [Get-VMNetworkAdapterFailoverConfiguration](./Get-VMNetworkAdapterFailoverConfiguration.md)
+Gets the IP address of a virtual network adapter configured to be used when a virtual machine fails over.
 
-### [Get-VMNetworkAdapterVlan](Get-VMNetworkAdapterVlan.md)
-{{Manually Enter Get-VMNetworkAdapterVlan Description Here}}
+### [Get-VMNetworkAdapterVlan](./Get-VMNetworkAdapterVlan.md)
+Gets the virtual LAN settings configured on a virtual network adapter.
 
-### [Get-VMNetworkAdapter](Get-VMNetworkAdapter.md)
-{{Manually Enter Get-VMNetworkAdapter Description Here}}
+### [Get-VMNetworkAdapter](./Get-VMNetworkAdapter.md)
+Gets the virtual network adapters of a virtual machine, snapshot, management OS, or of a virtual machine and management OS.
 
-### [Get-VMProcessor](Get-VMProcessor.md)
-{{Manually Enter Get-VMProcessor Description Here}}
+### [Get-VMProcessor](./Get-VMProcessor.md)
+Gets the processor of a virtual machine or snapshot.
 
-### [Get-VMRemoteFx3dVideoAdapter](Get-VMRemoteFx3dVideoAdapter.md)
-{{Manually Enter Get-VMRemoteFx3dVideoAdapter Description Here}}
+### [Get-VMRemoteFx3dVideoAdapter](./Get-VMRemoteFx3dVideoAdapter.md)
+Gets the RemoteFX video adapter of a virtual machine or snapshot.
 
-### [Get-VMRemoteFXPhysicalVideoAdapter](Get-VMRemoteFXPhysicalVideoAdapter.md)
-{{Manually Enter Get-VMRemoteFXPhysicalVideoAdapter Description Here}}
+### [Get-VMRemoteFXPhysicalVideoAdapter](./Get-VMRemoteFXPhysicalVideoAdapter.md)
+Gets the RemoteFX physical graphics adapters on one or more Hyper-V hosts.
 
-### [Get-VMReplicationAuthorizationEntry](Get-VMReplicationAuthorizationEntry.md)
-{{Manually Enter Get-VMReplicationAuthorizationEntry Description Here}}
+### [Get-VMReplicationAuthorizationEntry](./Get-VMReplicationAuthorizationEntry.md)
+Gets the authorization entries of a Replica server.
 
-### [Get-VMReplicationServer](Get-VMReplicationServer.md)
-{{Manually Enter Get-VMReplicationServer Description Here}}
+### [Get-VMReplicationServer](./Get-VMReplicationServer.md)
+Gets the replication and authentication settings of a Replica server.
 
-### [Get-VMReplication](Get-VMReplication.md)
-{{Manually Enter Get-VMReplication Description Here}}
+### [Get-VMReplication](./Get-VMReplication.md)
+Gets the replication settings for a virtual machine.
 
-### [Get-VMResourcePool](Get-VMResourcePool.md)
-{{Manually Enter Get-VMResourcePool Description Here}}
+### [Get-VMResourcePool](./Get-VMResourcePool.md)
+Gets the resource pools on one or more virtual machine hosts.
 
-### [Get-VMSan](Get-VMSan.md)
-{{Manually Enter Get-VMSan Description Here}}
+### [Get-VMSan](./Get-VMSan.md)
+Gets the available virtual machine storage area networks on a Hyper-V host or hosts.
 
-### [Get-VMScsiController](Get-VMScsiController.md)
-{{Manually Enter Get-VMScsiController Description Here}}
+### [Get-VMScsiController](./Get-VMScsiController.md)
+Gets the SCSI controllers of a virtual machine or snapshot.
 
-### [Get-VMSnapshot](Get-VMSnapshot.md)
-{{Manually Enter Get-VMSnapshot Description Here}}
+### [Get-VMSnapshot](./Get-VMSnapshot.md)
+Gets the checkpoints associated with a virtual machine or checkpoint.
 
-### [Get-VMStoragePath](Get-VMStoragePath.md)
-{{Manually Enter Get-VMStoragePath Description Here}}
+### [Get-VMStoragePath](./Get-VMStoragePath.md)
+Gets the storage paths in a storage resource pool.
 
-### [Get-VMSwitchExtensionPortData](Get-VMSwitchExtensionPortData.md)
-{{Manually Enter Get-VMSwitchExtensionPortData Description Here}}
+### [Get-VMSwitchExtensionPortData](./Get-VMSwitchExtensionPortData.md)
+Retrieves the status of a virtual switch extension feature applied to a virtual network adapter.
 
-### [Get-VMSwitchExtensionPortFeature](Get-VMSwitchExtensionPortFeature.md)
-{{Manually Enter Get-VMSwitchExtensionPortFeature Description Here}}
+### [Get-VMSwitchExtensionPortFeature](./Get-VMSwitchExtensionPortFeature.md)
+Gets the features configured on a virtual network adapter.
 
-### [Get-VMSwitchExtensionSwitchData](Get-VMSwitchExtensionSwitchData.md)
-{{Manually Enter Get-VMSwitchExtensionSwitchData Description Here}}
+### [Get-VMSwitchExtensionSwitchData](./Get-VMSwitchExtensionSwitchData.md)
+Gets the status of a virtual switch extension feature applied on a virtual switch.
 
-### [Get-VMSwitchExtensionSwitchFeature](Get-VMSwitchExtensionSwitchFeature.md)
-{{Manually Enter Get-VMSwitchExtensionSwitchFeature Description Here}}
+### [Get-VMSwitchExtensionSwitchFeature](./Get-VMSwitchExtensionSwitchFeature.md)
+Gets the features configured on a virtual switch.
 
-### [Get-VMSwitchExtension](Get-VMSwitchExtension.md)
-{{Manually Enter Get-VMSwitchExtension Description Here}}
+### [Get-VMSwitchExtension](./Get-VMSwitchExtension.md)
+Gets the extensions on one or more virtual switches.
 
-### [Get-VMSwitch](Get-VMSwitch.md)
-{{Manually Enter Get-VMSwitch Description Here}}
+### [Get-VMSwitch](./Get-VMSwitch.md)
+Gets virtual switches from one or more virtual Hyper-V hosts.
 
-### [Get-VMSystemSwitchExtensionPortFeature](Get-VMSystemSwitchExtensionPortFeature.md)
-{{Manually Enter Get-VMSystemSwitchExtensionPortFeature Description Here}}
+### [Get-VMSystemSwitchExtensionPortFeature](./Get-VMSystemSwitchExtensionPortFeature.md)
+Gets the port-level features supported by virtual switch extensions on one or more Hyper-V hosts.
 
-### [Get-VMSystemSwitchExtensionSwitchFeature](Get-VMSystemSwitchExtensionSwitchFeature.md)
-{{Manually Enter Get-VMSystemSwitchExtensionSwitchFeature Description Here}}
+### [Get-VMSystemSwitchExtensionSwitchFeature](./Get-VMSystemSwitchExtensionSwitchFeature.md)
+Gets the switch-level features on one or more Hyper-V hosts.
 
-### [Get-VMSystemSwitchExtension](Get-VMSystemSwitchExtension.md)
-{{Manually Enter Get-VMSystemSwitchExtension Description Here}}
+### [Get-VMSystemSwitchExtension](./Get-VMSystemSwitchExtension.md)
+Gets the switch extensions installed on a virtual machine host.
 
-### [Get-VM](Get-VM.md)
-{{Manually Enter Get-VM Description Here}}
+### [Get-VM](./Get-VM.md)
+Gets the virtual machines from one or more Hyper-V hosts.
 
-### [Grant-VMConnectAccess](Grant-VMConnectAccess.md)
-{{Manually Enter Grant-VMConnectAccess Description Here}}
+### [Grant-VMConnectAccess](./Grant-VMConnectAccess.md)
+Grants a user or users access to connect to a virtual machine or machines.
 
-### [Import-VMInitialReplication](Import-VMInitialReplication.md)
-{{Manually Enter Import-VMInitialReplication Description Here}}
+### [Import-VMInitialReplication](./Import-VMInitialReplication.md)
+Imports initial replication files for a Replica virtual machine to complete the initial replication when using external media as the source.
 
-### [Import-VM](Import-VM.md)
-{{Manually Enter Import-VM Description Here}}
+### [Import-VM](./Import-VM.md)
+Imports a virtual machine from a file.
 
-### [Measure-VMReplication](Measure-VMReplication.md)
-{{Manually Enter Measure-VMReplication Description Here}}
+### [Measure-VMReplication](./Measure-VMReplication.md)
+Gets replication statistics and information associated with a virtual machine.
 
-### [Measure-VMResourcePool](Measure-VMResourcePool.md)
-{{Manually Enter Measure-VMResourcePool Description Here}}
+### [Measure-VMResourcePool](./Measure-VMResourcePool.md)
+Reports resource utilization data for one or more resource pools.
 
-### [Measure-VM](Measure-VM.md)
-{{Manually Enter Measure-VM Description Here}}
+### [Measure-VM](./Measure-VM.md)
+Reports resource utilization data for one or more virtual machines.
 
-### [Merge-VHD](Merge-VHD.md)
-{{Manually Enter Merge-VHD Description Here}}
+### [Merge-VHD](./Merge-VHD.md)
+Merges virtual hard disks.
 
-### [Mount-VHD](Mount-VHD.md)
-{{Manually Enter Mount-VHD Description Here}}
+### [Mount-VHD](./Mount-VHD.md)
+Mounts one or more virtual hard disks.
 
-### [Move-VMStorage](Move-VMStorage.md)
-{{Manually Enter Move-VMStorage Description Here}}
+### [Move-VMStorage](./Move-VMStorage.md)
+Moves the storage of a virtual machine.
 
-### [Move-VM](Move-VM.md)
-{{Manually Enter Move-VM Description Here}}
+### [Move-VM](./Move-VM.md)
+Moves a virtual machine to a new Hyper-V host.
 
-### [New-VFD](New-VFD.md)
-{{Manually Enter New-VFD Description Here}}
+### [New-VFD](./New-VFD.md)
+Creates a virtual floppy disk.
 
-### [New-VHD](New-VHD.md)
-{{Manually Enter New-VHD Description Here}}
+### [New-VHD](./New-VHD.md)
+Creates one or more new virtual hard disks.
 
-### [New-VMReplicationAuthorizationEntry](New-VMReplicationAuthorizationEntry.md)
-{{Manually Enter New-VMReplicationAuthorizationEntry Description Here}}
+### [New-VMReplicationAuthorizationEntry](./New-VMReplicationAuthorizationEntry.md)
+Creates a new authorization entry that allows one or more primary servers to replicate data to a specified Replica server.
 
-### [New-VMResourcePool](New-VMResourcePool.md)
-{{Manually Enter New-VMResourcePool Description Here}}
+### [New-VMResourcePool](./New-VMResourcePool.md)
+Creates a resource pool.
 
-### [New-VMSan](New-VMSan.md)
-{{Manually Enter New-VMSan Description Here}}
+### [New-VMSan](./New-VMSan.md)
+Creates a new virtual storage area network (SAN) on a Hyper-V host.
 
-### [New-VMSwitch](New-VMSwitch.md)
-{{Manually Enter New-VMSwitch Description Here}}
+### [New-VMSwitch](./New-VMSwitch.md)
+Creates a new virtual switch on one or more virtual machine hosts.
 
-### [New-VM](New-VM.md)
-{{Manually Enter New-VM Description Here}}
+### [New-VM](./New-VM.md)
+Creates a new virtual machine.
 
-### [Optimize-VHD](Optimize-VHD.md)
-{{Manually Enter Optimize-VHD Description Here}}
+### [Optimize-VHD](./Optimize-VHD.md)
+Optimizes the allocation of space used by virtual hard disk files, except for fixed virtual hard disks.
 
-### [Remove-VMDvdDrive](Remove-VMDvdDrive.md)
-{{Manually Enter Remove-VMDvdDrive Description Here}}
+### [Remove-VMDvdDrive](./Remove-VMDvdDrive.md)
+Deletes a DVD drive from a virtual machine.
 
-### [Remove-VMFibreChannelHba](Remove-VMFibreChannelHba.md)
-{{Manually Enter Remove-VMFibreChannelHba Description Here}}
+### [Remove-VMFibreChannelHba](./Remove-VMFibreChannelHba.md)
+Removes a Fibre Channel host bus adapter from a virtual machine.
 
-### [Remove-VMHardDiskDrive](Remove-VMHardDiskDrive.md)
-{{Manually Enter Remove-VMHardDiskDrive Description Here}}
+### [Remove-VMHardDiskDrive](./Remove-VMHardDiskDrive.md)
+Deletes a hard disk drive from a virtual machine.
 
-### [Remove-VMMigrationNetwork](Remove-VMMigrationNetwork.md)
-{{Manually Enter Remove-VMMigrationNetwork Description Here}}
+### [Remove-VMMigrationNetwork](./Remove-VMMigrationNetwork.md)
+Removes a network from use with migration.
 
-### [Remove-VMNetworkAdapterAcl](Remove-VMNetworkAdapterAcl.md)
-{{Manually Enter Remove-VMNetworkAdapterAcl Description Here}}
+### [Remove-VMNetworkAdapterAcl](./Remove-VMNetworkAdapterAcl.md)
+Removes an ACL applied to the traffic through a virtual network adapter.
 
-### [Remove-VMNetworkAdapter](Remove-VMNetworkAdapter.md)
-{{Manually Enter Remove-VMNetworkAdapter Description Here}}
+### [Remove-VMNetworkAdapter](./Remove-VMNetworkAdapter.md)
+Removes one or more virtual network adapters from a virtual machine.
 
-### [Remove-VMRemoteFx3dVideoAdapter](Remove-VMRemoteFx3dVideoAdapter.md)
-{{Manually Enter Remove-VMRemoteFx3dVideoAdapter Description Here}}
+### [Remove-VMRemoteFx3dVideoAdapter](./Remove-VMRemoteFx3dVideoAdapter.md)
+Removes a RemoteFX 3D video adapter from a virtual machine.
 
-### [Remove-VMReplicationAuthorizationEntry](Remove-VMReplicationAuthorizationEntry.md)
-{{Manually Enter Remove-VMReplicationAuthorizationEntry Description Here}}
+### [Remove-VMReplicationAuthorizationEntry](./Remove-VMReplicationAuthorizationEntry.md)
+Removes an authorization entry from a Replica server.
 
-### [Remove-VMReplication](Remove-VMReplication.md)
-{{Manually Enter Remove-VMReplication Description Here}}
+### [Remove-VMReplication](./Remove-VMReplication.md)
+Removes the replication relationship of a virtual machine.
 
-### [Remove-VMResourcePool](Remove-VMResourcePool.md)
-{{Manually Enter Remove-VMResourcePool Description Here}}
+### [Remove-VMResourcePool](./Remove-VMResourcePool.md)
+Deletes a resource pool from one or more virtual machine hosts.
 
-### [Remove-VMSan](Remove-VMSan.md)
-{{Manually Enter Remove-VMSan Description Here}}
+### [Remove-VMSan](./Remove-VMSan.md)
+Removes a virtual storage area network (SAN) from a Hyper-V host.
 
-### [Remove-VMSavedState](Remove-VMSavedState.md)
-{{Manually Enter Remove-VMSavedState Description Here}}
+### [Remove-VMSavedState](./Remove-VMSavedState.md)
+Deletes the saved state of a saved virtual machine.
 
-### [Remove-VMScsiController](Remove-VMScsiController.md)
-{{Manually Enter Remove-VMScsiController Description Here}}
+### [Remove-VMScsiController](./Remove-VMScsiController.md)
+Removes a SCSI controller from a virtual machine.
 
-### [Remove-VMSnapshot](Remove-VMSnapshot.md)
-{{Manually Enter Remove-VMSnapshot Description Here}}
+### [Remove-VMSnapshot](./Remove-VMSnapshot.md)
+Deletes a virtual machine checkpoint.
 
-### [Remove-VMStoragePath](Remove-VMStoragePath.md)
-{{Manually Enter Remove-VMStoragePath Description Here}}
+### [Remove-VMStoragePath](./Remove-VMStoragePath.md)
+Removes a path from a storage resource pool.
 
-### [Remove-VMSwitchExtensionPortFeature](Remove-VMSwitchExtensionPortFeature.md)
-{{Manually Enter Remove-VMSwitchExtensionPortFeature Description Here}}
+### [Remove-VMSwitchExtensionPortFeature](./Remove-VMSwitchExtensionPortFeature.md)
+Removes a feature from a virtual network adapter.
 
-### [Remove-VMSwitchExtensionSwitchFeature](Remove-VMSwitchExtensionSwitchFeature.md)
-{{Manually Enter Remove-VMSwitchExtensionSwitchFeature Description Here}}
+### [Remove-VMSwitchExtensionSwitchFeature](./Remove-VMSwitchExtensionSwitchFeature.md)
+Removes a feature from a virtual switch.
 
-### [Remove-VMSwitch](Remove-VMSwitch.md)
-{{Manually Enter Remove-VMSwitch Description Here}}
+### [Remove-VMSwitch](./Remove-VMSwitch.md)
+Deletes a virtual switch.
 
-### [Remove-VM](Remove-VM.md)
-{{Manually Enter Remove-VM Description Here}}
+### [Remove-VM](./Remove-VM.md)
+Deletes a virtual machine.
 
-### [Rename-VMNetworkAdapter](Rename-VMNetworkAdapter.md)
-{{Manually Enter Rename-VMNetworkAdapter Description Here}}
+### [Rename-VMNetworkAdapter](./Rename-VMNetworkAdapter.md)
+Renames a virtual network adapter on a virtual machine or on the management operating system.
 
-### [Rename-VMResourcePool](Rename-VMResourcePool.md)
-{{Manually Enter Rename-VMResourcePool Description Here}}
+### [Rename-VMResourcePool](./Rename-VMResourcePool.md)
+Renames a resource pool on one or more Hyper-V hosts.
 
-### [Rename-VMSan](Rename-VMSan.md)
-{{Manually Enter Rename-VMSan Description Here}}
+### [Rename-VMSan](./Rename-VMSan.md)
+Renames a virtual storage area network (SAN).
 
-### [Rename-VMSnapshot](Rename-VMSnapshot.md)
-{{Manually Enter Rename-VMSnapshot Description Here}}
+### [Rename-VMSnapshot](./Rename-VMSnapshot.md)
+Renames a virtual machine checkpoint.
 
-### [Rename-VMSwitch](Rename-VMSwitch.md)
-{{Manually Enter Rename-VMSwitch Description Here}}
+### [Rename-VMSwitch](./Rename-VMSwitch.md)
+Renames a virtual switch.
 
-### [Rename-VM](Rename-VM.md)
-{{Manually Enter Rename-VM Description Here}}
+### [Rename-VM](./Rename-VM.md)
+Renames a virtual machine.
 
-### [Repair-VM](Repair-VM.md)
-{{Manually Enter Repair-VM Description Here}}
+### [Repair-VM](./Repair-VM.md)
+Repairs one or more virtual machines.
 
-### [Reset-VMReplicationStatistics](Reset-VMReplicationStatistics.md)
-{{Manually Enter Reset-VMReplicationStatistics Description Here}}
+### [Reset-VMReplicationStatistics](./Reset-VMReplicationStatistics.md)
+Resets the replication statistics of a virtual machine.
 
-### [Reset-VMResourceMetering](Reset-VMResourceMetering.md)
-{{Manually Enter Reset-VMResourceMetering Description Here}}
+### [Reset-VMResourceMetering](./Reset-VMResourceMetering.md)
+Resets the resource utilization data collected by Hyper-V resource metering.
 
-### [Resize-VHD](Resize-VHD.md)
-{{Manually Enter Resize-VHD Description Here}}
+### [Resize-VHD](./Resize-VHD.md)
+Resizes a virtual hard disk.
 
-### [Restart-VM](Restart-VM.md)
-{{Manually Enter Restart-VM Description Here}}
+### [Restart-VM](./Restart-VM.md)
+Restarts a virtual machine.
 
-### [Restore-VMSnapshot](Restore-VMSnapshot.md)
-{{Manually Enter Restore-VMSnapshot Description Here}}
+### [Restore-VMSnapshot](./Restore-VMSnapshot.md)
+Restores a virtual machine checkpoint.
 
-### [Resume-VMReplication](Resume-VMReplication.md)
-{{Manually Enter Resume-VMReplication Description Here}}
+### [Resume-VMReplication](./Resume-VMReplication.md)
+Resumes a virtual machine replication that is in a Paused, Error, Resynchronization Required, or Suspended state.
 
-### [Resume-VM](Resume-VM.md)
-{{Manually Enter Resume-VM Description Here}}
+### [Resume-VM](./Resume-VM.md)
+Resumes a suspended (paused) virtual machine.
 
-### [Revoke-VMConnectAccess](Revoke-VMConnectAccess.md)
-{{Manually Enter Revoke-VMConnectAccess Description Here}}
+### [Revoke-VMConnectAccess](./Revoke-VMConnectAccess.md)
+Revokes access for one or more users to connect to one or more virtual machines.
 
-### [Save-VM](Save-VM.md)
-{{Manually Enter Save-VM Description Here}}
+### [Save-VM](./Save-VM.md)
+Saves a virtual machine.
 
-### [Set-VHD](Set-VHD.md)
-{{Manually Enter Set-VHD Description Here}}
+### [Set-VHD](./Set-VHD.md)
+Set properties associated with a virtual hard disk.
 
-### [Set-VMBios](Set-VMBios.md)
-{{Manually Enter Set-VMBios Description Here}}
+### [Set-VMBios](./Set-VMBios.md)
+Configures the BIOS of a Generation 1 virtual machine.
 
-### [Set-VMComPort](Set-VMComPort.md)
-{{Manually Enter Set-VMComPort Description Here}}
+### [Set-VMComPort](./Set-VMComPort.md)
+Configures the COM port of a virtual machine.
 
-### [Set-VMDvdDrive](Set-VMDvdDrive.md)
-{{Manually Enter Set-VMDvdDrive Description Here}}
+### [Set-VMDvdDrive](./Set-VMDvdDrive.md)
+Configures a virtual DVD drive.
 
-### [Set-VMFibreChannelHba](Set-VMFibreChannelHba.md)
-{{Manually Enter Set-VMFibreChannelHba Description Here}}
+### [Set-VMFibreChannelHba](./Set-VMFibreChannelHba.md)
+Configures a Fibre Channel host bus adapter on a virtual machine.
 
-### [Set-VMFloppyDiskDrive](Set-VMFloppyDiskDrive.md)
-{{Manually Enter Set-VMFloppyDiskDrive Description Here}}
+### [Set-VMFloppyDiskDrive](./Set-VMFloppyDiskDrive.md)
+Configures a virtual floppy disk drive.
 
-### [Set-VMHardDiskDrive](Set-VMHardDiskDrive.md)
-{{Manually Enter Set-VMHardDiskDrive Description Here}}
+### [Set-VMHardDiskDrive](./Set-VMHardDiskDrive.md)
+Configures a virtual hard disk.
 
-### [Set-VMHost](Set-VMHost.md)
-{{Manually Enter Set-VMHost Description Here}}
+### [Set-VMHost](./Set-VMHost.md)
+Configures a Hyper-V host.
 
-### [Set-VMMemory](Set-VMMemory.md)
-{{Manually Enter Set-VMMemory Description Here}}
+### [Set-VMMemory](./Set-VMMemory.md)
+Configures the memory of a virtual machine.
 
-### [Set-VMMigrationNetwork](Set-VMMigrationNetwork.md)
-{{Manually Enter Set-VMMigrationNetwork Description Here}}
+### [Set-VMMigrationNetwork](./Set-VMMigrationNetwork.md)
+Sets the subnet, subnet mask, and/or priority of a migration network.
 
-### [Set-VMNetworkAdapterFailoverConfiguration](Set-VMNetworkAdapterFailoverConfiguration.md)
-{{Manually Enter Set-VMNetworkAdapterFailoverConfiguration Description Here}}
+### [Set-VMNetworkAdapterFailoverConfiguration](./Set-VMNetworkAdapterFailoverConfiguration.md)
+Configures the IP address of a virtual network adapter to be used when a virtual machine fails over.
 
-### [Set-VMNetworkAdapterVlan](Set-VMNetworkAdapterVlan.md)
-{{Manually Enter Set-VMNetworkAdapterVlan Description Here}}
+### [Set-VMNetworkAdapterVlan](./Set-VMNetworkAdapterVlan.md)
+Configures the virtual LAN settings for the traffic through a virtual network adapter.
 
-### [Set-VMNetworkAdapter](Set-VMNetworkAdapter.md)
-{{Manually Enter Set-VMNetworkAdapter Description Here}}
+### [Set-VMNetworkAdapter](./Set-VMNetworkAdapter.md)
+Configures features of the virtual network adapter in a virtual machine or the management operating system.
 
-### [Set-VMProcessor](Set-VMProcessor.md)
-{{Manually Enter Set-VMProcessor Description Here}}
+### [Set-VMProcessor](./Set-VMProcessor.md)
+Configures one or more processors of a virtual machine.
 
-### [Set-VMRemoteFx3dVideoAdapter](Set-VMRemoteFx3dVideoAdapter.md)
-{{Manually Enter Set-VMRemoteFx3dVideoAdapter Description Here}}
+### [Set-VMRemoteFx3dVideoAdapter](./Set-VMRemoteFx3dVideoAdapter.md)
+Configures the RemoteFX 3D video adapter of a virtual machine.
 
-### [Set-VMReplicationAuthorizationEntry](Set-VMReplicationAuthorizationEntry.md)
-{{Manually Enter Set-VMReplicationAuthorizationEntry Description Here}}
+### [Set-VMReplicationAuthorizationEntry](./Set-VMReplicationAuthorizationEntry.md)
+Modifies an authorization entry on a Replica server.
 
-### [Set-VMReplicationServer](Set-VMReplicationServer.md)
-{{Manually Enter Set-VMReplicationServer Description Here}}
+### [Set-VMReplicationServer](./Set-VMReplicationServer.md)
+Configures a host as a Replica server.
 
-### [Set-VMReplication](Set-VMReplication.md)
-{{Manually Enter Set-VMReplication Description Here}}
+### [Set-VMReplication](./Set-VMReplication.md)
+Modifies the replication settings of a virtual machine.
 
-### [Set-VMResourcePool](Set-VMResourcePool.md)
-{{Manually Enter Set-VMResourcePool Description Here}}
+### [Set-VMResourcePool](./Set-VMResourcePool.md)
+Sets the parent resource pool for a selected resource pool.
 
-### [Set-VMSan](Set-VMSan.md)
-{{Manually Enter Set-VMSan Description Here}}
+### [Set-VMSan](./Set-VMSan.md)
+Configures a virtual storage area network (SAN) on one or more Hyper-V hosts.
 
-### [Set-VMSwitchExtensionPortFeature](Set-VMSwitchExtensionPortFeature.md)
-{{Manually Enter Set-VMSwitchExtensionPortFeature Description Here}}
+### [Set-VMSwitchExtensionPortFeature](./Set-VMSwitchExtensionPortFeature.md)
+Configures a feature on a virtual network adapter.
 
-### [Set-VMSwitchExtensionSwitchFeature](Set-VMSwitchExtensionSwitchFeature.md)
-{{Manually Enter Set-VMSwitchExtensionSwitchFeature Description Here}}
+### [Set-VMSwitchExtensionSwitchFeature](./Set-VMSwitchExtensionSwitchFeature.md)
+Configures a feature on a virtual switch.
 
-### [Set-VMSwitch](Set-VMSwitch.md)
-{{Manually Enter Set-VMSwitch Description Here}}
+### [Set-VMSwitch](./Set-VMSwitch.md)
+Configures a virtual switch.
 
-### [Set-VM](Set-VM.md)
-{{Manually Enter Set-VM Description Here}}
+### [Set-VM](./Set-VM.md)
+Configures a virtual machine.
 
-### [Start-VMFailover](Start-VMFailover.md)
-{{Manually Enter Start-VMFailover Description Here}}
+### [Start-VMFailover](./Start-VMFailover.md)
+Starts failover on a virtual machine.
 
-### [Start-VMInitialReplication](Start-VMInitialReplication.md)
-{{Manually Enter Start-VMInitialReplication Description Here}}
+### [Start-VMInitialReplication](./Start-VMInitialReplication.md)
+Starts replication of a virtual machine.
 
-### [Start-VM](Start-VM.md)
-{{Manually Enter Start-VM Description Here}}
+### [Start-VM](./Start-VM.md)
+Starts a virtual machine.
 
-### [Stop-VMFailover](Stop-VMFailover.md)
-{{Manually Enter Stop-VMFailover Description Here}}
+### [Stop-VMFailover](./Stop-VMFailover.md)
+Stops failover of a virtual machine.
 
-### [Stop-VMInitialReplication](Stop-VMInitialReplication.md)
-{{Manually Enter Stop-VMInitialReplication Description Here}}
+### [Stop-VMInitialReplication](./Stop-VMInitialReplication.md)
+Stops an ongoing initial replication.
 
-### [Stop-VMReplication](Stop-VMReplication.md)
-{{Manually Enter Stop-VMReplication Description Here}}
+### [Stop-VMReplication](./Stop-VMReplication.md)
+Cancels an ongoing virtual machine resynchronization.
 
-### [Stop-VM](Stop-VM.md)
-{{Manually Enter Stop-VM Description Here}}
+### [Stop-VM](./Stop-VM.md)
+Shuts down, turns off, or saves a virtual machine.
 
-### [Suspend-VMReplication](Suspend-VMReplication.md)
-{{Manually Enter Suspend-VMReplication Description Here}}
+### [Suspend-VMReplication](./Suspend-VMReplication.md)
+Suspends replication of a virtual machine.
 
-### [Suspend-VM](Suspend-VM.md)
-{{Manually Enter Suspend-VM Description Here}}
+### [Suspend-VM](./Suspend-VM.md)
+Suspends or pauses a virtual machine.
 
-### [Test-VHD](Test-VHD.md)
-{{Manually Enter Test-VHD Description Here}}
+### [Test-VHD](./Test-VHD.md)
+Tests a virtual hard disk for any problems that would make it unusable.
 
-### [Test-VMReplicationConnection](Test-VMReplicationConnection.md)
-{{Manually Enter Test-VMReplicationConnection Description Here}}
-
+### [Test-VMReplicationConnection](./Test-VMReplicationConnection.md)
+Tests the connection between a primary server and a Replica server.

@@ -44,7 +44,7 @@ Using this cmdlet may result in loss of data if the client for which session is 
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: End an SMB session
 ```
 PS C:\>Close-SmbSession -SessionId 8813272891621
 Confirm 
@@ -53,14 +53,14 @@ Performing operation 'Close-Session' on Target '8813272891621'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
 ```
 
-This example ends the SMB session.
+This command ends an SMB session.
 
-### EXAMPLE 2
+### Example 2: End an SMB session without confirmation
 ```
 PS C:\>Close-SmbSession -SessionId 8813272891621 -Force
 ```
 
-This example ends the SMB session without user confirmation.
+This command ends an SMB session without user confirmation.
 
 ## PARAMETERS
 
@@ -234,13 +234,14 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

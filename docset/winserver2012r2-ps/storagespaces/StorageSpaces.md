@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 
 # StorageSpaces Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Storage Spaces-specific cmdlets. 
 
 ## StorageSpaces Cmdlets
 ### [Disable-StorageSpacesMpioSupport](./Disable-StorageSpacesMpioSupport.md)

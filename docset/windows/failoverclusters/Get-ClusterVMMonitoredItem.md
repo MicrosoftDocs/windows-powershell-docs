@@ -13,101 +13,57 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Remove-ClusterVMMonitoredItem
+title: Get-ClusterVMMonitoredItem
 ms.reviewer:
-ms.assetid: AF287F10-AB05-4217-9C72-AC4D2A851DCA
+ms.assetid: B2157CE4-2A94-4536-BA4A-22A79B2D7C6E
 ---
 
-# Remove-ClusterVMMonitoredItem
+# Get-ClusterVMMonitoredItem
 
 ## SYNOPSIS
-Removes monitoring of a service or event that is currently being monitored on a virtual machine.
+Gets the list of services and events currently being monitored in the virtual machine.
 
 ## SYNTAX
 
 ### VirtualMachine (Default)
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [[-VirtualMachine] <String>] [-Wait <Int32>] [-Cluster <String>]
+Get-ClusterVMMonitoredItem [[-VirtualMachine] <String>] [-Wait <Int32>] [-Cluster <String>]
  [<CommonParameters>]
 ```
 
 ### VMId
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
- [<CommonParameters>]
+Get-ClusterVMMonitoredItem [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>] [<CommonParameters>]
+```
+
+### InputObject
+```
+Get-ClusterVMMonitoredItem [-Wait <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is currently being monitored.
-After removal, if the service fails or the event occurs, the system will no longer take an action, such as restarting the virtual machine.
+The **Get-ClusterVMMonitoredItem** cmdlet gets the list of services and events currently being monitored in the virtual machine.
+If one of those services fails or one of the events occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
+For example, the configuration might specify that the virtual machine be restarted.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+PS C:\> Get-Cluster -Name Cluster1 | Get-ClusterVMMonitoredItem -VirtualMachine vm1
+Name 
+---- 
+Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708 
+Spooler
 ```
 
-This example removes all of the items being monitored on the virtual machine named VM1.
-
-### Example 2
-```
-PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
-```
-
-This example removes monitoring on the print spooler service on the virtual machine named VM1.
+This example returns the services and events being monitored in the virtual machine named vm1 on the cluster named Cluster1.
 
 ## PARAMETERS
 
 ### -Cluster
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventId
-
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventLog
-
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EventSource
-
+Specifies the name of the cluster on which to run this cmdlet.
+If the input for this parameter is `.` or it is omitted, then the cmdlet runs on the local cluster.
 
 ```yaml
 Type: String
@@ -122,11 +78,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-
+Specifies the cluster on which to run the cmdlet or the clustered virtual machine for which to retrieve the clustered virtual machine monitored item object.
 
 ```yaml
 Type: PSObject
-Parameter Sets: (All)
+Parameter Sets: InputObject
 Aliases: 
 
 Required: False
@@ -136,23 +92,8 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Service
-
-
-```yaml
-Type: StringCollection
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -VMId
-
+Specifies the virtual machine identifier (ID).
 
 ```yaml
 Type: Guid
@@ -167,7 +108,8 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-
+Specifies the name of the clustered virtual machine on which to perform monitoring.
+When this parameter is specified, the cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
 
 ```yaml
 Type: String
@@ -182,7 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-
+Specifies the time in seconds to wait for the cmdlet.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
+If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml
 Type: Int32
@@ -207,11 +151,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.FailoverClusters.PowerShell.ClusterResource
 
-### Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem
-
 ## OUTPUTS
 
-### None
+### Microsoft.FailoverClusters.PowerShell.ClusterVMMonitoredItem
 
 ## NOTES
 
@@ -219,7 +161,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Add-ClusterVMMonitoredItem](./Add-ClusterVMMonitoredItem.md)
 
-[Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
+[Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
 

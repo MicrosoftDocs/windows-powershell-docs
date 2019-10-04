@@ -13,7 +13,7 @@ author: andreabarr
 
 # ServerManager Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Server Manager-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## ServerManager Cmdlets
 ### [Disable-ServerManagerStandardUserRemoting](./Disable-ServerManagerStandardUserRemoting.md)

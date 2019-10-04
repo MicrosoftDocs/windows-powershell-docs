@@ -36,7 +36,7 @@ The **Get-SMBOpenFile** cmdlet retrieves basic information about the files that 
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get information about opened files
 ```
 PS C:\>Get-SMBOpenFile
 FileId              SessionId           Path                ShareRelativePath   ClientComputerName  ClientUserName 
@@ -73,9 +73,9 @@ FileId              SessionId           Path                ShareRelativePath   
 8813541328529       8813272891613       C:\ClusterStorag... VM3.VHDX            192.168.101.13      Contoso\Contoso-HV1$
 ```
 
-This example retrieves basic information about the files that are open on behalf of the clients of the SMB server.
+This command retrieves basic information about the files that are open on behalf of the clients of the SMB server.
 
-### EXAMPLE 2
+### Example 2: Get information about an opened file
 ```
 PS C:\>Get-SmbOpenFile -FileId 4415226383569 | Select-Object -Property *
 ClientComputerName    : 192.168.102.14 
@@ -96,9 +96,9 @@ CimInstanceProperties : {ClientComputerName, ClientUserName, ClusterNodeName, Co
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This example retrieves all of information about the file identified as 4415226383569 that is open on behalf of the clients of the SMB server.
+This command retrieves all information about the file identified as 4415226383569 that is open on behalf of the clients of the SMB server.
 
-### EXAMPLE 3
+### Example 3: Get information about a file opened for an SMB client
 ```
 PS C:\>Get-SmbOpenFile -SessionId 4415226380393
 FileId              SessionId           Path                ShareRelativePath   ClientComputerName  ClientUserName 
@@ -110,11 +110,11 @@ FileId              SessionId           Path                ShareRelativePath   
 4415226383589       4415226380393       C:\ClusterStorag... VM4.VHDX            192.168.102.14      Contoso\Contoso-HV2$
 ```
 
-This example retrieves basic information about the files that are open on behalf of the SMB client identified as 4415226380393of the SMB server.
+This command retrieves basic information about the files that are open on behalf of the SMB client identified as 4415226380393 of the SMB server.
 
-### EXAMPLE 4
+### Example 4: Get information about a file opened for an SMB client on an SMB server
 ```
-PS C:\>Get-SmbOpenFile -ScopeName Contoso-SO
+PS C:\>Get-SmbOpenFile -ScopeName "Contoso-SO"
 FileId              SessionId           Path                ShareRelativePath   ClientComputerName  ClientUserName 
 ------              ---------           ----                -----------------   ------------------  -------------- 
 4415226382229       4415226380377       C:\ClusterStorag... VM4\Virtual Mach... 192.168.102.14      Contoso\Contoso-HV2$ 
@@ -130,9 +130,9 @@ FileId              SessionId           Path                ShareRelativePath   
 8813541328529       8813272891613       C:\ClusterStorag... VM3.VHDX            192.168.101.13      Contoso\Contoso-HV1$
 ```
 
-This example retrieves basic information about the files that are open on behalf of the SMB client of the SMB server named Contoso-SO.
+This command retrieves basic information about the files that are open on behalf of the SMB client of the SMB server named Contoso-SO.
 
-### EXAMPLE 5
+### Example 5: Get information about files that have a specified file name extension
 ```
 PS C:\>Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match ".VHDX"
 FileId              SessionId           Path                ShareRelativePath   ClientComputerName  ClientUserName 
@@ -147,7 +147,7 @@ FileId              SessionId           Path                ShareRelativePath   
 8813541328529       8813272891613       C:\ClusterStorag... VM3.VHDX            192.168.101.13      Contoso\Contoso-HV1$
 ```
 
-This example retrieves basic information about the files with the file extension of .VHDX that are open on behalf of the SMB client of the SMB server.
+This command retrieves basic information about the files that have the file name extension of .VHDX that are open on behalf of the SMB client of the SMB server.
 
 ## PARAMETERS
 
@@ -291,7 +291,8 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance

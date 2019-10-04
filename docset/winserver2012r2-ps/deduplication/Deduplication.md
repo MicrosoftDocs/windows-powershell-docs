@@ -20,7 +20,7 @@ ms.assetid: 72144cf9-f9f5-43b3-be84-5c959089c28f
 
 # Deduplication Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Data Deduplication-specific cmdlets. 
+This reference provides cmdlet descriptions and syntax for all Windows Server Data Deduplication-specific cmdlets. 
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Deduplication Cmdlets

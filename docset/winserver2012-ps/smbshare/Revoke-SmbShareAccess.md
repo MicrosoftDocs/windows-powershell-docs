@@ -16,13 +16,13 @@ Removes all of the allow access control entries (ACEs) for a trustee from the se
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Revoke-SmbShareAccess [-Name] <String[]> [[-ScopeName] <String[]>] [-AccountName <String[]>] [-AsJob]
  [-CimSession <CimSession[]>] [-Force] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Revoke-SmbShareAccess [-AccountName <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
  [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
@@ -168,6 +168,23 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: Query
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

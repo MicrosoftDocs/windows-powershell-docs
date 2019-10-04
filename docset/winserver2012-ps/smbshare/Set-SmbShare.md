@@ -16,7 +16,7 @@ Modifies the properties of the Server Message Block (SMB) share.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Set-SmbShare [-AsJob] [-CachingMode <CachingMode>] [-CATimeout <UInt32>] [-CimSession <CimSession[]>]
  [-ConcurrentUserLimit <UInt32>] [-ContinuouslyAvailable <Boolean>] [-Description <String>]
@@ -24,7 +24,7 @@ Set-SmbShare [-AsJob] [-CachingMode <CachingMode>] [-CATimeout <UInt32>] [-CimSe
  [-SecurityDescriptor <String>] [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Set-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-AsJob] [-CachingMode <CachingMode>]
  [-CATimeout <UInt32>] [-CimSession <CimSession[]>] [-ConcurrentUserLimit <UInt32>]

@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -Flags
-{{Fill Flags Description}}
+Specifies an array of flags.
 
 ```yaml
 Type: Flags[]

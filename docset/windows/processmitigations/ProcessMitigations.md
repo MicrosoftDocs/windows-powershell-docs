@@ -7,6 +7,7 @@ author: andreabarr
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=845399
 Help Version: 5.0.0.1
 Locale: en-US
+title: ProcessMitigations
 ---
 
 # ProcessMitigations Module

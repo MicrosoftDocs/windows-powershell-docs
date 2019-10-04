@@ -116,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreationTime
-{{Fill CreationTime Description}}
+Specifies an array of **DateTime** objects.
+To get a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
 Type: DateTime[]
@@ -163,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -OffloadState
-{{Fill OffloadState Description}}
+Specifies the offload state of a TCP connection.
 
 ```yaml
 Type: OffloadState[]
@@ -179,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwningProcess
-{{Fill OwningProcess Description}}
+Specifies the PID of the owning process of a TCP connection.
 
 ```yaml
 Type: UInt32[]

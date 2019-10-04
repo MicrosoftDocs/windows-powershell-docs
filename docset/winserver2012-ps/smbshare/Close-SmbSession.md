@@ -16,13 +16,13 @@ Forcibly ends the Server Message Block (SMB) session.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Close-SmbSession [-AsJob] [-CimSession <CimSession[]>] [-Force] [-PassThru] [-ThrottleLimit <Int32>]
  -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Close-SmbSession [[-SessionId] <UInt64[]>] [-AsJob] [-CimSession <CimSession[]>]
  [-ClientComputerName <String[]>] [-ClientUserName <String[]>] [-ClusterNodeName <String[]>] [-Force]
@@ -35,7 +35,7 @@ Using this cmdlet may result in loss of data if the client for which session is 
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: End an SMB session
 ```
 PS C:\>Close-SmbSession -SessionId 8813272891621
 Confirm 
@@ -44,14 +44,14 @@ Performing operation 'Close-Session' on Target '8813272891621'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
 ```
 
-This example ends the SMB session.
+This command ends an SMB session.
 
-### EXAMPLE 2
+### Example 2: End an SMB session without confirmation
 ```
 PS C:\>Close-SmbSession -SessionId 8813272891621 -Force
 ```
 
-This example ends the SMB session without user confirmation.
+This command ends an SMB session without user confirmation.
 
 ## PARAMETERS
 
@@ -204,6 +204,23 @@ Aliases:
 
 Required: False
 Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: Query
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

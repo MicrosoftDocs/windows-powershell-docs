@@ -16,13 +16,13 @@ Removes all of the deny access control entries (ACEs) for the trustee from the s
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Unblock-SmbShareAccess [-Name] <String[]> [[-ScopeName] <String[]>] [-AccountName <String[]>] [-AsJob]
  [-CimSession <CimSession[]>] [-Force] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Unblock-SmbShareAccess [-AccountName <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
  [-ThrottleLimit <Int32>] -InputObject <CimInstance[]> [-Confirm] [-WhatIf]

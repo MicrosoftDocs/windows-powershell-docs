@@ -52,7 +52,7 @@ You must provide a read-only domain controller.
 The *AllowedList* parameters specify the users, computers and groups to remove from the allowed list.
 Similarly, the *DeniedList* parameter specifies the users, computers and groups to remove from the denied list.
 You must specify either one or both of the *AllowedList* and *DeniedList* parameters.
-You can identify a user, computer or group by distinguished name, GUID, security identifier (SID) or security accounts manager (SAM) account name.
+You can identify a user, computer or group by distinguished name (DN), GUID, security identifier (SID) or security accounts manager (SAM) account name.
 You can also specify user, computer or group variables, such as `$<localUserObject>`.
 If you are specifying more than one item, use a comma-separated list.
 

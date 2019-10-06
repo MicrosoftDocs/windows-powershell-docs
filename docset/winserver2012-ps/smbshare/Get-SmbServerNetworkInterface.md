@@ -17,8 +17,7 @@ Retrieves the network interfaces used by the Server Message Block (SMB) server.
 ## SYNTAX
 
 ```
-Get-SmbServerNetworkInterface [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+Get-SmbServerNetworkInterface [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
 ```
 
 ## DESCRIPTION
@@ -26,7 +25,7 @@ The **Get-SmbServerNetworkInterface** cmdlet retrieves the network interfaces us
 
 ## EXAMPLES
 
-### Example 1: Get network interfaces
+### EXAMPLE 1
 ```
 PS C:\>Get-SmbServerNetworkInterface
 Scope Name          Interface Index     RSS Capable         RDMA Capable        Speed               IpAddress 
@@ -47,9 +46,9 @@ Contoso-SO          12                  True                True                
 FE80::C8C0:F65D:... 13                  False               False               1 Gbps              172.30.182.8
 ```
 
-This command retrieves the network interfaces that are used by the SMB server.
+This example retrieves the network interfaces used by the SMB server.
 
-### Example 2: Get network interfaces that match a property
+### EXAMPLE 2
 ```
 PS C:\>Get-SmbServerNetworkInterface | Where-Object -Property LinkSpeed -Gt 10GB
 Scope Name          Interface Index     RSS Capable         RDMA Capable        Speed               IpAddress 
@@ -64,9 +63,9 @@ Contoso-SO          15                  True                True                
 Contoso-SO          12                  True                True                32 Gbps             192.168.101.11
 ```
 
-This command retrieves the network interfaces that are used by the SMB server that have the link speed of 10 gigabits or faster.
+This example retrieves the network interfaces used by the SMB server with the link speed of 10 gigabits or faster.
 
-### Example 3: Get network interfaces for a specific server
+### EXAMPLE 3
 ```
 PS C:\>Get-SmbServerNetworkInterface | Where-Object -Property ScopeName -Eq Contoso-FS
 Scope Name          Interface Index     RSS Capable         RDMA Capable        Speed               IpAddress 
@@ -76,9 +75,9 @@ Contoso-FS          12                  True                True                
 Contoso-FS          15                  True                True                32 Gbps             192.168.102.22
 ```
 
-This command retrieves the network interfaces that are used by the SMB server named Contoso-FS.
+This example retrieves the network interfaces used by the SMB server named Contoso-FS.
 
-### Example 4: Get properties of network interfaces of an SMB server
+### EXAMPLE 4
 ```
 PS C:\>Get-SmbServerNetworkInterface | Where-Object -Property ScopeName -Eq Contoso-FS | Select-Object -Property *
 FriendlyName          : Internal 
@@ -92,7 +91,7 @@ PSComputerName        :
 CimClass              : ROOT/Microsoft/Windows/SMB:MSFT_SmbServerNetworkInterface 
 CimInstanceProperties : {FriendlyName, InterfaceIndex, IpAddress, LinkSpeed...} 
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties 
-
+ 
 FriendlyName          : RDMA1 
 InterfaceIndex        : 12 
 IpAddress             : 192.168.101.22 
@@ -104,7 +103,7 @@ PSComputerName        :
 CimClass              : ROOT/Microsoft/Windows/SMB:MSFT_SmbServerNetworkInterface 
 CimInstanceProperties : {FriendlyName, InterfaceIndex, IpAddress, LinkSpeed...} 
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties 
-
+ 
 FriendlyName          : RDMA2 
 InterfaceIndex        : 15 
 IpAddress             : 192.168.102.22 
@@ -118,7 +117,7 @@ CimInstanceProperties : {FriendlyName, InterfaceIndex, IpAddress, LinkSpeed...}
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This command retrieves all properties of the network interfaces that are used by the SMB server named Contoso-FS.
+This example retrieves all of the network interfaces used by the SMB server named Contoso-FS.
 
 ## PARAMETERS
 

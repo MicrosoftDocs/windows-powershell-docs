@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519072
 Help Version: 5.0.0.3
 Locale: en-US
-title: HgsServer
 ---
 
 # HgsServer Module

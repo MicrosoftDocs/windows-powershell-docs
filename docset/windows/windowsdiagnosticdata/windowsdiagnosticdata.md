@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: https://go.microsoft.com/fwlink/?linkid=2028917
 Help Version: 1.0.0.0
 Locale: en-US
-title: WindowsDiagnosticData
 ---
 
 # WindowsDiagnosticData Module

@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableInsecureGuestLogons
-Indicates whether SMB client will allow insecure guest logons to an SMB server.
+{{Fill EnableInsecureGuestLogons Description}}
 
 ```yaml
 Type: Boolean

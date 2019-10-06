@@ -12,7 +12,7 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Provisioning 
+title: Install-TrustedProvisioningCertificate
 ms.reviewer:
 Module Name: provisioning
 Module Guid: 1323f046-a4bd-47df-a8bc-8253eabc49b2
@@ -21,7 +21,7 @@ Help Version: 1.0.0.0
 Locale: en-US
 ---
 
-# Provisioning Module
+# provisioning Module
 ## Description
 {{Manually Enter Description Here}}
 

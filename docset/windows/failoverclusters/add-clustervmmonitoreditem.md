@@ -13,51 +13,65 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Remove-ClusterVMMonitoredItem
+title: Add-ClusterVMMonitoredItem
 ms.reviewer:
-ms.assetid: AF287F10-AB05-4217-9C72-AC4D2A851DCA
+ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
 ---
 
-# Remove-ClusterVMMonitoredItem
+# Add-ClusterVMMonitoredItem
 
 ## SYNOPSIS
-Removes monitoring of a service or event that is currently being monitored on a virtual machine.
+Configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
 
 ## SYNTAX
 
 ### VirtualMachine (Default)
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [[-VirtualMachine] <String>] [-Wait <Int32>] [-Cluster <String>]
- [<CommonParameters>]
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [[-VirtualMachine] <String>] [-Wait <Int32>]
+ [-Cluster <String>] [<CommonParameters>]
 ```
 
 ### VMId
 ```
-Remove-ClusterVMMonitoredItem [-InputObject <PSObject>] [-Service <StringCollection>] [-EventLog <String>]
- [-EventSource <String>] [-EventId <Int32>] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-VMId <Guid>] [-Wait <Int32>] [-Cluster <String>]
  [<CommonParameters>]
 ```
 
+### InputObject
+```
+Add-ClusterVMMonitoredItem [-Service <StringCollection>] [-EventLog <String>] [-EventSource <String>]
+ [-EventId <Int32>] [-OverrideServiceRecoveryActions] [-Wait <Int32>] [-InputObject <PSObject>]
+ [-Cluster <String>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The **Remove-ClusterVMMonitoredItem** cmdlet removes monitoring of a service or event that is currently being monitored.
-After removal, if the service fails or the event occurs, the system will no longer take an action, such as restarting the virtual machine.
+The **Add-ClusterVMMonitoredItem** cmdlet configures monitoring for a service or an Event Tracing for Windows (ETW) event so that it is monitored on a virtual machine.
+If the service fails or the event occurs, then the system responds by taking an action based on the failover configuration for the virtual machine resource.
+For example, the configuration might specify that the virtual machine be restarted.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> Get-ClusterVMMonitoredItem -VirtualMachine VM1 | Remove-ClusterVMMonitoredItem -VirtualMachine VM1
+PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -EventLog "Microsoft-Windows-FailoverClustering-Manager/Admin" -EventSource "Microsoft-Windows-FailoverClustering-Manager" -EventId 4708
+Name 
+---- 
+Microsoft-Windows-FailoverClustering-Manager+Admin,Microsoft-Windows-FailoverClustering-Manager,4708
 ```
 
-This example removes all of the items being monitored on the virtual machine named VM1.
+This example adds monitoring for the ETW event ID 4708.
 
 ### Example 2
 ```
-PS C:\> Remove-ClusterVMMonitoredItem -VirtualMachine VM1 -Service spooler
+PS C:\> Add-ClusterVMMonitoredItem -VirtualMachine test-VM11 -Service spooler
+Name 
+---- 
+Spooler
 ```
 
-This example removes monitoring on the print spooler service on the virtual machine named VM1.
+This example configures monitoring for the print spooler service.
 
 ## PARAMETERS
 
@@ -78,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventId
-Specifies the event identifier (ID) of the Event Tracing for Windows (ETW) event to be removed from monitoring.
+Specifies the event identifier (ID) of the event to be monitored.
 
 ```yaml
 Type: Int32
@@ -93,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventLog
-Specifies the event log of the event to be removed from monitoring.
+Specifies the event log of the event to be monitored.
 
 ```yaml
 Type: String
@@ -108,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -EventSource
-Specifies the event source of the event to be removed from monitoring.
+Specifies the event source of the event to be monitored.
 
 ```yaml
 Type: String
@@ -123,11 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the cluster on which to run the cmdlet, the clustered virtual machine from which to remove monitoring, or the clustered virtual machine monitored item to stop monitoring.
+Specifies the cluster on which to run the cmdlet, the clustered virtual machine on which to configure monitoring, and the cluster virtual machine monitored item object to monitor.
 
 ```yaml
 Type: PSObject
-Parameter Sets: (All)
+Parameter Sets: InputObject
 Aliases: 
 
 Required: False
@@ -137,8 +151,32 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -OverrideServiceRecoveryActions
+Specifies that the cluster service will fix, by overriding, the service recovery actions in the event that it is not properly configured for monitoring.
+To be configured for monitoring the following conditions need to be met: 
+
+- None of the service recovery actions are set to Restart the computer. 
+
+AND 
+
+- At least one of the service recovery actions are set to Take no action.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Service
-Specifies the name of the service to be removed from monitoring.
+Specifies the name of a service to be monitored.
+This must be the short name, not the long name, of the service.
+For example, specify clussvc instead of Failover Cluster service.
 
 ```yaml
 Type: StringCollection
@@ -153,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -VMId
-Specifies the virtual machine identifier (ID).
+
 
 ```yaml
 Type: Guid
@@ -168,8 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachine
-Specifies the name of the clustered virtual machine from which to remove monitoring.
-When this parameter is specified, this cmdlet must be run on one of the host cluster nodes, or else the **Cluster** parameter must also be specified.
+
 
 ```yaml
 Type: String
@@ -184,9 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -Wait
-Specifies the time in seconds to wait for the cmdlet.
-If the *Wait* parameter is not specified, then the cmdlet waits for completion.
-If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
+
 
 ```yaml
 Type: Int32
@@ -221,9 +256,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-ClusterVMMonitoredItem](./Add-ClusterVMMonitoredItem.md)
-
 [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
+
+[Remove-ClusterVMMonitoredItem](./Remove-ClusterVMMonitoredItem.md)
 
 [Reset-ClusterVMMonitoredState](./Reset-ClusterVMMonitoredState.md)
 

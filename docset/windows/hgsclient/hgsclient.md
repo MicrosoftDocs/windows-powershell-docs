@@ -7,7 +7,6 @@ author: andreabarr
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519076
 Help Version: 5.0.0.2
 Locale: en-US
-title: HgsClient
 ---
 
 # HgsClient Module

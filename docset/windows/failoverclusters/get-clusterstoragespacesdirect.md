@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Node
-Specifies the name of the cluster node from which to get storage spaces direct information.
+{{Fill Node Description}}
 
 ```yaml
 Type: String

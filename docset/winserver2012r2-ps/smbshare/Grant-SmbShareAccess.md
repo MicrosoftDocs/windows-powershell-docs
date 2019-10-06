@@ -43,14 +43,14 @@ The **Grant-SmbShareAccess** cmdlet adds an allow access control entry (ACE) for
 
 ## EXAMPLES
 
-### Example 1: Adds an allow ACE for a trustee
+### Example 1
 ```
-PS C:\>Grant-SmbShareAccess -Name "VMFiles" -AccountName "Contoso\Contoso-HV2$" -AccessRight Full
+PS C:\>Grant-SmbShareAccess -Name VMFiles -AccountName Contoso\Contoso-HV2$ -AccessRight Full
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Modify' on Target 'Contoso-SO,VMFiles'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
-
+ 
 Name                    ScopeName               AccountName             AccessControlType       AccessRight 
 ----                    ---------               -----------             -----------------       ----------- 
 VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full 
@@ -58,11 +58,12 @@ VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow   
 VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow                   Full
 ```
 
-This command adds an allow ACE for a trustee to the security descriptor of the SMB share named VMFiles for the account named Contoso\Contoso-HV2$.
+This example adds an allow ACE for a trustee to the security descriptor of the SMB share named VMFiles for the account named Contoso\Contoso-HV2$.
 
-### Example 2: Adds an allow ACE for a trustee without confirmation
+### Example 2
 ```
 PS C:\>Grant-SmbShareAccess -Name VMFiles -AccountName "Contoso\Domain Admins" -AccessRight Change -Force
+
 Name                    ScopeName               AccountName             AccessControlType       AccessRight 
 ----                    ---------               -----------             -----------------       ----------- 
 VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full 
@@ -71,7 +72,7 @@ VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow   
 VMFiles                 Contoso-SO              Contoso\Domain Admins   Allow                   Change
 ```
 
-This command adds an allow ACE for a trustee to the security descriptor of the SMB share named VMFiles for the account named Contoso\Contoso-HV2$ without user confirmation.
+This example adds an allow ACE for a trustee to the security descriptor of the SMB share named VMFiles for the account named Contoso\Contoso-HV2$ without user confirmation.
 
 ## PARAMETERS
 
@@ -217,14 +218,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+{{Fill SmbInstance Description}}
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
 Aliases: 
-Accepted values: Default, CSV, SBL, SR
+Accepted values: Default, CSV
 
 Required: False
 Position: Named

@@ -338,8 +338,7 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+{{Fill SmbInstance Description}}
 
 ```yaml
 Type: SmbInstance

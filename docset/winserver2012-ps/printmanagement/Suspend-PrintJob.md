@@ -16,19 +16,19 @@ Suspends a print job on the specified printer.
 
 ## SYNTAX
 
-### jobObject
+### UNNAMED_PARAMETER_SET_1
 ```
 Suspend-PrintJob [-PrinterName] <String> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
  [-ComputerName <String>] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### printerName
+### UNNAMED_PARAMETER_SET_2
 ```
 Suspend-PrintJob [-InputObject] <CimInstance> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
  [-Confirm] [-WhatIf]
 ```
 
-### printerObject
+### UNNAMED_PARAMETER_SET_3
 ```
 Suspend-PrintJob [-PrinterObject] <CimInstance> [-ID] <UInt32> [-AsJob] [-CimSession <CimSession>]
  [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 
 ### -ID
 Specifies the ID of the print job to suspend on the specified printer. 
-You cannot use wildcard characters.
+You can use wildcard characters.
 
 ```yaml
 Type: UInt32

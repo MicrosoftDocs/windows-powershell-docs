@@ -25,15 +25,15 @@ Get-DhcpServerv4FreeIPAddress [-ScopeId] <IPAddress> [[-NumAddress] <UInt32>] [-
 ## DESCRIPTION
 This **Get-DhcpServerv4FreeIPAddress** cmdlet gets one or more free IP Addresses from the specified scope.
 
-If the **NumAddress** parameter is specified, then the requested number of free IPv4 addresses are returned.
-If the **NumAddress** parameter is not specified, then a single free IP address will be returned.
+If the *NumAddress* parameter is specified, then the requested number of free IPv4 addresses are returned.
+If the *NumAddress* parameter is not specified, then a single free IP address will be returned.
 The maximum number of free IP addresses returned is capped at `1024`.
 
-If the **StartAddress** parameter is specified and the **EndAddress** parameter is not specified, then the free IP addresses starting from the specified **StartAddress** parameter value through the end of the IP address range of the scope are returned.
+If the *StartAddress* parameter is specified and the *EndAddress* parameter is not specified, then the free IP addresses starting from the specified *StartAddress* parameter value through the end of the IP address range of the scope are returned.
 
-If the **EndAddress** parameter is specified and the **StartAddress** parameter is not specified, then  the free IP addresses starting from the beginning of the IP address range of the scope through the specified **EndAddress** parameter value are returned.
+If the *EndAddress* parameter is specified and the *StartAddress* parameter is not specified, then  the free IP addresses starting from the beginning of the IP address range of the scope through the specified *EndAddress* parameter value are returned.
 
-If both the **StartAddress** and **EndAddress** parameters are specified, then the free IP addresses between the specified **StartAddress** and **EndAddress** parameter values are returned.
+If both the *StartAddress** and *EndAddress* parameters are specified, then the free IP addresses between the specified *StartAddress* and *EndAddress* parameter values are returned.
 
 The exclusion address ranges, reservations, active, offered, and bad, or declined, leases are excluded while returning the free IP addresses.
 
@@ -45,21 +45,21 @@ If the requested number of free IP addresses could not be found, then a warning 
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get a free address
 ```
 PS C:\>Get-DhcpServerv4FreeIPAddress -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0
 ```
 
 This example gets a free IPv4 addresses from the specified scope.
 
-### EXAMPLE 2
+### Example 2: Get ten free addresses
 ```
 PS C:\>Get-DhcpServerv4FreeIPAddress -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -NumAddress 10
 ```
 
 This example gets a list of 10 free IPv4 addresses from the specified scope.
 
-### EXAMPLE 3
+### Example 3: Get a free address from a range
 ```
 PS C:\>Get-DhcpServerv4FreeIPAddress -ComputerName dhcpserver.contoso.com -ScopeId 10.10.10.0 -StartAddress 10.10.10.10 -EndAddress 10.10.10.50
 ```
@@ -69,7 +69,13 @@ This example gets a free IPv4 address from the specified scope within the IP add
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job.
+Use this parameter to run commands that take a long time to complete. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -85,7 +91,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession]https://docs.microsoft.com/en-us/powershell/module/cimcmdlets/new-cimsession?view=powershell-6) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -206,5 +212,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-DhcpServerv6FreeIPAddress{{Provide related cmdlet topic}}](00000000-0000-0000-0000-000000000000)
+[Get-DhcpServerv6FreeIPAddress](./Get-DhcpServerv6FreeIPAddress.md)
 

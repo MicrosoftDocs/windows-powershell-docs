@@ -57,7 +57,7 @@ This command displays a packet capture provider for a session named Session01
 ## PARAMETERS
 
 ### -AsJob
-{{Fill AsJob Description}}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter

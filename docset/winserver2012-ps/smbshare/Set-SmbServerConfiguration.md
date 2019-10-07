@@ -38,25 +38,26 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
 ## DESCRIPTION
 The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) server configuration.
 
+
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Set the SMB Service configuration
 ```
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 16
 Confirm 
 Are you sure you want to perform this action? 
-Performing operation 'Modify' on Target 'SMB Server Configuration'. 
+Performing operation 'Modify' on Target 'SMB Service Configuration'. 
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-This example sets the SMB server configuration.
+This command sets the SMB Service configuration.
 
-### EXAMPLE 2
+### Example 2: Set the SMB Service configuration without confirmation
 ```
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
 ```
 
-This example sets the SMB server configuration without user confirmation.
+This command sets the SMB Service configuration without user confirmation.
 
 ## PARAMETERS
 
@@ -110,6 +111,21 @@ Specifies the asynchronous credits.
 
 ```yaml
 Type: UInt32
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditSmb1Access
+Enables auditing of SMB version 1 protocol in Windows Event Log.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 

@@ -34,7 +34,7 @@ You can create a schedule to run the following types data deduplication jobs:
 - Scrubbing: This job processes data corruptions it finds during data integrity validation, performs possible corruption repair, and generates a scrubbing report. 
 - Unoptimization: This job undoes data deduplication on all of the optimized files on the volume. At the end of a successful unoptimization job, the server deletes all of the data deduplication metadata from the volume.
 
-For more information, see Install and Configure Data Deduplicationhttp://technet.microsoft.com/en-us/library/hh831434.aspx (http://technet.microsoft.com/en-us/library/hh831434.aspx) on TechNet.
+For more information, see [Install and Configure Data Deduplication](https://technet.microsoft.com/en-us/library/hh831434.aspx) on TechNet.
 
 ## EXAMPLES
 
@@ -69,7 +69,14 @@ The optimization job runs at a normal priority every weekday evening at 8:00.
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+You can continue to work in the session while the job completes. 
+To manage the job, use the `*-Job` cmdlets. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -84,10 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -CimSession
-Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
-The default is the current session on the local computer.
-
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)

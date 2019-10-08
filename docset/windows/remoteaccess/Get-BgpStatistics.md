@@ -139,7 +139,7 @@ This command retrieves the BGP message and route statistics for a routing domain
 ## PARAMETERS
 
 ### -AllRoutingDomains
-{{Fill AllRoutingDomains Description}}
+Runs the cmdlet against all routing domains that are setup.
 
 ```yaml
 Type: SwitchParameter

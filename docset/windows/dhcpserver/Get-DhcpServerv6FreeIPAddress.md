@@ -21,7 +21,7 @@ ms.assetid: 0A64F272-2D6C-437E-8788-B7C38065F390
 # Get-DhcpServerv6FreeIPAddress
 
 ## SYNOPSIS
-Gets one or more free, or unassigned, IPv6 addresses from the specified scope.
+Gets one or more free or unassigned IPv6 addresses from the specified scope.
 
 ## SYNTAX
 
@@ -84,7 +84,7 @@ The cmdlet immediately returns an object that represents the job and then displa
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
-For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter

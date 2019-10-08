@@ -33,7 +33,7 @@ Get-DhcpServerv6FreeIPAddress [-ComputerName <String>] [-Prefix] <IPAddress> [[-
 ## DESCRIPTION
 The **Get-DhcpServerv6FreeIPAddress** cmdlet gets one or more free IPv6 addresses from the specified scope.
 
-If the *NumAddress* parameter is specified, then the requested number of free IPv6 addresses are returned.
+If the *NumAddress* parameter is specified, then the requested number of free IPv6 addresses is returned.
 If the *NumAddress* parameter is not specified, then a single free IPv6 address will be returned.
 The maximum number of free IPv6 addresses returned is capped at `1024`.
 

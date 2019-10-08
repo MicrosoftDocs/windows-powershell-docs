@@ -25,7 +25,7 @@ Get-DhcpServerv6FreeIPAddress [-Prefix] <IPAddress> [[-NumAddress] <UInt32>] [-A
 ## DESCRIPTION
 The **Get-DhcpServerv6FreeIPAddress** cmdlet gets one or more free IPv6 addresses from the specified scope.
 
-If the *NumAddress* parameter is specified, then the requested number of free IPv6 addresses are returned.
+If the *NumAddress* parameter is specified, then the requested number of free IPv6 addresses is returned.
 If the *NumAddress* parameter is not specified, then a single free IPv6 address will be returned.
 The maximum number of free IPv6 addresses returned is capped at `1024`.
 
@@ -75,7 +75,7 @@ The cmdlet immediately returns an object that represents the job and then displa
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
-For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter

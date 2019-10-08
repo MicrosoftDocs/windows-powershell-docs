@@ -57,7 +57,7 @@ The third command adds a packet capture provider to the session.
 ## PARAMETERS
 
 ### -AsJob
-{{Fill AsJob Description}}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter

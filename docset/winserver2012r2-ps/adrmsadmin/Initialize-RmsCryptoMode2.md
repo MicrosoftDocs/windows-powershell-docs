@@ -130,8 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-{{Fill Path Description}}
-
+This parameter is for CSP-based installs only.
+If a CSP name is specified for a server with a centrally managed key, an error is returned if this parameter is included in the command.
 ```yaml
 Type: String[]
 Parameter Sets: (All)

@@ -53,7 +53,7 @@ This job processes data corruptions it finds during data integrity validation, p
 This job undoes data deduplication on all of the optimized files on the volume. 
 At the end of a successful unoptimization job, the server deletes all of the data deduplication metadata from the volume.
 
-For more information, see [Install and Configure Data Deduplication](https://technet.microsoft.com/en-us/library/hh831434.aspx) on TechNet.
+For more information, see [Install and Configure Data Deduplication](https://technet.microsoft.com/library/hh831434.aspx) on TechNet.
 
 ## EXAMPLES
 

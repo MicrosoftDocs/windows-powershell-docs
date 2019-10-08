@@ -33,7 +33,7 @@ Get-DhcpServerv4FreeIPAddress [-ComputerName <String>] [-ScopeId] <IPAddress> [[
 ## DESCRIPTION
 This **Get-DhcpServerv4FreeIPAddress** cmdlet gets one or more free IP Addresses from the specified scope.
 
-If the *NumAddress* parameter is specified, then the requested number of free IPv4 addresses are returned.
+If the *NumAddress* parameter is specified, then the requested number of free IPv4 addresses is returned.
 If the *NumAddress* parameter is not specified, then a single free IP address will be returned.
 The maximum number of free IP addresses returned is capped at `1024`.
 
@@ -83,7 +83,7 @@ The cmdlet immediately returns an object that represents the job and then displa
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
 To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
-For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter

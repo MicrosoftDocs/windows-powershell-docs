@@ -75,7 +75,7 @@ This command gets the interfaces and network prefixes for all custom routes from
 ## PARAMETERS
 
 ### -AllRoutingDomains
-{{Fill AllRoutingDomains Description}}
+Runs the cmdlet against all routing domains that are setup.
 
 ```yaml
 Type: SwitchParameter

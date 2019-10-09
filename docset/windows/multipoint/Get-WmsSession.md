@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbnail
-{{Fill Thumbnail Description}}
+Specifies the Thumbnail size of the session.
 
 ```yaml
 Type: ThumbnailSizePS

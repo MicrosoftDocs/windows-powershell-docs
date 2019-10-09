@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNoticePage
-Indicates the Self-Service Portal notice text on or off. By default, the notice text is turned on.
+Indicates whether the Self-Service Portal notice text is turned on or off. By default, the notice text is turned on.
 
 ```yaml
 Type: SwitchParameter

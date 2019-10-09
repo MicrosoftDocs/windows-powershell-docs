@@ -47,7 +47,7 @@ This command enables the Customer Experience Improvement Program (CEIP) for the 
 ## PARAMETERS
 
 ### -AdminOrchestration
-{{Fill AdminOrchestration Description}}
+Indicates whether to allow Admin Orchestration.
 
 ```yaml
 Type: Boolean

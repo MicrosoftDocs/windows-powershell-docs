@@ -170,7 +170,7 @@ For more information, type `Get-Help Format-Table`.
 ## PARAMETERS
 
 ### -AllRoutingDomains
-Runs the cmdlet against all routing domains that are setup.
+Use this command to retrieve details about all routing domains.
 
 ```yaml
 Type: SwitchParameter

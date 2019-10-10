@@ -427,7 +427,7 @@ Valid values are:
 
 - 2: Errors and warnings
 
-7: All Events
+- 3-7: All Events
 
 ```yaml
 Type: UInt32

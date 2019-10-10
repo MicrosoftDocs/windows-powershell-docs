@@ -423,7 +423,7 @@ Valid values are:
 
 - 0: No Events
 
-1: Errors Only
+- 1: Errors Only
 
 2: Errors and warnings
 

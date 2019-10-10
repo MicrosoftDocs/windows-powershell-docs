@@ -425,7 +425,7 @@ Valid values are:
 
 - 1: Errors Only
 
-2: Errors and warnings
+- 2: Errors and warnings
 
 7: All Events
 

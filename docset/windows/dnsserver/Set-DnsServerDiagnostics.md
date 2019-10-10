@@ -421,7 +421,7 @@ Accept wildcard characters: False
 Specifies an event log level.
 Valid values are:
 
-0: No Events
+- 0: No Events
 
 1: Errors Only
 

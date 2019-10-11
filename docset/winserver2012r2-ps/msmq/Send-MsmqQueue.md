@@ -62,7 +62,7 @@ PS C:\> Get-MsmqQueue -Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue" | S
 ## PARAMETERS
 
 ### -AcknowledgeType
-{{Fill AcknowledgeType Description}}
+Specifies the type of acknowledgements supported by Messaging Queue.
 
 ```yaml
 Type: AcknowledgeTypes

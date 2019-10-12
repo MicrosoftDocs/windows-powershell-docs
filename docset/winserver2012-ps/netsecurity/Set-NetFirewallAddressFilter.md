@@ -44,18 +44,18 @@ Alternatively, piping the address filter objects directly to this cmdlet allows 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```powershell
+```
 PS C:\>Set-NetIPsecRule -DisplayName "Tunnel Rule" -LocalAddress Any
 ```
 
 This task can be alternatively done with the following cmdlets.
-```powershell
+```
 PS C:\>$nfwAddressFilter = ( Get-NetIPsecRule -DisplayName "Tunnel Rule" | Get-NetFirewallAddressFilter )
 PS C:\>Set-NetFirewallAddressFilter -InputObject $nfwAddressFilter -LocalAddress Any
 ```
 
 This task can be alternatively done with the following cmdlet.
-```powershell
+```
 PS C:\>Get-NetIPsecRule -DisplayName "Tunnel Rule" | Get-NetFirewallAddressFilter | Set-NetFirewallAddressFilter -LocalAddress Any
 ```
 

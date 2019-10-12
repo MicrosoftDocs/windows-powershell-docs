@@ -52,32 +52,26 @@ Alternatively, piping the address filter objects directly to this cmdlet allows 
 ## EXAMPLES
 
 ### EXAMPLE 1
-```
+```powershell
 PS C:\>Set-NetIPsecRule -DisplayName "Tunnel Rule" -LocalAddress Any
-```
 
-This task can be alternatively done with the following cmdlets.
-```
+# This task can be alternatively done with the following cmdlets.
 PS C:\>$nfwAddressFilter = ( Get-NetIPsecRule -DisplayName "Tunnel Rule" | Get-NetFirewallAddressFilter )
 PS C:\>Set-NetFirewallAddressFilter -InputObject $nfwAddressFilter -LocalAddress Any
-```
 
-This task can be alternatively done with the following cmdlet.
-```
+# This task can be alternatively done with the following cmdlet.
 PS C:\>Get-NetIPsecRule -DisplayName "Tunnel Rule" | Get-NetFirewallAddressFilter | Set-NetFirewallAddressFilter -LocalAddress Any
 ```
 
 This example changes the first end point of a particular IPsec rule.
 
 ### EXAMPLE 2
-```
+```powershell
 PS C:\>$nfwAddressFilter = ( Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter )
 PS C:\>$nfwAddressFilterLS6 = ( Where-Object -InputObject $nfwAddressFilter -Property { $_.RemoteAddress -Eq "LocalSubnet6" } )
 PS C:\>Set-NetFirewallAddressFilter -InputObject $nfwAddressFilterLS6 -RemoteAddress LocalSubnet4
-```
 
-This task can be alternatively done with the following cmdlet.
-```
+# This task can be alternatively done with the following cmdlet.
 PS C:\>Get-NetFirewallRule -DisplayGroup "Core Networking" | Get-NetFirewallAddressFilter | Where-Object -Property { $_.RemoteAddress -Eq "LocalSubnet6" } | Get-NetFirewallRule | Set-NetFirewallRule -RemoteAddress LocalSubnet4
 ```
 

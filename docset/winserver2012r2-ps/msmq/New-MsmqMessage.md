@@ -43,7 +43,7 @@ PS C:\>New-MsmqMessage -Body "Test Message" -AdminQueue ".\private$\adminqueue" 
 ## PARAMETERS
 
 ### -AcknowledgeType
-Specifies the type of acknowledgements supported by Messaging Queue.
+Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
 
 ```yaml
 Type: AcknowledgeTypes

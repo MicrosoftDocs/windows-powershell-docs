@@ -73,7 +73,7 @@ The test message has a label.
 ## PARAMETERS
 
 ### -AcknowledgeType
-{{Fill AcknowledgeType Description}}
+Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
 
 ```yaml
 Type: AcknowledgeTypes

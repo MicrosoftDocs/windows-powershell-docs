@@ -116,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-{{Fill InputObject Description}}
+Specifies the input to this cmdlet. 
+You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: Process[]

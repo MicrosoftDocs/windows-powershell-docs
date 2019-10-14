@@ -16,12 +16,12 @@ Returns a DeduplicationVolume object for each volume that has data deduplication
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### ByVolumeId (Default)
 ```
 Get-DedupVolume [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-VolumeId <String[]>]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### ByVolume
 ```
 Get-DedupVolume [[-Volume] <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
 ```

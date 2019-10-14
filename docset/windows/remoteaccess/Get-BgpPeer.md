@@ -98,7 +98,7 @@ This domain contains only a single peer named Tenant46.
 ## PARAMETERS
 
 ### -AllRoutingDomains
-{{Fill AllRoutingDomains Description}}
+Runs the cmdlet against all routing domains that are setup.
 
 ```yaml
 Type: SwitchParameter

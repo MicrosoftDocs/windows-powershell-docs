@@ -419,7 +419,15 @@ Accept wildcard characters: False
 
 ### -EventLogLevel
 Specifies an event log level.
-Valid values are Warning, Error, and None.
+Valid values are:
+
+- 0: No Events
+
+- 1: Errors Only
+
+- 2: Errors and warnings
+
+- 3-7: All Events
 
 ```yaml
 Type: UInt32

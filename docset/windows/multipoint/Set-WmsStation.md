@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayOrientation
-{{Fill DisplayOrientation Description}}
+Specifies the Display Orientation for the station.
 
 ```yaml
 Type: EDisplayOrientationPS

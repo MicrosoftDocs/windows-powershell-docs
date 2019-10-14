@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
+ms.date: 10/06/2019
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -138,6 +138,13 @@ This certificate has the subject alternative names of patti.fuller@contoso.com a
 
 This command does not specify the **NotAfter** parameter.
 Therefore, the certificate expires in one year.
+
+### EXAMPLE 9
+```
+PS C:\> New-SelfSignedCertificate -Subject "localhost" -TextExtension @("2.5.29.17={text}DNS=localhost&IPAddress=127.0.0.1&IPAddress=::1")
+```
+
+This example creates a self-signed SSL server certificate with Subject and Issuer name set to `localhost` and with subject alternative name set to IPAddress `127.0.0.1` and `::1` via TextExtension.
 
 ## PARAMETERS
 

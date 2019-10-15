@@ -187,7 +187,6 @@ The acceptable formats for this parameter are:
 
 > [!NOTE]
 > Querying for rules with this parameter can only be performed using filter objects. See the **Get-NetFirewallAddressFilter** cmdlet for more information.
-See the **Get-NetFirewallAddressFilter** cmdlet for more information.
 
 ```yaml
 Type: String[]
@@ -273,7 +272,6 @@ The acceptable formats for this parameter are:
 
 > [!NOTE]
  Querying for rules with this parameter can only be performed using filter objects. See the **Get-NetFirewallAddressFilter** cmdlet for more information.
-See the **Get-NetFirewallAddressFilter** cmdlet for more information
 
 ```yaml
 Type: String[]

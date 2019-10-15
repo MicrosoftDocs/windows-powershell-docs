@@ -175,7 +175,7 @@ Specifies that network packets with matching IP addresses match this rule.
 This parameter value is the first end point of an IPsec rule and specifies the computers that are subject to the requirements of this rule. 
 This parameter value is an IPv4 or IPv6 address, hostname, subnet, range, or the following keyword: Any. 
 The acceptable formats for this parameter are: 
--- Single IPv4 Address: 1.2.3.4 
+- Single IPv4 Address: 1.2.3.4 
 - Single IPv6 Address: fe80::1 
 - IPv4 Subnet (by network bit count): 1.2.3.4/24 
 - IPv6 Subnet (by network bit count): fe80::1/48 
@@ -225,15 +225,15 @@ This policy is not from GPOs, and has been created manually or programmatically 
 Rules created in this store are attached to the ActiveStore and activated on the computer immediately. 
 - ActiveStore: This store contains the currently active policy, which is the sum of all policy stores that apply to the computer.
 This is the resultant set of policy (RSOP) for the local computer (the sum of all GPOs that apply to the computer), and the local stores (the PersistentStore, the static Windows service hardening (WSH), and the configurable WSH). 
----- GPOs are also policy stores.
+    - GPOs are also policy stores.
 Computer GPOs can be specified as follows. 
------- `-PolicyStore hostname`. 
----- Active Directory GPOs can be specified as follows. 
------- `-PolicyStore domain.fqdn.com\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`. 
------- Such as the following. 
--------- `-PolicyStore localhost`
--------- `-PolicyStore corp.contoso.com\FirewallPolicy`
----- Active Directory GPOs can be created using the **New-GPO** cmdlet or the Group Policy Management Console. 
+            - `-PolicyStore hostname`. 
+    - Active Directory GPOs can be specified as follows. 
+            - `-PolicyStore domain.fqdn.com\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`. 
+            - Such as the following. 
+                    - `-PolicyStore localhost`
+                    - `-PolicyStore corp.contoso.com\FirewallPolicy`
+    - Active Directory GPOs can be created using the **New-GPO** cmdlet or the Group Policy Management Console. 
 - RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
 - SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server® 2012. 
 - StaticServiceStore: This read-only store contains all the service restrictions that ship with Windows Server 2012.

@@ -140,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsgLogStore
-Indicates that this cmdlet changes the message logger storage location and moves over all the message logger files to the new location.
+{{Fill MsgLogStore Description}}
 
 ```yaml
 Type: String

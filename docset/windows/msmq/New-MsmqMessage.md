@@ -47,7 +47,7 @@ The command specifies the queue that receives the acknowledgement message.
 ## PARAMETERS
 
 ### -AcknowledgeType
-{{Fill AcknowledgeType Description}}
+Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
 
 ```yaml
 Type: AcknowledgeTypes

@@ -59,11 +59,12 @@ You do not need administrator credentials to run **Get-PrintConfiguration**.
 PS C:\> Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
 ```
 
-This command returns the printer configuration for the printer named Microsoft XPS Document Writer.
+This command returns the printer configuration for the printer named "Microsoft XPS Document Writer".
 
 ### Example 2: Get the print configuration for all printers
 ```
-PS C:\>$Printers = Get-Printer * Foreach ($Printer in $Printers){     Get-PrintConfiguration -PrinterName $Printer.name -DuplexingMode "TwoSidedLongEdge"}
+PS C:\>$Printers = Get-Printer *
+PS C:\>Foreach ($Printer in $Printers){Get-PrintConfiguration -PrinterName $Printer.name}
 ```
 
 This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.
@@ -71,7 +72,14 @@ This command gets all the printers into a variable $Printers and then loops thro
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+You can continue to work in the session while the job completes. 
+To manage the job, use the `*-Job` cmdlets. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +95,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -165,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

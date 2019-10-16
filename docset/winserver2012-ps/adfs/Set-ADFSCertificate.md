@@ -22,13 +22,13 @@ Set-ADFSCertificate -CertificateType <String> -Thumbprint <String> [-IsPrimary] 
 ```
 
 ## DESCRIPTION
-The Set-ADFSCertificate cmdlet sets the properties of an existing certificate that the Federation Service uses to sign, decrypt, or secure communications.
+The **Set-AdfsCertificate** cmdlet sets the properties of an existing certificate that Active Directory Federation Services (AD FS) uses to sign, decrypt, or secure communications.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Set a certificate
 ```
-C:\PS>Set-ADFSCertificate -IsPrimary -CertificateType Token-Signing -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
+PS C:\>Set-AdfsCertificate -IsPrimary -CertificateType "Token-Signing" -Thumbprint ‎"fedd995b45e633d4ef30fcbc8f3a48b627e9a28b"
 ```
 
 Description
@@ -41,7 +41,11 @@ Sets the primary token-signing certificate.
 
 ### -CertificateType
 Specifies the certificate type (that is, how the Federation Service uses the certificate).
-Accepted values are Infocard-Signing, Service-Communications, Token-Encryption, and Token-Signing.
+The acceptable values for this parameter are:
+
+- Service-Communications
+- Token-Decrypting
+- Token-Signing
 
 ```yaml
 Type: String
@@ -90,7 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Not Specified
+Returns an object representing the item with which you are working.
+By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -148,7 +153,7 @@ A class structure that represents a service certificate.
 ### None
 
 ## NOTES
-* You can modify the certificates that are associated with a relying party or a claims provider by using Set-ADFSRelyingPartyTrust or Set-ClaimsProviderTrust, as appropriate.
+* Use the **Set-AdfsRelyingPartyTrust** or **Set-AdfsClaimsProviderTrust** cmdlets, as appropriate, to modify the certificates that are associated with a relying party or a claims provider.
 
 ## RELATED LINKS
 

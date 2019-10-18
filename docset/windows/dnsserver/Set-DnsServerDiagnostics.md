@@ -756,24 +756,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerDiagnostics
 
-## NOTES
-- 0x0. The DNS server does not create a log. This is the default entry.
-- 0x10. Logs queries.
-- 0x10. Logs notifications.
-- 0x20. Logs updates.
-- 0xFE. Logs non-queries.
-- 0x100. Logs question transactions.
-- 0x200. Logs answers.
-- 0x1000. Logs send packets.
-- 0x2000. Logs receive packets.
-- 0x4000. Logs UDP packets.
-- 0x8000. Logs TCP packets.
-- 0xFFFF. Logs all packets.
-- 0x10000. Logs Active Directory write transactions.
-- 0x20000. Logs Active Directory update transactions.
-- 0x1000000. Logs full packets.
-- 0x80000000. Logs write-through transactions.
-
 ## RELATED LINKS
 
 [Get-DnsServerDiagnostics](./Get-DnsServerDiagnostics.md)

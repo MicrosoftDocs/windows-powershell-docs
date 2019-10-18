@@ -153,21 +153,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Remove
-Removes a mitigation entry from the registry.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: ProcessPolicy
-Aliases: 
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Reset
 Resets a specific mitigation entry to defer.
 

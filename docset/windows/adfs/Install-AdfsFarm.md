@@ -126,8 +126,6 @@ This certificate will be used as the SSL certificate and the service communicati
 Automatically generated, self-signed certificates will be used for the token signing and token decryption certificates.
 To specify certificates for token signing and token decryption, specify thumbprint values for the *SigningCertificateThumbprint* and *DecryptionCertificateThumbprint* parameters.
 
-Lists thumbprint values of currently installed certificates.
-
 ### Example 3: Create the first node in a federation server farm that uses SQL Server on a remote computer
 ```
 PS C:\> $fscredential = Get-Credential

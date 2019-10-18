@@ -294,7 +294,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHTTPRedirect
-Indicates that this cmdlet enables HTTP redirect for Web Application Proxy.
+Indicates that this cmdlet enables HTTP redirect for Web Application Proxy. Note that you will need to allow the traffic on port TCP 80 on the WAP servers expecting to use this publication. Here is an example in PowerShell to create such a rule:   
+
+```  
+New-NetFirewallRule -DisplayName "Allow 80 to 443 redirection" -Name "80to443redirect" -Action Allow -Direction Inbound -Protocol TCP -LocalPort 80  
+```
 
 ```yaml
 Type: SwitchParameter

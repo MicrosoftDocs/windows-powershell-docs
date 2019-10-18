@@ -175,26 +175,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-class DNS_statistic
-
-{
-
-string DnsServerName; // Indicates the FQDN or IP address of a DNS Server.
-
-string CollectionName;
-
-uint32 CollectionId; // Numeric representation of **CollectionName**.
-string Name; /
-
-uint32 Value;
-
-string StringValue;
-
-};
-
 ## OUTPUTS
 
 ### DNSServer01.Infrastructure.CimInstance#DnsServerStatistics

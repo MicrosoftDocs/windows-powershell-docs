@@ -246,25 +246,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-Class DNSForwarderSettings
-
-{
-
-uint32  ForwardDelegations; // Specifies whether the DNS server forwards queries to delegated subzones.
-
-DNSForwarders  Forwarders\[\]; //Enumerates the list of IP addresses of forwarders to which the DNS server forwards queries.
-
-uint32  ForwardingTimeout; // Time, in seconds, that a DNS server that is forwarding a query will wait for resolution from the forwarder before it attempts to resolve the query itself.
-This value is meaningless if the forwarding server is not set to use recursion.
-To determine this, check the **IsSlave** Boolean property.
-
-boolean IsSlave; //True if the DNS server does not use recursion when name resolution through forwarders fails.
-
-}
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerForwarder

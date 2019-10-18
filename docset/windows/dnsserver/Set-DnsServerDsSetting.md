@@ -300,29 +300,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-Class dnsServerDSSettings
-
-{
-
-ulong  dsPollingInterval; //Interval, in seconds, to poll the directory service-integrated zones.
-
-ulong  dsTombstoneInterval; // Time of tombstoned records in directory service-integrated zones, expressed in seconds.
-
-ulong adsLazyUpdateInterval;
-
-ulong dsMinimumBackgroundLoadThreads;
-
-ulong dsRemoteReplicationDelay;
-
-ulong dsDirectoryPartitionAutoEnlistInterval;
-
-boolean  DefaultDirectoryPartitions
-
-}
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerDsSetting

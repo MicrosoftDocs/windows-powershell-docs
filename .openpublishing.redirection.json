@@ -772,12 +772,12 @@
         },
         {
         "source_path": "docset/virtual-directory-module/appv/convertfrom-appvlegacypackage.md",
-        "redirect_url": "/powershell/module/appv/convertfrom-appvlegacypackage",
+        "redirect_url": "/powershell/module/appv/",
         "redirect_document_id": false
         },
         {
         "source_path": "docset/virtual-directory-module/appv/test-appvlegacypackage.md",
-        "redirect_url": "/powershell/module/appv/test-appvlegacypackage",
+        "redirect_url": "/powershell/module/appv/",
         "redirect_document_id": false
         },
         {

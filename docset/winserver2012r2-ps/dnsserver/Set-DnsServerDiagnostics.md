@@ -209,49 +209,21 @@ Accept wildcard characters: False
 Specifies the bitmask for debug logging.
 Valid values are:
 
-0x00000001.
-The server logs query packet exchanges.
-
-0x00000010.
-The server logs packet exchanges that are related to zone exchanges.
-
-0x00000020.
-The server logs packet exchanges that are related to zone updates.
-
-0x0000010.: The server logs packets that contain questions.
-
-0x00000200.
-The server logs packets that contain answers.
-
-0x00001000.
-The server logs packets that it sends.
-
-0x00002000.
-The server logs packets that it receives.
-
-0x00004000.
-The server logs User Datagram Protocol (UDP) packet exchanges.
-
-0x00008000.
-The server logs Transmission Control Protocol (TCP) packet exchanges.
-
-0x0000FFFF.
-The server logs operations if you set the following fields to $True: 0x00001000, 0x00002000, 0x00008000, 0x00004000, 0x00000001, 0x00000001, 0x00000020, 0x00000100, and 0x00000200S.
-
-0x00010000.
-Independent of other field values, this bitmap logs Active Directory write operations.
-
-0x00020000.
-Independent of other field values, this bitmap logs Active Directory polling operations and operations that occur during DNS updates (secure and not secure) on Active Directory-integrated zones.
-
-0x01000000.
-If other field values allow it, the server logs the entire packet to the log file.
-
-0x02000000.
-If other field values allow it, the server logs response packets that do not match any outstanding queries.
-
-0x80000000.
-If other field values allow it, the server saves packet logging information to persistent storage.
+- 0x00000001. The server logs query packet exchanges.
+- 0x00000010. The server logs packet exchanges that are related to zone exchanges.
+- 0x00000020. The server logs packet exchanges that are related to zone updates.
+- 0x00000100. The server logs packets that contain questions.
+- 0x00000200. The server logs packets that contain answers.
+- 0x00001000. The server logs packets that it sends.
+- 0x00002000. The server logs packets that it receives.
+- 0x00004000. The server logs User Datagram Protocol (UDP) packet exchanges.
+- 0x00008000. The server logs Transmission Control Protocol (TCP) packet exchanges.
+- 0x0000FFFF. The server logs operations if you set the following fields to $True: 0x00001000, 0x00002000, 0x00008000, 0x00004000, 0x00000001, 0x00000001, 0x00000020, 0x00000100, and 0x00000200S.
+- 0x00010000. Independent of other field values, this bitmap logs Active Directory write operations.
+- 0x00020000. Independent of other field values, this bitmap logs Active Directory polling operations and operations that occur during DNS updates (secure and not secure) on Active Directory-integrated zones.
+- 0x01000000. If other field values allow it, the server logs the entire packet to the log file.
+- 0x02000000. If other field values allow it, the server logs response packets that do not match any outstanding queries.
+- 0x80000000. If other field values allow it, the server saves packet logging information to persistent storage.
 
 ```yaml
 Type: UInt32
@@ -419,11 +391,8 @@ Accept wildcard characters: False
 Specifies an event log level. Valid values are:
 
 - 0: No Events
-
 - 1: Errors Only
-
 - 2: Errors and warnings
-
 - 3-7: All Events
 
 ```yaml
@@ -520,28 +489,15 @@ Accept wildcard characters: False
 Sets a bit flag for the logging level.
 Valid values are:
 
-0x00000001.
-The DNS server saves operational logging information to persistent storage.
-
-0x00000010: The DNS server logs event logging information to a log file.
-
-0x00000020: The DNS server logs operational logging information for server start and stop activities to the log file.
-
-0x00002000: The DNS server logs operational logging information for activities that are related to loading a zone from a directory server to the log file. 
-
-0x00004000.
-The DNS server logs operational logging information for activities that are related to writing zone data to the directory server to the log file.
-
-0x00020000.
-The DNS server logs operational logging information for activities that are related to updating nodes that have exceeded the tombstone lifetime to the log file.
-
-0x00100000: The DNS server logs operational logging information for local resource lookup activities to the log file.
-
-0x00200000.
-The DNS server logs operational logging information for activities that occur during recursive query lookup to the log file.
-
-0x00400000.
-The DNS server logs operational logging information for activities that are related to interaction with remote name servers to the log file.
+- 0x00000001. The DNS server saves operational logging information to persistent storage.
+- 0x00000010. The DNS server logs event logging information to a log file.
+- 0x00000020. The DNS server logs operational logging information for server start and stop activities to the log file.
+- 0x00002000. The DNS server logs operational logging information for activities that are related to loading a zone from a directory server to the log file. 
+- 0x00004000. The DNS server logs operational logging information for activities that are related to writing zone data to the directory server to the log file.
+- 0x00020000. The DNS server logs operational logging information for activities that are related to updating nodes that have exceeded the tombstone lifetime to the log file.
+- 0x00100000. The DNS server logs operational logging information for local resource lookup activities to the log file.
+- 0x00200000. The DNS server logs operational logging information for activities that occur during recursive query lookup to the log file.
+- 0x00400000. The DNS server logs operational logging information for activities that are related to interaction with remote name servers to the log file.
 
 ```yaml
 Type: UInt32
@@ -796,39 +752,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerDiagnostics
-
-## NOTES
-* 0x0. The DNS server does not create a log. This is the default entry.
-
-0x10. Logs queries. 
-
-0x10. Logs notifications. 
-
-0x20. Logs updates.  
-
-0xFE. Logs non-queries. 
-
-0x100. Logs question transactions. 
-
-0x200. Logs answers. 
-
-0x1000. Logs send packets. 
-
-0x2000. Logs receive packets. 
-
-0x4000. Logs UDP packets. 
-
-0x8000. Logs TCP packets.
-
-0xFFFF. Logs all packets. 
-
-0x10000. Logs Active Directory write transactions.
-
-0x20000. Logs Active Directory update transactions.  
-
-0x1000000. Logs full packets.
-
-0x80000000. Logs write-through transactions.
 
 ## RELATED LINKS
 

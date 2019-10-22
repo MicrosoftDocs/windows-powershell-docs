@@ -49,7 +49,7 @@ Name                          ScopeName                     Path                
 VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
 ```
 
-This command creates an SMB share.
+This command creates an SMB share named "VMSFiles" and grants Full Access permissions to "Contoso\Administrator", and "Contoso\Contoso-HV1$"
 
 ### Example 2: Create an encrypted SMB share
 ```
@@ -60,6 +60,18 @@ Data                          Contoso-FS                    J:\Data
 ```
 
 This command creates an encrypted SMB share.
+
+### Example 3: Create an SMB share with Multiple Permissions
+```
+PS C:\>New-SmbShare -Name "VMSFiles" -Path "C:\ClusterStorage\Volume1\VMFiles" -ChangeAccess "Users" -FullAccess "Administrators"
+
+Name                          ScopeName                     Path                          Description 
+----                          ---------                     ----                          ----------- 
+VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
+```
+
+This command creates an SMB share named "VMSFiles" and grants Change permissions to the local "Users" group, and Full Access permissions to the local "Administrators" group.
+
 
 ## PARAMETERS
 

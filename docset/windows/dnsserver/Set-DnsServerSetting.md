@@ -182,39 +182,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-"Class: DNSServerSettings {
-
-string  Name; //Specifies the FQDN or IP address of a DNS server.
-This specification should be common across roles.
-
-uint32  Version;  //Specifies the read-only version of the DNS server.
-
-sint32  RpcProtocol; //Specifies the remote procedure call (RPC) protocol or protocols over which administrative RPC runs.
-
-uint32 NameCheckFlag; //Specifies the set of eligible characters to use in DNS server names.
-
-uint32  AddressAnswerLimit; //Specifies the maximum number of host records that are returned in response to an address request.
-Values of 5 through 28 are valid.
-
-uint32  BootMethod; //Specifies the initialization method for a DNS server. 
-
-boolean DsAvailable; //Indicates whether an available directory service is on the DNS server.
-
-boolean DisableAutoReverseZones; //Indicates whether the DNS server automatically creates standard reverse lookup zones.
-
-boolean RoundRobin; //Indicates whether the DNS server uses the round robin mechanism to rotate the order of multiple address (A) records.
-
-boolean LooseWildcarding ;//Indicates whether the DNS server uses loose wildcards.
-If undefined or zero, the server follows the wildcard behavior that is specified in the DNS RFC.
-In this case, an administrator should include mail exchanger (MX) records for all hosts that cannot receive mail.
-If nonzero, the server seeks the closest wildcard node and an administrator should put MX records at the zone root and in a wildcard node (*) directly below the zone root.
-Administrators should also put self-referencing MX records on hosts that receive their own mail.
-
-boolean WriteAuthorityNS; //Indicates whether the DNS server writes name server (NS) and start of authority (SOA) records to the authority section on successful response.
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerSetting

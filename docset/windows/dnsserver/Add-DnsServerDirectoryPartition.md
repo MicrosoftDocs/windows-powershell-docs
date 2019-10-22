@@ -222,39 +222,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-Class dnsDirectoryPartition
-
-{
-
-boolean ApplicationDirectoryPartitions; //Specifies whether support for application directory partitions is enabled on the DNS Server. 
-
-string   fqdn; // UTF-8 string that specifies the FQDN of the application directory partition. 
-
-string dpdn; // Unicode string that specifies the distinguished name for the application directory partition head object
-
-string crDn; // Unicode string that specifies the distinguished name for the application directory partition crossRef object. 
-
-ulong flags; //application directory partition properties (see MS-DNSP for details) 
-
-ulong ZoneCount:  //The number of zones from this application directory partition that are loaded in the DNS server's memory. 
-
-ulong state; //The current state of this application directory partition  (see MS-DNSP for details) 
-
-ulong replicaCount; // The number of replication locations for the application directory partition
-
-string replicaArray\[\]; //contains information about replication locations for this application directory partition
-
-boolean DefaultDirectoryPartitions
-
-string     DirectoryPartition Scope
-
-ComputerName servers\[\]; // servers enlisted in DNS Application Directory Partition
-
-}
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerDirectoryPartition

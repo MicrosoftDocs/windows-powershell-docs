@@ -218,19 +218,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-{
-
-boolean EnableGlobalQueryBlockList; //Enables or disables support for the global query block list that blocks name resolution for names in the list.
-The DNS Server service creates and enables the global query block list by default when the service starts the first time.
-
-string\[\] Names; //Replaces the current global query block list with a list of the names that you specify.
-If you do not specify any names, this command clears the block list.
-
-}
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerGlobalQueryBlockList

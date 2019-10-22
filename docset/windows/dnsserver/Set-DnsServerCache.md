@@ -303,25 +303,6 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-###  
-Class DNSServerCache
-
-{
-
-**uint32 MaxCacheTTL;** // Maximum time, in seconds, that the record of a recursive name query can remain in the DNS server cache.
-The DNS server deletes records from the cache when the value of this entry expires, even if the value of the TTL field in the record is greater.
-The default value of this property is 86,400 seconds (one day).
-
-**uint32  MaxNegativeCacheTTL;** // Maximum time, in seconds, that a name error result from a recursive query can remain in the DNS server cache.
-The DNS server deletes records from the cache when this timer expires, even if the TTL field is greater.
-Default value is 86,400 (one day).
-
-**boolean AutoCacheUpdate** // Indicates whether the DNS Server attempts to update its cache entries by using data from root servers.
-When a DNS server starts, it needs a list of root server hints and Host A records for the server cache file.
-Microsoft DNS servers have a feature that enables them to attempt to write back a new cache file based on the responses from root servers.
-
 ## OUTPUTS
 
 ### Microsoft.Management.Infrastructure.CimInstance#DnsServerCache

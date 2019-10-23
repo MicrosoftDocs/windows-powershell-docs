@@ -139,8 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -Option
-Specifies the index of the rule option that this cmdlet modifies.
-Specify the **Help** parameter for option information.
+Specifies the index of the rule option that this cmdlet modifies. 
+Specify the **Help** parameter for option information. Refer to [WDAC Policy Rule Options](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) for more detailed descriptions of each option.
 
 ```yaml
 Type: Int32

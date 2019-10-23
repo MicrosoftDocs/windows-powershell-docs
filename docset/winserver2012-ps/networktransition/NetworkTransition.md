@@ -13,7 +13,7 @@ author: andreabarr
 
 # NetworkTransition Module
 ## Description
-{{Manually Enter Description Here}}
+This reference provides cmdlet descriptions and syntax for all Network Transition-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## NetworkTransition Cmdlets
 ### [Add-NetIPHttpsCertBinding](./Add-NetIPHttpsCertBinding.md)

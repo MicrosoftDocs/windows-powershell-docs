@@ -64,7 +64,7 @@ If there is no logo, the sign-in page displays the company name Contoso.
 
 ### Example 2: Set the text and links for the sign-in pages
 ```
-PS C:\> Set-AdfsWebContent -Locale "en-us" -CompanyName "Contoso" -HelpDeskLink "http://helpdesklink" -HelpDeskLinkText "Help desk" -CopyrightText "Copy right" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privacylink" -PrivacyLinkText "Privacy statement" -ContactLink "http://contactlink" -ContactLinkText "Contact" -SignInPageDescriptionText "Sign in here" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -ErrorPageSupportEmailText "Email" -UpdatePasswordPageDescriptionText "Update password here" -UpdatePasswordPageLink "http://updatepasswordlink" -UpdatePasswordPageLinkText "Update password"
+PS C:\> Set-AdfsWebContent -Locale "en-us" -CompanyName "Contoso" -HelpDeskLink "http://helpdesklink" -HelpDeskLinkText "Help desk" -HomeLink "http://homelink" -HomeLinkText "Home" -PrivacyLink "http://privacylink" -PrivacyLinkText "Privacy statement" -SignInPageDescriptionText "Sign in here" -SignOutPageDescriptionText "Sign out here" -ErrorPageGenericErrorMessage "An error occurred." -ErrorPageSupportEmail "support@contoso.com" -UpdatePasswordPageDescriptionText "Update password here"
 ```
 
 This command specifies the text to display in the sign-in pages for AD FS for the en-us locale.
@@ -438,24 +438,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet generates a **System.IdentityServer.Management.Resources.AdfsGlobalWebContent** object that represents global web content.
 The object includes the following properties:
 
-Locale: **System.Globalization.CultureInfo**
-CompanyName: **System.String**
-HelpDeskLink: **System.Uri**
-HelpDeskLinkText: **System.String**
-HomeLink: **System.Uri**
-HomeLinkText: **System.String**
-PrivacyLink: **System.Uri**
-PrivacyLinkText: **System.String**
-SignInPageDescriptionText: **System.String**
-SignOutPageDescriptionText: **System.String**
-ErrorPageDescriptionText: **System.String**
-ErrorPageGenericErrorMessage: **System.String**
-ErrorPageAuthorizationErrorMessage: **System.String**
-ErrorPageDeviceAuthenticationErrorMessage: **System.String**
-ErrorPageSupportEmail: **System.String**
-ErrorPageSupportEmailText: **System.String**
-UpdatePasswordPageDescriptionText: **System.String**
-SignInPageAdditionalAuthenticationDescriptionText: **System.String**
+- Locale: **System.Globalization.CultureInfo**
+- CompanyName: **System.String**
+- HelpDeskLink: **System.Uri**
+- HelpDeskLinkText: **System.String**
+- HomeLink: **System.Uri**
+- HomeLinkText: **System.String**
+- PrivacyLink: **System.Uri**
+- PrivacyLinkText: **System.String**
+- SignInPageDescriptionText: **System.String**
+- SignOutPageDescriptionText: **System.String**
+- ErrorPageDescriptionText: **System.String**
+- ErrorPageGenericErrorMessage: **System.String**
+- ErrorPageAuthorizationErrorMessage: **System.String**
+- ErrorPageDeviceAuthenticationErrorMessage: **System.String**
+- ErrorPageSupportEmail: **System.String**
+- UpdatePasswordPageDescriptionText: **System.String**
+- SignInPageAdditionalAuthenticationDescriptionText: **System.String**
 
 ## NOTES
 

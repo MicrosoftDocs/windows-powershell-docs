@@ -78,11 +78,10 @@ This command creates a file-backed primary forward lookup zone called west02.con
 
 ### Example 3: Create a reverse lookup zone
 ```
-PS C:\> Add-DnsServerPrimaryZone -NetworkID "10.1.0.0/24" -ReplicationScope "Forest" 
+PS C:\> Add-DnsServerPrimaryZone -NetworkID "10.1.0.0/24" -ReplicationScope "Forest"
+
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 1.10.in-addr.arpa                   Primary         False           True            True                 False
 ```
 

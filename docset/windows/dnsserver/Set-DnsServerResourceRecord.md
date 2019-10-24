@@ -47,9 +47,7 @@ PS C:\> $NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
 PS C:\> Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "contoso.com" -PassThru
 
 HostName                  RecordType Timestamp            TimeToLive      RecordData
-
 --------                  ---------- ---------            ----------      ----------
-
 Host01                       A          0                    02:00:00        2.2.2.2
 ```
 

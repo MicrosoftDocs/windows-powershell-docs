@@ -40,29 +40,17 @@ The **Show-DNSServerCache** cmdlet shows all cached Domain Name System (DNS) ser
 PS C:\> Show-DnsServerCache -ComputerName "Win12S-05.DNSServer-01.Contoso.com"
 
 HostName                  RecordType Timestamp            TimeToLive      RecordData
-
 --------                  ---------- ---------            ----------      ----------
-
 @                         NS         0                    00:00:00        a.root-servers.net.
-
 @                         NS         0                    00:00:00        b.root-servers.net.
-
 @                         NS         0                    00:00:00        c.root-servers.net.
-
 @                         NS         0                    00:00:00        d.root-servers.net.
-
 @                         NS         0                    00:00:00        e.root-servers.net.
-
 @                         NS         0                    00:00:00        f.root-servers.net.
-
-@                         NS         0                    00:00:00        g.root- 
-
+@                         NS         0                    00:00:00        g.root-
 Win12S-05.DNSServer-01.... A          0                    00:46:48        172.23.90.136
-
 localhost                 A          0                    17089.09:29:04  127.0.0.1
-
 a.root-servers.net        A          0                    00:00:00        198.41.0.4
-
 b.root-servers.net        A          0                    00:00:00
 ```
 

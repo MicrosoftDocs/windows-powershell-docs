@@ -39,14 +39,11 @@ Recursion occurs when a DNS server queries other DNS servers on behalf of a requ
 ### Example 1: Get DNS server recursion settings
 ```
 PS C:\> Get-DnsServerRecursion
+
 Enable               : False
-
 AdditionalTimeout(s) : 4
-
 RetryInterval(s)     : 15
-
 Timeout(s)           : 8
-
 SecureResponse       : True
 ```
 

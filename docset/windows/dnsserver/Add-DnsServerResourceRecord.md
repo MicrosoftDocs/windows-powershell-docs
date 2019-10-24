@@ -230,18 +230,11 @@ It specifies a TTL value and enables a time stamp for the record.
 
 ### Example 2: Add an A resource record under the Admin node
 ```
-PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "Host21.admin" -IPv4Address "10.17.1.21" 
-VERBOSE: Adding DNS resource record host21.admin of type A in zone contoso.com on ROOT server. 
-VERBOSE: Adding DNS resource record host21.admin of type A in zone contoso.com on ROOT server. 
+PS C:\> Add-DnsServerResourceRecord -ZoneName "Contoso.com" -A -Name "Host21.admin" -IPv4Address "10.17.1.21"
+
+VERBOSE: Adding DNS resource record host21.admin of type A in zone contoso.com on ROOT server.
 HostName                  RecordType Timestamp            TimeToLive      RecordData
-
 --------                  ---------- ---------            ----------      ----------
-
-host21.admin              A          0                    01:00:00        10.17.1.74
-HostName                  RecordType Timestamp            TimeToLive      RecordData
-
---------                  ---------- ---------            ----------      ----------
-
 host21.admin              A          0                    01:00:00        10.17.1.74
 ```
 

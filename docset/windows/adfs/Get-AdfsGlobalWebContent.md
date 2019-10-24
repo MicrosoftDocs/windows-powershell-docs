@@ -115,7 +115,6 @@ The object includes the following properties:
 - ErrorPageAuthorizationErrorMessage: **System.String**
 - ErrorPageDeviceAuthenticationErrorMessage: **System.String**
 - ErrorPageSupportEmail: **System.String**
-- ErrorPageSupportEmailText: **System.String**
 - UpdatePasswordPageDescriptionText: **System.String**
 - CertificatePageDescriptionText: **System.String**
 - SignInPageAdditionalAuthenticationDescriptionText: **System.String**

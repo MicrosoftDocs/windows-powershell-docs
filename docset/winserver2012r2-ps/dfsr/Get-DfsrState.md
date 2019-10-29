@@ -36,7 +36,7 @@ The cmdlet returns both inbound and outbound file replication information, such 
 
 ### Example 1: Get the DFS Replication state for a member
 ```
-PS C:\> Get-DfsrState -ComputerName "SRV01" | Format-Table filename,updatestate,inbound,source* -auto -wrap
+PS C:\> Get-DfsrState -ComputerName "SRV01" | Format-Table FileName,UpdateState,Inbound,Source* -Auto -Wrap
 
 
 FileName                   UpdateState Inbound SourceComputerName
@@ -60,9 +60,8 @@ This command gets the list of files currently replicating or queued inbound and 
 ## PARAMETERS
 
 ### -ComputerName
-Specifies an array of names of computers.
-The cmdlet adds these computers to the replication group specified by the GroupName parameter.
-You can use a comma separated list and the wildcard character (*).
+Specifies the name of a replication member computer.
+If you do not specify this parameter, the cmdlet uses the current computer.
 
 ```yaml
 Type: String
@@ -77,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

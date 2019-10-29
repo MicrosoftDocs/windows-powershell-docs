@@ -37,7 +37,7 @@ The cmdlet returns both inbound and outbound file replication information, such 
 
 ### Example 1: Get the DFS Replication state for a member
 ```
-PS C:\> Get-DfsrState -ComputerName "SRV01" | Format-Table FileName,UpdateState,Inbound,Source* -Auto -Wrap
+PS C:\> Get-DfsrState -ComputerName "SRV02" | Format-Table FileName,UpdateState,Inbound,Source* -Auto -Wrap
 
 
 FileName                   UpdateState Inbound SourceComputerName
@@ -56,7 +56,7 @@ NlsData001a - Copy.dll     Downloading    True SRV02
 ntlanui2 - Copy.dll          Scheduled    True SRV02
 ```
 
-This command gets the list of files currently replicating or queued inbound and outbound from the computer named SRV01.
+This command gets the list of files currently replicating or queued inbound and outbound from the computer named SRV02.
 
 ## PARAMETERS
 

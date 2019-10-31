@@ -2,12 +2,12 @@
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-anbarr
-Module Name: EventTracManCmdlets
+Module Name: EventTracingManagement
 Module Guid: 80CB11CF-96B5-4D48-84BD-F85F65DE78AE
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=524348
 Help Version: 5.0.0.1
 Locale: en-US
-title: EventTracManCmdlets
+title: EventTracingManagement
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -20,11 +20,11 @@ ms.technology: powershell-windows
 ms.assetid: 50441A60-22D9-44CE-9AC8-C9DA06747745
 ---
 
-# EventTracManCmdlets Module
+# EventTracingManagement Module
 ## Description
 This reference provides cmdlet descriptions and syntax for Event Tracing Management-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-## EventTracManCmdlets Cmdlets
+## EventTracingManagement Cmdlets
 ### [Add-EtwTraceProvider](./Add-EtwTraceProvider.md)
 Adds an ETW trace provider to an ETW trace session or AutoLogger session configuration.
 

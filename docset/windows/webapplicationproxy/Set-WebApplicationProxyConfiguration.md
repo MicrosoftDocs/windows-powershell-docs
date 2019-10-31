@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -ADFSTokenAcceptanceDurationSec
-Specifies the maximum duration in seconds until which the Web Application Proxy server accepts the edge token issued by the AD FS server.
+Specifies the maximum duration in seconds until when the Web Application Proxy server accepts the edge token issued by the AD FS server.
 
 ```yaml
 Type: UInt32
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserIdleTimeoutSec
-Specifies the inactivity time interval, in seconds, after which Web Application Proxy will redirect user to AD FS.
+Specifies the inactivity time interval, in seconds, after which Web Application Proxy will redirect users to AD FS.
 
 ```yaml
 Type: UInt32

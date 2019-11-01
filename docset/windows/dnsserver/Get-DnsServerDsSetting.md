@@ -38,16 +38,12 @@ The **Get-DnsServerDsSetting** cmdlet retrieves the following Domain Name System
 ### Example 1: Get Active Directory service settings
 ```
 PS C:\> Get-DnsServerDsSetting
+
 PollingInterval(s)                   : 180
-
 TombstoneInterval                    : 14.00:00:00
-
 DirectoryPartitionAutoEnlistInterval : 1.00:00:00
-
 LazyUpdateInterval(s)                : 3
-
 MinimumBackgroundLoadThreads         : 1
-
 RemoteReplicationDelay(s)            : 30
 ```
 

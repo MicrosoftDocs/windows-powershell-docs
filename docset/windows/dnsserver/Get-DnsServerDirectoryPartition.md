@@ -45,12 +45,10 @@ The **Get-DnsServerDirectoryPartition** cmdlet gets one or more Domain Name Syst
 ### Example 1: Get all DNS application directory partitions
 ```
 PS C:\> Get-DnsServerDirectoryPartition
+
 server.DirectoryPartitionName        State                         Flags                         ZoneCount
-
 -----------------------------        -----                         -----                         ---------
-
 DomainDnsZones.mytest.cont...        0(DNS_DP_OKAY)                Enlisted Auto Domain          3
-
 ForestDnsZones.mytest.cont...        0(DNS_DP_OKAY)                Enlisted Auto Forest          2
 ```
 
@@ -59,10 +57,9 @@ This command gets all the DNS application directory partitions on the local comp
 ### Example 2: Get all custom application directory partitions
 ```
 PS C:\> Get-DnsServerDirectoryPartition -Custom
+
 DirectoryPartitionName        State                         Flags                         ZoneCount
-
 ----------------------        -----                         -----                         ---------
-
 DomainDnsZones.mytest.cont... 0(DNS_DP_OKAY)                Enlisted Auto Domain          3
 ```
 

@@ -46,146 +46,77 @@ To get advanced DNS server settings, use the *All* parameter.
 ### Example 1: Get all DNS server settings
 ```
 PS C:\> Get-DnsServerSetting -All
+
 ComputerName                            : WIN-OLPN33S5Q3M.mytest.contoso.com
-
 MajorVersion                            : 6
-
 MinorVersion                            : 2
-
 BuildNumber                             : 8230
-
 IsReadOnlyDC                            : False
-
 EnableDnsSec                            : True
-
 EnableIPv6                              : True
-
 EnableOnlineSigning                     : True
-
 NameCheckFlag                           : 2
-
 AddressAnswerLimit                      : 0
-
 XfrConnectTimeout(s)                    : 30
-
 BootMethod                              : 3
-
 AllowUpdate                             : True
-
 UpdateOptions                           : 783
-
 DsAvailable                             : True
-
 DisableAutoReverseZone                  : False
-
 AutoCacheUpdate                         : False
-
 RoundRobin                              : True
-
 LocalNetPriority                        : True
-
 StrictFileParsing                       : False
-
 LooseWildcarding                        : False
-
 BindSecondaries                         : False
-
 WriteAuthorityNS                        : False
-
 ForwardDelegations                      : False
-
 AutoConfigFileZones                     : 1
-
 EnableDirectoryPartitions               : True
-
 RpcProtocol                             : 5
-
 EnableVersionQuery                      : 0
-
 EnableDuplicateQuerySuppression         : True
-
 LameDelegationTTL                       : 00:00:00
-
 AutoCreateDelegation                    : 2
-
 AllowCnameAtNs                          : True
-
 RemoteIPv4RankBoost                     : 5
-
 RemoteIPv6RankBoost                     : 0
-
 EnableRsoForRodc                        : True
-
 MaximumRodcRsoQueueLength               : 300
-
 MaximumRodcRsoAttemptsPerCycle          : 100
-
 OpenAclOnProxyUpdates                   : True
-
 NoUpdateDelegations                     : False
-
 EnableUpdateForwarding                  : False
-
 MaxResourceRecordsInNonSecureUpdate     : 30
-
 EnableWinsR                             : True
-
 LocalNetPriorityMask                    : 255
-
 DeleteOutsideGlue                       : False
-
 AppendMsZoneTransferTag                 : False
-
 AllowReadOnlyZoneTransfer               : False
-
 MaximumUdpPacketSize                    : 4000
-
 TcpReceivePacketSize                    : 65536
-
 EnableSendErrorSuppression              : True
-
 SelfTest                                : 4294967295
-
 XfrThrottleMultiplier                   : 10
-
 SilentlyIgnoreCnameUpdateConflicts      : False
-
 EnableIQueryResponseGeneration          : False
-
 SocketPoolSize                          : 2500
-
 AdminConfigured                         : True
-
 SocketPoolExcludedPortRanges            : {}
-
 ForestDirectoryPartitionBaseName        : ForestDnsZones
-
 DomainDirectoryPartitionBaseName        : DomainDnsZones
-
 ServerLevelPluginDll                    :
-
 EnableRegistryBoot                      :
-
 PublishAutoNet                          : False
-
 QuietRecvFaultInterval(s)               : 0
-
 QuietRecvLogInterval(s)                 : 0
-
 ReloadException                         : False
-
 SyncDsZoneSerial                        : 2
-
 EnableDuplicateQuerySuppression         : True
-
 SendPort                                : Random
-
 MaximumSignatureScanPeriod              : 2.00:00:00
-
 MaximumTrustAnchorActiveRefreshInterval : 15.00:00:00
-
 ListeningIPAddress                      : {172.23.90.136}
-
 AllIPAddress                            : {172.23.90.136}
 ```
 

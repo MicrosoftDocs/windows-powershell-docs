@@ -38,16 +38,12 @@ The **Get-DnsServerCache** cmdlet retrieves the following Domain Name System (DN
 ### Example 1: Get DNS server cache properties
 ```
 PS C:\> Get-DnsServerCache -ComputerName "Win12S-05.DNSServer-01.Contoso.com"
+
 MaxTTL                           : 1.00:00:00
-
 MaxNegativeTTL                   : 00:15:00
-
 MaxKBSize                        : 10240
-
 EnablePollutionProtection        : True
-
 LockingPercent                   : 100
-
 StoreEmptyAuthenticationResponse : True
 ```
 

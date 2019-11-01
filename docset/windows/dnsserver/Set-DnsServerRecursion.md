@@ -42,13 +42,9 @@ Recursion occurs when a DNS server queries other DNS servers on behalf of a requ
 PS C:\> Set-DnsServerRecursion -RetryInterval 3 -PassThru
 
 Enable               : False
-
 AdditionalTimeout(s) : 4
-
 RetryInterval(s)     : 15
-
 Timeout(s)           : 8
-
 SecureResponse       : True
 ```
 

@@ -48,12 +48,11 @@ For a file-backed zone, ensure there is only one server that hosts the primary z
 
 ### Example 1: Convert a file-backed zone
 ```
-PS C:\> ConvertTo-DnsServerPrimaryZone -Name "west03.contoso.com" -PassThru -Verbose -ZoneFile "west03.contoso.com" -Force 
+PS C:\> ConvertTo-DnsServerPrimaryZone -Name "west03.contoso.com" -PassThru -Verbose -ZoneFile "west03.contoso.com" -Force
+
 VERBOSE: Convert west03.contoso.com zone to (file backed/AD integrated) DNS primary zone on DNS-11 server.
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 west03.contoso.com                  Primary         False           False           False                False
 ```
 

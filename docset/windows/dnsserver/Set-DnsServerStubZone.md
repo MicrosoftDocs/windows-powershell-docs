@@ -60,9 +60,7 @@ This command changes the master servers for a stub zone named west03.contoso.com
 PS C:\> Set-DnsServerStubZone  -Name "west04.contoso.com" -ReplicationScope "Domain" -PassThru
 
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 west04.contoso.com                  Stub            False           True            False
 ```
 

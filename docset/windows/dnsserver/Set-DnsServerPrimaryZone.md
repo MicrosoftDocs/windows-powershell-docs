@@ -59,9 +59,7 @@ You can change values that are relevant for either Active Directory-integrated z
 PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -DynamicUpdate "NonsecureAndSecure" -PassThru
 
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 western.contoso.com                 Primary         False           True            False                False
 ```
 
@@ -73,9 +71,7 @@ The example uses the *PassThru* parameter to return output.
 PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -ReplicationScope "Forest" -PassThru
 
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 western.contoso.com                 Primary         False           True            False                False
 ```
 
@@ -87,9 +83,7 @@ The example uses the *PassThru* parameter to return output.
 PS C:\> Set-DnsServerPrimaryZone -Name "western.contoso.com" -ZoneFile "tet23.dns" -PassThru
 
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 western.contoso.com                 Primary         False           False           False                False
 ```
 

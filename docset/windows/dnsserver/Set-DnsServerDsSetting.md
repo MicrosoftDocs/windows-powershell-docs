@@ -43,16 +43,12 @@ It must continue to set other operations and display the modified settings.
 ### Example 1: Set an auto-enlist interval for a directory partition
 ```
 PS C:\> Set-DnsServerDsSetting -DirectoryPartitionAutoEnlistInterval 15.00:00:00 -PassThru
+
 PollingInterval(s)                   : 180
-
 TombstoneInterval                    : 14.00:00:00
-
 DirectoryPartitionAutoEnlistInterval : 15.00:00:00
-
 LazyUpdateInterval(s)                : 3
-
 MinimumBackgroundLoadThreads         : 1
-
 RemoteReplicationDelay(s)            : 30
 ```
 

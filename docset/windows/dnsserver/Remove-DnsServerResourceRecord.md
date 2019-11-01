@@ -67,10 +67,9 @@ This command removes all root hints for a DNS server.
 ### Example 2: Remove multiple A records
 ```
 PS C:\> Remove-DnsServerResourceRecord -ZoneName "contoso.com" -RRType "A" -Name "Host01"
+
 Confirm
-
 Removing DNS resource record Host01 of type A from zone contoso.com on ROOT server. Do you want to continue?
-
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): n
 ```
 

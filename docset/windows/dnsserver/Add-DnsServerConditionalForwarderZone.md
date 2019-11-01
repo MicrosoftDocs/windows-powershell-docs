@@ -49,11 +49,10 @@ Conditional forwarders are stored as zones on a DNS server.
 
 ### Example 1: Create a non-Active Directory-integrated forwarder
 ```
-PS C:\> Add-DnsServerConditionalForwarderZone -Name "contoso.com" -MasterServers 2001:4898:7020:f100:458f:e6a2:fcaf:698c,172.23.90.124 -PassThru 
+PS C:\> Add-DnsServerConditionalForwarderZone -Name "contoso.com" -MasterServers 2001:4898:7020:f100:458f:e6a2:fcaf:698c,172.23.90.124 -PassThru
+
 ZoneName                            ZoneType        IsAutoCreated   IsDsIntegrated  IsReverseLookupZone  IsSigned
-
 --------                            --------        -------------   --------------  -------------------  --------
-
 contoso.com                         Forwarder       False           False           False
 ```
 

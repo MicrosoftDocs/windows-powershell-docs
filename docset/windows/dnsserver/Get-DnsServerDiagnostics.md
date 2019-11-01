@@ -38,60 +38,34 @@ The **Get-DnsServerDiagnostics** cmdlet retrieves Domain Name System (DNS) serve
 ### Example 1: Get DNS event logging details
 ```
 PS C:\> Get-DnsServerDiagnostics
+
 SaveLogsToPersistentStorage          : False
-
 Queries                              : False
-
 Answers                              : False
-
 Notifications                        : False
-
 Update                               : False
-
 QuestionTransactions                 : False
-
 UnmatchedResponse                    : False
-
 SendPackets                          : False
-
 ReceivePackets                       : False
-
 TcpPackets                           : False
-
 UdpPackets                           : False
-
 FullPackets                          : False
-
 FilterIPAddressList                  :
-
 EventLogLevel                        : 4
-
 UseSystemEventLog                    : False
-
 EnableLoggingToFile                  : True
-
 EnableLogFileRollover                : False
-
 LogFilePath                          :
-
 MaxMBFileSize                        : 500000000
-
 WriteThrough                         : False
-
 EnableLoggingForLocalLookupEvent     : False
-
 EnableLoggingForPluginDllEvent       : False
-
 EnableLoggingForRecursiveLookupEvent : False
-
 EnableLoggingForRemoteServerEvent    : False
-
 EnableLoggingForServerStartStopEvent : False
-
 EnableLoggingForTombstoneEvent       : False
-
 EnableLoggingForZoneDataWriteEvent   : False
-
 EnableLoggingForZoneLoadingEvent     : False
 ```
 

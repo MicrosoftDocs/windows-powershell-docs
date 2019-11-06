@@ -151,14 +151,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+A string object is received by the *Thumbprint* parameter.
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
+
+Returns the new ServiceCertificate object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
-* Active Directory Federation Services (AD FS) 2.0 uses certificates for issuing and receiving tokens, publishing federation metadata and communicating through Secure Sockets Layer (SSL).
+* Active Directory Federation Services (AD FS) uses certificates for issuing and receiving tokens, publishing federation metadata and communicating through Secure Sockets Layer (SSL).
 
 ## RELATED LINKS
 

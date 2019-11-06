@@ -140,14 +140,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
-A class structure that represents the service certificates for the Federation Service.
+
+A ServiceCertificate object is received by the *TargetCertificate* parameter.
+
+### System.String
+
+A string object is received by the *Thumbprint* parameter.
 
 ## OUTPUTS
 
 ### None
 
 ## NOTES
-* Removing a certificate removes it only from the Active Directory Federation Services (AD FS) 2.0 configuration data. It does not remove or delete the certificate from the local certificate store on the server computer.
+* Removing a certificate removes it only from the Active Directory Federation Services (AD FS) configuration data. It does not remove or delete the certificate from the local certificate store on the server computer.
 
 ## RELATED LINKS
 

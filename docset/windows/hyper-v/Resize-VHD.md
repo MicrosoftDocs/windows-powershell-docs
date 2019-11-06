@@ -53,7 +53,7 @@ If the virtual disk file connects to a virtual machine's SCSI chain, you **can**
 PS C:\> Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1099511627776
 ```
 
-Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If it was larger, the cmdlet will error because it cannot shrink a VHD.
+Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If it was larger, the cmdlet will report an error because it cannot shrink a VHD.
 
 ### Example 2
 ```

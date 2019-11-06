@@ -38,7 +38,7 @@ Resize-VHD [-Path] <String[]> [-ToMinimumSize] [-AsJob] [-Passthru] [-CimSession
 ```
 
 ## DESCRIPTION
-The **Resize-VHD** cmdlet changes the maximum physical size of a virtual hard disk. It can expand both VHD and VHDX files. It can shrink only VHDX.
+The **Resize-VHD** cmdlet changes the maximum physical size of a virtual hard disk. It can expand both VHD and VHDX files but can shrink only VHDX files.
 The shrink operation fails if it would shrink the virtual disk to less than its minimum size (available through the VHDX object's **MinimumSize** property).
 
 If the virtual disk file connects to a virtual machine's IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.

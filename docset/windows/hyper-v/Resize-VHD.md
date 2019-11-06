@@ -44,7 +44,8 @@ The shrink operation fails if it would shrink the virtual disk to less than its 
 If the virtual disk file connects to a virtual machine's IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.
 If the virtual disk file connects to a virtual machine's SCSI chain, you **can** resize the virtual disk while the virtual machine is online.
 
-[!NOTE] Resize-VHD does not remove empty blocks from a dynamically-expanding virtual hard disk file. Use Optimize-VHD instead.
+> [!NOTE]
+> Resize-VHD does not remove empty blocks from a dynamically-expanding virtual hard disk file. Use Optimize-VHD instead.
 
 ## EXAMPLES
 

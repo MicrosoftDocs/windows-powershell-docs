@@ -162,7 +162,7 @@ A string object is received by the *Thumbprint* parameter.
 Returns the new ServiceCertificate object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
-* Active Directory Federation Services (AD FS) uses certificates for issuing and receiving tokens, publishing federation metadata and communicating through Secure Sockets Layer (SSL).
+* Active Directory Federation Services (AD FS) uses certificates for issuing and receiving tokens, publishing federation metadata, and communication through Secure Sockets Layer (SSL).
 
 ## RELATED LINKS
 

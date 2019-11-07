@@ -152,7 +152,7 @@ A string object is received by the *Thumbprint* parameter.
 ### None
 
 ## NOTES
-* Removing a certificate removes it only from the Active Directory Federation Services (AD FS) configuration data. It does not remove or delete the certificate from the local certificate store on the server computer.
+* Removing a certificate removes it only from the AD FS configuration data. It does not remove or delete the certificate from the local certificate store on the server computer.
 
 ## RELATED LINKS
 

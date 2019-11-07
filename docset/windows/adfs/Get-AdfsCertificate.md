@@ -98,7 +98,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
 
-Returns one or more ServiceCertificate objects that represent the certificate objects for ADFS.
+Returns one or more ServiceCertificate objects that represent the certificate objects for AD FS.
 
 ## NOTES
 * You can use the **Get-AdfsCertificate** cmdlet without any parameters to get all the certificates.

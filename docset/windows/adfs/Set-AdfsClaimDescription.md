@@ -294,7 +294,7 @@ A ClaimDescription object is received by the *TargetClaimDescription* parameter.
 
 ### System.String
 
-String objects are received by the *TargetClaimType*, *TargetName* and *TargetShortName* parameters.
+String objects are received by the *TargetClaimType*, *TargetName*, and *TargetShortName* parameters.
 
 ## OUTPUTS
 

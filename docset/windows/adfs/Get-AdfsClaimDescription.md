@@ -111,7 +111,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-String objects are received by the *ClaimType*, *Name* and *ShortName* parameters.
+String objects are received by the *ClaimType*, *Name*, and *ShortName* parameters.
 
 ## OUTPUTS
 

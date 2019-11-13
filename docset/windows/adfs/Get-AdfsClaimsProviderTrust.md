@@ -125,6 +125,8 @@ Returns one or more ClaimsProviderTrust objects that represent the claims provid
 
 ## RELATED LINKS
 
+[Add-AdfsClaimsProviderTrust](./Add-AdfsClaimsProviderTrust.md)
+
 [Disable-AdfsClaimsProviderTrust](./Disable-AdfsClaimsProviderTrust.md)
 
 [Enable-AdfsClaimsProviderTrust](./Enable-AdfsClaimsProviderTrust.md)

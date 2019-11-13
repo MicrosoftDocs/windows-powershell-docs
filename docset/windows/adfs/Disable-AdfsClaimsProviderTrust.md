@@ -200,6 +200,8 @@ Returns the disabled ClaimsProviderTrust object when the *PassThru* parameter is
 
 ## RELATED LINKS
 
+[Add-AdfsClaimsProviderTrust](./Add-AdfsClaimsProviderTrust.md)
+
 [Enable-AdfsClaimsProviderTrust](./Enable-AdfsClaimsProviderTrust.md)
 
 [Get-AdfsClaimsProviderTrust](./Get-AdfsClaimsProviderTrust.md)

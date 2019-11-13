@@ -79,7 +79,7 @@ PS C:\> $groups = Get-ClusterNode -Name node1 | Get-ClusterGroup | Where-Object 
 
 
 
-PS C:\> ForEach-Object -InputObject ($group in $groups) -Process { $group | Move-ClusterVirtualMachineRole -Node node2 }
+PS C:\> ForEach-Object -InputObject $groups -Process { $_ | Move-ClusterVirtualMachineRole -Node node2 }
 Name                       OwnerNode                           State 
 ----                       ---------                           ----- 
 Virtual Machine1           node2                              Online 

@@ -33,7 +33,7 @@ Export-DnsServerZone [-FileName] <String> [-Name] <String> [-ComputerName <Strin
 ## DESCRIPTION
 The **Export-DnsServerZone** cmdlet creates a file containing resource records for an Active Directory-integrated zone for troubleshooting purposes.
 This file is not in the same format as a file-backed zonefile.
-By default, the cmdlet places the file in the Domain Name System (DNS) directory.
+By default, the cmdlet places the file in the Domain Name System (DNS) directory which, by default, is C:\Windows\System32\dns.
 
 ## EXAMPLES
 

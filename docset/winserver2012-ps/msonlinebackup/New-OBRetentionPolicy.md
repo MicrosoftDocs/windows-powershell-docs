@@ -17,7 +17,7 @@ Creates a new OBRetentionPolicy specifying the number of days that the backup ne
 ## SYNTAX
 
 ```
-New-OBRetentionPolicy [[-RetentionDays] <Long {7 | 15 | 30}>]
+New-OBRetentionPolicy [[-RetentionDays] <Long {7 | 15 | 30}>] [[-RetentionWeeklyPolicy]] [[-WeekDaysOfWeek] {Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday}] [[-WeekTimesOfDay] <List[timespan]>] [[-RetentionWeeks] <long>] [[-RetentionMonthlyPolicy]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

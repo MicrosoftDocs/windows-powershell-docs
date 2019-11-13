@@ -37,7 +37,7 @@ The **Get-ClusterStorageSpacesDirect** cmdlet gets the Storage Spaces Direct (S2
 
 ### Example 1: Get the Storage Spaces Direct settings from a cluster
 ```
-PS C:\> Get-ClusterStorageSpacesDirect -Cluster "K0617-C1.contoso.com"
+PS C:\> Get-ClusterStorageSpacesDirect -Node "K0617-C1.contoso.com"
 S2DCacheBehavior             : Default
 S2DCacheDesiredState         : ReadWrite
 S2DCacheMetadataReserveBytes : 34359738368

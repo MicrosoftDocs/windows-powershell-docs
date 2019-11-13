@@ -406,8 +406,8 @@ The acceptable values for this parameter are:
 - CheckEndCertCacheOnly
 - CheckChain
 - CheckChainCacheOnly
-- CheckChainExcludingRoot
-- CheckChainExcludingRootCacheOnly
+- CheckChainExcludeRoot
+- CheckChainExcludeRootCacheOnly
 
 ```yaml
 Type: String

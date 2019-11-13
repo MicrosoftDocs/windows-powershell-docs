@@ -289,11 +289,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription
-A class structure for representing a claim description object for the Federation Service.
+
+A ClaimDescription object is received by the *TargetClaimDescription* parameter.
+
+### System.String
+
+String objects are received by the *TargetClaimType*, *TargetName*, and *TargetShortName* parameters.
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription
+
+Returns the updated ClaimDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 * All Set-* cmdlets have a positional parameter (at position 0) with a name that starts with Target*. This parameter defines the search criteria, and the parameter set. For example, **Set-ADFSRelyingParty** has the parameters *TargetName*, *TargetIdentifierUri*, and *TargetRelyingParty*. You can use only one of these *Target** parameters to identify which RelyingParty to modify. Because these parameters are positional, you do not have to specify their name. Therefore, the following commands are identical in effect. The commands change the RelyingParty object named RP1 to RP2.

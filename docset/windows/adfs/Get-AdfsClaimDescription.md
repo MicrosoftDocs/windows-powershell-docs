@@ -109,15 +109,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+String objects are received by the *ClaimType*, *Name*, and *ShortName* parameters.
 
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription
-This cmdlet generates a class structure that represents the claim description resources for the Federation Service.
+
+Returns one or more ClaimDescription objects that represent the claim description resources for the Federation Service.
 
 ## NOTES
-* Use claim descriptions to configure the list of claims available to be offered or accepted by Active Directory Federation Services (AD FS) 2.0.
+* Use claim descriptions to configure the list of claims available to be offered or accepted by Active Directory Federation Services (AD FS).
 
 ## RELATED LINKS
 

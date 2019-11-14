@@ -793,7 +793,7 @@ ClaimsProviderTrust objects are received by the *TargetClaimsProviderTrust* para
 
 ### System.String
 
-String objects are received by the *AcceptanceTransformRules*, *SamlEndpoint*, *TargetIdentifier* and *TargetName* parameters.
+String objects are received by the *AcceptanceTransformRules*, *SamlEndpoint*, *TargetIdentifier*, and *TargetName* parameters.
 
 ## OUTPUTS
 

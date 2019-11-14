@@ -317,11 +317,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### string, string, uri[], string
+### System.String
+
+String objects are received by the *ClientId*, *Description*, *Name*, and *RedirectUri* parameters.
+
+### System.Uri
+
+Uri objects are received by the AcceptanceTransformRules parameter.
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+Returns the new AdafsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

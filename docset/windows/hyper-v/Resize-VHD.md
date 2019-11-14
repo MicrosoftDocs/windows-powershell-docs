@@ -61,7 +61,7 @@ Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If 
 PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 20GB
 ```
 
-Changes the VHDX's size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet will only succeed if it had a **MinimumSize** less than or equal to 1TB 20 gigabytes.
+Changes the VHDX's size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet will only succeed if it had a **MinimumSize** less than or equal to 20 gigabytes.
 
 ### Example 3
 ```

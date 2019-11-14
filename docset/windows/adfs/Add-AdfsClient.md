@@ -329,7 +329,7 @@ Uri objects are received by the AcceptanceTransformRules parameter.
 
 ### Microsoft.IdentityServer.Management.Resources.AdfsClient
 
-Returns the new AdafsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+Returns the new AdfsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

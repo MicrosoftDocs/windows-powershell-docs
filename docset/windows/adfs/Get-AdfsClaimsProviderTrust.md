@@ -112,7 +112,7 @@ X509Certificate2 objects are received by the *Certificate* parameter.
 
 ### System.String
 
-String objects are received by the *Identifier* and *tName* parameters.
+String objects are received by the *Identifier* and *Name* parameters.
 
 ## OUTPUTS
 

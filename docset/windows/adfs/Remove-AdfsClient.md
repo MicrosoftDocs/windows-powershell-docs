@@ -153,9 +153,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+AdfsClient objects are received by the *TargetClient* parameter.
+
 ### System.String
 
-String objects are received by the *TargetClient*, *TargetClientId*, and *TargetName* parameters.
+String objects are received by the *TargetClientId* and *TargetName* parameters.
 
 ## OUTPUTS
 

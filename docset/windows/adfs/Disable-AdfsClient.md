@@ -153,7 +153,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *TargetClient*, *TargetClientId*, and *TargetName* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+Returns the disabled AdfsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

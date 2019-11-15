@@ -321,10 +321,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 String objects are received by the *ClientId*, *Description*, *Name*, and *RedirectUri* parameters.
 
-### System.Uri
-
-Uri objects are received by the AcceptanceTransformRules parameter.
-
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.AdfsClient

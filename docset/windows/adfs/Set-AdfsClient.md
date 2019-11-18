@@ -412,7 +412,7 @@ String objects are received by the *ClientId*, *Description*, *Name*, *RedirectU
 
 ### Microsoft.IdentityServer.Management.Resources.AdfsClient
 
-Returns the updated AdfsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+Returns the updated AdfsClient object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

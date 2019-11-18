@@ -166,7 +166,7 @@ String objects are received by the *TargetClientId* and *TargetName* parameters.
 
 ### Microsoft.IdentityServer.Management.Resources.AdfsClient
 
-Returns the enabled AdfsClient object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
+Returns the enabled AdfsClient object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

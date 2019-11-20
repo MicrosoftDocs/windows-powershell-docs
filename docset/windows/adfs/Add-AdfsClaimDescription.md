@@ -205,10 +205,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### Microsoft.IdentityServer.Management.Resources.ClaimDescription
+
+Returns the new ClaimDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+
 ## NOTES
-* Use claim descriptions to configure the list of claims that are available to be offered or accepted by Active Directory Federation Services (AD FS) 2.0.
+* Use claim descriptions to configure the list of claims that are available to be offered or accepted by Active Directory Federation Services (AD FS).
 
 ## RELATED LINKS
 

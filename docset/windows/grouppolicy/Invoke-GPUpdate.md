@@ -237,7 +237,7 @@ This cmdlet does not take any object as input.
 ## OUTPUTS
 
 ### None
-This cmdlet does not generate any input.
+This cmdlet does not generate any output.
 
 ## NOTES
 * This cmdlet does not support scheduling a Group Policy refresh for computers running Windows XP or earlier.

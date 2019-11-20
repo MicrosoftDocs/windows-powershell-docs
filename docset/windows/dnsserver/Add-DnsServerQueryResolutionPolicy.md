@@ -116,11 +116,11 @@ Each policy has a precedence value.
 You can specify the precedence by using the *ProcessingOrder* parameter.
 The DNS server evaluates queries against policies in the order of precedence for each type of policy.
 
-If the criteria of a server level policy match a query, and if the action is DENY, the DNS server returns SERV_FAIL.
+If the criteria of a server level policy match a query, and if the action is DENY, the DNS server returns REFUSED.
 If the action is IGNORE, the DNS server drops the query.
 If the query does not match any server level policy, and if the server is authoritative for the zone for the query, the server evaluates the query with regard to the zone level policies.
 
-If the criteria of a zone level policy in that zone match a query, and if the action is DENY, the server returns SERV_FAIL.
+If the criteria of a zone level policy in that zone match a query, and if the action is DENY, the server returns REFUSED.
 If the action is IGNORE, the server drops the query.
 If the action is ALLOW, the DNS server responds to the query from one of the zone scopes specified in the policy.
 You can chose to distribute the responses from multiple zone scopes in a particular ratio.
@@ -129,7 +129,7 @@ For policy processing, the cache is treated as a zone.
 The DNS server repeats the process for zone level policies for the cache.
 
 If the server is not authoritative for the zone for which the query has been received, and the response is not found in the cache or the specified cache scope, the DNS server matches the query against the server level recursion policies in order of their precedence.
-If the criteria of a recursion policy match a query and the action is DENY, the DNS server returns SERV_FAIL.
+If the criteria of a recursion policy match a query and the action is DENY, the DNS server returns REFUSED.
 If the action is IGNORE, the DNS server drops the query.
 If the action is ALLOW, the DNS server gets settings from the configured recursion scope.
 Based on those settings, the DNS server gets the response for the query by using recursion.

@@ -155,12 +155,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+
 ### Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust
-A class structure that represents relying party trusts for the Federation Service.
+
+RelyingPartytrust objects are received by the *TargetRelyingParty* parameter.
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust
+
+Returns the enabled RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 * A relying party in Active Directory Federation Services (AD FS) 2.0 is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately accessed by the Web-based resources that are located in the relying party organization. When AD FS is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party accesses the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server in the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.

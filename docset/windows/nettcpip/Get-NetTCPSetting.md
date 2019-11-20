@@ -273,8 +273,8 @@ Data Center TCP adjusts the TCP window based on network congestion feedback base
 This value can improve throughput on low latency links. 
 - Default.
 Servers use Data Center TCP by default.
-Clients use NewReno.
-For information about NewReno, see [RFC 3782](http://www.ietf.org/rfc/rfc3782.txt).
+Clients use [CUBIC](https://techcommunity.microsoft.com/t5/Networking-Blog/Top-10-Networking-Features-in-Windows-Server-2019-8-A-Faster/ba-p/339749).
+
 
 ```yaml
 Type: CongestionProvider[]

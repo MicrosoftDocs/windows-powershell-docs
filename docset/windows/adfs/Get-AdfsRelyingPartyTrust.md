@@ -123,15 +123,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+String objects are received by the *Identifier*, *Name*, and *PrefixIdentifier* parameters.
 
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust
-A class structure that represents a relying party trust.
+
+Returns one or more RelyingPartyTrust objects that represent the relying party trust resources for the Federation Service.
 
 ## NOTES
-* If no *Identifier* parameter is provided, the cmdlet returns all **RelyingPartyTrust** objects. A relying party in Active Directory Federation Services (AD FS) 2.0 is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately consumed by the Web-based resources that are located in the relying party organization. When AD FS 2.0 is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party consumes the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server at the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
+* If no *Identifier* parameter is provided, the cmdlet returns all **RelyingPartyTrust** objects. A relying party in Active Directory Federation Services (AD FS) is an organization in which Web servers that host one or more Web-based applications reside. Tokens and Information Cards that originate from a claims provider can then be presented and ultimately consumed by the Web-based resources that are located in the relying party organization. When AD FS is configured in the role of the relying party, it acts as a partner that trusts a claims provider to authenticate users. Therefore, the relying party consumes the claims that are packaged in security tokens that come from users in the claims provider. In other words, a relying party is the organization whose Web servers are protected by the resource-side federation server. The federation server at the relying party uses the security tokens that the claims provider produces to issue tokens to the Web servers that are located in the relying party.
 
 ## RELATED LINKS
 

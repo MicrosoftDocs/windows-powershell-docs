@@ -230,7 +230,7 @@ String objects are received by the *ApplicationGroupIdentifier*, *Description*, 
 
 ### Microsoft.IdentityServer.Management.Resources.NativeClientApplication
 
-Returns the new NativeclientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+Returns the new NativeClientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

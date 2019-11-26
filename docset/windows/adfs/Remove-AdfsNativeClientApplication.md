@@ -159,7 +159,7 @@ String objects are received by the *TargetIdentifier* and *TargetName* parameter
 
 ### Microsoft.IdentityServer.Management.Resources.NativeClientApplication
 
-Returns the removed NativeclientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+Returns the removed NativeClientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

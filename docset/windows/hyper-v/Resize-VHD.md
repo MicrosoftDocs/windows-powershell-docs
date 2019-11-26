@@ -38,15 +38,14 @@ Resize-VHD [-Path] <String[]> [-ToMinimumSize] [-AsJob] [-Passthru] [-CimSession
 ```
 
 ## DESCRIPTION
-The **Resize-VHD** cmdlet resizes a virtual hard disk.
-This cmdlet lets you shrink or expand the size of a virtual hard disk, but the shrink operation is allowed only on VHDX virtual hard disks.
+The **Resize-VHD** cmdlet changes the maximum physical size of a virtual hard disk. It can expand both VHD and VHDX files but can shrink only VHDX files.
 The shrink operation fails if it would shrink the virtual disk to less than its minimum size (available through the VHDX object's **MinimumSize** property).
 
-If the VHD belongs to the virtual IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.
-If the VHD belongs to the virtual SCSI chain, you **can** resize the virtual disk while the virtual machine is online.
+If the virtual disk file connects to a virtual machine's IDE chain, you **cannot** resize the virtual disk while the virtual machine is online.
+If the virtual disk file connects to a virtual machine's SCSI chain, you **can** resize the virtual disk while the virtual machine is online.
 
 > [!NOTE]
-> SizeBytes acceptes only Uint64 values and cannot accept strings in TB or GB. The value needs to be specified in Uint64 format which is 1099511627776 for 1 TB.
+> Resize-VHD does not remove empty blocks from a dynamically-expanding virtual hard disk file. Use Optimize-VHD instead.
 
 ## EXAMPLES
 
@@ -55,21 +54,21 @@ If the VHD belongs to the virtual SCSI chain, you **can** resize the virtual dis
 PS C:\> Resize-VHD -Path c:\BaseVHD.vhd -SizeBytes 1099511627776
 ```
 
-Expands the VHDX to 1 terabyte (assuming that the previous size was less than the new size prior to the command).
+Expands the VHD to 1 terabyte if the previous size was less than 1 terabyte. If it was larger, the cmdlet will report an error because it cannot shrink a VHD.
 
 ### Example 2
 ```
-PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 1099511627776
+PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -SizeBytes 20GB
 ```
 
-Shrinks the VHDX to one terabyte (assuming that the virtual hard disk object associated with the file path has a **MinimumSize** less than or equal to 1TB).
+Changes the VHDX's size to 20 gigabytes (21,474,836,480 bytes). If it was larger, the cmdlet will only succeed if it had a **MinimumSize** less than or equal to 20 gigabytes.
 
 ### Example 3
 ```
 PS C:\> Resize-VHD -Path c:\BaseVHDX.vhdx -ToMinimumSize
 ```
 
-Shrinks the VHDX to its minimum possible size.
+Shrinks the VHDX to its minimum possible size as indicated in its **MinimumSize** property.
 
 ## PARAMETERS
 
@@ -155,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Passthru
-Specifies that an object is to be passed through to the pipeline representing the virtual hard disk to be resized.
+Specifies that an object representing the resized virtual hard disk is to be passed through to the pipeline.
 
 ```yaml
 Type: SwitchParameter

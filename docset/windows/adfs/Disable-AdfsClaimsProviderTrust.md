@@ -178,14 +178,29 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2
+
+X509Certificate2 objects are received by the *TargetCertificate* parameter.
+
 ### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
-A class that represents a claims provider trust for the Federation Service.
+
+ClaimsProviderTrust objects are received by the *TargetClaimsProviderTrust* parameter.
+
+### System.String
+
+String objects are received by the *TargetIdentifier* and *TargetName* parameters.
 
 ## OUTPUTS
+
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
+
+Returns the disabled ClaimsProviderTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-AdfsClaimsProviderTrust](./Add-AdfsClaimsProviderTrust.md)
 
 [Enable-AdfsClaimsProviderTrust](./Enable-AdfsClaimsProviderTrust.md)
 

@@ -151,12 +151,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
-A class structure that represents a service certificate.
+### System.String
+
+A String object is received by the *Thumbprint* parameter.
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
+
+Returns the updated ServiceCertificate object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 * Use the **Set-AdfsRelyingPartyTrust** or **Set-AdfsClaimsProviderTrust** cmdlets, as appropriate, to modify the certificates that are associated with a relying party or a claims provider.

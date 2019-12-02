@@ -80,7 +80,7 @@ When AD FS is acting as a federation provider, these new properties on the claim
 
 ## EXAMPLES
 
-### Example 1: Add a claims provder trust
+### Example 1: Add a claims provider trust
 ```
 PS C:\> Add-AdfsClaimsProviderTrust -Name "Fabrikam" -MetadataURL "https://fabrikam.com/federationmetadata/2007-06/federationmetadata.xml"
 ```
@@ -682,14 +682,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+
+String objects are received by the *AcceptanceTransformRules* parameter.
+
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimDescription
+
+ClaimDescription objects are received by the *SamlEndpoint* parameter.
+
+### System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2
+
+X509Certificate2 objects are received by the *TokenSigningCertificate* parameter.
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
+
+Returns the new ClaimsProviderTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
-* The claims provider is responsible for collecting and authenticating a user's credentials, building up claims for that user, and packaging the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS) 2.0 to use federation services, the role of the claims provider is to enable its users to access resources that a relying party organization hosts by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to the relying party across the federation trust.
+* The claims provider is responsible for collecting and authenticating a user's credentials, building up claims for that user, and packaging the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS) to use federation services, the role of the claims provider is to enable its users to access resources that a relying party organization hosts by establishing one side of a federation trust relationship. After the trust is established, tokens and Information Cards can be presented to the relying party across the federation trust.
 
 ## RELATED LINKS
 

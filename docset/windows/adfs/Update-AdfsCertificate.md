@@ -33,7 +33,7 @@ Update-AdfsCertificate [[-CertificateType] <String>] [-Urgent] [-PassThru] [-Wha
 
 ## DESCRIPTION
 The **Update-AdfsCertificate** cmdlet creates new certificates for Active Directory Federation Services (AD FS).
-When automatic certificate rollover is enabled and AD FS 2.0 is managing the certificates that are used for signing, this update cmdlet can be used to initiate a rollover.
+When automatic certificate rollover is enabled and AD FS is managing the certificates that are used for signing, this update cmdlet can be used to initiate a rollover.
 
 ## EXAMPLES
 
@@ -139,7 +139,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
+### Microsoft.IdentityServer.PowerShell.Resources.ServiceCertificate
+
+Returns the updated ServiceCertificate object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 * The *Urgent* parameter option is useful for emergency rollover situations in which a key might be compromised.

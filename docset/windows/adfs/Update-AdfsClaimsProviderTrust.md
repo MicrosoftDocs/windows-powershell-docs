@@ -185,9 +185,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2
+
+X509Certificate2 objects are received by the *TargetCertificate* parameter.
+
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
+
+ClaimsProviderTrust objects are received by the *TargetClaimsProviderTrust* parameter.
+
+### System.String
+
+String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
+
+Returns the updated ClaimsProviderTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

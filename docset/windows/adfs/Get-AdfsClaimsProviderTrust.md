@@ -106,17 +106,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.Security.Cryptography.X509Certificates.X509Certificate.X509Certificate2
+
+X509Certificate2 objects are received by the *Certificate* parameter.
+
+### System.String
+
+String objects are received by the *Identifier* and *Name* parameters.
 
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.ClaimsProviderTrust
-The cmdlet outputs a class structure that represents the claims provider trusts for the Federation Service.
+
+Returns one or more ClaimsProviderTrust objects that represent the claims provider trusts for the Federation Service.
 
 ## NOTES
-* If you do not specify the *Name* parameter, the cmdlet lists all claims providers. The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS) 2.0, the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of the federation trust relationship. After the federation trust is established, tokens and Information Cards can be presented to the relying party across the trust.
+* If you do not specify the *Name* parameter, the cmdlet lists all claims providers. The claims provider collects and authenticates a user's credentials, builds up claims for that user, and packages the claims into security tokens or Information Cards. In other words, a claims provider represents the organization for whose users the claims provider issues security tokens or Information Cards on their behalf. When you configure Active Directory Federation Services (AD FS), the role of the claims provider is to enable its users to access resources that are hosted in a relying party organization by establishing one side of the federation trust relationship. After the federation trust is established, tokens and Information Cards can be presented to the relying party across the trust.
 
 ## RELATED LINKS
+
+[Add-AdfsClaimsProviderTrust](./Add-AdfsClaimsProviderTrust.md)
 
 [Disable-AdfsClaimsProviderTrust](./Disable-AdfsClaimsProviderTrust.md)
 

@@ -136,9 +136,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.IdentityServer.PowerShell.Resources.AttributeStore
-You can pipe a class structure that represents an AD FS 2.0 attribute store object.
+
+An AttributeStore object is received by the *TargetName* parameter.
 
 ## OUTPUTS
+
+### None or Microsoft.IdentityServer.Management.Resources.AttributeStore
+
+Returns the removed AttributeStore object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 * An Active Directory Federation Services (AD FS) 2.0 attribute store is a pluggable module that the policy process for AD FS 2.0 can query to retrieve claim values. You can use either an Active Directory database or a Microsoft SQL Server database as your attribute store, or you can implement your own custom attribute store.

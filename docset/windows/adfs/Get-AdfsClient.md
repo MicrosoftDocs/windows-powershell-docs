@@ -157,9 +157,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *ClientId* and *Name* parameters.
+
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+AdfsClient objects are received by the *InputObject* parameter.
+
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+Returns one or more AdfsClient objects that represent the Adfs Clients for the Federation Service.
 
 ## NOTES
 

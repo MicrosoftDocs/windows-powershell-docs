@@ -2,12 +2,12 @@
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-anbarr
-Module Name: WSUS
+Module Name: UpdateServices
 Module Guid: CMDLETS
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390839
 Help Version: 5.0.2.1
 Locale: en-US
-title: WSUS
+title: UpdateServices
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
@@ -24,7 +24,7 @@ ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
 ## Description
 This reference provides cmdlet descriptions and syntax for all Windows Server Update Services (WSUS) Administration-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-## WSUS Cmdlets
+## UpdateServices Cmdlets
 ### [Add-WsusComputer](./Add-WsusComputer.md)
 Adds a client computer to a target group.
 

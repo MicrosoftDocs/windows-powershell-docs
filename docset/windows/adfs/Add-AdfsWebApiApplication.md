@@ -526,19 +526,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-String objects are accepted by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *ApplicationGroupIdentifier*, *DelegationAuthorizationRules*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, and *IssuanceTransformRules* parameters.
+String objects are received by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *ApplicationGroupIdentifier*, *DelegationAuthorizationRules*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, and *IssuanceTransformRules* parameters.
 
 ### System.Object
 
-Objects are accepted by the *AccessControlPolicyParameters* parameter.
+Objects are received by the *AccessControlPolicyParameters* parameter.
 
 ### System.Management.Automation.SwitchParameter
 
-SwitchParameter objects are accepted by the *AlwaysRequireAuthentication* and *RequestMFAFromClaimsProviders* parameters.
+SwitchParameter objects are received by the *AlwaysRequireAuthentication* and *RequestMFAFromClaimsProviders* parameters.
 
 ### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 
-ApplicationGroup objects are accepted by the *ApplicationGroup* parameter.
+ApplicationGroup objects are received by the *ApplicationGroup* parameter.
 
 ## OUTPUTS
 

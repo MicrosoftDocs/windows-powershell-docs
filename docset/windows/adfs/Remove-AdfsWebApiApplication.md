@@ -156,6 +156,8 @@ String objects are received by the *TargetIdentifier* and *TargetName* parameter
 
 ## OUTPUTS
 
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
+
 Returns the removed WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES

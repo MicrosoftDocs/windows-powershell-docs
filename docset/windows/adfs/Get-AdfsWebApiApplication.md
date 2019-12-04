@@ -160,7 +160,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.IdentityServer.Management.Resources.WebApiApplication
 
-WebApiApplication objects are accepted by the *application* parameter.
+WebApiApplication objects are accepted by the *Application* parameter.
 
 ### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
 

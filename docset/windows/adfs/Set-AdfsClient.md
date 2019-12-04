@@ -400,9 +400,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+AdfsClient objects are received by the *TargetClient* parameter.
+
+### System.String
+
+String objects are received by the *ClientId*, *Description*, *Name*, *RedirectUri*, *TargetClientId*, and *TargetName* parameters.
+
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.Management.Resources.AdfsClient
+
+Returns the updated AdfsClient object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

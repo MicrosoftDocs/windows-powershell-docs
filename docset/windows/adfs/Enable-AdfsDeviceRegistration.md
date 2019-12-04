@@ -32,7 +32,7 @@ Enable-AdfsDeviceRegistration [-Credential <PSCredential>] [-Force] [-WhatIf] [-
 
 ## DESCRIPTION
 This cmdlet has been deprecated for AD FS 2016.
-For more information, see Configure On-Premises Conditional Access using registered deviceshttps://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/configure-device-based-conditional-access-on-premises (https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-fs/operations/configure-device-based-conditional-access-on-premises) on TechNet.
+For more information, see [Configure On-Premises Conditional Access using registered devices](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-device-based-conditional-access-on-premises).
 
 The **Enable-AdfsDeviceRegistration** cmdlet configures a server in an Active Directory Federation Services (AD FS) farm to host the Device Registration Service.
 To completely enable the Device Registration Service, you must run this command on each AD FS server in your AD FS farm.

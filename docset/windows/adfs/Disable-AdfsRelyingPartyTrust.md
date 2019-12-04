@@ -148,9 +148,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+
+### Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust
+
+RelyingPartytrust objects are received by the *TargetRelyingParty* parameter.
+
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.PowerShell.Resources.RelyingPartyTrust
+
+Returns the disabled RelyingPartyTrust object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

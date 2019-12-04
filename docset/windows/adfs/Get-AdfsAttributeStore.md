@@ -58,9 +58,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+A string object is received by the *Name* parameter.
+
 ## OUTPUTS
 
-### System.Object
+### Microsoft.IdentityServer.Management.Resources.AttributeStore
+
+Returns one or more AttributeStore objects that represent the attribute stores of the Federation Service.
 
 ## NOTES
 

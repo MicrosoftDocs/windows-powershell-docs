@@ -24,9 +24,6 @@ ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
 ## Description
 This reference provides cmdlet descriptions and syntax for all Windows Server Update Services (WSUS) Administration-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-> [!NOTE]
-> All cmdlets except the ones referencing "DynamicCategory" are included in the **UpdateServices** module.
-
 ## WSUS Cmdlets
 ### [Add-WsusComputer](./Add-WsusComputer.md)
 Adds a client computer to a target group.

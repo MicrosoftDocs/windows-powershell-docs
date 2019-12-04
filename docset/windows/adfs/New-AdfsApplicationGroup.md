@@ -150,7 +150,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *ApplicationGroupIdentifier*, *Description*, and *Name* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+Returns the new ApplicationGroup object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

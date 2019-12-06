@@ -41,7 +41,7 @@ Get-AppLockerPolicy [-Effective] [-Xml] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AppLockerPolicy** cmdlet retrieves the AppLocker policy from the local Group Policy Object (GPO), a specified Group Policy Object (GPO), or the effective policy on the computer.
+The **Get-AppLockerPolicy** cmdlet retrieves the AppLocker policy from the local Group Policy Object (GPO), a specified GPO, or the GP-deployed effective policy on the computer.
 
 By default, the output is an **AppLockerPolicy** object.
 If the *Xml* parameter is used, then the output will be the AppLocker policy as an XML-formatted string.

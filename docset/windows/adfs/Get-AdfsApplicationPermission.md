@@ -98,28 +98,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
+### System.String
+
+String objects are received by the *ClientRoleIdentifiers*, *Identifiers*, and *ServerRoleIdentifiers* parameters.
 
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.OAuthPermission
-ClientRoleIdentifier  string
-ConsentType           Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
-Description           string
-GrantedAt             datetime
-GrantedBy             string
-ObjectIdentifier      string
-ScopeNames            string[]
-ServerRoleIdentifier  string
 
-### Microsoft.IdentityServer.Protocols.PolicyStore.OAuthConsentType
-
-OAuthConsentType
-{
-  Unknown = 0,
-  Administrator = 1,
-  User = 2,
-}
+Returns one or more OAuthPermission objects that represent the application permssions for the Federation Service.
 
 ## NOTES
 

@@ -147,7 +147,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+ApplicationGroup objects are received by the *TargetApplicationGroup* parameter.
+
+### System.String
+
+String objects are received by the *TargetApplicationGroupIdentifier* and *TargetName* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+Returns the disabled ApplicationGroup object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

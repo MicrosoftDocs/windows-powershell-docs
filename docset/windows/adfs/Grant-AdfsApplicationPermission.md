@@ -173,7 +173,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Management.Automation.SwitchParameter
+
+SwitchParameter objects are received by the *AllowAllRegisteredClients* parameter.
+
+### System.String
+
+String objects are received by the *ClientRoleIdentifier*, *Description*, *ScopeNames*, and *ServerRoleIdentifier* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.OAuthPermission
+
+Returns the new OAuthPermission object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

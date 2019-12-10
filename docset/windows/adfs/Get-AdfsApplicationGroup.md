@@ -98,43 +98,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
-Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+
+### System.String
+
+String objects are received by the *ApplicationGroupIdentifier* and *Name* parameters.
 
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
-ApplicationGroupIdentifier  string
-Applications                Microsoft.IdentityServer.Management.Resources.IApplication[]
-Description                 string
-Enabled                     bool
-Name                        string
 
-### Microsoft.IdentityServer.Management.Resources.IApplication
-ADUserPrincipalName                   string
-ApplicationGroupIdentifier            string
-ClientSecret                          string
-Description                           string
-Enabled                               bool
-Identifier                            string
-JWKSUri                               uri
-JWTSigningCertificateRevocationCheck  Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-JWTSigningKeys                        System.Collections.Generic.IDictionary[string,System.Object]
-Name                                  string
-RedirectUri                           string[]
-
-### Microsoft.IdentityServer.PolicyModel.Configuration.RevocationSetting
-
-RevocationSetting
-{
-   None = 0,
-   CheckEndCert = 1,
-   CheckEndCertCacheOnly = 2,
-   CheckChain = 3,
-   CheckChainCacheOnly = 4,
-   CheckChainExcludeRoot = 5,
-   CheckChainExcludeRootCacheOnly = 6,
-}
+Returns one or more ApplicationGroup objects that represent the Application Groups for the Federation Service.
 
 ## NOTES
 

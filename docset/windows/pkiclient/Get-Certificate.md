@@ -55,8 +55,6 @@ Delegation may be required when using this cmdlet with Windows PowerShell® remo
 ```
 PS C:\>$up = Get-Credential
 
-
-
 PS C:\>Get-Certificate -Template SslWebServer -DnsName www.contoso.com,www.fabrikam.com -Url https://www.contoso.com/Policy/service.svc -Credential $up -CertStoreLocation cert:\LocalMachine\My
 ```
 
@@ -68,9 +66,7 @@ If the request is made pending, then the request is installed in the machine REQ
 
 ### EXAMPLE 2
 ```
-PS C:\>$cert = ( Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF )
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>$enrollResult = Get-Certificate -Template SslWebServer -DnsName www.contoso.com -Url https://www.contoso.com/policy/service.svc -Credential $cert -CertStoreLocation cert:\LocalMachine\My
 ```
@@ -81,9 +77,7 @@ This example submits a certificate request to a specific URL using the certifica
 ```
 PS C:\>Set-Location -Path cert:\LocalMachine\My
 
-
-
-PS C:\>$enrollResult = ( Get-Certificate -Template WorkstationTemplate -Url https://www.contoso.com/service.svc )
+PS cert:\LocalMachine\My>$enrollResult = Get-Certificate -Template WorkstationTemplate -Url https://www.contoso.com/service.svc
 ```
 
 This example authenticates the URL using the machine account and Windows integrated authentication and submits a request for a machine certificate of template named WorkstationTemplate.
@@ -92,22 +86,16 @@ This example authenticates the URL using the machine account and Windows integra
 ```
 PS C:\>Set-Location -Path cert:\CurrentUser\My
 
-
-
-PS C:\>Get-Certificate -Template User -Url ldap:
+PS cert:\CurrentUser\My>Get-Certificate -Template User -Url ldap:
 ```
 
 This example uses Windows integrated authentication to enroll for a certificate of template User using direct DCOM calls to the CA.
 
 ### EXAMPLE 5
 ```
-PS C:\>$request = (Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF)
-
-
+PS C:\>$request = Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>$up = Get-Credential
-
-
 
 PS C:\>Get-Certificate -Request $request -Credential $up
 ```
@@ -116,9 +104,7 @@ This example retrieves and submits a pending request using a user name and passw
 
 ### EXAMPLE 6
 ```
-PS C:\>$request = (Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF)
-
-
+PS C:\>$request = Get-ChildItem -Path cert:\LocalMachine\Request\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Get-Certificate -Request $request
 ```

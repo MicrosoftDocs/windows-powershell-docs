@@ -51,9 +51,7 @@ Auto enrollment is off and strong validation is off.
 
 ### EXAMPLE 2
 ```
-PS C:\>$cert = ( Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF )
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\LocalMachine\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert -Context Machine
 ```
@@ -64,8 +62,6 @@ This example loads a policy using $cert as the authentication credential and add
 ```
 PS C:\>$up = Get-Credential
 
-
-
 PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context Machine -Credential $up
 ```
 
@@ -74,9 +70,7 @@ This example adds the policy server to the local computer configuration.
 
 ### EXAMPLE 4
 ```
-PS C:\>$cert = (Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF)
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Add-CertificateEnrollmentPolicyServer -Url $cert.EnrollmentPolicyEndPoint.Url -Credential $cert.PSPath -Context Machine
 ```
@@ -87,8 +81,6 @@ Use the certificate to authenticate to the URL and add the policy server into th
 ### EXAMPLE 5
 ```
 PS C:\>$up = Get-Credential
-
-
 
 PS C:\>Add-CertificateEnrollmentPolicyServer -Url $url -Context User -Credential $up -WhatIf
 What if: Policy successfully loaded from {$url} using username/password credentials. 

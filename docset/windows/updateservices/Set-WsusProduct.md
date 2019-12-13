@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/UpdateServices/Set-WsusProduct?view=win10-ps
 schema: 2.0.0
 title: Set-WsusProduct
 ms.reviewer:
@@ -21,23 +21,24 @@ ms.assetid: 7C1A016A-A56E-44A2-9046-005490F13D82
 # Set-WsusProduct
 
 ## SYNOPSIS
+
 Sets whether the product representing the category of updates to synchronize is enabled.
 
 ## SYNTAX
 
-```
+```powershell
 Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize.
-In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet.
-You can run the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
+
+The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
 
 ## EXAMPLES
 
 ### Example 1: Specify updates for a product
-```
+
+```powershell
 PS C:\> Get-WsusServer | Get-WsusProduct | Where-Object -FilterScript {$_.product.title -Eq "Antigen"} | Set-WsusProduct
 ```
 
@@ -46,6 +47,7 @@ This command specifies that you want updates for the Antigen product.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -61,12 +63,13 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
+
 Specifies that updates are not to be synchronized for the specified product.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,14 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -Product
-Specifies the product for which the updates are to be synchronized.
-If the **Disable** parameter is used, then this parameter specifies the product for which the updates are not to be synchronized.
-This parameter value is passed from the [Get-WsusProduct](./Get-WsusProduct.md) cmdlet.
+
+Specifies the product for which the updates are to be synchronized. If the **Disable** parameter is used, then this parameter specifies the product for which the updates are not to be synchronized. This parameter value is passed from the [Get-WsusProduct](./Get-WsusProduct.md) cmdlet.
 
 ```yaml
 Type: WsusProduct
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,8 +95,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -109,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -128,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WsusProduct](./Get-WsusProduct.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

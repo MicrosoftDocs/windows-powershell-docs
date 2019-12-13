@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/UpdateServices/Get-WsusDynamicCategory?view=win10-ps
 schema: 2.0.0
 title: Get-WsusDynamicCategory
 ms.reviewer:
@@ -21,29 +21,34 @@ ms.assetid: 29FCC0EC-C462-4F38-81B1-7A1665E046FF
 # Get-WsusDynamicCategory
 
 ## SYNOPSIS
+
 Gets dynamic categories on a WSUS server.
 
 ## SYNTAX
 
 ### Filter (Default)
-```
+
+```powershell
 Get-WsusDynamicCategory [-UpdateServer <IUpdateServer>] [-DynamicCategoryTypeFilter <DynamicCategoryType>]
  [-First <Int64>] [-Skip <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
-```
+
+```powershell
 Get-WsusDynamicCategory [-UpdateServer <IUpdateServer>] -DynamicCategoryType <DynamicCategoryType>
  -Name <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Get-WsusDynamicCategory** cmdlet gets dynamic categories on a Windows Server Update Services (WSUS) server.
 
 ## EXAMPLES
 
 ### Example 1: Get all dynamic categories for specified servers
-```
+
+```text
 PS C:\> Get-WsusServer | Get-WsusDynamicCategory
 Name                                     Type                                     Status
 ----                                     ----                                     ------
@@ -51,12 +56,11 @@ Name                                     Type                                   
 PCI/Device07                             Device                                   True
 ```
 
-This command gets all dynamic categories from the current update server by using the [Get-WsusServer](./Get-WsusServer.md) cmdlet.
-The command passes the server to the current cmdlet by using the pipeline operator.
-The current cmdlet gets the available dynamic categories for the update server.
+This command gets all dynamic categories from the current update server by using the [Get-WsusServer](./Get-WsusServer.md) cmdlet. The command passes the server to the current cmdlet by using the pipeline operator. The current cmdlet gets the available dynamic categories for the update server.
 
 ### Example 2: Get a named dynamic category
-```
+
+```text
 PS C:\> Get-WsusDynamicCategory -DynamicCategoryType Device -Name "PCI/Device07"
 Name                                     Type                                     Status
 ----                                     ----                                     ------
@@ -66,7 +70,8 @@ PCI/Device07                             Device                                 
 This command gets the dynamic category named PCI/Device07 that is a Device type.
 
 ### Example 3: Get dynamic categories by type
-```
+
+```text
 PS C:\> Get-WsusDynamicCategory -DynamicCategoryTypeFilter ComputerModel
 Name                                     Type                                     Status
 ----                                     ----                                     ------
@@ -78,6 +83,7 @@ This command gets dynamic categories of the type ComputerModel that are currentl
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -93,8 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicCategoryType
-Specifies the type of the dynamic category.
-The acceptable values for this parameter are:
+
+Specifies the type of the dynamic category. The acceptable values for this parameter are:
 
 - ComputerModel
 - Device
@@ -114,8 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicCategoryTypeFilter
-Specifies the type of the dynamic categories that this cmdlet gets.
-The possible values are the same as those of the *DynamicCategoryType* parameter.
+
+Specifies the type of the dynamic categories that this cmdlet gets. The possible values are the same as those of the _DynamicCategoryType_ parameter.
 
 ```yaml
 Type: DynamicCategoryType
@@ -135,7 +141,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int64
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -145,12 +151,13 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 Specifies the name of the dynamic category to get.
 
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +171,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Int64
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,15 +181,13 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateServer
-Specifies a WSUS server.
-This cmdlet gets dynamic categories on the server that this parameter specifies.
-To obtain a server, use the Get-WsusServer cmdlet.
-If you do not specify a value for this parameter, the cmdlet gets dynamic category from the local server.
+
+Specifies a WSUS server. This cmdlet gets dynamic categories on the server that this parameter specifies. To obtain a server, use the Get-WsusServer cmdlet. If you do not specify a value for this parameter, the cmdlet gets dynamic category from the local server.
 
 ```yaml
 Type: IUpdateServer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,6 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
@@ -207,6 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -228,4 +235,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-WsusDynamicCategory](./Set-WsusDynamicCategory.md)
 
 [Get-WsusServer](./Get-WsusServer.md)
-

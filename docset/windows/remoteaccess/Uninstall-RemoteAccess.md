@@ -31,7 +31,7 @@ Uninstall-RemoteAccess [-VpnType <String>] [-ComputerName <String>] [-Entrypoint
 ```
 
 ## DESCRIPTION
-The **Unistall-RemoteAccess** cmdlet uninstalls DirectAccess (DA) and VPN, both Remote Access (RA) VPN and site-to-site VPN.
+The **Uninstall-RemoteAccess** cmdlet uninstalls DirectAccess (DA) and VPN, both Remote Access (RA) VPN and site-to-site VPN.
 
 Users should indicate which RA technology to uninstall using the appropriate parameter.
 If none of the technologies are specified, then everything gets uninstalled. 

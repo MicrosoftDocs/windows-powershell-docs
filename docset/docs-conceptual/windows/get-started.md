@@ -127,6 +127,7 @@ The table below also shows the latest published version of the Help for each mod
 | TLS | [TLS](/powershell/module/tls) |
 | TroubleshootingPack | [Troubleshooting Pack](/powershell/module/troubleshootingpack) |
 | TrustedPlatformModule | [Trusted Platform Module](/powershell/module/trustedplatformmodule) |
+| UpdateServices | [Windows Server Update Services](/powershell/module/wsus) |
 | UserAccessLogging | [User Access Logging](/powershell/module/useraccesslogging/) |
 | UEV | [User Experience Virtualization](/powershell/module/uev) |
 | VAMT | [Volume Activation Management Tool](/powershell/module/vamt) |
@@ -140,7 +141,6 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsErrorReporting | [Windows Error Reporting](/powershell/module/windowserrorreporting) |
 | WindowsSearch | [Windows Search](/powershell/module/windowssearch) |
 | WindowsServerBackup | [Windows Server Backup](/powershell/module/windowsserverbackup) |
-| WSUS | [Windows Server Update Services](/powershell/module/wsus) |
 | WindowsUpdate | [Windows Update](/powershell/module/windowsupdate) |
 
 You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

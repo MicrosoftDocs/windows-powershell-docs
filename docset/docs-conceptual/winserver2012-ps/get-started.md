@@ -32,7 +32,6 @@ The table below also shows the latest published version of the Help for each mod
 | AppX | [App Installation Cmdlets](/powershell/module/appx) |
 | BestPractices | [Best Practices Analyzer Cmdlets](/powershell/module/bestpractices) |
 | BitLocker | [BitLocker Cmdlets](/powershell/module/bitlocker) |
-<!-- | BitsTransfer | [BITS Cmdlets]("https://technet.microsoft.com/library/jj590836(v=wps.620).aspx") | -->
 | BranchCache | [BranchCache Cmdlets](/powershell/module/branchcache) |
 | ClusterAwareUpdating | [Cluster-Aware Updating Cmdlets](/powershell/module/clusterawareupdating) |
 | DcbQoS | [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets](/powershell/module/dcbqos) |
@@ -71,7 +70,6 @@ The table below also shows the latest published version of the Help for each mod
 | NFS | [NFS Cmdlets](/powershell/module/nfs) |
 | NPS | [NPS Cmdlets](/powershell/module/nps) |
 | PKI | [PKI Client Cmdlets](/powershell/module/pki) |
-<!-- | PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets]("https://technet.microsoft.com/library/jj592887(v=wps.620).aspx") | -->
 | PrintManagement | [Print Management Cmdlets](/powershell/module/printmanagement) |
 | RemoteAccess | [Remote Access Cmdlets](/powershell/module/remoteaccess) |
 | RemoteDesktop | [Remote Desktop Cmdlets](/powershell/module/remotedesktop) |
@@ -79,7 +77,7 @@ The table below also shows the latest published version of the Help for each mod
 | SecureBoot | [Secure Boot Cmdlets](/powershell/module/secureboot) |
 | ServerCore | [Server Core Cmdlets](/powershell/module/servercore) |
 | ServerManager | [Server Manager Cmdlets](/powershell/module/servermanager) |
-| ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks |
+| ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks) |
 | ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermig_cmdlets) |
 | SMBShare | [SMB Share Cmdlets](/powershell/module/smbshare) |
 | SMBWitness | [SMB Witness Cmdlets](/powershell/module/smbwitness) |
@@ -99,5 +97,7 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsErrorReporting | [Windows Error Reporting Cmdlets](/powershell/module/windowserrorreporting) |
 | WindowsServerBackup | [Windows Server Backup Cmdlets](/powershell/module/windowsserverbackup) |
 | WSSCmdlets | [Windows Server Backup Cmdlets](/powershell/module/wsscmdlets) |
+<!-- | BitsTransfer | [BITS Cmdlets]("https://technet.microsoft.com/library/jj590836(v=wps.620).aspx") | -->
+<!-- | PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets]("https://technet.microsoft.com/library/jj592887(v=wps.620).aspx") | -->
 
 You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

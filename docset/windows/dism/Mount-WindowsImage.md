@@ -103,7 +103,6 @@ PS C:\> Mount-WindowsImage -Checkintegrity -ImagePath "c:\imagestore\install.wim
 This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with Checkintegrity and getting a log file with a quicker initial mount time. Additional operations may be slower.
 
 
-
 ## PARAMETERS
 
 ### -CheckIntegrity

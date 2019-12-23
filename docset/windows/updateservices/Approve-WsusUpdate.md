@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/UpdateServices/Approve-WsusUpdate?view=win10-ps
 schema: 2.0.0
 title: Approve-WsusUpdate
 ms.reviewer:
@@ -21,25 +21,27 @@ ms.assetid: AF8E8258-D82E-43C1-BF9F-96DBA22E8B7F
 # Approve-WsusUpdate
 
 ## SYNOPSIS
+
 Approves an update to be applied to clients.
 
 ## SYNTAX
 
-```
+```powershell
 Approve-WsusUpdate -Update <WsusUpdate> -Action <UpdateApprovalAction> -TargetGroupName <String> [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Approve-WsusUpdate** cmdlet approves an update to be applied to clients.
-This operation requires Windows Server Update Services (WSUS) Administrator privileges.
+
+The **Approve-WsusUpdate** cmdlet approves an update to be applied to clients. This operation requires Windows Server Update Services (WSUS) Administrator privileges.
 
 To use this cmdlet, run the [Get-WsusUpdate](./Get-WsusUpdate.md) cmdlet and pipe the resulting **WsusUpdate** object into this cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Approve updates
-```
+
+```powershell
 PS C:\> Get-WsusUpdate -Classification All -Approval Unapproved -Status FailedOrNeeded | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
 ```
 
@@ -48,17 +50,17 @@ This command approves for installation all unapproved updates with a status of f
 ## PARAMETERS
 
 ### -Action
-Specifies the action that clients should perform when applying the associated update.
-The acceptable values for this parameter are:
 
-- Install 
-- Not Approved 
+Specifies the action that clients should perform when applying the associated update. The acceptable values for this parameter are:
+
+- Install
+- Not Approved
 - Uninstall
 
 ```yaml
 Type: UpdateApprovalAction
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Install, Uninstall, NotApproved, All
 
 Required: True
@@ -69,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -84,12 +87,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetGroupName
+
 Specifies the name of the computer target group for which to run this cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -99,13 +103,13 @@ Accept wildcard characters: False
 ```
 
 ### -Update
-Specifies the object that contains the server of the update to be approved or denied as well as the update to be approved or denied.
-This value is obtained by running the **Get-WsusUpdate** cmdlet and passing the resulting **WsusUpdate** object into this cmdlet.
+
+Specifies the object that contains the server of the update to be approved or denied as well as the update to be approved or denied. This value is obtained by running the **Get-WsusUpdate** cmdlet and passing the resulting **WsusUpdate** object into this cmdlet.
 
 ```yaml
 Type: WsusUpdate
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -115,8 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
 ```yaml
 Type: SwitchParameter
@@ -131,6 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -146,4 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Deny-WsusUpdate](./Deny-WsusUpdate.md)
 
 [Get-WsusUpdate](./Get-WsusUpdate.md)
-

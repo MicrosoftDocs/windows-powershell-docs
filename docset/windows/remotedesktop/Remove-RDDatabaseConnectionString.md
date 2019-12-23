@@ -51,7 +51,7 @@ Currently, you cannot use this cmdlet to remove the primary database connection 
 
 ## EXAMPLES
 
-### 1: Remove a remote desktop database connection string
+### Remove a remote desktop database connection string
 ```
 PS C:\> remove-RDDatabaseConnectionString -ConnectionBroker "Rdcb.Contoso.com" -DatabaseConnectionString "DRIVER=SQL Server Native Client 10.0;SERVER=Sqlserver.Contoso.com;Trusted_Connection=Yes;APP=Remote Desktop Services Connection Broker;Database=RemoteDesktopDeployment"
 ```
@@ -135,4 +135,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-RDDatabaseConnectionString](./Set-RDDatabaseConnectionString.md)
-

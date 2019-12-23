@@ -106,7 +106,7 @@ String objects are received by the *ClientRoleIdentifiers*, *Identifiers*, and *
 
 ### Microsoft.IdentityServer.Management.Resources.OAuthPermission
 
-Returns one or more OAuthPermission objects that represent the application permssions for the Federation Service.
+Returns one or more OAuthPermission objects that represent the application permissions for the Federation Service.
 
 ## NOTES
 

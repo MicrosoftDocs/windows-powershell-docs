@@ -469,7 +469,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetainFilesOnFailure
-In the case of a failed deployment, If this switch is set to $true it does not remove files that have been created on the target machine during the install process.
+In the case of a failed deployment, if this switch is set to $true, files that have been created on the target machine during the installation process are not removed.
 
 ```yaml
 Type: SwitchParameter

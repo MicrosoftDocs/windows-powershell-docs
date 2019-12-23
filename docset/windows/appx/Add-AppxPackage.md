@@ -454,7 +454,7 @@ Accept wildcard characters: False
 ```
 
 ### -RelatedPackages
-An optional element that is used to specify the other optional packages that are specified in the main app package. These packages will not be installed as part of the deployment operation.
+This is an optional element that is used to specify the other optional packages that are specified in the main app package. These packages will not be installed as part of the deployment operation.
 
 ```yaml
 Type: String[]

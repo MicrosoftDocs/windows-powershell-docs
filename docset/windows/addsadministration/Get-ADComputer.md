@@ -209,7 +209,7 @@ User01-SRV1 User01-SRV1.User01.com 10.194.99.181
 User02-SRV2 User02-SRV2.User02.com 10.194.100.3
 ```
 
-This command shows the name, dns hostname, and IPv4 address.
+This command shows the name, DNS hostname, and IPv4 address.
 
 
 ## PARAMETERS
@@ -580,4 +580,3 @@ To get a list of all the properties of an ADComputer object, use the following c
 [Set-ADComputer](./Set-ADComputer.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

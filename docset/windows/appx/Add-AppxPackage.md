@@ -424,7 +424,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpdateFromAnyVersion
-This parameter is used to Force a specific version of a package to be staged/registered, regardless of if a higher version is already staged/registered.
+This parameter is used to force a specific version of a package to be staged/registered, regardless of whether a higher version is already staged/registered.
 
 ```yaml
 Type: SwitchParameter
@@ -526,4 +526,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Move-AppxPackage](./Move-AppxPackage.md)
 
 [Remove-AppxPackage](./Remove-AppxPackage.md)
-

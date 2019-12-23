@@ -190,13 +190,13 @@ PS C:\> Get-ADComputer -Filter *
 
 This command gets all computer accounts.
 
-### Example 6: Get all computers with a name starting with User01 or User02
+### Example 6: Get all computers with a name starting with Computer01 or Computer02
 ```
-PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -or Name -like "User02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
 name        dnshostname            ipv4address
 ----        -----------            -----------
-User01-SRV1 User01-SRV1.User01.com 10.194.99.181
-User01-SRV2 User02-SRV2.User02.com 10.194.100.3
+Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
+Computer01-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
 ```
 
 ### Example 7: Get all computers with a name starting with a string AND password last set before 30 days

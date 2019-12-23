@@ -439,7 +439,7 @@ Accept wildcard characters: False
 ```
 
 ### -LimitToExistingPackages
-This parameter is used not to download missing referenced packages.
+This parameter is used to prevent missing referenced packages to be downloaded.
 
 ```yaml
 Type: SwitchParameter

@@ -16,7 +16,7 @@ ms.date: 09/26/2017
 
 This topic lists the Windows PowerShell modules included with Windows Server 2016 and Windows 10. The Windows PowerShell modules in the list support automating the features of those versions of the Windows operating system and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for Windows Server 2016 and Windows 10.
 
-The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. For more information, see [about_Updatable_Help](https://msdn.microsoft.com/powershell/reference/5.1/Microsoft.PowerShell.Core/about/about_Updatable_Help).
+The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. For more information, see [about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1).
 
 | Module name | Title and link to Web version |
 | - | - |

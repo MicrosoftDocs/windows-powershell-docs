@@ -28,7 +28,7 @@ These Network Switch Team cmdlets should only be used with NIC switch teams that
 
 ## NetSwitchTeam Cmdlets
 
-> [!Note]
+> [!NOTE]
 > For any Windows Client editions, these NetSwitchTeam cmdlets can be used only for remote management of the Hyper-V Extensible Switch that is running on Windows Server editions. Windows Client editions do not support running the Hyper-V Extensible Switch on the client itself.
 
 ### [Add-NetSwitchTeamMember](./Add-NetSwitchTeamMember.md)
@@ -51,5 +51,4 @@ Removes a network adapter member from a switch team.
 
 ### [Rename-NetSwitchTeam](./Rename-NetSwitchTeam.md)
 Changes the name of a switch team.
-
 

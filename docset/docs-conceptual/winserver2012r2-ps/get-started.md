@@ -13,9 +13,9 @@ author: andreabarr
 
 This topic lists the Windows PowerShellÂ® modules included with Windows Server 2012 R2 and Windows 8.1. The Windows PowerShell modules in the list support automating the features of those operating systems and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for and Windows Server 2012 R2.
 
-**Previous Versions** If you are looking for help for modules that were included with previous versions of Windows PowerShell or the Windows Server or Windows Client operating systems, see [Previous Versions of Windows PowerShell Module Help](https://technet.microsoft.com/en-us/library/dn296471.aspx).
+**Previous Versions** If you are looking for help for modules that were included with previous versions of the Windows operating systems, see [Previous Versions of Windows PowerShell Module Help](https://technet.microsoft.com/en-us/library/dn296471.aspx).
 
-The table below also shows the latest published version of the Help for each module. The Help is available in the TechNet Library through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about\_Updatable\_Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&viewFallbackFrom=powershell-Microsoft.PowerShell.Core) for more information.
+The table below also shows the latest published version of the Help for each module. The Help is available in the TechNet Library through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about\_Updatable\_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1) for more information.
 
 ## Windows and Windows Server Automation with Windows PowerShell
 

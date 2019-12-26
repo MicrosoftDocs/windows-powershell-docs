@@ -49,7 +49,7 @@ You can remove the string by using the current cmdlet.
 
 Currently, you cannot use this cmdlet to remove the primary database connection string.
 
-## EXAMPLE
+## EXAMPLES
 
 ### Remove a remote desktop database connection string
 ```

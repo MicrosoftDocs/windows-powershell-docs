@@ -52,7 +52,7 @@ Add site 'Asia2' to the site link 'Europe-Asia', and remove site 'Asia'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLink -Filter {ReplicationFrequencyInMinutes -ge 60} -Properties Cost | % {Set-ADReplicationSiteLink $_ -Cost 200}
+C:\PS>Get-ADReplicationSiteLink -Filter "ReplicationFrequencyInMinutes -ge 60" -Properties Cost | % {Set-ADReplicationSiteLink $_ -Cost 200}
 ```
 
 Description

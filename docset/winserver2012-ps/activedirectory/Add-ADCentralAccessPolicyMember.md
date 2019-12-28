@@ -59,7 +59,7 @@ Adds central access rules 'Finance Documents Rule' and 'Corporate Documents Rule
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADCentralAccessPolicy -Filter { Name -like "Corporate*" } | Add-ADCentralAccessPolicyMember -Members "Corporate Documents Rule"
+C:\PS>Get-ADCentralAccessPolicy -Filter "Name -like 'Corporate*'" | Add-ADCentralAccessPolicyMember -Members "Corporate Documents Rule"
 ```
 
 Description

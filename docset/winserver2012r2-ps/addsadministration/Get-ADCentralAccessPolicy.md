@@ -58,7 +58,7 @@ This command retrieves a list of all central access policies.
 
 ### Example 2: Get a list of specific central access policies using a filter
 ```
-PS C:\>Get-ADCentralAccessPolicy -Filter {Members -eq 'Finance Documents Rule'}
+PS C:\>Get-ADCentralAccessPolicy -Filter "Members -eq 'Finance Documents Rule'"
 ```
 
 This command gets the central access policies that have the central access rule Finance Documents Rule as its members.

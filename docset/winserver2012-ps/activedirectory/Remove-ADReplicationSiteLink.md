@@ -40,7 +40,7 @@ Remove the site link with the name 'Europe-Asia'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLink -Filter {SitesIncluded -eq "NorthAmerica"} | Remove-ADReplicationSiteLink
+C:\PS>Get-ADReplicationSiteLink -Filter "SitesIncluded -eq 'NorthAmerica'" | Remove-ADReplicationSiteLink
 ```
 
 Description

@@ -48,7 +48,7 @@ This cmdlet removes the subnet identified as 10.0.0.0/25.
 
 ### Example 3: Remove a filtered list of subnets
 ```
-PS C:\> Get-ADReplicationSubnet -Filter {Location -like "*Japan"} | Remove-ADReplicationSubnet
+PS C:\> Get-ADReplicationSubnet -Filter "Location -like '*Japan'" | Remove-ADReplicationSubnet
 ```
 
 This command gets all the subnets in Japan and removes them.

@@ -101,7 +101,7 @@ This command gets all of the properties of the user with the SAM account name Ch
 
 ### Example 4: Get a specified user
 ```
-PS C:\>Get-ADUser -Filter {Name -eq "ChewDavid"} -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
+PS C:\>Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
 This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.

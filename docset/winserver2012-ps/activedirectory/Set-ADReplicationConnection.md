@@ -55,7 +55,7 @@ Set the replication connection with name '5f98e288-19e0-47a0-9677-57f05ed54f6b' 
 C:\PS>$schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule;
 $schedule.ResetSchedule();
 $schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");
-Get-ADReplicationConnection -Filter {ReplicateFromDirectoryServer -eq "corp-DC01"} -Properties ReplicationSchedule | % {Set-ADReplicationConnection $_ - ReplicationSchedule $schedule}
+Get-ADReplicationConnection -Filter "ReplicateFromDirectoryServer -eq 'corp-DC01'" -Properties ReplicationSchedule | % {Set-ADReplicationConnection $_ - ReplicationSchedule $schedule}
 ```
 
 Description

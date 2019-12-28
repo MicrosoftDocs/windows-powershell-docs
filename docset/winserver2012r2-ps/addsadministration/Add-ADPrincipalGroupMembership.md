@@ -86,7 +86,7 @@ This command demonstrates the default behavior of this cmdlet, with no parameter
 
 ### Example 4: Add filtered users to a distinguished name group
 ```
-PS C:\>Get-ADUser -Server localhost:60000 -SearchBase "DC=AppNC" -Filter { Title -eq "Account Lead" -and Office -eq "Branch1" } | Add-ADPrincipalGroupMembership -MemberOf "CN=AccountLeads,OU=AccountDeptOU,DC=AppNC"
+PS C:\>Get-ADUser -Server localhost:60000 -SearchBase "DC=AppNC" -Filter "Title -eq 'Account Lead' -and Office -eq 'Branch1'" | Add-ADPrincipalGroupMembership -MemberOf "CN=AccountLeads,OU=AccountDeptOU,DC=AppNC"
 ```
 
 This command adds all employees in Branch1 in the AD LDS instance localhost:60000 whose title is Account Lead to the group with the distinguished name CN=AccountLeads,OU=AccountDeptOU,DC=AppNC.

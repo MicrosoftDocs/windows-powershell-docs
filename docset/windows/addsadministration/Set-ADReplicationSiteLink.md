@@ -57,7 +57,7 @@ This command adds the site Asia2 to the replication site link Europe-Asia, and r
 
 ### Example 2: Set a property on filtered sites
 ```
-PS C:\> Get-ADReplicationSiteLink -Filter {ReplicationFrequencyInMinutes -ge 60} -Properties Cost | % {Set-ADReplicationSiteLink $_ -Cost 200}
+PS C:\> Get-ADReplicationSiteLink -Filter "ReplicationFrequencyInMinutes -ge 60" -Properties Cost | % {Set-ADReplicationSiteLink $_ -Cost 200}
 ```
 
 This command gets all the site links in the directory with replication frequency greater than or equal to 60 minutes, and then sets the **Cost** property on these site link objects to 200.

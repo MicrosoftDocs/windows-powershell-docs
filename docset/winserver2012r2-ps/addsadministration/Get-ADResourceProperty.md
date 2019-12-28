@@ -51,7 +51,7 @@ The **Get-ADResourceProperty** cmdlet gets one or more resource properties.
 
 ### Example 1: Get filtered resource properties
 ```
-PS C:\>Get-ADResourceProperty -Filter {SharesValuesWith -eq 'Country'}
+PS C:\>Get-ADResourceProperty -Filter "SharesValuesWith -eq 'Country'"
 ```
 
 This command gets all the resource properties that refer to the claim type named Country for their suggested values.

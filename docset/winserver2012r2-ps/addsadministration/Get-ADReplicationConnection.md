@@ -53,7 +53,7 @@ This command gets all of the replication connections.
 
 ### Example 2: Get all replication connections from a specified domain controller
 ```
-PS C:\>Get-ADReplicationConnection -Filter {ReplicateFromDirectoryServer -eq "corp-DC01"}
+PS C:\>Get-ADReplicationConnection -Filter "ReplicateFromDirectoryServer -eq 'corp-DC01'"
 ```
 
 This command gets all replication connections that replicate from corp-DC01.

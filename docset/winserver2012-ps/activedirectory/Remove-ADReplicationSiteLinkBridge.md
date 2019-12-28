@@ -41,7 +41,7 @@ Remove the site link bridge with name 'NorthAmerica-Asia'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLinkBridge -Filter {SiteLinksIncluded -eq "Europe-Asia"} | Remove-ADReplicationSiteLinkBridge
+C:\PS>Get-ADReplicationSiteLinkBridge -Filter "SiteLinksIncluded -eq 'Europe-Asia'" | Remove-ADReplicationSiteLinkBridge
 ```
 
 Description

@@ -58,7 +58,7 @@ This command retrieves a list of all claim types.
 
 ### Example 2: Get all the claim types that are sourced from the attribute title.
 ```
-PS C:\> Get-ADClaimType -Filter {SourceAttribute -eq 'title'}
+PS C:\> Get-ADClaimType -Filter "SourceAttribute -eq 'title'"
 ```
 
 This command gets all the claim types that are sourced from the attribute title.

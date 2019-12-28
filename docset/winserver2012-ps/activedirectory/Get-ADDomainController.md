@@ -178,7 +178,7 @@ Get a domain controller using its IP address.
 
 ### -------------------------- EXAMPLE 12 --------------------------
 ```
-C:\PS>Get-ADDomainController -Filter  { isGlobalCatalog -eq $true -and Site -eq "Default-First-Site-Name" }
+C:\PS>Get-ADDomainController -Filter "isGlobalCatalog -eq `$true -and Site -eq 'Default-First-Site-Name'"
 ```
 
 Description
@@ -189,7 +189,7 @@ Get all global catalogs in a given site.
 
 ### -------------------------- EXAMPLE 13 --------------------------
 ```
-C:\PS>Get-ADDomainController -Server "research.fabrikam.com" -Filter { isGlobalCatalog -eq $true -and isReadOnly -eq $true }
+C:\PS>Get-ADDomainController -Server "research.fabrikam.com" -Filter "isGlobalCatalog -eq `$true -and isReadOnly -eq `$true"
 ```
 
 Description
@@ -399,37 +399,37 @@ Get-ADComputer -Filter *
 
 To get all user objects that have an e-mail message attribute, use one of the following commands:
 
-Get-ADUser -Filter {EmailAddress -like "*"}
+Get-ADUser -Filter "EmailAddress -like '*'"
 
-Get-ADUser -Filter {mail -like "*"}
+Get-ADUser -Filter "mail -like '*'"
 
 -or-
 
-Get-ADObject -Filter {(mail -like "*") -and (ObjectClass -eq "user")}
+Get-ADObject -Filter "(mail -like '*') -and (ObjectClass -eq 'user')"
 
 Note: PowerShell wildcards other than "*", such as "?" are not supported by the Filter syntax.
 
 To get all users objects that have surname of Smith and that have an e-mail attribute, use one of the following commands:
 
-Get-ADUser -filter {(EmailAddress -like "*") -and (Surname  -eq "smith")}
+Get-ADUser -filter "(EmailAddress -like '*') -and (Surname -eq 'smith')"
 
 -or-
 
-Get-ADUser -filter {(mail -eq "*") -and (sn -eq "Smith")}
+Get-ADUser -filter "(mail -eq '*') -and (sn -eq 'Smith')"
 
 To get all user objects who have not logged on since January 1, 2007, use the following commands:
 
 $logonDate = New-Object System.DateTime(2007, 1, 1)
 
-Get-ADUser  -filter { lastLogon -le $logonDate  }
+Get-ADUser -filter "lastLogon -le '$logonDate'"
 
 To get all groups that have a group category of Security and a group scope of Global, use one of the following commands:
 
-Get-ADGroup  -filter {GroupCategory  -eq "Security"  -and GroupScope -eq "Global"}
+Get-ADGroup -filter "GroupCategory -eq 'Security' -and GroupScope -eq 'Global'"
 
 -or-
 
-Get-ADGroup -filter {GroupType -band 0x80000000}
+Get-ADGroup -filter "GroupType -band 0x80000000"
 
 Note: To query using LDAP query strings, use the LDAPFilter parameter.
 

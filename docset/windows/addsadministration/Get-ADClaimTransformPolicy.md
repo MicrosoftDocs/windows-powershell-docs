@@ -58,7 +58,7 @@ This command retrieves a list of all claims transformation policies.
 ### Example 2: Get all the claims transformation policies that are applied to a specific trust
 ```
 PS C:\> $Contoso = Get-ADTrust -Identity "corp.contoso.com"
-PS C:\> Get-ADClaimTransformPolicy -Filter {IncomingTrust -eq $Contoso -or OutgoingTrust -eq $Contoso}
+PS C:\> Get-ADClaimTransformPolicy -Filter "IncomingTrust -eq '$Contoso' -or OutgoingTrust -eq '$Contoso'"
 ```
 
 This example gets all the claims transformation policies that are applied to trusts made with corp.contoso.com.

@@ -54,7 +54,7 @@ This command gets all of the subnets.
 
 ### Example 2: Get subnets in a specified location
 ```
-PS C:\>Get-ADReplicationSubnet -Filter {Location -like "*Japan"}
+PS C:\>Get-ADReplicationSubnet -Filter "Location -like '*Japan'"
 ```
 
 This command gets all the subnets in Japan.

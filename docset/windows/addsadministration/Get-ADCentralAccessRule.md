@@ -59,7 +59,7 @@ This command retrieves a list of all central access rules.
 
 ### Example 2: Get central access rules that have a specific resource condition
 ```
-PS C:\> Get-ADCentralAccessRule -Filter { ResourceCondition -like "*Department*"  }
+PS C:\> Get-ADCentralAccessRule -Filter "ResourceCondition -like '*Department*'"
 ```
 
 This command retrieves the central access rules that have Department in its resource condition.

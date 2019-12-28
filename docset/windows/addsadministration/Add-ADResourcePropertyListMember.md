@@ -59,7 +59,7 @@ This command demonstrates the default behavior for this cmdlet when no parameter
 
 ### Example 3: Add members to a filtered resource property list
 ```
-PS C:\> Get-ADResourcePropertyList -Filter { Name -like "Corporate*" } | Add-ADResourcePropertyListMember -Members Country,Authors
+PS C:\> Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" | Add-ADResourcePropertyListMember -Members Country,Authors
 ```
 
 This command gets any resource property list that has a name that begins with Corporate and then passes it to Add-ADResourcePropertyListMember, which then adds the resource properties Country and Authors to it.

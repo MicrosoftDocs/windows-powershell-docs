@@ -42,7 +42,7 @@ The **Get-WBVirtualMachine** cmdlet gets all virtual machines and Hyper-V Server
 
 ### Example 1: Get all virtual machines and components from the backup policy
 ```
-PS C:\> Get-WBVirtualMachines
+PS C:\> Get-WBVirtualMachine
 ```
 
 This command queries for virtual machines and Hyper-V Server 2016 components on the machine and lists them.

@@ -41,9 +41,7 @@ Use the **Type** parameter to change the file format.
 
 ### EXAMPLE 1
 ```
-PS C:\>$cert = (Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF)
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.sst -Type SST
 ```
@@ -52,9 +50,7 @@ This example exports a certificate to the file system as a Microsoft serialized 
 
 ### EXAMPLE 2
 ```
-PS C:\>$cert = (Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF)
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.cer
 ```
@@ -63,9 +59,7 @@ This example exports a certificate to the file system as a DER-encoded `.cer` fi
 
 ### EXAMPLE 3
 ```
-PS C:\>$cert = ( Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF )
-
-
+PS C:\>$cert = Get-ChildItem -Path cert:\CurrentUser\My\EEDEF61D4FF6EDBAAD538BB08CCAADDC3EE28FF
 
 PS C:\>Export-Certificate -Cert $cert -FilePath c:\certs\user.p7b -Type p7b
 ```

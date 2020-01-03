@@ -218,15 +218,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+
+### System.String
+
+String objects are received by the *ApplicationGroupIdentifier*, *Description*, *Identifier*, *Name*, and *RedirectUri* parameters.
+
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.NativeClientApplication
-ApplicationGroupIdentifier  string
-Description                 string
-Enabled                     bool
-Identifier                  string
-Name                        string
-RedirectUri                 string[]
+
+Returns the new NativeClientApplication object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

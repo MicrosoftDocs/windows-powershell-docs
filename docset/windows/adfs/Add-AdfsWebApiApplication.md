@@ -524,57 +524,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *ApplicationGroupIdentifier*, *DelegationAuthorizationRules*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, and *IssuanceTransformRules* parameters.
+
+### System.Object
+
+Objects are received by the *AccessControlPolicyParameters* parameter.
+
+### System.Management.Automation.SwitchParameter
+
+SwitchParameter objects are received by the *AlwaysRequireAuthentication* and *RequestMFAFromClaimsProviders* parameters.
+
+### Microsoft.IdentityServer.Management.Resources.ApplicationGroup
+
+ApplicationGroup objects are received by the *ApplicationGroup* parameter.
+
 ## OUTPUTS
 
 ### Microsoft.IdentityServer.Management.Resources.WebApiApplication
-AccessControlPolicyName               string
-AccessControlPolicyParameters         System.Object
-AdditionalAuthenticationRules         string
-AllowedAuthenticationClassReferences  string[]
-AllowedClientTypes                    Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-AlwaysRequireAuthentication           bool
-ApplicationGroupId                    string
-ApplicationGroupIdentifier            string
-ClaimsProviderName                    string[]
-DelegationAuthorizationRules          string
-Description                           string
-Enabled                               bool
-Identifier                            System.Collections.ObjectModel.ReadOnlyCollection[string]
-ImpersonationAuthorizationRules       string
-IssuanceAuthorizationRules            string
-IssuanceTransformRules                string
-IssueOAuthRefreshTokensTo             Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-Name                                  string
-NotBeforeSkew                         int
-PublishedThroughProxy                 bool
-RefreshTokenProtectionEnabled         bool
-RequestMFAFromClaimsProviders         bool
-ResultantPolicy                       Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-TokenLifetime                         int
 
-### Microsoft.IdentityServer.Protocols.PolicyStore.AllowedClientTypes
-
-AllowedClientTypes
-{
-  None = 0,
-  Public = 2,
-  Confidential=4,
-}
-
-### Microsoft.IdentityServer.Protocols.PolicyStore.RefreshTokenIssuanceDeviceTypes
-
-RefreshTokenIssuanceDeviceTypes
-{
-  NoDevice = 0,
-  WorkplaceJoinedDevices = 1,
-  AllDevices = 2
-}
-
-
-### Microsoft.IdentityServer.PolicyModel.Configuration.PolicyTemplate.PolicyMetadata
-IsParameterized  bool
-Summary          string
-Serialized       string
+Returns the new WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

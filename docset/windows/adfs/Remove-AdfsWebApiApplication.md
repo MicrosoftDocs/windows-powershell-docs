@@ -146,7 +146,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
+
+WebApiApplication objects are received by the 'TargetApplication' parameter.
+
+### System.String
+
+String objects are received by the *TargetIdentifier* and *TargetName* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
+
+Returns the removed WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

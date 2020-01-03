@@ -235,6 +235,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *AddScope*, *Description*, *RemoveScope*, *ScopeNames*, *TargetClientRoleIdentifier*, *TargetIdentifier*, and *TargetServerRoleIdentifier* parameters.
+
+### Microsoft.IdentityServer.Management.Resources.OAuthPermission
+
+OAuthPermission objects are received by the *InputObject* parameter.
+
 ## OUTPUTS
 
 ## NOTES

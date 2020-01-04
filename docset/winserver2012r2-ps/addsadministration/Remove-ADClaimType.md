@@ -43,7 +43,7 @@ This command removes the claim type with the name Title.
 
 ### Example 2: Get all disabled claim types and remove them
 ```
-PS C:\>Get-ADClaimType -Filter "Enabled -eq $False" | Remove-ADClaimType
+PS C:\>Get-ADClaimType -Filter "Enabled -eq `$False" | Remove-ADClaimType
 ```
 
 This command gets all the disabled claim types and remove them.

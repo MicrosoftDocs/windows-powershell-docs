@@ -223,7 +223,7 @@ Get-ADGroup -Filter "GroupCategory -eq 'Security' -and GroupScope -eq 'Global'"
 
 -or-
 
-Get-ADGroup -Filter 'GroupType -band 0x80000000"
+Get-ADGroup -Filter "GroupType -band 0x80000000"
 
 Note: To query using LDAP query strings, use the LDAPFilter parameter.
 

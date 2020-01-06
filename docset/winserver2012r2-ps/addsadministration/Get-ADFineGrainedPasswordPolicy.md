@@ -143,7 +143,7 @@ This command gets all the properties for the fine-grained password policy with D
 
 ### Example 3: Get all fine-grained password policy objects using a filter
 ```
-PS C:\>Get-ADFineGrainedPasswordPolicy -Filter {name -like "*admin*"}
+PS C:\>Get-ADFineGrainedPasswordPolicy -Filter "name -like '*admin*'"
 AppliesTo                   : {CN=GlenJohn,CN=Users,DC=USER01,DC=com, CN=JeffPrice,CN=Users,DC=USER01,DC=com, CN=Administrator,CN=Users,DC=USER01,DC=com}
 ComplexityEnabled           : True
 DistinguishedName           : CN=DlgtdAdminsPSO,CN=Password Settings Container,CN=System,DC=USER01,DC=com

@@ -59,7 +59,7 @@ This command gets a list of all resource property lists.
 
 ### Example 2: Get all resource property lists with a specified property
 ```
-PS C:\> Get-ADResourcePropertyList -Filter {Members -eq 'Country'}
+PS C:\> Get-ADResourcePropertyList -Filter "Members -eq 'Country'"
 ```
 
 This command gets all resource property lists that include the resource property Country.

@@ -41,7 +41,7 @@ Remove the site with name 'Europe'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSite -Filter {Description -eq "For testing only."} | Remove-ADReplicationSite
+C:\PS>Get-ADReplicationSite -Filter "Description -eq 'For testing only.'" | Remove-ADReplicationSite
 ```
 
 Description

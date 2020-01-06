@@ -46,7 +46,7 @@ This command removes the site link bridge named NorthAmerica-Asia.
 
 ### Example 2: Remove a filtered list of site link bridges
 ```
-PS C:\> Get-ADReplicationSiteLinkBridge -Filter {SiteLinksIncluded -eq "Europe-Asia"} | Remove-ADReplicationSiteLinkBridge
+PS C:\> Get-ADReplicationSiteLinkBridge -Filter "SiteLinksIncluded -eq 'Europe-Asia'" | Remove-ADReplicationSiteLinkBridge
 ```
 
 This command gets the site link bridges that include Europe-Asia and removes them.

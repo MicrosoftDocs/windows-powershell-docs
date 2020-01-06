@@ -51,7 +51,7 @@ This command removes the central access rules named Finance Documents Rule and C
 
 ### Example 3: Get central access policies using a filter then remove specified central access rules from those policies
 ```
-PS C:\>Get-ADCentralAccessPolicy -Filter { Name -like "Corporate*" } | Remove-ADCentralAccessPolicyMember -Members "Finance Documents Rule","Corporate Documents Rule"
+PS C:\>Get-ADCentralAccessPolicy -Filter "Name -like 'Corporate*'" | Remove-ADCentralAccessPolicyMember -Members "Finance Documents Rule","Corporate Documents Rule"
 ```
 
 This command gets the central access policies that begin with Corporate in its name, and then pipes that result to the Remove-ADCentralAccessPolicyMember, which then removes the central access rules named Finance Documents Rule and Corporate Documents Rule from the policies.

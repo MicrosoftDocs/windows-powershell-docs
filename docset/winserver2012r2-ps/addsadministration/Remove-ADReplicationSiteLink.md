@@ -44,7 +44,7 @@ This command removes the site link with the name Europe-Asia.
 
 ### Example 2: Get a filtered list of replication site links and remove them
 ```
-PS C:\>Get-ADReplicationSiteLink -Filter {SitesIncluded -eq "NorthAmerica"} | Remove-ADReplicationSiteLink
+PS C:\>Get-ADReplicationSiteLink -Filter "SitesIncluded -eq 'NorthAmerica'" | Remove-ADReplicationSiteLink
 ```
 
 This command gets the site links that include NorthAmerica and removes them.

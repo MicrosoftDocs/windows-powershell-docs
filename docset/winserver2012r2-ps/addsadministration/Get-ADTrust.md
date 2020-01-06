@@ -62,7 +62,7 @@ This command gets all of the trusted domain objects in the forest.
 
 ### Example 2: Get filtered trusted domain objects
 ```
-PS C:\>Get-ADTrust -Filter {Target -eq "corp.contoso.com"}
+PS C:\>Get-ADTrust -Filter "Target -eq 'corp.contoso.com'"
 ```
 
 This command gets all the trusted domain objects with corp.contoso.com as the trust partner.

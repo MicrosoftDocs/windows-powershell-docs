@@ -102,7 +102,7 @@ This command gets all of the properties of the user with the SAM account name Ch
 
 ### Example 4: Get a specified user
 ```
-PS C:\> Get-ADUser -Filter {Name -eq "ChewDavid"} -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
+PS C:\> Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
 This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
@@ -187,7 +187,7 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks: **Get-ADUser -Filter "Name -like '$UserName'"**. On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter {Name -like $UserName}**.
+Note: For String parameter type, PowerShell will cast the filter query to a string while processing the command. When using a string variable as a value in the filter component, make sure that it complies with the [PowerShell Quoting Rules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_quoting_rules). For example, if the filter expression is double-quoted, the variable should be enclosed using single quotation marks: **Get-ADUser -Filter "Name -like '$UserName'"**. On the contrary, if curly braces are used to enclose the filter, the variable should not be quoted at all: **Get-ADUser -Filter "Name -like '$UserName'"**.
 
 Note: PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.
 

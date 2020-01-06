@@ -44,7 +44,7 @@ This command removes the specified central access rule, Finance Documents Rule.
 
 ### Example 2: Remove all central access rules using a filter
 ```
-PS C:\> Get-ADCentralAccessRule -Filter { ResourceCondition -like "*Department*" } | Remove-ADCentralAccessRule
+PS C:\> Get-ADCentralAccessRule -Filter "ResourceCondition -like '*Department*'" | Remove-ADCentralAccessRule
 ```
 
 This command removes the central access rules with Department in their resource conditions.

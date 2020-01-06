@@ -44,7 +44,7 @@ This command removes the claims transformation policy with the name DenyAllPolic
 
 ### Example 2: Get all claims transformation policies using a filter then remove them
 ```
-PS C:\> Get-ADClaimTransformPolicy -Filter {Description -eq "For testing only."} | Remove-ADClaimTransformPolicy
+PS C:\> Get-ADClaimTransformPolicy -Filter "Description -eq 'For testing only.'" | Remove-ADClaimTransformPolicy
 ```
 
 This command gets all claims transformation policies that were marked in their description as for testing only and removes them.

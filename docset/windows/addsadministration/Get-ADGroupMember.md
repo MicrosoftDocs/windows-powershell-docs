@@ -90,7 +90,7 @@ This command gets all the members of the Administrators group.
 
 ### Example 2: Get all group members of all domain local groups
 ```
-PS C:\> Get-ADGroup -Server localhost:60000 -Filter {GroupScope -eq "DomainLocal"} -SearchBase "DC=AppNC" | Get-ADGroupMember -Partition "DC=AppNC"
+PS C:\> Get-ADGroup -Server localhost:60000 -Filter "GroupScope -eq 'DomainLocal'" -SearchBase "DC=AppNC" | Get-ADGroupMember -Partition "DC=AppNC"
 distinguishedName : CN=SanjayPatel,OU=AccountDeptOU,DC=AppNC
 name              : SanjayPatel
 objectClass       : user

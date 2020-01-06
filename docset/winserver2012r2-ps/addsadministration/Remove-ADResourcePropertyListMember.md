@@ -51,7 +51,7 @@ This command removes the resource properties named Department and Country from t
 
 ### Example 3: Remove specified members from a filtered resource property list
 ```
-PS C:\>Get-ADResourcePropertyList -Filter { Name -like "Corporate*" } | Remove-ADResourcePropertyListMember -Members Department,Country
+PS C:\>Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" | Remove-ADResourcePropertyListMember -Members Department,Country
 ```
 
 This command gets the resource property lists that have a name that begins with Corporate and then pipes it to Remove-ADResourcePropertyListMember, which then removes the resource properties with the name Department and Country from it.

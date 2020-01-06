@@ -91,7 +91,7 @@ Demonstrates the default behavior of this cmdlet (no parameters specified).
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```
-C:\PS>Get-ADUser  -Server localhost:60000 -SearchBase "DC=AppNC" -filter { Title -eq "Account Lead" -and Office -eq "Branch1" } | Add-ADPrincipalGroupMembership -MemberOf "CN=AccountLeads,OU=AccountDeptOU,DC=AppNC"
+C:\PS>Get-ADUser  -Server localhost:60000 -SearchBase "DC=AppNC" -filter "Title -eq 'Account Lead' -and Office -eq 'Branch1'" | Add-ADPrincipalGroupMembership -MemberOf "CN=AccountLeads,OU=AccountDeptOU,DC=AppNC"
 ```
 
 Description

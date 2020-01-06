@@ -39,7 +39,7 @@ Removes the claims transformation policy with the name 'DenyAllPolicy'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADClaimTransformPolicy -Filter {Description -eq "For testing only."} | Remove-ADClaimTransformPolicy
+C:\PS>Get-ADClaimTransformPolicy -Filter "Description -eq 'For testing only.'" | Remove-ADClaimTransformPolicy
 ```
 
 Description

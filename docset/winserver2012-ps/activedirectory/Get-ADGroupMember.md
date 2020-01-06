@@ -87,7 +87,7 @@ Get all the members of the administrators groups using the default behavior.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>get-adgroup -server localhost:60000 -filter {GroupScope -eq "DomainLocal"} -SearchBase "DC=AppNC" | get-adgroupmember -partition "DC=AppNC"
+C:\PS>get-adgroup -server localhost:60000 -filter "GroupScope -eq 'DomainLocal'" -SearchBase "DC=AppNC" | get-adgroupmember -partition "DC=AppNC"
 
 distinguishedName : CN=SanjayPatel,OU=AccountDeptOU,DC=AppNC
 name              : SanjayPatel

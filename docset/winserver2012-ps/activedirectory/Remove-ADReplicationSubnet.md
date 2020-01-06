@@ -43,7 +43,7 @@ Remove the site link with name '10.0.0.0/25'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSubnet -Filter {Location -like "*Japan"} | Remove-ADReplicationSubnet
+C:\PS>Get-ADReplicationSubnet -Filter "Location -like '*Japan'" | Remove-ADReplicationSubnet
 ```
 
 Description

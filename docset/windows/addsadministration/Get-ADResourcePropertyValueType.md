@@ -58,7 +58,7 @@ This command gets the names of all resource property value types.
 
 ### Example 2: Get resource property value types for specified resource properties
 ```
-PS C:\> Get-ADResourcePropertyValueType -Filter {ResourceProperties -eq 'Country' -or ResourceProperties -eq 'Authors'}
+PS C:\> Get-ADResourcePropertyValueType -Filter "ResourceProperties -eq 'Country' -or ResourceProperties -eq 'Authors'"
 ```
 
 This command gets all resource property value types that the resource properties Country and Authors use.

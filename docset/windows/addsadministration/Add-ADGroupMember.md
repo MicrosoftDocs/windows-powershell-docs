@@ -76,7 +76,7 @@ This command adds user accounts with SAM account names DavidChew and PattiFuller
 
 ### Example 3: Add an account by distinguished name to a filtered group
 ```
-PS C:\> Get-ADGroup -Server localhost:60000 -SearchBase "OU=AccountDeptOU,DC=AppNC" -Filter { name -like "AccountLeads" } | Add-ADGroupMember -Members "CN=PattiFuller,OU=AccountDeptOU,DC=AppNC"
+PS C:\> Get-ADGroup -Server localhost:60000 -SearchBase "OU=AccountDeptOU,DC=AppNC" -Filter "name -like 'AccountLeads'" | Add-ADGroupMember -Members "CN=PattiFuller,OU=AccountDeptOU,DC=AppNC"
 ```
 
 This command gets a group from the organizational unit OU=AccountDeptOU,DC=AppNC in the AD LDS instance localhost:60000 that has the name AccountLeads, and then pipes it to **Add-ADGroupMember**, which then adds the user account with the distinguished name CN=PattiFuller,OU=AccountDeptOU,DC=AppNC to it.

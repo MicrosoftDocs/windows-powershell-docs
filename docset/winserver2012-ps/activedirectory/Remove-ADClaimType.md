@@ -39,7 +39,7 @@ Remove the claim type with the name 'Title'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADClaimType -Filter { Enabled -eq $FALSE } | Remove-ADClaimType
+C:\PS>Get-ADClaimType -Filter "Enabled -eq `$False" | Remove-ADClaimType
 ```
 
 Description

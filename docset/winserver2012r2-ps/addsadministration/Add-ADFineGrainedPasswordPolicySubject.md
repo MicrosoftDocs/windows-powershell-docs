@@ -69,7 +69,7 @@ This command applies the fine-grained password policy named DlgtdAdminsPSO to th
 
 ### Example 4: Apply a fine-grained password policy to users with a specified name
 ```
-PS C:\>Get-ADGroup -Filter {lastname -eq "Fuller"} | Add-ADFineGrainedPasswordPolicySubject -Identity DlgtdAdminsPSO
+PS C:\>Get-ADGroup -Filter "lastname -eq 'Fuller'" | Add-ADFineGrainedPasswordPolicySubject -Identity DlgtdAdminsPSO
 ```
 
 This command applies the fine-grained password policy named DlgtdAdminsPSO to any users whose last name is Fuller.

@@ -22,7 +22,7 @@ Get-WindowsFeature [[-Name] <String[]>] [-Vhd <String>] [-ComputerName <String>]
 ```
 
 ## DESCRIPTION
-The `Get-WindowsFeature` cmdlet gets information about rrsandf_plural that are both available for installation and already installed on a computer that is running Windows Server 2012 or an offline virtual hard disk (VHD) that is running Windows Server 2012.
+The `Get-WindowsFeature` cmdlet gets information about features that are both available for installation and already installed on a computer that is running Windows Server 2012 or an offline virtual hard disk (VHD) that is running Windows Server 2012.
 
 ## EXAMPLES
 

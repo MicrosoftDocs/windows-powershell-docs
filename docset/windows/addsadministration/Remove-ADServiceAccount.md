@@ -53,7 +53,7 @@ This command removes the managed service account identified as SQL-SRV1.
 
 ### Example 2: Remove a filtered list of managed service accounts
 ```
-PS C:\> Get-ADServiceAccount -Filter {Name -like 'SQL*'} | Remove-ADServiceAccount
+PS C:\> Get-ADServiceAccount -Filter "Name -like 'SQL*'" | Remove-ADServiceAccount
 ```
 
 This command removes all managed service accounts whose names start with SQL.

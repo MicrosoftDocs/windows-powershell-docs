@@ -46,7 +46,7 @@ This command removes the site with name Europe.
 
 ### Example 2: Get filtered replication sites and remove them
 ```
-PS C:\> Get-ADReplicationSite -Filter {Description -eq "For testing only."} | Remove-ADReplicationSite
+PS C:\> Get-ADReplicationSite -Filter "Description -eq 'For testing only.'" | Remove-ADReplicationSite
 ```
 
 This command gets the sites that are for testing only and removes them.

@@ -52,7 +52,7 @@ This command gets all of the site link bridges.
 
 ### Example 2: Get a filtered list of site link bridges
 ```
-PS C:\>Get-ADReplicationSiteLinkBridge -Filter {SiteLinksIncluded -eq "NorthAmerica-Europe"} | FT Name,SiteLinksIncluded -A
+PS C:\>Get-ADReplicationSiteLinkBridge -Filter "SiteLinksIncluded -eq 'NorthAmerica-Europe'" | FT Name,SiteLinksIncluded -A
 ```
 
 This command gets all site link bridges that include the site link NorthAmerica-Europe.

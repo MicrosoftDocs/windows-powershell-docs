@@ -58,7 +58,7 @@ Get all the trusted domain objects in the forest.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADTrust -Filter {Target -eq "corp.contoso.com"}
+C:\PS>Get-ADTrust -Filter "Target -eq 'corp.contoso.com'"
 ```
 
 Description
@@ -187,37 +187,37 @@ Get-ADComputer -Filter *
 
 To get all user objects that have an e-mail message attribute, use one of the following commands:
 
-Get-ADUser -Filter {EmailAddress -like "*"}
+Get-ADUser -Filter "EmailAddress -like '*'"
 
-Get-ADUser -Filter {mail -like "*"}
+Get-ADUser -Filter "mail -like '*'"
 
 -or-
 
-Get-ADObject -Filter {(mail -like "*") -and (ObjectClass -eq "user")}
+Get-ADObject -Filter "(mail -like '*') -and (ObjectClass -eq 'user')"
 
 Note: PowerShell wildcards other than "*", such as "?" are not supported by the Filter syntax.
 
 To get all users objects that have surname of Smith and that have an e-mail attribute, use one of the following commands:
 
-Get-ADUser -filter {(EmailAddress -like "*") -and (Surname  -eq "smith")}
+Get-ADUser -Filter '(EmailAddress -like '*') -and (Surname -eq 'smith')"
 
 -or-
 
-Get-ADUser -filter {(mail -eq "*") -and (sn -eq "Smith")}
+Get-ADUser -Filter "(mail -eq '*') -and (sn -eq 'Smith')"
 
 To get all user objects who have not logged on since January 1, 2007, use the following commands:
 
 $logonDate = New-Object System.DateTime(2007, 1, 1)
 
-Get-ADUser  -filter { lastLogon -le $logonDate  }
+Get-ADUser -Filter "lastLogon -le '$logonDate'"
 
 To get all groups that have a group category of Security and a group scope of Global, use one of the following commands:
 
-Get-ADGroup  -filter {GroupCategory  -eq "Security"  -and GroupScope -eq "Global"}
+Get-ADGroup -Filter "GroupCategory -eq 'Security' -and GroupScope -eq 'Global'"
 
 -or-
 
-Get-ADGroup -filter {GroupType -band 0x80000000}
+Get-ADGroup -Filter "GroupType -band 0x80000000"
 
 Note: To query using LDAP query strings, use the LDAPFilter parameter.
 

@@ -555,7 +555,23 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *AccessControlPolicyName*, *AdditionalAuthenticationRules*, *DelegationAuthorizationRules*, *Description*, *ImpersonationAuthorizationRules*, *IssuanceAuthorizationRules*, *IssuanceTransformRules*, *TargetIdentifier*, and *TargetName* parameters.
+
+### System.Object
+
+Objects are received by the *AccessControlPolicyParameters* parameter.
+
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
+
+WebApiApplication objects are received by the *TargetApplication* parameter.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.WebApiApplication
+
+Returns the updated WebApiApplication object when the PassThru parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

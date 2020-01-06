@@ -44,7 +44,7 @@ This command adds the central access rules Finance Documents Rule and Corporate 
 
 ### Example 2: Add a central access rule to an existing central access policy
 ```
-PS C:\>Get-ADCentralAccessPolicy -Filter { Name -like "Corporate*" } | Add-ADCentralAccessPolicyMember -Members "Corporate Documents Rule"
+PS C:\>Get-ADCentralAccessPolicy -Filter "Name -like 'Corporate*'" | Add-ADCentralAccessPolicyMember -Members "Corporate Documents Rule"
 ```
 
 This command gets all central access policies that have a name that starts with Corporate and then passes this information to Add-ADCentralAccessPolicyMember by using the pipeline operator.

@@ -58,7 +58,7 @@ Move the domain controller "FABRIKAM-DC2" to the site "Branch-Office-Site".
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADDomainController -Filter {IsReadOnly -eq $true} | Move-ADDirectoryServer -site "RODC-Site-Name"
+C:\PS>Get-ADDomainController -Filter "IsReadOnly -eq `$true" | Move-ADDirectoryServer -site "RODC-Site-Name"
 ```
 
 Description

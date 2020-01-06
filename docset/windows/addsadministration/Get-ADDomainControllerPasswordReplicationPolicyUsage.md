@@ -71,7 +71,7 @@ The command displays the name and object class of each account returned.
 
 ### Example 3: Get a list of accounts cached across all RODCs
 ```
-PS C:\> Get-ADDomainController -Filter {IsReadOnly -eq $true} | Get-ADDomainControllerPasswordReplicationPolicyUsage
+PS C:\> Get-ADDomainController -Filter "IsReadOnly -eq `$true" | Get-ADDomainControllerPasswordReplicationPolicyUsage
 DistinguishedName : CN=krbtgt_35512,CN=Users,DC=User01,DC=com
 Enabled           : False
 Name              : krbtgt_35512

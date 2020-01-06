@@ -56,7 +56,7 @@ This command sets the properties of the replication subnet identified as 10.0.0.
 
 ### Example 2: Set a filtered list of replication subnets
 ```
-PS C:\>Get-ADReplicationSubnet -Filter {Location -like "*Japan"} -Properties Site | % {Set-ADReplicationSubnet $_ -Site Asia}
+PS C:\>Get-ADReplicationSubnet -Filter "Location -like '*Japan'" -Properties Site | % {Set-ADReplicationSubnet $_ -Site Asia}
 ```
 
 This command gets all of the replication subnets that are in Japan, and sets Asia as their associated site.

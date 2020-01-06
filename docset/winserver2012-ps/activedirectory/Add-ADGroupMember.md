@@ -78,7 +78,7 @@ Adds user accounts with SamAccountNames JohnSmith and JeffPrice to the group Rod
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADGroup -Server localhost:60000 -SearchBase "OU=AccountDeptOU,DC=AppNC" -filter { name -like "AccountLeads" } | Add-ADGroupMember -Members "CN=SanjayPatel,OU=AccountDeptOU,DC=AppNC"
+C:\PS>Get-ADGroup -Server localhost:60000 -SearchBase "OU=AccountDeptOU,DC=AppNC" -filter "name -like 'AccountLeads'" | Add-ADGroupMember -Members "CN=SanjayPatel,OU=AccountDeptOU,DC=AppNC"
 ```
 
 Description

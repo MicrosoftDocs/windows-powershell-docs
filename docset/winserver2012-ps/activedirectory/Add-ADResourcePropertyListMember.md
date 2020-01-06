@@ -59,7 +59,7 @@ Adds the resource properties named "Country" and "Authors" to the resource prope
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADResourcePropertyList -Filter { Name -like "Corporate*" } | Add-ADResourcePropertyListMember -Members Country,Authors
+C:\PS>Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" | Add-ADResourcePropertyListMember -Members Country,Authors
 ```
 
 Description

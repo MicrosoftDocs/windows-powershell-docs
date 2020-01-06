@@ -54,7 +54,7 @@ This command updates the site link bridge NorthAmerica-Asia to use Europe2 inste
 
 ### Example 2: Configure a filtered list of site link bridges
 ```
-PS C:\>Get-ADReplicationSiteLinkBridge -Filter {SiteLinksIncluded -eq "NorthAmerica-Europe" -and SiteLinksIncluded -eq "Europe-Asia"} -Properties SiteLinksIncluded | % {Set-ADReplicationSiteLinkBridge $_ -SiteLinksIncluded @{Add='NorthAmerica-Europe2','Europe2-Asia';Remove='NorthAmerica-Europe','Europe-Asia'}}
+PS C:\>Get-ADReplicationSiteLinkBridge -Filter "SiteLinksIncluded -eq 'NorthAmerica-Europe' -and SiteLinksIncluded -eq 'Europe-Asia'" -Properties SiteLinksIncluded | % {Set-ADReplicationSiteLinkBridge $_ -SiteLinksIncluded @{Add='NorthAmerica-Europe2','Europe2-Asia';Remove='NorthAmerica-Europe','Europe-Asia'}}
 ```
 
 This command gets all the site link bridges in the directory that includes site links NorthAmerica-Europe and Europe-Asia, and then updates the site link bridge objects to use Europe2 instead of Europe.

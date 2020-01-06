@@ -55,7 +55,7 @@ Remove the Fine Grained Password Policy object with DistinguishedName 'CN=MyPoli
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADFineGrainedPasswordPolicy -Filter {Name -like "*user*"} | Remove-ADFineGrainedPasswordPolicy
+C:\PS>Get-ADFineGrainedPasswordPolicy -Filter "Name -like '*user*'" | Remove-ADFineGrainedPasswordPolicy
 ```
 
 Description

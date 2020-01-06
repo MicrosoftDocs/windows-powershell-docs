@@ -49,7 +49,7 @@ Get all the site links.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLink -Filter {SitesIncluded -eq "NorthAmerica"} | FT Name,SitesIncluded -A
+C:\PS>Get-ADReplicationSiteLink -Filter "SitesIncluded -eq 'NorthAmerica'" | FT Name,SitesIncluded -A
 ```
 
 Description
@@ -60,7 +60,7 @@ Get all site links that include 'NorthAmerica'.
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLink -Filter {Cost -gt 100 -and ReplicationFrequencyInMinutes -lt 15}
+C:\PS>Get-ADReplicationSiteLink -Filter "Cost -gt 100 -and ReplicationFrequencyInMinutes -lt 15"
 ```
 
 Description

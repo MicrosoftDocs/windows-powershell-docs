@@ -97,7 +97,7 @@ This command gets the managed service account with SID S-1-5-21-159507390-298035
 
 ### Example 3: Get a filtered list of managed service accounts
 ```
-PS C:\>Get-ADServiceAccount -Filter {HostComputers -eq "CN=SQL-Server-1, DC=contoso,DC=com" }
+PS C:\>Get-ADServiceAccount -Filter "HostComputers -eq 'CN=SQL-Server-1,DC=contoso,DC=com'"
 Enabled           : True
 Name              : service1
 UserPrincipalName :

@@ -59,7 +59,7 @@ This command moves the domain controller USER01-DC2 to the site Branch-Office-Si
 
 ### Example 2: Move read-only domain controllers to an existing site
 ```
-PS C:\> Get-ADDomainController -Filter {IsReadOnly -eq $True} | Move-ADDirectoryServer -Site "RODC-Site-Name"
+PS C:\> Get-ADDomainController -Filter "IsReadOnly -eq `$True" | Move-ADDirectoryServer -Site "RODC-Site-Name"
 ```
 
 This command moves all Read-Only domain controllers to the site RODC-Site-Name.

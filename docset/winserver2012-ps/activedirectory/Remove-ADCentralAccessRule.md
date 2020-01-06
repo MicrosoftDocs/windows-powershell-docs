@@ -39,7 +39,7 @@ Removes the specified central access rule ("Finance Documents Rule").
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADCentralAccessRule -Filter { ResourceCondition -like "*Department*" } | Remove-ADCentralAccessRule
+C:\PS>Get-ADCentralAccessRule -Filter "ResourceCondition -like '*Department*'" | Remove-ADCentralAccessRule
 ```
 
 Description

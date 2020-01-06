@@ -55,7 +55,7 @@ Install a Managed Service Account with name 'SQL-HR-svc-01' on the local compute
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>$a = Get-ADServiceAccount -Filter { Name -eq 'SQL-HR-svc-01'}
+C:\PS>$a = Get-ADServiceAccount -Filter "Name -eq 'SQL-HR-svc-01'"
 Install-ADServiceAccount $a
 ```
 

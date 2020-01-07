@@ -51,7 +51,7 @@ To create an IPv4 address or IPv6 address, use the New-NetIPAddress cmdlet.
 
 ### Example 1: Modify an IP address
 ```
-PS C:\> Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
+PS C:\> New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
 PS C:\> Set-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24
 ```
 

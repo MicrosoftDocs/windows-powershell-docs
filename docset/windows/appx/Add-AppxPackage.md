@@ -78,7 +78,7 @@ Add-AppxPackage [-RegisterByFamilyName] -MainPackage <String> [-DependencyPackag
 
 ## DESCRIPTION
 The **Add-AppxPackage** cmdlet adds a signed app package to a user account.
-An app package has an .appx file name extension.
+An app package has an .msix or .appx file name extension.
 Use the *DependencyPath* parameter to add all other packages that are required for the installation of the app package.
 
 You can use the *Register* parameter to install from a folder of unpackaged files during development of Windows® Store apps.
@@ -89,7 +89,7 @@ To update an already installed package, the new package must have the same packa
 
 ### Example 1: Add an app package
 ```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appx" -DependencyPath "C:\Users\user1\Desktop\winjs.appx"
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix"
 ```
 
 This command adds an app package that the package contains.
@@ -105,16 +105,16 @@ You can use *DisableDevelopmentMode* to register an application that is staged b
 
 ### Example 3: Add an app along with its optional packages
 ```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.appx","C:\Users\user1\Desktop\optionalpackage2.appxbundle"
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -ExternalPackages "C:\Users\user1\Desktop\optionalpackage1.msix","C:\Users\user1\Desktop\optionalpackage2.msixbundle"
 
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -OptionalPackages "29270sandstorm.OptionalPackage1_gah1vdar1nn7a"
 ```
 
 This command adds an app package along with its optional packages. It is an atomic operation which means that if the app or its optional packages fail to install, the deployment operation will be aborted
 
 ### Example 4: Install only the required section of a streaming app
 ```
-PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.appxbundle" -RequiredContentGroupOnly
+PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msixbundle" -RequiredContentGroupOnly
 ```
 
 This command adds an app package but only installs the required section of a streaming app. Calling this command again without the RequiredContentGroupOnly flag proceeds to install the rest of the application in the order defined by the AppxContentGroupMap.xml
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -DependencyPath
 Specifies an array of file paths of dependency packages that  are required for the installation of the app package.
-The app package has an .appx or .appxbundle file name extension. You can specify the paths to more than one dependency package.
+The app package has an .msix, .appx, .msixbundle, or .appxbundle file name extension. You can specify the paths to more than one dependency package.
 If a package is already installed for a user, you can skip adding it to the DependencyPath.
 
 ```yaml
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 
 ### -Path
 Specifies the file path of the app package.
-An app package has an .appx or .appxbundle file name extension.
+An app package has an .msix, .appx, .msixbundle, or .appxbundle file name extension.
 
 ```yaml
 Type: String

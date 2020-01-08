@@ -196,17 +196,16 @@ PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Compute
 name        dnshostname            ipv4address
 ----        -----------            -----------
 Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
-Computer01-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
+Computer02-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
 ```
 
 ### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
 ```
 PS C:\> $Date = [DateTime]::Today.AddDays(-30)
-PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
 name        dnshostname            ipv4address
 ----        -----------            -----------
-User01-SRV1 User01-SRV1.User01.com 10.194.99.181
-User02-SRV2 User02-SRV2.User02.com 10.194.100.3
+Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
 ```
 
 This command shows the name, DNS hostname, and IPv4 address.

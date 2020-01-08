@@ -33,7 +33,7 @@ Get-AppxPackage [-AllUsers] [-PackageTypeFilter <PackageTypes>] [[-Name] <String
 
 ## DESCRIPTION
 The **Get-AppxPackage** cmdlet gets a list of the app packages that are installed in a user profile.
-An app package has an .appx file name extension.
+An app package has an .msix or .appx file name extension.
 To get the list of packages for a user profile other than the profile for the current user, you must run this command by using administrator permissions.
 
 ## EXAMPLES

@@ -32,7 +32,7 @@ Get-AppxLastError [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-AppxLastError** cmdlet gets the last error reported in the app package installation logs for the current Windows PowerShell® session.
-An app package has an .appx file name extension.
+An app package has an .msix or .appx file name extension.
 
 ## EXAMPLES
 

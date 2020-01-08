@@ -13,9 +13,9 @@ author: andreabarr
 
 This topic lists the Windows PowerShell modules included with Windows Server 2012 and Windows 8. The Windows PowerShell modules in the list support automating the features of those operating systems and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for Windows Server 2012 and Windows 8.
 
-For information about the core features common to all versions of Windows PowerShell, see [Windows PowerShell Core](http://go.microsoft.com/fwlink/p/?linkid=108518).
+For information about the core features common to all versions of Windows PowerShell, see [Windows PowerShell Core](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/?view=powershell-5.1).
 
-The table below also shows the latest published version of the Help for each module. The Help is available in the TechNet Library through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about\_Updatable\_Help](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&viewFallbackFrom=powershell-Microsoft.PowerShell.Core) for more information.
+The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1) for more information.
 
 ## Windows PowerShell features
 
@@ -32,7 +32,6 @@ The table below also shows the latest published version of the Help for each mod
 | AppX | [App Installation Cmdlets](/powershell/module/appx) |
 | BestPractices | [Best Practices Analyzer Cmdlets](/powershell/module/bestpractices) |
 | BitLocker | [BitLocker Cmdlets](/powershell/module/bitlocker) |
-<!-- | BitsTransfer | [BITS Cmdlets]("https://technet.microsoft.com/library/jj590836(v=wps.620).aspx") | -->
 | BranchCache | [BranchCache Cmdlets](/powershell/module/branchcache) |
 | ClusterAwareUpdating | [Cluster-Aware Updating Cmdlets](/powershell/module/clusterawareupdating) |
 | DcbQoS | [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets](/powershell/module/dcbqos) |
@@ -71,7 +70,6 @@ The table below also shows the latest published version of the Help for each mod
 | NFS | [NFS Cmdlets](/powershell/module/nfs) |
 | NPS | [NPS Cmdlets](/powershell/module/nps) |
 | PKI | [PKI Client Cmdlets](/powershell/module/pki) |
-<!-- | PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets]("https://technet.microsoft.com/library/jj592887(v=wps.620).aspx") | -->
 | PrintManagement | [Print Management Cmdlets](/powershell/module/printmanagement) |
 | RemoteAccess | [Remote Access Cmdlets](/powershell/module/remoteaccess) |
 | RemoteDesktop | [Remote Desktop Cmdlets](/powershell/module/remotedesktop) |
@@ -79,7 +77,7 @@ The table below also shows the latest published version of the Help for each mod
 | SecureBoot | [Secure Boot Cmdlets](/powershell/module/secureboot) |
 | ServerCore | [Server Core Cmdlets](/powershell/module/servercore) |
 | ServerManager | [Server Manager Cmdlets](/powershell/module/servermanager) |
-| ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks |
+| ServerManagerTasks | [Server Manager Tasks Cmdlets](/powershell/module/servermanagertasks) |
 | ServerMig_Cmdlets | [Server Migration Cmdlets](/powershell/module/servermig_cmdlets) |
 | SMBShare | [SMB Share Cmdlets](/powershell/module/smbshare) |
 | SMBWitness | [SMB Witness Cmdlets](/powershell/module/smbwitness) |
@@ -99,5 +97,7 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsErrorReporting | [Windows Error Reporting Cmdlets](/powershell/module/windowserrorreporting) |
 | WindowsServerBackup | [Windows Server Backup Cmdlets](/powershell/module/windowsserverbackup) |
 | WSSCmdlets | [Windows Server Backup Cmdlets](/powershell/module/wsscmdlets) |
+<!-- | BitsTransfer | [BITS Cmdlets]("https://technet.microsoft.com/library/jj590836(v=wps.620).aspx") | -->
+<!-- | PowerShellWebAccess | [Windows PowerShell Web Access Cmdlets]("https://technet.microsoft.com/library/jj592887(v=wps.620).aspx") | -->
 
 You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

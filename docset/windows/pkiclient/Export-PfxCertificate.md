@@ -51,8 +51,6 @@ Delegation may be required when using this cmdlet with Windows PowerShell® remo
 ```
 PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
 
-
-
 PS C:\>Get-ChildItem -Path cert:\localMachine\my\5F98EBBFE735CDDAE00E33E0FD69050EF9220254 | Export-PfxCertificate -FilePath C:\mypfx.pfx -Password $mypwd
 ```
 
@@ -61,8 +59,6 @@ This example exports a certificate from the local machine store to a PFX file wh
 ### EXAMPLE 2
 ```
 PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
-
-
 
 PS C:\>Get-ChildItem -Path cert:\LocalMachine\my | Export-PfxCertificate -FilePath C:\mypfx.pfx -Password $mypwd
 ```
@@ -74,8 +70,6 @@ In order for this cmdlet to succeed, all keys need to be exportable.
 ```
 PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
 
-
-
 PS C:\>Export-PfxCertificate -Cert cert:\currentuser\my\5F98EBBFE735CDDAE00E33E0FD69050EF9220254 -FilePath c:\myexport.pfx -ChainOption EndEntityCertOnly -NoProperties -Password $mypwd
 ```
 
@@ -83,8 +77,9 @@ This example exports a certificate from the current user store with no chain and
 
 ### EXAMPLE 4
 ```
-PS C:\>$a = Get-ChildItem -Path cert:\localMachine\my 
-Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99"
+PS C:\>$a = Get-ChildItem -Path cert:\localMachine\my
+
+PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99"
 ```
 
 This example exports a certificate from the current machine store.
@@ -95,11 +90,7 @@ A Windows® 8 DC for key distribution is required.
 ```
 PS C:\>$a = Get-ChildItem -Path cert:\localMachine\my
 
-
-
 PS C:\>$mypwd = ConvertTo-SecureString -String "1234" -Force -AsPlainText
-
-
 
 PS C:\>Export-PfxCertificate -Cert $a[1] -FilePath C:\myexport.pfx -ProtectTo "contoso\billb99", "contoso\johnj99" -Password $mypwd
 ```
@@ -113,11 +104,7 @@ A Windows 8 DC for key distribution is required.
 ```
 PS C:\>$NewPwd = ConvertTo-SecureString -String "abcd" -Force -AsPlainText
 
-
-
 PS C:\>$mypfx = Get-PfxData -FilePath C:\mypfx.pfx -Password $Oldpwd
-
-
 
 PS C:\>Export-PfxCertificate -PFXData $mypfx -FilePath C:\mypfx2.pfx -Password $NewPwd
 ```

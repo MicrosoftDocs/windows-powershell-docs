@@ -45,7 +45,7 @@ This example imports the certificate from the file into the root store of the cu
 ```
 PS C:\>Set-Location -Path cert:\CurrentUser\My
 
-PS C:\>Import-Certificate -Filepath "C:\files\intermediate.cert"
+PS cert:\CurrentUser\My>Import-Certificate -Filepath "C:\files\intermediate.cert"
 ```
 
 This example imports the certificate from the file into the current store.

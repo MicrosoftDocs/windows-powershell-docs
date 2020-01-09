@@ -59,8 +59,8 @@ TCP settings are optimized for different network conditions including latency an
 To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
 
 > [!Note] 
->1) You can modify Custom and Non-Custom settings on windows server 2016 and 2019.
->2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
+>1) You can modify Custom and Non-Custom settings on windows server 2019.
+>2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows server 2016 or earlier versions.
 >3) You cannot modify the NetTCPsetting on Client Operating systems(Windows 7, 8.1 and 10) as they are Read-Only.
 
 ## EXAMPLES

@@ -55,8 +55,6 @@ This example removes the enrollment policy server configuration from the local u
 ```
 PS C:\>$userPolicy = Get-CertificateEnrollmentPolicyServer -Scope All -Context User -Url https://www.contoso.com/policy/service.svc
 
-
-
 PS C:\>Remove-CertificateEnrollmentPolicyServer -Url $userPolicy.url -Context User
 ```
 

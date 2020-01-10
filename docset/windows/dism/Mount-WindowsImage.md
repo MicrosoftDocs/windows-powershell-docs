@@ -95,6 +95,14 @@ PS C:\> Mount-WindowsImage -Path "c:\offline" -Remount
 
 This command remounts a Windows image that has already been mounted to the c:\offline directory but has become inaccessible for servicing.
 
+### Example 5: Mount an image at an index of a file specifying logpath with checkintegrity and optimize parameters
+```PowerShell
+PS C:\> Mount-WindowsImage -Checkintegrity -ImagePath "c:\imagestore\install.wim" -Index 2 -Path "c:\offline" -Logpath C:\install.log -Optimize
+```
+
+This command mounts the Windows image at index 2 of the install.wim file to the c:\offline directory with Checkintegrity parameter, requesting a log file to be written and with a quicker initial mount time. Additional operations may be slower.
+
+
 ## PARAMETERS
 
 ### -CheckIntegrity
@@ -311,4 +319,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-WindowsImage](./Get-WindowsImage.md)
 
 [Repair-WindowsImage](./Repair-WindowsImage.md)
-

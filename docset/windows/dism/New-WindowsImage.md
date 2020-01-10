@@ -65,6 +65,8 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+ > [!IMPORTANT]
+ > When the path specified is not the root folder of a drive, the captured image will inherit the parent folder’s security descriptors. If you are capturing an image which was previously applied, apply the original image to the root folder of the drive to ensure that the security descriptors of the new image remain the same.
 
 ### -CheckIntegrity
 Detects and tracks .wim file corruption when used with the **Add-WindowsImage**, **Dismount-WindowsImage**, or **Save-WindowsImage** cmdlet.

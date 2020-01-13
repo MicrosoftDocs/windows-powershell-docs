@@ -45,12 +45,12 @@ Get-NetAdapter -InterfaceIndex <UInt32[]> [-IncludeHidden] [-Physical] [-CimSess
 ## DESCRIPTION
 The **Get-NetAdapter** cmdlet gets the basic network adapter properties.
 By default only visible adapters are returned.
-To see the common network adapter properties, pipe the output into the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkID=113302 cmdlet.
-To see all the properties, pipe the output to the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkID=113302 with the **Property** parameter specified as any (`*`).
+To see the common network adapter properties, pipe the output into the Format-List http://go.microsoft.com/fwlink/p/?LinkID=113302 cmdlet.
+To see all the properties, pipe the output to the Format-List http://go.microsoft.com/fwlink/p/?LinkID=113302 with the **Property** parameter specified as any (`*`).
 This cmdlet supports multiple views.
 The default view is as a table.
-To see more information regarding various network adapter identifiers use the names view using the Format-Tablehttp://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as name.
-To see more information regarding the miniport (device driver) such as driver date or version use the driver view using the Format-Tablehttp://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as driver.
+To see more information regarding various network adapter identifiers use the names view using the Format-Table http://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as name.
+To see more information regarding the miniport (device driver) such as driver date or version use the driver view using the Format-Table http://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as driver.
 
 ## EXAMPLES
 
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a New-CimSession http://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSession http://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

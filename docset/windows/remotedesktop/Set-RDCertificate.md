@@ -64,7 +64,8 @@ The second part of the example specifies the file name of the certificate to use
 
 The following example cmdlet applies a new secure string to an RDS role certificate.
 ```PowerShell
-PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force
+PS C:\> Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
 The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable.

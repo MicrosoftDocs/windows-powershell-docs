@@ -23,7 +23,7 @@ ms.assetid: DE25B3FF-9D3D-4A1D-B209-EFD5F56F5FD1
 ## SYNOPSIS
 Creates a virtual machine group.
 
-With Hyper-V, there are two types of VMGroups: a VMCollectionTpe and a ManagementCollectionType. 
+With Hyper-V, there are two types of VMGroups: a VMCollectionType and a ManagementCollectionType. 
 A VMCollectionType VMGroup contains VMs while the ManagementCollectionType VMGroup contains VMCollectionType VMGroups.
 For example, you could have two VMCollectionType VMGroups VMG1 (containing VMs VM1 and VM2) and a second VMG2 (containing VMs VM3 and VM4). 
 You could then create a ManagementCollectionType VMGroup VM-All containing the two VMCollectionType VMGroups.

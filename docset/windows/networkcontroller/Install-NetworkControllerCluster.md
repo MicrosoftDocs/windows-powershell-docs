@@ -71,7 +71,7 @@ PS C:\> $NodeObject1 = New-NetworkControllerNodeObject -Name "Node1" -Server "NC
 PS C:\> $NodeObject2 = New-NetworkControllerNodeObject -Name "Node2" -Server "NCNode2.Contoso.com" -FaultDomain "fd:/rack1/host2" -RestInterface "Ethernet"
 PS C:\> $NodeObject3 = New-NetworkControllerNodeObject -Name "Node3" -Server "NCNode3.Contoso.com" -FaultDomain "fd:/rack2/host3" -RestInterface "Ethernet"
 PS C:\> $Certificate = Get-Item Cert:\LocalMachine\My | Get-ChildItem | where {$_.Subject -imatch "NCEncryption"}
-PS C:\> Install-NetworkControllerCluster -Node @($ NodeObject1,$ NodeObject2,$ NodeObject3) -ClusterAuthentication Kerberos -ManagementSecurityGroup Contoso\NCManagementAdmins -LogLocation "\\share\diagnostics" -CredentialEncryptionCertificate $Certificate 
+PS C:\> Install-NetworkControllerCluster -Node @($NodeObject1,$NodeObject2,$NodeObject3) -ClusterAuthentication Kerberos -ManagementSecurityGroup Contoso\NCManagementAdmins -LogLocation "\\share\diagnostics" -CredentialEncryptionCertificate $Certificate 
 CertificateVersion             : 10.0.0
 Node                           : {Node1, Node2, Node3}
 ClusterAuthentication          : Kerberos
@@ -104,7 +104,7 @@ PS C:\> $NodeObject1 = New-NetworkControllerNodeObject -Name "Node1" -Server "NC
 PS C:\> $NodeObject2 = New-NetworkControllerNodeObject -Name "Node2" -Server "NCNode2" -FaultDomain "fd:/rack1/host2" -RestInterface "Ethernet" -Certificate $Node2Certificate
 PS C:\> $NodeObject3 = New-NetworkControllerNodeObject -Name "Node3" -Server "NCNode3" -FaultDomain "fd:/rack2/host3" -RestInterface "Ethernet" -Certificate $Node3Certificate
 PS C:\> $Cert = Get-Item Cert:\LocalMachine\My |  Get-ChildItem | where {$_.Subject -imatch "NCEncryption"}
-PS C:\> Install-NetworkControllerCluster -Node @($ NodeObject1,$ NodeObject2,$ NodeObject3) -ClusterAuthentication x509-LogLocation "\\share\diagnostics" -StoreAccessCredential $Cred -CredentialEncryptionCertificate $Cert
+PS C:\> Install-NetworkControllerCluster -Node @($NodeObject1,$NodeObject2,$NodeObject3) -ClusterAuthentication x509-LogLocation "\\share\diagnostics" -StoreAccessCredential $Cred -CredentialEncryptionCertificate $Cert
 Version                        : 10.0.0
 Node                           : {Node1, Node2, Node3}
 ClusterAuthentication          : x509

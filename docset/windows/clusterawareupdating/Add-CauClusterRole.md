@@ -74,7 +74,7 @@ Because the command uses the *Force* parameter, the cmdlet runs without displayi
 
 ### Example 2: Add a CAU clustered role on the specified cluster at a specific interval
 ```
-PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -WeeksInterval 3 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -EnableFirewallRules -Force
+PS C:\> Add-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday,Saturday -IntervalWeeks 3 -MaxFailedNodes 2 -MaxRetriesPerNode 2 -EnableFirewallRules -Force
 ```
 
 This command adds the CAU clustered role, using a default name, on the cluster called CONTOSO-FC1.

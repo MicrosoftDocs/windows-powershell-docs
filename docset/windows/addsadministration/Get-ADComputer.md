@@ -190,6 +190,27 @@ PS C:\> Get-ADComputer -Filter *
 
 This command gets all computer accounts.
 
+### Example 6: Get all computers with a name starting with Computer01 or Computer02
+```
+PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+name        dnshostname            ipv4address
+----        -----------            -----------
+Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
+Computer02-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
+```
+
+### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
+```
+PS C:\> $Date = [DateTime]::Today.AddDays(-30)
+PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
+name        dnshostname            ipv4address
+----        -----------            -----------
+Computer01-SRV1 Computer01-SRV1.Computer01.com 10.194.99.181
+```
+
+This command shows the name, DNS hostname, and IPv4 address.
+
+
 ## PARAMETERS
 
 ### -AuthType
@@ -274,26 +295,6 @@ Note: Windows PowerShell wildcards other than *, such as ?, are not supported by
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 
-### Example 6: Get all computers with a name starting with User01 or User02
-```
-PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -or Name -like "User02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
-name        dnshostname            ipv4address
-----        -----------            -----------
-User01-SRV1 User01-SRV1.User01.com 10.194.99.181
-User01-SRV2 User02-SRV2.User02.com 10.194.100.3
-```
-
-### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
-```
-PS C:\> $Date = [DateTime]::Today.AddDays(-30)
-PS C:\> Get-ADComputer -Filter 'Name -like "User01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
-name        dnshostname            ipv4address
-----        -----------            -----------
-User01-SRV1 User01-SRV1.User01.com 10.194.99.181
-User02-SRV2 User02-SRV2.User02.com 10.194.100.3
-```
-
-This command shows the name, dns hostname, and IPv4 address.
 
 ```yaml
 Type: String
@@ -578,4 +579,3 @@ To get a list of all the properties of an ADComputer object, use the following c
 [Set-ADComputer](./Set-ADComputer.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./activedirectory.md)
-

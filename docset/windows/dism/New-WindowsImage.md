@@ -55,7 +55,7 @@ This command captures the Drive D image in the WIM file located on d:\ and save 
 Specifies the drive or path to the Windows operating system that is to be captured to an image file.
 
    > [!NOTE]
-   > When the path specified is not the root folder of a drive, the captured image will inherit the parent folder’s security descriptors. If you are capturing an image which was previously applied, apply the original image to the root folder of the drive to ensure that the security descriptors of the new image remain the same.
+   > When the path specified is not the root folder of a drive, the captured image will inherit the parent folder’s security descriptors. If you are capturing an image that was previously applied, apply the original image to the root folder of the drive to ensure that the security descriptors of the new image remain the same.
 
 ```yaml
 Type: String

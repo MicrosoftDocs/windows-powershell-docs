@@ -48,7 +48,7 @@ In order to transfer dynamic categories from one update server to another, pass 
 
 This cmdlet is used to add Dynamic Categories to WSUS, based on the type of requirement (computer model, device or application). The definition of Dynamic Categories in a WSUS implementation helps to categorize the applying of updates to the different categories available.
 
-In some cases, you need advanced automation when using Dynamic Categories. If you want to download a specific device driver for a specific group of computers in the physical network, for example, advanced automation is required to use Dynamic Categories. In this case, the use of [System Center Configurations Manager](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager) is needed to configure the [Software Update Point](https://docs.microsoft.com/en-us/sccm/sum/get-started/install-a-software-update-point) feature.
+In some cases, you need advanced automation when using Dynamic Categories. If you want to download a specific device driver for a specific group of computers in the physical network, for example, advanced automation is required to use Dynamic Categories. In this case, the use of [Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/configmgr/) is needed to [install and configure a software update point](https://docs.microsoft.com/configmgr/sum/get-started/install-a-software-update-point) feature.
 
 ## EXAMPLES
 

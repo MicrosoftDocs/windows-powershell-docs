@@ -40,7 +40,7 @@ Test-MbamCMIntegration [-Detailed] [-SsrsServer <String>] [-SsrsInstance <String
 ```
 
 ## DESCRIPTION
-The **Test-MbamCMIntegration** cmdlet checks the server prerequisites and validates the parameters for the Microsoft BitLocker Administration and Monitoring (MBAM) System Center Configuration Manager Integration feature.
+The **Test-MbamCMIntegration** cmdlet checks the server prerequisites and validates the parameters for the Microsoft BitLocker Administration and Monitoring (MBAM) Microsoft Endpoint Configuration Manager Integration feature.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ The **Test-MbamCMIntegration** cmdlet checks the server prerequisites and valida
 PS C:\> Test-MbamCMIntegration
 ```
 
-This command tests the prerequisites for enabling the MBAM System Center Configuration Manager Integration on the local Configuration Manager server.
+This command tests the prerequisites for enabling the MBAM Microsoft Endpoint Configuration Manager Integration on the local Configuration Manager server.
 The MBAM reports are deployed on the default SQL Server Reporting Services instance, MSSQLSERVER.
 
 ### Example 2: Check prerequisites to enable integration with detailed output
@@ -59,10 +59,10 @@ PS C:\> Test-MbamCMIntegration -Detailed
 
 ID             Type  Message
 --             ----  -------
-CmInstallation Error This feature can be installed only on a server that is running System Center Configuration Manager.
+CmInstallation Error This feature can be installed only on a server that is running Microsoft Endpoint Configuration Manager.
 ```
 
-This command checks the prerequisites to enable the MBAM System Center Configuration Manager Integration feature on the local Configuration Manager server with detailed output.
+This command checks the prerequisites to enable the MBAM Microsoft Endpoint Configuration Manager Integration feature on the local Configuration Manager server with detailed output.
 
 ## PARAMETERS
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ### -SsrsInstance
 Specifies the SQL Server Reporting Services instance.
 This instance hosts the Configuration Manager reports.
-This parameter is ignored if the server has System Center 2012 Configuration Manager installed.
+This parameter is ignored if the server has Configuration Manager installed.
 
 ```yaml
 Type: String

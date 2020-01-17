@@ -26,10 +26,10 @@ This reference provides cmdlet descriptions and syntax for all Network Switch Te
 
 These Network Switch Team cmdlets should only be used with NIC switch teams that are manipulated by a forwarding extension in the Hyper-V Extensible Switch.
 
-## NetSwitchTeam Cmdlets
-
 > [!NOTE]
 > For any Windows Client editions, these NetSwitchTeam cmdlets can be used only for remote management of the Hyper-V Extensible Switch that is running on Windows Server editions. Windows Client editions do not support running the Hyper-V Extensible Switch on the client itself.
+
+## NetSwitchTeam Cmdlets
 
 ### [Add-NetSwitchTeamMember](./Add-NetSwitchTeamMember.md)
 Adds a network adapter member to an existing switch team.

@@ -104,7 +104,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String
 
-String objects are received by the UpnSuffix parameter.
+String objects are received by the *UpnSuffix* parameter.
 
 ## OUTPUTS
 

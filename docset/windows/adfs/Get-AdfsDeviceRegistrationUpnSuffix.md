@@ -56,15 +56,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### DrsBinding
-- Upn: **string**
-- SslPort: **ushort**
-- IsSetAsSslBinding: **bool**
-- IsCustom: **bool**
-- Upn: **string**
-- SslPort: **ushort**
-- IsSetAsSslBinding: **bool**
-- IsCustom: **bool**
+### Microsoft.IdentityServer.Management.Commands.GetAdfsDeviceRegistrationUpnSuffix+DrsBinding
+
+Returns one or more DrsBinding objects that represent the deevice registration service UPN suffix resources for the Federation Service.
 
 ## NOTES
 

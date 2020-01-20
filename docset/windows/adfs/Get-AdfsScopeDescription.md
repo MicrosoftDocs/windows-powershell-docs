@@ -57,7 +57,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *Name* parameter.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.OAuthScopeDescription
+
+Returns one or more OAuthScopeDescription objects that represent the scope descriptions for the Federation Service.
 
 ## NOTES
 

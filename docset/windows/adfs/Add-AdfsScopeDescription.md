@@ -120,7 +120,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.String
+
+String objects are received by the *Description* and *Name* parameters.
+
 ## OUTPUTS
+
+### Microsoft.IdentityServer.Management.Resources.OAuthScopeDescription
+
+Returns the new OAuthScopeDescription object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
 
 ## NOTES
 

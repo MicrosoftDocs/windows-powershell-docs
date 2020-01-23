@@ -44,6 +44,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.IdentityServer.Management.Resources.AdfsCertificateAuthority
+
+Returns an AdfsCertificateAuthority object that represents the certificate authority of the Federation Service.
+
 ## NOTES
 
 ## RELATED LINKS

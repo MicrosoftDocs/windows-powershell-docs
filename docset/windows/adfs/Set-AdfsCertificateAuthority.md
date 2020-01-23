@@ -262,6 +262,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.IdentityServer.Management.Resources.AdfsCertificateAuthority
+
+Returns the updated AdfsCertificateAuthority object when the *PassThru* parameter is specified. By default, this cmdlet does not generate any output.
+
 ## NOTES
 
 ## RELATED LINKS

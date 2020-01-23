@@ -82,7 +82,7 @@ Because the command specifies the *Force* parameter, the cmdlet runs without dis
 
 ### Example 2: Configure settings for a CAU cluster role on the specified cluster on the second week of the month
 ```
-PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -WeeksInterval 2 -RebootTimeoutMinutes 10 -PostUpdateScript "c:\verifyupdatesinstalled.ps1" -Force
+PS C:\> Set-CauClusterRole -ClusterName "CONTOSO-FC1" -DaysOfWeek Tuesday -IntervalWeeks 2 -RebootTimeoutMinutes 10 -PostUpdateScript "c:\verifyupdatesinstalled.ps1" -Force
 
 Name                                                        Value 
 ----                                                        ----- 

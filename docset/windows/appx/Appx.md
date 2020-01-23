@@ -20,7 +20,7 @@ ms.assetid: 1848DCF8-9EA3-4E54-9DFC-C40A6CC14BB6
 
 # Appx Module
 ## Description
-The Windows PowerShell cmdlets for AppX are designed to streamline the administration of AppX package management.
+The Windows PowerShell cmdlets for AppX are designed to streamline the administration of MSIX or AppX package management.
 
 ## Appx Cmdlets
 ### [Add-AppxPackage](Add-AppxPackage.md)

@@ -38,7 +38,7 @@ Get-AppxLog [-ActivityId <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 The **Get-AppxLog** cmdlet gets the app package installation log created during the deployment of an app package.
-An app package has an .appx file name extension.
+An app package has an .msix or .appx file name extension.
 The log contains errors, warnings, and additional information about the processes initiated by cmdlets in the Appx Windows PowerShell® module.
 
 When Add-AppxPackage or Remove-AppxPackage report a failure, they return the **ActivityID** to use with **Get-AppxLog**.

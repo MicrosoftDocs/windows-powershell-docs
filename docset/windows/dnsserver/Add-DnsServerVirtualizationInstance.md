@@ -33,7 +33,7 @@ Add-DnsServerVirtualizationInstance [-ComputerName <String>] [-Name] <String> [-
 
 ## DESCRIPTION
 The **Add-DnsServerVirtualizationInstance** cmdlet adds a virtualization instance to a DNS Server.
-A Virtualizat5on instance is a logical partition in a DNS Server that is capable of independently hosting zones and zone scopes.
+A Virtualizaton instance is a logical partition in a DNS Server that is capable of independently hosting zones and zone scopes.
 You can host the same name zones and zone scopes in different virtualization instances.
 
 ## EXAMPLES

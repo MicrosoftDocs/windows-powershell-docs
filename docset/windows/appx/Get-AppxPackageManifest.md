@@ -32,7 +32,7 @@ Get-AppxPackageManifest [-Package] <String> [[-User] <String>] [<CommonParameter
 
 ## DESCRIPTION
 The **Get-AppxPackageManifest** cmdlet gets the manifest of an app package.
-An app package has an .appx file name extension.
+An app package has an .msix or .appx file name extension.
 The manifest is an .xml document that contains information about the package, like the package ID.
 
 ## EXAMPLES

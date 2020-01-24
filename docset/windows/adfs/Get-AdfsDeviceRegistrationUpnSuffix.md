@@ -58,7 +58,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.IdentityServer.Management.Commands.GetAdfsDeviceRegistrationUpnSuffix+DrsBinding
 
-Returns one or more DrsBinding objects that represent the deevice registration service UPN suffix resources for the Federation Service.
+Returns one or more DrsBinding objects that represent the device registration service UPN suffix resources for the Federation Service.
 
 ## NOTES
 
@@ -69,4 +69,3 @@ Returns one or more DrsBinding objects that represent the deevice registration s
 [Remove-AdfsDeviceRegistrationUpnSuffix](./Remove-AdfsDeviceRegistrationUpnSuffix.md)
 
 [Set-AdfsDeviceRegistrationUpnSuffix](./Set-AdfsDeviceRegistrationUpnSuffix.md)
-

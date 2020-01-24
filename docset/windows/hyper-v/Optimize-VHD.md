@@ -31,7 +31,7 @@ Optimize-VHD [-Path] <String[]> [-Mode <VhdCompactMode>] [-AsJob] [-Passthru] [-
 ```
 
 ## DESCRIPTION
-The **Optimize-VHD** cmdlet optimizes the allocation of space in or more virtual hard disk files, except for fixed virtual hard disks.
+The **Optimize-VHD** cmdlet optimizes the allocation of space in one or more virtual hard disk files, except for fixed virtual hard disks.
 The **Compact** operation is used to optimize the files.
 This operation reclaims unused blocks as well as rearranges the blocks to be more efficiently packed, which reduces the size of a virtual hard disk file.
 

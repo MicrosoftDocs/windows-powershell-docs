@@ -67,6 +67,34 @@ PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
 
 This command sets the SMB Service configuration without user confirmation.
 
+### Example 3: Turn on SMB singing and encryption
+```
+PS C:\>Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -confirm $False
+```
+
+This command turns on SMB signing and encryption.
+
+### Example 4: Turn off the default server and workstations shares
+```
+PS C:\>Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -confirm $False
+```
+
+This command turns off the default server and workstations shares.
+
+### Example 5: Turn off server announcements
+```
+PS C:\>Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -confirm $False
+```
+
+This command turns off server announcements.
+
+### Example 6: Turn off SMB1
+```
+PS C:\>Set-SmbServerConfiguration -EnableSMB1Protocol $false
+```
+
+This command disables SMB1 on the SMB server.
+
 ## PARAMETERS
 
 ### -AnnounceComment

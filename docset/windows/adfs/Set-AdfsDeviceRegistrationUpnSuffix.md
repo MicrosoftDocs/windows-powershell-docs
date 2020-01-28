@@ -107,7 +107,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### switch
+### System.Management.Automation.SwitchParameter
+
+SwitchParameter objects are received by the *Force* parameter.
 
 ## OUTPUTS
 

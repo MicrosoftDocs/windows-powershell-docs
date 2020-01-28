@@ -174,6 +174,29 @@ This command generates a publisher rule for the specific file named ci.dll.
 The file ci.dll is a kernel component.
 Therefore, the cmdlet generates both a kernel rule and a user mode rule.
 
+### Example 4: Specify a policy rule for a file or folder path string
+```
+PS C:\> New-CIPolicyRule -FilePathRule '.\temp\ConfigCITestBinaries\'
+
+
+Name           : C:\temp\ConfigCITestBinaries\ FileRule
+Id             : ID_ALLOW_A_3
+TypeId         : Allow
+Root           :
+FileVersionRef :
+AppIDRef       :
+Wellknown      : False
+Ekus           :
+Exceptions     :
+FileAttributes :
+FileException  : False
+UserMode       : True
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, C:\temp\ConfigCITestBinaries\]}
+```
+
+This command generates a filepath rule for the specific path string.
+
+
 ## PARAMETERS
 
 ### -Deny
@@ -239,6 +262,23 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -FilePathRule
+Specifies the path of a file or folder path for generating a rule with level set to FilePath. 
+This cmdlet will not check whether the filepath string is a valid filepath. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: True
 ```
 
 ### -Level

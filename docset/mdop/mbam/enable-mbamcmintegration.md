@@ -22,7 +22,7 @@ ms.reviewer:
 # Enable-MbamCMIntegration
 
 ## SYNOPSIS
-Enables the MBAM System Center Configuration Manager Integration feature.
+Enables the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ Enable-MbamCMIntegration [-SkipValidation] [-SsrsServer <String>] [-SsrsInstance
 ```
 
 ## DESCRIPTION
-The **Enable-MbamCMIntegration** cmdlet enables the Microsoft BitLocker Administration and Monitoring (MBAM) System Center Configuration Manager Integration feature.
+The **Enable-MbamCMIntegration** cmdlet enables the Microsoft BitLocker Administration and Monitoring (MBAM) Microsoft Endpoint Configuration Manager Integration feature.
 This feature integrates Configuration Manager with MBAM, and moves the compliance and reporting infrastructure into the Configuration Manager environment.
 
 ## EXAMPLES
@@ -51,7 +51,7 @@ This feature integrates Configuration Manager with MBAM, and moves the complianc
 PS C:\> Enable-MbamCMIntegration
 ```
 
-This command enables the MBAM System Center Configuration Manager Integration feature on the local Configuration Manager server.
+This command enables the MBAM Microsoft Endpoint Configuration Manager Integration feature on the local Configuration Manager server.
 The MBAM reports are deployed on the default SQL Server Reporting Services instance, MSSQLSERVER.
 
 ## PARAMETERS
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ### -SsrsInstance
 Specifies the SQL Server Reporting Services instance.
 This instance hosts the Configuration Manager reports.
-This parameter is ignored if the server has System Center 2012Configuration Manager installed.
+This parameter is ignored if the server has Configuration Manager installed.
 
 ```yaml
 Type: String

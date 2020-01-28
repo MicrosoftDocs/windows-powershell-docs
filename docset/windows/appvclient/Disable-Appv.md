@@ -31,7 +31,7 @@ Disable-Appv [<CommonParameters>]
 
 ## DESCRIPTION
 The **Disable-Appv** cmdlet disables the Microsoft Application Virtualization (App-V) service on Windows 10 Anniversary Edition computers.
-This cmdlet disables the download of all App-V apps from App-V Server or System Center 2016 Configuration Manager.
+This cmdlet disables the download of all App-V apps from App-V Server or Configuration Manager.
 If this cmdlet succeeds, it returns a message.
 You must restart the computer for the change to take effect.
 

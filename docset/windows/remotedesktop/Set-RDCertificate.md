@@ -53,7 +53,8 @@ The **Set-RDCertificate** cmdlet imports a certificate or applies an installed c
 
 The following example imports a certificate to use with an RDS role.
 ```PowerShell
-PS C:\> $Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+PS C:\>$Password = ConvertTo-SecureString -String "Cups34Horses&&" -AsPlainText -Force
+PS C:\>Set-RDCertificate -Role RDRedirector -ImportPath "C:\Certificates\Redirector07.pfx" -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
 The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable. For more information, see [ConvertTo-SecureString](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/ConvertTo-SecureString?view=powershell-6). You can also enter the `Get-Help ConvertTo-SecureString` cmdlet into your PowerShell window.
@@ -64,7 +65,8 @@ The second part of the example specifies the file name of the certificate to use
 
 The following example cmdlet applies a new secure string to an RDS role certificate.
 ```PowerShell
-PS C:\> $Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force PS C:\>Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
+PS C:\>$Password = ConvertTo-SecureString -String "Wings%%83Potato" -AsPlainText -Force
+PS C:\>Set-RDCertificate -Role RDRedirector -Password $Password -ConnectionBroker "RDCB.Contoso.com"
 ```
 
 The first part of the example uses the **ConvertTo-SecureString** cmdlet to create a secure string based on a string that the user supplies and stores it in the **$Password** variable.
@@ -75,7 +77,7 @@ The second part of the example uses the secure string stored in the **$Password*
 
 The following example applies an existing certificate to use with an RDS role.
 ```PowerShell
-PS C:\> Set-RDCertificate -Role RDRedirector -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b -ConnectionBroker "RDCB.Contoso.com"
+PS C:\>Set-RDCertificate -Role RDRedirector -Thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b -ConnectionBroker "RDCB.Contoso.com"
 ```
 
 The first part of the example specifies the thumbprint of the certificate to use for the RD Connection Broker's redirector role, which in this example is named "RDCB.Contoso.com." The certificate must be installed in the "localmachine\my" store on each server running the specified RDS role. The `-Thumbprint` parameter is only available in Windows Server 2019.

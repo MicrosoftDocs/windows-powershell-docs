@@ -22,7 +22,7 @@ ms.reviewer:
 # Get-MbamCMIntegration
 
 ## SYNOPSIS
-Gets the configuration of the MBAM System Center Configuration Manager Integration feature.
+Gets the configuration of the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ## SYNTAX
 
@@ -31,19 +31,19 @@ Get-MbamCMIntegration [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-MbamCMIntegration** cmdlet gets the configuration of the Microsoft BitLocker Administration and Monitoring (MBAM) System Center Configuration Manager Integration feature.
+The **Get-MbamCMIntegration** cmdlet gets the configuration of the Microsoft BitLocker Administration and Monitoring (MBAM) Microsoft Endpoint Configuration Manager Integration feature.
 
 ## EXAMPLES
 
-### Example 1: Get the configuration of the System Center Configuration Manager Integration feature
+### Example 1: Get the configuration of the Microsoft Endpoint Configuration Manager Integration feature
 ```
 PS C:\> Get-MbamCMIntegration
 Name        : Configuration Manager Integration
 Enabled     : False
-Description : This feature will integrate MBAM with a Microsoft System Center Configuration Manager server.
+Description : This feature will integrate MBAM with a Microsoft Endpoint Configuration Manager server.
 ```
 
-This command gets the configuration of the MBAM System Center Configuration Manager Integration feature in the local server.
+This command gets the configuration of the MBAM Microsoft Endpoint Configuration Manager Integration feature in the local server.
 
 ## PARAMETERS
 

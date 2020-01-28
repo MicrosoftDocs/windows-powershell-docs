@@ -32,12 +32,12 @@ Update-DAMgmtServer [-PassThru] [-ComputerName <String>] [-CimSession <CimSessio
 The **Update-DAMgmtServer** cmdlet updates the list of Management servers of the DirectAccess (DA) deployment.
 A management server is any server that needs to be accessed in a DA managed-out deployment or during the first tunnel in a DA full deployment, such as update servers, domain controllers and other servers.
 
-Domain controllers and System Center Configuration Manager servers are discovered automatically.
+Domain controllers and Microsoft Endpoint Configuration Manager servers are discovered automatically.
 Manually entered management server names are resolved to IP addresses. 
 
 Management server configuration is applicable globally to the entire DA deployment and therefore is not impacted by multi-site deployments. 
 
-When the cmdlet runs, the list of automatically discovered domain controllers and System Center Configuration Manager servers is updated.
+When the cmdlet runs, the list of automatically discovered domain controllers and Configuration Manager servers is updated.
 Discovered servers are added to the list, and servers that cannot be discovered are removed.
 IP addresses in the list are updated in accordance with server name resolution.
 

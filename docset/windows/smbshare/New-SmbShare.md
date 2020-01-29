@@ -49,7 +49,7 @@ Name                          ScopeName                     Path                
 VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
 ```
 
-This command creates an SMB share named "VMSFiles" and grants Full Access permissions to "Contoso\Administrator", and "Contoso\Contoso-HV1$"
+This command creates an SMB share named "VMSFiles" and grants Full Access permissions to "Contoso\Administrator", and "Contoso\Contoso-HV1$".
 
 ### Example 2: Create an encrypted SMB share
 ```

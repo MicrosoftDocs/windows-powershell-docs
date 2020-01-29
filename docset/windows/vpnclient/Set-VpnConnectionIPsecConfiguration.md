@@ -350,7 +350,7 @@ Specifies the integrity check method used to protect data from tampering.
 The acceptable values for this parameter are:
 
 - MD5
-- SHA196
+- SHA1
 - SHA256
 - SHA384
 

@@ -1194,12 +1194,8 @@ Accept wildcard characters: False
 
 ### -Office
 Specifies the location of the user's office or place of business.
-This parameter sets the Office property of a user object.
-The LDAP display name (ldapDisplayName) of this property is "office".
-
-The following example shows how to set this parameter.
-
--Office  "D1042"
+This parameter sets the **Office** property of a user object.
+The LDAP display name (**ldapDisplayName**) of this property is physicalDeliveryOfficeName.
 
 ```yaml
 Type: String

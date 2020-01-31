@@ -598,15 +598,15 @@ To retrieve additional ADUser properties, use the Properties parameter.
 
 To get a list of the default set of properties of an ADUser object, use the following command:
 ```powershell
-Get-ADUser "<user>" | Get-Member
+Get-ADUser SaraDavis | Get-Member
 ```
 To get a list of the most commonly used properties of an ADUser object, use the following command:
 ```powershell
-Get-ADUser "<user>" -Properties Extended | Get-Member
+Get-ADUser SaraDavis -Properties Extended | Get-Member
 ```
 To get a list of all the properties of an ADUser object, use the following command:
 ```powershell
-Get-ADUser "<user>" -Properties * | Get-Member
+Get-ADUser SaraDavis -Properties * | Get-Member
 ```
 ## NOTES
 * This cmdlet does not work with an Active Directory Snapshot.

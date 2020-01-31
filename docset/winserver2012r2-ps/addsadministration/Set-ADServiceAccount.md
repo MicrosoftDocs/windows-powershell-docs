@@ -52,7 +52,7 @@ Property values that are not associated with cmdlet parameters can be modified b
 The *Identity* parameter specifies the Active Directory MSA to modify.
 You can identify an MSA by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
 You can also set the *Identity* parameter to an object variable such as `$<localServiceAccountObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
-For example, you can use the **Get-ADServiceAccount** cmdlet to retrieve a MSA object and then pass the object through the pipeline to the **Set-ADServiceAccount** cmdlet.
+For example, you can use the **Get-ADServiceAccount** cmdlet to retrieve an MSA object and then pass the object through the pipeline to the **Set-ADServiceAccount** cmdlet.
 
 The *Instance* parameter provides a way to update an MSA object by applying the changes made to a copy of the object.
 When you set the *Instance* parameter to a copy of an Active Directory MSA object that has been modified, the **Set-ADServiceAccount** cmdlet makes the same changes to the original MSA object.
@@ -864,4 +864,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADServiceAccount](./Remove-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

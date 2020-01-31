@@ -47,7 +47,7 @@ You can modify commonly used property values by using the cmdlet parameters.
 Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
 The *Identity* parameter specifies the Active Directory fine-grained password policy to modify.
-You can identify a fine-grained password policy by its distinguished name, GUID or name.
+You can identify a fine-grained password policy by its distinguished name, GUID, or name.
 You can also set the *Identity* parameter to an object variable such as `$<localFineGrainedPasswordPolicyObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
 For example, you can use the **Get-ADFineGrainedPasswordPolicy** cmdlet to retrieve a fine-grained password policy object and then pass the object through the pipeline operator to the **Set-ADFineGrainedPasswordPolicy** cmdlet.
 
@@ -750,4 +750,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADFineGrainedPasswordPolicy](./Remove-ADFineGrainedPasswordPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

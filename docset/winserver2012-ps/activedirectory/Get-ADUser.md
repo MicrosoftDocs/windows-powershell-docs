@@ -56,8 +56,8 @@ For more information about the how to determine the properties for user objects,
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
-C:\PS>Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
+```powershell
+Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
 
 Description
@@ -67,8 +67,8 @@ Description
 Get all users under the container 'OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Get-ADUser -Filter 'Name -like "*SvcAccount"' | FT Name,SamAccountName -A
+``` powershell
+Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -AutoSize
 
 
 Name             SamAccountName
@@ -85,8 +85,8 @@ Description
 Get all users that have a name that ends with 'SvcAccount'.
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Get-ADUser GlenJohn -Properties *
+```powershell
+Get-ADUser GlenJohn -Properties *
 
 
 Surname           : John
@@ -108,8 +108,8 @@ Description
 Get all properties of the user with samAccountName 'GlenJohn'.
 
 ### -------------------------- EXAMPLE 4 --------------------------
-```
-C:\PS>Get-ADUser -Filter "Name -eq 'GlenJohn'" -SearchBase "DC=AppNC" -Properties mail -Server lds.Fabrikam.com:50000
+```powershell
+Get-ADUser -Filter "Name -eq 'GlenJohn'" -SearchBase "DC=AppNC" -Properties mail -Server lds.Fabrikam.com:50000
 ```
 
 Description
@@ -134,7 +134,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 
 The following example shows how to set this parameter to Basic.
 
--AuthType Basic
+`-AuthType Basic`
 
 ```yaml
 Type: ADAuthType
@@ -159,12 +159,13 @@ If you specify a user name for this parameter, the cmdlet prompts for a password
 
 You can also create a PSCredential object by using a script or by using the Get-Credential cmdlet.
 You can then set the Credential parameter to the PSCredential object The following example shows how to create credentials.
-
+```powershell
 $AdminCredentials = Get-Credential "Domain01\User01"
+```
 
 The following shows how to set the Credential parameter to these credentials.
 
--Credential $AdminCredentials
+`-Credential $AdminCredentials`
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
@@ -216,48 +217,47 @@ The following examples show how to use this syntax with Active Directory cmdlets
 To get all objects of the type specified by the cmdlet, use the asterisk wildcard:
 
 All user objects:
-
+```powershell
 Get-ADUser -Filter *
-
+```
 -or-
 
 All computer objects:
-
+```powershell
 Get-ADComputer -Filter *
-
+```
 To get all user objects that have an e-mail message attribute, use one of the following commands:
-
+```powershell
 Get-ADUser -Filter "EmailAddress -like '*'"
-
 Get-ADUser -Filter "mail -like '*'"
-
+```
 -or-
-
+```powershell
 Get-ADObject -Filter "(mail -like '*') -and (ObjectClass -eq 'user')"
-
+```
 Note: PowerShell wildcards other than "*", such as "?" are not supported by the Filter syntax.
 
 To get all users objects that have surname of Smith and that have an e-mail attribute, use one of the following commands:
-
+```powershell
 Get-ADUser -Filter "(EmailAddress -like '*') -and (Surname -eq 'smith')"
-
+```
 -or-
-
+```powershell
 Get-ADUser -Filter "(mail -eq '*') -and (sn -eq 'Smith')"
-
+```
 To get all user objects who have not logged on since January 1, 2007, use the following commands:
-
+```powershell
 $logonDate = New-Object System.DateTime(2007, 1, 1)
-
 Get-ADUser -Filter "lastLogon -le '$logonDate'"
-
+```
 To get all groups that have a group category of Security and a group scope of Global, use one of the following commands:
-
+```powershell
 Get-ADGroup -Filter "GroupCategory -eq 'Security' -and GroupScope -eq 'Global'"
-
+```
 -or-
-
+```powershell
 Get-ADGroup -Filter "GroupType -band 0x80000000"
+```
 
 Note: To query using LDAP query strings, use the LDAPFilter parameter.
 
@@ -300,11 +300,11 @@ This parameter can also get this object through the pipeline or you can set this
 
 This example shows how to set the parameter to a distinguished name.
 
--Identity  "CN=SaraDavis,CN=Europe,CN=Users,DC=corp,DC=contoso,DC=com"
+`-Identity  "CN=SaraDavis,CN=Europe,CN=Users,DC=corp,DC=contoso,DC=com"`
 
 This example shows how to set this parameter to a user object instance named "userInstance".
 
--Identity   $userInstance
+`-Identity   $userInstance`
 
 ```yaml
 Type: ADUser
@@ -326,7 +326,7 @@ For more information, see the Filter parameter description and the about_ActiveD
 
 The following example shows how to set this parameter to search for all objects in the organizational unit specified by the SearchBase parameter with a name beginning with "sara".
 
--LDAPFilter "(name=sara*)"  -SearchScope Subtree -SearchBase "DC=NA,DC=fabrikam,DC=com"
+`-LDAPFilter "(name=sara*)"  -SearchScope Subtree -SearchBase "DC=NA,DC=fabrikam,DC=com"`
 
 ```yaml
 Type: String
@@ -347,9 +347,9 @@ The cmdlet searches this partition to find the object defined by the Identity pa
 
 The following two examples show how to specify a value for this parameter.
 
--Partition "CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
+`-Partition "CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"`
 
--Partition "CN=Schema,CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
+`-Partition "CN=Schema,CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"`
 
 In many cases, a default value will be used for the Partition parameter if no value is specified. 
 The rules for determining the default value are given below. 
@@ -391,22 +391,23 @@ For properties that are not default or extended properties, you must specify the
 
 To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the Get-Member cmdlet.
 The following examples show how to retrieve properties for a group where the Administrator's group is used as the sample group object.
-
+```powershell
 Get-ADGroup -Identity Administrators | Get-Member
-
+```
 To retrieve and display the list of all the properties for an ADGroup object, use the following command:
-
+```powershell
 Get-ADGroup -Identity Administrators -Properties *| Get-Member
-
+```
 The following examples show how to use the Properties parameter to retrieve individual properties as well as the default, extended or complete set of properties.
 
 To retrieve the extended properties "OfficePhone" and "Organization" and the default properties of an ADUser object named "SaraDavis", use the following command:
-
+```powershell
 GetADUser -Identity SaraDavis  -Properties OfficePhone,Organization
-
+```
 To retrieve the properties with LDAP display names of "otherTelephone" and "otherMobile", in addition to the default properties for the same user, use the following command:
-
-GetADUser -Identity SaraDavis  -Properties otherTelephone, otherMobile |Get-Member
+```powershell
+GetADUser -Identity SaraDavis  -Properties otherTelephone,otherMobile | Get-Member
+```
 
 ```yaml
 Type: String[]
@@ -427,7 +428,7 @@ The default is 256 objects per page.
 
 The following example shows how to set this parameter.
 
--ResultPageSize 500
+`-ResultPageSize 500`
 
 ```yaml
 Type: Int32
@@ -450,7 +451,7 @@ The default is $null.
 
 The following example shows how to set this parameter so that you receive all of the returned objects.
 
--ResultSetSize $null
+`-ResultSetSize $null`
 
 ```yaml
 Type: Int32
@@ -476,13 +477,13 @@ If no default naming context has been specified for the target AD LDS instance, 
 
 The following example shows how to set this parameter to search under an OU.
 
--SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"
+`-SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"`
 
 When the value of the SearchBase parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
 If the value of the SearchBase parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
 
 The following example shows how to set this parameter to an empty string. 
--SearchBase ""
+`-SearchBase ""`
 
 ```yaml
 Type: String
@@ -512,7 +513,7 @@ A Subtree query searches the current path or object and all children of that pat
 
 The following example shows how to set this parameter to a subtree search.
 
--SearchScope Subtree
+`-SearchScope Subtree`
 
 ```yaml
 Type: ADSearchScope
@@ -565,7 +566,7 @@ The default value for the Server parameter is determined by one of the following
 
 The following example shows how to specify a full qualified domain name as the parameter value.
 
--Server "corp.contoso.com"
+`-Server "corp.contoso.com"`
 
 ```yaml
 Type: String
@@ -596,17 +597,17 @@ This cmdlet returns a default set of ADUser property values.
 To retrieve additional ADUser properties, use the Properties parameter.
 
 To get a list of the default set of properties of an ADUser object, use the following command:
-
+```powershell
 Get-ADUser \<user\>| Get-Member
-
+```
 To get a list of the most commonly used properties of an ADUser object, use the following command:
-
+```powershell
 Get-ADUser \<user\> -Properties Extended | Get-Member
-
+```
 To get a list of all the properties of an ADUser object, use the following command:
-
+```powershell
 Get-ADUser \<user\> -Properties * | Get-Member
-
+```
 ## NOTES
 * This cmdlet does not work with an Active Directory Snapshot.
 

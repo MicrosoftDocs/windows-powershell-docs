@@ -216,15 +216,15 @@ Specifies an array of category types of a network.
 You cannot set the DomainAuthenticated type by using this cmdlet.
 The server automatically sets the value of DomainAuthenticated when the network is authenticated to a domain controller.
 The acceptable values for this parameter are:
+
 - Public
 - Private
-- DomainAuthenticated
 
 ```yaml
 Type: NetworkCategory
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Public, Private, DomainAuthenticated
+Accepted values: Public, Private
 
 Required: False
 Position: Named

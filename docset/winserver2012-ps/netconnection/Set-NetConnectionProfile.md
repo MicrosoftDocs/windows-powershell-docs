@@ -211,12 +211,13 @@ The acceptable values for this parameter are:
 
 - Public
 - Private
+- DomainAuthenticated
 
 ```yaml
 Type: NetworkCategory
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Public, Private
+Accepted values: Public, Private, DomainAuthenticated
 
 Required: False
 Position: Named

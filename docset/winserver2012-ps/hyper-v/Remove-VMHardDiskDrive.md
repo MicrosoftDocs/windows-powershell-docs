@@ -189,6 +189,8 @@ Accept wildcard characters: False
 
 ## INPUTS
 
+### Microsoft.HyperV.PowerShell.HardDiskDrive[]
+
 ## OUTPUTS
 
 ### None

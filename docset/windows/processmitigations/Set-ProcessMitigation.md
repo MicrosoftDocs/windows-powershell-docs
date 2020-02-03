@@ -49,7 +49,7 @@ Gets the current process mitigation for "notepad.exe" from the registry and then
 
 ### Example 2
 ```
-PS C:\> set-ProcessMitigation -file settings.xml
+PS C:\> set-ProcessMitigation -File settings.xml
 ```
 
 Applies all settings inside settings.xml
@@ -184,7 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyFilePath
-{{Fill PolicyFilePath Description}}```yaml
+Path to XML file containing mitigation settings.
+
+```yaml
 Type: String
 Parameter Sets: FullPolicy
 Aliases: x
@@ -197,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

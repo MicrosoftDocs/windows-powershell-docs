@@ -48,7 +48,7 @@ Get-NonRemovableAppsPolicy
     [-SystemDrive <string>] 
     [-LogPath <string>] 
     [-ScratchDirectory <string>] 
-    [-LogLevel {Errors | Warnings | WarningsInfo}]  
+    [-LogLevel {Errors | Warnings | WarningsInfo}] 
     [<CommonParameters>]
 ```
 

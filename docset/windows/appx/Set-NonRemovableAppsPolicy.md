@@ -40,7 +40,7 @@ Set-NonRemovableAppsPolicy
 ```
 
 ```powershell
-Get-NonRemovableAppsPolicy 
+Set-NonRemovableAppsPolicy 
     -PackageFamilyName <string> 
     -NonRemovable <int> 
     -Online 
@@ -53,18 +53,23 @@ Get-NonRemovableAppsPolicy
 ```
 
 ## DESCRIPTION
-The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what are installed, and have been configured as non-removable (can not be uninstalled). An app package has an .msix or .appx file name extension.
+The **Set-NonRemovableAppsPolicy** cmdlet sets an installed app package as either removable (capable of being uninstalled) or non-removable (can not be uninstalled). An app package has a .msix or .appx file name extension.
 
 ## EXAMPLES
 
-### Example 1: Get all installed non-removable app packages
+### Example 1: Set the app package Application1 as non-removable
 ```
-PS C:\> Get-NonRemovableAppsPolicy -Online
+PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
 This command gets information about all installed app packages which have been previously configured as non-removable.
 
-### Example 2: Get all non-removable apps from an offline windows image
+### Example 2: Set the app package Application1 as removable
+```
+PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
+```
+
+### Example 3: Sets the app package Application1 as non-removable on an offline windows image
 ```
 PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 ```
@@ -72,6 +77,30 @@ PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 This command gets all apps packages that have been loaded into the offline operating system image.
 
 ## PARAMETERS
+
+### -PackageFamilyName
+Specifies the Package Family Name of the app package that will have it's non-removable status set.
+
+|||
+|-|-|
+| Type: | String |
+| Position: | Named |
+| DefaultValue: | None |
+| Accept pipeline input: | True (ByPropertyName) |
+| Accept wildcard characters: | False |
+
+### -NonRemovable
+Specifies that the app package will be configured as non-removable or not. Accepted values are as follows:
+- 1 = Sets the application as non-removable, and unable to be uninstalled.
+- 0 = Sets the application as removable, and capable of being uninstalled.
+
+|||
+|-|-|
+| Type: | Integer |
+| Position: | Named |
+| DefaultValue: | None |
+| Accept pipeline input: | True (ByPropertyName) |
+| Accept wildcard characters: | False |
 
 ### -Online
 Indicates that the cmdlet operates on a running operating system on the local host.
@@ -85,7 +114,7 @@ Indicates that the cmdlet operates on a running operating system on the local ho
 | Accept wildcard characters: | False |
 
 ### -Path
-Specifies the full path to the root directory of the offline Windows image that you will inquire into. If the directory named Windows is not a subdirectory of the root directory, WindowsDirectory must be specified.
+Specifies the full path to the root directory of the offline Windows image that you will service. If the directory named Windows is not a subdirectory of the root directory, WindowsDirectory must be specified.
 
 |||
 |-|-|
@@ -96,7 +125,7 @@ Specifies the full path to the root directory of the offline Windows image that 
 | Accept wildcard characters: | False |
 
 ### -ScratchDirectory
-Specifies a temporary directory that will be used when extracting files for use during inquiry. The directory must exist locally. If not spcified, the ``` \Windows\%Temp% ``` directory will be used, with a subdirectoryname of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a pachage(.cab or .msu file) for installation. The directory used for extracting files for temporary usage during servicing should be a local directory.
+Specifies a temporary directory that will be used when extracting files for use during servicing. The directory must exist locally. If not spcified, the ``` \Windows\%Temp% ``` directory will be used, with a subdirectoryname of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a pachage(.cab or .msu file) for installation. The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 |||
 |-|-|
@@ -168,20 +197,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### None
-
 ## NOTES
 
 ## RELATED LINKS
-
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
-
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
-
-[Get-AppxPackage](./Get-AppxPackage.md)
-
-[Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
-
-[Move-AppxPackage](./Move-AppxPackage.md)
-
-[Remove-AppxPackage](./Remove-AppxPackage.md)

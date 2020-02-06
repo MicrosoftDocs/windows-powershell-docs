@@ -49,7 +49,7 @@ Get-NonRemovableAppsPolicy
 ```
 
 ## DESCRIPTION
-The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what are installed, and have been configured as non-removable (can not be uninstalled). An app package has an .msix or .appx file name extension.
+The **Get-NonRemovableAppsPolicy** cmdlet gets a list of the app packages what are installed, and have been configured as non-removable (can not be uninstalled). An app package has a .msix or .appx file name extension.
 
 ## EXAMPLES
 
@@ -160,24 +160,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.String[]
 
-### System.IO.FileInfo
+### Microsoft.Dism.Commands.ImageObject
 
 ## OUTPUTS
-
-### None
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
-
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
-
-[Get-AppxPackage](./Get-AppxPackage.md)
-
-[Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
-
-[Move-AppxPackage](./Move-AppxPackage.md)
-
-[Remove-AppxPackage](./Remove-AppxPackage.md)

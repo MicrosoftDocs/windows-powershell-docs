@@ -125,7 +125,7 @@ Specifies the full path to the root directory of the offline Windows image that 
 | Accept wildcard characters: | False |
 
 ### -ScratchDirectory
-Specifies a temporary directory that will be used when extracting files for use during servicing. The directory must exist locally. If not spcified, the ``` \Windows\%Temp% ``` directory will be used, with a subdirectoryname of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a pachage(.cab or .msu file) for installation. The directory used for extracting files for temporary usage during servicing should be a local directory.
+Specifies a temporary directory that will be used when extracting files for use during servicing. The directory must exist locally. If not spcified, the `\Windows\%Temp%` directory will be used, with a subdirectoryname of a randomly generated hexadecimal value for each run of DISM. Items in the scratch directory are deleted after each operation. You should not use a network share location as a scratch directory to expand a pachage(.cab or .msu file) for installation. The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 |||
 |-|-|
@@ -158,7 +158,7 @@ Specifies the path to the Windows directory relative to the image path. This can
 | Accept wildcard characters: | False |
 
 ### -LogPath
-Specifies the full path and file name to log to. If not set, the default is ``` %WINDIR%\Logs\Dism\dism.log ```. In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32MB. The log file will automatically be archived. The archived log file will be saved with .bak appended to the file name and a new log file will be generated. Each time the log file is archived the .bak file will be overwritten. When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+Specifies the full path and file name to log to. If not set, the default is `%WINDIR%\Logs\Dism\dism.log`. In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32MB. The log file will automatically be archived. The archived log file will be saved with .bak appended to the file name and a new log file will be generated. Each time the log file is archived the .bak file will be overwritten. When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
 
 |||
 |-|-|

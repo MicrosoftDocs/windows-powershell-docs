@@ -171,11 +171,10 @@ Specifies the full path and file name to log to. If not set, the default is `%WI
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs. The default log level is 3. The accepted values are as follows:
-    
-    - 1 = Error
-    - 2 = Errors and warnings
-    - 3 = Errors, warnings, and information
-    - 4 = All of the information listed previously, plus debug output
+- 1 = Error
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 |||
 |-|-|

@@ -59,7 +59,7 @@ This command returns the language list for the current user account, BCP-47 tags
 
 ### Example 2: Display input methods
 ```
-PS C:\> (Get-WinUserLanguageList)[0].InputMethodTip
+PS C:\> (Get-WinUserLanguageList)[0].InputMethodTips
 0409:00000409
 0409:00010409
 ```

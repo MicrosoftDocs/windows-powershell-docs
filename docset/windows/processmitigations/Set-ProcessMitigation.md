@@ -49,7 +49,7 @@ Gets the current process mitigation for "notepad.exe" from the registry and then
 
 ### Example 2
 ```
-PS C:\> set-ProcessMitigation -File settings.xml
+PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
 ```
 
 Applies all settings inside settings.xml
@@ -212,4 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

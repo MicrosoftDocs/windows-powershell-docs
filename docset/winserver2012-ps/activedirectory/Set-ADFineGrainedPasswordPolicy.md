@@ -34,86 +34,48 @@ Set-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-
 ```
 
 ## DESCRIPTION
-The Set-ADFineGrainedPasswordPolicy cmdlet modifies the properties of an Active Directory fine grained password policy.
+The **Set-ADFineGrainedPasswordPolicy** cmdlet modifies the properties of an Active Directory fine-grained password policy.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The Identity parameter specifies the Active Directory fine grained password policy to modify.
-You can identify a fine grained password policy by its distinguished name (DN), GUID or name.
-You can also set the Identity parameter to an object variable such as $\<localFineGrainedPasswordPolicyObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADFineGrainedPasswordPolicy cmdlet to retrieve a fine grained password policy object and then pass the object through the pipeline to the Set-ADFineGrainedPasswordPolicy cmdlet.
+The *Identity* parameter specifies the Active Directory fine-grained password policy to modify.
+You can identify a fine-grained password policy by its distinguished name, GUID or name.
+You can also set the *Identity* parameter to an object variable such as `$<localFineGrainedPasswordPolicyObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADFineGrainedPasswordPolicy** cmdlet to retrieve a fine-grained password policy object and then pass the object through the pipeline operator to the **Set-ADFineGrainedPasswordPolicy** cmdlet.
 
-The Instance parameter provides a way to update a fine grained password policy object by applying the changes made to a copy of the object.
-When you set the Instance parameter to a copy of an Active Directory fine grained password policy object that has been modified, the Set-ADFineGrainedPasswordPolicy cmdlet makes the same changes to the original fine grained password policy object.
+The *Instance* parameter provides a way to update a fine-grained password policy object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory fine-grained password policy object that has been modified, the **Set-ADFineGrainedPasswordPolicy** cmdlet makes the same changes to the original fine-grained password policy object.
 To get a copy of the object to modify, use the Get-ADFineGrainedPasswordPolicy object.
-The Identity parameter is not allowed when you use the Instance parameter.
-For more information about the Instance parameter, see the Instance parameter description.
-For more information about how the Instance concept is used in Active Directory cmdlets, see about_ActiveDirectory_Instance
-
-The following examples show how to modify the Precedence property of a fine grained password policy object by using three methods:
-
--By specifying the Identity and the Precedence parameters
-
--By passing a fine grained password policy object through the pipeline and specifying the Precedence parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the Precedence property for the Level3Policyfine grained password policy by using the Identity and Precedence parameters.
-
-Set-ADFineGrainedPasswordPolicy -Identity "Level3Policy" -Precedence 150
-
-Method 2: Modify the Precedence property for the Level3Policyfine grained password policy by passing the Level3Policyfine grained password policy through the pipeline and specifying the Precedence parameter.
-
-Get-ADFineGrainedPasswordPolicy -Identity "Level3Policy"| Set-ADFineGrainedPasswordPolicy -Precedence 150
-
-Method 3: Modify the Precedence property for the Level3Policy fine grained password policy by using the Windows PowerShell command line to modify a local instance of the Level3Policyfine grained password policy.
-Then set the Instance parameter to the local instance.
-
-$fineGrainedPasswordPolicy = Get-ADFineGrainedPasswordPolicy Level3Policy
-
-$fineGrainedPasswordPolicy.Precedence = 150
-
-Set-ADFineGrainedPasswordPolicy -Instance $fineGrainedPasswordPolicy
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Update properties on a fine-grained password policy object
 ```
-C:\PS>Set-ADFineGrainedPasswordPolicy MyPolicy -Precedence 100 -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $true -ReversibleEncryptionEnabled $false -MinPasswordLength 12
-```
-
-Description
-
------------
-
-Update the Precedence, LockoutDuration, LockoutObservationWindow, ComplexityEnabled, ReversibleEncryptionEnabled, and MinPasswordLength properties on the FineGrainedPasswordPolicy object with name MyPolicy.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Set-ADFineGrainedPasswordPolicy 'CN=MyPolicy,CN=Password Settings Container,CN=System,DC=FABRIKAM,DC=COM' -MinPasswordLength 12
+PS C:\>Set-ADFineGrainedPasswordPolicy -Identity MyPolicy -Precedence 100 -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $True -ReversibleEncryptionEnabled $false -MinPasswordLength 12
 ```
 
-Description
+This command updates the **Precedence**, **LockoutDuration**, **LockoutObservationWindow**, **ComplexityEnabled**, **ReversibleEncryptionEnabled**, and **MinPasswordLength** properties on the **FineGrainedPasswordPolicy** object with name MyPolicy.
 
------------
-
-Set the MinPasswordLength property on the FineGrainedPasswordPolicy object with DistinguishedName CN=MyPolicy,CN=Password Settings Container,CN=System,DC=FABRIKAM,DC=COM.
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Set a property on a fine-grained password policy using distinguished name
 ```
-C:\PS>$fgpp = Get-ADFineGrainedPasswordPolicy MyPolicy
-$fgpp.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
-$fgpp.LockoutThreshold = 10
-$fgpp.MinPasswordLength = 8
-$fgpp.PasswordHistoryCount = 24
-Set-ADFineGrainedPasswordPolicy -Instance $fgpp
+PS C:\>Set-ADFineGrainedPasswordPolicy -Identity 'CN=MyPolicy,CN=Password Settings Container,CN=System,DC=FABRIKAM,DC=COM' -MinPasswordLength 12
 ```
 
-Description
+This command sets the **MinPasswordLength** property on the **FineGrainedPasswordPolicy** object with distinguished name CN=MyPolicy,CN=Password Settings Container,CN=System,DC=USER01,DC=COM.
 
------------
+### Example 3: Get a fine-grained password policy then update a set of properties
+```
+PS C:\>$FGPP = Get-ADFineGrainedPasswordPolicy -Identity MyPolicy
+PS C:\> $FGPP.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
+PS C:\> $FGPP.LockoutThreshold = 10
+PS C:\> $FGPP.MinPasswordLength = 8
+PS C:\> $FGPP.PasswordHistoryCount = 24
+PS C:\> Set-ADFineGrainedPasswordPolicy -Instance $FGPP
+```
 
-Get the FineGrainedPasswordPolicy object with name MyPolicy,  Update a set of properties on the object and then write the modifications back to the directory using the instance parameter.
+This example gets the **FineGrainedPasswordPolicy** object with name MyPolicy, updates a set of properties on the object, and then writes the modifications back to the directory using the **Instance** parameter.
 
 ## PARAMETERS
 
@@ -815,24 +777,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -940,7 +895,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

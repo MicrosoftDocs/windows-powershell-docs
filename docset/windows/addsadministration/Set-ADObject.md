@@ -491,16 +491,12 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value[]; Attribute2LDAPDisplayName=value[]}`
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value 555-222-2222 with the values 555-222-1111 for Phone-Office-Other attribute (LDAP display name otherTelephone) set the *Replace* parameter as follows:
-
-`-Replace @{otherTelephone='555-222-2222', '555-222-1111'}`
-
-When you use the *Add*, *Replace*, *Clear*, and *Remove* parameters together, the operations are performed in the following order:
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**
@@ -573,7 +569,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

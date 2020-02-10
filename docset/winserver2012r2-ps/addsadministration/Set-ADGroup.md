@@ -42,18 +42,18 @@ Set-ADGroup [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCreden
 ## DESCRIPTION
 The **Set-ADGroup** cmdlet modifies the properties of an Active Directory group.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the **Add**, **Replace**, **Clear**, and **Remove** parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The **Identity** parameter specifies the Active Directory group to modify.
+The *Identity* parameter specifies the Active Directory group to modify.
 You can identify a group by its distinguished name, GUID, security identifier, or Security Account Manager (SAM) account name.
-You can also set the **Identity** parameter to an object variable such as **$\<localGroupObject\>**, or you can pass a group object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADGroup cmdlet to get a group object and then pass the object through the pipeline to the Set-ADGroup cmdlet.
+You can also set the *Identity* parameter to an object variable such as `$<localGroupObject>`, or you can pass a group object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADGroup** cmdlet to get a group object and then pass the object through the pipeline to the **Set-ADGroup** cmdlet.
 
-The **Instance** parameter provides a way to update a group object by applying the changes made to a copy of the object.
-When you set the **Instance** parameter to a copy of an Active Directory group object that has been modified, the **Set-ADGroup** cmdlet makes the same changes to the original group object.
+The *Instance* parameter provides a way to update a group object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory group object that has been modified, the **Set-ADGroup** cmdlet makes the same changes to the original group object.
 To get a copy of the object to modify, use the **Get-ADGroup** cmdlet.
-The **Identity** parameter is not allowed when you use the **Instance** parameter.
-For more information about the **Instance** parameter, see the **Instance** parameter description.
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
@@ -468,12 +468,12 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}`
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the operations are performed in the following order:
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**
@@ -565,7 +565,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

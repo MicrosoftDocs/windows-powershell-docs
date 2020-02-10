@@ -44,169 +44,91 @@ Set-ADUser [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredent
 ```
 
 ## DESCRIPTION
-The Set-ADUser cmdlet modifies the properties of an Active Directory user.
+The **Set-ADUser** cmdlet modifies the properties of an Active Directory user.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+You can set property values that are not associated with cmdlet parameters by using the *Add*, *Remove*, *Replace*, and *Clear* parameters.
 
-The Identity parameter specifies the Active Directory user to modify.
-You can identify a user by its distinguished name (DN), GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.
-You can also set the Identity parameter to an object variable such as $\<localUserObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADUser cmdlet to retrieve a user object and then pass the object through the pipeline to the Set-ADUser cmdlet.
+The *Identity* parameter specifies the Active Directory user to modify.
+You can identify a user by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
+You can also set the *Identity* parameter to an object variable such as `$<localUserObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADUser** cmdlet to retrieve a user object and then pass the object through the pipeline to the **Set-ADUser** cmdlet.
 
-The Instance parameter provides a way to update a user object by applying the changes made to a copy of the object.
-When you set the Instance parameter to a copy of an Active Directory user object that has been modified, the Set-ADUser cmdlet makes the same changes to the original user object.
-To get a copy of the object to modify, use the Get-ADUser object.
-The Identity parameter is not allowed when you use the Instance parameter.
-For more information about the Instance parameter, see the Instance parameter description.
-For more information about how the Instance concept is used in Active Directory cmdlets, see about_ActiveDirectory_Instance.
+The *Instance* parameter provides a way to update a user object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory user object that has been modified, the **Set-ADUser** cmdlet makes the same changes to the original user object.
+To get a copy of the object to modify, use the **Get-ADUser** object.
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
-Accounts created with the New-ADUser cmdlet will be disabled if no password is provided.
+Accounts created with the **New-ADUser** cmdlet are disabled if no password is provided.
 
-The following examples show how to modify the Manager property of a user object by using three methods:
+For AD LDS environments, the *Partition* parameter must be specified except in the following two conditions:
 
--By specifying the Identity and the Manager parameters
-
--By passing a user object through the pipeline and specifying the Manager parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the Manager property for the "saraDavis" user by using the Identity and Manager parameters.
-
-Set-ADUser -Identity "saraDavis" -Manager "JimCorbin"
-
-Method 2: Modify the Manager property for the "saraDavis" user by passing the "saraDavis" user through the pipeline and specifying the Manager parameter.
-
-Get-ADUser -Identity "saraDavis" | Set-ADUser -Manager "JimCorbin"
-
-Method 3: Modify the Manager property for the "saraDavis" user by using the Windows PowerShell command line to modify a local instance of the "saraDavis" user.
-Then set the Instance parameter to the local instance.
-
-$user = Get-ADUser -Identity "saraDavis"
-
-$user.Manager = "JimCorbin"
-
-Set-ADUser -Instance $user.
-
-For AD LDS environments, the Partition parameter must be specified except in the following two conditions:
-
--The cmdlet is run from an Active Directory provider drive.
-
--A default naming context or partition is defined for the AD LDS environment.
-To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+- The cmdlet is run from an Active Directory provider drive. 
+- A default naming context or partition is defined for the AD LDS environment.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Set properties for a user
 ```
-C:\PS>Set-ADUser AntonioAl -HomePage 'http://fabrikam.com/employees/AntonioAl' -LogonWorkstations 'AntonioAl-DSKTOP,AntonioAl-LPTOP'
-```
-
-Description
-
------------
-
-Set the user with samAccountName AntonioAL's property homepage to http://fabrikam.com/employees/AntonioAl and the LogonWorkstations property to AntonioAl-DSKTOP,AntonioAl-LPTOP.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Get-ADUser -Filter 'Name -like "*"' -SearchBase 'OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM' -Properties DisplayName | % {Set-ADUser $_ -DisplayName ($_.Surname + ' ' + $_.GivenName)}
+PS C:\> Set-ADUser -Identity ChewDavid -HomePage 'http://fabrikam.com/employees/ChewDavid' -LogonWorkstations 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
 ```
 
-Description
+This command sets the specified user's **homepage** property to http://fabrikam.com/employees/ChewDavid and the **LogonWorkstations** property to ChewDavid-DSKTOP,ChewDavid-LPTOP.
 
------------
-
-Get all the users in the directory that are located underneath the OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM organizationalUnit. 
-Set the DisplayName property on these user objects to the concatenation of the Surname property and the GivenName property.
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Set properties for multiple users
 ```
-C:\PS>Set-ADUser GlenJohn -Replace @{title="director";mail="glenjohn@fabrikam.com"}
+PS C:\> Get-ADUser -Filter 'Name -like "*"' -SearchBase 'OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM' -Properties DisplayName | % {Set-ADUser $_ -DisplayName ($_.Surname + ' ' + $_.GivenName)}
 ```
 
-Description
+This command gets all the users in the directory that are located in the OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM organizational unit.
+The command sets the **DisplayName** property on these user objects to the concatenation of the **Surname** property and the **GivenName** property.
 
------------
-
-Set the user with samAccountNAme GlenJohn's property title to director and property mail to glenjohn@fabrikam.com.
-
-### -------------------------- EXAMPLE 4 --------------------------
+### Example 3: Set properties
 ```
-C:\PS>Set-ADUser GlenJohn -Remove @{otherMailbox="glen.john"} -Add @{url="fabrikam.com"} -Replace @{title="manager"} -Clear description
+PS C:\> Set-ADUser -Identity GlenJohn -Replace @{title="director";mail="glenjohn@fabrikam.com"}
 ```
 
-Description
+This command sets the specified user's **title** property to director and the **mail** property to glenjohn@fabrikam.com.
 
------------
-
-Modify the user with samAccountName GlenJohn's object by removing glen.john from the otherMailbox property, adding fabrikam.com to the url property, replacing the title property with manager and clearing the description property.
-
-### -------------------------- EXAMPLE 5 --------------------------
+### Example 4: Modify a user otherMailbox property
 ```
-C:\PS>$user = Get-ADUser GlenJohn -Properties mail,department
-$user.mail = "glen@fabrikam.com"
-$user.department = "Accounting"
-Set-ADUser -instance $user
+PS C:\> Set-ADUser -Identity GlenJohn -Remove @{otherMailbox="glen.john"} -Add @{url="fabrikam.com"} -Replace @{title="manager"} -Clear description
 ```
 
-Description
+This command modifies the user with the SAM account name GlenJohn's object by removing glen.john from the **otherMailbox** property, adding fabrikam.com to the **url** property, replacing the **title** property with manager, and clearing the **description** property.
 
------------
-
-Set the mail and department properties on the user object with samAccountName GlenJohn by using the instance parameter.
-
-### -------------------------- EXAMPLE 6 --------------------------
+### Example 5: Set user properties to a local instance
 ```
-PS C:\># create a byte array for the M-F 8:00 am to 5 pm logon hours
-
-
-PS C:\>$hours = New-Object byte[] 21
-
-
-PS C:\>$hours[5] = 255; $hours[8] = 255; $hours[11] = 255; $hours[14] = 255; $hours[17] = 255;
-
-
-PS C:\>$hours[6] = 1; $hours[9] = 1; $hours[12] = 1; $hours[15] = 1; $hours[18] = 1;
-
-
-PS C:\># create a hashtable to update the logon hours and a description
-
-
-PS C:\>$replaceHashTable = New-Object HashTable
-
-
-PS C:\>$replaceHashTable.Add("logonHours", $hours)
-
-
-PS C:\>$replaceHashTable.Add("description", "Sarah Davis can only logon from Monday through Friday from 8:00 AM to 5:00 PM")
-
-
-PS C:\># set the value of the logonHours and description attributes
-
-
-PS C:\>Set-ADUser "SarahDavis" -Replace $replaceHashTable
+PS C:\> $User = Get-ADUser -Identity GlenJohn -Properties mail,department
+PS C:\> $User.mail = "glen@fabrikam.com"
+PS C:\> $User.department = "Accounting"
+PS C:\> Set-ADUser -Instance $User
 ```
 
-Description
+This example sets the **mail** and **department** properties on the user object with the SAM account name GlenJohn by using the *Instance* parameter.
 
------------
-
-Set the user logon hours to Monday through Friday from 8:00 AM to 5:00 PM and add a description.
-It updates the "logonHours" attribute with the specified byte array and the description attribute with the specified string.
-
-### -------------------------- EXAMPLE 7 --------------------------
+### Example 6: Set attributes for a user
 ```
-PS C:\>$manager = Get-ADUser GlenJohn -Server Corp-DC01
-
-
-PS C:\>Set-ADUser AntonioAl -Manager $manager -Server Branch-DC02
+PS C:\> $Hours = New-Object byte[] 21
+PS C:\> $Hours[5] = 255; $Hours[8] = 255; $Hours[11] = 255; $Hours[14] = 255; $Hours[17] = 255;
+PS C:\> $Hours[6] = 1; $Hours[9] = 1; $Hours[12] = 1; $Hours[15] = 1; $Hours[18] = 1;
+PS C:\> $ReplaceHashTable = New-Object HashTable
+PS C:\> $ReplaceHashTable.Add("logonHours", $Hours)
+PS C:\> $ReplaceHashTable.Add("description", "Sarah Davis can only logon from Monday through Friday from 8:00 AM to 5:00 PM")
+PS C:\> Set-ADUser -Identity "SarahDavis" -Replace $ReplaceHashTable
 ```
 
-Description
+This example sets the user logon hours to Monday through Friday from 8:00 AM to 5:00 PM and adds a description.
+It updates the **logonHours** attribute with the specified byte array and the **description** attribute with the specified string.
 
------------
+### Example 7: Set a property for a user
+```
+PS C:\> $Manager = Get-ADUser -Identity GlenJohn -Server Corp-DC01 
+PS C:\> Set-ADUser -Identity ChewDavid -Manager $Manager -Server Branch-DC02
+```
 
-Set the Manager property for user with samAccountName of "AntonioAL" where the manager (GlenJohn) is a user in another domain.
+This example sets the **Manager** property for the user with the SAM account name of ChewDavid where the manager, GlenJohn, is a user in another domain.
 
 ## PARAMETERS
 
@@ -1505,24 +1427,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -1860,7 +1775,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

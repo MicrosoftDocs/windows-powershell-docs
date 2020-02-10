@@ -44,18 +44,18 @@ Set-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-
 ## DESCRIPTION
 The **Set-ADFineGrainedPasswordPolicy** cmdlet modifies the properties of an Active Directory fine-grained password policy.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the **Add**, **Replace**, **Clear**, and **Remove** parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The **Identity** parameter specifies the Active Directory fine-grained password policy to modify.
-You can identify a fine-grained password policy by its distinguished name, GUID or name.
-You can also set the **Identity** parameter to an object variable such as **$\<localFineGrainedPasswordPolicyObject\>**, or you can pass an object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADFineGrainedPasswordPolicy cmdlet to retrieve a fine-grained password policy object and then pass the object through the pipeline operator to the **Set-ADFineGrainedPasswordPolicy** cmdlet.
+The *Identity* parameter specifies the Active Directory fine-grained password policy to modify.
+You can identify a fine-grained password policy by its distinguished name, GUID, or name.
+You can also set the *Identity* parameter to an object variable such as `$<localFineGrainedPasswordPolicyObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADFineGrainedPasswordPolicy** cmdlet to retrieve a fine-grained password policy object and then pass the object through the pipeline operator to the **Set-ADFineGrainedPasswordPolicy** cmdlet.
 
-The **Instance** parameter provides a way to update a fine-grained password policy object by applying the changes made to a copy of the object.
-When you set the **Instance** parameter to a copy of an Active Directory fine-grained password policy object that has been modified, the **Set-ADFineGrainedPasswordPolicy** cmdlet makes the same changes to the original fine-grained password policy object.
-To get a copy of the object to modify, use the **Get-ADFineGrainedPasswordPolicy** object.
-The **Identity** parameter is not allowed when you use the **Instance** parameter.
-For more information about the **Instance** parameter, see the **Instance** parameter description.
+The *Instance* parameter provides a way to update a fine-grained password policy object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory fine-grained password policy object that has been modified, the **Set-ADFineGrainedPasswordPolicy** cmdlet makes the same changes to the original fine-grained password policy object.
+To get a copy of the object to modify, use the Get-ADFineGrainedPasswordPolicy object.
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
@@ -721,7 +721,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -750,4 +750,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADFineGrainedPasswordPolicy](./Remove-ADFineGrainedPasswordPolicy.md)
 
 [AD DS Administration Cmdlets in Windows PowerShell](./ActiveDirectory.md)
-

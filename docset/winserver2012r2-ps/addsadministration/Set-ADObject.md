@@ -41,20 +41,20 @@ Set-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCrede
 ## DESCRIPTION
 The **Set-ADObject** cmdlet modifies the properties of an Active Directory object.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the **Add**, **Replace**, **Clear** and **Remove** parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The **Identity** parameter specifies the Active Directory object to modify.
+The *Identity* parameter specifies the Active Directory object to modify.
 You can identify an object by its distinguished name or GUID.
-You can also set the **Identity** parameter to an object variable such as **$\<localObject\>**, or you can pass an object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADObject cmdlet to retrieve an object and then pass the object through the pipeline to the **Set-ADObject** cmdlet.
+You can also set the *Identity* parameter to an object variable such as `$<localObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADObject** cmdlet to retrieve an object and then pass the object through the pipeline to the **Set-ADObject** cmdlet.
 
-The **Instance** parameter provides a way to update an object by applying the changes made to a copy of the object.
-When you set the **Instance** parameter to a copy of an Active Directory object that has been modified, the **Set-ADObject** cmdlet makes the same changes to the original object.
+The *Instance* parameter provides a way to update an object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory object that has been modified, the **Set-ADObject** cmdlet makes the same changes to the original object.
 To get a copy of the object to modify, use the **Get-ADObject** object.
-The **Identity** parameter is not allowed when you use the **Instance** parameter.
-For more information about the **Instance** parameter, see the **Instance** parameter description.
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
-For Active Directory Lightweight Directory Services (AD LDS) environments, the **Partition** parameter must be specified except in the following two conditions:
+For Active Directory Lightweight Directory Services (AD LDS) environments, the *Partition* parameter must be specified except in the following two conditions:
 
 - The cmdlet is run from an Active Directory provider drive. 
 - A default naming context or partition is defined for the AD LDS environment.
@@ -490,16 +490,12 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}`
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value 555-222-2222 with the values 555-222-1111 for Phone-Office-Other attribute (LDAP display name otherTelephone) set the Replace parameter as follows:
-
-`-Replace @{otherTelephone='555-222-2222', '555-222-1111'}`
-
-When you use the **Add**, **Remove**, **Replace** and **Clear** parameters together, the operations are performed in the following order:
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**
@@ -572,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

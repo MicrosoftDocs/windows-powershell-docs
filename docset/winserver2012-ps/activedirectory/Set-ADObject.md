@@ -31,147 +31,86 @@ Set-ADObject [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCrede
 ```
 
 ## DESCRIPTION
-The Set-ADObject cmdlet modifies the properties of an Active Directory object.
+The **Set-ADObject** cmdlet modifies the properties of an Active Directory object.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The Identity parameter specifies the Active Directory object to modify.
-You can identify an object by its distinguished name (DN) or GUID.
-You can also set the Identity parameter to an object variable such as $\<localObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADObject cmdlet to retrieve an object and then pass the object through the pipeline to the Set-ADObject cmdlet.
+The *Identity* parameter specifies the Active Directory object to modify.
+You can identify an object by its distinguished name or GUID.
+You can also set the *Identity* parameter to an object variable such as `$<localObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADObject** cmdlet to retrieve an object and then pass the object through the pipeline to the **Set-ADObject** cmdlet.
 
-The Instance parameter provides a way to update an object by applying the changes made to a copy of the object.
-When you set the Instance parameter to a copy of an Active Directory object that has been modified, the Set-ADObject cmdlet makes the same changes to the original object.
-To get a copy of the object to modify, use the Get-ADObject object.
-The Identity parameter is not allowed when you use the Instance parameter.
-For more information about the Instance parameter, see the Instance parameter description.
-For more information about how the Instance concept is used in Active Directory cmdlets, see about_ActiveDirectory_Instance.
+The *Instance* parameter provides a way to update an object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory object that has been modified, the **Set-ADObject** cmdlet makes the same changes to the original object.
+To get a copy of the object to modify, use the **Get-ADObject** object.
+The *Identity* parameter is not allowed when you use the *Instance* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
-The following examples show how to modify the DisplayName property of an object by using three methods:
+For Active Directory Lightweight Directory Services (AD LDS) environments, the *Partition* parameter must be specified except in the following two conditions:
 
--By specifying the Identity and the DisplayName parameters
-
--By passing an object through the pipeline and specifying the DisplayName parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the DisplayName property for the SecurityLevel2AccessGroup object by using the Identity and DisplayName parameters.
-
-Set-ADObject -Identity "SecurityLevel2AccessGroup" -DisplayName "Security Level 2"
-
-Method 2: Modify the DisplayName property for the SecurityLevel2AccessGroup object by passing the SecurityLevel2AccessGroup object through the pipeline and specifying the DisplayName parameter.
-
-Get-ADObject -Identity "SecurityLevel2AccessGroup" | Set-ADObject -DisplayName "Security Level 2"
-
-Method 3: Modify the DisplayName property for the SecurityLevel2AccessGroup object by using the Windows PowerShell command line to modify a local instance of the SecurityLevel2AccessGroup object.
-Then set the Instance parameter to the local instance.
-
-$adobject = Get-ADObject -Identity "SecurityLevel2AccessGroup"
-
-$adobject.DisplayName = "Security Level 2"
-
-Set-ADObject -Instance $adobject.
-
-For AD LDS environments, the Partition parameter must be specified except in the following two conditions:
-
--The cmdlet is run from an Active Directory provider drive.
-
--A default naming context or partition is defined for the AD LDS environment.
-To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+- The cmdlet is run from an Active Directory provider drive. 
+- A default naming context or partition is defined for the AD LDS environment.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (nTDSDSA) for the AD LDS instance.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Set a property on an object by distinguished name
 ```
-C:\PS>Set-ADObject 'CN=AntonioAl Direct Reports,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM' -Description 'Distribution List of Antonio Alwan Direct Reports'
-```
-
-Description
-
------------
-
-Set the Description property on the object with DistinguishedName 'CN=AntonioAl Direct Reports,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM'.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Set-ADObject 'CN=DEFAULTIPSITELINK,CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM' -Add @{siteList='CN=BO3,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM'} -Partition 'CN=Configuration,DC=FABRIKAM,DC=COM'
+PS C:\> Set-ADObject -Identity 'CN=PattiFu Direct Reports,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM' -Description "Distribution List of Patti Fuller Direct Reports"
 ```
 
-Description
+This command sets the **Description** property on the object with the distinguished name CN=PattiFu Direct Reports,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
------------
-
-Add the site 'CN=BO3,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM' to the property siteList on the object with DistinguishedName 'CN=DEFAULTIPSITELINK,CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM'.
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Add a site to a property for an object
 ```
-C:\PS>$urlValues = @()
-$urlValues += "www.contoso.com"
-$urlValues += "www.fabrikam.com"
-
-Set-ADObject "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Add @{url=$urlValues}
+PS C:\> Set-ADObject -Identity 'CN=DEFAULTIPSITELINK,CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM' -Add @{siteList='CN=BO3,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM'} -Partition 'CN=Configuration,DC=FABRIKAM,DC=COM'
 ```
 
-Description
+This command adds the site CN=BO3,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM to the property **siteList** on the object with the distinguished name CN=DEFAULTIPSITELINK,CN=IP,CN=Inter-Site Transports,CN=Sites,CN=Configuration,DC=FABRIKAM,DC=COM.
 
------------
-
-Add two new urls to the property urlValues in the object with objectGuid 'cdadd380-d3a8-4fd1-9d30-5cf72d94a056'.
-
-### -------------------------- EXAMPLE 4 --------------------------
+### Example 3: Add URLs to an object property
 ```
-C:\PS>$urlValues = @()
-$urlValues += "www.contoso.com"
-$urlValues += "www.fabrikam.com"
-
-Set-ADObject "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Replace @{url=$urlValues;description="Antonio Alwan"}
+PS C:\> $UrlValues = @()
+PS C:\> $UrlValues += "www.contoso.com"
+PS C:\> $UrlValues += "www.fabrikam.com"
+PS C:\> Set-ADObject -Identity "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Add @{url=$UrlValues}
 ```
 
-Description
+This command adds two new URLs to the **urlValues** property in the object with the GUID cdadd380-d3a8-4fd1-9d30-5cf72d94a056.
 
------------
-
-Replaces the old values of the multi-valued attribute 'url' with the new values and sets the value of the attribute 'description'.
-
-### -------------------------- EXAMPLE 5 --------------------------
+### Example 4: Set values for a multi-valued attribute
 ```
-C:\PS>Set-ADObject "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Remove @{url="www.contoso.com"} -Replace @{description="Antonio Alwan (European Manager)"}
-```
-
-Description
-
------------
-
-Removes the specified value from the attribute 'url' and sets the value of the attribute 'description'.
-
-### -------------------------- EXAMPLE 6 --------------------------
-```
-C:\PS>$myComp = Get-ADObject -identity "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Properties "userAccountControl","description"
-
-#Now set the new account control using powershell bitwise OR operation (-bor) and set description
-$myComp.userAccountControl = $myComp.userAccountControl -bor 50
-$myComp.description = "Setting a new UAC on the object"
-
-#Save the changes
-Set-ADObject -Instance $myComp
+PS C:\> $UrlValues = @() 
+PS C:\> $UrlValues += "www.contoso.com" 
+PS C:\> $UrlValues += "www.fabrikam.com" 
+PS C:\> Set-ADObject -Identity "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Replace @{url=$UrlValues;description="Patti Fuller"}
 ```
 
-Description
+This command replaces the old values of the multi-valued attribute **url** with the new values and sets the value of the attribute **description**.
 
------------
-
-Sets a new UAC bit on an object by updating the attribute 'userAccountControl' and setting the value of the attribute 'description'.
-
-### -------------------------- EXAMPLE 7 --------------------------
+### Example 5: Remove a value from an attribute
 ```
-C:\PS>set-adobject "CN=InternalApps,DC=AppNC" -protectedFromAccidentalDeletion $true -server "FABRIKAM-SRV1:60000"
+PS C:\> Set-ADObject -Identity "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Remove @{url="www.contoso.com"} -Replace @{description="Patti Fuller (European Manager)"}
 ```
 
-Description
+This command removes the specified value from the **url** attribute and sets the value of the **description** attribute.
 
------------
+### Example 6: Set a UAC bit on an object
+```
+PS C:\> $MyComp = Get-ADObject -Identity "cdadd380-d3a8-4fd1-9d30-5cf72d94a056" -Properties "userAccountControl","description" 
+PS C:\> $MyComp.userAccountControl = $MyComp.userAccountControl -bor 50 
+PS C:\> $MyComp.description = "Setting a new UAC on the object" 
+PS C:\> Set-ADObject -Instance $MyComp
+```
 
-Sets container "CN=InternalApps,DC=AppNC" in an LDS instance to be protected from accidental deletion
+This command sets a new User Access Control (UAC) bit on an object by updating the **userAccountControl** attribute, and sets the value of the **description** attribute.
+
+### Example 7: Protect an object from accidental deletion
+```
+PS C:\> Set-ADObject -Identity "CN=InternalApps,DC=AppNC" -protectedFromAccidentalDeletion $True -Server "FABRIKAM-SRV1:60000"
+```
+
+This command sets container CN=InternalApps,DC=AppNC in an AD LDS instance to be protected from accidental deletion.
 
 ## PARAMETERS
 
@@ -563,24 +502,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -663,7 +595,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

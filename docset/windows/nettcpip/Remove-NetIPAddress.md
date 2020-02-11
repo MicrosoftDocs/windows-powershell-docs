@@ -61,17 +61,19 @@ This command adds a new IP address.
 
 ### Example 2: Remove an IP address using a pipeline
 ```
+This command removes all of the IP addresses with the address 192.168.0.1.
 PS C:\>Get-NetIPAddress -IPAddress 192.168.0.1 | Remove-NetIPAddress
 ```
 
-This command removes all of the IP addresses with the address 192.168.0.1.
+
 
 ### Example 3: Remove IP addresses by prefix origin
 ```
+This command removes all of the IP addresses that have a manually-configured prefix origin.
 PS C:\>Remove-NetIPAddress -PrefixOrigin Manual
 ```
 
-This command removes all of the IP addresses that have a manually-configured prefix origin.
+
 
 ## PARAMETERS
 

@@ -48,8 +48,9 @@ If you do not specify an IPv4 or IPv6 address, the cmdlet will remove all IP add
 
 ## EXAMPLES
 
-### Example 1: Remove an IP address
+### Example 1: Add and Remove an IP address
 ```
+This command adds a new IP address to the controller with the interfaceindex 12
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1
 
 
@@ -57,7 +58,6 @@ This command removes the IP address created by the previous command.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1
 ```
 
-This command adds a new IP address.
 
 ### Example 2: Remove an IP address using a pipeline
 ```

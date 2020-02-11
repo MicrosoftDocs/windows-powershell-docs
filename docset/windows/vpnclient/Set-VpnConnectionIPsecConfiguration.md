@@ -314,12 +314,14 @@ The acceptable values for this parameter are:
 - AES128
 - AES192
 - AES256
+- GCMAES128
+- GCMAES256
 
 ```yaml
 Type: EncryptionMethod
 Parameter Sets: CustomPolicy
 Aliases: 
-Accepted values: DES, DES3, AES128, AES192, AES256
+Accepted values: DES, DES3, AES128, AES192, AES256, GCMAES128, GCMAES256
 
 Required: True
 Position: 5
@@ -348,7 +350,7 @@ Specifies the integrity check method used to protect data from tampering.
 The acceptable values for this parameter are:
 
 - MD5
-- SHA196
+- SHA1
 - SHA256
 - SHA384
 

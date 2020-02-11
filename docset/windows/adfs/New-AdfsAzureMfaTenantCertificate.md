@@ -57,7 +57,7 @@ These commands create a certificate for Azure MFA, register the certificate in a
 
 ### Example 2: Determine which certificate Azure MFA is using
 ```
-PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> -out-file amfacert.cer
+PS C:\> New-AdfsAzureMfaTenantCertificate -TenantID <your tenant ID> | Out-File amfacert.cer
 ```
 
 After AD FS has been configured for Azure MFA, this command determines which certificate Azure MFA is using.
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

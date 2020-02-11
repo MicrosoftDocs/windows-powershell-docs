@@ -119,7 +119,7 @@ This example sets the DHCPv4 option value for option ID 6, or DNS server, for th
 
 ### Example 8: Set a vendor class specific option value
 ```
-PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -VendorClass "MSUCClient" -OptionId 5 -Value "6874747073"
+PS C:\> Set-DhcpServerv4OptionValue -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -VendorClass "MSUCClient" -OptionId 5 -Value ([System.Text.Encoding]::ASCII.GetBytes("/CertProv/CertProvisioningService.svc"))
 ```
 
 This example sets the vendor class specific DHCPv4 option value for option ID 5 on the specified scope for the specified vendor class named MSUCClient.

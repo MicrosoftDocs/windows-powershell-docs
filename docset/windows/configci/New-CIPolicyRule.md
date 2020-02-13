@@ -37,6 +37,12 @@ New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLev
  [-ScriptFileNames] [<CommonParameters>]
 ```
 
+### FilePathRule
+```
+New-CIPolicyRule -FilePathRule <String> [-Deny]
+ [-ScriptFileNames] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The **New-CIPolicyRule** cmdlet generates Code Integrity policy rules for drivers.
 Specify a rule level and an array of **DriverFile** objects or the path of a driver.
@@ -174,13 +180,13 @@ This command generates a publisher rule for the specific file named ci.dll.
 The file ci.dll is a kernel component.
 Therefore, the cmdlet generates both a kernel rule and a user mode rule.
 
-### Example 4: Specify a policy rule for a file or folder path string
+### Example 4: Specify a policy rule for a folder path with wildcards
 ```
-PS C:\> New-CIPolicyRule -FilePathRule '.\temp\ConfigCITestBinaries\'
+PS C:\> New-CIPolicyRule -FilePathRule '.\temp\ConfigCITestBinaries\*'
 
 
-Name           : C:\temp\ConfigCITestBinaries\ FileRule
-Id             : ID_ALLOW_A_3
+Name           : .\temp\ConfigCITestBinaries\* FileRule
+Id             : ID_ALLOW_A_1
 TypeId         : Allow
 Root           :
 FileVersionRef :
@@ -191,7 +197,7 @@ Exceptions     :
 FileAttributes :
 FileException  : False
 UserMode       : True
-attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, C:\temp\ConfigCITestBinaries\]}
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, .\temp\ConfigCITestBinaries\*]}
 ```
 
 This command generates a filepath rule for the specific path string.
@@ -265,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePathRule
-Specifies the path of a file or folder path for generating a rule with level set to FilePath. 
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
 This cmdlet will not check whether the filepath string is a valid filepath. 
 
 ```yaml

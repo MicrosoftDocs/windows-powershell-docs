@@ -60,7 +60,7 @@ In addition, ensure that the **Windows Remote Management - Compatibility Mode (H
 
 ### Example 1: Preform a scan and a full updating run on the specified cluster
 ```
-PS C:\> Invoke-CauRun -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdatePlugin" -MaxFailedNodes -1 -MaxRetriesPerNode 3 -RequireAllNodesOnline -Force
+PS C:\> Invoke-CauRun -ClusterName "CONTOSO-FC1" -CauPluginName "Microsoft.WindowsUpdatePlugin" -MaxFailedNodes 1 -MaxRetriesPerNode 3 -RequireAllNodesOnline -Force
 ```
 
 This command performs a scan and a full updating run on the cluster named CONTOSO-FC1.
@@ -85,7 +85,7 @@ Because the command specifies the *Force* parameter, the cmdlet runs without dis
 PS C:\> Invoke-CauRun -ClusterName "CONTOSO-FC1"-ForceRecovery -Force
 ```
 
-This command recovers from a previous Updating Run that failed and left the cluster in a Locked state for the cluster named CONTOSO-FC1.
+This command recovers from a previous updating run that failed and left the cluster in a Locked state for the cluster named CONTOSO-FC1.
 Because the command specifies the *Force* parameter, the recovery is performed without confirmation prompts.
 
 ## PARAMETERS
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClusterName
-Specifies an array of clusters for which this cmdlet installs updates.
+Specifies a cluster for which this cmdlet installs updates.
 
 ```yaml
 Type: String
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -SeparateReboots
-Indicates that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an Updating Run.
+Indicates that CAU will shut down and restart a cluster node after each plug-in installs updates on the node, if the installation of an update by a plug-in requires a restart when multiple plug-ins are used during an updating run.
 By default, during an updating run, all plug-ins complete the installation of updates on a cluster node before the node restarts one time.
 
 The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
@@ -470,7 +470,7 @@ Accept wildcard characters: False
 ```
 
 ### -StopOnPluginFailure
-Indicates that if a failure occurs during the application of updates on a node by any plug-in, subsequent updates on the node that are coordinated by the remaining plug-ins are stopped when multiple plug-ins are used during an Updating Run.
+Indicates that if a failure occurs during the application of updates on a node by any plug-in, subsequent updates on the node that are coordinated by the remaining plug-ins are stopped when multiple plug-ins are used during an updating run.
 By default, a failure by one plug-in does not affect the application of updates on a node by other plug-ins.
 
 The parameter is valid only when multiple plug-ins are specified for the *CauPluginName* parameter.
@@ -511,7 +511,7 @@ Accept wildcard characters: False
 ```
 
 ### -WarnAfter
-Specifies the time in minutes after which a warning is logged if the Updating Run, including any pre-update and post-update scripts, has not completed.
+Specifies the time in minutes after which a warning is logged if the updating run, including any pre-update and post-update scripts, has not completed.
 By default, no warning is logged, regardless of the time taken by the updating run.
 
 ```yaml

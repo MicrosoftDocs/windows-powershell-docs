@@ -60,7 +60,7 @@ PS C:\> Get-NonRemovableAppsPolicy -Online
 
 This command gets information about all installed app packages which have been previously configured as non-removable.
 
-### Example 2: Get all non-removable apps from an offline windows image
+### Example 2: Get all non-removable apps from an offline Windows image
 ```
 PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 ```

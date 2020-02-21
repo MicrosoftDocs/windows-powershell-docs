@@ -1,5 +1,5 @@
 ---
-author: romaclac
+author: rdmaclachlan
 description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet, msix, appx, block uninstall

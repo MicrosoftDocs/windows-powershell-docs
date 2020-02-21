@@ -200,7 +200,7 @@ UserMode       : True
 attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, .\temp\ConfigCITestBinaries\*]}
 ```
 
-This command generates a filepath rule for the specific path string.
+This command generates a filepath rule for the specific path verbatim string. This will allow anything in the parent folder. 
 
 
 ## PARAMETERS

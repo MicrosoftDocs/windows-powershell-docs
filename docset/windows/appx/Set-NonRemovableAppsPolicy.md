@@ -69,7 +69,7 @@ This command gets information about all installed app packages which have been p
 PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
 ```
 
-### Example 3: Sets the app package Application1 as non-removable on an offline windows image
+### Example 3: Sets the app package Application1 as non-removable on an offline Windows image
 ```
 PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
 ```

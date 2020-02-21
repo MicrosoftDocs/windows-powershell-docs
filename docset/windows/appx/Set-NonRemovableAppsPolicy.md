@@ -72,7 +72,7 @@ This command sets the app package Application1 as removable.
 
 ### Example 3: Sets the app package Application1 as non-removable on an offline Windows image
 ```
-PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+PS C:\> Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
 This command gets all apps packages that have been loaded into the offline operating system image.

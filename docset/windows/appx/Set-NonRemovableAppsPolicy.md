@@ -62,7 +62,7 @@ The **Set-NonRemovableAppsPolicy** cmdlet sets an installed app package as eithe
 PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
-This command gets information about all installed app packages which have been previously configured as non-removable.
+This command sets the app package Application1 as non-removable.
 
 ### Example 2: Set the app package Application1 as removable
 ```

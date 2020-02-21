@@ -62,19 +62,20 @@ The **Set-NonRemovableAppsPolicy** cmdlet sets an installed app package as eithe
 PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
-This command gets information about all installed app packages which have been previously configured as non-removable.
+This command sets the app package Application1 as non-removable.
 
 ### Example 2: Set the app package Application1 as removable
 ```
 PS C:\> Set-NonRemovableAppsPolicy -Online -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 0
 ```
+This command sets the app package Application1 as removable.
 
-### Example 3: Set the app package Application1 as non-removable on an offline Windows image
+### Example 3: Sets the app package Application1 as non-removable on an offline Windows image
 ```
-PS C:\> Get-NonRemovableAppsPolicy -Path ".\wim\image.wim"
+PS C:\> Set-NonRemovableAppsPolicy -Path ".\wim\image.wim" -PackageFamilyName Application1_1.0.0.0+x64__ms7gsqeatfeb6 -NonRemovable 1
 ```
 
-This command gets all apps packages that have been loaded into the offline operating system image.
+This command sets the app package Application1 as non-removable on an offline Windows image.
 
 ## PARAMETERS
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-WindowsReservedStorageState
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the reserved storage state of the image.
 
 ## SYNTAX
 
@@ -18,21 +18,27 @@ Get-WindowsReservedStorageState [-LogPath <String>] [-ScratchDirectory <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Gets the current state of reserved storage. This command is supported with the online Windows image.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-WindowsReservedStorageState -Online
 ```
 
-{{ Add example description here }}
+This command gets the Windows reserved storage state on the local host.
 
 ## PARAMETERS
 
 ### -LogLevel
-{{ Fill LogLevel Description }}
+Specifies the maximum output level shown in the logs.
+The default log level is 3.
+The accepted values are as follows:
+- 1 = Errors only
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -48,7 +54,14 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-{{ Fill LogPath Description }}
+Specifies the full path and file name to log to.
+If not set, the default is `%WINDIR%\Logs\Dism\dism.log`.
+In Windows PE, the default directory is the RAMDISK scratch space which can be as low as 32 MB.
+The log file will automatically be archived.
+The archived log file will be saved with .bak appended to the file name and a new log file will be generated.
+Each time the log file is archived the .bak file will be overwritten. 
+When using a network share that is not joined to a domain, use the net use command together with domain credentials to set access permissions before you set the log path for the DISM log.
+
 
 ```yaml
 Type: String
@@ -63,7 +76,12 @@ Accept wildcard characters: False
 ```
 
 ### -ScratchDirectory
-{{ Fill ScratchDirectory Description }}
+Specifies a temporary directory that will be used when extracting files for use during servicing.
+The directory must exist locally.
+If not specified, the `\Windows\%Temp%` directory will be used, with a subdirectory name of a randomly generated hexadecimal value for each run of DISM.
+Items in the scratch directory are deleted after each operation. 
+You should not use a network share location as a scratch directory to expand a package (.cab or .msu file) for installation.
+The directory used for extracting files for temporary usage during servicing should be a local directory.
 
 ```yaml
 Type: String
@@ -91,5 +109,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Dism.Commands.ReservedStorageStateObject
 
 ## NOTES
+Supported on Windows 10, version 2004
 
 ## RELATED LINKS
+[Set-WindowsReservedStorageState](./Set-WindowsReservedStorageState.md)

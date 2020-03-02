@@ -6,7 +6,7 @@ keywords: powershell, cmdlet, msix, appx, block uninstall
 manager: jvintzel
 Module Name: Appx
 ms.assetid: 
-ms.author: rdmaclachlan
+ms.author: romaclac
 ms.date: 02/05/2020
 ms.mktglfcycl: manage
 ms.prod: w10

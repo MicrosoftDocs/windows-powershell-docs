@@ -115,6 +115,9 @@ Gets information about optional features in a Windows image.
 ### [Get-WindowsPackage](./Get-WindowsPackage.md)
 Gets information about packages in a Windows image.
 
+### [Get-WindowsReservedStorageState](./Get-WindowsReservedStorageState.md)
+Gets the reserved storage state of the image.
+
 ### [Mount-WindowsImage](./Mount-WindowsImage.md)
 Mounts a Windows image in a WIM or VHD file to a directory on the local computer.
 
@@ -156,6 +159,9 @@ Changes a Windows image to a higher edition.
 
 ### [Set-WindowsProductKey](./Set-WindowsProductKey.md)
 Sets the product key for the Windows image.
+
+### [Set-WindowsReservedStorageState](./Set-WindowsReservedStorageState.md)
+Sets the reserved storage state of the image.
 
 ### [Split-WindowsImage](./Split-WindowsImage.md)
 Splits an existing .wim file into multiple read-only split .wim files.

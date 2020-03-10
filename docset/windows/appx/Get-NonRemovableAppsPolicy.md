@@ -8,6 +8,7 @@ Module Name: Appx
 ms.assetid: 
 ms.author: romaclac
 ms.date: 02/05/2020
+audiencems.localizationpriority: ITPro
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:

@@ -45,7 +45,7 @@ Remove-AppxPackage [-Package] <String> -User <String> [-Confirm] [-WhatIf] [<Com
 
 ## DESCRIPTION
 
-The **Remove-AppxPackage** cmdlet removes an app package from a user account.
+The **Remove-AppxPackage** cmdlet removes an app package from a user account.  
 An app package has an .msix or .appx file name extension.
 
 ## EXAMPLES

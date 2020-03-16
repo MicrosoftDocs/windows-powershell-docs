@@ -50,14 +50,14 @@ In Windows 10, the Export-StartLayout cmdlet exports layouts as .xml files, and 
 
 ### Example 1: Import a layout into a Windows image
 ```
-PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath "E:\MountedImage\"
+PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath "C:\"
 ```
 
 This command imports a layout of the Start screen into a Windows image.
 
 ### Example 2: Validate the layout file and Windows image
 ```
-PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath " E:\MountedImage\" -WhatIf
+PS C:\> Import-StartLayout -LayoutPath "Layout.xml" -MountPath " C:\" -WhatIf
 ```
 
 This command validates the layout file and the Windows image by using the **WhatIf** parameter.

@@ -450,7 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptFileNames
-
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

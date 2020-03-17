@@ -30,8 +30,9 @@ Get-WinUILanguageOverride [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-WinUILanguageOverride** cmdlet specifies that a user-preferred display language should be used for the Windows user interface (UI).
-If no override setting is used, the display language is dynamically determined from the user language list.
+The **Get-WinUILanguageOverride** cmdlet displays the user-preferred language override (set via **Set-WinUILanguageOverride**) that will be used for the Windows user interface (UI) after a reboot or a logoff and logon.
+If no override setting is used, the **Get-WinUILanguageOverride** returns a null value. 
+If a change is pending (an override was set, but no restart or logoff and logon has taken place), the **Get-WinUILanguageOverride** returns the pending value.
 For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
 
 ## EXAMPLES

@@ -103,7 +103,7 @@ The **Set-AdfsClaimsProviderTrust** cmdlet configures the trust relationship wit
 
 ### Example 1: Enable auto-update for a claims provider trust
 ```
-PS C:\> Set-ADFSClaimsProviderTrust -TargetName "Fabrikam claims provider" -AutoUpdateEnabled $False
+PS C:\> Set-ADFSClaimsProviderTrust -TargetName "Fabrikam claims provider" -AutoUpdateEnabled $True
 ```
 
 This command enables auto-update for the claims provider trust named Fabrikam claims provider.

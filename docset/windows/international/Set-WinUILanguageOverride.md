@@ -50,8 +50,6 @@ PS C:\> Set-WinUILanguageOverride
 
 This command sets the Windows UI language override to null for the current user account.
 
-> [!NOTE]
-> Logging off and back on is required for changes to take place.
 
 ## PARAMETERS
 
@@ -90,4 +88,3 @@ For more information about the **CultureInfo** object, see [CultureInfo Class](h
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
 
 [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
-

@@ -37,6 +37,12 @@ New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLev
  [-ScriptFileNames] [<CommonParameters>]
 ```
 
+### FilePathRule
+```
+New-CIPolicyRule -FilePathRule <String> [-Deny]
+ [-ScriptFileNames] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 The **New-CIPolicyRule** cmdlet generates Code Integrity policy rules for drivers.
 Specify a rule level and an array of **DriverFile** objects or the path of a driver.
@@ -174,6 +180,29 @@ This command generates a publisher rule for the specific file named ci.dll.
 The file ci.dll is a kernel component.
 Therefore, the cmdlet generates both a kernel rule and a user mode rule.
 
+### Example 4: Specify a policy rule for a folder path with wildcards
+```
+PS C:\> New-CIPolicyRule -FilePathRule '.\temp\ConfigCITestBinaries\*'
+
+
+Name           : .\temp\ConfigCITestBinaries\* FileRule
+Id             : ID_ALLOW_A_1
+TypeId         : Allow
+Root           :
+FileVersionRef :
+AppIDRef       :
+Wellknown      : False
+Ekus           :
+Exceptions     :
+FileAttributes :
+FileException  : False
+UserMode       : True
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, .\temp\ConfigCITestBinaries\*]}
+```
+
+This command generates a filepath rule for the specific path verbatim string. This will allow anything in the parent folder. 
+
+
 ## PARAMETERS
 
 ### -Deny
@@ -241,6 +270,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePathRule
+Specifies the path of a folder for generating a rule with level set to FilePath. Refer to [Filepath Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#more-information-about-filepath-rules) for acceptable wildcard values and usage. 
+This cmdlet will not check whether the filepath string is a valid filepath. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Accepted values: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: True
+```
+
 ### -Level
 Specifies the primary level of detail for generated rules. Refer to [WDAC File Rule Levels](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-file-rule-levels) for acceptable parameter values and descriptions.
 
@@ -259,11 +305,27 @@ Accept wildcard characters: False
 
 ### -ScriptFileNames
 
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificFileNameLevel
+Specifies the attribute of the file off which to base a file name rule. The -Level must be set to FileName for this option. 
+Refer to [File Name Rules Info](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-filename-rules) for a description of the acceptable values. 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+Accepted values: None, OriginalFileName, InternalName, FileDescription, ProductName, PackageFamilyName
 
 Required: False
 Position: Named

@@ -55,7 +55,7 @@ If you specify the **Audit** parameter, this cmdlet scans the Code Integrity Aud
 
 ### Example 1: Create a policy
 ```
-The first command scans for user mode executables (applications) along with kernel mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
+The first command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
 PS C:\> New-CIPolicy -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript -FilePath '.\Policy.xml' -Level Publisher
 Scan completed successfully
 
@@ -230,7 +230,7 @@ these files, no action needs to be taken, otherwise a more complete policy may
 be created using the -fallback switch
 ```
 
-This command scans for user mode executables (applications) along with kernel mode binaries such as drivers, and then creates rules at the Publisher level, just as the first example did.
+This command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers, and then creates rules at the Publisher level, just as the first example did.
 This command does not specify the **OmitPaths** and **NoScript** parameters.
 The command encounters files that have an invalid or corrupted signature format.
 The cmdlet returns an informational message about generated rules.
@@ -465,7 +465,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPEs
-Indicates that this cmdlet includes user mode files in the scan.
+Indicates that this cmdlet includes user-mode files in the scan.
 Specify this parameter only if you do not provide driver files or rules.
 
 ```yaml

@@ -44,14 +44,14 @@ Autonym         : English (United States)
 EnglishName     : English (United States) 
 LocalizedName   : English (United States) 
 ScriptName      : Latin
-InputMethodTip  : {0409:00000409}
+InputMethodTips : {0409:00000409}
 Handwriting     : False 
 LanguageTag     : fr-FR
 Autonym         : français (France) 
 EnglishName     : French (France) 
 LocalizedName   : French (France) 
 ScriptName      : Latin
-InputMethodTip  : {040c:0000040c}
+InputMethodTips : {040c:0000040c}
 Handwriting     : False
 ```
 
@@ -59,7 +59,7 @@ This command returns the language list for the current user account, BCP-47 tags
 
 ### Example 2: Display input methods
 ```
-PS C:\> (Get-WinUserLanguageList)[0].InputMethodTip
+PS C:\> (Get-WinUserLanguageList)[0].InputMethodTips
 0409:00000409
 0409:00010409
 ```

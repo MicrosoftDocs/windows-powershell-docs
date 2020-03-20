@@ -151,7 +151,8 @@ If you specify this parameter, the cmdlet removes the app package for only the u
 > [!NOTE]
 >
 > - This parameter only accepts user SIDs
-> - Use the **whoami** command to display the current SID of a user. See [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami) for details.
+> - Use the **whoami /user** command to display the current SID of a user. See [whoami syntax](https://docs.microsoft.com/windows-server/administration/windows-commands/whoami) for details.
+
 
 
 ```yaml

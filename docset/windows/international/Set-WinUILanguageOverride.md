@@ -32,6 +32,7 @@ Set-WinUILanguageOverride [[-Language] <CultureInfo>] [<CommonParameters>]
 ## DESCRIPTION
 The **Set-WinUILanguageOverride** cmdlet sets a user-preferred display language to be used for the Windows user interface (UI).
 If no override setting is used, the display language is dynamically determined from the language list of the user.
+
 For more information, see the **Get-WinUserLanguageList** and **Set-WinUserLanguageList** cmdlets.
 
 ## EXAMPLES

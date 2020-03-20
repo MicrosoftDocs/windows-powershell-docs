@@ -50,6 +50,9 @@ Gets the manifest of an app package.
 ### [Get-AppxVolume](Get-AppxVolume.md)
 Gets appx volumes for the computer.
 
+### [Get-NonRemovableAppsPolicy](Get-NonRemovableAppsPolicy.md)
+Returns the a list of the app packages that are installed and configured as non-removable apps.
+
 ### [Mount-AppxVolume](Mount-AppxVolume.md)
 Mounts an appx volume.
 
@@ -65,6 +68,7 @@ Removes an appx volume.
 ### [Set-AppxDefaultVolume](Set-AppxDefaultVolume.md)
 Specifies a default appx volume.
 
-
+### [Set-NonRemovableAppsPolicy](Set-NonRemovableAppsPolicy.md)
+Sets an app packages as non-removable (can not be uninstalled).
 
 

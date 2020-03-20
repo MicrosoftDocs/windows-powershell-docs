@@ -67,7 +67,7 @@ PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
 
 This command sets the SMB Service configuration without user confirmation.
 
-### Example 3: Turn on SMB singing and encryption
+### Example 3: Turn on SMB signing and encryption
 ```
 PS C:\>Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -confirm $False
 ```

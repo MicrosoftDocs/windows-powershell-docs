@@ -62,7 +62,7 @@ You can import the cmdlet by running the following commands from Windows PowerSh
 - `Import-Module ServerManager`
 - `Add-WindowsFeature Adcs-Cert-Authority`
 
-To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `AddWindowsFeature Adcs-Cert-Authority` command.
+To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Add-WindowsFeature Adcs-Cert-Authority` command.
 
 Int is equivalent to Int32 in the [.NET Framework](http://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
 

@@ -92,7 +92,7 @@ This example modifies the default inbound action of the domain profile.
 
 ### Example 4
 ```
-PS C:\>$nfProfile = Get-NetFirewallProfile -Name Private -PolicyStore corp.contoso.com/gpo_name
+PS C:\>$nfProfile = Get-NetFirewallProfile -Name Private -PolicyStore corp.contoso.com\gpo_name
 
 
 
@@ -100,7 +100,7 @@ PS C:\>Set-NetFirewallProfile -AllowUnicastResponseToMulticast True -InputObject
 
 
 This cmdlet can be run using only the pipeline.
-PS C:\>Get-NetFirewallProfile -Name Private -PolicyStore corp.contoso.com/gpo_name | Set-NetFirewallProfile -AllowUnicastResponseToMulticast True
+PS C:\>Get-NetFirewallProfile -Name Private -PolicyStore corp.contoso.com\gpo_name | Set-NetFirewallProfile -AllowUnicastResponseToMulticast True
 ```
 
 This example modifies the private profile associated with a GPO.

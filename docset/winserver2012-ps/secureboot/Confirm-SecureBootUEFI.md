@@ -19,7 +19,7 @@ Confirms that Secure Boot is enabled by checking the Secure Boot status on the l
 ```
 Confirm-SecureBootUEFI [<CommonParameters>]
 ```
-
+ 
 ## DESCRIPTION
 The **Confirm-SecureBootUEFI** cmdlet confirms that Secure Boot is enabled by checking the Secure Boot status on a UEFI computer.
 

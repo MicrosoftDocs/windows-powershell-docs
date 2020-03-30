@@ -62,7 +62,7 @@ For more information about the CultureInfo object, see [CultureInfo Class](http:
 
 ## RELATED LINKS
 
-[Manage the input and display language settings in Windows 10](https://support.microsoft.com/en-us/help/4496404/windows-10-manage-the-input-and-display-language#input_language)
+[Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language)
 
 [Set-WinSystemLocale](./Set-WinSystemLocale.md)
 

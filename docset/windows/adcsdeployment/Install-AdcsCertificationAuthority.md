@@ -59,8 +59,7 @@ To remove the certification authority role service use the **Uninstall-AdcsCerti
 
 You can import the cmdlet by running the following commands from Windows PowerShell:
 
-- `Import-Module ServerManager`
-- `Add-WindowsFeature Adcs-Cert-Authority`
+- `Install-WindowsFeature Adcs-Cert-Authority`
 
 To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
 

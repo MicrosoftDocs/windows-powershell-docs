@@ -23,7 +23,7 @@ Set-Culture [-CultureInfo] <CultureInfo> [<CommonParameters>]
 ## DESCRIPTION
 The **Set-Culture** cmdlet sets a specific culture (also known as a locale for unmanaged code development) for the current user account.
 The information includes the names for the culture, the writing system, the calendar, and formatting for dates and sort strings.
-For more information, see CultureInfo Classhttp://go.microsoft.com/fwlink/?LinkID=242306 and Configurable Language and Cultural Settingshttp://go.microsoft.com/fwlink/?LinkID=242307.
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language).
 
 ## EXAMPLES
 
@@ -62,5 +62,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[GetCulture Class](http://go.microsoft.com/fwlink/?LinkID=243343)
-
+[GetCulture Class](https://go.microsoft.com/fwlink/?LinkID=243343)

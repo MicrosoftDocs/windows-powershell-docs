@@ -59,10 +59,9 @@ To remove the certification authority role service use the **Uninstall-AdcsCerti
 
 You can import the cmdlet by running the following commands from Windows PowerShell:
 
-- `Import-Module ServerManager`
-- `Add-WindowsFeature Adcs-Cert-Authority`
+- `Install-WindowsFeature Adcs-Cert-Authority`
 
-To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `AddWindowsFeature Adcs-Cert-Authority` command.
+To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
 
 Int is equivalent to Int32 in the [.NET Framework](http://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
 
@@ -518,4 +517,3 @@ If you have installation issues, try using the *verbose* parameter to get verbos
 ## RELATED LINKS
 
 [Uninstall-AdcsCertificationAuthority](./Uninstall-AdcsCertificationAuthority.md)
-

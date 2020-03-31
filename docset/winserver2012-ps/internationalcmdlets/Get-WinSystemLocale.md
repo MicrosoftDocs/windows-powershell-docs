@@ -53,5 +53,5 @@ For more information about the CultureInfo object, see CultureInfo Classhttp://g
 
 ## RELATED LINKS
 
-[Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307)
+[Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language)
 

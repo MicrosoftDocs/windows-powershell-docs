@@ -54,9 +54,6 @@ If Duplicate Address Detection (DAD) is enabled on the interface, the new IP add
 ### Example 1: Add an IPv4 address
 ```
 PS C:\>New-NetIPAddress -InterfaceIndex 12 -IPAddress 192.168.0.1 -PrefixLength 24 -DefaultGateway 192.168.0.5
-
-
-The second command removes the IPv4 address. To remove the IPv4 address, use the Remove-NetIPAddress cmdlet.
 PS C:\>Remove-NetIPAddress -IPAddress 192.168.0.1 -DefaultGateway 192.168.0.5
 ```
 
@@ -64,6 +61,7 @@ The first command adds a new IPv4 address to the network interface at index 12.
 The *PrefixLength* parameter specifies the subnet mask for the IP address.
 In this example, the *PrefixLength* of 24 equals a subnet mask of 255.255.255.0. 
 When you add an IPv4 address, the address specified for the Default Gateway must be in the same subnet as the IPv4 address that you add.
+The second command removes the IPv4 address. To remove the IPv4 address, use the Remove-NetIPAddress cmdlet.
 
 ## PARAMETERS
 

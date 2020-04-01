@@ -31,7 +31,7 @@ New-WinUserLanguageList [-Language] <String> [<CommonParameters>]
 ## DESCRIPTION
 The **New-WinUserLanguageList** cmdlet creates a new user language list object.
 The object settings include input method, spelling setting, text prediction setting, and handwriting input mode.
-For more information, see CultureInfo Classhttp://go.microsoft.com/fwlink/?LinkID=242306 and Configurable Language and Cultural Settingshttp://go.microsoft.com/fwlink/?LinkID=242307.
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language).
 
 ## EXAMPLES
 
@@ -123,4 +123,3 @@ This value is either 0 (freehand) or 1 (write each character separately).
 [Get-WinUserLanguageList](./Get-WinUserLanguageList.md)
 
 [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
-

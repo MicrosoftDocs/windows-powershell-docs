@@ -32,7 +32,7 @@ Get-WinUserLanguageList [<CommonParameters>]
 ## DESCRIPTION
 The **Get-WinUserLanguageList** cmdlet returns the current user language settings.
 These settings include input method, spelling setting, text prediction setting, and handwriting input mode.
-For more information, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307).
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Manage the input and display language settings in Windows 10](https://support.microsoft.com/help/4496404/windows-10-manage-the-input-and-display-language#input_language).
 
 ## EXAMPLES
 
@@ -44,14 +44,14 @@ Autonym         : English (United States)
 EnglishName     : English (United States) 
 LocalizedName   : English (United States) 
 ScriptName      : Latin
-InputMethodTip  : {0409:00000409}
+InputMethodTips : {0409:00000409}
 Handwriting     : False 
 LanguageTag     : fr-FR
 Autonym         : français (France) 
 EnglishName     : French (France) 
 LocalizedName   : French (France) 
 ScriptName      : Latin
-InputMethodTip  : {040c:0000040c}
+InputMethodTips : {040c:0000040c}
 Handwriting     : False
 ```
 
@@ -59,7 +59,7 @@ This command returns the language list for the current user account, BCP-47 tags
 
 ### Example 2: Display input methods
 ```
-PS C:\> (Get-WinUserLanguageList)[0].InputMethodTip
+PS C:\> (Get-WinUserLanguageList)[0].InputMethodTips
 0409:00000409
 0409:00010409
 ```
@@ -119,4 +119,3 @@ This value is either 0 (freehand) or 1 (write each character separately).
 [New-WinUserLanguageList](./New-WinUserLanguageList.md)
 
 [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
-

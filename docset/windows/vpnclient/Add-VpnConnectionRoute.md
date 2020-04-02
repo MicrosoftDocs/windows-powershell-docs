@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationPrefix
-Specifies the destination prefix of the route to add.
+Specifies the destination prefix of the route to add.  A destination prefix consists of an IP address prefix and a prefix length, separated by a slash (/).
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteMetric
-Specifies the metric of the route being added to the VPN connection.
+Specifies the metric of the route being added to the VPN connection. The cmdlet assigns the metric that you specify to the IP route. The default value is 256.
 
 ```yaml
 Type: UInt32
@@ -204,7 +204,7 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: None
+Default value: 256
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

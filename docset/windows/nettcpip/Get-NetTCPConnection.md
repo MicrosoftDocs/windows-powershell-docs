@@ -59,6 +59,13 @@ PS C:\>Get-NetTCPConnection -AppliedSetting Internet
 
 This command gets all TCP connections that use a TCP applied setting of Internet.
 
+### Example 4: Get Owning Process
+```
+PS C:\>Get-NetTcpConnection -OwningProcess 18948
+```
+
+This command gets all Owning Process with PID 18948
+
 ## PARAMETERS
 
 ### -AppliedSetting

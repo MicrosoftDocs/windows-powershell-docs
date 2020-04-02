@@ -53,7 +53,7 @@ Enables live migration on the local Hyper-V host.
 PS C:\> Enable-VMMigration -ComputerName TestVM -Passthru 
 ```
 
-When Trying to migrate a VM, the host needs to be enabled for VMmigration and the exmaple Enables the TestVM(host) for Migration.
+Enables live migration on the specified Hyper-V host. 
 
 ## PARAMETERS
 

@@ -50,7 +50,7 @@ Enables live migration on the local Hyper-V host.
 
 ### Example 2
 ```
-PS C:\> Enable-VMMigration -Comptername TestVM -Passthru 
+PS C:\> Enable-VMMigration -ComputerName TestVM -Passthru 
 ```
 
 When Trying to migrate a VM, the host needs to be enabled for VMmigration and the exmaple Enables the TestVM(host) for Migration.
@@ -170,4 +170,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

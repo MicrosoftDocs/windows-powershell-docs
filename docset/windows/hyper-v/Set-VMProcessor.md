@@ -31,7 +31,7 @@ Set-VMProcessor [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Creden
  [-VMName] <String[]> [-Count <Int64>] [-CompatibilityForMigrationEnabled <Boolean>]
  [-CompatibilityForOlderOperatingSystemsEnabled <Boolean>] [-HwThreadCountPerCore <Int64>] [-Maximum <Int64>]
  [-Reserve <Int64>] [-RelativeWeight <Int32>] [-MaximumCountPerNumaNode <Int32>]
- [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-EnableHostResourceProtection <Boolean>]
+ [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-Perfmon <String>] [-EnableHostResourceProtection <Boolean>]
  [-ExposeVirtualizationExtensions <Boolean>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -85,6 +85,14 @@ PS C:\> Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
 ```
 
 Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
+
+### Example 5
+```
+PS C:\> Set-VMProcessor TestVM -Perfmon pmu,pebs,lbr 
+```
+
+Configure your VM to expose PMU, PEBS, LBR for Performance Monitoring.
+
 
 
 
@@ -296,6 +304,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Perfmon
+Specifies the hardware to be Exposed for Performance Monitoring. For more information about requirements, visit [Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/performance-monitoring-hardware).
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+
 ### -Passthru
 Specifies that a **Microsoft.HyperV.PowerShell.Processor** is to be passed through to the pipeline representing the processor to be configured.
 
@@ -435,4 +461,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

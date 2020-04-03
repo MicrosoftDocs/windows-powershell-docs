@@ -48,6 +48,13 @@ PS C:\> Enable-VMMigration
 
 Enables live migration on the local Hyper-V host.
 
+### Example 2
+```
+PS C:\> Enable-VMMigration -ComputerName TestVM -Passthru 
+```
+
+Enables live migration on the specified Hyper-V host. 
+
 ## PARAMETERS
 
 ### -CimSession
@@ -163,4 +170,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

@@ -87,7 +87,7 @@ PS C:\> Set-VMProcessor TestVM -ExposeVirtualizationExtensions $true
 Configures virtual machine TestVM, enabling embedded Hyper-V.Uu
 
 
-> [!Tip]
+> [!TIP]
 > To enable Intel performance monitoring hardware in a Hyper-V virtual machine, you can use the -Perfmon parameter. For more information about requirements, visit [Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/performance-monitoring-hardware).
 
 ## PARAMETERS

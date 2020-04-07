@@ -75,7 +75,7 @@ node1                                                                   Joining
 
 This example forces the local node and the local cluster to start, even if quorum has not been achieved.
 If quorum has not been achieved, then the copy of the cluster configuration that is on the local node will be treated as the authoritative copy and will be replicated to all other nodes.
-This cmdlet should be considered a last resort, because some cluster configuration changes could be lost.
+This cmdlet should be considered a last resort, because some cluster configuration changes could be lost; e.g. recovery options for cluster service.
 
 ## PARAMETERS
 

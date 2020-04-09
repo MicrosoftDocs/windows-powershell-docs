@@ -38,19 +38,19 @@ It returns a **System.Messaging.Message** object that represents the message sen
 
 ## EXAMPLES
 
-### Example 1: Send a test message to a queue
+### Example 1: Send a test message to a discovered local queue
 ```
-PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Send-MsmqQueue -Recoverable -Transactional -AdminQueuePath ".\private$\admin_queue"
-```
-
-This command sends a recoverable and transactional test message to the queue named a04bm10\private$\order_queue.
-
-### Example 2: Send a test message to a queue with a label
-```
-PS C:\>Get-MsmqQueue -Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue"| Send-MsmqQueue -Transactional -Label "From Windows PowerShell"
+PS C:\>Get-MsmqQueue -Name "order_queue" | Send-MsmqQueue -Recoverable -Label "From Windows PowerShell"
 ```
 
-This command sends a transactional test message to the queue named FormatName:DIRECT=TCP:10.199.37.61\order_queue with the label named From Windows PowerShell.
+This command sends a non-transactional recoverable (durable) test message to the local queue named "order_queue" with a label named "From Windows PowerShell".
+
+### Example 2: Send a test message to a remote queue with a label
+```
+PS C:\>Send-MsmqQueue -Name "FormatName:DIRECT=TCP:10.199.37.61\order_queue" -Transactional -Label "From Windows PowerShell"
+```
+
+This command sends a transactional test message to the remote queue named "FormatName:DIRECT=TCP:10.199.37.61\order_queue" with a label named "From Windows PowerShell".
 
 ## PARAMETERS
 

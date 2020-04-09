@@ -76,6 +76,13 @@ PS C:\> Get-MsmqQueue -QueueType SystemJournal
 
 This command gets system Journal queues for the host computer.
 
+### Example 5: Get all local queues and their 
+```
+PS C:\> Get-MsmqQueue | Select QueueName, MessageCount
+```
+
+This command lists the message count for all queues on the host computer.
+
 ## PARAMETERS
 
 ### -Journal

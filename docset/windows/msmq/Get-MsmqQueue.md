@@ -76,7 +76,7 @@ PS C:\> Get-MsmqQueue -QueueType SystemJournal
 
 This command gets system Journal queues for the host computer.
 
-### Example 5: Get all local queues and their 
+### Example 5: Get all local queues and their message count
 ```
 PS C:\> Get-MsmqQueue | Select QueueName, MessageCount
 ```
@@ -188,4 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Send-MsmqQueue](./Send-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

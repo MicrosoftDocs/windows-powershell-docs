@@ -21,13 +21,13 @@ Remove-WebGlobalModule [-Name] <String> [-WhatIf] [-Confirm] [<CommonParameters>
 ```
 
 ## DESCRIPTION
-Removes an IIS module.
+The **Remove-WebGlobalModule** cmdlet removes an Internet Information Services (IIS) module.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Removing a module --------------
+### Example 1: Removing a module
 ```
-IIS:\>Remove-WebGlobalModule -Name testGlobalModule -PSPath "IIS:\Sites\Default Web Site"
+IIS:\>Remove-WebGlobalModule -Name "testGlobalModule"
 ```
 
 Removes the module named testGlobalModule from the Default Web Site.
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

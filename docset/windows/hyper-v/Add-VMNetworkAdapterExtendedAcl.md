@@ -298,9 +298,8 @@ Specifies the protocol that the ACL applies to.
 The acceptable values for this parameter are:
 
 - TCP 
-- UDP 
-- ICMP 
-- an integer IP protocol ID
+- UDP  
+- an integer IP protocol ID (**use 1 for ICMP**)
 
 ```yaml
 Type: String

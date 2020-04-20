@@ -27,16 +27,16 @@ Exports a certificate or a PFXData object to a Personal Information Exchange (PF
 
 ### PfxCert
 ```
-Export-PfxCertificate [-NoProperties] [-NoClobber] [-Force] [-ChainOption <ExportChainOption>]
- [-ProtectTo <String[]>] [-Password <SecureString>] [-FilePath] <String> [-PFXData] <PfxData> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Export-PfxCertificate [-NoProperties] [-NoClobber] [-Force] [-CryptoAlgorithmOption <CryptoAlgorithmOptions>]
+ [-ChainOption <ExportChainOption>] [-ProtectTo <String[]>] [-Password <SecureString>] [-FilePath] <String>
+ [-PFXData] <PfxData> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NormalCert
 ```
-Export-PfxCertificate [-NoProperties] [-NoClobber] [-Force] [-ChainOption <ExportChainOption>]
- [-ProtectTo <String[]>] [-Password <SecureString>] [-FilePath] <String> [-Cert] <Certificate> [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Export-PfxCertificate [-NoProperties] [-NoClobber] [-Force] [-CryptoAlgorithmOption <CryptoAlgorithmOptions>]
+ [-ChainOption <ExportChainOption>] [-ProtectTo <String[]>] [-Password <SecureString>] [-FilePath] <String>
+ [-Cert] <Certificate> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Specifies the options for building a chain when exporting certificates.
 The acceptable values for this parameter are:
 
- -- BuildChain:  Certificate chain for all end entity certificates will be built and included in the export.
+ -- BuildChain: Certificate chain for all end entity certificates will be built and included in the export.
 This option is valid for both **PfxData** and **Cert** parameters.
 In the case of **PfxData** parameter, the collection of all PFX certificates will be used as an additional store. 
 
@@ -166,6 +166,26 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CryptoAlgorithmOption
+Specifies the algorithm for encrypting private keys within the PFX file. If this parameter is not specified, the default is TripleDES_SHA1. The acceptable values for this parameter are:
+
+-- TripleDES_SHA1: Private keys will be encrypted in the PFX file using Triple DES encryption.
+
+-- AES256_SHA256: Private keys will be encrypted in the PFX file using AES-256 encryption.
+
+```yaml
+Type: CryptoAlgorithmOptions
+Parameter Sets: (All)
+Aliases: 
+Accepted values: TripleDES_SHA1, AES256_SHA256
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

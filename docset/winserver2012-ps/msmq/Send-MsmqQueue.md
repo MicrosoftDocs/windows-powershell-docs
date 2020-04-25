@@ -38,12 +38,12 @@ It returns a **System.Messaging.Message** object that represents the message sen
 
 ## EXAMPLES
 
-### Example 1: Send a test message to a discovered local queue
+### Example 1: Send a test message to a local queue
 ```
 PS C:\>Get-MsmqQueue -Name "order_queue" | Send-MsmqQueue -Recoverable -Label "From Windows PowerShell"
 ```
 
-This command sends a non-transactional recoverable (durable) test message to the local queue named "order_queue" with a label named "From Windows PowerShell".
+This command sends a non-transactional recoverable test message to the local queue named "order_queue" with a label named "From Windows PowerShell". Recoverable messages are written to disk and resilient to system crashes for guaranteed delivery.
 
 ### Example 2: Send a test message to a remote queue with a label
 ```
@@ -285,4 +285,3 @@ Accept wildcard characters: False
 [Remove-MsmqQueue](./Remove-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

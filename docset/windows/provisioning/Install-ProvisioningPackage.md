@@ -48,7 +48,7 @@ This will install the mypackage.ppkg file silently without customer interaction.
 ## PARAMETERS
 
 ### -ConnectedDevice
-{{Fill ConnectedDevice Description}}
+Install package to removable media.
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceInstall
-{{Fill ForceInstall Description}}
+Force the installation of the package.
 
 ```yaml
 Type: SwitchParameter
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogsDirectoryPath
-{{Fill LogsDirectoryPath Description}}
+Specifies the logs directory path.
 
 ```yaml
 Type: String
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -WprpFile
-{{Fill WprpFile Description}}
+Specifies the name of a wprp file.
 
 ```yaml
 Type: String

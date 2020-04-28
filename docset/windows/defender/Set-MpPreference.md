@@ -1078,7 +1078,7 @@ Accepted values: AlwaysPrompt, SendSafeSamples, NeverSend, SendAllSamples
 
 Required: False
 Position: Named
-Default value: None
+Default value: SendSafeSamples
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

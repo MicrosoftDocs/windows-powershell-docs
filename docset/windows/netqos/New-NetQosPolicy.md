@@ -162,7 +162,7 @@ AppPathName    : ftp.exe
 ThrottleRate   : 1 MBytes/sec
 ```
 
-This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 1,000,000 bits per second.
+This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 8,388,608 bits per second.
 This policy is ActiveStore.
 This means that it is not persistent after restart of the computer.
 
@@ -193,7 +193,7 @@ IPPort         : 80
 ThrottleRate   : 10 MBytes/sec
 ```
 
-This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 10,000,000 bits per second.
+This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 83,886,080 bits per second.
 
 ### Example 5: Create a default QoS policy
 ```
@@ -220,7 +220,7 @@ URIRecursive   : False
 ThrottleRate   : 500 KBytes/sec
 ```
 
-This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 500,000 bits per second.
+This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 4,096,000 bits per second.
 
 ## PARAMETERS
 

@@ -21,7 +21,7 @@ ms.assetid: 29C55F63-4B4F-4E08-919C-E23079F69F7C
 
 # NetLldpAgent Module
 ## Description
-This reference provides cmdlet descriptions and syntax for the following Network Logical Link Discovery Protocol (LLDP) Agent cmdlets:
+This reference provides cmdlet descriptions and syntax for the Network Logical Link Discovery Protocol (LLDP) Agent. Use of the NetLldpAgent module requires the [DataCenterBridging](https://docs.microsoft.com/en-us/windows-server/networking/technologies/dcb/dcb-install) feature to be installed. The following cmdlets are covered by this reference:
 
 ## NetLldpAgent Cmdlets
 ### [Disable-NetLldpAgent](./Disable-NetLldpAgent.md)

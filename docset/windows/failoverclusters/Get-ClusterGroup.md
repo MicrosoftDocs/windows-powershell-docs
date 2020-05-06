@@ -76,7 +76,7 @@ This example lists the clustered services and applications, or resource groups, 
 
 ### Example 4
 ```
-PS C:\> Get-ClusterGroup -Name FileServer1 | Format-List -Process *
+PS C:\> Get-ClusterGroup -Name FileServer1 | Format-List -Property *
 Cluster                :  Cluster1 
 IsCoreGroup            : False 
 OwnerNode              :  node1 

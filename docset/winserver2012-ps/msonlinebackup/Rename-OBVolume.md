@@ -33,7 +33,7 @@ ps_mob_user_group_remark
 
 ### EXAMPLE 1
 ```
-PS C:\> Rename-OBVolume D: E:
+PS C:\> Rename-OBVolume D:\ E:\
 ```
 
 This example maps E: to an older volume D:.

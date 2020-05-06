@@ -1074,7 +1074,7 @@ The acceptable values for this parameter are:
 Type: SubmitSamplesConsentType
 Parameter Sets: (All)
 Aliases: 
-Accepted values: None, Always, Never
+Accepted values: AlwaysPrompt, SendSafeSamples, NeverSend, SendAllSamples
 
 Required: False
 Position: Named

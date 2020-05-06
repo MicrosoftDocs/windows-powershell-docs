@@ -88,7 +88,7 @@ The first command creates a scheduled task action named Cmd and assigns the **Sc
 ```
 PS C:\>$Sta = New-ScheduledTaskAction -Execute "Cmd"
 
-PS C:\>$Stset = New-ScheduledTaskSettingsSet -RestartCount 3 -RestartInterval 60
+PS C:\>$Stset = New-ScheduledTaskSettingsSet -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 60)
 
 PS C:\>Register-ScheduledTask Task01 -Action $Sta -Settings $Stset
 

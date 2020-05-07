@@ -32,7 +32,7 @@ The collection of ADFSEndpoint objects is a list of all the supported endpoints 
 You can use this list to view the configuration of endpoints and enable or disable them.
 To see the full list of endpoints, use this cmdlet with no parameters.
 
-### Example 1: Get an endpoint
+## EXAMPLES: Get an endpoint
 ```
 PS C:\> Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/Windows"
 ```

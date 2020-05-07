@@ -162,7 +162,7 @@ AppPathName    : ftp.exe
 ThrottleRate   : 1 MBytes/sec
 ```
 
-This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 8,388,608 bits per second.
+This command creates a QoS policy named FTP that matches an application path at ftp.exe and throttles the traffic at 8,000,000 bits per second.
 This policy is ActiveStore.
 This means that it is not persistent after restart of the computer.
 
@@ -841,4 +841,3 @@ The **MSFT_NetQosPolicySettingData** object contains a QoS policy.
 [Remove-NetQosPolicy](./Remove-NetQosPolicy.md)
 
 [Set-NetQosPolicy](./Set-NetQosPolicy.md)
-

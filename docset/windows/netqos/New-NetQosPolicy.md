@@ -220,7 +220,7 @@ URIRecursive   : False
 ThrottleRate   : 500 KBytes/sec
 ```
 
-This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 4,096,000 bits per second.
+This command creates a QoS policy named IIS that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 4,000,000 bits per second.
 
 ## PARAMETERS
 

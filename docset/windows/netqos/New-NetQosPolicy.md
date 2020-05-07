@@ -193,7 +193,7 @@ IPPort         : 80
 ThrottleRate   : 10 MBytes/sec
 ```
 
-This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 83,886,080 bits per second.
+This command creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 80,000,000 bits per second.
 
 ### Example 5: Create a default QoS policy
 ```

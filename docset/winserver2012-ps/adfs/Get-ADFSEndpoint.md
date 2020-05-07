@@ -32,7 +32,9 @@ The collection of ADFSEndpoint objects is a list of all the supported endpoints 
 You can use this list to view the configuration of endpoints and enable or disable them.
 To see the full list of endpoints, use this cmdlet with no parameters.
 
-## EXAMPLES: Get an endpoint
+## EXAMPLES
+
+### Example 1: Get an endpoint
 ```
 PS C:\> Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/Windows"
 ```
@@ -91,4 +93,3 @@ A class structure that represents the endpoints for the Federation Service.
 [Enable-ADFSEndpoint](./Enable-ADFSEndpoint.md)
 
 [Set-ADFSEndpoint](./Set-ADFSEndpoint.md)
-

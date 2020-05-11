@@ -48,6 +48,8 @@ This example merges the virtual hard disk from Child4 to Child2, for a virtual d
 This example merges all data from Child4 and Child3 up to Child2.
 Child4.vhdx and Child3.vhdx are not deleted, but are no longer valid virtual hard disk files after the operation.
 
+![merge-vhd example](/docset/images/merge-vhd-example.png)
+
 ## PARAMETERS
 
 ### -AsJob

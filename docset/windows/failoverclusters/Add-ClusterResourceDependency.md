@@ -32,7 +32,7 @@ Add-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>] [-In
 
 ## DESCRIPTION
 The **Add-ClusterResourceDependency** cmdlet adds a resource to the list of resources on which a particular resource depends, using AND as the connector, within a failover cluster.
-Existing dependencies will remain in the list.
+Existing dependencies will remain in the list. If you specify the *InputObject* parameter the *Resource* parameter will be ignored.
 
 A dependent resource is brought online after the resources on which it depends.
 A dependent resource is taken offline before the resources on which it depends.
@@ -41,13 +41,13 @@ A dependent resource is taken offline before the resources on which it depends.
 
 ### Example 1
 ```
-PS C:\> Add-ClusterResourceDependency -Cluster "FileServer-(cluster1FS12)(Cluster Disk 2)" -Resource "Cluster Disk 4"
+PS C:\> Add-ClusterResourceDependency -Resource "FileServer-(cluster1FS12)" -Provider "Cluster Disk 4"
 Name                State               Group               ResourceType 
 ----                -----               -----               ------------ 
 FileServer-(clus... Online              cluster1FS12        File Server
 ```
 
-This example adds the resource named Cluster Disk 4 to the list of resources on which the resource called FileServer-(cluster1FS12)(Cluster Disk 2) depends, using AND as the connector.
+This example adds the resource named "Cluster Disk 4" to the list of resources on which the resource called "FileServer-(cluster1FS12)" depends, using AND as the connector.
 
 ## PARAMETERS
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the cluster resource on which to add a dependency.
+Specifies the cluster resource which to add as a dependency.
 
 ```yaml
 Type: String
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Resource
-Specifies the name of the cluster resource for which to add a dependency.
+Specifies the name of the cluster resource for which to add the dependency.
 
 ```yaml
 Type: String
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -22,7 +22,7 @@ Add-ClusterResourceDependency [[-Resource] <String>] [[-Provider] <String>] [-Cl
 ```
 
 ## DESCRIPTION
-The **Add-ClusterResourceDependency** cmdlet adds a resource to the list of resources on which a particular resource depends, using AND as the connector, within a failover cluster. Existing dependencies will remain in the list. If you specify the *InputObject* parameter the *Resource* parameter will be ignored.
+The **Add-ClusterResourceDependency** cmdlet adds a resource to the list of resources on which a particular resource depends, using AND as the connector, within a failover cluster. Existing dependencies will remain on the list. If you specify the *InputObject* parameter, the *Resource* parameter will be ignored.
 
 A dependent resource is brought online after the resources on which it depends.
 A dependent resource is taken offline before the resources on which it depends.
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Provider
-Specifies the cluster resource which to add as a dependency.
+Specifies the cluster resource to add as a dependency.
 
 ```yaml
 Type: String
@@ -121,4 +121,3 @@ Accept wildcard characters: False
 [Remove-ClusterResourceDependency](./Remove-ClusterResourceDependency.md)
 
 [Set-ClusterResourceDependency](./Set-ClusterResourceDependency.md)
-

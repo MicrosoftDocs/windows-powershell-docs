@@ -515,6 +515,8 @@ Specify this parameter only if you set the *Type* parameter to Report.The accept
 - FilesByFileGroup
 - FilesByOwner
 - FilesByProperty
+-	FileScreenAuditFiles
+- FoldersByProperty
 - LargeFiles
 - LeastRecentlyAccessed
 - MostRecentlyAccessed

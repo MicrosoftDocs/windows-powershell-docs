@@ -40,6 +40,10 @@ You can also use this cmdlet to view the following information about a BitLocker
 - VolumeType - Data or Operating System.
 - Mount Point - Drive letter.
 - CapacityGB - Size of drive.
+- MetadataVersion - Returns the FVE metadata version of the volume.
+    - 0 - **Unknown** - The operating system is unknown.
+    - 1 - **Vista** - Windows Vista format, meaning that the volume was protected with BitLocker on a computer running Windows Vista.
+    - 2 - **Win7** - Windows 7 format, meaning that the volume was protected with BitLocker on a computer running Windows 7 or the metadata format was upgraded by using the UpgradeVolume method.
 - VolumeStatus - Whether BitLocker currently protects some, all, or none of the data on the volume. 
 - Encryption Percentage - Percent of the volume protected by BitLocker.
 - KeyProtector - Type of key protector or protectors.

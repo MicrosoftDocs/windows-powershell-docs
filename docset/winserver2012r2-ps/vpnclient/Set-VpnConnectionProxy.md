@@ -37,17 +37,24 @@ If errors occur when you modify the web proxy information, the error information
 ## EXAMPLES
 
 ### Example 1: Configure the proxy settings for a VPN connection profile
-```
-PS C:\>Set-VpnConnectionProxy -Name Contoso -ProxyServer 10.0.0.1:8080 -BypassProxyForLocal
+```powershell
+PS C:\>Set-VpnConnectionProxy -ConnectionName Contoso -ProxyServer 10.0.0.1:8080 -BypassProxyForLocal
 ```
 
 This command sets the proxy configuration for the VPN connection named Contoso to use the proxy server with IP address 10.0.0.1 over port 8080, as specified by the **ProxyServer** parameter.
 The command also specifies that internal IP addresses are not routed to the proxy server, as specified by the **BypassProxyForLocal** parameter.
 
+### Example 2: Configure proxy and exclude based on domain and network
+```powershell
+PS C:\>Set-VpnConnectionProxy -ConnectionName "Contoso" -ProxyServer "10.0.0.1:8080" -ExcludePrefix '10.', '*.microsoft.com'
+```
+
+This command also sets the proxy for Contoso VPN and also specifies prefixes for addresses that will not use proxy via the _ExcludePrefix_ parameter. This exclude 10.0.0.0/8 and *.microsoft.com.
+
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +115,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -236,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -246,4 +253,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-
+[Get-VpnConnection](./Get-VpnConnection.md)

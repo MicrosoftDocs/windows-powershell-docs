@@ -28,12 +28,20 @@ If errors occur when you modify the web proxy information, the error information
 ## EXAMPLES
 
 ### Example 1: Configure the proxy settings for a VPN connection profile
-```
+```powershell
 PS C:\>Set-VpnConnectionProxy -Name Contoso -ProxyServer 10.0.0.1:8080 -BypassProxyForLocal
 ```
 
-This command sets the proxy configuration for the VPN connection named Contoso to use the proxy server with IP address 10.0.0.1 over port 8080, as specified by the **ProxyServer** parameter.
-The command also specifies that internal IP addresses are not routed to the proxy server, as specified by the **BypassProxyForLocal** parameter.
+
+This command sets the proxy configuration for the VPN connection named Contoso to use the proxy server with IP address 10.0.0.1 over port 8080, as specified by the _ProxyServer_ parameter.
+The command also specifies that internal IP addresses are not routed to the proxy server, as specified by the _BypassProxyForLocal_ parameter.
+
+### Example 2: Configure proxy and exclude based on domain and network
+```powershell
+PS C:\>Set-VpnConnectionProxy -Name "Contoso" -ProxyServer "10.0.0.1:8080" -ExcludePrefix '10.', '*.microsoft.com'
+```
+
+This command also sets the proxy for Contoso VPN and also specifies prefixes for addresses that will not use proxy via the _ExcludePrefix_ parameter. This exclude 10.0.0.0/8 and *.microsoft.com.
 
 ## PARAMETERS
 
@@ -138,5 +146,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+[Get-VpnConnection](./Get-VpnConnection.md)
 

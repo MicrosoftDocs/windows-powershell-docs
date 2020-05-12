@@ -62,7 +62,7 @@ Specify criteria in the following format:
 
 operator, value01, value02, .
 . .
-, operator, value03, value04, .
+; operator, value03, value04, .
 . .
 
 The operator is either EQ or NE.

@@ -32,11 +32,11 @@ Remove-AppxPackage [-Package] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ```powershell
-Remove-AppxPackage [-Package] <String> [-AllUsers] [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ```powershell
-Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-Confirm] [-WhatIf] [<CommonParameters>]
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ```powershell

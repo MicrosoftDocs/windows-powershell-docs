@@ -77,6 +77,8 @@ For AD LDS environments, the *Partition* parameter must be specified except in t
 - A default naming context or partition is defined for the AD LDS environment.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 
+
+
 ## EXAMPLES
 
 ### Example 1: Set properties for a user
@@ -447,6 +449,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+> [!NOTE]
+> The Difference between  -Clear and -remove is that -Clear Completely removes all data within an attribute. You can use -Remove to remove a value from a mutlivalued attributte, Such as removing a single Phone number without affecting other items in the list.
 
 ### -Company
 Specifies the user's company.

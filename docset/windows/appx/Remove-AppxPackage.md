@@ -27,17 +27,22 @@ Removes an app package from one or more user accounts.
 
 ## SYNTAX
 
+### Paramter Set 1
 ```powershell
 Remove-AppxPackage [-Package] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### Paramter Set 2
 ```powershell
 Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
+### Paramter Set 3
 ```powershell
 Remove-AppxPackage [-Package] <String> [-AllUsers] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
+
+### Paramter Set 4
 
 ```powershell
 Remove-AppxPackage [-Package] <String> -User <String> [-Confirm] [-WhatIf] [<CommonParameters>]

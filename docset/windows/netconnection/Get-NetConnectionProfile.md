@@ -34,7 +34,7 @@ Get-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-Inter
 
 ## DESCRIPTION
 The **Get-NetConnectionProfile** cmdlet gets a connection profile associated with one or more physical network adapters.
-A connection profile represents a network connection.
+A connection profile represents a network connection. These commands use core operating system libraries. Since the core o/s is 64bit, the process trying to load these libraries must also be 64 bit. It does not work on  x86 or ARM in emulation on the Pro X.
 
 ## EXAMPLES
 

@@ -230,7 +230,7 @@ Use the LockOutObservationWindow parameter to set the lockout observation time.
 
 Specify the lockout duration time interval in the following format.
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
 
@@ -285,7 +285,7 @@ Use the LockoutDuration parameter to set the lockout duration time.
 
 Specify the time interval in the following format.
 
-\[-\]D:H:M:S.F
+D:H:M:S.F
 
 where:
 

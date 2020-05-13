@@ -197,7 +197,7 @@ Use the **LockOutObservationWindow** parameter to set the lockout observation ti
 
 Specify the lockout duration time interval in the following format:
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
 
@@ -234,7 +234,7 @@ Use the **LockoutDuration** parameter to set the lockout duration time.
 
 Specify the time interval in the following format:
 
-\[-\]D:H:M:S.F
+D:H:M:S.F
 
 where:
 
@@ -288,11 +288,9 @@ The LDAP display name (**ldapDisplayName**) for this property is maxPwdAge.
 
 Specify the time interval in the following format:
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
-
-\[-\] = Specifies a negative time interval
 
 D = Days (0 to 10675199)
 
@@ -326,11 +324,9 @@ The LDAP display name (**ldapDisplayName**) for this property is minPwdAge.
 
 Specify the time interval in the following format.
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
-
-\[-\] = Specifies a negative time interval
 
 D = Days (0 to 10675199)
 

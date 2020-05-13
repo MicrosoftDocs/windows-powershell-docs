@@ -299,7 +299,7 @@ S = Seconds (0 to 59)
 
 F = Fractions of a second (0 to 9999999)
 
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
 ```yaml
 Type: TimeSpan
@@ -335,7 +335,7 @@ S = Seconds (0 to 59)
 
 F = Fractions of a second (0 to 9999999)
 
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
 ```yaml
 Type: TimeSpan

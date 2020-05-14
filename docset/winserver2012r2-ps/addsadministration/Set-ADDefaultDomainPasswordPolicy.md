@@ -197,7 +197,7 @@ Use the **LockOutObservationWindow** parameter to set the lockout observation ti
 
 Specify the lockout duration time interval in the following format:
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
 
@@ -234,7 +234,7 @@ Use the **LockoutDuration** parameter to set the lockout duration time.
 
 Specify the time interval in the following format:
 
-\[-\]D:H:M:S.F
+D:H:M:S.F
 
 where:
 
@@ -288,11 +288,9 @@ The LDAP display name (**ldapDisplayName**) for this property is maxPwdAge.
 
 Specify the time interval in the following format:
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
-
-\[-\] = Specifies a negative time interval
 
 D = Days (0 to 10675199)
 
@@ -304,7 +302,7 @@ S = Seconds (0 to 59)
 
 F= Fractions of a second (0 to 9999999)
 
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
 ```yaml
 Type: TimeSpan
@@ -326,11 +324,9 @@ The LDAP display name (**ldapDisplayName**) for this property is minPwdAge.
 
 Specify the time interval in the following format.
 
-\[-\]D.H:M:S.F
+D.H:M:S.F
 
 where:
-
-\[-\] = Specifies a negative time interval
 
 D = Days (0 to 10675199)
 
@@ -342,7 +338,7 @@ S = Seconds (0 to 59)
 
 F= Fractions of a second (0 to 9999999)
 
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
 ```yaml
 Type: TimeSpan

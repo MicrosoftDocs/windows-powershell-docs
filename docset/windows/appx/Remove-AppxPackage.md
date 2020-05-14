@@ -27,22 +27,19 @@ Removes an app package from one or more user accounts.
 
 ## SYNTAX
 
-### RemoveSet (Default)
-
-```powershell
-Remove-AppxPackage [-Package] <String> -User <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+### RemoveByPackageSet (Default)
+```
+Remove-AppxPackage [-Package]  [-PreserveApplicationData] [-WhatIf] [-Confirm] []
 ```
 
-### PreserveapplicationdataSet
-
-```powershell
-Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-Confirm] [-WhatIf] [<CommonParameters>]
+### AllUsersSet
+```
+Remove-AppxPackage [-Package]  [-AllUsers] [-WhatIf] [-Confirm] []
 ```
 
-### AllusersRemoveset
-
-```powershell
-Remove-AppxPackage [-Package] <String> [-AllUsers] [-Confirm] [-WhatIf] [<CommonParameters>]
+### UserSet
+```
+Remove-AppxPackage [-Package]  -User  [-WhatIf] [-Confirm] []
 ```
 
 ## DESCRIPTION

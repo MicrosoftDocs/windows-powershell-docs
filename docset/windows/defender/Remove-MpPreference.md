@@ -28,7 +28,7 @@ Removes exclusions or default actions.
 ```
 Remove-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-ThreatIDDefaultAction_Ids <Int64[]>] [-UnknownThreatDefaultAction] [-LowThreatDefaultAction]
- [-AttackSurfaceReductionOnlyExclusions]
+ [-AttackSurfaceReductionOnlyExclusions <String>]
  [-ModerateThreatDefaultAction] [-HighThreatDefaultAction] [-SevereThreatDefaultAction] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```

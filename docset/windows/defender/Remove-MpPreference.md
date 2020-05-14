@@ -51,7 +51,7 @@ This command removes the folder C:\Temp from the exclusion list.
 PS C:\> Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
 ```
 
-This command will exclude only that specific file app.exe in that specific folder
+This command will exclude only that specific file app.exe in that specific folder.
 
 ## PARAMETERS
 

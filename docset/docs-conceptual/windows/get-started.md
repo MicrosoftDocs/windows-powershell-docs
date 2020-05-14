@@ -142,5 +142,6 @@ The table below also shows the latest published version of the Help for each mod
 | WindowsSearch | [Windows Search](/powershell/module/windowssearch) |
 | WindowsServerBackup | [Windows Server Backup](/powershell/module/windowsserverbackup) |
 | WindowsUpdate | [Windows Update](/powershell/module/windowsupdate) |
+| WSUS | [Windows Server Update Services](/powershell/module/wsus) |
 
 You can also find these modules by searching the [PowerShell Module Browser](/powershell/module/).

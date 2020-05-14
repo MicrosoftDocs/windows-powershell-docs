@@ -37,7 +37,7 @@ The **Get-NetConnectionProfile** cmdlet gets a connection profile associated wit
 A connection profile represents a network connection. 
 
 > [!NOTE]
-> The Microsoft.PowerShell.LocalAccounts module is not available in 32-bit PowerShell on a 64-bit system.
+> The Netconnection Module works only on 64-bit Powershell.
 
 ## EXAMPLES
 

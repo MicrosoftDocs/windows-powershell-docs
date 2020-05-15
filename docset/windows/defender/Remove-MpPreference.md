@@ -28,6 +28,7 @@ Removes exclusions or default actions.
 ```
 Remove-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-ExclusionProcess <String[]>]
  [-ThreatIDDefaultAction_Ids <Int64[]>] [-UnknownThreatDefaultAction] [-LowThreatDefaultAction]
+ [-AttackSurfaceReductionOnlyExclusions <String>]
  [-ModerateThreatDefaultAction] [-HighThreatDefaultAction] [-SevereThreatDefaultAction] [-Force]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
@@ -45,6 +46,13 @@ PS C:\> Remove-MpPreference -ExclusionPath "C:\Temp"
 
 This command removes the folder C:\Temp from the exclusion list.
 
+### Example 2: 
+```
+PS C:\> Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\App.exe"
+```
+
+This command will exclude only that specific file app.exe in that specific folder.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -59,6 +67,24 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -AttackSurfaceReductionOnlyExclusions
+Exclude files and paths from Attack Surface Reduction (ASR) rules. Specify the folders or files and resources that should be excluded from ASR rules. Enter a folder path or a fully qualified resource name. For example, ""C:\Windows"" will exclude all files in that directory. ""C:\Windows\App.exe"" will exclude only that specific file in that specific folder.
+
+For more information about excluding files and folders from [ASR rules](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-attack-surface-reduction#exclude-files-and-folders-from-asr-rules).
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 
@@ -273,4 +299,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-MpPreference](./Get-MpPreference.md)
 
 [Set-MpPreference](./Set-MpPreference.md)
-

@@ -931,82 +931,82 @@
         "redirect_document_id": false
         },
         {
-        "source_path": "docset/windows/wsus/Add-WsusComputer.md",
+        "source_path": "docset/virtual-directory-module/wsus/Add-WsusComputer.md",
         "redirect_url": "/powershell/module/updateservices/Add-WsusComputer?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Add-WsusDynamicCategory.md",
+        "source_path": "docset/virtual-directory-module/wsus/Add-WsusDynamicCategory.md",
         "redirect_url": "/powershell/module/updateservices/Add-WsusDynamicCategory?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Approve-WsusUpdate.md",
+        "source_path": "docset/virtual-directory-module/wsus/Approve-WsusUpdate.md",
         "redirect_url": "/powershell/module/updateservices/Approve-WsusUpdate?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Deny-WsusUpdate.md",
+        "source_path": "docset/virtual-directory-module/wsus/Deny-WsusUpdate.md",
         "redirect_url": "/powershell/module/updateservices/Deny-WsusUpdate?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusClassification.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusClassification.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusClassification?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusComputer.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusComputer.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusComputer?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusDynamicCategory.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusDynamicCategory.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusDynamicCategory?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusProduct.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusProduct.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusProduct?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusServer.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusServer.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusServer?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Get-WsusUpdate.md",
+        "source_path": "docset/virtual-directory-module/wsus/Get-WsusUpdate.md",
         "redirect_url": "/powershell/module/updateservices/Get-WsusUpdate?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Invoke-WsusServerCleanup.md",
+        "source_path": "docset/virtual-directory-module/wsus/Invoke-WsusServerCleanup.md",
         "redirect_url": "/powershell/module/updateservices/Invoke-WsusServerCleanup?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Remove-WsusDynamicCategory.md",
+        "source_path": "docset/virtual-directory-module/wsus/Remove-WsusDynamicCategory.md",
         "redirect_url": "/powershell/module/updateservices/Remove-WsusDynamicCategory?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Set-WsusClassification.md",
+        "source_path": "docset/virtual-directory-module/wsus/Set-WsusClassification.md",
         "redirect_url": "/powershell/module/updateservices/Set-WsusClassification?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Set-WsusDynamicCategory.md",
+        "source_path": "docset/virtual-directory-module/wsus/Set-WsusDynamicCategory.md",
         "redirect_url": "/powershell/module/updateservices/Set-WsusDynamicCategory?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Set-WsusProduct.md",
+        "source_path": "docset/virtual-directory-module/wsus/Set-WsusProduct.md",
         "redirect_url": "/powershell/module/updateservices/Set-WsusProduct?view=win10-ps",
         "redirect_document_id": true
         },
         {
-        "source_path": "docset/windows/wsus/Set-WsusServerSynchronization.md",
+        "source_path": "docset/virtual-directory-module/wsus/Set-WsusServerSynchronization.md",
         "redirect_url": "/powershell/module/updateservices/Set-WsusServerSynchronization?view=win10-ps",
         "redirect_document_id": true
         }

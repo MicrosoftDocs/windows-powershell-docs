@@ -35,7 +35,7 @@ Otherwise all the application pools are returned.
 ## EXAMPLES
 
 ### Example 1: Get information about specific app pool(s)
-powershell```
+```powershell
 PS C:\> Get-IISAppPool "DefaultAppPool","NewAppPool"
 Name                 Status       CLR Ver  Pipeline Mode  Start Mode
 ----                 ------       -------  -------------  ----------
@@ -46,7 +46,7 @@ NewAppPool           Started      v4.0     Integrated     OnDemand
 This command gets the configuration information for the pools DefaultAppPool and NewAppPool.
 
 ### Example 2: Get information about all application pools
-powershell```
+```powershell
 PS C:\> Get-IISAppPool
 Name                 Status       CLR Ver  Pipeline Mode  Start Mode
 ----                 ------       -------  -------------  ----------

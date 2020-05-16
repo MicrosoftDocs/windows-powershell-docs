@@ -26,19 +26,19 @@ Gets the basic network adapter properties.
 ## SYNTAX
 
 ### ByName (Default)
-```
+```powershell
 Get-NetAdapter [[-Name] <String[]>] [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByInstanceID
-```
+```powershell
 Get-NetAdapter -InterfaceDescription <String[]> [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByIfIndex
-```
+```powershell
 Get-NetAdapter -InterfaceIndex <UInt32[]> [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
@@ -56,67 +56,66 @@ To see more information regarding the miniport, device driver, such as driver da
 ## EXAMPLES
 
 ### Example 1: Get all visible network adapters
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*"
 ```
 
 This command gets all of the visible network adapters.
 
 ### Example 2: Get all visible and hidden network adapters
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" -IncludeHidden
 ```
 
 This command gets all of the network adapters.
 
 ### Example 3: Get all physical network adapters
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" -Physical
 ```
 
 This command gets all of the physical network adapters.
 
 ### Example 4: Get a network adapter by the specified name
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "Ethernet 2"
 
-
-This command is a version that uses wildcard characters.
 PS C:\> Get-NetAdapter -Name "E*2"
 ```
+The first command gets the network adapter named Ethernet 2.
 
-This command gets the network adapter named Ethernet 2.
+The second command is a version that uses wildcard characters.
 
 ### Example 5: Display the common properties for the specified network adapter
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "Ethernet 3" | Format-List -Property "*"
 ```
 
 This command displays the common properties for the network adapter named Ethernet 3 and formats the list using the **Format-List** cmdlet.
 
 ### Example 6: Display all properties for the specified network adapter
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "Ethernet 6" | Format-List -Property "*"
 ```
 
 This command displays all of the properties for the network adapter named Ethernet 6.
 
 ### Example 7: Get all network adapters using the interface description that matches a prefix pattern
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" -InterfaceDescription "VendorAdapter*"
 ```
 
 This command gets all of the network adapters using the interface description that matches the prefix pattern VendorAdapter.
 
 ### Example 8: Display parameter values for all network adapters
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" -IncludeHidden | Format-List -Property "Name", "InterfaceDescription", "InterfaceName"
 ```
 
 This command displays the *Name*, *InterfaceDescription*, and *InterfaceName* parameter values for all network adapters.
 
 ### Example 9: Get the visible network adapters on the specified server
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" -CimSession "Server5"
 ```
 
@@ -124,14 +123,14 @@ This command gets the visible network adapters on the server named Server5.
 The server named Server5 can be a remote computer.
 
 ### Example 10: Get the visible network adapters and format the output
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Driver
 ```
 
 This command gets the visible network adapters and formats the output to present driver information.
 
 ### Example 11: Gets visible network adapters and format the output
-```
+```powershell
 PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Name
 ```
 
@@ -145,8 +144,8 @@ Use this parameter to run commands that take a long time to complete.
  The cmdlet immediately returns an object that represents the job and then displays the command prompt.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
-To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
- For more information about Windows PowerShell® background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+ For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -162,7 +161,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -284,6 +283,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/NetAdapter
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+
+[CIM_NetworkAdapter class](https://docs.microsoft.com/windows/win32/cimwin32prov/cim-networkadapter)
 
 ## NOTES
 

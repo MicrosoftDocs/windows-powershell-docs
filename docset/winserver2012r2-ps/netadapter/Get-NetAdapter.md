@@ -25,19 +25,19 @@ Gets the basic network adapter properties.
 ## SYNTAX
 
 ### ByName (Default)
-```
+```powershell
 Get-NetAdapter [[-Name] <String[]>] [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByInstanceID
-```
+```powershell
 Get-NetAdapter -InterfaceDescription <String[]> [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByIfIndex
-```
+```powershell
 Get-NetAdapter -InterfaceIndex <UInt32[]> [-IncludeHidden] [-Physical] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
@@ -45,105 +45,106 @@ Get-NetAdapter -InterfaceIndex <UInt32[]> [-IncludeHidden] [-Physical] [-CimSess
 ## DESCRIPTION
 The **Get-NetAdapter** cmdlet gets the basic network adapter properties.
 By default only visible adapters are returned.
-To see the common network adapter properties, pipe the output into the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkID=113302 cmdlet.
-To see all the properties, pipe the output to the Format-Listhttp://go.microsoft.com/fwlink/p/?LinkID=113302 with the **Property** parameter specified as any (`*`).
+To see the common network adapter properties, pipe the output into the **Format-List** cmdlet.
+To see all the properties, pipe the output to the **Format-List** cmdlet with the *Property* parameter specified as the wildcard character "*".
 This cmdlet supports multiple views.
 The default view is as a table.
-To see more information regarding various network adapter identifiers use the names view using the Format-Tablehttp://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as name.
-To see more information regarding the miniport (device driver) such as driver date or version use the driver view using the Format-Tablehttp://go.microsoft.com/fwlink/p/?LinkID=113303 cmdlet with the **View** parameter specified as driver.
+To see more information regarding various network adapter identifiers use the **names** view using the **Format-Table** cmdlet with the *View* parameter specified as **name**.
+To see more information regarding the miniport, device driver, such as driver date or version use the **driver** view using the **Format-Table** cmdlet with the *View* parameter specified as **driver**.
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
-PS C:\>Get-NetAdapter -Name *
-```
-
-This example gets all of the visible network adapters.
-
-### EXAMPLE 2
-```
-PS C:\>Get-NetAdapter -Name * -IncludeHidden
+### Example 1: Get all visible network adapters
+```powershell
+PS C:\> Get-NetAdapter -Name "*"
 ```
 
-This example gets all of the network adapters.
+This command gets all of the visible network adapters.
 
-### EXAMPLE 3
-```
-PS C:\>Get-NetAdapter -Name * -Physical
-```
-
-This example gets all of the physical network adapters.
-
-### EXAMPLE 4
-```
-PS C:\>Get-NetAdapter -Name "Ethernet 2"
-
-
-A version of the cmdlet that uses wildcard characters.
-PS C:\>Get-NetAdapter -Name "E*2"
-
-
-A version of the cmdlet that uses position and wildcard characters.
-PS C:\>Get-NetAdapter "E*2"
+### Example 2: Get all visible and hidden network adapters
+```powershell
+PS C:\> Get-NetAdapter -Name "*" -IncludeHidden
 ```
 
-This example gets the network adapter named Ethernet 2.
+This command gets all of the network adapters.
 
-### EXAMPLE 5
-```
-PS C:\>Get-NetAdapter -Name "Ethernet 2" | Format-List -Property *
-```
-
-This example displays the common properties for the network adapter named Ethernet 2.
-
-### EXAMPLE 6
-```
-PS C:\>Get-NetAdapter -Name "Ethernet 2" | Format-List -Property *
+### Example 3: Get all physical network adapters
+```powershell
+PS C:\> Get-NetAdapter -Name "*" -Physical
 ```
 
-This example displays all of the properties for the network adapter named Ethernet 2,
+This command gets all of the physical network adapters.
 
-### EXAMPLE 7
-```
-PS C:\>Get-NetAdapter -Name * -InterfaceDescription "VendorAdapter*"
-```
+### Example 4: Get a network adapter by the specified name
+```powershell
+PS C:\> Get-NetAdapter -Name "Ethernet 2"
 
-This example gets all of network adapters using the interface description that matches the prefix pattern VendorAdapter.
-
-### EXAMPLE 8
+PS C:\> Get-NetAdapter -Name "E*2"
 ```
-PS C:\>Get-NetAdapter -Name * -IncludeHidden | Format-List -Property Name, InterfaceDescription, InterfaceName
-```
+The first command gets the network adapter named Ethernet 2.
 
-This example displays the **Name**, **InterfaceDescription**, and **InterfaceName** parameter values for all network adapters.
+The second command is a version that uses wildcard characters.
 
-### EXAMPLE 9
-```
-PS C:\>Get-NetAdapter -Name * -CimSession Server5
+### Example 5: Display the common properties for the specified network adapter
+```powershell
+PS C:\> Get-NetAdapter -Name "Ethernet 3" | Format-List -Property "*"
 ```
 
-This example gets the visible network adapters on the server named Server5.
-Note: The server named Server5 can be a remote computer.
+This command displays the common properties for the network adapter named Ethernet 3 and formats the list using the **Format-List** cmdlet.
 
-### EXAMPLE 10
-```
-PS C:\>Get-NetAdapter -Name * | Format-Table -View Driver
-```
-
-This example gets the visible network adapters and formats the output to present driver information.
-
-### EXAMPLE 11
-```
-PS C:\>Get-NetAdapter -Name * | Format-Table -View Name
+### Example 6: Display all properties for the specified network adapter
+```powershell
+PS C:\> Get-NetAdapter -Name "Ethernet 6" | Format-List -Property "*"
 ```
 
-This example gets the visible network adapters and formats the output to present various names by which a network adapter can be identified such as the **Name**, **InterfaceDescription**, and **InterfaceIndex** parameter values.
+This command displays all of the properties for the network adapter named Ethernet 6.
+
+### Example 7: Get all network adapters using the interface description that matches a prefix pattern
+```powershell
+PS C:\> Get-NetAdapter -Name "*" -InterfaceDescription "VendorAdapter*"
+```
+
+This command gets all of the network adapters using the interface description that matches the prefix pattern VendorAdapter.
+
+### Example 8: Display parameter values for all network adapters
+```powershell
+PS C:\> Get-NetAdapter -Name "*" -IncludeHidden | Format-List -Property "Name", "InterfaceDescription", "InterfaceName"
+```
+
+This command displays the *Name*, *InterfaceDescription*, and *InterfaceName* parameter values for all network adapters.
+
+### Example 9: Get the visible network adapters on the specified server
+```powershell
+PS C:\> Get-NetAdapter -Name "*" -CimSession "Server5"
+```
+
+This command gets the visible network adapters on the server named Server5.
+The server named Server5 can be a remote computer.
+
+### Example 10: Get the visible network adapters and format the output
+```powershell
+PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Driver
+```
+
+This command gets the visible network adapters and formats the output to present driver information.
+
+### Example 11: Gets visible network adapters and format the output
+```powershell
+PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Name
+```
+
+This command gets the visible network adapters and formats the output to present various names by which a network adapter can be identified such as the *Name*, *InterfaceDescription*, and *InterfaceName* parameter values.
 
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job.
+Use this parameter to run commands that take a long time to complete. 
+ The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+ For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -159,7 +160,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -270,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -282,13 +283,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects.
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
+[CIM_NetworkAdapter class](https://docs.microsoft.com/windows/win32/cimwin32prov/cim-networkadapter)
+
 ## NOTES
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkID=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkID=113303)
 
 [Disable-NetAdapter](./Disable-NetAdapter.md)
 

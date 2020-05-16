@@ -21,7 +21,7 @@ ms.assetid: 00E203F4-D1F7-49CF-AC07-2630E820DC3E
 # Import-DhcpServer
 
 ## SYNOPSIS
-Imports the DHCP server service configuration, and optionally lease data, from a file.
+Imports the Dynamic Host Configuration Protocol (DHCP) server service configuration, and optionally lease data, from a file.
 
 ## SYNTAX
 
@@ -49,15 +49,15 @@ If the file specified contains any scope information, the same information is no
 ## EXAMPLES
 
 ### Example 1: Import configuration data
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\"
 ```
 
 This example imports the configuration data in the specified file onto the DHCP server service that runs on the computer named dhcpserver.contoso.com.
 The file can contain DHCPv4 and DHCPv6 configuration data.
 
-### Example 2 Import configuration and lease data
-```
+### Example 2: Import configuration and lease data
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Leases
 ```
 
@@ -65,7 +65,7 @@ This example imports the configuration and lease data in the specified file onto
 The file can contain DHCPv4 and DHCPv6 configuration data.
 
 ### Example 3: Import configuration data for specified scopes
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0
 ```
 
@@ -74,7 +74,7 @@ If the export file contains scopes besides 10.10.10.0 and 10.20.20.0, those scop
 The DHCPv4 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
 
 ### Example 4: Import configuration and lease data for specified scopes
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName dhcpserver.contoso.com -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0 -Leases
 ```
 
@@ -83,7 +83,7 @@ If the export file contains scopes besides 10.10.10.0 and 10.20.20.0, those scop
 The DHCPv4 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
 
 ### Example 5: Import configuration and lease data for specified scopes with overwrite
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ScopeId 10.10.10.0,10.20.20.0 -Leases -ScopeOverwrite
 ```
 
@@ -93,7 +93,7 @@ The DHCPv4 server level configuration data, if present in the export file, is al
 If the scopes 10.10.10.0 and 10.20.20.0 are already present on the DHCP server service that runs one the computer named dhcpserver.contoso.com, the scopes are deleted and recreated from the data in the export file.
 
 ### Example 6: Import server level configuration data
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -ServerConfigOnly
 ```
 
@@ -101,7 +101,7 @@ This example imports only the server level configuration data in the specified f
 Any scope configuration data, if present in the file, is ignored.
 
 ### Example 7: Import configuration data for specified scopes for DHCPv6
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030::
 ```
 
@@ -110,7 +110,7 @@ If the export file contains scopes besides 2001:4898:7020:1020:: and 2001:4898:7
 The DHCPv6 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
 
 ### Example 8: Import configuration and lease data for specified scopes for DHCPv6
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030:: -Leases
 ```
 
@@ -119,7 +119,7 @@ If the export file contains scopes besides 2001:4898:7020:1020:: and 2001:4898:7
 The DHCPv6 server level configuration data, if present in the export file, is also imported onto the DHCP server service.
 
 ### Example 9: Import configuration and lease data for specified scopes for DHCPv6 with overwrite
-```
+```powershell
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exports\dhcpexport.xml" -BackupPath "C:\dhcpbackup\" -Prefix 2001:4898:7020:1020::,2001:4898:7020:1030:: -Leases -ScopeOverwrite
 ```
 
@@ -129,25 +129,21 @@ The DHCPv6 server level configuration data, if present in the export file, is al
 If the scopes 2001:4898:7020:1020:: and 2001:4898:7020:1030:: are already present on the DHCP server service that runs on the computer named dhcpserver.contoso.com, the scopes are deleted and recreated from the data in the export file.
 
 ### Example 10: Import scopes specified in a file
-```
-The **Import-Csv** cmdlet gets the list of scopes to import and returns it in the variable named $ScopeIdList.
+```powershell
 PS C:\> $ScopeIdList = Import-Csv -Path ".\ScopeList.txt"
 
-
-This cmdlet imports the scopes using the variable named $ScopeIdList as input for the *ScopeId* parameter.
 PS C:\> Import-DhcpServer -ComputerName "dhcpserver.contoso.com" -File "C:\exportdir\dhcpexport.xml" -Leases -ScopeId $ScopeIdList.ScopeId -BackupPath "C:\dhcpbackup\"
 ```
 
-This example imports a list of scopes specified in file named ScopeList.txt to the DHCP server service that runs on the computer named dhcpserver.contoso.com.
+This example imports a list of scopes specified in file named _ScopeList.txt_ to the DHCP server service that runs on the computer named dhcpserver.contoso.com.
 
-The file named ScopeList.txt should contain the following format: 
+The **Import-Csv** cmdlet gets the list of scopes to import and returns it in the variable named _$ScopeIdList_. The second line imports the scopes using the variable named _$ScopeIdList_ as input for the _ScopeId_ parameter.
 
-ScopeID 
+The file named _ScopeList.txt_ should contain the following format: 
 
-10.10.10.0 
-
-10.20.20.0 
-
+ScopeID \
+10.10.10.0 \
+10.20.20.0 \
 10.30.30.0
 
 ## PARAMETERS
@@ -169,7 +165,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -350,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -363,6 +359,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Import-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113341)
 
 [Backup-DhcpServer](./Backup-DhcpServer.md)
 

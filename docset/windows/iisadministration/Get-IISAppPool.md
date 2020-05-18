@@ -35,7 +35,7 @@ Otherwise all the application pools are returned.
 ## EXAMPLES
 
 ### Example 1: Get information about specific app pool(s)
-```
+```powershell
 PS C:\> Get-IISAppPool "DefaultAppPool","NewAppPool"
 Name                 Status       CLR Ver  Pipeline Mode  Start Mode
 ----                 ------       -------  -------------  ----------
@@ -46,7 +46,7 @@ NewAppPool           Started      v4.0     Integrated     OnDemand
 This command gets the configuration information for the pools DefaultAppPool and NewAppPool.
 
 ### Example 2: Get information about all application pools
-```
+```powershell
 PS C:\> Get-IISAppPool
 Name                 Status       CLR Ver  Pipeline Mode  Start Mode
 ----                 ------       -------  -------------  ----------
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,4 +91,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
+
+[Web Administration Cmdlets for Windows PowerShell](../../winserver2012-ps/webadminstration/WebAdministration.md)
 

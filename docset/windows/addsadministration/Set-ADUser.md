@@ -199,7 +199,7 @@ Accept wildcard characters: False
 Specifies values to add to an object property.
 Use this parameter to add one or more values to a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties has null or empty value the cmdlet will fail.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
 `-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -1185,7 +1185,7 @@ Accept wildcard characters: False
 Specifies that the cmdlet remove values of an object property.
 Use this parameter to remove one or more values of a property that cannot be modified using a cmdlet parameter.
 To remove an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties has null or empty value the cmdlet will fail.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
 `-Remove @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -1213,7 +1213,7 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties has null or empty value the cmdlet will fail.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
 `-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -1532,4 +1532,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADUser](./Remove-ADUser.md)
 
 [Set-ADAccountControl](./Set-ADAccountControl.md)
-

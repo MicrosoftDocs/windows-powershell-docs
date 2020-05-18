@@ -48,21 +48,21 @@ To see more information regarding the miniport, device driver, such as driver da
 
 ### Example 1: Get all visible network adapters
 ```powershell
-PS C:\> Get-NetAdapter -Name "*"
+PS C:\> Get-NetAdapter -Name *
 ```
 
 This command gets all of the visible network adapters.
 
 ### Example 2: Get all visible and hidden network adapters
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" -IncludeHidden
+PS C:\> Get-NetAdapter -Name * -IncludeHidden
 ```
 
 This command gets all of the network adapters.
 
 ### Example 3: Get all physical network adapters
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" -Physical
+PS C:\> Get-NetAdapter -Name * -Physical
 ```
 
 This command gets all of the physical network adapters.
@@ -79,35 +79,35 @@ The second command is a version that uses wildcard characters.
 
 ### Example 5: Display the common properties for the specified network adapter
 ```powershell
-PS C:\> Get-NetAdapter -Name "Ethernet 3" | Format-List -Property "*"
+PS C:\> Get-NetAdapter -Name "Ethernet 3" | Format-List -Property *
 ```
 
 This command displays the common properties for the network adapter named Ethernet 3 and formats the list using the **Format-List** cmdlet.
 
 ### Example 6: Display all properties for the specified network adapter
 ```powershell
-PS C:\> Get-NetAdapter -Name "Ethernet 6" | Format-List -Property "*"
+PS C:\> Get-NetAdapter -Name "Ethernet 6" | Format-List -Property *
 ```
 
 This command displays all of the properties for the network adapter named Ethernet 6.
 
 ### Example 7: Get all network adapters using the interface description that matches a prefix pattern
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" -InterfaceDescription "VendorAdapter*"
+PS C:\> Get-NetAdapter -Name * -InterfaceDescription "VendorAdapter*"
 ```
 
 This command gets all of the network adapters using the interface description that matches the prefix pattern VendorAdapter.
 
 ### Example 8: Display parameter values for all network adapters
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" -IncludeHidden | Format-List -Property "Name", "InterfaceDescription", "InterfaceName"
+PS C:\> Get-NetAdapter -Name * -IncludeHidden | Format-List -Property "Name", "InterfaceDescription", "InterfaceName"
 ```
 
 This command displays the *Name*, *InterfaceDescription*, and *InterfaceName* parameter values for all network adapters.
 
 ### Example 9: Get the visible network adapters on the specified server
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" -CimSession "Server5"
+PS C:\> Get-NetAdapter -Name * -CimSession "Server5"
 ```
 
 This command gets the visible network adapters on the server named Server5.
@@ -115,14 +115,14 @@ The server named Server5 can be a remote computer.
 
 ### Example 10: Get the visible network adapters and format the output
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Driver
+PS C:\> Get-NetAdapter -Name * | Format-Table -View Driver
 ```
 
 This command gets the visible network adapters and formats the output to present driver information.
 
 ### Example 11: Gets visible network adapters and format the output
 ```powershell
-PS C:\> Get-NetAdapter -Name "*" | Format-Table -View Name
+PS C:\> Get-NetAdapter -Name * | Format-Table -View Name
 ```
 
 This command gets the visible network adapters and formats the output to present various names by which a network adapter can be identified such as the *Name*, *InterfaceDescription*, and *InterfaceName* parameter values.

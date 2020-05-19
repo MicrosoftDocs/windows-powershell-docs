@@ -36,7 +36,7 @@ Add-KdsRootKey [-LocalTestOnly] [-EffectiveImmediately] [-WhatIf] [-Confirm] [<C
 
 ## DESCRIPTION
 The **Add-KdsRootKey** cmdlet generates a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory (AD).
-The Microsoft Group KdsSvc generates new group keys from the new root key.
+The Microsoft Group KdsSvc generates new group keys from the new root key. It is required to run this only once per forest.
 
 ## EXAMPLES
 

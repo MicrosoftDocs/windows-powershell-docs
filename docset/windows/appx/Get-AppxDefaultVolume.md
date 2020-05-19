@@ -27,7 +27,7 @@ Gets the default appx volume.
 ## SYNTAX
 
 ```
-Get-AppxDefaultVolume [<CommonParameters>]
+Get-AppxDefaultVolume
 ```
 
 ## DESCRIPTION

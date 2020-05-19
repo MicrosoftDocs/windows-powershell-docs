@@ -49,8 +49,11 @@ This command returns a list of properties for the printer specified by the *Prin
 
 ### Example 2: Get printer properties for all installed printers
 ```
-PS C:\>$Printers = Get-Printer
-PS C:\>Foreach ($Printer in $Printers){Get-PrinterProperty -PrinterName $Printer.name}
+PS C:\>$printers = get-printer * 
+foreach ($printer in $printers)
+{ 
+    get-printerproperty -printerName $printer.name 
+}
 ```
 
 This command gets all the printers into a variable $Printers and then loops through all the printers and displays the properties.

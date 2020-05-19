@@ -51,7 +51,7 @@ The table below also shows the latest published version of the Help for each mod
 | DISM | [DISM](/powershell/module/dism) |
 | DNSClient | [DNS client](/powershell/module/dnsclient) |
 | DNSServer | [DNS Server](/powershell/module/dnsserver) |
-| EventTracingManagement | [EventTracManCmdlets](/powershell/module/eventtracmancmdlets) |
+| EventTracingManagement | [EventTracingManagement](/powershell/module/eventtracingmanagement) |
 | FailoverClusters | [Failover clusters](/powershell/module/failoverclusters) |
 | FileServerResourceManager | [File Server Resource Manager](/powershell/module/fileserverresourcemanager) |
 | GroupPolicy | [Group Policy](/powershell/module/grouppolicy) |

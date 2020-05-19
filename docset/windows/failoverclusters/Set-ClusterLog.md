@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Size
 Specifies the log size to set for the cluster.
-The acceptable values for this parameter are:`8` MB to `1024` MB.
+The acceptable values for this parameter are:`8` MB to `2048` MB.
 
 ```yaml
 Type: Int32

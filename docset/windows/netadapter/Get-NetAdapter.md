@@ -81,15 +81,14 @@ This command gets all of the physical network adapters.
 PS C:\> Get-NetAdapter -Name "Ethernet 2"
 ```
 
-### Example 5: Get a network adapter by the specified name
-
 This command gets the network adapter named Ethernet 2.
 
+### Example 5: Get a network adapter by the specified name
 ```powershell
 PS C:\> Get-NetAdapter -Name "E*2"
 ```
 
-This command is a version that gets adapters starting with "E" and ending in "2" using wildcard characters.
+This command gets adapters starting with "E" and ending in "2" using wildcard characters.
 
 ### Example 6: Display the common properties for the specified network adapter
 ```powershell

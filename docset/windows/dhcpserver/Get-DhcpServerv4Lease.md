@@ -66,42 +66,42 @@ If you specify the *BadLeases* parameter without the *ScopeId* parameter, all of
 ## EXAMPLES
 
 ### Example 1: Get all active leases in a scope
-```
+```powershell
 PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0
 ```
 
 This example gets all the active IPv4 address leases from the DHCPv4 scope 10.10.10.0.
 
 ### Example 2: Get leases for specified addresses
-```
+```powershell
 PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -IPAddress 10.10.10.10,10.20.20.20
 ```
 
 This example gets the IP address lease information for the IPv4 addresses 10.10.10.10 and 10.20.20.20.
 
 ### Example 3: Get declined leases
-```
+```powershell
 PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -BadLeases
 ```
 
 This example gets all the bad, or declined, IPv4 address leases from the DHCPv4 scope 10.10.10.0.
 
 ### Example 4: Get leases for specified clients
-```
-PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -CliendId "F0-DE-F1-7A-00-5E", "00-24-D7-C5-25-B0"
+```powershell
+PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -ClientId "F0-DE-F1-7A-00-5E", "00-24-D7-C5-25-B0"
 ```
 
 This example gets the IPv4 address leases from the DHCPv4 scope 10.10.10.0 for the clients identified by the client IDs F0-DE-F1-7A-00-5E and 00-24-D7-C5-25-B0.
 
 ### Example 5: Get all leases in a scope
-```
+```powershell
 PS C:\> Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com" -ScopeId 10.10.10.0 -AllLeases
 ```
 
 This example gets all of the types of IPv4 address leases including Active, Declined, and Expired from the DHCPv4 scope 10.10.10.0.
 
 ### Example 6: Get active leases from all scopes on a computer
-```
+```powershell
 PS C:\> Get-DhcpServerv4Scope -ComputerName "dhcpserver.contoso.com" | Get-DhcpServerv4Lease -ComputerName "dhcpserver.contoso.com"
 ```
 
@@ -132,8 +132,8 @@ Use this parameter to run commands that take a long time to complete.
 The cmdlet immediately returns an object that represents the job and then displays the command prompt.
 You can continue to work in the session while the job completes.
 To manage the job, use the `*-Job` cmdlets.
-To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
-For more information about Windows PowerShell® background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+For more information about Windows PowerShell® background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +149,8 @@ Accept wildcard characters: False
 
 ### -BadLeases
 Indicates that this cmdlet returns only bad leases.
-If an IP address lease is declined by the client because of a conflict with another client, the lease record is marked as bad, or declined, by the DHCP server service. 
+If an IP address lease is declined by the client because of a conflict with another client, the lease record is marked as bad, or declined, by the DHCP server service.
+
 An IP address lease in this state is not offered to any client until expiry of a timer, which is 10 minutes.
 
 ```yaml
@@ -166,7 +167,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -271,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

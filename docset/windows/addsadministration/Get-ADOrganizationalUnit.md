@@ -66,7 +66,7 @@ For more information about the how to determine the properties for computer obje
 ## EXAMPLES
 
 ### Example 1: Get all of the OUs in a domain
-```
+```powershell
 PS C:\> Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
 Name                 DistinguishedName
 ----                 -----------------
@@ -92,7 +92,7 @@ ServiceAccounts      OU=ServiceAccounts,OU=Managed,DC=FABRIKAM,DC=COM
 This command gets all of the OUs in a domain.
 
 ### Example 2: Get an OU by its distinguished name
-```
+```powershell
 PS C:\> Get-ADOrganizationalUnit -Identity 'OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' | Format-Table Name,Country,PostalCode,City,StreetAddress,State -A
 Name        Country PostalCode City     StreetAddress    State
 ----        ------- ---------- ----     -------------    -----
@@ -102,7 +102,7 @@ AsiaPacific AU      4171       Balmoral 45 Martens Place QLD
 This command gets the OU with the distinguished name OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 3: Get child OUs
-```
+```powershell
 PS C:\> Get-ADOrganizationalUnit -LDAPFilter '(name=*)' -SearchBase 'OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' -SearchScope OneLevel | Format-Table Name,Country,PostalCode,City,StreetAddress,State
 Name                    Country                 PostalCode             City                   StreetAddress          State
 ----                    -------                 ----------             ----                   -------------          -----
@@ -255,9 +255,27 @@ Accept wildcard characters: False
 ```
 
 ### -Partition
-The default authentication method is Negotiate.
+Specifies the distinguished name of an Active Directory partition.
+The distinguished name must be one of the naming contexts on the current directory server.
+The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+In many cases, a default value is used for the *Partition* parameter if no value is specified.
+The rules for determining the default value are given below.
+Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
+
+In Active Directory Domain Services environments, a default value for *Partition* is set in the following cases: 
+
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
+
+In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
+
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
+- If none of the previous cases apply, the *Partition* parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -417,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

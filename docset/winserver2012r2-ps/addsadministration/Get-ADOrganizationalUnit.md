@@ -48,24 +48,24 @@ Get-ADOrganizationalUnit [-AuthType <ADAuthType>] [-Credential <PSCredential>] -
 ## DESCRIPTION
 The **Get-ADOrganizationalUnit** cmdlet gets an organizational unit (OU) object or performs a search to get multiple OUs.
 
-The **Identity** parameter specifies the Active Directory OU to get.
+The *Identity* parameter specifies the Active Directory OU to get.
 You can identify an OU by its distinguished name or GUID.
-You can also set the parameter to an OU object variable, such as **$\<localOrganizationalunitObject\>** or pass an OU object through the pipeline to the **Identity** parameter.
+You can also set the parameter to an OU object variable, such as `$<localOrganizationalunitObject>` or pass an OU object through the pipeline to the *Identity* parameter.
 
-To search for and retrieve more than one OU, use the **Filter** or **LDAPFilter** parameters.
-The **Filter** parameter uses the PowerShell Expression Language to write query strings for Active Directory.
-PowerShell Expression Language syntax provides rich type conversion support for value types received by the **Filter** parameter.
-For more information about the **Filter** parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
-If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the **LDAPFilter** parameter.
+To search for and retrieve more than one OU, use the *Filter* or *LDAPFilter* parameters.
+The *Filter* parameter uses the PowerShell Expression Language to write query strings for Active Directory.
+PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
+For more information about the *Filter* parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
+If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
 
 This cmdlet gets a default set of OU object properties.
-To get additional properties, use the **Properties** parameter.
-For more information about the how to determine the properties for computer objects, see the **Properties** parameter description.
+To get additional properties, use the *Properties* parameter.
+For more information about the how to determine the properties for computer objects, see the *Properties* parameter description.
 
 ## EXAMPLES
 
 ### Example 1: Get all of the OUs in a domain
-```
+```powershell
 PS C:\>Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
 Name                 DistinguishedName
 ----                 -----------------
@@ -91,8 +91,8 @@ ServiceAccounts      OU=ServiceAccounts,OU=Managed,DC=FABRIKAM,DC=COM
 This command gets all of the OUs in a domain.
 
 ### Example 2: Get an OU by its distinguished name
-```
-PS C:\>Get-ADOrganizationalUnit -Identity 'OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' | Format-Table Name,Country,PostalCode,City,StreetAddress,State -A
+```powershell
+PS C:\> Get-ADOrganizationalUnit -Identity 'OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' | Format-Table Name,Country,PostalCode,City,StreetAddress,State -A
 Name        Country PostalCode City     StreetAddress    State
 ----        ------- ---------- ----     -------------    -----
 AsiaPacific AU      4171       Balmoral 45 Martens Place QLD
@@ -101,8 +101,8 @@ AsiaPacific AU      4171       Balmoral 45 Martens Place QLD
 This command gets the OU with the distinguished name OU=AsiaPacific,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 3: Get child OUs
-```
-PS C:\>Get-ADOrganizationalUnit -LDAPFilter '(name=*)' -SearchBase 'OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' -SearchScope OneLevel | Format-Table Name,Country,PostalCode,City,StreetAddress,State
+```powershell
+PS C:\> Get-ADOrganizationalUnit -LDAPFilter '(name=*)' -SearchBase 'OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM' -SearchScope OneLevel | Format-Table Name,Country,PostalCode,City,StreetAddress,State
 Name                    Country                 PostalCode             City                   StreetAddress          State
 ----                    -------                 ----------             ----                   -------------          -----
 AsiaPacific             AU                      4171                   Balmoral               45 Martens Place       QLD
@@ -146,8 +146,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -166,9 +166,9 @@ Accept wildcard characters: False
 ### -Filter
 Specifies a query string that retrieves Active Directory objects.
 This string uses the PowerShell Expression Language syntax.
-The PowerShell Expression Language syntax provides rich type-conversion support for value types received by the **Filter** parameter.
+The PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
 The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
-For more information about the **Filter** parameter, type `Get-Help about_ActiveDirectory_Filter`.
+For more information about the *Filter* parameter, type `Get-Help about_ActiveDirectory_Filter`.
 
 Syntax:
 
@@ -192,9 +192,9 @@ The following syntax uses Backus-Naur form to show how to use the PowerShell Exp
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: PowerShell wildcards other than *, such as ?, are not supported by the **Filter** syntax.
+Note: PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
 
-Note: To query using LDAP query strings, use the **LDAPFilter** parameter.
+Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 
 ```yaml
 Type: String
@@ -238,8 +238,8 @@ Accept wildcard characters: False
 ### -LDAPFilter
 Specifies an LDAP query string that is used to filter Active Directory objects.
 You can use this parameter to run your existing LDAP queries.
-The **Filter** parameter syntax supports the same functionality as the LDAP syntax.
-For more information, see the **Filter** parameter description or type `Get-Help about_ActiveDirectory_Filter`.
+The *Filter* parameter syntax supports the same functionality as the LDAP syntax.
+For more information, see the *Filter* parameter description or type `Get-Help about_ActiveDirectory_Filter`.
 
 ```yaml
 Type: String
@@ -256,25 +256,25 @@ Accept wildcard characters: False
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the **Identity** parameter.
+The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-In many cases, a default value is used for the **Partition** parameter if no value is specified.
+In many cases, a default value is used for the *Partition* parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for **Partition** is set in the following cases: 
+In Active Directory Domain Services environments, a default value for *Partition* is set in the following cases: 
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If none of the previous cases apply, the default value of **Partition** is set to the default partition or naming context of the target domain.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
-In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for **Partition** is set in the following cases:
+In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If the target AD LDS instance has a default naming context, the default value of **Partition** is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the **Partition** parameter does not take any default value.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
+- If none of the previous cases apply, the *Partition* parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -298,7 +298,7 @@ To display all of the attributes that are set on the object, specify * (asterisk
 To specify an individual extended property, use the name of the property.
 For properties that are not default or extended properties, you must specify the LDAP display name of the attribute.
 
-To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the Get-Memberhttp://go.microsoft.com/fwlink/?LinkID=113322 cmdlet.
+To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the **Get-Member** cmdlet.
 
 ```yaml
 Type: String[]
@@ -358,8 +358,8 @@ When you run a cmdlet outside of an Active Directory provider drive against an A
 When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target AD LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
 
-When the value of the **SearchBase** parameter is set to an empty string and you are connected to a global catalog (GC) port, all partitions are searched.
-If the value of the **SearchBase** parameter is set to an empty string and you are not connected to a GC port, an error is thrown.
+When the value of the *SearchBase* parameter is set to an empty string and you are connected to a global catalog (GC) port, all partitions are searched.
+If the value of the *SearchBase*  parameter is set to an empty string and you are not connected to a GC port, an error is thrown.
 
 ```yaml
 Type: String
@@ -404,7 +404,7 @@ The service may be any of the following: AD LDS, AD DS, or Active Directory snap
 
 Specify the AD DS instance in one of the following ways:  
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
@@ -417,7 +417,7 @@ Directory server values:
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
+- By using the *Server* value from objects passed through the pipeline
 - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
@@ -434,12 +434,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)..
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADOrganizationalUnit
-An OU object is received by the **Identity** parameter.
+An OU object is received by the *Identity* parameter.
 
 ## OUTPUTS
 
@@ -447,7 +447,7 @@ An OU object is received by the **Identity** parameter.
 Returns one or more OU objects.
 
 This cmdlet returns a default set of **ADOrganizational** property values.
-To retrieve additional **ADOrganizational** properties, use the **Properties** parameter.
+To retrieve additional **ADOrganizational** properties, use the *Properties* parameter.
 
 To view the properties for an **ADOrganizational** object, see the following examples.
 To run these examples, replace \<organizational unit\> with an OU identifier such as the distinguished name of an OU.

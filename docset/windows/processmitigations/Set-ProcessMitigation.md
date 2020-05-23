@@ -54,6 +54,46 @@ PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
 
 Applies all settings inside settings.xml
 
+### Example 3
+
+Following Example Applies DEP at system level
+
+```
+PS C:\> Set-Processmitigation -System -Enable DEP
+```
+
+To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
+
+If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the following example:
+
+```PowerShell
+PS C:\> Set-Processmitigation -system -Remove -Disable DEP
+```
+
+### Example 4
+
+To Enable SEHOP Compenent at the system level
+
+```
+PS C:\> Set-ProcessMitigation system -enable SEHOP
+```
+
+### Example 5
+
+To Disable SEHOP Compenent at the system level
+
+```
+PS C:\> Set-ProcessMitigation system -disable SEHOP
+```
+
+### Example 6
+
+To reset MItigtaion at system level 
+
+```
+PS C:\> Set-ProcessMitigation -System -reset
+```
+
 ## PARAMETERS
 
 ### -Disable
@@ -146,6 +186,19 @@ Type: SwitchParameter
 Parameter Sets: ProcessPolicy
 Aliases: 
 
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -Remove
+Removes a mitigation entry from the registry.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
 Required: False
 Position: Named
 Default value: False

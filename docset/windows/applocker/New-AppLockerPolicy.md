@@ -71,7 +71,7 @@ The policy contains only path rules, the rules are applied to the Everyone group
 
 ### Example 3: Create an AppLocker policy from audited events
 ```
-C:\PS>Get-AppLockerFileInformation -EventLog -LogPath "Microsoft-Windows-AppLocker/EXE and DLL" -EventType Audited | New-AppLockerPolicy -RuleType Publisher,Hash -User domain\FinanceGroup -IgnoreMissingFileInformation | Set-AppLockerPolicy -LDAP "LDAP://DC13.TailspinToys.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=WingTipToys,DC=com"
+C:\PS>Get-AppLockerFileInformation -EventLog -LogPath "Microsoft-Windows-AppLocker/EXE and DLL" -EventType Audited |where {$_.path -like '*.exe'}| New-AppLockerPolicy -RuleType Publisher,Hash -User domain\FinanceGroup -IgnoreMissingFileInformation | Set-AppLockerPolicy -LDAP "LDAP://DC13.TailspinToys.com/CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=WingTipToys,DC=com"
 ```
 
 This example creates a new AppLocker policy from the audited events in the local Microsoft-Windows-AppLocker/EXE and DLL event log.
@@ -81,6 +81,8 @@ If only path information is available for a file, then the file is skipped becau
 If the *IgnoreMissingFileInformation* parameter is not specified when file information is missing, then the cmdlet exits because it cannot create the specified rule type.
 After the new AppLocker policy is created, the AppLocker policy of the specified Group Policy Object (GPO) is set.
 The existing AppLocker policy in the specified GPO will be overwritten.
+If *where {$_.path -like '*.exe'}* is not specified it could cause the workstations to enable rule enforcement on DLL files and cause the workstation to not trust Windows DLL files
+
 
 ## PARAMETERS
 

@@ -182,7 +182,7 @@ Specifies an array of one or more trigger objects that cause a scheduled task to
 A trigger is a set of criteria that starts a scheduled task when the criteria are met.
 You can use a time-based trigger or an event-based trigger to start a task, and one or more triggers can start a task.
 A task can have up to 48 triggers.
-For more information about triggers, see [Triggers](https://technet.microsoft.com/en-us/library/cc748841.aspx).
+For more information about triggers, see [Triggers](https://technet.microsoft.com/library/cc748841.aspx).
 
 ```yaml
 Type: CimInstance[]
@@ -232,4 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-ScheduledTaskSettingsSet](./New-ScheduledTaskSettingsSet.md)
 
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
-

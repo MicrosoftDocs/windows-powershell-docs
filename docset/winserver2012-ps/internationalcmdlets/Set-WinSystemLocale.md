@@ -12,24 +12,28 @@ author: andreabarr
 # Set-WinSystemLocale
 
 ## SYNOPSIS
+
 Sets the system locale (the language for non-Unicode programs) for the current computer.
 
 ## SYNTAX
 
-```
+```powershell
 Set-WinSystemLocale [-SystemLocale] <CultureInfo> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The **Set-WinSystemLocale** cmdlet sets the code pages (ANSI, DOS, and Macintosh) that the system uses by default.
 If you change the system-locale setting, the necessary bitmap font files are installed to support legacy applications in the selected language.
+
 Note that because this is a system setting, this can only be changed by a user with Administrator permissions, and changes do not take effect until the computer is restarted.
 
 ## EXAMPLES
 
 ### Example 1: Set the system locale
-```
-PS C:\>Set-WinSystemLocale -SystemLocale ja-JP
+
+```powershell
+Set-WinSystemLocale -SystemLocale ja-JP
 ```
 
 This command sets the system locale to Japanese (Japan).
@@ -37,6 +41,7 @@ This command sets the system locale to Japanese (Japan).
 ## PARAMETERS
 
 ### -SystemLocale
+
 Specifies the system locale.
 
 ```yaml
@@ -52,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### CultureInfo
+
 An object that contains a BCP-47 tag to specify the system locale for the current computer.
-For more information about the CultureInfo object, see CultureInfo Classhttp://go.microsoft.com/fwlink/?LinkID=242306.
+For more information about the CultureInfo object, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306).
 
 ## OUTPUTS
 

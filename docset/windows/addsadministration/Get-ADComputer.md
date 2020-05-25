@@ -26,20 +26,20 @@ Gets one or more Active Directory computers.
 ## SYNTAX
 
 ### Filter (Default)
-```
+```powershell
 Get-ADComputer [-AuthType <ADAuthType>] [-Credential <PSCredential>] -Filter <String> [-Properties <String[]>]
  [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>] [-SearchScope <ADSearchScope>]
  [-Server <String>] [<CommonParameters>]
 ```
 
 ### Identity
-```
+```powershell
 Get-ADComputer [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADComputer>
  [-Partition <String>] [-Properties <String[]>] [-Server <String>] [<CommonParameters>]
 ```
 
 ### LdapFilter
-```
+```powershell
 Get-ADComputer [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <String>
  [-Properties <String[]>] [-ResultPageSize <Int32>] [-ResultSetSize <Int32>] [-SearchBase <String>]
  [-SearchScope <ADSearchScope>] [-Server <String>] [<CommonParameters>]
@@ -65,7 +65,7 @@ For more information about the how to determine the properties for computer obje
 ## EXAMPLES
 
 ### Example 1: Get specific computer that shows all properties
-```
+```powershell
 PS C:\> Get-ADComputer -Identity "User01-SRV1" -Properties *
 
 
@@ -150,7 +150,7 @@ whenCreated                        : 3/16/2009 4:15:00 PM
 This command gets a specific computer showing all the properties.
 
 ### Example 2: Get all computers with a name starting with a particular string
-```
+```powershell
 PS C:\> Get-ADComputer -Filter 'Name -like "User01*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
 name        dnshostname            ipv4address
 ----        -----------            -----------
@@ -161,7 +161,7 @@ User01-SRV2 User01-SRV2.User01.com 10.194.100.3
 This command gets all the computers with a name starting with a particular string and shows the name, dns hostname, and IPv4 address.
 
 ### Example 3: Gets all computers that have changed their password in specific time frame
-```
+```powershell
 PS C:\> $Date = [DateTime]::Today.AddDays(-90) 
 PS C:\> Get-ADComputer -Filter 'PasswordLastSet -ge $Date' -Properties PasswordLastSet | FT Name,PasswordLastSet
 Name                                                      PasswordLastSet
@@ -173,7 +173,7 @@ USER01-SRV5                                               3/12/2009 7:05:45 PM
 This command gets all the computers that have changed their password in the last 90 days.
 
 ### Example 4: Get computer accounts in a specific location using an LDAPFilter
-```
+```powershell
 PS C:\> Get-ADComputer -LDAPFilter "(name=*laptop*)" -SearchBase "CN=Computers,DC= User01,DC=com"
 name
 ----
@@ -184,14 +184,14 @@ davidche-laptop
 This command gets the computer accounts in the location CN=Computers,DC=User01,DC=com that are listed as laptops by using an *LDAPFilter*.
 
 ### Example 5: Get all computer accounts using a filter
-```
+```powershell
 PS C:\> Get-ADComputer -Filter *
 ```
 
 This command gets all computer accounts.
 
 ### Example 6: Get all computers with a name starting with Computer01 or Computer02
-```
+```powershell
 PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -or Name -like "Computer02*"' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
 name        dnshostname            ipv4address
 ----        -----------            -----------
@@ -200,7 +200,7 @@ Computer02-SRV2 Computer02-SRV2.Computer02.com 10.194.100.3
 ```
 
 ### Example 7: Get all computers with a name starting with a string AND password last set before 30 days
-```
+```powershell
 PS C:\> $Date = [DateTime]::Today.AddDays(-30)
 PS C:\> Get-ADComputer -Filter 'Name -like "Computer01*" -and PasswordLastSet -ge $Date' -Properties IPv4Address | FT Name,DNSHostName,IPv4Address -A
 name        dnshostname            ipv4address
@@ -535,7 +535,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -54,7 +54,7 @@ You can also set the parameter to a computer object variable, such as `$<localCo
 To search for and retrieve more than one computer, use the *Filter* or *LDAPFilter* parameters.
 The *Filter* parameter uses the PowerShell Expression Language to write query strings for Active Directory.
 PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
-For more information about the *Filter* parameter syntax, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10).
+For more information about the *Filter* parameter syntax, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
 If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
 
 This cmdlet retrieves a default set of computer object properties.
@@ -245,7 +245,7 @@ Specifies a query string that retrieves Active Directory objects.
 This string uses the Windows PowerShell Expression Language syntax.
 The Windows PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
 The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
-For more information about the *Filter* parameter, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10).
+For more information about the *Filter* parameter, type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
 
 Syntax:
 
@@ -269,7 +269,7 @@ The following syntax uses Backus-Naur form to show how to use the Windows PowerS
 
 For a list of supported types for \<value\>, type `Get-Help about_ActiveDirectory_ObjectModel`.
 
-Note: Windows PowerShell wildcards other than *, such as ?, are not supported by the *Filter* syntax.
+Note: Windows PowerShell wildcards other than \*, such as ?, are not supported by the *Filter* syntax.
 
 Note: To query using LDAP query strings, use the *LDAPFilter* parameter.
 
@@ -317,7 +317,7 @@ Accept wildcard characters: False
 Specifies an LDAP query string that is used to filter Active Directory objects.
 You can use this parameter to run your existing LDAP queries.
 The *Filter* parameter syntax supports the same functionality as the LDAP syntax.
-For more information, see the *Filter* parameter description or type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10).
+For more information, see the *Filter* parameter description or type `Get-Help` [about_ActiveDirectory_Filter](https://docs.microsoft.com/previous-versions/windows/server/hh531527(v=ws.10)).
 
 ```yaml
 Type: String

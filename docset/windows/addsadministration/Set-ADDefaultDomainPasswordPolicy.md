@@ -40,12 +40,12 @@ You can modify property values by using the cmdlet parameters.
 The *Identity* parameter specifies the domain whose default password policy you want modify.
 You can identify a domain by its distinguished name, GUID, Security Identifier (SID), DNS domain name, or NETBIOS name.
 You can also set the parameter to an **ADDomain**  object variable, or pass an **ADDomain** object through the pipeline to the *Identity* parameter.
-For example, you can use the Get-ADDomain cmdlet to retrieve a domain object and then pass the object through the pipeline to the **Set-ADDefaultDomainPasswordPolicy** cmdlet.
+For example, you can use the **Get-ADDomain** cmdlet to retrieve a domain object and then pass the object through the pipeline to the **Set-ADDefaultDomainPasswordPolicy** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Set the default password policy for a specified domain
-```
+```powershell
 PS C:\> Set-ADDefaultDomainPasswordPolicy -Identity fabrikam.com -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $True -ReversibleEncryptionEnabled $False -MaxPasswordAge 10.00:00:00
 ```
 
@@ -53,7 +53,7 @@ This command sets the default domain password policy for a domain specified by u
 Note: setting **MaxPwdAge** to 0 will convert it to never, which is Int64.MinValue or -9223372036854775808 in the directory.
 
 ### Example 2: Set the default domain policy for the current logged on user domain
-```
+```powershell
 PS C:\> Get-ADDefaultDomainPasswordPolicy -Current LoggedOnUser | Set-ADDefaultDomainPasswordPolicy -LockoutDuration 00:40:00 -LockoutObservationWindow 00:20:00 -ComplexityEnabled $true -ReversibleEncryptionEnabled $false -MinPasswordLength 12
 ```
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 Specifies the length of time that an account is locked after the number of failed login attempts exceeds the lockout threshold.
 You cannot login to an account that is locked until the lockout duration time period has expired.
 This parameter sets the **lockoutDuration** property of a password policy object.
-The LDAP display name (**ldapDisplayName**) of this property is msDS-LockoutDuration.
+The LDAP display name (**ldapDisplayName**) of this property is lockoutDuration.
 
 The lockout duration must be greater than or equal to the lockout observation time for a password policy.
 Use the *LockOutObservationWindow* parameter to set the lockout observation time.
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 Specifies the maximum time interval between two unsuccessful login attempts before the number of unsuccessful login attempts is reset to 0.
 An account is locked when the number of unsuccessful login attempts exceeds the password policy lockout threshold.
 This parameter sets the **lockoutObservationWindow** property of a password policy object.
-The LDAP display name (**ldapDisplayName**) of this property is msDS-lockoutObservationWindow.
+The LDAP display name (**ldapDisplayName**) of this property is lockoutObservationWindow.
 
 The lockout observation window must be smaller than or equal to the lockout duration for a password policy.
 Use the *LockoutDuration* parameter to set the lockout duration time.
@@ -470,7 +470,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

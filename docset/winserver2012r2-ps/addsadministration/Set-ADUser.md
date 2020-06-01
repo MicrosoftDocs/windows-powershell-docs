@@ -79,14 +79,14 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 ## EXAMPLES
 
 ### Example 1: Set properties for a user
-```
+```powershell
 PS C:\>Set-ADUser -Identity ChewDavid -HomePage 'http://fabrikam.com/employees/ChewDavid' -LogonWorkstations 'ChewDavid-DSKTOP,ChewDavid-LPTOP'
 ```
 
 This command sets the specified user's **homepage** property to http://fabrikam.com/employees/ChewDavid and the **LogonWorkstations** property to ChewDavid-DSKTOP,ChewDavid-LPTOP.
 
 ### Example 2: Set properties for multiple users
-```
+```powershell
 PS C:\>Get-ADUser -Filter 'Name -like "*"' -SearchBase 'OU=HumanResources,OU=UserAccounts,DC=FABRIKAM,DC=COM' -Properties DisplayName | % {Set-ADUser $_ -DisplayName ($_.Surname + ' ' + $_.GivenName)}
 ```
 
@@ -94,21 +94,21 @@ This command gets all the users in the directory that are located in the OU=Huma
 The command sets the **DisplayName** property on these user objects to the concatenation of the **Surname** property and the **GivenName** property.
 
 ### Example 3: Set properties
-```
+```powershell
 PS C:\>Set-ADUser -Identity GlenJohn -Replace @{title="director";mail="glenjohn@fabrikam.com"}
 ```
 
 This command sets the specified user's **title** property to director and the **mail** property to glenjohn@fabrikam.com.
 
 ### Example 4:
-```
+```powershell
 PS C:\>Set-ADUser -Identity GlenJohn -Remove @{otherMailbox="glen.john"} -Add @{url="fabrikam.com"} -Replace @{title="manager"} -Clear description
 ```
 
 This command modifies the user with the SAM account name GlenJohn's object by removing glen.john from the **otherMailbox** property, adding fabrikam.com to the **url** property, replacing the **title** property with manager, and clearing the **description** property.
 
 ### Example 5: Set user properties to a local instance
-```
+```powershell
 PS C:\>$User = Get-ADUser -Identity GlenJohn -Properties mail,department
 PS C:\> $User.mail = "glen@fabrikam.com"
 PS C:\> $User.department = "Accounting"
@@ -118,7 +118,7 @@ PS C:\> Set-ADUser -Instance $User
 This example sets the **mail** and **department** properties on the user object with the SAM account name GlenJohn by using the **Instance** parameter.
 
 ### Example 6: Set attributes for a user
-```
+```powershell
 PS C:\>$Hours = New-Object byte[] 21
 PS C:\> $Hours[5] = 255; $Hours[8] = 255; $Hours[11] = 255; $Hours[14] = 255; $Hours[17] = 255;
 PS C:\> $Hours[6] = 1; $Hours[9] = 1; $Hours[12] = 1; $Hours[15] = 1; $Hours[18] = 1;
@@ -132,7 +132,7 @@ This example sets the user logon hours to Monday through Friday from 8:00 AM to 
 It updates the **logonHours** attribute with the specified byte array and the **description** attribute with the specified string.
 
 ### Example 7: Set a property for a user
-```
+```powershell
 PS C:\>$Manager = Get-ADUser -Identity GlenJohn -Server Corp-DC01 
 PS C:\> Set-ADUser -Identity ChewDavid -Manager $Manager -Server Branch-DC02
 ```
@@ -140,7 +140,7 @@ PS C:\> Set-ADUser -Identity ChewDavid -Manager $Manager -Server Branch-DC02
 This example sets the **Manager** property for the user with the SAM account name of ChewDavid where the manager, GlenJohn, is a user in another domain.
 
 ### Example 8: Get a user and set a property
-```
+```powershell
 PS C:\>Get-ADUser -Identity "DavidChew" | Set-ADUser -Manager "ElisaDaugherty"
 ```
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 Specifies values to add to an object property.
 Use this parameter to add one or more values to a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon.
+You can specify multiple values to a property by specifying a comma-separated list of values and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
 `-Add @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -525,11 +525,11 @@ Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the Get-Credential  cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
@@ -1037,25 +1037,25 @@ Accept wildcard characters: False
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the **Identity** parameter.
+The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-In many cases, a default value is used for the **Partition** parameter if no value is specified.
+In many cases, a default value is used for the *Partition* parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and when a default value can be determined, no further rules are evaluated.
 
-In AD DS environments, a default value for **Partition** are set in the following cases: 
+In AD DS environments, a default value for *Partition* are set in the following cases: 
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If none of the previous cases apply, the default value of **Partition** is set to the default partition or naming context of the target domain.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for **Partition** will be set in the following cases:
+In AD LDS environments, a default value for *Partition* will be set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
-- If the target AD LDS instance has a default naming context, the default value of **Partition** is set to the default naming context.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the **Partition** parameter does not take any default value.
+- If none of the previous cases apply, the *Partition* parameter does not take any default value.
 
 ```yaml
 Type: String
@@ -1184,12 +1184,12 @@ Accept wildcard characters: False
 Specifies that the cmdlet remove values of an object property.
 Use this parameter to remove one or more values of a property that cannot be modified using a cmdlet parameter.
 To remove an object property, you must use the LDAP display name.
-You can remove more than one property by specifying a semicolon-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
-`-Remove @{Attribute1LDAPDisplayName=value\[\];   Attribute2LDAPDisplayName=value\[\]}`
+`-Remove @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the parameters are applied in the following sequence:
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the parameters are applied in the following sequence:
 
 - **Remove**
 - **Add**
@@ -1212,7 +1212,7 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon. If any of the properties have a null or empty value the cmdlet will return an error.
 The format for this parameter is:
 
 `-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
@@ -1281,7 +1281,7 @@ The service may be any of the following: AD LDS, AD DS, or Active Directory snap
 
 Specify the AD DS instance in one of the following ways:  
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
@@ -1294,7 +1294,7 @@ Directory server values:
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
+- By using the *Server* value from objects passed through the pipeline
 - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
@@ -1311,10 +1311,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServicePrincipalNames
-Specifies the service principal names for the account.
-This parameter sets the **ServicePrincipalNames** property of the account.
-The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace, or clear service principal name values:
+Specifies the service principal names for the account. This parameter sets the ServicePrincipalNames property of the account. The LDAP display name (ldapDisplayName) for this property is servicePrincipalName. This parameter uses the following syntax to add, remove, replace, or clear service principal name values.
+
+Syntax:
 
 To add values:
 
@@ -1330,18 +1329,21 @@ To replace values:
 
 To clear all values:
 
-`-ServicePrincipalNames $Null`
+`-ServicePrincipalNames $null`
 
-You can specify more than one change by using a list separated by semicolons.
-For example, use the following syntax to add and remove service principal names.
+You can specify more than one change by using a list separated by semicolons. For example, use the following syntax to add and remove service principal names.
 
 `@{Add=value1,value2,...};@{Remove=value3,value4,...}`
 
-The operators are applied in the following sequence: 
+The operators will be applied in the following sequence:
 
-- Remove 
+- Remove
 - Add
 - Replace
+
+The following example shows how to add and remove service principal names.
+
+`-ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}`
 
 ```yaml
 Type: Hashtable
@@ -1467,7 +1469,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-Specifies a user principal name (UPN) in the format \<user\>@\<DNS-domain-name\>.
+Specifies a user principal name (UPN) in the format `<user>@<DNS-domain-name>`.
 A UPN is a friendly name assigned by an administrator that is shorter than the LDAP distinguished name used by the system and easier to remember.
 The UPN is independent of the user object's distinguished name, so a user object can be moved or renamed without affecting the user logon name.
 When logging on using a UPN, users don't have to choose a domain from a list on the logon dialog box.
@@ -1529,4 +1531,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADUser](./Remove-ADUser.md)
 
 [Set-ADAccountControl](./Set-ADAccountControl.md)
-

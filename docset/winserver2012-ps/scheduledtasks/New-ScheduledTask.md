@@ -37,15 +37,15 @@ PS C:\> $A = New-ScheduledTaskAction -Execute "Taskmgr.exe" PS C:\>$T = New-Sche
 
 In this example, the set of commands uses several cmdlets and variables to define and then register a scheduled task.
 
-The first command uses the **New-ScheduledTaskAction** cmdlet to assign the variable $A to the executable file tskmgr.exe.
+The first command uses the **New-ScheduledTaskAction** cmdlet to assign the executable file tskmgr.exe to the variable $A.
 
-The second command uses the **New-ScheduledTaskTrigger** cmdlet to assign the variable $T to the value AtLogon.
+The second command uses the **New-ScheduledTaskTrigger** cmdlet to assign the value AtLogon to the variable $T.
 
-The third command assigns the variable $P to the principal of the scheduled task, Contoso\Administrator.
+The third command assigns the principal of the scheduled task `Contoso\Administrator` to the variable $P.
 
-The fourth command uses the **New-ScheduledTaskSettingsSet** cmdlet to assign the variable $S to a task settings object.
+The fourth command uses the **New-ScheduledTaskSettingsSet** cmdlet to assign a task settings object to the variable $S.
 
-The fifth command creates a new task and assigns the variable $D to the task definition.
+The fifth command creates a new task and assigns the task definition to the variable $D.
 
 The sixth command (hypothetically) runs at a later time.
 It registers the new scheduled task and defines it by using the $D variable.
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -164,12 +164,13 @@ Accept wildcard characters: False
 ```
 
 ### -Trigger
+### -Trigger
 Specifies an array of one or more trigger objects that cause a scheduled task to start.
 
 A trigger is a set of criteria that starts a scheduled task when the criteria are met.
 You can use a time-based trigger or an event-based trigger to start a task, and one or more triggers can start a task.
 A task can have up to 48 triggers.
-For more information about triggers, see Triggershttp://technet.microsoft.com/en-us/library/cc748841.aspx.
+For more information about triggers, see [Triggers](https://technet.microsoft.com/library/cc748841.aspx).
 
 ```yaml
 Type: CimInstance[]
@@ -216,4 +217,3 @@ Accept wildcard characters: False
 [New-ScheduledTaskSettingsSet](./New-ScheduledTaskSettingsSet.md)
 
 [New-ScheduledTaskTrigger](./New-ScheduledTaskTrigger.md)
-

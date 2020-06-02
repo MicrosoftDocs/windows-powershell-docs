@@ -310,7 +310,7 @@ To clear all values:
 You can specify more than one operation by using a list separated by semicolons.
 For example, use the following syntax to add and remove Certificate values
 
--Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}
+-Certificates @{Add=value1,value2,...;Remove=value3,value4,...}
 
 The operators will be applied in the following sequence:
 

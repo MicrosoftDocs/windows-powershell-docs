@@ -42,7 +42,7 @@ Can also apply an XML file to apply settings for many processes at once.
 
 ### Example 1
 ```
-PS C:\>  set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
+PS C:\>  Set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
 ```
 
 Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables ForceRelocateImages.
@@ -56,43 +56,40 @@ Applies all settings inside settings.xml
 
 ### Example 3
 
-Following Example Applies DEP at system level
-
 ```
-PS C:\> Set-Processmitigation -System -Enable DEP
+PS C:\> Set-ProcessMitigation -System -Enable DEP
 ```
 
-To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
+Applies DEP at system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
 
 If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the following example:
 
 ```PowerShell
-PS C:\> Set-Processmitigation -system -Remove -Disable DEP
+PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
 ```
 
 ### Example 4
 
-To Enable SEHOP Compenent at the system level
+```
+PS C:\> Set-ProcessMitigation -System -Enable SEHOP
+```
 
-```
-PS C:\> Set-ProcessMitigation system -enable SEHOP
-```
+Enable SEHOP Compenent at the system level
 
 ### Example 5
 
-To Disable SEHOP Compenent at the system level
+```
+PS C:\> Set-ProcessMitigation -System -Disable SEHOP
+```
 
-```
-PS C:\> Set-ProcessMitigation system -disable SEHOP
-```
+Disable SEHOP Compenent at the system level
 
 ### Example 6
 
-To reset MItigtaion at system level 
-
 ```
-PS C:\> Set-ProcessMitigation -System -reset
+PS C:\> Set-ProcessMitigation -System -Reset
 ```
+Reset Mitigtaion at system level 
 
 ## PARAMETERS
 

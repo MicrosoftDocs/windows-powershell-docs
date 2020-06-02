@@ -67,7 +67,7 @@ Name                          ScopeName                     Path                
 VMS1                          Contoso-FS                    I:\VMS
 ```
 
-This command retrieves information about the SMB share named 'VMS1' on the local computer
+This command retrieves information about the SMB share named 'VMS1' on the local computer.
 
 ### Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list
 ```

@@ -74,7 +74,7 @@ PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
 PS C:\> Set-ProcessMitigation -System -Enable SEHOP
 ```
 
-Enable SEHOP Compenent at the system level
+Enable SEHOP Component at the system level
 
 ### Example 5
 

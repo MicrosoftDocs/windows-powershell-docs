@@ -82,7 +82,7 @@ Enable SEHOP Component at the system level
 PS C:\> Set-ProcessMitigation -System -Disable SEHOP
 ```
 
-Disable SEHOP Compenent at the system level
+Disable SEHOP Component at the system level
 
 ### Example 6
 

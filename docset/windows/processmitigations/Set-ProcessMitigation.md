@@ -89,7 +89,7 @@ Disable SEHOP Compenent at the system level
 ```
 PS C:\> Set-ProcessMitigation -System -Reset
 ```
-Reset Mitigtaion at system level 
+Reset Mitigation at system level 
 
 ## PARAMETERS
 

@@ -69,7 +69,7 @@ VMS5                          *                             D:\VMS
 
 This command retrieves the SMB shares on the computer.
 
-### Example 2: Get a specific SMB share on a the local computer
+### Example 2: Get a specific SMB share on the local computer
 ```
 PS C:\>Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description 
@@ -439,4 +439,3 @@ The **MSFT_SmbShare** object represents the SMB shares on the computer.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

@@ -33,7 +33,7 @@ Note that because this is a system setting, this can only be changed by a user w
 ### Example 1: Set the system locale
 
 ```powershell
-Set-WinSystemLocale -SystemLocale ja-JP
+PS C:\> Set-WinSystemLocale -SystemLocale ja-JP
 ```
 
 This command sets the system locale to Japanese (Japan).
@@ -58,14 +58,14 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### CultureInfo
 
 An object that contains a BCP-47 tag to specify the system locale for the current computer.
-For more information about the CultureInfo object, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306).
+For more information about the CultureInfo object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
 
 ## OUTPUTS
 

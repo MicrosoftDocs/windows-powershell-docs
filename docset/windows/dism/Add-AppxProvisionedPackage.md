@@ -274,7 +274,7 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 ### -StubPackageOption
-Specifies the stub preference of the package. If no stub package option is specified than the provisioned package version is set to the predefined stub preferences. 
+Specifies the stub preference of the package. If no stub package option is specified then the provisioned package version is set to the predefined stub preferences. 
 
 ```yaml
 Type: StubPackageOption
@@ -348,4 +348,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AppxProvisionedPackage](./Remove-AppxProvisionedPackage.md)
 
 [Set-AppXProvisionedDataFile](./Set-AppXProvisionedDataFile.md)
-

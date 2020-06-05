@@ -55,20 +55,21 @@ PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
 Applies all settings inside settings.xml
 
 ### Example 3
-
 ```
 PS C:\> Set-ProcessMitigation -System -Enable DEP
 ```
 
 Applies DEP at the system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
 
-If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the following example:
+### Exmaple 4
 
 ```
 PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
 ```
 
-### Example 4
+If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the above  example:
+
+### Example 5
 
 ```
 PS C:\> Set-ProcessMitigation -System -Enable SEHOP
@@ -76,7 +77,7 @@ PS C:\> Set-ProcessMitigation -System -Enable SEHOP
 
 Enable SEHOP Component at the system level.
 
-### Example 5
+### Example 6
 
 ```
 PS C:\> Set-ProcessMitigation -System -Disable SEHOP
@@ -84,11 +85,12 @@ PS C:\> Set-ProcessMitigation -System -Disable SEHOP
 
 Disable SEHOP Component at the system level.
 
-### Example 6
+### Example 7
 
 ```
 PS C:\> Set-ProcessMitigation -System -Reset
 ```
+
 Reset Mitigation at the system level.
 
 ## PARAMETERS

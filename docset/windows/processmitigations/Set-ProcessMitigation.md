@@ -64,7 +64,7 @@ Applies DEP at the system level. To disable mitigations, you can replace `-Enabl
 
 If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the following example:
 
-```PowerShell
+```
 PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
 ```
 

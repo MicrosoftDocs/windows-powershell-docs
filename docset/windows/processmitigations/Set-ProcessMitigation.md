@@ -42,7 +42,7 @@ Can also apply an XML file to apply settings for many processes at once.
 
 ### Example 1
 ```
-PS C:\>  set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
+PS C:\>  Set-ProcessMitigation -Name Notepad.exe -Enable SEHOP -Disable ForceRelocateImages
 ```
 
 Gets the current process mitigation for "notepad.exe" from the registry and then enables SEHOP, and disables ForceRelocateImages.
@@ -53,6 +53,45 @@ PS C:\> Set-ProcessMitigation -PolicyFilePath settings.xml
 ```
 
 Applies all settings inside settings.xml
+
+### Example 3
+```
+PS C:\> Set-ProcessMitigation -System -Enable DEP
+```
+
+Applies DEP at the system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
+
+### Exmaple 4
+
+```
+PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP
+```
+
+If you need to restore the mitigation back to the system default, you need to include the `-Remove` cmdlet as well, as in the above  example:
+
+### Example 5
+
+```
+PS C:\> Set-ProcessMitigation -System -Enable SEHOP
+```
+
+Enable SEHOP Component at the system level.
+
+### Example 6
+
+```
+PS C:\> Set-ProcessMitigation -System -Disable SEHOP
+```
+
+Disable SEHOP Component at the system level.
+
+### Example 7
+
+```
+PS C:\> Set-ProcessMitigation -System -Reset
+```
+
+Reset Mitigation at the system level.
 
 ## PARAMETERS
 
@@ -146,6 +185,19 @@ Type: SwitchParameter
 Parameter Sets: ProcessPolicy
 Aliases: 
 
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -Remove
+Removes a mitigation entry from the registry.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ProcessPolicy
+Aliases: 
 Required: False
 Position: Named
 Default value: False

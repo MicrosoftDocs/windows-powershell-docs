@@ -69,7 +69,7 @@ VMS5                          *                             D:\VMS
 
 This command retrieves the SMB shares on the computer.
 
-### Example 2: Get a specific SMB share on a specific computer
+### Example 2: Get a specific SMB share on the local computer
 ```
 PS C:\>Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description 
@@ -77,7 +77,7 @@ Name                          ScopeName                     Path                
 VMS1                          Contoso-FS                    I:\VMS
 ```
 
-This command retrieves the SMB shares on the computer named VMS1.
+This command retrieves information about the SMB share named 'VMS1' on the local computer.
 
 ### Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list
 ```
@@ -90,7 +90,7 @@ Description :
 
 This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### Example 3: Display all properties about a specific SMB share on the local computer in a list
+### Example 4: Display all properties about a specific SMB share on the local computer in a list
 ```
 PS C:\>Get-SmbShare -Name "VMS1" | Format-List -Property *
 PresetPathAcl         : System.Security.AccessControl.DirectorySecurity 
@@ -439,4 +439,3 @@ The **MSFT_SmbShare** object represents the SMB shares on the computer.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

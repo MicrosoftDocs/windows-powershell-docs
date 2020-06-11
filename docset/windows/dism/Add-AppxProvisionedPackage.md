@@ -29,7 +29,7 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
@@ -273,6 +273,20 @@ Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
+### -StubPackageOption
+Specifies the stub preference of the package. If no stub package option is specified then the provisioned package version is set to the predefined stub preferences. 
+
+```yaml
+Type: StubPackageOption
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: InstallFull, InstallStub
+Accept wildcard characters: False
+```
 
 ### -SystemDrive
 Specifies the path to the location of the BootMgr files.
@@ -334,4 +348,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AppxProvisionedPackage](./Remove-AppxProvisionedPackage.md)
 
 [Set-AppXProvisionedDataFile](./Set-AppXProvisionedDataFile.md)
-

@@ -77,7 +77,7 @@ This command adds an allow ACE for a trustee to the security descriptor of the S
 
 ### -AccessRight
 Specifies the access right to grant to the trustee.
-The acceptable values for this parameter are: Full, Modify, or Read.
+The acceptable values for this parameter are: Full, Change, or Read.
 
 ```yaml
 Type: ShareAccessRight

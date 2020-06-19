@@ -49,21 +49,21 @@ Sites can also be used to optimize replication between domain controllers.
 ## EXAMPLES
 
 ### Example 1: Create a replication site
-```
+```powershell
 PS C:\> New-ADReplicationSite -Name "NorthAmerica"
 ```
 
 This command creates a new site named NorthAmerica.
 
 ### Example 2: Create a replication site and set a property for it
-```
+```powershell
 PS C:\> New-ADReplicationSite -Name "Europe" -AutomaticInterSiteTopologyGenerationEnabled $FALSE
 ```
 
 This command creates a new site named Europe, and sets the **AutomaticInterSiteTopologyGenerationEnabled** property on the new object.
 
 ### Example 3: Create a replication site and set its replication schedule
-```
+```powershell
 PS C:\> $Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule
 PS C:\> $Schedule.ResetSchedule()
 PS C:\> $Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty");
@@ -484,8 +484,7 @@ Accept wildcard characters: False
 ```
 
 ### -UniversalGroupCachingRefreshSite
-Specifies the name of a site.
-If universal group caching is enabled, the name of the site from which the cache is pulled.
+Specifies the name of a site from which the cache is pulled if universal group caching is enabled.
 
 ```yaml
 Type: ADReplicationSite
@@ -595,7 +594,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticInterSiteTopologyGenerationEnabled
-Indicates whether the cmdlet prevents the Kerberos consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
+Indicates whether the cmdlet prevents the Knowledge consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
 Use this option when you want to create manual intersite connections (disable the ISTG) but retain the KCC to generate intrasite connections.
 
 ```yaml
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 
 ### -RedundantServerTopologyEnabled
 Indicates whether the cmdlet creates redundant connections between sites before a failure takes place.
-When enabled, disables the Kerberos consistency checker (KCC) failover.
+When enabled, disables the Knowledge consistency checker (KCC) failover.
 Requires that automatic detection of failed connections also be disabled (+IS_TOPL_DETECT_STALE_DISABLED).
 
 ```yaml

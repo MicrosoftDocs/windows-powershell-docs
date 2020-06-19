@@ -59,7 +59,7 @@ This example configures the local host as a Replica server and specifies Kerbero
 
 ### Example 2
 ```
-PS C:\>  Set-VMReplicationServer -ReplicationEnabled $true AllowedAuthenticationType Kerberos -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
+PS C:\>  Set-VMReplicationServer -ReplicationEnabled $true -AllowedAuthenticationType Kerberos -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
 ```
 
 This example configures a Replica server that accepts replication from all authenticated servers and uses a default storage location of d:\DefaultReplicaStorage.

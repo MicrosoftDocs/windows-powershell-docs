@@ -46,33 +46,33 @@ Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
 ## DESCRIPTION
 The **Set-VMReplicationServer** cmdlet configures a host as a Replica server and enables you to specify the types of authentication and ports to use for incoming replication traffic.
 
-To restrict the replication traffic that the Replica server will accept by allowing it only from specific servers, use the New-VMReplicationAuthorizationEntry cmdlet.
+To restrict the replication traffic that the Replica server will accept by allowing it only from specific servers, use the **New-VMReplicationAuthorizationEntry** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\>  Set-VMReplicationServer $true -AllowedAuthenticationType Kerberos
 ```
 
 This example configures the local host as a Replica server and specifies Kerberos for authentication.
 
 ### Example 2
-```
+```powershell
 PS C:\>  Set-VMReplicationServer -ReplicationEnabled $true -AllowedAuthenticationType Kerberos -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
 ```
 
 This example configures a Replica server that accepts replication from all authenticated servers and uses a default storage location of d:\DefaultReplicaStorage.
 
 ### Example 3
-```
+```powershell
 PS C:\>  Set-VMReplicationServer -MonitoringInterval "12:00:00" -MonitoringStartTime "17:00:00"
 ```
 
 This example configures the Replica server with a monitoring interval of 12 hours starting at 17:00 hours.
 
 ### Example 4
-```
+```powershell
 PS C:\> $portmapping = @{"Server1.contoso.com" = 82; "Server2.contoso.com" = 81; "Broker.contoso.com" = 80}
 PS C:\> Set-VMReplicationServer -KerberosAuthenticationPortMapping $portmapping
 ```
@@ -152,7 +152,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 `PS C:\\\> cd cert:\LocalMachine\My`
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see http://technet.microsoft.com//library/cc757138.aspxhttp://technet.microsoft.com//library/cc757138.aspx.
+For more information about certificate stores, see [Certificate stores](https://technet.microsoft.com//library/cc757138.aspx).
 
 ```yaml
 Type: String
@@ -168,8 +168,9 @@ Accept wildcard characters: False
 
 ### -ComputerName
 Configures Replica server settings for one or more Hyper-V hosts.
-NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
-The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+The default is the local computer.
+Use localhost or a dot (.) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
@@ -357,16 +358,18 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
-###  
-None by default; **VMRecoveryServer** if **-PassThru** is specified.
+### None
+Default
+
+### VMRecoveryServer
+If **-PassThru** is specified.
 
 ## NOTES
 
 ## RELATED LINKS
-

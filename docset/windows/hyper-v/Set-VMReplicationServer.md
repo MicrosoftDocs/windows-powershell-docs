@@ -54,28 +54,28 @@ To restrict the replication traffic that the Replica server will accept by allow
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\>  Set-VMReplicationServer $true -AllowedAuthenticationType Kerberos
 ```
 
 This example configures the local host as a Replica server and specifies Kerberos for authentication.
 
 ### Example 2
-```
+```powershell
 PS C:\>  Set-VMReplicationServer -ReplicationEnabled $true -AllowedAuthenticationType Kerberos -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
 ```
 
 This example configures a Replica server that accepts replication from all authenticated servers and uses a default storage location of d:\DefaultReplicaStorage.
 
 ### Example 3
-```
+```powershell
 PS C:\>  Set-VMReplicationServer -MonitoringInterval "12:00:00" -MonitoringStartTime "17:00:00"
 ```
 
 This example configures the Replica server with a monitoring interval of 12 hours starting at 17:00 hours.
 
 ### Example 4
-```
+```powershell
 PS C:\> $portmapping = @{"Server1.contoso.com" = 82; "Server2.contoso.com" = 81; "Broker.contoso.com" = 80}
 PS C:\> Set-VMReplicationServer -KerberosAuthenticationPortMapping $portmapping
 ```
@@ -156,7 +156,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see [http://technet.microsoft.com//library/cc757138.aspx](http://technet.microsoft.com//library/cc757138.aspx).
+For more information about certificate stores, see [Certificate stores](https://technet.microsoft.com//library/cc757138.aspx).
 
 ```yaml
 Type: String
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -410,4 +410,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

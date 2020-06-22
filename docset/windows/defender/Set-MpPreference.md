@@ -57,6 +57,21 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
 You can modify exclusion file name extensions, paths, or processes, and specify the default action for high, moderate, and low threat levels.
 
+## REMEDIATION ACTION VALUES
+
+The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
+
+|Value |Action
+|------|-------------------------------------------------------------------------|
+1|Clean the detected threat.
+2|Quarantine the detected threat.
+3|Remove the detected threat.
+6|Allow the detected threat.
+8|Allow the user to determine the action to take with the detected threat.
+9|Do not take any action.
+10|Block the detected threat.
+0 (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value.
+
 ## EXAMPLES
 
 ### Example 1: Schedule to check for definition updates everyday
@@ -1094,6 +1109,9 @@ The acceptable values for this parameter are:
 - 8: UserDefined 
 - 9: NoAction 
 - 10: Block
+
+>[!NOTE]
+>A value of 0 (NULL) applies an action based on the Security Intelligence Update (SIU). This is the default value.
 
 ```yaml
 Type: ThreatAction[]

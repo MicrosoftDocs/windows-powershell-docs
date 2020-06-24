@@ -70,7 +70,7 @@ The following table provides remediation action values for detected threats at l
 |8 |Allow the user to determine the action to take with the detected threat. |
 |9 |Do not take any action. |
 |10 |Block the detected threat. |
-0 (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value.
+|0 | (NULL)|Apply action based on the Security Intelligence Update (SIU). This is the default value. |
 
 ## EXAMPLES
 

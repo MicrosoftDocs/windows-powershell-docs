@@ -11,7 +11,7 @@ ms.date: 12/27/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-ADReplicationSite
 ms.reviewer:
@@ -88,7 +88,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -105,7 +105,7 @@ Use this option when you want to create manual intersite connections (disable th
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Disable this option if you use manual connections and do not want the KCC to bui
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ This parameter is not supported by any providers installed with Windows PowerShe
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,19 +190,20 @@ Specifies an instance of a site object to use as a template for a new site objec
 You can use an instance of an existing site object as a template or you can construct a new site object by using the Windows PowerShell command line or by using a script.
 
 Method 1: Use an existing site object as a template for a new object.
-To retrieve an instance of an existing site object, use the Get-ADReplicationSite cmdlet.
+To retrieve an instance of an existing site object, use the **Get-ADReplicationSite** cmdlet.
 Then provide this site object to the *Instance* parameter of the **New-ADReplicationSite** cmdlet to create a new site object.
 You can override property values of the new object by setting the appropriate parameters.
 
 Method 2: Create a new **ADReplicationSite** and set the property values by using the Windows PowerShell command line interface.
 Then pass this object to the *Instance* parameter of the **New-ADReplicationSite** cmdlet to create the new site object.
 
-Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
+[!NOTE]
+Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
 
 ```yaml
 Type: ADReplicationSite
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +218,7 @@ Specifies the server acting as the inter-site topology generator for this site.
 ```yaml
 Type: ADDirectoryServer
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,21 +228,22 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-Specifies the user or group that manages the object by providing one of the following property values : 
+Specifies the user or group that manages the object by providing one of the following property values:
 
 - Distinguished name
-- GUID (objectGUID) 
+- GUID (objectGUID)
 - Security identifier (objectSid)
 - SAM account name (sAMAccountName)
 
-Note: The identifier in parentheses is the LDAP display name for the property.
+[!NOTE]
+The identifier in parentheses is the LDAP display name for the property.
 
 This parameter sets the Active Directory attribute with an LDAP display name of managedBy.
 
 ```yaml
 Type: ADPrincipal
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,7 +258,7 @@ Specifies a name for the replication site object.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -287,7 +289,7 @@ The following syntax shows how to set values for multiple attributes:
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +305,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -323,7 +325,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +342,7 @@ Requires that automatic detection of failed connections also be disabled (+IS_TO
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +357,7 @@ Specifies the default replication schedule for connections within this site (int
 ```yaml
 Type: ActiveDirectorySchedule
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -370,7 +372,7 @@ Indicates whether the cmdlet spreads replication start times randomly across the
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,14 +385,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -405,7 +407,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -423,7 +425,7 @@ Alternatively, to control or augment the topology, you can use manual connection
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -440,7 +442,7 @@ Use this option only if network communication is very unstable and brief outages
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -457,7 +459,7 @@ Optimizing connections reduce the replication latency in the site and disabling 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -474,7 +476,7 @@ It can be useful in sites with no GC servers available locally.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -489,7 +491,7 @@ Specifies the name of a site from which the cache is pulled if universal group c
 ```yaml
 Type: ADReplicationSite
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -520,7 +522,7 @@ Implements the Windows 2000 Server method of selecting a single bridgehead serve
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -530,13 +532,13 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsServer2000KCCISTGSelectionBehaviorEnabled
-Indicates whether the cmdlet to implements the Windows 2000 Server method of ISTG selection.
+Indicates whether the cmdlet implements the Windows 2000 Server method of ISTG selection.
 Off by default.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,7 +554,7 @@ This option can be set if all domain controllers in the site are running Windows
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -568,7 +570,7 @@ When the forest functional level Windows Server 2003 or Windows Server 2003 inte
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -584,7 +586,7 @@ When the forest functional level Windows Server 2003 or Windows Server 2003 inte
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

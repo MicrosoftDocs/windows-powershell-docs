@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Grant-SmbShareAccess
 ms.reviewer:
@@ -21,7 +21,7 @@ ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
 # Grant-SmbShareAccess
 
 ## SYNOPSIS
-Adds an allow ACE for a trustee to the security descriptor of the SMB share.
+Adds an allow access control entry (ACE) for a trustee to the security descriptor of the Server Message Block (SMB) share.
 
 ## SYNTAX
 
@@ -47,15 +47,15 @@ The **Grant-SmbShareAccess** cmdlet adds an allow access control entry (ACE) for
 ### Example 1: Adds an allow ACE for a trustee
 ```powershell
 PS C:\>Grant-SmbShareAccess -Name "VMFiles" -AccountName "Contoso\Contoso-HV2$" -AccessRight Full
-Confirm 
-Are you sure you want to perform this action? 
-Performing operation 'Modify' on Target 'Contoso-SO,VMFiles'. 
+Confirm
+Are you sure you want to perform this action?
+Performing operation 'Modify' on Target 'Contoso-SO,VMFiles'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
 
-Name                    ScopeName               AccountName             AccessControlType       AccessRight 
-----                    ---------               -----------             -----------------       ----------- 
-VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full 
-VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow                   Full 
+Name                    ScopeName               AccountName             AccessControlType       AccessRight
+----                    ---------               -----------             -----------------       -----------
+VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full
+VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow                   Full
 VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow                   Full
 ```
 
@@ -64,11 +64,11 @@ This command adds an allow ACE for a trustee to the security descriptor of the S
 ### Example 2: Adds an allow ACE for a trustee without confirmation
 ```powershell
 PS C:\>Grant-SmbShareAccess -Name VMFiles -AccountName "Contoso\Domain Admins" -AccessRight Change -Force
-Name                    ScopeName               AccountName             AccessControlType       AccessRight 
-----                    ---------               -----------             -----------------       ----------- 
-VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full 
-VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow                   Full 
-VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow                   Full 
+Name                    ScopeName               AccountName             AccessControlType       AccessRight
+----                    ---------               -----------             -----------------       -----------
+VMFiles                 Contoso-SO              Contoso\Administrator   Allow                   Full
+VMFiles                 Contoso-SO              Contoso\Contoso-HV1$    Allow                   Full
+VMFiles                 Contoso-SO              Contoso\Contoso-HV2$    Allow                   Full
 VMFiles                 Contoso-SO              Contoso\Domain Admins   Allow                   Change
 ```
 
@@ -83,7 +83,7 @@ The acceptable values for this parameter are: Full, Change, or Read.
 ```yaml
 Type: ShareAccessRight
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Full, Change, Read, Custom
 
 Required: False
@@ -100,7 +100,7 @@ Use a comma-separated list to specify multiple trustees.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -192,7 +192,7 @@ Specifies the name of the SMB share.
 ```yaml
 Type: String[]
 Parameter Sets: Query
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -207,7 +207,7 @@ Specifies the scope of the share by name.
 ```yaml
 Type: String[]
 Parameter Sets: Query
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -223,7 +223,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: SmbInstance
 Parameter Sets: Query
-Aliases: 
+Aliases:
 Accepted values: Default, CSV, SBL, SR
 
 Required: False
@@ -241,7 +241,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

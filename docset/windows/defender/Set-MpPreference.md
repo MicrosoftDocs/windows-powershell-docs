@@ -57,7 +57,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
 The **Set-MpPreference** cmdlet configures preferences for Windows Defender scans and updates.
 You can modify exclusion file name extensions, paths, or processes, and specify the default action for high, moderate, and low threat levels.
 
-### REMEDIATION ACTION VALUES
+**REMEDIATION VALUES**
 
 The following table provides remediation action values for detected threats at low, medium, high, and severe alert levels.
 

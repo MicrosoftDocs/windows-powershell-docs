@@ -14,7 +14,7 @@ Configures a host as a Replica server.
 
 ## SYNTAX
 
-### AuthenticationPort
+### AuthenticationPort (Default)
 ```
 Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
  [[-AllowedAuthenticationType] <RecoveryAuthenticationType>] [[-ReplicationAllowedFromAnyServer] <Boolean>]

@@ -77,7 +77,7 @@ SelfTest           : {191, 191, 245, 191...}
 
 This command resets the TPM by using the specified owner authorization value.
 
-### Example 3: Reset TMP using authorization value from file
+### Example 3: Reset TPM using authorization value from file
 ```
 PS C:\> Clear-Tpm -File "MyOwnerAuthFile.tpm"
 TpmReady           : False

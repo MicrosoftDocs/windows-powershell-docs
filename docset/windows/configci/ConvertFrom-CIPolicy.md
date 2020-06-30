@@ -37,7 +37,7 @@ You can install the binary version of a policy on a computer.
 
 ### Example 1: Converts a policy
 ```
-PS C:\> ConvertFrom-CIPolicy -XmlFilePath ".\Policy03.xml" - BinaryFilePath "Policy03.bin" 
+PS C:\> ConvertFrom-CIPolicy -XmlFilePath ".\Policy03.xml" -BinaryFilePath "Policy03.bin" 
 C:\Policies\Policy03.bin
 ```
 

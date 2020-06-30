@@ -28,7 +28,7 @@ Creates a new failover cluster.
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
  [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
- [-Force] [<CommonParameters>]
+ [-Force] [-ManagementPointTypeNetwork] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -158,6 +158,21 @@ Networks with DHCP enabled are always included, but other networks need a static
 
 ```yaml
 Type: StringCollection
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagementPointTypeNetwork 
+Specifies the type of name to use when the cluster is created.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases: 
 

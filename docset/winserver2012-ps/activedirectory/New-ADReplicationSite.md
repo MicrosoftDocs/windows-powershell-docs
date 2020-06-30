@@ -187,7 +187,7 @@ You can override property values of the new object by setting the appropriate pa
 Method 2: Create a new **ADReplicationSite** and set the property values by using the Windows PowerShell command line interface.
 Then pass this object to the *Instance* parameter of the **New-ADReplicationSite** cmdlet to create the new site object.
 
-[!NOTE]
+Note:
 Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
 
 ```yaml
@@ -225,7 +225,7 @@ Specifies the user or group that manages the object by providing one of the foll
 - Security identifier (objectSid)
 - SAM account name (sAMAccountName)
 
-[!NOTE]
+Note:
 The identifier in parentheses is the LDAP display name for the property.
 
 This parameter sets the Active Directory attribute with an LDAP display name of managedBy.

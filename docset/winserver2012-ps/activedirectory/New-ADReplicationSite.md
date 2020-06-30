@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticInterSiteTopologyGenerationEnabled
-Indicates whether the cmdlet prevents the Knowledge consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
+Indicates whether the cmdlet prevents the Knowledge Consistency Checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
 Use this option when you want to create manual intersite connections (disable the ISTG) but retain the KCC to generate intrasite connections.
 
 ```yaml
@@ -326,7 +326,7 @@ Accept wildcard characters: False
 
 ### -RedundantServerTopologyEnabled
 Indicates whether the cmdlet creates redundant connections between sites before a failure takes place.
-When enabled, disables the Knowledge consistency checker (KCC) failover.
+When enabled, disables the Knowledge Consistency Checker (KCC) failover.
 Requires that automatic detection of failed connections also be disabled (+IS_TOPL_DETECT_STALE_DISABLED).
 
 ```yaml
@@ -604,4 +604,3 @@ A site object that is a template for the new site object is received by the *Ins
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
 
 [Set-ADReplicationSite](./Set-ADReplicationSite.md)
-

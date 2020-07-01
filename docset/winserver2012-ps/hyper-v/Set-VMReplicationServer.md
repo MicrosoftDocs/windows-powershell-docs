@@ -1,6 +1,6 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -14,7 +14,7 @@ Configures a host as a Replica server.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### AuthenticationPort (Default)
 ```
 Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
  [[-AllowedAuthenticationType] <RecoveryAuthenticationType>] [[-ReplicationAllowedFromAnyServer] <Boolean>]
@@ -23,7 +23,7 @@ Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
  [-MonitoringInterval <TimeSpan>] [-MonitoringStartTime <TimeSpan>] [-PassThru] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### AuthenticationPortMapping
 ```
 Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
  [[-AllowedAuthenticationType] <RecoveryAuthenticationType>] [[-ReplicationAllowedFromAnyServer] <Boolean>]
@@ -36,33 +36,33 @@ Set-VMReplicationServer [[-ReplicationEnabled] <Boolean>]
 ## DESCRIPTION
 The **Set-VMReplicationServer** cmdlet configures a host as a Replica server and enables you to specify the types of authentication and ports to use for incoming replication traffic.
 
-To restrict the replication traffic that the Replica server will accept by allowing it only from specific servers, use the New-VMReplicationAuthorizationEntry cmdlet.
+To restrict the replication traffic that the Replica server will accept by allowing it only from specific servers, use the **New-VMReplicationAuthorizationEntry** cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> Set-VMReplicationServer $true -AllowedAuthenticationType Kerberos
 ```
 
 This example configures the local host as a Replica server and specifies Kerberos for authentication.
 
 ### Example 2
-```
-PS C:\> Set-VMReplicationServer -ReplicationEnabled $true AllowedAuthenticationType -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
+```powershell
+PS C:\> Set-VMReplicationServer -ReplicationEnabled $true -AllowedAuthenticationType -ReplicationAllowedFromAnyServer $true -DefaultStorageLocation d:\DefaultReplicaStorage
 ```
 
 This example configures a Replica server that accepts replication from all authenticated servers and uses a default storage location of d:\DefaultReplicaStorage.
 
 ### Example 3
-```
+```powershell
 PS C:\> Set-VMReplicationServer -MonitoringInterval "12:00:00" -MonitoringStartTime "17:00:00"
 ```
 
 This example configures the Replica server with a monitoring interval of 12 hours starting at 17:00 hours.
 
 ### Example 4
-```
+```powershells
 PS C:\> $portmapping = @{"Server1.contoso.com" = 82; "Server2.contoso.com" = 81; "Broker.contoso.com" = 80}
 PS C:\> Set-VMReplicationServer -KerberosAuthenticationPortMapping $portmapping
 ```
@@ -95,7 +95,7 @@ This parameter can be set only when the value of the AllowedAuthType parameter i
 
 ```yaml
 Type: Int32
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: AuthenticationPort
 Aliases: CertAuthPort
 
 Required: False
@@ -112,8 +112,8 @@ This parameter can be set only when the Replica server is configured with an aut
 
 ```yaml
 Type: Hashtable
-Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Parameter Sets: AuthenticationPortMapping
+Aliases:
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ To display a list of certificates in the computer's My store and the thumbprint 
 
 `PS C:\\\> dir | format-list`
 
-For more information about certificate stores, see http://technet.microsoft.com//library/cc757138.aspxhttp://technet.microsoft.com//library/cc757138.aspx.
+For more information about certificate stores, see [Certificate stores](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10).
 
 ```yaml
 Type: String
@@ -159,13 +159,14 @@ Accept wildcard characters: False
 
 ### -ComputerName
 Configures Replica server settings for one or more Hyper-V hosts.
-NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
-The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+The default is the local computer.
+Use localhost or a dot (.) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +197,7 @@ Specifies whether the command runs without requiring confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +211,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: Int32
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: AuthenticationPort
 Aliases: KerbAuthPort
 
 Required: False
@@ -227,8 +228,8 @@ This parameter can be set only when the Replica server is configured with an aut
 
 ```yaml
 Type: Hashtable
-Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Parameter Sets: AuthenticationPortMapping
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +246,7 @@ Specify in the format days:hours:minutes:seconds, such as 01:00:00 for 1 hour, o
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +261,7 @@ Specifies when the monitoring interval starts.
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +276,7 @@ Specifies that a **VMReplicationServer** object is to be passed through to the p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -322,7 +323,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +339,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -360,6 +361,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
-

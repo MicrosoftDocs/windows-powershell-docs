@@ -52,7 +52,7 @@ This command enables the device that has the specified instance ID.
 
 ### Example 2: Enable all disabled devices
 ```
-PS C:\>Get-PnpDevice | Where-Object {$_.Problem -match 22} | Enable-PnpDevice
+PS C:\>Get-PnpDevice | Where-Object {$_.Problem -eq 22} | Enable-PnpDevice
 ```
 
 This command gets all the PnP devices by using the **Get-PnpDevice** cmdlet, and then passes them to the **Where-Object** cmdlet by using the pipeline operator.

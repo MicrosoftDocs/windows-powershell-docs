@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ### -DisableCatchupFullScan
 Indicates whether Windows Defender runs catch-up scans for scheduled full scans.
 A computer can miss a scheduled scan, usually because the computer is turned off at the scheduled time.
-If you specify a value of $False or do not specify a value, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
+If you specify a value of $False, after the computer misses two scheduled full scans, Windows Defender runs a catch-up scan the next time someone logs on to the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled full scans.
 
 ```yaml
 Type: Boolean
@@ -223,7 +223,7 @@ Aliases: dcfsc
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ### -DisableCatchupQuickScan
 Indicates whether Windows Defender runs catch-up scans for scheduled quick scans.
 A computer can miss a scheduled scan, usually because the computer is off at the scheduled time.
-If you specify a value of $False or do not specify a value, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled quick scans.
+If you specify a value of $False, after the computer misses two scheduled quick scans, Windows Defender runs a catch-up scan the next time someone logs onto the computer. If you specify a value of $True, the computer does not run catch-up scans for scheduled quick scans.
 
 ```yaml
 Type: Boolean
@@ -240,7 +240,7 @@ Aliases: dcqsc
 
 Required: False
 Position: Named
-Default value: None
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

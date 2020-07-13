@@ -87,7 +87,7 @@ This command removes the A resource record from a zone named contoso.com that ha
 PS C:\> Remove-DnsServerResourceRecord -RRType SRV -Name "_misc._tcp" -ZoneName "_msdcs.contoso.com" -RecordData "0","10","1234","1.1.1.1."
 ```
 
-This command removes all SRV records in the _msdcs.contoso.co zone that have the name _misc._tcp.
+This command removes all SRV records in the _msdcs.contoso.com zone that have the name _misc._tcp.
 
 ## PARAMETERS
 
@@ -414,4 +414,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-DnsServerResourceRecord](./Set-DnsServerResourceRecord.md)
 
 [Add-DnsServerResourceRecord](./Add-DnsServerResourceRecord.md)
-

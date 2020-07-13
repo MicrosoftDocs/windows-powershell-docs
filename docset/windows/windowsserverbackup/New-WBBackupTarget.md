@@ -175,7 +175,7 @@ Specifies the path to the remote shared folder in which the server stores backup
 
 Use this parameter if the storage location is a remote shared folder (on a network).
 You can specify the *NonInheritAcl* parameter for this type of storage location, but only for one-time backups.
-You can also use the *Credential* parameter to specify who can access the backups.
+You can also use the *Credential* parameter to specify who can access the backups. The maximum network path length can be 110 characters.
 
 ```yaml
 Type: String

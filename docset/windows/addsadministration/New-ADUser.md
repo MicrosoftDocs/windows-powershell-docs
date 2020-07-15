@@ -295,6 +295,7 @@ Use the **DateTime** syntax when you specify this parameter.
 Time is assumed to be local time unless otherwise specified.
 When a time value is not specified, the time is assumed to 12:00:00 AM local time.
 When a date is not specified, the date is assumed to be the current date.
+Use the following syntax: ,,.... If the values contain spaces or otherwise require quotation marks, use the following syntax: "","",...""."
 
 ```yaml
 Type: X509Certificate[]
@@ -1182,6 +1183,8 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
+
+Use the following syntax: ,,.... If the values contain spaces or otherwise require quotation marks, use the following syntax: "","",...""."
 
 ```yaml
 Type: String[]

@@ -291,10 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificates
-Use the **DateTime** syntax when you specify this parameter.
-Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to 12:00:00 AM local time.
-When a date is not specified, the date is assumed to be the current date.
+Specifies the DER-encoded X.509v3 certificates of the account. These certificates include the public key certificates issued to this account by the Microsoft Certificate Service. This parameter sets the Certificates property of the account object. The LDAP display name (ldapDisplayName) for this property is userCertificate. 
 To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>"."
 
 ```yaml

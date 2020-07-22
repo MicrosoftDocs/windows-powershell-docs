@@ -290,7 +290,6 @@ Specifies the DER-encoded X.509v3 certificates of the account.
 These certificates include the public key certificates issued to this account by the Microsoft Certificate Service.
 This parameter sets the **Certificates** property of the account object.
 The LDAP display name (**ldapDisplayName**) for this property is userCertificate.
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>"."
 
 ```yaml
 Type: X509Certificate[]

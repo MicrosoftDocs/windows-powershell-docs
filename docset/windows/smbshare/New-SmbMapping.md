@@ -28,7 +28,7 @@ Creates an SMB mapping.
 ```
 New-SmbMapping [[-LocalPath] <String>] [[-RemotePath] <String>] [-UserName <String>] [-Password <String>]
  [-Persistent <Boolean>] [-SaveCredentials] [-HomeFolder] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>] [-UseWriteThrough <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
 Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
-The default is the current session on the local computer.
+The default is the current session on the local computer.  
 
 ```yaml
 Type: CimSession[]
@@ -229,6 +229,22 @@ Aliases: wi
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseWriteThrough
+This features was added in Windows Server 2019 and Windows 10 version 1809.
+[UseWriteThrough ensures that writes are completed prior to the write operation returning as completed](https://docs.microsoft.com/en-us/windows-server/storage/file-server/file-server-smb-overview).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

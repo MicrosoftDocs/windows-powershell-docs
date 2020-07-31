@@ -291,10 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificates
-Use the **DateTime** syntax when you specify this parameter.
-Time is assumed to be local time unless otherwise specified.
-When a time value is not specified, the time is assumed to 12:00:00 AM local time.
-When a date is not specified, the date is assumed to be the current date.
+Specifies the DER-encoded X.509v3 certificates of the account. These certificates include the public key certificates issued to this account by the Microsoft Certificate Service. This parameter sets the Certificates property of the account object. The LDAP display name (ldapDisplayName) for this property is userCertificate. 
 
 ```yaml
 Type: X509Certificate[]
@@ -1182,34 +1179,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the **ServicePrincipalNames** property of the account.
 The LDAP display name (**ldapDisplayName**) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values:
-
-To add values:
-
-`-ServicePrincipalNames @{Add=value1,value2,...}`
-
-To remove values:
-
-`-ServicePrincipalNames @{Remove=value3,value4,...}`
-
-To replace values:
-
-`-ServicePrincipalNames @{Replace=value1,value2,...}`
-
-To clear all values:
-
-`-ServicePrincipalNames $Null`
-
-You can specify more than one change by using a list separated by semicolons.
-For example, use the following syntax to add and remove service principal names.
-
-`@{Add=value1,value2,...};@{Remove=value3,value4,...}`
-
-The operators are applied in the following sequence: 
-
-- Remove 
-- Add
-- Replace
+To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>"."
 
 ```yaml
 Type: String[]

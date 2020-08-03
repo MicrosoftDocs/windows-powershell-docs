@@ -26,7 +26,10 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
         ],
         "src": "windows",
         "version": "win10-ps",
@@ -58,7 +61,10 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
         ],
         "src": "winserver2012-ps",
         "version": "winserver2012-ps",
@@ -90,7 +96,10 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
         ],
         "src": "winserver2012r2-ps",
         "version": "winserver2012r2-ps",
@@ -122,7 +131,10 @@
       },
       {
         "files": [
-          "**/*.md"
+          "**/*.yml"
+        ],
+        "exclude": [
+          "toc.yml"
         ],
         "src": "mdop",
         "version": "win-mdop2-ps",

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Format-Volume
 ms.reviewer:
@@ -82,18 +82,39 @@ To create a new volume, use this cmdlet in conjunction with the Initialize-Disk 
 ## EXAMPLES
 
 ### Example 1: Quick format
-```
+```powershell
 PS C:\>Format-Volume -DriveLetter D
 ```
 
 This example performs a format of the D volume.
 
 ### Example 2: Full format using FAT32
-```
+```powershell
 PS C:\>Format-Volume -DriveLetter D -FileSystem FAT32 -Full -Force
 ```
 
 This example performs a full format of the D volume using the FAT32 file system.
+
+### Example 3: Format all D drives across a cluster
+```powershell
+PS C:\> Get-Volume -DriveLetter D
+
+DriveLetter FileSystemLabel FileSystem DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- --------------- ---------- --------- ------------ ----------------- -------------      ----
+D           Server1         NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
+D           Server2         NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
+
+
+PS C:\> Format-Volume -DriveLetter D
+
+DriveLetter FileSystemLabel FileSystem DriveType HealthStatus OperationalStatus SizeRemaining      Size
+----------- --------------- ---------- --------- ------------ ----------------- -------------      ----
+D                           NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
+D                           NTFS       Fixed     Healthy      OK                    126.76 GB 126.87 GB
+
+```
+
+This example gets all drives with letter D on the cluster and then formats them. This would format all D drives without confirmation!
 
 ## PARAMETERS
 
@@ -118,7 +139,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +150,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -150,7 +171,7 @@ Enables compression on all files and folders created on the specified NTFS volum
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +203,7 @@ This parameter is only valid for tiered volumes.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +218,7 @@ Specifies the drive letter of the volume to format.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -213,7 +234,7 @@ The acceptable values for this parameter are:NTFS, ReFS, exFAT, FAT32, and FAT.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: FAT, FAT32, exFAT, NTFS, ReFS
 
 Required: False
@@ -229,7 +250,7 @@ Specifies the label to use for the volume.
 ```yaml
 Type: String[]
 Parameter Sets: ByLabel
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -244,7 +265,7 @@ Specifies the override switch.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +281,7 @@ A full format writes to every sector of the disk, takes much longer to perform t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +296,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -294,7 +315,7 @@ If you do not specify the *IsDAX* parameter, the cmdlet defaults to a regular, n
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +330,7 @@ Specifies a new label to use for the volume.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -340,7 +361,7 @@ Enter a Partition CIM object, which is exposed by the Get-Partition and New-Part
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPartition
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -355,7 +376,7 @@ Specifies the path of the volume to format.
 ```yaml
 Type: String[]
 Parameter Sets: ByPaths
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -370,7 +391,7 @@ Enables integrity streams on the volume to be formatted.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -385,7 +406,7 @@ Specifies that support for short file names should be enabled on this volume.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -402,7 +423,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -417,7 +438,7 @@ Specifies that large File Record Segment (FRS) should be used.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -443,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -459,6 +480,8 @@ You can use the pipeline operator to pass an MSFT_Partition object to the *Parti
 This cmdlet returns an object that represents the newly formatted volume.
 
 ## NOTES
+
+If you run this cmdlet on Failover Cluster it will run on all volumes of the cluster.
 
 ## RELATED LINKS
 

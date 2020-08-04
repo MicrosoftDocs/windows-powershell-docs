@@ -42,7 +42,7 @@ The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) se
 ## EXAMPLES
 
 ### Example 1: Set the SMB Service configuration
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 16
 Confirm
 Are you sure you want to perform this action?
@@ -53,35 +53,35 @@ Performing operation 'Modify' on Target 'SMB Service Configuration'.
 This command sets the SMB Service configuration.
 
 ### Example 2: Set the SMB Service configuration without confirmation
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 32 -Force
 ```
 
 This command sets the SMB Service configuration without user confirmation.
 
 ### Example 3: Turn on SMB singing and encryption
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -RequireSecuritySignature $True -EnableSecuritySignature $True -EncryptData $True -Confirm:$false
 ```
 
 This command turns on SMB signing and encryption.
 
 ### Example 4: Turn off the default server and workstations shares
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False -Confirm:$false
 ```
 
 This command turns off the default server and workstations shares.
 
 ### Example 5: Turn off server announcements
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -ServerHidden $False -AnnounceServer $False -Confirm:$false
 ```
 
 This command turns off server announcements.
 
 ### Example 6: Turn off SMB1
-```
+```powershell
 PS C:\>Set-SmbServerConfiguration -EnableSMB1Protocol $false
 ```
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

@@ -114,7 +114,7 @@ D                           NTFS       Fixed     Healthy      OK                
 
 ```
 
-This example gets all drives with letter D on the cluster and then formats them. This would format all D drives without confirmation!
+Be careful, if using this cmdlet on a Windows Cluster, it would format all drives returned by the **Get-Volume** cmdlet.
 
 ## PARAMETERS
 
@@ -481,7 +481,7 @@ This cmdlet returns an object that represents the newly formatted volume.
 
 ## NOTES
 
-If you run this cmdlet on Failover Cluster it will run on all volumes of the cluster.
+Be careful, if using this cmdlet on a Windows Cluster, it would format all drives returned by the **Get-Volume** cmdlet.
 
 ## RELATED LINKS
 

@@ -235,7 +235,7 @@ Accept wildcard characters: False
 
 ### -UseWriteThrough
 This features was added in Windows Server 2019 and Windows 10 version 1809.
-[UseWriteThrough ensures that writes are completed prior to the write operation returning as completed](https://docs.microsoft.com/en-us/windows-server/storage/file-server/file-server-smb-overview).
+This parameter ensures that writes are completed prior to the write operation returning as completed. For more information, see [Features added in Windows Server 2019 and Windows 10, version 1809](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview#features-added-in-windows-server-2019-and-windows-10-version-1809).
 
 ```yaml
 Type: Boolean
@@ -268,4 +268,3 @@ This cmdlet returns a **MSFT_SmbMapping** object that represents the newly creat
 [Get-SmbMapping](./Get-SmbMapping.md)
 
 [Remove-SmbMapping](./Remove-SmbMapping.md)
-

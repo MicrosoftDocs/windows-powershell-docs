@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author:jgerend
+ms.author: jgerend
 Module Name: systeminsights
 Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
 Download Help Link: http://go.microsoft.com

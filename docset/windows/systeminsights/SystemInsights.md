@@ -11,6 +11,7 @@ title: SystemInsights
 ms.author: v-anbarr
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: xxx
 keywords: powershell, cmdlet
 author: andreabarr
 manager: elizapo

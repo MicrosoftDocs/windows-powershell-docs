@@ -139,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
+### 
 **System.IO.FileInfo**.
 To obtain a **FileInfo** object, use the [Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495) cmdlet for a specified file name.
 The cmdlet uses the **FullName** property as the value of the *FileName* parameter.

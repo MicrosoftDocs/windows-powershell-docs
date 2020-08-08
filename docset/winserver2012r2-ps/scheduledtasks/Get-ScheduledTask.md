@@ -1,10 +1,10 @@
 ---
 external help file: MSFT_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
-online version: 
+online version:
 schema: 2.0.0
 title: Get-ScheduledTask
-description: 
+description:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: jasgro
@@ -49,14 +49,29 @@ This command gets the definition object of the SystemScan scheduled task in the 
 PS C:\> Get-ScheduledTask -TaskPath "\UpdateTasks\"
 TaskPath                          TaskName                        State
 --------                          --------                        --------
-\UpdateTasks                      UpdateApps                      Ready 
-\UpdateTasks                      UpdateDrivers                   Ready 
-\UpdateTasks                      UpdateOS                        Disabled 
+\UpdateTasks                      UpdateApps                      Ready
+\UpdateTasks                      UpdateDrivers                   Ready
+\UpdateTasks                      UpdateOS                        Disabled
 
 \UpdateTasks                      UpdateSignatures                Running
 ```
 
 This command gets an array of task definitions objects from the UpdateTasks folder.
+
+### Example 3: Get an array of scheduled task definition objects in multiple paths
+```powershell
+Get-ScheduledTask -TaskPath "\Microsoft\Windows\Work Folders\","\Microsoft\Windows\Workplace Join\"
+
+TaskPath                                       TaskName                          State
+--------                                       --------                          -----
+\Microsoft\Windows\Work Folders\               Work Folders Logon Synchroniza... Ready
+\Microsoft\Windows\Work Folders\               Work Folders Maintenance Work     Ready
+\Microsoft\Windows\Workplace Join\             Automatic-Device-Join             Disabled
+\Microsoft\Windows\Workplace Join\             Device-Sync                       Disabled
+\Microsoft\Windows\Workplace Join\             Recovery-Check                    Disabled
+```
+
+This command gets task definition objects from multiple task paths
 
 ## PARAMETERS
 
@@ -66,7 +81,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +113,7 @@ Specifies an array of one or more names of a scheduled task.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -108,14 +123,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\**.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -132,7 +147,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

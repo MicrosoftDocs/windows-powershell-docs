@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Register-ScheduledTask
 ms.reviewer:
@@ -63,7 +63,7 @@ You can register a task to run any of the following application or file types: W
 
 ### Example 1: Register a scheduled task
 ```
-PS C:\> $Time = New-ScheduledTaskTrigger -At 12:00 -Once 
+PS C:\> $Time = New-ScheduledTaskTrigger -At 12:00 -Once
 PS C:\> $User = "Contoso\Administrator"
 PS C:\> $PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
 PS C:\> Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
@@ -91,7 +91,7 @@ You can specify up to 32 actions.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: User, Principal
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -106,7 +106,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ Briefly describes the task.
 ```yaml
 Type: String
 Parameter Sets: User, Principal
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -153,7 +153,7 @@ Instructs the cmdlet to perform the operation without prompting for confirmation
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -186,7 +186,7 @@ Well-known accounts are: NT AUTHORITY\SYSTEM, NT AUTHORITY\LOCALSERVICE, NT AUTH
 ```yaml
 Type: String
 Parameter Sets: User, Xml, Object
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -201,7 +201,7 @@ Specifies the security context in which a task is run.
 ```yaml
 Type: CimInstance
 Parameter Sets: Principal
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -216,7 +216,7 @@ Specifies the required privilege level to run tasks that are associated with the
 ```yaml
 Type: RunLevelEnum
 Parameter Sets: User
-Aliases: 
+Aliases:
 Accepted values: Limited, Highest
 
 Required: False
@@ -232,7 +232,7 @@ Specifies a configuration that the Task Scheduler service uses to determine how 
 ```yaml
 Type: CimInstance
 Parameter Sets: User, Principal
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -247,7 +247,7 @@ Specifies the name of a scheduled task.
 ```yaml
 Type: String
 Parameter Sets: User, Xml, Principal
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -269,14 +269,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies the path for a scheduled task in Task Scheduler namespace.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\**.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -293,7 +293,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ A task can have a maximum of 48 triggers.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: User, Principal
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -324,7 +324,7 @@ Specifies the name of the **\<run as\>** user account to use when you run the ta
 ```yaml
 Type: String
 Parameter Sets: User, Xml, Object
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -339,7 +339,7 @@ Specifies the XML string that contains a task definition.
 ```yaml
 Type: String
 Parameter Sets: Xml
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-ScheduledTaskInfo
 ms.reviewer:
@@ -67,7 +67,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -114,7 +114,7 @@ Specifies a name of a scheduled task.
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -124,15 +124,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies a path for a scheduled task in the Task Scheduler namespace.
-
-The root folder in the file path is described as \.
-If you do not specify a file path, the cmdlet uses the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\**.
+If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -149,7 +148,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

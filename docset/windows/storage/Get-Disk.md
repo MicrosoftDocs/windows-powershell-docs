@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-Disk
 ms.reviewer:
@@ -136,7 +136,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Enter a friendly name, or use wildcard characters to enter a name pattern.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ The Partition CIM object is exposed by the [Get-Partition](http://technet.micros
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPartition
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ Contains valid path information.
 ```yaml
 Type: String[]
 Parameter Sets: ByPath
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ Specifies an array of serial numbers associated with disks that this cmdlet gets
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ To obtain a storage job, use the Get-StorageJob cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageJob
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ Accept wildcard characters: False
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ The Virtual Disk CIM object is exposed by the [Get-VirtualDisk](http://technet.m
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ The iSCSI Connection CIM object is exposed by the [Get-IscsiConnection](http://t
 ```yaml
 Type: CimInstance
 Parameter Sets: ByiSCSIConnection
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +358,7 @@ The iSCSI Session CIM object is exposed by the Get-IscsiSession cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByiSCSISession
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -392,6 +392,7 @@ This cmdlet outputs one or more objects representing disks.
 ## NOTES
 * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 * Some objects such as disks might include trailing spaces in their friendly names. If you suspect that an object name could have trailing spaces, you can use a wildcard at the end of the name, for example Disk*, or use the **Match** parameter to instruct Windows PowerShell to include all strings that include the specified characters, instead of only strings that include only the specified characters.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

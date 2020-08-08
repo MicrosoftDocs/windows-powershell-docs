@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-MaskingSet
 ms.reviewer:
@@ -86,7 +86,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Allowed values are NoAccess, ReadOnly, ReadWrite, and Unknown.
 ```yaml
 Type: DeviceAccess[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, ReadWrite, ReadOnly, NoAccess
 
 Required: False
@@ -137,7 +137,7 @@ Some storage providers do not use device numbers.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Specifies the host operating system or other host environmental factors that may
 ```yaml
 Type: HostMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Other, Standard, Solaris, HPUX, OpenVMS, Tru64, Netware, Sequent, AIX, DGUX, Dynix, Irix, CiscoISCSIStorageRouter, Linux, MicrosoftWindows, OS400, TRESPASS, HIUX, VMwareESXi, MicrosoftWindowsServer2008, MicrosoftWindowsServer2003
 
 Required: False
@@ -183,7 +183,7 @@ Specifies the initiator addresses.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -213,7 +213,7 @@ Specifies the friendly name of the storage subsystem.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -228,7 +228,7 @@ Specifies the name of the storage subsystem provided by the Storage Management.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -258,7 +258,7 @@ Specifies one or more target port addresses.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ Specifies one or more virtual disk names to include in the masking set.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,6 +313,8 @@ You can pipe a StorageSubsystem object to the *InputObject* parameter.
 This cmdlet outputs an object representing the newly created masking set.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

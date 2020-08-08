@@ -109,7 +109,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Specifies a letter used to identify a drive or volume in the system.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -171,7 +171,7 @@ Specifies the volume to scan based on the file system label (the volume name).
 ```yaml
 Type: String[]
 Parameter Sets: ByLabel
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -187,7 +187,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +218,7 @@ Performs and offline scan and fix of any errors found in the file system.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ Contains valid path information.
 ```yaml
 Type: String[]
 Parameter Sets: ByPaths
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -248,7 +248,7 @@ Scans the volume.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +263,7 @@ Takes the volume offline and fixes any issues that are logged in the $corrupt fi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,6 +319,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 ### System.UInt32
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

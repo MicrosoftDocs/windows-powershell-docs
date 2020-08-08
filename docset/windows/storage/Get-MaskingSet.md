@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-MaskingSet
 ms.reviewer:
@@ -100,7 +100,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Gets the masking set with the specified friendly name or friendly name pattern.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -148,7 +148,7 @@ If the HostType property is blank for the object you want to get, omit this para
 ```yaml
 Type: HostType[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 Accepted values: Unknown, Other, Standard, Solaris, HPUX, OpenVMS, Tru64, Netware, Sequent, AIX, DGUX, Dynix, Irix, CiscoISCSIStorageRouter, Linux, MicrosoftWindows, OS400, TRESPASS, HIUX, VMwareESXi, MicrosoftWindowsServer2008, MicrosoftWindowsServer2003
 
 Required: False
@@ -165,7 +165,7 @@ Enter an InitiatorID CIM object, which is exposed by the Get-InitiatorId cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByInitiatorId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Enter a StorageSubSystem CIM object, which is exposed by the Get-StorageSubSyste
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ Enter a TargetPort CIM object, which is exposed by the Get-TargetPort cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPort
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ Enter a VirtualDisk CIM object, which is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,6 +277,8 @@ You can pipe a VirtualDisk object to the *VirtualDisk* parameter.
 This cmdlet outputs an object that represents a masking set.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

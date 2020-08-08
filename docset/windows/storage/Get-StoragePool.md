@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StoragePool
 ms.reviewer:
@@ -130,8 +130,8 @@ This example lists all (concrete) storage pools, excluding primordial pools (whi
 ```
 PS C:\>Get-ResiliencySetting -Name Mirror | Get-StoragePool
 FriendlyName                  OperationalStatus             HealthStatus                  IsPrimordial                  IsReadOnly
-------------                  -----------------             ------------                  ------------                  ----------                   
-CompanyData                   OK                            Healthy                       False                         False                        
+------------                  -----------------             ------------                  ------------                  ----------
+CompanyData                   OK                            Healthy                       False                         False
 Primordial                    OK                            Healthy                       True                          False
 ```
 
@@ -145,7 +145,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ Specifies the friendly name of the storage pool to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -193,7 +193,7 @@ Specify one or more of the following values: **Healthy**, **Warning**, Unhealthy
 ```yaml
 Type: HealthStatus[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Healthy, Warning, Unhealthy, Unknown
 
 Required: False
@@ -211,7 +211,7 @@ To get primordial pools, specify the $True Boolean value.
 ```yaml
 Type: Boolean[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ Specifies the name of the storage pool to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,7 +241,7 @@ Gets any storage pools that match the specified OtherUsageDescription string.
 ```yaml
 Type: String[]
 Parameter Sets: ByUsage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ The Physical Disk CIM object is exposed by the Get-PhysicalDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Resiliency Setting CIM objects are exposed by the Get-ResiliencySetting cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByResiliencySetting
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +292,7 @@ To obtain a storage job, use the Get-StorageJob cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageJob
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ To obtain a storage node object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](http:/
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ To obtain a storage tier object, use the Get-StorageTier cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageTier
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -359,7 +359,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +391,7 @@ Acceptable values: ReservedAsDeltaReplicaContainer, ReservedForComputerSystem, R
 ```yaml
 Type: Usage[]
 Parameter Sets: ByFriendlyName, ByUsage
-Aliases: 
+Aliases:
 Accepted values: Unknown, Other, Unrestricted, ReservedForComputerSystem, ReservedAsDeltaReplicaContainer, ReservedForMigrationServices, ReservedForLocalReplicationServices, ReservedForRemoteReplicationServices, ReservedForSparing
 
 Required: False
@@ -409,7 +409,7 @@ The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -426,7 +426,7 @@ To obtain a **Volume** object, use the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -466,6 +466,7 @@ The **Get-StoragePool** cmdlet returns objects representing storage pools.
 ## NOTES
 * To reduce load times, storage providers other than the Storage Spaces provider might not perform a full discovery of objects on initial load. As a result, this cmdlet might show an empty or incomplete listing of objects from a particular storage provider. To update the storage provider cache so that storage objects are available from a storage provider, use the **Update-StorageProviderCache** cmdlet.
 * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

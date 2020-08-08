@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-PartitionSupportedSize
 ms.reviewer:
@@ -62,7 +62,7 @@ The **Get-PartitionSupportedSize** cmdlet returns information on supported parti
 ### Example 1
 ```
 PS C:\>Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2
-SizeMin                                                 SizeMax 
+SizeMin                                                 SizeMax
 -----------                                             -----------
 ```
 
@@ -76,7 +76,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Specifies an ID used to identify a disk in the system.
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -124,7 +124,7 @@ These represent the disks for which to get partitions.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -139,7 +139,7 @@ Specifies a letter used to identify a drive or volume in the system.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +154,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -169,7 +169,7 @@ Specifies the starting offset, in bytes.
 ```yaml
 Type: UInt64[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -223,6 +223,8 @@ You can pipe a Partition object to the **InputObject** parameter.
 ### System.UInt64
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Update-Disk
 ms.reviewer:
@@ -75,7 +75,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ The friendly name may be defined by a user and is not guaranteed to be unique.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -138,7 +138,7 @@ Specifies a disk number on which the cmdlet acts.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -149,16 +149,16 @@ Accept wildcard characters: False
 
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
-By default, this cmdlet does not generate any output. 
- 
-                        
+By default, this cmdlet does not generate any output.
+
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -173,7 +173,7 @@ Contains valid path information.
 ```yaml
 Type: String[]
 Parameter Sets: ByPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,7 +190,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,6 +231,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

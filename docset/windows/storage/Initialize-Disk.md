@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Initialize-Disk
 ms.reviewer:
@@ -97,7 +97,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ Specifies the friendly name of the disk to initialize.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -174,7 +174,7 @@ Specifies the disk number of the disk to initialize.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -191,7 +191,7 @@ The disk must be set to read-write (`IsReadOnly $false` ) before this cmdlet wil
 ```yaml
 Type: PartitionStyle
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, MBR, GPT
 
 Required: False
@@ -203,16 +203,16 @@ Accept wildcard characters: False
 
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
-By default, this cmdlet does not generate any output. 
- 
-                        
+By default, this cmdlet does not generate any output.
+
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ Specifies the path of the disk to initialize.
 ```yaml
 Type: String[]
 Parameter Sets: ByPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -244,7 +244,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,6 +317,8 @@ You can pipe an MSFT_Disk object to the *InputObject* parameter.
 If you specify the *Passthru* parameter, this cmdlet returns an object representing the newly initialized disk.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

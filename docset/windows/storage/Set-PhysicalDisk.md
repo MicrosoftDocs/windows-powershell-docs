@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-PhysicalDisk
 ms.reviewer:
@@ -73,7 +73,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Sets the description of the specified physical disk.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Specifies the friendly name of the physical disk on which to set attributes.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -135,7 +135,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +155,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MediaType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HDD, SSD, SCM
 
 Required: False
@@ -171,7 +171,7 @@ Specifies the new friendly name of the physical disk.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ Valid values are AutoSelect, HotSpare, Journal, ManualSelect, Retired, and Unkno
 ```yaml
 Type: Usage
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AutoSelect, ManualSelect, HotSpare, Retired, Journal
 
 Required: False
@@ -244,6 +244,7 @@ You can use the pipeline operator to pass an MSFT_PhysicalDisk object to the *In
 ## NOTES
 * When using the Windows Storage subsystem, this cmdlet works only on physical disks that have been added to a storage pool.
 * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).s
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-VirtualDiskToMaskingSet
 ms.reviewer:
@@ -70,7 +70,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Allowed values are NoAccess, ReadOnly, ReadWrite, and Unknown.
 ```yaml
 Type: DeviceAccess[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, ReadWrite, ReadOnly, NoAccess
 
 Required: False
@@ -135,7 +135,7 @@ Specifies the device numbers for one or more virtual disks.
 ```yaml
 Type: UInt16[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +165,7 @@ Specifies the friendly name of the masking set to which you want to add a virtua
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -196,7 +196,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ Specifies one or more virtual disk names to add to the masking set.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -267,6 +267,8 @@ You can pipe a **MaskingSet** object to the *InputObject* parameter.
 If you specify the *Passthru* parameter, this cmdlet outputs an object that represents the masking set to which you added a virtual disk.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

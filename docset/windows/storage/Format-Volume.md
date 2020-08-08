@@ -481,7 +481,7 @@ This cmdlet returns an object that represents the newly formatted volume.
 
 ## NOTES
 
-Be careful, if using this cmdlet on a Windows Cluster, it would format all drives returned by the **Get-Volume** cmdlet.
+* Be careful, if using this cmdlet on a Windows Cluster, it would format all drives returned by the **Get-Volume** cmdlet.
 
 ## RELATED LINKS
 

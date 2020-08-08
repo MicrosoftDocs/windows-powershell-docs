@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-VolumeCorruptionCount
 ms.reviewer:
@@ -67,7 +67,7 @@ If you specify the **Verbose** parameter, the cmdlet also generates a descriptio
 ```
 PS C:\>Get-VolumeCorruptionCount -Verbose C
 VERBOSE: Corruption Record: 000000000000000000
-VERBOSE: Header: 
+VERBOSE: Header:
 VERBOSE: Version        : 1.0
 VERBOSE: Flags          : (0x000000000000002c) GLOBALLY_VERIFIED | SKIP_SELF_HEALING | TESTED_DUPLICATE
 VERBOSE: Length         : 188 bytes
@@ -75,13 +75,13 @@ VERBOSE: InstanceTag    : {00000000-0000-0000-0000-000000000000}
 VERBOSE: description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 VERBOSE: Verb           : IndexEntry
 VERBOSE: Length         : 164 bytes
-VERBOSE: Verb-Specific Fields: 
-VERBOSE: Index          : 
+VERBOSE: Verb-Specific Fields:
+VERBOSE: Index          :
 VERBOSE: FRN            : 0x0001 0000`00000023
-VERBOSE: Attribute: 
+VERBOSE: Attribute:
 VERBOSE: TypeCode: 0 Name: $I30
 VERBOSE: Value Length   : 132 bytes
-VERBOSE: Value          : 
+VERBOSE: Value          :
 VERBOSE: 0000000000: 23 00 00 00 00 00 01 00 3b 52 3a c1 e7 62 ce 01
 VERBOSE: 0x00000010: 26 45 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 VERBOSE: 0x00000020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -92,7 +92,7 @@ VERBOSE: 0x00000060: 6e 00 74 00 20 00 2d 00 20 00 43 00 6f 00 70 00
 VERBOSE: 0x00000070: 79 00 20 00 28 00 31 00 30 00 29 00 2e 00 74 00
 VERBOSE: 0x00000080: 78 00 74 00
 VERBOSE: Corruption Record: 0x00030000000050b9
-VERBOSE: Header: 
+VERBOSE: Header:
 VERBOSE: Version        : 1.0
 VERBOSE: Flags          : (0x000000000000002c) GLOBALLY_VERIFIED | SKIP_SELF_HEALING | TESTED_DUPLICATE
 VERBOSE: Length         : 74 bytes
@@ -100,10 +100,10 @@ VERBOSE: InstanceTag    : {00000000-0000-0000-0000-000000000000}
 VERBOSE: description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 VERBOSE: Verb           : Connect
 VERBOSE: Length         : 50 bytes
-VERBOSE: Verb-Specific Fields: 
-VERBOSE: Index          : 
+VERBOSE: Verb-Specific Fields:
+VERBOSE: Index          :
 VERBOSE: FRN            : 0x0001 0000`00000023
-VERBOSE: Attribute: 
+VERBOSE: Attribute:
 VERBOSE: TypeCode: 0 Name: $I30
 VERBOSE: Recover FRN    : 000000 0001`00000000
 VERBOSE: FRN Count      : 1
@@ -120,7 +120,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ The cmdlet gets the volume corruption count for the drives or volumes you specif
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -169,7 +169,7 @@ The cmdlet gets the volume corruption count for the file system labels you speci
 ```yaml
 Type: String[]
 Parameter Sets: ByLabel
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +184,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ The cmdlet gets the volume corruption count for the paths you specify.
 ```yaml
 Type: String[]
 Parameter Sets: ByPaths
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -233,7 +233,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -256,6 +256,8 @@ You can use the pipeline operator to pass a Volume object to the *InputObject* p
 This cmdlet returns the number of errors on the volume.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

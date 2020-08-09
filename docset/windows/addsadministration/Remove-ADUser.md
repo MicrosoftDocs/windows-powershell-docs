@@ -49,28 +49,28 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 ## EXAMPLES
 
 ### Example 1: Remove a specified user
-```
+```powershell
 PS C:\> Remove-ADUser -Identity GlenJohn
 ```
 
 This command removes the user with SAM account name GlenJohn.
 
 ### Example 2: Remove a filtered list of users
-```
+```powershell
 PS C:\> Search-ADAccount -AccountDisabled | where {$_.ObjectClass -eq 'user'} | Remove-ADUser
 ```
 
 This command searches for any users that have disabled accounts and removes them.
 
 ### Example 3: Remove a user by distinguished name
-```
+```powershell
 PS C:\> Remove-ADUser -Identity "CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
 
 This command removes the user with the distinguished name CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 4: Get a user by distinguished name and remove it
-```
+```powershells
 PS C:\> Get-ADUser -Identity "cn=glenjohn,dc=appnc" -Server Lds.Fabrikam.com:50000 | Remove-ADUser
 ```
 
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

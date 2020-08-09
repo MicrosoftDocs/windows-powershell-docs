@@ -32,14 +32,14 @@ Remove-ADUser [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCred
 ## DESCRIPTION
 The **Remove-ADUser** cmdlet removes an Active Directory user.
 
-The **Identity** parameter specifies the Active Directory user to remove.
+The *Identity* parameter specifies the Active Directory user to remove.
 You can identify a user by its distinguished name (DN), GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the **Identity** parameter to a user object variable, such as **$\<localUserObject\>**, or you can pass a user object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADUser cmdlet to retrieve a user object and then pass the object through the pipeline to the Remove-ADUser cmdlet.
+You can also set the *Identity* parameter to a user object variable, such as `$<localUserObject>`, or you can pass a user object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADUser** cmdlet to retrieve a user object and then pass the object through the pipeline to the Remove-ADUser cmdlet.
 
-If the **ADUser** is being identified by its DN, the **Partition** parameter will be automatically determined.
+If the **ADUser** is being identified by its DN, the *Partition* parameter will be automatically determined.
 
-For AD LDS environments, the **Partition** parameter must be specified except in the following two conditions:
+For AD LDS environments, the *Partition* parameter must be specified except in the following two conditions:
 
 - The cmdlet is run from an Active Directory provider drive.
 - A default naming context or partition is defined for the AD LDS environment.
@@ -48,29 +48,29 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 ## EXAMPLES
 
 ### Example 1: Remove a specified user
-```
-PS C:\>Remove-ADUser -Identity GlenJohn
+```powershell
+PS C:\> Remove-ADUser -Identity GlenJohn
 ```
 
 This command removes the user with SAM account name GlenJohn.
 
 ### Example 2: Remove a filtered list of users
-```
-PS C:\>Search-ADAccount -AccountDisabled | where {$_.ObjectClass -eq 'user'} | Remove-ADUser
+```powershell
+PS C:\> Search-ADAccount -AccountDisabled | where {$_.ObjectClass -eq 'user'} | Remove-ADUser
 ```
 
 This command searches for any users that have disabled accounts and removes them.
 
 ### Example 3: Remove a user by distinguished name
-```
-PS C:\>Remove-ADUser -Identity "CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
+```powershell
+PS C:\> Remove-ADUser -Identity "CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
 
 This command removes the user with the distinguished name CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 4: Get a user by distinguished name and remove it
-```
-PS C:\>Get-ADUser -Identity "cn=glenjohn,dc=appnc" -Server Lds.Fabrikam.com:50000 | Remove-ADUser
+```powershells
+PS C:\> Get-ADUser -Identity "cn=glenjohn,dc=appnc" -Server Lds.Fabrikam.com:50000 | Remove-ADUser
 ```
 
 This command gets the user with the distinguished name cn=glenjohn,dc=appnc from the AD LDS instance and removes it.
@@ -124,10 +124,10 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
-If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
+If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error
 
 ```yaml
 Type: PSCredential
@@ -171,25 +171,25 @@ Accept wildcard characters: False
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the **Identity** parameter.
+The cmdlet searches this partition to find the object defined by the *Identity* parameter.
 
-In many cases, a default value will be used for the **Partition** parameter if no value is specified.
+In many cases, a default value will be used for the *Partition* parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
 In AD DS environments, a default value for Partition will be set in the following cases:
 
-_- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive.
-- If none of the previous cases apply, the default value of **Partition** will be set to the default partition or naming context of the target domain.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
+- If none of the previous cases apply, the default value of *Partition* will be set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for **Partition** will be set in the following cases:
+In AD LDS environments, a default value for *Partition* will be set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive.
-- If the target AD LDS instance has a default naming context, the default value of **Partition** will be set to the default naming context.
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
+- If the target AD LDS instance has a default naming context, the default value of *Partition* will be set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
-- If none of the previous cases apply, the **Partition** parameter will not take any default value.
+- If none of the previous cases apply, the *Partition* parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -209,7 +209,7 @@ The service may be any of the following: AD LDS, AD DS, or Active Directory snap
 
 Specify the AD DS instance in one of the following ways:
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
@@ -222,7 +222,7 @@ Directory server values:
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
+- By using the *Server* value from objects passed through the pipeline
 - By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
@@ -255,12 +255,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADUser
-A user object is received by the **Identity** parameter.
+A user object is received by the *Identity* parameter.
 
 ## OUTPUTS
 

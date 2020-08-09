@@ -2,7 +2,7 @@
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 ms.assetid: F4D7A3B4-8F8E-4B26-9586-16E56473BF85
 manager: dansimp
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -105,7 +105,7 @@ The following example shows how to set this parameter to Basic.
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -152,7 +152,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ This example shows how to set this parameter to a user object instance named "us
 ```yaml
 Type: ADUser
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -217,8 +217,8 @@ The following two examples show how to specify a value for this parameter.
 
 -Partition "CN=Schema,CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
 
-In many cases, a default value will be used for the Partition parameter if no value is specified. 
-The rules for determining the default value are given below. 
+In many cases, a default value will be used for the Partition parameter if no value is specified.
+The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
 In AD DS environments, a default value for Partition will be set in the following cases:  - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
@@ -236,7 +236,7 @@ In AD LDS environments, a default value for Partition will be set in the followi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -288,7 +288,7 @@ The following example shows how to specify a full qualified domain name as the p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,11 +327,8 @@ A user object is received by the Identity parameter.
 
 ## NOTES
 * This cmdlet does not work with an Active Directory Snapshot.
-
-  This cmdlet does not work with a read-only domain controller.
-
-  By default, this cmdlet has the -Confirm parameter set, which prompts you to confirm before a removal of the specified object type can occur.
-To bypass prompting for confirmation before removal, you can specify -Confirm:$false when using this cmdlet.
+* This cmdlet does not work with a read-only domain controller.
+* By default, this cmdlet prompts for confirmation as it is defined with **High impact** and the default value of the **$ConfirmPreference** variable is **High**. To bypass prompting for confirmation before removal, you can specify `-Confirm:$False` when using this cmdlet.
 
 ## RELATED LINKS
 

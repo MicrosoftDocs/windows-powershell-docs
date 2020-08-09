@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
-online version: 
+online version:
 schema: 2.0.0
 title: Remove-ADUser
 ms.author: v-anbarr
 ms.reviewer: brianlic
-description: 
+description:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: jasgro
@@ -91,7 +91,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -132,7 +132,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,8 +147,8 @@ The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
 - A Distinguished name
-- A GUID (objectGUID) 
-- A Security Identifier (objectSid) 
+- A GUID (objectGUID)
+- A Security Identifier (objectSid)
 - A SAM account name (sAMAccountName)
 
 The cmdlet searches the default naming context or partition to find the object.
@@ -159,7 +159,7 @@ This parameter can also get this object through the pipeline or you can set this
 ```yaml
 Type: ADUser
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -173,28 +173,28 @@ Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
 The cmdlet searches this partition to find the object defined by the **Identity** parameter.
 
-In many cases, a default value will be used for the **Partition** parameter if no value is specified. 
-The rules for determining the default value are given below. 
+In many cases, a default value will be used for the **Partition** parameter if no value is specified.
+The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
-In AD DS environments, a default value for Partition will be set in the following cases: 
+In AD DS environments, a default value for Partition will be set in the following cases:
 
 _- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive.
 - If none of the previous cases apply, the default value of **Partition** will be set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for **Partition** will be set in the following cases:
 
-- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive.
 - If the target AD LDS instance has a default naming context, the default value of **Partition** will be set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the **Partition** parameter will not take any default value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,14 +207,14 @@ Accept wildcard characters: False
 Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
 
-Specify the AD DS instance in one of the following ways:  
+Specify the AD DS instance in one of the following ways:
 
  Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -229,7 +229,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ A user object is received by the **Identity** parameter.
 ## NOTES
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* By default, this cmdlet has the **Confirm** parameter set, which prompts you to confirm before a removal of the specified object type can occur. To bypass prompting for confirmation before removal, you can specify `-Confirm:$False` when using this cmdlet.
+* By default, this cmdlet prompts for confirmation as it is defined with **High impact** and the default value of the **$ConfirmPreference** variable is **High**. To bypass prompting for confirmation before removal, you can specify `-Confirm:$False` when using this cmdlet.
 
 ## RELATED LINKS
 

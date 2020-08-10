@@ -14,7 +14,7 @@ Moves a virtual machine to a new Hyper-V host.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Name (default)
 ```
 Move-VM [-Name] <String> [-DestinationHost] <String> [-AsJob] [-ComputerName <String[]>]
  [-DestinationStoragePath <String>] [-IncludeStorage] [-Passthru] [-ResourcePoolName <String>]
@@ -22,12 +22,12 @@ Move-VM [-Name] <String> [-DestinationHost] <String> [-AsJob] [-ComputerName <St
  [-VirtualMachinePath <String>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### CompatibilityReport
 ```
 Move-VM [-CompatibilityReport] <VMCompatibilityReport> [-AsJob] [-Passthru] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### VM
 ```
 Move-VM [-VM] <VirtualMachine> [-DestinationHost] <String> [-AsJob] [-DestinationStoragePath <String>]
  [-IncludeStorage] [-Passthru] [-ResourcePoolName <String>] [-RetainVhdCopiesOnSource]
@@ -83,7 +83,7 @@ Specifies a compatibility report which includes any adjustments required for the
 
 ```yaml
 Type: VMCompatibilityReport
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: CompatibilityReport
 Aliases:
 
 Required: True
@@ -94,13 +94,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Specifies one or more Hyper-V hosts from which the virtual machine is to be removed.
-NetBIOS names, IP addresses, and fully-qualified domain names are allowable.
-The default is the local computer - use "localhost" or a dot (".") to specify the local computer explicitly.
+Specifies one or more Hyper-V hosts that run this cmdlet.
+NetBIOS names, IP addresses, and fully qualified domain names are allowable.
+The default is the local computer.
+Use localhost or a dot (.) to specify the local computer explicitly.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: Name
 Aliases:
 
 Required: False
@@ -115,7 +116,7 @@ Specifies the virtual machine host to which the virtual machine is to be moved.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: True
@@ -130,7 +131,7 @@ Specifies a destination storage path to which all virtual machine storage is to 
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -145,7 +146,7 @@ Specifies that both the virtual machine and its storage are to be moved.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -160,7 +161,7 @@ Specifies the friendly name of the virtual machine to be moved.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: Name
 Aliases:
 
 Required: True
@@ -190,7 +191,7 @@ Specifies the virtual machine to be moved.
 
 ```yaml
 Type: VirtualMachine
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: VM
 Aliases:
 
 Required: True
@@ -205,7 +206,7 @@ Specifies the name of the storage resource pool to use after the move operation 
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -221,7 +222,7 @@ If not specified, all virtual hard disks will be removed from the source compute
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -236,7 +237,7 @@ Specifies the new path to use for a smart paging file, if one is needed.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -251,7 +252,7 @@ Specifies the new path for any snapshot files associated with the virtual machin
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -270,7 +271,7 @@ The virtual hard disk names must be identical in both entries.
 
 ```yaml
 Type: Hashtable[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -285,7 +286,7 @@ Specifies the path for the virtual machine configuration file and associated mem
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: Name, VM
 Aliases:
 
 Required: False
@@ -330,7 +331,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-###
+### 
 None, by default.
 **Microsoft.Virtualization.Powershell.VirtualMachine** if the migration succeeds and **-PassThru** is specified.
 **Microsoft.Virtualization.Powershell.CompatibilityReport** if the migration fails because of an incompatibility.
@@ -338,6 +339,3 @@ None, by default.
 ## NOTES
 
 ## RELATED LINKS
-
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
-

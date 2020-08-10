@@ -1,6 +1,6 @@
 ---
 external help file: Hyper-V_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -40,23 +40,23 @@ The **Move-VM** cmdlet moves a virtual machine to a new Hyper-V host.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> Move-VM "Test VM" remoteServer
+### Example 1: Move VM to remote computer
+```powershell
+PS C:\> Move-VM -Name "Test VM" -DestinationHost remoteServer
 ```
 
 Moves a virtual machine test VM to a remote computer remoteServer when the virtual machine is stored on an SMB share.
 
-### Example 2
-```
-PS C:\>Move-VM "Test VM" remoteServer -IncludeStorage -DestinationStoragePath D:\TestVM
+### Example 2: Move VM and all storage to remote computer
+```powershell
+PS C:\> Move-VM -Name "Test VM" -DestinationHost remoteServer -IncludeStorage -DestinationStoragePath D:\TestVM
 ```
 
 Moves virtual machine test VM to remote computer remoteServer, and moves all files associated with the virtual machine to D:\TestVM on the remote computer.
 
-### Example 3
-```
-PS C:\>Move-VM "Test VM" remoteServer -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -IncludeStorage -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
+### Example 3: Move VM and specified storage file to remote computer
+```powershell
+PS C:\> Move-VM  -Name "Test VM" -DestinationHost remoteServer -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -IncludeStorage -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
 ```
 
 Moves a virtual machine Test VM to a remote computer remoteServer and places the files associated with the virtual machine in the specified locations under D:\TestVM on the remote computer.
@@ -69,7 +69,7 @@ Specifies that the cmdlet is to be run as a background job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Specifies a compatibility report which includes any adjustments required for the
 ```yaml
 Type: VMCompatibilityReport
 Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -101,7 +101,7 @@ The default is the local computer - use "localhost" or a dot (".") to specify th
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ Specifies the virtual machine host to which the virtual machine is to be moved.
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -131,7 +131,7 @@ Specifies a destination storage path to which all virtual machine storage is to 
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Specifies that both the virtual machine and its storage are to be moved.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Specifies the friendly name of the virtual machine to be moved.
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -176,7 +176,7 @@ Specifies that an object is to be passed through to be pipeline representing the
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ Specifies the virtual machine to be moved.
 ```yaml
 Type: VirtualMachine
 Parameter Sets: UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -206,7 +206,7 @@ Specifies the name of the storage resource pool to use after the move operation 
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ If not specified, all virtual hard disks will be removed from the source compute
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ Specifies the new path to use for a smart paging file, if one is needed.
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -252,7 +252,7 @@ Specifies the new path for any snapshot files associated with the virtual machin
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -271,7 +271,7 @@ The virtual hard disk names must be identical in both entries.
 ```yaml
 Type: Hashtable[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ Specifies the path for the virtual machine configuration file and associated mem
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -301,7 +301,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 ## OUTPUTS
 
-### 
+###
 None, by default.
 **Microsoft.Virtualization.Powershell.VirtualMachine** if the migration succeeds and **-PassThru** is specified.
 **Microsoft.Virtualization.Powershell.CompatibilityReport** if the migration fails because of an incompatibility.

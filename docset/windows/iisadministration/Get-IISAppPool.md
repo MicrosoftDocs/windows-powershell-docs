@@ -92,5 +92,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 
-[Web Administration Cmdlets for Windows PowerShell](../../winserver2012-ps/webadminstration/WebAdministration.md)
+[Web Administration Cmdlets for Windows PowerShell](../../winserver2012-ps/webadministration/WebAdministration.md)
 

@@ -65,7 +65,7 @@ This command removes the user with the distinguished name CN=Glen John,OU=Financ
 PS C:\> Get-ADUser -Identity "cn=glenjohn,dc=appnc" -Server Lds.Fabrikam.com:50000 | Remove-ADUser
 ```
 
-This command gets the user with the distinguished name cn=glenjohn,dc=appnc from the AD LDS instance and removes it.s
+This command gets the user with the distinguished name cn=glenjohn,dc=appnc from the AD LDS instance and removes it.
 
 ## PARAMETERS
 
@@ -108,7 +108,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Credential
 ### -Credential
 Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory PowerShell provider drive.

@@ -4,7 +4,7 @@ ms.author: v-anbarr
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
-manager:
+manager: New-HpcSoftCard
 ms.date: 2016-12-20
 ms.prod: powershell
 ms.technology: powershell

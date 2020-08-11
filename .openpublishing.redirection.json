@@ -1009,6 +1009,396 @@
         "source_path": "docset/virtual-directory-module/wsus/Set-WsusServerSynchronization.md",
         "redirect_url": "/powershell/module/updateservices/Set-WsusServerSynchronization?view=win10-ps",
         "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Add-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/add-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Add-WebConfigurationLock.md",
+        "redirect_url": "/powershell/module/webadministration/add-webconfigurationlock?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Add-WebConfigurationProperty.md",
+        "redirect_url": "/powershell/module/webadministration/add-webconfigurationproperty?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Backup-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/backup-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Clear-WebCentralCertProvider.md",
+        "redirect_url": "/powershell/module/webadministration/clear-webcentralcertprovider?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Clear-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/clear-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Clear-WebRequestTracingSetting.md",
+        "redirect_url": "/powershell/module/webadministration/clear-webrequesttracingsetting?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Clear-WebRequestTracingSettings.md",
+        "redirect_url": "/powershell/module/webadministration/clear-webrequesttracingsettings?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/ConvertTo-WebApplication.md",
+        "redirect_url": "/powershell/module/webadministration/convertto-webapplication?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Disable-WebCentralCertProvider.md",
+        "redirect_url": "/powershell/module/webadministration/disable-webcentralcertprovider?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Disable-WebGlobalModule.md",
+        "redirect_url": "/powershell/module/webadministration/disable-webglobalmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Disable-WebRequestTracing.md",
+        "redirect_url": "/powershell/module/webadministration/disable-webrequesttracing?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Enable-WebCentralCertProvider.md",
+        "redirect_url": "/powershell/module/webadministration/enable-webcentralcertprovider?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Enable-WebGlobalModule.md",
+        "redirect_url": "/powershell/module/webadministration/enable-webglobalmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Enable-WebRequestTracing.md",
+        "redirect_url": "/powershell/module/webadministration/enable-webrequesttracing?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebAppDomain.md",
+        "redirect_url": "/powershell/module/webadministration/get-webappdomain?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebApplication.md",
+        "redirect_url": "/powershell/module/webadministration/get-webapplication?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebAppPoolState.md",
+        "redirect_url": "/powershell/module/webadministration/get-webapppoolstate?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebBinding.md",
+        "redirect_url": "/powershell/module/webadministration/get-webbinding?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebCentralCertProvider.md",
+        "redirect_url": "/powershell/module/webadministration/get-webcentralcertprovider?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfigFile.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfigfile?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfigurationBackup.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfigurationbackup?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfigurationLocation.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfigurationlocation?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfigurationLock.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfigurationlock?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebConfigurationProperty.md",
+        "redirect_url": "/powershell/module/webadministration/get-webconfigurationproperty?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebFilePath.md",
+        "redirect_url": "/powershell/module/webadministration/get-webfilepath?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebHandler.md",
+        "redirect_url": "/powershell/module/webadministration/get-webhandler?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebItemState.md",
+        "redirect_url": "/powershell/module/webadministration/get-webitemstate?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebManagedModule.md",
+        "redirect_url": "/powershell/module/webadministration/get-webmanagedmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebRequest.md",
+        "redirect_url": "/powershell/module/webadministration/get-webrequest?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-Website.md",
+        "redirect_url": "/powershell/module/webadministration/get-website?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebsiteState.md",
+        "redirect_url": "/powershell/module/webadministration/get-websitestate?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebURL.md",
+        "redirect_url": "/powershell/module/webadministration/get-weburl?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Get-WebVirtualDirectory.md",
+        "redirect_url": "/powershell/module/webadministration/get-webvirtualdirectory?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebApplication.md",
+        "redirect_url": "/powershell/module/webadministration/new-webapplication?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebAppPool.md",
+        "redirect_url": "/powershell/module/webadministration/new-webapppool?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebBinding.md",
+        "redirect_url": "/powershell/module/webadministration/new-webbinding?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebFtpSite.md",
+        "redirect_url": "/powershell/module/webadministration/new-webftpsite?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebGlobalModule.md",
+        "redirect_url": "/powershell/module/webadministration/new-webglobalmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebHandler.md",
+        "redirect_url": "/powershell/module/webadministration/new-webhandler?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebManagedModule.md",
+        "redirect_url": "/powershell/module/webadministration/new-webmanagedmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-Website.md",
+        "redirect_url": "/powershell/module/webadministration/new-website?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/New-WebVirtualDirectory.md",
+        "redirect_url": "/powershell/module/webadministration/new-webvirtualdirectory?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebApplication.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webapplication?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebAppPool.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webapppool?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebBinding.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webbinding?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebConfigurationBackup.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webconfigurationbackup?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebConfigurationLocation.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webconfigurationlocation?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebConfigurationLock.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webconfigurationlock?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebConfigurationProperty.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webconfigurationproperty?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebGlobalModule.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webglobalmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebHandler.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webhandler?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebManagedModule.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webmanagedmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-Website.md",
+        "redirect_url": "/powershell/module/webadministration/remove-website?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Remove-WebVirtualDirectory.md",
+        "redirect_url": "/powershell/module/webadministration/remove-webvirtualdirectory?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Rename-WebConfigurationLocation.md",
+        "redirect_url": "/powershell/module/webadministration/rename-webconfigurationlocation?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Restart-WebAppPool.md",
+        "redirect_url": "/powershell/module/webadministration/restart-webapppool?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Restart-WebItem.md",
+        "redirect_url": "/powershell/module/webadministration/restart-webitem?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Restore-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/restore-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Select-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/select-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebBinding.md",
+        "redirect_url": "/powershell/module/webadministration/set-webbinding?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebCentralCertProvider.md",
+        "redirect_url": "/powershell/module/webadministration/set-webcentralcertprovider?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebCentralCertProviderCredential.md",
+        "redirect_url": "/powershell/module/webadministration/set-webcentralcertprovidercredential?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebConfiguration.md",
+        "redirect_url": "/powershell/module/webadministration/set-webconfiguration?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebConfigurationProperty.md",
+        "redirect_url": "/powershell/module/webadministration/set-webconfigurationproperty?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebGlobalModule.md",
+        "redirect_url": "/powershell/module/webadministration/set-webglobalmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebHandler.md",
+        "redirect_url": "/powershell/module/webadministration/set-webhandler?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Set-WebManagedModule.md",
+        "redirect_url": "/powershell/module/webadministration/set-webmanagedmodule?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Start-WebAppPool.md",
+        "redirect_url": "/powershell/module/webadministration/start-webapppool?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Start-WebCommitDelay.md",
+        "redirect_url": "/powershell/module/webadministration/start-webcommitdelay?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Start-WebItem.md",
+        "redirect_url": "/powershell/module/webadministration/start-webitem?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Start-Website.md",
+        "redirect_url": "/powershell/module/webadministration/start-website?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Stop-WebAppPool.md",
+        "redirect_url": "/powershell/module/webadministration/stop-webapppool?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Stop-WebCommitDelay.md",
+        "redirect_url": "/powershell/module/webadministration/stop-webcommitdelay?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Stop-WebItem.md",
+        "redirect_url": "/powershell/module/webadministration/stop-webitem?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/Stop-Website.md",
+        "redirect_url": "/powershell/module/webadministration/stop-website?view=winserver2012-ps",
+        "redirect_document_id": true
+        },
+        {
+        "source_path": "docset/virtual-directory-module/webadminstration/WebAdministration.md",
+        "redirect_url": "/powershell/module/webadministration/webadministration?view=winserver2012-ps",
+        "redirect_document_id": true
         }
     ]
 }

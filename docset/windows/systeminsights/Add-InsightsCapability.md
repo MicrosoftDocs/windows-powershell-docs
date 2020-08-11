@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Add-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Adds new predictive capabilities to System Insights. 
 
@@ -38,6 +35,9 @@ Add-InsightsCapability [-Name] <String> [-Library] <String> [[-ComputerName] <St
 ## DESCRIPTION
 
 The **Add-InsightsCapability** cmdlet dynamically adds a new capability using the specified capability name and capability library.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

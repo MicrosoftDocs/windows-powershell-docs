@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Get-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Gets the specified capability, or all available capabilities if left unspecified.
 
@@ -37,6 +34,9 @@ Get-InsightsCapability [[-Name] <String>] [[-ComputerName] <String>] [-Credentia
 
 ## DESCRIPTION
 The **Get-InsightsCapability** cmdlet gets the specified capability, or all available capabilities if left unspecified.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

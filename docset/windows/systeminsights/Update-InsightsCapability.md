@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Update-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Updates an existing System Insights capability. Updating a capability will preserve all of the custom configuration information associated with a capability.
 
@@ -37,6 +34,9 @@ Update-InsightsCapability [-Name] <String> [-Library] <String> [[-ComputerName] 
 
 ## DESCRIPTION
 The **Update-InsightsCapability** cmdlet updates an existing System Insights capability. Updating a capability will preserve all of the custom configuration information associated with a capability.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Disable-InsightsCapabilitySchedule
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 
 Disables periodic predictions for the specified capabilities.
@@ -37,6 +34,9 @@ Disable-InsightsCapabilitySchedule [-Name] <String> [[-ComputerName] <String>] [
 
 ## DESCRIPTION
 The **Disable-InsightsCapabilitySchedule** cmdlet disables periodic predictions for the specified capabilities.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

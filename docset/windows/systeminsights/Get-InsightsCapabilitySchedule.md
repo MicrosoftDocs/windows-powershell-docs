@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Get-InsightsCapabilitySchedule
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Gets the schedule for the specified capabilities.
 
@@ -37,6 +34,9 @@ Get-InsightsCapabilitySchedule [-Name] <String> [[-ComputerName] <String>] [-Cre
 
 ## DESCRIPTION
 The **Get-InsightsCapabilitySchedule** cmdlet gets the schedule for the specified capabilities.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

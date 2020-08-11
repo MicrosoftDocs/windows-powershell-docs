@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Remove-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Permanently removes a capability from System Insights. 
 
@@ -36,7 +33,10 @@ Remove-InsightsCapability [-Name] <String> [[-ComputerName] <String>] [-Credenti
 ```
 
 ## DESCRIPTION
-The **Remove-InsightsCapability** cmdlet permanently removes a capability from System Insights. 
+The **Remove-InsightsCapability** cmdlet permanently removes a capability from System Insights.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

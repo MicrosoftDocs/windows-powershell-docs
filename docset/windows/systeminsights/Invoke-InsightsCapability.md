@@ -132,12 +132,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-**Microsoft.SystemInsights.Management.PowerShell.Capability**
+### Microsoft.SystemInsights.Management.PowerShell.Capability
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
 ## OUTPUTS
-**None**
+
+### None
 
 ## NOTES
 The **Invoke-InsightsCapability** won't return until the specified capabilities have finished running.

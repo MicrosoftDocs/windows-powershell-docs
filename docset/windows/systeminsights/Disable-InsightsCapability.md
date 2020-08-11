@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Disable-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Deactivates a capability, which stops data collection for that capability and prevents the capability from being invoked.
 
@@ -36,6 +33,9 @@ Disable-InsightsCapability [-Name] <String> [[-ComputerName] <String>] [-Credent
 
 ## DESCRIPTION
 The **Disable-InsightsCapability** cmdlet deactivates a capability, which stops data collection for that capability and prevents the capability from being invoked.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

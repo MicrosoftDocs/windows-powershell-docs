@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Enable-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Activates a capability, which starts all data collection for that capability, allows the capability to be invoked, and enables users to set custom configuration information.
 
@@ -37,6 +34,9 @@ Enable-InsightsCapability [-Name] <String> [[-ComputerName] <String>] [-Credenti
 
 ## DESCRIPTION
 The **Enable-InsightsCapability** cmdlet activates a capability, which starts all data collection for that capability, allows the capability to be invoked, and enables users to set custom configuration information.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

@@ -22,9 +22,6 @@ schema: 2.0.0
 
 # Set-InsightsCapabilitySchedule
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Sets a prediction schedule for the specified capabilities.
 
@@ -64,6 +61,9 @@ Set-InsightsCapabilitySchedule [-Name] <String> [-DefaultSchedule] [[-ComputerNa
 
 ## DESCRIPTION
 The **Set-InsightsCapabilitySchedule** cmdlet sets a prediction schedule for the specified capabilities.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 

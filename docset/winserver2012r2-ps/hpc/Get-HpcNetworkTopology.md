@@ -3,7 +3,7 @@ external help file:
 Module Name: hpc
 online version:
 schema: 2.0.0
-title:
+title: Get-HpcNetworkTopology
 description:
 keywords: powershell, cmdlet
 ms.date: 2016-12-20

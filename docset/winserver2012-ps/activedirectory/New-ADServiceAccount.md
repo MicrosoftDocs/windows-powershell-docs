@@ -117,7 +117,6 @@ C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.c
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the AccountExpirationDate property of an account object.
 The LDAP Display name (ldapDisplayName) for this property is accountExpires.
 

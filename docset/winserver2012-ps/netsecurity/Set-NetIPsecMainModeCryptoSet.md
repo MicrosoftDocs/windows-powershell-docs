@@ -329,7 +329,7 @@ The acceptable values for this parameter are: 0 through 2879.
  -- NotConfigured: Valid only when configuring a GPO.
 Removes the setting from the GPO, which results in the policy not changing the value on the computer when the policy is applied. 
 
-The default value is 4800 minutes (eight hours). 
+The default value is 480 minutes (eight hours). 
 
 When managing a GPO, the default setting is NotConfigured.
 

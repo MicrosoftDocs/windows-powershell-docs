@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 # Get-StorageSubSystem
 
 ## SYNOPSIS
-Gets one or more StorageSubsystem objects.
+Gets one or more StorageSubSystem objects.
 
 ## SYNTAX
 
@@ -120,7 +120,7 @@ Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
 ```
 
 ## DESCRIPTION
-The **Get-StorageSubsystem** cmdlet gets one or more StorageSubsystem objects.
+The **Get-StorageSubSystem** cmdlet gets one or more StorageSubSystem objects.
 If no parameters are specified, then all subsystems on the system will be returned.
 If two parameters are specified that conflict with unique values, then no subsystem will be returned; since none match that criteria.
 
@@ -128,10 +128,10 @@ If two parameters are specified that conflict with unique values, then no subsys
 
 ### Example 1: Get all storage subsystems
 ```
-PS C:\>Get-StorageSubsystem
+PS C:\>Get-StorageSubSystem
 ```
 
-This example returns a list of all visible StorageSubsystem objects across all accessible StorageProvider objects.
+This example returns a list of all visible StorageSubSystem objects across all accessible StorageProvider objects.
 
 ### Example 2: Get the Storage Spaces subsystem
 ```
@@ -141,7 +141,7 @@ FriendlyName                            HealthStatus                            
 Storage Spaces on SRV1                  Healthy                                 OK
 ```
 
-This example returns only the StorageSubsystem object for the Storage Spaces provider.
+This example returns only the StorageSubSystem object for the Storage Spaces provider.
 
 ### Example 3: Get all unhealthy storage subsystems
 ```
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -Manufacturer
-Gets StorageSubsystem objects with the specified manufacturer name.
+Gets StorageSubSystem objects with the specified manufacturer name.
 
 ```yaml
 Type: String[]
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaskingSet
-Gets the StorageSubsystem for the specified MaskingSet object.
+Gets the StorageSubSystem for the specified MaskingSet object.
 Enter a MaskingSet CIM object.
 The MaskingSet object is exposed by the Get-MaskingSet cmdlet.
 
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Gets the StorageSubsystem with the specified model string.
+Gets the StorageSubSystem with the specified model string.
 
 ```yaml
 Type: String[]
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gets the StorageSubsystem with the specified name.
+Gets the StorageSubSystem with the specified name.
 
 ```yaml
 Type: String[]
@@ -304,7 +304,7 @@ Accept wildcard characters: False
 ```
 
 ### -OffloadDataTransferSetting
-Gets the StorageSubsystem associated with the specified OffloadDataTransferSetting object.
+Gets the StorageSubSystem associated with the specified OffloadDataTransferSetting object.
 The Offload Data Transfer Setting CIM object is exposed by the Get-OffloadDataTransferSetting cmdlet.
 
 ```yaml
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhysicalDisk
-Gets the StorageSubsystem associated with the specified PhysicalDisk object.
+Gets the StorageSubSystem associated with the specified PhysicalDisk object.
 The Physical Disk CIM object is exposed by the Get-PhysicalDisk cmdlet.
 
 ```yaml
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoragePool
-Gets the StorageSubsystem associated with the specified StoragePool object.
+Gets the StorageSubSystem associated with the specified StoragePool object.
 The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
 
 ```yaml
@@ -384,7 +384,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageProvider
-Gets the StorageSubsystem associated with the specified StorageProvider object.
+Gets the StorageSubSystem associated with the specified StorageProvider object.
 The Storage Provider CIM object is exposed by the Get-StorageProvider cmdlet.
 
 ```yaml
@@ -400,7 +400,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPort
-Gets the StorageSubsystem associated with the specified TargetPort object.
+Gets the StorageSubSystem associated with the specified TargetPort object.
 The TargetPort CIM object is exposed by the Get-TargetPort cmdlet.
 
 ```yaml
@@ -416,7 +416,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPortal
-Gets the StorageSubsystem associated with the specified TargetPortal object.
+Gets the StorageSubSystem associated with the specified TargetPortal object.
 The TargetPortal CIM object is exposed by the Get-TargetPortal cmdlet.
 
 ```yaml
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 ```
 
 ### -UniqueId
-Gets the StorageSubsystem with the specified UniqueID value.
+Gets the StorageSubSystem with the specified UniqueID value.
 
 ```yaml
 Type: String[]
@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-Gets the StorageSubsystem associated with the specified VirtualDisk object.
+Gets the StorageSubSystem associated with the specified VirtualDisk object.
 The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 
 ```yaml
@@ -516,7 +516,7 @@ You can use the pipeline operator to pass a VirtualDisk object to the **VirtualD
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubSystem
 This cmdlet outputs an object representing a storage subsystem.
 
 ## NOTES
@@ -525,7 +525,7 @@ This cmdlet outputs an object representing a storage subsystem.
 
 [Get-StorageProvider](./Get-StorageProvider.md)
 
-[Set-StorageSubsystem](./Set-StorageSubsystem.md)
+[Set-StorageSubSystem](./Set-StorageSubSystem.md)
 
 [Get-StorageNode](./Get-StorageNode.md)
 

@@ -13,7 +13,7 @@ ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Set-StorageSubsystem
+title: Set-StorageSubSystem
 ms.reviewer:
 ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
 ---

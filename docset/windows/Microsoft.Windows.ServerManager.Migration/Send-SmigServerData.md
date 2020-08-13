@@ -6,7 +6,7 @@ author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 2017-01-03
+ms.date: 01/03/2017
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference

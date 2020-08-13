@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageEnclosure
 ms.reviewer:
@@ -132,7 +132,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ The cmdlet gets storage enclosures that the names specify.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -181,7 +181,7 @@ The acceptable values for this parameter are:
 - Healthy
 - Warning
 - Unhealthy
-- Unknown 
+- Unknown
 
 Health status describes the health of an enclosure.
 This cmdlet gets the enclosures that have health statuses that this parameter specifies.
@@ -189,7 +189,7 @@ This cmdlet gets the enclosures that have health statuses that this parameter sp
 ```yaml
 Type: HealthStatus[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Healthy, Warning, Unhealthy, Unknown
 
 Required: False
@@ -206,7 +206,7 @@ This cmdlet gets enclosures for the manufacturers that this parameter identifies
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ This cmdlet gets enclosures that the model IDs specify.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -239,7 +239,7 @@ To obtain a physical disk object, use the Get-PhysicalDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ Indicates that this cmdlet gets storage enclosures that are physically connected
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ Specifies the serial number of the storage enclosure to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -286,7 +286,7 @@ To obtain a storage node object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -303,7 +303,7 @@ To obtain a storage subsystem object, use the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -320,7 +320,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -356,6 +356,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet returns an array of **StorageEnclosure** objects.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

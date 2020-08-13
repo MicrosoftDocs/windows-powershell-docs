@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-TargetPort
 ms.reviewer:
@@ -88,7 +88,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ The acceptable values for this parameter are:iSCSI, SAS, Fibre Channel, and so o
 ```yaml
 Type: ConnectionType[]
 Parameter Sets: ByName, ByAddress
-Aliases: 
+Aliases:
 Accepted values: Other, FibreChannel, ParallelSCSI, SSA, IEEE1394, RDMA, iSCSI, SAS, ADT
 
 Required: False
@@ -138,7 +138,7 @@ The friendly name may be defined by a user and is not guaranteed to be unique.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -154,7 +154,7 @@ The Masking Set CIM object is exposed by the [Get-MaskingSet](http://technet.mic
 ```yaml
 Type: CimInstance
 Parameter Sets: ByMaskingSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies a string containing the port address to query.
 ```yaml
 Type: String[]
 Parameter Sets: ByAddress
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](http:/
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ The Target Portal CIM object is exposed by the Get-TargetPortal cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPortal
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ The Virtual Disk CIM object is exposed by the [Get-VirtualDisk](http://technet.m
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,6 +287,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-StoragePool
 ms.reviewer:
@@ -92,7 +92,7 @@ This example creates a new storage pool named CompanyData using the Windows Stor
 ### Example 3: Create a new storage pool, virtual disk, partition, and volume
 ```
 The first line ([CODE_Snippit]$PhysicalDisks =[CODE_Snippit]…) gets the storage subsystem object for the Windows Storage subsystem, passes it to the **Get-PhysicalDisk** cmdlet, which then gets the physical disks in the specified subsystem that are available to add to a storage pool, and assigns these disks to the $PhysicalDisks variable.The second line of the command has five parts, connected by the pipeline (|). The first part ([CODE_Snippit]New-StoragePool[CODE_Snippit]…) creates a new storage pool using the physical disks in the $PhysicalDisks variable, and then passes the new storage pool down the pipeline. All of the following commands are logically part of one command and should be entered as such.The second part ([CODE_Snippit]New-VirtualDisk[CODE_Snippit]…) creates a new virtual disk on the passed in storage pool and then passes the new virtual disk down the pipeline.The third part ([CODE_Snippit]Initialize-Disk[CODE_Snippit]…) initializes the disk that was passed in, and then passes the disk down the pipeline.The fourth part ([CODE_Snippit]New-Partition[CODE_Snippit]…) creates a new partition on the disk that was passed in, assigns it the next available drive letter, and then passes the partition down the pipeline.The final part of the command ([CODE_Snippit]Format-Volume[CODE_Snippit]) formats the partition that was passed in.
-PS C:\> $PhysicalDisks = Get-StorageSubSystem -FriendlyName "Windows Storage*" | Get-PhysicalDisk -CanPool $True 
+PS C:\> $PhysicalDisks = Get-StorageSubSystem -FriendlyName "Windows Storage*" | Get-PhysicalDisk -CanPool $True
 PS C:\> New-StoragePool -FriendlyName "CompanyData" -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks |New-VirtualDisk -FriendlyName "UserData" -Size 100GB -ProvisioningType Thin |Initialize-Disk -PassThru |New-Partition -AssignDriveLetter -UseMaximumSize |Format-Volume
 ```
 
@@ -107,7 +107,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ If the number or size of the solid-state drives (SSDs) or journal disks in the s
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ For example, an enclosure-aware subsystem could balance each data copy of the vi
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,10 +169,10 @@ Accept wildcard characters: False
 Specifies the default fault domain for new virtual disks created in this storage pool.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 The fault domain specifies at what level you want to be fault tolerant.
@@ -182,7 +182,7 @@ This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -214,7 +214,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +230,7 @@ Valid logical sector size values (in bytes) for virtual disks created by using t
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```yaml
 Type: MediaType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HDD, SSD, SCM
 
 Required: False
@@ -277,7 +277,7 @@ The Physical Disk CIM objects represent the physical disks to be added to the st
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -293,7 +293,7 @@ The acceptable values for this parameter are: Unknown, Fixed or Thin.
 ```yaml
 Type: ProvisioningType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Thin, Fixed
 
 Required: False
@@ -309,7 +309,7 @@ Specifies the default resiliency setting (also known as storage layout) to use f
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ Specifies the friendly name of the storage subsystem on which you want to create
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -339,7 +339,7 @@ Specifies the name of the storage subsystem (provided by the Storage Management)
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -371,7 +371,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,7 +403,7 @@ Specifies the default write-back cache size for virtual disks in the storage poo
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -429,6 +429,8 @@ You can use the pipeline operator to pass an MSFT_StorageSubsystem object to the
 This cmdlet returns an object representing the newly created storage pool.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

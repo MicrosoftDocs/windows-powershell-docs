@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Disable-StorageHighAvailability
 ms.reviewer:
@@ -70,7 +70,7 @@ Number IsHighlyAvailable IsClustered IsScaleOut
      9              True        True       True
 
 
-The next command removes disk number 9 its failover cluster. The final command repeats the first command to display the new status of the disk. 
+The next command removes disk number 9 its failover cluster. The final command repeats the first command to display the new status of the disk.
 PS C:\> Disable-StorageHighAvailability -DiskNumber 9
 PS C:\> Get-Disk -Number 9 | Format-Table Number,IsHighlyAvailable,IsClustered,IsScaleOut
 
@@ -89,7 +89,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies an array of friendly names of disks.
 ```yaml
 Type: String[]
 Parameter Sets: ByDiskName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -136,7 +136,7 @@ Specifies an array of disk numbers.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByDiskNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -151,7 +151,7 @@ Specifies an array of disk paths.
 ```yaml
 Type: String[]
 Parameter Sets: ByDiskPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +181,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -197,7 +197,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,6 +231,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

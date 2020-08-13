@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-StorageProvider
 ms.reviewer:
@@ -66,7 +66,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ The cmdlet modifies the providers that you specify.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -159,13 +159,13 @@ Accept wildcard characters: False
 Specifies the cache mode for a remote subsystem.
 The acceptable values for this parameter are:
 
-- Disable 
+- Disable
 - Manual
 
 ```yaml
 Type: RemoteSubsystemCacheMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, ManualDiscovery
 
 Required: False
@@ -183,7 +183,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,6 +206,8 @@ You can use the pipeline operator to pass one or more MSFT_StorageProvider objec
 If you use the *PassThru* parameter, this cmdlet outputs an object that represents the storage provider for which you changed settings
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-StorageSubsystemVirtualDisk
 ms.reviewer:
@@ -86,7 +86,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,16 +117,16 @@ Specifies the default fault domain for new virtual disks created in this storage
 The fault domain specifies at what level you want to be fault tolerant.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -158,7 +158,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ Therefore, `Interleave * NumberOfColumns` yields the size of one stripe of user 
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +190,7 @@ Specifies that the enclosure supports SCSI Enclosure Services (SES), which is ut
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ Specifies the number of columns to create.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Specifies the number of data copies to create.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ Specifies the usage of this object.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ Specifies the parity layout to be used with the virtual disk to be created.
 ```yaml
 Type: ParityLayout
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: NonRotatedParity, RotatedParity
 
 Required: False
@@ -266,7 +266,7 @@ Specifies the physical disk redundancy value to use during the creation of a vir
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ The acceptable values for this parameter are: Unknown, Fixed, or Thin.
 ```yaml
 Type: ProvisioningType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Thin, Fixed
 
 Required: False
@@ -299,7 +299,7 @@ This cannot be guaranteed.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ The size may be defined by a user.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ The friendly name may be defined by the user.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -348,7 +348,7 @@ Specifies the name of the storage subsystem provided by the Storage Management.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -381,7 +381,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -396,7 +396,7 @@ Specifies the intended usage.
 ```yaml
 Type: Usage
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Other, Unrestricted, ReservedForComputerSystem, ReservedForReplicationServices, ReservedForMigrationServices, LocalReplicaSource, RemoteReplicaSource, LocalReplicaTarget, RemoteReplicaTarget, LocalReplicaSourceOrTarget, RemoteReplicaSourceOrTarget, DeltaReplicaTarget, ElementComponent, ReservedAsPoolContributer, CompositeVolumeMember, CompositeVirtualDiskMember, ReservedForSparing
 
 Required: False
@@ -412,7 +412,7 @@ Uses the maximum allowable size for this virtual disk.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,6 +437,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-Disk
 ms.reviewer:
@@ -124,7 +124,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Contains a globally unique ID (GUID).
 ```yaml
 Type: String
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByIdAttributes, ByPathAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObjectAttributes, ByObject, ByObjectConvertStyle
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -186,7 +186,7 @@ Specifies that the disk is offline.
 ```yaml
 Type: Boolean
 Parameter Sets: ByObject, ById, ByPath, ByNumber
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ Note: If the disk is set to read-only, then the disk must be set to read-only = 
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByIdAttributes, ByPathAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ Specifies a disk number on which the cmdlet acts.
 ```yaml
 Type: UInt32
 Parameter Sets: ByNumberAttributes, ByNumberConvertStyle, ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -235,7 +235,7 @@ The disk must be set to read-only = false before this cmdlet will work.
 ```yaml
 Type: PartitionStyle
 Parameter Sets: ByObjectConvertStyle, ByNumberConvertStyle, ByPathConvertStyle, ByIdConvertStyle
-Aliases: 
+Aliases:
 Accepted values: Unknown, MBR, GPT
 
 Required: False
@@ -251,7 +251,7 @@ Contains the device instance path.
 ```yaml
 Type: String
 Parameter Sets: ByPathConvertStyle, ByPathAttributes, ByPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -266,7 +266,7 @@ Contains the signature of the disk.
 ```yaml
 Type: UInt32
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByIdAttributes, ByPathAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -283,7 +283,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ The ID persists through restarts.
 ```yaml
 Type: String
 Parameter Sets: ByIdConvertStyle, ByIdAttributes, ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -322,6 +322,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 ### None
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

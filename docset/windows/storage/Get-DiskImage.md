@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-DiskImage
 ms.reviewer:
@@ -90,7 +90,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ You cannot use this parameter with the *ImagePath* parameter.
 ```yaml
 Type: String[]
 Parameter Sets: ByDevicePath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +139,7 @@ You cannot use this parameter with the *DevicePath* parameter.
 ```yaml
 Type: String[]
 Parameter Sets: ByImagePath
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -155,7 +155,7 @@ If the *StorageType* parameter is not specified or the Unknown type is provided,
 ```yaml
 Type: StorageType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, ISO, VHD, VHDX, VHDSet
 
 Required: False
@@ -173,7 +173,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ Enter a Volume CIM object, which can be obtained by using the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,6 +212,8 @@ You can pipe a Volume object to the *Volume* parameter.
 This cmdlet returns an object that represents the specified disk image.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

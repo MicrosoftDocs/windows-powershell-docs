@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-DiskStorageNodeView
 ms.reviewer:
@@ -56,9 +56,9 @@ IsReadOnly        : False
 
 IsOffline         : False
 
-OfflineReason     : 
+OfflineReason     :
 
-StorageNode       : MSFT_StorageNode (ObjectId = "{1}\\Contoso-C1\ROOT/Microsoft/Window...) 
+StorageNode       : MSFT_StorageNode (ObjectId = "{1}\\Contoso-C1\ROOT/Microsoft/Window...)
 
 Disk              : MSFT_Disk (ObjectId = "{1}\\Contoso-C1\ROOT/Microsoft/Window...)
 ```
@@ -77,7 +77,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -93,7 +93,7 @@ To obtain a **Disk** object, use the Get-Disk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -109,7 +109,7 @@ To obtain a **StorageNode** object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -126,6 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

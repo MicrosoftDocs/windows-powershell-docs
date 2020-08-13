@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-VirtualDisk
 ms.reviewer:
@@ -136,7 +136,7 @@ Specifies the allocation unit size to use when create the virtual disk.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Columns represent the number of underlying physical disks across which one strip
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ If the number or size of the solid-state drives (SSDs) or journal disks in the s
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -214,16 +214,16 @@ Specifies at which level columns within a virtual disk should be isolated from e
 We recommend omitting this parameter and using the defaults.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -237,10 +237,10 @@ Accept wildcard characters: False
 Specifies at what level you want the virtual disk to be fault tolerant.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 For example, specify StorageScaleUnit to store data copies on separate nodes of a Storage Spaces Direct cluster.
@@ -249,7 +249,7 @@ This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -281,7 +281,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -298,7 +298,7 @@ Therefore, `Interleave * NumberOfColumns` yields the size of one stripe of user 
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +321,7 @@ For more information about enclosure awareness, see [Storage Spaces Frequently A
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -335,16 +335,16 @@ Specifies the media type of the storage tier.
 The cmdlet creates the storage tier for the media type that you specify.
 The acceptable values for this parameter are:
 
-- SSD 
-- SCM 
-- HDD 
+- SSD
+- SCM
+- HDD
 
 Use SCM for storage-class memory such as NVDIMMs.
 
 ```yaml
 Type: MediaType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HDD, SSD, SCM
 
 Required: False
@@ -360,7 +360,7 @@ Specifies the number of columns to use when allocating the virtual disk.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -376,7 +376,7 @@ Specify 2 to create a two-way mirror, or 3 to specify a three-way mirror or for 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -392,7 +392,7 @@ We recommend omitting this parameter and using the defaults.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -419,17 +419,17 @@ Accept wildcard characters: False
 
 ### -PhysicalDiskRedundancy
 Specifies the physical disk redundancy value to use during the creation of a virtual disk.
-This value represents how many failed physical disks the virtual disk can tolerate without data loss. 
+This value represents how many failed physical disks the virtual disk can tolerate without data loss.
 
-- For two-way mirror spaces, the virtual disk can tolerate 1 failed physical disk without data loss. 
-- For three-way mirror spaces, the virtual disk can tolerate 2 failed physical disks without data loss. 
-- For single-parity spaces, the virtual disk can tolerate 1 failed physical disk without data loss. 
+- For two-way mirror spaces, the virtual disk can tolerate 1 failed physical disk without data loss.
+- For three-way mirror spaces, the virtual disk can tolerate 2 failed physical disks without data loss.
+- For single-parity spaces, the virtual disk can tolerate 1 failed physical disk without data loss.
 - For dual-parity spaces the virtual disk can tolerate 2 failed physical disks without data loss.
 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -445,7 +445,7 @@ The PhysicalDisk objects represent the specific physical disks on which to creat
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -462,7 +462,7 @@ You must specify Fixed for storage spaces that use storage tiers or a clustered 
 ```yaml
 Type: ProvisioningType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Thin, Fixed
 
 Required: False
@@ -478,7 +478,7 @@ This parameter is no longer supported.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -501,7 +501,7 @@ To create a dual-parity space, specify 2 for the *PhysicalDiskRedundancy* parame
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -517,7 +517,7 @@ The default unit is Bytes; to specify a different unit, enter the size followed 
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -533,7 +533,7 @@ Enter a friendly name, or use wildcard characters to enter a name pattern.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -549,7 +549,7 @@ Enter the name of the storage pool provided by the Storage Management Provider, 
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -579,7 +579,7 @@ Specifies an array of sizes of the storage tiers that you specify for the *Stora
 ```yaml
 Type: UInt64[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -596,7 +596,7 @@ To obtain a virtual disk object, use the Get-StorageTier cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -613,7 +613,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -629,7 +629,7 @@ You can specify one of the predefined descriptions, or use the default value (Ot
 ```yaml
 Type: Usage
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Other, Unrestricted, ReservedForComputerSystem, ReservedForReplicationServices, ReservedForMigrationServices, LocalReplicaSource, RemoteReplicaSource, LocalReplicaTarget, RemoteReplicaTarget, LocalReplicaSourceOrTarget, RemoteReplicaSourceOrTarget, DeltaReplicaTarget, ElementComponent, ReservedAsPoolContributer, CompositeVolumeMember, CompositeVirtualDiskMember, ReservedForSparing
 
 Required: False
@@ -645,7 +645,7 @@ Creates a virtual disk with the maximum size possible given the available storag
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -658,28 +658,28 @@ Accept wildcard characters: False
 Specifies the size of the write-back cache.
 The cmdlet creates the write-back cache of the size that you specify when the cmdlet creates the virtual disk space.
 
-The following describes the behavior of this parameter based on the value that you specify: 
+The following describes the behavior of this parameter based on the value that you specify:
 
-1. If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool. 
+1. If you do not specify this parameter, the cmdlet sets the value of the **WriteCacheSizeDefault** property from the storage pool.
 
 1. The default setting of **WriteCacheSizeDefault** for a storage pool is Auto, which specifies that Windows Server automatically selects the optimal write-back cache size for your configuration.
-You can change the value of **WriteCacheSizeDefault** to a concrete value at any time. 
+You can change the value of **WriteCacheSizeDefault** to a concrete value at any time.
 
-1. The Auto setting for **WriteCacheSize** functions as follows: 
-    1. If any of the following is true, Auto is set to 1 GB: 
+1. The Auto setting for **WriteCacheSize** functions as follows:
+    1. If any of the following is true, Auto is set to 1 GB:
         1. The storage pool contains at least N drives with enough capacity and you set the *Usage* parameter to Journal.
-        (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
-        1. The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity) 
+        (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity)
+        1. The storage pool contains at least N drives with enough capacity and the media type of the virtual disk is set to SSD (N = 1 for simple spaces, N = 2 for two-way mirror and single parity, N = 3 for three-way mirror and dual parity)
     1. Otherwise, Auto is set to 0 (no log) for simple and mirror spaces, and 32 MB for parity spaces.
 
 1. If you specify Auto or 0 (zero) for this parameter and the storage space is not a parity space, the cmdlet verifies that either 3.a.i or 3.a.ii is true.
-    If either 3.a.i or 3.a.ii is not true, you cannot set **WriteCacheSize** to Auto or 0. 
+    If either 3.a.i or 3.a.ii is not true, you cannot set **WriteCacheSize** to Auto or 0.
     1. The objective of these conditions is to help you avoid scenarios in which you force the creation of a write-back cache in situations that result in slower performance.
 
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -705,6 +705,8 @@ You can use the pipeline operator to pass an array of MSFT_StorageTier objects t
 The New-VirtualDisk cmdlet returns an object that represents the newly created virtual disk.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

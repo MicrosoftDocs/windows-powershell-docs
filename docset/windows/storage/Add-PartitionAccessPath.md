@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-PartitionAccessPath
 ms.reviewer:
@@ -81,7 +81,7 @@ The access path string does not require a trailing backslash.
 ```yaml
 Type: String
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -96,7 +96,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -111,7 +111,7 @@ Assigns the next available drive letter to the new partition.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ Specifies an ID used to identify a disk in the system.
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -173,7 +173,7 @@ Specifies an array of disk numbers.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -188,7 +188,7 @@ Specifies a letter used to identify a drive or volume in the system.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -203,7 +203,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -218,7 +218,7 @@ Specifies the starting offset, in bytes.
 ```yaml
 Type: UInt64[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -249,7 +249,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -305,9 +305,11 @@ You can pipe a Partition object to the *InputObject* parameter to specify the pa
 If you specify the *Passthru* parameter, this cmdlet outputs a Partition object representing the partition on which you added an access path.
 
 ## NOTES
+
 * Mounted folders are supported only on NTFS-formatted partitions.
 * You can only assign a single drive letter to a partition. To change the drive letter, use the **Set-Partition** cmdlet with the *NewDriveLetter* parameter.
 * The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class that displays Windows Management Instrumentation (WMI) objects. The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageFaultDomain
 ms.reviewer:
@@ -64,7 +64,7 @@ The Rack is stored in the $Rack variable.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specifies the physical location of the hardware.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +94,7 @@ Specifies the objects in the hierarchy that are above or below the fault domain.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageFaultDomain
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -111,7 +111,7 @@ The StorageSubsystem CIM object is exposed by the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubsystem
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Specifies the Storage fault domain type: 
+Specifies the Storage fault domain type:
 
 - PhysicalDisk
 - Enclosure
@@ -132,7 +132,7 @@ Specifies the Storage fault domain type:
 ```yaml
 Type: StorageFaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack, StorageSite
 
 Required: False
@@ -152,6 +152,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### MSFT_PhysicalDisk, MSFT_StorageEnclosure, MSFT_StorageScaleUnit, MSFT_StorageRack, MSFT_StorageChassis
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Debug-FileShare
 ms.reviewer:
@@ -51,15 +51,15 @@ The **Debug-FileShare** cmdlet finds problems with a file share and recommends s
 ### Example 1: Debug a file share by using the pipeline
 ```
 PS C:\>Get-FileShare | Debug-FileShare
-EventTime                 : 
+EventTime                 :
 FaultId                   : 0ef62dbe-657a-483e-a248-7c5c1dc82477
-FaultingObject            : 
-FaultingObjectDescription : Storage appliance server '{ac906082-8b7e-44fc-b9e5-7bd8aa749958}:SN:GalenB-VM6'. 
-FaultingObjectLocation    : 
+FaultingObject            :
+FaultingObjectDescription : Storage appliance server '{ac906082-8b7e-44fc-b9e5-7bd8aa749958}:SN:GalenB-VM6'.
+FaultingObjectLocation    :
 FaultType                 : ServerDownFault
 PerceivedSeverity         : Minor
-Reason                    : The server cannot be reached. 
-RecommendedActions        : {Start or replace storage server.} 
+Reason                    : The server cannot be reached.
+RecommendedActions        : {Start or replace storage server.}
 PSComputerName            :
 ```
 
@@ -68,15 +68,15 @@ This command gets any faults and remediation actions associated with all file sh
 ### Example 2: Debug a file share by name
 ```
 PS C:\>Debug-FileShare -Name "ContosoShare"
-EventTime                 : 
+EventTime                 :
 FaultId                   : 0ef62dbe-657a-483e-a248-7c5c1dc82477
-FaultingObject            : 
-FaultingObjectDescription : Storage appliance server '{ac906082-8b7e-44fc-b9e5-7bd8aa749958}:SN:GalenB-VM6'. 
-FaultingObjectLocation    : 
+FaultingObject            :
+FaultingObjectDescription : Storage appliance server '{ac906082-8b7e-44fc-b9e5-7bd8aa749958}:SN:GalenB-VM6'.
+FaultingObjectLocation    :
 FaultType                 : ServerDownFault
 PerceivedSeverity         : Minor
-Reason                    : The server cannot be reached. 
-RecommendedActions        : {Start or replace storage server.} 
+Reason                    : The server cannot be reached.
+RecommendedActions        : {Start or replace storage server.}
 PSComputerName            :
 ```
 
@@ -90,7 +90,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: InputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -137,7 +137,7 @@ Specifies the name of the file share about which you want to get information.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -154,7 +154,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ Specifies the ID of the file share about which you want to get information.
 ```yaml
 Type: String[]
 Parameter Sets: ByUniqueId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -190,6 +190,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.Management.Infrastructure.CimInstance#MSFT_StorageDiagnoseResult
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

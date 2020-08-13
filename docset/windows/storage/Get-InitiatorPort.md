@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-InitiatorPort
 ms.reviewer:
@@ -76,8 +76,8 @@ Typically used either for connection to an iSCSI target in the case of iSCSI, or
 ### Example 1: Get all initiator ports
 ```
 PS C:\>Get-InitiatorPort
-InstanceName                  NodeAddress                   PortAddress                   ConnectionType 
-------------                  -----------                   -----------                   -------------- 
+InstanceName                  NodeAddress                   PortAddress                   ConnectionType
+------------                  -----------                   -----------                   --------------
 ROOT\ISCSIPRT\0000_0          iqn.1991-05.com.contoso:...   ISCSI ANY PORT                iSCSI
 ```
 
@@ -86,8 +86,8 @@ This example gets all available initiator ports.
 ### Example 2: Get all initiator ports, and filter the display
 ```
 PS C:\>Get-InitiatorPort | Select-Object -Property NodeAddress,ConnectionType | Format-Table -AutoSize
-NodeAddress                                                    ConnectionType 
------------                                                    -------------- 
+NodeAddress                                                    ConnectionType
+-----------                                                    --------------
 iqn.1991-05.com.microsoft:johnj99-pc2.contoso.com              iSCSI
 ```
 
@@ -102,7 +102,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ To specify a custom connection type, specify the Other value and specify a non-N
 ```yaml
 Type: ConnectionType[]
 Parameter Sets: ByNodeAddress, ByInstanceName
-Aliases: 
+Aliases:
 Accepted values: Other, FibreChannel, iSCSI, SAS
 
 Required: False
@@ -153,7 +153,7 @@ Specifies the instance name of the initiator.
 ```yaml
 Type: String[]
 Parameter Sets: ByInstanceName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Specifies the node address for the initiator.
 ```yaml
 Type: String[]
 Parameter Sets: ByNodeAddress
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -200,7 +200,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ Enter a VirtualDisk CIM object, which is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ Enter an iSCSIConnection CIM object, which is exposed by the **Get-IscsiConnecti
 ```yaml
 Type: CimInstance
 Parameter Sets: ByiSCSIConnection
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +248,7 @@ Enter an iSCSISession CIM object, which is exposed by the **Get-IscsiSession** c
 ```yaml
 Type: CimInstance
 Parameter Sets: ByiSCSISession
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +264,7 @@ Enter an iSCSITarget CIM object, which is exposed by the **Get-IscsiTarget** cmd
 ```yaml
 Type: CimInstance
 Parameter Sets: ByiSCSITarget
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,6 +296,8 @@ You can pipe a VirtualDisk object to the *VirtualDisk* parameter.
 This cmdlet returns an object that represents the initiator port you specified.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

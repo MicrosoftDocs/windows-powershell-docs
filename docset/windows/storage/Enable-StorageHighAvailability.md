@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Enable-StorageHighAvailability
 ms.reviewer:
@@ -62,14 +62,14 @@ The **Enable-StorageHighAvailability** cmdlet enables a clusterable disk that is
 
 ### Example 1: Enable a disk in a failover cluster by using its ID
 ```
-This command uses the Get-Disk cmdlet to display the properties of disk number 9. 
+This command uses the Get-Disk cmdlet to display the properties of disk number 9.
 PS C:\>Get-Disk -Number 9 | Format-Table -Property Number,IsHighlyAvailable,IsClustered,IsScaleOut
 Number IsHighlyAvailable IsClustered IsScaleOut
 ------ ----------------- ----------- ----------
      9             False       False      False
 
-The next command enables disk number 9. The final command repeats the first command to display the new status of the disk. 
-PS C:\>Enable-StorageHighAvailability -DiskNumber 9 
+The next command enables disk number 9. The final command repeats the first command to display the new status of the disk.
+PS C:\>Enable-StorageHighAvailability -DiskNumber 9
 PS C:\> Get-Disk -Number 9 | Format-Table Number,IsHighlyAvailable,IsClustered,IsScaleOut
 Number IsHighlyAvailable IsClustered IsScaleOut
 ------ ----------------- ----------- ----------
@@ -80,7 +80,7 @@ This command enables a shared disk to be added to the failover cluster and made 
 
 ### Example 2: Enable a disk for failover cluster without it being enabled for Cluster Shared Volumes
 ```
-This command uses **Get-Disk** to display the properties of disk number 9. 
+This command uses **Get-Disk** to display the properties of disk number 9.
 PS C:\>Get-Disk -Number 9 | Format-Table -Property Number,IsHighlyAvailable,IsClustered,IsScaleOut
 
 Number IsHighlyAvailable IsClustered IsScaleOut
@@ -88,8 +88,8 @@ Number IsHighlyAvailable IsClustered IsScaleOut
      9             False       False      False
 
 
-The next command enables disk number 9. The command specifies a value of 0 for the *Scaleout* parameter. This command leaves the disk in available storage and not enabled. The final command repeats the first command to display the new status of the disk. 
-PS C:\>Enable-StorageHighAvailability -DiskNumber 9 -ScaleOut 0 
+The next command enables disk number 9. The command specifies a value of 0 for the *Scaleout* parameter. This command leaves the disk in available storage and not enabled. The final command repeats the first command to display the new status of the disk.
+PS C:\>Enable-StorageHighAvailability -DiskNumber 9 -ScaleOut 0
 PS C:\> Get-Disk -Number 9 | Format-Table Number,IsHighlyAvailable,IsClustered,IsScaleOut
 
 Number IsHighlyAvailable IsClustered IsScaleOut
@@ -108,7 +108,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ Specifies an array of friendly names for disks.
 ```yaml
 Type: String[]
 Parameter Sets: ByDiskName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -155,7 +155,7 @@ Specifies an array of disk numbers.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByDiskNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -170,7 +170,7 @@ Specifies an array of disk paths.
 ```yaml
 Type: String[]
 Parameter Sets: ByDiskPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +200,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,6 +263,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

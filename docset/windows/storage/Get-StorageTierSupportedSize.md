@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageTierSupportedSize
 ms.reviewer:
@@ -51,7 +51,7 @@ Use this information to create or extend a virtual disk with the specified resil
 
 ### Example 1: Get the size estimate for a mirror space
 ```
-PS C:\> Get-StorageTierSupportedSize -FriendlyName "*SSD*" -ResiliencySettingName "Mirror" 
+PS C:\> Get-StorageTierSupportedSize -FriendlyName "*SSD*" -ResiliencySettingName "Mirror"
 SupportedSizes                  TierSizeMin                  TierSizeMax                  TierSizeDivisor
 --------------                  -----------                  -----------                  ---------------
 {}                              4294967296                   2130303778816                4294967296
@@ -68,7 +68,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ The cmdlet gets the storage tiers that match the names that you specify.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -116,7 +116,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,6 +187,8 @@ This cmdlet returns an object that lists the minimum and maximum amounts of spac
 These values are System.UInt64 objects.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

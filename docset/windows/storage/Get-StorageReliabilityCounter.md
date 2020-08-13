@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageReliabilityCounter
 ms.reviewer:
@@ -48,10 +48,10 @@ These counters include information about such things as the device temperature, 
 PS C:\>Get-PhysicalDisk -FriendlyName "PhysicalDisk8" | Get-StorageReliabilityCounter | Format-List
 
 ObjectId                : {e24dbc00-a448-11e1-a100-806e6f6e6963}:reliabilitycounter
-PassThroughClass        : 
-PassThroughIds          : 
-PassThroughNamespace    : 
-PassThroughServer       : 
+PassThroughClass        :
+PassThroughIds          :
+PassThroughNamespace    :
+PassThroughServer       :
 UniqueId                : {e24dbc00-a448-11e1-a100-806e6f6e6963}:reliabilitycounter
 DeviceId                : 8
 LoadUnloadCycleCount    : 224
@@ -65,7 +65,7 @@ StartStopCycleCount     : 80
 StartStopCycleCountMax  : 10000
 Temperature             : 28
 TemperatureMax          : 68
-Wear                    : 
+Wear                    :
 WriteErrorsCorrected    : 0
 WriteErrorsTotal        : 0
 WriteErrorsUncorrected  : 0
@@ -82,7 +82,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Specifies a disk for which to get storage reliability counters.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +132,7 @@ PhysicalDisk objects represent physical disks attached to a storage subsystem an
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +149,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,6 +175,8 @@ You can pipe an MSFT_Disk object to the *Disk* parameter to get the storage reli
 The **Get-StorageReliabilityCounter** cmdlet returns a StorageReliabilityCounter object, or an array of StorageReliabilityCounter objects.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

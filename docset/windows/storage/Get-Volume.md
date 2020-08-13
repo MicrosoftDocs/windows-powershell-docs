@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-Volume
 ms.reviewer:
@@ -112,7 +112,7 @@ Get-Volume [-FilePath <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <In
 ## DESCRIPTION
 The **Get-Volume** cmdlet will return a Volume object or a set of Volume objects that match the specified criteria.
 
-Note: Dynamic volumes are supported only by the following cmdlets: 
+Note: Dynamic volumes are supported only by the following cmdlets:
 Repair-Volume (chkdsk), Optimize-Volume (defrag), and Format-Volume (format) on basic disks and storage spaces.
 
 ## EXAMPLES
@@ -127,8 +127,8 @@ This example returns all volumes on all partitions, on all disks.
 ### Example 2: Get the volume for a particular drive letter
 ```
 PS C:\>Get-Volume -DriveLetter C
-DriveLetter         FileSystemLabel     FileSystem          HealthStatus              SizeRemaining                Size 
------------         ---------------     ----------          ------------              -------------                ---- 
+DriveLetter         FileSystemLabel     FileSystem          HealthStatus              SizeRemaining                Size
+-----------         ---------------     ----------          ------------              -------------                ----
 C                                       NTFS                Healthy                        23.61 GB           465.42 GB
 ```
 
@@ -142,7 +142,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ Enter a DiskImage CIM object, which is returned by the Get-DiskImage cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDiskImage
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ Separate multiple drive letters with commas.x
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -223,7 +223,7 @@ To obtain a **FileShare** object, use the Get-FileShare cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByFileShare
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ Gets the volume with the specified label.
 ```yaml
 Type: String[]
 Parameter Sets: ByLabel
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -269,7 +269,7 @@ Enter a Partition CIM object, which is returned by the Get-Partition cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPartition
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ Gets the volume with the specified path.
 ```yaml
 Type: String[]
 Parameter Sets: ByPaths
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,7 +300,7 @@ To obtain a **StorageFileServer**, use the Get-StorageFileServer cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageFileServer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -316,7 +316,7 @@ To obtain a **StorageJob** object, use the Get-StorageJob cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageJob
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ To obtain a **StorageNode** object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +348,7 @@ To obtain **StoragePool** objects, use the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -364,7 +364,7 @@ To obtain **StorageSubsystem** object, the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -396,7 +396,7 @@ Specifies the ID of the volume to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByUniqueId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -425,6 +425,8 @@ You can use the pipeline operator to pass a Volume object to the *ObjectId* para
 This cmdlet returns one or more objects that represent the specified volume(s).
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

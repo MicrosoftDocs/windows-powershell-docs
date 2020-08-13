@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-ResiliencySetting
 ms.reviewer:
@@ -72,7 +72,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,14 +83,14 @@ Accept wildcard characters: False
 
 ### -AutoNumberOfColumns
 Indicates whether the provider automatically determines the best possible column count for a resiliency setting on a storage pool.
-The value ranges are: 
+The value ranges are:
 
 - Mirror.
 The minimum is two for two-way mirror or three for three-way mirror.
-The maximum is eight times the number of data copies. 
+The maximum is eight times the number of data copies.
 - Parity.
 The minimum is three for single parity and seven for dual parity.
-The maximum is eight for single parity and 17 for dual parity. 
+The maximum is eight for single parity and 17 for dual parity.
 - Simple.
 The minimum is one.
 The maximum is eight.
@@ -98,7 +98,7 @@ The maximum is eight.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -147,7 +147,7 @@ Therefore, `Interleave * NumberOfColumns` yields the size of one stripe of user 
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ The acceptable values for this parameter are:simple, mirror, or parity.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,7 +178,7 @@ Specifies the default number of columns to create.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ Specifies the default number of data copies to create.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ We recommend omitting this parameter and using the defaults.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -220,16 +220,16 @@ Accept wildcard characters: False
 
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
-By default, this cmdlet does not generate any output. 
- 
-                        
+By default, this cmdlet does not generate any output.
+
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ Specifies the default number to use for the physical disk redundancy value.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ The Storage Pool CIM object is exposed by the [Get-StoragePool](http://technet.m
 ```yaml
 Type: CimInstance
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -277,7 +277,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,6 +319,8 @@ You can use the pipeline operator to pass an MSFT_StoragePool object to the *Sto
 This cmdlet generates an object that represents resiliency settings if you specify the *PassThru* parameter.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageSubsystem
 ms.reviewer:
@@ -185,7 +185,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,7 +218,7 @@ To obtain a **Disk** object, use the Get-Disk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ To obtain a **FileServer** object, use the Get-StorageFileServer cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByFileServer
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Specifies the friendly name of the storage subsystem to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -265,7 +265,7 @@ The acceptable values for this parameter are: Healthy, Warning, and Unhealthy.
 ```yaml
 Type: HealthStatus[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Healthy, Warning, Unhealthy
 
 Required: False
@@ -283,7 +283,7 @@ The InitiatorID object is exposed by the Get-InitiatorId cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByInitiatorId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -298,7 +298,7 @@ Specifies a manufacturer of storage subsystems to get.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -315,7 +315,7 @@ The MaskingSet object is exposed by the Get-MaskingSet cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByMaskingSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -330,7 +330,7 @@ Specifies a model for which to get storage subsystems.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ Gets the StorageSubsystem with the specified name.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -361,7 +361,7 @@ The Offload Data Transfer Setting CIM object is exposed by the Get-OffloadDataTr
 ```yaml
 Type: CimInstance
 Parameter Sets: ByOffloadDataTransferSetting
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ To obtain a **Partition** object, use the Get-Partition cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPartition
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -410,7 +410,7 @@ To obtain a storage node object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -426,7 +426,7 @@ The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ The Storage Provider CIM object is exposed by the Get-StorageProvider cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageProvider
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -458,7 +458,7 @@ The TargetPort CIM object is exposed by the Get-TargetPort cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPort
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -474,7 +474,7 @@ The TargetPortal CIM object is exposed by the Get-TargetPortal cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPortal
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -491,7 +491,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -522,7 +522,7 @@ The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -538,7 +538,7 @@ To obtain a **Volume** object, use the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -588,6 +588,8 @@ You can use the pipeline operator to pass a VirtualDisk object to the **VirtualD
 This cmdlet outputs an object representing a storage subsystem.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

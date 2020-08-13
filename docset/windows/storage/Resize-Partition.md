@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Resize-Partition
 ms.reviewer:
@@ -63,11 +63,11 @@ The **Resize-Partition** cmdlet resizes a partition and the underlying file syst
 ### EXAMPLE 1
 ```
 PS C:\>Get-Partition -DiskNumber 3 -PartitionNumber 2
-Disk Number: 3 
- 
-PartitionNumber  DriveLetter Offset                                        Size Type 
----------------  ----------- ------                                        ---- ---- 
-2                D           135266304                                931.39 GB Basic 
+Disk Number: 3
+
+PartitionNumber  DriveLetter Offset                                        Size Type
+---------------  ----------- ------                                        ---- ----
+2                D           135266304                                931.39 GB Basic
 
 Resize the partition to 900GB.
 PS C:\>Resize-Partition -DiskNumber 3 -PartitionNumber 2 -Size (900GB)
@@ -75,11 +75,11 @@ PS C:\>Resize-Partition -DiskNumber 3 -PartitionNumber 2 -Size (900GB)
 
 The partition is now 900GB.
 PS C:\>Get-Partition -DiskNumber 3 -PartitionNumber 2
-Disk Number: 3 
- 
-PartitionNumber  DriveLetter Offset                                        Size Type 
----------------  ----------- ------                                        ---- ---- 
-2                D           135266304                                   900 GB Basic 
+Disk Number: 3
+
+PartitionNumber  DriveLetter Offset                                        Size Type
+---------------  ----------- ------                                        ---- ----
+2                D           135266304                                   900 GB Basic
 
 Get the partition sizes.
 PS C:\>$size = (Get-PartitionSupportedSize -DiskNumber 3 -PartitionNumber 2)
@@ -99,7 +99,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Specifies an ID used to identify a disk in the system.
 ```yaml
 Type: String[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -161,7 +161,7 @@ Specifies an array of disk numbers.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -176,7 +176,7 @@ Specifies a letter used to identify a drive or volume in the system.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -206,7 +206,7 @@ Specifies the starting offset, in bytes.
 ```yaml
 Type: UInt64[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -233,16 +233,16 @@ Accept wildcard characters: False
 
 ### -PassThru
 Sends items from the interactive window down the pipeline as input to other cmdlets.
-By default, this cmdlet does not generate any output. 
- 
-                        
+By default, this cmdlet does not generate any output.
+
+
 To send items from the interactive window down the pipeline, click to select the items and then click OK.
 Shift-click and Ctrl-click are supported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ The size may be defined by a user.
 ```yaml
 Type: UInt64
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -277,7 +277,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: ById, ByNumber, ByDriveLetter, InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -318,6 +318,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

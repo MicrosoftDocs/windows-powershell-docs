@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-PhysicalDiskStorageNodeView
 ms.reviewer:
@@ -40,7 +40,7 @@ You can use this cmdlet to debug disk issues specific to a node.
 
 ### Example 1: Get the node view for a Storage node
 ```
-PS C:\>$N = Get-StorageNode -Name "ClusterNode01" 
+PS C:\>$N = Get-StorageNode -Name "ClusterNode01"
 PS C:\> $Output = Get-PhysicalDiskStorageNodeView -StorageNode $N
 PS C:\> $Pd = Get-PhysicalDisk -ObjectId $Output[0].PhysicalDiskObjectId
 ```
@@ -63,7 +63,7 @@ The second command gets the node-specific properties for the disk in $Pd.
 
 ### Example 3: Get the node view for a specified disk and node
 ```
-PS C:\>$N = Get-StorageNode -Name "ClusterNode01" 
+PS C:\>$N = Get-StorageNode -Name "ClusterNode01"
 PS C:\> $Pd = Get-PhysicalDisk -FriendlyName "PhysicalDisk01"
 PS C:\> Get-PhysicalDiskStorageNodeView -StorageNode $N -PhysicalDisk $Pd
 ```
@@ -82,7 +82,7 @@ The third command gets the node view for the specified Storage node and physical
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -97,7 +97,7 @@ Specifies a physical disk as a **CimInstance** object.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -112,7 +112,7 @@ Specifies a storage node as a **CimInstance** object.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -132,6 +132,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 Specifies physical disk properties such as health status, operational status, MPIO status, MPIO load balancing policy, MPIO path IDs, MPIO path state, and IDs of the physical disk object and Storage node object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

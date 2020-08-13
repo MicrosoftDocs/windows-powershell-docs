@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageProvider
 ms.reviewer:
@@ -58,8 +58,8 @@ This cmdlet returns a list of the available storage providers available to the c
 ### Example 1: Get all Storage providers
 ```
 PS C:\>Get-StorageProvider
-Type    Name                                                    Manufacturer 
-----    ----                                                    ------------ 
+Type    Name                                                    Manufacturer
+----    ----                                                    ------------
 SMP     Storage Spaces Management Provider                      Microsoft Corporation
 ```
 
@@ -73,7 +73,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ Specifies the name of the manufacturer of this piece of hardware or software.
 ```yaml
 Type: String[]
 Parameter Sets: ByName, ByURI
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Specifies the name of an object or setting.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -136,7 +136,7 @@ The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](http:/
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Specifies the URI for the object.
 ```yaml
 Type: Uri[]
 Parameter Sets: ByURI
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -209,6 +209,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageTier
 ms.reviewer:
@@ -87,7 +87,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Specifies an array of friendly names of storage tiers to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -139,7 +139,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: MediaType[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unspecified, HDD, SSD, SCM
 
 Required: False
@@ -157,7 +157,7 @@ To obtain a storage pool, use the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ To obtain a virtual disk, use theGet-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -232,6 +232,8 @@ You can use the pipeline operator to pass an **MSFT_VirtualDisk** object to the 
 This cmdlet returns an object that contains details about the storage tier, such as tier friendly name, media type and size.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

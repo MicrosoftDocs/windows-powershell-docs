@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-PhysicalDisk
 ms.reviewer:
@@ -95,8 +95,8 @@ The **Get-PhysicalDisk** cmdlet gets a list of all PhysicalDisk objects visible 
 ### Example 1: Getting all physical disks
 ```
 PS C:\> Get-PhysicalDisk
-FriendlyName        CanPool            OperationalStatus   HealthStatus        Usage                              Size 
-------------        --------            -----------------   ------------        -----                              ---- 
+FriendlyName        CanPool            OperationalStatus   HealthStatus        Usage                              Size
+------------        --------            -----------------   ------------        -----                              ----
 PhysicalDisk4       False               OK                  Healthy             Data Store                        25 GB
 ```
 
@@ -118,7 +118,7 @@ Gets physical disks that are available for use in a storage pool.
 ```yaml
 Type: Boolean
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ Enter a description or use wildcard characters to enter a description pattern.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ Enter a friendly name or use wildcard characters to enter a name pattern.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -182,7 +182,7 @@ Indicates whether the cmdlet gets a list of physical disks that host the extents
 ```yaml
 Type: Boolean
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,15 +195,15 @@ Accept wildcard characters: False
 Specifies the **health status** of physical disks.
 The acceptable values for this parameter are:
 
-- Healthy 
-- Unhealthy 
-- Unknown 
+- Healthy
+- Unhealthy
+- Unknown
 - Warning
 
 ```yaml
 Type: PhysicalDiskHealthStatus
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 Accepted values: Healthy, Warning, Unhealthy, Unknown
 
 Required: False
@@ -219,7 +219,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -235,7 +235,7 @@ Enter a manufacturer string or use wildcard characters to enter a pattern.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +251,7 @@ Enter a model string or use wildcard characters to enter a pattern.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ Indicates that this cmdlet gets physical disks that contain the last remaining c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ Indicates that this cmdlet gets physical disks that are physically connected to 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ Specify the physical disks to host the extents of a virtual disk by using the *P
 ```yaml
 Type: Boolean
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ Specifies the serial number of the physical disk to get.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -343,7 +343,7 @@ To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageEnclosure
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -360,7 +360,7 @@ To obtain a storage node object, use the **Get-StorageNode** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -376,7 +376,7 @@ The Storage Pool CIM object is exposed by the **Get-StoragePool** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -393,7 +393,7 @@ To obtain a **StorageSubsystem** object, use the **Get-StorageSubSystem** cmdlet
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubsystem
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -423,17 +423,17 @@ Specifies an allocation method or usage.
 This cmdlet gets the physical disks that have the specified allocation method.
 The acceptable values for this parameter are:
 
-- AutoSelect 
-- HotSpare 
-- Journal 
-- ManualSelect 
-- Retired 
+- AutoSelect
+- HotSpare
+- Journal
+- ManualSelect
+- Retired
 - Unknown
 
 ```yaml
 Type: PhysicalDiskUsage
 Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
-Aliases: 
+Aliases:
 Accepted values: Unknown, AutoSelect, ManualSelect, HotSpare, Retired, Journal
 
 Required: False
@@ -450,7 +450,7 @@ The VirtualDisk object is exposed by the **Get-VirtualDisk** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -465,7 +465,7 @@ This parameter is reserved for future use.
 ```yaml
 Type: UInt64
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -480,7 +480,7 @@ This parameter is reserved for future use.
 ```yaml
 Type: UInt64
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -509,6 +509,8 @@ You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *Vir
 The Get-PhysicalDisk cmdlet returns objects that represent physical disks.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

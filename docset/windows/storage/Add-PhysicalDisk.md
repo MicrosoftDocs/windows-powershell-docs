@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-PhysicalDisk
 ms.reviewer:
@@ -120,7 +120,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ Enter one or more PhysicalDisk CIM objects.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -184,7 +184,7 @@ Enter a StoragePool CIM object.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -199,7 +199,7 @@ Specifies the friendly name of the storage pool to which to add the physical dis
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -214,7 +214,7 @@ Specifies the name of the storage pool, provided by the Storage Management Provi
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -229,7 +229,7 @@ Specifies the ID of the storage pool to which to add the physical disk.
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolUniqueId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -246,7 +246,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -262,7 +262,7 @@ Valid values are AutoSelect, HotSpare, Journal, ManualSelect, Retired, and Unkno
 ```yaml
 Type: Usage
 Parameter Sets: ByStoragePool, ByStoragePoolUniqueId, ByStoragePoolName, ByStoragePoolFriendlyName
-Aliases: 
+Aliases:
 Accepted values: AutoSelect, ManualSelect, HotSpare, Retired, Journal
 
 Required: False
@@ -282,7 +282,7 @@ You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -300,7 +300,7 @@ You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -315,7 +315,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -333,7 +333,7 @@ You can do so by using the Add-PhysicalDisk or Set-PhysicalDisk cmdlets.
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskUniqueId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -372,6 +372,8 @@ You can pipe an MSFT_VirtualDisk object to the *VirtualDisk* parameter.
 ## OUTPUTS
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

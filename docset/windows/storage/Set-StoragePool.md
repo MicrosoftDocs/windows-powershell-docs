@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-StoragePool
 ms.reviewer:
@@ -152,7 +152,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ If the number or size of the solid-state drives (SSDs) or journal disks in the s
 ```yaml
 Type: Boolean
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ Clearing all blocks is more secure, but is much slower to deallocate.
 ```yaml
 Type: Boolean
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,7 +224,7 @@ For more information about enclosure awareness, see Software-Defined Storage Des
 ```yaml
 Type: Boolean
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,10 +237,10 @@ Accept wildcard characters: False
 Specifies the default fault domain for new virtual disks created in this storage pool.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 The fault domain specifies at what level you want to be fault tolerant.
@@ -250,7 +250,7 @@ This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -266,7 +266,7 @@ Specifies the friendly name of the storage pool on which you want to set attribu
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName, ByFriendlyNameAttributes, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -281,7 +281,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObjectAttributes, ByObjectDefaults, ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -297,7 +297,7 @@ If you specify a value of $True for this parameter, the storage pool does not pe
 ```yaml
 Type: Boolean
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ Sets the object to be read-only (`IsReadOnly $true$true`) or read-write (`IsRead
 ```yaml
 Type: Boolean
 Parameter Sets: ByObjectAttributes, ByUniqueIdAttributes, ByNameAttributes, ByFriendlyNameAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -329,7 +329,7 @@ The acceptable values for this parameter are: HDD, SSD, and Unspecified.
 ```yaml
 Type: MediaType
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 Accepted values: Unspecified, HDD, SSD, SCM
 
 Required: False
@@ -345,7 +345,7 @@ Specifies the name of the storage pool on which you want to set attributes.
 ```yaml
 Type: String
 Parameter Sets: ByName, ByNameAttributes, ByNameDefaults
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -360,7 +360,7 @@ Specifies the new friendly name for the storage pool.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -391,7 +391,7 @@ The acceptable values for this parameter are: **Fixed** or **Thin**.
 ```yaml
 Type: ProvisioningType
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 Accepted values: Unknown, Thin, Fixed
 
 Required: False
@@ -405,13 +405,13 @@ Accept wildcard characters: False
 Specifies how the operating system proceeds with repairing virtual disks in the specified storage pool.
 The acceptable values for this parameter are:
 --**Sequential** Repair processes one allocation slab at a time.
-Specifying this value results in longer repair times, but smaller impact on I/O load. 
+Specifying this value results in longer repair times, but smaller impact on I/O load.
 --**Parallel** Repair processes as many allocation slabs as it can in parallel.  Specifying this value results in the shortest repair time, but significantly impacts I/O load.
 
 ```yaml
 Type: RepairPolicy
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 Accepted values: Sequential, Parallel
 
 Required: False
@@ -429,7 +429,7 @@ Acceptable values for the Windows Storage subsystem are Mirror, Parity, and Simp
 ```yaml
 Type: String
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ Accept wildcard characters: False
 Specifies when Windows should set the Usage property of physical disks missing from a storage pool to Retired.
 The acceptable values for this parameter are:
 -**Auto** This is the default setting for storage pools.
-When set to **Auto**, Windows retires missing disks, but doesn't automatically rebuild affected virtual disks unless there are physical disks whose Usage value is set to **HotSpare**, in which case Windows rebuilds the virtual disks five minutes after the failed write operation. 
+When set to **Auto**, Windows retires missing disks, but doesn't automatically rebuild affected virtual disks unless there are physical disks whose Usage value is set to **HotSpare**, in which case Windows rebuilds the virtual disks five minutes after the failed write operation.
 -**Always** This is the recommended setting when using free pool space to rebuild storage spaces instead of using hot-spare disks.
 When set to **Always**, Windows retires missing physical disks and automatically rebuilds affected virtual disks five minutes after the failed write operation.
 -**Never** When set to **Never**, Windows never retires missing physical disks.
@@ -450,7 +450,7 @@ When set to **Always**, Windows retires missing physical disks and automatically
 ```yaml
 Type: RetireMissingPhysicalDisks
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 Accepted values: Auto, Always, Never
 
 Required: False
@@ -466,7 +466,7 @@ Specifies how full a storage pool must get (in percent) before an alert is gener
 ```yaml
 Type: UInt16[]
 Parameter Sets: ByUniqueId, ByObject, ByFriendlyName, ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -483,7 +483,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -530,7 +530,7 @@ Specifies the default write-back cache size for virtual disks in the storage poo
 ```yaml
 Type: UInt64
 Parameter Sets: ByObjectDefaults, ByUniqueIdDefaults, ByNameDefaults, ByFriendlyNameDefaults
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -552,6 +552,8 @@ You can use the pipeline operator to pass one or more MSFT_StoragePool objects t
 ### None
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

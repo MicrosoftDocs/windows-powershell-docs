@@ -3,6 +3,7 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-anbarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 Module Name: Microsoft.Windows.ServerManager.Migration
 ms.topic: reference
 manager: jasgro

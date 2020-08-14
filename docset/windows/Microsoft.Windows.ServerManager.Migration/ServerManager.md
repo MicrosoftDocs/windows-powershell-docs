@@ -3,7 +3,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-anbarr
 Module Name: ServerManager
-Module Guid: D8E0CAE9-8E9B-45BC-BFED-0AAD50938AF0
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390825
 Help Version: 5.0.0.1
 Locale: en-US

@@ -70,7 +70,7 @@ PS C:\> Remove-ADUser -Identity "CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABR
 This command removes the user with the distinguished name CN=Glen John,OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 4: Get a user by distinguished name and remove it
-```powershells
+```powershell
 PS C:\> Get-ADUser -Identity "cn=glenjohn,dc=appnc" -Server Lds.Fabrikam.com:50000 | Remove-ADUser
 ```
 

@@ -3,7 +3,7 @@ external help file: StorageCmdlets.cdxml-help.xml
 Module Name: Storage
 online version: 
 schema: 2.0.0
-title: Set-StorageSubsystem
+title: Set-StorageSubSystem
 description: 
 keywords: powershell, cmdlet
 author: andreabarr
@@ -20,7 +20,7 @@ ms.reviewer: brianlic
 # Set-StorageSubSystem
 
 ## SYNOPSIS
-Sets the friendly name or description of the specified StorageSubsystem object.
+Sets the friendly name or description of the specified StorageSubSystem object.
 
 ## SYNTAX
 
@@ -73,17 +73,17 @@ Set-StorageSubSystem -Name <String> [-AutomaticClusteringEnabled <Boolean>] [-Ci
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubsystem** cmdlet sets the friendly name or description of the specified StorageSubsystem object.
+The **Set-StorageSubSystem** cmdlet sets the friendly name or description of the specified StorageSubSystem object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> $inpobject = (Get-StorageSubsystem)
-PS C:\> Set-StorageSubsystem -InputObject $inpobject -Description "Non-Production Testing only"
+PS C:\> $inpobject = (Get-StorageSubSystem)
+PS C:\> Set-StorageSubSystem -InputObject $inpobject -Description "Non-Production Testing only"
 ```
 
-This example changes the Description field on a StorageSubsystem object.
+This example changes the Description field on a StorageSubSystem object.
 
 ## PARAMETERS
 
@@ -235,7 +235,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubSystem
 You can use the pipeline operator to pass an array of MSFT_StorageSubsytem objects to the **InputObject** parameter.
 
 ## OUTPUTS
@@ -246,5 +246,5 @@ You can use the pipeline operator to pass an array of MSFT_StorageSubsytem objec
 
 ## RELATED LINKS
 
-[Get-StorageSubsystem](./Get-StorageSubsystem.md)
+[Get-StorageSubSystem](./Get-StorageSubSystem.md)
 

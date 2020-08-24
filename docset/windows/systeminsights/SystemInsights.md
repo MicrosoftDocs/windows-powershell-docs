@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author:jgerend
+ms.author: jgerend
 Module Name: systeminsights
 Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
 Download Help Link: http://go.microsoft.com
@@ -23,11 +23,11 @@ ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
 
 # SystemInsights Module
 
+## Description
+The System Insights module contains the PowerShell cmdlets for [System Insights](https://aka.ms/SystemInsights), a predictive analytics feature for Windows Server 2019.
+
 >[!IMPORTANT]
 >Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
-## Description
-The System Insights module contains the PowerShell cmdlets for [System Insights](https://aka.ms/SystemInsights), a predictive analytics feature for Windows Server 2019. 
 
 ## systeminsights Cmdlets
 ### [Add-InsightsCapability](Add-InsightsCapability.md)

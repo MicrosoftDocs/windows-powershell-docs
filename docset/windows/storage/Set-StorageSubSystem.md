@@ -11,9 +11,9 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version:
+online version: 
 schema: 2.0.0
-title: Set-StorageSubsystem
+title: Set-StorageSubSystem
 ms.reviewer:
 ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
 ---
@@ -21,7 +21,7 @@ ms.assetid: CBCADABB-5D46-440A-AE5F-57E18960238F
 # Set-StorageSubSystem
 
 ## SYNOPSIS
-Modifies the properties of a StorageSubsystem object.
+Modifies the properties of a StorageSubSystem object.
 
 ## SYNTAX
 
@@ -78,17 +78,17 @@ Set-StorageSubSystem -Name <String> [-AutomaticClusteringEnabled <Boolean>]
 ```
 
 ## DESCRIPTION
-The **Set-StorageSubsystem** cmdlet modifies the properties of the specified StorageSubsystem object.
+The **Set-StorageSubSystem** cmdlet modifies the properties of the specified StorageSubSystem object.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 ```
-PS C:\> $inpobject = (Get-StorageSubsystem)
-PS C:\> Set-StorageSubsystem -InputObject $inpobject -Description "Non-Production Testing only"
+PS C:\> $inpobject = (Get-StorageSubSystem)
+PS C:\> Set-StorageSubSystem -InputObject $inpobject -Description "Non-Production Testing only"
 ```
 
-This example changes the Description field on a StorageSubsystem object.
+This example changes the Description field on a StorageSubSystem object.
 
 ## PARAMETERS
 
@@ -98,7 +98,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ If you want to disable this, set the value of this parameter to $False.
 ```yaml
 Type: Boolean
 Parameter Sets: ByObjectSetAttributes, ByUniqueIdSetAttributes, ByFriendlyNameSetAttributes, ByNameSetAttributes
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ The description may be defined by a user.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueIdDescription, ByObjectDescription, ByNameDescription, ByFriendlyNameDescription
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -161,10 +161,10 @@ Accept wildcard characters: False
 Specifies the default fault domain for new virtual disks created with this storage subsystem.
 The acceptable values for this parameter are:
 
-- PhysicalDisk
-- StorageScaleUnit
-- StorageChassis
-- StorageEnclosure
+- PhysicalDisk 
+- StorageScaleUnit 
+- StorageChassis 
+- StorageEnclosure 
 - StorageRack
 
 The fault domain specifies at what level you want to be fault tolerant.
@@ -174,7 +174,7 @@ This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: ByObjectSetAttributes, ByUniqueIdSetAttributes, ByFriendlyNameSetAttributes, ByNameSetAttributes
-Aliases:
+Aliases: 
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -190,7 +190,7 @@ Specifies the friendly name of the storage subsystem to modify.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyNameDescription, ByFriendlyNameSetAttributes
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -205,7 +205,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObjectSetAttributes, ByObjectDescription
-Aliases:
+Aliases: 
 
 Required: True
 Position: 0
@@ -220,7 +220,7 @@ Specifies the name of the storage subsystem to modify.
 ```yaml
 Type: String
 Parameter Sets: ByNameDescription, ByNameSetAttributes
-Aliases:
+Aliases: 
 
 Required: True
 Position: Named
@@ -237,7 +237,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases:
+Aliases: 
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubSystem
 You can use the pipeline operator to pass an array of MSFT_StorageSubsytem objects to the *InputObject* parameter.
 
 ## OUTPUTS
@@ -275,9 +275,7 @@ You can use the pipeline operator to pass an array of MSFT_StorageSubsytem objec
 
 ## NOTES
 
-* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
-
 ## RELATED LINKS
 
-[Get-StorageSubSystem](./Get-StorageSubsystem.md)
+[Get-StorageSubSystem](./Get-StorageSubSystem.md)
 

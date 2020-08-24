@@ -4,6 +4,7 @@ ms.sitesec: library
 ms.author: v-anbarr
 author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 2017-01-03

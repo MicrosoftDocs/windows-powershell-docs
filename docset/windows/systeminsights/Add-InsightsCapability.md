@@ -8,6 +8,7 @@ Locale: en-US
 title: Add-InsightsCapability
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: lizapo
@@ -20,9 +21,6 @@ schema: 2.0.0
 ---
 
 # Add-InsightsCapability
-
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## SYNOPSIS
 Adds new predictive capabilities to System Insights. 
@@ -37,6 +35,9 @@ Add-InsightsCapability [-Name] <String> [-Library] <String> [[-ComputerName] <St
 ## DESCRIPTION
 
 The **Add-InsightsCapability** cmdlet dynamically adds a new capability using the specified capability name and capability library.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -146,12 +147,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-**Microsoft.SystemInsights.Management.PowerShell.Capability**
+### Microsoft.SystemInsights.Management.PowerShell.Capability
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
 ## OUTPUTS
-**None**
+
+### None
 
 ## RELATED LINKS
 [Get-InsightsCapability](get-insightscapability.md)

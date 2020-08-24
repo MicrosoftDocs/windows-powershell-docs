@@ -8,6 +8,7 @@ Locale: en-US
 title: Remove-InsightsCapabilityAction
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: elizapo
@@ -20,9 +21,6 @@ schema: 2.0.0
 ---
 
 # Remove-InsightsCapabilityAction
-
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## SYNOPSIS
 Removes the action(s) associated with a capability.
@@ -43,6 +41,9 @@ Remove-InsightsCapabilityAction [-Name] <String> [-Type] <PredictionStatus> [[-C
 
 ## DESCRIPTION
 The **Remove-InsightsCapabilityAction** cmdlet removes the action(s) associated with a capability.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -175,12 +176,13 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-**Microsoft.SystemInsights.Management.PowerShell.Capability**
+### Microsoft.SystemInsights.Management.PowerShell.Capability
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
 ## OUTPUTS
-**None**
+
+### None
 
 ## RELATED LINKS
 [Get-InsightsCapability](get-insightscapability.md)

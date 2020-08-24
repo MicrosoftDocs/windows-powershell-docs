@@ -8,6 +8,7 @@ Locale: en-US
 title: Get-InsightsCapability
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: elizapo
@@ -21,9 +22,6 @@ schema: 2.0.0
 
 # Get-InsightsCapability
 
->[!IMPORTANT]
->Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SYNOPSIS
 Gets the specified capability, or all available capabilities if left unspecified.
 
@@ -36,6 +34,9 @@ Get-InsightsCapability [[-Name] <String>] [[-ComputerName] <String>] [-Credentia
 
 ## DESCRIPTION
 The **Get-InsightsCapability** cmdlet gets the specified capability, or all available capabilities if left unspecified.
+
+>[!IMPORTANT]
+>Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## EXAMPLES
 
@@ -106,13 +107,14 @@ For more information, see about_CommonParameters (http://go.microsoft.com/fwlink
 
 ## INPUTS
 
-**Microsoft.SystemInsights.Management.PowerShell.Capability**
+### Microsoft.SystemInsights.Management.PowerShell.Capability
 
 You can use the pipeline operator to pass a capability object to the *Name* parameter.
 
 
 ## OUTPUTS
-**Microsoft.SystemInsights.Management.PowerShell.Capability**
+
+### Microsoft.SystemInsights.Management.PowerShell.Capability
 
 The cmdlet returns one or more objects that represent the specified capabilities.
 

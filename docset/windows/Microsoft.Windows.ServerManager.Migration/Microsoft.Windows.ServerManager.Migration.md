@@ -11,7 +11,7 @@ author: andreabarr
 ms.prod: w10
 ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
 keywords: powershell, cmdlet
-ms.date: 01/03/2017
+ms.date: 2017-01-03
 title: Microsoft.Windows.ServerManager.Migration
 ms.reviewer:
 ms.technology: powershell-windows

@@ -35,6 +35,9 @@ The **New-NpsRadiusClient** cmdlet creates a Remote Authentication Dial-In User 
 A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
 A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
 
+> [!NOTE]
+> The NPS Server service must be restarted after you run the **New-NpsRadiusClient** cmdlet.
+
 ## EXAMPLES
 
 ### Example 1: Add a new RADIUS client

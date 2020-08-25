@@ -93,7 +93,6 @@ This example creates a new computer account from a template object.
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the **AccountExpirationDate** property of an account object.
 The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for this property is accountExpires.
 

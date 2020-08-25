@@ -117,7 +117,6 @@ Sets the principals allowed to retrieve the password for this managed service ac
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the AccountExpirationDate property of an account object.
 The LDAP Display name (ldapDisplayName) for this property is accountExpires.
 

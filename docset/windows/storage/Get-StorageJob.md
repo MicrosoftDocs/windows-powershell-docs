@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageJob
 ms.reviewer:
@@ -97,7 +97,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ To obtain a **Disk** object, use the Get-Disk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Acceptable values are Completed, Exception, Killed, New, QueryPending, Running, 
 ```yaml
 Type: JobState[]
 Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
-Aliases: 
+Aliases:
 Accepted values: New, Starting, Running, Suspended, ShuttingDown, Completed, Terminated, Killed, Exception, Service, QueryPending
 
 Required: False
@@ -162,7 +162,7 @@ Specifies the name the storage job to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByVirtualDisk, ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ The StoragePool CIM object is exposed by the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ The StorageSubsystem CIM object is exposed by the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: BySubsystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ To obtain a **Volume** object, use the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,6 +290,8 @@ You can pipe an MSFT_VirtualDisk object to the *VirtualDisk* parameter to specif
 The Get-StorageJob cmdlet returns objects that represent storage jobs.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

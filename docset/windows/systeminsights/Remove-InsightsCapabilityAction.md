@@ -8,7 +8,7 @@ Locale: en-US
 title: Remove-InsightsCapabilityAction
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: xxx
+external help file:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: elizapo

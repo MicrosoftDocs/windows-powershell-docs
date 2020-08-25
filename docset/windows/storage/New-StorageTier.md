@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: New-StorageTier
 ms.reviewer:
@@ -81,7 +81,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,16 +112,16 @@ Specifies at which level columns within a virtual disk should be isolated from e
 We recommend omitting this parameter and using the defaults.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -137,7 +137,7 @@ Specifies a description for the storage tier that you create.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,10 +150,10 @@ Accept wildcard characters: False
 Specifies at what level you want the virtual disk to be fault tolerant.
 The acceptable values for this parameter are:
 
-- PhysicalDisk 
-- StorageScaleUnit 
-- StorageChassis 
-- StorageEnclosure 
+- PhysicalDisk
+- StorageScaleUnit
+- StorageChassis
+- StorageEnclosure
 - StorageRack
 
 For example, specify StorageScaleUnit to store data copies on separate nodes of a Storage Spaces Direct cluster.
@@ -162,7 +162,7 @@ This cmdlet refers to nodes of a Storage Spaces Direct cluster as storage scale 
 ```yaml
 Type: FaultDomainType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack
 
 Required: False
@@ -193,7 +193,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -210,7 +210,7 @@ Thus `Interleave * NumberOfColumns` yields the size of one stripe of user data.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -224,16 +224,16 @@ Specifies the media type of the storage tier.
 The cmdlet creates the storage tier for the media type that you specify.
 The acceptable values for this parameter are:
 
-- SSD 
-- SCM 
-- HDD 
+- SSD
+- SCM
+- HDD
 
 Use SCM for storage-class memory such as NVDIMMs.
 
 ```yaml
 Type: MediaType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: HDD, SSD, SCM
 
 Required: False
@@ -250,7 +250,7 @@ Columns represent the number of underlying physical disks in a tier across which
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ Specify 2 to create a two-way mirror, or 3 to specify a three-way mirror or for 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ We recommend omitting this parameter and using the defaults.
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -294,17 +294,17 @@ Accept wildcard characters: False
 ### -PhysicalDiskRedundancy
 Specifies the physical disk redundancy value to use during the creation of a virtual disk.
 This value represents how many failed physical disks the virtual disk can tolerate without data loss.
-The redundancy values are as follows: 
+The redundancy values are as follows:
 
-- For two-way mirror spaces, the virtual disk can tolerate 1 failed physical disk without data loss. 
-- For three-way mirror spaces, the virtual disk can tolerate 2 failed physical disks without data loss. 
-- For single-parity spaces, the virtual disk can tolerate 1 failed physical disk without data loss. 
+- For two-way mirror spaces, the virtual disk can tolerate 1 failed physical disk without data loss.
+- For three-way mirror spaces, the virtual disk can tolerate 2 failed physical disks without data loss.
+- For single-parity spaces, the virtual disk can tolerate 1 failed physical disk without data loss.
 - For dual-parity spaces the virtual disk can tolerate 2 failed physical disks without data loss.
 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ To create a dual-parity space, specify 2 for the *PhysicalDiskRedundancy* parame
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +343,7 @@ The cmdlet creates the storage tier in the storage pool that you specify.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -360,7 +360,7 @@ This human-readable name is not necessarily unique.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -393,7 +393,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -416,6 +416,8 @@ You can use the pipeline operator to pass a MSFT_StoragePool object to the **Inp
 This cmdlet outputs an object that represents the storage tier
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

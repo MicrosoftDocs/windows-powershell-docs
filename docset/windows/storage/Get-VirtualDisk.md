@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-VirtualDisk
 ms.reviewer:
@@ -184,7 +184,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ The Disk CIM object is exposed by the [Get-Disk](http://technet.microsoft.com/li
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The friendly name may be defined by a user and is not guaranteed to be unique.
 ```yaml
 Type: String[]
 Parameter Sets: ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -248,7 +248,7 @@ Specifies the status of an object and indicates if the object is **Healthy** or 
 ```yaml
 Type: HealthStatus[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Healthy, Warning, Unhealthy, Unknown
 
 Required: False
@@ -265,7 +265,7 @@ The Initiator ID CIM object is exposed by the [Get-InitiatorId](http://technet.m
 ```yaml
 Type: CimInstance
 Parameter Sets: ByInitiatorId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,7 +281,7 @@ The Initiator Port CIM object is exposed by the [Get-InitiatorPort](http://techn
 ```yaml
 Type: CimInstance
 Parameter Sets: ByInitiatorPort
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ Specifies that the virtual disk is a snapshot of another virtual disk.
 ```yaml
 Type: Boolean[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ The Masking Set CIM object is exposed by the [Get-MaskingSet](http://technet.mic
 ```yaml
 Type: CimInstance
 Parameter Sets: ByMaskingSet
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -327,7 +327,7 @@ Specifies the name of an object or setting.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -342,7 +342,7 @@ Indicates that this cmdlet gets virtual disks that have one remaining copy of da
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +357,7 @@ Specifies the usage of this object.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ The Physical Disk CIM object is exposed by the [Get-PhysicalDisk](http://technet
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +388,7 @@ This parameter is reserved for future use.
 ```yaml
 Type: UInt64
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -403,7 +403,7 @@ This parameter is reserved for future use.
 ```yaml
 Type: UInt64
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +420,7 @@ To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: BySourceVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,7 +437,7 @@ To obtain a virtual disk object, use the Get-StorageJob cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageJob
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -455,7 +455,7 @@ To obtain a virtual disk object, use the Get-StorageNode cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageNode
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -471,7 +471,7 @@ The Storage Pool CIM object is exposed by the [Get-StoragePool](http://technet.m
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -487,7 +487,7 @@ The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](http:/
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -504,7 +504,7 @@ To obtain a virtual disk object, use the Get-StorageTier cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageTier
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -520,7 +520,7 @@ The Target Port CIM object is exposed by the [Get-TargetPort](http://technet.mic
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPort
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -537,7 +537,7 @@ To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -554,7 +554,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -585,7 +585,7 @@ Indicates the intended usage of the virtual disk.
 ```yaml
 Type: Usage[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Other, Unrestricted, ReservedForComputerSystem, ReservedForReplicationServices, ReservedForMigrationServices, LocalReplicaSource, RemoteReplicaSource, LocalReplicaTarget, RemoteReplicaTarget, LocalReplicaSourceOrTarget, RemoteReplicaSourceOrTarget, DeltaReplicaTarget, ElementComponent, ReservedAsPoolContributer, CompositeVolumeMember, CompositeVirtualDiskMember, ReservedForSparing
 
 Required: False
@@ -637,6 +637,8 @@ You can use the pipeline operator to pass an MSFT_TargetVirtualDisk object to th
 This cmdlet outputs an object that represents the specified virtual disk. For more information about output object type, please see [MSFT_VirtualDisk class](https://docs.microsoft.com/previous-versions/windows/desktop/stormgmt/msft-virtualdisk)
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

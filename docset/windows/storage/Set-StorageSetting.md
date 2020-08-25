@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-StorageSetting
 ms.reviewer:
@@ -71,7 +71,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,19 +102,19 @@ Manages the policy that will be applied to newly attached disks.
 New disk policy accepts the following settings; (only applies to disks that were not previously seen), The acceptable values for this parameter are:
 
 - OnlineAll: (Same as current diskpartsanpolicy definition) All disks are automatically onlined regardless of bus-type or configuration.
-Can cause data loss if used on shared bus disks improperly. 
+Can cause data loss if used on shared bus disks improperly.
 - OfflineAll: (Same as current diskpartsanpolicy definition) All disks are automatically left offline, regardless of the bus-type.
-(not recommended for Windows Client as this would result in attached USB disk not being available by default). 
+(not recommended for Windows Client as this would result in attached USB disk not being available by default).
 - OfflineInternal: Leaves all newly attached disks, which are non-shared storage busses (such as ATA, SATA, USB) offline by default.
-(new for Windows Server® 2012). 
-- OfflineShared: Leaves all newly attached disks which are on a sharable bus (iSCSI, FC, SAS) offline by default. 
+(new for Windows Server® 2012).
+- OfflineShared: Leaves all newly attached disks which are on a sharable bus (iSCSI, FC, SAS) offline by default.
 
 In Windows Server 2016, including Nano Server, the default policy is OfflineShared.
 
 ```yaml
 Type: NewDiskPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, OnlineAll, OfflineShared, OfflineAll, OfflineInternal
 
 Required: False
@@ -135,7 +135,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ScrubPolicy
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Off, IntegrityStreams, All
 
 Required: False
@@ -153,7 +153,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -174,6 +174,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

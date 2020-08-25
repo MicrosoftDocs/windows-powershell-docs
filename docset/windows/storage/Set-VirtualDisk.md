@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-VirtualDisk
 ms.reviewer:
@@ -101,7 +101,7 @@ Manages access permissions to the VirtualDisk object.
 ```yaml
 Type: Access
 Parameter Sets: ByObjectAttributes, ByUniqueIdAttributes, ByFriendlyNameAttributes, ByNameAttributes
-Aliases: 
+Aliases:
 Accepted values: Unknown, Readable, Writeable, ReadWrite, WriteOnce
 
 Required: False
@@ -117,7 +117,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ The friendly name may be defined by a user and is not guaranteed to be unique.
 ```yaml
 Type: String
 Parameter Sets: ByFriendlyName, ByFriendlyNameAttributes
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -165,7 +165,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObjectAttributes, ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -180,7 +180,7 @@ Specifies that the object is set as manual-attach.
 ```yaml
 Type: Boolean
 Parameter Sets: ByObjectAttributes, ByUniqueIdAttributes, ByFriendlyNameAttributes, ByNameAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Specifies the name of the virtual disk to modify.
 ```yaml
 Type: String
 Parameter Sets: ByName, ByNameAttributes
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -210,7 +210,7 @@ Specifies the new name of the virtual disk.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObject, ByName, ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ Specifies the usage of this object.
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObject, ByName, ByFriendlyName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -243,7 +243,7 @@ Specify the **IsManualAttach** parameter to set the manual-attach attribute of t
 ```yaml
 Type: String
 Parameter Sets: ByObjectAttributes, ByUniqueIdAttributes, ByFriendlyNameAttributes, ByNameAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ Specifies the intended usage.
 ```yaml
 Type: Usage
 Parameter Sets: ByUniqueId, ByObject, ByName, ByFriendlyName
-Aliases: 
+Aliases:
 Accepted values: Other, Unrestricted, ReservedForComputerSystem, ReservedForReplicationServices, ReservedForMigrationServices, LocalReplicaSource, RemoteReplicaSource, LocalReplicaTarget, RemoteReplicaTarget, LocalReplicaSourceOrTarget, RemoteReplicaSourceOrTarget, DeltaReplicaTarget, ElementComponent, ReservedAsPoolContributer, CompositeVolumeMember, CompositeVirtualDiskMember, ReservedForSparing
 
 Required: False
@@ -313,6 +313,8 @@ You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *Inp
 ### None
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

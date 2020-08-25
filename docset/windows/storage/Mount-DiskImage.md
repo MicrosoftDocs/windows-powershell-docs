@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Mount-DiskImage
 ms.reviewer:
@@ -41,8 +41,8 @@ Mount-DiskImage -InputObject <CimInstance[]> [-Access <Access>] [-NoDriveLetter]
 ## DESCRIPTION
 The **Mount-DiskImage** cmdlet mounts a previously created disk image (virtual hard disk or ISO), making it appear as a normal disk.
 This cmdlet requires the full path of the VHD or ISO file.
-If the file is already mounted, then the cmdlet will display the following error. 
-                       
+If the file is already mounted, then the cmdlet will display the following error.
+
  -- `"The process cannot access the file because it is being used by another process."`
 
 To mount a VHD file, administrator privileges is required.
@@ -72,7 +72,7 @@ ISO files are mounted in read-only mode regardless of what parameter value you p
 ```yaml
 Type: Access
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, ReadWrite, ReadOnly
 
 Required: False
@@ -88,7 +88,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Specifies the path of the VHD or ISO file.
 ```yaml
 Type: String[]
 Parameter Sets: ByImagePath
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -150,7 +150,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +165,7 @@ Specifies that no drive letter should be assigned to the VHD or ISO file after m
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ If the *StorageType* parameter is not specified or the Unknown type is provided,
 ```yaml
 Type: StorageType
 Parameter Sets: ByImagePath
-Aliases: 
+Aliases:
 Accepted values: Unknown, ISO, VHD, VHDX, VHDSet
 
 Required: False
@@ -215,7 +215,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -254,6 +254,8 @@ You can pipe a DiskImage object to the *InputObject* parameter.
 If you specify the *Passthru* parameter, this cmdlet outputs an object that represents the disk image that you mounted.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

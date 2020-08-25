@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-PhysicalExtent
 ms.reviewer:
@@ -51,15 +51,15 @@ PS C:\>Get-PhysicalExtent -PhysicalDisk $(Get-PhysicalDisk)[0]
 ```
 This command gets physical extents on all physical disks on the computer.
 
-### Example 2: Get all physical extents on all physical disks 
+### Example 2: Get all physical extents on all physical disks
 
 ```Powershell
-PS C:\>Get-PhysicalDisk | Get-PhysicalExtent 
+PS C:\>Get-PhysicalDisk | Get-PhysicalExtent
 ```
 
 This command gets all physical extents on all physical disks on the computer.
 
-### Example 3: Get extents on a specific disk 
+### Example 3: Get extents on a specific disk
 ```Powershell
 PS C:\>Get-PhysicalExtent -PhysicalDisk (Get-PhysicalDisk -FriendlyName "PhysicalDisk4")
 ```
@@ -85,7 +85,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ To obtain a **PhysicalDisk** object, use the Get-PhysicalDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -117,7 +117,7 @@ To obtain a **StorageTier** object, use the Get-StorageTier cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageTier
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ To obtain a **VirtualDisk** object, use the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -162,6 +162,8 @@ You can pass a **VirtualDisk** object to this cmdlet.
 This cmdlet returns the physical allocation that is associated with the input object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

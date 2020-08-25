@@ -101,7 +101,6 @@ This command sets the **Location** and **ManagedBy**  attributes of a computer.
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the **AccountExpirationDate** property of an account object.
 The Active Directory Lightweight Directory Services (LDAP) display name (**ldapDisplayName**) for this property is accountExpires.
 

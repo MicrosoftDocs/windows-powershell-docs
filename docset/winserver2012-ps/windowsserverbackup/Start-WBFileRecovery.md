@@ -224,7 +224,7 @@ After the operation is complete, you can use the `Get-WBJob -Previous 1` command
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 
 [Get-WBBackupVolumeBrowsePath](./Get-WBBackupVolumeBrowsePath.md)
 

@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -FileName
 Specifies a name for the export file.
-You can include a file path.
+You CANNOT include a file path. the file will be exported to the SYSTEM32 DNS Folder
 
 ```yaml
 Type: String

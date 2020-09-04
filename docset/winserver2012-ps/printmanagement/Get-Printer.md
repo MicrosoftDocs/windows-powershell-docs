@@ -189,5 +189,5 @@ This cmdlet outputs one or more printer objects.
 
 [Rename-Printer](./Rename-Printer.md)
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

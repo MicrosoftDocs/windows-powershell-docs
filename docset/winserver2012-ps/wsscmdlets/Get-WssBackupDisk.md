@@ -44,5 +44,5 @@ This command gets the list of currently available backup targets and stores the 
 
 [Initialize-WssBackupDisk](./Initialize-WssBackupDisk.md)
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

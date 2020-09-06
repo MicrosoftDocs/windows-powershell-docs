@@ -236,7 +236,7 @@ This cmdlet returns an object that represents an initiator ID.
 
 ## RELATED LINKS
 
-[Connect-iSCSITarget](../Iscsi_Cmdlets/Connect-IscsiTarget.md)
+[Connect-iSCSITarget](../iscsi/Connect-IscsiTarget.md)
 
 [Get-InitiatorPort](./Get-InitiatorPort.md)
 

@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 [Unregister-SmisProvider](./Unregister-SmisProvider.md)
 
-[Get-StorageProvider](../Storage2_Cmdlets/Get-StorageProvider.md)
+[Get-StorageProvider](../storage/Get-StorageProvider.md)
 
-[Update-StorageProviderCache](../Storage2_Cmdlets/Update-StorageProviderCache.md)
+[Update-StorageProviderCache](../storage/Update-StorageProviderCache.md)
 

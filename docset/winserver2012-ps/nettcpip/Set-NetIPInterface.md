@@ -791,5 +791,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-NetIPInterface](./Get-NetIPInterface.md)
 
-[Get-NetAdapter](../NetAdapter_Cmdlets/Get-NetAdapter.md)
+[Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 

@@ -294,7 +294,7 @@ When the **Passthru** parameter is specified, this cmdlet outputs a modified Win
 
 ## RELATED LINKS
 
-[Get-NetIPInterface](../NetTCPIP_Cmdlets/Get-NetIPInterface.md)
+[Get-NetIPInterface](../nettcpip/Get-NetIPInterface.md)
 
 [Get-NetIsatapConfiguration](./Get-NetIsatapConfiguration.md)
 

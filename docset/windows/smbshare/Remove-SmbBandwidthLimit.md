@@ -175,7 +175,7 @@ For more information, type `Get-Help Install-WindowsFeature`. When you enable th
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](../servermanager/Install-WindowsFeature.md)
+[Install-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature.md)
 
 [Get-SmbBandwidthLimit](./Get-SmbBandwidthLimit.md)
 

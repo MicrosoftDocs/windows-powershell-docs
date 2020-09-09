@@ -353,11 +353,8 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-IscsiTargetPortal](./Get-IscsiTargetPortal.md)
 
-[Get-Disk](../Storage2_Cmdlets/Get-Disk.md)
+[Get-Disk](../storage/Get-Disk.md)
 
 [Get-InitiatorPort](../Storage2_Cmdlets/Get-InitiatorPort.md)
 
-[N:MPIO](00000000-0000-0000-0000-000000000000)
-
-[N:Storage](00000000-0000-0000-0000-000000000000)
-
+[Get-InitiatorPort](../storage/Get-InitiatorPort.md)

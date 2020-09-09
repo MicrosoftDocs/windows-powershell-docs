@@ -109,7 +109,7 @@ To check the functional level of the Active Directory forest, use the Get-ADFore
 
 ## RELATED LINKS
 
-[Install-WindowsFeature](../servermanager/Install-WindowsFeature.md)
+[Install-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature.md)
 
 [Enable-SmbDelegation](./Enable-SmbDelegation.md)
 

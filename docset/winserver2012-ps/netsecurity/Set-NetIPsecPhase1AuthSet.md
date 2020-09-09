@@ -449,5 +449,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Remove-NetIPsecPhase1AuthSet](./Remove-NetIPsecPhase1AuthSet.md)
 
-[New-GPO](../GPv2_Cmdlets/New-GPO.md)
+[New-GPO](../grouppolicy/New-GPO.md)
 

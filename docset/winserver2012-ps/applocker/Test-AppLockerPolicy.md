@@ -207,5 +207,5 @@ AppLockerPolicy
 
 [Set-AppLockerPolicy](./Set-AppLockerPolicy.md)
 
-[Get-AppxPackage](../AppX_Cmdlets/Get-AppxPackage.md)
+[Get-AppxPackage](../appx/Get-AppxPackage.md)
 

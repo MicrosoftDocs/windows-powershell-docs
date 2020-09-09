@@ -989,5 +989,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Show-NetFirewallRule](./Show-NetFirewallRule.md)
 
-[New-GPO](../winserver2012-ps/grouppolicy/New-GPO.md)
-
+[New-GPO](../grouppolicy/New-GPO.md)

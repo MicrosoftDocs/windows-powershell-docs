@@ -98,5 +98,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-WindowsFeature](../servermanager/Uninstall-WindowsFeature.md)
+[Uninstall-WindowsFeature](../Microsoft.Windows.ServerManager.Migration/Uninstall-WindowsFeature.md)
 

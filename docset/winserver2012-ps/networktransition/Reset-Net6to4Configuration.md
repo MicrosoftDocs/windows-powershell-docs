@@ -313,7 +313,7 @@ When the **Passthru** parameter is specified, this cmdlet outputs a modified Win
 
 ## RELATED LINKS
 
-[Get-NetIPInterface](../NetTCPIP_Cmdlets/Get-NetIPInterface.md)
+[Get-NetIPInterface](../nettcpip/Get-NetIPInterface.md)
 
 [Get-Net6to4Configuration](./Get-Net6to4Configuration.md)
 

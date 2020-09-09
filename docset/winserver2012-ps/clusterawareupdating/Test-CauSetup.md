@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Invoke-BpaModel](../BPAv2_Cmdlets/Invoke-BpaModel.md)
+[Invoke-BpaModel](../bestpractices/Invoke-BpaModel.md)
 
-[Get-BpaResult](../BPAv2_Cmdlets/Get-BpaResult.md)
+[Get-BpaResult](../bestpractices/Get-BpaResult.md)
 

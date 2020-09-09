@@ -126,5 +126,5 @@ Accept wildcard characters: False
 
 [Search-SmisProvider](./Search-SmisProvider.md)
 
-[Get-StorageProvider](../Storage2_Cmdlets/Get-StorageProvider.md)
+[Get-StorageProvider](../storage/Get-StorageProvider.md)
 

@@ -276,9 +276,9 @@ The output object is returned only when the **PassThru** parameter is specified.
 
 [Get-NetAdapterQos](./Get-NetAdapterQos.md)
 
-[Enable-NetQosFlowControl](../DcbQos_Cmdlets/Enable-NetQosFlowControl.md)
+[Enable-NetQosFlowControl](../dcbqos/Enable-NetQosFlowControl.md)
 
-[New-NetQosTrafficClass](../DcbQos_Cmdlets/New-NetQosTrafficClass.md)
+[New-NetQosTrafficClass](../dcbqos/New-NetQosTrafficClass.md)
 
-[Set-NetQosDcbxSetting](../DcbQos_Cmdlets/Set-NetQosDcbxSetting.md)
+[Set-NetQosDcbxSetting](../dcbqos/Set-NetQosDcbxSetting.md)
 

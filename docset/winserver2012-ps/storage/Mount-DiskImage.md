@@ -247,5 +247,5 @@ If you specify the **Passthru** parameter, this cmdlet outputs an object that re
 
 [Get-DiskImage](./Get-DiskImage.md)
 
-[New-VHD](00000000-0000-0000-0000-000000000000)
+[New-VHD](../hyper-v/New-VHD.md)
 

@@ -1013,7 +1013,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the ServicePrincipalNames property of the account.
 The LDAP display name (ldapDisplayName) for this property is servicePrincipalName.
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>"."
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`."
 
 ```yaml
 Type: String[]

@@ -179,5 +179,5 @@ Accept wildcard characters: False
 
 [Update-ClusterVirtualMachineConfiguration](./Update-ClusterVirtualMachineConfiguration.md)
 
-[Get-VM](./hyper-v/Get-VM.md)
+[Get-VM](../hyper-v/Get-VM.md)
 

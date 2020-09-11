@@ -68,5 +68,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Import-NpsSettings](./Import-NpsConfiguration.md)
+[Import-NpsConfiguration](./Import-NpsConfiguration.md)
 

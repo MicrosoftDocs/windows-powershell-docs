@@ -342,9 +342,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](HYPERLINK "/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10)" /previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
-
-[Storage on TechNet](HYPERLINK "http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx" http://technet.microsoft.com/en-us/library/ee344838(WS.10).aspx)
+[iSCSI Target Server Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848272(v=ws.11))
 
 [Get-IscsiSession](./Get-IscsiSession.md)
 

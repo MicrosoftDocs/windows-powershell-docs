@@ -28,28 +28,28 @@ Creates a new partition on an existing Disk object.
 ### ByNumber (Default)
 ```
 New-Partition [-DiskNumber] <UInt32[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>]
- [-Alignment <UInt32>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
+ [-Alignment <UInt32>] [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
  [-IsHidden] [-IsActive] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
 New-Partition -DiskId <String[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>] [-Alignment <UInt32>]
- [-DriveLetter <Char>] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
+ [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByPath
 ```
 New-Partition -DiskPath <String[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>] [-Alignment <UInt32>]
- [-DriveLetter <Char>] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
+ [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>] [-IsHidden] [-IsActive]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
 New-Partition -InputObject <CimInstance[]> [-Size <UInt64>] [-UseMaximumSize] [-Offset <UInt64>]
- [-Alignment <UInt32>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
+ [-Alignment <UInt32>] [-DriveLetter <Char>] [-AssignDriveLetter] [-MbrType <MbrType>] [-GptType <String>]
  [-IsHidden] [-IsActive] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 

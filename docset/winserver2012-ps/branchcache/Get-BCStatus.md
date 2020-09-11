@@ -101,11 +101,11 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-BCClientSettings](00000000-0000-0000-0000-000000000000)
+[Get-BCClientConfiguration](./Get-BCClientConfiguration.md)
 
-[Get-BCContentServerSettings](00000000-0000-0000-0000-000000000000)
+[Get-BCContentServerConfiguration](./Get-BCContentServerConfiguration.md)
 
-[Get-BCHostedCacheServerSettings](00000000-0000-0000-0000-000000000000)
+[Get-BCHostedCacheServerConfiguration](./Get-BCHostedCacheServerConfiguration.md)
 
-[Get-BCNetworkSettings](00000000-0000-0000-0000-000000000000)
+[Get-BCNetworkConfiguration](./Get-BCNetworkConfiguration.md)
 

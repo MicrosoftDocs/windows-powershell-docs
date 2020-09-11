@@ -352,6 +352,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Get-Disk](../storage/Get-Disk.md)
 
-[Get-InitiatorPort](../Storage2_Cmdlets/Get-InitiatorPort.md)
-
 [Get-InitiatorPort](../storage/Get-InitiatorPort.md)

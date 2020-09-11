@@ -279,5 +279,5 @@ Accept wildcard characters: False
 
 [Get-OdbcDriver](./Get-OdbcDriver.md)
 
-[ADRMSAdmin Module](./ADRMSAdmin.md)
+
 

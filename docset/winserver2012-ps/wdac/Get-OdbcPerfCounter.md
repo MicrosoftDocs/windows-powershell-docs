@@ -129,5 +129,5 @@ Accept wildcard characters: False
 
 [Enable-OdbcPerfCounter](./Enable-OdbcPerfCounter.md)
 
-[ADRMSAdmin Module](./ADRMSAdmin.md)
+
 

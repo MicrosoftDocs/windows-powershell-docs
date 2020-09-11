@@ -289,5 +289,5 @@ Accept wildcard characters: False
 
 [Get-WdacBidTrace](./Get-WdacBidTrace.md)
 
-[ADRMSAdmin Module](./ADRMSAdmin.md)
+
 

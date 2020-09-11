@@ -203,5 +203,5 @@ Accept wildcard characters: False
 
 [Get-OdbcPerfCounter](./Get-OdbcPerfCounter.md)
 
-[ADRMSAdmin Module](./ADRMSAdmin.md)
+
 

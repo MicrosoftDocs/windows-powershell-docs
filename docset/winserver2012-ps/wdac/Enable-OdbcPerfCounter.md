@@ -203,5 +203,5 @@ Accept wildcard characters: False
 
 [Get-OdbcPerfCounter](./Get-OdbcPerfCounter.md)
 
-[N:Wdac](00000000-0000-0000-0000-000000000000)
+
 

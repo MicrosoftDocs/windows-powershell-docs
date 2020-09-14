@@ -58,7 +58,7 @@ This command retrieves a list of print jobs on the printer named PrinterName.
 ### Example 2: Get a list of print jobs using a printer object
 ```
 PS C:\> $Printer = Get-Printer -Name "PrinterName:"
-PS C:\> Get-PrintJob -InputObject $Printer
+PS C:\> Get-PrintJob -PrinterObject $Printer
 ```
 
 The first command gets a printer named PrinterName: by using the Get-Printer cmdlet.

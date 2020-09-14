@@ -149,5 +149,4 @@ The MSFT_SmbClientNetworkInterface object represents the network interfaces used
 
 ## RELATED LINKS
 
-[Get-SmbServerNetworkInterface{{INSERT_A_VALID_LINK}}](00000000-0000-0000-0000-000000000000)
-
+[Get-SmbServerNetworkInterface](./Get-SmbServerNetworkInterface.md)

@@ -32,92 +32,50 @@ Set-ADDomain [-WhatIf] [-Confirm] [-AllowedDNSSuffixes <Hashtable>] [-AuthType <
 ```
 
 ## DESCRIPTION
-The Set-ADDomain cmdlet modifies the properties of an Active Directory domain.
+The **Set-ADDomain** cmdlet modifies the properties of an Active Directory domain.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The Identity parameter specifies the domain to modify.
-You can identify a domain by its distinguished name (DN), GUID, security identifier (SID), DNS domain name, or NetBIOS name.
-You can also set the Identity parameter to an object variable such as $\<localDomainObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADDomain cmdlet to retrieve a domain object and then pass the object through the pipeline to the Set-ADDomain cmdlet.
+The *Identity* parameter specifies the domain to modify.
+You can identify a domain by its distinguished name, GUID, security identifier (SID), DNS domain name, or NetBIOS name.
+You can also set the *Identity* parameter to an object variable such as `$<localDomainObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the Get-ADDomain cmdlet to retrieve a domain object and then pass the object through the pipeline to the **Set-ADDomain** cmdlet.
 
-The Instance parameter provides a way to update a domain object by applying the changes made to a copy of the domain object.
-When you set the Instance parameter to a copy of an Active Directory domain object that has been modified, the Set-ADDomain cmdlet makes the same changes to the original domain object.
+The *Instance* parameter provides a way to update a domain object by applying the changes made to a copy of the domain object.
+When you set the *Instance* parameter to a copy of an Active Directory domain object that has been modified, the **Set-ADDomain** cmdlet makes the same changes to the original domain object.
 To get a copy of the object to modify, use the Get-ADDomain object.
-When you specify the Instance parameter you should not pass the identity parameter. 
-For more information about the Instance parameter, see the Instance parameter description.
-
-The following examples show how to modify the ManagedBy property of a domain object by using three methods:
-
--By specifying the Identity and the ManagedBy parameters
-
--By passing a domain object through the pipeline and specifying the ManagedBy parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the ManagedBy property for the London domain by using the Identity and ManagedBy parameters.
-
-Set-ADDomain -Identity London -ManagedBy SaraDavis
-
-Method 2: Modify the ManagedBy property for the London domain by passing the London domain through the pipeline and specifying the ManagedBy parameter.
-
-Get-ADDomain London | Set-ADDomain -ManagedBy SaraDavis
-
-Method 3: Modify the ManagedBy property for the London domain by using the Windows PowerShell command line to modify a local instance of the London domain.
-Then set the Instance parameter to the local instance.
-
-$domain = Get-ADDomain London
-
-$domain.ManagedBy = SaraDavis
-
-Set-ADDomain -Instance $domain.
+When you specify the *Instance* parameter you should not pass the *Identity* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Set the value of a property in a domain
 ```
-C:\PS>Set-ADDomain -Identity FABRIKAM -AllowedDNSSuffixes @{Replace="fabrikam.com","corp.fabrikam.com"}
-```
-
-Description
-
------------
-
-Sets the value of AllowedDNSSuffixes to {"fabrikam.com","corp.fabrikam.com"} in domain "FABRIKAM".
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Set-ADDomain -Identity FABRIKAM -AllowedDNSSuffixes @{Add="corp.fabrikam.com"}
-
-
-Adds the value "corp.fabrikam.com" to the AllowedDNSSuffixes in domain "FABRIKAM".
+PS C:\>Set-ADDomain -Identity USER01 -AllowedDNSSuffixes @{Replace="USER01.com","corp.USER01.com"}
 ```
 
-Description
+This command sets the value of **AllowedDNSSuffixes** to {"USER01.com","corp.USER01.com"} in domain USER01.
 
------------
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Set the value of a property in a domain
 ```
-C:\PS>Set-ADDomain -Identity FABRIKAM -ManagedBy 'CN=Domain Admins,CN=Users,DC=FABRIKAM,DC=COM'
+PS C:\> Set-ADDomain -Identity USER01 -AllowedDNSSuffixes @{Add="corp.USER01.com"}
 ```
 
-Description
+This command adds the value corp.USER01.com to the **AllowedDNSSuffixes** in domain USER01.
 
------------
-
-Sets the ManagedBy property in domain "FABRIKAM" to 'CN=Domain Admins,CN=Users,DC=FABRIKAM,DC=COM'.
-
-### -------------------------- EXAMPLE 4 --------------------------
+### Example 3: Set the ManagedBy property in a domain
 ```
-C:\PS>Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "10"
+PS C:\> Set-ADDomain -Identity USER01 -ManagedBy 'CN=Domain Admins,CN=Users,DC=USER01,DC=COM'
 ```
 
-Description
+This command sets the **ManagedBy** property in domain USER01 to CN=Domain Admins,CN=Users,DC=USER01,DC=COM.
 
------------
+### Example 4: Set the time in days for replication for the current logged on user
+```
+PS C:\> Get-ADDomain | Set-ADDomain -LastLogonReplicationInterval "10"
+```
 
-Sets the LastLogonReplicationInterval of the current logged on user domain to "10".
+This command sets the **LastLogonReplicationInterval** of the current logged on user domain to 10.
 
 ## PARAMETERS
 
@@ -519,24 +477,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -619,7 +570,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

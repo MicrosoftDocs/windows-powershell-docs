@@ -1,10 +1,10 @@
 ---
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
 Module Name: ScheduledTasks
-online version: 
+online version:
 schema: 2.0.0
 title: Start-ScheduledTask
-description: 
+description:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: jasgro
@@ -63,7 +63,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: Object
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -111,7 +111,7 @@ Specifies the name of a scheduled task.
 ```yaml
 Type: String
 Parameter Sets: Path
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -121,14 +121,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies the path for a scheduled task in Task Scheduler namespace.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\\**.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String
 Parameter Sets: Path
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -145,7 +145,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

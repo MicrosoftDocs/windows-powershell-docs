@@ -221,7 +221,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
 
-[Get-ADDomainController](../ADDS2_Cmdlets/Get-ADDomainController.md)
+[Get-ADDomainController](../activedirectory/Get-ADDomainController.md)
 
-[New-GPO](../GPv2_Cmdlets/New-GPO.md)
+[New-GPO](../grouppolicy/New-GPO.md)
 

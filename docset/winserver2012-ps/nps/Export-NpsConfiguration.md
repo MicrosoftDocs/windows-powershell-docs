@@ -68,5 +68,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Import-NpsSettings](00000000-0000-0000-0000-000000000000)
+[Import-NpsConfiguration](./Import-NpsConfiguration.md)
 

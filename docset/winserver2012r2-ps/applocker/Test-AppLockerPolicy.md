@@ -60,7 +60,7 @@ Instead, a representative member of the Finance group should be specified for th
 
 ### EXAMPLE 1
 ```
-PS C:\>Test-AppLockerPolicy -XMLPath C:\Policy.xml -Path c:\windows\system32\calc.exe, C:\windows\system32\notepad.exe -User Everyone
+PS C:\>Test-AppLockerPolicy -XMLPolicy C:\Policy.xml -Path c:\windows\system32\calc.exe, C:\windows\system32\notepad.exe -User Everyone
 ```
 
 This example reports if calc.exe and notepad.exe will be allowed to run for Everyone under the policy specified by C:\Policy.xml.

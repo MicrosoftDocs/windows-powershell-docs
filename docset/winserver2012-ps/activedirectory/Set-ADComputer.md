@@ -39,98 +39,58 @@ Set-ADComputer [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-The Set-ADComputer cmdlet modifies the properties of an Active Directory computer object.
+The **Set-ADComputer** cmdlet modifies the properties of an Active Directory computer object.
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Replace*, *Clear*, and *Remove* parameters.
 
-The Identity parameter specifies the Active Directory computer to modify.
-You can identify a computer by its distinguished name Members (DN), GUID, security identifier (SID) or Security Accounts Manager (SAM) account name.
-You can also set the Identity parameter to an object variable such as $\<localComputerObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADComputer cmdlet to retrieve a computer object and then pass the object through the pipeline to Set-ADComputer.
+The *Identity* parameter specifies the Active Directory computer to modify.
+You can identify a computer by its distinguished name, GUID, security identifier (SID), or Security Accounts Manager (SAM) account name.
+You can also set the *Identity* parameter to an object variable such as `$<localComputerobject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADComputer** cmdlet to retrieve a computer object and then pass the object through the pipeline to Set-ADComputer.
 
-The Instance parameter provides a way to update a computer by applying the changes made to a copy of the computer object.
-When you set the Instance parameter to a copy of an Active Directory computer object that has been modified, the Set-ADComputer cmdlet makes the same changes to the original computer object.
+The *Instance* parameter provides a way to update a computer by applying the changes made to a copy of the computer object.
+When you set the *Instance* parameter to a copy of an Active Directory computer object that has been modified, the **Set-ADComputer** cmdlet makes the same changes to the original computer object.
 To get a copy of the object to modify, use the Get-ADComputer object.
-When you specify the Instance parameter you should not pass the identity parameter.
-For more information about the Instance parameter, see the Instance parameter description.
-For more information about how the instance concept is used in Active Directory cmdlets, see about_ActiveDirectory_Instance.
-
-The following examples show how to modify the Location property of a computer object by using three methods:
-
--By specifying the Identity and the Location parameters
-
--By passing a computer object through the pipeline and specifying the Location parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the Location property for the saraDavisLaptop computer by using the Identity and Location parameters.
-
-Set-ADComputer  -Identity SaraDavisLaptop  -Location  "W4013"
-
-Method 2: Modify the Location property for the saraDavisLaptop computer by passing the computer object through the pipeline and specifying the Location parameter.
-
-Get-ADComputer SaraDavisLaptop | Set-ADcomputer -Location  "W4013"
-
-Method 3:  Modify the Location property for the saraDavisLaptop computer by using the Windows PowerShell command line to modify a local instance of the computer object.
-Then set the Instance parameter to the local instance.
-
-$computer = Get-ADcomputer saraDavisLaptop
-
-$computer.Location=  "W4013"
-
-Set-ADComputer -Instance $computer
+When you specify the *Instance* parameter you should not pass the *Identity* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Modify the SPN value for a specified Active Directory computer
 ```
-C:\PS>Set-ADComputer "FABRIKAM-SRV1" -ServicePrincipalName @{Replace="MSSQLSVC/FABRIKAM-SRV1.FABRIKAM.COM:1456","MSOLAPSVC.3/FABRIKAM-SRV1.FABRIKAM.COM:analyze"}
-```
-
-Description
-
------------
-
-Modify the SPN value for a given computer.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Set-ADComputer "FABRIKAM-SRV1" -Location "NA/HQ/Building A"
+PS C:\> Set-ADComputer -Identity "USER01-SRV1" -ServicePrincipalName @{Replace="MSSQLSVC/USER01-SRV1.USER01.COM:1456","MSOLAPSVC.3/USER01-SRV1.USER01.COM:analyze"}
 ```
 
-Description
+This command modifies the service principal name (SPN) value for the computer specified by the *Identity* parameter.
 
------------
-
-Modify the location for a given computer.
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Set the location for a specified Active Directory computer
 ```
-C:\PS>Set-ADComputer "FABRIKAM-SRV1" -ManagedBy "CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=FABRIKAM,DC=COM"
+PS C:\> Set-ADComputer -Identity "USER02-SRV1" -Location "NA/HQ/Building A"
 ```
 
-Description
+This command sets the location for the computer specified by the *Identity* parameter.
 
------------
-
-Set the managed by attribute value for a given computer using the SAM account name of the user.
-
-### -------------------------- EXAMPLE 4 --------------------------
+### Example 3: Set an attribute for a specified Active Directory computer using a SAM account name
 ```
-C:\PS>$comp = Get-ADComputer "FABRIKAM-SRV1"; $comp.Location = "NA/HQ/Building A"; $comp.ManagedBy = "CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=FABRIKAM,DC=COM"; Set-ADComputer -Instance $comp
+PS C:\> Set-ADComputer -Identity "USER03-SRV1" -ManagedBy "CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=USER03,DC=COM"
 ```
 
-Description
+This command sets the **ManagedBy** attribute value for the computer specified by the *Identity* parameter using the SAM account name of the user.
 
------------
+### Example 4: Set multiple attributes of an Active Directory computer
+```
+PS C:\> $Comp = Get-ADComputer -Identity "USER04-SRV1" 
+PS C:\> $Comp.Location = "NA/HQ/Building A" 
+PS C:\> $Comp.ManagedBy = "CN=SQL Administrator 01,OU=UserAccounts,OU=Managed,DC=USER04,DC=COM" 
+PS C:\> Set-ADComputer -Instance $Comp
+```
 
-Set the location and managed-by attributes of a given computer using the instance parameter set.
+This command sets the **Location** and **ManagedBy**  attributes of a computer.
 
 ## PARAMETERS
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the AccountExpirationDate property of an account object.
 The LDAP Display name (ldapDisplayName) for this property is accountExpires.
 
@@ -349,7 +309,7 @@ To clear all values:
 You can specify more than one operation by using a list separated by semicolons.
 For example, use the following syntax to add and remove Certificate values
 
--Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}
+-Certificates @{Add=value1,value2,...;Remove=value3,value4,...}
 
 The operators will be applied in the following sequence:
 
@@ -1057,24 +1017,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -1280,7 +1233,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -1317,4 +1270,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADComputer](./Remove-ADComputer.md)
 
 [Remove-ADComputerServiceAccount](./Remove-ADComputerServiceAccount.md)
-

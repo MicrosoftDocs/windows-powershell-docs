@@ -51,7 +51,7 @@ Remove the central access rules named 'Finance Documents Rule' and 'Corporate Do
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADCentralAccessPolicy -Filter { Name -like "Corporate*" } | Remove-ADCentralAccessPolicyMember "Finance Documents Rule","Corporate Documents Rule"
+C:\PS>Get-ADCentralAccessPolicy -Filter "Name -like 'Corporate*'" | Remove-ADCentralAccessPolicyMember "Finance Documents Rule","Corporate Documents Rule"
 ```
 
 Description

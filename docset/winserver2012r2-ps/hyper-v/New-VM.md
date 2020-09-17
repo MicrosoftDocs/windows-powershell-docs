@@ -51,21 +51,21 @@ The **New-VM** cmdlet creates a new virtual machine.
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\> New-VM -Name "new 1" -MemoryStartupBytes 512MB
 ```
 
 This example creates a new virtual machine named new 1 that has 512 MB of memory.
 
 ### Example 2
-```
-PS C:\> New-VM -Name "new 2" -MemoryStartupBytes 1GB -NewVHDPath d:\vhd\base.vhdx
+```powershell
+PS C:\> New-VM -Name "new 2" -MemoryStartupBytes 1GB -NewVHDPath d:\vhd\base.vhdx -NewVHDSizeBytes 40GB
 ```
 
 This example creates a virtual machine named new 2 that has 1 GB of memory and that is connected to a new 40 GB virtual hard disk that uses the VHDX format.
 
 ### Example 3
-```
+```powershell
 PS C:\> New-VM -Name "new 3" -MemoryStartupBytes 1GB -VHDPath d:\vhd\BaseImage.vhdx
 ```
 
@@ -304,7 +304,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -315,4 +316,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

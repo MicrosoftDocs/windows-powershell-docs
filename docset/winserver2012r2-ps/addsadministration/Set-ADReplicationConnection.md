@@ -59,7 +59,7 @@ This command sets the replication connection with GUID 5f98e288-19e0-47a0-9677-5
 PS C:\>$Schedule = New-Object -TypeName System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule
 PS C:\> $Schedule.ResetSchedule()
 PS C:\> $Schedule.SetDailySchedule("Twenty","Zero","TwentyTwo","Thirty")
-PS C:\> Get-ADReplicationConnection -Filter {ReplicateFromDirectoryServer -eq "corp-DC01"} -Properties ReplicationSchedule | % {Set-ADReplicationConnection $_ - ReplicationSchedule $Schedule}
+PS C:\> Get-ADReplicationConnection -Filter "ReplicateFromDirectoryServer -eq 'corp-DC01'" -Properties ReplicationSchedule | % {Set-ADReplicationConnection $_ - ReplicationSchedule $Schedule}
 ```
 
 This command gets all of the replication connections in the directory that replicates from corp-DC01, and then sets the daily replication schedule on these connection objects.

@@ -51,7 +51,7 @@ Removes the resource properties named 'Department' and 'Country' from the resour
 
 ### -------------------------- EXAMPLE 3 --------------------------
 ```
-C:\PS>Get-ADResourcePropertyList -Filter { Name -like "Corporate*" } | Remove-ADResourcePropertyListMember Department,Country
+C:\PS>Get-ADResourcePropertyList -Filter "Name -like 'Corporate*'" | Remove-ADResourcePropertyListMember Department,Country
 ```
 
 Description

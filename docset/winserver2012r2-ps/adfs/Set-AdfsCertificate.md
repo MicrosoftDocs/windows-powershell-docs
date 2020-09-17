@@ -47,11 +47,9 @@ This command sets the primary token-signing certificate.
 Specifies the certificate type (that is, how the Federation Service uses the certificate).
 The acceptable values for this parameter are:
 
-- Infocard-Signing
 - Service-Communications
-- Token-Encryption
+- Token-Decrypting
 - Token-Signing
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -146,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -158,7 +156,7 @@ A class structure that represents a service certificate.
 ### None
 
 ## NOTES
-* Use the Set-AdfsRelyingPartyTrust or Set-AdfsClaimsProviderTrust cmdlets, as appropriate, to modify the certificates that are associated with a relying party or a claims provider.
+* Use the **Set-AdfsRelyingPartyTrust** or **Set-AdfsClaimsProviderTrust** cmdlets, as appropriate, to modify the certificates that are associated with a relying party or a claims provider.
 
 ## RELATED LINKS
 

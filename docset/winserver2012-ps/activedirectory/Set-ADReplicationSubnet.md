@@ -52,7 +52,7 @@ Set the properties of the subnet named '10.0.0.12/22'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSubnet -Filter {Location -like "*Japan"} -Properties Site | % {Set-ADReplicationSubnet $_ -Site Asia}
+C:\PS>Get-ADReplicationSubnet -Filter "Location -like '*Japan'" -Properties Site | % {Set-ADReplicationSubnet $_ -Site Asia}
 ```
 
 Description

@@ -154,8 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -CMIntegrationMode
-Indicates that all reports, except the Recovery Audit Report, are integrated into Microsoft System Center Configuration Manager.
-If you enable the System Center Configuration Manager Integration feature, specify this parameter.
+Indicates that all reports, except the Recovery Audit Report, are integrated into Microsoft Endpoint Configuration Manager.
+If you enable the Configuration Manager Integration feature, specify this parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNoticePage
-{{Fill DisableNoticePage Description}}
+Indicates whether the Self-Service Portal notice text is turned on or off. By default, the notice text is turned on.
 
 ```yaml
 Type: SwitchParameter

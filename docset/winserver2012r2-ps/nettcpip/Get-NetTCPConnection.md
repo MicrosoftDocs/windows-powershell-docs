@@ -58,6 +58,13 @@ PS C:\>Get-NetTCPConnection -AppliedSetting Internet
 
 This command gets all TCP connections that use a TCP applied setting of Internet.
 
+### Example 4: Get Owning Process
+```
+PS C:\>Get-NetTcpConnection -OwningProcess 18948
+```
+
+This command gets all Owning Process with PID 18948
+
 ## PARAMETERS
 
 ### -AppliedSetting
@@ -116,7 +123,8 @@ Accept wildcard characters: False
 ```
 
 ### -CreationTime
-{{Fill CreationTime Description}}
+Specifies an array of **DateTime** objects.
+To get a **DateTime** object, use the Get-Date cmdlet.
 
 ```yaml
 Type: DateTime[]
@@ -163,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -OffloadState
-{{Fill OffloadState Description}}
+Specifies the offload state of a TCP connection.
 
 ```yaml
 Type: OffloadState[]
@@ -179,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwningProcess
-{{Fill OwningProcess Description}}
+Specifies the PID of the owning process of a TCP connection.
 
 ```yaml
 Type: UInt32[]

@@ -9,20 +9,20 @@
       "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "PowershellModule": "Content",
+        "PowershellCmdlet": "Content"
       },
+      "xref_query_tags": ["/dotnet"],
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
         ]
       },
-     "monikerPath": [
+      "monikerPath": [
         "mapping/monikerMapping.json"
       ]
     }
@@ -30,7 +30,8 @@
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
-  "git_repository_url_open_to_public_contributors": "https://cpubwin.visualstudio.com/_git/powershell",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/windows-powershell-docs",
+  "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
@@ -47,17 +48,11 @@
   "targets": {},
   "dependent_packages": [
     {
-      "path_to_root": "_dependentPackages/azurecli.plugins",
-      "id": "opbuild.templates.azurecli",
-      "version": "latest",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
-    },
-    {
-      "path_to_root": "_dependentPackages/CommonPlugins",
+      "id": "Microsoft.DocAsCode.MAML2Yaml",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/MAML2Yaml",
       "target_framework": "net45",
-      "version": "latest",
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+      "version": "latest"
     }
   ]
 }

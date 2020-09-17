@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -GroupServiceAccountIdentifier
-Specifies the firstref_adds Group Managed Service Account under which the Active Directory Federation Services (AD FS) service runs.
+Specifies the Group Managed Service Account under which the Active Directory Federation Services (AD FS) service runs.
 
 ```yaml
 Type: String

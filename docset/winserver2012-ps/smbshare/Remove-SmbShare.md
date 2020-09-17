@@ -16,13 +16,13 @@ Deletes the specified Server Message Block (SMB) shares.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Query
 ```
 Remove-SmbShare [-Name] <String[]> [[-ScopeName] <String[]>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
  [-PassThru] [-ThrottleLimit <Int32>] [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### InputObject (cdxml)
 ```
 Remove-SmbShare [-AsJob] [-CimSession <CimSession[]>] [-Force] [-PassThru] [-ThrottleLimit <Int32>]
  -InputObject <CimInstance[]> [-Confirm] [-WhatIf]
@@ -162,6 +162,23 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: Query
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

@@ -22,7 +22,7 @@ ms.reviewer:
 # Disable-MbamCMIntegration
 
 ## SYNOPSIS
-Disables the MBAM System Center Configuration Manager Integration feature.
+Disables the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ## SYNTAX
 
@@ -31,11 +31,11 @@ Disable-MbamCMIntegration [-Force] [-RemoveComplianceData] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-The **Disable-MbamCMIntegration** cmdlet disables the Microsoft BitLocker Administration and Monitoring (MBAM) System Center Configuration Manager Integration feature.
+The **Disable-MbamCMIntegration** cmdlet disables the Microsoft BitLocker Administration and Monitoring (MBAM) Microsoft Endpoint Configuration Manager Integration feature.
 
 ## EXAMPLES
 
-### Example 1: Disable the System Center Configuration Manager Integration feature
+### Example 1: Disable the Microsoft Endpoint Configuration Manager Integration feature
 ```
 PS C:\> Disable-MbamCMIntegration
 Are you sure you want to perform this action?
@@ -43,7 +43,7 @@ Performing operation "Disable MBAM CM Integration feature"
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"):
 ```
 
-This command disables the MBAM System Center Configuration Manager Integration feature after you confirm the operation.
+This command disables the MBAM Microsoft Endpoint Configuration Manager Integration feature after you confirm the operation.
 
 ## PARAMETERS
 

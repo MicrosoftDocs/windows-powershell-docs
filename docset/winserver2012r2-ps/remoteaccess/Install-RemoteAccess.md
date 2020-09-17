@@ -136,7 +136,7 @@ If an appropriate certificate cannot be found, then a self-signed certificate is
                        
  ---- If an IPv4 address is detected on the internal interface of the DA server, then the DNS64 or NAT64 configuration is enabled on the DA server which enables DA clients to access corporate network resources that have IPv4 address only by allotting v6 addresses to these hosts. 
                        
- ---- This cmdlet also does an auto-discovery of SCCM servers including Domain Controllers and configures them as the Management Servers.
+ ---- This cmdlet also does an auto-discovery of Microsoft Endpoint Configuration Manager servers including Domain Controllers and configures them as the Management Servers.
 
 VPN Installation. 
                        

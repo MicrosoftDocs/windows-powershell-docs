@@ -27,7 +27,7 @@ Users can connect to an SMB share using credentials different than the associate
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get connections from an SMB client to SMB servers
 ```
 PS C:\>Get-SmbConnection
 ServerName          ShareName           UserName             Credential           Dialect             NumOpens 
@@ -41,9 +41,9 @@ Contoso-SO          VMS3                NT VIRTUAL MACHI...  Contoso\Contoso-HV1
 Contoso-SO          VMS3                NT VIRTUAL MACHI...  Contoso\Contoso-HV1$ 3.00                2
 ```
 
-This example retrieves the connections established from the SMB client to the SMB servers.
+This command retrieves the connections established from the SMB client to the SMB servers.
 
-### EXAMPLE 2
+### Example 2: Get connections from an SMB server
 ```
 PS C:\>Get-SmbConnection -ServerName Contoso-FS | Select-Object -Property *
 ContinuouslyAvailable : True 
@@ -58,7 +58,7 @@ PSComputerName        :
 CimClass              : ROOT/Microsoft/Windows/SMB:MSFT_SmbConnection 
 CimInstanceProperties : {ContinuouslyAvailable, Credential, Dialect, Encrypted...} 
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties 
- 
+
 ContinuouslyAvailable : True 
 Credential            : Contoso\Contoso-HV1$ 
 Dialect               : 3.00 
@@ -73,7 +73,7 @@ CimInstanceProperties : {ContinuouslyAvailable, Credential, Dialect, Encrypted..
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This example retrieves the connections established from the SMB client to the SMB server named Contoso-FS.
+This command retrieves the connections established from the SMB client to the SMB server named Contoso-FS.
 
 ## PARAMETERS
 
@@ -124,6 +124,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SmbInstance
+Specifies the input to this cmdlet.
+You can use this parameter, or you can pipe the input to this cmdlet.
+
+```yaml
+Type: SmbInstance
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Default, CSV, SBL, SR
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
 If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
@@ -169,7 +186,7 @@ The MSFT_SmbConnection object represent the per share per user logon per credent
 
 ## RELATED LINKS
 
-[Get-SmbMultichannelConnection{{INSERT_A_VALID_LINK}}](00000000-0000-0000-0000-000000000000)
+[Get-SmbMultichannelConnection](./Get-SmbMultichannelConnection.md)
 
 [Update-SmbMultichannelConnection](./Update-SmbMultichannelConnection.md)
 

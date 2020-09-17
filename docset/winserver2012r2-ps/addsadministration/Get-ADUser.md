@@ -101,7 +101,7 @@ This command gets all of the properties of the user with the SAM account name Ch
 
 ### Example 4: Get a specified user
 ```
-PS C:\>Get-ADUser -Filter {Name -eq "ChewDavid"} -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
+PS C:\>Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
 This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
@@ -375,8 +375,8 @@ The acceptable values for this parameter are:
 - OneLevel or 1
 - Subtree or 2
 
-A Base query searches only the current path or object.
-A OneLevel query searches the immediate children of that path or object.
+A SearchScope with a Base value searches only for the given user. If an OU is specified in the SearchBase parameter, no user will be returned by, for example, a specified Filter statement.
+A OneLevel query searches the immediate children of that path or object. This option only works when an OU is given as the SearchBase. If a user is given, no results are returned.
 A Subtree query searches the current path or object and all children of that path or object.
 
 ```yaml

@@ -58,7 +58,7 @@ If a group managed service account is used, the service account must have the **
 
 ### Example 2: Get a managed service account and install it on the local computer
 ```
-PS C:\>$Account = Get-ADServiceAccount -Filter { Name -eq 'SQL-HR-svc-01'}
+PS C:\>$Account = Get-ADServiceAccount -Filter "Name -eq 'SQL-HR-svc-01'"
 PS C:\> Install-ADServiceAccount $Account
 ```
 

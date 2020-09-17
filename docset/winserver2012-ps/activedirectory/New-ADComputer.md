@@ -96,7 +96,6 @@ Creates a new computer account from a template object.
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the AccountExpirationDate property of an account object.
 The LDAP Display name (ldapDisplayName) for this property is accountExpires.
 
@@ -299,48 +298,6 @@ Modifies the DER-encoded X.509v3 certificates of the account.
 These certificates include the public key certificates issued to this account by the Microsoft Certificate Service.
 This parameter sets the Certificates property of the account object.
 The LDAP Display Name (ldapDisplayName) for this property is "userCertificate".
-
-Syntax:
-
-To add values:
-
--Certificates @{Add=value1,value2,...}
-
-To remove values:
-
--Certificates @{Remove=value3,value4,...}
-
-To replace values:
-
--Certificates @{Replace=value1,value2,...}
-
-To clear all values:
-
--Certificates $null
-
-You can specify more than one operation by using a list separated by semicolons.
-For example, use the following syntax to add and remove Certificate values
-
--Certificates @{Add=value1,value2,...};@{Remove=value3,value4,...}
-
-The operators will be applied in the following sequence:
-
-..Remove
-
-..Add
-
-..Replace
-
-The following example shows how to create a certificate by using the New-Object cmdlet, and then add it to a user account.
-When this cmdlet is run, \<certificate password\> is replaced by the password used to add the certificate.
-
-$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate certificate1.cer  \<certificate password\>
-
-Set-ADUser saradavis  -Certificates @{Add=$cert}
-
-The following example shows how to add a certificate that is specified as a byte array.
-
-Set-ADUser saradavis  -Certificates @{Add= \[Byte\[\]\](0xC5,0xEE,0x53,...)}
 
 ```yaml
 Type: X509Certificate[]
@@ -1056,42 +1013,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the ServicePrincipalNames property of the account.
 The LDAP display name (ldapDisplayName) for this property is servicePrincipalName.
-This parameter uses the following syntax to add remove, replace or clear service principal name values.
-
-Syntax:
-
-To add values:
-
--ServicePrincipalNames @{Add=value1,value2,...}
-
-To remove values:
-
--ServicePrincipalNames @{Remove=value3,value4,...}
-
-To replace values:
-
--ServicePrincipalNames @{Replace=value1,value2,...}
-
-To clear all values:
-
--ServicePrincipalNames $null
-
-You can specify more than one change by using a list separated by semicolons.
-For example, use the following syntax to add and remove service principal names.
-
-@{Add=value1,value2,...};@{Remove=value3,value4,...}
-
-The operators will be applied in the following sequence:
-
-..Remove
-
-..Add
-
-..Replace
-
-The following example shows how to add and remove service principal names.
-
--ServicePrincipalNames-@{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`."
 
 ```yaml
 Type: String[]

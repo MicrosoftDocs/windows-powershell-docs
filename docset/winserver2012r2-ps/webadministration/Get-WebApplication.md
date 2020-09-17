@@ -34,8 +34,12 @@ The **Get-WebApplication** cmdlet gets the web applications associated with a sp
 ## EXAMPLES
 
 ### Example 1: Gets the web applications associated with the default web site
-```
+```powershell
 IIS:\>Get-WebApplication -Site "Default Web Site"
+
+Name             Application pool   Protocols    Physical Path
+----             ----------------   ---------    -------------
+Test             DefaultAppPool     http         C:\inetpub\wwwroot\
 ```
 
 This command gets the web applications associated with the default website.
@@ -73,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -89,3 +93,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-WebApplication](./Remove-WebApplication.md)
 
+[Microsoft.Web.Administration.ConfigurationElement#Application](https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)

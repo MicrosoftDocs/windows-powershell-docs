@@ -53,14 +53,14 @@ This command gets all the site links.
 
 ### Example 2: Get all specified replication site links
 ```
-PS C:\>Get-ADReplicationSiteLink -Filter {SitesIncluded -eq "NorthAmerica"} | Format-Table Name,SitesIncluded -A
+PS C:\>Get-ADReplicationSiteLink -Filter "SitesIncluded -eq 'NorthAmerica'" | Format-Table Name,SitesIncluded -A
 ```
 
 This command gets all site links that include NorthAmerica.
 
 ### Example 3: Get filtered replication site links
 ```
-PS C:\>Get-ADReplicationSiteLink -Filter {Cost -gt 100 -and ReplicationFrequencyInMinutes -lt 15}
+PS C:\>Get-ADReplicationSiteLink -Filter "Cost -gt 100 -and ReplicationFrequencyInMinutes -lt 15"
 ```
 
 This command gets all site links that have a cost greater than 100 and a replication frequency less than 15 minutes.

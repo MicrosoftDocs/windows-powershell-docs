@@ -16,13 +16,13 @@ Gets the configuration information of a printer.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### PrinterObject
 ```
 Get-PrintConfiguration [-PrinterObject] <CimInstance> [-AsJob] [-CimSession <CimSession>]
  [-ThrottleLimit <Int32>]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### PrinterName
 ```
 Get-PrintConfiguration [-PrinterName] <String> [-AsJob] [-CimSession <CimSession>] [-ComputerName <String>]
  [-ThrottleLimit <Int32>]
@@ -32,15 +32,11 @@ Get-PrintConfiguration [-PrinterName] <String> [-AsJob] [-CimSession <CimSession
 The **Get-PrintConfiguration** cmdlet gets the configuration information of the specified printer. 
 Using **Get-PrintConfiguration** cmdlet, you can manage the configuration of the following features: 
 
-● Collate
-
-● Color
-
-● Duplexing Mode
-
-● N-Up
-
-● Paper Size
+- Collate
+- Color
+- Duplexing Mode
+- N-Up
+- Paper Size
 
 You cannot use wildcard characters with **Get-PrintConfiguration**.
 You can use **Get-PrintConfiguration** in a Windows PowerShell remoting session.
@@ -49,8 +45,7 @@ You do not need administrator privileges to use **Get-PrintConfiguration**.
 
 ## EXAMPLES
 
-### -------------------------- Example 1: Get the printer  configuration-------------------------- 
-xample:Get the printer configuration
+### Example 1: Get the printer configuration
 ```
 PS C:\> Get-PrintConfiguration -PrinterName "Microsoft XPS Document Writer"
 ```
@@ -59,12 +54,8 @@ This command returns the printer configuration for the printer named "Microsoft 
 
 ### Example 2: Get the print configuration for all printers
 ```
-PS C:\>$printers = get-printer * 
-
-foreach ($printer in $printers)
-{ 
-    Get-printconfiguration -printerName $printer.name -duplexingMode "TwoSidedLongEdge"
-}
+PS C:\>$Printers = Get-Printer *
+PS C:\>Foreach ($Printer in $Printers){Get-PrintConfiguration -PrinterName $Printer.name}
 ```
 
 This command gets all the printers into a variable $printers and then loops through all the printers and displays the properties.
@@ -72,7 +63,14 @@ This command gets all the printers into a variable $printers and then loops thro
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+You can continue to work in the session while the job completes. 
+To manage the job, use the `*-Job` cmdlets. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -88,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -108,7 +106,7 @@ Specifies the name of the computer from which to retrieve the printer configurat
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: PrinterName
 Aliases: 
 
 Required: False
@@ -123,7 +121,7 @@ Specifies the name of the printer from which to retrieve the configuration infor
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: PrinterName
 Aliases: 
 
 Required: True
@@ -138,7 +136,7 @@ Specifies the object which contains the printer from which to retrieve configura
 
 ```yaml
 Type: CimInstance
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: PrinterObject
 Aliases: 
 
 Required: True

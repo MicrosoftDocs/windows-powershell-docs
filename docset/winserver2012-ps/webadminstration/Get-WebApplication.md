@@ -21,14 +21,19 @@ Get-WebApplication [-Site <String>] [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets the Web applications associated with a specific site or with the specified name.
+The **Get-WebApplication** cmdlet gets the web applications associated with a specific site or with a specified name.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Gets the Web applications associated with the Default Web Site --------------
-```
+### Example 1: Gets the web applications associated with the default web site
+````powershell
 IIS:\>Get-WebApplication -Site "Default Web Site"
-```
+
+Name             Application pool   Protocols    Physical Path
+----             ----------------   ---------    -------------
+Test             DefaultAppPool     http         C:\inetpub\wwwroot\
+
+````
 
 Gets the Web applications associated with the Default Web Site.
 
@@ -65,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameter](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -75,3 +80,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[ConvertTo-WebApplication](./ConvertTo-WebApplication.md)
+
+[New-WebApplication](./New-WebApplication.md)
+
+[Remove-WebApplication](./Remove-WebApplication.md)
+
+[Microsoft.Web.Administration.ConfigurationElement#Application](https://docs.microsoft.com/dotnet/api/microsoft.web.administration.application?view=iis-dotnet)

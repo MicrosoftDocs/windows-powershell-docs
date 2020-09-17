@@ -32,55 +32,27 @@ Set-ADOrganizationalUnit [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credent
 ```
 
 ## DESCRIPTION
-The Set-ADOrganizationalUnit cmdlet modifies the properties of an Active Directory organizational unit.
+The **Set-ADOrganizationalUnit** cmdlet modifies the properties of an Active Directory organizational unit (OU).
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the Add, Replace, Clear and Remove parameters.
+**Property** values that are not associated with cmdlet parameters can be modified by using the *Add*, *Remove*, *Replace*, and *Clear* parameters.
 
-The Identity parameter specifies the Active Directory organizational unit to modify.
-You can identify an organizational unit by its distinguished name (DN) or GUID.
+The *Identity* parameter specifies the Active Directory organizational unit to modify.
+You can identify an organizational unit by its distinguished name or GUID.
 
-You can also set the Identity parameter to an object variable such as $\<localADOrganizationalUnitObject\>, or you can pass an object through the pipeline to the Identity parameter.
-For example, you can use the Get-ADOrganizationalUnit cmdlet to retrieve an organizational unit object and then pass the object through the pipeline to the Set-ADOrganizationalUnit cmdlet.
+You can also set the *Identity* parameter to an object variable such as `$<localADOrganizationalUnitObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADOrganizationalUnit** cmdlet to retrieve an organizational unit object and then pass the object through the pipeline to the **Set-ADOrganizationalUnit** cmdlet.
 
-The Instance parameter provides a way to update an organizational unit object by applying the changes made to a copy of the object.
-When you set the Instance parameter to a copy of an Active Directory organizational unit object that has been modified, the Set-ADOrganizationalUnit cmdlet makes the same changes to the original organizational unit object.
-To get a copy of the object to modify, use the Get-ADOrganizationalUnit object.
-When you specify the Instance parameter you should not pass the Identity parameter.
-For more information about the Instance parameter, see the Instance parameter description.
+The *Instance* parameter provides a way to update an organizational unit object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory organizational unit object that has been modified, the **Set-ADOrganizationalUnit** cmdlet makes the same changes to the original organizational unit object.
+To get a copy of the object to modify, use the **Get-ADOrganizationalUnit** object.
+When you specify the *Instance* parameter you should not pass the *Identity* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
-For more information about how the Instance concept is used in Active Directory cmdlets, see about_ActiveDirectory_Instance.
+For Active Directory Lightweight Directory Services (AD LDS) environments, the *Partition* parameter must be specified except in the following two conditions:
 
-The following examples show how to modify the ManagedBy property of an organizational unit object by using three methods:
-
--By specifying the Identity and the ManagedBy parameters
-
--By passing an organizational unit object through the pipeline and specifying the ManagedBy parameter
-
--By specifying the Instance parameter.
-
-Method 1: Modify the ManagedBy property for the "AccountingDepartment" organizational unit by using the Identity and ManagedBy parameters.
-
-Set-ADOrganizationalUnit -Identity "AccountingDepartment" -ManagedBy "SaraDavisGroup"
-
-Method 2: Modify the ManagedBy property for the "AccountingDepartment" organizational unit by passing the "AccountingDepartment" organizational unit through the pipeline and specifying the ManagedBy parameter.
-
-Get-ADOrganizationalUnit -Identity ""AccountingDepartment"" | Set-ADOrganizationalUnit -ManagedBy "SaraDavisGroup"
-
-Method 3: Modify the ManagedBy property for the "AccountingDepartment" organizational unit by using the Windows PowerShell command line to modify a local instance of the "AccountingDepartment" organizational unit.
-Then set the Instance parameter to the local instance.
-
-$organizational unit = Get-ADOrganizationalUnit -Identity "AccountingDepartment"
-
-$organizational unit.ManagedBy = "SaraDavisGroup"
-
-Set-ADOrganizationalUnit -Instance $organizational unit.
-
-For AD LDS environments, the Partition parameter must be specified except in the following two conditions:
-
--The cmdlet is run from an Active Directory provider drive.
-
--A default naming context or partition is defined for the AD LDS environment.
-To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+- The cmdlet is run from an Active Directory provider drive. 
+- A default naming context or partition is defined for the AD LDS environment.
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 
 ## EXAMPLES
 
@@ -637,24 +609,17 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
-The format for this parameter is
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
+The format for this parameter is:
 
--Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-For example, if you want to replace the value "555-222-2222" with the values "555-222-1111" for Phone-Office-Other attribute (LDAP display name 'otherTelephone') set the Replace parameter as follows.
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
--Replace @{otherTelephone='555-222-2222', '555-222-1111'}
-
-When you use the Add, Remove, Replace  and Clear parameters together, the operations will be performed in the following order:
-
-..Remove
-
-..Add
-
-..Replace
-
-..Clear
+- **Remove**
+- **Add**
+- **Replace**
+- **Clear**
 
 ```yaml
 Type: Hashtable
@@ -779,7 +744,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -47,18 +47,18 @@ Set-ADServiceAccount [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential 
 ## DESCRIPTION
 The **Set-ADServiceAccount** cmdlet modifies the properties of an Active Directory managed service account (MSA).
 You can modify commonly used property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be modified by using the **Add**, **Replace**, **Clear** and **Remove** parameters.
+Property values that are not associated with cmdlet parameters can be modified by using the *Add*, *Remove*, *Replace*, and *Clear* parameters.
 
-The **Identity** parameter specifies the Active Directory MSA to modify.
+The *Identity* parameter specifies the Active Directory MSA to modify.
 You can identify an MSA by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the **Identity** parameter to an object variable such as **$\<localServiceAccountObject\>**, or you can pass an object through the pipeline to the **Identity** parameter.
-For example, you can use the Get-ADServiceAccount cmdlet to retrieve a MSA object and then pass the object through the pipeline to the Set-ADServiceAccount cmdlet.
+You can also set the *Identity* parameter to an object variable such as `$<localServiceAccountObject>`, or you can pass an object through the pipeline to the *Identity* parameter.
+For example, you can use the **Get-ADServiceAccount** cmdlet to retrieve an MSA object and then pass the object through the pipeline to the **Set-ADServiceAccount** cmdlet.
 
-The **Instance** parameter provides a way to update an MSA object by applying the changes made to a copy of the object.
-When you set the **Instance** parameter to a copy of an Active Directory MSA object that has been modified, the Set-ADServiceAccount cmdlet makes the same changes to the original MSA object.
+The *Instance* parameter provides a way to update an MSA object by applying the changes made to a copy of the object.
+When you set the *Instance* parameter to a copy of an Active Directory MSA object that has been modified, the **Set-ADServiceAccount** cmdlet makes the same changes to the original MSA object.
 To get a copy of the object to modify, use the **Get-ADServiceAccount** object.
-When you specify the **Instance** parameter you should not pass the **Identity** parameter.
-For more information about the **Instance** parameter, see the **Instance** parameter description.
+When you specify the *Instance* parameter you should not pass the *Identity* parameter.
+For more information about the *Instance* parameter, see the *Instance* parameter description.
 
 ## EXAMPLES
 
@@ -112,7 +112,6 @@ The example modifies a local instance of the AccessTSQA MSA, and then specifies 
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the **AccountExpirationDate** property of an account object.
 The Lightweight Directory Access Protocol (LDAP) display name (**ldapDisplayName**) for this property is accountExpires.
 
@@ -665,12 +664,12 @@ Accept wildcard characters: False
 Specifies values for an object property that will replace the current values.
 Use this parameter to replace one or more values of a property that cannot be modified using a cmdlet parameter.
 To modify an object property, you must use the LDAP display name.
-You can modify more than one property by specifying a comma-separated list.
+You can specify multiple values to a property by specifying a comma-separated list of values, and more than one property by separating them using a semicolon.
 The format for this parameter is:
 
-`-Replace @{Attribute1LDAPDisplayName=value\[\],   Attribute2LDAPDisplayName=value\[\]}`
+`-Replace @{Attribute1LDAPDisplayName=value1, value2, ...;   Attribute2LDAPDisplayName=value1, value2, ...; AttributeNLDAPDisplayName=value1, value2, ...}`
 
-When you use the **Add**, **Remove**, **Replace**, and **Clear** parameters together, the operations will be performed in the following order:
+When you use the *Add*, *Remove*, *Replace*, and *Clear* parameters together, the operations will be performed in the following order:
 
 - **Remove**
 - **Add**
@@ -833,7 +832,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -864,4 +863,3 @@ By default, this cmdlet does not generate any output.
 [Remove-ADServiceAccount](./Remove-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

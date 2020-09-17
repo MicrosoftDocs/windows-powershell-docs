@@ -23,16 +23,16 @@ Suspend-ClusterNode [[-Name] <StringCollection>] [[-TargetNode] <String>] [-Clus
 
 ## DESCRIPTION
 The **Suspend-ClusterNode** cmdlet suspends activity on a failover cluster node, that is, pauses the node.
-If you use the **Drain** parameter, clustered roles currently running on the node will be drained before the node is paused.
+If you use the *Drain* parameter, clustered roles currently running on the node will be drained before the node is paused.
 
 Pausing (suspending) a node is usually done when applying software updates to the node.
 If you need to perform extensive diagnosis or maintenance on a cluster node, it might be more workable to stop (not pause) the Cluster service on that node.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Pause a node of the local cluster
 ```
-PS C:\>Suspend-ClusterNode node1
+PS C:\> Suspend-ClusterNode -Name "node1"
 Name                                                                      State 
 ----                                                                      ----- 
 node1                                                                    Paused
@@ -40,9 +40,9 @@ node1                                                                    Paused
 
 This example pauses the node named node1 on the local cluster.
 
-### EXAMPLE 2
+### Example 2: Pause a node of a cluster
 ```
-PS C:\>Suspend-ClusterNode node2 -Cluster cluster2
+PS C:\> Suspend-ClusterNode "node2" -Cluster "cluster2"
 Name                                                                      State 
 ----                                                                      ----- 
 node2                                                                    Paused
@@ -50,9 +50,9 @@ node2                                                                    Paused
 
 This example pauses the node named node2 on the cluster named cluster2.
 
-### EXAMPLE 3
+### Example 3: Pause a node and move its workloads
 ```
-PS C:\>Suspend-ClusterNode -Name node1 -Target node2 -Drain
+PS C:\> Suspend-ClusterNode -Name "node1" -Target "node2" -Drain
 Name                                                                      State 
 ----                                                                      ----- 
 node1                                                                    Paused
@@ -60,9 +60,9 @@ node1                                                                    Paused
 
 This example pauses the node named node1 and moves the workloads from it to the node named node2.
 
-### EXAMPLE 4
+### Example 4: Preview a pause operation
 ```
-PS C:\>Suspend-ClusterNode node1 -Drain -WhatIf
+PS C:\> Suspend-ClusterNode node1 -Drain -WhatIf
 What if: Performing operation "Suspend-ClusterNode" on Target "node1".
 ```
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 
 ### -Wait
 Specifies the time in seconds to wait for the cmdlet.
-If the **Wait** parameter is not specified, then the cmdlet waits for completion.
+If the *Wait* parameter is not specified, then the cmdlet waits for completion.
 If `-Wait 0` is specified, then the call is initiated and the cmdlet returns without waiting.
 
 ```yaml

@@ -34,16 +34,12 @@ To see the full list of endpoints, use this cmdlet with no parameters.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Get an endpoint
 ```
-C:\PS>Enable-ADFSEndpoint -TargetAddress /adfs/services/trust/13/Windows
+PS C:\> Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/Windows"
 ```
 
-Description
-
------------
-
-Enables the WS-Trust 1.3 endpoint.
+This command gets the WS-Trust 1.3 endpoint.
 
 ## PARAMETERS
 
@@ -97,4 +93,3 @@ A class structure that represents the endpoints for the Federation Service.
 [Enable-ADFSEndpoint](./Enable-ADFSEndpoint.md)
 
 [Set-ADFSEndpoint](./Set-ADFSEndpoint.md)
-

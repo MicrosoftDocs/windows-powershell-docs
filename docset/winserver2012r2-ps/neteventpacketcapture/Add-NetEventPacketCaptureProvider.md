@@ -41,7 +41,7 @@ To remove an existing Remote Packet Capture provider, use the Remove-NetEventPac
 
 ### Example 1: Add a packet capture provider
 ```
-PS C:\>New-NetEventSession -SessionName "Session01"
+PS C:\>New-NetEventSession -Name "Session01"
 PS C:\> Add-NetEventProvider -Name "Microsoft-Windows-TCPIP" -SessionName "Session01"
 PS C:\> Add-NetEventPacketCaptureProvider -SessionName "Session01"
 ```
@@ -57,7 +57,7 @@ The third command adds a packet capture provider to the session.
 ## PARAMETERS
 
 ### -AsJob
-{{Fill AsJob Description}}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter

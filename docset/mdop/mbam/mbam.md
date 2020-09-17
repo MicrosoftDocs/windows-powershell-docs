@@ -27,7 +27,7 @@ The following list contains links to the help topics for the Microsoft BitLocker
 
 ## MBAM Cmdlets
 ### [Disable-MbamCMIntegration](disable-mbamcmintegration.md)
-Disables the MBAM System Center Configuration Manager Integration feature.
+Disables the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ### [Disable-MbamReport](disable-mbamreport.md)
 Disables the Reports feature.
@@ -36,7 +36,7 @@ Disables the Reports feature.
 Disables a web application.
 
 ### [Enable-MbamCMIntegration](enable-mbamcmintegration.md)
-Enables the MBAM System Center Configuration Manager Integration feature.
+Enables the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ### [Enable-MbamDatabase](enable-mbamdatabase.md)
 Enables the Compliance and Audit and Recovery databases.
@@ -51,7 +51,7 @@ Enables a web application.
 Requests an MBAM recovery key.
 
 ### [Get-MbamCMIntegration](get-mbamcmintegration.md)
-Gets the configuration of the MBAM System Center Configuration Manager Integration feature.
+Gets the configuration of the MBAM Microsoft Endpoint Configuration Manager Integration feature.
 
 ### [Get-MbamReport](get-mbamreport.md)
 Gets the configuration of the Reports feature.

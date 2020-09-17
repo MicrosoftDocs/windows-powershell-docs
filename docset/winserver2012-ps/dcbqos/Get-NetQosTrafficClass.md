@@ -125,7 +125,7 @@ The MSFT_NetQosTrafficClassSettingData object contains a network traffic class.
 
 ## RELATED LINKS
 
-[Get-NetAdapterQos](../NetAdapter_Cmdlets/Get-NetAdapterQos.md)
+[Get-NetAdapterQos](../netadapter/Get-NetAdapterQos.md)
 
 [New-NetQosTrafficClass](./New-NetQosTrafficClass.md)
 

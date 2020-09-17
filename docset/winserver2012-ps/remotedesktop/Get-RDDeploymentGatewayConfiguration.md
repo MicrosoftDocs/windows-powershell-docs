@@ -68,7 +68,7 @@ GatewayExternalFQDN - External FQDN of the RD Gateway server specified for the d
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 
 [Set-RDDeploymentGatewayConfiguration](./Set-RDDeploymentGatewayConfiguration.md)
 

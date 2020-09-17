@@ -61,7 +61,7 @@ This command displays the settings of the session named Session38.
 ## PARAMETERS
 
 ### -AsJob
-{{Fill AsJob Description}}
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter

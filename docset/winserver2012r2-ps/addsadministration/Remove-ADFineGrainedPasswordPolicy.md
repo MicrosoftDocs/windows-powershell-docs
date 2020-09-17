@@ -55,7 +55,7 @@ This command removes the fine-grained password policy object with DistinguishedN
 
 ### Example 3: Remove fine-grained password policy objects that contains a specified string
 ```
-PS C:\>Get-ADFineGrainedPasswordPolicy -Filter {Name -like "*user*"} | Remove-ADFineGrainedPasswordPolicy
+PS C:\>Get-ADFineGrainedPasswordPolicy -Filter "Name -like '*user*'" | Remove-ADFineGrainedPasswordPolicy
 ```
 
 This command removes all fine-grained password policy objects that contain user in their names.

@@ -73,7 +73,7 @@ Apply the Fine-Grained Password Policy named DlgtdAdminsPSO to the group DlgtdAd
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```
-C:\PS>Get-ADGroup -Filter {lastname -eq "John"} | Add-ADFineGrainedPasswordPolicySubject DlgtdAdminsPSO
+C:\PS>Get-ADGroup -Filter "lastname -eq 'John'" | Add-ADFineGrainedPasswordPolicySubject DlgtdAdminsPSO
 ```
 
 Description

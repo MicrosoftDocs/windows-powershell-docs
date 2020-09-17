@@ -1,6 +1,6 @@
 ---
 external help file: ScheduledTask_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -47,12 +47,12 @@ The changes do not affect the current instance.
 ### Example 1: Modify a trigger in a scheduled task
 ```
 PS C:\>$Time = New-ScheduledTaskTrigger -At 12:00 -Once PS C:\>Set-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time
-TaskPath                          TaskName 
---------                          -------- 
+TaskPath                          TaskName
+--------                          --------
 \                                 SoftwareScan
 ```
 
-In this example, the first command uses the **New-ScheduledTaskTrigger** cmdlet to define a time trigger, to which the $Time variable is assigned. 
+In this example, the first command uses the **New-ScheduledTaskTrigger** cmdlet to define a time trigger, to which the $Time variable is assigned.
 
 The second command adds (or replaces) the $Time trigger in the scheduled task SoftwareScan.
 
@@ -61,8 +61,8 @@ The second command adds (or replaces) the $Time trigger in the scheduled task So
 PS C:\>$Act1 = New-ScheduledTaskAction -Execute Notepad.exe
 PS C:\>$Act2 = New-ScheduledTaskAction -Execute Calc.exe
 PS C:\>Set-ScheduledTask "DeployTools" -Action $A1,$A2
-TaskPath                          TaskName 
---------                          -------- 
+TaskPath                          TaskName
+--------                          --------
 \                                 DeployTools
 ```
 
@@ -84,7 +84,7 @@ You can specify up to 32 actions.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -99,7 +99,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -150,7 +150,7 @@ Well-known accounts are: NT AUTHORITY\SYSTEM, NT AUTHORITY\LOCALSERVICE, NT AUTH
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -165,7 +165,7 @@ Specifies the security context in which a task is run.
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -180,7 +180,7 @@ Specifies a configuration object that the Task Scheduler service uses to determi
 ```yaml
 Type: CimInstance
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -195,7 +195,7 @@ Specifies the name of a scheduled task.
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -205,14 +205,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies the path for a scheduled task in Task Scheduler namespace.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\\**.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -229,7 +229,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ For more information about triggers, see Triggershttp://technet.microsoft.com/en
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -264,7 +264,7 @@ Specifies the name of a **\<run as\>** user account to use when you run the task
 ```yaml
 Type: String
 Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6

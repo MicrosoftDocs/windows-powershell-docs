@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.HyperV.PowerShell.dll-Help.xml
 Module Name: Hyper-V
-online version: 
+online version:
 schema: 2.0.0
 title: Move-VM
 ms.author: v-anbarr
 ms.reviewer: brianlic
-description: 
+description:
 keywords: powershell, cmdlet
 author: andreabarr
 manager: jasgro
@@ -51,23 +51,23 @@ The **Move-VM** cmdlet moves a virtual machine to a new Hyper-V host.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> Move-VM "Test VM" remoteServer
+### Example 1: Move VM to remote computer
+```powershell
+PS C:\> Move-VM -Name "Test VM" -DestinationHost remoteServer
 ```
 
 Moves a virtual machine test VM to a remote computer remoteServer when the virtual machine is stored on an SMB share.
 
-### Example 2
-```
-PS C:\>Move-VM "Test VM" remoteServer -IncludeStorage -DestinationStoragePath D:\TestVM
+### Example 2: Move VM and all storage to remote computer
+```powershell
+PS C:\> Move-VM -Name "Test VM" -DestinationHost remoteServer -IncludeStorage -DestinationStoragePath D:\TestVM
 ```
 
 Moves virtual machine test VM to remote computer remoteServer, and moves all files associated with the virtual machine to D:\TestVM on the remote computer.
 
-### Example 3
-```
-PS C:\>Move-VM "Test VM" remoteServer -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -IncludeStorage -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
+### Example 3: Move VM and specified storage file to remote computer
+```powershell
+PS C:\> Move-VM  -Name "Test VM" -DestinationHost remoteServer -VirtualMachinePath D:\TestVM\Config -SnapshotFilePath D:\TestVM\Snapshots -SmartPagingFilePath D:\TestVM\SmartPaging -IncludeStorage -VHDs @(@{"SourceFilePath" = "C:\TestVM\Disk1.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk1.VHDX"}, @{"SourceFilePath" = "C:\TestVM\Disk2.VHDX"; "DestinationFilePath" = "D:\TestVM\Disks\Disk2.VHDX"})
 ```
 
 Moves a virtual machine Test VM to a remote computer remoteServer and places the files associated with the virtual machine in the specified locations under D:\TestVM on the remote computer.
@@ -80,7 +80,7 @@ Specifies that the cmdlet is to be run as a background job.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ Specifies a compatibility report which includes any adjustments required for the
 ```yaml
 Type: VMCompatibilityReport
 Parameter Sets: CompatibilityReport
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -112,7 +112,7 @@ The default is the local computer - use "localhost" or a dot (".") to specify th
 ```yaml
 Type: String[]
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ Specifies the virtual machine host to which the virtual machine is to be moved.
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -157,7 +157,7 @@ Specifies a destination storage path to which all virtual machine storage is to 
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ Specifies that both the virtual machine and its storage are to be moved.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Specifies the friendly name of the virtual machine to be moved.
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -202,7 +202,7 @@ Specifies that an object is to be passed through to be pipeline representing the
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ Specifies the name of the storage resource pool to use after the move operation 
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ If not specified, all virtual hard disks will be removed from the source compute
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +248,7 @@ Specifies the new path to use for a smart paging file, if one is needed.
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +263,7 @@ Specifies the new path for any snapshot files associated with the virtual machin
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +278,7 @@ Specifies the virtual machine to be moved.
 ```yaml
 Type: VirtualMachine
 Parameter Sets: VM
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -297,7 +297,7 @@ The virtual hard disk names must be identical in both entries.
 ```yaml
 Type: Hashtable[]
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -312,7 +312,7 @@ Specifies the path for the virtual machine configuration file and associated mem
 ```yaml
 Type: String
 Parameter Sets: Name, VM
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,13 +338,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
-###  
+### 
 None, by default.
 **Microsoft.HyperV.PowerShell.VirtualMachine** if the migration succeeds and **-PassThru** is specified.
 **Microsoft.HyperV.PowerShell.CompatibilityReport** if the migration fails because of an incompatibility.

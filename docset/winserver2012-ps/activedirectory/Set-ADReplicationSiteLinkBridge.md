@@ -50,7 +50,7 @@ Update the site link bridge 'NorthAmerica-Asia' to use 'Europe2' instead of 'Eur
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADReplicationSiteLinkBridge -Filter {SiteLinksIncluded -eq "NorthAmerica-Europe" -and SiteLinksIncluded -eq "Europe-Asia"} -Properties SiteLinksIncluded | % {Set-ADReplicationSiteLinkBridge $_ -SiteLinksIncluded @{Add='NorthAmerica-Europe2','Europe2-Asia';Remove='NorthAmerica-Europe','Europe-Asia'}}
+C:\PS>Get-ADReplicationSiteLinkBridge -Filter "SiteLinksIncluded -eq 'NorthAmerica-Europe' -and SiteLinksIncluded -eq 'Europe-Asia'" -Properties SiteLinksIncluded | % {Set-ADReplicationSiteLinkBridge $_ -SiteLinksIncluded @{Add='NorthAmerica-Europe2','Europe2-Asia';Remove='NorthAmerica-Europe','Europe-Asia'}}
 ```
 
 Description

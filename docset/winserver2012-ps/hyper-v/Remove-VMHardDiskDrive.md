@@ -189,6 +189,8 @@ Accept wildcard characters: False
 
 ## INPUTS
 
+### Microsoft.HyperV.PowerShell.HardDiskDrive[]
+
 ## OUTPUTS
 
 ### None
@@ -201,5 +203,5 @@ If **-PassThru** is specified.
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

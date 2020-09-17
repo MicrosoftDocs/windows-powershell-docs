@@ -52,7 +52,7 @@ This command gets all Active Directory Replication sites.
 
 ### Example 2: Get replication sites by flag
 ```
-PS C:\>Get-ADReplicationSite -Properties * -Filter {WindowsServer2003KCCSiteLinkBridgingEnabled -eq $TRUE}
+PS C:\>Get-ADReplicationSite -Properties * -Filter "WindowsServer2003KCCSiteLinkBridgingEnabled -eq `$True"
 ```
 
 This command gets all sites that have the WindowsServer2003KCCBehaviorEnabled flag turned on.

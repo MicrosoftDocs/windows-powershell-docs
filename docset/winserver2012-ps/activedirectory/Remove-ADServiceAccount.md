@@ -48,7 +48,7 @@ Remove the managed service account named 'service1'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
 ```
-C:\PS>Get-ADServiceAccount -Filter {Name -like 'SQL*'} | Remove-ADServiceAccount
+C:\PS>Get-ADServiceAccount -Filter "Name -like 'SQL*'" | Remove-ADServiceAccount
 ```
 
 Description

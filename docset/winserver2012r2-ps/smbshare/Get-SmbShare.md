@@ -38,7 +38,7 @@ The **Get-SMBShare** cmdlet retrieves objects that represent the Server Message 
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get SMB shares
 ```
 PS C:\>Get-SMBShare
 Name                          ScopeName                     Path                          Description 
@@ -66,33 +66,32 @@ VMS4                          Contoso-SO                    C:\ClusterStorage\Vo
 VMS5                          *                             D:\VMS
 ```
 
-This example retrieves the SMB shares on the computer.
+This command retrieves the SMB shares on the computer.
 
-### EXAMPLE 2
+### Example 2: Get a specific SMB share on a the local computer
 ```
-PS C:\>Get-SmbShare -Name VMS1
+PS C:\>Get-SmbShare -Name "VMS1"
 Name                          ScopeName                     Path                          Description 
 ----                          ---------                     ----                          ----------- 
 VMS1                          Contoso-FS                    I:\VMS
 ```
 
-This example retrieves the SMB shares on the computer named VMS1.
+This command retrieves information about the SMB share named 'VMS1' on the local computer.
 
-### EXAMPLE 3
+### Example 3: Display information about the SMB share named 'VMS1' on the local computer in a list
 ```
-PS C:\>Get-SmbShare -Name VMS1 | Format-List
-
+PS C:\>Get-SmbShare -Name "VMS1" | Format-List
 Name        : VMS1 
 ScopeName   : Contoso-FS 
 Path        : I:\VMS 
 Description :
 ```
 
-This example displays the information about the SMB shares on the computer named VMS1.
+This command displays the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### EXAMPLE 4
+### Example 4: Display all properties about a specific SMB share on the local computer in a list
 ```
-PS C:\>Get-SmbShare -Name VMS1 | Format-List -Property *
+PS C:\>Get-SmbShare -Name "VMS1" | Format-List -Property *
 PresetPathAcl         : System.Security.AccessControl.DirectorySecurity 
 ShareState            : Online 
 AvailabilityType      : Clustered 
@@ -121,9 +120,9 @@ CimInstanceProperties : {AvailabilityType, CachingMode, CATimeout, ConcurrentUse
 CimSystemProperties   : Microsoft.Management.Infrastructure.CimSystemProperties
 ```
 
-This example displays all of the information about the SMB shares on the computer named VMS1.
+This command displays all of the information about the SMB share named 'VMS1' on the local computer as a formatted list.
 
-### EXAMPLE 5
+### Example 5: Get shares on the local computer that have scaled out availability
 ```
 PS C:\>Get-SmbShare | Where-Object -Property AvailabilityType -Eq ScaleOut
 Name                          ScopeName                     Path                          Description 
@@ -133,11 +132,11 @@ VMS3                          Contoso-SO                    C:\ClusterStorage\Vo
 VMS4                          Contoso-SO                    C:\ClusterStorage\Volume2\VMS
 ```
 
-This example retrieves the SMB shares on the computer with scaled out availability.
+This command retrieves the SMB shares on the computer that have scaled out availability.
 
-### EXAMPLE 6
+### Example 6: Get shares that are connected to a specific server
 ```
-PS C:\>Get-SmbShare -ScopeName Contoso-FS
+PS C:\>Get-SmbShare -ScopeName "Contoso-FS"
 Name                          ScopeName                     Path                          Description 
 ----                          ---------                     ----                          ----------- 
 I$                            Contoso-FS                    I:\                           Cluster Default Share 
@@ -146,7 +145,7 @@ VMS1                          Contoso-FS                    I:\VMS
 VMS2                          Contoso-FS                    J:\VMS
 ```
 
-This example retrieves the SMB shares on the computer that are connect to the SMB server named Contoso-FS.
+This command retrieves the SMB shares on the computer that are connected to the SMB server named Contoso-FS.
 
 ## PARAMETERS
 
@@ -367,13 +366,13 @@ Accept wildcard characters: False
 ```
 
 ### -SmbInstance
-{{Fill SmbInstance Description}}
+Specifies the input to this cmdlet. You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: SmbInstance
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Default, CSV
+Accepted values: Default, CSV, SBL, SR
 
 Required: False
 Position: Named

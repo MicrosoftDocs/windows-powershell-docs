@@ -37,6 +37,8 @@ This command creates a message object with body text named Test Message.
 ## PARAMETERS
 
 ### -AcknowledgeType
+Specifies the type of acknowledgement messages that can be returned by Messaging Queuing.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

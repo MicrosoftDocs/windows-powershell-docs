@@ -21,6 +21,8 @@ title: Reset-AppxPackage
 
 # Reset-AppxPackage
 
+Starting at Windows 10 Insider Preview Build 20215 you get access to the `Rest-AppxPackage` PowerShell Cmdlet for use in resetting your installed Windows Apps.
+
 ## SYNOPSIS
 
 Restores the Windows app to its initial configuration.

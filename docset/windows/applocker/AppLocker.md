@@ -40,4 +40,5 @@ Sets the AppLocker policy for the specified GPO.
 ### [Test-AppLockerPolicy](./Test-AppLockerPolicy.md)
 Specifies the AppLocker policy to determine whether the input files will be allowed to run for a given user.
 
-
+> [!Note]
+> AppLocker cmdlets only interact with group policy and do not have any knowledge of the AppLocker CSP.

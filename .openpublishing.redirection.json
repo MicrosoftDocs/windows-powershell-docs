@@ -151,11 +151,6 @@
         "redirect_document_id": false
         },
         {
-        "source_path": "docset/virtual-directory-module/dhcpserver/add-dhcpserverindc.md",
-        "redirect_url": "/powershell/module/dhcpserver",
-        "redirect_document_id": false
-        },
-        {
         "source_path": "docset/virtual-directory-module/directaccessclientcomponent/directaccessclientcomponent.md",
         "redirect_url": "/powershell/module/directaccessclientcomponent",
         "redirect_document_id": false
@@ -771,16 +766,6 @@
         "redirect_document_id": false
         },
         {
-        "source_path": "docset/virtual-directory-module/appv/convertfrom-appvlegacypackage.md",
-        "redirect_url": "/powershell/module/appv/",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/test-appvlegacypackage.md",
-        "redirect_url": "/powershell/module/appv/",
-        "redirect_document_id": false
-        },
-        {
         "source_path": "docset/virtual-directory-module/appv/appv-sequencer.md",
         "redirect_url": "/powershell/module/appvsequencer",
         "redirect_document_id": false
@@ -903,16 +888,6 @@
         {
         "source_path": "docset/virtual-directory-module/medv/medv-cmdlets.md",
         "redirect_url": "/powershell/module/medv",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/export-medvconfiguration.md",
-        "redirect_url": "/powershell/module/medv/export-medvconfiguration?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/new-medvconfiguration.md",
-        "redirect_url": "/powershell/module/medv/new-medvconfiguration?view=win-mdop2-ps",
         "redirect_document_id": false
         },
         {

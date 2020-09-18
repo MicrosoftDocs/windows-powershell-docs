@@ -25,7 +25,7 @@ Creates a new Active Directory fine-grained password policy.
 
 ## SYNTAX
 
-```
+```powershell
 New-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-ComplexityEnabled <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>]
  [-Instance <ADFineGrainedPasswordPolicy>] [-LockoutDuration <TimeSpan>] [-LockoutObservationWindow <TimeSpan>]
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 ### -LockoutDuration
 Specifies the length of time that an account is locked after the number of failed login attempts exceeds the lockout threshold.
-You cannot login to an account that is locked until the lockout duration time period has expired.
+You cannot login to an account that is locked until the lockout duration time period has expired. If you set the value to 0 the account needs to be unlocked manually by administrator.
 This parameter sets the **lockoutDuration** property of a password policy object.
 The LDAP display name (**ldapDisplayName**) of this property is msDS-LockoutDuration.
 
@@ -255,19 +255,14 @@ Use the *LockOutObservationWindow* parameter to set the lockout observation time
 
 Specify the lockout duration time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 ```yaml
 Type: TimeSpan
@@ -292,19 +287,14 @@ Use the *LockoutDuration* parameter to set the lockout duration time.
 
 Specify the time interval in the following format:
 
-D:H:M:S.F
+`D:H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 Note: Time values must be between the following values: 0:0:0:0.0 and 10675199:02:48:05.4775807.
 
@@ -346,19 +336,14 @@ The LDAP display name (**ldapDisplayName**) for this property is maxPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
@@ -382,21 +367,16 @@ The LDAP display name (**ldapDisplayName**) for this property is minPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
-
-Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.
 
 ```yaml
 Type: TimeSpan
@@ -627,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

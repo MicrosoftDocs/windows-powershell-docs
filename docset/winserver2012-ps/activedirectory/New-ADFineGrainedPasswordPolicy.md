@@ -49,37 +49,35 @@ Then pass these objects through the pipeline to the New-ADFineGrainedPasswordPol
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
-```
-C:\PS>New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
-```
-
-Description
-
------------
-
-Create a new Fine Grained Password Policy object named 'DomainUsersPSO' and set the Precedence, ComplexityEnabled, Description, DisplayName, LockoutDuration, LockoutObservationWindow, and LockoutThreshold properties on the object.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>$templatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
-$templatePSO.ComplexityEnabled = $true
-$templatePSO.LockoutDuration = [TimeSpan]::Parse("0.12:00:00")
-$templatePSO.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
-$templatePSO.LockoutThreshold = 10
-$templatePSO.MinPasswordAge = [TimeSpan]::Parse("0.00:10:00")
-$templatePSO.PasswordHistoryCount = 24
-$templatePSO.ReversibleEncryptionEnabled = $false
-
-New-ADFineGrainedPasswordPolicy -Instance $templatePSO -Name "SvcAccPSO" -Precedence 100 -Description "The Service Accounts Password Policy" -DisplayName "Service Accounts PSO" -MaxPasswordAge "30.00:00:00" -MinPasswordLength 20
-New-ADFineGrainedPasswordPolicy -Instance $templatePSO -Name "AdminsPSO" -Precedence 200 -Description "The Domain Administrators Password Policy" -DisplayName "Domain Administrators PSO" -MaxPasswordAge "15.00:00:00" -MinPasswordLength 10
+### Example 1: Create a fine-grained password policy
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
 ```
 
-Description
+This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindow**, and **LockoutThreshold** properties on the object.
 
------------
+### Example 2: Create fine-grained password policies using a template object
+```powershell
+PS C:\> $TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
+PS C:\> $TemplatePSO.ComplexityEnabled = $true
+PS C:\> $TemplatePSO.LockoutDuration = [TimeSpan]::Parse("0.12:00:00")
+PS C:\> $TemplatePSO.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
+PS C:\> $TemplatePSO.LockoutThreshold = 10
+PS C:\> $TemplatePSO.MinPasswordAge = [TimeSpan]::Parse("0.00:10:00")
+PS C:\> $TemplatePSO.PasswordHistoryCount = 24
+PS C:\> $TemplatePSO.ReversibleEncryptionEnabled = $false
+PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "SvcAccPSO" -Precedence 100 -Description "The Service Accounts Password Policy" -DisplayName "Service Accounts PSO" -MaxPasswordAge "30.00:00:00" -MinPasswordLength 20
+PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "AdminsPSO" -Precedence 200 -Description "The Domain Administrators Password Policy" -DisplayName "Domain Administrators PSO" -MaxPasswordAge "15.00:00:00" -MinPasswordLength 10
+```
 
-Create two new Fine Grained Password Policy object using a template object.
+This example creates two new fine-grained password policy objects using a template object.
+
+### Example 3: Create a fine-grained password policy with manual account unlock
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
+```
+
+This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by administrator.
 
 ## PARAMETERS
 

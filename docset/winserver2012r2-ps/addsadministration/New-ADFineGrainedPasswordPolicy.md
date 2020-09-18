@@ -58,15 +58,15 @@ Then pass these objects through the pipeline operator to the **New-ADFineGrained
 ## EXAMPLES
 
 ### Example 1: Create a fine-grained password policy
-```
-PS C:\>New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
 ```
 
 This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindow**, and **LockoutThreshold** properties on the object.
 
 ### Example 2: Create fine-grained password policies using a template object
-```
-PS C:\>$TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
+```powershell
+PS C:\> $TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
 PS C:\> $TemplatePSO.ComplexityEnabled = $true
 PS C:\> $TemplatePSO.LockoutDuration = [TimeSpan]::Parse("0.12:00:00")
 PS C:\> $TemplatePSO.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
@@ -79,6 +79,13 @@ PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "AdminsPSO"
 ```
 
 This example creates two new fine-grained password policy objects using a template object.
+
+### Example 3: Create a fine-grained password policy with manual account unlock
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
+```
+
+This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by administrator.
 
 ## PARAMETERS
 

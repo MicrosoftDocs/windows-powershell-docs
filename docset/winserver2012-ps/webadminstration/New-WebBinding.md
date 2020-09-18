@@ -26,12 +26,19 @@ Adds a new binding to an existing Web site.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Adding a new Site Binding --------------
-```
-IIS:\>New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader TestSite
+### Example 1: Add a new site binding
+```powershell
+IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
 ```
 
-Creates a new binding on the Default Web Site.
+This command creates a binding on the default website.
+
+### Example 2: Add a new ssl site binding
+```powershell
+IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+```
+
+This command creates an SSL binding on the default website.s
 
 ## PARAMETERS
 

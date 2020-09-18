@@ -55,22 +55,16 @@ For more information about the how to determine the properties for user objects,
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Get all of the users in a container
+```powershell
+PS C:\> Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
-C:\PS>Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
-```
 
-Description
+This command gets all users in the container OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
------------
-
-Get all users under the container 'OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM'.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Get-ADUser -Filter 'Name -like "*SvcAccount"' | FT Name,SamAccountName -A
-
-
+### Example 2: Get a filtered list of users
+```powershell
+PS C:\> Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -78,45 +72,31 @@ SQL02 SvcAccount SQL02
 IIS01 SvcAccount IIS01
 ```
 
-Description
+This command gets all users that have a name that ends with SvcAccount.
 
------------
-
-Get all users that have a name that ends with 'SvcAccount'.
-
-### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Get-ADUser GlenJohn -Properties *
-
-
-Surname           : John
-Name              : Glen John
-UserPrincipalName :
-GivenName         : Glen
+### Example 3: Get all of the properties for a specified user
+```powershell
+PS C:\> Get-ADUser -Identity ChewDavid -Properties *
+Surname           : David
+Name              : Chew David
+UserPrincipalName : 
+GivenName         : David
 Enabled           : False
-SamAccountName    : GlenJohn
+SamAccountName    : ChewDavid
 ObjectClass       : user
 SID               : S-1-5-21-2889043008-4136710315-2444824263-3544
 ObjectGUID        : e1418d64-096c-4cb0-b903-ebb66562d99d
-DistinguishedName : CN=Glen John,OU=NorthAmerica,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM
+DistinguishedName : CN=Chew David,OU=NorthAmerica,OU=Sales,OU=UserAccounts,DC=FABRIKAM,DC=COM
 ```
 
-Description
+This command gets all of the properties of the user with the SAM account name ChewDavid.
 
------------
-
-Get all properties of the user with samAccountName 'GlenJohn'.
-
-### -------------------------- EXAMPLE 4 --------------------------
-```
-C:\PS>Get-ADUser -Filter "Name -eq 'GlenJohn'" -SearchBase "DC=AppNC" -Properties mail -Server lds.Fabrikam.com:50000
+### Example 4: Get a specified user
+```powershell
+PS C:\> Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
-Description
-
------------
-
-Get the user with name 'GlenJohn' on the AD LDS instance.
+This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
 
 ## PARAMETERS
 

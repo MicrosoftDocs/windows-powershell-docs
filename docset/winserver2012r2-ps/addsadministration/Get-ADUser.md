@@ -64,15 +64,15 @@ For more information about the how to determine the properties for user objects,
 ## EXAMPLES
 
 ### Example 1: Get all of the users in a container
-```
-PS C:\>Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
+```powershell
+PS C:\> Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
 
 This command gets all users in the container OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM.
 
 ### Example 2: Get a filtered list of users
-```
-PS C:\>Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
+```powershell
+PS C:\> Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -83,8 +83,8 @@ IIS01 SvcAccount IIS01
 This command gets all users that have a name that ends with SvcAccount.
 
 ### Example 3: Get all of the properties for a specified user
-```
-PS C:\>Get-ADUser -Identity ChewDavid -Properties *
+```powershell
+PS C:\> Get-ADUser -Identity ChewDavid -Properties *
 Surname           : David
 Name              : Chew David
 UserPrincipalName : 
@@ -100,8 +100,8 @@ DistinguishedName : CN=Chew David,OU=NorthAmerica,OU=Sales,OU=UserAccounts,DC=FA
 This command gets all of the properties of the user with the SAM account name ChewDavid.
 
 ### Example 4: Get a specified user
-```
-PS C:\>Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
+```powershell
+PS C:\> Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
 This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.

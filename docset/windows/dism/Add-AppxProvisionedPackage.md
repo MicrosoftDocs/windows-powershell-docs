@@ -29,7 +29,7 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
 
@@ -230,6 +230,23 @@ Parameter Sets: Offline
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Regions
+Specifies what regions an app package (.appx or .appxbundle) must be provisioned in. The region argument can either be “all”, indicating that the app should be provisioned for all regions, or it can be a semi-colon delimited list of regions. The regions will be in the form of [ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 codes](https://en.wikipedia.org/wiki/ISO_3166-1). For example, the United States can be specified as either "US" or "USA" (case-insensitive). When a list of regions is not specified, the package will be provisioned only if it is pinned to start layout.
+
+Note: Option is available on client OS. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

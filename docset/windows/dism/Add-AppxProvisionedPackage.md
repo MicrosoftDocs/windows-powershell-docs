@@ -65,7 +65,7 @@ For more information, including requirements for app package provisioning, see [
 ## EXAMPLES
 
 ### Example 1: Add an app package to the running operating system
-```
+```powershell
 PS C:\> Add-AppxProvisionedPackage -Online -FolderPath "c:\Appx"
 ```
 
@@ -73,7 +73,7 @@ This command adds the app package, dependency packages, and license file from th
 The package will be installed for the current user and any new user account created on the computer.
 
 ### Example 2: Add an app package an operating system image
-```
+```powershell
 PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```
 
@@ -276,8 +276,8 @@ Accept wildcard characters: False
 ### -SkipLicense
 Adds an app package without a license file.
 
-Only use SkipLicense with apps that do not require a license on Enterprise or Server versions of the operating system.
-Using SkipLicense in other scenarios can compromise an image.
+Only use *SkipLicense* with apps that do not require a license on Enterprise or Server versions of the operating system.
+Using *SkipLicense* in other scenarios can compromise an image.
 
 ```yaml
 Type: SwitchParameter
@@ -340,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

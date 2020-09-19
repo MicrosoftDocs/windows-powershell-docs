@@ -41,39 +41,39 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ```
 
 ## DESCRIPTION
-The Add-AppxProvisionedPackage cmdlet adds an app package (.appx) that will install for each new user to a Windows image.
+The **Add-AppxProvisionedPackage** cmdlet adds an app package (.appx) that will install for each new user to a Windows image.
 If the package has dependencies that are architecture-specific, you must install the applicable architectures for the dependency on the target image.
 For example, you must install the x86 dependency on the x86 image.
 
 You cannot install an app package (.appx) on an operating system that does not support Windows® 8 apps.
 Apps are not supported on Server Core installations of Windows Server® 2012, Windows® Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server 2012, you must install the Desktop Experiencehttp://go.microsoft.com/fwlink/?LinkId=247330.
+To install and run apps on Windows Server 2012, you must install the [Desktop Experience](http://go.microsoft.com/fwlink/?LinkId=247330).
 
-Use the Online parameter to specify the running operating system on your local computer, or use the Path parameter to specify the location of a mounted Windows image.
+Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
 
-Use the PackagePath, DependencyPackagePath, and LicensePath parameters to specify the location of all the files that are needed to add the provisioned app package (.appx).
+Use the *PackagePath*, *DependencyPackagePath*, and *LicensePath* parameters to specify the location of all the files that are needed to add the provisioned app package (.appx).
 Use these parameters to provision line-of-business apps.
 
-Use the FolderPath parameter to specify the location of a folder of unpacked app package (.appx) files that includes any dependency packages and a license file.
+Use the *FolderPath* parameter to specify the location of a folder of unpacked app package (.appx) files that includes any dependency packages and a license file.
 
-To add an app package (.appx) for a particular user, or to test a package while developing your app, use the Add-AppxPackage cmdlet instead.
+To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-For more information, including requirements for app package provisioning, see How to Add and Remove Appshttp://go.microsoft.com/fwlink/?LinkID=231020 and How to develop an OEM app that uses a custom file (Windows)http://go.microsoft.com/fwlink/?LinkID=279989.
+For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020) and [How to develop an OEM app that uses a custom file](http://go.microsoft.com/fwlink/?LinkID=279989) in the TechNet Library..
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\>Add-AppxProvisionedPackage -Online -FolderPath c:\Appx
+### Example 1: Add an app package to the running operating system
+```powershell
+PS C:\> Add-AppxProvisionedPackage -Online -FolderPath "c:\Appx"
 ```
 
 This command adds the app package, dependency packages, and license file from the c:\Appx folder to the running Windows operating system.
 The package will be installed for the current user and any new user account created on the computer.
 
-### Example 2
-```
-PS C:\>Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
+### Example 2: Add an app package an operating system image
+```powershell
+PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```
 
 This command adds the app package, myPackage.appx, to the Windows image mounted to c:\offline.
@@ -146,10 +146,10 @@ Accept wildcard characters: False
 Specifies the maximum output level shown in the logs.
 The default log level is 3.
 The accepted values are as follows:
-1 = Errors only
-2 = Errors and warnings
-3 = Errors, warnings, and information
-4 = All of the information listed previously, plus debug output
+- 1 = Errors only
+- 2 = Errors and warnings
+- 3 = Errors, warnings, and information
+- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -203,9 +203,9 @@ Accept wildcard characters: False
 ### -PackagePath
 Specifies the location of the app package (.appx) to add to the Windows image.
 This package will be added for every new user account.
-To add an app package (.appx) for a particular user or to test a package while developing your app, use the Add-AppxPackage cmdlet instead.
+To add an app package (.appx) for a particular user or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-The PackagePath option is only supported for offline servicing when the technician computer is running a version of Windows that supports Windows 8 apps.
+The *PackagePath* parameter is only supported for offline servicing when the technician computer is running a version of Windows that supports Windows 8 apps.
 
 ```yaml
 Type: String
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 
 ### -Path
 Specifies the full path to the root directory of the offline Windows image that you will service.
-If the directory named Windows is not a subdirectory of the root directory, -WindowsDirectory must be specified.
+If the directory named Windows is not a subdirectory of the root directory, *WindowsDirectory* must be specified.
 
 ```yaml
 Type: String
@@ -258,8 +258,8 @@ Accept wildcard characters: False
 ### -SkipLicense
 Adds an app package without a license file.
 
-Only use SkipLicense with apps that do not require a license on Enterprise or Server versions of the operating system.
-Using SkipLicense in other scenarios can compromise an image.
+Only use *SkipLicense* with apps that do not require a license on Enterprise or Server versions of the operating system.
+Using *SkipLicense* in other scenarios can compromise an image.
 
 ```yaml
 Type: SwitchParameter
@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

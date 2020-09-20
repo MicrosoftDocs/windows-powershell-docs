@@ -27,7 +27,7 @@ Sets an SSL certificate for HTTPS bindings for AD FS.
 ## SYNTAX
 
 ```
-Set-AdfsSslCertificate -Thumbprint <String> [-Member <String[]>] [-Force <Boolean>] [-WhatIf] [-Confirm]
+Set-AdfsSslCertificate -Thumbprint <String> [-Force <Boolean>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -52,19 +52,6 @@ This command sets the specified certificate for HTTPS bindings for AD FS.
 ### -Force
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Member
-```yaml
-Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

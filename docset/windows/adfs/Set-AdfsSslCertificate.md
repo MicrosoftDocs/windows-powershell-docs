@@ -26,7 +26,7 @@ Sets an SSL certificate for HTTPS bindings for AD FS.
 
 ## SYNTAX
 
-```
+```powershell
 Set-AdfsSslCertificate -Thumbprint <String> [-Force <Boolean>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -41,7 +41,7 @@ Specify a new certificate that does not contain a Subject Alternative Name (SAN)
 ## EXAMPLES
 
 ### Example 1: Set a certificate
-```
+```powershell
 PS C:\> Set-AdfsSslCertificate -Thumbprint "FC85DDB0FC58E63D8CB52654F22E4BE7900FE349"
 ```
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

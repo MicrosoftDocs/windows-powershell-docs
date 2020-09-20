@@ -25,17 +25,17 @@ Gets IP network configuration.
 ## SYNTAX
 
 ### Alias (Default)
-```
+```powershell
 Get-NetIPConfiguration [[-InterfaceAlias] <String>] [-Detailed] [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### Index
-```
+```powershell
 Get-NetIPConfiguration -InterfaceIndex <Int32> [-Detailed] [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### All
-```
+```powershell
 Get-NetIPConfiguration [-All] [-Detailed] [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
@@ -47,38 +47,38 @@ If you do not specify any parameters, this cmdlet gets IP configuration properti
 ## EXAMPLES
 
 ### Example 1: Get the IP configuration
-```
-PS C:\>Get-NetIPConfiguration
+```powershell
+Get-NetIPConfiguration
 ```
 
 This command gets IP configuration information.
 When this cmdlet is run without parameters, it gets the IP configuration information for all of the non-virtual connected interfaces on the computer.
 
 ### Example 2: Get all IP configuration details
-```
-PS C:\>Get-NetIPConfiguration -All
+```powershell
+Get-NetIPConfiguration -All
 ```
 
 This command gets the IP configuration information for all of the interfaces on the computer, including virtual interfaces, loopback interfaces, and disconnected interfaces.
 
 ### Example 3: Get the IP configuration information with a common parameter
-```
-PS C:\>Get-NetIPConfiguration -Verbose
+```powershell
+Get-NetIPConfiguration -Verbose
 ```
 
 This command gets IP configuration information.
 By using the **Verbose** parameter, the networking cmdlets are shown to gather and format the information displayed in this cmdlet.
 
 ### Example 4: Get the IP configuration by interface index
-```
-PS C:\>Get-NetIPConfiguration -InterfaceIndex 12
+```powershell
+Get-NetIPConfiguration -InterfaceIndex 12
 ```
 
 This command gets the IP configuration information for the interface at the index 12.
 
 ### Example 5: Get the IP configuration from pipeline input
-```
-PS C:\>Get-NetIPConfiguration | Get-NetIPAddress
+```powershell
+Get-NetIPConfiguration | Get-NetIPAddress
 ```
 
 This command gets the IP address information, including the prefix length.

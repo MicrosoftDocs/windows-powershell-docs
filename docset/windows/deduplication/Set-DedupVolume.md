@@ -75,8 +75,8 @@ Any previously optimized files under the ExcludeFolder will need to be manually 
 PS C:\> Set-DedupVolume -Volume "E:" -MinimumFileAgeDays 10
 ```
 
-This command sets the number of days since users have accessed a file before the deduplication engine optimizes the file.
-The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were not accessed in the last 10 days.
+This command sets the number of days since the file was created before the deduplication engine optimizes the file.
+The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were created at least 10 days ago.
 
 ### Example 3: Set the chunk redundancy threshold on a volume
 ```
@@ -84,7 +84,7 @@ PS C:\> Set-DedupVolume -Volume "D:" -MinimumFileAgeDays 15 -ChunkRedundancyThre
 ```
 
 This command sets the number of identical chunks of data that the deduplication engine encounters during deduplication before the server creates a redundant copy of the data chunk.
-The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were not accessed in the last 15 days.
+The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were created at least 15 days ago.
 The **ChunkRedundancyThreshold** parameter specifies that if the data deduplication engine discovers 50 chunks of identical data, it makes one redundant copy as a safeguard.
 
 ## PARAMETERS
@@ -235,9 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumFileAgeDays
-Specifies a number of days.
-The deduplication engine optimizes files that users have not accessed in the number of days that you specify.
-If the last access time is not available, then the deduplication engine uses the last modified time.
+Number of days after the file is created before the file is considered to be in-policy for optimization.
+
+The **Default** and **HyperV** usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.
 
 ```yaml
 Type: UInt32

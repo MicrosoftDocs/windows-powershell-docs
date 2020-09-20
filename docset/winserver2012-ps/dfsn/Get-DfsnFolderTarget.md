@@ -26,7 +26,7 @@ The **Get-DfsnFolderTarget** cmdlet gets settings for targets of a Distributed F
 You can specify a DFS namespace folder path to see all the targets for that path.
 You can specify a namespace path and a target path to see settings for a particular target.
 
-For more information about DFS namespaces, see Overview of DFS Namespaceshttp://technet.microsoft.com/library/cc730736 (http://technet.microsoft.com/library/cc730736) on TechNet.
+For more information about DFS namespaces, see [DFS Namespaces overview](https://docs.microsoft.com/windows-server/storage/dfs-namespaces/dfs-overview).
 
 ## EXAMPLES
 

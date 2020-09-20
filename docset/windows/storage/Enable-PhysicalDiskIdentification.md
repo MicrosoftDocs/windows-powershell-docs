@@ -50,25 +50,22 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 
 ## EXAMPLES
 
-### Example 1: Enable the identification LED on all physical disks in a pool
-```
-PS C:\>$stpool = (Get-StoragePool -FriendlyName "SpacePool")
-PS C:\> Enable-PhysicalDiskIndication -StoragePool $stpool
-```
-
-This example enables the identification LED on all physical disks associated with the storage pool named SpacePool.
-This is useful for identifying a specific virtual disk, when the LED on the disk in question is not functioning.
-
-### Example 2: Enable the identification LED on all physical disks used by a virtual disk
-```
-PS C:\>$vdisk = (Get-VirtualDisk -FriendlyName "Bruce's Music")
-PS C:\> Enable-PhysicalDiskIndication -VirtualDisk $vdisk
+### Example 1: Enable the identification LED on all physical disks with certain FriendlyName
+```powershell
+PS C:\> Enable-PhysicalDiskIdentification -FriendlyName ST2000LM015-2E8174
 ```
 
-This example enables the identification LED on all physical disks associated with the virtual disk named Bruce's Music to visually identify the physical disk associated with the virtual disk.
+This example enables the identification LED on all physical disks with *FriendlyName* ST2000LM015-2E8174.
+
+### Example 2: Enable the identification LED on physical disk with certain UniqueId
+```powershell
+sPS C:\> Enable-PhysicalDiskIndication -UniqueId 5000C500B1DA75F6
+```
+
+This example enables the identification LED physical disk with *UniqueId* 5000C500B1DA75F6.
 
 ### Example 3: Enable the identification LED on all disks that are not healthy
-```
+```powershell
 PS C:\>Get-PhysicalDisk | Where-Object -FilterScript { $_.HealthStatus -Ne "healthy" } | Enable-PhysicalDiskIndication
 ```
 

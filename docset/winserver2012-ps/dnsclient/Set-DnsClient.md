@@ -182,7 +182,6 @@ Accept wildcard characters: False
 
 ### -RegisterThisConnectionsAddress
 Specifies that the IP address for this connection is to be registered.
-The default value is True.
 
 ```yaml
 Type: Boolean
@@ -191,7 +190,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

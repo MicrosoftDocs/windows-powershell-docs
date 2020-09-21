@@ -198,7 +198,6 @@ Accept wildcard characters: False
 
 ### -RegisterThisConnectionsAddress
 Indicates whether the IP address for this connection is to be registered.
-The default value is $True.
 
 ```yaml
 Type: Boolean

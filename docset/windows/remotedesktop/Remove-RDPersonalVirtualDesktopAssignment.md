@@ -43,12 +43,20 @@ This removal makes the virtual desktop available for another user.
 
 ## EXAMPLES
 
-### 1: Remove a personal virtual desktop assignment
-```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
+### Example 1: Remove a personal virtual desktop assignment by user
+```powershell
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones"
 ```
 
-This command removes a personal virtual desktop assignment.
+This command removes a personal virtual desktop assignment by user.
+
+### Example 2: Remove a personal virtual desktop assignment virtual desktop name
+```powershell
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -VirtualDesktopName "PVD-12"
+```
+
+This command removes a personal virtual desktop assignment by virtual desktop name.
+
 
 ## PARAMETERS
 

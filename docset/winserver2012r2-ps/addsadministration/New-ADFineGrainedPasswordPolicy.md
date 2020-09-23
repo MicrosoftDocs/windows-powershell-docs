@@ -245,7 +245,7 @@ Accept wildcard characters: False
 
 ### -LockoutDuration
 Specifies the length of time that an account is locked after the number of failed login attempts exceeds the lockout threshold.
-You cannot login to an account that is locked until the lockout duration time period has expired. If you set the value to 0 the account needs to be unlocked manually by administrator.
+You cannot log in to an account that is locked until the lockout duration time period has expired. If you set the value to 0 the account needs to be unlocked manually by the administrator.
 This parameter sets the **lockoutDuration** property of a password policy object.
 The LDAP display name (**ldapDisplayName**) of this property is msDS-LockoutDuration.
 

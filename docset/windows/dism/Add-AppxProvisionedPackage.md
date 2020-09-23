@@ -49,7 +49,7 @@ For example, you must install the x86 dependency on the x86 image.
 You cannot install an app package (.appx) on an operating system that does not support Windows® 8 apps.
 Apps are not supported on Server Core installations of Windows Server® 2012, Windows® Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server 2012, you must install the [Desktop Experience](http://go.microsoft.com/fwlink/?LinkId=247330).
+To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](https://docs.microsoft.com/en-us/windows-server/get-started/getting-started-with-server-with-desktop-experience).
 
 Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
 
@@ -60,7 +60,7 @@ Use the *FolderPath* parameter to specify the location of a folder of unpacked a
 
 To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020) and [How to develop an OEM app that uses a custom file](http://go.microsoft.com/fwlink/?LinkID=279989) in the TechNet Library..
+For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](https://docs.microsoft.com/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
 
 ## EXAMPLES
 
@@ -145,12 +145,6 @@ Accept wildcard characters: False
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs.
-The default log level is 3.
-The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -160,7 +154,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: WarningsInfo
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

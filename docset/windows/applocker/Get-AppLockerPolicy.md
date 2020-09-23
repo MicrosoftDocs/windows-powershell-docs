@@ -46,8 +46,7 @@ The **Get-AppLockerPolicy** cmdlet retrieves the AppLocker policy from the local
 By default, the output is an **AppLockerPolicy** object.
 If the *Xml* parameter is used, then the output will be the AppLocker policy as an XML-formatted string.
 
-> [!Note]
-> The Get-AppLockerPolicy cmdlet only functions with policies deployed via GP. It does not have any knowledge of the AppLocker CSP, so it will return incorrect data if the policy in place has been applied via the CSP.
+Note that the Get-AppLockerPolicy cmdlet only functions with policies deployed via GP. It does not have any knowledge of the AppLocker CSP, so it will return incorrect data if the policy in place has been applied via the CSP.
 
 ## EXAMPLES
 

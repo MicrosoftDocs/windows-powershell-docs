@@ -48,7 +48,7 @@ If you do not specify any parameters, this cmdlet gets IP configuration properti
 
 ### Example 1: Get the IP configuration
 ```powershell
-PC C:\> Get-NetIPConfiguration
+PS C:\> Get-NetIPConfiguration
 ```
 
 This command gets IP configuration information.
@@ -188,4 +188,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-NetIPInterface](./Get-NetIPInterface.md)
 
 [Get-NetRoute](./Get-NetRoute.md)
-

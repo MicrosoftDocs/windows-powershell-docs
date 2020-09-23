@@ -48,7 +48,7 @@ If you do not specify any parameters, this cmdlet gets IP configuration properti
 
 ### Example 1: Get the IP configuration
 ```powershell
-Get-NetIPConfiguration
+PC C:\> Get-NetIPConfiguration
 ```
 
 This command gets IP configuration information.
@@ -56,14 +56,14 @@ When this cmdlet is run without parameters, it gets the IP configuration informa
 
 ### Example 2: Get all IP configuration details
 ```powershell
-Get-NetIPConfiguration -All
+PC C:\> Get-NetIPConfiguration -All
 ```
 
 This command gets the IP configuration information for all of the interfaces on the computer, including virtual interfaces, loopback interfaces, and disconnected interfaces.
 
 ### Example 3: Get the IP configuration information with a common parameter
 ```powershell
-Get-NetIPConfiguration -Verbose
+PC C:\> Get-NetIPConfiguration -Verbose
 ```
 
 This command gets IP configuration information.
@@ -71,14 +71,14 @@ By using the **Verbose** parameter, the networking cmdlets are shown to gather a
 
 ### Example 4: Get the IP configuration by interface index
 ```powershell
-Get-NetIPConfiguration -InterfaceIndex 12
+PC C:\> Get-NetIPConfiguration -InterfaceIndex 12
 ```
 
 This command gets the IP configuration information for the interface at the index 12.
 
 ### Example 5: Get the IP configuration from pipeline input
 ```powershell
-Get-NetIPConfiguration | Get-NetIPAddress
+PC C:\> Get-NetIPConfiguration | Get-NetIPAddress
 ```
 
 This command gets the IP address information, including the prefix length.

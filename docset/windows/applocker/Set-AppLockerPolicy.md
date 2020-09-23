@@ -42,8 +42,7 @@ If no Lightweight Directory Access Protocol (LDAP) is specified, then the defaul
 
 The input values for the AppLocker policy can be an **AppLockerPolicy** object or an XML-formatted file that contains the AppLocker policy.
 
-> [!Note]
-> The Set-AppLockerPolicy cmdlet only works with GP. It cannot interact with the AppLocker CSP.
+Note that the Set-AppLockerPolicy cmdlet only works with GP. It cannot interact with the AppLocker CSP.
 
 ## EXAMPLES
 

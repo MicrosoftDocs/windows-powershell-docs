@@ -16,16 +16,16 @@ Changes data deduplication settings on one or more volumes.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
-```
+### ByVolume (Default)
+```powershell
 Set-DedupVolume [-Volume] <String[]> [-AsJob] [-ChunkRedundancyThreshold <UInt32>] [-CimSession <CimSession[]>]
  [-ExcludeFileType <String[]>] [-ExcludeFolder <String[]>] [-MinimumFileAgeDays <UInt32>]
  [-MinimumFileSize <UInt32>] [-NoCompress <Boolean>] [-NoCompressionFileType <String[]>] [-PassThru]
  [-ThrottleLimit <Int32>] [-Verify <Boolean>]
 ```
 
-### UNNAMED_PARAMETER_SET_2
-```
+### InputObject (cdxml)
+```powershell
 Set-DedupVolume [-AsJob] [-ChunkRedundancyThreshold <UInt32>] [-CimSession <CimSession[]>]
  [-ExcludeFileType <String[]>] [-ExcludeFolder <String[]>] [-MinimumFileAgeDays <UInt32>]
  [-MinimumFileSize <UInt32>] [-NoCompress <Boolean>] [-NoCompressionFileType <String[]>] [-PassThru]
@@ -38,29 +38,29 @@ The **Set-DedupVolume** cmdlet changes data deduplication settings on one or mor
 ## EXAMPLES
 
 ### Example 1: Set the exclude folders on a volume
-```
+```powershell
 PS C:\>Set-DedupVolume -Volume F: -ExcludeFolder F:\temp,F:\SQL
 ```
 
 This command sets the root folders under which all files are skipped during data deduplication.
-The **ExcludeFolder** parameter specifies that the data deduplication engine processes the files in all of the folders on volume F: except for files in the Temp folder and the SQL folder.
+The *ExcludeFolder* parameter specifies that the data deduplication engine processes the files in all of the folders on volume F: except for files in the Temp folder and the SQL folder.
 
 ### Example 2: Set the minimum file age on a volume
-```
+```powershell
 PS C:\>Set-DedupVolume -Volume E: -MinimumFileAgeDays 10
 ```
 
 This command sets the number of days since users have accessed a file before the deduplication engine optimizes the file.
-The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were not accessed in the last 10 days.
+The *MinimumFileAgeDays* parameter specifies that the data deduplication engine processes the files in all of the folders on volume E: that were not accessed in the last 10 days.
 
 ### Example 3: Set the chunk redundancy threshold on a volume
-```
+```powershell
 PS C:\>Set-DedupVolume -Volume D: -MinimumFileAgeDays 15 -ChunkRedundancyThreshold 50
 ```
 
 This command sets the number of identical chunks of data that the deduplication engine encounters during deduplication before the server creates a redundant copy of the data chunk.
-The **MinimumFileAgeDays** parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were not accessed in the last 15 days.
-The **ChunkRedundancyThreshold** parameter specifies that if the data deduplication engine discovers 50 chunks of identical data, it makes one redundant copy as a safeguard.
+The *MinimumFileAgeDays* parameter specifies that the data deduplication engine processes the files in all of the folders on volume D: that were not accessed in the last 15 days.
+The *ChunkRedundancyThreshold* parameter specifies that if the data deduplication engine discovers 50 chunks of identical data, it makes one redundant copy as a safeguard.
 
 ## PARAMETERS
 
@@ -93,7 +93,7 @@ This increases the reliability of the server by adding redundancy to the most re
 Deduplication detects corruptions and the deduplication scrubbing job restores the corrupted chunks from a redundant copy, if it is available.
 The default value is 100.
 The minimum value that you can set is 20.
-A low value for the **ChunkRedundancyThreshold** parameter reduces the effectiveness of data deduplication by creating more redundant copies of a chunk, and consumes more memory and disk space.
+A low value for the *ChunkRedundancyThreshold* parameter reduces the effectiveness of data deduplication by creating more redundant copies of a chunk, and consumes more memory and disk space.
 
 ```yaml
 Type: UInt32
@@ -161,7 +161,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: InputObject (cdxml)
 Aliases: 
 
 Required: True
@@ -290,12 +290,14 @@ Accept wildcard characters: False
 
 ### -Volume
 Specifies an array of system volumes.
-Specify one or more volume IDs, drive letters (such as D:), or volume GUID pathnames (using the form \\\\?\Volume{{GUID}}\\).
+Specify one or more volume IDs, drive letters, or volume GUID paths.
+For drive letters, use the format D:.
+For volume GUID paths, use the format \\\\?\Volume{{GUID}}\.
 Separate multiple volumes with a comma.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: ByVolume
 Aliases: Path,Name
 
 Required: True

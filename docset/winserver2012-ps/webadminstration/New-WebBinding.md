@@ -38,7 +38,7 @@ This command creates a binding on the default website.
 IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
 ```
 
-This command creates an SSL binding on the default website.s
+This command creates an SSL binding on the default website.
 
 ## PARAMETERS
 
@@ -165,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

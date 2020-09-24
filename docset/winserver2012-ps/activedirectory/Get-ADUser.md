@@ -56,8 +56,8 @@ For more information about the how to determine the properties for user objects,
 ## EXAMPLES
 
 ### -------------------------- EXAMPLE 1 --------------------------
-```
-C:\PS>Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
+```powershell
+C:\PS> Get-ADUser -Filter * -SearchBase "OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM"
 ```
 
 Description
@@ -67,8 +67,8 @@ Description
 Get all users under the container 'OU=Finance,OU=UserAccounts,DC=FABRIKAM,DC=COM'.
 
 ### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Get-ADUser -Filter 'Name -like "*SvcAccount"' | FT Name,SamAccountName -A
+```powershell
+C:\PS> Get-ADUser -Filter 'Name -like "*SvcAccount"' | FT Name,SamAccountName -A
 
 
 Name             SamAccountName
@@ -85,8 +85,8 @@ Description
 Get all users that have a name that ends with 'SvcAccount'.
 
 ### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Get-ADUser GlenJohn -Properties *
+```powershell
+C:\PS> Get-ADUser GlenJohn -Properties *
 
 
 Surname           : John
@@ -108,8 +108,8 @@ Description
 Get all properties of the user with samAccountName 'GlenJohn'.
 
 ### -------------------------- EXAMPLE 4 --------------------------
-```
-C:\PS>Get-ADUser -Filter "Name -eq 'GlenJohn'" -SearchBase "DC=AppNC" -Properties mail -Server lds.Fabrikam.com:50000
+```powershell
+C:\PS> Get-ADUser -Filter "Name -eq 'GlenJohn'" -SearchBase "DC=AppNC" -Properties mail -Server lds.Fabrikam.com:50000
 ```
 
 Description
@@ -117,6 +117,20 @@ Description
 -----------
 
 Get the user with name 'GlenJohn' on the AD LDS instance.
+
+### -------------------------- EXAMPLE 5 --------------------------
+```powershell
+C:\PS> Get-ADUser -LDAPFilter '(!userAccountControl:1.2.840.113556.1.4.803:=2)'
+```
+
+Description
+
+-----------
+
+Get all user accounts in AD that are enabled, using an LDAP filter.
+
+
+
 
 ## PARAMETERS
 
@@ -351,21 +365,21 @@ The following two examples show how to specify a value for this parameter.
 
 -Partition "CN=Schema,CN=Configuration,DC=EUROPE,DC=TEST,DC=CONTOSO,DC=COM"
 
-In many cases, a default value will be used for the Partition parameter if no value is specified. 
+In many cases, a default value is used for the Partition parameter if no value is specified. 
 The rules for determining the default value are given below. 
-Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
+Note that rules listed first are evaluated first and once a default value can be determined, no further rules is evaluated.
 
-In AD DS environments, a default value for Partition will be set in the following cases:  - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
+In AD DS environments, a default value for Partition is set in the following cases:  - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
 
 - If running cmdlets from an Active Directory provider drive, the default value of Partition is automatically generated from the current path in the drive.
-- If none of the previous cases apply, the default value of Partition will be set to the default partition or naming context of the target domain.
+- If none of the previous cases apply, the default value of Partition is set to the default partition or naming context of the target domain.
 
-In AD LDS environments, a default value for Partition will be set in the following cases:
+In AD LDS environments, a default value for Partition is set in the following cases:
 
 - If the Identity parameter is set to a distinguished name, the default value of Partition is automatically generated from this distinguished name.
 - If running cmdlets from an Active Directory provider drive, the default value of Partition is automatically generated from the current path in the drive.
-- If the target AD LDS instance has a default naming context, the default value of Partition will be set to the default naming context.  To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
-- If none of the previous cases apply, the Partition parameter will not take any default value.
+- If the target AD LDS instance has a default naming context, the default value of Partition is set to the default naming context.  To specify a default naming context for an AD LDS environment, set the msDS-defaultNamingContext property of the Active Directory directory service agent (DSA) object (nTDSDSA) for the AD LDS instance.
+- If none of the previous cases apply, the Partition parameter does not take any default value.
 
 ```yaml
 Type: String
@@ -478,8 +492,8 @@ The following example shows how to set this parameter to search under an OU.
 
 -SearchBase "ou=mfg,dc=noam,dc=corp,dc=contoso,dc=com"
 
-When the value of the SearchBase parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
-If the value of the SearchBase parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
+When the value of the SearchBase parameter is set to an empty string and you are connected to a GC port, all partitions are searched.
+If the value of the SearchBase parameter is set to an empty string and you are not connected to a GC port, an error is thrown.
 
 The following example shows how to set this parameter to an empty string. 
 -SearchBase ""

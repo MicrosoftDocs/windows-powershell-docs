@@ -42,7 +42,7 @@ IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHead
 
 This command creates a binding on the default website.
 
-### Example 2: Add a new ssl site binding
+### Example 2: Add a new SSL site binding
 ```powershell
 IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
 ```
@@ -179,4 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WebBinding](./Remove-WebBinding.md)
 
 [Set-WebBinding](./Set-WebBinding.md)
-

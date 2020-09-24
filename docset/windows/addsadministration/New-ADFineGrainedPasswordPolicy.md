@@ -86,7 +86,7 @@ This example creates two new fine-grained password policy objects using a templa
 PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
 ```
 
-This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by administrator.
+This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by the administrator.
 
 ## PARAMETERS
 
@@ -536,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReversibleEncryptionEnabled
-Specifies whether the directory must  store passwords using reversible encryption.
+Specifies whether the directory must store passwords using reversible encryption.
 This parameter sets the **ReversibleEncryption** property for a password policy.
 The acceptable values for this parameter are:
 
@@ -557,7 +557,7 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways:  
 

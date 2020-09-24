@@ -49,18 +49,18 @@ Get-ADUser [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAPFilter <St
 The **Get-ADUser** cmdlet gets a specified user object or performs a search to get multiple user objects.
 
 The *Identity* parameter specifies the Active Directory user to get.
-You can identify a user by its distinguished name (DN), GUID, security identifier (SID), Security Account Manager (SAM) account name or name.
-You can also set the parameter to a user object variable, such as `$<localUserObject>` or pass a user object through the pipeline to the *Identity* parameter.
+You can identify a user by its distinguished name (DN), GUID, security identifier (SID), Security Account Manager (SAM) account name, or name.
+You can also set the parameter to a user object variable such as `$<localUserObject>` or pass a user object through the pipeline to the *Identity* parameter.
 
 To search for and retrieve more than one user, use the *Filter* or *LDAPFilter* parameters.
 The *Filter* parameter uses the PowerShell Expression Language to write query strings for Active Directory.
-PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
+PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
 For more information about the *Filter* parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
 If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
 
 This cmdlet retrieves a default set of user object properties.
-To retrieve additional properties use the **Properties** parameter.
-For more information about the how to determine the properties for user objects, see the **Properties** parameter description.
+To retrieve additional properties use the _Properties_ parameter.
+For more information about how to determine the properties for user objects, see the _Properties_ parameter description.
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ This command gets all of the properties of the user with the SAM account name Ch
 PS C:\> Get-ADUser -Filter "Name -eq 'ChewDavid'" -SearchBase "DC=AppNC" -Properties "mail" -Server lds.Fabrikam.com:50000
 ```
 
-This command gets the user with name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
+This command gets the user with the name ChewDavid in the Active Directory Lightweight Directory Services (AD LDS) instance.
 
 ## PARAMETERS
 

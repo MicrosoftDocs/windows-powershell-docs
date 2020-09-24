@@ -36,14 +36,14 @@ The **New-WebBinding** cmdlet adds a new binding to an existing website.
 
 ### Example 1: Add a new site binding
 ```powershell
-IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
 ```
 
 This command creates a binding on the default website.
 
 ### Example 2: Add a new SSL site binding
 ```powershell
-IIS:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
 ```
 
 This command creates an SSL binding on the default website.

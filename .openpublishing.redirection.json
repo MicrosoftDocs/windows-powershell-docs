@@ -1,989 +1,989 @@
 {
-"redirections": [
-        {
-        "source_path": "docset/docs-conceptual/windows/index.md",
-        "redirect_url": "/powershell/windows/get-started",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/docs-conceptual/windows/overview.md",
-        "redirect_url": "/powershell/windows/get-started",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/docs-conceptual/mdop/index.md",
-        "redirect_url": "/powershell/mdop/get-started",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/adcsadministration/adcsadministration.md",
-        "redirect_url": "/powershell/module/adcsadministration",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/adcsdeployment/adcsdeployment.md",
-        "redirect_url": "/powershell/module/adcsdeployment",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/addsadministration/activedirectory.md",
-        "redirect_url": "/powershell/module/addsadministration",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/addsdeployment/addsdeployment.md",
-        "redirect_url": "/powershell/module/addsdeployment",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/adfs/adfs.md",
-        "redirect_url": "/powershell/module/adfs",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/adrmsadmin/adrmsadmin.md",
-        "redirect_url": "/powershell/module/adrmsadmin",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appbackgroundtask/appbackgroundtask.md",
-        "redirect_url": "/powershell/module/appbackgroundtask",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/applocker/applocker.md",
-        "redirect_url": "/powershell/module/applocker",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appvclient/appvclient.md",
-        "redirect_url": "/powershell/module/appvclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appvsequencer/appvsequencer.md",
-        "redirect_url": "/powershell/module/appvsequencer",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appx/appx.md",
-        "redirect_url": "/powershell/module/appx",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/assignedaccess/assignedaccess.md",
-        "redirect_url": "/powershell/module/assignedaccess",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/bestpractices/bestpractices.md",
-        "redirect_url": "/powershell/module/bestpractices",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/bitlocker/bitlocker.md",
-        "redirect_url": "/powershell/module/bitlocker",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/bitstransfer/bitstransfer.md",
-        "redirect_url": "/powershell/module/bitstransfer",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/booteventcollector/booteventcollector.md",
-        "redirect_url": "/powershell/module/booteventcollector",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/branchcache/branchcache.md",
-        "redirect_url": "/powershell/module/branchcache",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/cimcmdlets/cimcmdlets.md",
-        "redirect_url": "/powershell/module/cimcmdlets",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/clusterawareupdating/clusterawareupdating.md",
-        "redirect_url": "/powershell/module/clusterawareupdating",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/configci/configci.md",
-        "redirect_url": "/powershell/module/configci",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hostcomputeservice/hostcomputeservice.md",
-        "redirect_url": "/powershell/module/hostcomputeservice",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dcbqos/dcbqos.md",
-        "redirect_url": "/powershell/module/dcbqos",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/deduplication/deduplication.md",
-        "redirect_url": "/powershell/module/deduplication",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/defender/defender.md",
-        "redirect_url": "/powershell/module/defender",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dfsn/dfsn.md",
-        "redirect_url": "/powershell/module/dfsn",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dfsr/dfsr.md",
-        "redirect_url": "/powershell/module/dfsr",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/devicehealthattestation/devicehealthattestation.md",
-        "redirect_url": "/powershell/module/devicehealthattestation",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/directaccessclientcomponent/directaccessclientcomponent.md",
-        "redirect_url": "/powershell/module/directaccessclientcomponent",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dism/dism.md",
-        "redirect_url": "/powershell/module/dism",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dnsclient/dnsclient/dns-client.md",
-        "redirect_url": "/powershell/module/dnsclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/dnsserver/dnsserver.md",
-        "redirect_url": "/powershell/module/dnsserver",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/eventtracmancmdlets/eventtracmancmdlets.md",
-        "redirect_url": "/powershell/module/eventtracmancmdlets",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/failoverclusters/failoverclusters.md",
-        "redirect_url": "/powershell/module/failoverclusters",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/fileserverresourcemanager/fileserverresourcemanager.md",
-        "redirect_url": "/powershell/module/fileserverresourcemanager",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/grouppolicy/grouppolicy.md",
-        "redirect_url": "/powershell/module/grouppolicy",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hardwarecertification/hardwarecertification.md",
-        "redirect_url": "/powershell/module/hardwarecertification",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hnvdiagnostics/hnvdiagnostics.md",
-        "redirect_url": "/powershell/module/hnvdiagnostics",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hgsattestation/hgsattestation.md",
-        "redirect_url": "/powershell/module/hnvdiagnostics",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hgsclient/hgsclient.md",
-        "redirect_url": "/powershell/module/hgsclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hgsdiagnostics/hgsdiagnostics.md",
-        "redirect_url": "/powershell/module/hgsdiagnostics",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hgskeyprotection/hgskeyprotection.md",
-        "redirect_url": "/powershell/module/hgskeyprotection",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/hgsserver/hgsserver.md",
-        "redirect_url": "/powershell/module/hgsserver",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "dvirtual-directory-module/hyper-v/hyper-v.md",
-        "redirect_url": "/powershell/module/hyper-v",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/iisadministration/iisadministration.md",
-        "redirect_url": "/powershell/module/iisadministration",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/international/international.md",
-        "redirect_url": "/powershell/module/international",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/ipamserver/ipamserver.md",
-        "redirect_url": "/powershell/module/ipamserver",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/iscsi/iscsi.md",
-        "redirect_url": "/powershell/module/iscsi",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/iscsitarget/iscsitarget.md",
-        "redirect_url": "/powershell/module/iscsitarget",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/kds/kds.md",
-        "redirect_url": "/powershell/module/kds",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/mmagent/mmagent.md",
-        "redirect_url": "/powershell/module/mmagent",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/mpio/mpio.md",
-        "redirect_url": "/powershell/module/mpio",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/msdtc/msdtc.md",
-        "redirect_url": "/powershell/module/msdtc",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/msmq/msmq.md",
-        "redirect_url": "/powershell/module/msmq",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/multipointvdi/multipointvdi.md",
-        "redirect_url": "/powershell/module/multipointvdi",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/nanoserverimagegenerator/nanoserverimagegenerator.md",
-        "redirect_url": "/powershell/module/nanoserverimagegenerator",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netnat/netnat.md",
-        "redirect_url": "/powershell/module/netnat",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netadapter/netadapter.md",
-        "redirect_url": "/powershell/module/netadapter",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netldpagent/netldpagent.md",
-        "redirect_url": "/powershell/module/netldpagent",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netconnection/netconnection.md",
-        "redirect_url": "/powershell/module/netconnection",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/neteventpacketcapture/neteventpacketcapture.md",
-        "redirect_url": "/powershell/module/neteventpacketcapture",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netsecurity/netsecurity.md",
-        "redirect_url": "/powershell/module/netsecurity",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networkswitchmanager/networkswitchmanager.md",
-        "redirect_url": "/powershell/module/networkswitchmanager",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networkcontrollerdiagnostics/networkcontrollerdiagnostics.md",
-        "redirect_url": "/powershell/module/networkcontrollerdiagnostics",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networktransition/networktransition.md",
-        "redirect_url": "/powershell/module/networktransition",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netswitchteam/netswitchteam.md",
-        "redirect_url": "/powershell/module/netswitchteam",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netwnv/netwnv.md",
-        "redirect_url": "/powershell/module/netwnv",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/nfs/nfs.md",
-        "redirect_url": "/powershell/module/nfs",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netlbfo/netlbfo.md",
-        "redirect_url": "/powershell/module/netlbfo",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networkloadbalancingclusters/networkloadbalancingclusters.md",
-        "redirect_url": "/powershell/module/networkloadbalancingclusters",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/nps/nps.md",
-        "redirect_url": "/powershell/module/nps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/pcsvdevice/pcsvdevice.md",
-        "redirect_url": "/powershell/module/pcsvdevice",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
-        "redirect_url": "/powershell/module/pkiclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/platformidentifier/platformidentifier.md",
-        "redirect_url": "/powershell/module/platformidentifier",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/pnpdevice/pnpdevice.md",
-        "redirect_url": "/powershell/module/pnpdevice",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/printmanagement/printmanagement.md",
-        "redirect_url": "/powershell/module/printmanagement",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/processmitigations/processmitigations.md",
-        "redirect_url": "/powershell/module/processmitigations",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/netqos/netqos.md",
-        "redirect_url": "/powershell/module/netqos",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/remoteaccess/remoteaccess.md",
-        "redirect_url": "/powershell/module/remoteaccess",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/remotedesktop/remotedesktop.md",
-        "redirect_url": "/powershell/module/remotedesktop",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/remotedesktopservices/remotedesktopservices.md",
-        "redirect_url": "/powershell/module/remotedesktopservices",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/scheduledtasks/scheduledtasks.md",
-        "redirect_url": "/powershell/module/scheduledtasks",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "dvirtual-directory-module/secureboot/secureboot.md",
-        "redirect_url": "/powershell/module/secureboot",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/servercore/servercore.md",
-        "redirect_url": "/powershell/module/servercore",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/servermanager/servermanager.md",
-        "redirect_url": "/powershell/module/servermanager",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/servermanagertasks/servermanagertasks.md",
-        "redirect_url": "/powershell/module/servermanagertasks",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/shieldedvmdatafile/shieldedvmdatafile.md",
-        "redirect_url": "/powershell/module/shieldedvmdatafile",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/shieldedvmprovisioning/shieldedvmprovisioning.md",
-        "redirect_url": "/powershell/module/shieldedvmprovisioning",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/shieldedvmtemplate/shieldedvmtemplate.md",
-        "redirect_url": "/powershell/module/shieldedvmtemplate",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/softwareinventorylogging/softwareinventorylogging.md",
-        "redirect_url": "/powershell/module/softwareinventorylogging",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/smbshare/smbshare.md",
-        "redirect_url": "/powershell/module/smbshare",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/smbwitness/smbwitness.md",
-        "redirect_url": "/powershell/module/smbwitness",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/smisconfig/smisconfig.md",
-        "redirect_url": "/powershell/module/smisconfig",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/startlayout/startlayout.md",
-        "redirect_url": "/powershell/module/startlayout",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/storage/storage.md",
-        "redirect_url": "/powershell/module/storage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/storageqos/storageqos.md",
-        "redirect_url": "/powershell/module/storageqos",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/storagereplica/storagereplica.md",
-        "redirect_url": "/powershell/module/storagereplica",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/syncshare/syncshare.md",
-        "redirect_url": "/powershell/module/syncshare",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/nettcpip/nettcpip.md",
-        "redirect_url": "/powershell/module/nettcpip",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/tls/tls.md",
-        "redirect_url": "/powershell/module/tls",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/trustedplatformmodule/trustedplatformmodule.md",
-        "redirect_url": "/powershell/module/trustedplatformmodule",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/useraccesslogging/useraccesslogging.md",
-        "redirect_url": "/powershell/module/useraccesslogging",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/vamt/vamt.md",
-        "redirect_url": "/powershell/module/vamt",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/uev/uev.md",
-        "redirect_url": "/powershell/module/uev",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/troubleshootingpack/troubleshootingpack.md",
-        "redirect_url": "/powershell/module/troubleshootingpack",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/vpnclient/vpnclient.md",
-        "redirect_url": "/powershell/module/vpnclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/webapplicationproxy/webapplicationproxy.md",
-        "redirect_url": "/powershell/module/webapplicationproxy",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/windowserrorreporting/windowserrorreporting.md",
-        "redirect_url": "/powershell/module/windowserrorreporting",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/windowsupdate/windowsupdate.md",
-        "redirect_url": "/powershell/module/windowsupdate",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/webadministration/webadministration.md",
-        "redirect_url": "/powershell/module/webadministration",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/whea/whea.md",
-        "redirect_url": "/powershell/module/whea",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/windowsdevlic/windowsdevlic.md",
-        "redirect_url": "/powershell/module/windowsdevlic",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/windowssearch/windowssearch.md",
-        "redirect_url": "/powershell/module/windowssearch",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/windowsserverbackup/windowsserverbackup.md",
-        "redirect_url": "/powershell/module/windowsserverbackup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/wsus.md",
-        "redirect_url": "/powershell/module/wsus",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networkconnectivitystatus/networkconnectivitystatus.md",
-        "redirect_url": "/powershell/module/networkconnectivitystatus",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wdac/wdac.md",
-        "redirect_url": "/powershell/module/wdac",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wds/wds.md",
-        "redirect_url": "/powershell/module/wds",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/networkcontroller/networkcontroller.md",
-        "redirect_url": "/powershell/module/networkcontroller",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/provisioning/provisioning.md",
-        "redirect_url": "/powershell/module/provisioning",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/agpm/agpm.md",
-        "redirect_url": "/powershell/module/agpm",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/appvclient.md",
-        "redirect_url": "/powershell/module/appvclient",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/add-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/add-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/add-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/add-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/add-appvpublishingserver.md",
-        "redirect_url": "/powershell/module/appvclient/add-appvpublishingserver?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/disable-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/disable-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/enable-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/enable-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvclientapplication.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvclientapplication?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvclientconfiguration.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvclientconfiguration?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvclientmode.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvclientmode?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvpublishingserver.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvpublishingserver?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvvirtualprocess.md",
-        "redirect_url": "/powershell/module/appvclient/get-appvvirtualprocess?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/mount-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/mount-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/mount-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/mount-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/publish-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/publish-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/remove-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/remove-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/remove-appvpublishingserver.md",
-        "redirect_url": "/powershell/module/appvclient/remove-appvpublishingserver?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/repair-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/repair-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/repair-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/repair-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/send-appvclientreport.md",
-        "redirect_url": "/powershell/module/appvclient/send-appvclientreport?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvclientconfiguration.md",
-        "redirect_url": "/powershell/module/appvclient/set-appvclientconfiguration?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvclientmode.md",
-        "redirect_url": "/powershell/module/appvclient/set-appvclientmode?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/set-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvpublishingserver.md",
-        "redirect_url": "/powershell/module/appvclient/set-appvpublishingserver?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/start-appvvirtualprocess.md",
-        "redirect_url": "/powershell/module/appvclient/start-appvvirtualprocess?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/stop-appvclientconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvclient/stop-appvclientconnectiongroup?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/sync-appvpublishingserver.md",
-        "redirect_url": "/powershell/module/appvclient/sync-appvpublishingserver?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/unpublish-appvclientpackage.md",
-        "redirect_url": "/powershell/module/appvclient/unpublish-appvclientpackage?view=win-mdop2-ps",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/appv-package-converter.md",
-        "redirect_url": "/powershell/module/appv/",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/appv-sequencer.md",
-        "redirect_url": "/powershell/module/appvsequencer",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/expand-appvsequencerpackage.md",
-        "redirect_url": "/powershell/module/appvsequencer/expand-appvsequencerpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/new-appvpackageaccelerator.md",
-        "redirect_url": "/powershell/module/appvsequencer/new-appvpackageaccelerator",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/new-appvsequencerpackage.md",
-        "redirect_url": "/powershell/module/appvsequencer/new-appvsequencerpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/update-appvsequencerpackage.md",
-        "redirect_url": "/powershell/module/appvsequencer/update-appvsequencerpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/appv-server.md",
-        "redirect_url": "/powershell/module/appvserver/",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/add-appvserverconnectiongrouppackage.md",
-        "redirect_url": "/powershell/module/appvserver/add-appvserverconnectiongrouppackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/get-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/get-appvserverpackagedeploymentconfiguration.md",
-        "redirect_url": "/powershell/module/appvserver/get-appvserverpackagedeploymentconfiguration",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/grant-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/grant-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/grant-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/grant-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/import-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/import-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/new-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/new-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/publish-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/publish-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/publish-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/publish-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/remove-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/remove-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/remove-appvserverconnectiongrouppackage.md",
-        "redirect_url": "/powershell/module/appvserver/remove-appvserverconnectiongrouppackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/remove-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/remove-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/set-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvserverconnectiongrouppackage.md",
-        "redirect_url": "/powershell/module/appvserver/set-appvserverconnectiongrouppackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/set-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/set-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/unpublish-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/unpublish-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/unpublish-appvserverpackage.md",
-        "redirect_url": "/powershell/module/appvserver/unpublish-appvserverpackage",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/appv/update-appvserverconnectiongroup.md",
-        "redirect_url": "/powershell/module/appvserver/update-appvserverconnectiongroup",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/medv-cmdlets.md",
-        "redirect_url": "/powershell/module/medv",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/medv-workspace-cmdlets.md",
-        "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/export-medvworkspace.md",
-        "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager/export-medvworkspace",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/medv/new-medvworkspace.md",
-        "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager/new-medvworkspace",
-        "redirect_document_id": false
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Add-WsusComputer.md",
-        "redirect_url": "/powershell/module/updateservices/Add-WsusComputer?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Add-WsusDynamicCategory.md",
-        "redirect_url": "/powershell/module/updateservices/Add-WsusDynamicCategory?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Approve-WsusUpdate.md",
-        "redirect_url": "/powershell/module/updateservices/Approve-WsusUpdate?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Deny-WsusUpdate.md",
-        "redirect_url": "/powershell/module/updateservices/Deny-WsusUpdate?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusClassification.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusClassification?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusComputer.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusComputer?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusDynamicCategory.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusDynamicCategory?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusProduct.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusProduct?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusServer.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusServer?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Get-WsusUpdate.md",
-        "redirect_url": "/powershell/module/updateservices/Get-WsusUpdate?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Invoke-WsusServerCleanup.md",
-        "redirect_url": "/powershell/module/updateservices/Invoke-WsusServerCleanup?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Remove-WsusDynamicCategory.md",
-        "redirect_url": "/powershell/module/updateservices/Remove-WsusDynamicCategory?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Set-WsusClassification.md",
-        "redirect_url": "/powershell/module/updateservices/Set-WsusClassification?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Set-WsusDynamicCategory.md",
-        "redirect_url": "/powershell/module/updateservices/Set-WsusDynamicCategory?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Set-WsusProduct.md",
-        "redirect_url": "/powershell/module/updateservices/Set-WsusProduct?view=win10-ps",
-        "redirect_document_id": true
-        },
-        {
-        "source_path": "docset/virtual-directory-module/wsus/Set-WsusServerSynchronization.md",
-        "redirect_url": "/powershell/module/updateservices/Set-WsusServerSynchronization?view=win10-ps",
-        "redirect_document_id": true
-        }
-    ]
+  "redirections": [
+    {
+      "source_path": "docset/docs-conceptual/windows/index.md",
+      "redirect_url": "/powershell/windows/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/docs-conceptual/windows/overview.md",
+      "redirect_url": "/powershell/windows/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/docs-conceptual/mdop/index.md",
+      "redirect_url": "/powershell/mdop/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/adcsadministration/adcsadministration.md",
+      "redirect_url": "/powershell/module/adcsadministration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/adcsdeployment/adcsdeployment.md",
+      "redirect_url": "/powershell/module/adcsdeployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/addsadministration/activedirectory.md",
+      "redirect_url": "/powershell/module/addsadministration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/addsdeployment/addsdeployment.md",
+      "redirect_url": "/powershell/module/addsdeployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/adfs/adfs.md",
+      "redirect_url": "/powershell/module/adfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/adrmsadmin/adrmsadmin.md",
+      "redirect_url": "/powershell/module/adrmsadmin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appbackgroundtask/appbackgroundtask.md",
+      "redirect_url": "/powershell/module/appbackgroundtask",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/applocker/applocker.md",
+      "redirect_url": "/powershell/module/applocker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appvclient/appvclient.md",
+      "redirect_url": "/powershell/module/appvclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appvsequencer/appvsequencer.md",
+      "redirect_url": "/powershell/module/appvsequencer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appx/appx.md",
+      "redirect_url": "/powershell/module/appx",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/assignedaccess/assignedaccess.md",
+      "redirect_url": "/powershell/module/assignedaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/bestpractices/bestpractices.md",
+      "redirect_url": "/powershell/module/bestpractices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/bitlocker/bitlocker.md",
+      "redirect_url": "/powershell/module/bitlocker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/bitstransfer/bitstransfer.md",
+      "redirect_url": "/powershell/module/bitstransfer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/booteventcollector/booteventcollector.md",
+      "redirect_url": "/powershell/module/booteventcollector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/branchcache/branchcache.md",
+      "redirect_url": "/powershell/module/branchcache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/cimcmdlets/cimcmdlets.md",
+      "redirect_url": "/powershell/module/cimcmdlets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/clusterawareupdating/clusterawareupdating.md",
+      "redirect_url": "/powershell/module/clusterawareupdating",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/configci/configci.md",
+      "redirect_url": "/powershell/module/configci",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hostcomputeservice/hostcomputeservice.md",
+      "redirect_url": "/powershell/module/hostcomputeservice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dcbqos/dcbqos.md",
+      "redirect_url": "/powershell/module/dcbqos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/deduplication/deduplication.md",
+      "redirect_url": "/powershell/module/deduplication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/defender/defender.md",
+      "redirect_url": "/powershell/module/defender",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dfsn/dfsn.md",
+      "redirect_url": "/powershell/module/dfsn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dfsr/dfsr.md",
+      "redirect_url": "/powershell/module/dfsr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/devicehealthattestation/devicehealthattestation.md",
+      "redirect_url": "/powershell/module/devicehealthattestation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/directaccessclientcomponent/directaccessclientcomponent.md",
+      "redirect_url": "/powershell/module/directaccessclientcomponent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dism/dism.md",
+      "redirect_url": "/powershell/module/dism",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dnsclient/dnsclient/dns-client.md",
+      "redirect_url": "/powershell/module/dnsclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/dnsserver/dnsserver.md",
+      "redirect_url": "/powershell/module/dnsserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/eventtracmancmdlets/eventtracmancmdlets.md",
+      "redirect_url": "/powershell/module/eventtracmancmdlets",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/failoverclusters/failoverclusters.md",
+      "redirect_url": "/powershell/module/failoverclusters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/fileserverresourcemanager/fileserverresourcemanager.md",
+      "redirect_url": "/powershell/module/fileserverresourcemanager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/grouppolicy/grouppolicy.md",
+      "redirect_url": "/powershell/module/grouppolicy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hardwarecertification/hardwarecertification.md",
+      "redirect_url": "/powershell/module/hardwarecertification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hnvdiagnostics/hnvdiagnostics.md",
+      "redirect_url": "/powershell/module/hnvdiagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hgsattestation/hgsattestation.md",
+      "redirect_url": "/powershell/module/hnvdiagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hgsclient/hgsclient.md",
+      "redirect_url": "/powershell/module/hgsclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hgsdiagnostics/hgsdiagnostics.md",
+      "redirect_url": "/powershell/module/hgsdiagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hgskeyprotection/hgskeyprotection.md",
+      "redirect_url": "/powershell/module/hgskeyprotection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/hgsserver/hgsserver.md",
+      "redirect_url": "/powershell/module/hgsserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "dvirtual-directory-module/hyper-v/hyper-v.md",
+      "redirect_url": "/powershell/module/hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/iisadministration/iisadministration.md",
+      "redirect_url": "/powershell/module/iisadministration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/international/international.md",
+      "redirect_url": "/powershell/module/international",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/ipamserver/ipamserver.md",
+      "redirect_url": "/powershell/module/ipamserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/iscsi/iscsi.md",
+      "redirect_url": "/powershell/module/iscsi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/iscsitarget/iscsitarget.md",
+      "redirect_url": "/powershell/module/iscsitarget",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/kds/kds.md",
+      "redirect_url": "/powershell/module/kds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/mmagent/mmagent.md",
+      "redirect_url": "/powershell/module/mmagent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/mpio/mpio.md",
+      "redirect_url": "/powershell/module/mpio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/msdtc/msdtc.md",
+      "redirect_url": "/powershell/module/msdtc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/msmq/msmq.md",
+      "redirect_url": "/powershell/module/msmq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/multipointvdi/multipointvdi.md",
+      "redirect_url": "/powershell/module/multipointvdi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/nanoserverimagegenerator/nanoserverimagegenerator.md",
+      "redirect_url": "/powershell/module/nanoserverimagegenerator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netnat/netnat.md",
+      "redirect_url": "/powershell/module/netnat",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netadapter/netadapter.md",
+      "redirect_url": "/powershell/module/netadapter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netldpagent/netldpagent.md",
+      "redirect_url": "/powershell/module/netldpagent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netconnection/netconnection.md",
+      "redirect_url": "/powershell/module/netconnection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/neteventpacketcapture/neteventpacketcapture.md",
+      "redirect_url": "/powershell/module/neteventpacketcapture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netsecurity/netsecurity.md",
+      "redirect_url": "/powershell/module/netsecurity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networkswitchmanager/networkswitchmanager.md",
+      "redirect_url": "/powershell/module/networkswitchmanager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networkcontrollerdiagnostics/networkcontrollerdiagnostics.md",
+      "redirect_url": "/powershell/module/networkcontrollerdiagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networktransition/networktransition.md",
+      "redirect_url": "/powershell/module/networktransition",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netswitchteam/netswitchteam.md",
+      "redirect_url": "/powershell/module/netswitchteam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netwnv/netwnv.md",
+      "redirect_url": "/powershell/module/netwnv",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/nfs/nfs.md",
+      "redirect_url": "/powershell/module/nfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netlbfo/netlbfo.md",
+      "redirect_url": "/powershell/module/netlbfo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networkloadbalancingclusters/networkloadbalancingclusters.md",
+      "redirect_url": "/powershell/module/networkloadbalancingclusters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/nps/nps.md",
+      "redirect_url": "/powershell/module/nps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/pcsvdevice/pcsvdevice.md",
+      "redirect_url": "/powershell/module/pcsvdevice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
+      "redirect_url": "/powershell/module/pkiclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/platformidentifier/platformidentifier.md",
+      "redirect_url": "/powershell/module/platformidentifier",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/pnpdevice/pnpdevice.md",
+      "redirect_url": "/powershell/module/pnpdevice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/printmanagement/printmanagement.md",
+      "redirect_url": "/powershell/module/printmanagement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/processmitigations/processmitigations.md",
+      "redirect_url": "/powershell/module/processmitigations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/netqos/netqos.md",
+      "redirect_url": "/powershell/module/netqos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/remoteaccess/remoteaccess.md",
+      "redirect_url": "/powershell/module/remoteaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/remotedesktop/remotedesktop.md",
+      "redirect_url": "/powershell/module/remotedesktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/remotedesktopservices/remotedesktopservices.md",
+      "redirect_url": "/powershell/module/remotedesktopservices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/scheduledtasks/scheduledtasks.md",
+      "redirect_url": "/powershell/module/scheduledtasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "dvirtual-directory-module/secureboot/secureboot.md",
+      "redirect_url": "/powershell/module/secureboot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/servercore/servercore.md",
+      "redirect_url": "/powershell/module/servercore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/servermanager/servermanager.md",
+      "redirect_url": "/powershell/module/servermanager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/servermanagertasks/servermanagertasks.md",
+      "redirect_url": "/powershell/module/servermanagertasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/shieldedvmdatafile/shieldedvmdatafile.md",
+      "redirect_url": "/powershell/module/shieldedvmdatafile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/shieldedvmprovisioning/shieldedvmprovisioning.md",
+      "redirect_url": "/powershell/module/shieldedvmprovisioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/shieldedvmtemplate/shieldedvmtemplate.md",
+      "redirect_url": "/powershell/module/shieldedvmtemplate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/softwareinventorylogging/softwareinventorylogging.md",
+      "redirect_url": "/powershell/module/softwareinventorylogging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/smbshare/smbshare.md",
+      "redirect_url": "/powershell/module/smbshare",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/smbwitness/smbwitness.md",
+      "redirect_url": "/powershell/module/smbwitness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/smisconfig/smisconfig.md",
+      "redirect_url": "/powershell/module/smisconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/startlayout/startlayout.md",
+      "redirect_url": "/powershell/module/startlayout",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/storage/storage.md",
+      "redirect_url": "/powershell/module/storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/storageqos/storageqos.md",
+      "redirect_url": "/powershell/module/storageqos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/storagereplica/storagereplica.md",
+      "redirect_url": "/powershell/module/storagereplica",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/syncshare/syncshare.md",
+      "redirect_url": "/powershell/module/syncshare",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/nettcpip/nettcpip.md",
+      "redirect_url": "/powershell/module/nettcpip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/tls/tls.md",
+      "redirect_url": "/powershell/module/tls",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/trustedplatformmodule/trustedplatformmodule.md",
+      "redirect_url": "/powershell/module/trustedplatformmodule",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/useraccesslogging/useraccesslogging.md",
+      "redirect_url": "/powershell/module/useraccesslogging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/vamt/vamt.md",
+      "redirect_url": "/powershell/module/vamt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/uev/uev.md",
+      "redirect_url": "/powershell/module/uev",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/troubleshootingpack/troubleshootingpack.md",
+      "redirect_url": "/powershell/module/troubleshootingpack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/vpnclient/vpnclient.md",
+      "redirect_url": "/powershell/module/vpnclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/webapplicationproxy/webapplicationproxy.md",
+      "redirect_url": "/powershell/module/webapplicationproxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/windowserrorreporting/windowserrorreporting.md",
+      "redirect_url": "/powershell/module/windowserrorreporting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/windowsupdate/windowsupdate.md",
+      "redirect_url": "/powershell/module/windowsupdate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/webadministration/webadministration.md",
+      "redirect_url": "/powershell/module/webadministration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/whea/whea.md",
+      "redirect_url": "/powershell/module/whea",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/windowsdevlic/windowsdevlic.md",
+      "redirect_url": "/powershell/module/windowsdevlic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/windowssearch/windowssearch.md",
+      "redirect_url": "/powershell/module/windowssearch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/windowsserverbackup/windowsserverbackup.md",
+      "redirect_url": "/powershell/module/windowsserverbackup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/wsus.md",
+      "redirect_url": "/powershell/module/wsus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networkconnectivitystatus/networkconnectivitystatus.md",
+      "redirect_url": "/powershell/module/networkconnectivitystatus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wdac/wdac.md",
+      "redirect_url": "/powershell/module/wdac",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wds/wds.md",
+      "redirect_url": "/powershell/module/wds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/networkcontroller/networkcontroller.md",
+      "redirect_url": "/powershell/module/networkcontroller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/provisioning/provisioning.md",
+      "redirect_url": "/powershell/module/provisioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/agpm/agpm.md",
+      "redirect_url": "/powershell/module/agpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/appvclient.md",
+      "redirect_url": "/powershell/module/appvclient",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/add-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/add-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/add-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/add-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/add-appvpublishingserver.md",
+      "redirect_url": "/powershell/module/appvclient/add-appvpublishingserver?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/disable-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/disable-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/enable-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/enable-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvclientapplication.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvclientapplication?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvclientconfiguration.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvclientconfiguration?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvclientmode.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvclientmode?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvpublishingserver.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvpublishingserver?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvvirtualprocess.md",
+      "redirect_url": "/powershell/module/appvclient/get-appvvirtualprocess?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/mount-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/mount-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/mount-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/mount-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/publish-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/publish-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/remove-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/remove-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/remove-appvpublishingserver.md",
+      "redirect_url": "/powershell/module/appvclient/remove-appvpublishingserver?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/repair-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/repair-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/repair-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/repair-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/send-appvclientreport.md",
+      "redirect_url": "/powershell/module/appvclient/send-appvclientreport?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvclientconfiguration.md",
+      "redirect_url": "/powershell/module/appvclient/set-appvclientconfiguration?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvclientmode.md",
+      "redirect_url": "/powershell/module/appvclient/set-appvclientmode?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/set-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvpublishingserver.md",
+      "redirect_url": "/powershell/module/appvclient/set-appvpublishingserver?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/start-appvvirtualprocess.md",
+      "redirect_url": "/powershell/module/appvclient/start-appvvirtualprocess?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/stop-appvclientconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvclient/stop-appvclientconnectiongroup?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/sync-appvpublishingserver.md",
+      "redirect_url": "/powershell/module/appvclient/sync-appvpublishingserver?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/unpublish-appvclientpackage.md",
+      "redirect_url": "/powershell/module/appvclient/unpublish-appvclientpackage?view=win-mdop2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/appv-package-converter.md",
+      "redirect_url": "/powershell/module/appv/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/appv-sequencer.md",
+      "redirect_url": "/powershell/module/appvsequencer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/expand-appvsequencerpackage.md",
+      "redirect_url": "/powershell/module/appvsequencer/expand-appvsequencerpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/new-appvpackageaccelerator.md",
+      "redirect_url": "/powershell/module/appvsequencer/new-appvpackageaccelerator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/new-appvsequencerpackage.md",
+      "redirect_url": "/powershell/module/appvsequencer/new-appvsequencerpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/update-appvsequencerpackage.md",
+      "redirect_url": "/powershell/module/appvsequencer/update-appvsequencerpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/appv-server.md",
+      "redirect_url": "/powershell/module/appvserver/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/add-appvserverconnectiongrouppackage.md",
+      "redirect_url": "/powershell/module/appvserver/add-appvserverconnectiongrouppackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/get-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/get-appvserverpackagedeploymentconfiguration.md",
+      "redirect_url": "/powershell/module/appvserver/get-appvserverpackagedeploymentconfiguration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/grant-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/grant-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/grant-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/grant-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/import-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/import-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/new-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/new-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/publish-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/publish-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/publish-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/publish-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/remove-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/remove-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/remove-appvserverconnectiongrouppackage.md",
+      "redirect_url": "/powershell/module/appvserver/remove-appvserverconnectiongrouppackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/remove-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/remove-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/set-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvserverconnectiongrouppackage.md",
+      "redirect_url": "/powershell/module/appvserver/set-appvserverconnectiongrouppackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/set-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/set-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/unpublish-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/unpublish-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/unpublish-appvserverpackage.md",
+      "redirect_url": "/powershell/module/appvserver/unpublish-appvserverpackage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/appv/update-appvserverconnectiongroup.md",
+      "redirect_url": "/powershell/module/appvserver/update-appvserverconnectiongroup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/medv/medv-cmdlets.md",
+      "redirect_url": "/powershell/module/medv",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/medv/medv-workspace-cmdlets.md",
+      "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/medv/export-medvworkspace.md",
+      "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager/export-medvworkspace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/medv/new-medvworkspace.md",
+      "redirect_url": "/powershell/module/Microsoft.Medv.Administration.Commands.WorkspacePackager/new-medvworkspace",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Add-WsusComputer.md",
+      "redirect_url": "/powershell/module/updateservices/Add-WsusComputer?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Add-WsusDynamicCategory.md",
+      "redirect_url": "/powershell/module/updateservices/Add-WsusDynamicCategory?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Approve-WsusUpdate.md",
+      "redirect_url": "/powershell/module/updateservices/Approve-WsusUpdate?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Deny-WsusUpdate.md",
+      "redirect_url": "/powershell/module/updateservices/Deny-WsusUpdate?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusClassification.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusClassification?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusComputer.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusComputer?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusDynamicCategory.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusDynamicCategory?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusProduct.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusProduct?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusServer.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusServer?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Get-WsusUpdate.md",
+      "redirect_url": "/powershell/module/updateservices/Get-WsusUpdate?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Invoke-WsusServerCleanup.md",
+      "redirect_url": "/powershell/module/updateservices/Invoke-WsusServerCleanup?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Remove-WsusDynamicCategory.md",
+      "redirect_url": "/powershell/module/updateservices/Remove-WsusDynamicCategory?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Set-WsusClassification.md",
+      "redirect_url": "/powershell/module/updateservices/Set-WsusClassification?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Set-WsusDynamicCategory.md",
+      "redirect_url": "/powershell/module/updateservices/Set-WsusDynamicCategory?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Set-WsusProduct.md",
+      "redirect_url": "/powershell/module/updateservices/Set-WsusProduct?view=win10-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/wsus/Set-WsusServerSynchronization.md",
+      "redirect_url": "/powershell/module/updateservices/Set-WsusServerSynchronization?view=win10-ps",
+      "redirect_document_id": false
+    }
+  ]
 }

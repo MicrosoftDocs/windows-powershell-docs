@@ -17,13 +17,13 @@ Removes the association between a personal virtual desktop and a user.
 ## SYNTAX
 
 ### RemoveByUser (Default)
-```
+```powershell
 Remove-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> [-User] <String>
  [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveByDesktop
-```
+```powershell
 Remove-RDPersonalVirtualDesktopAssignment [-CollectionName] <String> [-VirtualDesktopName] <String>
  [-ConnectionBroker <String>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -34,12 +34,19 @@ This removal makes the virtual desktop available for another user.
 
 ## EXAMPLES
 
-### 1: Remove a personal virtual desktop assignment
-```
-PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones" -VirtualDesktopName "PVD-12"
+### Example 1: Remove a personal virtual desktop assignment by user
+```powershell
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -User "CONTOSO\sarahjones"
 ```
 
-This command removes a personal virtual desktop assignment.
+This command removes a personal virtual desktop assignment by user.
+
+### Example 2: Remove a personal virtual desktop assignment virtual desktop name
+```powershell
+PS C:\>Remove-RDPersonalVirtualDesktopAssignment -CollectionName "Virtual Desktop Collection" -VirtualDesktopName "PVD-12"
+```
+
+This command removes a personal virtual desktop assignment by virtual desktop name.
 
 ## PARAMETERS
 
@@ -122,7 +129,7 @@ Accept wildcard characters: False
 ### -VirtualDesktopName
 Specifies the name of the virtual desktop.
 This parameter is required.
-The virtual desktop identified here must be a member of the collection that the **CollectionName** parameter specifies.
+The virtual desktop identified here must be a member of the collection that the *CollectionName* parameter specifies.
 
 ```yaml
 Type: String
@@ -153,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

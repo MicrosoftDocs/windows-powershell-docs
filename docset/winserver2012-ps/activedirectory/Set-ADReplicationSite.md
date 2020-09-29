@@ -760,7 +760,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsServer2003KCCSiteLinkBridgingEnabled
-When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Knowledge consistency checker (KCC) control of the ability to enable or disable site link bridging.
+When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Knowledge Consistency Checker (KCC) control of the ability to enable or disable site link bridging.
 
 ```yaml
 Type: Boolean

@@ -602,7 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyCleanupEnabled
-When enabled,  this optional parameter prevents the Knowledge consistency checker (KCC) from removing connection objects that it does not need.
+When enabled,  this optional parameter prevents the Knowledge Consistency Checker (KCC) from removing connection objects that it does not need.
 Disable this option if you want to take responsibility for removing old redundant connections.
 Alternatively, to control or augment the topology, you can use manual connections, which the KCC does not delete.
 
@@ -797,4 +797,3 @@ A site object that was retrieved by using the Get-ADReplicationSite cmdlet and t
 [New-ADReplicationSite](./New-ADReplicationSite.md)
 
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
-

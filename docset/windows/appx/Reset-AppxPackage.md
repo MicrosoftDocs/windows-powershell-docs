@@ -61,7 +61,7 @@ Parameter Sets: None
 Aliases: None
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
@@ -84,3 +84,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+
+[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
+
+[Get-AppxPackage](./Get-AppxPackage.md)
+
+[Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
+
+[Move-AppxPackage](./Move-AppxPackage.md)
+
+[Remove-AppxPackage](./Remove-AppxPackage.md)

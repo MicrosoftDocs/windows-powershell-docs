@@ -26,14 +26,14 @@ Installs a Windows capability package on the specified operating system image.
 ## SYNTAX
 
 ### Online
-```
+```powershell
 Add-WindowsCapability -Online -Name <String> [-LimitAccess] [-Source <String[]>] [-WindowsDirectory <String>]
  [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-LogLevel <LogLevel>]
  [<CommonParameters>]
 ```
 
 ### Offline
-```
+```powershell
 Add-WindowsCapability -Path <String> -Name <String> [-Source <String[]>] [-WindowsDirectory <String>] [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>]
  [-LogLevel <LogLevel>] [<CommonParameters>]
 ```
@@ -44,13 +44,13 @@ The **Add-WindowsCapability** cmdlet acquires a Windows capability package from 
 ## EXAMPLES
 
 ### Example 1: Add a Windows capability package to the running OS via the Windows Update client
-```
+```powershell
 PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0"
 ```
 This command adds a Windows capability package to the running operating system. Because no source is specified, the Windows Update client will download the necessary package. It requires either an active Internet connection or an active network connection to the local Windows Server Update Services (WSUS) server.
 
 ### Example 2: Add a Windows capability package to the running OS using a locally stored package file
-```
+```powershell
 PS C:\> Add-WindowsCapability -Online -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\" -LimitAccess
 ```
 
@@ -59,7 +59,7 @@ This command adds a Windows capability package specified by the *Name* parameter
 If the package specified by the *Name* parameter is already installed, this command does not return an error message, regardless of whether the required files are present at `E:\`.
 
 ### Example 3: Add a Windows capability package to an image
-```
+```powershell
 PS C:\> Add-WindowsCapability -Path "C:\mount\Windows" -Name "Msix.PackagingTool.Driver~~~~0.0.1.0" -Source "E:\"
 ```
 
@@ -84,12 +84,6 @@ Accept wildcard characters: False
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs.
-The default log level is 3.
-The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -99,7 +93,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: 3
+Default value: WarningsInfo
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -245,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

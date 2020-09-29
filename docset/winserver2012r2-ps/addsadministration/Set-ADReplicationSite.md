@@ -644,7 +644,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsServer2003KCCBehaviorEnabled
-Indicates whether the cmdlet implements Knowledge consistency checker (KCC) operation that is consistent with Windows Server 2003 forest functional level.
+Indicates whether the cmdlet implements Knowledge Consistency Checker (KCC) operation that is consistent with Windows Server 2003 forest functional level.
 This option can be set if all domain controllers in the site are running Windows Server 2003.
 
 ```yaml

@@ -40,7 +40,7 @@ Get-ADReplicationConnection [-AuthType <ADAuthType>] [-Credential <PSCredential>
 The **Get-ADReplicationConnection** cmdlet returns a specific Active Directory replication connection or a set of Active Directory replication connection objects based on a specified filter.
 Connections are used to enable domain controllers to replicate with each other.
 A connection defines a one-way, inbound route from one domain controller (the source), to another domain controller (the destination).
-The Kerberos consistency checker (KCC) reuses existing connections where it can, deletes unused connections, and creates new connections if none exist that meet the current need.
+The Knowledge consistency checker (KCC) reuses existing connections where it can, deletes unused connections, and creates new connections if none exist that meet the current need.
 
 ## EXAMPLES
 

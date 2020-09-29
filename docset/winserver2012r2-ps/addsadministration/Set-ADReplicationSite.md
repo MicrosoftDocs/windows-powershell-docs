@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -TopologyCleanupEnabled
 Indicates whether the cmdlet enables topology cleanup.
-When enabled,  this optional parameter prevents the Knowledge consistency checker (KCC) from removing connection objects that it does not need.
+When enabled,  this optional parameter prevents the Knowledge Consistency Checker (KCC) from removing connection objects that it does not need.
 Disable this option if you want to take responsibility for removing old redundant connections.
 Alternatively, to control or augment the topology, you can use manual connections, which the KCC does not delete.
 

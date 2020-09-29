@@ -37,7 +37,9 @@ Reset-AppxPackage [-Package] <string>
 ```
 
 ## DESCRIPTION
+The **Reset-AppxPackage** cmdlet will reset the app to its original settings, and the app will react as a freshly installed app. 
 
+After resetting the app, any initial prompts by the app will be prompted for user input. 
 
 ## EXAMPLES
 
@@ -51,7 +53,7 @@ This cmdlet will reset the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` a
 ## PARAMETERS
 
 ### -Package
-Specifies the full package name which will be reset
+Specifies the package full name (PFuN) of the app which will be reset.
 
 ```yaml
 Type: String[]

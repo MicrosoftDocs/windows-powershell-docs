@@ -65,7 +65,7 @@ To specify a different number of hours, use the *TimeSpan* parameter.
 
 ### Example 1: Get all logs and dumps for a cluster subsystem
 ```
-PS C:\>Get-StorageDiagnostics -StorageSubSystemName "VMMCluster.contoso.corp.microsoft.com" -DestinationPath "\\FileShare1\Debug\"
+PS C:\>Get-StorageDiagnosticInfo -StorageSubSystemName "VMMCluster.contoso.corp.microsoft.com" -DestinationPath "\\FileShare1\Debug\"
 ```
 
 This command gets all types of logs and dumps for the specified Storage cluster subsystem.

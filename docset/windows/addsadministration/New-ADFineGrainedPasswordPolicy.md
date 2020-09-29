@@ -25,7 +25,7 @@ Creates a new Active Directory fine-grained password policy.
 
 ## SYNTAX
 
-```
+```powershell
 New-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-ComplexityEnabled <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>]
  [-Instance <ADFineGrainedPasswordPolicy>] [-LockoutDuration <TimeSpan>] [-LockoutObservationWindow <TimeSpan>]
@@ -59,14 +59,14 @@ Then pass these objects through the pipeline operator to the **New-ADFineGrained
 ## EXAMPLES
 
 ### Example 1: Create a fine-grained password policy
-```
+```powershell
 PS C:\> New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
 ```
 
 This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindow**, and **LockoutThreshold** properties on the object.
 
 ### Example 2: Create fine-grained password policies using a template object
-```
+```powershell
 PS C:\> $TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
 PS C:\> $TemplatePSO.ComplexityEnabled = $true
 PS C:\> $TemplatePSO.LockoutDuration = [TimeSpan]::Parse("0.12:00:00")
@@ -80,6 +80,13 @@ PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "AdminsPSO"
 ```
 
 This example creates two new fine-grained password policy objects using a template object.
+
+### Example 3: Create a fine-grained password policy with manual account unlock
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
+```
+
+This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by the administrator.
 
 ## PARAMETERS
 
@@ -239,7 +246,7 @@ Accept wildcard characters: False
 
 ### -LockoutDuration
 Specifies the length of time that an account is locked after the number of failed login attempts exceeds the lockout threshold.
-You cannot login to an account that is locked until the lockout duration time period has expired.
+You cannot log in to an account that is locked until the lockout duration time period has expired. If you set the value to 0 the account needs to be unlocked manually by the administrator.
 This parameter sets the **lockoutDuration** property of a password policy object.
 The LDAP display name (**ldapDisplayName**) of this property is msDS-LockoutDuration.
 
@@ -248,19 +255,14 @@ Use the *LockOutObservationWindow* parameter to set the lockout observation time
 
 Specify the lockout duration time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 ```yaml
 Type: TimeSpan
@@ -285,19 +287,14 @@ Use the *LockoutDuration* parameter to set the lockout duration time.
 
 Specify the time interval in the following format:
 
-D:H:M:S.F
+`D:H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 Note: Time values must be between the following values: 0:0:0:0.0 and 10675199:02:48:05.4775807.
 
@@ -339,19 +336,14 @@ The LDAP display name (**ldapDisplayName**) for this property is maxPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
@@ -375,21 +367,16 @@ The LDAP display name (**ldapDisplayName**) for this property is minPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
-
-Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.
 
 ```yaml
 Type: TimeSpan
@@ -549,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReversibleEncryptionEnabled
-Specifies whether the directory must  store passwords using reversible encryption.
+Specifies whether the directory must store passwords using reversible encryption.
 This parameter sets the **ReversibleEncryption** property for a password policy.
 The acceptable values for this parameter are:
 
@@ -570,7 +557,7 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways:  
 
@@ -620,7 +607,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

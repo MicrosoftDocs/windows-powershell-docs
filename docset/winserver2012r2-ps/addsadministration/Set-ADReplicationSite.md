@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticInterSiteTopologyGenerationEnabled
-Indicates whether the cmdlet prevents the Knowledge consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
+Indicates whether the cmdlet prevents the Knowledge Consistency Checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
 Use this option when you want to create manual intersite connections (disable the ISTG) but retain the KCC to generate intrasite connections.
 
 ```yaml
@@ -714,4 +714,3 @@ A site object that was retrieved by using the **Get-ADReplicationSite** cmdlet a
 [New-ADReplicationSite](./New-ADReplicationSite.md)
 
 [Remove-ADReplicationSite](./Remove-ADReplicationSite.md)
-

@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticInterSiteTopologyGenerationEnabled
-Indicates whether the cmdlet prevents the Kerberos consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
+Indicates whether the cmdlet prevents the Knowledge consistency checker (KCC) that functions as the intersite topology generator (ISTG) from generating connections for intersite replication.
 Use this option when you want to create manual intersite connections (disable the ISTG) but retain the KCC to generate intrasite connections.
 
 ```yaml
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -TopologyCleanupEnabled
 Indicates whether the cmdlet enables topology cleanup.
-When enabled,  this optional parameter prevents the Kerberos consistency checker (KCC) from removing connection objects that it does not need.
+When enabled,  this optional parameter prevents the Knowledge consistency checker (KCC) from removing connection objects that it does not need.
 Disable this option if you want to take responsibility for removing old redundant connections.
 Alternatively, to control or augment the topology, you can use manual connections, which the KCC does not delete.
 
@@ -531,7 +531,7 @@ Accept wildcard characters: False
 
 ### -TopologyDetectStaleEnabled
 Indicates whether the cmdlet enables topology detect stale.
-This parameter option prevents the Kerberos consistency checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC does use an alternate server to reroute replication.
+This parameter option prevents the Knowledge consistency checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC does use an alternate server to reroute replication.
 Use this option only if network communication is very unstable and brief outages are expected.
 
 ```yaml
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 
 ### -TopologyMinimumHopsEnabled
 Indicates whether the cmdlet enables topology minimum hops.
-When enabled, this parameter prevents the Kerberos consistency checker (KCC) from generating optimizing connections in the ring topology of intrasite replication.
+When enabled, this parameter prevents the Knowledge consistency checker (KCC) from generating optimizing connections in the ring topology of intrasite replication.
 Optimizing connections reduce the replication latency in the site and disabling them is not recommended.
 
 ```yaml
@@ -644,7 +644,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsServer2003KCCBehaviorEnabled
-Indicates whether the cmdlet implements Kerberos consistency checker (KCC) operation that is consistent with Windows Server 2003 forest functional level.
+Indicates whether the cmdlet implements Knowledge consistency checker (KCC) operation that is consistent with Windows Server 2003 forest functional level.
 This option can be set if all domain controllers in the site are running Windows Server 2003.
 
 ```yaml
@@ -677,7 +677,7 @@ Accept wildcard characters: False
 
 ### -WindowsServer2003KCCSiteLinkBridgingEnabled
 Indicates whether the cmdlet enables site link bridging.
-When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Kerberos consistency checker (KCC) control of the ability to enable or disable site link bridging.
+When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Knowledge consistency checker (KCC) control of the ability to enable or disable site link bridging.
 
 ```yaml
 Type: Boolean

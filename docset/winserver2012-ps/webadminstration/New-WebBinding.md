@@ -12,7 +12,7 @@ author: andreabarr
 # New-WebBinding
 
 ## SYNOPSIS
-Adds a new binding to an existing Web site.
+Adds a binding to a website.
 
 ## SYNTAX
 
@@ -22,16 +22,23 @@ New-WebBinding [[-Name] <String>] [-Protocol <String>] [-Port <UInt32>] [-IPAddr
 ```
 
 ## DESCRIPTION
-Adds a new binding to an existing Web site.
+The **New-WebBinding** cmdlet adds a new binding to an existing website.
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Adding a new Site Binding --------------
-```
-IIS:\>New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader TestSite
+### Example 1: Add a new site binding
+```powershell
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
 ```
 
-Creates a new binding on the Default Web Site.
+This command creates a binding on the default website.
+
+### Example 2: Add a new SSL site binding
+```powershell
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+```
+
+This command creates an SSL binding on the default website.
 
 ## PARAMETERS
 
@@ -51,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
-The host header of the new binding.
+Specifies the host header of the new binding.
 
 ```yaml
 Type: String
@@ -66,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddress
-The IP address of the new binding.
+Specifies the IP address of the new binding.
 
 ```yaml
 Type: String
@@ -81,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Web site on which the new binding is created.
+Specifies the name of the website on which this cmdlet creates the new binding.
 
 ```yaml
 Type: String
@@ -96,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The port used for the binding.
+Specifies the port for the new binding.
 
 ```yaml
 Type: UInt32
@@ -111,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The protocol to be used for the Web binding (usually HTTP, HTTPS, or FTP).
+Specifies the protocol for the new binding.
+This protocol is usually HTTP, HTTPS, or FTP.
 
 ```yaml
 Type: String
@@ -126,8 +134,13 @@ Accept wildcard characters: False
 ```
 
 ### -SslFlags
-Indicates what type of certificate and/or certificate storage the new website supports.
-Only the following values are valid: 0 (Regular certificate in Windows certificate storage), 1 (SNI certificate), 2 (central certificate store), or 3 (SNI certificate in central certificate store).
+Indicates what type of certificate and certificate storage the new website supports.
+The acceptable values for this parameter are:
+
+- 0: Regular certificate in Windows certificate storage. 
+- 1: SNI certificate. 
+- 2: Central certificate store.
+- 3: SNI certificate in central certificate store.
 
 ```yaml
 Type: Int32
@@ -142,7 +155,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 
@@ -151,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

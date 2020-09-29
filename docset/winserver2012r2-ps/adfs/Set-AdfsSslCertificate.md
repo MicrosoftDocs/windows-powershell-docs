@@ -24,7 +24,7 @@ Sets an SSL certificate for HTTPS bindings for AD FS and the device registration
 
 ## SYNTAX
 
-```
+```powershell
 Set-AdfsSslCertificate -Thumbprint <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ You must run this cmdlet on each AD FS server in the AD FS farm.
 ## EXAMPLES
 
 ### Example 1: Set a certificate
-```
+```powershell
 PS C:\> Set-AdfsSslCertificate -Thumbprint "FC85DDB0FC58E63D8CB52654F22E4BE7900FE349"
 ```
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -Thumbprint
 Specifies the thumbprint of a certificate.
-The thumbprint that you specify corresponds to the certificate installed on the adfs2_fs in the local store.
+The thumbprint that you specify corresponds to the certificate installed on the federation server in the local store.
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

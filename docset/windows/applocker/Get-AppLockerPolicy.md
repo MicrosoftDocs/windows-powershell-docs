@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
+ms.date: 09/28/2020
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -45,6 +45,8 @@ The **Get-AppLockerPolicy** cmdlet retrieves the AppLocker policy from the local
 
 By default, the output is an **AppLockerPolicy** object.
 If the *Xml* parameter is used, then the output will be the AppLocker policy as an XML-formatted string.
+
+Note that the Get-AppLockerPolicy cmdlet only functions with policies deployed via GP. It does not have any knowledge of the AppLocker CSP, so it will return incorrect data if the policy in place has been applied via the CSP.
 
 ## EXAMPLES
 

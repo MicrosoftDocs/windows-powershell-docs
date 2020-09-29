@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 12/20/2016
+ms.date: 09/28/2020
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
@@ -41,6 +41,8 @@ The **Set-AppLockerPolicy cmdlet** sets the specified GPO to contain the specifi
 If no Lightweight Directory Access Protocol (LDAP) is specified, then the default is the local GPO.
 
 The input values for the AppLocker policy can be an **AppLockerPolicy** object or an XML-formatted file that contains the AppLocker policy.
+
+Note that the Set-AppLockerPolicy cmdlet only works with GP. It cannot interact with the AppLocker CSP.
 
 ## EXAMPLES
 

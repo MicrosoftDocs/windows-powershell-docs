@@ -619,7 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyDetectStaleEnabled
-This parameter option prevents the Knowledge consistency checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC does use an alternate server to reroute replication.
+This parameter option prevents the Knowledge Consistency Checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC uses an alternate server to reroute replication.
 Use this option only if network communication is very unstable and brief outages are expected.
 
 ```yaml

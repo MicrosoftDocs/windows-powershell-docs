@@ -635,7 +635,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyMinimumHopsEnabled
-When enabled, this parameter prevents the Knowledge consistency checker (KCC) from generating optimizing connections in the ring topology of intrasite replication.
+When enabled, this parameter prevents the Knowledge Consistency Checker (KCC) from generating optimizing connections in the ring topology of intrasite replication.
 Optimizing connections reduce the replication latency in the site and disabling them is not recommended.
 
 ```yaml

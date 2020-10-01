@@ -50,7 +50,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-ThrottleLimit <Int32>] [-AsJob] [- DisableCpuThrottleOnIdleScans] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1196,6 +1196,19 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DisableCpuThrottleOnIdleScans
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This feature is enabled by default, and will not throttle the CPU for scheduled scans performed when the device is otherwise idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag will have no impact and normal throttling will occur.
+
+```yaml
+Type: Boolean
+Aliases: None
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).

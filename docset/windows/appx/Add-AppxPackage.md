@@ -31,7 +31,8 @@ Adds a signed app package to a user account.
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
  [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
  [-RetainFilesOnFailure] [-InstallAllResources] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
- [DeferRegistrationWhenPackagesAreInUse] [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] 
+ [-DeferRegistrationWhenPackagesAreInUse] [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] 
+
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

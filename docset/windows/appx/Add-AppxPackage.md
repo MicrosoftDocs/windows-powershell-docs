@@ -508,7 +508,8 @@ Accept wildcard characters: False
 ```
 
 ### -DeferRegistrationWhenPackagesAreInUse
-Specifies that the app will not register for a user if currently in use. The app will update on next launch.
+Specifies that the app will not register for a user if currently in use. The app will update on the next launch.
+
 
 ```yaml
 Type: SwitchParameter

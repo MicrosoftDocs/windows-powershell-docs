@@ -619,7 +619,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopologyDetectStaleEnabled
-This parameter option prevents the Knowledge Consistency Checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC uses an alternate server to reroute replication.
+This parameter option prevents the Knowledge Consistency Checker (KCC) from excluding servers that are unreachable from the topology; that is, the KCC does use an alternate server to reroute replication.
 Use this option only if network communication is very unstable and brief outages are expected.
 
 ```yaml
@@ -760,7 +760,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsServer2003KCCSiteLinkBridgingEnabled
-When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Knowledge Consistency Checker (KCC) control with the ability to enable or disable site link bridging.
+When the forest functional level Windows Server 2003 or Windows Server 2003 interim is in effect, provides Knowledge Consistency Checker (KCC) control of the ability to enable or disable site link bridging.
 
 ```yaml
 Type: Boolean

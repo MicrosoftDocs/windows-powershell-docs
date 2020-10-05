@@ -95,7 +95,8 @@ PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPat
 
 This command adds an app package that the package contains.
 
-### Example 2: Update an app, but defer registration until app has closed.
+### Example 2: Update an app, but defer registration until the app has closed
+
 ```
 PS C:\> Add-AppxPackage -Path "C:\Users\user1\Desktop\MyApp.msix" -DependencyPath "C:\Users\user1\Desktop\winjs.msix" -DeferRegistrationWhenPackagesAreInUse
 ```

@@ -29,7 +29,7 @@ Adds an app package (.appx) that will install for each new user to a Windows ima
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] -Path <String> [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-Depe
 ```
 Add-AppxProvisionedPackage [-FolderPath <String>] [-PackagePath <String>] [-DependencyPackagePath <String[]>]
  [-LicensePath <String>] [-SkipLicense] [-CustomDataPath <String>] [-Online] [-WindowsDirectory <String>]
- [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>]
+ [-SystemDrive <String>] [-LogPath <String>] [-ScratchDirectory <String>] [-StubPackageOption <StubPackageOption>] [-LogLevel <LogLevel>] [-Regions <String>]
  [<CommonParameters>]
 ```
 
@@ -46,10 +46,10 @@ The **Add-AppxProvisionedPackage** cmdlet adds an app package (.appx) that will 
 If the package has dependencies that are architecture-specific, you must install the applicable architectures for the dependency on the target image.
 For example, you must install the x86 dependency on the x86 image.
 
-You cannot install an app package (.appx) on an operating system that does not support Windows® 8 apps.
-Apps are not supported on Server Core installations of Windows Server® 2012, Windows® Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
+You cannot install an app package (.appx) on an operating system that does not support Windows 8 apps.
+Apps are not supported on Server Core installations of Windows Server 2012, Windows Preinstallation Environment (Windows PE) 4.0, or on any versions of Windows older than Windows 8 and Windows Server 2012.
 
-To install and run apps on Windows Server 2012, you must install the [Desktop Experience](http://go.microsoft.com/fwlink/?LinkId=247330).
+To install and run apps on Windows Server 2016, you must install the [Install Server with Desktop Experience](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-with-desktop-experience).
 
 Use the *Online* parameter to specify the running operating system on your local computer, or use the *Path* parameter to specify the location of a mounted Windows image.
 
@@ -60,12 +60,12 @@ Use the *FolderPath* parameter to specify the location of a folder of unpacked a
 
 To add an app package (.appx) for a particular user, or to test a package while developing your app, use the **Add-AppxPackage** cmdlet instead.
 
-For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020) and [How to develop an OEM app that uses a custom file](http://go.microsoft.com/fwlink/?LinkID=279989) in the TechNet Library..
+For more information, including requirements for app package provisioning, see [Sideload Apps with DISM](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sideload-apps-with-dism-s14) and [How to develop an OEM app that uses a custom file](https://docs.microsoft.com/windows/win32/appxpkg/how-to-develop-oem-app-with-custom-file) in MicrosoftDocs.
 
 ## EXAMPLES
 
 ### Example 1: Add an app package to the running operating system
-```
+```powershell
 PS C:\> Add-AppxProvisionedPackage -Online -FolderPath "c:\Appx"
 ```
 
@@ -73,7 +73,7 @@ This command adds the app package, dependency packages, and license file from th
 The package will be installed for the current user and any new user account created on the computer.
 
 ### Example 2: Add an app package an operating system image
-```
+```powershell
 PS C:\> Add-AppxProvisionedPackage -Path c:\offline -PackagePath c:\Appx\myPackage.appx -DependencyPackagePath c:\Appx\dependency1\dependencyPackage.appx -LicensePath c:\Appx\myLicense.xml
 ```
 
@@ -145,12 +145,6 @@ Accept wildcard characters: False
 
 ### -LogLevel
 Specifies the maximum output level shown in the logs.
-The default log level is 3.
-The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
 
 ```yaml
 Type: LogLevel
@@ -160,7 +154,7 @@ Accepted values: Errors, Warnings, WarningsInfo
 
 Required: False
 Position: Named
-Default value: None
+Default value: WarningsInfo
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -236,6 +230,23 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Regions
+Specifies what regions an app package (.appx or .appxbundle) must be provisioned in. The region argument can either be “all”, indicating that the app should be provisioned for all regions, or it can be a semi-colon delimited list of regions. The regions will be in the form of [ISO 3166-1 Alpha-2 or ISO 3166-1 Alpha-3 codes](https://en.wikipedia.org/wiki/ISO_3166-1). For example, the United States can be specified as either "US" or "USA" (case-insensitive). When a list of regions is not specified, the package will be provisioned only if it is pinned to start layout.
+
+Note: Option is available on client OS. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ScratchDirectory
 Specifies a temporary directory that will be used when extracting files for use during servicing.
 The directory must exist locally.
@@ -259,8 +270,8 @@ Accept wildcard characters: False
 ### -SkipLicense
 Adds an app package without a license file.
 
-Only use SkipLicense with apps that do not require a license on Enterprise or Server versions of the operating system.
-Using SkipLicense in other scenarios can compromise an image.
+Only use *SkipLicense* with apps that do not require a license on Enterprise or Server versions of the operating system.
+Using *SkipLicense* in other scenarios can compromise an image.
 
 ```yaml
 Type: SwitchParameter
@@ -323,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

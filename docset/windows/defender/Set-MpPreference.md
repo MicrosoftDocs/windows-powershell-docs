@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCpuThrottleOnIdleScans
-Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not throttle for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
+Indicates whether the CPU will be throttled for scheduled scans while the device is idle. This parameter is enabled by default, thus ensuring that the CPU will not be throttled for scheduled scans performed when the device is idle, regardless of what **ScanAvgCPULoadFactor** is set to. For all other scheduled scans, this flag does not have any impact and normal throttling will occur.
 
 ```yaml
 Type: Boolean

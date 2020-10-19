@@ -327,6 +327,9 @@ The IP address prefix was provided by DHCP settings.
                          
  -- RouterAdvertisement.
 The IP address prefix was obtained through a router advertisement (RA).
+                         
+ -- Other.
+The IP address prefix was obtained from another source, such as a VPN.
 
 ```yaml
 Type: PrefixOrigin[]
@@ -379,6 +382,9 @@ The IP address suffix was obtained from the link-layer address.
                          
  -- Random.
 The IP address suffix was obtained from a random source.
+                         
+ -- Other.
+The IP address suffix was obtained from another source, such as a VPN.
 
 ```yaml
 Type: SuffixOrigin[]

@@ -33,7 +33,7 @@ Add-DnsServerZoneScope [-ZoneName] <String> [-Name] <String> [-LoadExisting] [-P
 
 ## DESCRIPTION
 The **Add-DnsServerZoneScope** cmdlet adds a zone scope to an existing zone on the Domain Name System (DNS) server.
-A DNS server can load an existing scope its data file.
+A DNS server can load an existing scope from its data file.
 The name of the scope should adhere to the same conventions as the zone name.
 The scope name cannot be same as the zone name to which this cmdlet adds it.
 

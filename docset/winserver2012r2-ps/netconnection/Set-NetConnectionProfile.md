@@ -25,7 +25,7 @@ Changes the network category of a connection profile.
 ## SYNTAX
 
 ### Query (cdxml) (Default)
-```
+```powershell
 Set-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-InterfaceIndex <UInt32[]>]
  [-IPv4Connectivity <IPv4Connectivity[]>] [-IPv6Connectivity <IPv6Connectivity[]>]
  [-NetworkCategory <NetworkCategory>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
@@ -33,7 +33,7 @@ Set-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-Inter
 ```
 
 ### InputObject (cdxml)
-```
+```powershell
 Set-NetConnectionProfile -InputObject <CimInstance[]> [-NetworkCategory <NetworkCategory>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -46,7 +46,7 @@ A connection profile represents a network connection.
 ## EXAMPLES
 
 ### Example 1: Change the network category of a connection profile
-```
+```powershell
 PS C:\> Set-NetConnectionProfile -InterfaceAlias Ethernet1 -NetworkCategory "Public"
 ```
 

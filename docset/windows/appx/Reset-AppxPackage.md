@@ -7,7 +7,7 @@ manager: jvintzel
 Module Name: Appx
 ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
 ms.author: romaclac
-ms.date: 08/06/2020
+ms.date: 10/20/2020
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Enable-StorageMaintenanceMode
 ms.reviewer:
@@ -65,7 +65,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ Indicates that this cmdlet ignores detached virtual disks when it performs the c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ This cmdlet matches manufacturer information of physical disk devices, and place
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ If multiple devices fit a model string, this cmdlet places those devices in main
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ Indicates whether this cmdlet validates that all virtual disks in the fault doma
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +180,7 @@ You can pipe a fault domain object, **PhysicalDisk**, **Enclosure**, or **SSU** 
 
 ## NOTES
 * You can run this cmdlet only for fault domains that host resilient virtual disks, which include Mirror and Parity Space.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

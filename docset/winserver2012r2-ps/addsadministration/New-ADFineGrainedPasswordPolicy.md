@@ -24,7 +24,7 @@ Creates a new Active Directory fine-grained password policy.
 
 ## SYNTAX
 
-```
+```powershell
 New-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-ComplexityEnabled <Boolean>]
  [-Credential <PSCredential>] [-Description <String>] [-DisplayName <String>]
  [-Instance <ADFineGrainedPasswordPolicy>] [-LockoutDuration <TimeSpan>] [-LockoutObservationWindow <TimeSpan>]
@@ -37,36 +37,36 @@ New-ADFineGrainedPasswordPolicy [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-
 ## DESCRIPTION
 The **New-ADFineGrainedPasswordPolicy** cmdlet creates a new Active Directory fine-grained password policy.
 You can set commonly used fine-grained password policy property values by using the cmdlet parameters.
-Property values that are not associated with cmdlet parameters can be set by using the **OtherAttributes** parameter.
+Property values that are not associated with cmdlet parameters can be set by using the *OtherAttributes* parameter.
 
-You must set the **Name** and **Precedence** parameters to create a new fine-grained password policy.
+You must set the *Name* and *Precedence* parameters to create a new fine-grained password policy.
 
 The following methods explain different ways to create an object by using this cmdlet.
 
-Method 1: Use the New-ADFineGrainedPasswordPolicy cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
+Method 1: Use the **New-ADFineGrainedPasswordPolicy** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
 
 Method 2: Use a template to create the new object.
-To do this, create a new fine-grained password policy object or retrieve a copy of an existing fine-grained password policy object and set the **Instance** parameter to this object.
-The object provided to the **Instance** parameter is used as a template for the new object.
+To do this, create a new fine-grained password policy object or retrieve a copy of an existing fine-grained password policy object and set the *Instance* parameter to this object.
+The object provided to the *Instance* parameter is used as a template for the new object.
 You can override property values from the template by setting cmdlet parameters.
-For examples and more information, see the **Instance** parameter description for this cmdlet.
+For examples and more information, see the *Instance* parameter description for this cmdlet.
 
-Method 3: Use the Import-Csvhttp://go.microsoft.com/fwlink/?LinkID=113341 cmdlet with the **New-ADFineGrainedPasswordPolicy** cmdlet to create multiple Active Directory fine-grained password policy objects.
+Method 3: Use the Import-Csv cmdlet with the **New-ADFineGrainedPasswordPolicy** cmdlet to create multiple Active Directory fine-grained password policy objects.
 To do this, use the **Import-Csv** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
 Then pass these objects through the pipeline operator to the **New-ADFineGrainedPasswordPolicy** cmdlet to create the fine-grained password policy objects.
 
 ## EXAMPLES
 
 ### Example 1: Create a fine-grained password policy
-```
-PS C:\>New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "DomainUsersPSO" -Precedence 500 -ComplexityEnabled $true -Description "The Domain Users Password Policy" -DisplayName "Domain Users PSO" -LockoutDuration "0.12:00:00" -LockoutObservationWindow "0.00:15:00" -LockoutThreshold 10
 ```
 
 This command creates a fine-grained password policy object named DomainUsersPSO and set the **Precedence**, **ComplexityEnabled**, **Description**, **DisplayName**, **LockoutDuration**, **LockoutObservationWindow**, and **LockoutThreshold** properties on the object.
 
 ### Example 2: Create fine-grained password policies using a template object
-```
-PS C:\>$TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
+```powershell
+PS C:\> $TemplatePSO = New-Object Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
 PS C:\> $TemplatePSO.ComplexityEnabled = $true
 PS C:\> $TemplatePSO.LockoutDuration = [TimeSpan]::Parse("0.12:00:00")
 PS C:\> $TemplatePSO.LockoutObservationWindow = [TimeSpan]::Parse("0.00:15:00")
@@ -79,6 +79,13 @@ PS C:\> New-ADFineGrainedPasswordPolicy -Instance $TemplatePSO -Name "AdminsPSO"
 ```
 
 This example creates two new fine-grained password policy objects using a template object.
+
+### Example 3: Create a fine-grained password policy with manual account unlock
+```powershell
+PS C:\> New-ADFineGrainedPasswordPolicy -Name "ManualUnlockPSO" -Precedence 500 -ComplexityEnabled $true -Description "Manual Unlock Password Policy" -DisplayName "Manual Unlock PSO" -LockoutDuration "00:00:00" -LockoutObservationWindow "00:00:00" -LockoutThreshold 3
+```
+
+This command creates a fine-grained password policy object named ManualUnlockPSO that would require manual unlock of accounts by the administrator.
 
 ## PARAMETERS
 
@@ -110,13 +117,9 @@ Accept wildcard characters: False
 Specifies whether password complexity is enabled for the password policy.
 If enabled, the password must contain three of the following four character types:
 
-
 - Uppercase characters (A, B, C, D, E, ...)
-
 - Lowercase characters (a, b, c, d, e, ...)
-
 - Numerals (0, 1, 2, 3, ...)
-
 - Special characters (#, $, *, %, ...)
 
 This parameter sets the **ComplexityEnabled** property of a password policy.
@@ -162,8 +165,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -219,12 +222,12 @@ Specifies an instance of a fine-grained password policy object to use as a templ
 You can use an instance of an existing fine-grained password policy object as a template or you can construct a new fine-grained password policy object by using the Windows PowerShell command line or by using a script.
 
 Method 1: Use an existing fine-grained password policy object as a template for a new object.
-To retrieve an instance of an existing fine-grained password policy object, use a cmdlet such as Get-ADFineGrainedPasswordPolicy.
-Then provide this object to the **Instance** parameter of the **New-ADFineGrainedPasswordPolicy** cmdlet to create a new fine-grained password policy object.
+To retrieve an instance of an existing fine-grained password policy object, use a cmdlet such as **Get-ADFineGrainedPasswordPolicy**.
+Then provide this object to the *Instance* parameter of the **New-ADFineGrainedPasswordPolicy** cmdlet to create a new fine-grained password policy object.
 You can override property values of the new object by setting the appropriate parameters.
 
 Method 2: Create a new **ADFineGrainedPasswordPolicy** object and set the property values by using the Windows PowerShell command line interface.
-Then pass this object to the **Instance** parameter of the **New-ADFineGrainedPasswordPolicy** cmdlet to create the new Active Directory fine-grained password policy object.
+Then pass this object to the *Instance* parameter of the **New-ADFineGrainedPasswordPolicy** cmdlet to create the new Active Directory fine-grained password policy object.
 
 Note: Specified attributes are not validated, so attempting to set attributes that do not exist or cannot be set will raise an error.
 
@@ -242,28 +245,24 @@ Accept wildcard characters: False
 
 ### -LockoutDuration
 Specifies the length of time that an account is locked after the number of failed login attempts exceeds the lockout threshold.
-You cannot login to an account that is locked until the lockout duration time period has expired.
+You cannot log in to an account that is locked until the lockout duration time period has expired. If you set the value to 0 the account needs to be unlocked manually by the administrator.
 This parameter sets the **lockoutDuration** property of a password policy object.
 The LDAP display name (**ldapDisplayName**) of this property is msDS-LockoutDuration.
 
 The lockout duration must be greater than or equal to the lockout observation time for a password policy.
-Use the **LockOutObservationWindow** parameter to set the lockout observation time.
+Use the *LockOutObservationWindow* parameter to set the lockout observation time.
 
 Specify the lockout duration time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
 
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 ```yaml
 Type: TimeSpan
@@ -284,23 +283,18 @@ This parameter sets the **lockoutObservationWindow** property of a password poli
 The LDAP display name (**ldapDisplayName**) of this property is **msDS-lockoutObservationWindow**.
 
 The lockout observation window must be smaller than or equal to the lockout duration for a password policy.
-Use the **LockoutDuration** parameter to set the lockout duration time.
+Use the *LockoutDuration* parameter to set the lockout duration time.
 
 Specify the time interval in the following format:
 
-D:H:M:S.F
+`D:H:M:S.F`
 
 where:
-
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
 Note: Time values must be between the following values: 0:0:0:0.0 and 10675199:02:48:05.4775807.
 
@@ -342,21 +336,16 @@ The LDAP display name (**ldapDisplayName**) for this property is maxPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
-
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.4775807.
 
 ```yaml
 Type: TimeSpan
@@ -378,21 +367,16 @@ The LDAP display name (**ldapDisplayName**) for this property is minPwdAge.
 
 Specify the time interval in the following format:
 
-D.H:M:S.F
+`D.H:M:S.F`
 
 where:
+- D = Days (0 to 10675199)
+- H = Hours (0 to 23)
+- M = Minutes (0 to 59)
+- S = Seconds (0 to 59)
+- F= Fractions of a second (0 to 9999999)
 
-D = Days (0 to 10675199)
-
-H = Hours (0 to 23)
-
-M = Minutes (0 to 59)
-
-S = Seconds (0 to 59)
-
-F= Fractions of a second (0 to 9999999)
-
-Note: Time values must be between the following values: -10675199:02:48:05.4775808 and 10675199:02:48:05.4775807.
+Note: Time values must be between the following values: 0 and 10675199:02:48:05.
 
 ```yaml
 Type: TimeSpan
@@ -517,7 +501,7 @@ For example, if PasswordPolicy1 has a **Precedence** property value of 200 and P
 Typically, password policy precedence values are assigned in multiples of 10 or 100, making it easier to add policies at a later time.
 For example, if you set the initial precedence values for your policies to 100 and 200, you can add another policy that has precedence value of 150.
 
-If the specified **Precedence** parameter is already assigned to another password policy object, the cmdlet returns a terminating error.
+If the specified *Precedence* parameter is already assigned to another password policy object, the cmdlet returns a terminating error.
 
 ```yaml
 Type: Int32
@@ -552,7 +536,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReversibleEncryptionEnabled
-Specifies whether the directory must  store passwords using reversible encryption.
+Specifies whether the directory must store passwords using reversible encryption.
 This parameter sets the **ReversibleEncryption** property for a password policy.
 The acceptable values for this parameter are:
 
@@ -573,16 +557,16 @@ Accept wildcard characters: False
 
 ### -Server
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
+The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services, or Active Directory snapshot instance.
 
 Specify the Active Directory Domain Services instance in one of the following ways:  
 
- Domain name values:
+Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+Directory server values: 
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -590,8 +574,8 @@ Specify the Active Directory Domain Services instance in one of the following wa
 
 The default value for this parameter is determined by one of the following methods in the order that they are listed:
 
-- By using the **Server** value from objects passed through the pipeline
-- By using the server information associated with the Active Directory Domain ServicesWindows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the *Server* value from objects passed through the pipeline
+- By using the server information associated with the Active Directory Domain Services Windows PowerShell provider drive, when the cmdlet runs in that drive
 - By using the domain of the computer running Windows PowerShell
 
 ```yaml
@@ -623,17 +607,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
-A fine-grained password policy object that is a template for the new fine-grained password policy object is received by the **Instance** parameter.
+A fine-grained password policy object that is a template for the new fine-grained password policy object is received by the *Instance* parameter.
 
 ## OUTPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADFineGrainedPasswordPolicy
-This cmdlet returns the new fine-grained password policy object when the **PassThru** parameter is specified.
+This cmdlet returns the new fine-grained password policy object when the *PassThru* parameter is specified.
 By default, this cmdlet does not generate any output.
 
 ## NOTES

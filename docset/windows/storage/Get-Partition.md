@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-Partition
 ms.reviewer:
@@ -83,10 +83,10 @@ This example return all partitions, on all disks.
 ### Example 2
 ```
 PS C:\>Get-Partition -DiskNumber 5
-Disk Number: 5 
- 
-PartitionNumber  DriveLetter Offset                                        Size Type 
----------------  ----------- ------                                        ---- ---- 
+Disk Number: 5
+
+PartitionNumber  DriveLetter Offset                                        Size Type
+---------------  ----------- ------                                        ---- ----
 1                H           1048576                                  298.09 GB IFS
 ```
 
@@ -95,10 +95,10 @@ This example return all partitions on disk 5.
 ### Example 3
 ```
 PS C:\>Get-Partition -DriveLetter C
-Disk Number: 0 
- 
-PartitionNumber  DriveLetter Offset                                        Size Type 
----------------  ----------- ------                                        ---- ---- 
+Disk Number: 0
+
+PartitionNumber  DriveLetter Offset                                        Size Type
+---------------  ----------- ------                                        ---- ----
 2                C           368050176                                465.42 GB IFS
 ```
 
@@ -119,7 +119,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ The Disk CIM object is exposed by the Get-Disk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ Specifies an array of disk numbers.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -198,7 +198,7 @@ Specifically the drive on which the partition resides.
 ```yaml
 Type: Char[]
 Parameter Sets: ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Specifies the starting offset, in bytes.
 ```yaml
 Type: UInt64[]
 Parameter Sets: ById
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ To obtain a **StorageSubsystem** object, use the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +276,7 @@ Specifies the ID of the partition to get.
 ```yaml
 Type: String[]
 Parameter Sets: ByUniqueId
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +292,7 @@ The Volume CIM object is exposed by the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,6 +325,8 @@ The `Microsoft.Management.Infrastructure.CimInstance` object is a wrapper class 
 The path after the pound sign (`#`) provides the namespace and class name for the underlying WMI object.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

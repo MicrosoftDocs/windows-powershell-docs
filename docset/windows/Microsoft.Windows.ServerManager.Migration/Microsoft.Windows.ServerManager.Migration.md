@@ -4,6 +4,7 @@ ms.sitesec: library
 ms.author: v-anbarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Module Name: Microsoft.Windows.ServerManager.Migration
+Module Guid:
 ms.topic: reference
 manager: jasgro
 author: andreabarr

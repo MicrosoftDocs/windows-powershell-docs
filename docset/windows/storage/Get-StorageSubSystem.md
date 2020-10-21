@@ -1,26 +1,27 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSubSystem.cdxml-help.xml
-Module Name: Storage
+keywords: powershell, cmdlet
+manager: jasgro
+ms.date: 12/20/2016
+ms.prod: w10
+ms.technology: powershell-windows
+ms.topic: reference
 online version: 
 schema: 2.0.0
-title: Get-StorageSubsystem
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
-manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
+title: Get-StorageSubSystem
+ms.reviewer:
 ms.assetid: EA364A0B-06D6-4653-B41C-BE69B8038B54
-ms.author: v-anbarr
-ms.reviewer: brianlic
 ---
 
 # Get-StorageSubSystem
 
 ## SYNOPSIS
-Gets one or more StorageSubsystem objects.
+Gets one or more StorageSubSystem objects.
 
 ## SYNTAX
 
@@ -40,6 +41,38 @@ Get-StorageSubSystem [-UniqueId <String[]>] [-HealthStatus <HealthStatus[]>] [-M
 ```
 Get-StorageSubSystem [-Name <String[]>] [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
  [-Model <String[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageFaultDomain
+```
+Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+ [-StorageFaultDomain <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+### ByFileServer
+```
+Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+ [-FileServer <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
+```
+
+### ByVolume
+```
+Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+ [-Volume <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByPartition
+```
+Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+ [-Partition <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByDisk
+```
+Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
+ [-Disk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByOffloadDataTransferSetting
@@ -84,13 +117,6 @@ Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
  [<CommonParameters>]
 ```
 
-### ByPhysicalDisk
-```
-Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
- [-PhysicalDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
-```
-
 ### ByStoragePool
 ```
 Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
@@ -105,13 +131,6 @@ Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
  [<CommonParameters>]
 ```
 
-### ByStorageEnclosure
-```
-Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
- [-StorageEnclosure <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
-```
-
 ### ByStorageProvider
 ```
 Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>] [-Model <String[]>]
@@ -120,7 +139,7 @@ Get-StorageSubSystem [-HealthStatus <HealthStatus[]>] [-Manufacturer <String[]>]
 ```
 
 ## DESCRIPTION
-The **Get-StorageSubsystem** cmdlet gets one or more StorageSubsystem objects.
+The **Get-StorageSubSystem** cmdlet gets one or more StorageSubSystem objects.
 If no parameters are specified, then all subsystems on the system will be returned.
 If two parameters are specified that conflict with unique values, then no subsystem will be returned; since none match that criteria.
 
@@ -128,12 +147,12 @@ If two parameters are specified that conflict with unique values, then no subsys
 
 ### Example 1: Get all storage subsystems
 ```
-PS C:\>Get-StorageSubsystem
+PS C:\>Get-StorageSubSystem
 ```
 
-This example returns a list of all visible StorageSubsystem objects across all accessible StorageProvider objects.
+This example returns a list of all visible StorageSubSystem objects across all accessible StorageProvider objects.
 
-### Example 2: Get the Storage Spaces subsystem
+### Example 2: Get the Windows Storage subsystem
 ```
 PS C:\>Get-StorageSubSystem -Model "Storage Spaces"
 FriendlyName                            HealthStatus                            OperationalStatus
@@ -141,7 +160,7 @@ FriendlyName                            HealthStatus                            
 Storage Spaces on SRV1                  Healthy                                 OK
 ```
 
-This example returns only the StorageSubsystem object for the Storage Spaces provider.
+This example returns only the StorageSubSystem object for the Storage Spaces provider.
 
 ### Example 3: Get all unhealthy storage subsystems
 ```
@@ -161,7 +180,7 @@ Storage arrays that support ODX using the SMI-S protocol are not shown.
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -177,7 +196,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -189,6 +208,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Disk
+Specifies a Disk for which this cmdlet gets storage subsystems.
+To obtain a **Disk** object, use the Get-Disk cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByDisk
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -FileServer
+Specifies the file server on which to get storage subsystems.
+To obtain a **FileServer** object, use the Get-StorageFileServer cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByFileServer
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -208,8 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -HealthStatus
-Gets all storage subsystems that have the specified health status.
-Acceptable values are Healthy, Warning, and Unhealthy.
+Specifies the health status for which this cmdlet gets storage subsystems.
+The acceptable values for this parameter are: Healthy, Warning, and Unhealthy.
 
 ```yaml
 Type: HealthStatus[]
@@ -242,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -Manufacturer
-Gets StorageSubsystem objects with the specified manufacturer name.
+Specifies a manufacturer of storage subsystems to get.
 
 ```yaml
 Type: String[]
@@ -257,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaskingSet
-Gets the StorageSubsystem for the specified MaskingSet object.
+Gets the StorageSubSystem for the specified MaskingSet object.
 Enter a MaskingSet CIM object.
 The MaskingSet object is exposed by the Get-MaskingSet cmdlet.
 
@@ -274,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Gets the StorageSubsystem with the specified model string.
+Specifies a model for which to get storage subsystems.
 
 ```yaml
 Type: String[]
@@ -289,7 +340,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Gets the StorageSubsystem with the specified name.
+Gets the StorageSubSystem with the specified name.
 
 ```yaml
 Type: String[]
@@ -304,7 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -OffloadDataTransferSetting
-Gets the StorageSubsystem associated with the specified OffloadDataTransferSetting object.
+Gets the StorageSubSystem associated with the specified OffloadDataTransferSetting object.
 The Offload Data Transfer Setting CIM object is exposed by the Get-OffloadDataTransferSetting cmdlet.
 
 ```yaml
@@ -319,13 +370,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -PhysicalDisk
-Gets the StorageSubsystem associated with the specified PhysicalDisk object.
-The Physical Disk CIM object is exposed by the Get-PhysicalDisk cmdlet.
+### -Partition
+Specifies a partition associated with a storage subsystem to get.
+To obtain a **Partition** object, use the Get-Partition cmdlet.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: ByPhysicalDisk
+Parameter Sets: ByPartition
 Aliases: 
 
 Required: False
@@ -335,13 +386,14 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -StorageEnclosure
-
+### -StorageFaultDomain
+Specifies a storage fault domain associated with a storage subsystem to get.
+To obtain a **StorageFaultDomain** object, use the Get-StorageFaultDomain cmdlet.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: ByStorageEnclosure
-Aliases: 
+Parameter Sets: ByStorageFaultDomain
+Aliases: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassis, StorageRack, StorageSite
 
 Required: False
 Position: Named
@@ -368,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoragePool
-Gets the StorageSubsystem associated with the specified StoragePool object.
+Gets the StorageSubSystem associated with the specified StoragePool object.
 The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
 
 ```yaml
@@ -384,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -StorageProvider
-Gets the StorageSubsystem associated with the specified StorageProvider object.
+Gets the StorageSubSystem associated with the specified StorageProvider object.
 The Storage Provider CIM object is exposed by the Get-StorageProvider cmdlet.
 
 ```yaml
@@ -400,7 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPort
-Gets the StorageSubsystem associated with the specified TargetPort object.
+Gets the StorageSubSystem associated with the specified TargetPort object.
 The TargetPort CIM object is exposed by the Get-TargetPort cmdlet.
 
 ```yaml
@@ -416,7 +468,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPortal
-Gets the StorageSubsystem associated with the specified TargetPortal object.
+Gets the StorageSubSystem associated with the specified TargetPortal object.
 The TargetPortal CIM object is exposed by the Get-TargetPortal cmdlet.
 
 ```yaml
@@ -449,7 +501,7 @@ Accept wildcard characters: False
 ```
 
 ### -UniqueId
-Gets the StorageSubsystem with the specified UniqueID value.
+Gets the StorageSubSystem with the specified UniqueID value.
 
 ```yaml
 Type: String[]
@@ -464,7 +516,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDisk
-Gets the StorageSubsystem associated with the specified VirtualDisk object.
+Gets the StorageSubSystem associated with the specified VirtualDisk object.
 The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 
 ```yaml
@@ -479,8 +531,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Volume
+Specifies a volume that is associated the storage subsystem that this cmdlet gets.
+To obtain a **Volume** object, use the Get-Volume cmdlet.
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByVolume
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -516,16 +584,24 @@ You can use the pipeline operator to pass a VirtualDisk object to the **VirtualD
 
 ## OUTPUTS
 
-### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubsystem
+### Microsoft.Management.Infrastructure.CimInstance#ROOT/Microsoft/Windows/Storage/MSFT_StorageSubSystem
 This cmdlet outputs an object representing a storage subsystem.
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-Disk](./Get-Disk.md)
+
+[Get-Partition](./Get-Partition.md)
+
+[Get-StorageFaultDomain](./Get-StorageFaultDomain.md)
+
+[Get-StorageFileServer](./Get-StorageFileServer.md)
+
 [Get-StorageProvider](./Get-StorageProvider.md)
 
-[Set-StorageSubsystem](./Set-StorageSubsystem.md)
+[Get-Volume](./Get-Volume.md)
 
 [Get-StorageNode](./Get-StorageNode.md)
 

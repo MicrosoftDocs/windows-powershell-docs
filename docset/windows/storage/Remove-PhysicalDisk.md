@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Remove-PhysicalDisk
 ms.reviewer:
@@ -74,9 +74,9 @@ Remove-PhysicalDisk -PhysicalDisks <CimInstance[]> -StoragePoolFriendlyName <Str
 ```
 
 ## DESCRIPTION
-The **Remove-PhysicalDisk** cmdlet removes a physical disk from a specified storage pool. 
- 
-                      
+The **Remove-PhysicalDisk** cmdlet removes a physical disk from a specified storage pool.
+
+
 If sufficient space does not exist in the storage pool to tolerate this removal, then data loss can result (the user is warned about this).
 If the user configuration allows, then the user should add a replacement physical disk to the pool prior to removal of the old one.
 
@@ -98,7 +98,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ The Physical Disk CIM objects represent the physical disks to be removed from th
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +163,7 @@ To obtain a storage pool object, use the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -178,7 +178,7 @@ Specifies the friendly name of the storage pool from which to remove the physica
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -193,7 +193,7 @@ Specifies the name of the storage pool from which to remove the physical disk.
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,7 +208,7 @@ Specifies the ID of the storage pool from which to remove the physical disk.
 ```yaml
 Type: String
 Parameter Sets: ByStoragePoolUniqueId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -225,7 +225,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ To obtain a virtual disk object, use the Get-VirtualDisk cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -257,7 +257,7 @@ Specifies the friendly name of the virtual disk from which to remove the physica
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskFriendlyName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -272,7 +272,7 @@ Specifies the name of the virtual disk from which to remove the physical disk.
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskName
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -287,7 +287,7 @@ Specifies the ID of the virtual disk from which to remove the physical disk.
 ```yaml
 Type: String
 Parameter Sets: ByVirtualDiskUniqueId
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -328,10 +328,12 @@ You can use the pipeline operator to pass an MSFT_VirtualDisk object to the *Vir
 
 ## OUTPUTS
 
-###  
+### 
 This cmdlet does not generate output.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

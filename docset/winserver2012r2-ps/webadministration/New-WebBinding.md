@@ -34,12 +34,19 @@ The **New-WebBinding** cmdlet adds a new binding to an existing website.
 
 ## EXAMPLES
 
-### Example 1: Adding a new site binding
-```
-IIS:\>New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
+### Example 1: Add a new site binding
+```powershell
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 80 -HostHeader "TestSite"
 ```
 
 This command creates a binding on the default website.
+
+### Example 2: Add a new SSL site binding
+```powershell
+PS C:\> New-WebBinding -Name "Default Web Site" -IPAddress "*" -Port 443 -HostHeader "TestSite" -Protocol "https"
+```
+
+This command creates an SSL binding on the default website.
 
 ## PARAMETERS
 
@@ -156,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 
 ## INPUTS
 
@@ -171,4 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WebBinding](./Remove-WebBinding.md)
 
 [Set-WebBinding](./Set-WebBinding.md)
-

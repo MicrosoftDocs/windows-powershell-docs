@@ -186,9 +186,9 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-DNSClientServerAddress](../DNSClient_Cmdlets/Get-DnsClientServerAddress.md)
+[Get-DNSClientServerAddress](../dnsclient/Get-DnsClientServerAddress.md)
 
-[Get-NetAdapter](../NetAdapter_Cmdlets/Get-NetAdapter.md)
+[Get-NetAdapter](../netadapter/Get-NetAdapter.md)
 
 [Get-NetIPAddress](./Get-NetIPAddress.md)
 

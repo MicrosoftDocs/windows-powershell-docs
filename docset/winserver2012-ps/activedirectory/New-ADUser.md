@@ -107,7 +107,6 @@ Create a new inetOrgPerson named 'GlenJohn' on an AD LDS instance.
 
 ### -AccountExpirationDate
 Specifies the expiration date for an account.
-When you set this parameter to 0, the account never expires.
 This parameter sets the AccountExpirationDate property of an account object.
 The LDAP Display name (ldapDisplayName) for this property is accountExpires.
 
@@ -1406,7 +1405,7 @@ Accept wildcard characters: False
 Specifies the service principal names for the account.
 This parameter sets the ServicePrincipalNames property of the account.
 The LDAP display name (ldapDisplayName) for this property is servicePrincipalName.
-To enter multiple values, use the following syntax: <value1>,<value2>,...<valueX>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "<value1>","<value2>",..."<valueX>"."
+To enter multiple values, use the following syntax: `<value1>,<value2>,...<valueX>`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"<value1>","<value2>",..."<valueX>"`."
 
 ```yaml
 Type: String[]

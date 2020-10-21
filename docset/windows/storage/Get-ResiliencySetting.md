@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-ResiliencySetting
 ms.reviewer:
@@ -46,10 +46,10 @@ The resiliency settings vary depending on the storage subsystem; the Windows Sto
 ### Example 1: Get all resiliency setting objects
 ```
 PS C:\> Get-ResiliencySetting
-Name                    NumberOfDataCopies      PhysicalDiskRedundancy  NumberOfColumns         Interleave 
-----                    ------------------      ----------------------  ---------------         ---------- 
-Simple                  1                       0                       8                       65536 
-Mirror                  2                       1                       4                       65536 
+Name                    NumberOfDataCopies      PhysicalDiskRedundancy  NumberOfColumns         Interleave
+----                    ------------------      ----------------------  ---------------         ----------
+Simple                  1                       0                       8                       65536
+Mirror                  2                       1                       4                       65536
 Parity                  1                       1                       8                       65536
 ```
 
@@ -79,7 +79,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ The supported resiliency setting names vary by storage subsystem; the Windows St
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ The Storage Pool CIM object is exposed by the Get-StoragePool cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,6 +185,8 @@ You can pipe an MSFT_StoragePool object to the *StoragePool* parameter to get th
 The Get-ResiliencySetting cmdlet returns objects representing resiliency settings for a particular storage pool.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

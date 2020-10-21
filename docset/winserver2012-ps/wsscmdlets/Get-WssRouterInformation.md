@@ -45,5 +45,5 @@ This command retrieves the router information for the local network.
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

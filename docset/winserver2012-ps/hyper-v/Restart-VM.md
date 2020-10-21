@@ -147,5 +147,5 @@ None by default, **Microsoft.HyperV.Powershell.VirtualMachine** if **-PassThru**
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

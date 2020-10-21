@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-FileStorageTier
 ms.reviewer:
@@ -52,7 +52,7 @@ Get-FileStorageTier -FilePath <String> [-CimSession <CimSession[]>] [-ThrottleLi
 ## DESCRIPTION
 The **Get-FileStorageTier** cmdlet gets all the files assigned to a Storage tier on a tiered volume stored on a tiered Storage space, and the status of each file.
 A file that you assign to a Storage tier is called a pinned file.
-The possible status values are the following: 
+The possible status values are the following:
 
 - Not on tier
 - Completely on tier
@@ -82,7 +82,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ The cmdlet gets the pinned file that you specify and its status.
 ```yaml
 Type: String
 Parameter Sets: ByFilePath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -132,7 +132,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ To obtain a volume, use the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -165,7 +165,7 @@ The cmdlet gets the pinned files for the volume that you specify, and their stat
 ```yaml
 Type: Char
 Parameter Sets: ByVolumeDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -181,7 +181,7 @@ The cmdlet gets the pinned files for the volume that you specify, and their stat
 ```yaml
 Type: String
 Parameter Sets: ByVolumePath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -202,6 +202,8 @@ This cmdlet generates a file storage tier object that contains the desired stora
 State includes values of Ok, Pending, and Processing.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

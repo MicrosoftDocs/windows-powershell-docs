@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Set-Partition
 ms.reviewer:
@@ -153,7 +153,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ Specifies the disk ID of the partition to modify.
 ```yaml
 Type: String
 Parameter Sets: ByIdAttributes, ByIdAccessPath, ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -216,7 +216,7 @@ These represent the disks on which the partitions reside to modify.
 ```yaml
 Type: UInt32
 Parameter Sets: ByNumberAttributes, ByNumberAccessPath, ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -231,7 +231,7 @@ Specifies the drive letter of the partition to modify.
 ```yaml
 Type: Char
 Parameter Sets: ByDriveLetterAttributes, ByDriveLetterAccessPath, ByDriveLetter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -246,7 +246,7 @@ Sets the type of a GPT partition to a specific GUID.
 ```yaml
 Type: String
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: ByObjectAccessPath, ByObject, ByObjectAttributes
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -277,7 +277,7 @@ This parameter is only relevant for MBR disks.
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ If you do not specify the *IsDAX* parameter, the cmdlet defaults to a regular, n
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ This ensures that applications such as disk defragmenter do not access the parti
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,7 +328,7 @@ Takes the partition offline until explicitly brought back online, or until an ac
 ```yaml
 Type: Boolean
 Parameter Sets: ByObject, ById, ByDriveLetter, ByNumber
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +343,7 @@ Sets the partition to be read-only (`IsReadOnly $true`) or read-write (`IsReadOn
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +358,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ Sets the type of an MBR partition to a specific numeric ID.
 ```yaml
 Type: UInt16
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -388,7 +388,7 @@ Specifies the new drive letter for the partition.
 ```yaml
 Type: Char
 Parameter Sets: ByObjectAccessPath, ByIdAccessPath, ByDriveLetterAccessPath, ByNumberAccessPath
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,7 +405,7 @@ This attribute is useful in storage area network (SAN) environments.
 ```yaml
 Type: Boolean
 Parameter Sets: ByNumberAttributes, ByObjectAttributes, ByDriveLetterAttributes, ByIdAttributes
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +420,7 @@ Specifies the partition's offset from the beginning of the disk, measured in byt
 ```yaml
 Type: UInt64
 Parameter Sets: ByIdAttributes, ByIdAccessPath, ById
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -452,7 +452,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -490,6 +490,8 @@ You can pipe a Partition object to the InputObject parameter to specify the part
 ### None
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

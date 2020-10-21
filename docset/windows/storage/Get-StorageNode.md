@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageNode
 ms.reviewer:
@@ -115,7 +115,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ To obtain a **Disk** object, use the **Get-Disk** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The cmdlet gets the storage nodes that you specify by name.
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,18 +193,18 @@ Specifies an array of **OperationStatus** objects.
 The cmdlet gets storage nodes that match the operational statuses that you specify.
 The acceptable values for this parameter are:
 
-- Dormant 
-- Down 
-- LowerLayerDown 
-- NotPresent 
-- Testing 
+- Dormant
+- Down
+- LowerLayerDown
+- NotPresent
+- Testing
 - Unknown
 - Up
 
 ```yaml
 Type: OperationalStatus[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unknown, Up, Down, Joining, Paused
 
 Required: False
@@ -222,7 +222,7 @@ To obtain a physical disk object, use the **Get-PhysicalDisk** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByPhysicalDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ Indicates that this cmdlet gets the storage nodes that are physically connected 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByPhysicalDisk, ByStorageEnclosure
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ To obtain a **StorageEnclosure** object, use the Get-StorageEnclosure cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageEnclosure
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -270,7 +270,7 @@ To obtain a storage pool object, use the **Get-StoragePool** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -287,7 +287,7 @@ To obtain a storage subsystem object, use the **Get-StorageSubSystem** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStorageSubSystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +304,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -337,7 +337,7 @@ To obtain a virtual disk object, use the **Get-VirtualDisk** cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVirtualDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ To obtain a **Volume** object, use the Get-Volume cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByVolume
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -374,6 +374,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet outputs an array of objects that represent storage nodes and their operational statuses.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

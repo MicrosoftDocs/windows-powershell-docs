@@ -103,7 +103,7 @@ This example modifies the local port field of a particular firewall rule.
 
 ### Example 4
 ```
-PS C:\>Get-NetFirewallPortFilter | Where-Object -Property { $_.LocalPort -Eq "10246" } | Set-NetFirewallPortFilter -LocalPort Any
+PS C:\>Get-NetFirewallPortFilter | Where-Object -Property LocalPort -EQ 10246 | Set-NetFirewallPortFilter -LocalPort Any
 ```
 
 This example modifies all of the rules associated with a specific port.

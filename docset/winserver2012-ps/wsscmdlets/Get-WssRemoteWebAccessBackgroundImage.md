@@ -44,5 +44,5 @@ This command retrieves the filename of the background image.
 
 [Set-WssRemoteWebAccessBackgroundImage](./Set-WssRemoteWebAccessBackgroundImage.md)
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 

@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-StorageEnclosureStorageNodeView
 ms.reviewer:
@@ -66,7 +66,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -81,7 +81,7 @@ Specifies the Storage enclosure.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -96,7 +96,7 @@ Specifies the Storage node.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -116,6 +116,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 This cmdlet returns an array of **StorageNodeToStorageEnclosure** objects.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

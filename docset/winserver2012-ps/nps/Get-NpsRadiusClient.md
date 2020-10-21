@@ -46,7 +46,7 @@ This command gets a list of all RADIUS clients and puts the list in the variable
 
 ## RELATED LINKS
 
-[00000000-0000-0000-0000-000000000000](00000000-0000-0000-0000-000000000000)
+
 
 [New-NpsRadiusClient](./New-NpsRadiusClient.md)
 

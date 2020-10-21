@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-TargetPortal
 ms.reviewer:
@@ -82,7 +82,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ Represents a TCP/IP v4 address in `xxx.xxx.xxx.xxx` format.
 ```yaml
 Type: String[]
 Parameter Sets: ByIPv4Address
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Represents a TCP/IP v6 address.
 ```yaml
 Type: String[]
 Parameter Sets: ByIPv6Address
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ To obtain a storage subsystem object, use the Get-StorageSubSystem cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: BySubsystem
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ The Target Port CIM object is exposed by the [Get-TargetPort](http://technet.mic
 ```yaml
 Type: CimInstance
 Parameter Sets: ByTargetPort
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -218,6 +218,8 @@ You can use the pipeline operator to pass a TargetPort object to the *TargetPort
 This cmdlet returns an object that represents the target portal.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

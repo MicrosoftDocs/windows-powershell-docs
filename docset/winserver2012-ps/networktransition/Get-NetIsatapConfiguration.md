@@ -164,7 +164,7 @@ This cmdlet returns an ISATAP configuration object.
 
 ## RELATED LINKS
 
-[Get-NetIPInterface](../NetTCPIP_Cmdlets/Get-NetIPInterface.md)
+[Get-NetIPInterface](../nettcpip/Get-NetIPInterface.md)
 
 [Reset-NetIsatapConfiguration](./Reset-NetIsatapConfiguration.md)
 

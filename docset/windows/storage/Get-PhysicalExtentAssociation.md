@@ -11,7 +11,7 @@ ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: powershell-windows
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-PhysicalExtentAssociation
 ms.reviewer:
@@ -54,7 +54,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,6 +98,8 @@ This cmdlet returns a **StorageTier** object, if the physical extent is associat
 This cmdlet returns a **VirtualDisk** object, if the physical extent is associated with a virtual disk.
 
 ## NOTES
+
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

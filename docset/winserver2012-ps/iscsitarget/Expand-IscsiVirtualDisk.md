@@ -160,7 +160,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Resize-Partition](../Storage2_Cmdlets/Resize-Partition.md)
+[Resize-Partition](../storage/Resize-Partition.md)
 
 [Checkpoint-IscsiVirtualDisk](./Checkpoint-IscsiVirtualDisk.md)
 

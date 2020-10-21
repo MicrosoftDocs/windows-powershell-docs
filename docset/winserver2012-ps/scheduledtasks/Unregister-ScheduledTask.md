@@ -1,6 +1,6 @@
 ---
 external help file: ScheduledTask_Cmdlets.xml
-online version: 
+online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-anbarr
@@ -49,7 +49,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -75,6 +75,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Specifies the input to this cmdlet.
 You can use this parameter, or you can pipe the input to this cmdlet.
@@ -82,7 +97,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: UNNAMED_PARAMETER_SET_2
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -98,7 +113,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -113,7 +128,7 @@ Specifies an array of one or more names for a scheduled task.
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -123,14 +138,14 @@ Accept wildcard characters: False
 ```
 
 ### -TaskPath
-Specifies an array of one or more file paths for a scheduled task.
-You can use **\** for the root folder.
+Specifies an array of one or more paths for scheduled tasks in Task Scheduler namespace. You can use **"*"** for a wildcard character query.
+You can use **\\*** for the root folder. To specify a full TaskPath you need to include the leading and trailing **\\**.
 If you do not specify a path, the cmdlet uses the root folder.
 
 ```yaml
 Type: String[]
 Parameter Sets: UNNAMED_PARAMETER_SET_1
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -147,7 +162,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +177,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -178,7 +193,7 @@ The cmdlet is not run.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

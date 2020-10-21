@@ -172,7 +172,7 @@ Accept wildcard characters: False
 Specifies an array of category types of a network.
 The acceptable values for this parameter are:
 
-- *Public* - Networks in a public place such as an airport or coffee shop. Your PC is hidden from other devices on the network and can't be used ofr printer and file sharing.
+- *Public* - Networks in a public place such as an airport or coffee shop. Your PC is hidden from other devices on the network and can't be used for printer and file sharing.
 - *Private* - Networks at home or work, where you know and trust the people and devices on the network. Your PC is discoverable and can be used for printer and file sharing if you set it up.
 - *DomainAuthenticated* - Networks at a workplace that are joined to a domain.
 

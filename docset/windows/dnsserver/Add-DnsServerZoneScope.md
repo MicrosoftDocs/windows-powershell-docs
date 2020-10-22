@@ -37,7 +37,7 @@ A DNS server can load an existing scope from its data file.
 The name of the scope should adhere to the same conventions as the zone name.
 The scope name cannot be same as the zone name to which this cmdlet adds it.
 
-When a scope is created, its data is persisted in a file named `%Systemroot%\system32\dns\\\<zone name\>\\\<scope name\>.dns`.
+When a scope is created, its data is persisted in a file named `%Systemroot%\system32\dns\<zone name>\<scope name>.dns`.
 
 ## EXAMPLES
 

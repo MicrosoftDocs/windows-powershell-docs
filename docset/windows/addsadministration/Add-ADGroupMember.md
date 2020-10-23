@@ -28,7 +28,7 @@ Adds one or more members to an Active Directory group.
 ```
 Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
  [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>]
- [-PassThru] [-Server <String>] [<CommonParameters>]
+ [-PassThru] [-Server <String>] [-DisablePermissiveModify] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -325,6 +325,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisablePermissiveModify
+Group membership updates use permissive modify by default. This suppresses an error when adding a member that is already member of the group.
+When this parameter is used, an error “The specified account name is already a member of the group” is returned.
+
+This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

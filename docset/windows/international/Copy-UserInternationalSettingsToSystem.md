@@ -58,7 +58,7 @@ This example copies the Windows Display language, Input language, Regional Forma
 PS C:\> Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $False
 ```
 
-This command copies the Display language, Input language, Format/locale and Location/GeoID only into the Welcome screen.
+This example copies the Windows Display language, Input language, Format/locale and Regional Location/GeoID to the Welcome screen only.
 
 
 ## PARAMETERS

@@ -40,17 +40,17 @@ You can decide whether to copy this settings into the **Welcome screen and syste
 
 This cmdlet needs two parameters: **-WelcomeScreen** and **-NewUser**.
 
-When any of the parameters is set to $True, this gets the current values from the registry for the current user and copies them into the selected places whose parameter was set to $True.
+When any of the parameters is set to $True, this gets the current values from the current user and copies them to the system settings for the selected options based on the parameters that were set to $True.
 
 
 ## EXAMPLES
 
-### Example 1: Copy the settings into both Welcome screen and new user accounts
+### Example 1: Copy settings into both the Welcome screen and new user accounts
 ```
 PS C:\> Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $True
 ```
 
-This command copies the Display language, Input language, Format/locale and Location/GeoID into both the Welcome screen and the new user accounts.
+This example copies the Windows Display language, Input language, Regional Format/locale and Location/GeoID into both the Welcome screen and the new user accounts.
 
 
 ### Example 2: Copy the settings into only the Welcome screen

@@ -22,7 +22,7 @@ ms.assetid:
 # Copy-UserInternationalSettingsToSystem
 
 ## SYNOPSIS
-Copy the current user's international settings (Display language, Input language, Format/locale and Location/GeoID) to one or both of the following:
+Copies the current user's international settings (Windows Display language, Input language, Regional Format/locale and Location/GeoID) to one or both of the following:
     * Welcome screen and system accounts
     * New user accounts
 

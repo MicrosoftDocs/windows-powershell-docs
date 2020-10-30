@@ -76,6 +76,8 @@ For more information about the CultureInfo object, see [CultureInfo Class](https
 ## OUTPUTS
 
 ## NOTES
+Please note that the system locale is primarily used for legacy codepage selection and font fallback. If the system locale is changed,
+it is highly recommended that the Windows Display Language is changed as well to match the locale, since the UI language may depend on the codepage and font to render properly. Failure to do so could result in configurations where the settings don't work as intended.
 
 ## RELATED LINKS
 

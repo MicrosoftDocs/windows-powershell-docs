@@ -61,7 +61,7 @@ To apply a TCP setting to a port number or destination IP address range, create 
 > [!NOTE] 
 >1) You can modify custom and non-custom settings on Windows server 2016 and 2019.
 >2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
->3) On client operating systems (Windows 7, 8.1 and 10), only AutoReusePortRangeStartPort and AutoReusePortRangeNumberOfPorts parameters could be modified. Others are Read-Only.
+>3) On client operating systems (Windows 7, 8.1 and 10), only AutoReusePortRangeStartPort and AutoReusePortRangeNumberOfPorts parameters can be modified. Others are read-only.
 
 ## EXAMPLES
 

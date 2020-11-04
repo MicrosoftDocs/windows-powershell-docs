@@ -26,8 +26,11 @@ Configures the system to enable S2D to claim or not claim specific physical disk
 ## SYNTAX
 
 ```
-Set-ClusterStorageSpacesDirectDisk [-CanBeClaimed <Boolean>] [-PhysicalDiskIds <String[]>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-ClusterStorageSpacesDirectDisk -PhysicalDiskGuid <string[]> [-CanBeClaimed <Boolean>] [-Reset] [-CacheUsage {NonHybrid | Capacity | Cache | Auto}] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+```
+Set-ClusterStorageSpacesDirectDisk -PhysicalDisk <CimInstance#MSFT_PhysicalDisk[]> [-CanBeClaimed <Boolean>] [-Reset] [-CacheUsage {NonHybrid | Capacity | Cache | Auto}] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

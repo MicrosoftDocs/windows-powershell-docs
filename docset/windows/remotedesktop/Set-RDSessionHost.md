@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionHost
-Specifies an array that contains the name of one or more RD Session Host servers that you configure.
+Specifies an array that contains the fully qualified domain name (FQDN) of one or more RD Session Host servers that you configure.
 
 ```yaml
 Type: String[]

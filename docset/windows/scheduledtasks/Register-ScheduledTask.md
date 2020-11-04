@@ -57,7 +57,7 @@ Register-ScheduledTask [-Force] [-InputObject] <CimInstance> [[-Password] <Strin
 ## DESCRIPTION
 The **Register-ScheduledTask** cmdlet registers a scheduled task definition on a local computer.
 
-You can register a task to run any of the following application or file types: Win32 applications, Win16 applications, OS/2 applications, MS-DOS applications, batch files (*.bat), command files (*.cmd), or any properly registered file type.
+You can register a task to run executable files (`.exe` and `.com`), batch files (`.bat` and `.cmd`), or any registered file type. However, this cmdlet does not check whether the file you intend it to run is compatible with your version, edition or platform SKU of Windows.
 
 ## EXAMPLES
 

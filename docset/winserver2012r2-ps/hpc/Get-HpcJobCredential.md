@@ -1,5 +1,4 @@
 ---
-author:
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -11,10 +10,10 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217205
 schema: 2.0.0
 title: Get-HpcJobCredential
-author: Kateyanne
 ms.assetid:
 ms.reviewer:
 ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-HpcJobCredential

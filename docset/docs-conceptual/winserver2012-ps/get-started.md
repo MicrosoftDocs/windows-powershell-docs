@@ -5,8 +5,8 @@ ms.assetid: 9c5a65fb-8921-45df-b5c2-eca8e57feca7
 manager: dansimp
 ms.date: 01/10/2018
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Windows Server 2012 and Windows 8

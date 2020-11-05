@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 152D5F59-D246-422B-9EC4-EAD28E0C7E4B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6StatelessStatistics

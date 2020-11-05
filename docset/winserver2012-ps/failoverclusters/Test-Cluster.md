@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 69D30A79-E961-41C7-901A-DC04A17EAA6C
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Test-Cluster

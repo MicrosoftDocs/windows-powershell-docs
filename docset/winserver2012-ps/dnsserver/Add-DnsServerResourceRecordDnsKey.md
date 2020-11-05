@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EC24BA06-03D9-48A9-8FEA-830DCE8E4B34
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerResourceRecordDnsKey

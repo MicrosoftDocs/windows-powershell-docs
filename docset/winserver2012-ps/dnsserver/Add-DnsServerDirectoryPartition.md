@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: FA848EE6-7482-4B9D-9701-3BC578CC8BC4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerDirectoryPartition

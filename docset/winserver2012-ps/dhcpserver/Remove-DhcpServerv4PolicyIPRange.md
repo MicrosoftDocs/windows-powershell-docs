@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0B6C31CF-08A3-4699-9E53-FC4808BE56BB
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv4PolicyIPRange

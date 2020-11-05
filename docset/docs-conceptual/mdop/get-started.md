@@ -1,7 +1,7 @@
 ---
-ms.technology: powershell-mdop
-author: andreabarr
-ms.author: v-anbarr
+ms.technology: 
+author: Kateyanne
+ms.author: v-kaunu
 ms.reviewer:
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 keywords: powershell, cmdlet

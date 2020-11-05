@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D92DBC65-9B8B-460F-9497-67299F86D43D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerInDC

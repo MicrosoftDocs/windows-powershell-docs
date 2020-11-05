@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 29FEDBDE-E566-4CCB-B5B0-3AC1B9FCAD1B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterResourceType

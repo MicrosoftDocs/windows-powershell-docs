@@ -1,11 +1,11 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
+ms.author: v-kaunu
 title: Windows 10 and Windows Server 2016
 ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.Windows 10 and Windows Server 2016
-author: andreabarr
+author: Kateyanne
 ms.assetid: f16d306b-a30a-45b3-a585-c450ad7ba93b
 manager: dansimp
 ms.date: 09/26/2017

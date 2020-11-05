@@ -6,7 +6,7 @@ ms.assetid: D12E5246-2D94-48AB-97B7-9B2FF0B8A58A
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Add-ClusterServerRole

@@ -6,7 +6,7 @@ ms.assetid: D9E13DE4-9792-4015-B3F4-87CD1FFC06F0
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Stop-ClusterNode

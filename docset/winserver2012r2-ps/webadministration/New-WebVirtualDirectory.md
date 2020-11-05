@@ -6,7 +6,7 @@ schema: 2.0.0
 title: New-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
 ms.date: 2017-10-30
 ms.topic: reference

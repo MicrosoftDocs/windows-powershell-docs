@@ -6,7 +6,7 @@ online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Stop-WebItem

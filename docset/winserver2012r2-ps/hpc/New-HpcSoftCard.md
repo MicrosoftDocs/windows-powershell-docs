@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 ms.author: v-kaunu
 description:
 external help file: CCPPSH.dll-Help.xml

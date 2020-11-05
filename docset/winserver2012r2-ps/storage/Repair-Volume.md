@@ -6,7 +6,7 @@ schema: 2.0.0
 title: Repair-Volume
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference

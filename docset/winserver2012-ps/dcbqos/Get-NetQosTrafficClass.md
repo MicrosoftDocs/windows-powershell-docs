@@ -6,7 +6,7 @@ ms.assetid: 2E6A3602-4064-47B5-B326-20BC5D3393D0
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Get-NetQosTrafficClass

@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet

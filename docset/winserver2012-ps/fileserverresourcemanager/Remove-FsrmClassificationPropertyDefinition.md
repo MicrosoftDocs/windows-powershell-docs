@@ -6,7 +6,7 @@ ms.assetid: 0129D051-B0A4-4ED2-B096-DFFFFEEB2D71
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Remove-FsrmClassificationPropertyDefinition

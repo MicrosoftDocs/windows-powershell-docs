@@ -6,7 +6,7 @@ ms.assetid: 848467EE-2F72-4680-8540-08A86DB12916
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Move-ClusterSharedVolume

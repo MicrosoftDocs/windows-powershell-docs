@@ -11,7 +11,7 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217205
 schema: 2.0.0
 title: Get-HpcJobCredential
-author: andreabarr
+author: Kateyanne
 ms.assetid:
 ms.reviewer:
 ms.author: v-kaunu

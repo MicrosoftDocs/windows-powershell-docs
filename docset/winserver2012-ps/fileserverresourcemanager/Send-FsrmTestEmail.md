@@ -6,7 +6,7 @@ ms.assetid: BA2C3A10-736C-4328-B8CA-C8E74A950143
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Send-FsrmTestEmail

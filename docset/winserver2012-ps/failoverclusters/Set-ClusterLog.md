@@ -6,7 +6,7 @@ ms.assetid: EF07AF65-FB1F-4777-AA29-9213E52AB423
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Set-ClusterLog

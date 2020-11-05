@@ -6,7 +6,7 @@ ms.assetid: 1A5E7519-DAB9-4289-BD9B-2D72AC0F48DB
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # New-FsrmQuota

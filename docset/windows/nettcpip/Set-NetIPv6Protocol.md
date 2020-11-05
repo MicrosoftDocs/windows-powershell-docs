@@ -2,7 +2,7 @@
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIPv6Protocol.cdxml-help.xml
 keywords: powershell, cmdlet

@@ -11,7 +11,7 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182871
 schema: 2.0.0
 title: Start-HpcNode
-author: andreabarr
+author: Kateyanne
 ms.assetid: 13C64A14-D413-43B1-AB3D-12A32C6270BC
 ms.reviewer:
 ms.author: v-kaunu

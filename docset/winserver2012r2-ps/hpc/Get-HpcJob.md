@@ -16,7 +16,7 @@ ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Get-HpcJob

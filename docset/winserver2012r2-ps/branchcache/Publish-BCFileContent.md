@@ -8,7 +8,7 @@ ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference

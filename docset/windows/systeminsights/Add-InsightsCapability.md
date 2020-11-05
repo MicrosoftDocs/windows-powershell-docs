@@ -10,7 +10,7 @@ ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file:
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: lizapo
 ms.date: 6/18/18
 ms.topic: reference

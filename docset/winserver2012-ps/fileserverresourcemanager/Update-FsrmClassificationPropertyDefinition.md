@@ -6,7 +6,7 @@ ms.assetid: F25087A9-A048-4577-B4FE-85338E7A19CD
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Update-FsrmClassificationPropertyDefinition

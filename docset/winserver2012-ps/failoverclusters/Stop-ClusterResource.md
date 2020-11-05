@@ -6,7 +6,7 @@ ms.assetid: C4326170-FF50-4A3F-A4E6-994F598D4C25
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Stop-ClusterResource

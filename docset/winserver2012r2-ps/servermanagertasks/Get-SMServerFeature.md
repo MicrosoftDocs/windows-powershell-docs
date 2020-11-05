@@ -6,7 +6,7 @@ schema: 2.0.0
 title: Get-SMServerFeature
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
 ms.date: 2017-10-29
 ms.topic: reference

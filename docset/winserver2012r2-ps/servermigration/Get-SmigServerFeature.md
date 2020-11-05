@@ -5,7 +5,7 @@ schema: 2.0.0
 title: Get-SmigServerFeature
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
 ms.date: 2017-12-06
 ms.topic: reference

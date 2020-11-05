@@ -3,8 +3,8 @@ external help file: MSFT_DnsClientServerAddress.cdxml-help.xml
 ms.assetid: 040900C7-72B7-431D-B41F-A9343F6977DF
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

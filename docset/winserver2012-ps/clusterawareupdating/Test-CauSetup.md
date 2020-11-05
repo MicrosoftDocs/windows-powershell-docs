@@ -3,8 +3,8 @@ external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 540A8005-6F06-46B8-A97D-1EFF34CE7B6C
 manager: dansimp
 ---

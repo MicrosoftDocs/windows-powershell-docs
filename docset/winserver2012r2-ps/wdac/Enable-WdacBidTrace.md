@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Enable-WdacBidTrace
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3A39F5C4-6AC1-4B3E-A4CB-4D6C876BA4B4
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

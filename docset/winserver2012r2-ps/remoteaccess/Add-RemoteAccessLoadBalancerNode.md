@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Add-RemoteAccessLoadBalancerNode
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 90AA4EC8-09C9-4B77-BFB2-0E68AF04B3E5
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

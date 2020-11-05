@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1477CCAB-A813-469E-955A-4FB094985CED
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Import-DnsServerRootHint

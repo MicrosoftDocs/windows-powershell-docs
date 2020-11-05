@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: DC53E5DC-08A3-48F1-94DF-7BFCEDE21209
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerSigningKey

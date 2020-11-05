@@ -6,15 +6,15 @@ schema: 2.0.0
 title: Update-WmsCoreManager
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6AA79EA1-36AB-471B-BA21-F97C845FDED3
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Update-WmsCoreManager

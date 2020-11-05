@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Enable-StorageEnclosureIdentification
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2F3339B1-E4E7-4E98-9379-62D2AE4D4EC7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

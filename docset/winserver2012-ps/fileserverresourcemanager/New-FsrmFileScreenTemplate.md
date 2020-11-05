@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0D09322F-EFBF-4194-9F2E-A72CE464BEF4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFileScreenTemplate

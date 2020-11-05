@@ -117,9 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-PSDrive](00000000-0000-0000-0000-000000000000)
-
-[Remove-PSDrive](00000000-0000-0000-0000-000000000000)
-
 [ADRMSAdmin Module](./ADRMSAdmin.md)
 

@@ -1,5 +1,4 @@
 ---
-author:
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet

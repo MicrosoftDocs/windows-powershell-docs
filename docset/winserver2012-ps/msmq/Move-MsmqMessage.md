@@ -3,8 +3,8 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 5F7B7FB1-A749-4637-87CF-AC1E8DD7C588
 manager: dansimp
 ---

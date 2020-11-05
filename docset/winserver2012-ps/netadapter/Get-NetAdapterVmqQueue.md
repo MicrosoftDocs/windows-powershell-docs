@@ -3,8 +3,8 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 2036A78E-8DA7-4781-8A85-5EF8314E0981
 manager: dansimp
 ---

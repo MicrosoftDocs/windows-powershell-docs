@@ -3,8 +3,8 @@ external help file: MsDTC_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 2B1B2EAD-FE95-4E7F-B7EA-DE5A1F1FFC35
 manager: dansimp
 ---

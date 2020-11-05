@@ -3,8 +3,8 @@ external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 86963755-70D4-461C-A612-A2250351AC90
 manager: dansimp
 ---

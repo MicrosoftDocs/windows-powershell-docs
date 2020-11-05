@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EA5012C8-2C10-4E44-BD05-122954970183
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerEDns

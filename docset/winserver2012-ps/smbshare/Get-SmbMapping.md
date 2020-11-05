@@ -3,8 +3,8 @@ external help file: SmbShare_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: F7E6F380-A274-4326-B121-49128FF2A37B
 manager: dansimp
 ---

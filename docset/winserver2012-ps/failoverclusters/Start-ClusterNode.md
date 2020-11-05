@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: ADACDEA4-7613-4B44-A621-88025367C41D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Start-ClusterNode

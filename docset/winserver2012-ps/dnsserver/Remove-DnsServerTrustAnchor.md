@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 70E8876D-3CC0-4FD1-92FF-6DC3DDC4A9E0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DnsServerTrustAnchor

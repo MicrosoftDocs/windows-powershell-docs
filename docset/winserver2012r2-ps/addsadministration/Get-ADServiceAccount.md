@@ -10,7 +10,7 @@ description:
 keywords: powershell, cmdlet
 author: kenwith
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell

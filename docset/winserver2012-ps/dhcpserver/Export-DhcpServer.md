@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1107DCCE-668A-44F6-872E-B6AB07B70C2B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Export-DhcpServer

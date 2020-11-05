@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D8196A22-2B5E-4466-81EF-8C78B93955DC
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Invoke-DnsServerSigningKeyRollover

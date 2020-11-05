@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -7,12 +7,12 @@ ms.assetid: 99FBD9F4-0DA9-4359-8483-2A2D256049A6
 manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IISConfigElement
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 

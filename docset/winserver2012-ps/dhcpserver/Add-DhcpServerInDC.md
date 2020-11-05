@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AC82E069-C63B-47A7-BDC3-35589830C119
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerInDC

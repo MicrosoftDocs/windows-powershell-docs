@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: BB641F6F-1C07-4A54-BA10-8D9F8B6449B0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerResourceRecord

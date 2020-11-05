@@ -5,15 +5,15 @@ schema: 2.0.0
 title: Import-SmigServerSetting
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Import-SmigServerSetting

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CB1E7D0E-5EC6-45DA-81BF-53CEBED5D827
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterDisk

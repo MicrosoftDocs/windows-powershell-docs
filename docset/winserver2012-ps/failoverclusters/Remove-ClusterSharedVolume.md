@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3A030267-1460-464D-91F7-63407B0D7ADB
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-ClusterSharedVolume

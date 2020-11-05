@@ -4,8 +4,8 @@ Module Name: Microsoft.DiagnosticDataViewer
 online version:
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 title: Disable-DiagnosticDataViewing
 ---
 

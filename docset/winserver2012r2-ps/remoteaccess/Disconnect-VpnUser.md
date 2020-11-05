@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disconnect-VpnUser
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A4DCA216-584F-48F5-8594-0B04F010B3AC
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

@@ -3,8 +3,8 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 00980E48-5937-40BD-BA8C-65B0053D53B7
 manager: dansimp
 ---

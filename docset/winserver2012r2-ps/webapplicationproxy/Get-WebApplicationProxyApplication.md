@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 99D86A99-E40A-45E1-B048-06172CB73BE7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

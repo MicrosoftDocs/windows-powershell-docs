@@ -3,8 +3,8 @@ external help file: SMTasks_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: CB5682DE-A40F-4987-BC5B-C4B57F15D352
 manager: dansimp
 ---

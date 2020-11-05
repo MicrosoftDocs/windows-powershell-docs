@@ -3,8 +3,8 @@ external help file: MPIO_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 1E060953-FA34-4BF1-891E-249A1DBAC3FB
 manager: dansimp
 ---

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CEFD566C-075D-4363-B341-B0D95FB35F09
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFileManagementJob

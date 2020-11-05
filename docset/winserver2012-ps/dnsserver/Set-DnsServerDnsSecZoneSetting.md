@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: DFCFB200-78E7-4921-BBB6-A99572D6548A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerDnsSecZoneSetting

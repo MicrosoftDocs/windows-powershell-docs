@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Disable-WssMsoSharePointPermissionInheritance
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1DF5C792-ACD8-41F1-AD6A-5E365E4D51B4
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

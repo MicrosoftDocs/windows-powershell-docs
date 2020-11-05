@@ -3,8 +3,8 @@ external help file: NetQos_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 0043C08D-E596-4177-A981-0CD8C04CA7E4
 manager: dansimp
 ---

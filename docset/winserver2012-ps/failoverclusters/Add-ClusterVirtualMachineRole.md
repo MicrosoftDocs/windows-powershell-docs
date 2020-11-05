@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 5DDCD4DC-06F9-4340-96F4-463847BD8426
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterVirtualMachineRole

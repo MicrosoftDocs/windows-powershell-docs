@@ -8,8 +8,8 @@ description: Use this topic to help manage Windows and Windows Server technologi
 keywords: powershell, cmdlet
 ms.sitesec: library
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
 manager: dansimp
 ---

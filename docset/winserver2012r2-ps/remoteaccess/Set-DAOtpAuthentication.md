@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Set-DAOtpAuthentication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DCFB9D5A-C24B-4192-9FF2-63C6A2DA2C89
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

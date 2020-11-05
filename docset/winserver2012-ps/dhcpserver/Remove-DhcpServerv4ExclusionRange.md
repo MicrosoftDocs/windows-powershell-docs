@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 5CECCAD0-6D55-4071-BCD7-C3ADEB60BD8E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv4ExclusionRange

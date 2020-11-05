@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B023D801-3097-4377-9234-8E8B71C3706B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Filter

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 7172BC57-F26A-4132-AB0D-87DBCBAADAA9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Update-ClusterIPResource

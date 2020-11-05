@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: BC7E8823-6E63-4DFB-8675-81CD5E76F4D7
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterNetwork

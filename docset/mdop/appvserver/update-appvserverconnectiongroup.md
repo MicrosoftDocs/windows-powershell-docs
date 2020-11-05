@@ -1,16 +1,16 @@
 ---
-ms.technology: powershell-mdop
+ms.technology: 
 ms.mktglfcycl: manage
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.prod: w10
 ms.sitesec: library
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro 
 ms.assetid: FCE46BDA-5F36-4146-8C34-5956A8F74C76
-ms.date: 2016-12-05
+ms.date: 12/05/2016
 ms.devlang: powershell
 ms.topic: reference
 online version: 

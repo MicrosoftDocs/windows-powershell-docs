@@ -1,5 +1,4 @@
 ---
-author:
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
@@ -11,10 +10,10 @@ ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182877
 schema: 2.0.0
 title: Validate-HpcIScsiStorageArray
-author: Kateyanne
 ms.assetid: C95A33FD-33FE-4BCC-9B8F-AC293B055E4C
 ms.reviewer:
 ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Validate-HpcIScsiStorageArray

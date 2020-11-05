@@ -14,7 +14,7 @@ keywords: powershell, cmdlet
 manager: jasgro
 ms.topic: reference
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
 ---
 

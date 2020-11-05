@@ -15,7 +15,7 @@ manager: elizapo
 ms.date: 6/18/18
 ms.topic: reference
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.assetid: 38D3C589-40AB-4E35-843F-5AC57EEB65A7
 schema: 2.0.0
 ---

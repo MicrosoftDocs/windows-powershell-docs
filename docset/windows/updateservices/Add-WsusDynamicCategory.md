@@ -9,7 +9,7 @@ keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/UpdateServices/Add-WsusDynamicCategory?view=win10-ps
 schema: 2.0.0

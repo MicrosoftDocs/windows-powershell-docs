@@ -7,7 +7,7 @@ ms.assetid: 99FBD9F4-0DA9-4359-8483-2A2D256049A6
 manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0

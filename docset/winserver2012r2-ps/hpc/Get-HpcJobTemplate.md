@@ -102,8 +102,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Copy-HpcJobTemplate](./Copy-HpcJobTemplate.md)
 
-[Export-HpcJobTemplate](./Export-HpcJobTemplate.md)
-
 [Import-HpcJobTemplate](./Import-HpcJobTemplate.md)
 
 [Remove-HpcJobTemplate](./Remove-HpcJobTemplate.md)

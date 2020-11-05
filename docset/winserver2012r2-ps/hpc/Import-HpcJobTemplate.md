@@ -151,6 +151,4 @@ For information about changing permissions on job templates, see the Get-HpcJobT
 
 ## RELATED LINKS
 
-[Export-HpcJobTemplate](./Export-HpcJobTemplate.md)
-
 [Remove-HpcJobTemplate](./Remove-HpcJobTemplate.md)

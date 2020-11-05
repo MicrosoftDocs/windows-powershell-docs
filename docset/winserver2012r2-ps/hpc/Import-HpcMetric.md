@@ -123,8 +123,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-HpcMetric](./Export-HpcMetric.md)
-
 [Get-HpcMetric](./Get-HpcMetric.md)
 
 [Remove-HpcMetric](./Remove-HpcMetric.md)

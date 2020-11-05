@@ -8,7 +8,7 @@ description:
 keywords: powershell, cmdlet
 author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell

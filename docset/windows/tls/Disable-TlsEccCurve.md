@@ -5,7 +5,7 @@ external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.x
 keywords: powershell, cmdlet
 manager: jasgro
 ms.author: v-kaunu
-ms.date: 2017-05-09
+ms.date: 05/09/2017
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library

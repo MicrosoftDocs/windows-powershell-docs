@@ -8,7 +8,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 keywords: powershell, cmdlet
 author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell

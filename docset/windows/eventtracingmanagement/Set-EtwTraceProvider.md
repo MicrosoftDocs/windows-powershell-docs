@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MSFT_EtwTraceProvider_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 2017-01-05
+ms.date: 01/05/2017
 ms.prod: w10
 ms.technology: 
 ms.topic: reference

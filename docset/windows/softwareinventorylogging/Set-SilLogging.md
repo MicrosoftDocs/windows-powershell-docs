@@ -7,7 +7,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: MsftSil_ManagementTasks-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 2017-01-24
+ms.date: 01/24/2017
 ms.prod: w10
 ms.technology: 
 ms.topic: reference

@@ -6,7 +6,7 @@ ms.assetid: ACF82BAB-08BA-4D3B-AD60-A554F5AE0A7D
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Resume-ClusterResource

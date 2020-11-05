@@ -2,12 +2,12 @@
 ms.mktglfcycl: manage
 ms.sitesec: library
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MsftSil_WindowsUpdate.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.date: 2017-01-24
+ms.date: 01/24/2017
 ms.prod: w10
 ms.technology: 
 ms.topic: reference

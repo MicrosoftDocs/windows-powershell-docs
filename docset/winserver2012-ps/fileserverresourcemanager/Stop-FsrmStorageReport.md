@@ -6,7 +6,7 @@ ms.assetid: 97E952DF-D715-4CEA-88E5-34035B9DF71A
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Stop-FsrmStorageReport

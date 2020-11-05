@@ -6,7 +6,7 @@ ms.assetid: 3D6FE616-2674-444A-BA26-832FC93B3CBD
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Grant-ClusterAccess

@@ -6,7 +6,7 @@ ms.assetid: 2DD41C46-24BC-44D1-BE23-FE43E7F75749
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Update-DnsServerTrustPoint

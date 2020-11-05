@@ -5,9 +5,9 @@ schema: 2.0.0
 title: Install-RemoteAccess
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2018-05-31
+ms.date: 05/31/2018
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell

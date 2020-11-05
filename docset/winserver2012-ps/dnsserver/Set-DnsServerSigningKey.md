@@ -6,7 +6,7 @@ ms.assetid: DC53E5DC-08A3-48F1-94DF-7BFCEDE21209
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Set-DnsServerSigningKey

@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ShieldedVmCmdlets-help.xml
 keywords: powershell, cmdlet

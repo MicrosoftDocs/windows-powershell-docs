@@ -6,7 +6,7 @@ ms.assetid: DD8807A5-3CD5-4A73-B372-979696936C6D
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Remove-FsrmFileGroup

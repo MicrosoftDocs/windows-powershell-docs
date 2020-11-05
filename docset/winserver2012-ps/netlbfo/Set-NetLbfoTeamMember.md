@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ms.assetid: CF89FA2A-ECCA-406A-A43B-4D94D452724D
 manager: dansimp
 ---

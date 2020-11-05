@@ -6,7 +6,7 @@ ms.assetid: BE89DFE6-70CF-4A30-BE4F-DC8679C8776E
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Stop-ClusterGroup

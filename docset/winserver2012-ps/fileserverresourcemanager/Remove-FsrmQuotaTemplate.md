@@ -6,7 +6,7 @@ ms.assetid: E16384BB-C420-4A19-BCD1-B9D8E6B2207B
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Remove-FsrmQuotaTemplate

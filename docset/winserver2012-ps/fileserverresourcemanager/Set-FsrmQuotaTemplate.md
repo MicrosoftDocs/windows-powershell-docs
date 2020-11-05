@@ -6,7 +6,7 @@ ms.assetid: 1517E303-B084-4BE8-BF3B-89808FA98777
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Set-FsrmQuotaTemplate

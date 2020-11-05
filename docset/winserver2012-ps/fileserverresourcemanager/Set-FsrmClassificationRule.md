@@ -6,7 +6,7 @@ ms.assetid: 93C4A867-5C2A-43F5-9B9F-4F2684CCED81
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Set-FsrmClassificationRule

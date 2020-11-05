@@ -6,7 +6,7 @@ ms.assetid: BE308EA5-23A1-4FA8-B179-2EDC065C0428
 manager: dansimp
 ms.reviewer:
 ms.author: v-kaunu
-author: andreabarr
+author: Kateyanne
 ---
 
 # Reset-FsrmFileScreen

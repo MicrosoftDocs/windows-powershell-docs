@@ -18,7 +18,7 @@ This topic lists the Windows PowerShell modules included with Microsoft Desktop 
 
 ## MDOP Automation with Windows Powershell
 
-The table below shows the latest published version of the Help for each module. The Help is available in docs.microsoft.com through the links below, or as Updateable Help files. Updateable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer by using the Update-Help cmdlet. For more information, see [about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1).
+The table below shows the latest published version of the Help for each module. The Help is available in docs.microsoft.com through the links below, or as Updateable Help files. Updateable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer by using the Update-Help cmdlet. For more information, see [about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
 | Product | Latest product version |
 | - | - |

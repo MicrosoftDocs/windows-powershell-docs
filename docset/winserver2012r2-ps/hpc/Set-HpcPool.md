@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Set-HpcPool
 ms.assetid: 412CB991-A3EE-4C7A-B379-73D31A425981
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Set-HpcPool

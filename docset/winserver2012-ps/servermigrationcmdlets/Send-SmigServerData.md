@@ -3,7 +3,7 @@ external help file: ServerMig_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
 manager: dansimp

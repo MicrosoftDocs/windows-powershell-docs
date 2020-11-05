@@ -5,7 +5,7 @@ external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 ms.assetid: A402F68C-FBAC-4007-B79C-0C06BE73CB75
 manager: dansimp
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
 ms.technology: 

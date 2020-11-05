@@ -13,7 +13,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0976012A-EF43-42A9-9377-AC1950224D8D
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Send-SmigServerData

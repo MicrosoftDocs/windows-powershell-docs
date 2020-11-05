@@ -1,6 +1,6 @@
 ---
 author: andreabarr
-ms.author: v-anbarr
+ms.author: v-kaunu
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet

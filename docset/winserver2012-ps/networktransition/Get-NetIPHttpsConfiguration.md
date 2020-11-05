@@ -3,7 +3,7 @@ external help file: NetTransition_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: E3DB6861-8AC4-43D7-96A7-E832280B9A10
 manager: dansimp

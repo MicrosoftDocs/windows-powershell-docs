@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Start-HpcAzureNode
 ms.assetid: CE0FD152-B4EE-4F13-923C-70EEF031CBC3
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Start-HpcAzureNode

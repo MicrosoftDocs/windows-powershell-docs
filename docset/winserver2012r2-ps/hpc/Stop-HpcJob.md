@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Stop-HpcJob
 ms.assetid: 1C71E2EF-0A23-42EC-86F1-9549FE3FF42A
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Stop-HpcJob

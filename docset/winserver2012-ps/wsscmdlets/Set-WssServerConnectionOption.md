@@ -3,7 +3,7 @@ external help file: WSS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: 3C56CEC7-14C5-46B9-A1F9-7DD31D893693
 manager: dansimp

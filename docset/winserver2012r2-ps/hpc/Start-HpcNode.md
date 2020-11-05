@@ -14,7 +14,7 @@ title: Start-HpcNode
 author: andreabarr
 ms.assetid: 13C64A14-D413-43B1-AB3D-12A32C6270BC
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Start-HpcNode

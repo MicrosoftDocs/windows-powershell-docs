@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell. 
 title: Get-IISSiteBinding
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.reviewer:
 online version:

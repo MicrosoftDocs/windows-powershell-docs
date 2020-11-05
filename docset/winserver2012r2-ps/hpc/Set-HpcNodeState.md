@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Set-HpcNodeState
 ms.assetid: 7DC6022D-942F-43EB-846F-609EE83B6F23
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Set-HpcNodeState

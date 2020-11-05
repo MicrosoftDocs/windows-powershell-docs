@@ -14,7 +14,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: AE3B8DB9-C081-48CE-A1D1-43BA7244F329
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Get-WmsThumbnail

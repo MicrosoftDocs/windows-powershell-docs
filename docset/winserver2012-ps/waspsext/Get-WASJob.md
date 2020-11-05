@@ -3,7 +3,7 @@ external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: 3BF3937D-CBD9-4051-B7CA-4F95A5E30A49
 manager: dansimp

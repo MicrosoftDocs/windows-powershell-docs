@@ -14,7 +14,7 @@ ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Clear-IISConfigCollection
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 

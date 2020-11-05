@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Stop-HpcAzureNode
 ms.assetid: 9CD5FC86-8C82-4247-8DE0-228AC18890C7
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Stop-HpcAzureNode

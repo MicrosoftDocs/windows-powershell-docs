@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Start-HpcNodeSet
 ms.assetid: 383CE8F0-810D-4C87-B415-B405E67F960F
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Start-HpcNodeSet

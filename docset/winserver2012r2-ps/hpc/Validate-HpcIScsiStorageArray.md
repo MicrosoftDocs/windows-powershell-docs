@@ -14,7 +14,7 @@ title: Validate-HpcIScsiStorageArray
 author: andreabarr
 ms.assetid: C95A33FD-33FE-4BCC-9B8F-AC293B055E4C
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Validate-HpcIScsiStorageArray

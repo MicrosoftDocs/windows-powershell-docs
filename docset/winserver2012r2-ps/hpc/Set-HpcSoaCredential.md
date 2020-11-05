@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Set-HpcSoaCredential
 ms.assetid: 49A52A04-AEE2-43DB-B239-DD2BF8E6E0CE
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Set-HpcSoaCredential

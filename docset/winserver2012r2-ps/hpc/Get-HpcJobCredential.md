@@ -14,7 +14,7 @@ title: Get-HpcJobCredential
 author: andreabarr
 ms.assetid:
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Get-HpcJobCredential

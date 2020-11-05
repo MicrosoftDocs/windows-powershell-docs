@@ -3,7 +3,7 @@ external help file: NetConnect_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: 08B732CF-73C6-46BA-83DD-2C859D791B76
 manager: dansimp

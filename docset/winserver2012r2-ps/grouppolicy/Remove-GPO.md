@@ -4,7 +4,7 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Remove-GPO
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet

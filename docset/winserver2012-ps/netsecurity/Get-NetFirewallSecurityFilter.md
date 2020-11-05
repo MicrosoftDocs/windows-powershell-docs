@@ -3,7 +3,7 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: 04CCAF2F-0B85-4ABF-B8AD-203DE3A2467F
 manager: dansimp

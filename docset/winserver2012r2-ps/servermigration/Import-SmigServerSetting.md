@@ -13,7 +13,7 @@ ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Import-SmigServerSetting

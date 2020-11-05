@@ -4,7 +4,7 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Add-ClusterResourceDependency
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet

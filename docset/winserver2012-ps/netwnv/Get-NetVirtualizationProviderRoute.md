@@ -3,7 +3,7 @@ external help file: NetWNV_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: BC4274F1-F6DC-4344-9A1B-DC68163248B0
 manager: dansimp

@@ -4,7 +4,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 external help file: provcmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 2017-05-09
 ms.mktglfcycl: manage
 ms.prod: w10

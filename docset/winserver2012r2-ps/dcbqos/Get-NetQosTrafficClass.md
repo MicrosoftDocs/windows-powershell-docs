@@ -4,7 +4,7 @@ Module Name: DcbQos
 online version: 
 schema: 2.0.0
 title: Get-NetQosTrafficClass
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet

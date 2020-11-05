@@ -3,7 +3,7 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 author: andreabarr
 ms.assetid: C245B3BC-7471-4BBD-88AD-B87E916FB0B3
 manager: dansimp

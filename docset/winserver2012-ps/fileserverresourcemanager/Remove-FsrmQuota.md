@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: DDBA8BC2-B6C9-4E32-AA0D-6E48EFD9DEB1
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-FsrmQuota

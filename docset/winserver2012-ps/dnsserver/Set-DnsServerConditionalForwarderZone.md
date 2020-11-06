@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 8925DBAA-CDEE-428B-9FA6-3CF7725C13EE
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerConditionalForwarderZone

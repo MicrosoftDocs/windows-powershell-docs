@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 28F4646E-A4E7-4C9B-A195-69E733F55D7E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Unregister-DnsServerDirectoryPartition

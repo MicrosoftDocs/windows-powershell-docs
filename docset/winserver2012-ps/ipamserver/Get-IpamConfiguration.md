@@ -3,8 +3,8 @@ external help file: IpamServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 1BEB28C1-6E04-4C8E-91C1-10EB8AFBB42B
 manager: dansimp
 ---

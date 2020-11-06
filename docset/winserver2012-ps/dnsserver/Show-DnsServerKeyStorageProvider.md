@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: E7D3765D-0BBD-4D0C-A8F7-54C656A746FD
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Show-DnsServerKeyStorageProvider

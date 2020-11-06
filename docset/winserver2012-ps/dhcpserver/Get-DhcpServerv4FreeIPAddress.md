@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 83C2727D-5E10-4DA7-915B-476AF11A3F29
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv4FreeIPAddress

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3A5072BD-150F-4CA3-AB96-6EF007B4F49E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerResourceRecord

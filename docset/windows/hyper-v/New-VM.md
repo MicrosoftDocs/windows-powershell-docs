@@ -108,7 +108,7 @@ $switch = (Get-VMNetworkAdapter -VMName $oldVM.name).SwitchName
 New-VM -Name "new 6" -Generation $oldVM.Generation -MemoryStartupBytes $memory -SwitchName $switch
 ```
 
-This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as existing machine named old 1, and connected to the same network switch.
+This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
 
 ## PARAMETERS
 

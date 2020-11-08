@@ -97,7 +97,7 @@ This example asks for credentials, then creates a virtual machine named new 4 th
 New-VM -Name "new 5" -Generation 1 -BootDevice CD -NoVHD
 ```
 
-This example creates a virtual machine named new 5. The machine doesn't have any VHD disk and set to boot from CD. 
+This example creates a virtual machine named new 5. The machine doesn't have any VHD disk and is set to boot from CD. 
 
 ### Example 6
 

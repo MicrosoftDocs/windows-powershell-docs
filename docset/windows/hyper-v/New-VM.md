@@ -89,7 +89,7 @@ This example creates a virtual machine named new 3 that has 1 GB of memory and c
 New-VM -Name "new 4" -MemoryStartupBytes 2GB -Credential (Get-Credential) -ComputerName HostServer01
 ```
 
-This example asks for credentials, then creates a virtual machine named new 4 that has 2 GB of memory on the server named HostServer01.
+This example asks for credentials, then creates a virtual machine named new 4, which has 2 GB of memory, on the server named HostServer01.
 
 ### Example 5
 

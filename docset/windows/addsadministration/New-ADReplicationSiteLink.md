@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Cost
 Specifies the cost to be placed on the site link.
-For more information on determining the cost, see [Determining the Cost](http://go.microsoft.com/fwlink/?LinkId=221871) in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221871.
+For more information on determining the cost, see [Determining the Cost](https://go.microsoft.com/fwlink/?LinkId=221871) in the TechNet Library: http://go.microsoft.com/fwlink/?LinkId=221871.
 
 ```yaml
 Type: Int32
@@ -391,7 +391,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

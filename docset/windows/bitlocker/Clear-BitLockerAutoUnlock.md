@@ -40,7 +40,7 @@ After a user unlocks the operating system volume, BitLocker uses encrypted infor
 You must remove automatic unlocking keys before you can disable BitLocker by using the **Disable-BitLocker** cmdlet.
 You can use the **Disable-BitLockerAutoUnlock** cmdlet to remove keys for specific volumes that use automatic unlocking instead of all volumes.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
 
 ## EXAMPLES
 
@@ -54,7 +54,7 @@ This command clears all automatic unlocking keys stored on the current computer.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

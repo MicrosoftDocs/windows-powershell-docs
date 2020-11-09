@@ -283,9 +283,9 @@ The EnrollmentResult object contains the results of enrollment.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
-[Get-Credential](http://go.microsoft.com/fwlink/p/?LinkId=113311)
+[Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=113311)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=113397)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkId=113397)
 

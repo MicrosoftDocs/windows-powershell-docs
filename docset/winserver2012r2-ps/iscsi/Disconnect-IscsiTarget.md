@@ -221,7 +221,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
-[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+[Storage on TechNet](https://go.microsoft.com/fwlink/?linkid=191356)
 
 [Get-iSCSITarget](./Get-IscsiTarget.md)
 

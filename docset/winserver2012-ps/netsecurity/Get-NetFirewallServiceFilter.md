@@ -277,9 +277,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113303)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Get-NetFirewallRule](./Get-NetFirewallRule.md)
 

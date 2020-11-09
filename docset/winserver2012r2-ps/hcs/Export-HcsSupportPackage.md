@@ -294,11 +294,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291)
 
-[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
+[Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966)
 
 [Enable-HcsSupportAccess](./Enable-HcsSupportAccess.md)
 

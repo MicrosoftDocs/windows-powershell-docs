@@ -79,7 +79,7 @@ This cmdlet makes the following configuration changes to components on an additi
 - Configures the Attestation service signer certificate with the Key Protection service.
 - Enables Just Enough Administration on the local node.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

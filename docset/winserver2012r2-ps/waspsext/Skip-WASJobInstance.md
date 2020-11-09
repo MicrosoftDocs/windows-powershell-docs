@@ -88,7 +88,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Windows Assessment Services Technical Reference](http://go.microsoft.com/fwlink/?LinkId=215628)
+[Windows Assessment Services Technical Reference](https://go.microsoft.com/fwlink/?LinkId=215628)
 
 [Get-WASComputer](./Get-WASComputer.md)
 

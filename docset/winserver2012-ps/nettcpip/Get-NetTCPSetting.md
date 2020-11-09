@@ -499,7 +499,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-NetTransportFilter](./New-NetTransportFilter.md)
 

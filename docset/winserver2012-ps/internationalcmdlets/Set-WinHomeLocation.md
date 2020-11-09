@@ -64,5 +64,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RegionInfo.GeoId Property](http://go.microsoft.com/fwlink/?LinkID=242310)
+[RegionInfo.GeoId Property](https://go.microsoft.com/fwlink/?LinkID=242310)
 

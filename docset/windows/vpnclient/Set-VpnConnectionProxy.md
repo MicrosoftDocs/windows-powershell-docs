@@ -35,6 +35,9 @@ Set-VpnConnectionProxy [-AutoDetect] [-AutoConfigurationScript <String>] [-Proxy
 The **Set-VpnConnectionProxy** cmdlet configures web proxy information for the specified VPN connection.
 If errors occur when you modify the web proxy information, the error information is returned.
 
+>[!NOTE]
+> VPN proxy settings are only used on Force Tunnel Connections. On Split Tunnel Connections the general proxy settings are used.
+
 ## EXAMPLES
 
 ### Example 1: Configure the proxy settings for a VPN connection profile

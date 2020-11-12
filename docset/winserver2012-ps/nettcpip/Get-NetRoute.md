@@ -375,11 +375,11 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkId=113302)
 
-[Select-Object](http://go.microsoft.com/fwlink/?LinkId=113387)
+[Select-Object](https://go.microsoft.com/fwlink/?LinkId=113387)
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkId=113423)
 
 [New-NetRoute](./New-NetRoute.md)
 

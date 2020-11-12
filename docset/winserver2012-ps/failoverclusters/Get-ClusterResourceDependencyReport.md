@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Copy-Item](http://go.microsoft.com/fwlink/?LinkID=113292)
+[Copy-Item](https://go.microsoft.com/fwlink/?LinkID=113292)
 
 [Add-ClusterResourceDependency](./Add-ClusterResourceDependency.md)
 

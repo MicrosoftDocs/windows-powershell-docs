@@ -65,13 +65,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### CultureInfo
 An object that contains a BCP-47 tag to specify the system locale for the current computer.
-For more information about the CultureInfo object, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306).
+For more information about the CultureInfo object, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306).
 
 ## OUTPUTS
 
@@ -79,7 +79,7 @@ For more information about the CultureInfo object, see [CultureInfo Class](http:
 
 ## RELATED LINKS
 
-[Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307)
+[Configurable Language and Cultural Settings](https://go.microsoft.com/fwlink/?LinkID=242307)
 
 [Get-WinSystemLocale](./Get-WinSystemLocale.md)
 

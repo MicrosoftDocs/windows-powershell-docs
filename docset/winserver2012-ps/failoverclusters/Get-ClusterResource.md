@@ -226,9 +226,9 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/?LinkID=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/?LinkID=113300)
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-ClusterResource](./Add-ClusterResource.md)
 

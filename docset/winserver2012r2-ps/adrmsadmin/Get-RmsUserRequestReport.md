@@ -220,7 +220,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Using Windows PowerShell with AD RMS](http://go.microsoft.com/fwlink/?LinkId=136806)
+[Using Windows PowerShell with AD RMS](https://go.microsoft.com/fwlink/?LinkId=136806)
 
 [Get-RmsCertChain](./Get-RmsCertChain.md)
 

@@ -53,7 +53,7 @@ You can import the cmdlet by running the following commands from Windows PowerSh
 - `Import-Module ServerManager`
 - `Add-WindowsFeature Adcs-Device-Enrollment`
 
-Int is equivalent to Int32 in the [.NET Framework](http://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
+Int is equivalent to Int32 in the [.NET Framework](https://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
 
 ## EXAMPLES
 
@@ -386,7 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -406,5 +406,5 @@ To see parameters, run the following command: `Install-AdcsNetworkDeviceEnrollme
 
 [Uninstall-AdcsNetworkDeviceEnrollmentService](./Uninstall-AdcsNetworkDeviceEnrollmentService.md)
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 

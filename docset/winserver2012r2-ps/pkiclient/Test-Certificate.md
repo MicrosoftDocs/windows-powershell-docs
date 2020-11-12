@@ -179,5 +179,5 @@ If the verification succeeds, then the return value is True; otherwise the retur
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 

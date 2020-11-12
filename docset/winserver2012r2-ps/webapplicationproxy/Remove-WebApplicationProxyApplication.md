@@ -166,9 +166,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Web Application Proxy Overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy Overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Add-WebApplicationProxyApplication](./Add-WebApplicationProxyApplication.md)
 

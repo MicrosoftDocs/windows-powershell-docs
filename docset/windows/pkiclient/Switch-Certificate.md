@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -152,9 +152,9 @@ The **Certificate** object can either be provided as a Path object to a certific
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkID=293912)
 
 [Get-CertificateNotificationTask](./Get-CertificateNotificationTask.md)
 

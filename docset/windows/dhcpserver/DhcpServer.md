@@ -24,7 +24,7 @@ ms.assetid: 4ABFF348-0669-4EDA-8B88-9C4F2A9BA5DE
 ## Description
 This reference provides cmdlet descriptions and syntax for all Dynamic Host Configuration Protocol (DHCP) server service-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet. 
 
-Also see [DHCP Classes](http://go.microsoft.com/FWLink/p/?LinkId=260590).
+Also see [DHCP Classes](https://go.microsoft.com/FWLink/p/?LinkId=260590).
 
 
 ## DhcpServer Cmdlets

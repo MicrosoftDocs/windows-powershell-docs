@@ -300,7 +300,7 @@ The RemoteAccessInboxAccounting object consists of the following properties:
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 
 [Set-RemoteAccessInboxAccountingStore](./Set-RemoteAccessInboxAccountingStore.md)
 

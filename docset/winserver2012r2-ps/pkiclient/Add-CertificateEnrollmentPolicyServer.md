@@ -240,9 +240,9 @@ The EnrollmentPolicyServer object contains information about the certificate enr
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Get-Credential](http://go.microsoft.com/fwlink/p/?LinkId=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=293936)
 
 [Get-CertificateEnrollmentPolicyServer](./Get-CertificateEnrollmentPolicyServer.md)
 

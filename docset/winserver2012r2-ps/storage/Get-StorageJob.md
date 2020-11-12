@@ -248,5 +248,5 @@ The Get-StorageJob cmdlet returns objects that represent storage jobs.
 
 ## RELATED LINKS
 
-[Receive-Job](http://go.microsoft.com/fwlink/p/?LinkID=113372)
+[Receive-Job](https://go.microsoft.com/fwlink/p/?LinkID=113372)
 

@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-NlbClusterNode](./Add-NlbClusterNode.md)
 

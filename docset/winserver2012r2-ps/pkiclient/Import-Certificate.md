@@ -138,9 +138,9 @@ The output is an array of X509Certificate2\[\] objects.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=293912)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkId=293912)
 
 [Export-Certificate](./Export-Certificate.md)
 

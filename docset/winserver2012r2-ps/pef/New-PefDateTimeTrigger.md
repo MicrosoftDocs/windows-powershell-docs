@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
+[Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966)
 
 [Add-PefMessageSource](./Add-PefMessageSource.md)
 

@@ -844,7 +844,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -861,7 +861,7 @@ By default, this cmdlet does not generate any output.
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* This cmdlet requires that you create a Microsoft Group Key Distribution Service (GKDS) root key first to begin using group managed service accounts in your Active Directory deployment. For more information on how to create the GKDS root key using Windows PowerShell, see [Create the Key Distribution Services KDS Root Key](http://go.microsoft.com/fwlink/?LinkId=253584).
+* This cmdlet requires that you create a Microsoft Group Key Distribution Service (GKDS) root key first to begin using group managed service accounts in your Active Directory deployment. For more information on how to create the GKDS root key using Windows PowerShell, see [Create the Key Distribution Services KDS Root Key](https://go.microsoft.com/fwlink/?LinkId=253584).
 
 ## RELATED LINKS
 

@@ -157,9 +157,9 @@ The Certificate object can either be provided as a Path object to a certificate 
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkID=293912)
 
 [Get-CertificateNotificationTask](./Get-CertificateNotificationTask.md)
 

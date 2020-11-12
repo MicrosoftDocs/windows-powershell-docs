@@ -200,7 +200,7 @@ The output object contains QoS capabilities and configurations on a network adap
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Disable-NetAdapterQos](./Disable-NetAdapterQos.md)
 

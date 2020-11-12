@@ -172,7 +172,7 @@ The cmdlet uses the **FullName** property as the value of the **FileName** param
 
 ## RELATED LINKS
 
-[Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495)
+[Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495)
 
 [Get-FileIntegrity](./Get-FileIntegrity.md)
 

@@ -181,11 +181,11 @@ The imported X509Certificate2 object contained in the PFX file that is associate
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=293933)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkID=293933)
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkID=293912)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

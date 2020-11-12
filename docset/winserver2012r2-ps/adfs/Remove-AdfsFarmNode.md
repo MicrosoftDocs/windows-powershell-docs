@@ -101,5 +101,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-WindowsFeature](http://go.microsoft.com/fwlink/?LinkID=287572)
+[Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572)
 

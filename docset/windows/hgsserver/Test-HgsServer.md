@@ -55,7 +55,7 @@ The following checks are performed, when applicable:
 - Attestation application pool state
 - Key Protection application pool state
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

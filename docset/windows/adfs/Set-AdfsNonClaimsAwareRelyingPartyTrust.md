@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -AdditionalAuthenticationRules
 Specifies rules for additional authentication for the relying party.
-For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](http://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
+For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
 
 ```yaml
 Type: String

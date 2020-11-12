@@ -165,7 +165,7 @@ A X509Certificate2 object for the certificate that has been created.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkId=293912)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkId=293912)
 

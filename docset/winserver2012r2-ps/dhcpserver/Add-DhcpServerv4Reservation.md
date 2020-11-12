@@ -309,7 +309,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Import-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113341)
+[Import-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113341)
 
 [Get-DhcpServerv4FreeIPAddress](./Get-DhcpServerv4FreeIPAddress.md)
 

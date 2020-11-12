@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ### -ComputerName
 Specifies the names of the computers on which you want to perform the operation.
 You can specify a fully qualified domain name (FQDN), a NetBIOS name, or an IP address for each computer.
-For more information see [Invoke-CimMethod](http://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
+For more information see [Invoke-CimMethod](https://go.microsoft.com/fwlink/?LinkId=808801) on MSDN.
 
 ```yaml
 Type: String[]
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

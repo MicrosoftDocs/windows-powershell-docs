@@ -43,7 +43,7 @@ The cmdlet causes the following Host Guardian Service state to be exported to th
 - Key Protection Signer Certificates and private keys
 - Key Protection Encryption Certificates and private keys
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

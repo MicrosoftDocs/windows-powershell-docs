@@ -47,7 +47,7 @@ When this cmdlet is run on an additional HGS node, it promotes the node to a sec
 
 A reboot is necessary for the infrastructure components configured by this cmdlet.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

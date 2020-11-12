@@ -93,7 +93,7 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[about_Remote](http://technet.microsoft.com/en-us/library/hh847900.aspx)
+[about_Remote](https://technet.microsoft.com/en-us/library/hh847900.aspx)
 
 [Disable-HcsRemoteManagement](./Disable-HcsRemoteManagement.md)
 

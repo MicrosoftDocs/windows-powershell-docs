@@ -39,7 +39,7 @@ Remove-AdfsFarmNode -GroupServiceAccountIdentifier <String> [-Credential <PSCred
 
 ## DESCRIPTION
 The **Remove-AdfsFarmNode** cmdlet is deprecated in this release.
-Instead, use the [Uninstall-WindowsFeature](http://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
+Instead, use the [Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572) cmdlet.
 For more information on the **Uninstall-WindowsFeature** cmdlet, type `Get-Help Uninstall-WindowsFeature`.
 
 ## EXAMPLES

@@ -251,8 +251,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](https://www.microsoft.com/iSCSI)
 
-[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+[Storage on TechNet](https://go.microsoft.com/fwlink/?linkid=191356)
 
 

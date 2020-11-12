@@ -48,7 +48,7 @@ PS C:\> Install-AdcsEnrollmentPolicyWebService -AuthenticationType Kerberos -SSL
 ```
 
 This command installs the Certificate Enrollment Policy Web Service using Kerberos for authentication.
-For information on obtaining a certificate thumbprint using Windows PowerShell, see [Certificate Provider](http://go.microsoft.com/fwlink/?LinkId=225044).
+For information on obtaining a certificate thumbprint using Windows PowerShell, see [Certificate Provider](https://go.microsoft.com/fwlink/?LinkId=225044).
 
 ### Example 2: Install the Certificate Enrollment Policy Web Service specifying a username and password
 ```
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

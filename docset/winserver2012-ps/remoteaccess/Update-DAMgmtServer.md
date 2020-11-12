@@ -225,7 +225,7 @@ The DAMgmtServer object contains the following properties:
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113303)
 
 [Add-DAMgmtServer](./Add-DAMgmtServer.md)
 

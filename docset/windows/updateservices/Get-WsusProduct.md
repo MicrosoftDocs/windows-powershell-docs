@@ -34,7 +34,7 @@ Get-WsusProduct [-UpdateServer <IUpdateServer>] [-TitleIncludes <String>] [<Comm
 
 The **Get-WsusProduct** cmdlet gets the list of all Windows Server Update Services (WSUS) products (categories).
 
-This list can be filtered using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusProduct](./Set-WsusProduct.md) cmdlet.
+This list can be filtered using the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet with the results passed into the [Set-WsusProduct](./Set-WsusProduct.md) cmdlet.
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -131,6 +131,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Set-WsusProduct](./Set-WsusProduct.md)

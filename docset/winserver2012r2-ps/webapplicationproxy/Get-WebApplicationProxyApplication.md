@@ -176,9 +176,9 @@ If the cmdlet gets a single application, it displays the properties of the appli
 
 ## RELATED LINKS
 
-[Web Application Proxy Overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy Overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application Proxy](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application Proxy](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Add-WebApplicationProxyApplication](./Add-WebApplicationProxyApplication.md)
 

@@ -45,7 +45,7 @@ Get-WdacBidTrace [-Platform <String>] [-IncludeAllApplications] [-CimSession <Ci
 ## DESCRIPTION
 The **Get-WdacBidTrace** cmdlet gets a list of Built-in Diagnostics Tracing (BidTrace) settings for different applications.
 
-For more information about data access tracing, see [Data Access Tracing (Windows 8)](http://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx) on the Microsoft Developer Network.
+For more information about data access tracing, see [Data Access Tracing (Windows 8)](https://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

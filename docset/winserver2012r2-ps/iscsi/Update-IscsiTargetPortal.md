@@ -222,9 +222,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](https://www.microsoft.com/iSCSI)
 
-[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+[Storage on TechNet](https://go.microsoft.com/fwlink/?linkid=191356)
 
 [Get-IscsiTargetPortal](./Get-IscsiTargetPortal.md)
 

@@ -41,7 +41,7 @@ PS C:\> Uninstall-ADRMS -Force
 ```
 
 This command removes the AD RMS configuration on this computer.
-For more information on using this cmdlet, see [Using Windows PowerShell with AD RMS](http://go.microsoft.com/fwlink/?LinkId=136806).
+For more information on using this cmdlet, see [Using Windows PowerShell with AD RMS](https://go.microsoft.com/fwlink/?LinkId=136806).
 
 ### Example 2: removes the Identity Federation Support configuration
 ```
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

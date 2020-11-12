@@ -275,11 +275,11 @@ This cmdlet accepts a string or an array of strings as input.
 
 ## RELATED LINKS
 
-[Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+[Add-Member](https://go.microsoft.com/fwlink/p/?LinkId=113280)
 
-[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+[New-Object](https://go.microsoft.com/fwlink/p/?LinkId=113355)
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Get-PswaAuthorizationRule](./Get-PswaAuthorizationRule.md)
 

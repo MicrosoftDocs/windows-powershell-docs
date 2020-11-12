@@ -276,7 +276,7 @@ The MSFT_NetQosPolicySettingData object contains a QoS policy.
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-NetQosPolicy](./New-NetQosPolicy.md)
 

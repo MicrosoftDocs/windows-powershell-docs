@@ -220,7 +220,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-Command](http://go.microsoft.com/fwlink/p/?LinkId=113309)
+[Get-Command](https://go.microsoft.com/fwlink/p/?LinkId=113309)
 
 [New-NetFirewallRule](./New-NetFirewallRule.md)
 

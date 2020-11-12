@@ -164,9 +164,9 @@ Displays the Web Application Proxy configuration.
 
 ## RELATED LINKS
 
-[Web Application Proxy overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Set-WebApplicationProxyConfiguration](./Set-WebApplicationProxyConfiguration.md)
 

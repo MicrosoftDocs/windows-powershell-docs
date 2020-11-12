@@ -343,7 +343,7 @@ You can pipe an MSFT_VirtualDisk object to the VirtualDisk parameter.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Get-PhysicalDisk](./Get-PhysicalDisk.md)
 

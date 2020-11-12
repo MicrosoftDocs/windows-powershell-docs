@@ -51,7 +51,7 @@ This cmdlet makes the following configuration changes in order to remove the HGS
 - Destroys the cluster on the local node. 
 - Removes the local node from being a domain controller and removes the HGS domain.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

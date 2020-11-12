@@ -156,7 +156,7 @@ This cmdlet generates an **MSFT_FileIntegrity** object.
 
 ## RELATED LINKS
 
-[Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495)
+[Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495)
 
 [Repair-FileIntegrity](./Repair-FileIntegrity.md)
 

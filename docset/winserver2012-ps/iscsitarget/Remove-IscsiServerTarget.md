@@ -131,7 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/p/?Linkd=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/p/?Linkd=113300)
 
 [Get-IscsiServerTarget](./Get-IscsiServerTarget.md)
 

@@ -63,7 +63,7 @@ The second command modifies the date for a specific trusted attestation signer c
 ### -DenyHealthCertificatesIssuedBefore
 Specifies a date as a **DateTime** object.
 The Key Protection Service rejects any health certificates signed by the specified attestation signer certificate and issued before this time.
-To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml

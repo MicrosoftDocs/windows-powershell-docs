@@ -35,7 +35,7 @@ The **New-HwCertTestCollectionExcelReport** cmdlet creates a Windows Hardware Ce
 Specify one or more merged test collection .xml files.
 The cmdlet creates a separate worksheet for each merged test collection file, aggregates results, and compares the same test target from each file in a summary report.
 The summary shows total pass, pass with filter, fail, and N-1 regression data.
-For more information, see [Windows Hardware Certification Kit downloads](http://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
 
 You can use up to ten results per test in the test result aggregation process.
 The most recent passing result takes precedence as the aggregate.
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

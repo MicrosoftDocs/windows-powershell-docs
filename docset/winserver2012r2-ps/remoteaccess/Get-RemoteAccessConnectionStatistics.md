@@ -305,11 +305,11 @@ A separate instance of the object is outputted for every connection.
 
 ## RELATED LINKS
 
-[Export-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113299)
+[Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 
 [Get-RemoteAccessConnectionStatisticsSummary](./Get-RemoteAccessConnectionStatisticsSummary.md)
 

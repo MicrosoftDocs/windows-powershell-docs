@@ -137,5 +137,5 @@ Description: whether to enable password synchronization feature
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291)
 

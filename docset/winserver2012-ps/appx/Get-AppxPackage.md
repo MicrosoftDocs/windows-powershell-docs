@@ -132,7 +132,7 @@ This cmdlet returns an **AppxPackage** object that contains information, includi
 
 ## RELATED LINKS
 
-[PackageManager class](http://go.microsoft.com/fwlink/?LinkId=245447)
+[PackageManager class](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)
+[Sideload Apps with DISM](https://go.microsoft.com/fwlink/?LinkID=231020)
 

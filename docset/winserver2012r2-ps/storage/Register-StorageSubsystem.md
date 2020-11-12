@@ -206,7 +206,7 @@ You can use this object to perform storage management operations on the remote c
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Unregister-StorageSubsystem](./Unregister-StorageSubsystem.md)
 

@@ -48,7 +48,7 @@ This command gets the configuration attribute MaxUrlSegments for the Default Web
 ### Example 2: Get configuration attribute values from different parts of the configuration store
 ```
 PS C:\> Get-IISConfigSection "system.webServer/asp" | Get-IISConfigAttributeValue -AttributeName "ScriptErrorMessage"
-An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="http://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
+An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="https://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
 ```
 
 This command gets the global attribute value for ScriptErrorMessage

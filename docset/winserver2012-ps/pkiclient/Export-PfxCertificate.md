@@ -320,9 +320,9 @@ The FileInfo object contains the information about the PFX file.
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkId=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkId=113291)
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 
 [Get-PfxData](./Get-PfxData.md)
 

@@ -472,7 +472,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[New-TimeSpan](http://go.microsoft.com/fwlink/p/?LinkId=113360)
+[New-TimeSpan](https://go.microsoft.com/fwlink/p/?LinkId=113360)
 
 [Get-NetIPAddress](./Get-NetIPAddress.md)
 

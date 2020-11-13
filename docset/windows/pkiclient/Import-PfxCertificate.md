@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -178,11 +178,11 @@ The imported **X509Certificate2** object contained in the PFX file that is assoc
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=293933)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkID=293933)
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkID=293912)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

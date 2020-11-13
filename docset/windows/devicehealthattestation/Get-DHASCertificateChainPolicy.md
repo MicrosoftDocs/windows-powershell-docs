@@ -47,7 +47,7 @@ This command gets the current certificate chain policy for the Device Health Att
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -57,13 +57,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 The **CertificateChainPolicy** object that this cmdlet returns has the following members: 
 
 - RevocationFlag.
-A .NET [X509RevocationFlag enumeration](http://go.microsoft.com/fwlink/?LinkId=821152).
+A .NET [X509RevocationFlag enumeration](https://go.microsoft.com/fwlink/?LinkId=821152).
 - RevocationMode.
-A .NET [X509RevocationMode enumeration](http://go.microsoft.com/fwlink/?LinkId=821153).
+A .NET [X509RevocationMode enumeration](https://go.microsoft.com/fwlink/?LinkId=821153).
 - VerificationFlags.
-A .NET [X509VerificationFlags enumeration](http://go.microsoft.com/fwlink/?LinkId=821154).
+A .NET [X509VerificationFlags enumeration](https://go.microsoft.com/fwlink/?LinkId=821154).
 - UrlRetrievalTimeout.
-A .NET [TimeSpan structure](http://go.microsoft.com/fwlink/?LinkId=821155).
+A .NET [TimeSpan structure](https://go.microsoft.com/fwlink/?LinkId=821155).
 
 ## NOTES
 

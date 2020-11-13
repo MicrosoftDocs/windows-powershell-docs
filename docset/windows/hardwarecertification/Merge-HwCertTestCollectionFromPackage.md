@@ -32,7 +32,7 @@ Merge-HwCertTestCollectionFromPackage [-LiteralPath] <String[]> [-Force] [-Inclu
 
 ## DESCRIPTION
 The **Merge-HwCertTestCollectionFromPackage** cmdlet merges the test result information from several .hckx package files into a single test collection.
-For more information, see [Windows Hardware Certification Kit downloads](http://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
+For more information, see [Windows Hardware Certification Kit downloads](https://go.microsoft.com/fwlink/?LinkId=614978) in the Microsoft Developer Network (MSDN) Library.
 
 You can use the **Export-HwCertTestCollectionToXml** cmdlet to export the merged test collection as an .xml file.
 You can use the **New-HwCertTestCollectionExcelReport** cmdlet to create a Microsoft Excel report of the test results.
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

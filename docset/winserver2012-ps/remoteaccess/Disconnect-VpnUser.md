@@ -211,7 +211,7 @@ The array of strings consists of the list of user names or host addresses of the
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [Get-RemoteAccessConnectionStatistics](./Get-RemoteAccessConnectionStatistics.md)
 

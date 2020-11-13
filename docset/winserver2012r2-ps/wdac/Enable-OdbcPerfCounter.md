@@ -39,7 +39,7 @@ Enable-OdbcPerfCounter [-PassThru] [[-Platform] <String>] [-CimSession <CimSessi
 ## DESCRIPTION
 The **Enable-OdbcPerfCounter** cmdlet enables the Open Database Connectivity (ODBC) connection pooling Performance Monitor counters for troubleshooting ODBC connection pooling.
 
-For more information about ODBC and performance counters, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx) and [ODBC Performance Counters](http://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx) on the Microsoft Developer Network.
+For more information about ODBC and performance counters, see [Microsoft Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) and [ODBC Performance Counters](https://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

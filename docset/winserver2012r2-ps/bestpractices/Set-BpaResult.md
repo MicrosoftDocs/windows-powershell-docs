@@ -139,7 +139,7 @@ The input object specified by the **Results** parameter.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Get-BpaModel](./Get-BpaModel.md)
 

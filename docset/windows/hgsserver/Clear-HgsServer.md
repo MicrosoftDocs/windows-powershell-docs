@@ -48,7 +48,7 @@ This cmdlet makes the following infrastructure components changes on the last HG
 - Disables Just Enough Administration on the local node.
 - Destroys the cluster on the local node.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

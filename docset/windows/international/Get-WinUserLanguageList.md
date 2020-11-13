@@ -77,7 +77,7 @@ This command returns the autonym property of the first item in the user language
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -85,7 +85,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Collections.Generic.List<Microsoft.InternationalSettings.Commands.WinUserLanguage>
 This cmdlet returns a list of **WinUserLanguage** objects that contain one or more languages and associated properties from the current user account's language list.
-For information about the **Generic.List** object, see [List(Of T) Class](http://go.microsoft.com/fwlink/?LinkID=243342).
+For information about the **Generic.List** object, see [List(Of T) Class](https://go.microsoft.com/fwlink/?LinkID=243342).
 
 The generic list object supports the following methods: 
 
@@ -97,7 +97,7 @@ The output language object contains the following properties:
 
 - **BCP-47** (READ).
 A standard language tag that is used to identify languages.
-For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](http://go.microsoft.com/fwlink/?LinkID=242207). 
+For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207). 
 - **Autonym** (LP database) (READ).
 The name of the language in the language itself. 
 - **English name** (LP database) (READ).

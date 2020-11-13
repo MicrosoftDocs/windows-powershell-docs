@@ -52,7 +52,7 @@ The cmdlet imports the following Host Guardian Service state from the input file
 
 Additionally, this cmdlet renews the attestation service signer certificate and updates the key protection service instance with this certificate.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

@@ -403,7 +403,7 @@ The acceptable values for this parameter are:
 - ExpandString
 - Qword
 
-For more information about these data types, see [Microsoft.Win32.RegistryValueKind Enumeration](http://go.microsoft.com/fwlink/?LinkID=143266) in the MSDN library.
+For more information about these data types, see [Microsoft.Win32.RegistryValueKind Enumeration](https://go.microsoft.com/fwlink/?LinkID=143266) in the MSDN library.
 
 When you configure a Registry preference item for a registry key, do not specify this parameter.
 When you configure a Registry preference item for a registry value, specify this parameter together with the *Key*, *ValueName*, and *Value* parameters.
@@ -477,7 +477,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

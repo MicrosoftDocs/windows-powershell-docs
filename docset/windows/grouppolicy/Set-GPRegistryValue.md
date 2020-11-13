@@ -325,7 +325,7 @@ The acceptable values for this parameter are:
 - MultiString
 - QWord
 
-For more information about these data types, see [Microsoft.Win32.RegistryValueKind Enumeration](http://go.microsoft.com/fwlink/?LinkID=143266) in the MSDN library.
+For more information about these data types, see [Microsoft.Win32.RegistryValueKind Enumeration](https://go.microsoft.com/fwlink/?LinkID=143266) in the MSDN library.
 
 Only the following data types are supported for list values: String and ExpandString.
 
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

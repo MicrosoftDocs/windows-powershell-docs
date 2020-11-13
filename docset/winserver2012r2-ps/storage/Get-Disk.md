@@ -311,7 +311,7 @@ This cmdlet outputs one or more objects representing disks.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Clear-Disk](./Clear-Disk.md)
 

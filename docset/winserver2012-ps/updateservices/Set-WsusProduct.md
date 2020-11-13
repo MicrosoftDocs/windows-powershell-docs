@@ -110,7 +110,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Get-WsusProduct](./Get-WsusProduct.md)
 

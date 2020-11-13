@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object based on a user name and password.
-To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet.
+To obtain a **PSCredential** object, use the [Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936) cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
@@ -245,7 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -255,5 +255,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 

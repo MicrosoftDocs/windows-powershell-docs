@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -144,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-RDSessionHost](../remotedesktop/Get-RDSessionHost.md)
 
-[Get-WmiObject](http://go.microsoft.com/fwlink/?LinkId=821595)
+[Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 
-[Get-Member](http://go.microsoft.com/fwlink/?LinkId=821792)
+[Get-Member](https://go.microsoft.com/fwlink/?LinkId=821792)
 

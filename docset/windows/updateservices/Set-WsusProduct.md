@@ -32,7 +32,7 @@ Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonP
 
 ## DESCRIPTION
 
-The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
+The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
 
 ## EXAMPLES
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -126,7 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=289623)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=289623)
 
 [Get-WsusProduct](./Get-WsusProduct.md)
 

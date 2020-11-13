@@ -230,7 +230,7 @@ This cmdlet outputs an object that represents the physical disk for which you en
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Disable-PhysicalDiskIndication](./Disable-PhysicalDiskIndication.md)
 

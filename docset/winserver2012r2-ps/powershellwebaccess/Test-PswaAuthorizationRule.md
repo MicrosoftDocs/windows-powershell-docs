@@ -176,7 +176,7 @@ This cmdlet produces a PswaAuthorizationRule object as output.
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Add-PswaAuthorizationRule](./Add-PswaAuthorizationRule.md)
 

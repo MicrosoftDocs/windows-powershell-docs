@@ -313,9 +313,9 @@ boolean  DefaultDirectoryPartitions
 
 ## RELATED LINKS
 
-[DNS Server Integer Properties](http://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
+[DNS Server Integer Properties](https://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
 
-[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](http://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
+[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](https://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
 
 [Get-DnsServerDsSetting](./Get-DnsServerDsSetting.md)
 

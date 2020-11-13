@@ -624,7 +624,7 @@ This cmdlet outputs an object that represents the specified virtual disk.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Connect-VirtualDisk](./Connect-VirtualDisk.md)
 

@@ -176,9 +176,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/p/?LinkId=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-Cluster](./New-Cluster.md)
 

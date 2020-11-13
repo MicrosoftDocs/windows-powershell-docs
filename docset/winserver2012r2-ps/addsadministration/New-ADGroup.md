@@ -491,7 +491,7 @@ By default, this cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Import-CSV](http://go.microsoft.com/fwlink/?LinkID=113341)
+[Import-CSV](https://go.microsoft.com/fwlink/?LinkID=113341)
 
 [Get-ADGroup](./Get-ADGroup.md)
 

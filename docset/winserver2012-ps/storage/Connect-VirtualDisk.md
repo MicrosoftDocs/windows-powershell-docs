@@ -211,7 +211,7 @@ The Connect-VirtualDisk cmdlet does not output objects unless you use the Passth
 
 ## RELATED LINKS
 
-[Invoke-Command](http://go.microsoft.com/fwlink/p/?LinkID=135225)
+[Invoke-Command](https://go.microsoft.com/fwlink/p/?LinkID=135225)
 
 [Disconnect-VirtualDisk](./Disconnect-VirtualDisk.md)
 

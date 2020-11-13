@@ -36,7 +36,7 @@ The **Set-VpnConnectionProxy** cmdlet configures web proxy information for the s
 If errors occur when you modify the web proxy information, the error information is returned.
 
 >[!NOTE]
-> VPN proxy settings are only used on Force Tunnel Connections. On Split Tunnel Connections the general proxy settings are used.
+> VPN proxy settings are only used on Force Tunnel Connections. On Split Tunnel Connections, the general proxy settings are used.
 
 ## EXAMPLES
 

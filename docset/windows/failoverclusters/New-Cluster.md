@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -S2D
-
+Specifies whether to enable Storage Spaces Direct when creating the cluster.
 
 ```yaml
 Type: SwitchParameter

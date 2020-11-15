@@ -508,6 +508,9 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
+> [!NOTE]
+> The WhatIf switch doesn’t work if **ConnectionName** parameters set is used.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -521,7 +524,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

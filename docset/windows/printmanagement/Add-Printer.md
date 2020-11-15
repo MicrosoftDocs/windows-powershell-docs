@@ -63,17 +63,17 @@ You may need administrative credentials to run **Add-Printer**.
 ## EXAMPLES
 
 ### Example 1: Add a printer to a local computer
-```
+```powershell
 PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
 
 This command adds a printer with name mxdw2 to the local computer.
-The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the portprompt: port.
+The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the `portprompt:` port.
 
-The portprompt: port prompts for a file name to save the XPS document when printing to the XPS printer.
+The` portprompt:` port prompts for a file name to save the XPS document when printing to the XPS printer.
 
 ### Example 2: Add a new network printer connection
-```
+```powershell
 PS C:\> Add-Printer -ConnectionName \\printServer\printerName
 ```
 
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 
 ### -ShareName
 Specifies the name by which to share the printer on the network.
-To share a printer, specify the *Shared* parameter.
+To share a printer, specify the **Shared** parameter.
 
 ```yaml
 Type: String
@@ -442,8 +442,8 @@ Accept wildcard characters: False
 
 ### -Shared
 Indicates whether to share the printer on the network.
-You can determine the name by which the printer is shared by specifying *ShareName*.
-If *ShareName* is not specified, the name of the printer is used as the share name.
+You can determine the name by which the printer is shared by specifying **ShareName**.
+If **ShareName** is not specified, the name of the printer is used as the share name.
 
 ```yaml
 Type: SwitchParameter

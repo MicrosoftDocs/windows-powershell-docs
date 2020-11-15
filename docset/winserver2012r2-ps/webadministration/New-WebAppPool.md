@@ -29,16 +29,33 @@ New-WebAppPool [-Name] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool.
+The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool. For changing different properties of the application pool after creation check the following article - [PowerShell Snap-in: Making Configuration Changes to Websites and App Pools](https://docs.microsoft.com/iis/manage/powershell/powershell-snap-in-making-simple-configuration-changes-to-web-sites-and-application-pools).
 
 ## EXAMPLES
 
-### Example 1: Create new an IIS application pool
-```
-IIS:\>New-WebAppPool -Name "NewAppPool"
+### Example 1: Create an IIS application pool
+```powershell
+IIS:\> New-WebAppPool -Name "NewAppPool"
 ```
 
 This command creates an IIS application pool named NewAppPool.
+
+### Example 2: Create an IIS application pool and set autoStart
+```powershell
+IIS:\> $newAppPool = New-WebAppPool -Name "NewAppPool"
+IIS:\> $newAppPool.autoStart = "false"
+IIS:\> $newAppPool | Set-Item
+```
+
+This command creates an IIS application pool named NewAppPool and sets **autoStart** property to false.
+
+### Example 2: Create an IIS application pool and set managedRuntimeVersion
+```powershell
+IIS:\> New-WebAppPool -Name "NewAppPool"
+IIS:\> Set-ItemProperty -Path IIS:\AppPools\NewAppPool managedRuntimeVersion "v4.0"
+```
+
+This command creates an IIS application pool named NewAppPool and sets **managedRuntimeVersion** property to v4.0.
 
 ## PARAMETERS
 

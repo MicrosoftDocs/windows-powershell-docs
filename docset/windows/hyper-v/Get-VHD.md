@@ -46,6 +46,9 @@ Get-VHD [-VMId] <Guid[]> [-CimSession <CimSession[]>] [-ComputerName <String[]>]
 ## DESCRIPTION
 The **Get-VHD** cmdlet gets the virtual hard disk object associated with a virtual hard disk.
 
+> [!Note]
+> When the VHD is in use (e.g by a VM or mounted in OS) and it is on shared storage, the **Get-VHD** cmdlet can only access it from the host that is using it. All others will get and error that it is in use. 
+
 ## EXAMPLES
 
 ### Example 1

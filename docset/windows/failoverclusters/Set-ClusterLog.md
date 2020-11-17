@@ -48,13 +48,13 @@ This example sets the cluster log to a detail level of 1.
 
 ### Example 2
 ```
-PS C:\> Set-ClusterLog -Size 2048
+PS C:\> Set-ClusterLog -Size 1024
 Name 
 ---- 
 cluster1
 ```
 
-This example sets the cluster log size to 2048 MB.
+This example sets the cluster log size to 1024 MB.
 
 ## PARAMETERS
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Size
 Specifies the log size to set for the cluster.
-The acceptable values for this parameter are:`8` MB to `2048` MB.
+The acceptable values for this parameter are:`8` MB to `1024` MB.
 
 ```yaml
 Type: Int32

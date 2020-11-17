@@ -95,7 +95,7 @@ IUpdateServer
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Set-WsusClassification](./Set-WsusClassification.md)
 

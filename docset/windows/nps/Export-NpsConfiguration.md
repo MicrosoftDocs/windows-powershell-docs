@@ -33,7 +33,7 @@ Export-NpsConfiguration [-Path] <String> [<CommonParameters>]
 The **Export-NpsConfiguration** cmdlet exports settings for Network Policy Server (NPS).
 NPS manages network access policies, connection request authentication, and connection request authorization.
 You can use NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy to forward connection requests to NPS or other RADIUS servers that you configure in remote RADIUS server groups.
-For more information about NPS, see [Network Policy Server](http://technet.microsoft.com/en-us/library/cc732912.aspx) on TechNet.
+For more information about NPS, see [Network Policy Server](https://technet.microsoft.com/en-us/library/cc732912.aspx) on TechNet.
 
 The exported file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups.
 Because of this, make sure that you save the file to a secure location.
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

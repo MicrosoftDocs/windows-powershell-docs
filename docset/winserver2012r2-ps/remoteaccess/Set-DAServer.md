@@ -657,7 +657,7 @@ The output object contains the following properties:
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
 [Get-DAServer](./Get-DAServer.md)
 

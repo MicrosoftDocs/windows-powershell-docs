@@ -44,7 +44,7 @@ To make these decisions, the IP layer consults a routing table stored in memory.
 Routing table entries are created by default when TCP/IP initializes, and entries can be added either manually or automatically.
 When the computer is routing, the RouteMetric property is added to the InterfaceMetric property, described as a part of NetIPInterface.
 This total value is used to decide the pass-through interface to send the forwarded packets.
-For more information, see [IP Routing](http://technet.microsoft.com/library/bb727001.aspx) on TechNet.
+For more information, see [IP Routing](https://technet.microsoft.com/library/bb727001.aspx) on TechNet.
 
 Note: A gateway is a routing concept covered by the NetRoute cmdlets.
 For IP endpoints, the gateway specifies the forwarding or next hop IP address over which the set of addresses defined by the network destination and subnet mask are reachable.
@@ -344,7 +344,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [Get-NetRoute](./Get-NetRoute.md)
 
@@ -352,4 +352,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetRoute](./Set-NetRoute.md)
 
-[TimeSpan](http://msdn.microsoft.com/library/system.timespan.aspx)
+[TimeSpan](https://msdn.microsoft.com/library/system.timespan.aspx)

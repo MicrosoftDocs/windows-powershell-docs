@@ -206,7 +206,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Windows Assessment Services Technical Reference](http://go.microsoft.com/fwlink/?LinkId=215628)
+[Windows Assessment Services Technical Reference](https://go.microsoft.com/fwlink/?LinkId=215628)
 
 [Get-WASAssessment](./Get-WASAssessment.md)
 

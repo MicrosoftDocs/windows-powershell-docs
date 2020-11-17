@@ -33,7 +33,7 @@ Set-Culture [-CultureInfo] <CultureInfo> [<CommonParameters>]
 The **Set-Culture** cmdlet sets a specific culture for the current user account.
 A culture is known as a locale for unmanaged code development.
 The information includes the names for the culture, the writing system, the calendar, and formatting for dates and sort strings.
-For more information, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307).
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](https://go.microsoft.com/fwlink/?LinkID=242307).
 
 ## EXAMPLES
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -72,5 +72,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[GetCulture Class](http://go.microsoft.com/fwlink/?LinkID=243343)
+[GetCulture Class](https://go.microsoft.com/fwlink/?LinkID=243343)
 

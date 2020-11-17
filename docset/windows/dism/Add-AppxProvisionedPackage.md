@@ -352,7 +352,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppxPackage](http://go.microsoft.com/fwlink/?LinkId=215769)
+[Add-AppxPackage](https://go.microsoft.com/fwlink/?LinkId=215769)
 
 [Get-AppxProvisionedPackage](./Get-AppxProvisionedPackage.md)
 

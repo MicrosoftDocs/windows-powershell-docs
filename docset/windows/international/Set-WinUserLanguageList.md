@@ -34,7 +34,7 @@ Set-WinUserLanguageList
 ## DESCRIPTION
 The **Set-WinUserLanguageList** cmdlet sets the current user language settings.
 These settings include input method, spelling setting, text prediction setting, and handwriting input mode.
-For more information, see [CultureInfo Class](http://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](http://go.microsoft.com/fwlink/?LinkID=242307).
+For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?LinkID=242306) and [Configurable Language and Cultural Settings](https://go.microsoft.com/fwlink/?LinkID=242307).
 
 ## EXAMPLES
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -143,7 +143,7 @@ The language object contains the following properties:
 
 - **BCP-47** (READ).
 A standard language tag that is used to identify languages.
-For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](http://go.microsoft.com/fwlink/?LinkID=242207). 
+For more information, see the [Internet Engineering Task Force (IETF) BCP 47 RFC](https://go.microsoft.com/fwlink/?LinkID=242207). 
 - **Autonym** (LP database) (READ).
 The name of the language in the language itself. 
 - **English name** (LP database) (READ).

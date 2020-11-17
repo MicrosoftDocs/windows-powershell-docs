@@ -298,9 +298,9 @@ This cmdlet returns an object that represents the initiator port you specified.
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/?LinkID=113303)
+[Format-Table](https://go.microsoft.com/fwlink/?LinkID=113303)
 
-[Select-Object](http://go.microsoft.com/fwlink/?LinkID=113387)
+[Select-Object](https://go.microsoft.com/fwlink/?LinkID=113387)
 
 [Set-InitiatorPort](./Set-InitiatorPort.md)
 

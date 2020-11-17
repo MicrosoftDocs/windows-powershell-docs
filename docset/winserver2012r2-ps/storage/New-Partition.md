@@ -379,7 +379,7 @@ This cmdlet outputs an object that represents the newly created partition.
 
 ## RELATED LINKS
 
-[Select-Object](http://go.microsoft.com/fwlink/p/?LinkId=113387)
+[Select-Object](https://go.microsoft.com/fwlink/p/?LinkId=113387)
 
 [Add-PartitionAccessPath](./Add-PartitionAccessPath.md)
 

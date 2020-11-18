@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualHardDiskPath
-Specifies the default folder to store virtual hard disks on the Hyper-V host. This is not a functional setting. The Hyper-V Manager snap-in and Windows Admin Center query it to offer you a default path, but the Hyper-V API (e.g. `CreateFixedVirtualHardDisk`) and `New-VHD` don't use it.
+Specifies the default folder to store virtual hard disks on the Hyper-V host. This is not a functional setting. The Hyper-V Manager snap-in and Windows Admin Center query it to offer you a default path, but the Hyper-V API (for example `CreateFixedVirtualHardDisk`) and `New-VHD` don't use it.
 
 ```yaml
 Type: String
@@ -474,4 +474,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

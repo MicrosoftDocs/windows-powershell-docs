@@ -3,8 +3,8 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 3A5CD3F6-C210-46C3-A46B-3B9BA113AF08
 manager: dansimp
 ---
@@ -230,5 +230,5 @@ The Get-StorageJob cmdlet returns objects that represent storage jobs.
 
 ## RELATED LINKS
 
-[Receive-Job](http://go.microsoft.com/fwlink/p/?LinkID=113372)
+[Receive-Job](https://go.microsoft.com/fwlink/p/?LinkID=113372)
 

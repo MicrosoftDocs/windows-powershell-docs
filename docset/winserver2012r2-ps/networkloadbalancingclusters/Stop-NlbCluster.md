@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Stop-NlbCluster
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4ACF3C94-5AA5-45A5-9E0F-A57EDA1AA5E7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

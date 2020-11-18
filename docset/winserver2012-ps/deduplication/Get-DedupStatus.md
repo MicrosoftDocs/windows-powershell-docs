@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0812DC6A-E2CF-4DDD-AC58-E698CE4D8FE5
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DedupStatus

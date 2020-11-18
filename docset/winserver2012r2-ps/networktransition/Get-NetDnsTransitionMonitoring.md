@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NetDnsTransitionMonitoring
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 06FD4F67-5A4E-4A73-847E-909482BC5539
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

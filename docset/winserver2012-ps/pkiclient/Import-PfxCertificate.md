@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Import-PfxCertificate
@@ -173,11 +173,11 @@ The imported X509Certificate2 object contained in the PFX file that is associate
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkID=113291)
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkID=113397)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkID=113397)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

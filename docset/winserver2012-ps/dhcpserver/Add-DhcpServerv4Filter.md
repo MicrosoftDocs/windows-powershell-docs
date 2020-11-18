@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B023D801-3097-4377-9234-8E8B71C3706B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Filter
@@ -253,7 +253,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Import-Csv](http://go.microsoft.com/fwlink/p/?LinkID=113341)
+[Import-Csv](https://go.microsoft.com/fwlink/p/?LinkID=113341)
 
 [Get-DhcpServerv4Filter](./Get-DhcpServerv4Filter.md)
 

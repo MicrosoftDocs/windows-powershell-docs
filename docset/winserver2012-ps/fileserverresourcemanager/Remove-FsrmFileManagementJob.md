@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 9F17AAB6-E761-4F8F-8137-53D8285DA651
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-FsrmFileManagementJob

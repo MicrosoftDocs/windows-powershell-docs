@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -62,7 +62,7 @@ Test-ADDSDomainControllerInstallation -DomainName <String> [-SafeModeAdministrat
 The **Test-ADDSDomainControllerInstallation** cmdlet runs those prerequisite checks (only) which would be performed if you were to use the **Install-ADDSDomainController** cmdlet to install a domain controller in Active Directory.
 It differs from using the *WhatIf* parameter with the **Install-ADDSDomainController** cmdlet in that instead of summarizing the changes that would occur during the installation process, this cmdlet actually tests whether those changes are possible given the current environment.
 
-For more information on the scope of these prerequisite checks that the ADDSDeployment module performs when using this cmdlet see the section ADPrep and Prerequisite Checking Architecture in [AD DS Simplified Administration](http://go.microsoft.com/fwlink/?LinkID=237244).
+For more information on the scope of these prerequisite checks that the ADDSDeployment module performs when using this cmdlet see the section ADPrep and Prerequisite Checking Architecture in [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 
 ## EXAMPLES
 
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -590,7 +590,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Understand and Troubleshoot AD DS Simplified Administration](http://go.microsoft.com/fwlink/?LinkID=237244)
+[Understand and Troubleshoot AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244)
 
 [Install-ADDSDomainController](./Install-ADDSDomainController.md)
 
@@ -600,7 +600,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Test-ADDSForestInstallation](./Test-ADDSForestInstallation.md)
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkId=113291)
 

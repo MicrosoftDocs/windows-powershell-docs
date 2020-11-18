@@ -3,8 +3,8 @@ external help file: ClusterAware_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: F20C0ACB-0F7B-410E-9713-D939F41C7D29
 manager: dansimp
 ---
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Register-CauPlugin](./Register-CauPlugin.md)
 

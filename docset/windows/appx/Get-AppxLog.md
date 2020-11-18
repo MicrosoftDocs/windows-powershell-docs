@@ -1,18 +1,18 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: Appx
 ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -43,7 +43,7 @@ The log contains errors, warnings, and additional information about the processe
 
 When Add-AppxPackage or Remove-AppxPackage report a failure, they return the **ActivityID** to use with **Get-AppxLog**.
 
-For more information about common error codes, see [Troubleshooting packaging, deployment, and query of Windows Store apps](http://go.microsoft.com/fwlink/?LinkId=271201).
+For more information about common error codes, see [Troubleshooting packaging, deployment, and query of Windows Store apps](https://go.microsoft.com/fwlink/?LinkId=271201).
 
 ## EXAMPLES
 
@@ -110,11 +110,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+[Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
+[How to Add and Remove Apps](https://go.microsoft.com/fwlink/?LinkID=231020)
 
-[Troubleshooting packaging, deployment, and query of Windows Store apps](http://go.microsoft.com/fwlink/?LinkId=271201)
+[Troubleshooting packaging, deployment, and query of Windows Store apps](https://go.microsoft.com/fwlink/?LinkId=271201)
 
 [Get-AppxPackage](./Get-AppxPackage.md)
 

@@ -6,15 +6,15 @@ schema: 2.0.0
 title: Hide-WmsIdentifier
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 26F90975-4C32-4077-A88F-7754CEF8AC82
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Hide-WmsIdentifier

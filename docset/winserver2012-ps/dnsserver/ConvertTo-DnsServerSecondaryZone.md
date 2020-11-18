@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 9EB56481-7D34-4087-811D-7C6BC30499DA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # ConvertTo-DnsServerSecondaryZone

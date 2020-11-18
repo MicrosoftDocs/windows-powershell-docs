@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 6DA4139A-9D29-4913-8658-8640EE0F22B7
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerDiagnostics

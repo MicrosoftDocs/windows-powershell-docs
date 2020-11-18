@@ -3,8 +3,8 @@ external help file: IpamServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 2F4086C5-54C3-4AC2-B5EA-BF2F6108301A
 manager: dansimp
 ---
@@ -178,9 +178,9 @@ This array of objects contains IPAM IP addresses.
 
 ## RELATED LINKS
 
-[Export-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113299)
+[Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Import-IpamAddress](./Import-IpamAddress.md)
 

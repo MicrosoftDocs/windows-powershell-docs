@@ -3,8 +3,8 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 6DC5AA3F-2D0A-4F9C-BCE0-B3F53F77A1C0
 manager: dansimp
 ---
@@ -161,5 +161,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 

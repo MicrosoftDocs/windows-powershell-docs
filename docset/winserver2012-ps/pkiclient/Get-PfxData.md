@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-PfxData
@@ -100,7 +100,7 @@ A PFXData object.
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

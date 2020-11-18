@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceURL
-Specifies a URL for directed discovery of Web Services on Devices (WSD) printer to add to the specified computer.
+Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computer.
 
 ```yaml
 Type: String
@@ -508,7 +508,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 > [!NOTE]
-> The WhatIf switch doesn’t work if **ConnectionName** parameters set is used.
+> The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
 
 ```yaml
 Type: SwitchParameter

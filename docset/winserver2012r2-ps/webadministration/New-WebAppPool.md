@@ -49,7 +49,7 @@ IIS:\> $newAppPool | Set-Item
 
 This command creates an IIS application pool named NewAppPool and sets **autoStart** property to false.
 
-### Example 2: Create an IIS application pool and set managedRuntimeVersion
+### Example 3: Create an IIS application pool and set managedRuntimeVersion
 ```powershell
 IIS:\> New-WebAppPool -Name "NewAppPool"
 IIS:\> Set-ItemProperty -Path IIS:\AppPools\NewAppPool managedRuntimeVersion "v4.0"
@@ -107,4 +107,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Start-WebAppPool](./Start-WebAppPool.md)
 
 [Stop-WebAppPool](./Stop-WebAppPool.md)
-

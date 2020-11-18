@@ -51,31 +51,33 @@ Note: This cmdlet does not support creating dynamic volumes.
 ## EXAMPLES
 
 ### Example 1: Create a new partition on disk 1
-```
-PS C:\> New-Partiton -DiskNumber 1 -UseMaximumSize -AssignDriveLetter
+```powershell
+PS C:\> New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter T
 ```
 
-This example creates a new partition on disk 1, using the maximum available space, and automatically assigning a drive letter.
+This example creates a new partition on disk 1, using the maximum available space, and assign a drive letter T.
 
 ### Example 2: Get all RAW disks, initialize the disks, partition, and format them
-```
-This line gets all disk objects and then pipes the objects to the next command.
-PS C:\>Get-Disk |
-
-This line selects only objects where the PartitionStyle property value equals "RAW", and then pipes the objects to the next command.
-PS C:\>Where-Object PartitionStyle -Eq "RAW" |
-
-This line initializes all Disk objects in the pipeline and then pipes the objects to the next cmdlet.
-PS C:\>Initialize-Disk -PassThru |
-
-This line creates a maximum sized partition on each initialized Disk object, assigns a drive letter to the partitions, and then pipes the objects to the next cmdlet.
-PS C:\>New-Partition -AssignDriveLetter -UseMaximumSize |
-
-This line formats all newly partitioned disks.
-PS C:\>Format-Volume
+```powershell
+PS C:\> Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
 ```
 
 This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then format them.
+
+### Example 3: Create a new EFI partition on on GTP disk 2
+```powershell
+PS C:\> New-Partition -DiskNumber 2 -Size 500MB -GptType "{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"
+```
+
+This example creates a new EFI partition on disk 2 with size 500MB.
+
+
+### Example 4: Create a Windows/system partition on MBR disk 0
+```powershell
+PS C:\> New-Partition -DiskNumber 0 -Size 100GB -MbrType IFS -IsActive
+```
+
+This example creates a new Windows/system partition on MBR disk 0 with size 100GB.
 
 ## PARAMETERS
 

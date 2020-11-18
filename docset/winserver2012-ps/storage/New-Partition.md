@@ -16,28 +16,28 @@ Creates a new partition on an existing Disk object.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### ByNumber  (Default)
 ```
 New-Partition [-DiskNumber] <UInt32[]> [-Alignment <UInt32>] [-AsJob] [-AssignDriveLetter]
  [-CimSession <CimSession[]>] [-DriveLetter <Char>] [-GptType <String>] [-IsActive] [-IsHidden]
  [-MbrType <MbrType>] [-Offset <UInt64>] [-Size <UInt64>] [-ThrottleLimit <Int32>] [-UseMaximumSize]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### ByPath
 ```
 New-Partition [-Alignment <UInt32>] [-AsJob] [-AssignDriveLetter] [-CimSession <CimSession[]>]
  [-DriveLetter <Char>] [-GptType <String>] [-IsActive] [-IsHidden] [-MbrType <MbrType>] [-Offset <UInt64>]
  [-Size <UInt64>] [-ThrottleLimit <Int32>] [-UseMaximumSize] -DiskPath <String[]>
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### ByUniqueId
 ```
 New-Partition [-Alignment <UInt32>] [-AsJob] [-AssignDriveLetter] [-CimSession <CimSession[]>]
  [-DriveLetter <Char>] [-GptType <String>] [-IsActive] [-IsHidden] [-MbrType <MbrType>] [-Offset <UInt64>]
  [-Size <UInt64>] [-ThrottleLimit <Int32>] [-UseMaximumSize] -DiskId <String[]>
 ```
 
-### UNNAMED_PARAMETER_SET_4
+### InputObject (cdxml)
 ```
 New-Partition [-Alignment <UInt32>] [-AsJob] [-AssignDriveLetter] [-CimSession <CimSession[]>]
  [-DriveLetter <Char>] [-GptType <String>] [-IsActive] [-IsHidden] [-MbrType <MbrType>] [-Offset <UInt64>]
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -148,7 +148,7 @@ Specifies the ID of the disk on which to create the partition.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: ByUniqueId
 Aliases: Id
 
 Required: True
@@ -163,7 +163,7 @@ Specifies the number of the disk.
 
 ```yaml
 Type: UInt32[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: ByNumber
 Aliases: 
 
 Required: True
@@ -178,7 +178,7 @@ Specifies the path of the disk on which to create the partition.
 
 ```yaml
 Type: String[]
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: ByPath
 Aliases: 
 
 Required: True
@@ -205,26 +205,26 @@ Accept wildcard characters: False
 
 ### -GptType
 Specifies the type of GPT partition to create (by GUID).
+The format should be 32 digits separated by hyphens, enclosed in braces and quoted:
+
+`"{00000000-0000-0000-0000-000000000000}"`
+
 By default, the **New-Partition** cmdlet creates a basic GPT data partition.
 
-The GUIDs of valid types are: 
-                         
- -- System Partition (c12a7328-f81f-11d2-ba4b-00a0c93ec93b) 
-                         
- -- Microsoft Reserved (e3c9e316-0b5c-4db8-817d-f92df00215ae)
-                         
- -- Basic data (ebd0a0a2-b9e5-4433-87c0-68b6b72699c7) 
-                         
- -- Microsoft Recovery (de94bba4-06d1-4d40-a16a-bfd50179d6ac)
+The GUIDs of valid types are:
+- System Partition    - `"{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"`
+- Microsoft Reserved  - `"{e3c9e316-0b5c-4db8-817d-f92df00215ae}"`
+- Basic data          - `"{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}"`
+- Microsoft Recovery  - `"{de94bba4-06d1-4d40-a16a-bfd50179d6ac}"`
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: "{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}"
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -235,7 +235,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: UNNAMED_PARAMETER_SET_4
+Parameter Sets: InputObject (cdxml)
 Aliases: 
 
 Required: True
@@ -246,7 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsActive
-Specifies that the object is marked active.
+Marks the partition as active:
+- On a BIOS-based system, the active partition is the partition the system will boot to. This partition must be a primary partition.
+- On a Unified Extensible Firmware Interface (UEFI)-based system, this setting is not used. The system will always boot to the EFI System Partition (ESP). If Active is set for this partition type, it is ignored.
 
 ```yaml
 Type: SwitchParameter
@@ -277,16 +279,16 @@ Accept wildcard characters: False
 
 ### -MbrType
 Specifies the type of MBR partition to create.
-Valid types are: Extended, FAT12, FAT16, FAT32, Huge, and IFS.
 
 ```yaml
 Type: MbrType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+Accepted values: FAT12, FAT16, Extended, Huge, IFS, FAT32
 
 Required: False
 Position: Named
-Default value: None
+Default value: Huge
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -366,6 +368,9 @@ You can pipe a Disk object to the **InputObject** parameter.
 This cmdlet outputs an object that represents the newly created partition.
 
 ## NOTES
+
+* You can use either -AssignDriveLetter parameter or -DriveLetter parameter, but not both at the same time, while creating a new partition.
+* When used in Failover Cluster, cmdlets from the Storage module operate on cluster level (all servers in the cluster).
 
 ## RELATED LINKS
 

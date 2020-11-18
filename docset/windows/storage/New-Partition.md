@@ -214,19 +214,17 @@ Accept wildcard characters: False
 
 ### -GptType
 Specifies the type of GPT partition to create (by GUID).
-The format should be 32 digits separated by hyphens, enclosed in braces:
-{00000000-0000-0000-0000-000000000000}
+The format should be 32 digits separated by hyphens, enclosed in braces and quoted:
+
+`"{00000000-0000-0000-0000-000000000000}"`
+
 By default, the **New-Partition** cmdlet creates a basic GPT data partition.
 
 The GUIDs of valid types are:
-
- -- System Partition {c12a7328-f81f-11d2-ba4b-00a0c93ec93b}
-
- -- Microsoft Reserved {e3c9e316-0b5c-4db8-817d-f92df00215ae}
-
- -- Basic data {ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}
-
- -- Microsoft Recovery {de94bba4-06d1-4d40-a16a-bfd50179d6ac}
+- System Partition    - `"{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"`
+- Microsoft Reserved  - `"{e3c9e316-0b5c-4db8-817d-f92df00215ae}"`
+- Basic data          - `"{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}"`
+- Microsoft Recovery  - `"{de94bba4-06d1-4d40-a16a-bfd50179d6ac}"`
 
 ```yaml
 Type: String
@@ -235,7 +233,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: "{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}"
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -256,7 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsActive
-Specifies that the object is marked active.
+Marks the partition as active:
+- On a BIOS-based system, the active partition is the partition the system will boot to. This partition must be a primary partition.
+- On a Unified Extensible Firmware Interface (UEFI)-based system, this setting is not used. The system will always boot to the EFI System Partition (ESP). If Active is set for this partition type, it is ignored.
 
 ```yaml
 Type: SwitchParameter
@@ -287,7 +287,6 @@ Accept wildcard characters: False
 
 ### -MbrType
 Specifies the type of MBR partition to create.
-Valid types are: Extended, FAT12, FAT16, FAT32, Huge, and IFS.
 
 ```yaml
 Type: MbrType
@@ -297,7 +296,7 @@ Accepted values: FAT12, FAT16, Extended, Huge, IFS, FAT32
 
 Required: False
 Position: Named
-Default value: None
+Default value: Huge
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -367,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -428,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachinePath
-Specifies the default folder to store virtual machine configuration files on the Hyper-V host. This is a functional setting, meaning that if you do not supply a path to VM creations tools (e.g. `New-VM`), Hyper-V will use this path. Hyper-V will create at least one subfolder in this path, called "Virtual Machines".
+Specifies the default folder to store virtual machine configuration files on the Hyper-V host. This is a functional setting, meaning that if you do not supply a path to VM creation tools (for example `New-VM`), Hyper-V will use this path. Hyper-V will create at least one subfolder in this path, called "Virtual Machines".
 
 ```yaml
 Type: String

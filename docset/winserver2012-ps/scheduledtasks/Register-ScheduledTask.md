@@ -50,7 +50,7 @@ The **Register-ScheduledTask** cmdlet registers a scheduled task definition on a
 
 You can register a task to run executable files (`.exe` and `.com`), batch files (`.bat` and `.cmd`),
 or any registered file type. However, this cmdlet does not check whether the file you intend it to
-run is compatible with your version, edition or platform specialization of Windows.
+run is compatible with your version, edition, or platform specialization of Windows.
 
 ## EXAMPLES
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 4C3E1376-B8DE-4B3E-87F3-E351F369E314
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterCheckpoint

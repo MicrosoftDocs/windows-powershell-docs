@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 95D63DB2-6825-4F68-AA05-0AAD56EAA1CE
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv6Lease

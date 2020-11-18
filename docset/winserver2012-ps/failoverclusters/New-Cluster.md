@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2D6C52EB-6D5F-4FC2-9E78-F013E004CEE9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-Cluster

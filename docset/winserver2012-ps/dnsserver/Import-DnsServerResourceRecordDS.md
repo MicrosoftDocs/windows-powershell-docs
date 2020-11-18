@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3D689937-229D-421D-9377-B5DE300396A8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Import-DnsServerResourceRecordDS

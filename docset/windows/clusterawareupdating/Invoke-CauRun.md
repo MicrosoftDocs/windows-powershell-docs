@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ClusterAwareUpdating.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -111,7 +111,7 @@ For a name, use **QueryString** and for a value, enclose the full query in quota
 If not specified, then the **Microsoft.WindowsUpdatePlugin** plug-in by default uses the following argument: 
 - `QueryString="IsInstalled=0 and Type='Software' and IsHidden=0 and IsAssigned=1"`
 
-For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see [IUpdateSearcher::Search method](http://go.microsoft.com/fwlink/p/?LinkId=223304).
+For more information about query strings for the default **Microsoft.WindowsUpdatePlugin** plug-in and the criteria such as IsInstalled that can be included in the query strings, see [IUpdateSearcher::Search method](https://go.microsoft.com/fwlink/p/?LinkId=223304).
 For the **Microsoft.HotfixPlugin** plug-in, the following argument is required: 
 - **HotfixRootFolderPath**: The UNC path to a hotfix root folder in an SMB share with a structure that contains the updates to apply and that contains the hotfix configuration file.
 
@@ -126,7 +126,7 @@ If not specified, the default value is 30 minutes.
 - **HotfixConfigFileName=\<name\>**: Name for the hotfix configuration file.
 If not specified, the default name DefaultHotfixConfig.xml is used.
 
-For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see [How CAU Plug-ins Work](http://go.microsoft.com/fwlink/p/?LinkId=235333).
+For more information about required and optional arguments for the **Microsoft.HotfixPlugin** plug-in, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
 
 ```yaml
 Type: Hashtable[]
@@ -145,7 +145,7 @@ Specifies one or more plug-ins to use when performing updates.
 You can specify multiple values separated with commas.
 The default is the **Microsoft.WindowsUpdatePlugin** plug-in.
 This plug-in coordinates the Windows Update Agent software resident on each cluster node, the same software that is used when updates are downloaded from Windows Update or Microsoft Update, or from a Windows Server Update Services (WSUS) server.
-For more information about how plug-ins work with CAU, see [How CAU Plug-ins Work](http://go.microsoft.com/fwlink/p/?LinkId=235333).
+For more information about how plug-ins work with CAU, see [How CAU Plug-ins Work](https://go.microsoft.com/fwlink/p/?LinkId=235333).
 
 ```yaml
 Type: String[]
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Import-PfxCertificate
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 22EF79AB-E28C-454F-B539-BD3A69CFB58D
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -181,11 +181,11 @@ The imported X509Certificate2 object contained in the PFX file that is associate
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=293933)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkID=293933)
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkID=293912)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

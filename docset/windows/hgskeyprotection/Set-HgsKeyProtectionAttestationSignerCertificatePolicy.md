@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
 ms.assetid: EBEF3085-017F-4094-A007-CDBCA600DCD7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -63,7 +63,7 @@ The second command modifies the date for a specific trusted attestation signer c
 ### -DenyHealthCertificatesIssuedBefore
 Specifies a date as a **DateTime** object.
 The Key Protection Service rejects any health certificates signed by the specified attestation signer certificate and issued before this time.
-To obtain a **DateTime** object, use the [Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
+To obtain a **DateTime** object, use the [Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966) cmdlet.
 For more information, type `Get-Help Get-Date`.
 
 ```yaml

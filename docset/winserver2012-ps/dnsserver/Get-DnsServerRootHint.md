@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 556C0842-0115-4183-AF00-9420A1AB2B8F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerRootHint

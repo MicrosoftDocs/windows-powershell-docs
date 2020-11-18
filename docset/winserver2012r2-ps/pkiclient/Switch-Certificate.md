@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Switch-Certificate
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: FEC58154-D4DF-4F65-9FF5-D26ADE2AA7B7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -157,9 +157,9 @@ The Certificate object can either be provided as a Path object to a certificate 
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkID=293912)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkID=293912)
 
 [Get-CertificateNotificationTask](./Get-CertificateNotificationTask.md)
 

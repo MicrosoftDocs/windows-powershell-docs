@@ -3,8 +3,8 @@ external help file: SMISConfig_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: BA892703-88F4-45C9-AFD3-29B2E3389742
 manager: dansimp
 ---

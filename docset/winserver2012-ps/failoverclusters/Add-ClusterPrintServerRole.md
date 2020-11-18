@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 39EF243A-1846-4D63-80AF-75A188145B50
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterPrintServerRole

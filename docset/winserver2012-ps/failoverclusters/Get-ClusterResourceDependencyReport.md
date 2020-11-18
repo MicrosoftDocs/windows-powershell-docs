@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CAD88AE9-A1B9-431E-9284-A10598C3AAF5
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterResourceDependencyReport
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Copy-Item](http://go.microsoft.com/fwlink/?LinkID=113292)
+[Copy-Item](https://go.microsoft.com/fwlink/?LinkID=113292)
 
 [Add-ClusterResourceDependency](./Add-ClusterResourceDependency.md)
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D232F81C-D5F8-48B3-9F16-F6FA321C874E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerZoneDelegation

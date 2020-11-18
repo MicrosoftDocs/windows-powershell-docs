@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: C04BC137-7A78-4CA8-8CB5-C9118046BB02
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DhcpServerv4DnsSetting

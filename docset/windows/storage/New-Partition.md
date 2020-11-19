@@ -78,7 +78,7 @@ This example uses five cmdlets and the pipeline to get all disks, filter them fo
 PS C:\> New-Partition -DiskNumber 2 -Size 500MB -GptType "{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"
 ```
 
-This example creates a new EFI partition on disk 2 with size 500 MB.
+This example creates a new EFI partition on disk 2 with a size of 500 MB.
 
 
 ### Example 4: Create a Windows/system partition on MBR disk 0

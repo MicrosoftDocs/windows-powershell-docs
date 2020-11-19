@@ -55,21 +55,21 @@ Note: This cmdlet does not support creating dynamic volumes.
 PS C:\> New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter T
 ```
 
-This example creates a new partition on disk 1, using the maximum available space, and assign a drive letter T.
+This example creates a new partition on disk 1 using the maximum available space and assigns a drive letter T.
 
 ### Example 2: Get all RAW disks, initialize the disks, partition, and format them
 ```powershell
 PS C:\> Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
 ```
 
-This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then format them.
+This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then to format them.
 
-### Example 3: Create a new EFI partition on on GTP disk 2
+### Example 3: Create a new EFI partition on GTP disk 2
 ```powershell
 PS C:\> New-Partition -DiskNumber 2 -Size 500MB -GptType "{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"
 ```
 
-This example creates a new EFI partition on disk 2 with size 500MB.
+This example creates a new EFI partition on disk 2 with a size of 500 MB.
 
 
 ### Example 4: Create a Windows/system partition on MBR disk 0
@@ -77,7 +77,7 @@ This example creates a new EFI partition on disk 2 with size 500MB.
 PS C:\> New-Partition -DiskNumber 0 -Size 100GB -MbrType IFS -IsActive
 ```
 
-This example creates a new Windows/system partition on MBR disk 0 with size 100GB.
+This example creates a new Windows/system partition on MBR disk 0 with a size of 100 GB.
 
 ## PARAMETERS
 
@@ -385,4 +385,3 @@ This cmdlet outputs an object that represents the newly created partition.
 [Initialize-Disk](./Initialize-Disk.md)
 
 [Format-Volume](./Format-Volume.md)
-

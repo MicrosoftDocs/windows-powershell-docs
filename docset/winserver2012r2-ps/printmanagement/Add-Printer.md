@@ -507,9 +507,6 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
-> [!NOTE]
-> The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -535,6 +532,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## NOTES
 
+- The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
 ## RELATED LINKS
 
 [Get-Printer](./Get-Printer.md)

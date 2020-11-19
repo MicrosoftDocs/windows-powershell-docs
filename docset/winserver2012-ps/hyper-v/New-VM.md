@@ -70,7 +70,7 @@ This example asks for credentials, then creates a virtual machine named new 4, w
 ### Example 5
 
 ```powershell
-New-VM -Name "new 5" -Generation 1 -BootDevice CD -NoVHD
+New-VM -Name "new 5" -BootDevice CD -NoVHD
 ```
 
 This example creates a virtual machine named new 5. The machine doesn't have any VHD disk and is set to boot from CD. 
@@ -81,10 +81,10 @@ This example creates a virtual machine named new 5. The machine doesn't have any
 $oldVM = Get-VM "old 1"
 $memory = (Get-VMMemory -VMName $oldVM.name).Startup
 $switch = (Get-VMNetworkAdapter -VMName $oldVM.name).SwitchName
-New-VM -Name "new 6" -Generation $oldVM.Generation -MemoryStartupBytes $memory -SwitchName $switch
+New-VM -Name "new 6" -MemoryStartupBytes $memory -SwitchName $switch
 ```
 
-This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
+This example creates a virtual machine named new 6. The machine has the same amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
 
 ## PARAMETERS
 

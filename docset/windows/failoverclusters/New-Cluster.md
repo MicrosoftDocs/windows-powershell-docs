@@ -39,9 +39,6 @@ Use Test-Cluster to run the validation tests.
 The tests will confirm that the hardware and settings are compatible with failover clustering.
 There are multiple types of tests, including Inventory, System Configuration, Network, Storage, and other types of tests.
 
-> [!Note]
-> This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
-
 ## EXAMPLES
 
 ### Example 1
@@ -273,6 +270,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## NOTES
 
+- This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
 ## RELATED LINKS
 
 [Add-ClusterNode](./Add-ClusterNode.md)

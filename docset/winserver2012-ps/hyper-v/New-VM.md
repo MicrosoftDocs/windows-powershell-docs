@@ -57,6 +57,8 @@ This example creates a virtual machine named new 2 that has 1 GB of memory and t
 PS C:\>New-VM -Name "new 3" -MemoryStartupBytes 1GB -VHDPath d:\vhd\BaseImage.vhdx
 ```
 
+This example creates a virtual machine named new 3 that has 1 GB of memory and connects it to an existing virtual hard disk that uses the VHDX format.
+
 ### Example 4
 
 ```powershell
@@ -83,8 +85,6 @@ New-VM -Name "new 6" -Generation $oldVM.Generation -MemoryStartupBytes $memory -
 ```
 
 This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
-
-This example creates a virtual machine named new 3 that has 1 GB of memory and connects it to an existing virtual hard disk that uses the VHDX format.
 
 ## PARAMETERS
 

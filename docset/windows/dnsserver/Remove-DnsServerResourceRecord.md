@@ -82,6 +82,8 @@ PS C:\> Remove-DnsServerResourceRecord -ZoneName "contoso.com" -RRType "A" -Name
 
 This command removes the A resource record from a zone named contoso.com that has the name Host01 and the IP address 10.17.1.41.
 
+If you are running this command as a domain admin with delegated permissions, "-RecordData" parameter is required. 
+
 ### Example 4: Remove multiple SRV records
 ```
 PS C:\> Remove-DnsServerResourceRecord -RRType SRV -Name "_misc._tcp" -ZoneName "_msdcs.contoso.com" -RecordData "0","10","1234","1.1.1.1."

@@ -752,6 +752,8 @@ The acceptable values for this parameter are: integers from 5 through 100, and t
 Windows Defender does not exceed the percentage of CPU usage that you specify.
 The default value is 50.
 
+Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
+
 ```yaml
 Type: Byte
 Parameter Sets: (All)

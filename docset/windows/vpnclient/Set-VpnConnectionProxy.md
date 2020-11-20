@@ -36,7 +36,7 @@ The **Set-VpnConnectionProxy** cmdlet configures web proxy information for the s
 If errors occur when you modify the web proxy information, the error information is returned.
 
 >[!NOTE]
-> VPN proxy settings are only used on Force Tunnel Connections. On Split Tunnel Connections, the general proxy settings are used.
+Note that VPN proxy settings are only used on forced tunnel connections. On split tunnel connections, the general proxy settings are used.
 
 ## EXAMPLES
 
@@ -259,4 +259,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-VpnConnection](./Get-VpnConnection.md)
-

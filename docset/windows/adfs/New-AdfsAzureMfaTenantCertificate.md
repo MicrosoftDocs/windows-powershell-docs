@@ -32,7 +32,7 @@ New-AdfsAzureMfaTenantCertificate -TenantId <String> [-Renew <Boolean>] [-WhatIf
 ```
 
 ## DESCRIPTION
-The **New-AdfsAzureMfaTenantCertificate** cmdlet creates a certificate for an Active Directory Federation Services (AD FS) farm to use to connect to Azure Multi-Factor Authentication (MFA), or returns the currently configured certificate.
+The **New-AdfsAzureMfaTenantCertificate** cmdlet creates a certificate for an Active Directory Federation Services (AD FS) farm to use to connect to Azure AD Multi-Factor Authentication (MFA), or returns the currently configured certificate.
 
 The cmdlet looks in the local machine My store for a certificate with Issuer and Subject equal to: 
 

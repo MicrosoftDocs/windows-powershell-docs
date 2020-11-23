@@ -31,7 +31,7 @@ Get-AdfsAzureMfaConfigured [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AdfsAzureMfaConfigured** cmdlet returns $True if Azure Multi-Factor Authentication (MFA) is enabled on an Active Directory Federation Services (AD FS) farm.
+The **Get-AdfsAzureMfaConfigured** cmdlet returns $True if Azure AD Multi-Factor Authentication (MFA) is enabled on an Active Directory Federation Services (AD FS) farm.
 
 ## EXAMPLES
 

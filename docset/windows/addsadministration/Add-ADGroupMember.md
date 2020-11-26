@@ -26,8 +26,8 @@ Adds one or more members to an Active Directory group.
 ## SYNTAX
 
 ```
-Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>]
+Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>][-Identity] <ADGroup>
+ [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>]
  [-PassThru] [-Server <String>] [-DisablePermissiveModify] [<CommonParameters>]
 ```
 

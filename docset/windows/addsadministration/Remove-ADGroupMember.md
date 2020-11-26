@@ -26,8 +26,8 @@ Removes one or more members from an Active Directory group.
 ## SYNTAX
 
 ```
-Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>] [-DisablePermissiveModify]
+Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADGroup>
+ [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>] [-DisablePermissiveModify]
  [<CommonParameters>]
 ```
 

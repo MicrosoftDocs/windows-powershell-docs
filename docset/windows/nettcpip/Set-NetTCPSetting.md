@@ -58,7 +58,7 @@ The **Set-NetTCPSetting** cmdlet modifies a TCP setting.
 TCP settings are optimized for different network conditions including latency and congestion.
 To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
 
-> [!NOTE] 
+**Note:**
 >1) You can modify custom and non-custom settings on Windows server 2016 and 2019.
 >2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
 >3) On client operating systems (Windows 7, 8.1, and 10), only AutoReusePortRangeStartPort and AutoReusePortRangeNumberOfPorts parameters can be modified. Others are read-only.

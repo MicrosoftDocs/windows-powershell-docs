@@ -61,7 +61,7 @@ To apply a TCP setting to a port number or destination IP address range, create 
 **Note:**
 >1) You can modify custom and non-custom settings on Windows server 2016 and 2019.
 >2) You can modify only custom settings. Internet and Datacenter settings cannot be modified on Windows 2012 or earlier versions.
->3) On Windows 10, following parameters are read-only and cannot be modified:
+>3) On Windows 10, the following parameters are read-only and cannot be modified:
 
 * MinRtoMs
 * InitialCongestionWindowMss

@@ -46,39 +46,42 @@ Get-VHD [-VMId] <Guid[]> [-CimSession <CimSession[]>] [-ComputerName <String[]>]
 ## DESCRIPTION
 The **Get-VHD** cmdlet gets the virtual hard disk object associated with a virtual hard disk.
 
+> [!Note]
+> When the VHD is in use (for example by a VM or mounted in the OS) and it is on shared storage, the **Get-VHD** cmdlet can only access it from the host that is using it. Any other server trying to run the **Get-VHD** cmdlet will get an error that it is in use. 
+
 ## EXAMPLES
 
 ### Example 1
-```
-PS C:\> Get-VHD -Path c:\test\testvhdx.vhdx
+```powershell
+PS C:\> Get-VHD -Path C:\test\testvhdx.vhdx
 ```
 
-Gets the virtual hard disk where the path to the virtual hard disk file is c:\test\testvhdx.vhdx.
+Gets the virtual hard disk where the path to the virtual hard disk file is `C:\test\testvhdx.vhdx`.
 
 ### Example 2
-```
+```powershell
 PS C:\> Get-VHD -DiskNumber 6
 ```
 
 Gets the virtual hard disk attached to the system with disk number 6.
 
 ### Example 3
-```
-PS C:\> Get-VM -VMName TestVM | Select-Object VMId | Get-VHD
+```powershell
+PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
 Gets the virtual hard disk objects associated with virtual machine TestVM, using the pipeline feature for the VMId parameter.
 
 ### Example 4
-```
-PS C:\> Get-VM -VMName testvm | Select-Object vmid | Get-VHD
+```powershell
+PS C:\> Get-VM -VMName TestVM | Select-Object -Property VMId | Get-VHD
 ```
 
-Gets the virtual hard disk objects associated with virtual machine testvm using the pipeline feature for the path parameter.
+Gets the virtual hard disk objects associated with virtual machine TestVM using the pipeline feature for the path parameter.
 
 ### Example 5
-```
-PS C:\> Get-ChildItem c:\test -Recurse |% {$_.FullName} | Get-VHD -ErrorAction SilentlyContinue
+```powershell
+PS C:\> Get-ChildItem -Path C:\test -Recurse -Include *.vhd, *.vhdx, *.vhds, *.avhd, *.avhdx | Get-VHD
 ```
 
 Gets the virtual hard disk object for all the virtual hard disk files that are contained in the specified directory and its subdirectories.
@@ -183,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 

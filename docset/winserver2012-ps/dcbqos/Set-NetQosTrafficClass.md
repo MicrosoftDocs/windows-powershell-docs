@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 7A2DFD6D-168D-4757-AF70-8563D69DEA6A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-NetQosTrafficClass

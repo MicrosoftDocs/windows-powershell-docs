@@ -23,11 +23,11 @@ ms.author: v-anbarr
 ## Description
 This reference provides cmdlet descriptions and syntax for all HPC cluster-specific cmdlets that are available in Microsoft HPC Pack 2012 R2, Microsoft HPC Pack 2012, and HPC Pack 2008 R2. The HPC cmdlets provide an alternative to most actions that you would otherwise perform with command-line commands, HPC Cluster Manager, or HPC Job Manager.
 
-For information about using HPC PowerShell, see [Appendix 6: Using HPC PowerShell](http://go.microsoft.com/fwlink/?LinkId=151474) in the TechNet library.
+For information about using HPC PowerShell, see [Appendix 6: Using HPC PowerShell](https://go.microsoft.com/fwlink/?LinkId=151474) in the TechNet library.
 
-For information about using Windows PowerShell, see [Windows PowerShell (TechNet)](http://go.microsoft.com/fwlink/?LinkId=128426) in TechNet.
+For information about using Windows PowerShell, see [Windows PowerShell (TechNet)](https://go.microsoft.com/fwlink/?LinkId=128426) in TechNet.
 
-For information about built-in Windows PowerShell cmdlets, see [Windows PowerShell Core Cmdlets](http://go.microsoft.com/fwlink/?LinkId=113277) in TechNet.
+For information about built-in Windows PowerShell cmdlets, see [Windows PowerShell Core Cmdlets](https://go.microsoft.com/fwlink/?LinkId=113277) in TechNet.
 
 
 ## HPC Cmdlets

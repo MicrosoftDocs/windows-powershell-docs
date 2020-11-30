@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 21FC15F6-CFE9-44FE-9F00-1FB4B50D0632
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerGlobalQueryBlockList

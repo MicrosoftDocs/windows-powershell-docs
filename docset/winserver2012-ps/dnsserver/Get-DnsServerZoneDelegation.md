@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F01664CF-1D04-4001-B3A1-A9F86C2A8B19
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerZoneDelegation

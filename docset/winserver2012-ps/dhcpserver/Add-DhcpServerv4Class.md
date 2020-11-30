@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1019D435-7A01-4B34-8043-8D6A7B3DD392
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Class

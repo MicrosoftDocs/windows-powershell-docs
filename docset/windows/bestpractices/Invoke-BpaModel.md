@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -46,7 +46,7 @@ If a model is specified in the cmdlet after the BPA scan has been performed, the
 This cmdlet cannot be canceled after it has been started.
 
 Single-node XML is not supported by the BPA model schema.
-For more information about what is supported by the BPA model schema, see the [Microsoft Baseline Configuration Analyzer Model Authoring Guide](http://www.microsoft.com/download/details.aspx?id=16475) on the [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=16475).
+For more information about what is supported by the BPA model schema, see the [Microsoft Baseline Configuration Analyzer Model Authoring Guide](https://www.microsoft.com/download/details.aspx?id=16475) on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=16475).
 
 ## EXAMPLES
 
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

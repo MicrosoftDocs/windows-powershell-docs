@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: E3C5714A-FF61-4485-9F86-D49A3AC8A86E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Export-DnsServerDnsSecPublicKey

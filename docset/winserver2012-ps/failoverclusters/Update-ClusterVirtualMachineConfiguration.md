@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CC4C1119-2255-4E52-85B0-DDF5270C2180
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Update-ClusterVirtualMachineConfiguration

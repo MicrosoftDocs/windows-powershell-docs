@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerDsSetting_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -62,9 +62,9 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
 You can continue to work in the session while the job completes. 
 To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -150,7 +150,7 @@ Specifies a value, in seconds, to determine how frequently the DNS server submit
 We recommend that you limit this value to the range 0x00000000 to 0x0000003c.
 You must set the default value to 0x00000003.
 You must set the value zero to indicate that the DNS server does not specify the LDAP_SERVER_LAZY_COMMIT_OID control at the same time that it processes DNS dynamic update requests.
-For more information about LDAP_SERVER_LAZY_COMMIT_OID, see [LDAP_SERVER_LAZY_COMMIT_OID control code](http://technet.microsoft.com/en-us/library/aa366982).
+For more information about LDAP_SERVER_LAZY_COMMIT_OID, see [LDAP_SERVER_LAZY_COMMIT_OID control code](https://technet.microsoft.com/en-us/library/aa366982).
 
 The LDAP_SERVER_LAZY_COMMIT_OID control instructs the DNS server to return the results of a directory service modification command after it is completed in memory but before it is committed to disk.
 In this way, the server can return results quickly and save data to disk without sacrificing performance.
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## OUTPUTS
 
@@ -304,9 +304,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[DNS Server Integer Properties](http://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
+[DNS Server Integer Properties](https://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
 
-[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](http://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
+[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](https://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
 
 [Get-DnsServerDsSetting](./Get-DnsServerDsSetting.md)
 

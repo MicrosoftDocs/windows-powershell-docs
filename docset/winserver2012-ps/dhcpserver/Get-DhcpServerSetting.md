@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F0554EFC-7B52-46C2-933E-AFAF47B4FA6B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerSetting

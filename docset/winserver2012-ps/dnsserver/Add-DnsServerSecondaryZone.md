@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 99374013-D3CB-4754-99A9-7C6D02B126DA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerSecondaryZone

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CEFD566C-075D-4363-B341-B0D95FB35F09
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFileManagementJob
@@ -38,7 +38,7 @@ The first command gets a **DateTime** object and stores it in the variable **$da
 PS C:\>$date = Get-Date "12:00am"
 
 This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the **$task** variable.
-PS C:\>$task = New-FsrmScheduledTask -Time $date.ToFileTimeUtc() -Monthly 1
+PS C:\>$task = New-FsrmScheduledTask -Time $date -Monthly 1
 
 The third command returns an action object for a management job and stores the results in the **$action** variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
 PS C:\>$action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
@@ -55,7 +55,7 @@ The first command gets a **DateTime** object and stores it in the variable **$da
 PS C:\>$date = Get-Date "12:00am"
 
 This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the **$task** variable.
-PS C:\>$task = New-FsrmScheduledTask -Time $date.ToFileTimeUtc() -Monthly 1
+PS C:\>$task = New-FsrmScheduledTask -Time $date -Monthly 1
 
 The third command returns an action object for a management job and stores the results in the **$action** variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
 PS C:\>$action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
@@ -72,7 +72,7 @@ The first command gets a **DateTime** object and stores it in the variable **$da
 PS C:\>$date = Get-Date "12:00am"
 
 This second command returns a **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the **$task** variable.
-PS C:\>$task = New-FsrmScheduledTask -Time $date.ToFileTimeUtc() -Monthly 1
+PS C:\>$task = New-FsrmScheduledTask -Time $date -Monthly 1
 
 The third command returns an action object for a management job and stores the results in the **$action** variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
 PS C:\>$action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"
@@ -95,7 +95,7 @@ The first command gets a **DateTime** object and stores it in the variable **$da
 PS C:\>$date = Get-Date "12:00am"
 
 This second command returns an **FsrmScheduledTask** object that runs the task at midnight on the first day of the month. The command stores results in the **$task** variable.
-PS C:\>$task = New-FsrmScheduledTask -Time $date.ToFileTimeUtc() -Monthly 1
+PS C:\>$task = New-FsrmScheduledTask -Time $date -Monthly 1
 
 The third command returns an action object for a management job and stores the results in the **$action** variable. The command specifies an expiration action and specifies a path that the action uses to expire files.
 PS C:\>$action = New-FsrmFmjAction -Type Expiration -ExpirationFolder "C:\Expire"

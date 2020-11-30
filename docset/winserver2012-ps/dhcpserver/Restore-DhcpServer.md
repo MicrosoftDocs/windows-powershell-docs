@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 78AFC8F5-EACA-4D07-8041-78D0895C936A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Restore-DhcpServer

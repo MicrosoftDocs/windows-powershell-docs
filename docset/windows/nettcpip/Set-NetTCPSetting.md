@@ -68,7 +68,7 @@ To apply a TCP setting to a port number or destination IP address range, create 
 * AutomaticUseCustom
 * CongestionProvider
 * CwndRestart
-* DelayedAckTimeoutMs
+> * DelayedAckTimeoutMs
 
 ## EXAMPLES
 

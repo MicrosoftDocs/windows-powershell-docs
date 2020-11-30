@@ -16,7 +16,7 @@ Adds a printer to the specified computer.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### port
 ```
 Add-Printer [-Name] <String> [-DriverName] <String> [-AsJob] [-CimSession <CimSession>] [-Comment <String>]
  [-ComputerName <String>] [-Datatype <String>] [-KeepPrintedJobs] [-Location <String>]
@@ -25,13 +25,13 @@ Add-Printer [-Name] <String> [-DriverName] <String> [-AsJob] [-CimSession <CimSe
  [-StartTime <UInt32>] [-ThrottleLimit <Int32>] [-UntilTime <UInt32>] -PortName <String> [-Confirm] [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### connection
 ```
 Add-Printer [-ConnectionName] <String> [-AsJob] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-Confirm]
  [-WhatIf]
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### wsd
 ```
 Add-Printer [-Name] <String> [-AsJob] [-CimSession <CimSession>] [-Comment <String>] [-ComputerName <String>]
  [-Datatype <String>] [-DeviceURL <String>] [-DeviceUUID <String>] [-KeepPrintedJobs] [-Location <String>]
@@ -51,27 +51,27 @@ You do not need administrator privileges to use **Add-Printer**.
 
 ## EXAMPLES
 
-### -------------------------- Example 1: Add a printer to a local machinecomputer by specifying Driver name and Port name-------------------------- xample:Add a printer to a local computer
-```
+### Example 1: Add a printer to a local computer
+```powershell
 PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
 
-This command adds a printer with name "mxdw2" to the local computer. 
-The "mxdw" printer uses the "Microsoft XPS Document Writer v4" driver and the "portprompt:" port.
+This command adds a printer with name mxdw2 to the local computer.
+The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the `portprompt:` port.
 
-The "portprompt:" port prompts for a file name to save the XPS document when printing to the XPS printer.
+The` portprompt:` port prompts for a file name to save the XPS document when printing to the XPS printer.
 
-### -------------------------- Example 2: Add a new network printer connection-------------------------- xample:Add a new network printer connection
-```
+### Example 2: Add a new network printer connection
+```powershell
 PS C:\> Add-Printer -ConnectionName \\printServer\printerName
 ```
 
-This command adds a new printer by specifying the name of a print server and a shared printer on that server.
+This command adds a printer by specifying the name of a print server and a shared printer on that server.
 
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -107,7 +107,7 @@ Specifies the text to add to the Comment field for the specified printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -122,7 +122,7 @@ Specifies the name of the computer to which to add the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -138,7 +138,7 @@ This parameter is required.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: connection
 Aliases: 
 
 Required: True
@@ -153,7 +153,7 @@ Specifies the data type the printer uses to record print jobs.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -164,12 +164,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceURL
-Adds a WSD (Web Services on Devices) printer to the specified computer. 
-The URL is used for directed discovery.
+Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: wsd
 Aliases: 
 
 Required: False
@@ -184,7 +183,7 @@ Specifies the multicast UUID for device detection for the WSD port.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: wsd
 Aliases: 
 
 Required: False
@@ -199,7 +198,7 @@ Specifies the name of the printer driver for the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: port
 Aliases: 
 
 Required: True
@@ -214,7 +213,7 @@ Specifies whether the print jobs in the queue are kept.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -229,7 +228,7 @@ Specifies the location of the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -244,7 +243,7 @@ Specifies the name of the printer to add.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: True
@@ -259,7 +258,7 @@ Specifies the permissions for the printer as an SDDL (Security Descriptor Defini
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -274,7 +273,7 @@ Specifies the name of the port used or created for the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: port
 Aliases: 
 
 Required: True
@@ -289,7 +288,7 @@ Specifies the name of the print processor used by the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -304,7 +303,7 @@ Specifies the relative queue priority.
 
 ```yaml
 Type: UInt32
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -319,7 +318,7 @@ Specifies whether or not the printer is published in the network directory servi
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -331,11 +330,17 @@ Accept wildcard characters: False
 
 ### -RenderingMode
 Specifies the rendering mode for the printer.
-You can specify one of the following three rendering modes: SSR (Service Side Rendering), CSR (Client Side Rendering), or Branch Office
+You can specify one of the following rendering modes: 
+
+- SSR, Service Side Rendering 
+- CSR.
+Client Side Rendering 
+- BranchOffice.
+Branch Office
 
 ```yaml
 Type: RenderingModeEnum
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -350,7 +355,7 @@ Specifies the path to and name of the separator page to be used by the printer.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -366,7 +371,7 @@ To share a printer, specify the **Shared** parameter.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -383,7 +388,7 @@ If **ShareName** is not specified, the name of the printer is used as the share 
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -398,7 +403,7 @@ Specifies the starting time of printer availability.
 
 ```yaml
 Type: UInt32
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -430,7 +435,7 @@ Specifies the ending time of printer availability.
 
 ```yaml
 Type: UInt32
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3
+Parameter Sets: port, wsd
 Aliases: 
 
 Required: False
@@ -473,16 +478,15 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### 
-This cmdlet takes no input objects.
+### None
 
 ## OUTPUTS
 
-### 
-This cmdlet produces no output.
+### None
 
 ## NOTES
 
+- The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
 ## RELATED LINKS
 
 [Get-Printer](./Get-Printer.md)

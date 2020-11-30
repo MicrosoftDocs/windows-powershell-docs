@@ -64,7 +64,7 @@ To apply a TCP setting to a port number or destination IP address range, create 
 >3) On Windows 10, the following parameters are read-only and cannot be modified:
 
 * MinRtoMs
-* InitialCongestionWindowMss
+> * InitialCongestionWindowMss
 > * AutomaticUseCustom
 > * CongestionProvider
 > * CwndRestart

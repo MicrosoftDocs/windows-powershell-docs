@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Import-Certificate
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 5BACC9D9-2D47-40AE-B70D-2CC8A788310D
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -138,9 +138,9 @@ The output is an array of X509Certificate2\[\] objects.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=290488)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=293912)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkId=293912)
 
 [Export-Certificate](./Export-Certificate.md)
 

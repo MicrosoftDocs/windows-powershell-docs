@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1E1D49DC-53B6-4EB5-9B1A-6583EB55ECA8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterGroup
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-ClusterGroup](./Add-ClusterGroup.md)
 

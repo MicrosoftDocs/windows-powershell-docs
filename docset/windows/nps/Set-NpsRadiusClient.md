@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NPS.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -35,7 +35,7 @@ The **Set-NpsRadiusClient** cmdlet specifies configuration settings for a Remote
 A RADIUS client uses a RADIUS server to manage authentication, authorization, and accounting requests that the client sends.
 A RADIUS client can be an access server, such as a dial-up server or wireless access point, or a RADIUS proxy.
 
-For more information about RADIUS client options, see [Managing RADIUS Clients](http://technet.microsoft.com/library/cc754717.aspx) on TechNet.
+For more information about RADIUS client options, see [Managing RADIUS Clients](https://technet.microsoft.com/library/cc754717.aspx) on TechNet.
 
 ## EXAMPLES
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

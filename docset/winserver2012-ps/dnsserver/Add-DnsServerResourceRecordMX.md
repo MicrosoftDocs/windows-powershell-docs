@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 95EDD405-167D-42AA-9C67-72624E9EA404
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerResourceRecordMX

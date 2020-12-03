@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Test-PswaAuthorizationRule
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 36205D8E-3832-423D-A094-BEFC7172A6B7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -176,7 +176,7 @@ This cmdlet produces a PswaAuthorizationRule object as output.
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Add-PswaAuthorizationRule](./Add-PswaAuthorizationRule.md)
 

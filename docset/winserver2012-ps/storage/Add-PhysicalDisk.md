@@ -3,8 +3,8 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: D6192DDC-C09D-4CB3-B406-A1AD801D3DED
 manager: dansimp
 ---
@@ -329,7 +329,7 @@ You can pipe an MSFT_VirtualDisk object to the VirtualDisk parameter.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Get-PhysicalDisk](./Get-PhysicalDisk.md)
 

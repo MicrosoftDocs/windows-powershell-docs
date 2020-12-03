@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1A5E7519-DAB9-4289-BD9B-2D72AC0F48DB
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmQuota

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Rename-NetIPsecMainModeCryptoSet
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B50BA2D8-C0E1-4816-A96E-DDA1058C4553
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

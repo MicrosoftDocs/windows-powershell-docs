@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 89E1F016-9E38-4553-AE4B-569FACDDD265
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv4OptionDefinition

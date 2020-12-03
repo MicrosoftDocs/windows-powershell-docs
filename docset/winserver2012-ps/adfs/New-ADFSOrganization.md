@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-ADFSOrganization
@@ -100,7 +100,7 @@ A class structure that represents the organization object for the Federation Ser
 
 ## RELATED LINKS
 
-[Get-ADFSProperties](00000000-0000-0000-0000-000000000000)
+[Get-AdfsProperties](./Get-AdfsProperties.md)
 
-[Set-ADFSProperties](00000000-0000-0000-0000-000000000000)
+[Set-AdfsProperties](./Set-AdfsProperties.md)
 

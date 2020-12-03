@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/UpdateServices/Set-WsusProduct?view=win10-ps
 schema: 2.0.0
@@ -32,7 +32,7 @@ Set-WsusProduct -Product <WsusProduct> [-Disable] [-WhatIf] [-Confirm] [<CommonP
 
 ## DESCRIPTION
 
-The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
+The **Set-WsusProduct** cmdlet enables or disables the product representing the category of updates to synchronize. In order to use this cmdlet, the Get-WsusProduct cmdlet must be run with its results passed into this cmdlet. You can run the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet to filter results.
 
 ## EXAMPLES
 
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -126,7 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=289623)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=289623)
 
 [Get-WsusProduct](./Get-WsusProduct.md)
 

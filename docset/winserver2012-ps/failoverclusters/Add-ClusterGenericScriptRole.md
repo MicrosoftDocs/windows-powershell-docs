@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: A7764644-9683-4D79-8C2C-447EADA1DE24
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterGenericScriptRole

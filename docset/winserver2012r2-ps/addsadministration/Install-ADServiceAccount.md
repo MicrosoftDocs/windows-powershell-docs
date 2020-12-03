@@ -4,13 +4,13 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Install-ADServiceAccount
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -236,6 +236,7 @@ A managed service account object is received by the **Identity** parameter.
 * This cmdlet does not work with Active Directory Lightweight Directory Services (AD LDS).
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
+* This cmdlet must be run from an elevated PowerShell session.
 * To successfully install a managed service account, the service account should have the **PrincipalsAllowedToRetrieveManagedPassword** parameter option set first by using either the New-ADServiceAccount or Set-ADServiceAccount cmdlet first. Otherwise, installation will fail.
 
 ## RELATED LINKS

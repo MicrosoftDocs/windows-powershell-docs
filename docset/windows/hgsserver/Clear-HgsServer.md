@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsServer
 ms.assetid: AAE0C591-6B5E-42B3-B547-1AEC29E96C86
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -48,7 +48,7 @@ This cmdlet makes the following infrastructure components changes on the last HG
 - Disables Just Enough Administration on the local node.
 - Destroys the cluster on the local node.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

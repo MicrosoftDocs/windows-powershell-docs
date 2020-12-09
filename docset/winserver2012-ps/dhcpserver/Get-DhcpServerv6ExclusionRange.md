@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 77586C17-1CE1-408F-96A6-CA5437DB4601
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6ExclusionRange

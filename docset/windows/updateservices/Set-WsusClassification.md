@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.UpdateServices.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/UpdateServices/Set-WsusClassification?view=win10-ps
 schema: 2.0.0
@@ -37,7 +37,7 @@ The **Set-WsusClassification** cmdlet enables or disables the category of update
 
 To use this cmdlet without filtering results, the [Get-WsusClassification](./Get-WsusClassification.md) cmdlet must be run, then the results are passed it into this cmdlet.
 
-To use this cmdlet with filtered results, the Get-WsusClassification cmdlet must be run, then results are filtered using the [Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423) cmdlet and passed into this cmdlet.
+To use this cmdlet with filtered results, the Get-WsusClassification cmdlet must be run, then results are filtered using the [Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423) cmdlet and passed into this cmdlet.
 
 ## EXAMPLES
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -131,6 +131,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=289623)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=289623)
 
 [Get-WsusClassification](./Get-WsusClassification.md)

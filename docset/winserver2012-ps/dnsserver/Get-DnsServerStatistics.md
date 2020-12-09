@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2A334FDC-433C-4EE8-8626-09A0AA38D702
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerStatistics

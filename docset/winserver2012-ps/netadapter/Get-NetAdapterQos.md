@@ -3,8 +3,8 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: CF781957-2C2B-48AC-8028-D8D040EC039E
 manager: dansimp
 ---
@@ -189,7 +189,7 @@ The output object contains QoS capabilities and configurations on a network adap
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Disable-NetAdapterQos](./Disable-NetAdapterQos.md)
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AF287F10-AB05-4217-9C72-AC4D2A851DCA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-ClusterVMMonitoredItem

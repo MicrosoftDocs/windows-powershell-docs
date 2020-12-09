@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0B4B9F8D-D43E-4054-88B4-0E16B9058762
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmAction

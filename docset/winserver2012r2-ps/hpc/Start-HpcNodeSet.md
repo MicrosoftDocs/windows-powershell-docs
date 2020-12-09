@@ -1,19 +1,20 @@
 ---
-author: andreabarr
+author: Kateyanne
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=205311
 schema: 2.0.0
 title: Start-HpcNodeSet
+author: Kateyanne
 ms.assetid: 383CE8F0-810D-4C87-B415-B405E67F960F
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Start-HpcNodeSet

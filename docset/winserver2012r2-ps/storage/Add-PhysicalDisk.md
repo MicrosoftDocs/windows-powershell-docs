@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Add-PhysicalDisk
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D6192DDC-C09D-4CB3-B406-A1AD801D3DED
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -343,7 +343,7 @@ You can pipe an MSFT_VirtualDisk object to the VirtualDisk parameter.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Get-PhysicalDisk](./Get-PhysicalDisk.md)
 

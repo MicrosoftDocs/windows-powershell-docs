@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B93531FB-2130-428B-8DAA-66027AA2488B
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Test-DnsServer

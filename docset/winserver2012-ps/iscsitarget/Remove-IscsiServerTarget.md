@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-IscsiServerTarget
@@ -131,7 +131,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/p/?Linkd=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/p/?Linkd=113300)
 
 [Get-IscsiServerTarget](./Get-IscsiServerTarget.md)
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-WebHandler
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 3F5C852A-05EE-454C-8333-7479931BE260
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

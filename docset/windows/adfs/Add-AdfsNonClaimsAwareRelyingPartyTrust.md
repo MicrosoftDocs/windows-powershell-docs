@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: 09022B52-63AC-43D1-A5EC-94B2FB8BA720
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -AdditionalAuthenticationRules
 Specifies rules for additional authentication on the relying party.
-For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](http://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
+For more information about the claims language for rules, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx) on TechNet.
 
 ```yaml
 Type: String

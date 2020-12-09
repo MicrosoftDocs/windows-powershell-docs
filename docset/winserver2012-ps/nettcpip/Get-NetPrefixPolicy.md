@@ -3,8 +3,8 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
 manager: dansimp
 ---
@@ -155,5 +155,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Source and Destination Address Selection for IPv6 on TechNet](http://technet.microsoft.com/library/bb877985.aspx)
+[Source and Destination Address Selection for IPv6 on TechNet](https://technet.microsoft.com/library/bb877985.aspx)
 

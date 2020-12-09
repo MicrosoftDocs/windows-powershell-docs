@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Clear-RemoteAccessInboxAccountingStore
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CF2ADFED-8E78-4BD2-8769-26794B27EEBF
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -300,7 +300,7 @@ The RemoteAccessInboxAccounting object consists of the following properties:
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 
 [Set-RemoteAccessInboxAccountingStore](./Set-RemoteAccessInboxAccountingStore.md)
 

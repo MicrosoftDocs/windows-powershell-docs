@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/21/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ### -ForceUnsigned
 Adds unsigned drivers to an x64 image.
 The *ForceUnsigned* parameter overrides the requirement that drivers that are installed on X64-based computers must have a digital signature.
-For more information about driver signing requirements, see [Windows Deployment Options](http://go.microsoft.com/fwlink/?LinkId=214574) in the TechNet Library.
+For more information about driver signing requirements, see [Windows Deployment Options](https://go.microsoft.com/fwlink/?LinkId=214574) in the TechNet Library.
 
 ```yaml
 Type: SwitchParameter
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

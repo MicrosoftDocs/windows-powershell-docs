@@ -3,8 +3,8 @@ external help file: NPS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 1DA52B73-64A9-42E7-9316-371E09E2348A
 manager: dansimp
 ---

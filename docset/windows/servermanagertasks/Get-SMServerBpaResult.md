@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: ServerManagerTasks.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -32,7 +32,7 @@ Get-SMServerBpaResult -BpaXPath <String[]> [-BatchSize <UInt32>] [-CimSession <C
 
 ## DESCRIPTION
 The **Get-SMServerBpaResult** cmdlet retrieves raw XML results of Best Practices Analyzer (BPA) scans on server roles, role services, or features, for one or more specified XPaths.
-To get BPA scan results, we recommend that you run the [Get-BpaResult](http://technet.microsoft.com/library/hh868083.aspx) cmdlet instead of this cmdlet.
+To get BPA scan results, we recommend that you run the [Get-BpaResult](https://technet.microsoft.com/library/hh868083.aspx) cmdlet instead of this cmdlet.
 
 ## EXAMPLES
 
@@ -92,7 +92,7 @@ PSComputerName :
 
 This command gets the raw XML results of a BPA scan that was run on the Hyper-V role.
 Before you can run this command, run a BPA scan on the role, or verify that there are existing BPA scan results.
-For a better view of the command results, pipe the command to the [Format-List](http://technet.microsoft.com/library/hh849957.aspx) cmdlet, another **Format-*** cmdlet, or to a file by using [Out-File](http://technet.microsoft.com/library/hh849882.aspx).
+For a better view of the command results, pipe the command to the [Format-List](https://technet.microsoft.com/library/hh849957.aspx) cmdlet, another **Format-*** cmdlet, or to a file by using [Out-File](https://technet.microsoft.com/library/hh849882.aspx).
 
 ### Example 2: Get BPA scan results for File Services, and pipe them to a text file
 ```
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 Specifies one or more BPA XPaths where BPA scan results are available.
 Specify the BPA XPath in the following format: BpaModelId:BpaFilepath:BpaXPath.
 
-To get the names for BPA models that are installed on the target server, run the cmdlet [Get-BpaModel](http://technet.microsoft.com/library/hh868082.aspx).
+To get the names for BPA models that are installed on the target server, run the cmdlet [Get-BpaModel](https://technet.microsoft.com/library/hh868082.aspx).
 There is no file path available for results for a BPA model on a server until at least one set of scan results is available; that is, at least one scan has been run on the role or feature that is represented by the model.
 For best results, and to avoid errors, enclose the value of this parameter in single quotation marks.
 The following is a sample *BpaXPath* parameter value for results from a BPA scan on Hyper-V.
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B81BE96E-B6BA-45FB-8EBD-13C8CE70400F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Wait-FsrmFileManagementJob

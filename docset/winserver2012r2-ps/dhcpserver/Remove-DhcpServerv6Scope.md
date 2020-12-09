@@ -4,13 +4,13 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Remove-DhcpServerv6Scope
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -223,7 +223,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Add-DhcpServerv6Scope](./Add-DhcpServerv6Scope.md)
 

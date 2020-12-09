@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-NetIPHttpsConfiguration
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: DA59CF8F-6554-47FD-9691-DFC1E3E93E10
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

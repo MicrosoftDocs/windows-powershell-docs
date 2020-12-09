@@ -4,14 +4,14 @@ online version:
 schema: 2.0.0
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: 
 keywords: powershell, cmdlet
 manager: jasgro
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 title: Set-RDCertificate
 ms.reviewer:

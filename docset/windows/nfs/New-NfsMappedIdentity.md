@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FileServices.Powershell.NFS.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -48,8 +48,8 @@ A UID or GID identifies a UNIX account namespace.
 These elements are associated with the corresponding elements of a Windows account namespace: a user name or a group name.
 By using a mapped identity, a user who is logged on to a UNIX domain can access shared resources in a Windows domain without having to log on to the Windows domain.
 
-For more information about NFS, see [Network File System Overview](http://technet.microsoft.com/en-us/library/jj592688).
-For more information about NFS account mapping, see [NFS Account Mapping Guide](http://technet.microsoft.com/en-us/library/hh509020(v=ws.10)) and [Identity Management for UNIX](http://technet.microsoft.com/en-us/library/cc772571).
+For more information about NFS, see [Network File System Overview](https://technet.microsoft.com/en-us/library/jj592688).
+For more information about NFS account mapping, see [NFS Account Mapping Guide](https://technet.microsoft.com/en-us/library/hh509020(v=ws.10)) and [Identity Management for UNIX](https://technet.microsoft.com/en-us/library/cc772571).
 
 ## EXAMPLES
 
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

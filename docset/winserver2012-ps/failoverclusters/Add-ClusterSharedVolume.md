@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: FEE8A735-0D5F-4C07-A70E-73F0BB90DEB1
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterSharedVolume

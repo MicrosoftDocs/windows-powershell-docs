@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Disk.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -Partition
 Accepts a Partition object as input.
-The Partition CIM object is exposed by the [Get-Partition](http://technet.microsoft.com/library/85bb3c53-536e-408f-b159-28e91afeb1a1) cmdlet.
+The Partition CIM object is exposed by the [Get-Partition](https://technet.microsoft.com/library/85bb3c53-536e-408f-b159-28e91afeb1a1) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -321,7 +321,7 @@ Accept wildcard characters: False
 
 ### -VirtualDisk
 Accepts a VirtualDisk object as input.
-The Virtual Disk CIM object is exposed by the [Get-VirtualDisk](http://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0) cmdlet.
+The Virtual Disk CIM object is exposed by the [Get-VirtualDisk](https://technet.microsoft.com/library/0eeba53f-6468-485f-a680-49260b4c83f0) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 
 ### -iSCSIConnection
 Accepts an iSCSIConnection object as input.
-The iSCSI Connection CIM object is exposed by the [Get-IscsiConnection](http://technet.microsoft.com/library/e566d297-76ad-48d0-b5af-11674f23b080) cmdlet.
+The iSCSI Connection CIM object is exposed by the [Get-IscsiConnection](https://technet.microsoft.com/library/e566d297-76ad-48d0-b5af-11674f23b080) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -396,7 +396,7 @@ This cmdlet outputs one or more objects representing disks.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Clear-Disk](./Clear-Disk.md)
 

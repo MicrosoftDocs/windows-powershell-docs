@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: A4A95DD7-4744-4BC5-8197-375971B2F599
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Start-Cluster

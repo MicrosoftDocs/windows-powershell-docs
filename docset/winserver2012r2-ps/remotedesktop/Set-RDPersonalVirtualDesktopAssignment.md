@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-RDPersonalVirtualDesktopAssignment
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: B8909D98-EB9D-4A18-91BF-E31C6C8D03DB
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

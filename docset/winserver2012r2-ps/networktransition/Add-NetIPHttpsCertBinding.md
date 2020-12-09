@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Add-NetIPHttpsCertBinding
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2F79CD8C-FF12-4BBB-ACC4-5600BF8318BF
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

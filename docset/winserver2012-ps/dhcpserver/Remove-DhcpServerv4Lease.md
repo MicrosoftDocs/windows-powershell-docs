@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AAC6BD13-2DF9-4DC8-826C-D9EEEDAD2C50
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv4Lease

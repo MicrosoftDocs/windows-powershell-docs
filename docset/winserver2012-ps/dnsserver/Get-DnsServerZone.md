@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2B1D1228-1329-4421-A4FA-36BDE0F331C8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerZone

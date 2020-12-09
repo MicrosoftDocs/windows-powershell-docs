@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 81593AB8-6828-4334-B711-4D9B20FECB31
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerRecursion

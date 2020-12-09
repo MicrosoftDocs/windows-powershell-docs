@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WdacBidTrace
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4814CE74-7218-4396-935E-25F3C483A081
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -45,7 +45,7 @@ Get-WdacBidTrace [-Platform <String>] [-IncludeAllApplications] [-CimSession <Ci
 ## DESCRIPTION
 The **Get-WdacBidTrace** cmdlet gets a list of Built-in Diagnostics Tracing (BidTrace) settings for different applications.
 
-For more information about data access tracing, see [Data Access Tracing (Windows 8)](http://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx) on the Microsoft Developer Network.
+For more information about data access tracing, see [Data Access Tracing (Windows 8)](https://msdn.microsoft.com/en-us/library/hh829624(VS.85).aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -108,7 +108,7 @@ Valid values for the parameter include a NetBIOS name, an IP address, or a fully
 
 To use an IP address of a remote computer as the value of this parameter, your command must include the *Credential* parameter.
 The computer must either be configured for HTTPS transport, or the IP address of the remote computer must be included in the WinRM TrustedHosts list on the local computer.
-For information about adding a computer name to the WinRM TrustedHosts list, see [How to Add a Computer to the Trusted Host List in about_Remote_Troubleshooting](http://go.microsoft.com/fwlink/p/?LinkID=135188).
+For information about adding a computer name to the WinRM TrustedHosts list, see [How to Add a Computer to the Trusted Host List in about_Remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188).
 
 ```yaml
 Type: String
@@ -344,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

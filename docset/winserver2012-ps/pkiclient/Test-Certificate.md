@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Test-Certificate
@@ -171,5 +171,5 @@ If the verification succeeds, then the return value is True; otherwise the retur
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 

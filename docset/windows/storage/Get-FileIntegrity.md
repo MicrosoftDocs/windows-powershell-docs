@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FileIntegrity.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -63,7 +63,7 @@ H:\Temp\New Text Document 08 22         False                                Tru
 H:\Temp\New Text Document 09 07         False                                True
 ```
 
-This command uses the [Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495) cmdlet to get all the files in the specified folder, and then passes them to the current cmdlet by using the pipeline operator.
+This command uses the [Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495) cmdlet to get all the files in the specified folder, and then passes them to the current cmdlet by using the pipeline operator.
 For more information, type `Get-Help Get-Item`.
 The command gets file integrity information for all the files in the folder.
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -135,13 +135,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### 
 **System.IO.FileInfo**.
-To obtain a **FileInfo** object, use the [Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495) cmdlet for a specified file name.
+To obtain a **FileInfo** object, use the [Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495) cmdlet for a specified file name.
 The cmdlet uses the **FullName** property as the value of the *FileName* parameter.
 
 **System.IO.DirectoryInfo**.

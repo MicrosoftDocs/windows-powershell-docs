@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D12E5246-2D94-48AB-97B7-9B2FF0B8A58A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterServerRole

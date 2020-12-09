@@ -3,8 +3,8 @@ external help file: VpnClient_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 9E500D0B-AD09-463E-A5B7-E2986476BC58
 manager: dansimp
 ---

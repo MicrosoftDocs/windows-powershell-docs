@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-DtcDiagnosticTransaction
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A0C09899-6C8F-43A3-8D64-8243BC96A4C5
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

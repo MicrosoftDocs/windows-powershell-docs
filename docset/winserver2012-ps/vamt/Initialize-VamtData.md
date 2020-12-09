@@ -3,8 +3,8 @@ external help file: VAMT_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 6DF25E18-FC39-42E2-B616-1EC5EE860ED6
 manager: dansimp
 ---

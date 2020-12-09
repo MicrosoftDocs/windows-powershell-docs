@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 04AA0089-AD47-46ED-9B16-370F5B785196
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-NetQosFlowControl

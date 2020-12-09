@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 9CED1F64-FBB4-45C4-A0C3-3D1CFB827199
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Register-DnsServerDirectoryPartition

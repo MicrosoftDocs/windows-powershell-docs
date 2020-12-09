@@ -3,8 +3,8 @@ external help file: Iscsi_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 8740AFC8-89A6-404C-967D-F7C0D3877BC5
 manager: dansimp
 ---

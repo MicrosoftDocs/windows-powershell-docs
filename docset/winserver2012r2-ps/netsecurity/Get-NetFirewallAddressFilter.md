@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NetFirewallAddressFilter
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: F4FD0A59-8C76-41FD-AA4B-8C19CF03D213
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -327,9 +327,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113303)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Copy-NetIPsecRule](./Copy-NetIPsecRule.md)
 

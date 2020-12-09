@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Enable-WssMsoIntegration
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 86072D37-042A-4E30-9B14-00C5AF1F50CE
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -144,7 +144,7 @@ The MsoUserName in UPN form for the administrator account to be used to administ
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/?LinkID=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/?LinkID=113291)
 
 [Disable-WssMsoIntegration](./Disable-WssMsoIntegration.md)
 

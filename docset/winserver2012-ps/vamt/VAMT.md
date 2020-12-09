@@ -13,7 +13,7 @@ author: andreabarr
 
 # VAMT Module
 ## Description
-The enables network administrators and other IT professionals to automate and centrally manage the volume and retail-activation process for Windows, Microsoft Office, and select other Microsoft products. can manage volume activation using Multiple Activation Keys (MAKs) or the Windows Key Management Service (KMS). For more information about VAMT, see the [Volume Activation Management Tool Technical Reference](http://go.microsoft.com/fwlink/?LinkId=214550).
+The enables network administrators and other IT professionals to automate and centrally manage the volume and retail-activation process for Windows, Microsoft Office, and select other Microsoft products. can manage volume activation using Multiple Activation Keys (MAKs) or the Windows Key Management Service (KMS). For more information about VAMT, see the [Volume Activation Management Tool Technical Reference](https://go.microsoft.com/fwlink/?LinkId=214550).
 
 ## VAMT Cmdlets
 ### [Add-VamtProductKey](./Add-VamtProductKey.md)

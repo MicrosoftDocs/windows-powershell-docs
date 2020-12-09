@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Repair-FileIntegrity
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 9F95D964-20B5-484D-8EF8-E205E8DC3BBE
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -172,7 +172,7 @@ The cmdlet uses the **FullName** property as the value of the **FileName** param
 
 ## RELATED LINKS
 
-[Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495)
+[Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495)
 
 [Get-FileIntegrity](./Get-FileIntegrity.md)
 

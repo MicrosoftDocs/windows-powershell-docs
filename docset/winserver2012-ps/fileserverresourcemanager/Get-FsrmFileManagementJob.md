@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 70EF1E21-21D0-47CD-BA75-BC214E32A490
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-FsrmFileManagementJob

@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -74,6 +74,9 @@ This command gets all users in the container OU=Finance,OU=UserAccounts,DC=FABRI
 ### Example 2: Get a filtered list of users
 ```powershell
 PS C:\> Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
+```
+
+```Output
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -86,6 +89,9 @@ This command gets all users that have a name that ends with SvcAccount.
 ### Example 3: Get all of the properties for a specified user
 ```powershell
 PS C:\> Get-ADUser -Identity ChewDavid -Properties *
+```
+
+```Output
 Surname           : David
 Name              : Chew David
 UserPrincipalName : 

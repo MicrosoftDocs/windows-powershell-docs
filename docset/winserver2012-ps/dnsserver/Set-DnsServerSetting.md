@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B491D354-EAD2-402F-B762-0136B615C9FB
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerSetting

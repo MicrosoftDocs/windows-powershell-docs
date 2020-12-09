@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2D9D58B8-793B-4731-B0EA-C42E57DCBF88
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv4Class

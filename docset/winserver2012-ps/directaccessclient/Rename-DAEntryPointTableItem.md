@@ -3,8 +3,8 @@ external help file: MSFT_DASiteTableEntry.cdxml-help.xml
 ms.assetid: F68C0ECF-F064-4C50-B164-15224780EB90
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

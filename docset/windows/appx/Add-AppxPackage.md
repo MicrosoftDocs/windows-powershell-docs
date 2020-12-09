@@ -1,18 +1,18 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: Appx
 ms.assetid: 40B54C64-C3EB-4898-AE19-CDD5CA3BD70E
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ### -DisableDevelopmentMode
 Indicates that this cmdlet registers an existing app package installation that has been disabled, did not register, or has become corrupted.
 Use the current parameter to specify that the manifest is from an existing installation, and not from a collection of files in development mode.
-You can also use this parameter to register an application that the [Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447) has staged.
+You can also use this parameter to register an application that the [Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447) has staged.
 Use the *Register* parameter to specify the location of the app package manifest .xml file from the installation location.
 
 ```yaml
@@ -541,9 +541,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+[Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
+[How to Add and Remove Apps](https://go.microsoft.com/fwlink/?LinkID=231020)
 
 [Get-AppxPackage](./Get-AppxPackage.md)
 

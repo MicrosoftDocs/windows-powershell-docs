@@ -3,8 +3,8 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 580A19CF-26D1-45BB-AD34-A6265E2EFACF
 manager: dansimp
 ---
@@ -282,9 +282,9 @@ This cmdlet returns an object that represents the initiator port you specified.
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/?LinkID=113303)
+[Format-Table](https://go.microsoft.com/fwlink/?LinkID=113303)
 
-[Select-Object](http://go.microsoft.com/fwlink/?LinkID=113387)
+[Select-Object](https://go.microsoft.com/fwlink/?LinkID=113387)
 
 [Set-InitiatorPort](./Set-InitiatorPort.md)
 

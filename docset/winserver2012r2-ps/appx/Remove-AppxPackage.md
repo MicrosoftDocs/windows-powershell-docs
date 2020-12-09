@@ -4,13 +4,13 @@ Module Name: Appx
 online version: 
 schema: 2.0.0
 title: Remove-AppxPackage
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -122,9 +122,9 @@ An AppxPackage object that contain information, including the full name of the a
 
 ## RELATED LINKS
 
-[Package Manager API](http://go.microsoft.com/fwlink/?LinkId=245447)
+[Package Manager API](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
+[How to Add and Remove Apps](https://go.microsoft.com/fwlink/?LinkID=231020)
 
 [Get-AppxPackage](./Get-AppxPackage.md)
 

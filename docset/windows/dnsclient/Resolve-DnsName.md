@@ -4,13 +4,13 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Resolve-DnsName
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2019-05-20
+ms.date: 05/20/2019
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -398,5 +398,5 @@ The DnsRecord object contains all of the records returned from the wire for the 
 
 ## RELATED LINKS
 
-[Nslookup on TechNet](http://go.microsoft.com/fwlink/p/?LinkId=84907)
+[Nslookup on TechNet](https://go.microsoft.com/fwlink/p/?LinkId=84907)
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Add-PswaAuthorizationRule
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 12CC98FC-9668-4097-9789-37842D4B8F4F
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -275,11 +275,11 @@ This cmdlet accepts a string or an array of strings as input.
 
 ## RELATED LINKS
 
-[Add-Member](http://go.microsoft.com/fwlink/p/?LinkId=113280)
+[Add-Member](https://go.microsoft.com/fwlink/p/?LinkId=113280)
 
-[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+[New-Object](https://go.microsoft.com/fwlink/p/?LinkId=113355)
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Get-PswaAuthorizationRule](./Get-PswaAuthorizationRule.md)
 

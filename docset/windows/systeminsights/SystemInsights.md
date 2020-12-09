@@ -14,7 +14,7 @@ description: Use this topic to help manage Windows and Windows Server technologi
 keywords: powershell, cmdlet
 author: andreabarr
 manager: elizapo
-ms.date: 6/18/18
+ms.date: 06/18/2018
 ms.topic: reference
 ms.prod: w10
 ms.technology: powershell-windows

@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Switch-Certificate
@@ -149,9 +149,9 @@ The Certificate object can either be provided as a Path object to a certificate 
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkID=113397)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkID=113397)
 
 [Get-CertificateNotificationTask](./Get-CertificateNotificationTask.md)
 

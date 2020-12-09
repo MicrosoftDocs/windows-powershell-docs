@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0B23DF39-82FD-41C2-906E-34E6C717B447
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Wait-FsrmClassification

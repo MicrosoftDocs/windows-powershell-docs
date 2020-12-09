@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -ZoneName
-Specifies the name of a DNS zone.
+Specifies the name of a DNS zone. The zone must exist on the specified DNS server.
 
 ```yaml
 Type: String

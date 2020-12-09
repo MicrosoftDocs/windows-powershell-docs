@@ -25,7 +25,7 @@ Gets a connection profile.
 
 ## SYNTAX
 
-```
+```powershell
 Get-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-InterfaceIndex <UInt32[]>]
  [-NetworkCategory <NetworkCategory[]>] [-IPv4Connectivity <IPv4Connectivity[]>]
  [-IPv6Connectivity <IPv6Connectivity[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
@@ -39,12 +39,12 @@ A connection profile represents a network connection.
 ## EXAMPLES
 
 ### Example 1: Get a connection profile
-```
+```powershell
 PS C:\>Get-NetConnectionProfile -InterfaceAlias "Ethernet1" | Set-NetConnectionProfile -NetworkCategory Public
 ```
 
 This first part of this command gets the connection profile for the network adapter named Ethernet1.
-The command passes the results to the Set-NetConnectionProfile cmdlet by using the pipe operator.
+The command passes the results to the **Set-NetConnectionProfile** cmdlet by using the pipe operator.
 The second part of the command changes the value of the network category for the connection profile.
 
 ## PARAMETERS
@@ -183,9 +183,9 @@ Accept wildcard characters: False
 Specifies an array of category types of a network.
 The acceptable values for this parameter are:
 
-- Public
-- Private
-- DomainAuthenticated
+- *Public* - Networks in a public place such as an airport or coffee shop. Your PC is hidden from other devices on the network and can't be used for printer and file sharing.
+- *Private* - Networks at home or work, where you know and trust the people and devices on the network. Your PC is discoverable and can be used for printer and file sharing if you set it up.
+- *DomainAuthenticated* - Networks at a workplace that are joined to a domain.
 
 ```yaml
 Type: NetworkCategory[]

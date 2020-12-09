@@ -83,6 +83,33 @@ New-VM -Name "new 3" -MemoryStartupBytes 1GB -VHDPath d:\vhd\BaseImage.vhdx
 
 This example creates a virtual machine named new 3 that has 1 GB of memory and connects it to an existing virtual hard disk that uses the VHDX format.
 
+### Example 4
+
+```powershell
+New-VM -Name "new 4" -MemoryStartupBytes 2GB -Credential (Get-Credential) -ComputerName HostServer01
+```
+
+This example asks for credentials, then creates a virtual machine named new 4, which has 2 GB of memory, on the server named HostServer01.
+
+### Example 5
+
+```powershell
+New-VM -Name "new 5" -Generation 1 -BootDevice CD -NoVHD
+```
+
+This example creates a virtual machine named new 5. The machine doesn't have any VHD disk and is set to boot from CD. 
+
+### Example 6
+
+```powershell
+$oldVM = Get-VM "old 1"
+$memory = (Get-VMMemory -VMName $oldVM.name).Startup
+$switch = (Get-VMNetworkAdapter -VMName $oldVM.name).SwitchName
+New-VM -Name "new 6" -Generation $oldVM.Generation -MemoryStartupBytes $memory -SwitchName $switch
+```
+
+This example creates a virtual machine named new 6. The machine has the same generation and amount of assigned memory as the existing machine named old 1 and connects to the same network switch.
+
 ## PARAMETERS
 
 ### -AsJob

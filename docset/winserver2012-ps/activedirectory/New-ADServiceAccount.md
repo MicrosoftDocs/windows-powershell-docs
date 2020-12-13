@@ -794,7 +794,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 Specifies the Security Account Manager (SAM) account name of the user, group, computer, or service account.
 The maximum length of the description is 256 characters.
-To be compatible with older operating systems, create a SAM account name that is 20 characters or less.
+To be compatible with older operating systems, create a SAM account name that is 15 characters or less.
 This parameter sets the SAMAccountName for an account object.
 The LDAP display name (ldapDisplayName) for this property is "sAMAccountName".
 

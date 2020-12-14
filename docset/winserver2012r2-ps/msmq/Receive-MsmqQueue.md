@@ -50,7 +50,7 @@ If you specify the **Peek** parameter, this cmdlet returns the number of message
 
 ### Example 1
 ```
-PS C:\>Get-MsmqMessage -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
+PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
 ```
 
 ## PARAMETERS

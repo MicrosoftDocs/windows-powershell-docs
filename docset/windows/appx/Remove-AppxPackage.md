@@ -61,7 +61,8 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 
 ### -AllUsers
 
-This cmdlet removes the app package for all user accounts on the computer. This cmdlet works off the parent package type. If it is a bundle, use -PackageTypeFilter and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+This parameter removes the app package for all user accounts on the computer. The parameter works off the parent package type. If it is a bundle, use -PackageTypeFilter with "Get-AppxPackage" command and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+
 
 ```yaml
 Type: SwitchParameter

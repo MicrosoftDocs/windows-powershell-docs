@@ -2,7 +2,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: ertorres
+ms.author: erik0686
 author: Erik Torres
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
@@ -31,12 +31,12 @@ This is a system setting. It can only be changed by a user who has Administrator
 ## SYNTAX
 
 ```
-Copy-UserInternationalSettingsToSystem [-WelcomeScreen]<Boolean> [-NewUser]<Boolean> [<CommonParameters>]
+Copy-UserInternationalSettingsToSystem [-WelcomeScreen <Boolean>] [-NewUser <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Copy-UserInternationalSettingsToSystem** cmdlet gets the **international settings** from the current user.
-You can decide whether to copy this settings into the **Welcome screen and system accounts**, the **New user accounts** or both.
+You can decide whether to copy these settings into the **Welcome screen and system accounts**, the **New user accounts** or both.
 
 This cmdlet needs two parameters: **-WelcomeScreen** and **-NewUser**.
 
@@ -64,7 +64,7 @@ This example copies the Windows Display language, Input language, Format/locale 
 ## PARAMETERS
 
 ### -WelcomeScreen
-Copies the settings into the Welcome Screen and System accounts
+Copies the settings into the Welcome Screen and System accounts.
 
 ```yaml
 Type: Boolean
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewUser
-Copies the settings into the New user accounts
+Copies the settings into the new user accounts.
 
 ```yaml
 Type: Boolean
@@ -88,4 +88,4 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

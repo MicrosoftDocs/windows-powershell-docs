@@ -37,41 +37,38 @@ The cmdlet modifies private, public, journal, system journal, system dead-letter
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Modify the ACLs of queues specified by name
+```powershell
+PS C:\> $queue = Get-MsmqQueue -Name "Order*" -QueueType Private
+PS C:\> $rights = "DeleteQueue", "PeekMessage", "ReceiveMessage", "WriteMessage"
+PS C:\> $rights | Foreach-Object { Set-MsmqQueueAcl -InputObject $queue -UserName "CONTOSO\DavidChew" -Allow $PSItem}
+PS C:\> Set-MsmqQueueAcl -InputObject $queue -UserName "CONTOSO\DavidChew" -Deny TakeQueueOwnership
 ```
-PS C:\>Get-MsmqQueue -Name "Order*" -QueueType Private | Set-MsmqQueueAcl -UserName "CONTOSO\DavidChew" -Allow Delete,Peek,Receive,Send -Deny TakeOwnership
-```
+
+This command gets all the private queues that have names that start with the string Order by using the **Get-MsmqQueue** cmdlet. The current cmdlet modifies the ACL of the queues.
 
 ## PARAMETERS
 
 ### -Allow
 Specifies an array of permissions that this cmdlet grants to a user account or group.
+
 The acceptable values for this parameter are:
 
-- Delete.
-Delete the specified queue. 
-- FullControl.
-Full control of the specified queue. 
-- GetPermissions.
-Get the permissions of the specified queue. 
-- GetProperties.
-Get the properties of the specified queue. 
-- JournalReceive.
-Receive a message from the specified queue journal queue. 
-- Peek.
-Peek a message from the specified queue. 
-- Receive.
-Receive a message from the specified queue. 
-- Send.
-Send a message to the specified queue. 
-- SetPermissions.
-Set the permissions of the specified queue. 
-- SetProperties.
-Set the properties of the specified queue. 
-- SpecialPermissions.
-Special permissions for the specified queue. 
-- TakeOwnership.
-Assign the specified queue to oneself.
+- DeleteQueue - Delete the specified queue
+- FullControl - Full control of the specified queue
+- GetQueuePermissions - Get the permissions of the specified queue
+- GetQueueProperties - Get the properties of the specified queue 
+- ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+- DeleteJournalMessage - Delete messages from the journal queue
+- PeekMessage - Peek a message from the specified queue
+- ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+- WriteMessage - Send a message to the specified queue
+- DeleteMessage - Delete a message from the specified queue
+- ChangeQueuePermissions - Set the permissions of the specified queue
+- SetQueueProperties - Set the properties of the specified queue
+- TakeQueueOwnership - Assign the specified queue to oneself
+- GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+- GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
 
 ```yaml
 Type: MessageQueueAccessRights
@@ -103,32 +100,24 @@ Accept wildcard characters: False
 
 ### -Deny
 Specifies an array of permissions that the cmdlet revokes from a user account or group.
+
 The acceptable values for this parameter are:
 
-- Delete.
-Delete the specified queue. 
-- FullControl.
-Full control of the specified queue. 
-- GetPermissions.
-Get the permissions of the specified queue. 
-- GetProperties.
-Get the properties of the specified queue. 
-- JournalReceive.
-Receive a message from the specified queue journal queue. 
-- Peek.
-Peek a message from the specified queue. 
-- Receive.
-Receive a message from the specified queue. 
-- Send.
-Send a message to the specified queue. 
-- SetPermissions.
-Set the permissions of the specified queue. 
-- SetProperties.
-Set the properties of the specified queue. 
-- SpecialPermissions.
-Special permissions for the specified queue. 
-- TakeOwnership.
-Assign the specified queue to oneself.
+- DeleteQueue - Delete the specified queue
+- FullControl - Full control of the specified queue
+- GetQueuePermissions - Get the permissions of the specified queue
+- GetQueueProperties - Get the properties of the specified queue 
+- ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+- DeleteJournalMessage - Delete messages from the journal queue
+- PeekMessage - Peek a message from the specified queue
+- ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+- WriteMessage - Send a message to the specified queue
+- DeleteMessage - Delete a message from the specified queue
+- ChangeQueuePermissions - Set the permissions of the specified queue
+- SetQueueProperties - Set the properties of the specified queue
+- TakeQueueOwnership - Assign the specified queue to oneself
+- GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+- GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
 
 ```yaml
 Type: MessageQueueAccessRights
@@ -162,32 +151,24 @@ Accept wildcard characters: False
 
 ### -Remove
 Specifies an array of permissions that this cmdlet removes from a user account or group.
+
 The acceptable values for this parameter are:
 
-- Delete.
-Delete the specified queue. 
-- FullControl.
-Full control of the specified queue. 
-- GetPermissions.
-Get the permissions of the specified queue. 
-- GetProperties.
-Get the properties of the specified queue. 
-- JournalReceive.
-Receive a message from the specified queue journal queue. 
-- Peek.
-Peek a message from the specified queue. 
-- Receive.
-Receive a message from the specified queue. 
-- Send.
-Send a message to the specified queue. 
-- SetPermissions.
-Set the permissions of the specified queue. 
-- SetProperties.
-Set the properties of the specified queue. 
-- SpecialPermissions.
-Special permissions for the specified queue. 
-- TakeOwnership.
-Assign the specified queue to oneself.
+- DeleteQueue - Delete the specified queue
+- FullControl - Full control of the specified queue
+- GetQueuePermissions - Get the permissions of the specified queue
+- GetQueueProperties - Get the properties of the specified queue 
+- ReceiveJournalMessage - Receive messages from the journal queue. This includes the rights to delete and peek messages from the journal queue
+- DeleteJournalMessage - Delete messages from the journal queue
+- PeekMessage - Peek a message from the specified queue
+- ReceiveMessage - Receive messages from the queue. This includes the rights to delete and peek messages
+- WriteMessage - Send a message to the specified queue
+- DeleteMessage - Delete a message from the specified queue
+- ChangeQueuePermissions - Set the permissions of the specified queue
+- SetQueueProperties - Set the properties of the specified queue
+- TakeQueueOwnership - Assign the specified queue to oneself
+- GenericRead - A combination of `GetQueueProperties`, `GetQueuePermissions`, `ReceiveMessage`, and `ReceiveJournalMessage`
+- GenericWrite - A combination of `GetQueueProperties`, `GetQueuePermissions`, and `WriteMessage`
 
 ```yaml
 Type: MessageQueueAccessRights
@@ -234,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -73,6 +73,9 @@ This command gets all users in the container OU=Finance,OU=UserAccounts,DC=FABRI
 ### Example 2: Get a filtered list of users
 ```powershell
 PS C:\> Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
+```
+
+```Output
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -85,6 +88,9 @@ This command gets all users that have a name that ends with SvcAccount.
 ### Example 3: Get all of the properties for a specified user
 ```powershell
 PS C:\> Get-ADUser -Identity ChewDavid -Properties *
+```
+
+```Output
 Surname           : David
 Name              : Chew David
 UserPrincipalName : 

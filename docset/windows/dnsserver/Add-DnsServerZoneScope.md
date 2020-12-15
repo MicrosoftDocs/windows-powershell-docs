@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZoneScope_v1.0.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -33,16 +33,16 @@ Add-DnsServerZoneScope [-ZoneName] <String> [-Name] <String> [-LoadExisting] [-P
 
 ## DESCRIPTION
 The **Add-DnsServerZoneScope** cmdlet adds a zone scope to an existing zone on the Domain Name System (DNS) server.
-A DNS server can load an existing scope its data file.
+A DNS server can load an existing scope from its data file.
 The name of the scope should adhere to the same conventions as the zone name.
 The scope name cannot be same as the zone name to which this cmdlet adds it.
 
-When a scope is created, its data is persisted in a file named %Systemroot%\system32\dns\\\<zone name\>\\\<scope name\>.dns.
+When a scope is created, its data is persisted in a file named `%Systemroot%\system32\dns\<zone name>\<scope name>.dns`.
 
 ## EXAMPLES
 
 ### Example 1: Add a scope on a zone
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "contoso_NorthAmerica" -Verbose -PassThru
 VERBOSE: A scope contoso_NorthAmerica will be added for the zone contoso.com on server Server17. 
 
@@ -54,7 +54,7 @@ contoso_NorthAmerica      contoso_NorthAmerica.dns
 This command adds a scope on an existing zone named contoso.com.
 
 ### Example 2: Add a scope on a zone with existing file
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "contoso_NorthAmerica" -LoadExisting -PassThru 
 ZoneScope                 FileName
 ---------                 --------
@@ -65,7 +65,7 @@ This command adds a scope on an existing zone named contoso.com.
 The command specifies the *LoadExisting* parameter, so the server loads the scope from an existing file.
 
 ### Example 3: Add a cache scope
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "..cache" -Name "ContosoScope" -PassThru
 ZoneScope             FileName
 ---------             --------
@@ -82,9 +82,9 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
 You can continue to work in the session while the job completes. 
 To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](http://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
 
-For more information about Windows PowerShell background jobs, see [about_Jobs](http://go.microsoft.com/fwlink/?LinkID=113251).
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -100,7 +100,8 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+
 The default is the current session on the local computer.
 
 ```yaml
@@ -243,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

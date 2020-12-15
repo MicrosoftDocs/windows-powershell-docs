@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Remove-BgpRoutingPolicyForPeer
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: CBF879FE-FF1E-4E6D-8C6C-BC185EB4FF6B
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

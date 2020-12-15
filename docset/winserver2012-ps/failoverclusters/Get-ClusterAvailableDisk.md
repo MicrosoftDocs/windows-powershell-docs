@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 837E6F97-3782-4170-9DC9-0D69619DD4AA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterAvailableDisk

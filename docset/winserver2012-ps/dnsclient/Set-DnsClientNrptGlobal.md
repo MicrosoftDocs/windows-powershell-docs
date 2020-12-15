@@ -3,8 +3,8 @@ external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
 ms.assetid: 3B2243A2-20A8-4A89-BAF8-DE972758EB54
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

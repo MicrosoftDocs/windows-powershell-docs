@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2DC9ED00-38F7-4158-ACEF-B0DE85DB2A2F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv6Scope
@@ -212,7 +212,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Add-DhcpServerv6Scope](./Add-DhcpServerv6Scope.md)
 

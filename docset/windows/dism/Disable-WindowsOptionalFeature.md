@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/21/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -54,7 +54,7 @@ Separate feature names with a comma.
 The *Remove* parameter removes the files for an optional feature without removing the feature's manifest from the image.
 You can use *Remove* to reduce the disk space that is used by a Windows image.
 After the image has been installed, you can restore the feature at any time from a remote source such as Windows Update or a network share.
-For more information about Features on Demand, see [Configure a Windows Repair Source](http://go.microsoft.com/fwlink/?LinkId=243077) in the TechNet Library.
+For more information about Features on Demand, see [Configure a Windows Repair Source](https://go.microsoft.com/fwlink/?LinkId=243077) in the TechNet Library.
 
 ## EXAMPLES
 
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

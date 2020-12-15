@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
 ms.assetid: D8E7446F-C295-4652-8503-C0877549BD4F
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -337,7 +337,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Install-AdfsFarm](./Install-AdfsFarm.md)
 

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-NlbClusterNode
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 0A3C00E3-9AF0-415B-9D8A-055FAC03484A
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -150,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-NlbClusterNode](./Add-NlbClusterNode.md)
 

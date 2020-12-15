@@ -3,8 +3,8 @@ external help file: MMAgent_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 4BE1B70E-BB79-40CE-B68B-63D9F3106EED
 manager: dansimp
 ---

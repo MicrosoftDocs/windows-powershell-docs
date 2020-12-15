@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-PefWin32EventTrigger
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E6D2201B-CB3A-4DCF-B8A3-F1E7D95C1313
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

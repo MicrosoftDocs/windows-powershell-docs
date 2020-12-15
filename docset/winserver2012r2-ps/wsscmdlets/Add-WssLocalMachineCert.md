@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Add-WssLocalMachineCert
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 86697B49-AD8B-4CBE-96C8-A1DF0D15179F
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

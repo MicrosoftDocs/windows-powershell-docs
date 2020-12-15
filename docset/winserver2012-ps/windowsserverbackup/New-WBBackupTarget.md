@@ -3,8 +3,8 @@ external help file: WSBackup_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: D4D0C006-575E-4F0D-87AB-FD4E9E727D27
 manager: dansimp
 ---

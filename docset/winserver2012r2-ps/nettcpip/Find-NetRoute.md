@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Find-NetRoute
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: E4012E7D-DB63-4EF1-A175-2F19A8B71C2E
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

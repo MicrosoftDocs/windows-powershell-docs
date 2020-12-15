@@ -3,8 +3,8 @@ external help file: DfsNamespace.cdxml-help.xml
 ms.assetid: F067DDB3-A300-46C8-BE2C-9E3769FFBE35
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

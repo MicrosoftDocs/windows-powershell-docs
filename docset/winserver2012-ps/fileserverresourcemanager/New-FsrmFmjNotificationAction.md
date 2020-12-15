@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 93A69581-C005-4D0A-866C-B73AD4DDD8B9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFmjNotificationAction

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 59D81384-63E8-4CAE-BD91-5ECCFA1BCC00
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerDirectoryPartition

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 64D5384C-D67A-459E-8DAF-20C426CAFC09
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerEDns

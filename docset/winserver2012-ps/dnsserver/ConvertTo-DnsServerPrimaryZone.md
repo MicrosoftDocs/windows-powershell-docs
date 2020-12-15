@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 06DEA79B-2082-4698-9E8E-7053DF252CF4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # ConvertTo-DnsServerPrimaryZone

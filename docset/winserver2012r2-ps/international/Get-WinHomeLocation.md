@@ -4,13 +4,13 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Get-WinHomeLocation
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -65,7 +65,7 @@ A 32-bit signed number that uniquely identifies a geographical location.
 
 ## RELATED LINKS
 
-[RegionInfo.GeoId Property](http://go.microsoft.com/fwlink/?LinkID=242310)
+[RegionInfo.GeoId Property](https://go.microsoft.com/fwlink/?LinkID=242310)
 
 [Set-WinHomeLocation](./Set-WinHomeLocation.md)
 

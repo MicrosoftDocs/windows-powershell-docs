@@ -3,8 +3,8 @@ external help file: NLB_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: F803358A-7281-47B4-8A95-32D6D207C36E
 manager: dansimp
 ---
@@ -240,7 +240,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-NlbClusterNode](./Add-NlbClusterNode.md)
 

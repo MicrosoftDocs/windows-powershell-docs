@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 67E030DA-8AB7-4E42-BEE7-BDAA9A6B5681
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmScheduledTask

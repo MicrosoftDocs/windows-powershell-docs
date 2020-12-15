@@ -4,13 +4,13 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: New-ADGroup
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -491,7 +491,7 @@ By default, this cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[Import-CSV](http://go.microsoft.com/fwlink/?LinkID=113341)
+[Import-CSV](https://go.microsoft.com/fwlink/?LinkID=113341)
 
 [Get-ADGroup](./Get-ADGroup.md)
 

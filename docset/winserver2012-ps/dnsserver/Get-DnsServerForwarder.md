@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 7810E61D-C125-4D31-8FAD-86416784AEEF
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerForwarder

@@ -44,13 +44,15 @@ Set-SmbServerConfiguration [-AnnounceServer <Boolean>] [-AsynchronousCredits <UI
 ```
 
 ## DESCRIPTION
-The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) server configuration.
+The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) server configuration. For more information on SMB server and protocol specifications, see [Server Message Block Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11)). For protocol specification, see [[MS-SMB2]: Server Message Block (SMB) Protocol Versions 2 and 3](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 ## EXAMPLES
 
 ### Example 1: Set the SMB Service configuration
 ```powershell
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 16
+```
+```output
 Confirm
 Are you sure you want to perform this action?
 Performing operation 'Modify' on Target 'SMB Service Configuration'.
@@ -837,4 +839,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
-

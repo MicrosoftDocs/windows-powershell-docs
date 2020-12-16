@@ -434,6 +434,7 @@ The acceptable values for this parameter are:
  -- ICMP type code pairs: 3:4. 
 
  -- Keyword: Any. 
+ 
 Note: A rule can be queried for this condition, modified by using the security filter object, or both.
 See the Get-NetFirewallPortFilter cmdlet for more information.
 
@@ -858,7 +859,7 @@ The acceptable values for this parameter are:
 
  -- Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
 
-If a port number is identified by using port1 or port2, then this parameter must be set to TCP or UDP. 
+If a port number is identified by using numeric values (80, 443, 8080, etc.), then this parameter must be set to TCP or UDP. 
 
 The values ICMPv4 and ICMPv6 create a rule that exempts ICMP network traffic from the IPsec requirements of another rule. 
 

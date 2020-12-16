@@ -36,7 +36,7 @@ Copy-UserInternationalSettingsToSystem [-WelcomeScreen <Boolean>] [-NewUser <Boo
 
 ## DESCRIPTION
 The **Copy-UserInternationalSettingsToSystem** cmdlet gets the **international settings** from the current user.
-You can decide whether to copy these settings into the **Welcome screen and system accounts**, the **New user accounts** or both.
+You can decide whether to copy these settings into the **Welcome screen and system accounts**, the **New user accounts**, or both.
 
 This cmdlet needs two parameters: **-WelcomeScreen** and **-NewUser**.
 
@@ -64,7 +64,7 @@ This example copies the Windows Display language, Input language, Format/locale 
 ## PARAMETERS
 
 ### -WelcomeScreen
-Copies the settings into the Welcome Screen and System accounts.
+Copies the settings into the Welcome Screen and system accounts.
 
 ```yaml
 Type: Boolean

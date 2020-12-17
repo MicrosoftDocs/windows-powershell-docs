@@ -5,14 +5,14 @@ schema: 2.0.0
 title: Get-WebApplicationProxyConfiguration
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 6EE4F3B0-6A70-4DB4-BA36-EDCE8B546512
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -164,9 +164,9 @@ Displays the Web Application Proxy configuration.
 
 ## RELATED LINKS
 
-[Web Application Proxy overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Set-WebApplicationProxyConfiguration](./Set-WebApplicationProxyConfiguration.md)
 

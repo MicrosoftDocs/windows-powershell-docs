@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-WebVirtualDirectory
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D5A72EDB-4E58-49A2-9EAE-4A3544B5FCB2
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

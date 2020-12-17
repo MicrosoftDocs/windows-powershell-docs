@@ -1,18 +1,18 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: Appx
 ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage
 schema: 2.0.0
@@ -61,7 +61,8 @@ This command removes an app package named package1_1.0.0.0_neutral__8wekyb3d8bbw
 
 ### -AllUsers
 
-This cmdlet removes the app package for all user accounts on the computer. This cmdlet works off the parent package type. If it is a bundle, use -PackageTypeFilter and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+This parameter removes the app package for all user accounts on the computer. The parameter works off the parent package type. If it is a bundle, use -PackageTypeFilter with "Get-AppxPackage" command and specify the bundle. To use this parameter, you must run the command by using administrator permissions.
+
 
 ```yaml
 Type: SwitchParameter
@@ -186,6 +187,6 @@ An **AppxPackage** object that contain information, including the full name of t
 
 ## RELATED LINKS
 
-[PackageManager class](http://go.microsoft.com/fwlink/?LinkId=245447)
+[PackageManager class](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)
+[Sideload Apps with DISM](https://go.microsoft.com/fwlink/?LinkID=231020)

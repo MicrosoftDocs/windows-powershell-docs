@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 65A0C90E-C243-4EF7-913A-687FDCC61080
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterAccess

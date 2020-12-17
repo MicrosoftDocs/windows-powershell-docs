@@ -3,8 +3,8 @@ external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Reset-VMResourceMetering
@@ -152,7 +152,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Measure-VM](1e88b99a-9b5e-43ce-929f-7608ee7a7620)
+[Measure-VM](./Measure-VM.md)
 
-[Measure-VMResourcePool](692df375-67a3-4945-8590-3cccab788f35)
-
+[Measure-VMResourcePool](./Measure-VMResourcePool.md)

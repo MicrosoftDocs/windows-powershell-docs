@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 925ABE4D-DB6B-40C2-8AA1-0DCCAA0D6CE3
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerGlobalQueryBlockList

@@ -3,8 +3,8 @@ external help file: Hyper-V_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Measure-VM
@@ -165,13 +165,13 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Add-VMNetworkAdapterAcl](63d68d2a-6c40-4c26-b457-cbee37075ade)
+[Add-VMNetworkAdapterAcl](./Add-VMNetworkAdapterAcl.md)
 
-[Disable-VMResourceMetering](5a184811-6acf-4a76-98fa-a0d37abdd2e3)
+[Disable-VMResourceMetering](./Disable-VMResourceMetering.md)
 
-[Enable-VMResourceMetering](30cfc606-ee24-4001-bd65-16602bb76ce2)
+[Enable-VMResourceMetering](./Enable-VMResourceMetering.md)
 
-[Remove-VMNetworkAdapterAcl](aef0ef8f-6810-4eee-abbd-8a9f14e954ac)
+[Remove-VMNetworkAdapterAcl](./Remove-VMNetworkAdapterAcl.md)
 
-[Reset-VMResourceMetering](baa23771-dfd7-4015-bc2f-b387dde0683d)
+[Reset-VMResourceMetering](./Reset-VMResourceMetering.md)
 

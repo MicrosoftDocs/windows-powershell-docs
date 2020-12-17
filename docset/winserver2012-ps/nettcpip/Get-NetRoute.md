@@ -3,8 +3,8 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 3FFBE8B0-365B-45AD-9237-6FA5FA01438A
 manager: dansimp
 ---
@@ -375,11 +375,11 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkId=113302)
 
-[Select-Object](http://go.microsoft.com/fwlink/?LinkId=113387)
+[Select-Object](https://go.microsoft.com/fwlink/?LinkId=113387)
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkId=113423)
 
 [New-NetRoute](./New-NetRoute.md)
 

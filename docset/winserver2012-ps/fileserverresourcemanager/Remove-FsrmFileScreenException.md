@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 29E11826-0613-4D83-B512-816E1D13942F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-FsrmFileScreenException

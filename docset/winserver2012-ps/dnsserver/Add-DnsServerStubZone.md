@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 91911E6C-6CEF-4B83-8712-E9F551B652F6
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DnsServerStubZone

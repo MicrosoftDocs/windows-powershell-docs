@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: E39F7A3B-2E8E-4038-B8E5-45CC4279898D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Measure-DedupFileMetadata

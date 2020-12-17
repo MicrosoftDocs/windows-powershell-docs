@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1CA7A62E-7DC1-44DB-867A-A66E6F8A55A2
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerCache

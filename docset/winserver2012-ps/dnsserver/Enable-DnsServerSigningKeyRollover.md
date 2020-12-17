@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B71074CC-52ED-4E73-A7A9-E3E92729F6BA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Enable-DnsServerSigningKeyRollover

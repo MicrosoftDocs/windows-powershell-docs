@@ -4,13 +4,13 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Resolve-DnsName
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -33,8 +33,6 @@ Resolve-DnsName [-Name] <String> [[-Type] <RecordType>] [-Server <String[]>] [-D
 ## DESCRIPTION
 The **Resolve-DnsName** cmdlet performs a DNS query for the specified name.
 This cmdlet is functionally similar to the nslookup tool which allows users to query for names.
-
-Note:  The **Resolve-DnsName** cmdlet will return a maximum of 25 A and AAAA records from NS servers.
 
 ## EXAMPLES
 
@@ -401,5 +399,5 @@ The DnsRecord object contains all of the records returned from the wire for the 
 
 ## RELATED LINKS
 
-[Nslookup on TechNet](http://go.microsoft.com/fwlink/p/?LinkId=84907)
+[Nslookup on TechNet](https://go.microsoft.com/fwlink/p/?LinkId=84907)
 

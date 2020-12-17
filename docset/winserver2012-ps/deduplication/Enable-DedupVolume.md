@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 4A752894-524D-4A64-8483-F06A73AB0ED0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Enable-DedupVolume

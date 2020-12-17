@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 95EE0821-02C0-4110-9514-062C0AC8C9EE
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6Scope

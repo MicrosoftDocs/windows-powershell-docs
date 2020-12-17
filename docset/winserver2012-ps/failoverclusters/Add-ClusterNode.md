@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 08F23B75-257B-42AB-B13E-1A3190B0A845
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterNode

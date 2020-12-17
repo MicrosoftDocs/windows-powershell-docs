@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-WebCentralCertProviderCredential
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D0323D6F-2D42-49EE-93CA-9B4B1EB8663C
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

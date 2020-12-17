@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EF07AF65-FB1F-4777-AA29-9213E52AB423
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-ClusterLog

@@ -3,8 +3,8 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
 manager: dansimp
 ---
@@ -499,7 +499,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-NetTransportFilter](./New-NetTransportFilter.md)
 

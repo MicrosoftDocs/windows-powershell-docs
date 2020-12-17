@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B296FDDC-A8FE-48A2-86BF-F120E3E53EC4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterCheckpoint

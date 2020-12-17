@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3D62E1AB-62B5-4018-B35E-6B2FB2F1C14D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6Class

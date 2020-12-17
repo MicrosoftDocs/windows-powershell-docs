@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NlbClusterPortRuleNodeWeight
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 2750FC48-A482-4589-9D63-D697615DC560
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 331ACAE2-7C05-49B0-9154-359D6DF9E82F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFileScreenException

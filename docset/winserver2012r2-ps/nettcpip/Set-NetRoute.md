@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Set-NetRoute
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 4A9A1254-7BEE-45F5-810D-118D7A94F850
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -470,5 +470,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetIPInterface](./Set-NetIPInterface.md)
 
-[New-TimeSpan](http://go.microsoft.com/fwlink/p/?LinkId=113360)
+[New-TimeSpan](https://go.microsoft.com/fwlink/p/?LinkId=113360)
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 151AEC03-AAB5-4C2D-B2E9-ACD6C203A125
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-FsrmStorageReport

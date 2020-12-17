@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -336,7 +336,7 @@ Specifies the schedule on which the source server is available for replication.
 
 Replication occurs at intervals that administrators can schedule so that use of expensive WAN links is managed.
 Use this parameter to specify the replication intervals.
-For more information on how replication topology works, see [How Active Directory Replication Topology Works](http://go.microsoft.com/fwlink/?LinkId=223932) on TechNet.
+For more information on how replication topology works, see [How Active Directory Replication Topology Works](https://go.microsoft.com/fwlink/?LinkId=223932) on TechNet.
 
 To specify the replication schedule:
 
@@ -356,7 +356,7 @@ To specify the replication schedule:
 
     `Set-ADReplicationConnection "5f98e288-19e0-47a0-9677-57f05ed54f6b" -ReplicationSchedule $Schedule.`
 
-For more information on the **ActiveDirectorySchedule** class, see [ActiveDirectorySchedule Class](http://go.microsoft.com/fwlink/?LinkId=223933) on the Microsoft Developer Network.
+For more information on the **ActiveDirectorySchedule** class, see [ActiveDirectorySchedule Class](https://go.microsoft.com/fwlink/?LinkId=223933) on the Microsoft Developer Network.
 
 ```yaml
 Type: ActiveDirectorySchedule
@@ -422,7 +422,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

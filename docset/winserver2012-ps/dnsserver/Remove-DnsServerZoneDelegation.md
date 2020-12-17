@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 52812AA0-7CA2-425F-8B28-6A5D383D47A6
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DnsServerZoneDelegation

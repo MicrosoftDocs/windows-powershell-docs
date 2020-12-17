@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -48,13 +48,13 @@ This example sets the cluster log to a detail level of 1.
 
 ### Example 2
 ```
-PS C:\> Set-ClusterLog -Size 2048
+PS C:\> Set-ClusterLog -Size 1024
 Name 
 ---- 
 cluster1
 ```
 
-This example sets the cluster log size to 2048 MB.
+This example sets the cluster log size to 1024 MB.
 
 ## PARAMETERS
 
@@ -117,7 +117,8 @@ Accept wildcard characters: False
 
 ### -Size
 Specifies the log size to set for the cluster.
-The acceptable values for this parameter are:`8` MB to `2048` MB.
+The acceptable values for this parameter in Windows 2016 are:`8` MB to `1024` MB.
+The acceptable values for this parameter in Windows 2019 are:`8` MB to `2048` MB.
 
 ```yaml
 Type: Int32
@@ -132,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -147,4 +148,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-ClusterLog](./Get-ClusterLog.md)
-

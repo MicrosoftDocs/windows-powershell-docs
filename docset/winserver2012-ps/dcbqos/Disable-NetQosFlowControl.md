@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 19B107BD-76AC-4E1F-A963-DECF9400E223
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Disable-NetQosFlowControl

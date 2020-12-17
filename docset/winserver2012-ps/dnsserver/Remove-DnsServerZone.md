@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1FA4F5A8-2AF5-4909-A58B-CC667A288E89
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DnsServerZone

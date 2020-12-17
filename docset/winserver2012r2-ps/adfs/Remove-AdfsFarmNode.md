@@ -4,13 +4,13 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Remove-AdfsFarmNode
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -101,5 +101,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-WindowsFeature](http://go.microsoft.com/fwlink/?LinkID=287572)
+[Uninstall-WindowsFeature](https://go.microsoft.com/fwlink/?LinkID=287572)
 

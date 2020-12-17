@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: ED2C90F6-5605-4041-93CD-CF179D010631
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DedupSchedule

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D5FF4E5A-8ACC-4E89-BA67-9966821D4F52
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DhcpServerv6Scope

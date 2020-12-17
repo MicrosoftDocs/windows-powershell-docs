@@ -3,8 +3,8 @@ external help file: WSUS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 6CFD1224-CEC5-47D9-93F7-89B236146FF6
 manager: dansimp
 ---

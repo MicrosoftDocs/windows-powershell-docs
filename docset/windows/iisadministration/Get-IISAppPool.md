@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -7,12 +7,12 @@ ms.assetid: 790C6A32-DE1D-4650-ABF1-9C59BE608DC2
 manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IISAppPool
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 
@@ -92,5 +92,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [IIS Administration Cmdlets for Windows PowerShell](./iisadministration.md)
 
-[Web Administration Cmdlets for Windows PowerShell](../../winserver2012-ps/webadminstration/WebAdministration.md)
+[Web Administration Cmdlets for Windows PowerShell](../webadministration/WebAdministration.md)
 

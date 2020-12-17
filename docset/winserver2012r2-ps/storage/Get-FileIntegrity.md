@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Get-FileIntegrity
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: C6163BC8-F560-48B2-893E-4A840C64B2C3
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -156,7 +156,7 @@ This cmdlet generates an **MSFT_FileIntegrity** object.
 
 ## RELATED LINKS
 
-[Get-Item](http://go.microsoft.com/fwlink/?LinkID=290495)
+[Get-Item](https://go.microsoft.com/fwlink/?LinkID=290495)
 
 [Repair-FileIntegrity](./Repair-FileIntegrity.md)
 

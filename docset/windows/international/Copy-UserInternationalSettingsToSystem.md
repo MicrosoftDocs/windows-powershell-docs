@@ -2,8 +2,8 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: erik0686
-author: Erik Torres
+ms.author: ertorres
+author: erik0686
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
 keywords: powershell, cmdlet

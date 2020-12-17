@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 24918563-3BFF-4378-9184-096E2D1AC875
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DhcpServerv6DnsSetting

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 050D2CEB-026E-44F1-8CCC-E17740F7BB94
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Update-FsrmAutoQuota

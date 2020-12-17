@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 6C17626A-58B9-4E6A-AD4B-72E362AEB4F8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-FsrmAdrSetting

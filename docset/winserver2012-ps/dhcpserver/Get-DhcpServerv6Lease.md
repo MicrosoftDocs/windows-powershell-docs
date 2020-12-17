@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: C4C02532-1232-4C10-A56B-01E0CC6F6FA0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6Lease

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 636F18BD-3619-48ED-B68E-7F1EAB89C744
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Stop-FsrmClassification

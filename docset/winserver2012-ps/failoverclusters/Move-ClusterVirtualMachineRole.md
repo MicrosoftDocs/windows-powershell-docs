@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: A8EB04E2-0323-4A81-922A-4ED227A5450D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Move-ClusterVirtualMachineRole

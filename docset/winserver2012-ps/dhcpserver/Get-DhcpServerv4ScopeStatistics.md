@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: DE9418AD-0819-4E39-A43A-AA7C16E22819
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv4ScopeStatistics
@@ -174,7 +174,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Add-DhcpServerv4Scope](./Add-DhcpServerv4Scope.md)
 

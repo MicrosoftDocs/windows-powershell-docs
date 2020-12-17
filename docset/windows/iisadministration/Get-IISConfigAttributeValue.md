@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -8,12 +8,12 @@ manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Get-IISConfigAttributeValue
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 
@@ -48,7 +48,7 @@ This command gets the configuration attribute MaxUrlSegments for the Default Web
 ### Example 2: Get configuration attribute values from different parts of the configuration store
 ```
 PS C:\> Get-IISConfigSection "system.webServer/asp" | Get-IISConfigAttributeValue -AttributeName "ScriptErrorMessage"
-An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="http://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
+An error occurred on the server when processing the URL. Please contact the system administrator. <p/> If you are the system administrator please click <a href="https://go.microsoft.com/fwlink/?LinkID=82731">here</a> to find out more about this error.
 ```
 
 This command gets the global attribute value for ScriptErrorMessage

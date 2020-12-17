@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: BE89DFE6-70CF-4A30-BE4F-DC8679C8776E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Stop-ClusterGroup

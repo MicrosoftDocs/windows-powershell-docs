@@ -1,10 +1,10 @@
 ---
-author: andreabarr
+author: Kateyanne
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: powershell
 ms.technology: powershell
 ms.topic: reference
@@ -13,7 +13,7 @@ schema: 2.0.0
 title: Submit-HpcJob
 ms.assetid: C00ED57D-B307-4221-8CA1-7D7C5F4C348F
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Submit-HpcJob

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 81CA127C-1913-44B0-9934-C027D797867D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv4PolicyIPRange

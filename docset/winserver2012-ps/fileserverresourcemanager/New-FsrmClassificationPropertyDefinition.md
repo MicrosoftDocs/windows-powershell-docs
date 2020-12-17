@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 15DEA0EC-5165-4305-9A77-05606A9282ED
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmClassificationPropertyDefinition

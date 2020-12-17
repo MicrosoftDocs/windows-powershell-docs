@@ -5,15 +5,15 @@ schema: 2.0.0
 title: Receive-SmigServerData
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: D8AD4455-C5F4-4EEB-9C81-6F6B5E3A2DC3
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Receive-SmigServerData

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 656160DA-EE18-40B4-BC25-2EB76F5E0740
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-FsrmFileGroup

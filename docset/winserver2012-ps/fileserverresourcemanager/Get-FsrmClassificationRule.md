@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: EE3FEEC6-B7AF-46C9-A5EF-C9190D498AB4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-FsrmClassificationRule

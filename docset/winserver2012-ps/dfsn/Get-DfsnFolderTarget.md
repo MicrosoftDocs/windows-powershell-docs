@@ -3,8 +3,8 @@ external help file: DfsNamespaceFolderTarget.cdxml-help.xml
 ms.assetid: 9CC8E2DF-1EBF-4E77-A5EF-D4B60B5367E9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-IscsiServerTarget
@@ -391,9 +391,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkId=113291)
 
-[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+[New-Object](https://go.microsoft.com/fwlink/p/?LinkId=113355)
 
 [Get-IscsiServerTarget](./Get-IscsiServerTarget.md)
 

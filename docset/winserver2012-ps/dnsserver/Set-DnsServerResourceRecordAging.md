@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F5AD1594-6D98-42E2-8C37-3860912ED276
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerResourceRecordAging

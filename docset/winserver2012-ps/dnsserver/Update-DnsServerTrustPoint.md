@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2DD41C46-24BC-44D1-BE23-FE43E7F75749
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Update-DnsServerTrustPoint

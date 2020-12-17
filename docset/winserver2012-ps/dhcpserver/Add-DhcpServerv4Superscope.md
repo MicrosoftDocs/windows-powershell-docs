@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 29FE4630-7B29-4BB2-BA4C-7FE16F11240E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Superscope

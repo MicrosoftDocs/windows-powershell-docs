@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 25803094-3789-4545-AF77-0D46652D3FCD
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-ClusterOwnerNode

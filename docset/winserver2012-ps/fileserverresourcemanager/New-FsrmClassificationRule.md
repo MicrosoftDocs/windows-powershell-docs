@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 212C6E0A-0F98-4A45-8DF6-E3E0E856BD6F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmClassificationRule

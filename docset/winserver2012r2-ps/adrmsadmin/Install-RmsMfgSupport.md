@@ -4,13 +4,13 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Install-RmsMfgSupport
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -126,5 +126,5 @@ Failure to do this may cause an inconsistent configuration of your AD RMS cluste
 
 ## RELATED LINKS
 
-[Using Windows PowerShell with AD RMS](http://go.microsoft.com/fwlink/?LinkId=136806)
+[Using Windows PowerShell with AD RMS](https://go.microsoft.com/fwlink/?LinkId=136806)
 

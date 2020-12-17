@@ -6,15 +6,15 @@ schema: 2.0.0
 title: Search-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 8954DC2F-5DEF-4B55-A9E7-9BBCD01D5435
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Search-WmsSystem

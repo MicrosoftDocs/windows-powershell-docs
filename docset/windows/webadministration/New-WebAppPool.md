@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -30,16 +30,33 @@ New-WebAppPool [-Name] <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool.
+The **New-WebAppPool** cmdlet creates an Internet Information Services (IIS) application pool. For changing different properties of the application pool after creation, see [PowerShell Snap-in: Making Configuration Changes to Websites and App Pools](https://docs.microsoft.com/iis/manage/powershell/powershell-snap-in-making-simple-configuration-changes-to-web-sites-and-application-pools).
 
 ## EXAMPLES
 
 ### Example 1: Create an IIS application pool
-```
+```powershell
 IIS:\> New-WebAppPool -Name "NewAppPool"
 ```
 
 This command creates an IIS application pool named NewAppPool.
+
+### Example 2: Create an IIS application pool and set autoStart
+```powershell
+IIS:\> $newAppPool = New-WebAppPool -Name "NewAppPool"
+IIS:\> $newAppPool.autoStart = "false"
+IIS:\> $newAppPool | Set-Item
+```
+
+This command creates an IIS application pool named NewAppPool and sets **autoStart** property to false.
+
+### Example 3: Create an IIS application pool and set managedRuntimeVersion
+```powershell
+IIS:\> New-WebAppPool -Name "NewAppPool"
+IIS:\> Set-ItemProperty -Path IIS:\AppPools\NewAppPool managedRuntimeVersion "v4.0"
+```
+
+This command creates an IIS application pool named NewAppPool and sets **managedRuntimeVersion** property to v4.0.
 
 ## PARAMETERS
 
@@ -74,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -91,4 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-WebAppPool](./Start-WebAppPool.md)
 
 [Stop-WebAppPool](./Stop-WebAppPool.md)
-

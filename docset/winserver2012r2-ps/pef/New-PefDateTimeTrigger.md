@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-PefDateTimeTrigger
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 325863B7-C9D9-4053-93B7-2ABE21AA4D4E
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/?LinkID=293966)
+[Get-Date](https://go.microsoft.com/fwlink/?LinkID=293966)
 
 [Add-PefMessageSource](./Add-PefMessageSource.md)
 

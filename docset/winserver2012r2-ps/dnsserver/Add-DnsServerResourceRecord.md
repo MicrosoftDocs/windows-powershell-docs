@@ -4,13 +4,13 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Add-DnsServerResourceRecord
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -1182,7 +1182,7 @@ Specifies whether the server is an AFS volume location server.
 Use a value of 1 indicate that the server is an AFS version 3.0 volume location server for the specified AFS cell.
 Use a value of 2 to indicate that the server is an authenticated name server that holds the cell-root directory node for the server that uses either Open Software Foundation's (OSF) DCE authenticated cell-naming system or HP/Apollo's Network Computing Architecture (NCA).
 
-For more information about server subtypes, see RFC 1183www.ietf.org/rfc/rfc1183.txt (www.ietf.org/rfc/rfc1183.txt).
+For more information about server subtypes, see [RFC 1183](https://www.ietf.org/rfc/rfc1183.txt).
 
 ```yaml
 Type: UInt16

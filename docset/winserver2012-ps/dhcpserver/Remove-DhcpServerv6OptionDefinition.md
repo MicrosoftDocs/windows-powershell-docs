@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: FC463EC2-AE40-4181-BAE6-D0EB6C329647
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv6OptionDefinition

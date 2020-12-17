@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Disable-TpmAutoProvisioning
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 1D4F82DB-0AF0-4DE5-8587-46037ED3BCDE
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

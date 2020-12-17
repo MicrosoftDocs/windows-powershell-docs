@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Export-Certificate
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: 42B14C23-66F0-4A84-BCC7-BE99E488DB10
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -215,7 +215,7 @@ The FileInfo object contains the information about the certificate file.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=290488)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
 [Import-Certificate](./Import-Certificate.md)
 

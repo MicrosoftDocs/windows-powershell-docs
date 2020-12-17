@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.HyperV.PowerShell.Cmdlets.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -77,10 +77,13 @@ This example enables the use of any network for incoming live migrations on the 
 
 ### Example 4
 ```
-PS C:\> Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V\Configuration Files"
+PS C:\> Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V"
 ```
 
-This example specifies new default locations for virtual hard disksand virtual machines on the local Hyper-V host.
+This example specifies new default locations for virtual hard disks and virtual machines on the local Hyper-V host. In this case:
+
+- Virtual machines are stored in "C:\Hyper-V\Virtual Machines" (not "C:\Hyper-V")
+- Virtual hard disks are stored in "C:\Hyper-V\Virtual Hard Disks"
 
 ### Example 5
 ```
@@ -114,7 +117,7 @@ The example configures the local Hyper-V host to use Kerberos to authenticate in
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -369,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualHardDiskPath
-Specifies the default folder to store virtual hard disks on the Hyper-V host.
+Specifies the default folder to store virtual hard disks on the Hyper-V host. This is not a functional setting. The Hyper-V Manager snap-in and Windows Admin Center query it to offer you a default path, but the Hyper-V API (for example `CreateFixedVirtualHardDisk`) and `New-VHD` don't use it.
 
 ```yaml
 Type: String
@@ -425,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachinePath
-Specifies the default folder to store virtual machine configuration files on the Hyper-V host.
+Specifies the default folder to store virtual machine configuration files on the Hyper-V host. This is a functional setting, meaning that if you do not supply a path to VM creation tools (for example `New-VM`), Hyper-V will use this path. Hyper-V will create at least one subfolder in this path, called "Virtual Machines".
 
 ```yaml
 Type: String
@@ -456,7 +459,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -471,4 +474,3 @@ If **-PassThru** is specified.
 ## NOTES
 
 ## RELATED LINKS
-

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: New-NetFirewallRule
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -434,6 +434,7 @@ The acceptable values for this parameter are:
  -- ICMP type code pairs: 3:4. 
 
  -- Keyword: Any. 
+ 
 Note: A rule can be queried for this condition, modified by using the security filter object, or both.
 See the Get-NetFirewallPortFilter cmdlet for more information.
 
@@ -858,7 +859,7 @@ The acceptable values for this parameter are:
 
  -- Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
 
-If a port number is identified by using port1 or port2, then this parameter must be set to TCP or UDP. 
+If a port number is identified by using numeric values (80, 443, 8080, etc.), then this parameter must be set to TCP or UDP. 
 
 The values ICMPv4 and ICMPv6 create a rule that exempts ICMP network traffic from the IPsec requirements of another rule. 
 

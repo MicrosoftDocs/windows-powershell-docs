@@ -38,13 +38,13 @@ Use Test-Cluster to run the validation tests.
 The tests will confirm that the hardware and settings are compatible with failover clustering.
 There are multiple types of tests, including Inventory, System Configuration, Network, Storage, and other types of tests.
 
-Note: This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
-
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2,node3,node4
+```output
 Name 
 ---- 
 cluster1
@@ -52,9 +52,11 @@ cluster1
 
 This example creates a four-node cluster named cluster1, using default settings for IP addressing.
 
-### EXAMPLE 2
+### Example 2
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2 -NoStorage
+```output
 Name 
 ---- 
 cluster1
@@ -62,11 +64,13 @@ cluster1
 
 This example creates a two-node cluster named cluster1.
 The cluster will not have any clustered storage, or disk resources.
-Storage can be added using the Get-ClusterAvailableDisk cmdlet with the Add-ClusterDisk cmdlet.
+Storage can be added using the **Get-ClusterAvailableDisk** cmdlet with the **Add-ClusterDisk** cmdlet.
 
-### EXAMPLE 3
+### Example 3
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123
+```output
 Name 
 ---- 
 cluster1
@@ -74,9 +78,11 @@ cluster1
 
 This example creates a four-node cluster named cluster1 that uses the static IP address 2.0.0.123.
 
-### EXAMPLE 4
+### Example 4
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123,3.0.0.123
+```output
 Name 
 ---- 
 cluster1
@@ -84,9 +90,11 @@ cluster1
 
 This example creates a four-node cluster named cluster1 that uses the static IP addresses 2.0.0.123 and 3.0.0.123.
 
-### EXAMPLE 5
+### Example 5
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -IgnoreNetwork 2.0.0.0/8
+```output
 Name 
 ---- 
 cluster1
@@ -95,9 +103,11 @@ cluster1
 This example creates a four-node cluster named cluster1.
 The cluster uses default settings for IP addressing, and does not use the network 2.0.0.0/8.
 
-### EXAMPLE 6
+### Example 6
+```powershell
+PS C:\> New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123 -IgnoreNetwork 3.0.0.0/8
 ```
-PS C:\>New-Cluster -Name cluster1 -Node node1,node2,node3,node4 -StaticAddress 2.0.0.123 -IgnoreNetwork 3.0.0.0/8
+```output
 Name 
 ---- 
 cluster1
@@ -185,7 +195,7 @@ Accept wildcard characters: False
 ### -NoStorage
 Specifies that shared storage is ignored during the cluster creation.
 The cluster created at the end of the operation will not have shared storage.
-Shared storage can later be added by piping the ClusterDiskInfo object from the Get-ClusterAvailableDisk cmdlet into the Add-ClusterDisk cmdlet.
+Shared storage can later be added by piping the **ClusterDiskInfo** object from the **Get-ClusterAvailableDisk** cmdlet into the **Add-ClusterDisk** cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -232,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -244,6 +254,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+- This cmdlet cannot be run remotely without Credential Security Service Provider (CredSSP) authentication on the server computer.
 ## RELATED LINKS
 
 [Add-ClusterNode](./Add-ClusterNode.md)

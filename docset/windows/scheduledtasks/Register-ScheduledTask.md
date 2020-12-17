@@ -57,7 +57,9 @@ Register-ScheduledTask [-Force] [-InputObject] <CimInstance> [[-Password] <Strin
 ## DESCRIPTION
 The **Register-ScheduledTask** cmdlet registers a scheduled task definition on a local computer.
 
-You can register a task to run any of the following application or file types: Win32 applications, Win16 applications, OS/2 applications, MS-DOS applications, batch files (*.bat), command files (*.cmd), or any properly registered file type.
+You can register a task to run executable files (`.exe` and `.com`), batch files (`.bat` and `.cmd`),
+or any registered file type. However, this cmdlet does not check whether the file you intend it to
+run is compatible with your version, edition, or platform specialization of Windows.
 
 ## EXAMPLES
 
@@ -73,7 +75,8 @@ In this example, the set of commands uses cmdlets and variables to define and re
 
 The first command uses the New-ScheduledTaskTrigger cmdlet to assign a time trigger to the $Time variable.
 
-The second command assigns the $User variable to the **\<run as\>** user account name (Contoso\Administrator).
+The second command assigns the $User variable the name of the user account in the context of which
+the task runs (Contoso\Administrator).
 
 The third command assigns the $PS variable to PowerShell.exe.
 This variable is used to define a task action.
@@ -178,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies a password for the **\<run as\>** user.
+Specifies a password for the user account in the context of which the task runs.
 The password is ignored for the well-known system accounts.
 
 Well-known accounts are: NT AUTHORITY\SYSTEM, NT AUTHORITY\LOCALSERVICE, NT AUTHORITY\NETWORKSERVICE, and the well-known security identifiers (SIDs) for all three accounts.
@@ -319,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-Specifies the name of the **\<run as\>** user account to use when you run the task.
+Specifies the name of the user account in the context of which Windows runs the task.
 
 ```yaml
 Type: String
@@ -349,7 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -378,4 +381,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ScheduledTask](./Stop-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

@@ -40,7 +40,7 @@ If you specify the **Peek** parameter, this cmdlet returns the number of message
 ## EXAMPLES
 
 ### Example 1: Peek at a MsmqQueue message instead of doing a destructive read
-```powershells
+```powershell
 PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional -Peek
 ```
 
@@ -162,4 +162,3 @@ Accept wildcard characters: False
 [Send-MsmqQueue](./Send-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

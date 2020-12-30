@@ -9,7 +9,7 @@ keywords: powershell, cmdlet
 manager: aandrejs
 ms.date: 10/23/2020
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology:
 ms.topic: reference
 online version: 
 schema: 2.1.0
@@ -22,8 +22,8 @@ ms.assetid:
 
 ## SYNOPSIS
 Copies the current user's international settings (Windows Display language, Input language, Regional Format/locale and Location/GeoID) to one or both of the following:
-    * Welcome screen and system accounts
-    * New user accounts
+* Welcome screen and system accounts
+* New user accounts
 
 This is a system setting. It can only be changed by a user who has Administrator permissions. Changes take effect after the computer is restarted.
 

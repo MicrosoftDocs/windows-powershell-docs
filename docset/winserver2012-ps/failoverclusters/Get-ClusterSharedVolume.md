@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 7B7673AB-20A6-406D-A955-267E42D2F03E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterSharedVolume

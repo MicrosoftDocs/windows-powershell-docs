@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 12ED2919-A1F8-4108-9135-7F14435083FE
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerSetting

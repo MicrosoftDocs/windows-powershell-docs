@@ -3,8 +3,8 @@ external help file: WasPsExt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 03708C21-87A9-44BB-A015-0FA2DA14869D
 manager: dansimp
 ---
@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Windows Assessment Services Technical Reference](http://go.microsoft.com/fwlink/?LinkId=215628)
+[Windows Assessment Services Technical Reference](https://go.microsoft.com/fwlink/?LinkId=215628)
 
 [Update-WASJob](./Update-WASJob.md)
 

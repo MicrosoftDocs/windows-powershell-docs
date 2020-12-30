@@ -4,13 +4,13 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Export-IpamRange
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -259,9 +259,9 @@ This array of objects contains an IPAM IP address range.
 
 ## RELATED LINKS
 
-[Export-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113299)
+[Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Import-IpamRange](./Import-IpamRange.md)
 

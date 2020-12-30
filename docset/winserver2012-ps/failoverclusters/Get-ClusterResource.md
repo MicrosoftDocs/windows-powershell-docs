@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: BDC2B8C2-898F-4CB7-86AB-55E304D829B9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-ClusterResource
@@ -226,9 +226,9 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/?LinkID=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/?LinkID=113300)
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Add-ClusterResource](./Add-ClusterResource.md)
 

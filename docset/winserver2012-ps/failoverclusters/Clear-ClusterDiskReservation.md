@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: A99C3621-A137-4EB1-9AC1-A05115BDDFD3
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Clear-ClusterDiskReservation

@@ -3,8 +3,8 @@ external help file: PrintMgmt_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 28E76B8B-6F8F-4554-A8F7-B0375A1D8D9D
 manager: dansimp
 ---

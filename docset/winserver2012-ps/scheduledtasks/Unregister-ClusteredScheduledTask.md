@@ -3,8 +3,8 @@ external help file: ScheduledTask_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 34719FDC-54B9-4B32-952B-7D9084CB6107
 manager: dansimp
 ---

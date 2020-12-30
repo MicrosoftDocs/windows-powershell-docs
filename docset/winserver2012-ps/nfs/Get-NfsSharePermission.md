@@ -3,8 +3,8 @@ external help file: NFS_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 0092F253-EE7B-4908-BD7F-60BF9DF5BE4A
 manager: dansimp
 ---

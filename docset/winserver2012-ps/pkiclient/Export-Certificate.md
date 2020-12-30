@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Export-Certificate
@@ -207,7 +207,7 @@ The FileInfo object contains the information about the certificate file.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 
 [Import-Certificate](./Import-Certificate.md)
 

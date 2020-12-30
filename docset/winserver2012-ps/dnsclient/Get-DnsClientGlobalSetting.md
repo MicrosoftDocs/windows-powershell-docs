@@ -3,8 +3,8 @@ external help file: MSFT_DnsClientGlobalSetting.cdxml-help.xml
 ms.assetid: 388CDBFB-6DC1-452F-AF28-3FF59FD3317F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

@@ -6,14 +6,14 @@ schema: 2.0.0
 title: Remove-NetIPsecDospSetting
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
 ms.assetid: EC1F98C4-4B51-4124-ACF0-918DBC82BAB0
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

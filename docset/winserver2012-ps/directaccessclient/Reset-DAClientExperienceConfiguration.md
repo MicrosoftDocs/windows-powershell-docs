@@ -3,8 +3,8 @@ external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
 ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

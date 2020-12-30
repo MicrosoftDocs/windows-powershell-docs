@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 35CD5640-538A-4957-B87D-A59BB87C34B1
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Disable-DedupVolume

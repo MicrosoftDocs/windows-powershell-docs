@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F0E3BF5E-CE60-4923-B84E-909EFD6F4039
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Reset-DnsServerZoneKeyMasterRole

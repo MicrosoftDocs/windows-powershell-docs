@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1928007D-0C76-4A8A-B6AD-AD0B380E6A3F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Lease

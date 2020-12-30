@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 686040F6-7835-48E1-925B-37E04384DD9F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-Cluster

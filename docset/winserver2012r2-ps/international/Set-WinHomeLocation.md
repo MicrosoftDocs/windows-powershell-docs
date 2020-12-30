@@ -4,13 +4,13 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Set-WinHomeLocation
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -72,7 +72,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RegionInfo.GeoId Property](http://go.microsoft.com/fwlink/?LinkID=242310)
+[RegionInfo.GeoId Property](https://go.microsoft.com/fwlink/?LinkID=242310)
 
 [Get-WinHomeLocation](./Get-WinHomeLocation.md)
 

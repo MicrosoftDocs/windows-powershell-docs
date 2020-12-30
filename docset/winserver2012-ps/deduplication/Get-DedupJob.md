@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F4920CDE-BC31-4C73-9859-32547D8EFD16
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DedupJob

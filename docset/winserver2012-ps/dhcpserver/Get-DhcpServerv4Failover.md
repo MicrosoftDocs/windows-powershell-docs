@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B7898336-3532-422D-A1F5-C8360D554F8D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv4Failover

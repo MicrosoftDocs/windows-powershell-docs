@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 957575FF-64B7-4C54-A9D1-D70F72DC0466
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-FsrmQuota

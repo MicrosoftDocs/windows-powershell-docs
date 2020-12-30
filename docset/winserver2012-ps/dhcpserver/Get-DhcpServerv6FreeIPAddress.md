@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0A64F272-2D6C-437E-8788-B7C38065F390
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6FreeIPAddress

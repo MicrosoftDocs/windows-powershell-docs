@@ -3,8 +3,8 @@ external help file: NetTCPIP_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: C245B3BC-7471-4BBD-88AD-B87E916FB0B3
 manager: dansimp
 ---
@@ -591,7 +591,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Architectural Overview of the TCP/IP Protocol Suite on TechNet](http://technet.microsoft.com/library/bb726993.aspx)
+[Architectural Overview of the TCP/IP Protocol Suite on TechNet](https://technet.microsoft.com/library/bb726993.aspx)
 
 [Get-NetIPv6Protocol](./Get-NetIPv6Protocol.md)
 

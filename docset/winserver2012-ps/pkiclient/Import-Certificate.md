@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Import-Certificate
@@ -130,9 +130,9 @@ The output is an array of X509Certificate2\[\] objects.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
-[Set-Location](http://go.microsoft.com/fwlink/p/?LinkId=113397)
+[Set-Location](https://go.microsoft.com/fwlink/p/?LinkId=113397)
 
 [Export-Certificate](./Export-Certificate.md)
 

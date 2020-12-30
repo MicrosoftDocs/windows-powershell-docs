@@ -3,8 +3,8 @@ external help file: NetSwitchTeam_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 4CB4D629-BE9A-43EA-B4CF-54E7F7595B40
 manager: dansimp
 ---

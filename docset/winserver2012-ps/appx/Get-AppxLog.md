@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-AppxLog
@@ -100,9 +100,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[PackageManager class](http://go.microsoft.com/fwlink/?LinkId=245447)
+[PackageManager class](https://go.microsoft.com/fwlink/?LinkId=245447)
 
-[Sideload Apps with DISM](http://go.microsoft.com/fwlink/?LinkID=231020)
+[Sideload Apps with DISM](https://go.microsoft.com/fwlink/?LinkID=231020)
 
-[Troubleshooting packaging, deployment, and query of Windows Store apps](http://go.microsoft.com/fwlink/?LinkId=271201)
+[Troubleshooting packaging, deployment, and query of Windows Store apps](https://go.microsoft.com/fwlink/?LinkId=271201)
 

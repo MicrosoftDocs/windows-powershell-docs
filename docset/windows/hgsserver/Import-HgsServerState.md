@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsServer-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsServer
 ms.assetid: 73AD3A36-0BED-4BD0-A315-A6178C596A00
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -52,7 +52,7 @@ The cmdlet imports the following Host Guardian Service state from the input file
 
 Additionally, this cmdlet renews the attestation service signer certificate and updates the key protection service instance with this certificate.
 
-For more information about the scenario terms, see [Security and Assurance](http://go.microsoft.com/fwlink/?LinkId=699209).
+For more information about the scenario terms, see [Security and Assurance](https://go.microsoft.com/fwlink/?LinkId=699209).
 
 ## EXAMPLES
 

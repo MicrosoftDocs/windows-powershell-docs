@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AE603879-72CE-4D9D-BA0B-5205AB7347D9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-FsrmFileScreen

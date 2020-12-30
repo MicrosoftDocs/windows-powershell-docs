@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F11C6412-7CDB-4398-85C8-C599E963F3D8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv6Reservation

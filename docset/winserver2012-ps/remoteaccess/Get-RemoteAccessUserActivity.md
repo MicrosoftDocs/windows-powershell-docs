@@ -3,8 +3,8 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 7D4B7537-C100-425D-BBAA-4EE7586803B5
 manager: dansimp
 ---
@@ -264,5 +264,5 @@ A separate instance of the RemoteAccessUserActivity object is output for every c
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 

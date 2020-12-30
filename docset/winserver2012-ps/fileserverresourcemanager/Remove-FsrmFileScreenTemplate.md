@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 70148A36-944D-4B4D-8531-A739A9D1191D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-FsrmFileScreenTemplate

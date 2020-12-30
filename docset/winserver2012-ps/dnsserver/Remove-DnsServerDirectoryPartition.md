@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0B3F2DA3-1733-47A7-A040-16347557DC30
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DnsServerDirectoryPartition

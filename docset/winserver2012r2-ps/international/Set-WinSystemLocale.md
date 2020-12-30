@@ -4,13 +4,13 @@ Module Name: International
 online version: 
 schema: 2.0.0
 title: Set-WinSystemLocale
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -71,6 +71,9 @@ For more information about the CultureInfo object, see CultureInfo Classhttp://g
 ## OUTPUTS
 
 ## NOTES
+Please note that the System Locale setting on the computer is primarily used for legacy code page selection and font fallback. This setting is primarily used by applications that do not support Unicode. It should not be viewed from the sense of a traditional locale or culture info, and should not be confused with the user locale (Regional Format) setting.
+
+When changing the System Locale setting it is highly recommended to also change the Windows Display Language or UI language setting for the computer so that it matches the System Locale. In some cases, the UI language may depend on the code page and/or the font to render properly. Failure to do so can result in configurations where non-Unicode applications don't work as intended.
 
 ## RELATED LINKS
 

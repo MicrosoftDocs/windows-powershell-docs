@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 06B5393E-D9BB-4B52-AAA8-A72CD3669436
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerInDC

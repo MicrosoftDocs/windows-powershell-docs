@@ -4,13 +4,13 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADUser
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
 ms.technology: powershell
@@ -73,6 +73,9 @@ This command gets all users in the container OU=Finance,OU=UserAccounts,DC=FABRI
 ### Example 2: Get a filtered list of users
 ```powershell
 PS C:\> Get-ADUser -Filter 'Name -like "*SvcAccount"' | Format-Table Name,SamAccountName -A
+```
+
+```Output
 Name             SamAccountName
 ----             --------------
 SQL01 SvcAccount SQL01
@@ -85,6 +88,9 @@ This command gets all users that have a name that ends with SvcAccount.
 ### Example 3: Get all of the properties for a specified user
 ```powershell
 PS C:\> Get-ADUser -Identity ChewDavid -Properties *
+```
+
+```Output
 Surname           : David
 Name              : Chew David
 UserPrincipalName : 

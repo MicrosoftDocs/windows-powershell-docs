@@ -107,9 +107,9 @@ PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthentication
 
 This command creates a managed service account and restricts its use to outbound authentication.
 
-### Example 5: Create a new maanged service accoutn and register multiple service principal names
+### Example 5: Create a new managed service account and register multiple service principal names
 ```Powershell
-C:\PS>New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
+PS C:\> New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
 ```
 
 ## PARAMETERS

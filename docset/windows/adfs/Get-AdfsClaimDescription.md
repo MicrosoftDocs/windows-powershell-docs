@@ -51,7 +51,7 @@ You can use this cmdlet without parameters to get all claim descriptions in the 
 
 ### Example 1: Get a claim description
 ```
-PS C:\> Get-AdfsClaimDescription | Where -Object {$_.IsOffered}
+PS C:\> Get-AdfsClaimDescription | Where-Object {$_.IsOffered}
 ```
 
 This command gets the list of claim descriptions that the Federation Service offers.

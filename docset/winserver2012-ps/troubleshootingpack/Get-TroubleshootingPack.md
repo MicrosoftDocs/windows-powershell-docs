@@ -28,14 +28,14 @@ The **Get-TroubleshootingPack** can also get information about a troubleshooting
 ## EXAMPLES
 
 ### Example 1: Get a troubleshooting pack
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 ```
 
 The command gets the troubleshooting pack for Audio in the specified path.
 
 ### Example 2: Get a root cause
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" PS C:\>$Audio.Rootcauses[2]
 ```
 
@@ -48,7 +48,7 @@ The $Audio object contains an array of root causes.
 This command uses conventional array notation to access the third member of the array.
 
 ### Example 3: Get a resolution
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" PS C:\>$Audio.RootCauses[2].Resolutions[0]
 ```
 
@@ -61,7 +61,7 @@ The $Audio object contains an array of root causes, each of which contains an ar
 This command uses conventional array notation to access the first resolution for the third root cause.
 
 ### Example 4: Generate an answer file
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -AnswerFile "AudioAnswerFile.xml"
 ```
 
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

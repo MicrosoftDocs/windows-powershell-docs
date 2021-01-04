@@ -34,16 +34,12 @@ You can use this cmdlet without parameters to get the full list of claim descrip
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Get a claim description
+```powershell
+PS C:\> Get-AdfsClaimDescription | Where-Object {$_.IsOffered}
 ```
-C:\PS>Get-ADFSClaimDescription | Where -Object {$_.IsOffered}
-```
 
-Description
-
------------
-
-Gets the list of claim descriptions that the Federation Service offers.
+This command gets the list of claim descriptions that the Federation Service offers.
 
 ## PARAMETERS
 
@@ -78,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 

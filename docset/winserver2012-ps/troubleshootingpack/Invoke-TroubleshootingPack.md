@@ -52,7 +52,7 @@ The command uses the **Get-TroubleshootingPack** cmdlet to get a **DiagPack** ob
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" PS C:\>Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"
 ```
 
-This example runs the Areo pack in interactive mode and saves the results to a folder.
+This example runs the Audio pack in interactive mode and saves the results to a folder.
 
 The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack object and stores it in the $Audio variable.
 

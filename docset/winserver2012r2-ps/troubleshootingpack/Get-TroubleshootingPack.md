@@ -76,7 +76,7 @@ PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -Ans
 ```
 
 This command uses the **Get-TroubleshootingPack** cmdlet to generate an answer file.
-The Areo troubleshooting pack provides a series of questions for the user to describe the troubleshooting situation and saves that information in the specified XML file.
+The Audio troubleshooting pack provides a series of questions for the user to describe the troubleshooting situation and saves that information in the specified XML file.
 
 ## PARAMETERS
 

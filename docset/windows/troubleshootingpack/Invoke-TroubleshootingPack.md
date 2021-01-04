@@ -38,7 +38,7 @@ The cmdlet can save reports that detail issues and resolutions.
 In interactive mode, you can select the resolutions to use and provide input to interactions with the troubleshooting pack.
 In unattended mode, the troubleshooting pack determines which resolutions to use at run time.
 While in unattended mode, if the troubleshooting pack requires input, you need to provide answers or specify an answer file.
-To create an answer file, use the Get-TroubleshootingPack cmdlet.
+To create an answer file, use the **Get-TroubleshootingPack** cmdlet.
 
 You can save the result report and the debug report, along with XSL and any linked files.
 Both reports contain the issues and resolutions.
@@ -47,7 +47,7 @@ The debug report contains additional information.
 ## EXAMPLES
 
 ### Example 1: Run a troubleshooting pack
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" | Invoke-TroubleshootingPack
 ```
 
@@ -57,7 +57,7 @@ This example does not save reports.
 The command uses the **Get-TroubleshootingPack** cmdlet to get a **DiagPack** object and pipes it to the **Invoke-TroubleshootingPack** cmdlet.
 
 ### Example 2: Save troubleshooting reports
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"
 ```
@@ -70,7 +70,7 @@ The second command invokes the troubleshooting pack stored in $Audio.
 The pack saves reports in the specified folder.
 
 ### Example 3: Run a troubleshooting pack in unattended mode
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -AnswerFile "AudioAnswerFile.xml" -Unattended
 ```
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Unattended
 Indicates that the troubleshooting pack runs in unattended mode.
-If you specify this parameter and the troubleshooting pack requires input, specify an answer file in the *AnswerFile* parameter.
+If you specify this parameter and the troubleshooting pack requires input, specify an answer file in the **AnswerFile** parameter.
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

@@ -46,7 +46,7 @@ The debug report contains additional information.
 ## EXAMPLES
 
 ### Example 1: Run a troubleshooting pack
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" | Invoke-TroubleshootingPack
 ```
 
@@ -56,7 +56,7 @@ This example does not save reports.
 The command uses the **Get-TroubleshootingPack** cmdlet to get a **DiagPack** object and pipes it to the **Invoke-TroubleshootingPack** cmdlet.
 
 ### Example 2: Save troubleshooting reports
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"
 ```
@@ -69,7 +69,7 @@ The second command invokes the troubleshooting pack stored in $Audio.
 The pack saves reports in the specified folder.
 
 ### Example 3: Run a troubleshooting pack in unattended mode
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -AnswerFile "AudioAnswerFile.xml" -Unattended
 ```
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

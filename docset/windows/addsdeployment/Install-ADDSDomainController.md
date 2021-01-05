@@ -69,14 +69,14 @@ The **Install-ADDSDomainController** cmdlet installs a domain controller in Acti
 
 ### Example 1: Install a domain controller and DNS server
 ```
-PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential "CORP\Administrator") -DomainName "corp.contoso.com"
+PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com "
 ```
 
 This command installs a domain controller and DNS server in the corp.contoso.com domain using CORP\Administrator credentials and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM) password.
 
 ### Example 2: Install a domain controller and DNS server using administrator credentials
 ```
-PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com "
+PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential "CORP\Administrator") -DomainName "corp.contoso.com"
 ```
 
 This command installs a domain controller and DNS server in the corp.contoso.com domain using Administrator credentials and prompts the user to provide and confirm the DSRM password.

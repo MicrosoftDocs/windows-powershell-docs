@@ -41,7 +41,7 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx).
+For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/library/cc732774.aspx).
 
 ## EXAMPLES
 

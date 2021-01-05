@@ -33,7 +33,7 @@ Remove-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <String>
 The **Remove-BitLockerKeyProtector** cmdlet removes a key protector for a volume protected by BitLocker Drive Encryption.
 
 You can specify a key protector to remove by using an ID.
-To add a protector, use the Add-BitLockerKeyProtector cmdlet.
+To add a protector, use the **Add-BitLockerKeyProtector** cmdlet.
 
 If you remove all the key protectors for a BitLocker volume, BitLocker stores the data encryption key for the volume without using encryption.
 This means that any user that can access the volume can read the encrypted data on the volume unless you add a key protector.
@@ -41,7 +41,7 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://technet.microsoft.com/en-us/library/cc732774.aspx (http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see [BitLocker Drive Encryption Overview](https://technet.microsoft.com/en-us/library/cc732774.aspx).
 
 ## EXAMPLES
 
@@ -91,11 +91,11 @@ Accept wildcard characters: False
 ```
 
 ### -KeyProtectorId
-Specifies the ID for a key protector or a **KeyProtector** object.
+Specifies the ID for a key protector.
 A BitLocker volume object includes a **KeyProtector** object.
-You can specify the key protector object itself, or you can specify the ID.
+You have to specify the key protector ID.
 See the Examples section.
-To obtain a BitLocker volume object, use the Get-BitLockerVolume cmdlet.
+To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 
 ```yaml
 Type: String
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ### -MountPoint
 Specifies an array of drive letters or BitLocker volume objects.
 The cmdlet removes key protectors for the volumes specified.
-To obtain a BitLocker volume object, use the Get-BitLockerVolume cmdlet.
+To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 
 ```yaml
 Type: String[]
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

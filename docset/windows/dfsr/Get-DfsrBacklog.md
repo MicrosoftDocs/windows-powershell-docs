@@ -44,7 +44,7 @@ A backlog indicates latency, and a backlog may be expected in your environment, 
 
 ### Example 1: Retrieve unreplicated changes
 ```
-PS C:\> Get-DfsrBacklog -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1A"
+PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1A"
 
 Identifier                  : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v538
 Flags                       : 5

@@ -36,17 +36,33 @@ For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://tech
 
 ## EXAMPLES
 
-### Example 1: Remove a key protector for a volume
-```
-PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:" PS C:\>Remove-KeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1]
+### Example 1: Remove the second key protector for a volume
+```powershell
+PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
 ```
 
 This example removes a key protector for a specified BitLocker volume.
 
-The first command uses Get-BitLockerVolume to obtain a BitLocker volume and store it in the $BLV variable.
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
 
 The second command removes the key protector for the BitLocker volume specified by the **MountPoint** parameter.
-The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV.
+The command specifies the key protector by using its ID, contained in the BitLocker object stored in `$BLV`.
+
+### Example 2: Remove TpmPin key protector for a volume
+```powershell
+PS C:\> $BLV = Get-BitlockerVolume -MountPoint "C:"
+PS C:\> $TpmPinKeyProtecor = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtecor.KeyProtectorId 
+```
+
+This example removes a key protector of type TpmPin for a specified BitLocker Volume.
+
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
+
+The second command filters the key protectors to get only the one with TpmPin type and stores it in `$TpmPinKeyProtecor` varible.
+
+The third command removes they key protector by its ID.
 
 ## PARAMETERS
 

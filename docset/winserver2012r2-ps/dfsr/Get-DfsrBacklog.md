@@ -94,7 +94,6 @@ The command converts the verbose stream data into a text string containing only 
 ### -DestinationComputerName
 Specifies the name of the receiving computer.
 A destination computer is also called an inbound or downstream computer.
-If you do not specify this parameter, the cmdlet uses the local computer.
 
 ```yaml
 Type: String
@@ -103,7 +102,7 @@ Aliases: ReceivingMember, RMem
 
 Required: True
 Position: 3
-Default value: [local computer]
+Default value: none
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```

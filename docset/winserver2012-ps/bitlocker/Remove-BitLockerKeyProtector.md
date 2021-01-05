@@ -52,15 +52,15 @@ The command specifies the key protector by using its ID, contained in the BitLoc
 ### Example 2: Remove TpmPin key protector for a volume
 ```powershell
 PS C:\> $BLV = Get-BitlockerVolume -MountPoint "C:"
-PS C:\> $TpmPinKeyProtecor = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
-PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtecor.KeyProtectorId 
+PS C:\> $TpmPinKeyProtector = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtector.KeyProtectorId 
 ```
 
 This example removes a key protector of type TpmPin for a specified BitLocker Volume.
 
 The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
 
-The second command filters the key protectors to get only the one with TpmPin type and stores it in `$TpmPinKeyProtecor` varible.
+The second command filters the key protectors to get only the one with TpmPin type and stores it in `$TpmPinKeyProtector` varible.
 
 The third command removes they key protector by its ID.
 

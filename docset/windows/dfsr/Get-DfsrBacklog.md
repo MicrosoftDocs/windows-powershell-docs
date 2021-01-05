@@ -35,7 +35,7 @@ The **Get-DfrsBacklog** cmdlet retrieves pending updates between two computers t
 
 Updates can be new, modified, or deleted files and folders.
 The maximum number of files that this command displays is 100.
-The *Verbose* parameter displays a count of all backlogged updates.
+The **Verbose** parameter displays a count of all backlogged updates.
 Any files or folders listed in the DFS Replication backlog have not yet replicated from the source computer to the destination computer.
 This is not necessarily an indication of problems.
 A backlog indicates latency, and a backlog may be expected in your environment, depending on configuration, rate of change, network, and other factors.
@@ -43,9 +43,10 @@ A backlog indicates latency, and a backlog may be expected in your environment, 
 ## EXAMPLES
 
 ### Example 1: Retrieve unreplicated changes
-```
+```powershell
 PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1A"
-
+```
+```output
 Identifier                  : {DCE7FC28-5584-4D5D-BC84-2BD9D53CC2FC}-v538
 Flags                       : 5
 Attributes                  : 32
@@ -87,22 +88,24 @@ This command retrieves the first 100 unreplicated changes between the local comp
 The command displays all file metadata.
 
 ### Example 2: Retrieve unreplicated changes between upstream and downstream computers
+```powershell
+PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1" | Format-Table FullPathName, UpdateTime
 ```
-PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV1" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1" | format-table fullpathname,updatetime
-
+```output
 FullPathName                      UpdateTime
 ------------                      ----------
 c:\rf1a\imageres.dll       3/15/2013 5:28:45 PM
 c:\rf1a\mshtml.dll         3/15/2013 5:28:50 PM
 ```
 
-This command retrieves the first 100 unreplicated changes between the downstream computer SRV1 and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1.
-The command also formats the output into a table that contains only the file paths and modification dates on the upstream server
+This command retrieves the first 100 unreplicated changes between the downstream computer SRV01 and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1.
+The command also formats the output into a table that contains only the file paths and modification dates on the upstream server.
 
 ### Example 3: Retrieve unreplicated changes count to display
-```
+```powershell
 PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose
-
+```
+```output
 The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
 ```
 
@@ -110,9 +113,10 @@ This command retrieves the total count of unreplicated changes between the downs
 The command displays this output in the verbose stream.
 
 ### Example 4: Retrieve unreplicated changes count to a string object
-```
+```powershell
 PS C:\> (Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4>&1).Message.Split(':')[2] 
-
+```
+```output
 2400
 ```
 
@@ -120,10 +124,11 @@ This command retrieves the total count of unreplicated changes between the downs
 The command converts the verbose stream data into a text string containing only the count, for later manipulation.
 
 ### Example 5: Retrieve unreplicated changes count to a file
-```
+```powershell
 PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4> verbose.txt > null
 PS C:\> Get-Content .\verbose.txt
-
+```
+```output
 The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
 ```
 
@@ -200,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

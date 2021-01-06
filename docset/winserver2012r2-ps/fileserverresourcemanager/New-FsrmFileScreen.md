@@ -40,39 +40,38 @@ The file screen does not prevent users and applications from accessing files tha
 ## EXAMPLES
 
 ### Example 1: Create a passive file screen
-```
-PS C:\>New-FsrmFileScreen -Path "C:\Shares" -Description "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files"
+```powershell
+PS C:\> New-FsrmFileScreen -Path "C:\Shares" -Description "Filter Non-HTML text files" -IncludeGroup "Non-HTML text files" -Active:$false
 ```
 
 This command creates a passive file screen on C:\Shares that logs any files that match the "Non-HTML text files" file group.
-The file screen template is passive because the command does not specify the **Active** parameter.
+The file screen template is passive because the command specifies the `-Active:$false` parameter.
 This means that users can create non-HTML text files.
 
 ### Example 2: Create an active file screen
-```
-PS C:\>$Notification = New-FsrmAction -Type Email -MailTo "[Admin Email];[File Owner]" -Subject "Warning: attempted to create a non-HTML text file" -Body "You attempted to create a non-HTML text file. This is not allowed." -RunLimitInterval 120
+```powershell
+PS C:\> $Notification = New-FsrmAction -Type Email -MailTo "[Admin Email];[File Owner]" -Subject "Warning: attempted to create a non-HTML text file" -Body "You attempted to create a non-HTML text file. This is not allowed." -RunLimitInterval 120
 PS C:\> New-FsrmFileScreen -Path "C:\Shares\Ctrshare03" -IncludeGroup "Non-HTML text files" -Notification $Notification -Active
 ```
 
-The first command creates a File Server Resource Manager (FSRM) action object and stores the results in the **$Notification** variable.
+The first command creates a File Server Resource Manager (FSRM) action object and stores the results in the $Notification variable.
 The action sends an email notification to the file owner and administrator.
 The **RunLimitInterval** parameter specifies an interval of 2 minutes before the server can send the email notification again.
 
-This second command creates an active file screen on C:\Shares\Ctrshare03 that restricts any files that match the "Non-HTML text files" file group.
-When a user attempts to create a non-HTML text file, the file screen performs the notification action stored in the **$Notification** variable.
+This second command creates an active file screen on `C:\Shares\Ctrshare03` that restricts any files that match the "Non-HTML text files" file group.
+When a user attempts to create a non-HTML text file, the file screen performs the notification action stored in the `$Notification` variable.
 
 ### Example 3: Create a file screen from a file screen template
-```
-PS C:\>New-FsrmFileScreen -Path "C:\shares\ctrshare03" -Template "Block Image Files"
+```powershell
+PS C:\> New-FsrmFileScreen -Path "C:\shares\ctrshare03" -Template "Block Image Files"
 ```
 
-This command creates a file screen on C:\shares\ctrshare03 based on the settings in the "Block Image Files" template.
+This command creates a file screen on `C:\shares\ctrshare03` based on the settings in the "Block Image Files" template.
 
 ## PARAMETERS
 
 ### -Active
-Indicates that the server will fail any I/O operation that violates the file screen.
-If you do not specify this parameter, the server does not fail violating I/O operations and still runs any action that is associated with the file screen.
+Indicates that the server will fail any I/O operation that violates the file screen. It is enabled by default.
 
 ```yaml
 Type: SwitchParameter

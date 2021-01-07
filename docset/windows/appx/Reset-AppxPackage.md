@@ -12,7 +12,7 @@ ms.mktglfcycl: manage
 ms.prod: w10
 ms.reviewer:
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: windows
 ms.topic: reference
 online version:
 schema: 2.0.0

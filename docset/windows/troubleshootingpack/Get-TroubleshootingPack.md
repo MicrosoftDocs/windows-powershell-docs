@@ -30,21 +30,21 @@ Get-TroubleshootingPack [-Path] <String> [-AnswerFile <String>] [<CommonParamete
 ```
 
 ## DESCRIPTION
-The **Get-TroubleshootingPack** cmdlet gets a **Microsoft.Windows.Diagnosis.DiagPack** object that you can pass to the Invoke-TroubleshootingPack cmdlet.
+The **Get-TroubleshootingPack** cmdlet gets a **Microsoft.Windows.Diagnosis.DiagPack** object that you can pass to the **Invoke-TroubleshootingPack** cmdlet.
 
 The **Get-TroubleshootingPack** cmdlet also gets information about a troubleshooting pack and generates an answer file.
 
 ## EXAMPLES
 
 ### Example 1: Get a troubleshooting pack
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 ```
 
 The command gets the troubleshooting pack for Audio in the specified path.
 
 ### Example 2: Get a root cause
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> $Audio.Rootcauses[2]
 ```
@@ -58,7 +58,7 @@ The $Audio object contains an array of root causes.
 This command uses conventional array notation to access the third member of the array.
 
 ### Example 3: Get all root causes
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> $Audio.Rootcauses
 ```
@@ -67,7 +67,7 @@ This example displays all the root causes this troubleshooting pack investigates
 
 
 ### Example 4: Get a resolution for a root cause
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> $Audio.RootCauses[2].Resolutions[0]
 ```
@@ -81,7 +81,7 @@ The $Audio object contains an array of root causes, each of which contains an ar
 This command uses conventional array notation to access the first resolution for the third root cause.
 
 ### Example 5: Generate an answer file
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" -AnswerFile "AudioAnswerFile.xml"
 ```
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

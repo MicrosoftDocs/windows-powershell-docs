@@ -486,7 +486,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualDesktopTemplateStoragePath
-Specifies the path where the template for the virtual desktop collection is stored.
+Specifies the path where the parent disk for virtual machines in the collection is stored.
 
 ```yaml
 Type: String

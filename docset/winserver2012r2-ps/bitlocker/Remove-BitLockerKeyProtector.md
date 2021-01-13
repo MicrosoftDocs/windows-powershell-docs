@@ -69,9 +69,9 @@ This example removes a key protector of type TpmPin for a specified BitLocker Vo
 
 The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
 
-The second command filters the key protectors to get only the one with TpmPin type and stores it in `$TpmPinKeyProtector` varible.
+The second command filters the key protectors to get only the one with TpmPin type and stores it in the `$TpmPinKeyProtector` variable.
 
-The third command removes they key protector by its ID.
+The third command removes the key protector by its ID.
 
 ## PARAMETERS
 
@@ -162,4 +162,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

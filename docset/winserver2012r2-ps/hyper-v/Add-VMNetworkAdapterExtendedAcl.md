@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPort
-Specifies the local port for the ACL. Also a ports range format can be used (i.e. "49152-49182", for example).
+Specifies the local port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the local port is the destination port.
 For an outbound packet, the local port is the source port.
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePort
-Specifies the remote port for the ACL. Also a ports range format can be used (i.e. "49152-49182", for example).
+Specifies the remote port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the remote port is the source port.
 For an outbound packet, the remote port is the destination port.
 

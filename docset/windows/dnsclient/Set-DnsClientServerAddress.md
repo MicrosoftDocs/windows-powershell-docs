@@ -48,8 +48,8 @@ Set-DnsClientServerAddress -InputObject <CimInstance[]> [-ServerAddresses <Strin
 
 ## DESCRIPTION
 The **Set-DnsClientServerAddress** cmdlet sets one or more IP addresses for DNS servers associated with an interface.
-This cmdlet statically adds DNS server addresses to the interface.
-If this cmdlet is used to add DNS servers to the interface, then the DNS servers will override any DHCP configuration for that interface.
+This cmdlet adds static DNS server addresses to the interface.
+If you use this cmdlet to add DNS servers to the interface, then the DNS servers you specify override any DHCP configuration for that interface.
 
 ## EXAMPLES
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 Specifies the input to this cmdlet. 
-You can use this parameter, or you can pipe the input to this cmdlet.
+You can use this parameter or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance[]
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If you omit this parameter or enter value of `0`, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml

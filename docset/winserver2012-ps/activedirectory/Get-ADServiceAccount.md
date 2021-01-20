@@ -125,7 +125,7 @@ Description
 
 -----------
 
-Find the Managed Service Accounts installed on the computer "CN=SQL-Server-1,DC=contoso,DC=com".
+This command gets the managed service accounts allowed to be used on the computer `CN=SQL-Server-1,DC=contoso,DC=com`.
 
 ## PARAMETERS
 

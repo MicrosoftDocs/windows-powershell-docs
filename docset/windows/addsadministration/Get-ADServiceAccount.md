@@ -110,7 +110,7 @@ HostComputers     : {CN=SQL-Server-1, DC=contoso,DC=com}
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets the managed service accounts installed on the computer CN=SQL-Server-1,DC=contoso,DC=com.
+This command gets the managed service accounts allowed to be used on the computer `CN=SQL-Server-1,DC=contoso,DC=com`.
 
 ## PARAMETERS
 

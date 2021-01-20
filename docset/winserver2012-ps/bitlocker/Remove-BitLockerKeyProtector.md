@@ -24,7 +24,7 @@ Remove-BitLockerKeyProtector [-MountPoint] <String[]> [-KeyProtectorId] <String>
 The **Remove-BitLockerKeyProtector** cmdlet removes a key protector for a volume protected by BitLocker Drive Encryption.
 
 You can specify a key protector to remove by using an ID.
-To add a protector, use the Add-BitLockerKeyProtector cmdlet.
+To add a protector, use the **Add-BitLockerKeyProtector** cmdlet.
 
 If you remove all the key protectors for a BitLocker volume, BitLocker stores the data encryption key for the volume without using encryption.
 This means that any user that can access the volume can read the encrypted data on the volume unless you add a key protector.
@@ -32,30 +32,46 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see BitLocker Drive Encryption Overviewhttp://technet.microsoft.com/en-us/library/cc732774.aspx (http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see [BitLocker Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/dn641993(v=ws.11)).
 
 ## EXAMPLES
 
-### Example 1: Remove a key protector for a volume
-```
-PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:" PS C:\>Remove-KeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1]
+### Example 1: Remove the second key protector for a volume
+```powershell
+PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
 ```
 
 This example removes a key protector for a specified BitLocker volume.
 
-The first command uses Get-BitLockerVolume to obtain a BitLocker volume and store it in the $BLV variable.
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
 
 The second command removes the key protector for the BitLocker volume specified by the **MountPoint** parameter.
-The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV.
+The command specifies the key protector by using its ID, contained in the BitLocker object stored in `$BLV`.
+
+### Example 2: Remove TpmPin key protector for a volume
+```powershell
+PS C:\> $BLV = Get-BitlockerVolume -MountPoint "C:"
+PS C:\> $TpmPinKeyProtector = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtector.KeyProtectorId 
+```
+
+This example removes a key protector of type TpmPin for a specified BitLocker Volume.
+
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
+
+The second command filters the key protectors to get only the one with TpmPin type and stores it in the `$TpmPinKeyProtector` variable.
+
+The third command removes they key protector by its ID.
 
 ## PARAMETERS
 
 ### -KeyProtectorId
-Specifies the ID for a key protector or a **KeyProtector** object.
+Specifies the ID for a key protector.
 A BitLocker volume object includes a **KeyProtector** object.
-You can specify the key protector object itself, or you can specify the ID.
+You have to specify the key protector ID.
 See the Examples section.
-To obtain a BitLocker volume object, use the Get-BitLockerVolume cmdlet.
+To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 
 ```yaml
 Type: String
@@ -72,7 +88,7 @@ Accept wildcard characters: False
 ### -MountPoint
 Specifies an array of drive letters or BitLocker volume objects.
 The cmdlet removes key protectors for the volumes specified.
-To obtain a BitLocker volume object, use the Get-BitLockerVolume cmdlet.
+To obtain a BitLocker volume object, use the **Get-BitLockerVolume** cmdlet.
 
 ```yaml
 Type: String[]
@@ -134,4 +150,3 @@ Accept wildcard characters: False
 [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

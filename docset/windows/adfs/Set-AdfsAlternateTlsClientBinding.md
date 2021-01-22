@@ -46,7 +46,7 @@ It will configure AD FS to use port 443 for client TLS.
 
 ### Example 1: Configure a deployment
 ```
-PS C:\> Set-AdfsAlternateTlsClientBinding -Member "DC1.contoso.com" -Thumbprint "c67e1ffba186d70c7e00c89596e0cb5645f9874a"
+PS C:\> Set-AdfsAlternateTlsClientBinding -Member "ADFSServer1.contoso.com" -Thumbprint "c67e1ffba186d70c7e00c89596e0cb5645f9874a"
 ```
 
 This command configures a deployment to use the same port for device certificate authentication and user certificate authentication.

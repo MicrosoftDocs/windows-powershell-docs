@@ -7,7 +7,6 @@ keywords: powershell, cmdlet
 manager: New-HpcSoftCard
 ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=217207
 schema: 2.0.0
@@ -22,7 +21,6 @@ description:
 keywords: powershell, cmdlet
 ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0

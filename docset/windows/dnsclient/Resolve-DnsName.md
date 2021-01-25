@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 05/20/2019
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ---
 
 # Resolve-DnsName

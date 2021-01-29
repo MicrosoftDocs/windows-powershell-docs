@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: E659A9D5-6E7F-49FE-80DE-9E91ACA2BA4A
 ---
 

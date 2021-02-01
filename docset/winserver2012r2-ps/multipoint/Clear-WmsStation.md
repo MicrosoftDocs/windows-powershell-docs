@@ -11,7 +11,6 @@ manager: jasgro
 ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: CF10CF86-649C-441A-BFD3-A8C56C690080
 ms.reviewer:
 ms.author: v-kaunu

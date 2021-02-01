@@ -6,7 +6,6 @@ keywords: powershell, cmdlet
 manager:
 ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182870
 schema: 2.0.0

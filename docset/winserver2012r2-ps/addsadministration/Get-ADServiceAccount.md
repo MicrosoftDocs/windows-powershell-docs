@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: F025132E-9FD5-4870-BE58-A1AB16DCBC3A
 ---
 
@@ -49,7 +48,7 @@ The **Get-ADServiceAccount** cmdlet gets a managed service account or performs a
 
 The **Identity** parameter specifies the Active Directory managed service account to get.
 You can identify a managed service account by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the parameter to a managed service account object variable, such as **$\<localServiceaccountObject\>** or pass a managed service account object through the pipeline to the **Identity** parameter.
+You can also set the parameter to a managed service account object variable, such as `$<localServiceAccountObject>` or pass a managed service account object through the pipeline to the **Identity** parameter.
 
 To search for and retrieve more than one managed service account, use the **Filter** or **LDAPFilter** parameters.
 The **Filter** parameter uses the PowerShell Expression Language to write query strings for Active Directory.
@@ -64,8 +63,10 @@ For more information about the how to determine the properties for service accou
 ## EXAMPLES
 
 ### Example 1: Get a managed service account by its Security Account Manager name
+```powershell
+PS C:\> Get-ADServiceAccount -Identity service1
 ```
-PS C:\>Get-ADServiceAccount -Identity service1
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -80,8 +81,10 @@ DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 This command gets a managed service account with SAM account name service1.
 
 ### Example 2: Get a managed service account by its SID
+```powershell
+PS C:\> Get-ADServiceAccount -Identity S-1-5-21-159507390-2980359153-3438059098-29770
 ```
-PS C:\>Get-ADServiceAccount -Identity S-1-5-21-159507390-2980359153-3438059098-29770
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -93,11 +96,13 @@ HostComputers     :
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets the managed service account with SID S-1-5-21-159507390-2980359153-3438059098-29770.
+This command gets the managed service account with SID `S-1-5-21-159507390-2980359153-3438059098-29770`.
 
 ### Example 3: Get a filtered list of managed service accounts
+```powershell
+PS C:\> Get-ADServiceAccount -Filter "HostComputers -eq 'CN=SQL-Server-1, DC=contoso,DC=com'"
 ```
-PS C:\>Get-ADServiceAccount -Filter "HostComputers -eq 'CN=SQL-Server-1,DC=contoso,DC=com'"
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -109,7 +114,7 @@ HostComputers     : {CN=SQL-Server-1, DC=contoso,DC=com}
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets the managed service accounts installed on the computer CN=SQL-Server-1,DC=contoso,DC=com.
+This command gets the managed service accounts allowed to be used on the computer `CN=SQL-Server-1,DC=contoso,DC=com`.
 
 ## PARAMETERS
 
@@ -142,11 +147,11 @@ Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then set the **Credential** parameter to the **PSCredential** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory module for Windows PowerShell returns a terminating error.
 
@@ -293,7 +298,7 @@ To display all of the attributes that are set on the object, specify * (asterisk
 To specify an individual extended property, use the name of the property.
 For properties that are not default or extended properties, you must specify the LDAP display name of the attribute.
 
-To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the Get-Memberhttp://go.microsoft.com/fwlink/?LinkID=113322 cmdlet.
+To retrieve properties and display them for an object, you can use the Get-* cmdlet associated with the object and pass the output to the **Get-Member** cmdlet.
 For more information, type `Get-Help Get-Member`.
 
 ```yaml
@@ -327,10 +332,10 @@ Accept wildcard characters: False
 
 ### -ResultSetSize
 Specifies the maximum number of objects to return for an Active Directory Domain Services query.
-If you want to receive all of the objects, set this parameter to $Null (null value).
+If you want to receive all of the objects, set this parameter to `$Null` (null value).
 You can use Ctrl+C to stop the query and return of objects.
 
-The default is $Null.
+The default is `$Null`.
 
 ```yaml
 Type: Int32
@@ -428,7 +433,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -442,17 +447,6 @@ Returns one or more managed service account (MSA) objects.
 
 This cmdlet returns a default set of ADService account property values.
 To retrieve additional ADService account properties, use the **Properties** parameter.
-
-To view the properties for an ADService account object, see the following examples.
-To run these examples, replace \<service account\> with a managed service account identifier such as the name of a managed service account.
-
-To get a list of the default set of properties of an ADService account object, use the following command:
-
-`Get-ADServiceAccount`\<service account\>`| Get-Member`
-
-To get a list of all the properties of an ADService account object, use the following command:
-
-`Get-ADServiceAccount`\<service account\>`-Properties ALL | Get-Member`
 
 ## NOTES
 * This cmdlet does not work with AD LDS.

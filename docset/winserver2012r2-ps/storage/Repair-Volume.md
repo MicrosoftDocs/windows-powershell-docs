@@ -11,7 +11,6 @@ manager: jasgro
 ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.sitesec: library
 ms.assetid: 41547EC6-C1F1-487F-9BB3-0A08FA80BA70
 ms.author: v-kaunu

@@ -33,16 +33,16 @@ Add-DnsServerZoneScope [-ZoneName] <String> [-Name] <String> [-LoadExisting] [-P
 
 ## DESCRIPTION
 The **Add-DnsServerZoneScope** cmdlet adds a zone scope to an existing zone on the Domain Name System (DNS) server.
-A DNS server can load an existing scope its data file.
+A DNS server can load an existing scope from its data file.
 The name of the scope should adhere to the same conventions as the zone name.
 The scope name cannot be same as the zone name to which this cmdlet adds it.
 
-When a scope is created, its data is persisted in a file named %Systemroot%\system32\dns\\\<zone name\>\\\<scope name\>.dns.
+When a scope is created, its data is persisted in a file named `%Systemroot%\system32\dns\<zone name>\<scope name>.dns`.
 
 ## EXAMPLES
 
 ### Example 1: Add a scope on a zone
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "contoso_NorthAmerica" -Verbose -PassThru
 VERBOSE: A scope contoso_NorthAmerica will be added for the zone contoso.com on server Server17. 
 
@@ -54,7 +54,7 @@ contoso_NorthAmerica      contoso_NorthAmerica.dns
 This command adds a scope on an existing zone named contoso.com.
 
 ### Example 2: Add a scope on a zone with existing file
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "contoso_NorthAmerica" -LoadExisting -PassThru 
 ZoneScope                 FileName
 ---------                 --------
@@ -65,7 +65,7 @@ This command adds a scope on an existing zone named contoso.com.
 The command specifies the *LoadExisting* parameter, so the server loads the scope from an existing file.
 
 ### Example 3: Add a cache scope
-```
+```powershell
 PS C:\> Add-DnsServerZoneScope -ZoneName "..cache" -Name "ContosoScope" -PassThru
 ZoneScope             FileName
 ---------             --------
@@ -101,6 +101,7 @@ Accept wildcard characters: False
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+
 The default is the current session on the local computer.
 
 ```yaml

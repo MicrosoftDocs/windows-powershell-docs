@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C0B08CB5-D72C-4A3F-A39A-3910EF781AAE
 ---
 
@@ -37,7 +36,7 @@ Set-ADAccountControl [-WhatIf] [-Confirm] [-AccountNotDelegated <Boolean>]
 ## DESCRIPTION
 The **Set-ADAccountControl** cmdlet modifies the user account control (UAC) values for an Active Directory user or computer account.
 UAC values are represented by cmdlet parameters.
-For example, set the **PasswordExpired** parameter to change whether an account is expired and to modify the **ADS_UF_PASSWORD_EXPIRED** UAC value.
+For example, set the *PasswordNeverExpires* parameter to change whether an account password could expire and to modify the **ADS_UF_DONT_EXPIRE_PASSWD** UAC value.
 
 The **Identity** parameter specifies the Active Directory account to modify.
 

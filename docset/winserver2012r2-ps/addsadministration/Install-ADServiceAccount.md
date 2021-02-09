@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0B1E30A3-7E02-477C-ACA3-9F2A7C3C7552
 ---
 
@@ -236,6 +235,7 @@ A managed service account object is received by the **Identity** parameter.
 * This cmdlet does not work with Active Directory Lightweight Directory Services (AD LDS).
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
+* This cmdlet must be run from an elevated PowerShell session.
 * To successfully install a managed service account, the service account should have the **PrincipalsAllowedToRetrieveManagedPassword** parameter option set first by using either the New-ADServiceAccount or Set-ADServiceAccount cmdlet first. Otherwise, installation will fail.
 
 ## RELATED LINKS

@@ -58,10 +58,17 @@ The **Set-NetTCPSetting** cmdlet modifies a TCP setting.
 TCP settings are optimized for different network conditions including latency and congestion.
 To apply a TCP setting to a port number or destination IP address range, create a transport filter by using the New-NetTransportFilter cmdlet.
 
-> [!Note] 
->1) You can modify Custom and Non-Custom settings on windows server 2016 and 2019.
->2) You can modify only Custom settings, Internet and Datacenter settings Cannot be modified on windows 2012 or earlier versions.
->3) You cannot modify the NetTCPsetting on Client Operating systems(Windows 7, 8.1 and 10) as they are Read-Only.
+**Note:**
+>1) You can modify custom and non-custom settings on Windows server 2016 and 2019.
+>2) You can modify only custom settings. Internet and Datacenter settings cannot be modified on Windows 2012 or earlier versions.
+>3) On Windows 10, the following parameters are read-only and cannot be modified:
+
+> * MinRtoMs
+> * InitialCongestionWindowMss
+> * AutomaticUseCustom
+> * CongestionProvider
+> * CwndRestart
+> * DelayedAckTimeoutMs
 
 ## EXAMPLES
 
@@ -156,8 +163,8 @@ Accept wildcard characters: False
 Specifies whether the automatic profile assigns a custom template, either Datacenter Custom or Internet Custom, to a connection.
 The acceptable values for this parameter are:
 
-- True 
-- False
+- Enabled 
+- Disabled
 
 ```yaml
 Type: AutomaticUseCustom
@@ -628,4 +635,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Remove-NetTransportFilter](./Remove-NetTransportFilter.md)
 
 [Set-NetUDPSetting](./Set-NetUDPSetting.md)
-

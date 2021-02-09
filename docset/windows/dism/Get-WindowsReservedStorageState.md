@@ -32,13 +32,11 @@ This command gets the Windows reserved storage state on the local host.
 ## PARAMETERS
 
 ### -LogLevel
-Specifies the maximum output level shown in the logs.
-The default log level is 3.
+Specifies the output level shown in the logs.
 The accepted values are as follows:
-- 1 = Errors only
-- 2 = Errors and warnings
-- 3 = Errors, warnings, and information
-- 4 = All of the information listed previously, plus debug output
+- Errors (or '0') - shows error events. Could be combined with Warnings or WarningsInfo
+- Warnings (or '1') - shows warning events
+- WarningsInfo (or '2') - shows information log records
 
 ```yaml
 Type: LogLevel

@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 05/20/2019
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ---
 
 # Resolve-DnsName
@@ -32,8 +31,6 @@ Resolve-DnsName [-Name] <String> [[-Type] <RecordType>] [-Server <String[]>] [-D
 ## DESCRIPTION
 The **Resolve-DnsName** cmdlet performs a DNS query for the specified name.
 This cmdlet is functionally similar to the nslookup tool which allows users to query for names.
-
-Note:  The **Resolve-DnsName** cmdlet will return a maximum of 25 A and AAAA records from NS servers.
 
 ## EXAMPLES
 

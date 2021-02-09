@@ -11,7 +11,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 630524E4-7523-43E3-A140-808537F8F98F
 ms.author: v-kaunu
 ms.reviewer: brianlic
@@ -48,10 +47,14 @@ If you specify the **Peek** parameter, this cmdlet returns the number of message
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Perform a transacted read
+```powershell
+PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
 ```
-PS C:\>Get-MsmqMessage -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
-```
+
+This command gets the specified queue by using the **Get-MsmqQueue** cmdlet.
+The command passes the result to the current cmdlet by using the pipeline operator.
+The current cmdlet performs a transacted read on the queue.
 
 ## PARAMETERS
 
@@ -151,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 

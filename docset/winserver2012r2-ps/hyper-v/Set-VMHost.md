@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 866A8586-BCBE-4C91-B50C-5017C1965942
 ---
 
@@ -63,10 +62,13 @@ This example enables the use of any network for incoming live migrations on the 
 
 ### Example 4
 ```
-PS C:\>Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V\Configuration Files"
+PS C:\> Set-VMHost -VirtualHardDiskPath "C:\Hyper-V\Virtual Hard Disks" -VirtualMachinePath "C:\Hyper-V"
 ```
 
-This example specifies new default locations for virtual hard disksand virtual machines on the local Hyper-V host.
+This example specifies new default locations for virtual hard disks and virtual machines on the local Hyper-V host. In this case:
+
+- Virtual machines are stored in "C:\Hyper-V\Virtual Machines" (not "C:\Hyper-V")
+- Virtual hard disks are stored in "C:\Hyper-V\Virtual Hard Disks"
 
 ### Example 5
 ```
@@ -321,8 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualHardDiskPath
-Specifies the default folder to store virtual hard disks on the Hyper-V host.
-
+Specifies the default folder to store virtual hard disks on the Hyper-V host. This is not a functional setting. The Hyper-V Manager snap-in and Windows Admin Center query it to offer you a default path, but the Hyper-V API (for example `CreateFixedVirtualHardDisk`) and `New-VHD` don't use it.
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -377,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualMachinePath
-Specifies the default folder to store virtual machine configuration files on the Hyper-V host.
+Specifies the default folder to store virtual machine configuration files on the Hyper-V host. This is a functional setting, meaning that if you do not supply a path to VM creation tools (for example `New-VM`), Hyper-V will use this path. Hyper-V will create at least one subfolder in this path, called "Virtual Machines".
 
 ```yaml
 Type: String

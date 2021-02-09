@@ -984,6 +984,11 @@
       "source_path": "docset/virtual-directory-module/wsus/Set-WsusServerSynchronization.md",
       "redirect_url": "/powershell/module/updateservices/Set-WsusServerSynchronization?view=win10-ps",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/windows/international/Copy-UserInternationalSettingsToSystem.md",
+      "redirect_url": "/powershell/windows/get-started",
+      "redirect_document_id": false
     }
   ]
 }

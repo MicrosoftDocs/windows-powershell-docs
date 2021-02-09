@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: AB867988-6482-4B37-BE74-7748A59D865C
 ---
 
@@ -48,8 +47,8 @@ You can use this cmdlet without parameters to get all claim descriptions in the 
 ## EXAMPLES
 
 ### Example 1: Get a claim description
-```
-PS C:\> Get-AdfsClaimDescription | Where -Object {$_.IsOffered}
+```powershell
+PS C:\> Get-AdfsClaimDescription | Where-Object {$_.IsOffered}
 ```
 
 This command gets the list of claim descriptions that the Federation Service offers.
@@ -88,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShortName
-{{Fill ShortName Description}}
+Specifies the unique short name ID for the claim description that is used for issuing and consuming JWT tokens.
 
 ```yaml
 Type: String[]
@@ -103,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -124,4 +123,3 @@ This cmdlet generates a class structure that represents the claim description re
 [Remove-AdfsClaimDescription](./Remove-AdfsClaimDescription.md)
 
 [Set-AdfsClaimDescription](./Set-AdfsClaimDescription.md)
-

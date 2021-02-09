@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 92D42F54-D6E9-422B-8174-A53F8FE86017
 ---
 
@@ -66,44 +65,32 @@ The Install-ADDSDomainController cmdlet installs a domain controller in Active D
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
-```
-PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential CORP\Administrator) -DomainName "corp.contoso.com"
-```
-
-Description
-
------------
-
-Installs a domain controller and DNS server in the corp.contoso.com domain using CORP\Administrator credentials and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM) password.
-
-### -------------------------- EXAMPLE 2 --------------------------
-```
-PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com "
+### Example 1: Install a domain controller and DNS server
+```powershell
+PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com"
 ```
 
-Description
+This command installs a domain controller and DNS server in the corp.contoso.com domain using CORP\Administrator credentials and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM) password.
 
------------
-
-Installs a domain controller and DNS server in the corp.contoso.com domain using Administrator credentials and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM) password.
-
-### -------------------------- EXAMPLE 3 --------------------------
+### Example 2: Install a domain controller and DNS server using administrator credentials
+```powershell
+PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential "CORP\Administrator") -DomainName "corp.contoso.com"
 ```
+
+This command installs a domain controller and DNS server in the corp.contoso.com domain using Administrator credentials and prompts the user to provide and confirm the DSRM password.
+
+### Example 3: Install a domain controller and DNS server that uses domain promotion
+```powershell
 PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential) -DomainName (Read-Host "Domain to promote into")
 ```
 
-Description
-
------------
-
-Installs a domain controller and DNS server and prompts for credentials, the name of the domain to use when installing and promoting the domain controller and to provide and confirm the Directory Services Restore Mode (DSRM) password.
+Installs a domain controller and DNS server and prompts for credentials, the name of the domain to use when installing and promoting the domain controller and to provide and confirm the DSRM password.
 
 ## PARAMETERS
 
 ### -ADPrepCredential
-Specifies the user name and password that corresponds to the account to be used for running the Adprep utility (if it is required) to prepare the directory prior to the installation of this domain controller.
-Specify "(Get-Credential)" to prompt the user to supply a password.
+Specifies the user name and password that corresponds to the account to be used for running the Adprep utility, if it is required, to prepare the directory prior to the installation of this domain controller.
+Use the **Get-Credential** cmdlet to prompt the user to supply a password.
 
 ```yaml
 Type: PSCredential
@@ -119,7 +106,7 @@ Accept wildcard characters: False
 
 ### -AllowDomainControllerReinstall
 Specifies whether to continue installing this domain controller, despite the fact that another domain controller account with the same name is detected.
-By default, the Install-ADDSDomainController cmdlet does not continue installing if another domain controller with the same name is found.
+By default, the **Install-ADDSDomainController** cmdlet does not continue installing if another domain controller with the same name is found.
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +190,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies the user name and password that corresponds to the account used to install the domain controller.
-Specify "(Get-Credential)" to prompt the user to supply a password.
+Specify **Get-Credential** to prompt the user to supply a password.
 
 ```yaml
 Type: PSCredential
@@ -235,8 +222,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatabasePath
-Specifies the fully qualified, non-Universal Naming Convention (UNC) path to a directory on a fixed disk of the local computer that will contain the domain database, for example, C:\Windows\NTDS.
-The default is %SYSTEMROOT%\NTDS.
+Specifies the fully qualified, non-Universal Naming Convention (UNC) path to a directory on a fixed disk of the local computers that will contain the domain database, for example, `C:\Windows\NTDS`.
+The default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml
 Type: String
@@ -285,7 +272,7 @@ Accept wildcard characters: False
 
 ### -DnsDelegationCredential
 Specifies the user name and password (account credentials) for creating DNS delegation.
-This parameter is skipped if the value for the **-CreateDnsDelegation** parameter is either specified or computed to be $false.
+This parameter is skipped if the value for the **CreateDnsDelegation** parameter is either specified or computed to be $false.
 
 ```yaml
 Type: PSCredential
@@ -315,8 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-When this parameter is specified any warnings that might normally appear during the installation and addition of the domain controller will be suppressed to allow the cmdlet to complete its operation.
-This parameter can be useful to include when scripting installation.
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -331,11 +317,12 @@ Accept wildcard characters: False
 ```
 
 ### -InstallDns
-Specifies whether the DNS Server service should be installed and configured on the domain controller.
-For domain controller installation, if this parameter is left unspecified and the current domain already hosts and stores the DNS names for the domain, then the default for this parameter is $true and the DNS server will be installed.
-Otherwise, if DNS domain names are hosted outside of Active Directory, the default is $false and no DNS server will be installed.
+Indicates the cmdlet installs and configures the DNS Server service on the domain controller.
+For domain controller installation, if this parameter is left unspecified and the current domain already hosts and stores the DNS names for the domain, then the default for this parameter is $True and the DNS server is installed.
+Otherwise, if DNS domain names are hosted outside of Active Directory, the default is `$False` and no DNS server is installed.
 
-To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of authority (SOA) type DNS query to ask the question "Does a zone exist for the domain name?" For example, if the value of **-DomainName** is "corp.contoso.com", Active Directory performs an SOA query for "corp.contoso.com" and ensures that the zone name in the response is " corp.contoso.com".
+To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of authority (SOA) type DNS query.
+For instance, if the value of **DomainName** is corp.contoso.com, Active Directory performs an SOA query for corp.contoso.com and ensures that the zone name in the response is corp.contoso.com.
 
 ```yaml
 Type: SwitchParameter
@@ -365,8 +352,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, C:\Windows\Logs.
-The default is %SYSTEMROOT%\NTDS.
+Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, `C:\Windows\Logs`.
+The default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml
 Type: String
@@ -382,7 +369,7 @@ Accept wildcard characters: False
 
 ### -MoveInfrastructureOperationMasterRoleIfNecessary
 Use this parameter to transfer the infrastructure master role to the domain controller being installed.
-To successfully complete the transfer, the **-NoGlobalCatalog** switch parameter must be included as well.
+To successfully complete the transfer, the **NoGlobalCatalog** switch parameter must be included as well.
 Do not specify this parameter if you want the infrastructure master role to remain where it currently is.
 
 ```yaml
@@ -419,7 +406,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoGlobalCatalog
-Specifies that the read-only domain controller (RODC) will not be a global catalog server.
+Indicates that the RODC will not be a global catalog server.
 By default, the domain controller that you are installing is a global catalog server.
 
 ```yaml
@@ -556,9 +543,9 @@ Accept wildcard characters: False
 
 ### -SkipPreChecks
 Specifies that only a base set of validations will be performed.
-This behavior is equivalent to the validations that were performed when using Dcpromo.exe in earlier versions of Windows Server to add a new domain controller.
+This behavior is equivalent to the validations that were performed when using `Dcpromo.exe` in earlier versions of Windows Server to add a new domain controller.
 When this switch parameter is set, it specifies that additional preliminary checks should be bypassed.
-For more information on the scope of these additional preliminary checks that the ADDSDeployment module performs by default when using Windows Server 2012, refer to the table in the section "Prerequisite Checking" in the Understand and Troubleshoot AD DS Simplified Administration in Windows Server 2012 guide (http://go.microsoft.com/fwlink/?LinkID=237244).
+For more information on the scope of these additional preliminary checks that the ADDSDeployment module performs by default when using Windows Server 2012 R2, refer to the table in the section "ADPrep and Prerequisite Checking Architecture" in the [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 
 ```yaml
 Type: SwitchParameter
@@ -589,8 +576,8 @@ Accept wildcard characters: False
 ```
 
 ### -SysvolPath
-Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the Sysvol data, for example, C:\Windows\SYSVOL.
-The default is %SYSTEMROOT%\SYSVOL.
+Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the Sysvol data, for example, `C:\Windows\SYSVOL`.
+The default is `%SYSTEMROOT%\SYSVOL`.
 
 ```yaml
 Type: String
@@ -637,14 +624,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
-* By default, this cmdlet always prompts for confirmation. To bypass confirmation, you need to include the **-Confirm** parameter and specify a value of *$false*. For example, `-Confirm:$false`.
+* By default, this cmdlet always prompts for confirmation. To bypass confirmation, you need to include the **-Confirm** parameter and specify a value of `$false`. For example, `-Confirm:$false`.
 * By default, this cmdlet is always run when executed. To see what will happen if the cmdlet runs without executing or committing installation changes, first run the cmdlet using the **-WhatIf** parameter to show what would happen.
 
 ## RELATED LINKS
@@ -654,4 +641,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Install-ADDSDomain](./Install-ADDSDomain.md)
 
 [Install-ADDSForest](./Install-ADDSForest.md)
-

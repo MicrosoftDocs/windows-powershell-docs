@@ -11,7 +11,6 @@ manager: jasgro
 ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 25FC6F1B-B88E-457B-8AC2-95A35E63FF63
 ms.author: v-kaunu
 ms.reviewer: brianlic
@@ -46,7 +45,7 @@ The debug report contains additional information.
 ## EXAMPLES
 
 ### Example 1: Run a troubleshooting pack
-```
+```powershell
 PS C:\> Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" | Invoke-TroubleshootingPack
 ```
 
@@ -56,12 +55,12 @@ This example does not save reports.
 The command uses the **Get-TroubleshootingPack** cmdlet to get a **DiagPack** object and pipes it to the **Invoke-TroubleshootingPack** cmdlet.
 
 ### Example 2: Save troubleshooting reports
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -Result "C:\DiagResult"
 ```
 
-This example runs the Areo pack in interactive mode and saves the results to a folder.
+This example runs the Audio pack in interactive mode and saves the results to a folder.
 
 The first command uses the **Get-TroubleshootingPack** cmdlet to get a DiagPack object and stores it in the $Audio variable.
 
@@ -69,7 +68,7 @@ The second command invokes the troubleshooting pack stored in $Audio.
 The pack saves reports in the specified folder.
 
 ### Example 3: Run a troubleshooting pack in unattended mode
-```
+```powershell
 PS C:\> $Audio = Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio"
 PS C:\> Invoke-TroubleshootingPack -Pack $Audio -AnswerFile "AudioAnswerFile.xml" -Unattended
 ```
@@ -152,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

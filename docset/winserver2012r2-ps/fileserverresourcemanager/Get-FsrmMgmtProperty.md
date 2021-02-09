@@ -4,16 +4,15 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Get-FsrmMgmtProperty
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3FE2F1F8-0CFC-4D74-B465-E7DA2B20E0E4
 ---
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 5577F641-EC20-4F17-AAF9-601CE33C522C
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DnsServerZoneAging

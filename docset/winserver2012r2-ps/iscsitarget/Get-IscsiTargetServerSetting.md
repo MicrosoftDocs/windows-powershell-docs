@@ -4,16 +4,15 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Get-IscsiTargetServerSetting
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 07C8D0C2-6032-453C-9E66-AA58669EC71D
 ---
 

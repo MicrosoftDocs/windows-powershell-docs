@@ -4,16 +4,15 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Sync-ADObject
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A9F81EF1-BF28-4F63-AF88-9490FB9E9DFA
 ---
 

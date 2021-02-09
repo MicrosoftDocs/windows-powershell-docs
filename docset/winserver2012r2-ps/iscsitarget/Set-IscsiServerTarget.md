@@ -4,16 +4,15 @@ Module Name: IscsiTarget
 online version: 
 schema: 2.0.0
 title: Set-IscsiServerTarget
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 957B9B1F-D7E2-4FDE-8F7D-25FC27293F6A
 ---
 
@@ -399,9 +398,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkId=113291)
 
-[New-Object](http://go.microsoft.com/fwlink/p/?LinkId=113355)
+[New-Object](https://go.microsoft.com/fwlink/p/?LinkId=113355)
 
 [Get-IscsiServerTarget](./Get-IscsiServerTarget.md)
 

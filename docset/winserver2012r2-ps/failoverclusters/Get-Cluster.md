@@ -4,16 +4,15 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Get-Cluster
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4A2838C2-64AA-40D8-8BB9-A6993A7E1F47
 ---
 
@@ -176,9 +175,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[ForEach-Object](http://go.microsoft.com/fwlink/p/?LinkId=113300)
+[ForEach-Object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-Cluster](./New-Cluster.md)
 

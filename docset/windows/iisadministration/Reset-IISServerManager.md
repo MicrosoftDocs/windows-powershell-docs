@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -7,12 +7,12 @@ ms.assetid: 3868A1B3-C617-4FB4-99D6-20AD636FB487
 manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Reset-IISServerManager
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 

@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Remove-NetAdapterAdvancedProperty
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BB8B1B16-6946-4BF6-97F8-25265B7E0A20
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

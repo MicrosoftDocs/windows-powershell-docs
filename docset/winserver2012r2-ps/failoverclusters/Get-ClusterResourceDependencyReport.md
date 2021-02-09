@@ -4,16 +4,15 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Get-ClusterResourceDependencyReport
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: CAD88AE9-A1B9-431E-9284-A10598C3AAF5
 ---
 
@@ -142,7 +141,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Copy-Item](http://go.microsoft.com/fwlink/?LinkID=113292)
+[Copy-Item](https://go.microsoft.com/fwlink/?LinkID=113292)
 
 [Add-ClusterResourceDependency](./Add-ClusterResourceDependency.md)
 

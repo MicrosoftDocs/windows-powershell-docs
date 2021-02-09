@@ -4,16 +4,15 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Add-BCDataCacheExtension
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4A04E8AB-1697-43C5-A936-8061F1B98EEB
 ---
 

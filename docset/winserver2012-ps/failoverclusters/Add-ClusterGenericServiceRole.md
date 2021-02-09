@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 188158B2-1000-46CE-BBF0-13D0A8191AD4
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterGenericServiceRole

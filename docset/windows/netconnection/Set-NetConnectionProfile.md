@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -26,7 +26,7 @@ Changes the network category of a connection profile.
 ## SYNTAX
 
 ### Query (cdxml) (Default)
-```
+```powershell
 Set-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-InterfaceIndex <UInt32[]>]
  [-IPv4Connectivity <IPv4Connectivity[]>] [-IPv6Connectivity <IPv6Connectivity[]>]
  [-NetworkCategory <NetworkCategory>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
@@ -34,7 +34,7 @@ Set-NetConnectionProfile [-Name <String[]>] [-InterfaceAlias <String[]>] [-Inter
 ```
 
 ### InputObject (cdxml)
-```
+```powershell
 Set-NetConnectionProfile -InputObject <CimInstance[]> [-NetworkCategory <NetworkCategory>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -47,7 +47,7 @@ A connection profile represents a network connection.
 ## EXAMPLES
 
 ### Example 1: Change the network category of a connection profile
-```
+```powershell
 PS C:\> Set-NetConnectionProfile -InterfaceAlias Ethernet1 -NetworkCategory "Public"
 ```
 
@@ -220,9 +220,9 @@ You cannot set the DomainAuthenticated type by using this cmdlet.
 The server automatically sets the value of DomainAuthenticated when the network is authenticated to a domain controller.
 The acceptable values for this parameter are:
 
-- Public
-- Private
-- DomainAuthenticated
+- *Public* - Networks in a public place such as an airport or coffee shop. Your PC is hidden from other devices on the network and can't be used for printer and file sharing.
+- *Private* - Networks at home or work, where you know and trust the people and devices on the network. Your PC is discoverable and can be used for printer and file sharing if you set it up.
+- *DomainAuthenticated* - Networks at a workplace that are joined to a domain.
 
 ```yaml
 Type: NetworkCategory

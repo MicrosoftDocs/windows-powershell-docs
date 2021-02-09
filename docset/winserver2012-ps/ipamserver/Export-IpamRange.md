@@ -3,8 +3,8 @@ external help file: IpamServer_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 543BE520-530C-4DD4-8403-659CF05826AD
 manager: dansimp
 ---
@@ -177,9 +177,9 @@ This array of objects contains an IPAM IP address range.
 
 ## RELATED LINKS
 
-[Export-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113299)
+[Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Import-IpamRange](./Import-IpamRange.md)
 

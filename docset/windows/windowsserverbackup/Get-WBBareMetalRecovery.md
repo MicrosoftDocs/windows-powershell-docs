@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: wsbcmdlet.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -34,7 +34,7 @@ The **Get-WBBareMetalRecovery** cmdlet gets a Boolean value that indicates wheth
 A bare metal recovery is the process of rebuilding a computer after a catastrophic failure.
 The recovery process backs up the system volume and master boot record by copying the entire volume and using Volume Shadow Copy Service (VSS) writers to ensure that all applications are in a consistent state for the copy.
 
-For more information about bare metal recovery, see [Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
+For more information about bare metal recovery, see [Backup for Bare Metal Recovery](https://technet.microsoft.com/en-us/library/bb795820.aspx) on TechNet.
 
 
 If a policy does not include the ability to perform bare metal recoveries from backups, use the [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md) cmdlet to add this ability.
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -84,7 +84,7 @@ This cmdlet returns a Boolean value to indicate whether the server can run backu
 
 ## RELATED LINKS
 
-[Backup for Bare Metal Recovery](http://technet.microsoft.com/en-us/library/bb795820.aspx)
+[Backup for Bare Metal Recovery](https://technet.microsoft.com/en-us/library/bb795820.aspx)
 
 [Add-WBBareMetalRecovery](./Add-WBBareMetalRecovery.md)
 

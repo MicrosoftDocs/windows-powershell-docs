@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B2BC5204-A6A7-4BBC-9AE8-BAF7AD2DBB56
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6OptionValue

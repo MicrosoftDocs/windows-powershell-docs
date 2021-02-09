@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -42,22 +42,37 @@ Any encrypted data on the drive remains encrypted.
 
 We recommend you have at least one recovery password as key protector to a volume in case you need to recover a system.
 
-For an overview of BitLocker, see [BitLocker Drive Encryption Overview](http://technet.microsoft.com/en-us/library/cc732774.aspx) on TechNet.
+For an overview of BitLocker, see [Overview of BitLocker Device Encryption](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10).
 
 ## EXAMPLES
 
-### Example 1: Remove a key protector for a volume
-```
+### Example 1: Remove the second key protector for a volume
+```powershell
 PS C:\> $BLV = Get-BitLockerVolume -MountPoint "C:"
-PS C:\> Remove-BitlockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $BLV.KeyProtector[1].KeyProtectorId
 ```
 
 This example removes a key protector for a specified BitLocker volume.
 
-The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the $BLV variable.
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
 
-The second command removes the key protector for the BitLocker volume specified by the *MountPoint* parameter.
-The command specifies the key protector by using its ID, contained in the BitLocker object stored in $BLV.
+The second command removes the key protector for the BitLocker volume specified by the **MountPoint** parameter.
+The command specifies the key protector by using its ID, contained in the BitLocker object stored in `$BLV`.
+
+### Example 2: Remove TpmPin key protector for a volume
+```powershell
+PS C:\> $BLV = Get-BitlockerVolume -MountPoint "C:"
+PS C:\> $TpmPinKeyProtector = $BLV.KeyProtector | Where-Object {$PSItem.KeyProtectorType -eq "TpmPin"}
+PS C:\> Remove-BitLockerKeyProtector -MountPoint "C:" -KeyProtectorId $TpmPinKeyProtector.KeyProtectorId 
+```
+
+This example removes a key protector of type TpmPin for a specified BitLocker Volume.
+
+The first command uses **Get-BitLockerVolume** to obtain a BitLocker volume and store it in the `$BLV` variable.
+
+The second command filters the key protectors to get only the one with TpmPin type and stores it in the `$TpmPinKeyProtector` variable.
+
+The third command removes the key protector by its ID.
 
 ## PARAMETERS
 
@@ -129,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -148,4 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Backup-BitLockerKeyProtector](./Backup-BitLockerKeyProtector.md)
 
 [Get-BitLockerVolume](./Get-BitLockerVolume.md)
-

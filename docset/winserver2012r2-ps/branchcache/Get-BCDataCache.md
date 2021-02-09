@@ -4,16 +4,15 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Get-BCDataCache
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 091A4DD5-B207-4553-A934-E8A285310D4A
 ---
 

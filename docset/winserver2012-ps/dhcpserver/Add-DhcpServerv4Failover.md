@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 0A1F0811-FE87-473A-815A-285BDC2A0CEF
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv4Failover
@@ -398,7 +398,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-Content](http://go.microsoft.com/fwlink/p/?LinkID=204574)
+[Get-Content](https://go.microsoft.com/fwlink/p/?LinkID=204574)
 
 [Add-DhcpServerv4FailoverScope](./Add-DhcpServerv4FailoverScope.md)
 

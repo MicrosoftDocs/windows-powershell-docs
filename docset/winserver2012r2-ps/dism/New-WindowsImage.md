@@ -4,16 +4,15 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: New-WindowsImage
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 48C44DEE-EE4C-4040-9B42-297EAAD5E4E4
 ---
 

@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Set-DAClient
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: E232C383-76AF-4C75-89ED-F4E72BDD2B7D
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -283,7 +282,7 @@ The DAClientSettings object contains the following properties:
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
 [Add-DAClient](./Add-DAClient.md)
 

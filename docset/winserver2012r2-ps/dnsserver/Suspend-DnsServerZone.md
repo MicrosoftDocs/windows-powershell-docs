@@ -4,16 +4,15 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Suspend-DnsServerZone
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C40F698D-88CB-4346-9CB6-9D965EAF2013
 ---
 

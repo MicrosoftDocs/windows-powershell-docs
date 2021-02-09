@@ -4,16 +4,15 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerDsSetting
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 5CFABE53-1D6E-416B-9220-D493B43728D5
 ---
 
@@ -323,9 +322,9 @@ boolean  DefaultDirectoryPartitions
 
 ## RELATED LINKS
 
-[DNS Server Integer Properties](http://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
+[DNS Server Integer Properties](https://msdn.microsoft.com/en-us/library/cc422472(v=prot.10))
 
-[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](http://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
+[[MS-DNSP]: Domain Name Service (DNS) Server Management Protocol Specification](https://msdn.microsoft.com/en-us/library/cc448821(v=prot.10))
 
 [Get-DnsServerDsSetting](./Get-DnsServerDsSetting.md)
 

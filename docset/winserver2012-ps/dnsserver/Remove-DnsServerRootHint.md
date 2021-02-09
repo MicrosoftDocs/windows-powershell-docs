@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 965DC972-9B2E-48BA-90BA-214198AA2B4C
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DnsServerRootHint

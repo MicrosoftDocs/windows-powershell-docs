@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-SelfSignedCertificate
@@ -163,7 +163,7 @@ A X509Certificate2 object for the certificate that has been created.
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 
-[Set-Location](http://go.microsoft.com/fwlink/?LinkId=113397)
+[Set-Location](https://go.microsoft.com/fwlink/?LinkId=113397)
 

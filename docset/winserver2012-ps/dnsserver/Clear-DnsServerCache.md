@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 8581EE53-E8DD-4A77-8268-656868EB36B3
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Clear-DnsServerCache

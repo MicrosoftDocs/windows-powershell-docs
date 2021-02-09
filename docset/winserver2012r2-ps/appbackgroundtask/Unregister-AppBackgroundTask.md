@@ -4,16 +4,15 @@ Module Name: AppBackgroundTask
 online version: 
 schema: 2.0.0
 title: Unregister-AppBackgroundTask
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C874C445-20A6-4D9D-B894-CB7305B1CCC0
 ---
 

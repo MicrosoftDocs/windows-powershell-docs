@@ -4,16 +4,15 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Set-FsrmSetting
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: CD6DF9A0-1E07-4E0E-93FF-BFFEC729C900
 ---
 

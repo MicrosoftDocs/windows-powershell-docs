@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F00E24C1-4E55-4B3C-9825-FAD6AE63936E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Clear-DnsServerStatistics

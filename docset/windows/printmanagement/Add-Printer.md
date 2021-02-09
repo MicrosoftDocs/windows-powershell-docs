@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_Printer_v1.0.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -63,17 +63,17 @@ You may need administrative credentials to run **Add-Printer**.
 ## EXAMPLES
 
 ### Example 1: Add a printer to a local computer
-```
+```powershell
 PS C:\> Add-Printer -Name "mxdw 2" -DriverName "Microsoft XPS Document Writer v4" -PortName "portprompt:"
 ```
 
 This command adds a printer with name mxdw2 to the local computer.
-The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the portprompt: port.
+The mxdw printer uses the Microsoft XPS Document Writer v4 driver and the `portprompt:` port.
 
-The portprompt: port prompts for a file name to save the XPS document when printing to the XPS printer.
+The` portprompt:` port prompts for a file name to save the XPS document when printing to the XPS printer.
 
 ### Example 2: Add a new network printer connection
-```
+```powershell
 PS C:\> Add-Printer -ConnectionName \\printServer\printerName
 ```
 
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceURL
-Specifies a URL for directed discovery of Web Services on Devices (WSD) printer to add to the specified computer.
+Specifies a URL for the directed discovery of a Web Services on Devices (WSD) printer to add to the specified computer.s
 
 ```yaml
 Type: String
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 
 ### -ShareName
 Specifies the name by which to share the printer on the network.
-To share a printer, specify the *Shared* parameter.
+To share a printer, specify the **Shared** parameter.
 
 ```yaml
 Type: String
@@ -442,8 +442,8 @@ Accept wildcard characters: False
 
 ### -Shared
 Indicates whether to share the printer on the network.
-You can determine the name by which the printer is shared by specifying *ShareName*.
-If *ShareName* is not specified, the name of the printer is used as the share name.
+You can determine the name by which the printer is shared by specifying **ShareName**.
+If **ShareName** is not specified, the name of the printer is used as the share name.
 
 ```yaml
 Type: SwitchParameter
@@ -521,7 +521,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -533,6 +533,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+- The WhatIf switch doesn’t work if the **ConnectionName** parameter set is used.
 ## RELATED LINKS
 
 [Get-Printer](./Get-Printer.md)

@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Disable-RemoteAccessRoutingDomain
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: EBB5028A-59FD-4635-9E9E-ED50B2E94C7A
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

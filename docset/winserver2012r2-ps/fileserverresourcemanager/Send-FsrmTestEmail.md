@@ -4,16 +4,15 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Send-FsrmTestEmail
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BA2C3A10-736C-4328-B8CA-C8E74A950143
 ---
 

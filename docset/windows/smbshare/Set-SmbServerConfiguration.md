@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbServerConfiguration.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -45,13 +45,15 @@ Set-SmbServerConfiguration [-AnnounceComment <String>] [-AnnounceServer <Boolean
 ```
 
 ## DESCRIPTION
-The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) Service configuration.
+The **Set-SmbServerConfiguration** cmdlet sets the Server Message Block (SMB) Service configuration. For more information on SMB server and protocol specifications, see [Overview of file sharing using the SMB 3 protocol in Windows Server](https://docs.microsoft.com/windows-server/storage/file-server/file-server-smb-overview) and [[MS-SMB2]: Server Message Block (SMB) Protocol Versions 2 and 3](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/5606ad47-5ee0-437a-817e-70c366052962).
 
 ## EXAMPLES
 
 ### Example 1: Set the SMB Service configuration
 ```powershell
 PS C:\>Set-SmbServerConfiguration -MaxChannelPerSession 16
+```
+```output
 Confirm
 Are you sure you want to perform this action?
 Performing operation 'Modify' on Target 'SMB Service Configuration'.
@@ -838,4 +840,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SmbServerConfiguration](./Get-SmbServerConfiguration.md)
-

@@ -3,8 +3,8 @@ external help file: UnifiedRA_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 8A16968E-1C61-4E0A-BDB9-278E6C05797F
 manager: dansimp
 ---
@@ -340,9 +340,9 @@ The DANetworkLocationServer object consists of the following properties:
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=204557)
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkId=113423)
 
 [Get-DANetworkLocationServer](./Get-DANetworkLocationServer.md)
 

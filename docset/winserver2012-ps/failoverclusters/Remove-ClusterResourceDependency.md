@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CF2A8410-EE45-4493-872B-E5F82E478601
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-ClusterResourceDependency

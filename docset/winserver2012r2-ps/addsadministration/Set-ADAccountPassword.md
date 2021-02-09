@@ -4,16 +4,15 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Set-ADAccountPassword
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3FB5BEE8-B432-4FB1-B5DD-3FC2209D7191
 ---
 

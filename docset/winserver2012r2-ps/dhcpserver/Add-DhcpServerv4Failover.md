@@ -4,16 +4,15 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Add-DhcpServerv4Failover
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0A1F0811-FE87-473A-815A-285BDC2A0CEF
 ---
 
@@ -412,7 +411,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-Content](http://go.microsoft.com/fwlink/p/?LinkID=204574)
+[Get-Content](https://go.microsoft.com/fwlink/p/?LinkID=204574)
 
 [Add-DhcpServerv4FailoverScope](./Add-DhcpServerv4FailoverScope.md)
 

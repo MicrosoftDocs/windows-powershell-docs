@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Register-ScheduledTask
 description:
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -56,7 +55,9 @@ Register-ScheduledTask [-Force] [-InputObject] <CimInstance> [[-Password] <Strin
 ## DESCRIPTION
 The **Register-ScheduledTask** cmdlet registers a scheduled task definition on a local computer.
 
-You can register a task to run any of the following application or file types: Win32 applications, Win16 applications, OS/2 applications, MS-DOS applications, batch files (*.bat), command files (*.cmd), or any properly registered file type.
+You can register a task to run executable files (`.exe` and `.com`), batch files (`.bat` and `.cmd`),
+or any registered file type. However, this cmdlet does not check whether the file you intend it to
+run is compatible with your version, edition, or platform specialization of Windows.
 
 ## EXAMPLES
 
@@ -70,9 +71,10 @@ PS C:\> Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $Us
 
 In this example, the set of commands uses cmdlets and variables to define and register a scheduled task.
 
-The first command uses the **New-ScheduledTaskTrigger** cmdlet to assign a time trigger to the $Time variable.
+The first command uses the New-ScheduledTaskTrigger cmdlet to assign a time trigger to the $Time variable.
 
-The second command assigns the $User variable to the **\<run as\>** user account name (Contoso\Administrator).
+The second command assigns the $User variable the name of the user account in the context of which
+the task runs (Contoso\Administrator).
 
 The third command assigns the $PS variable to PowerShell.exe.
 This variable is used to define a task action.
@@ -100,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -116,7 +118,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/get-cimsession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -162,8 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance
@@ -178,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies a password for the **\<run as\>** user.
+Specifies a password for the user account in the context of which the task runs.
 The password is ignored for the well-known system accounts.
 
 Well-known accounts are: NT AUTHORITY\SYSTEM, NT AUTHORITY\LOCALSERVICE, NT AUTHORITY\NETWORKSERVICE, and the well-known security identifiers (SIDs) for all three accounts.
@@ -319,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-Specifies the name of the **\<run as\>** user account to use when you run the task.
+Specifies the name of the user account in the context of which Windows runs the task.
 
 ```yaml
 Type: String
@@ -328,7 +329,7 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: Current user
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -349,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -361,13 +362,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-ScheduledTask](./Get-ScheduledTask.md)
-
 [Disable-ScheduledTask](./Disable-ScheduledTask.md)
 
 [Enable-ScheduledTask](./Enable-ScheduledTask.md)
 
 [Export-ScheduledTask](./Export-ScheduledTask.md)
+
+[Get-ScheduledTask](./Get-ScheduledTask.md)
 
 [New-ScheduledTask](./New-ScheduledTask.md)
 
@@ -378,4 +379,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-ScheduledTask](./Stop-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

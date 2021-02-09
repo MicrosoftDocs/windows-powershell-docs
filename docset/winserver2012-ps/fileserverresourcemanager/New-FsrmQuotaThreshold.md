@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 2877A218-A85C-48C1-B77F-FAD1F4BEBB34
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmQuotaThreshold

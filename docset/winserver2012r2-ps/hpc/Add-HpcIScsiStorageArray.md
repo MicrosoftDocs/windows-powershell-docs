@@ -6,17 +6,16 @@ schema: 2.0.0
 title: Add-HpcScsiStorageArray
 description:
 keywords: powershell, cmdlet
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182659
 schema: 2.0.0
 ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-HpcIScsiStorageArray

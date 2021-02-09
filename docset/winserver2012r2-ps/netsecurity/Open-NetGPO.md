@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Open-NetGPO
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 78D22B3A-37E0-4D0F-82C5-F7EF52853BA0
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -220,7 +219,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-Command](http://go.microsoft.com/fwlink/p/?LinkId=113309)
+[Get-Command](https://go.microsoft.com/fwlink/p/?LinkId=113309)
 
 [New-NetFirewallRule](./New-NetFirewallRule.md)
 

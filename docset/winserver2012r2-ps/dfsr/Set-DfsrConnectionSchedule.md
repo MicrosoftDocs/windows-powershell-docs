@@ -4,16 +4,15 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Set-DfsrConnectionSchedule
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0B1E0B36-503F-497C-82A3-97307285D480
 ---
 

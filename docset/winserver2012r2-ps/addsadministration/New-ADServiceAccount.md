@@ -4,16 +4,15 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: New-ADServiceAccount
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 488C5812-CD3B-442E-8A66-307C3D383353
 ---
 
@@ -25,7 +24,7 @@ Creates a new Active Directory managed service account or group managed service 
 ## SYNTAX
 
 ### Group (Default)
-```yaml
+```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-CompoundIdentitySupported <Boolean>]
@@ -39,7 +38,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToSingleComputer
-```yaml
+```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AccountPassword <SecureString>] [-AuthenticationPolicy <ADAuthenticationPolicy>]
  [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>] [-AuthType <ADAuthType>] [-Certificates <String[]>]
@@ -51,7 +50,7 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ```
 
 ### RestrictedToOutboundAuthenticationOnly
-```yaml
+```
 New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-AccountNotDelegated <Boolean>]
  [-AuthenticationPolicy <ADAuthenticationPolicy>] [-AuthenticationPolicySilo <ADAuthenticationPolicySilo>]
  [-AuthType <ADAuthType>] [-Certificates <String[]>] [-Credential <PSCredential>] [-Description <String>]
@@ -64,8 +63,8 @@ New-ADServiceAccount [-WhatIf] [-Confirm] [-AccountExpirationDate <DateTime>] [-
 ## DESCRIPTION
 The **New-ADServiceAccount** cmdlet creates a new Active Directory managed service account.
 By default, the cmdlet creates a group managed service account.
-To create a standalone managed service account which is linked to a specific computer, use the **-RestrictToSingleComputer** parameter.
-To create a group managed service account which can only be used in client roles, use the **-RestrictToOutboundAuthenticationOnly** parameter.
+To create a standalone managed service account which is linked to a specific computer, use the **RestrictToSingleComputer** parameter.
+To create a group managed service account which can only be used in client roles, use the **RestrictToOutboundAuthenticationOnly** parameter.
 This creates a group managed service account that can be used for outbound connections only and any attempts to connect to services using this account will fail because the account does not have enough information for authentication.
 You can set commonly used managed service account property values by using the cmdlet parameters.
 Property values that are not associated with cmdlet parameters can be set by using the **OtherAttributes** parameter.
@@ -75,15 +74,15 @@ When you do not specify the **Path** parameter, the cmdlet creates an object in 
 
 The following methods explain different ways to create an object by using this cmdlet.
 
-Method 1: Use the New-ADServiceAccount cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
+- Method 1: Use the **New-ADServiceAccount** cmdlet, specify the required parameters, and set any additional property values by using the cmdlet parameters.
 
-Method 2: Use a template to create the new object.
+- Method 2: Use a template to create the new object.
 To do this, create a new managed service account object or retrieve a copy of an existing managed service account object and set the **Instance** parameter to this object.
 The object provided to the **Instance** parameter is used as a template for the new object.
 You can override property values from the template by setting cmdlet parameters.
 For examples and more information, see the **Instance** parameter description for this cmdlet.
 
-Method 3: Use the Import-CSVhttp://go.microsoft.com/fwlink/?LinkID=113341 cmdlet with the **New-ADServiceAccount** cmdlet to create multiple Active Directory managed service account objects.
+- Method 3: Use the **Import-Csv** cmdlet with the **New-ADServiceAccount** cmdlet to create multiple Active Directory managed service account objects.
 To do this, use the **Import-CSV** cmdlet to create the custom objects from a comma-separated value (CSV) file that contains a list of object properties.
 For more information, type `Get-Help Import-CSV`.
 Then pass these objects through the pipeline to the **New-ADServiceAccount** cmdlet to create the managed service account objects.
@@ -91,32 +90,37 @@ Then pass these objects through the pipeline to the **New-ADServiceAccount** cmd
 ## EXAMPLES
 
 ### Example 1: Create an enabled managed service account
-```Powershell
+```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -DNSHostName "Service01.contoso.com" -Enabled $True
 ```
 
 This command creates an enabled managed service account in Active Directory Domain Services (AD DS).
 
 ### Example 2: Create a managed service account and register its service principal name
-```Powershell
+```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -ServicePrincipalNames "MSSQLSVC/Machine3.corp.contoso.com" -DNSHostName "Service01.contoso.com"
 ```
 
 This command creates a managed service account and registers its service principal name.
 
 ### Example 3: Create a managed service account for a single computer
-```Powershell
+```powershell
 PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToSingleComputer
 ```
 
 This command creates a managed service account and restricts its use to a single computer.
 
 ### Example 4: Create a managed service account for outbound authentication only
-```Powershell
-PS C:\>New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthenticationOnly
+```powershell
+PS C:\> New-ADServiceAccount -Name "Service01" -RestrictToOutboundAuthenticationOnly
 ```
 
 This command creates a managed service account and restricts its use to outbound authentication.
+
+### Example 5: Create a new managed service account and register multiple service principal names
+```Powershell
+PS C:\> New-ADServiceAccount service1 -ServicePrincipalNames "HTTP/Machine3.corp.contoso.com,HTTP/Machine3.corp.contoso.com/contoso" -DNSHostName service1.contoso.com
+```
 
 ## PARAMETERS
 
@@ -354,8 +358,8 @@ If the cmdlet is run from such a provider drive, the account associated with the
 To specify this parameter, you can type an administrative account name, such as Admin1 or Contoso\Admin1 or you can specify a **PSCredential** object.
 If you specify a service account name for this parameter, the cmdlet prompts for a password.
 
-You can also create a **PSCredential** object by using a script or by using the Get-Credentialhttp://go.microsoft.com/fwlink/?LinkID=293936 cmdlet.
-You can then use it to specify the **Credential** parameter to the **ADServiceAccount** object.
+You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
+You can then set the *Credential* parameter to the **PSCredential** object.
 
 If the acting credentials do not have directory-level permission to perform the task, Active Directory PowerShell returns a terminating error.
 
@@ -600,19 +604,19 @@ In AD DS environments, a default value for **Path** is set in the following case
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive.
 - If the cmdlet has a default path, this is used.
-For example: in New-ADUser, the **Path** parameter defaults to the Users container.
+For example: in **New-ADUser**, the **Path** parameter defaults to the Users container.
 - If none of the previous cases apply, the default value of **Path** is set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for **Path** is set in the following cases:
 
 - If the cmdlet is run from an Active Directory PowerShell provider drive, the parameter is set to the current path of the provider drive. 
 - If the cmdlet has a default path, this is used.
-For example: in New-ADUser, the **Path** parameter defaults to the Users container. 
+For example: in **New-ADUser**, the **Path** parameter defaults to the Users container. 
 - If the target AD LDS instance has a default naming context, the default value of **Path** is set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
 - If none of the previous cases apply, the **Path** parameter does not take any default value.
 
-Note: The Active Directory Provider cmdlets, such **New-Item**, **Remove-Item**, **Remove-ItemProperty**, **Rename-Item**, and **Set-ItemProperty** also contain a **Path** property.
+Note: The Active Directory Provider cmdlets, such as **New-Item**, **Remove-Item**, **Remove-ItemProperty**, **Rename-Item**, and **Set-ItemProperty**, also contain a **Path** property.
 However, for the provider cmdlets, the **Path** parameter identifies the path of the actual object and not the container as with the Active Directory cmdlets.
 
 ```yaml
@@ -698,7 +702,7 @@ Accept wildcard characters: False
 ### -SamAccountName
 Specifies the Security Account Manager (SAM) account name of the user, group, computer, or service account.
 The maximum length of the description is 256 characters.
-To be compatible with older operating systems, create a SAM account name that is 20 characters or less.
+To be compatible with older operating systems, create a SAM account name that is 15 characters or less.
 This parameter sets the **SAMAccountName** for an account object.
 The LDAP display name (**ldapDisplayName**) for this property is sAMAccountName.
 
@@ -782,12 +786,6 @@ The operators are applied in the following sequence:
 - Add
 - Replace
 
-The following example shows how to add and remove service principal names:
-
-```powershell
- -ServicePrincipalNames @{Add="SQLservice\accounting.corp.contoso.com:1456"};{Remove="SQLservice\finance.corp.contoso.com:1456"}
-```
-
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -839,7 +837,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 
@@ -856,7 +854,7 @@ By default, this cmdlet does not generate any output.
 * This cmdlet does not work with AD LDS.
 * This cmdlet does not work with an Active Directory snapshot.
 * This cmdlet does not work with a read-only domain controller.
-* This cmdlet requires that you create a Microsoft Group Key Distribution Service (GKDS) root key first to begin using group managed service accounts in your Active Directory deployment. For more information on how to create the GKDS root key using Windows PowerShell, see Create the Key Distribution Services KDS Root Keyhttp://go.microsoft.com/fwlink/?LinkId=253584 (http://go.microsoft.com/fwlink/?LinkId=253584).
+* This cmdlet requires that you create a Microsoft Group Key Distribution Service (GKDS) root key first to begin using group managed service accounts in your Active Directory deployment. For more information on how to create the GKDS root key using Windows PowerShell, see [Create the Key Distribution Services KDS Root Key](https://go.microsoft.com/fwlink/?LinkId=253584).
 
 ## RELATED LINKS
 
@@ -869,4 +867,3 @@ By default, this cmdlet does not generate any output.
 [Set-ADServiceAccount](./Set-ADServiceAccount.md)
 
 [Uninstall-ADServiceAccount](./Uninstall-ADServiceAccount.md)
-

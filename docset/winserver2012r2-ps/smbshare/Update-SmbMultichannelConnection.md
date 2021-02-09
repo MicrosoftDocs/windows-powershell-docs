@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Update-SmbMultichannelConnection
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 42A5CB1C-50F8-4AB1-B699-9B51A54B02D4
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

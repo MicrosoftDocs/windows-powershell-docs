@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 3C59457D-F193-4FA3-8332-B70051EC4270
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmStorageReport

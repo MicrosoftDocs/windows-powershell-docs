@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 9AE3EFCD-0DE3-4AB3-92A6-465D703D9F2C
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-ClusterVMMonitoredItem

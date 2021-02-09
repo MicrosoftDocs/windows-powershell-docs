@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 9BB36BDF-2405-420E-BCC5-DDC79A675567
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Start-DnsServerScavenging

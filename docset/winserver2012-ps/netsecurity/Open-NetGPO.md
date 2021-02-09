@@ -3,8 +3,8 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 78D22B3A-37E0-4D0F-82C5-F7EF52853BA0
 manager: dansimp
 ---
@@ -209,7 +209,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Get-Command](http://go.microsoft.com/fwlink/p/?LinkId=113309)
+[Get-Command](https://go.microsoft.com/fwlink/p/?LinkId=113309)
 
 [New-NetFirewallRule](./New-NetFirewallRule.md)
 

@@ -4,16 +4,15 @@ Module Name: BranchCache
 online version: 
 schema: 2.0.0
 title: Disable-BC
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 6B3BBE29-2BE9-45B8-97E0-05E10C29F5ED
 ---
 

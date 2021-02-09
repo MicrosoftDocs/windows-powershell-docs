@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: BAFE3268-DCF5-42B0-864F-162DDE499FAA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv6Lease

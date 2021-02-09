@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Switch-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: FC447764-D439-4A80-9791-8C40D56D006C
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Switch-WmsSystem

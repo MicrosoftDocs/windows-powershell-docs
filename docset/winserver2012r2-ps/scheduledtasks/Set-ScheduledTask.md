@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Set-ScheduledTask
 description:
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 7426C09E-EA80-4C42-8F3A-0DEBB5C2B655
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

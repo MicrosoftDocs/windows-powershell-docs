@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B5B6E091-C062-4A50-9E61-05F2AD282221
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DedupSchedule

@@ -4,16 +4,15 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Remove-DfsrMember
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: D659EAE1-E7FB-4CA3-820B-37CE3A79C6A9
 ---
 

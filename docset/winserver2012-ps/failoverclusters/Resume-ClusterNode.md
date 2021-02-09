@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 1FB038FB-B8C1-414D-B2D9-52A65747723A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Resume-ClusterNode

@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DfsrPowerShell.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -40,7 +40,7 @@ The export process skips replicated folders automatically.
 You can only export or import one database at a time for a computer.
 
 Use the recommended and supported steps to perform DFS Replication database cloning.
-For more information, see the following Microsoft web site: [http://go.microsoft.com/fwlink/?LinkId=302005](http://go.microsoft.com/fwlink/?LinkId=302005).
+For more information, see the following Microsoft web site: [http://go.microsoft.com/fwlink/?LinkId=302005](https://go.microsoft.com/fwlink/?LinkId=302005).
 The term upstream refers to the server that is the authoritative source of both replicated file data and the DFS Replication database.
 The term downstream refers to the non-authoritative server that is a clone of the authoritative server.
 
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

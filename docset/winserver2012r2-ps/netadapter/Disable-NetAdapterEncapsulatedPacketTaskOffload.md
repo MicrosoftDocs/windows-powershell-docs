@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Disable-NetAdapterEncapsulatedPacketTaskOffload
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: F4ECCCD6-AC57-4EE4-BD8A-7436885A1265
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

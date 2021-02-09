@@ -4,16 +4,15 @@ Module Name: DnsClient
 online version: 
 schema: 2.0.0
 title: Get-DnsClientNrptPolicy
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C87EF4C2-589F-4779-AC7F-F510D30A50F5
 ---
 

@@ -3,8 +3,8 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: F4FD0A59-8C76-41FD-AA4B-8C19CF03D213
 manager: dansimp
 ---
@@ -316,9 +316,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113303)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [Copy-NetIPsecRule](./Copy-NetIPsecRule.md)
 

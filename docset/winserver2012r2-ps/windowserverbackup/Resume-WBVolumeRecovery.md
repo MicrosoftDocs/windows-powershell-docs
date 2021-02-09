@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Resume-WBVolumeRecovery
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: F4AF6DD5-285C-41E2-9B4A-CC5AEFF0CDE6
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

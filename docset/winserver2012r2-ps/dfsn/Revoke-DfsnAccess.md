@@ -4,16 +4,15 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Revoke-DfsnAccess
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 2E04C0A9-1EFB-4E37-BD6C-7121E41BC668
 ---
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 10DD6225-F667-4D45-A9CB-6C6E5C7D236F
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DhcpServerDatabase

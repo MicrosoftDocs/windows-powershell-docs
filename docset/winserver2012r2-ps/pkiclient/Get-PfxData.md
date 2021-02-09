@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-PfxData
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 654BB02E-B277-4497-AD58-BEAA73B725B5
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -108,7 +107,7 @@ A PFXData object.
 
 ## RELATED LINKS
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkID=293933)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkID=293933)
 
 [Export-PfxCertificate](./Export-PfxCertificate.md)
 

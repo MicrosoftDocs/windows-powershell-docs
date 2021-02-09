@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Show-WmsSystem
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: DA04627A-F13A-49A4-8872-C0CBF89A09C2
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Show-WmsSystem

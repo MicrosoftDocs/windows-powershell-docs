@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -27,8 +27,8 @@ Adds one or more members to an Active Directory group.
 
 ```
 Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>]
- [-PassThru] [-Server <String>] [<CommonParameters>]
+ [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>] 
+ [-PassThru] [-Server <String>] [-DisablePermissiveModify] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -329,6 +329,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisablePermissiveModify
+Group membership updates use permissive modify by default. This suppresses an error when adding a member that is already member of the group.
+When this parameter is used, an error “The specified account name is already a member of the group” is returned.
+
+This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -346,7 +364,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

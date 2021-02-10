@@ -3,8 +3,8 @@ external help file: NetAdapter_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 5E8EAF0B-3F5E-4F60-B985-0CAC45FDD192
 manager: dansimp
 ---
@@ -168,9 +168,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Disable-NetAdapterVmq](./Disable-NetAdapterVmq.md)
 

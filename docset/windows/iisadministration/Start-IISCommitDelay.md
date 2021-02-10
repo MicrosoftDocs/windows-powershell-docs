@@ -1,5 +1,5 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
@@ -7,12 +7,12 @@ ms.assetid: 06937FDB-7089-44B9-A9B9-782D6F5DEC14
 manager: dansimp
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
 title: Start-IISCommitDelay
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer:
 ---
 

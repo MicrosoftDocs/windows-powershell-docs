@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallRule.cmdletDefinition.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -419,6 +419,7 @@ The acceptable values for this parameter are:
 - ICMP type code: 0-255. 
 - ICMP type code pairs: 3:4. 
 - Keyword: Any. 
+
 A rule can be queried for this condition, modified by using the security filter object, or both.
 See the Get-NetFirewallPortFilter cmdlet for more information.
 
@@ -530,11 +531,13 @@ The acceptable value is a port, range, or keyword and depends on the protocol.
 If the *Protocol* parameter value is TCP or UDP, then the acceptable values for this parameter are: 
 - Port range: 0-65535. 
 - Port number: 80. 
-- Keyword: PlayToDiscovery or Any. 
+- Keyword: PlayToDiscovery or Any.
+
 If the *Protocol* parameter value is ICMPv4 or ICMPv6, then the acceptable values for this parameter are: 
 - An ICMP type, code pair: 0, 8. 
 - Type and code: 0-255. 
 - Keyword: Any. 
+
 If the *Protocol* parameter is not specified, then the acceptable values for this parameter are: RPC, RPCEPMap, Teredo, IPHTTPSIn, IPHTTPSOut, or Any. 
 IPHTTPS is only supported on Windows Server 2012. 
 Querying for rules with this parameter can only be performed using filter objects.
@@ -786,7 +789,7 @@ The acceptable values for this parameter are:
 
 - Protocols by number:  0-255. 
 - Protocols by name:  TCP, UDP, ICMPv4, or ICMPv6. 
-If a port number is identified by using port1 or port2, then this parameter must be set to TCP or UDP. 
+If a port number is identified by using numeric values (80, 443, 8080, etc.), then this parameter must be set to TCP or UDP. 
 The values ICMPv4 and ICMPv6 create a rule that exempts ICMP network traffic from the IPsec requirements of another rule. 
 
 The default value is Any. 
@@ -862,6 +865,7 @@ If the protocol is TCP or UDP, then the acceptable values for this parameter are
 - Port range: 0-65535 
 - Port number: 80 
 - Keyword: Any 
+
 If the protocol is ICMPv4 or ICMPv6, then the acceptable values for this parameter are: 
 - An ICMP type, code pair: 0, 8 
 - Type and code: 0-255 
@@ -955,7 +959,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

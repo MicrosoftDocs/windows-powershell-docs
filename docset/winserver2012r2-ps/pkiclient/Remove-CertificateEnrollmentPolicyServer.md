@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Remove-CertificateEnrollmentPolicyServer
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 048D5F06-8277-4CC7-A827-84C2FA4D3904
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

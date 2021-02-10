@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Remove-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 40B9DAF7-48F3-425F-806A-9A6A9F1566A6
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -166,9 +165,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Web Application Proxy Overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy Overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Add-WebApplicationProxyApplication](./Add-WebApplicationProxyApplication.md)
 

@@ -3,8 +3,8 @@ external help file: MSFT_DnsClient.cdxml-help.xml
 ms.assetid: F89AA7EE-5BD8-4548-8672-7CA0852B32F9
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 online version: 
 schema: 2.0.0
 ---

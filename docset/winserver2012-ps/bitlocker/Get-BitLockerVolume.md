@@ -3,8 +3,8 @@ external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 0714E33E-71B1-4FDE-8B83-25F50135874B
 manager: dansimp
 ---
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

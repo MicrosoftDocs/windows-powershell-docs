@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B1ECC72F-7AAE-417E-A14E-D86E04A41C64
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Import-DnsServerTrustAnchor

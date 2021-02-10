@@ -4,16 +4,15 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Backup-CARoleService
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: AD8E8F01-F47A-4C1B-923B-7358415A279A
 ---
 

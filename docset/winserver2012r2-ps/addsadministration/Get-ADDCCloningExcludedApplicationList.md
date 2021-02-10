@@ -4,16 +4,15 @@ Module Name: ActiveDirectory
 online version: 
 schema: 2.0.0
 title: Get-ADDCCloningExcludedApplicationList
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A43B14CD-8E32-404F-A2EA-8AA9BD5B1477
 ---
 

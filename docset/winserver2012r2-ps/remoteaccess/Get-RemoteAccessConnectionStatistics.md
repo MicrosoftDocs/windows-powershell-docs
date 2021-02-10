@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Get-RemoteAccessConnectionStatistics
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 26655B1B-1AF2-408C-9F48-45E9926ACD68
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -305,11 +304,11 @@ A separate instance of the object is outputted for every connection.
 
 ## RELATED LINKS
 
-[Export-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113299)
+[Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 
 [Get-RemoteAccessConnectionStatisticsSummary](./Get-RemoteAccessConnectionStatisticsSummary.md)
 

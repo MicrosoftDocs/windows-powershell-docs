@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Set-NetAdapterBinding
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A2360AAE-2FCF-4C8A-8063-923162B47F90
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

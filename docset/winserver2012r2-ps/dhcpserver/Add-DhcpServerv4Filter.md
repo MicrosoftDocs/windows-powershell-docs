@@ -4,16 +4,15 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Add-DhcpServerv4Filter
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: B023D801-3097-4377-9234-8E8B71C3706B
 ---
 
@@ -261,7 +260,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Import-Csv](http://go.microsoft.com/fwlink/p/?LinkID=113341)
+[Import-Csv](https://go.microsoft.com/fwlink/p/?LinkID=113341)
 
 [Get-DhcpServerv4Filter](./Get-DhcpServerv4Filter.md)
 

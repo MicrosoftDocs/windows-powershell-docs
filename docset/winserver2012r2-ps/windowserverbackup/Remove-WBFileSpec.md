@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Remove-WBFileSpec
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BF74FF84-49EE-4D60-8C82-83E6B9C8D8CA
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

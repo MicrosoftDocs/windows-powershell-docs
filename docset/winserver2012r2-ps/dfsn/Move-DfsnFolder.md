@@ -4,16 +4,15 @@ Module Name: DFSN
 online version: 
 schema: 2.0.0
 title: Move-DfsnFolder
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: EC97581D-B896-492F-94A5-1A214FD409CC
 ---
 

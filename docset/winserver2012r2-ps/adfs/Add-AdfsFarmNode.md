@@ -4,16 +4,15 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Add-AdfsFarmNode
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 8F40B69A-8090-4AC7-AC8E-ED8A5C55ACA8
 ---
 
@@ -117,7 +116,7 @@ Accept wildcard characters: False
 
 ### -Credential
 Specifies a **PSCredential** object based on a user name and password.
-To obtain a **PSCredential** object, use the [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936) cmdlet.
+To obtain a **PSCredential** object, use the [Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936) cmdlet.
 For more information, type `Get-Help Get-Credential`.
 
 ```yaml
@@ -245,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -255,5 +254,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 

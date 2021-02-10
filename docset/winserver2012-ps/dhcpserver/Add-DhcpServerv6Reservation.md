@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D1B1F504-0087-4DBE-8C99-0A364ADA0663
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-DhcpServerv6Reservation
@@ -292,7 +292,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Import-Csv](http://go.microsoft.com/fwlink/p/?LinkId=113341)
+[Import-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113341)
 
 [Get-DhcpServerv6FreeIPAddress](./Get-DhcpServerv6FreeIPAddress.md)
 

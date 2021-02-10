@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: B8414A11-3D51-438A-9EA6-CC3A7ABD08EA
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerAuditLog

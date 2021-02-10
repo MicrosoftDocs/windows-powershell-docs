@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Add-CertificateEnrollmentPolicyServer
@@ -232,9 +232,9 @@ The EnrollmentPolicyServer object contains information about the certificate enr
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
-[Get-Credential](http://go.microsoft.com/fwlink/p/?LinkId=113311)
+[Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=113311)
 
 [Get-CertificateEnrollmentPolicyServer](./Get-CertificateEnrollmentPolicyServer.md)
 

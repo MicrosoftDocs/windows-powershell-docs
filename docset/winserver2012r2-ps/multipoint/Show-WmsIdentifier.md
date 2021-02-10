@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Show-WmsIdentifier
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C281BBA8-F498-4A9B-8D88-1143EEEBFEF7
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Show-WmsIdentifier

@@ -4,16 +4,15 @@ Module Name: ActiveDirectory
 online version:
 schema: 2.0.0
 title: Remove-ADUser
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description:
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: F4D7A3B4-8F8E-4B26-9586-16E56473BF85
 ---
 

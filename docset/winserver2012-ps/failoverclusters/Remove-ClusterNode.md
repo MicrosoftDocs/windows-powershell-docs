@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 4061CDEE-7A4D-49F6-AC15-6C3E833C7E5D
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-ClusterNode

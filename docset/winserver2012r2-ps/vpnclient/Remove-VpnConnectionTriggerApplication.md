@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Remove-VpnConnectionTriggerApplication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C5D31872-B56B-4E13-8CAC-E1F83042F2CF
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

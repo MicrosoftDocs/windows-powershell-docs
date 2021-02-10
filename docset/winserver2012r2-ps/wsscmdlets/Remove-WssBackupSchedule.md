@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Remove-WssBackupSchedule
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: E37DC420-8460-405A-8F7C-F34D49F8C3E4
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

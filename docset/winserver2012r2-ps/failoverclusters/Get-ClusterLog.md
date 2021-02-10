@@ -4,16 +4,15 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Get-ClusterLog
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: E69E9553-284E-4A7E-8C05-08B7B8760F73
 ---
 

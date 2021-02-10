@@ -4,16 +4,15 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Get-DhcpServerv6Class
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3D62E1AB-62B5-4018-B35E-6B2FB2F1C14D
 ---
 

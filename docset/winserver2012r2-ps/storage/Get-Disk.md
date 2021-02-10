@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-Disk
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3929EB27-1365-42CA-8ACF-68B364C3599F
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -311,7 +310,7 @@ This cmdlet outputs one or more objects representing disks.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Clear-Disk](./Clear-Disk.md)
 

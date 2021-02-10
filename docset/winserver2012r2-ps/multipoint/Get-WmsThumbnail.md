@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-WmsThumbnail
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: AE3B8DB9-C081-48CE-A1D1-43BA7244F329
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Get-WmsThumbnail

@@ -4,16 +4,15 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Get-DnsServerRootHint
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 556C0842-0115-4183-AF00-9420A1AB2B8F
 ---
 

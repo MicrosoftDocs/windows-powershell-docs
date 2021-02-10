@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-MSDSMGlobalDefaultLoadBalancePolicy
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 38B5EFB4-24BF-4695-8E4A-62ABBDF09667
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

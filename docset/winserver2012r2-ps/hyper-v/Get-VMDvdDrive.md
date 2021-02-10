@@ -4,16 +4,15 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Get-VMDvdDrive
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 5C07D5B5-4D31-4109-BDCF-42E74E09A59B
 ---
 

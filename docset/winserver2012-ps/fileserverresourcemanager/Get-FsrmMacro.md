@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: DFF2B870-70FE-4708-A513-C28E3BA64CD1
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-FsrmMacro

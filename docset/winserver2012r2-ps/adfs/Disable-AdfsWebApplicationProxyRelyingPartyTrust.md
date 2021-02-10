@@ -4,16 +4,15 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Disable-AdfsWebApplicationProxyRelyingPartyTrust
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: E5C7CA93-89D1-4077-9F46-20D7137D4197
 ---
 

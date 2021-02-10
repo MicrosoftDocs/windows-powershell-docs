@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -38,7 +38,7 @@ Set-ADAccountControl [-WhatIf] [-Confirm] [-AccountNotDelegated <Boolean>]
 ## DESCRIPTION
 The **Set-ADAccountControl** cmdlet modifies the user account control (UAC) values for an Active Directory user or computer account.
 UAC values are represented by cmdlet parameters.
-For example, set the *PasswordExpired* parameter to change whether an account is expired and to modify the **ADS_UF_PASSWORD_EXPIRED** UAC value.
+For example, set the *PasswordNeverExpires* parameter to change whether an account password could expire and to modify the **ADS_UF_DONT_EXPIRE_PASSWD** UAC value.
 
 The *Identity* parameter specifies the Active Directory account to modify.
 
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

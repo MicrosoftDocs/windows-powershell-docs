@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-NetAdapterHardwareInfo
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0132A721-4441-4A71-AFB3-B2A86357EF19
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -173,5 +172,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 

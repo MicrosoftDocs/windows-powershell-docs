@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Disable-ServerManagerStandardUserRemoting
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

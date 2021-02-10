@@ -4,16 +4,15 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Set-AppXProvisionedDataFile
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3C776A62-79F8-46D7-A1D3-59A2D26976E0
 ---
 

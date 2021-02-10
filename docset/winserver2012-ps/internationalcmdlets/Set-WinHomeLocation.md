@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-WinHomeLocation
@@ -64,5 +64,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RegionInfo.GeoId Property](http://go.microsoft.com/fwlink/?LinkID=242310)
+[RegionInfo.GeoId Property](https://go.microsoft.com/fwlink/?LinkID=242310)
 

@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: AD6F1FCA-3C4A-41E9-BF2B-5748834DF256
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DnsServerGlobalNameZone

@@ -4,16 +4,15 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Test-AdfsFarmInstallation
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: D8E7446F-C295-4652-8503-C0877549BD4F
 ---
 
@@ -320,7 +319,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Install-AdfsFarm](./Install-AdfsFarm.md)
 

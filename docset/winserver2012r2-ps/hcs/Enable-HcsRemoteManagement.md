@@ -3,16 +3,15 @@ external help file: Microsoft.HCS.Management.dll-Help.xml
 online version: 
 schema: 2.0.0
 title: Enable-HcsRemoteManagement
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A83E0E4C-C592-4CF1-96EA-57F6E72FEA56
 ---
 
@@ -93,7 +92,7 @@ This cmdlet does not generate any output.
 
 ## RELATED LINKS
 
-[about_Remote](http://technet.microsoft.com/en-us/library/hh847900.aspx)
+[about_Remote](https://technet.microsoft.com/en-us/library/hh847900.aspx)
 
 [Disable-HcsRemoteManagement](./Disable-HcsRemoteManagement.md)
 

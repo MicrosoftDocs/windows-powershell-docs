@@ -4,16 +4,15 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Show-DnsServerCache
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C37BCB58-F942-41AD-8B71-700C5C5921BE
 ---
 

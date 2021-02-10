@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Set-WssRemoteWebAccessLogo
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 2BACCC6D-141D-4238-BEFF-B2C748076A3A
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

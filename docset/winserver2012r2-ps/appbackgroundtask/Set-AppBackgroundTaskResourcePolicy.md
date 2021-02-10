@@ -4,16 +4,15 @@ Module Name: AppBackgroundTask
 online version: 
 schema: 2.0.0
 title: Set-AppBackgroundTaskResourcePolicy
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 82B0732A-B6CD-46C8-9D83-212A05EFB3D6
 ---
 

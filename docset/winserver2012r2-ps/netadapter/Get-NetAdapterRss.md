@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-NetAdapterRss
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BDE7A13E-E3D2-4990-A4C2-6FB48674C118
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -188,9 +187,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Disable-NetAdapterRss](./Disable-NetAdapterRss.md)
 

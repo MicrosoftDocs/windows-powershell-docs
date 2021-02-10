@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -68,21 +68,21 @@ The **Install-ADDSDomainController** cmdlet installs a domain controller in Acti
 ## EXAMPLES
 
 ### Example 1: Install a domain controller and DNS server
-```
-PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential "CORP\Administrator") -DomainName "corp.contoso.com"
+```powershell
+PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com"
 ```
 
 This command installs a domain controller and DNS server in the corp.contoso.com domain using CORP\Administrator credentials and prompts the user to provide and confirm the Directory Services Restore Mode (DSRM) password.
 
 ### Example 2: Install a domain controller and DNS server using administrator credentials
-```
-PS C:\> Install-ADDSDomainController -InstallDns -DomainName "corp.contoso.com "
+```powershell
+PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential "CORP\Administrator") -DomainName "corp.contoso.com"
 ```
 
 This command installs a domain controller and DNS server in the corp.contoso.com domain using Administrator credentials and prompts the user to provide and confirm the DSRM password.
 
 ### Example 3: Install a domain controller and DNS server that uses domain promotion
-```
+```powershell
 PS C:\> Install-ADDSDomainController -InstallDns -Credential (Get-Credential) -DomainName (Read-Host "Domain to promote into")
 ```
 
@@ -225,8 +225,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatabasePath
-Specifies the fully qualified, non-Universal Naming Convention (UNC) path to a directory on a fixed disk of the local computer that will contain the domain database, for instance, C:\Windows\NTDS.
-The default is %SYSTEMROOT%\NTDS.
+Specifies the fully qualified, non-Universal Naming Convention (UNC) path to a directory on a fixed disk of the local computer that will contain the domain database, for instance, `C:\Windows\NTDS`.
+The default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml
 Type: String
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -DnsDelegationCredential
 Specifies the user name and password for creating DNS delegation.
-This parameter is skipped if the value for the *CreateDnsDelegation* parameter is either specified or computed to be $False.
+This parameter is skipped if the value for the **CreateDnsDelegation** parameter is either specified or computed to be $False.
 
 ```yaml
 Type: PSCredential
@@ -322,10 +322,10 @@ Accept wildcard characters: False
 ### -InstallDns
 Indicates the cmdlet installs and configures the DNS Server service on the domain controller.
 For domain controller installation, if this parameter is left unspecified and the current domain already hosts and stores the DNS names for the domain, then the default for this parameter is $True and the DNS server is installed.
-Otherwise, if DNS domain names are hosted outside of Active Directory, the default is $False and no DNS server is installed.
+Otherwise, if DNS domain names are hosted outside of Active Directory, the default is `$False` and no DNS server is installed.
 
 To test if DNS domain names are hosted outside of Active Directory, this cmdlet uses a start of authority (SOA) type DNS query.
-For instance, if the value of *DomainName* is corp.contoso.com, Active Directory performs an SOA query for corp.contoso.com and ensures that the zone name in the response is corp.contoso.com.
+For instance, if the value of **DomainName** is corp.contoso.com, Active Directory performs an SOA query for corp.contoso.com and ensures that the zone name in the response is corp.contoso.com.
 
 ```yaml
 Type: SwitchParameter
@@ -355,8 +355,8 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, C:\Windows\Logs.
-The default is %SYSTEMROOT%\NTDS.
+Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files, for example, `C:\Windows\Logs`.
+The default is `%SYSTEMROOT%\NTDS`.
 
 ```yaml
 Type: String
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 
 ### -MoveInfrastructureOperationMasterRoleIfNecessary
 Indicates that the cmdlet transfers the infrastructure master role to the domain controller being installed.
-To successfully complete the transfer, the *NoGlobalCatalog* parameter must be included as well.
+To successfully complete the transfer, the **NoGlobalCatalog** parameter must be included as well.
 Do not specify this parameter if you want the infrastructure master role to remain where it currently is.
 
 ```yaml
@@ -547,9 +547,9 @@ Accept wildcard characters: False
 
 ### -SkipPreChecks
 Indicates that the cmdlet performs only a base set of validations.
-This behavior is equivalent to the validations that were performed when using Dcpromo.exe in earlier versions of Windows Server to add a new domain controller.
+This behavior is equivalent to the validations that were performed when using `Dcpromo.exe` in earlier versions of Windows Server to add a new domain controller.
 When this switch parameter is set, it specifies that additional preliminary checks should be bypassed.
-For more information on the scope of these additional preliminary checks that the ADDSDeployment module performs by default when using Windows Server 2012, refer to the table in the section ADPrep and Prerequisite Checking Architecture in [AD DS Simplified Administration](http://go.microsoft.com/fwlink/?LinkID=237244).
+For more information on the scope of these additional preliminary checks that the ADDSDeployment module performs by default when using Windows Server 2016, refer to the table in the section "ADPrep and Prerequisite Checking Architecture" in [AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244).
 
 ```yaml
 Type: SwitchParameter
@@ -580,8 +580,8 @@ Accept wildcard characters: False
 ```
 
 ### -SysvolPath
-Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the Sysvol data, for example, C:\Windows\SYSVOL.
-The default is %SYSTEMROOT%\SYSVOL.
+Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the Sysvol data, for example, `C:\Windows\SYSVOL`.
+The default is `%SYSTEMROOT%\SYSVOL`.
 
 ```yaml
 Type: String
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -637,12 +637,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Microsoft.DirectoryServices.Deployment.Types.Result
 
 ## NOTES
-* By default, this cmdlet always prompts for confirmation. To bypass confirmation, you need to include the *Confirm* parameter and specify a value of $false. For example, `-Confirm:$false`.
-* By default, this cmdlet is always run when executed. To see what will happen if the cmdlet runs without executing or committing installation changes, first run the cmdlet using the *WhatIf* parameter to show what would happen.
+* By default, this cmdlet always prompts for confirmation. To bypass confirmation, you need to include the **Confirm** parameter and specify a value of `$false`. For example, `-Confirm:$false`.
+* By default, this cmdlet is always run when executed. To see what will happen if the cmdlet runs without executing or committing installation changes, first run the cmdlet using the ***WhatIf** parameter to show what would happen.
 
 ## RELATED LINKS
 
-[AD DS Simplified Administration](http://go.microsoft.com/fwlink/?LinkID=237244)
+[AD DS Simplified Administration](https://go.microsoft.com/fwlink/?LinkID=237244)
 
 [Add-ADDSReadOnlyDomainControllerAccount](./Add-ADDSReadOnlyDomainControllerAccount.md)
 
@@ -650,7 +650,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Install-ADDSForest](./Install-ADDSForest.md)
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
-[ConvertTo-SecureString](http://go.microsoft.com/fwlink/p/?LinkId=113291)
+[ConvertTo-SecureString](https://go.microsoft.com/fwlink/p/?LinkId=113291)
 

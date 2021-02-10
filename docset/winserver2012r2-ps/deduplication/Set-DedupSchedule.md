@@ -4,16 +4,15 @@ Module Name: Deduplication
 online version: 
 schema: 2.0.0
 title: Set-DedupSchedule
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: B5B6E091-C062-4A50-9E61-05F2AD282221
 ---
 

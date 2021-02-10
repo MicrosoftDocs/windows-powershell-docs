@@ -1,19 +1,18 @@
 ---
-author: andreabarr
+author: Kateyanne
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182872
 schema: 2.0.0
 title: Stop-HpcJob
 ms.assetid: 1C71E2EF-0A23-42EC-86F1-9549FE3FF42A
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Stop-HpcJob

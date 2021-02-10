@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: CE696FD7-9A26-4606-816C-6DAD2228ADC8
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # New-FsrmFMJNotification

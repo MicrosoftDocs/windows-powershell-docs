@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 5ED97A2C-9571-443C-BC20-E63458498A2E
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Remove-DhcpServerv4OptionDefinition

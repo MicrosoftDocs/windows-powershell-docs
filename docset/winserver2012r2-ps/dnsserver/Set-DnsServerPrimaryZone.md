@@ -4,16 +4,15 @@ Module Name: DnsServer
 online version: 
 schema: 2.0.0
 title: Set-DnsServerPrimaryZone
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3C26B80A-DBEB-45CE-8644-4D2EBAD9408E
 ---
 

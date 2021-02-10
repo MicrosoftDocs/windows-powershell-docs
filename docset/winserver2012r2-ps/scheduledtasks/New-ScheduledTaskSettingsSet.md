@@ -6,14 +6,13 @@ schema: 2.0.0
 title: New-ScheduledTaskSettingsSet
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: FBC4B2C5-A56C-4D97-B1AC-20C0A62F8D07
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

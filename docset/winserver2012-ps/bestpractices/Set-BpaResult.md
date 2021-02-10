@@ -5,8 +5,8 @@ manager: dansimp
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-BpaResult
@@ -131,7 +131,7 @@ The input object specified by the **Results** parameter.
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Get-BpaModel](./Get-BpaModel.md)
 

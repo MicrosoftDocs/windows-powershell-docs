@@ -6,15 +6,14 @@ schema: 2.0.0
 title: Get-WmsApp
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-06
+ms.date: 12/06/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A54B4A6B-98E2-48CE-9814-67BCC78CB796
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Get-WmsApp

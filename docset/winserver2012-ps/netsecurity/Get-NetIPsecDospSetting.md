@@ -3,8 +3,8 @@ external help file: NetSecurity_Function.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 29CC6099-8372-4283-B9D2-CB9B4F101F5D
 manager: dansimp
 ---
@@ -189,7 +189,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkId=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
 
 [New-NetIPsecDospSetting](./New-NetIPsecDospSetting.md)
 

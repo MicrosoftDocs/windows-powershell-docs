@@ -3,8 +3,8 @@ external help file: Storage2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 699C06C9-4384-4369-91FF-EEA3BD1E2AD8
 manager: dansimp
 ---

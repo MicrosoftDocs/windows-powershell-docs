@@ -1,19 +1,18 @@
 ---
-author: andreabarr
+author: Kateyanne
 description:
 external help file: CCPPSH.dll-Help.xml
 keywords: powershell, cmdlet
 manager:
-ms.date: 2016-12-20
+ms.date: 12/20/2016
 ms.prod: powershell
-ms.technology: powershell
 ms.topic: reference
 online version: http://go.microsoft.com/fwlink/?LinkId=182867
 schema: 2.0.0
 title: Set-HpcNodeState
 ms.assetid: 7DC6022D-942F-43EB-846F-609EE83B6F23
 ms.reviewer:
-ms.author: v-anbarr
+ms.author: v-kaunu
 ---
 
 # Set-HpcNodeState

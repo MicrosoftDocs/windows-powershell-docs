@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -40,18 +40,17 @@ Receive-MsmqQueue -InputObject <MessageQueue> [-Peek] [-RetrieveBody] [-Timeout 
 ## DESCRIPTION
 The **Receive-MsmqQueue** cmdlet does a destructive read from a queue.
 The cmdlet returns the received **System.Messaging.Message** object.
-This cmdlet accepts values for the *Name* parameter of path names, format names, and direct format names.
+This cmdlet accepts values for the **Name** parameter of path names, format names, and direct format names.
 Some other Message Queuing (also known as MSMQ) cmdlets require a friendly name for the queue.
-If you specify the *Peek* parameter, the cmdlet peeks at the message instead of doing a destructive read.
-
+If you specify the **Peek** parameter, the cmdlet peeks at the message instead of doing a destructive read.
 The cmdlet succeeds if it returns at least one message.
 
-If you specify the *Peek* parameter, this cmdlet returns the number of messages that is the minimum of the number supplied by the *Count* parameter and the number of messages in the queue.
+If you specify the **Peek** parameter, this cmdlet returns the number of messages  that is the minimum of the number supplied by the **Count** parameter and the number of messages in the queue.
 
 ## EXAMPLES
 
 ### Example 1: Perform a transacted read
-```
+```powershell
 PS C:\> Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional
 ```
 
@@ -157,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)
 
 ## INPUTS
 

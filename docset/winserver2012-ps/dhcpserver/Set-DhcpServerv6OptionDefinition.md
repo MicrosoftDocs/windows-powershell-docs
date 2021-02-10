@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 7DC5D0D6-85A0-467A-A41D-17755FEEAA6A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Set-DhcpServerv6OptionDefinition

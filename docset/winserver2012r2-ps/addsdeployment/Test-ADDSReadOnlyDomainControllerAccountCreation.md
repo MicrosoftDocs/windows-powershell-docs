@@ -4,16 +4,15 @@ Module Name: ADDSDeployment
 online version: 
 schema: 2.0.0
 title: Test-ADDSReadOnlyDomainControllerAccountCreation
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
 ---
 

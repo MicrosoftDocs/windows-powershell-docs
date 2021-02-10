@@ -4,16 +4,15 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Set-DhcpServerAuditLog
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: B106E9C9-1BD8-48F7-A820-60D7E77225CA
 ---
 

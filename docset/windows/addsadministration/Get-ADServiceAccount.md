@@ -9,7 +9,6 @@ keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: powershell-windows
 ms.topic: reference
 online version: 
 schema: 2.0.0
@@ -48,25 +47,27 @@ Get-ADServiceAccount [-AuthType <ADAuthType>] [-Credential <PSCredential>] -LDAP
 ## DESCRIPTION
 The **Get-ADServiceAccount** cmdlet gets a managed service account or performs a search to get managed service accounts.
 
-The *Identity* parameter specifies the Active Directory managed service account to get.
+The **Identity** parameter specifies the Active Directory managed service account to get.
 You can identify a managed service account by its distinguished name, GUID, security identifier (SID), or Security Account Manager (SAM) account name.
-You can also set the parameter to a managed service account object variable, such as `$<localServiceAccountObject>` or pass a managed service account object through the pipeline to the *Identity* parameter.
+You can also set the parameter to a managed service account object variable, such as `$<localServiceAccountObject>` or pass a managed service account object through the pipeline to the **Identity** parameter.
 
-To search for and retrieve more than one managed service account, use the *Filter* or *LDAPFilter* parameters.
-The *Filter* parameter uses the PowerShell Expression Language to write query strings for Active Directory.
-PowerShell Expression Language syntax provides rich type conversion support for value types received by the *Filter* parameter.
-For more information about the *Filter* parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
-If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the *LDAPFilter* parameter.
+To search for and retrieve more than one managed service account, use the **Filter** or **LDAPFilter** parameters.
+The **Filter** parameter uses the PowerShell Expression Language to write query strings for Active Directory.
+PowerShell Expression Language syntax provides rich type conversion support for value types received by the **Filter** parameter.
+For more information about the **Filter** parameter syntax, type `Get-Help about_ActiveDirectory_Filter`.
+If you have existing Lightweight Directory Access Protocol (LDAP) query strings, you can use the **LDAPFilter** parameter.
 
 This cmdlet gets a default set of managed service account object properties.
-To get additional properties use the *Properties* parameter.
-For more information about the how to determine the properties for service account objects, see the *Properties* parameter description.
+To get additional properties use the **Properties** parameter.
+For more information about the how to determine the properties for service account objects, see the **Properties** parameter description.
 
 ## EXAMPLES
 
 ### Example 1: Get a managed service account by its Security Account Manager name
-```
+```powershell
 PS C:\> Get-ADServiceAccount -Identity service1
+```
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -81,8 +82,10 @@ DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 This command gets a managed service account with SAM account name service1.
 
 ### Example 2: Get a managed service account by its SID
-```
+```powershell
 PS C:\> Get-ADServiceAccount -Identity S-1-5-21-159507390-2980359153-3438059098-29770
+```
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -94,11 +97,13 @@ HostComputers     :
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets the managed service account with SID S-1-5-21-159507390-2980359153-3438059098-29770.
+This command gets the managed service account with SID `S-1-5-21-159507390-2980359153-3438059098-29770`.
 
 ### Example 3: Get a filtered list of managed service accounts
-```
+```powershell
 PS C:\> Get-ADServiceAccount -Filter "HostComputers -eq 'CN=SQL-Server-1, DC=contoso,DC=com'"
+```
+```output
 Enabled           : True
 Name              : service1
 UserPrincipalName :
@@ -110,7 +115,7 @@ HostComputers     : {CN=SQL-Server-1, DC=contoso,DC=com}
 DistinguishedName : CN=service1,CN=Managed Service Accounts,DC=contoso,DC=com
 ```
 
-This command gets the managed service accounts installed on the computer CN=SQL-Server-1,DC=contoso,DC=com.
+This command gets the managed service accounts allowed to be used on the computer `CN=SQL-Server-1,DC=contoso,DC=com`.
 
 ## PARAMETERS
 
@@ -143,7 +148,7 @@ Specifies the user account credentials to use to perform this task.
 The default credentials are the credentials of the currently logged on user unless the cmdlet is run from an Active Directory module for Windows PowerShell provider drive.
 If the cmdlet is run from such a provider drive, the account associated with the drive is the default.
 
-To specify this parameter, you can type a user name, such as User1 or Domain01\User01 or you can specify a **PSCredential** object.
+To specify this parameter, you can type a user name, such as `User1` or `Domain01\User01` or you can specify a **PSCredential** object.
 If you specify a user name for this parameter, the cmdlet prompts for a password.
 
 You can also create a **PSCredential** object by using a script or by using the **Get-Credential** cmdlet.
@@ -166,9 +171,9 @@ Accept wildcard characters: False
 ### -Filter
 Specifies a query string that retrieves Active Directory objects.
 This string uses the PowerShell Expression Language syntax.
-The PowerShell Expression Language syntax provides rich type-conversion support for value types received by the *Filter* parameter.
+The PowerShell Expression Language syntax provides rich type-conversion support for value types received by the **Filter** parameter.
 The syntax uses an in-order representation, which means that the operator is placed between the operand and the value.
-For more information about the *Filter* parameter, type `Get-Help about_ActiveDirectory_Filter`.
+For more information about the **Filter** parameter, type `Get-Help about_ActiveDirectory_Filter`.
 
 Syntax:
 
@@ -234,8 +239,8 @@ Accept wildcard characters: False
 ### -LDAPFilter
 Specifies an LDAP query string that is used to filter Active Directory objects.
 You can use this parameter to run your existing LDAP queries.
-The *Filter* parameter syntax supports the same functionality as the LDAP syntax.
-For more information, see the *Filter* parameter description or type `Get-Help about_ActiveDirectory_Filter`.
+The **Filter** parameter syntax supports the same functionality as the LDAP syntax.
+For more information, see the **Filter** parameter description or type `Get-Help about_ActiveDirectory_Filter`.
 
 ```yaml
 Type: String
@@ -252,25 +257,25 @@ Accept wildcard characters: False
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
-The cmdlet searches this partition to find the object defined by the *Identity* parameter.
+The cmdlet searches this partition to find the object defined by the **Identity** parameter.
 
-In many cases, a default value will be used for the *Partition* parameter if no value is specified.
+In many cases, a default value will be used for the **Partition** parameter if no value is specified.
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules will be evaluated.
 
-In AD DS environments, a default value for *Partition* will be set in the following cases: 
+In AD DS environments, a default value for **Partition** will be set in the following cases: 
 
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
-- If none of the previous cases apply, the default value of *Partition* will be set to the default partition or naming context of the target domain.
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
+- If none of the previous cases apply, the default value of **Partition** will be set to the default partition or naming context of the target domain.
 
 In AD LDS environments, a default value for Partition will be set in the following cases: 
 
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
-- If the target AD LDS instance has a default naming context, the default value of *Partition* will be set to the default naming context.
+- If the **Identity** parameter is set to a distinguished name, the default value of **Partition** is automatically generated from this distinguished name. 
+- If running cmdlets from an Active Directory provider drive, the default value of **Partition** is automatically generated from the current path in the drive. 
+- If the target AD LDS instance has a default naming context, the default value of **Partition** will be set to the default naming context.
 To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance. 
-- If none of the previous cases apply, the *Partition* parameter will not take any default value.
+- If none of the previous cases apply, the **Partition** parameter will not take any default value.
 
 ```yaml
 Type: String
@@ -328,10 +333,10 @@ Accept wildcard characters: False
 
 ### -ResultSetSize
 Specifies the maximum number of objects to return for an Active Directory Domain Services query.
-If you want to receive all of the objects, set this parameter to $Null (null value).
+If you want to receive all of the objects, set this parameter to `$Null` (null value).
 You can use Ctrl+C to stop the query and return of objects.
 
-The default is $Null.
+The default is `$Null`.
 
 ```yaml
 Type: Int32
@@ -355,8 +360,8 @@ When you run a cmdlet outside of an Active Directory provider drive against an A
 When you run a cmdlet outside of an Active Directory provider drive against an AD LDS target, the default value is the default naming context of the target LDS instance if one has been specified by setting the **msDS-defaultNamingContext** property of the Active Directory directory service agent (DSA) object (**nTDSDSA**) for the AD LDS instance.
 If no default naming context has been specified for the target AD LDS instance, then this parameter has no default value.
 
-When the value of the *SearchBase* parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
-If the value of the *SearchBase* parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
+When the value of the **SearchBase** parameter is set to an empty string and you are connected to a GC port, all partitions will be searched.
+If the value of the **SearchBase** parameter is set to an empty string and you are not connected to a GC port, an error will be thrown.
 
 ```yaml
 Type: String
@@ -410,9 +415,9 @@ Directory server values:
 - NetBIOS name
 - Fully qualified directory server name and port
 
-The default value for the *Server* parameter is determined by one of the following methods in the order that they are listed:
+The default value for the **Server** parameter is determined by one of the following methods in the order that they are listed:
 
-- By using *Server* value from objects passed through the pipeline. 
+- By using **Server** value from objects passed through the pipeline. 
 - By using the server information associated with the Active Directory PowerShell provider drive, when running under that drive. 
 - By using the domain of the computer running PowerShell.
 
@@ -429,12 +434,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### None or Microsoft.ActiveDirectory.Management.ADServiceAccount
-A managed service account object is received by the *Identity* parameter.
+A managed service account object is received by the **Identity** parameter.
 
 ## OUTPUTS
 
@@ -442,18 +447,7 @@ A managed service account object is received by the *Identity* parameter.
 Returns one or more managed service account (MSA) objects.
 
 This cmdlet returns a default set of ADService account property values.
-To retrieve additional ADService account properties, use the *Properties* parameter.
-
-To view the properties for an ADService account object, see the following examples.
-To run these examples, replace \<service account\> with a managed service account identifier such as the name of a managed service account.
-
-To get a list of the default set of properties of an ADService account object, use the following command:
-
-`Get-ADServiceAccount`\<service account\>`| Get-Member`
-
-To get a list of all the properties of an ADService account object, use the following command:
-
-`Get-ADServiceAccount`\<service account\>`-Properties ALL | Get-Member`
+To retrieve additional ADService account properties, use the **Properties** parameter.
 
 ## NOTES
 * This cmdlet does not work with AD LDS.

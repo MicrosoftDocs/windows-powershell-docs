@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Set-NetAdapterChecksumOffload
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A6F87E59-4776-4353-8EDB-2E02E7CE96A4
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

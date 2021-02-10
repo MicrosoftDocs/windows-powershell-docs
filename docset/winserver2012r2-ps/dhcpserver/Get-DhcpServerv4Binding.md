@@ -4,16 +4,15 @@ Module Name: DhcpServer
 online version: 
 schema: 2.0.0
 title: Get-DhcpServerv4Binding
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4C216DE1-CFA0-4918-AD0F-0F5AA776C489
 ---
 

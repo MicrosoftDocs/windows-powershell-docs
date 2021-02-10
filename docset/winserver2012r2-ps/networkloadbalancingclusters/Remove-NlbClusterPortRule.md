@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Remove-NlbClusterPortRule
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 8DB15162-B7F4-44E5-B9F0-9305EFEE57FD
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

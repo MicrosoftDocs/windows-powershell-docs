@@ -4,16 +4,15 @@ Module Name: iSCSI
 online version: 
 schema: 2.0.0
 title: Get-IscsiTarget
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 686A3960-380E-4E4D-A6A4-24F9DFCC793E
 ---
 
@@ -230,7 +229,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [iSCSI on TechNet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee338476(v=ws.10))
 
-[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+[Storage on TechNet](https://go.microsoft.com/fwlink/?linkid=191356)
 
 [Get-IscsiConnection](./Get-IscsiConnection.md)
 

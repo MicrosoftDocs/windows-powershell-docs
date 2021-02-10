@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-OdbcDriver
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 00890D77-4875-4EA6-A243-D78479DE8541
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -35,7 +34,7 @@ Specify values for the **Name** and **Platform** parameters.
 If you do not specify a value for **Name**, the cmdlet gets drivers that have any driver name.
 If you do not specify any parameters, the cmdlet gets all ODBC drivers installed on the computer.
 
-For more information about ODBC and drivers, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx) and [Drivers](http://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
+For more information about ODBC and drivers, see [Microsoft Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) and [Drivers](https://msdn.microsoft.com/en-us/library/ms715383.aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -87,7 +86,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

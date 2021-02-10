@@ -3,8 +3,8 @@ external help file: GPv2_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: AED425CB-BAD1-4114-8EFC-3D874435E730
 manager: dansimp
 ---

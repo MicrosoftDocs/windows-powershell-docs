@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: C5CF1300-03F7-45B8-9E08-8E7756C583BB
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Get-DhcpServerv6DnsSetting

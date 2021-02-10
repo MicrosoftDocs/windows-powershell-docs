@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Register-StorageSubsystem
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: BF813E63-D66D-4B04-9CEB-2B8B6D6E2980
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -206,7 +205,7 @@ You can use this object to perform storage management operations on the remote c
 
 ## RELATED LINKS
 
-[Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936)
+[Get-Credential](https://go.microsoft.com/fwlink/?LinkID=293936)
 
 [Unregister-StorageSubsystem](./Unregister-StorageSubsystem.md)
 

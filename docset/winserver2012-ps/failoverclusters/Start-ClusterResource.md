@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: 18DB4B43-DD14-431D-93E4-27AF88CB1780
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Start-ClusterResource

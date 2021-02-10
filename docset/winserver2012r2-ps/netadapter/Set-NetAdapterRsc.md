@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Set-NetAdapterRsc
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 6B7B6811-1BFD-46E4-9F7A-D4D80C30F86C
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

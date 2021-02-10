@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: F68C96E1-F45A-47E4-BE82-735B682DE42A
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Resume-DnsServerZone

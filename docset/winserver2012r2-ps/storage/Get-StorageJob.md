@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-StorageJob
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 3A5CD3F6-C210-46C3-A46B-3B9BA113AF08
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -248,5 +247,5 @@ The Get-StorageJob cmdlet returns objects that represent storage jobs.
 
 ## RELATED LINKS
 
-[Receive-Job](http://go.microsoft.com/fwlink/p/?LinkID=113372)
+[Receive-Job](https://go.microsoft.com/fwlink/p/?LinkID=113372)
 

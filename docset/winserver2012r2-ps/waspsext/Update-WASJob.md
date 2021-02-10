@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Update-WASJob
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: D4AC7EAE-B33B-458A-8007-C4A4F9034C56
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -216,7 +215,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Windows Assessment Services Technical Reference](http://go.microsoft.com/fwlink/?LinkId=215628)
+[Windows Assessment Services Technical Reference](https://go.microsoft.com/fwlink/?LinkId=215628)
 
 [Get-WASAssessment](./Get-WASAssessment.md)
 

@@ -4,16 +4,15 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Rename-VMResourcePool
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C7A1B012-C75D-49FD-B054-A975C7710BA2
 ---
 

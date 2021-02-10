@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Get-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 99D86A99-E40A-45E1-B048-06172CB73BE7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -176,9 +175,9 @@ If the cmdlet gets a single application, it displays the properties of the appli
 
 ## RELATED LINKS
 
-[Web Application Proxy Overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy Overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application Proxy](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application Proxy](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Add-WebApplicationProxyApplication](./Add-WebApplicationProxyApplication.md)
 

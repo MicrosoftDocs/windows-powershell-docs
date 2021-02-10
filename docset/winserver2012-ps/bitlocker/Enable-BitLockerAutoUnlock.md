@@ -3,8 +3,8 @@ external help file: Bitlocker_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: B8ED92D0-F562-460C-87C7-3C9D4A37C7D9
 manager: dansimp
 ---

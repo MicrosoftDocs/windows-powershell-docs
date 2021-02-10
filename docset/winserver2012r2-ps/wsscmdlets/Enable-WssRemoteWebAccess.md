@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Enable-WssRemoteWebAccess
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0EDFB6C2-B7CF-4F32-BA54-4A0663D45F86
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

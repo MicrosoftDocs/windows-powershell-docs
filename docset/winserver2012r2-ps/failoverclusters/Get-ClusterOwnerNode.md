@@ -4,16 +4,15 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Get-ClusterOwnerNode
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C730B479-DEE6-4C34-B1C8-5E40FB23547A
 ---
 

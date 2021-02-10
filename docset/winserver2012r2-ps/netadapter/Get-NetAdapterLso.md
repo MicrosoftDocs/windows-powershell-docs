@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-NetAdapterLso
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: ECBBCA96-A4FB-434F-A8AB-3C10C81329BE
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -182,9 +181,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/p/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/p/?LinkID=113302)
 
-[Where-Object](http://go.microsoft.com/fwlink/p/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/p/?LinkID=113423)
 
 [Disable-NetAdapterLso](./Disable-NetAdapterLso.md)
 

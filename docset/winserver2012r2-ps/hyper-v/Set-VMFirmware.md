@@ -4,16 +4,15 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Set-VMFirmware
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C379A867-42B2-44E1-B349-F74ABFE063B3
 ---
 

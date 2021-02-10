@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-NetPrefixPolicy
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -167,5 +166,5 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS 
 
-[Source and Destination Address Selection for IPv6 on TechNet](http://technet.microsoft.com/library/bb877985.aspx)
+[Source and Destination Address Selection for IPv6 on TechNet](https://technet.microsoft.com/library/bb877985.aspx)
 

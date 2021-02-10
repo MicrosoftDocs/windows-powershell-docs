@@ -4,16 +4,15 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Remove-AdfsClaimsProviderTrust
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 892C41EF-FC33-4DF9-A891-7F0A20F5C9CE
 ---
 

@@ -4,16 +4,15 @@ Module Name: ADRMSAdmin
 online version: 
 schema: 2.0.0
 title: Export-RmsTPD
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: AD78CFED-A52A-4AB0-900A-8E4E8ECEA651
 ---
 
@@ -188,7 +187,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Using Windows PowerShell with AD RMS](http://go.microsoft.com/fwlink/?LinkId=136806)
+[Using Windows PowerShell with AD RMS](https://go.microsoft.com/fwlink/?LinkId=136806)
 
 [Export-RmsTUD](./Export-RmsTUD.md)
 

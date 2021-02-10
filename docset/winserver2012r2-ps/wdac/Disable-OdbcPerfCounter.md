@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Disable-OdbcPerfCounter
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 631FD972-CCC6-4D8D-AACF-B5D16AB968DB
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -39,7 +38,7 @@ Disable-OdbcPerfCounter [-PassThru] [[-Platform] <String>] [-CimSession <CimSess
 ## DESCRIPTION
 The **Disable-OdbcPerfCounter** cmdlet disables the Open Database Connectivity (ODBC) connection pooling Performance Monitor counters for ODBC connection pooling.
 
-For more information about ODBC and performance counters, see [Microsoft Open Database Connectivity (ODBC)](http://msdn.microsoft.com/en-us/library/ms710252.aspx) and [ODBC Performance Counters](http://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx) on the Microsoft Developer Network.
+For more information about ODBC and performance counters, see [Microsoft Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) and [ODBC Performance Counters](https://msdn.microsoft.com/en-us/library/windows/desktop/ms709288.aspx) on the Microsoft Developer Network.
 
 ## EXAMPLES
 
@@ -86,7 +85,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -207,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

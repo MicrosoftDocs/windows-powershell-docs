@@ -1,17 +1,17 @@
 ---
-author: andreabarr
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsDiagnostics
 ms.assetid: E899FBBD-328B-4607-9584-017AF3108816
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version: 
 schema: 2.0.0

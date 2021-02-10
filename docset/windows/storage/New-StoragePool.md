@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSubSystem.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -72,12 +72,13 @@ The **New-StoragePool** cmdlet creates a new storage pool using a group of physi
 
 ### Example 1: Create a new storage pool using Storage Spaces
 ```
-This line uses the **Get-PhysicalDisk** cmdlet to get all PhysicalDisk objects than are not yet in a (concrete) storage pool, and assigns the array of objects to the $PhysicalDisks variable.
 PS C:\> $PhysicalDisks = (Get-PhysicalDisk -CanPool $True)
-
-This line creates a new storage pool using the $PhysicalDisks variable to specify the disks to include from the WindowsStorage subsystem (specified with a wildcard * to remove the need to modify the friendly name for different computers).
 PS C:\> New-StoragePool -FriendlyName CompanyData -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks
 ```
+
+The first line uses the **Get-PhysicalDisk** cmdlet to get all PhysicalDisk objects that are not yet in a (concrete) storage pool and assigns the array of objects to the `$PhysicalDisks` variable.
+
+The second line creates a new storage pool using the `$PhysicalDisks` variable to specify the disks to include from the WindowsStorage subsystem (specified with a wildcard * to remove the need to modify the friendly name for different computers).
 
 This example creates a new storage pool named CompanyData using the Storage Spaces subsytem, using the minimum parameters, and assuming that there are no other storage subsystems attached to the computer that have available disks.
 
@@ -90,10 +91,22 @@ PS C:\> New-StoragePool -FriendlyName CompanyData -StorageSubsystemFriendlyName 
 This example creates a new storage pool named CompanyData using the Windows Storage subsystem and sets default values for virtual disk creation.
 
 ### Example 3: Create a new storage pool, virtual disk, partition, and volume
+
+The first line (`$PhysicalDisks = …`) gets the storage subsystem object for the Windows Storage subsystem, passes it to the **Get-PhysicalDisk** cmdlet, which then gets the physical disks in the specified subsystem that are available to add to a storage pool, and assigns these disks to the $PhysicalDisks variable.
+
+The second line of the command has five parts, connected by the pipeline (|).
+
+The first part (`New-StoragePool …`) creates a new storage pool using the physical disks in the `$PhysicalDisks` variable and then passes the new storage pool down the pipeline. All of the following commands are logically part of one command and should be entered as such.
+
+The second part (`New-VirtualDisk …`) creates a new virtual disk on the passed in storage pool and then passes the new virtual disk down the pipeline.
+The third part (`Initialize-Disk …`) initializes the disk that was passed in and then passes the disk down the pipeline.
+
+The fourth part (`New-Partition …`) creates a new partition on the disk that was passed in, assigns it the next available drive letter, and then passes the partition down the pipeline.
+
+The final part of the command (`Format-Volume`) formats the partition that was passed in.
 ```
-The first line ([CODE_Snippit]$PhysicalDisks =[CODE_Snippit]…) gets the storage subsystem object for the Windows Storage subsystem, passes it to the **Get-PhysicalDisk** cmdlet, which then gets the physical disks in the specified subsystem that are available to add to a storage pool, and assigns these disks to the $PhysicalDisks variable.The second line of the command has five parts, connected by the pipeline (|). The first part ([CODE_Snippit]New-StoragePool[CODE_Snippit]…) creates a new storage pool using the physical disks in the $PhysicalDisks variable, and then passes the new storage pool down the pipeline. All of the following commands are logically part of one command and should be entered as such.The second part ([CODE_Snippit]New-VirtualDisk[CODE_Snippit]…) creates a new virtual disk on the passed in storage pool and then passes the new virtual disk down the pipeline.The third part ([CODE_Snippit]Initialize-Disk[CODE_Snippit]…) initializes the disk that was passed in, and then passes the disk down the pipeline.The fourth part ([CODE_Snippit]New-Partition[CODE_Snippit]…) creates a new partition on the disk that was passed in, assigns it the next available drive letter, and then passes the partition down the pipeline.The final part of the command ([CODE_Snippit]Format-Volume[CODE_Snippit]) formats the partition that was passed in.
 PS C:\> $PhysicalDisks = Get-StorageSubSystem -FriendlyName "Windows Storage*" | Get-PhysicalDisk -CanPool $True
-PS C:\> New-StoragePool -FriendlyName "CompanyData" -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks |New-VirtualDisk -FriendlyName "UserData" -Size 100GB -ProvisioningType Thin |Initialize-Disk -PassThru |New-Partition -AssignDriveLetter -UseMaximumSize |Format-Volume
+PS C:\> New-StoragePool -FriendlyName "CompanyData" -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks | New-VirtualDisk -FriendlyName "UserData" -Size 100GB -ProvisioningType Thin | Initialize-Disk -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
 ```
 
 This example creates a new storage pool, and then makes use of the pipeline to create a new virtual disk in the pool, initialize the disk, create a new partition on the disk, and then format the new partition (volume).
@@ -134,7 +147,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -160,7 +173,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -187,7 +200,7 @@ Accepted values: PhysicalDisk, StorageEnclosure, StorageScaleUnit, StorageChassi
 
 Required: False
 Position: Named
-Default value: None
+Default value: PhysicalDisk
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -234,7 +247,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 512
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -250,7 +263,7 @@ Accepted values: HDD, SSD, SCM
 
 Required: False
 Position: Named
-Default value: None
+Default value: Unspecified
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -298,13 +311,14 @@ Accepted values: Unknown, Thin, Fixed
 
 Required: False
 Position: Named
-Default value: None
+Default value: Fixed
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -ResiliencySettingNameDefault
-Specifies the default resiliency setting (also known as storage layout) to use for virtual disks created in the specified storage pool. The supported resiliency settings vary by storage subsystem. Acceptable values for the Windows Storage subsystem are Mirror, Parity, and Simple.
+Specifies the default resiliency setting (also known as storage layout) to use for virtual disks created in the specified storage pool. The supported resiliency settings vary by storage subsystem.
+For the Windows Storage subsystem, acceptable values are Mirror, Parity, and Simple. "Mirror" is the default value.
 
 ```yaml
 Type: String
@@ -313,7 +327,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Mirror
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -382,7 +396,15 @@ Accept wildcard characters: False
 
 ### -Usage
 Specifies the usage setting for the storage pool.
-The acceptable values for this parameter are:Other, ReservedAsDeltaReplicaContainer, ReservedForComputerSystem, ReservedForLocalReplicationServices, ReservedForMigrationServices, ReservedForRemoteReplicationServices, ReservedForSparing, and Unrestricted.
+The acceptable values for this parameter are:
+- Other
+- ReservedAsDeltaReplicaContainer
+- ReservedForComputerSystem
+- ReservedForLocalReplicationServices
+- ReservedForMigrationServices
+- ReservedForRemoteReplicationServices
+- ReservedForSparing
+- Unrestricted
 
 ```yaml
 Type: Usage
@@ -392,7 +414,7 @@ Accepted values: Other, Unrestricted, ReservedForComputerSystem, ReservedAsDelta
 
 Required: False
 Position: Named
-Default value: None
+Default value: Other
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -413,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -443,4 +465,3 @@ This cmdlet returns an object representing the newly created storage pool.
 [Remove-StoragePool](./Remove-StoragePool.md)
 
 [Set-StoragePool](./Set-StoragePool.md)
-

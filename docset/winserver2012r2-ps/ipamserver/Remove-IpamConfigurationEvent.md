@@ -4,16 +4,15 @@ Module Name: IpamServer
 online version: 
 schema: 2.0.0
 title: Remove-IpamConfigurationEvent
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 8FC2CF6E-E2B1-4365-81E5-CC23AE552DC7
 ---
 

@@ -4,16 +4,15 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Get-FsrmQuota
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4362C85B-0053-45C5-830A-4E6E1227868A
 ---
 

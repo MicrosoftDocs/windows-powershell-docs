@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-NetTCPSetting
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: EEEBBF53-C1A6-4513-9168-5288C1B4DA35
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -647,7 +646,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113302)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113302)
 
 [New-NetTransportFilter](./New-NetTransportFilter.md)
 

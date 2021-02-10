@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Remove-StorageSpacesEventLog
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 9B18A037-17E3-4860-BCBC-0264828F1DE2
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

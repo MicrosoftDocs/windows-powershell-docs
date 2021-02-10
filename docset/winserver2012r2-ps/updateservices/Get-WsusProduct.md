@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-WsusProduct
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 0BFDB18C-49EA-4D2D-B810-BB2B5B3D34F8
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -122,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Set-WsusProduct](./Set-WsusProduct.md)
 

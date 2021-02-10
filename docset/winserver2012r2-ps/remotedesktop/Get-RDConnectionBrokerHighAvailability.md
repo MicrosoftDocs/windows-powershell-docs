@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Get-RDConnectionBrokerHighAvailability
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4B896F36-CE23-4AE9-B887-F155EB316E6B
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

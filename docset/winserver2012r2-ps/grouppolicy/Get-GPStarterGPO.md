@@ -4,16 +4,15 @@ Module Name: GroupPolicy
 online version: 
 schema: 2.0.0
 title: Get-GPStarterGPO
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 47397B2B-49DA-4329-A2AE-6AB87CC1EE1E
 ---
 

@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Enable-RDVirtualDesktopADMachineAccountReuse
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 33D5210F-CA52-4E43-AA55-859E2C7C5D13
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

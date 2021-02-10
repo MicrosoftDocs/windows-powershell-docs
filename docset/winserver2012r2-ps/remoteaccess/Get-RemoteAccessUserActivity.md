@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Get-RemoteAccessUserActivity
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 7D4B7537-C100-425D-BBAA-4EE7586803B5
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -275,5 +274,5 @@ A separate instance of the RemoteAccessUserActivity object is output for every c
 
 ## RELATED LINKS
 
-[Get-Date](http://go.microsoft.com/fwlink/p/?LinkId=113313)
+[Get-Date](https://go.microsoft.com/fwlink/p/?LinkId=113313)
 

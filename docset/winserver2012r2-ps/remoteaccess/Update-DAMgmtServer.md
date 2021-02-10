@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Update-DAMgmtServer
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 4AE61538-A4A2-4747-AAC7-C7C3154ECE07
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -235,7 +234,7 @@ The DAMgmtServer object contains the following properties:
 
 ## RELATED LINKS
 
-[Format-Table](http://go.microsoft.com/fwlink/p/?LinkId=113303)
+[Format-Table](https://go.microsoft.com/fwlink/p/?LinkId=113303)
 
 [Add-DAMgmtServer](./Add-DAMgmtServer.md)
 

@@ -4,16 +4,15 @@ Module Name: ADCSAdministration
 online version: 
 schema: 2.0.0
 title: Remove-CACrlDistributionPoint
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 459FC3FA-77AD-47BD-9F02-B113A87FD347
 ---
 

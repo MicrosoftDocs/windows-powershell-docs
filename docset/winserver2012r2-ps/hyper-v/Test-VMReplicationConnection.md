@@ -4,16 +4,15 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Test-VMReplicationConnection
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: C3C7A689-F1EE-4F53-B5D0-E831AEBD5838
 ---
 

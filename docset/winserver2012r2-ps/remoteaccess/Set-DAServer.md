@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Set-DAServer
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 00980E48-5937-40BD-BA8C-65B0053D53B7
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -657,7 +656,7 @@ The output object contains the following properties:
 
 ## RELATED LINKS
 
-[Get-ChildItem](http://go.microsoft.com/fwlink/p/?LinkId=204557)
+[Get-ChildItem](https://go.microsoft.com/fwlink/p/?LinkId=204557)
 
 [Get-DAServer](./Get-DAServer.md)
 

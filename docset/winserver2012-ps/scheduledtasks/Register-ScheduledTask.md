@@ -3,8 +3,8 @@ external help file: ScheduledTask_Cmdlets.xml
 online version:
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 40985269-AF17-444C-921F-42AC576C1AC3
 manager: dansimp
 ---
@@ -16,57 +16,62 @@ Registers a scheduled task definition on a local computer.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### User (Default)
 ```
-Register-ScheduledTask [-TaskName] <String> [[-TaskPath] <String>] [-Action] <CimInstance[]>
- [[-Trigger] <CimInstance[]>] [[-Settings] <CimInstance>] [[-User] <String>] [[-Password] <String>]
- [[-RunLevel] <RunLevelEnum>] [[-Description] <String>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
- [-ThrottleLimit <Int32>]
-```
-
-### UNNAMED_PARAMETER_SET_2
-```
-Register-ScheduledTask [-TaskName] <String> [[-TaskPath] <String>] [-Action] <CimInstance[]>
- [[-Trigger] <CimInstance[]>] [[-Settings] <CimInstance>] [[-Principal] <CimInstance>]
- [[-Description] <String>] [-AsJob] [-CimSession <CimSession[]>] [-Force] [-ThrottleLimit <Int32>]
+Register-ScheduledTask [-Force] [[-Password] <String>] [[-User] <String>] [-TaskName] <String>
+ [[-TaskPath] <String>] [-Action] <CimInstance[]> [[-Description] <String>] [[-Settings] <CimInstance>]
+ [[-Trigger] <CimInstance[]>] [[-RunLevel] <RunLevelEnum>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_3
+### Xml
 ```
-Register-ScheduledTask [[-TaskName] <String>] [[-TaskPath] <String>] [-InputObject] <CimInstance>
- [[-User] <String>] [[-Password] <String>] [-AsJob] [-CimSession <CimSession[]>] [-Force]
- [-ThrottleLimit <Int32>]
+Register-ScheduledTask [-Force] [[-Password] <String>] [[-User] <String>] [-TaskName] <String>
+ [[-TaskPath] <String>] [-Xml] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
-### UNNAMED_PARAMETER_SET_4
+### Principal
 ```
-Register-ScheduledTask [-TaskName] <String> [[-TaskPath] <String>] [-Xml] <String> [[-User] <String>]
- [[-Password] <String>] [-AsJob] [-CimSession <CimSession[]>] [-Force] [-ThrottleLimit <Int32>]
+Register-ScheduledTask [-Force] [-TaskName] <String> [[-TaskPath] <String>] [[-Principal] <CimInstance>]
+ [-Action] <CimInstance[]> [[-Description] <String>] [[-Settings] <CimInstance>] [[-Trigger] <CimInstance[]>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### Object
+```
+Register-ScheduledTask [-Force] [-InputObject] <CimInstance> [[-Password] <String>] [[-User] <String>]
+ [[-TaskName] <String>] [[-TaskPath] <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **Register-ScheduledTask** cmdlet registers a scheduled task definition on a local computer.
 
-You can register a task to run any of the following application or file types: Win32 applications, Win16 applications, OS/2 applications, MS-DOS applications, batch files (*.bat), command files (*.cmd), or any properly registered file type.
+You can register a task to run executable files (`.exe` and `.com`), batch files (`.bat` and `.cmd`),
+or any registered file type. However, this cmdlet does not check whether the file you intend it to
+run is compatible with your version, edition, or platform specialization of Windows.
 
 ## EXAMPLES
 
 ### Example 1: Register a scheduled task
 ```
-PS C:\>$Time = New-ScheduledTaskTrigger -At 12:00 -Once
-
-PS C:\>$User = "Contoso\Administrator"
-
-PS C:\>$PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
-
-PS C:\>Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
+PS C:\> $Time = New-ScheduledTaskTrigger -At 12:00 -Once
+PS C:\> $User = "Contoso\Administrator"
+PS C:\> $PS = New-ScheduledTaskAction -Execute "PowerShell.exe"
+PS C:\> Register-ScheduledTask -TaskName "SoftwareScan" -Trigger $Time -User $User -Action $PS
 ```
 
 In this example, the set of commands uses cmdlets and variables to define and register a scheduled task.
-The first command uses the **New-ScheduledTaskTrigger** cmdlet to assign a time trigger to the $Time variable.
-The second command assigns the $User variable to the **\<run as\>** user account name (Contoso\Administrator).
+
+The first command uses the New-ScheduledTaskTrigger cmdlet to assign a time trigger to the $Time variable.
+
+The second command assigns the $User variable the name of the user account in the context of which
+the task runs (Contoso\Administrator).
+
 The third command assigns the $PS variable to PowerShell.exe.
 This variable is used to define a task action.
+
 The fourth command registers a scheduled task that is named SoftwareScan in the root folder.
 The registered task uses the pre-created action and trigger values that are specified by the $Action and $User variables.
 
@@ -79,18 +84,18 @@ You can specify up to 32 actions.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
+Parameter Sets: User, Principal
 Aliases:
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +111,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/new-cimsession) or [Get-CimSession](https://docs.microsoft.com/powershell/module/cimcmdlets/get-cimsession) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -126,11 +131,11 @@ Briefly describes the task.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
+Parameter Sets: User, Principal
 Aliases:
 
 Required: False
-Position: 9
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -152,34 +157,33 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet.
-You can use this parameter, or you can pipe the input to this cmdlet.
+Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: Object
 Aliases:
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -Password
-Specifies a password for the **\<run as\>** user.
+Specifies a password for the user account in the context of which the task runs.
 The password is ignored for the well-known system accounts.
 
 Well-known accounts are: NT AUTHORITY\SYSTEM, NT AUTHORITY\LOCALSERVICE, NT AUTHORITY\NETWORKSERVICE, and the well-known security identifiers (SIDs) for all three accounts.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3, UNNAMED_PARAMETER_SET_4
+Parameter Sets: User, Xml, Object
 Aliases:
 
 Required: False
-Position: 7
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -190,11 +194,11 @@ Specifies the security context in which a task is run.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: Principal
 Aliases:
 
 Required: False
-Position: 6
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -205,11 +209,12 @@ Specifies the required privilege level to run tasks that are associated with the
 
 ```yaml
 Type: RunLevelEnum
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: User
 Aliases:
+Accepted values: Limited, Highest
 
 Required: False
-Position: 8
+Position: 7
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -220,11 +225,11 @@ Specifies a configuration that the Task Scheduler service uses to determine how 
 
 ```yaml
 Type: CimInstance
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
+Parameter Sets: User, Principal
 Aliases:
 
 Required: False
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -235,11 +240,11 @@ Specifies the name of a scheduled task.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2, UNNAMED_PARAMETER_SET_4
+Parameter Sets: User, Xml, Principal
 Aliases:
 
 Required: True
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -247,11 +252,11 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_3
+Parameter Sets: Object
 Aliases:
 
 Required: False
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -268,7 +273,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -297,27 +302,27 @@ A task can have a maximum of 48 triggers.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_2
+Parameter Sets: User, Principal
 Aliases:
 
 Required: False
-Position: 4
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -User
-Specifies the name of the **\<run as\>** user account to use when you run the task.
+Specifies the name of the user account in the context of which Windows runs the task.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_1, UNNAMED_PARAMETER_SET_3, UNNAMED_PARAMETER_SET_4
+Parameter Sets: User, Xml, Object
 Aliases:
 
 Required: False
-Position: 6
-Default value: Current user
+Position: 3
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -327,15 +332,18 @@ Specifies the XML string that contains a task definition.
 
 ```yaml
 Type: String
-Parameter Sets: UNNAMED_PARAMETER_SET_4
+Parameter Sets: Xml
 Aliases:
 
 Required: True
-Position: 3
+Position: 2
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -347,13 +355,13 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Get-ScheduledTask](./Get-ScheduledTask.md)
-
 [Disable-ScheduledTask](./Disable-ScheduledTask.md)
 
 [Enable-ScheduledTask](./Enable-ScheduledTask.md)
 
 [Export-ScheduledTask](./Export-ScheduledTask.md)
+
+[Get-ScheduledTask](./Get-ScheduledTask.md)
 
 [New-ScheduledTask](./New-ScheduledTask.md)
 
@@ -364,4 +372,3 @@ Accept wildcard characters: False
 [Stop-ScheduledTask](./Stop-ScheduledTask.md)
 
 [Unregister-ScheduledTask](./Unregister-ScheduledTask.md)
-

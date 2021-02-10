@@ -4,16 +4,15 @@ Module Name: FileServerResourceManager
 online version: 
 schema: 2.0.0
 title: Reset-FsrmQuota
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 16FC6506-C379-44F7-BBA5-D98E743EDE94
 ---
 

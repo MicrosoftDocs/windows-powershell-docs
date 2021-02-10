@@ -1,15 +1,15 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: VirtualDisk.cdxml-help.xml
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.topic: reference
 online version:
 schema: 2.0.0
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a [New-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](http://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 
 ### -Disk
 Accepts a Disk object as input.
-The Disk CIM object is exposed by the [Get-Disk](http://technet.microsoft.com/library/3929eb27-1365-42ca-8acf-68b364c3599f) cmdlet.
+The Disk CIM object is exposed by the [Get-Disk](https://technet.microsoft.com/library/3929eb27-1365-42ca-8acf-68b364c3599f) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 
 ### -InitiatorId
 Accepts an InitiatorId object as input.
-The Initiator ID CIM object is exposed by the [Get-InitiatorId](http://technet.microsoft.com/library/56c96b69-33c0-402b-8813-d64a4434011d) cmdlet.
+The Initiator ID CIM object is exposed by the [Get-InitiatorId](https://technet.microsoft.com/library/56c96b69-33c0-402b-8813-d64a4434011d) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 
 ### -InitiatorPort
 Accepts an InitiatorPort object as input.
-The Initiator Port CIM object is exposed by the [Get-InitiatorPort](http://technet.microsoft.com/library/580a19cf-26d1-45bb-ad34-a6265e2efacf) cmdlet.
+The Initiator Port CIM object is exposed by the [Get-InitiatorPort](https://technet.microsoft.com/library/580a19cf-26d1-45bb-ad34-a6265e2efacf) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 
 ### -MaskingSet
 Accepts a MaskingSet object as input.
-The Masking Set CIM object is exposed by the [Get-MaskingSet](http://technet.microsoft.com/library/a7ef71fd-f7f6-4231-8799-0e96dd9eac84) cmdlet.
+The Masking Set CIM object is exposed by the [Get-MaskingSet](https://technet.microsoft.com/library/a7ef71fd-f7f6-4231-8799-0e96dd9eac84) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -368,7 +368,7 @@ Accept wildcard characters: False
 
 ### -PhysicalDisk
 Accepts a PhysicalDisk object as input.
-The Physical Disk CIM object is exposed by the [Get-PhysicalDisk](http://technet.microsoft.com/library/a204dcde-bfac-43ac-9b79-d81384f255be) cmdlet.
+The Physical Disk CIM object is exposed by the [Get-PhysicalDisk](https://technet.microsoft.com/library/a204dcde-bfac-43ac-9b79-d81384f255be) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 
 ### -StoragePool
 Accepts a StoragePool object as input.
-The Storage Pool CIM object is exposed by the [Get-StoragePool](http://technet.microsoft.com/library/288acad9-7678-45c2-b7b4-3a0522fea499) cmdlet.
+The Storage Pool CIM object is exposed by the [Get-StoragePool](https://technet.microsoft.com/library/288acad9-7678-45c2-b7b4-3a0522fea499) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -482,7 +482,7 @@ Accept wildcard characters: False
 
 ### -StorageSubSystem
 Accepts a StorageSubsystem object as input.
-The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](http://technet.microsoft.com/library/ea364a0b-06d6-4653-b41c-be69b8038b54) cmdlet.
+The Storage Subsystem CIM object is exposed by the [Get-StorageSubsystem](https://technet.microsoft.com/library/ea364a0b-06d6-4653-b41c-be69b8038b54) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 ### -TargetPort
 Accepts a TargetPort object as input.
-The Target Port CIM object is exposed by the [Get-TargetPort](http://technet.microsoft.com/library/4c139739-cda3-4379-b87b-60b1b4db8cd2) cmdlet.
+The Target Port CIM object is exposed by the [Get-TargetPort](https://technet.microsoft.com/library/4c139739-cda3-4379-b87b-60b1b4db8cd2) cmdlet.
 
 ```yaml
 Type: CimInstance
@@ -596,7 +596,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -642,7 +642,7 @@ This cmdlet outputs an object that represents the specified virtual disk. For mo
 
 ## RELATED LINKS
 
-[Where-Object](http://go.microsoft.com/fwlink/?LinkID=113423)
+[Where-Object](https://go.microsoft.com/fwlink/?LinkID=113423)
 
 [Connect-VirtualDisk](./Connect-VirtualDisk.md)
 

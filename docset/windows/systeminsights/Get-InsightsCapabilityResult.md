@@ -1,7 +1,7 @@
 ---
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.author: v-anbarr
+ms.author: v-kaunu
 Module Name: systeminsights
 Download Help Link: http://go.microsoft.com
 Locale: en-US
@@ -10,12 +10,12 @@ ms.reviewer:
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file:
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: elizapo
-ms.date: 6/18/18
+ms.date: 06/18/2018
 ms.topic: reference
 ms.prod: w10
-ms.technology: powershell-windows
+ms.technology: 
 ms.assetid: 38D3C589-40AB-4E35-843F-5AC57EEB65A7
 schema: 2.0.0
 ---

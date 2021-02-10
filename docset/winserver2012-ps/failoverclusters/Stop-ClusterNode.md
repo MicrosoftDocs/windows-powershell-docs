@@ -5,8 +5,8 @@ schema: 2.0.0
 ms.assetid: D9E13DE4-9792-4015-B3F4-87CD1FFC06F0
 manager: dansimp
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ---
 
 # Stop-ClusterNode

@@ -4,16 +4,15 @@ Module Name: FailoverClusters
 online version: 
 schema: 2.0.0
 title: Resume-ClusterResource
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: ACF82BAB-08BA-4D3B-AD60-A554F5AE0A7D
 ---
 

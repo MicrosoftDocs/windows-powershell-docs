@@ -4,16 +4,15 @@ Module Name: Hyper-V
 online version: 
 schema: 2.0.0
 title: Add-VMNetworkAdapterExtendedAcl
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: D00DA76A-7C44-4E66-9CFD-58D886B1F7A7
 ---
 
@@ -77,6 +76,11 @@ This command creates a stateful inbound ACL that allows a remote device to conne
 ### Example 2: Create an ACL to initiate a connection with idle session timeout
 ```
 PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -IdleSessionTimeout 3600 -Stateful $True
+```
+
+### Example 3: Create an ACL for FTP dynamic ports (using ports range)
+```
+PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Direction Inbound -LocalPort "49152-49182" -Protocol "TCP" -Weight 200 -Stateful $True
 ```
 
 This command creates a stateful ACL that allows outbound packets to a remote device by using TCP.
@@ -210,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPort
-Specifies the local port for the ACL.
+Specifies the local port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the local port is the destination port.
 For an outbound packet, the local port is the source port.
 
@@ -298,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePort
-Specifies the remote port for the ACL.
+Specifies the remote port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the remote port is the source port.
 For an outbound packet, the remote port is the destination port.
 

@@ -6,14 +6,13 @@ schema: 2.0.0
 title: Export-RDPersonalVirtualDesktopAssignment
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 7FF9BC8D-6EF3-478F-8C74-92329A29C46D
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 

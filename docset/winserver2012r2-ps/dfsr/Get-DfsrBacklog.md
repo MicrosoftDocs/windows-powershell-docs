@@ -4,16 +4,15 @@ Module Name: DFSR
 online version: 
 schema: 2.0.0
 title: Get-DfsrBacklog
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 933DF783-4CB6-4E94-87E4-D7E4EB1D3E59
 ---
 
@@ -41,41 +40,48 @@ A backlog indicates latency, and a backlog may be expected in your environment, 
 
 ## EXAMPLES
 
-### Example 12: Retrieve unreplicated changes between upstream and downstream computers1
+### Example 1: Retrieve unreplicated changes between upstream and downstream computers
+```powershell
+PS C:\> Get-DfsrBacklog -DestinationComputerName "SRV01" -SourceComputerName "SRV02" -GroupName "RG01" -FolderName "RF1" | Format-Table FullPathName, UpdateTime
 ```
-PS C:\> Get-DfsrBacklog -DestinationComputerName SRV1 -SourceComputerName SRV02 -GroupName RG01 -FolderName RF1 | format-table fullpathname,updatetime
-
-
+```output
 FullPathName                      UpdateTime
 ------------                      ----------
 c:\rf1a\imageres.dll       3/15/2013 5:28:45 PM
 c:\rf1a\mshtml.dll         3/15/2013 5:28:50 PM
 ```
 
-This command retrieves the first 100 unreplicated changes between the downstream computer SRV1 and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1.
+This command retrieves the first 100 unreplicated changes between the downstream computer SRV01 and the upstream computer SRV02 for the replication group RG01 and the replicated folder RF1.
 The command also formats the output into a table that contains only the file paths and modification dates on the upstream server.
 
-### Example 23: Retrieve unreplicated changes count to display2
+### Example 2: Retrieve unreplicated changes count to display
+```powershell
+PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose
 ```
-PS C:\>Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose
+```output
 The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
 ```
 
 This command retrieves the total count of unreplicated changes between the downstream computer SRV02 and the upstream computer SRV01 for the replication group RG01 and the replicated folder RF01.
 The command displays this output in the verbose stream.
 
-### Example 34: Retrieve unreplicated changes count to a string object3
+### Example 3: Retrieve unreplicated changes count to a string object
+```powershell
+PS C:\> (Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4>&1).Message.Split(':')[2] 
 ```
-PS C:\>(Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4>&1).Message.Split(':')[2]
+```output
 2400
 ```
 
 This command retrieves the total count of unreplicated changes between the downstream computer SRV02 and the upstream computer SRV01 for the replication group RG01 and the replicated folder RF01.
 The command converts the verbose stream data into a text string containing only the count, for later manipulation.
 
-### Example 45: Retrieve unreplicated changes count to a file4
+### Example 4: Retrieve unreplicated changes count to a file
+```powershell
+PS C:\> Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4> verbose.txt > null
+PS C:\> Get-Content .\verbose.txt
 ```
-PS C:\>Get-DfsrBacklog -GroupName "RG01" -FolderName "RF01" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" -Verbose 4> verbose.txt > nullPS C:\> Get-Content .\verbose.txt
+```output
 The replicated folder has a backlog of files. Replicated folder: "RF01". Count: 2400
 ```
 
@@ -87,7 +93,6 @@ The command converts the verbose stream data into a text string containing only 
 ### -DestinationComputerName
 Specifies the name of the receiving computer.
 A destination computer is also called an inbound or downstream computer.
-If you do not specify this parameter, the cmdlet uses the local computer.
 
 ```yaml
 Type: String
@@ -96,7 +101,7 @@ Aliases: ReceivingMember, RMem
 
 Required: True
 Position: 3
-Default value: [local computer]
+Default value: none
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
@@ -152,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

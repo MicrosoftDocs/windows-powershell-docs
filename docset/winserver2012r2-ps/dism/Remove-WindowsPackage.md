@@ -4,16 +4,15 @@ Module Name: Dism
 online version: 
 schema: 2.0.0
 title: Remove-WindowsPackage
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A584AF83-A2B0-4200-97B7-63C762946A49
 ---
 

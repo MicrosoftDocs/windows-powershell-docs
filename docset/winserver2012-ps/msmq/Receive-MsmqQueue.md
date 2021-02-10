@@ -3,8 +3,8 @@ external help file: MSMQ_Cmdlets.xml
 online version: 
 schema: 2.0.0
 ms.reviewer:
-ms.author: v-anbarr
-author: andreabarr
+ms.author: v-kaunu
+author: Kateyanne
 ms.assetid: 630524E4-7523-43E3-A140-808537F8F98F
 manager: dansimp
 ---
@@ -12,33 +12,35 @@ manager: dansimp
 # Receive-MsmqQueue
 
 ## SYNOPSIS
-Performs a destructive read from a queue.
+Does a destructive read from a queue.
 
 ## SYNTAX
 
-### UNNAMED_PARAMETER_SET_1
+### Transactional (Default)
 ```
 Receive-MsmqQueue [-Count <Int32>] [-RetrieveBody] [-Timeout <TimeSpan>] [-Transactional]
  -InputObject <MessageQueue>
 ```
 
-### UNNAMED_PARAMETER_SET_2
+### Peek
 ```
 Receive-MsmqQueue [-Count <Int32>] [-Peek] [-RetrieveBody] [-Timeout <TimeSpan>] -InputObject <MessageQueue>
 ```
 
 ## DESCRIPTION
-The **Receive-MsmqQueue** cmdlet performs a destructive read from a queue.
-The **Name** parameter accepts path names, format names, and direct format names, unlike other MSMQ cmdlets that accept only a friendly name for the queue.
-If the **Peek** parameter is specified, this cmdlet peeks at the message instead of doing a destructive read.
-This cmdlet also writes the received **System.Messaging.Message** object to the pipeline.
-This cmdlet succeeds when at least one messages is returned.
-If the **Peek** parameter is supplied, the number of messages returned by this cmdlet is the minimum number supplied by the parameter **Count** and the number of messages in the queue.
+The **Receive-MsmqQueue** cmdlet does a destructive read from a queue.
+The cmdlet returns the received **System.Messaging.Message** object.
+This cmdlet accepts values for the **Name** parameter of path names, format names, and direct format names.
+Some other Message Queuing (also known as MSMQ) cmdlets require a friendly name for the queue.
+If you specify the **Peek** parameter, the cmdlet peeks at the message instead of doing a destructive read.
+The cmdlet succeeds if it returns at least one message.
+
+If you specify the **Peek** parameter, this cmdlet returns the number of messages  that is the minimum of the number supplied by the **Count** parameter and the number of messages in the queue.s
 
 ## EXAMPLES
 
 ### Example 1: Peek at a MsmqQueue message instead of doing a destructive read
-```
+```powershell
 PS C:\>Get-MsmqQueue -Name "a04bm10\private$\order_queue" | Receive-MsmqQueue -Transactional -Peek
 ```
 
@@ -48,7 +50,8 @@ This command peeks at the queue named a04bm10\private$\order_queue and does not 
 
 ### -Count
 Specifies the number of messages to be returned.
-This value must be greater than 0.
+The default value is 1.
+You must specify a value greater than 0.
 
 ```yaml
 Type: Int32
@@ -63,7 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies a **MessageQueue** object that represents the queue from which the message will be read from.
+Specifies a **MessageQueue** object.
+The cmdlet reads from the queue that the **MessageQueue** specifies.
+This parameter accepts pipeline input.
 
 ```yaml
 Type: MessageQueue
@@ -82,7 +87,7 @@ Indicates that this cmdlet returns a copy of the first message in the queue with
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_2
+Parameter Sets: Peek
 Aliases: 
 
 Required: False
@@ -108,7 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-Specifies the time in milliseconds that specifies the maximum time to wait for the queue to contain a message.
+Specifies the maximum time, in milliseconds, to wait for the queue to contain a message.
+The default value is 0.
 
 ```yaml
 Type: TimeSpan
@@ -127,7 +133,7 @@ Indicates that this cmdlet performs a transacted retrieval.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: UNNAMED_PARAMETER_SET_1
+Parameter Sets: Transactional
 Aliases: 
 
 Required: False
@@ -156,4 +162,3 @@ Accept wildcard characters: False
 [Send-MsmqQueue](./Send-MsmqQueue.md)
 
 [Set-MsmqQueue](./Set-MsmqQueue.md)
-

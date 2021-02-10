@@ -4,16 +4,15 @@ Module Name: ClusterAwareUpdating
 online version: 
 schema: 2.0.0
 title: Get-CauPlugin
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: F20C0ACB-0F7B-410E-9713-D939F41C7D29
 ---
 
@@ -85,7 +84,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Format-List](http://go.microsoft.com/fwlink/?LinkID=113302)
+[Format-List](https://go.microsoft.com/fwlink/?LinkID=113302)
 
 [Register-CauPlugin](./Register-CauPlugin.md)
 

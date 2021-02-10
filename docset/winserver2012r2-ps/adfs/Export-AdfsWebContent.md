@@ -4,16 +4,15 @@ Module Name: ADFS
 online version: 
 schema: 2.0.0
 title: Export-AdfsWebContent
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-30
+ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A3D805F8-E882-4B80-9D23-AC7D493C4D6D
 ---
 

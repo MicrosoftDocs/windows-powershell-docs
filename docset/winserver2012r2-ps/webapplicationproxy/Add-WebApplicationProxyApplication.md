@@ -5,14 +5,13 @@ schema: 2.0.0
 title: Add-WebApplicationProxyApplication
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-12-05
+ms.date: 12/05/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 896A7FBB-B98F-4B26-AC42-0811C232B5ED
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 ---
 
@@ -380,9 +379,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Web Application Proxy Overview](http://technet.microsoft.com/library/dn280944.aspx)
+[Web Application Proxy Overview](https://technet.microsoft.com/library/dn280944.aspx)
 
-[Publishing Internal Applications using Web Application Proxy](http://technet.microsoft.com/library/dn383650.aspx)
+[Publishing Internal Applications using Web Application Proxy](https://technet.microsoft.com/library/dn383650.aspx)
 
 [Get-WebApplicationProxyApplication](./Get-WebApplicationProxyApplication.md)
 

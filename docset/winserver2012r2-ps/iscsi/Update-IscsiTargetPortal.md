@@ -4,16 +4,15 @@ Module Name: iSCSI
 online version: 
 schema: 2.0.0
 title: Update-IscsiTargetPortal
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: A963DBC6-1005-4514-BA59-FDBE82F7E441
 ---
 
@@ -222,9 +221,9 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 ## RELATED LINKS
 
-[iSCSI on TechNet](http://www.microsoft.com/iSCSI)
+[iSCSI on TechNet](https://www.microsoft.com/iSCSI)
 
-[Storage on TechNet](http://go.microsoft.com/fwlink/?linkid=191356)
+[Storage on TechNet](https://go.microsoft.com/fwlink/?linkid=191356)
 
 [Get-IscsiTargetPortal](./Get-IscsiTargetPortal.md)
 

@@ -4,16 +4,15 @@ Module Name: BitLocker
 online version: 
 schema: 2.0.0
 title: Lock-BitLocker
-ms.author: v-anbarr
+ms.author: v-kaunu
 ms.reviewer: brianlic
 description: 
 keywords: powershell, cmdlet
-author: andreabarr
+author: Kateyanne
 manager: jasgro
-ms.date: 2017-10-29
+ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 90042DB2-7289-4167-A7B3-245D316EF361
 ---
 

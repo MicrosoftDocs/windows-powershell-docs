@@ -13,7 +13,7 @@ author: andreabarr
 
 # ADFS Module
 ## Description
-{{Manually Enter Description Here}}This reference provides command-line reference documentation for the IT professional of the Windows PowerShell cmdlets that you can use to deploy and administer Active Directory Federation Services (AD FS) in Windows Server.
+This reference provides command-line reference documentation for the IT professional of the Windows PowerShell cmdlets that you can use to deploy and administer Active Directory Federation Services (AD FS) in Windows Server.
 ## ADFS Cmdlets
 ### [Add-ADFSAttributeStore](./Add-ADFSAttributeStore.md)
 Adds an attribute store to the Federation Service.

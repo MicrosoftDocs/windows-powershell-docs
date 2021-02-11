@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: DC76D664-45B8-4928-887C-0E7C912E1981
 ---
 
@@ -1380,9 +1379,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[RFC 2535](http://www.ietf.org/rfc/rfc2535.txt)
+[RFC 2535](https://www.ietf.org/rfc/rfc2535.txt)
 
-[RFC 1183](www.ietf.org/rfc/rfc1183.txt)
+[RFC 1183](https://www.ietf.org/rfc/rfc1183.txt)
 
 [Show-DnsServerCache](./Show-DnsServerCache.md)
 

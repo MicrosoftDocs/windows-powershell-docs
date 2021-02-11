@@ -99,8 +99,3 @@ A class structure that represents the organization object for the Federation Ser
 * You can publish this information by using the Set-ADFSProperties cmdlet.
 
 ## RELATED LINKS
-
-[Get-AdfsProperties](./Get-AdfsProperties.md)
-
-[Set-AdfsProperties](./Set-AdfsProperties.md)
-

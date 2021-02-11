@@ -80,6 +80,3 @@ Sets the Windows UI language override setting for the current user account.
 
 ### [Set-WinUserLanguageList](./Set-WinUserLanguageList.md)
 Sets the language list and associated properties for the current user account.
-
-### [Copy-UserInternationalSettingsToSystem](./Copy-UserInternationalSettingsToSystem.md)
-Copies the current user's international settings to the Welcome screen and system accounts and/or new user accounts.

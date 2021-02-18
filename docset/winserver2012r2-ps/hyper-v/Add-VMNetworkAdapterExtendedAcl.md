@@ -78,6 +78,11 @@ This command creates a stateful inbound ACL that allows a remote device to conne
 PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA03" -Action Allow -Direction Outbound -RemotePort "80" -Protocol "TCP" -Weight 100 -IdleSessionTimeout 3600 -Stateful $True
 ```
 
+### Example 3: Create an ACL for FTP dynamic ports (using ports range)
+```
+PS C:\> Add-VMNetworkAdapterExtendedAcl -VMName "TSQA01" -Action Allow -Direction Inbound -LocalPort "49152-49182" -Protocol "TCP" -Weight 200 -Stateful $True
+```
+
 This command creates a stateful ACL that allows outbound packets to a remote device by using TCP.
 If there is no activity for 3600 seconds, the connection times out.
 
@@ -209,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalPort
-Specifies the local port for the ACL.
+Specifies the local port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the local port is the destination port.
 For an outbound packet, the local port is the source port.
 
@@ -297,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePort
-Specifies the remote port for the ACL.
+Specifies the remote port for the ACL. A port range format can also be used (i.e. "49152-49182", for example).
 For an inbound TCP or UDP packet, the remote port is the source port.
 For an outbound packet, the remote port is the destination port.
 

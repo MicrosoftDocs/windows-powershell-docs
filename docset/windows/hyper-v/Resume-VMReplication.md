@@ -75,7 +75,7 @@ This example schedules the resynchronization of replication for virtual machine 
 
 ### Example 4
 ```
-PS C:\> Resume-Replication *
+PS C:\> Resume-VMReplication *
 ```
 
 This example resumes replication of all virtual machines for which replication is paused.

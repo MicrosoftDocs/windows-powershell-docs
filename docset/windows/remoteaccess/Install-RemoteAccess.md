@@ -237,7 +237,7 @@ Specifies the names of the client GPO.
 The GPO name is specified in `DOMAIN\GPO_NAME` format.
 A domain can be one of the domains deployed in the corporate network. 
 If a GPO name is not specified, then by default a GPO with following name is created in the domain of the DA server: 
- -- DirectAccess Client Settings.
+- DirectAccess Client Settings.
 
 ```yaml
 Type: String
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ### -DAInstallType
 Specifies the configuration in which DA should be installed. 
 The acceptable values for this parameter are:
- -- FullInstall: DA is installed for both remote access and for the management of remote clients. 
+- FullInstall: DA is installed for both remote access and for the management of remote clients. 
 - ManageOut: DA is installed only for the management of remote clients.
 
 ```yaml
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ### -MsgAuthenticator
 Specifies that the usage of message authenticator should be enabled or disabled.
 The acceptable values for this parameter are:
- -- Enabled. 
+- Enabled. 
 - Disabled. 
 The default value is Disabled. 
 This parameter is applicable only when a RADIUS server is being configured for authentication.
@@ -769,7 +769,7 @@ Accept wildcard characters: False
 Specifies the type of VPN installation.
 The acceptable values for this parameter are:
 - Vpn. 
- -- VpnS2S. 
+- VpnS2S. 
 - SstpProxy
 - RoutingOnly
 

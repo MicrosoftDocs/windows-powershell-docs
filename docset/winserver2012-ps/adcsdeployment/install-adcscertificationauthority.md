@@ -89,7 +89,7 @@ Description
 
 -----------
 
-This command installs a new Enterprise Root CA with the Microsoft Software Key Storage Provider using the RSA algorithm, key length (2048), hash algorithm (SHA 256), and validity period (3 years).
+This command installs a new Enterprise Root CA with the Microsoft Software Key Storage Provider using the RSA algorithm, key length (2048), hash algorithm (SHA 1), and validity period (3 years).
 
 ### -------------------------- EXAMPLE 4 --------------------------
 ```

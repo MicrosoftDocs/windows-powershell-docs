@@ -86,7 +86,7 @@ This command installs a new Enterprise Root CA using the provider named ECDSA_P2
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
 ```
 
-This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 256, and validity period of three years.
+This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 1, and validity period of three years.
 
 ### Example 4: Install a new Enterprise Subordinate CA using a parent CA
 ```

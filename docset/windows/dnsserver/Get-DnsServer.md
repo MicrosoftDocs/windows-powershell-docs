@@ -41,14 +41,14 @@ For more information about **Export-Clixml**, see [Using the Export-Clixml cmdle
 ## EXAMPLES
 
 ### Example 1: Get a DNS server configuration
-```
+```powershell
 PS C:\> Get-DnsServer -ComputerName "10.255.255.254"
 ```
 
 This command gets a DNS server configuration.
 
 ### Example 2: Get local DNS server configuration and then export it
-```
+```powershell
 PS C:\> Get-DnsServer | Export-Clixml -Path "c:\config\DnsServerConfig.xml"
 ```
 
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

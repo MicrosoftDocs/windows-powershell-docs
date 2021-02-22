@@ -769,7 +769,7 @@ Accept wildcard characters: False
 Specifies the type of VPN installation.
 The acceptable values for this parameter are:
 - Vpn. 
-- VpnS2S. 
+- VpnS2S
 - SstpProxy
 - RoutingOnly
 
@@ -851,4 +851,3 @@ The RemoteAccessCommon object consists of the following properties:
 [Set-RemoteAccess](./Set-RemoteAccess.md)
 
 [Uninstall-RemoteAccess](./Uninstall-RemoteAccess.md)
-

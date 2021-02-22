@@ -768,7 +768,7 @@ Accept wildcard characters: False
 ### -VpnType
 Specifies the type of VPN installation.
 The acceptable values for this parameter are:
-- Vpn. 
+- Vpn
 - VpnS2S
 - SstpProxy
 - RoutingOnly

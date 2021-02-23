@@ -84,7 +84,7 @@ This command installs a new Enterprise Root CA using a RSA algorithm using the p
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
 ```
 
-This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com
+This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com.
 
 ### Example 5: Install a new Enterprise Subordinate CA using an existing certificate
 ```powershell
@@ -508,4 +508,3 @@ If you have installation issues, try using the -verbose switch to get verbose ou
 ## RELATED LINKS
 
 [Uninstall-AdcsCertificationAuthority](./Uninstall-AdcsCertificationAuthority.md)
-

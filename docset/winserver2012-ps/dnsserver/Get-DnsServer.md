@@ -25,7 +25,7 @@ The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configu
 
 You can pipe the output of the **Get-DnsServer** cmdlet to the **Export-Clixml** cmdlet, which generates an XML file of the configuration.
 You can use the XML file to back up or transfer DNS settings between computers.
-For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://technet.microsoft.com/library/ee176824.aspx).
+For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-clixml).
 
 ## EXAMPLES
 

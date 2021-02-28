@@ -38,32 +38,49 @@ This load balancing rule defines how traffic that arrives at the front-end IP is
 
 ## EXAMPLES
 
-### Example 1
+### Example 1 - define a load balancing rule
 
-This example creates a new load balancing rule associated with load balancer resource lb1.
-The example creates front end IP configuration resource, health probe resource, backend address pool resource and finally load balancing rule resource.
-
-```
-//Retrieve the subnet for front end IP
-$subnet = Get-NetworkControllerSubnet -ConnectionUri https://networkcontroller -NetworkId ln1 -ResourceId subnet1
-
-//Create the front end IP resource
-$frontEndIp=New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
+```powershell
+# Frontend
+# Create the front end IP resource
+$frontEndIp = New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
 $frontEndIp.PrivateIpAddress="10.127.32.12"
 $frontEndIp.PrivateIPAllocationMethod="Static"
 
-//Add the front end IP resource to Network Controller
-$lbfrontEndIP = New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId front1 -Properties $frontEndIp
+$FrontEndIPConfig = New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
 
-//Create a probe object and add it to Network Controller
-$probe=New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
-$probe.protocol="HTTP"
-$probe.port="80"
-$probe.RequestPath="/health.htm"
-$probe.IntervalInSeconds=5
-$probe.NumberofProbes=8
-$lbProbe=New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalance
+# Backend
+# Retrieve the backend IPs that will form the pool
+$backEndIp = Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
+
+## Define the properties of the backend address pool
+$bePool = New-Object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
+$bePool.backEndIpConfiguration = $backEndIp
+
+$BackEndAddressPool = New-NetworkControllerLoadBalancerBackEndAddressPool -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId be1 -Properties $bePool
+
+# Probe
+$ProbeProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
+$ProbeProperties.protocol="HTTP"
+$ProbeProperties.port="80"
+$ProbeProperties.RequestPath="/health.htm"
+$ProbeProperties.IntervalInSeconds=5
+$ProbeProperties.NumberofProbes=8
+$Probe = New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Probe1 -Properties $ProbeProperties
+
+# Rule properties
+$RuleProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+$RuleProperties.FrontEndIPConfigurations += $FrontEndIPConfig
+$RuleProperties.BackendAddressPool = $BackEndAddressPool
+$RuleProperties.protocol = "TCP"
+$RuleProperties.FrontEndPort = 80
+$RuleProperties.BackEndPort = 80
+$RuleProperties.IdleTimeoutInMinutes = 4
+$RuleProperties.Probe = $Probe
+New-NetworkControllerLoadBalancerRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -Properties $RuleProperties -ResourceId "webserver1"
 ```
+
+This example creates a new load balancing rule associated with load balancer resource lb1.
 
 ## PARAMETERS
 

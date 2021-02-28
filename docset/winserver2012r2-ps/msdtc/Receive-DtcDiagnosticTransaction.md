@@ -65,7 +65,6 @@ Accept wildcard characters: False
 
 ### -Port
 Specifies the listening port of the test RM.
-If you do not specify a port number, this cmdlet uses the name of the local computer.
 
 ```yaml
 Type: Int32
@@ -74,7 +73,7 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
+Default value: 3002
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

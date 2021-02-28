@@ -28,7 +28,7 @@ Use the **PropagationMethod** parameter to specify the propagation method.
 ## EXAMPLES
 
 ### Example 1: Send a DTC diagnostic transaction
-```
+```powershell
 PS C:\>$Tx = New-DtcDiagnosticTransaction
 PS C:\> Send-DtcDiagnosticTransaction -Transaction $Tx -ComputerName "Host1" -PropagationMethod Push
 ```

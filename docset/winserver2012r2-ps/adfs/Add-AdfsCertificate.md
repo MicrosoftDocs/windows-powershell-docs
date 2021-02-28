@@ -47,7 +47,7 @@ Specifies the type and purpose of the certificate.
 The acceptable values for this parameter are:
 
 - Service-Communications 
-- Token-Encryption
+- Token-Decrypting
 - Token-Signing
 
 ```yaml

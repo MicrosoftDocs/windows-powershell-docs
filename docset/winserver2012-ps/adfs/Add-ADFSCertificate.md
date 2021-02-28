@@ -43,7 +43,7 @@ Adds a token-signing certificate with the thumbprint fedd995b45e633d4ef30fcbc8f3
 Specifies the type and purpose of the certificate.
 Possible certificate types include the following:
 
-Token-Signing, Token-Encryption or Service-Communications.
+Token-Signing, Token-Decrypting or Service-Communications.
 
 ```yaml
 Type: String

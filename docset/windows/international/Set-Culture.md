@@ -70,6 +70,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## NOTES
 Changes made by the use of this cmdlet will take effect on subsequent PowerShell sessions.
+
 ## RELATED LINKS
 
 [GetCulture Class](https://go.microsoft.com/fwlink/?LinkID=243343)

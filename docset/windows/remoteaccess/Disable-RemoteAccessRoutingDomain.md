@@ -38,7 +38,7 @@ Remote access functions include virtual private networking (Dial-in VPN), VPN si
 
 ### Example 1: Disable VPN for a routing in a domainVPN for a
 ```
-PS C:\> Disable-RemoteAccessRoutingDomain  -RoutingDomain  Rd_01 Type VPN
+PS C:\> Disable-RemoteAccessRoutingDomain  -RoutingDomain  Rd_01 -Type VPN
 ```
 
 This command disables VPN for a routing domain named Rd_01.

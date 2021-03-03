@@ -31,7 +31,7 @@ Get-DnsServer [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLi
 ```
 
 ## DESCRIPTION
-The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configuration.
+The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configuration. 
 
 You can pass the output of the **Get-DnsServer** cmdlet to the **Export-Clixml** cmdlet by using the pipeline operator.
 That cmdlet generates an XML file of the configuration.

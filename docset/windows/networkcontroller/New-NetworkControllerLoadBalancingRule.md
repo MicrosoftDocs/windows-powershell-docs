@@ -41,43 +41,44 @@ This load balancing rule defines how traffic that arrives at the front-end IP is
 ### Example 1 - define a load balancing rule
 
 ```powershell
+PS C:\> Import-Module NetworkController
 # Frontend
 # Create the front end IP resource
-$frontEndIp = New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
-$frontEndIp.PrivateIpAddress="10.127.32.12"
-$frontEndIp.PrivateIPAllocationMethod="Static"
+PS C:\> $frontEndIp = New-Object Microsoft.Windows.NetworkController.LoadBalancerFrontEndIpConfigurationProperties
+PS C:\> $frontEndIp.PrivateIpAddress="10.127.32.12"
+PS C:\> $frontEndIp.PrivateIPAllocationMethod="Static"
 
-$FrontEndIPConfig = New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
+PS C:\> $FrontEndIPConfig = New-NetworkControllerLoadBalancerFrontEndIpConfiguration -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId frontEnd1 -Properties $frontEndIp
 
 # Backend
 # Retrieve the backend IPs that will form the pool
-$backEndIp = Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
+PS C:\> $backEndIp = Get-NetworkControllerNetworkInterfaceIpConfiguration -ConnectionUri https://networkcontroller -NetworkInterfaceId nw1
 
 ## Define the properties of the backend address pool
-$bePool = New-Object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
-$bePool.backEndIpConfiguration = $backEndIp
+PS C:\> $bePool = New-Object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
+PS C:\> $bePool.BackendIPConfigurations = $backEndIp
 
-$BackEndAddressPool = New-NetworkControllerLoadBalancerBackEndAddressPool -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId be1 -Properties $bePool
+PS C:\> $BackEndAddressPool = New-NetworkControllerLoadBalancerBackEndAddressPool -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId be1 -Properties $bePool
 
 # Probe
-$ProbeProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
-$ProbeProperties.protocol="HTTP"
-$ProbeProperties.port="80"
-$ProbeProperties.RequestPath="/health.htm"
-$ProbeProperties.IntervalInSeconds=5
-$ProbeProperties.NumberofProbes=8
-$Probe = New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Probe1 -Properties $ProbeProperties
+PS C:\> $ProbeProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
+PS C:\> $ProbeProperties.protocol="HTTP"
+PS C:\> $ProbeProperties.port="80"
+PS C:\> $ProbeProperties.RequestPath="/health.htm"
+PS C:\> $ProbeProperties.IntervalInSeconds=5
+PS C:\> $ProbeProperties.NumberofProbes=8
+PS C:\> $Probe = New-NetworkControllerLoadBalancerProbe -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -ResourceId Probe1 -Properties $ProbeProperties
 
 # Rule properties
-$RuleProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-$RuleProperties.FrontEndIPConfigurations += $FrontEndIPConfig
-$RuleProperties.BackendAddressPool = $BackEndAddressPool
-$RuleProperties.protocol = "TCP"
-$RuleProperties.FrontEndPort = 80
-$RuleProperties.BackEndPort = 80
-$RuleProperties.IdleTimeoutInMinutes = 4
-$RuleProperties.Probe = $Probe
-New-NetworkControllerLoadBalancerRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -Properties $RuleProperties -ResourceId "webserver1"
+PS C:\> $RuleProperties = New-Object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+PS C:\> $RuleProperties.FrontEndIPConfigurations += $FrontEndIPConfig
+PS C:\> $RuleProperties.BackendAddressPool = $BackEndAddressPool
+PS C:\> $RuleProperties.protocol = "TCP"
+PS C:\> $RuleProperties.FrontEndPort = 80
+PS C:\> $RuleProperties.BackEndPort = 80
+PS C:\> $RuleProperties.IdleTimeoutInMinutes = 4
+PS C:\> $RuleProperties.Probe = $Probe
+PS C:\> New-NetworkControllerLoadBalancingRule -ConnectionUri https://networkcontroller -LoadBalancerId lb1 -Properties $RuleProperties -ResourceId "webserver1"
 ```
 
 This example creates a new load balancing rule associated with load balancer resource lb1.

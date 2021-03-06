@@ -30,6 +30,8 @@ New-RDSessionDeployment [-ConnectionBroker] <String> [-SessionHost] <String[]> [
  [<CommonParameters>]
 ```
 
+:warning: **TLS 1.0** must be enabled or RDSession will fail to deploy.
+
 ## DESCRIPTION
 The **New-RDSessionDeployment** cmdlet installs role services required for the Virtual Desktop Infrastructure (VDI) to create a Remote Desktop Services (RDS) session-based Remote Desktop deployment.
 A session-based deployment allows users to connect to session collections that include published Windows Server 2012 RemoteApp programs and session-based desktops.

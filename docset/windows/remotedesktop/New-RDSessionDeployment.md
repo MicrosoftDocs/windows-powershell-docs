@@ -30,7 +30,8 @@ New-RDSessionDeployment [-ConnectionBroker] <String> [-SessionHost] <String[]> [
  [<CommonParameters>]
 ```
 
-:warning: TLS 1.0 must be enabled or RDSession will fail to deploy.
+> [!IMPORTANT]
+> Transport Layer Security (TLS) version 1.0 must be enabled; if not, Remote Desktop Session will fail to deploy.
 
 ## DESCRIPTION
 The **New-RDSessionDeployment** cmdlet installs role services required for the Virtual Desktop Infrastructure (VDI) to create a Remote Desktop Services (RDS) session-based Remote Desktop deployment.
@@ -119,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

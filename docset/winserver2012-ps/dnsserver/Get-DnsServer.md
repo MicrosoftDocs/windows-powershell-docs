@@ -22,23 +22,22 @@ Get-DnsServer [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String>] [-T
 
 ## DESCRIPTION
 The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configuration.
-The DNS server must be running Windows Server® 2008 R2 operating system or above.
 
 You can pipe the output of the **Get-DnsServer** cmdlet to the **Export-Clixml** cmdlet, which generates an XML file of the configuration.
 You can use the XML file to back up or transfer DNS settings between computers.
-For more information about **Export-Clixml**, see Using the Export-Clixml Cmdlethttp://technet.microsoft.com/en-us/library/ee176824.aspx.
+For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-clixml).
 
 ## EXAMPLES
 
 ### Example 1: Get a DNS server configuration
-```
+```powershell
 PS C:\>Get-DnsServer -ComputerName "10.255.255.254"
 ```
 
 This command gets a DNS server configuration.
 
 ### Example 2: Get local DNS server configuration and pipe it to Export-Clixml
-```
+```powershell
 PS C:\>Get-DnsServer | Export-Clixml -Path "c:\config\DnsServerConfig.xml"
 ```
 
@@ -47,7 +46,14 @@ This command gets the DNS server configuration on the local server and pipes it 
 ## PARAMETERS
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+
+The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
+You can continue to work in the session while the job completes. 
+To manage the job, use the `*-Job` cmdlets. 
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+
+For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
@@ -63,7 +69,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml

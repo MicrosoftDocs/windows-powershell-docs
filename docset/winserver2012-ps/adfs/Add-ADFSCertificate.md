@@ -22,28 +22,22 @@ Add-ADFSCertificate -CertificateType <String> -Thumbprint <String> [-IsPrimary] 
 ```
 
 ## DESCRIPTION
-The Add-ADFSCertificate cmdlet adds a new certificate to the Federation Service for token signing, token decrypting, card signing or securing communications.
+The **Add-AdfsCertificate** cmdlet adds a new certificate to  Active Directory Federation Services (AD FS) for token signing, token decrypting, card signing, or securing communications.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Add a token-signing certificate
+```powershell
+PS C:\> Add-AdfsCertificate -CertificateType "Token-Signing" -Thumbprint ‎"fedd995b45e633d4ef30fcbc8f3a48b627e9a28b"
 ```
-C:\PS>Add-ADFSCertificate -CertificateType "Token-Signing" -Thumbprint ‎fedd995b45e633d4ef30fcbc8f3a48b627e9a28b
-```
 
-Description
-
------------
-
-Adds a token-signing certificate with the thumbprint fedd995b45e633d4ef30fcbc8f3a48b627e9a28b.
+This command adds a token-signing certificate with the thumbprint `fedd995b45e633d4ef30fcbc8f3a48b627e9a28b`.
 
 ## PARAMETERS
 
 ### -CertificateType
 Specifies the type and purpose of the certificate.
-Possible certificate types include the following:
-
-Token-Signing, Token-Encryption or Service-Communications.
+The acceptable values for this parameter are:
 
 ```yaml
 Type: String
@@ -139,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

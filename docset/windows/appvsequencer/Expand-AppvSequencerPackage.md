@@ -39,7 +39,7 @@ Run this cmdlet each time to expand a new package onto the computer running the 
 
 ### Example 1: Expand a package
 ```
-PS C:\> Expand-AppvSequencerPackage -AppvPackageFilePath "C:\MyPackages\PreReq.appv"
+PS C:\> Expand-AppvSequencerPackage -AppvPackagePath "C:\MyPackages\PreReq.appv"
 ```
 
 This command expands the package PreReq.appv to the sequencing computer.

@@ -36,8 +36,10 @@ Use the **PropagationMethod** parameter to specify the propagation mechanism.
 ## EXAMPLES
 
 ### Example 1: Receive a diagnostic transaction
+```powershell
+PS C:\> Receive-DtcDiagnosticTransaction -ComputerName "Host1" -Port 17123 -PropagationMethod Pull
 ```
-PS C:\>Receive-DtcDiagnosticTransaction -ComputerName "Host1" -Port 17123 -PropagationMethod Pull
+```output
 Id
 --
 d23fd4b1-1b54-486a-9e9f-a92550a19ce2
@@ -65,7 +67,6 @@ Accept wildcard characters: False
 
 ### -Port
 Specifies the listening port of the test RM.
-If you do not specify a port number, this cmdlet uses the name of the local computer.
 
 ```yaml
 Type: Int32
@@ -74,7 +75,7 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
+Default value: 3002
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -97,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

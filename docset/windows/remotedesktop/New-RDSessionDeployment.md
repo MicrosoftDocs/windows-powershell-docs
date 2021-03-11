@@ -30,8 +30,8 @@ New-RDSessionDeployment [-ConnectionBroker] <String> [-SessionHost] <String[]> [
  [<CommonParameters>]
 ```
 
-> [!IMPORTANT]
-> Transport Layer Security (TLS) version 1.0 must be enabled; if not, Remote Desktop Session will fail to deploy.
+
+Important: Transport Layer Security (TLS) version 1.0 must be enabled while doing a single instance install on Windows Server 2016 or earlier; if not, Remote Desktop Session will fail to deploy.
 
 ## DESCRIPTION
 The **New-RDSessionDeployment** cmdlet installs role services required for the Virtual Desktop Infrastructure (VDI) to create a Remote Desktop Services (RDS) session-based Remote Desktop deployment.

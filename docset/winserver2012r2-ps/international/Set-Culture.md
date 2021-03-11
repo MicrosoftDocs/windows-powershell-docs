@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: D46BF01E-B43B-49DD-89EB-388C8F3CCB41
 ---
 
@@ -36,7 +35,7 @@ For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?L
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 PS C:\>Set-Culture de-DE
 ```
 
@@ -60,14 +59,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
-
+Changes made by the use of this cmdlet will take effect on subsequent PowerShell sessions.
 ## RELATED LINKS
 
 [GetCulture Class](https://go.microsoft.com/fwlink/?LinkID=243343)

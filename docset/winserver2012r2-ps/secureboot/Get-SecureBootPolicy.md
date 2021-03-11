@@ -11,7 +11,6 @@ manager: jasgro
 ms.date: 10/29/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: 5825E1DE-2EBE-4063-8BCA-68B770468D1B
 ms.author: v-kaunu
 ms.reviewer: brianlic

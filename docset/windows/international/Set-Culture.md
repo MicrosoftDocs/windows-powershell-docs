@@ -38,7 +38,7 @@ For more information, see [CultureInfo Class](https://go.microsoft.com/fwlink/?L
 ## EXAMPLES
 
 ### Example 1: Set the culture
-```
+```powershell
 PS C:\> Set-Culture -CultureInfo de-DE
 ```
 
@@ -62,13 +62,14 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ## OUTPUTS
 
 ## NOTES
+Changes made by the use of this cmdlet will take effect on subsequent PowerShell sessions.
 
 ## RELATED LINKS
 

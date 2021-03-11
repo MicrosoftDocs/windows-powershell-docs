@@ -59,7 +59,7 @@ PS C:\>$certAuthSet = New-NetIPsecPhase1AuthSet -DisplayName "Computer Certifica
 
 
 
-PS C:\>New-NetIPSecRule -DisplayName "Authenticate with Certificates Rule" -InboundSecurity Require -OutboundSecurity Request -Phase2AuthSet $certAuthSet.Name
+PS C:\>New-NetIPSecRule -DisplayName "Authenticate with Certificates Rule" -InboundSecurity Require -OutboundSecurity Request -Phase1AuthSet $certAuthSet.Name
 ```
 
 This example creates a rule that requires that incoming connections are authenticated by using either of two computer certificates.

@@ -13,7 +13,6 @@ manager: jasgro
 ms.date: 10/30/2017
 ms.topic: reference
 ms.prod: powershell
-ms.technology: powershell
 ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
 ---
 
@@ -53,73 +52,53 @@ Install-AdcsCertificationAuthority [-AllowAdministratorInteraction] [-ValidityPe
 ```
 
 ## DESCRIPTION
-The Install-AdcsCertificationAuthority cmdlet performs installation and configuration of the AD CS CA role service.
-To remove the certification authority role service use the Uninstall-AdcsCertificationAuthority cmdlet.
+The **Install-AdcsCertificationAuthority** cmdlet performs installation and configuration of the Active Directory Certificate Services (AD CS) Certification Authority (CA) role service.
+To remove the certification authority role service use the **Uninstall-AdcsCertificationAuthority** cmdlet.
 
 You can import the cmdlet by running the following commands from Windows PowerShell:
-`Import-Module ServerManager`
-`Add-WindowsFeature Adcs-Cert-Authority`
 
-To include the Certification Authority and Certificate Templates consoles in a CA installation, you must add `-IncludeManagementTools` to the end of the `AddWindowsFeature Adcs-Cert-Authority` command.
+- `Install-WindowsFeature Adcs-Cert-Authority`
 
-Int is equivalent to Int32 in the .NET Frameworkhttp://msdn.microsoft.com/en-us/library/ya5y69ds.aspx (http://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
+To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
+
+Int is equivalent to Int32 in the [.NET Framework](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/built-in-types).
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### Example 1: Install a new Standalone Root CA with default settings
+```powershell
+PS C:\> Install-AdcsCertificationAuthority -CAType StandaloneRootCa
 ```
-C:\PS>Install-AdcsCertificationAuthority -CAType StandaloneRootCa
-```
-
-Description
-
------------
 
 This command installs a new Standalone Root CA with default settings.
 
-### -------------------------- EXAMPLE 2 --------------------------
-```
-C:\PS>Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "ECDSA_P256#Microsoft Software Key Storage Provider" -KeyLength 256 -HashAlgorithmName SHA256
-```
-
-Description
-
------------
-
-This command installs a new Enterprise Root CA using a specific provider (ECDSA_P256 Microsoft Software Key Storage Provider), key length (256), hash algorithm (SHA 256)
-
-### -------------------------- EXAMPLE 3 --------------------------
-```
-C:\PS>Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
+### Example 2: Install a new Enterprise Root CA using a specific provider and key length
+```powershell
+PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "ECDSA_P256#Microsoft Software Key Storage Provider" -KeyLength 256 -HashAlgorithmName SHA256
 ```
 
-Description
+This command installs a new Enterprise Root CA using the provider named ECDSA_P256 Microsoft Software Key Storage Provider, key length of 256, and the hash algorithm named SHA 256.
 
------------
-
-This command installs a new Enterprise Root CA with the Microsoft Software Key Storage Provider using the RSA algorithm, key length (2048), hash algorithm (SHA 256), and validity period (3 years).
-
-### -------------------------- EXAMPLE 4 --------------------------
-```
-C:\PS>Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
+### Example 3: Install a new Enterprise Root CA using a specific provider and a validity period
+```powershell
+PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
 ```
 
-Description
+This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 1, and validity period of three years.
 
------------
-
-This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com
-
-### -------------------------- EXAMPLE 5 --------------------------
-```
-C:\PS>Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -CertFile C:\Cert\SERVER80-CA.p12 -CertFilePassword (read-host "Set user password" -assecurestring)
+### Example 4: Install a new Enterprise Subordinate CA using a parent CA
+```powershell
+PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
 ```
 
-Description
+This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com.
 
------------
+### Example 5: Install a new Enterprise Subordinate CA using an existing certificate
+```powershell
+PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -CertFile C:\Cert\SERVER80-CA.p12 -CertFilePassword (read-host "Set user password" -assecurestring)
+```
 
-This command installs an Enterprise Subordinate certification authority using an existing certificate from a PFX/P12 file that is located on the local C:\Cert folder named SERVER80-CA.p12.
+This command installs an Enterprise Subordinate CA using an existing certificate from a PFX/P12 file that is located on the local C:\Cert folder named SERVER80-CA.p12.
 
 ## PARAMETERS
 
@@ -171,8 +150,13 @@ Accept wildcard characters: False
 ```
 
 ### -CAType
-Specifies the type of certification authority to install.
-The possible values are: EnterpriseRootCA, EnterpriseSubordinateCA, StandaloneRootCA, or StandaloneSubordinateCA.
+Specifies the type of certification authority that this cmdlet installs.
+The acceptable values for this parameter are:
+
+- EnterpriseRootCA
+- EnterpriseSubordinateCA
+- StandaloneRootCA
+- StandaloneSubordinateCA
 
 ```yaml
 Type: CAType
@@ -248,7 +232,10 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-To install an enterprise certification authority, the computer must be joined to an Active Directory Domain Services (AD DS) domain and a user account that is a member of the Enterprise Admin group is required.
+Specifies a **PSCredential** object for the connection to AD DS.
+To obtain a credential object, use the **Get-Credential** cmdlet.
+For more information, type `Get-Help Get-Credential`.
+To install an enterprise certification authority, the computer must be joined to an AD DS domain and a user account that is a member of the Enterprise Admin group is required.
 To install a standalone certification authority, the computer can be in a workgroup or AD DS domain.
 If the computer is in a workgroup, a user account that is a member of Administrators is required.
 If the computer is in an AD DS domain, a user account that is a member of Domain Admins is required.
@@ -296,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-
+Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: SwitchParameter
@@ -510,7 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -528,4 +515,3 @@ If you have installation issues, try using the -verbose switch to get verbose ou
 ## RELATED LINKS
 
 [Uninstall-AdcsCertificationAuthority](./Uninstall-AdcsCertificationAuthority.md)
-

@@ -63,40 +63,40 @@ You can import the cmdlet by running the following commands from Windows PowerSh
 
 To include the Certification Authority and Certificate Templates consoles in a CA installation, you must use the *IncludeManagementTools* parameter at the end of the `Install-WindowsFeature Adcs-Cert-Authority` command.
 
-Int is equivalent to Int32 in the [.NET Framework](https://msdn.microsoft.com/en-us/library/ya5y69ds.aspx).
+Int is equivalent to Int32 in the [.NET Framework](https://docs.microsoft.com/dotnet/csharp/language-reference/builtin-types/built-in-types).
 
 ## EXAMPLES
 
 ### Example 1: Install a new Standalone Root CA with default settings
-```
+```powershell
 PS C:\> Install-AdcsCertificationAuthority -CAType StandaloneRootCa
 ```
 
 This command installs a new Standalone Root CA with default settings.
 
 ### Example 2: Install a new Enterprise Root CA using a specific provider and key length
-```
+```powershell
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "ECDSA_P256#Microsoft Software Key Storage Provider" -KeyLength 256 -HashAlgorithmName SHA256
 ```
 
 This command installs a new Enterprise Root CA using the provider named ECDSA_P256 Microsoft Software Key Storage Provider, key length of 256, and the hash algorithm named SHA 256.
 
 ### Example 3: Install a new Enterprise Root CA using a specific provider and a validity period
-```
+```powershell
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseRootCa -CryptoProviderName "RSA#Microsoft Software Key Storage Provider" -KeyLength 2048 -HashAlgorithmName SHA1 -ValidityPeriod Years -ValidityPeriodUnits 3
 ```
 
-This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 256, and validity period of three years.
+This command installs a new Enterprise Root CA using a RSA algorithm using the provider named Microsoft Software Key Storage Provider, a key length of 2048, a hash algorithm named SHA 1, and validity period of three years.
 
 ### Example 4: Install a new Enterprise Subordinate CA using a parent CA
-```
+```powershell
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -ParentCA SERVER75.corp.contoso.com\SERVER75-CA
 ```
 
-This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com
+This command installs a new Enterprise subordinate CA, the parent CA is SERVER75 in the CORP domain of Contoso.com.
 
 ### Example 5: Install a new Enterprise Subordinate CA using an existing certificate
-```
+```powershell
 PS C:\> Install-AdcsCertificationAuthority -CAType EnterpriseSubordinateCa -CertFile C:\Cert\SERVER80-CA.p12 -CertFilePassword (read-host "Set user password" -assecurestring)
 ```
 
@@ -499,7 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

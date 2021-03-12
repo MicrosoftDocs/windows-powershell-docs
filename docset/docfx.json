@@ -3,8 +3,8 @@
     "content": [
       { "files": [ "toc.yml" ], "src": "bread", "dest": "windows/bread" },
 
-      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "winserver2019-ps" },
-      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "winserver2019-ps/WindowsServer2019-ps" },
+      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "windows" },
+      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "windows/WindowsServer2019-ps" },
       { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "windows", "version": "WindowsServer2019-ps", "dest": "module" },
       { "files": [ "toc.yml" ], "src": "windows", "version": "WindowsServer2019-ps", "dest": "module/WindowsServer2019-ps" },
 

@@ -61,27 +61,27 @@ SRV01.corp.contoso.com Branch Office 1
 SRV02.corp.contoso.com Branch Office 1
 SRV03.corp.contoso.com Branch Office 1 
 
-PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" | Format-Table *name -wrap -auto
+PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV02" | Format-Table *name -wrap -autosize
 
 GroupName       SourceComputerName DestinationComputerName
 ---------       ------------------ -----------------------
 Branch Office 1 SRV01               SRV02
 Branch Office 1 SRV02               SRV01 
 
-PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV03" | Format-Table *name -wrap -auto
+PS C:\> Add-DfsrConnection -GroupName "Branch Office 1" -SourceComputerName "SRV01" -DestinationComputerName "SRV03" | Format-Table *name -wrap -autosize
 
 GroupName       SourceComputerName DestinationComputerName
 ---------       ------------------ -----------------------
 Branch Office 1 SRV01               SRV03
 Branch Office 1 SRV03               SRV01 
 
-PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\Rf01" -ComputerName "SRV01" -PrimaryMember $True -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
+PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\Rf01" -ComputerName "SRV01" -PrimaryMember $True -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -autosize -wrap
 
 DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
 ----------       ---------       ----------          ------------ ----------- -----------                -------------
 corp.contoso.com Branch Office 1 Data Distribution 1 SRV01         c:\Rf01      c:\Rf01\DfsrPrivate\Staging          True 
 
-PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\Rf01" -ComputerName "SRV02","SRV03" -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -auto -wrap
+PS C:\> Set-DfsrMembership -GroupName "Branch Office 1" -FolderName "Data Distribution 1" -ContentPath "C:\Rf01" -ComputerName "SRV02","SRV03" -StagingPathQuotaInMB 16384 -Force | Format-Table *name,*path,primary* -autosize -wrap
 
 DomainName       GroupName       FolderName          ComputerName ContentPath StagingPath                PrimaryMember
 ----------       ---------       ----------          ------------ ----------- -----------                -------------

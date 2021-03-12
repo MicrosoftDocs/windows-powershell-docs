@@ -32,11 +32,11 @@
       "template_folder": "_themes",
       "type_mapping": {
         "PowershellModule": "Content",
-        "PowershellCmdlet": "Content"
-        "Conceptual": "Content",
+        "PowershellCmdlet": "Content",
+        "Conceptual": "Content"
       },
       "xref_query_tags": [ "/dotnet" ],
-      "version": 0,
+      "version": 0
     }],
 
   "git_repository_branch_open_to_public_contributors": "master",

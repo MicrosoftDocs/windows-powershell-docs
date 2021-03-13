@@ -52,7 +52,7 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 
 ### Example 1: Disable the identification LED on all physical disks in a pool
 ```
-PGet-PhysicalDisk -StoragePool $pool | Disable-PhysicalDiskIdentification
+Get-PhysicalDisk -StoragePool $pool | Disable-PhysicalDiskIdentification
 ```
 
 The command stores the pool in the $StPool variable.

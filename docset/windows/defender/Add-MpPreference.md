@@ -45,6 +45,13 @@ PS C:\> Add-MpPreference -ExclusionPath "C:\Temp"
 This command adds the folder C:\Temp to the exclusion list.
 The command disables Windows Defender scheduled and real-time scanning for files in this folder.
 
+### Example 2: Exclude files opened by a process
+```
+PS C:\> Add-MpPreference -ExclusionProcess C:\Program\Executable1.exe, Executable2.exe
+```
+
+This command excludes files opened by process C:\Program\Executable1.exe and by any process named Executable2.exe from scheduled and real-time scanning.
+
 ## PARAMETERS
 
 ### -AsJob
@@ -123,7 +130,7 @@ Specifies an array of processes, as paths to process images.
 This cmdlet excludes any files opened by the processes that you specify from scheduled and real-time scanning.
 Specifying this parameter excludes files opened by executable programs only.
 The cmdlet does not exclude the processes themselves.
-To exclude a process, specify it by using the **ExclusionPath** parameter.
+For more details, see [Configure exclusions for files opened by processes](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/configure-process-opened-file-exclusions-microsoft-defender-antivirus).
 
 ```yaml
 Type: String[]

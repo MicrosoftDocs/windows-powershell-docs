@@ -125,7 +125,7 @@ Connects locally for a live event and packet capture.
 
 If you specify a value of SaveToFile, you can specify a location for the file by using the **LocalFilePath** parameter and specify a maximum file size by using the **MaxFileSize** parameter.
 
-If you specify a value of RealtimeRPC or RealtimeLocal, the capture requires additional software, such as Microsoft Message Analyzer.
+If you specify a value of RealtimeRPC or RealtimeLocal, the capture requires additional software that supports Event Tracing for Windows listener.
 
 ```yaml
 Type: CaptureModes

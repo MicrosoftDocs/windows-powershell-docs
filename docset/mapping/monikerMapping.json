@@ -1,6 +1,6 @@
 {
     "WindowsServer2019-ps": {
-        "conceptualToc": "docs-conceptual/winserver2019-ps/windows/toc.yml",
+        "conceptualToc": "docs-conceptual/winserver2019-ps/toc.yml",
         "conceptualTocUrl": "/powershell/winserver2019-ps/WindowsServer2019-ps/toc.json",
         "referenceTocUrl": "/powershell/module/WindowsServer2019-ps/toc.json",
         "packageRoot": "winserver2019-ps"

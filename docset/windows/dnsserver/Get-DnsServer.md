@@ -31,25 +31,24 @@ Get-DnsServer [-ComputerName <String>] [-CimSession <CimSession[]>] [-ThrottleLi
 ```
 
 ## DESCRIPTION
-The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configuration.
-The DNS server must be running Windows Server® 2008 R2 operating system or above.
+The **Get-DnsServer** cmdlet retrieves a Domain Name System (DNS) server configuration. 
 
 You can pass the output of the **Get-DnsServer** cmdlet to the **Export-Clixml** cmdlet by using the pipeline operator.
 That cmdlet generates an XML file of the configuration.
 You can use the XML file to back up or transfer DNS settings between computers.
-For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://technet.microsoft.com/en-us/library/ee176824.aspx).
+For more information about **Export-Clixml**, see [Using the Export-Clixml cmdlet](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/export-clixml).
 
 ## EXAMPLES
 
 ### Example 1: Get a DNS server configuration
-```
+```powershell
 PS C:\> Get-DnsServer -ComputerName "10.255.255.254"
 ```
 
 This command gets a DNS server configuration.
 
 ### Example 2: Get local DNS server configuration and then export it
-```
+```powershell
 PS C:\> Get-DnsServer | Export-Clixml -Path "c:\config\DnsServerConfig.xml"
 ```
 
@@ -130,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

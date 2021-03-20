@@ -50,7 +50,7 @@ The command disables Windows Defender scheduled and real-time scanning for files
 PS C:\> Add-MpPreference -ExclusionProcess C:\Program\Executable1.exe, Executable2.exe
 ```
 
-This command excludes files opened by process C:\Program\Executable1.exe and by any process named Executable2.exe from scheduled and real-time scanning.
+This command excludes files opened by the process C:\Program\Executable1.exe and by any process named Executable2.exe from scheduled and real-time scanning.
 
 ## PARAMETERS
 
@@ -233,4 +233,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-MpPreference](./Remove-MpPreference.md)
 
 [Set-MpPreference](./Set-MpPreference.md)
-

@@ -52,11 +52,9 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 
 ### Example 1: Disable the identification LED on all physical disks in a pool
 ```
-PS C:\>$StPool = (Get-StoragePool -FriendlyName "SpacePool")
-PS C:\> Disable-PhysicalDiskIndication -StoragePool $StPool
+PS C:\> Get-PhysicalDisk -StoragePool $pool | Disable-PhysicalDiskIdentification
 ```
 
-The first command gets the storage poll named SpacePool by using the Get-StoragePool cmdlet.
 The command stores the pool in the $StPool variable.
 
 The second command disables the identification LED on all physical disks associated with the storage pool in $StPool.
@@ -169,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-StoragePool](./Get-StoragePool.md)
 
 [Enable-PhysicalDiskIdentification](./Enable-PhysicalDiskIdentification.md)
-

@@ -1,8 +1,14 @@
 {
-    "win10-ps": {
+    "WindowsServer2019-ps": {
+        "conceptualToc": "docs-conceptual/winserver2019-ps/toc.yml",
+        "conceptualTocUrl": "/powershell/winserver2019-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/WindowsServer2019-ps/toc.json",
+        "packageRoot": "winserver2019-ps"
+    },
+    "WindowsServer2016-ps": {
         "conceptualToc": "docs-conceptual/windows/toc.yml",
-        "conceptualTocUrl": "/powershell/windows/win10-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/win10-ps/toc.json",
+        "conceptualTocUrl": "/powershell/windows/toc.json",
+        "referenceTocUrl": "/powershell/module/WindowsServer2016-ps/toc.json",
         "packageRoot": "windows"
     },
     "winserver2012r2-ps": {

@@ -128,7 +128,7 @@ SplitTunneling        : True
 
 This command adds a VPN connection named Test4 to the server with an IP address of 10.1.1.1.
 This connection uses the default EAP authentication method, as specified by the **AuthenticationMethod** parameter.
-The pre-shared key for the connection is specified by the **L2tpPsk** parameter Additional parameters specify that the connection: 
+The pre-shared key for the connection is specified by the **L2tpPsk** parameter. Additional parameters specify that the connection: 
 
 - Uses split tunneling (the **SplitTunneling** parameter) 
 - Is stored in the global phone book (the **AllUserConnection** parameter) 
@@ -167,7 +167,7 @@ PS C:\> $EAPXml = [xml]Get-Content -Path C:\eap-config.xml
 PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlSteam $EAPXml
 ```
 
-This set of commands adds a VPN connection using already generated EAP XML configuration. For more information how to generate EAP XML configuration, see [EAP Configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)
+This set of commands adds a VPN connection using already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
 
 ## PARAMETERS
 
@@ -561,7 +561,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

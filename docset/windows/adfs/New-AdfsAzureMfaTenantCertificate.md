@@ -65,6 +65,8 @@ After AD FS has been configured for Azure MFA, this command determines which cer
 ## PARAMETERS
 
 ### -Renew
+Renews certificate. Do not use if certificate has already expired. In this scenario, the existing expired certificate is replaced with a new one instead.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)

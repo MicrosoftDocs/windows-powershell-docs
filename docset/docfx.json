@@ -3,6 +3,11 @@
     "content": [
       { "files": [ "toc.yml" ], "src": "bread", "dest": "windows/bread" },
 
+      { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2019-ps", "dest": "windows" },
+      { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2022-ps", "version": "WindowsServer2019-ps", "dest": "winserver2022-ps" },
+      { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2019-ps", "dest": "module" },
+      { "files": [ "toc.yml" ], "src": "winserver2022-ps", "version": "WindowsServer2019-ps", "dest": "module/WindowsServer2022-ps" },
+
       { "files": [ "**/*.md" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "windows" },
       { "files": [ "toc.yml" ], "src": "docs-conceptual/winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "winserver2019-ps" },
       { "files": [ "**/*.yml" ], "exclude": [ "toc.yml" ], "src": "winserver2019-ps", "version": "WindowsServer2019-ps", "dest": "module" },
@@ -34,6 +39,9 @@
       { "files": [ "**/*.png", "**/*.jpg" ], "exclude": [ "**/obj/**", "**/includes/**" ] }
     ],
     "versions": {
+      "WindowsServer2022-ps": {
+        "dest": "winserver2022-ps"
+      },
       "WindowsServer2019-ps": {
         "dest": "winserver2019-ps"
       },

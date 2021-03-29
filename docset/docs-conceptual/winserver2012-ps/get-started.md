@@ -1,10 +1,8 @@
 ---
 title: Windows 8 and Windows Server 2012
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-ms.assetid: 9c5a65fb-8921-45df-b5c2-eca8e57feca7
+description: Use this topic to help manage Windows 8 and Windows Server 2012 technologies with Windows PowerShell.
 manager: dansimp
-ms.date: 01/10/2018
-ms.reviewer:
+ms.date: 03/29/2021
 ms.author: v-kaunu
 author: Kateyanne
 ---
@@ -13,9 +11,9 @@ author: Kateyanne
 
 This topic lists the Windows PowerShell modules included with Windows Server 2012 and Windows 8. The Windows PowerShell modules in the list support automating the features of those operating systems and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for Windows Server 2012 and Windows 8.
 
-For information about the core features common to all versions of Windows PowerShell, see [Windows PowerShell Core](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/).
+For information about the core features common to all versions of Windows PowerShell, see [Windows PowerShell Core](/powershell/scripting).
 
-The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help) for more information.
+The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. See [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help) for more information.
 
 ## Windows PowerShell features
 

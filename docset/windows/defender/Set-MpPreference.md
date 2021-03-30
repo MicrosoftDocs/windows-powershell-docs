@@ -42,7 +42,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [- DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
+ [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
@@ -808,7 +808,7 @@ Accept wildcard characters: False
 Specifies the number of days to keep items in the scan history folder.
 After this time, Windows Defender removes the items.
 If you specify a value of zero, Windows Defender does not remove items.
-If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 30 days.
+If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
 
 ```yaml
 Type: UInt32
@@ -817,7 +817,7 @@ Aliases: spiad
 
 Required: False
 Position: Named
-Default value: None
+Default value: 15
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

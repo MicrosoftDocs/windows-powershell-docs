@@ -30,8 +30,10 @@ If errors occur when you create the VPN profile, the error information is return
 ## EXAMPLES
 
 ### Example 1: Add a VPN connection
-```
+```powershell
 PS C:\> Add-VpnConnection -Name "Test1" -ServerAddress "10.1.1.1" -PassThru
+```
+```output
 Name                  : Test1
 ServerAddress         : 10.1.1.1
 AllUserConnection     : False 
@@ -49,12 +51,13 @@ SplitTunneling        : False
 ```
 
 This command adds a VPN connection named Test1 to the server with an IP address 10.1.1.1.
-By specifying the **Passthru** parameter, you can see the configuration of the VPN connection object.
+By specifying the *PassThru* parameter, you can see the configuration of the VPN connection object.
 
 ### Example 2: Add a VPN connection with an alternate authentication method
+```powershell
+PS C:\> Add-VpnConnection -Name "Test3" -ServerAddress "10.1.1.1" -TunnelType "Pptp" -EncryptionLevel "Required" -AuthenticationMethod MSChapv2 -UseWinlogonCredential -SplitTunneling -AllUserConnection -RememberCredential -PassThru
 ```
-PS C:\>Add-VpnConnection -Name "Test3" -ServerAddress "10.1.1.1" -TunnelType Pptp -EncryptionLevel Required -AuthenticationMethod MSChapv2 -UseWinlogonCredential -SplitTunneling -AllUserConnection  -RememberCredential -PassThru
-
+```output
 Name                  : Test3 
 ServerAddress         : 10.1.1.1 
 AllUserConnection     : True 
@@ -76,16 +79,17 @@ This connection uses the MSCHAPv2 authentication method, as specified by the **A
 Additional parameters specify that the connection: 
 
 - Uses the Windows logon credentials (the **UseWinlogonCredential** parameter) 
-- Uses split tunneling (the SplitTunneling parameter) 
+- Uses split tunneling (the **SplitTunneling** parameter) 
 - Is stored in the global phone book (the **AllUserConnection** parameter) 
- -- Caches the credentials used for the first successful connection (the **RememberCredential** parameter)
+- Caches the credentials used for the first successful connection (the **RememberCredential** parameter)
 
-By specifying the **Passthru** parameter, you can see the configuration of the VPN connection object.
+By specifying the **PassThru** parameter, you can see the configuration of the VPN connection object.
 
-### EXAMPLE 3
+### Example 3: Add a VPN connection that uses EAP authentication
+```powershell
+PS C:\> Add-VpnConnection -Name "Test4" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -L2tpPsk "password" -Force -RememberCredential -PassThru
 ```
-PS C:\>Add-VpnConnection -Name "Test4" -ServerAddress "10.1.1.1" -TunnelType L2tp -EncryptionLevel Required -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -L2tpPsk "password" -Force -RememberCredential -PassThru
-
+```output
 Name                  : Test4 
 ServerAddress         : 10.1.1.1 
 AllUserConnection     : True 
@@ -104,28 +108,20 @@ SplitTunneling        : True
 
 This command adds a VPN connection named Test4 to the server with an IP address of 10.1.1.1.
 This connection uses the default EAP authentication method, as specified by the **AuthenticationMethod** parameter.
-The pre-shared key for the connection, password, is specified by the **L2tpPsk** parameter Additional parameters specify that the connection: 
+The pre-shared key for the connection is specified by the **L2tpPsk** parameter. Additional parameters specify that the connection: 
 
 - Uses split tunneling (the **SplitTunneling** parameter) 
-- Is stored in the global phone book (the **AllUserConnection** parameter)  
+- Is stored in the global phone book (the **AllUserConnection** parameter) 
 - Caches the credentials used for the first successful connection (the **RememberCredential** parameter)
 
-By specifying the **Passthru** parameter, you can see the configuration of the VPN connection object.
+By specifying the **PassThru** parameter, you can see the configuration of the VPN connection object.
 
-### EXAMPLE 4
+### Example 4: Add a VPN connection that uses a custom EAP authentication method
+```powershell
+PS C:\> $A = New-EapConfiguration
+PS C:\> Add-VpnConnection -Name "Test5" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $A.EapConfigXmlStream -PassThru
 ```
-This command stores the result of the New-EapConfiguration cmdlet into the variable named $a.
-PS C:\>$a = New-EapConfiguration
-
-
-
-This command adds a new VPN connection named Test5 to the server with an IP address of 10.1.1.1. This connection is configured to use the custom EAP authentication method specifying the **EapConfigXmlStream** parameter, and using the **EapConfigXmlStream** method of the $a variable created earlier. Additional parameters specify that the connection: 
-
--- Uses split tunneling (the **SplitTunneling** parameter) 
--- Is stored in the global phone book (the **AllUserConnection** parameter)  
--- Caches the credentials used for the first successful connection (the **RememberCredential** parameter)By specifying the **Passthru** parameter, you can see the configuration of the VPN connection object.
-PS C:\>Add-VpnConnection -Name "Test5" -ServerAddress "10.1.1.1" -TunnelType L2tp -EncryptionLevel Required -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $a.EapConfigXmlStream -PassThru
-
+```output
 Name                  : Test5 
 ServerAddress         : 10.1.1.1 
 AllUserConnection     : True 
@@ -143,7 +139,15 @@ SplitTunneling        : True
 ```
 
 This set of commands adds a VPN connection using a custom EAP authentication method.
-For more information about custom EAP authentication methods, see the New-EapConfiguration cmdlet.
+For more information about custom EAP authentication methods, see the **New-EapConfiguration** cmdlet.
+
+### Example 5: Add a VPN connection that uses already generated EAP XML configuration
+```powershell
+PS C:\> $EAPXml = [xml]Get-Content -Path C:\eap-config.xml
+PS C:\> Add-VpnConnection -Name "Test6" -ServerAddress "10.1.1.1" -TunnelType "L2tp" -EncryptionLevel "Required" -AuthenticationMethod Eap -SplitTunneling -AllUserConnection -RememberCredential -EapConfigXmlStream $EAPXml
+```
+
+This set of commands adds a VPN connection using an already generated EAP XML configuration. For more information about how to generate EAP XML configuration, see [EAP Configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
 
 ## PARAMETERS
 
@@ -163,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-ps_cimcommon_asjob
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
 ```yaml
 Type: SwitchParameter
@@ -179,7 +183,6 @@ Accept wildcard characters: False
 
 ### -AuthenticationMethod
 Specifies the authentication method to use for the VPN connection.
-The acceptable values for this parameter are:**PAP**, **CHAP**, **MSCHAPv2**, or **EAP**.
 
 ```yaml
 Type: String[]
@@ -195,7 +198,7 @@ Accept wildcard characters: False
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
-Enter a computer name or a session object, such as the output of a New-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227967 or Get-CimSessionhttp://go.microsoft.com/fwlink/p/?LinkId=227966 cmdlet.
+Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
 The default is the current session on the local computer.
 
 ```yaml
@@ -227,7 +230,6 @@ Accept wildcard characters: False
 
 ### -EncryptionLevel
 Specifies the encryption level for the VPN connection.
-The acceptable values for this parameter are:**NoEncryption**, **Optional**, **Required** and **Maximum**.
 
 ```yaml
 Type: String
@@ -369,7 +371,6 @@ Accept wildcard characters: False
 
 ### -TunnelType
 Specifies the type of tunnel used for the VPN connection.
-The acceptable values for this parameter are:**PPTP**, **L2TP**, **SSTP**, **IKEv2**, or **Automatic**.
 
 ```yaml
 Type: String

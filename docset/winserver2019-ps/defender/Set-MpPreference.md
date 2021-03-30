@@ -808,7 +808,7 @@ Accept wildcard characters: False
 Specifies the number of days to keep items in the scan history folder.
 After this time, Windows Defender removes the items.
 If you specify a value of zero, Windows Defender does not remove items.
-If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 30 days.
+If you do not specify a value, Windows Defender removes items from the scan history folder after the default length of time, which is 15 days.
 
 ```yaml
 Type: UInt32
@@ -817,7 +817,7 @@ Aliases: spiad
 
 Required: False
 Position: Named
-Default value: None
+Default value: 15
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

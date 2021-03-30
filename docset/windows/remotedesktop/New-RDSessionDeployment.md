@@ -36,6 +36,10 @@ A session-based deployment allows users to connect to session collections that i
 
 Specify the fully qualified domain names (FQDN) for servers to host a Remote Desktop Connection Broker (RD Connection Broker) role service, a Remote Desktop Web Access (RD Web Access) role service, and one or more instances of the Remote Desktop Session Host (RD Session Host) role service.
 
+> [!IMPORTANT]
+> Transport Layer Security (TLS) version 1.0 must be enabled while doing a single instance install on Windows Server 2016 or earlier. 
+> If not, the Remote Desktop Session fails to deploy.
+
 ## EXAMPLES
 
 ### Example 1: Install role services for a session deployment
@@ -117,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

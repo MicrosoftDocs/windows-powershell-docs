@@ -31,7 +31,7 @@ Set-AdfsAzureMfaTenant -TenantId <String> -ClientId <String> [-WhatIf] [-Confirm
 ```
 
 ## DESCRIPTION
-The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use -Factor Authentication (MFA) after a certificate has been created and registered in the Azure Active Directory (AD) tenant.
+The **Set-AdfsAzureMfaTenant** cmdlet enables an Active Directory Federation Services (AD FS) farm to use Azure AD Multi-Factor Authentication (MFA) after a certificate has been created and registered in the Azure Active Directory (AD) tenant.
 
 ## EXAMPLES
 
@@ -131,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-AdfsAzureMfaTenantCertificate](./New-AdfsAzureMfaTenantCertificate.md)
-

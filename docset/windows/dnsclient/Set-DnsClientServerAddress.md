@@ -217,8 +217,8 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If you omit this parameter or enter value of `0`, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
-The throttle limit applies only to the current cmdlet, not to the session or to the computer.
+If you omit this parameter or enter a value of `0`, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets running on the computer.
+The throttle limit applies only to the current cmdlet, not to the session or the computer.
 
 ```yaml
 Type: Int32
@@ -299,4 +299,3 @@ If no interface is specified, then all interfaces are configured.
 ## RELATED LINKS
 
 [Get-DnsClientServerAddress](./Get-DnsClientServerAddress.md)
-

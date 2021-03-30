@@ -12,10 +12,10 @@
         "packageRoot": "winserver2019-ps"
     },
     "WindowsServer2016-ps": {
-        "conceptualToc": "docs-conceptual/windows/toc.yml",
-        "conceptualTocUrl": "/powershell/windows/toc.json",
+        "conceptualToc": "docs-conceptual/winserver2016-ps/toc.yml",
+        "conceptualTocUrl": "/powershell/winserver2016-ps/toc.json",
         "referenceTocUrl": "/powershell/module/WindowsServer2016-ps/toc.json",
-        "packageRoot": "windows"
+        "packageRoot": "winserver2016-ps"
     },
     "winserver2012r2-ps": {
         "conceptualToc": "docs-conceptual/winserver2012r2-ps/toc.yml",

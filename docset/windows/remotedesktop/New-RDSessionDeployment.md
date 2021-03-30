@@ -30,14 +30,15 @@ New-RDSessionDeployment [-ConnectionBroker] <String> [-SessionHost] <String[]> [
  [<CommonParameters>]
 ```
 
-
-Important: Transport Layer Security (TLS) version 1.0 must be enabled while doing a single instance install on Windows Server 2016 or earlier; if not, Remote Desktop Session will fail to deploy.
-
 ## DESCRIPTION
 The **New-RDSessionDeployment** cmdlet installs role services required for the Virtual Desktop Infrastructure (VDI) to create a Remote Desktop Services (RDS) session-based Remote Desktop deployment.
 A session-based deployment allows users to connect to session collections that include published Windows Server 2012 RemoteApp programs and session-based desktops.
 
 Specify the fully qualified domain names (FQDN) for servers to host a Remote Desktop Connection Broker (RD Connection Broker) role service, a Remote Desktop Web Access (RD Web Access) role service, and one or more instances of the Remote Desktop Session Host (RD Session Host) role service.
+
+> [!IMPORTANT]
+> Transport Layer Security (TLS) version 1.0 must be enabled while doing a single instance install on Windows Server 2016 or earlier. 
+> If not, the Remote Desktop Session fails to deploy.
 
 ## EXAMPLES
 

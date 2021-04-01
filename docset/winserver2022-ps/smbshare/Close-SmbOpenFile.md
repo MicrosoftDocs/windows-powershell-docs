@@ -89,7 +89,7 @@ Performing operation 'Close-File' on Target '4415226383569'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): N
 ```
 
-This command closes one or more files that are open by one of the client identified with the session ID 4415226380393 of the SMB server.
+This command closes one or more files that are open by one of the clients identified with the session ID 4415226380393 of the SMB server.
 
 ### Example 3: Close open files that match a file name extension
 ```powershell
@@ -350,4 +350,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SmbOpenFile](./Get-SmbOpenFile.md)
-

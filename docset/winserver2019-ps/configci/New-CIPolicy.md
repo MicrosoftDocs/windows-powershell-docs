@@ -309,7 +309,7 @@ New-CIPolicy -MultiplePolicyFormat -FilePath ".\temp\Policy.xml" -Rules $Rules
 
 The first set of commands create an allow file rule based on the CA certificate used to sign the test application as well as a deny exception rule based on the original file name of the application to block. The deny rule has a user mode and kernel mode component which requires both sections' file exception boolean fields to be set to '1'. 
 
-The second set of commands set the exceptions field of the allow file rule to the identifier of the exception rule. If the allow rule has both a user mode and kernel mode component, the exception fields of both components must have the identifier of the exception rule set. 
+The second set of commands sets the exceptions field of the allow file rule to the identifier of the exception rule. If the allow rule has both a user mode and kernel mode component, the exception fields of both components must have the identifier of the exception rule set. 
 
 The last commands merge the allow file rule and its deny rule exceptions into one rule variable which can be used in the New-CIPolicy creation step. The same process can be repeated for a deny file rule with allow exception rules.  
 

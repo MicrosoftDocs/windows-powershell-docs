@@ -313,7 +313,7 @@ The second set of commands set the exceptions field of the allow file rule to th
 
 The last commands merge the allow file rule and its deny rule exceptions into one rule variable which can be used in the New-CIPolicy creation step. The same process can be repeated for a deny file rule with allow exception rules.  
 
-File rule exceptions cannot use the PCA Certificate, Publisher, Signed Version or File Publisher rule levels. 
+File rule exceptions cannot use the PCA Certificate, Publisher, Signed Version, or File Publisher rule levels. 
 
 ## PARAMETERS
 
@@ -567,4 +567,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicyRule](./New-CIPolicyRule.md)
-

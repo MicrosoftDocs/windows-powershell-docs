@@ -61,7 +61,7 @@ PS C:\> Set-ProcessMitigation -System -Enable DEP
 
 Applies DEP at the system level. To disable mitigations, you can replace `-Enable` with `-Disable`. However, for app-level mitigations, this will force the mitigation to be disabled only for that app.
 
-### Exmaple 4
+### Example 4
 
 ```
 PS C:\> Set-ProcessMitigation -System -Remove -Disable DEP

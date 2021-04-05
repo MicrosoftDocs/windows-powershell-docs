@@ -36,8 +36,10 @@ This cmdlet should be used with care as it may result in data loss to the client
 ## EXAMPLES
 
 ### Example 1: Close an open file
+```powershell
+PS C:\> Close-SmbOpenFile -FileId 4415226383589
 ```
-PS C:\>Close-SmbOpenFile -FileId 4415226383589
+```output
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383589'. 
@@ -47,8 +49,10 @@ Performing operation 'Close-File' on Target '4415226383589'.
 This command closes a file identified as 4415226383589 that is open by one of the clients of the SMB server.
 
 ### Example 2: Close open files for a session
+```powershell
+PS C:\> Close-SmbOpenFile -SessionId 4415226380393
 ```
-PS C:\>Close-SmbOpenFile -SessionId 4415226380393
+```output
 Confirm 
 Are you sure you want to perform this action? 
 Performing operation 'Close-File' on Target '4415226383589'. 
@@ -78,8 +82,8 @@ Performing operation 'Close-File' on Target '4415226383569'.
 This command closes one or more files that are open by one of the client identified with the session ID 4415226380393 of the SMB server.
 
 ### Example 3: Close open files that match a file name extension
-```
-PS C:\>Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match ".DOCX" | Close-SmbOpenFile -Force
+```powershell
+PS C:\> Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match "\.DOCX" | Close-SmbOpenFile -Force
 ```
 
 This command closes, without user confirmation, one or more files that are open by one of the clients of the SMB server and that match the file name extension .DOCX.

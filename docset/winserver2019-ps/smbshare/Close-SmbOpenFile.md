@@ -89,7 +89,7 @@ This command closes one or more files that are open by one of the client identif
 
 ### Example 3: Close open files that match a file name extension
 ```
-PS C:\>Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match "\.DOCX" | Close-SmbOpenFile -Force
+PS C:\> Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match "\.DOCX" | Close-SmbOpenFile -Force
 ```
 
 This command closes, without user confirmation, one or more files that are open by one of the clients of the SMB server and that match the file name extension .DOCX.
@@ -346,4 +346,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SmbOpenFile](./Get-SmbOpenFile.md)
-

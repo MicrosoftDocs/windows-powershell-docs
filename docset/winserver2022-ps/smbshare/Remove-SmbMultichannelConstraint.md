@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbMultichannelConstraint.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: smbshare
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/remove-smbmultichannelconstraint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-SmbMultichannelConstraint
-ms.reviewer:
-ms.assetid: 382A020C-5DD3-49CE-BBC4-7095E8EF7B48
 ---
 
 # Remove-SmbMultichannelConstraint

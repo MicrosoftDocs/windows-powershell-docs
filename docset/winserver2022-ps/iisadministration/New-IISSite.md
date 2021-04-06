@@ -2,18 +2,17 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: D7752E90-7913-4250-97CC-6178FDE9A955
 manager: dansimp
+Module Name: iisadministration
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
+ms.reviewer: 
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/new-iissite?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-IISSite
-ms.author: v-kaunu
-ms.reviewer:
 ---
 
 # New-IISSite

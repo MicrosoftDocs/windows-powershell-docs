@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: MsDtc
-Module Guid: 52923875-F2E3-4AD2-8E0C-96C7B10E2E3D
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390791
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: MsDtc
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 52923875-f2e3-4ad2-8e0c-96c7b10e2e3d
+Module Name: MsDtc
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C362E2E9-6D95-4A7F-A526-C553D116023B
+ms.topic: reference
+title: MsDtc
 ---
 
 # MsDtc Module

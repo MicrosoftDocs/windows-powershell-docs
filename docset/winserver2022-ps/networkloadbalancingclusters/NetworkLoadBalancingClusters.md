@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetworkLoadBalancingClusters
-Module Guid: 52832D3A-17D8-48FF-A5BC-F5078492ECBE
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285558
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.3.2
 Locale: en-US
-title: NetworkLoadBalancingClusters
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
+Module Name: NetworkLoadBalancingClusters
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 5633F599-8F57-4452-B083-B79D0E68C11E
+ms.topic: reference
+title: NetworkLoadBalancingClusters
 ---
 
 # NetworkLoadBalancingClusters Module

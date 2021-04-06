@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkTransition
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/enable-netiphttpsprofile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-NetIPHttpsProfile
-ms.reviewer:
-ms.assetid: 2D03CC4A-89CB-47B1-ABDE-7AB4E2DA0232
 ---
 
 # Enable-NetIPHttpsProfile

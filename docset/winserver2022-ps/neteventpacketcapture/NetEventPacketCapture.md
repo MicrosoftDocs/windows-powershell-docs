@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetEventPacketCapture
-Module Guid: 7E984F2F-35DA-48A2-A3C1-40CE59930A7C
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=532774
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetEventPacketCapture
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 7e984f2f-35da-48a2-a3c1-40ce59930a7c
+Module Name: NetEventPacketCapture
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 8F4825A6-2BB7-4093-AA4C-9EBE7623EB01
+ms.topic: reference
+title: NetEventPacketCapture
 ---
 
 # NetEventPacketCapture Module

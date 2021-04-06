@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Mpio-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Mpio
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/mpio/set-mpiosetting?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MPIOSetting
-ms.reviewer:
-ms.assetid: D72F57C7-F3A5-4D38-A658-BFA8B0A4B0FE
 ---
 
 # Set-MPIOSetting

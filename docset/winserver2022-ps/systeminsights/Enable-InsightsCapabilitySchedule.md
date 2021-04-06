@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
-Module Name: systeminsights
-Download Help Link: http://go.microsoft.com
-Locale: en-US
-title: Enable-InsightsCapabilitySchedule
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file:
-keywords: powershell, cmdlet
 author: Kateyanne
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+Locale: en-US
 manager: elizapo
+Module Name: SystemInsights
+ms.author: v-kaunu
 ms.date: 06/18/2018
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
-ms.assetid: 38D4C234-40FB-4E35-943F-5AC56EEB55A7
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/systeminsights/enable-insightscapabilityschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Enable-InsightsCapabilitySchedule
 ---
 
 # Enable-InsightsCapabilitySchedule
@@ -80,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name. 
+Specifies a capability using a capability name.
 
 ```yaml
 Type: String

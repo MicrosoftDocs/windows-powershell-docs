@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: WHEA
-Module Guid: B7BF4D74-F837-430E-810F-234F26021253
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390848
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: WHEA
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: b7bf4d74-f837-430e-810f-234f26021253
+Module Name: Whea
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 5881494F-DCEB-422C-8009-80D0630946B2
+ms.topic: reference
+title: WHEA
 ---
 
 # WHEA Module

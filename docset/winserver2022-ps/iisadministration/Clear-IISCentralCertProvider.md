@@ -2,20 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: CE40617B-880D-4566-B0BC-CAFA0601BE89
 manager: dansimp
-ms.mktglfcycl: manage
+Module Name: iisadministration
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/clear-iiscentralcertprovider?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-IISCentralCertProvider
-ms.author: v-kaunu
-ms.reviewer:
 ---
 
 # Clear-IISCentralCertProvider

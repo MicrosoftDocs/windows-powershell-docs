@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ConfigCI
-Module Guid: 28C9A37E-C849-4370-B672-E5563447B0E1
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=626871
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
-title: ConfigCI
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 28c9a37e-c849-4370-b672-e5563447b0e1
+Module Name: ConfigCI
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 64D8C55E-60B7-4867-AD39-ACF8AC69A9EE
+ms.topic: reference
+title: ConfigCI
 ---
 
 # ConfigCI Module

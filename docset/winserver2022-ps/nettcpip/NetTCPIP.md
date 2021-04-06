@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetTCPIP
-Module Guid: 2D0B6C7F-16A0-4185-843F-AE47B6DB4551
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390802
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.4.1
 Locale: en-US
-title: NetTCPIP
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 2d0b6c7f-16a0-4185-843f-ae47b6db4551
+Module Name: NetTCPIP
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 2E018228-3ABE-4901-B33D-92C2D16262CC
+ms.topic: reference
+title: NetTCPIP
 ---
 
 # NetTCPIP Module

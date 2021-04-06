@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: SmbShare
-Module Guid: 3AF1699D-CC54-4E54-81CF-28D2DF5CCE0A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390827
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-title: SmbShare
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
+Module Name: smbshare
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: D4DCA601-168D-4943-9778-1975F870BAA9
+ms.topic: reference
+title: SmbShare
 ---
 
 # SmbShare Module

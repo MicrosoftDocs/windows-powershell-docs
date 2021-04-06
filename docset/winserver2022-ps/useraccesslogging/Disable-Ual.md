@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MsftUal_Admin.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: UserAccessLogging
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/disable-ual?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-Ual
-ms.reviewer:
-ms.assetid: DA0D5341-D9DB-4D04-AF50-BF16C4041BB0
 ---
 
 # Disable-Ual

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetworkSwitchConfiguration-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: NetworkSwitchManager
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/networkswitchmanager/restore-networkswitchconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Restore-NetworkSwitchConfiguration
+ms.reviewer:
+ms.assetid: B1210FE0-9807-4690-BBA3-C0D46E0E1888
 ---
 
 # Restore-NetworkSwitchConfiguration

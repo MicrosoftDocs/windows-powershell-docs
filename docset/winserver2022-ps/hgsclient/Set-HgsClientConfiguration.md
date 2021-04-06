@@ -2,19 +2,21 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsClient-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
+ms.assetid: 0C150F6E-C13B-49D7-8FE5-AE197AB49038
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/hgsclient/set-hgsclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Set-HgsClientConfiguration
+ms.reviewer:
 ---
 
 # Set-HgsClientConfiguration

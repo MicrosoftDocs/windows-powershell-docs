@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NfsOpenFile.cmdletDefinition.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: nfs
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsopenfile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-NfsOpenFile
+ms.reviewer:
+ms.assetid: D8B6D787-7615-4DF0-A7E9-90311AA2BAAD
 ---
 
 # Get-NfsOpenFile

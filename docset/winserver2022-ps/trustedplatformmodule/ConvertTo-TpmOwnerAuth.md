@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: TrustedPlatformModule
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/convertto-tpmownerauth?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: ConvertTo-TpmOwnerAuth
+ms.reviewer:
+ms.assetid: 1BF5CA4A-9E9B-4C8C-8B7D-ECC6FF0716EF
 ---
 
 # ConvertTo-TpmOwnerAuth

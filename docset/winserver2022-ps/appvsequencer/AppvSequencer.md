@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: AppvSequencer
+Module Guid: 120C1A42-E4B5-4FCF-9DBD-D416BD3B41F5
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403113
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
-Module Guid: 120c1a42-e4b5-4fcf-9dbd-d416bd3b41f5
-Module Name: AppVSequencer
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: AppvSequencer
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: DFDD1425-A91A-4F29-99D9-B267ABCAB242
 ---
 
 # AppvSequencer Module

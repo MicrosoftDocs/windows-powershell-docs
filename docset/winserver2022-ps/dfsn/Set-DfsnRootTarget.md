@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DfsNamespaceRootTarget.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: dfsn
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/dfsn/set-dfsnroottarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Set-DfsnRootTarget
+ms.reviewer:
+ms.assetid: 2B9018A4-5B74-40D4-BD6F-04B08A0B2AD5
 ---
 
 # Set-DfsnRootTarget

@@ -1,21 +1,24 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: jgerend
+Module Name: systeminsights
+Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
+Download Help Link: http://go.microsoft.com
 Help Version: 5.0.0.1
 Locale: en-US
-manager: elizapo
-Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
-Module Name: SystemInsights
-ms.author: jgerend
-ms.date: 06/18/2018
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: SystemInsights
+ms.author: v-anbarr
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: elizapo
+ms.date: 06/18/2018
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
 ---
 
 # SystemInsights Module
@@ -46,7 +49,7 @@ The **Enable-InsightsCapabilitySchedule** cmdlet enables periodic predictions fo
 The **Get-InsightsCapability** cmdlet gets the specified capability, or all available capabilities if left unspecified.
 
 ### [Get-InsightsCapabilityAction](Get-InsightsCapabilityAction.md)
-The **Get-InsightsCapabilityAction** cmdlet gets the actions for the specified capabilities.
+The **Get-InsightsCapabilityAction** cmdlet gets the actions for the specified capabilities. 
 
 ### [Get-InsightsCapabilityResult](Get-InsightsCapabilityResult.md)
 The **Get-InsightsCapabilityResult** cmdlet gets the most recent prediction or the last 30 predictions from the specified capabilities.
@@ -58,7 +61,7 @@ The **Get-InsightsCapabilitySchedule** cmdlet gets the schedule for the specifie
 The **Invoke-InsightsCapability** cmdlet invokes the specified capability.
 
 ### [Remove-InsightsCapability](Remove-InsightsCapability.md)
-The **Remove-InsightsCapability** cmdlet permanently removes a capability from System Insights.
+The **Remove-InsightsCapability** cmdlet permanently removes a capability from System Insights. 
 
 ### [Remove-InsightsCapabilityAction](Remove-InsightsCapabilityAction.md)
 The **Remove-InsightsCapabilityAction** cmdlet removes the action(s) associated with a capability.

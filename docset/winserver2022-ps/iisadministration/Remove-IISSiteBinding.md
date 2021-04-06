@@ -1,13 +1,14 @@
 ---
-author: Kateyanne
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-Module Name: iisadministration
-ms.author: v-kaunu
-ms.reviewer: 
-online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iissitebinding?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version:
 schema: 2.0.0
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 title: Remove-IISSiteBinding
+ms.author: v-kaunu
+author: Kateyanne
+ms.reviewer:
+online version:
+keywords: powershell, cmdlet
 ---
 
 # Remove-IISSiteBinding

@@ -1,11 +1,11 @@
 ---
-author: Kateyanne
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 Module Name: ShieldedVMDataFile
-ms.author: v-kaunu
-ms.reviewer: 
-online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
+ms.reviewer:
+ms.author: v-kaunu
+author: Kateyanne
 title: New-ShieldingDataFile
 ---
 

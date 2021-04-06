@@ -2,19 +2,21 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
+ms.assetid: B2B0D2DB-24E7-4B87-80F1-FF36097ADB13
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/adfs/test-adfsfarmbehaviorlevelrestore?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Test-AdfsFarmBehaviorLevelRestore
+ms.reviewer:
 ---
 
 # Test-AdfsFarmBehaviorLevelRestore

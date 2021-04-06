@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: DnsServer
+Module Guid: 46F598E5-9907-42B2-AFBB-68E5F7E34604
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390769
 Help Version: 5.0.5.2
 Locale: en-US
-manager: jasgro
-Module Guid: 46f598e5-9907-42b2-afbb-68e5f7e34604
-Module Name: DnsServer
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: DnsServer
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
 ---
 
 # DnsServer Module

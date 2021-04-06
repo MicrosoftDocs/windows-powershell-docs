@@ -2,17 +2,18 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+keywords: powershell, cmdlet
+ms.assetid: C6A820C5-661A-4DBD-B829-DC8E03C6777C
 manager: dansimp
-Module Name: iisadministration
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
-ms.reviewer: 
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/iisadministration/export-iisconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Export-IISConfiguration
+ms.reviewer:
 ---
 
 # Export-IISConfiguration

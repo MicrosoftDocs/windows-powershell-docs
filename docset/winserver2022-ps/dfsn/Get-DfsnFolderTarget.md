@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: DfsNamespaceFolderTarget.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: dfsn
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnfoldertarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-DfsnFolderTarget
+ms.reviewer:
+ms.assetid: 9CC8E2DF-1EBF-4E77-A5EF-D4B60B5367E9
 ---
 
 # Get-DfsnFolderTarget

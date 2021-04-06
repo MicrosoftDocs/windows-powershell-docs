@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: PCSVDevice
+Module Guid: 576FF287-7D01-46A3-8A88-94DF7581A2B0
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390809
 Help Version: 2.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: 576ff287-7d01-46a3-8a88-94df7581a2b0
-Module Name: PcsvDevice
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: PCSVDevice
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 108F3AEF-F78E-4950-957A-AA36B9FFFF26
 ---
 
 # PCSVDevice Module

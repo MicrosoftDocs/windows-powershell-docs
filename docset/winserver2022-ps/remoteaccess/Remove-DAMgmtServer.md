@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DAMgmtServer_v1.0.0.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: RemoteAccess
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-damgmtserver?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Remove-DAMgmtServer
+ms.reviewer:
+ms.assetid: 538962B5-D9D9-4031-9688-20A6B62CE244
 ---
 
 # Remove-DAMgmtServer

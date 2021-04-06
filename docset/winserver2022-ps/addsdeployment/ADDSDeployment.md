@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: ADDSDeployment
+Module Guid: DF736400-2E72-4A7B-8EDA-D5B28421881F
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
 Help Version: 4.0.3.1
 Locale: en-US
-manager: jasgro
-Module Guid: df736400-2e72-4a7b-8eda-d5b28421881f
-Module Name: ADDSDeployment
-ms.author: v-anbarr
-ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: ADDSDeployment
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/27/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 7F1FAA42-ECF3-4C09-B95D-961C5E18453A
 ---
 
 # ADDSDeployment Module

@@ -2,19 +2,21 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
+ms.assetid: 368AA5D3-5523-47EE-8A0A-049CB8D7AB37
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsserverapplication?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version:
 schema: 2.0.0
 title: Get-AdfsServerApplication
+ms.reviewer:
 ---
 
 # Get-AdfsServerApplication

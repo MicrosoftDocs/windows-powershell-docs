@@ -1,27 +1,29 @@
 ---
-author: Kateyanne
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
-Locale: en-US
-manager: lizapo
-Module Name: SystemInsights
-ms.author: v-kaunu
-ms.date: 06/18/2018
 ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
-ms.technology: 
-ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/systeminsights/add-insightscapability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.author: v-kaunu
+Module Name: systeminsights
+Download Help Link: http://go.microsoft.com
+Locale: en-US
 title: Add-InsightsCapability
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
+keywords: powershell, cmdlet
+author: Kateyanne
+manager: lizapo
+ms.date: 06/18/2018
+ms.topic: reference
+ms.prod: w10
+ms.technology: 
+ms.assetid: 38DCC777-40BB-4E35-943F-5AC57EEB53A7
+schema: 2.0.0
 ---
 
 # Add-InsightsCapability
 
 ## SYNOPSIS
-Adds new predictive capabilities to System Insights.
+Adds new predictive capabilities to System Insights. 
 
 ## SYNTAX
 

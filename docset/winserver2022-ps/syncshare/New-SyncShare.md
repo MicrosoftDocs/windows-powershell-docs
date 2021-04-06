@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SyncShare.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: SyncShare
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/syncshare/new-syncshare?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: New-SyncShare
+ms.reviewer:
+ms.assetid: 2E1F761F-D922-4C65-BEFF-15034F0F964D
 ---
 
 # New-SyncShare

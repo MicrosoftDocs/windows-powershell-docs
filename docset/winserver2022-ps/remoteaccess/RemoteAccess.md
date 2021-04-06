@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: RemoteAccess
+Module Guid: D9D222A9-756C-41F8-B23A-2A596093216B
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390819
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
-Module Guid: d9d222a9-756c-41f8-b23a-2a596093216b
-Module Name: RemoteAccess
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: RemoteAccess
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 6A012DA3-8BD5-4EC5-8CF6-75A3F1C00430
 ---
 
 # RemoteAccess Module

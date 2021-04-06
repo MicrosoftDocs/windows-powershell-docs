@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITarget.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: iSCSI
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/iscsi/disconnect-iscsitarget?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Disconnect-IscsiTarget
+ms.reviewer:
+ms.assetid: C6D1C713-F3D8-4BC2-9DDC-B2FD87E0C025
 ---
 
 # Disconnect-IscsiTarget

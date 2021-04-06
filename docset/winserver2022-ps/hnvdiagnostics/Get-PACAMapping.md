@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Get-PACAMapping-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: HNVDiagnostics
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/hnvdiagnostics/get-pacamapping?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-PACAMapping
+ms.reviewer:
+ms.assetid: D56D127D-ADEF-4F17-8D12-8699D27694E3
 ---
 
 # Get-PACAMapping

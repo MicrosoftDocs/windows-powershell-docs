@@ -1,21 +1,23 @@
 ---
-author: Kateyanne
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
-Locale: en-US
-manager: elizapo
-Module Name: SystemInsights
-ms.author: v-kaunu
-ms.date: 06/18/2018
 ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
-ms.technology: 
-ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/systeminsights/set-insightscapabilityaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.author: v-kaunu
+Module Name: systeminsights 
+Download Help Link: http://go.microsoft.com
+Locale: en-US
 title: Set-InsightsCapabilityAction
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
+keywords: powershell, cmdlet
+author: Kateyanne
+manager: elizapo
+ms.date: 06/18/2018
+ms.topic: reference
+ms.prod: w10
+ms.technology: 
+ms.assetid: 38D3C433-40AB-4E45-765F-5AC57EEB55A7
+schema: 2.0.0
 ---
 
 # Set-InsightsCapabilityAction
@@ -45,7 +47,7 @@ PS C:\> $Cred = Get-Credential
 PS C:\> Set-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Critical -Action "C:\Users\Public\CriticalAction.ps1" -ActionCredential $Cred
 ```
 
-This example sets a **Critical** action for the **CPU capacity forecasting** capability, using the credentials specified using the **Get-Credential** cmdlet.
+This example sets a **Critical** action for the **CPU capacity forecasting** capability, using the credentials specified using the **Get-Credential** cmdlet. 
 
 ### Example 2
 ```powershell
@@ -53,7 +55,7 @@ PS C:\> $Cred = Get-Credential
 PS C:\> Set-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Warning -Action "C:\Users\Public\WarningAction.ps1" -ActionCredential $Cred
 ```
 
-This example sets a **Warning** action for the **CPU capacity forecasting** capability, using the credentials specified using the **Get-Credential** cmdlet.
+This example sets a **Warning** action for the **CPU capacity forecasting** capability, using the credentials specified using the **Get-Credential** cmdlet. 
 
 ## PARAMETERS
 
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name.
+Specifies a capability using a capability name. 
 
 ```yaml
 Type: String

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DnsServerZoneUnsign_v1.0.0.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: DnsServer
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/dnsserver/invoke-dnsserverzoneunsign?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Invoke-DnsServerZoneUnsign
+ms.reviewer:
+ms.assetid: 4274B8EF-1B0E-498D-83B8-F0AB49A6798E
 ---
 
 # Invoke-DnsServerZoneUnsign

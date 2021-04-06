@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: AppvClient
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/appvclient/send-appvclientreport?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Send-AppvClientReport
+ms.reviewer:
+ms.assetid: BD6C1D47-24C2-453C-859F-9FA27B5AB241
 ---
 
 # Send-AppvClientReport

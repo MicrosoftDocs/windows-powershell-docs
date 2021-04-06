@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: BitsTransfer
+Module Guid: 8FA5064B-8479-4C5C-86EA-0D311FE48875
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390756
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: 8fa5064b-8479-4c5c-86ea-0d311fe48875
-Module Name: BitsTransfer
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BitsTransfer
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 34F36891-5E50-42FD-B5F1-038BF55946B6
 ---
 
 # BitsTransfer Module

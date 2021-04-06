@@ -2,18 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+keywords: powershell, cmdlet
+ms.assetid: EC94ABF0-3C59-4237-9654-3169F0D002A6
 manager: dansimp
-Module Name: iisadministration
-ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iisconfigattributevalue?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-IISConfigAttributeValue
+ms.author: v-kaunu
+ms.reviewer:
 ---
 
 # Get-IISConfigAttributeValue

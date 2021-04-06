@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterEncapsulatedPacketTaskOffload.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: netadapter
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterencapsulatedpackettaskoffload?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-NetAdapterEncapsulatedPacketTaskOffload
+ms.reviewer:
+ms.assetid: 325B2499-57FC-4993-B89A-83FEA659D3B7
 ---
 
 # Get-NetAdapterEncapsulatedPacketTaskOffload

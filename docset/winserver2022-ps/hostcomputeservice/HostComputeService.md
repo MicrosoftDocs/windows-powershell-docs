@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: HostComputeService
+Module Guid: D19D4F4C-6CA6-4071-ABCF-3AB62544A1A1
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=627287
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: d19d4f4c-6ca6-4071-abcf-3ab62544a1a1
-Module Name: HostComputeService
-ms.author: v-anbarr
-ms.date: 12/21/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: HostComputeService
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/21/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 6BE9E974-A772-474D-A27E-5F15E9FAC8C8
 ---
 
 # HostComputeService Module

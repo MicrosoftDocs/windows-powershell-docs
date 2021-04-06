@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PnpDevice.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: PnpDevice
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/pnpdevice/disable-pnpdevice?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Disable-PnpDevice
+ms.reviewer:
+ms.assetid: 63EADD9D-118B-4AEF-810F-35655D5FB6FC
 ---
 
 # Disable-PnpDevice

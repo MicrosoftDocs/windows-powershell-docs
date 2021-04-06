@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: BootEventCollector
+Module Guid: 7E4C6113-1789-4C2D-ABAA-BEA1EF5C62E8
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=518772
 Help Version: 5.0.0.2
 Locale: en-US
-manager: jasgro
-Module Guid: 7e4c6113-1789-4c2d-abaa-bea1ef5c62e8
-Module Name: booteventcollector
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BootEventCollector
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 394B60AC-9516-494B-86D7-50F767321820
 ---
 
 # BootEventCollector Module

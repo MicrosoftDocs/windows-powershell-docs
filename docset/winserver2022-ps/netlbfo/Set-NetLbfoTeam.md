@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetLbfoTeam.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: NetLbfo
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/netlbfo/set-netlbfoteam?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Set-NetLbfoTeam
+ms.reviewer:
+ms.assetid: 15D7041C-D5BD-4F55-833F-0F25B1E5445A
 ---
 
 # Set-NetLbfoTeam

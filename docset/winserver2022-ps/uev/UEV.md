@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: UEV
+Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=826061
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
-Module Guid: d22e34c9-0a99-47d7-98f3-c0570257deb6
-Module Name: UEV
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: UEV
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: AC9B47F4-19F7-4EB5-B5FE-70790B7A825D
 ---
 
 # UEV Module

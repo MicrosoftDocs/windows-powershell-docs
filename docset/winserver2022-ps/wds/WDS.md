@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: WDS
+Module Guid: 95B28FD4-92C3-41E8-B338-2DF356BA9ECA
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=280236
 Help Version: 4.0.3.1
 Locale: en-US
-manager: jasgro
-Module Guid: 95b28fd4-92c3-41e8-b338-2df356ba9eca
-Module Name: WDS
-ms.author: v-anbarr
-ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: WDS
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/27/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 0564E442-8543-4621-8054-C550D246909B
 ---
 
 # WDS Module

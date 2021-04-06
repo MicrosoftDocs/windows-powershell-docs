@@ -2,19 +2,21 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: HgsClient-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsClient
+ms.assetid: 488CF45F-3E4C-4032-8958-2D6E8FA8BB2D
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/hgsclient/new-hgsguardian?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: New-HgsGuardian
+ms.reviewer:
 ---
 
 # New-HgsGuardian

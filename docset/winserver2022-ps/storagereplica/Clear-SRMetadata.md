@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: storagereplica
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/storagereplica/clear-srmetadata?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Clear-SRMetadata
+ms.reviewer:
+ms.assetid: E27DDA10-F489-4D44-B36A-BF0423CC6107
 ---
 
 # Clear-SRMetadata

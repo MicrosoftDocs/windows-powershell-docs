@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbWitnessWmiClient.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: SmbWitness
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/smbwitness/get-smbwitnessclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-SmbWitnessClient
+ms.reviewer:
+ms.assetid: 3E363C82-B492-486D-B964-7253E467F3E3
 ---
 
 # Get-SmbWitnessClient

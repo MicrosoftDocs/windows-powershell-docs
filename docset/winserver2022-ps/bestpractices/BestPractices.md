@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: BestPractices
+Module Guid: 5551EA86-919D-499B-948F-87305E4F2344
+Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285737
 Help Version: 4.0.2.1
 Locale: en-US
-manager: jasgro
-Module Guid: 5551ea86-919d-499b-948f-87305e4f2344
-Module Name: BestPractices
-ms.author: v-anbarr
-ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BestPractices
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/27/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: F8643E33-1240-44C1-A3E3-08A355A4E190
 ---
 
 # BestPractices Module

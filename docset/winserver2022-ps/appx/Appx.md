@@ -1,19 +1,21 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.author: v-anbarr
+Module Name: Appx
+Module Guid: AEEF2BEF-EBA9-4A1D-A3D2-D0B52DF76DEB
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=525624
 Help Version: 5.0.6.4
 Locale: en-US
-manager: jasgro
-Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
-Module Name: Appx
-ms.author: v-anbarr
-ms.date: 05/19/2017
-ms.prod: w10
-ms.reviewer: 
-ms.technology: powershell-windows
-ms.topic: reference
 title: Appx
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 2017-05-19
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 1848DCF8-9EA3-4E54-9DFC-C40A6CC14BB6
 ---
 
 # Appx Module

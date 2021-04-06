@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.BackgroundIntelligentTransfer.Management.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: BitsTransfer
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/bitstransfer/complete-bitstransfer?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Complete-BitsTransfer
+ms.reviewer:
+ms.assetid: 7D1241E4-79D4-408B-8F95-2250E940C250
 ---
 
 # Complete-BitsTransfer

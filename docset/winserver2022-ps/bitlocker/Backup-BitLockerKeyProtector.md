@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: bitlocker
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/bitlocker/backup-bitlockerkeyprotector?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Backup-BitLockerKeyProtector
+ms.reviewer:
+ms.assetid: 9D570405-6330-40F7-B755-6A77EED3E7DB
 ---
 
 # Backup-BitLockerKeyProtector

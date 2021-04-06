@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: NetworkController
+Module Guid: 05718206-C147-47B6-83F5-92F52AF61C6E
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=216368
 Help Version: 5.0.6.1
 Locale: en-us
-manager: jasgro
-Module Guid: 05718206-c147-47b6-83f5-92f52af61c6e
-Module Name: NetworkController
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: NetworkController
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: F917C6D6-16F8-447F-A187-B3D03F25D3CE
 ---
 
 # NetworkController Module

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Firewall.Commands.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: NetSecurity
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/netsecurity/new-netipsecmainmodecryptoproposal?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: New-NetIPsecMainModeCryptoProposal
+ms.reviewer:
+ms.assetid: BA2DC739-6357-41C1-8F85-6A1E488DBE6A
 ---
 
 # New-NetIPsecMainModeCryptoProposal

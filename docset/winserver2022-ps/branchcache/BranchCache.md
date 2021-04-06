@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: BranchCache
+Module Guid: D57AEE1E-6FE7-4BBC-8C57-8675A3A83E0D
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390757
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: d57aee1e-6fe7-4bbc-8c57-8675a3a83e0d
-Module Name: BranchCache
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BranchCache
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 05AD9108-DE76-4F8C-B0AC-DFB2E99ADD66
 ---
 
 # BranchCache Module

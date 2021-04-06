@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: UserAccessLogging
+Module Guid: E507509A-EB81-4AF2-A141-B50CB24000F0
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390840
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: e507509a-eb81-4af2-a141-b50cb24000f0
-Module Name: UserAccessLogging
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: UserAccessLogging
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 40047A3B-9473-49D1-B164-84FA6CCC9AFA
 ---
 
 # UserAccessLogging Module

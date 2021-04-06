@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallInterfaceFilter.cmdletDefinition.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: NetSecurity
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallinterfacefilter?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-NetFirewallInterfaceFilter
+ms.reviewer:
+ms.assetid: B1323EB6-0E78-4FD2-B7E3-3345F2407C9B
 ---
 
 # Get-NetFirewallInterfaceFilter

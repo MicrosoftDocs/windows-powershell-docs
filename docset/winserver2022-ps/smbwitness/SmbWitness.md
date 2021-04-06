@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: SmbWitness
+Module Guid: EF018256-3318-4E74-A823-158022778487
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390828
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: ef018256-3318-4e74-a823-158022778487
-Module Name: SmbWitness
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: SmbWitness
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 4F0AD55F-79C7-4918-B66D-D337FC3DBB99
 ---
 
 # SmbWitness Module

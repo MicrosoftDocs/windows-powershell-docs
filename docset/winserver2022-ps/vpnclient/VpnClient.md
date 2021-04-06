@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: VpnClient
+Module Guid: 3389CC73-DAA3-4D25-BD50-B1730925D2DF
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390842
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: 3389cc73-daa3-4d25-bd50-b1730925d2df
-Module Name: VpnClient
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: VpnClient
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 71B470A7-DC58-4A30-9F5E-AB0B25A64625
 ---
 
 # VpnClient Module

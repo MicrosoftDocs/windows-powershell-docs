@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: BitLocker
+Module Guid: 0FF02BB8-300A-4262-AC08-E06DD810F1B6
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390755
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: 0ff02bb8-300a-4262-ac08-e06dd810f1b6
-Module Name: bitlocker
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BitLocker
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 6F49F904-E04D-4B90-AFBC-84BC45D4D30D
 ---
 
 # BitLocker Module

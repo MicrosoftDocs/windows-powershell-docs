@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: HNVDiagnostics
+Module Guid: 75E89C8E-8680-4EA4-BB7E-E55316BD56A6
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799342
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
-Module Guid: 75e89c8e-8680-4ea4-bb7e-e55316bd56a6
-Module Name: HNVDiagnostics
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: HNVDiagnostics
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 2843AED7-DCF9-4E2E-A520-A205A4743FFE
 ---
 
 # HNVDiagnostics Module

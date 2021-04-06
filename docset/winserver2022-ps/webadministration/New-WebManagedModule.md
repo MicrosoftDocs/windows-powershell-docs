@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: WebAdministration
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/webadministration/new-webmanagedmodule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: New-WebManagedModule
+ms.reviewer:
+ms.assetid: 188FB11F-E503-4A30-9A09-B6A89FAC54A7
 ---
 
 # New-WebManagedModule

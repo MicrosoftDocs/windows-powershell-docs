@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WdsClient_v1.0.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: WDS
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/wds/approve-wdsclient?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Approve-WdsClient
+ms.reviewer:
+ms.assetid: 2B779046-40BB-4D5F-9B8C-A9ABF78D9F5E
 ---
 
 # Approve-WdsClient

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MPIOClaimedHW.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: Mpio
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/mpio/update-mpioclaimedhw?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Update-MPIOClaimedHW
+ms.reviewer:
+ms.assetid: 1E060953-FA34-4BF1-891E-249A1DBAC3FB
 ---
 
 # Update-MPIOClaimedHW

@@ -2,17 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
 Module Name: Appx
+ms.assetid: 91B9C397-BE94-4631-8739-F41DC41CA31E
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/appx/get-appxlog?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version:
 schema: 2.0.0
 title: Get-AppxLog
 ---

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MPIOAvailableHW.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: Mpio
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/mpio/get-mpioavailablehw?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-MPIOAvailableHW
+ms.reviewer:
+ms.assetid: AE7B0548-14A7-4645-9E72-AE6E30138207
 ---
 
 # Get-MPIOAvailableHW

@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BranchCacheOrchestrator.cdxml-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: BranchCache
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/branchcache/add-bcdatacacheextension?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Add-BCDataCacheExtension
+ms.reviewer:
+ms.assetid: 4A04E8AB-1697-43C5-A936-8061F1B98EEB
 ---
 
 # Add-BCDataCacheExtension

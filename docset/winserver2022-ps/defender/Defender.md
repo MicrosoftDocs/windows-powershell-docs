@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: Defender
+Module Guid: C46BE3DC-30A9-452F-A5FD-4BF9CA87A854
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390762
 Help Version: 5.0.3.1
 Locale: en-US
-manager: jasgro
-Module Guid: c46be3dc-30a9-452f-a5fd-4bf9ca87a854
-Module Name: Defender
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: Defender
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 00797342-0AAC-4FFF-84FE-4749DA9242D6
 ---
 
 # Defender Module

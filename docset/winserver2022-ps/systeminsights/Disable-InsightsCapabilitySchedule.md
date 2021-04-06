@@ -1,21 +1,23 @@
 ---
-author: Kateyanne
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
-Locale: en-US
-manager: elizapo
-Module Name: SystemInsights
-ms.author: v-kaunu
-ms.date: 06/18/2018
 ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
-ms.technology: 
-ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/systeminsights/disable-insightscapabilityschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.author: v-kaunu
+Module Name: systeminsights
+Download Help Link: http://go.microsoft.com
+Locale: en-US
 title: Disable-InsightsCapabilitySchedule
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
+keywords: powershell, cmdlet
+author: Kateyanne
+manager: elizapo
+ms.date: 06/18/2018
+ms.topic: reference
+ms.prod: w10
+ms.technology: 
+ms.assetid: 38D3C123-40BB-4E35-943F-5AC47EEB55A6
+schema: 2.0.0
 ---
 
 # Disable-InsightsCapabilitySchedule
@@ -43,7 +45,7 @@ The **Disable-InsightsCapabilitySchedule** cmdlet disables periodic predictions 
 PS C:\> Disable-InsightsCapabilitySchedule -Name "CPU capacity forecasting"
 ```
 
-This example disables periodic predictions for the **CPU capacity forecasting** capability.
+This example disables periodic predictions for the **CPU capacity forecasting** capability. 
 
 ## PARAMETERS
 
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name.
+Specifies a capability using a capability name. 
 
 ```yaml
 Type: String

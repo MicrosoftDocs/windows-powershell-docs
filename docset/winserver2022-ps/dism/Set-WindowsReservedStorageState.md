@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
 Module Name: dism
-online version: https://docs.microsoft.com/powershell/module/dism/set-windowsreservedstoragestate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://go.microsoft.com/fwlink/?LinkId=289367
 schema: 2.0.0
 ---
 

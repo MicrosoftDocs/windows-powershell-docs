@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: wsbcmdlet.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: WindowsServerBackup
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbbaremetalrecovery?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Get-WBBareMetalRecovery
+ms.reviewer:
+ms.assetid: D13531F1-43DE-4CDD-95B8-D93961005D4E
 ---
 
 # Get-WBBareMetalRecovery

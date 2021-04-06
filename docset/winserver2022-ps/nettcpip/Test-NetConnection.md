@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Test-NetConnection-help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: NetTCPIP
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/nettcpip/test-netconnection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Test-NetConnection
+ms.reviewer:
+ms.assetid: F76921D4-3657-40BF-A99F-2E83609EA048
 ---
 
 # Test-NetConnection

@@ -1,12 +1,12 @@
 ---
+Module Name: HgsClient
+Module Guid: DE3E9B0F-0845-4B05-8CB1-65669405130C
+ms.reviewer:
+ms.author: v-anbarr
 author: andreabarr
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519076
 Help Version: 5.0.0.2
 Locale: en-US
-Module Guid: de3e9b0f-0845-4b05-8cb1-65669405130c
-Module Name: HgsClient
-ms.author: v-anbarr
-ms.reviewer: 
 title: HgsClient
 ---
 

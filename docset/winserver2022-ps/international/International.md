@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: International
+Module Guid: 561544E6-3A83-4D24-B140-78AD771EAF10
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390776
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
-Module Name: International
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: International
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 907EAB19-5023-44EE-A421-085168E561E8
 ---
 
 # International Module

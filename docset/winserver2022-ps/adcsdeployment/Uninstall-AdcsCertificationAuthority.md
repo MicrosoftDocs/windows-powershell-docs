@@ -1,20 +1,21 @@
 ---
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+keywords: powershell, cmdlet
 manager: jasgro
-Module Name: ADCSDeployment
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcscertificationauthority?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: 
 schema: 2.0.0
 title: Uninstall-AdcsCertificationAuthority
+ms.reviewer:
+ms.assetid: 714B6C69-4B88-4CB4-8477-AF36325663A3
 ---
 
 # Uninstall-AdcsCertificationAuthority

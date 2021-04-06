@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: StorageQoS
+Module Guid: 18CD46DA-E6A6-47F6-84B3-D4EDD6E3ECCF
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=216367
 Help Version: 5.0.2.1
 Locale: en-US
-manager: jasgro
-Module Guid: 18cd46da-e6a6-47f6-84b3-d4edd6e3eccf
-Module Name: StorageQoS
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: StorageQoS
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 141B4BB3-EABD-4F8A-9F27-D434E0C32C18
 ---
 
 # StorageQoS Module

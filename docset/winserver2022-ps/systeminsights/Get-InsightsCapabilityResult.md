@@ -1,21 +1,23 @@
 ---
-author: Kateyanne
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
-Locale: en-US
-manager: elizapo
-Module Name: SystemInsights
-ms.author: v-kaunu
-ms.date: 06/18/2018
 ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
 ms.sitesec: library
-ms.technology: 
-ms.topic: reference
-online version: https://docs.microsoft.com/powershell/module/systeminsights/get-insightscapabilityresult?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
-schema: 2.0.0
+ms.author: v-kaunu
+Module Name: systeminsights
+Download Help Link: http://go.microsoft.com
+Locale: en-US
 title: Get-InsightsCapabilityResult
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file:
+keywords: powershell, cmdlet
+author: Kateyanne
+manager: elizapo
+ms.date: 06/18/2018
+ms.topic: reference
+ms.prod: w10
+ms.technology: 
+ms.assetid: 38D3C589-40AB-4E35-843F-5AC57EEB65A7
+schema: 2.0.0
 ---
 
 # Get-InsightsCapabilityResult
@@ -47,7 +49,7 @@ This example gets the most recent result for the **CPU capacity forecasting** ca
 
 ### Example 2
 ```powershell
-PS C:\> Get-InsightsCapability | Get-InsightsCapabilityResult
+PS C:\> Get-InsightsCapability | Get-InsightsCapabilityResult 
 ```
 
 This example uses the **Get-InsightsCapability** and the pipeline operator to get the most recent result for all capabilities.
@@ -92,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -History
-Retrieves the most recent 30 predictions for the specified capability.
+Retrieves the most recent 30 predictions for the specified capability. 
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name.
+Specifies a capability using a capability name. 
 
 ```yaml
 Type: String

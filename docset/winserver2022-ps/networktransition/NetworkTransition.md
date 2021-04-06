@@ -1,21 +1,23 @@
 ---
-author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
+ms.mktglfcycl: manage
+ms.sitesec: library
+ms.author: v-anbarr
+Module Name: NetworkTransition
+Module Guid: EFF9CCF9-53ED-423D-B0DA-23E6772AACAA
+Download Help Link: http://go.microsoft.com/fwlink/?linkid=390806
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
-Module Guid: eff9ccf9-53ed-423d-b0da-23e6772aacaa
-Module Name: NetworkTransition
-ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: NetworkTransition
+ms.reviewer:
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+keywords: powershell, cmdlet
+author: andreabarr
+manager: jasgro
+ms.date: 12/20/2016
+ms.topic: reference
+ms.prod: w10
+ms.technology: powershell-windows
+ms.assetid: 4FF8EEDB-5AB8-4C70-8290-4B11A6D04791
 ---
 
 # NetworkTransition Module

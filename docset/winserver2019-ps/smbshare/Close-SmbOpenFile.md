@@ -92,6 +92,7 @@ Performing operation 'Close-File' on Target '4415226383569'.
 This command closes one or more files that are open by one of the clients identified with the session ID 4415226380393 of the SMB server.
 
 ### Example 3: Close open files that match a file name extension
+
 ```powershell
 PS C:\> Get-SmbOpenFile | Where-Object -Property ShareRelativePath -Match "\.DOCX" | Close-SmbOpenFile -Force
 ```

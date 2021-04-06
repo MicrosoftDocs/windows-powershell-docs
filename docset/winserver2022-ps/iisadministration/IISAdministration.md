@@ -1,21 +1,19 @@
 ---
-Module Name: IISAdministration
-Module Guid: 07640789-476A-4713-A091-F5B365129C32
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=216321
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.3.1
 Locale: en-uS
-title: IISAdministration
-ms.author: v-anbarr
-author: andreabarr
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-ms.date: 12/20/2016
-ms.topic: reference
-ms.prod: w10
-ms.technology: powershell-windows
-ms.assetid: 72D9819C-2ADD-4886-8C37-019FB403EFDB
 manager: dansimp
+Module Guid: 07640789-476a-4713-a091-f5b365129c32
+Module Name: iisadministration
+ms.author: v-anbarr
+ms.date: 12/20/2016
+ms.prod: w10
+ms.reviewer: 
+ms.technology: powershell-windows
+ms.topic: reference
+title: IISAdministration
 ---
 
 # IISAdministration Module

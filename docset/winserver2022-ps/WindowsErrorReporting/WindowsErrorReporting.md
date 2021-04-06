@@ -1,0 +1,35 @@
+---
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Help Version: 5.0.0.1
+Locale: en-US
+manager: jasgro
+Module Guid: 4bc4ded7-249b-41ac-973f-83af4d25d82b
+Module Name: WindowsErrorReporting
+ms.author: v-anbarr
+ms.date: 12/20/2016
+ms.mktglfcycl: manage
+ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
+ms.technology: powershell-windows
+ms.topic: reference
+title: WindowsErrorReporting
+---
+
+# WindowsErrorReporting Module
+## Description
+This reference provides cmdlet descriptions and syntax for all Windows Error Reporting cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+
+## WindowsErrorReporting Cmdlets
+### [Disable-WindowsErrorReporting](./Disable-WindowsErrorReporting.md)
+Disables Windows Error Reporting.
+
+### [Enable-WindowsErrorReporting](./Enable-WindowsErrorReporting.md)
+Enables Windows Error Reporting.
+
+### [Get-WindowsErrorReporting](./Get-WindowsErrorReporting.md)
+Retrieves the Windows Error Reporting status.
+
+

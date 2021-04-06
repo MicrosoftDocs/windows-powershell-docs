@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: DISM
-Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390767
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-title: DISM
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
+Module Name: dism
+ms.author: v-anbarr
 ms.date: 12/21/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 3DD32417-9E7D-41FE-BB76-8F24D96B835A
+ms.topic: reference
+title: DISM
 ---
 
 # DISM Module

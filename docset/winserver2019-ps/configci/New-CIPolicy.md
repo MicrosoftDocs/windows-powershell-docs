@@ -246,6 +246,75 @@ The first command gets drivers by using the **Get-SystemDriver** cmdlet, and the
 The second command creates rules at the Publisher level for the items stored in $DriverFiles.
 This example has the same effect as the single command in the second example.
 
+### Example 4: Create a policy with exception rules
+```
+PS C:\> $Rule_1 = New-CIPolicyRule -Level PcaCertificate -DriverFilePath '.\temp\signedFile.exe'
+PS C:\> $Exception_1 = New-CIPolicyRule -Level FileName -SpecificFileNameLevel  OriginalFileName -DriverFilePath '.\temp\FileToBlock.exe' -Deny
+PS C:\> $Exception_1
+
+
+Name           : C:\temp\FileToBlock.exe FileRule
+Id             : ID_DENY_D_1
+TypeId         : Deny
+Root           :
+FileVersionRef :
+AppIDRef       :
+Wellknown      : False
+Ekus           :
+Exceptions     :
+FileAttributes :
+FileException  : False
+UserMode       : False
+attributes     : {[AppIDs, ], [MinimumFileVersion, ], [FileName, FileToBlock.exe]}
+
+Name           : C:\temp\FileToBlock.exe FileRule
+Id             : ID_DENY_D_2
+TypeId         : Deny
+Root           :
+FileVersionRef :
+AppIDRef       :
+Wellknown      : False
+Ekus           :
+Exceptions     :
+FileAttributes :
+FileException  : False
+UserMode       : True
+attributes     : {[AppIDs, ], [MinimumFileVersion, ], [FileName, FileToBlock.exe]}
+
+PS C:\> $Exception_1[0].FileException = 1
+PS C:\> $Exception_1[1].FileException = 1
+
+PS C:\> $Rule_1[0].Exceptions += $Exception_1.ID
+
+PS C:\> $Rule_1
+
+
+Name           : Microsoft Testing PCA 2010
+Id             : ID_SIGNER_S_1
+TypeId         : Allow
+Root           : CCEA4720A5D9D56ACFAA31C19D9D34FA4CC0771720A99DC8A2C7A4CF38A9DEE8
+FileVersionRef :
+AppIDRef       :
+Wellknown      : False
+Ekus           :
+Exceptions     : {ID_DENY_D_1, ID_DENY_D_2}
+FileAttributes :
+FileException  : False
+UserMode       : True
+attributes     : {}
+
+$Rules += $Rule_1 + $Exception_1
+New-CIPolicy -MultiplePolicyFormat -FilePath ".\temp\Policy.xml" -Rules $Rules
+```
+
+The first set of commands creates an allow file rule based on the CA certificate used to sign the test application as well as a deny exception rule based on the original file name of the application to block. The deny rule has a user mode and kernel mode component which requires both sections' file exception boolean fields to be set to '1'. 
+
+The second set of commands sets the exceptions field of the allow file rule to the identifier of the exception rule. If the allow rule has both a user mode and kernel mode component, the exception fields of both components must have the identifier of the exception rule set. 
+
+The last commands merge the allow file rule and its deny rule exceptions into one rule variable which can be used in the New-CIPolicy creation step. The same process can be repeated for a deny file rule with allow exception rules.  
+
+File rule exceptions cannot use the PCA Certificate, Publisher, Signed Version, or File Publisher rule levels. 
+
 ## PARAMETERS
 
 ### -Audit
@@ -498,4 +567,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Merge-CIPolicy](./Merge-CIPolicy.md)
 
 [New-CIPolicyRule](./New-CIPolicyRule.md)
-

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkController
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networkcontroller/remove-networkcontrollerloadbalancermux?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetworkControllerLoadBalancerMux
-ms.reviewer:
-ms.assetid: 9B4D1C49-F618-43A1-ACCF-4A6DF1C20AD9
 ---
 
 # Remove-NetworkControllerLoadBalancerMux

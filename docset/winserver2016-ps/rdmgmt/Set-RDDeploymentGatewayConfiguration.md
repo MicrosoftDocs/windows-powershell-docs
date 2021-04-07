@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rddeploymentgatewayconfiguration?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDDeploymentGatewayConfiguration
-ms.reviewer:
-ms.assetid: 6D7CF025-7B04-4559-8077-B4C3273260DF
 ---
 
 # Set-RDDeploymentGatewayConfiguration
@@ -43,7 +42,7 @@ The RD Gateway role service enables authorized users to connect to virtual deskt
 PS C:\> Set-RDDeploymentGatewayConfiguration -GatewayMode Automatic -GatewayExternalFQDN "rdg.contoso.com" -LogonMethod AllowUserToSelectDuringConnection -UseCachedCredentials $True -BypassLocal $True -ConnectionBroker "rdcb.contoso.com"
 ```
 
-This command sets these options for the RD Gateway server: 
+This command sets these options for the RD Gateway server:
 
 - Authorized users automatically detect settings from the RD Gateway server.
 
@@ -62,7 +61,7 @@ By default, the value of this parameter is $False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -78,7 +77,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -93,7 +92,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +107,7 @@ Specifies the external FQDN of the RD Gateway server for this Remote Desktop dep
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -121,14 +120,14 @@ Accept wildcard characters: False
 Specifies a value that indicates whether or not authorized remote users use the RD Gateway server and, if so, whether they detect existing RD Gateway settings automatically or enter settings manually.
 The acceptable values for this parameter are:
 
-- DoNotUse: Remote users enter settings manually and do not use the Gateway. 
-- Custom: Remote users get Gateway settings from other parameters to this cmdlet. 
+- DoNotUse: Remote users enter settings manually and do not use the Gateway.
+- Custom: Remote users get Gateway settings from other parameters to this cmdlet.
 - Automatic: Remote users detect Gateway settings automatically.
 
 ```yaml
 Type: GatewayUsage
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotUse, Custom, Automatic
 
 Required: True
@@ -150,7 +149,7 @@ They must specify a password or smart card reader as the authentication method.
 ```yaml
 Type: GatewayAuthMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Password, Smartcard, AllowUserToSelectDuringConnection
 
 Required: False
@@ -166,7 +165,7 @@ Indicates whether or not remote users can use RD Gateway access credentials to a
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3

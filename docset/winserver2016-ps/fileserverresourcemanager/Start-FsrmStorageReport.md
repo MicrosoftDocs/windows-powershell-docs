@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: FsrmStorageReport.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: FileServerResourceManager
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/start-fsrmstoragereport?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-FsrmStorageReport
-ms.reviewer:
-ms.assetid: C524CA07-0DE5-41D8-B958-A05C6B27F9C8
 ---
 
 # Start-FsrmStorageReport

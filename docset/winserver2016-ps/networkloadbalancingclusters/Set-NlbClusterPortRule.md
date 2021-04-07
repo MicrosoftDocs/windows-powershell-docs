@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkLoadBalancingClusters
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclusterportrule?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NlbClusterPortRule
-ms.reviewer:
-ms.assetid: 51E2120E-4079-47D2-8A89-721D4530CEE9
 ---
 
 # Set-NlbClusterPortRule

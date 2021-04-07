@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: RemoteDesktop
-Module Guid: CMDLETS
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390820
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.2.0
 Locale: en-US
-title: RemoteDesktop
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: cmdlets
+Module Name: RDMgmt
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 2DCC3D8E-4155-44FC-AF0E-DC6608D33D8D
+ms.topic: reference
+title: RemoteDesktop
 ---
 
 # RemoteDesktop Module

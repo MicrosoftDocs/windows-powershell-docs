@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: AppLocker
+ms.author: v-kaunu
 ms.date: 09/28/2020
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/applocker/set-applockerpolicy?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AppLockerPolicy
-ms.reviewer:
-ms.assetid: A5B91C2A-73C3-417C-84B1-D430B42860A3
 ---
 
 # Set-AppLockerPolicy

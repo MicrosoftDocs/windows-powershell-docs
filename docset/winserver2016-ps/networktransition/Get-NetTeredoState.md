@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetTeredoState.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkTransition
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/get-netteredostate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetTeredoState
-ms.reviewer:
-ms.assetid: 862A11AC-F6D2-43F1-9C47-354304610627
 ---
 
 # Get-NetTeredoState

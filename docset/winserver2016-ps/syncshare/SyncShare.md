@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: SyncShare
-Module Guid: 5CE60F84-4560-40A6-AB86-62E7F8BA89D1
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390835
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: SyncShare
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 5ce60f84-4560-40a6-ab86-62e7f8ba89d1
+Module Name: SyncShare
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C13F141F-5421-486B-8F08-61936A9757E8
+ms.topic: reference
+title: SyncShare
 ---
 
 # SyncShare Module

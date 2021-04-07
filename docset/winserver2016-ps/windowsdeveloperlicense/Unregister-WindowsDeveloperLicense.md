@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: WindowsDeveloperLicense
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/windowsdeveloperlicense/unregister-windowsdeveloperlicense?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-WindowsDeveloperLicense
-ms.reviewer:
-ms.assetid: 2D3D3DD5-BA97-4613-BADE-609298A6229B
 ---
 
 # Unregister-WindowsDeveloperLicense

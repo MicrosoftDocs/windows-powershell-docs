@@ -170,7 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###
+### None
+
 This cmdlet accepts no input.
 
 ## OUTPUTS
@@ -184,4 +185,3 @@ This cmdlet accepts no input.
 [Get-RDServer](./Get-RDServer.md)
 
 [Remove-RDServer](./Remove-RDServer.md)
-

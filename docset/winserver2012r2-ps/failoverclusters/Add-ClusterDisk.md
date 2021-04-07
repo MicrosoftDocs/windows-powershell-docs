@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
 Module Name: FailoverClusters
-online version: 
+online version:
 schema: 2.0.0
 title: Add-ClusterDisk
 ms.author: v-kaunu
 ms.reviewer: brianlic
-description: 
+description:
 keywords: powershell, cmdlet
 author: Kateyanne
 manager: jasgro
@@ -40,9 +40,9 @@ The Get-ClusterAvailableDisk cmdlet gets information about disks that you can ad
 ### Example 1
 ```
 PS C:\>Get-ClusterAvailableDisk | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
-Cluster Disk 7      OnlinePending       Available Storage   Physical Disk 
+Name                State               Group               ResourceType
+----                -----               -----               ------------
+Cluster Disk 7      OnlinePending       Available Storage   Physical Disk
 Cluster Disk 8      OnlinePending       Available Storage   Physical Disk
 ```
 
@@ -51,8 +51,8 @@ This example identifies the disks that are ready to be added to the cluster, and
 ### EXAMPLE 2
 ```
 PS C:\>Get-ClusterAvailableDisk | Where-Object -FilterScript { $_.ScsiAddress -Eq 50331651 } | Add-ClusterDisk
-Name                State               Group               ResourceType 
-----                -----               -----               ------------ 
+Name                State               Group               ResourceType
+----                -----               -----               ------------
 Cluster Disk 4      OnlinePending       Available Storage   Physical Disk
 ```
 
@@ -61,8 +61,8 @@ This example examines disks that are ready to be added to the cluster, finds the
 ### EXAMPLE 3
 ```
 PS C:\>Get-Disk -Number 11 | Add-Clusterdisk
-Name                          State                         OwnerGroup                    ResourceType 
-----                          -----                         ----------                    ------------ 
+Name                          State                         OwnerGroup                    ResourceType
+----                          -----                         ----------                    ------------
 Cluster Disk 5                OnlinePending                 Available Storage             Physical Disk
 ```
 
@@ -77,7 +77,7 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +93,7 @@ The list of disks is generated with the Get-ClusterAvailableDisk  cmdlet.
 ```yaml
 Type: PSObject[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -131,5 +131,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 
 [Test-Cluster](./Test-Cluster.md)
-
-

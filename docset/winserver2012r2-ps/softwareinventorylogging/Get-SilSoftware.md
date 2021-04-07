@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MsftSil_Software.cdxml-help.xml
+manager: jasgro
 Module Name: SoftwareInventoryLogging
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/get-silsoftware?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SilSoftware
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: ECD586AB-7035-4A35-8FBD-C4B26DAA502D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-SilSoftware

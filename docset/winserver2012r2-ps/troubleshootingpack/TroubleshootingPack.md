@@ -1,21 +1,19 @@
 ---
-Module Name: TroubleshootingPack
-Module Guid: D6FDB0D8-2B0F-406B-AFC6-68F60569EBDF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285571
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: TroubleshootingPack
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 85b07b31-f376-4046-801a-7a8f6b39aae9
+Module Guid: d6fdb0d8-2b0f-406b-afc6-68f60569ebdf
+Module Name: TroubleshootingPack
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: TroubleshootingPack
 ---
 
 # TroubleshootingPack Module

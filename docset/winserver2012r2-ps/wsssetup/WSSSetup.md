@@ -1,21 +1,19 @@
 ---
-Module Name: WSSSetup
-Module Guid: 7AFC0F03-1B5F-40B9-A794-7EB6170E50A6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280244
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: WSSSetup
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 67521ced-e4a1-42af-89f7-45b7ed4f146c
+Module Guid: 7afc0f03-1b5f-40b9-a794-7eb6170e50a6
+Module Name: WSSSetup
 ms.author: v-anbarr
+ms.date: 12/05/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WSSSetup
 ---
 
 # WSSSetup Module

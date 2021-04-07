@@ -1,21 +1,19 @@
 ---
-Module Name: ADRMS
-Module Guid: A127FB5D-22A6-4056-A043-B16196305CC7
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285538
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: ADRMS
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: a127fb5d-22a6-4056-a043-b16196305cc7
+Module Name: ADRMS
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 9451ee96-965a-4221-9403-9c2e760912a2
+ms.topic: reference
+title: ADRMS
 ---
 
 # ADRMS Module

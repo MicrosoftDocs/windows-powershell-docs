@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetRoute.cdxml-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/find-netroute?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Find-NetRoute
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E4012E7D-DB63-4EF1-A175-2F19A8B71C2E
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Find-NetRoute

@@ -1,21 +1,19 @@
 ---
-Module Name: WindowsServerBackup
-Module Guid: D27A5D7A-8B1D-4B0A-809D-65EF33EE2F2D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285580
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: WindowsServerBackup
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 189a7126-f9fc-45f0-b951-aec84260d36e
+Module Guid: d27a5d7a-8b1d-4b0a-809d-65ef33ee2f2d
+Module Name: WindowsServerBackup
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WindowsServerBackup
 ---
 
 # WindowsServerBackup Module

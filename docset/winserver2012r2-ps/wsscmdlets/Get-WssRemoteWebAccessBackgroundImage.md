@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WssCmdlets.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: WSSCmdlets
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremotewebaccessbackgroundimage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WssRemoteWebAccessBackgroundImage
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 98F5EC0F-5604-4ECB-B88B-62942BA5D949
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-WssRemoteWebAccessBackgroundImage

@@ -1,21 +1,19 @@
 ---
-Module Name: SecureBoot
-Module Guid: A5BD98E1-E44C-44FB-B88F-5AF9BDE66FDF
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285772
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: SecureBoot
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 52fb92c0-691b-4f78-afa1-dba0a7988728
+Module Guid: a5bd98e1-e44c-44fb-b88f-5af9bde66fdf
+Module Name: SecureBoot
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SecureBoot
 ---
 
 # SecureBoot Module

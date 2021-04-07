@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+manager: jasgro
 Module Name: FailoverClusters
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustergroup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ClusterGroup
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 1E1D49DC-53B6-4EB5-9B1A-6583EB55ECA8
 ---
 
 # Get-ClusterGroup

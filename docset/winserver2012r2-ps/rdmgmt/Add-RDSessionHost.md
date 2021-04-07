@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: 
-Module Name: RemoteDesktop
-online version: 
+manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/add-rdsessionhost?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-RDSessionHost
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2E434A50-1560-4205-81A4-516FD3B3E686
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Add-RDSessionHost

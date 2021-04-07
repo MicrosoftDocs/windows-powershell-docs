@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DnsClient
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclientnrptglobal?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsClientNrptGlobal
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3B2243A2-20A8-4A89-BAF8-DE972758EB54
 ---
 
 # Set-DnsClientNrptGlobal

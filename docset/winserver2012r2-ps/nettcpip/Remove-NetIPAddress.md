@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetIPAddress.cdxml-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/remove-netipaddress?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetIPAddress
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: C3A0B677-F2F9-40C3-9A6B-B72AA292B721
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-NetIPAddress

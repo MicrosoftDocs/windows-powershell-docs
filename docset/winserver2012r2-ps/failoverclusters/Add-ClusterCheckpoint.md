@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.FailoverClusters.PowerShell.dll-Help.xml
+manager: jasgro
 Module Name: FailoverClusters
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustercheckpoint?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-ClusterCheckpoint
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 4C3E1376-B8DE-4B3E-87F3-E351F369E314
 ---
 
 # Add-ClusterCheckpoint

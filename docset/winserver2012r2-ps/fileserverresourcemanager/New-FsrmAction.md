@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: FsrmAction.cdxml-help.xml
+manager: jasgro
 Module Name: FileServerResourceManager
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmaction?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-FsrmAction
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 0B4B9F8D-D43E-4054-88B4-0E16B9058762
 ---
 
 # New-FsrmAction

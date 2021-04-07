@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetAdapterSriov.cdxml-help.xml
+manager: jasgro
 Module Name: NetAdapter
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadaptersriov?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetAdapterSriov
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D9B971D9-2C10-424A-A277-704C156C8F18
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NetAdapterSriov

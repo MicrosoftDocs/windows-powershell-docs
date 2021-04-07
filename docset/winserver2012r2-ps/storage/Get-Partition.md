@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Partition.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/get-partition?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-Partition
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 85BB3C53-536E-408F-B159-28E91AFEB1A1
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-Partition

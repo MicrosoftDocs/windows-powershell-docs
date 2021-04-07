@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NfsClientLock.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsclientlock?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NfsClientLock
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8C029D0B-7CC0-4C84-B3B0-57AFE0153F56
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NfsClientLock

@@ -1,18 +1,17 @@
 ---
 author: Kateyanne
-description:
+description: 
 external help file: CCPPSH.dll-Help.xml
-keywords: powershell, cmdlet
-manager:
+manager: 
+Module Name: HPC
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: powershell
+ms.reviewer: 
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182872
+online version: https://docs.microsoft.com/powershell/module/hpc/stop-hpcjob?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Stop-HpcJob
-ms.assetid: 1C71E2EF-0A23-42EC-86F1-9549FE3FF42A
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Stop-HpcJob

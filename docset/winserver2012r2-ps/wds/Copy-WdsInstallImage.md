@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_WdsInstallImage_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: WDS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/wds/copy-wdsinstallimage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Copy-WdsInstallImage
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 600994B2-F6D9-42AF-9691-0ED76208FF5C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Copy-WdsInstallImage

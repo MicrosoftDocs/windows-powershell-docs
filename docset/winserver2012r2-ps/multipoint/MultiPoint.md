@@ -1,21 +1,19 @@
 ---
-Module Name: MultiPoint
-Module Guid: BED96625-7E2A-47E7-82C7-F10C76790ED5
-Download Help Link: NO_URI
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
-title: MultiPoint
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-06
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: e1a69d62-bec5-4389-8acc-d3c2f928da86
-ms.reviewer:
+Module Guid: bed96625-7e2a-47e7-82c7-f10c76790ed5
+Module Name: MultiPoint
 ms.author: v-anbarr
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.technology: powershell
+ms.topic: reference
+title: MultiPoint
 ---
 
 # MultiPoint Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
+manager: jasgro
 Module Name: NetworkTransition
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/networktransition/new-netiphttpsconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetIPHttpsConfiguration
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 32991B3D-41BF-4DB9-8096-8D5847C7F75A
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-NetIPHttpsConfiguration

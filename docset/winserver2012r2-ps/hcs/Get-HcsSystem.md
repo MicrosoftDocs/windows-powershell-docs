@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.HCS.Management.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: HCS
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/hcs/get-hcssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HcsSystem
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 27698C2C-ADD2-48B9-85EE-CD4270F6042A
 ---
 
 # Get-HcsSystem

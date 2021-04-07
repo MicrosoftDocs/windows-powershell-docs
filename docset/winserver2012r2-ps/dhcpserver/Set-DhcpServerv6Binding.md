@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DhcpServerV6Binding_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DhcpServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv6binding?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DhcpServerv6Binding
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B91738B3-CB53-4159-8D31-3E75B06B29EE
 ---
 
 # Set-DhcpServerv6Binding

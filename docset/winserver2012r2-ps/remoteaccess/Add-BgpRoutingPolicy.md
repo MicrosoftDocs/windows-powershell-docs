@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_BgpRoutingPolicy_v1.0.cdxml-help.xml
-online version: 
+manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-bgproutingpolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-BgpRoutingPolicy
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 65E4CF9D-D0F2-4DB5-8E45-4250AAD16784
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Add-BgpRoutingPolicy

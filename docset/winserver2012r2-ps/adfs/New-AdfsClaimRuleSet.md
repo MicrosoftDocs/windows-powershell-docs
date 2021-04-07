@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+manager: jasgro
 Module Name: ADFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsclaimruleset?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-AdfsClaimRuleSet
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 5108E6A1-37A4-4EA9-AA8A-FFBEAB0B8CBD
 ---
 
 # New-AdfsClaimRuleSet

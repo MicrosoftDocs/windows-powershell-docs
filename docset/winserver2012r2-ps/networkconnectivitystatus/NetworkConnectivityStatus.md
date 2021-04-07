@@ -1,21 +1,19 @@
 ---
-Module Name: NetworkConnectivityStatus
-Module Guid: 6C9A449B-B0C6-4386-B139-EE0A55638803
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285557
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: NetworkConnectivityStatus
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 90bd79e4-44b9-4c0e-ab6b-94ce60b41c10
+Module Guid: 6c9a449b-b0c6-4386-b139-ee0a55638803
+Module Name: NetworkConnectivityStatus
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetworkConnectivityStatus
 ---
 
 # NetworkConnectivityStatus Module

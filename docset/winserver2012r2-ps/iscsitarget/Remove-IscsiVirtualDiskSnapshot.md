@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+manager: jasgro
 Module Name: IscsiTarget
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/iscsitarget/remove-iscsivirtualdisksnapshot?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-IscsiVirtualDiskSnapshot
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D66A76E7-28E7-4231-91A4-03183871F4A0
 ---
 
 # Remove-IscsiVirtualDiskSnapshot

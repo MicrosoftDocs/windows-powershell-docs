@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: IpamDatabase.cdxml-help.xml
+manager: jasgro
 Module Name: IpamServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/ipamserver/move-ipamdatabase?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Move-IpamDatabase
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 886AD7F9-AB1E-4250-B13C-A06DF476A74A
 ---
 
 # Move-IpamDatabase

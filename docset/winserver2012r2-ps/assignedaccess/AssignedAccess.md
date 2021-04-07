@@ -1,21 +1,19 @@
 ---
-Module Name: AssignedAccess
-Module Guid: 9E72217E-9E27-45F7-81FC-048763587E0A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=311962
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: AssignedAccess
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 9e72217e-9e27-45f7-81fc-048763587e0a
+Module Name: AssignedAccess
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 896407a5-7e36-404c-bfc1-79e247c9b396
+ms.topic: reference
+title: AssignedAccess
 ---
 
 # AssignedAccess Module

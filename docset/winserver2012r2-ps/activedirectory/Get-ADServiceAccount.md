@@ -1,19 +1,17 @@
 ---
+author: kenwith
+description: 
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: jasgro
 Module Name: ActiveDirectory
-online version: 
+ms.author: kenwith
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adserviceaccount?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-ADServiceAccount
-ms.author: kenwith
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: kenwith
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F025132E-9FD5-4870-BE58-A1AB16DCBC3A
 ---
 
 # Get-ADServiceAccount

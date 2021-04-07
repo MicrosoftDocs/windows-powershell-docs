@@ -1,21 +1,19 @@
 ---
-Module Name: VpnClient
-Module Guid: 3389CC73-DAA3-4D25-BD50-B1730925D2DF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285778
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US
-title: VpnClient
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9d8b83fc-121a-40f1-9aa3-6916920b1929
+Module Guid: 3389cc73-daa3-4d25-bd50-b1730925d2df
+Module Name: VpnClient
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: VpnClient
 ---
 
 # VpnClient Module

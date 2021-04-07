@@ -1,21 +1,19 @@
 ---
-Module Name: DFSR
-Module Guid: C3F81F5F-6555-43CB-802A-AEF7AA5A11CB
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=280124
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: DFSR
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: c3f81f5f-6555-43cb-802a-aef7aa5a11cb
+Module Name: DFSR
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 743aeadc-557a-4869-9b6d-7fa7ff1404ff
+ms.topic: reference
+title: DFSR
 ---
 
 # DFSR Module

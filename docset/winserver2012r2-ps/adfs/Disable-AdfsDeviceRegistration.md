@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.Deployment.dll-Help.xml
+manager: jasgro
 Module Name: ADFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adfs/disable-adfsdeviceregistration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-AdfsDeviceRegistration
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 64A40824-4DCD-4DF8-8EFC-0CE756ACE8C8
 ---
 
 # Disable-AdfsDeviceRegistration

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
+manager: jasgro
 Module Name: ServerManager
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/servermanager/uninstall-windowsfeature?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Uninstall-WindowsFeature
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FF3743EB-D209-44B9-93EC-7118ABE14EDE
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Uninstall-WindowsFeature

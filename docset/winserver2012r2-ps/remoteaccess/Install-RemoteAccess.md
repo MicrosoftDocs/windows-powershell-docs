@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_RemoteAccess_v1.0.0.cdxml-help.xml
-online version: 
+manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.date: 05/31/2018
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/install-remoteaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-RemoteAccess
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 05/31/2018
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 7E7DDD35-D252-4E9D-9399-B5D1AD1107D9
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Install-RemoteAccess

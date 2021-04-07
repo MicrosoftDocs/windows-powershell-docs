@@ -1,21 +1,19 @@
 ---
-Module Name: NetAdapter
-Module Guid: 1042B422-63A8-4016-A6D6-293E19E8F8A6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285553
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: NetAdapter
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 06a5d995-aad6-4b7c-9b45-efd9886779c1
+Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
+Module Name: NetAdapter
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetAdapter
 ---
 
 # NetAdapter Module

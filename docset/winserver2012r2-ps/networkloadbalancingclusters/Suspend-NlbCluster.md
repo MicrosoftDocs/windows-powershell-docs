@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+manager: jasgro
 Module Name: NetworkLoadBalancingClusters
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/suspend-nlbcluster?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-NlbCluster
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B67E9CB4-15B0-4BB2-8DDC-8946AB42C757
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Suspend-NlbCluster

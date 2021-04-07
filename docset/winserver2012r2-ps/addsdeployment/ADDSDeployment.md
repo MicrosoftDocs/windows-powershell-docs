@@ -1,21 +1,19 @@
 ---
-Module Name: ADDSDeployment
-Module Guid: DF736400-2E72-4A7B-8EDA-D5B28421881F
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285734
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: ADDSDeployment
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: df736400-2e72-4a7b-8eda-d5b28421881f
+Module Name: ADDSDeployment
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 2759d4b3-632c-4a20-9692-c410595e839e
+ms.topic: reference
+title: ADDSDeployment
 ---
 
 # ADDSDeployment Module

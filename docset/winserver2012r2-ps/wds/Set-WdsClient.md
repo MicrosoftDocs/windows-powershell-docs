@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_WdsClient_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: WDS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/wds/set-wdsclient?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WdsClient
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E694C93B-F4A5-4E83-A1D4-88FCE5D4435C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-WdsClient

@@ -1,21 +1,19 @@
 ---
-Module Name: AppLocker
-Module Guid: 9DAFD409-67DE-4108-8EE9-73CD61F5B7BF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285540
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: AppLocker
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 9dafd409-67de-4108-8ee9-73cd61f5b7bf
+Module Name: AppLocker
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 1aeef434-5587-4ec1-9854-222d707bc362
+ms.topic: reference
+title: AppLocker
 ---
 
 # AppLocker Module

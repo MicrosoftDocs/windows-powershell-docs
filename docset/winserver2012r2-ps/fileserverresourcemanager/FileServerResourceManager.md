@@ -1,21 +1,19 @@
 ---
-Module Name: FileServerResourceManager
-Module Guid: FAA199B6-C378-4AAD-9D4D-F0E99F3F4845
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285746
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: FileServerResourceManager
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
+Module Name: FileServerResourceManager
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: cb17fcb8-cff7-4d03-b9d4-bd7c299876aa
+ms.topic: reference
+title: FileServerResourceManager
 ---
 
 # FileServerResourceManager Module

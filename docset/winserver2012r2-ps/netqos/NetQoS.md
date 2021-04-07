@@ -1,21 +1,19 @@
 ---
-Module Name: NetQoS
-Module Guid: 743692B7-A227-4389-B082-2B47DE1D0D2D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285555
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: NetQoS
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 587139be-99c2-47c0-a0ad-4bc439c463d4
+Module Guid: 743692b7-a227-4389-b082-2b47de1d0d2d
+Module Name: NetQoS
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetQoS
 ---
 
 # NetQoS Module

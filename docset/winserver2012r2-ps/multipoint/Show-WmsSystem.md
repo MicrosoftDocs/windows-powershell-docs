@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WmsCmdlets.dll-Help.xml
-Module Name: WmsCmdlets
-online version: 
+manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/multipoint/show-wmssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-WmsSystem
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: DA04627A-F13A-49A4-8872-C0CBF89A09C2
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Show-WmsSystem

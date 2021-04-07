@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
+manager: jasgro
 Module Name: ADFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsdeviceregistrationupnsuffix?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsDeviceRegistrationUpnSuffix
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 37B96AE4-A975-465E-A4F7-523202FB5F28
 ---
 
 # Set-AdfsDeviceRegistrationUpnSuffix

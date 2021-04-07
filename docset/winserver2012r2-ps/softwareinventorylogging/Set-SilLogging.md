@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MsftSil_ManagementTasks-help.xml
+manager: jasgro
 Module Name: SoftwareInventoryLogging
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/set-sillogging?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SilLogging
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 00C6A020-B0DE-47AD-8778-19C444A2A90D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-SilLogging

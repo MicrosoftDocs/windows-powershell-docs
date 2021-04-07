@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetGPO.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version:
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/open-netgpo?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Open-NetGPO
-description:
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 78D22B3A-37E0-4D0F-82C5-F7EF52853BA0
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Open-NetGPO

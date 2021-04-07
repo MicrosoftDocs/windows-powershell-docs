@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetFirewallSecurityFilter.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netfirewallsecurityfilter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetFirewallSecurityFilter
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B2D4E04A-1B8A-4083-BF4C-85BB12B74B26
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NetFirewallSecurityFilter

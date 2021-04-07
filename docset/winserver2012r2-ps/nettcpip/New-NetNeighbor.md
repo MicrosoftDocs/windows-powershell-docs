@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetNeighbor.cdxml-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/new-netneighbor?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-NetNeighbor
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2D6535B1-74DA-47A1-8787-2A23CBBAA322
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-NetNeighbor

@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WebApplicationProxy-help.xml
-online version: 
+manager: jasgro
+Module Name: WebApplicationProxy
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/remove-webapplicationproxyapplication?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-WebApplicationProxyApplication
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 40B9DAF7-48F3-425F-806A-9A6A9F1566A6
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-WebApplicationProxyApplication

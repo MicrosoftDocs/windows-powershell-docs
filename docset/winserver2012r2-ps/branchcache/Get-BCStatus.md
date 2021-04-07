@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: BranchCacheStatus.cdxml-help.xml
+manager: jasgro
 Module Name: BranchCache
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bcstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-BCStatus
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2E68D4DA-55B8-46D1-A48C-5BD155CE6558
 ---
 
 # Get-BCStatus

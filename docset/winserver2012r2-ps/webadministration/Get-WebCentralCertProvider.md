@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: jasgro
 Module Name: WebAdministration
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webadministration/get-webcentralcertprovider?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WebCentralCertProvider
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E3026A42-359B-4BEE-BC2F-8DF3B9DC5329
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-WebCentralCertProvider

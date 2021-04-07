@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.NPS.Commands.dll-Help.xml
-Module Name: Nps
-online version: 
+manager: jasgro
+Module Name: NPS
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nps/remove-npsradiusclient?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NpsRadiusClient
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 575A8489-73DB-4C77-BB77-15971D5D159B
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-NpsRadiusClient

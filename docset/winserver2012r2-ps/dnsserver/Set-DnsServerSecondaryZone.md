@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DnsServerSecondaryZone_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DnsServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserversecondaryzone?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerSecondaryZone
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D4330DFE-E2C6-4458-924D-69624439C283
 ---
 
 # Set-DnsServerSecondaryZone

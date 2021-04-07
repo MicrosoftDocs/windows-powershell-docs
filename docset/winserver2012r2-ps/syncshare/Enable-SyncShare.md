@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: SyncShare.cdxml-help.xml
+manager: jasgro
 Module Name: SyncShare
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/syncshare/enable-syncshare?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-SyncShare
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 9F510D55-7336-4852-9D41-5DF56FEAF6F8
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Enable-SyncShare

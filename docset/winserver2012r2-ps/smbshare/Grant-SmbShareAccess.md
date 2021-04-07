@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: SmbShare.cdxml-help.xml
+manager: jasgro
 Module Name: SmbShare
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/smbshare/grant-smbshareaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Grant-SmbShareAccess
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Grant-SmbShareAccess

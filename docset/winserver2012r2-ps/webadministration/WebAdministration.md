@@ -1,21 +1,19 @@
 ---
-Module Name: WebAdministration
-Module Guid: 13C15630-959C-49E4-A977-758C5CC93408
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285576
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: WebAdministration
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: ca95ebfd-5440-4dca-a9c2-34da802e484d
+Module Guid: 13c15630-959c-49e4-a977-758c5cc93408
+Module Name: WebAdministration
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WebAdministration
 ---
 
 # WebAdministration Module

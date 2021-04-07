@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: BranchCacheOrchestrator.cdxml-help.xml
+manager: jasgro
 Module Name: BranchCache
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/branchcache/export-bccachepackage?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-BCCachePackage
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 76012F58-0AE8-4FFD-9201-45B4FF6214C9
 ---
 
 # Export-BCCachePackage

@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.HCS.Management.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: HCS
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/hcs/test-hcsntp?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-HcsNtp
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: DA2E5D7F-EA06-4CEE-935E-A5B56DBE4670
 ---
 
 # Test-HcsNtp

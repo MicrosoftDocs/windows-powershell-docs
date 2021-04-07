@@ -1,21 +1,19 @@
 ---
-Module Name: TrustedPlatformModule
-Module Guid: 17FC1F02-CFF3-45FB-AC4F-126594C70B1E
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285777
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: TrustedPlatformModule
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: d594cc86-60b9-495b-922b-af956489a7a9
+Module Guid: 17fc1f02-cff3-45fb-ac4f-126594c70b1e
+Module Name: TrustedPlatformModule
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: TrustedPlatformModule
 ---
 
 # TrustedPlatformModule Module

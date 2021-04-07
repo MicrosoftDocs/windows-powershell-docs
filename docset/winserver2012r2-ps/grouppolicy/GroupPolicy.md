@@ -1,21 +1,19 @@
 ---
-Module Name: GroupPolicy
-Module Guid: 03E49E3A-BE77-4422-9D97-8FE355C2284C
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285747
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: GroupPolicy
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 03e49e3a-be77-4422-9d97-8fe355c2284c
+Module Name: GroupPolicy
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: b9732fda-e344-4d14-8946-791fab93fbaf
+ms.topic: reference
+title: GroupPolicy
 ---
 
 # GroupPolicy Module

@@ -1,21 +1,19 @@
 ---
-Module Name: RemoteDesktop
-Module Guid: 81D5DF9C-8FE3-46D7-A9BF-2AEDD60D1843
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285771
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: RemoteDesktop
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 4ac56204-319e-425b-b261-91dc105b4dea
+Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
+Module Name: RDMgmt
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: RemoteDesktop
 ---
 
 # RemoteDesktop Module

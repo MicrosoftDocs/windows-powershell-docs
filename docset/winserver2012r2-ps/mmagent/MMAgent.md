@@ -1,21 +1,19 @@
 ---
-Module Name: MMAgent
-Module Guid: E1383A06-D48B-45E0-81E4-5EAD146E81A8
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285551
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: MMAgent
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 01c95e48-9fd0-4165-9931-5c37afb2e113
+Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
+Module Name: MMAgent
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: MMAgent
 ---
 
 # MMAgent Module

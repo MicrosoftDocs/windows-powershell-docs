@@ -1,21 +1,19 @@
 ---
-Module Name: DcbQoS
-Module Guid: B57D41F8-8B6B-4012-912F-B08109101281
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285544
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: DcbQoS
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: b57d41f8-8b6b-4012-912f-b08109101281
+Module Name: DcbQoS
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: f505fbc5-031f-4480-8446-121defda6f16
+ms.topic: reference
+title: DcbQoS
 ---
 
 # DcbQoS Module

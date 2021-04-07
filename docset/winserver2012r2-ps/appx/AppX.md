@@ -1,21 +1,19 @@
 ---
-Module Name: AppX
-Module Guid: AEEF2BEF-EBA9-4A1D-A3D2-D0B52DF76DEB
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285736
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: AppX
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
+Module Name: AppX
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 221ac730-e8bc-4bf8-92ef-06215136a55a
+ms.topic: reference
+title: AppX
 ---
 
 # AppX Module

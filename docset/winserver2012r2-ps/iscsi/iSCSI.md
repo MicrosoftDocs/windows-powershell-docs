@@ -1,21 +1,19 @@
 ---
-Module Name: iSCSI
-Module Guid: 53E1C251-4283-4B07-AB02-FC492C7AB8C5
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285750
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: iSCSI
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 53e1c251-4283-4b07-ab02-fc492c7ab8c5
+Module Name: iSCSI
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 8037b3f8-e00e-4883-8fda-2dbd571f3de3
+ms.topic: reference
+title: iSCSI
 ---
 
 # iSCSI Module

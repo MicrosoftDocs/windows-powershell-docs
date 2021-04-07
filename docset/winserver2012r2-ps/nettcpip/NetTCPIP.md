@@ -1,21 +1,19 @@
 ---
-Module Name: NetTCPIP
-Module Guid: 2D0B6C7F-16A0-4185-843F-AE47B6DB4551
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285765
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: NetTCPIP
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9869ee45-0d94-495c-8193-5c391aa7c5e5
+Module Guid: 2d0b6c7f-16a0-4185-843f-ae47b6db4551
+Module Name: NetTCPIP
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetTCPIP
 ---
 
 # NetTCPIP Module

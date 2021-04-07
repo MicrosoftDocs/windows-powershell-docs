@@ -1,21 +1,19 @@
 ---
-Module Name: BestPractices
-Module Guid: 5551EA86-919D-499B-948F-87305E4F2344
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285737
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: BestPractices
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 5551ea86-919d-499b-948f-87305e4f2344
+Module Name: BestPractices
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 1ca8a602-4787-4461-9550-3b3fd30fbdab
+ms.topic: reference
+title: BestPractices
 ---
 
 # BestPractices Module

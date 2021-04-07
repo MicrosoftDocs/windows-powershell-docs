@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Windows.ServerManager.Migration.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: ServerMigration
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/servermigration/import-smigserversetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-SmigServerSetting
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3697AF9E-1525-44A3-9CCB-746660D4535B
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Import-SmigServerSetting

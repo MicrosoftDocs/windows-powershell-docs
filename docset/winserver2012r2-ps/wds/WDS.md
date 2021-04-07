@@ -1,21 +1,19 @@
 ---
-Module Name: WDS
-Module Guid: 95B28FD4-92C3-41E8-B338-2DF356BA9ECA
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=280236
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: WDS
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 876b597d-8d88-448d-8659-989511b1423c
+Module Guid: 95b28fd4-92c3-41e8-b338-2df356ba9eca
+Module Name: WDS
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WDS
 ---
 
 # WDS Module

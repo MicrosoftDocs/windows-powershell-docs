@@ -1,21 +1,19 @@
 ---
-Module Name: PEF
-Module Guid: C03B021F-C868-45D2-886A-0360B7B4B3E9
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=271275
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.6.0
 Locale: en-US
-title: PEF
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 68bca658-97e5-42b1-944d-f174bdfa77f1
+Module Guid: c03b021f-c868-45d2-886a-0360b7b4b3e9
+Module Name: PEF
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: PEF
 ---
 
 # PEF Module

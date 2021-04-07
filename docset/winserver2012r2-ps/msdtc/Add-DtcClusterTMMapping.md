@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_DtcClusterTMMappingTask_v1.0.cdxml-help.xml
-Module Name: MsDtc
-online version: 
+manager: jasgro
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msdtc/add-dtcclustertmmapping?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-DtcClusterTMMapping
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 84AE919B-144B-45A5-A217-14B9D2DA4EB1
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Add-DtcClusterTMMapping

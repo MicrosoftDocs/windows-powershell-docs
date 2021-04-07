@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WmsCmdlets.dll-Help.xml
-Module Name: WmsCmdlets
-online version: 
+manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsuser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WmsUser
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: EA8744D5-B53A-4C3E-AE80-5D4A9252E6FB
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Get-WmsUser

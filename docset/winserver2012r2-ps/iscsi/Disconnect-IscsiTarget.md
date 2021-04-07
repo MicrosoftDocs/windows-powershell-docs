@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: iSCSITarget.cdxml-help.xml
+manager: jasgro
 Module Name: iSCSI
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/iscsi/disconnect-iscsitarget?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-IscsiTarget
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: C6D1C713-F3D8-4BC2-9DDC-B2FD87E0C025
 ---
 
 # Disconnect-IscsiTarget

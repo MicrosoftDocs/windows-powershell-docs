@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorSpaces2_Cmdlets.xml
-online version: 
+manager: jasgro
+Module Name: StorageSpaces
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storagespaces/test-spacesconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-SpacesConfiguration
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: C415F1BC-62BE-4E34-B55A-B9B2DB31232E
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Test-SpacesConfiguration

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NfsServerTasks.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsclientgroup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NfsClientgroup
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3875B931-5D6D-4E60-AFA2-01AFDD09F95C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NfsClientgroup

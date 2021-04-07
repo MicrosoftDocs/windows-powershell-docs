@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.NPS.Commands.dll-Help.xml
-Module Name: Nps
-online version: 
+manager: jasgro
+Module Name: NPS
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nps/import-npsconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-NpsConfiguration
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: ECFA9FCE-617C-408B-B4D8-C53CB4835522
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Import-NpsConfiguration

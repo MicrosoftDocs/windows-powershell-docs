@@ -1,21 +1,19 @@
 ---
-Module Name: NetSecurity
-Module Guid: 4B26FF51-7AEE-4731-9CF7-508B82532CBF
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285764
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: NetSecurity
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 78a769c2-b9f2-4426-8368-bec9f6cc263b
+Module Guid: 4b26ff51-7aee-4731-9cf7-508b82532cbf
+Module Name: NetSecurity
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetSecurity
 ---
 
 # NetSecurity Module

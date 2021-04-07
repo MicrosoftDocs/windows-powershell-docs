@@ -1,21 +1,19 @@
 ---
-Module Name: PrintManagement
-Module Guid: 8466AE97-2C03-4385-A501-7E74CF6BB1DF
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285768
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: PrintManagement
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: c15dc324-8378-465b-a853-eb5b90cf84e6
+Module Guid: 8466ae97-2c03-4385-a501-7e74cf6bb1df
+Module Name: PrintManagement
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: PrintManagement
 ---
 
 # PrintManagement Module

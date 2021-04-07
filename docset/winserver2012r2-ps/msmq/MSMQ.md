@@ -1,21 +1,19 @@
 ---
-Module Name: MSMQ
-Module Guid: 33CA09B1-A7FE-42E0-8AA1-E7203746CA94
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285552
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US
-title: MSMQ
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: ac33def1-39eb-4169-adec-aa1ecf646c97
+Module Guid: 33ca09b1-a7fe-42e0-8aa1-e7203746ca94
+Module Name: MSMQ
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: MSMQ
 ---
 
 # MSMQ Module

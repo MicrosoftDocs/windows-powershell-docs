@@ -1,21 +1,19 @@
 ---
-Module Name: IpamServer
-Module Guid: 69775F93-9317-4234-A558-13B6655FC41B
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285749
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: IpamServer
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 69775f93-9317-4234-a558-13b6655fc41b
+Module Name: IpamServer
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: df713894-ec5d-404b-8ef9-7d583365993e
+ms.topic: reference
+title: IpamServer
 ---
 
 # IpamServer Module

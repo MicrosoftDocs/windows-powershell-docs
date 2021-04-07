@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetTCPConnection.cdxml-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/get-nettcpconnection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetTCPConnection
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FDF635B0-3F62-48AE-BDE6-1DAC120DD52D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NetTCPConnection

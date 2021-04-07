@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: BranchCacheNetworkSettingData.cdxml-help.xml
+manager: jasgro
 Module Name: BranchCache
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bcnetworkconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-BCNetworkConfiguration
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
 ---
 
 # Get-BCNetworkConfiguration

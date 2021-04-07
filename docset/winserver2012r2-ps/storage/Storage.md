@@ -1,21 +1,19 @@
 ---
-Module Name: Storage
-Module Guid: 41486F7D-842F-40F1-ACE4-8405F9C2ED9B
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285775
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.7.0
 Locale: en-US
-title: Storage
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 8156049d-614d-434a-85df-d55a8c96653e
+Module Guid: 41486f7d-842f-40f1-ace4-8405f9c2ed9b
+Module Name: Storage
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: Storage
 ---
 
 # Storage Module

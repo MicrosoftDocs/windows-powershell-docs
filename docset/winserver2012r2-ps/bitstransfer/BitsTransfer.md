@@ -1,21 +1,19 @@
 ---
-Module Name: BitsTransfer
-Module Guid: 8FA5064B-8479-4C5C-86EA-0D311FE48875
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=279550
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: BitsTransfer
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 8fa5064b-8479-4c5c-86ea-0d311fe48875
+Module Name: BitsTransfer
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: aae2880b-f17e-44c3-b352-47eca09bcf71
+ms.topic: reference
+title: BitsTransfer
 ---
 
 # BitsTransfer Module

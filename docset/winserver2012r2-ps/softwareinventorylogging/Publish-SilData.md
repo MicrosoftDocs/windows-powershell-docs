@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Msft_MiStreamTasks.cdxml-help.xml
+manager: jasgro
 Module Name: SoftwareInventoryLogging
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/softwareinventorylogging/publish-sildata?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Publish-SilData
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8D4D554E-7053-4C8F-9F38-9502149C0860
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Publish-SilData

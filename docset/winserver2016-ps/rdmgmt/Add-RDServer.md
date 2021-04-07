@@ -4,14 +4,14 @@ ms.sitesec: library
 ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
+external help file:
 keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/20/2016
 ms.prod: w10
-ms.technology: 
+ms.technology:
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Add-RDServer
 ms.reviewer:
@@ -78,7 +78,7 @@ If you do not specify a value, the cmdlet uses the FQDN of the local computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -93,7 +93,7 @@ Indicates that the cmdlet creates a virtual switch.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -110,7 +110,7 @@ The **Role** parameter value is RDS-GATEWAY.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -141,7 +141,7 @@ If you select a value of RDS-GATEWAY for this parameter, supply a value for the 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDS-CONNECTION-BROKER, RDS-VIRTUALIZATION, RDS-RD-SERVER, RDS-WEB-ACCESS, RDS-GATEWAY, RDS-LICENSING
 
 Required: True
@@ -157,7 +157,7 @@ Specifies the FQDN of the server to add to the Remote Desktop deployment.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -171,7 +171,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### None
+
 This cmdlet accepts no input.
 
 ## OUTPUTS

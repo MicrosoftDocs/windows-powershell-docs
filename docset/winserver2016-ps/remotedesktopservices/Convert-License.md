@@ -9,9 +9,9 @@ keywords: powershell, cmdlet
 manager: jasgro
 ms.date: 12/27/2016
 ms.prod: w10
-ms.technology: 
+ms.technology:
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Convert-License
 ms.reviewer:
@@ -32,12 +32,12 @@ Convert-License -KeyPackId <UInt32> [-Count <UInt32>] [-WhatIf] [-Confirm] [<Com
 ## DESCRIPTION
 The **Convert-License** cmdlet converts licenses in a specified key pack.
 A key pack contains a number of licenses that enable clients to connect to a Remote Desktop Session Host (RD Session Host) server.
-Remote Desktop Licensing (RD Licensing) supports the following kinds of licenses: 
+Remote Desktop Licensing (RD Licensing) supports the following kinds of licenses:
 
 - Per-device.
-RD Licensing requires a license for each device that connects to an RD Session Host server. 
+RD Licensing requires a license for each device that connects to an RD Session Host server.
 - Per-user.
-RD Licensing requires a license for each user that connects to an RD Session Host server. 
+RD Licensing requires a license for each user that connects to an RD Session Host server.
 
 If a key pack contains per-device licenses, this cmdlet converts them to per-user licenses.
 If a key pack contains per-user licenses, this cmdlet converts them to per-device licenses.
@@ -89,7 +89,7 @@ Specifies the number of licenses that this cmdlet converts.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Specifies the ID for a key pack.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -140,9 +140,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RDLicenseConfiguration](../remotedesktop/Get-RDLicenseConfiguration.md)
+[Get-RDLicenseConfiguration](../rdmgmt/Get-RDLicenseConfiguration.md)
 
-[Get-RDSessionHost](../remotedesktop/Get-RDSessionHost.md)
+[Get-RDSessionHost](../rdmgmt/Get-RDSessionHost.md)
 
 [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 

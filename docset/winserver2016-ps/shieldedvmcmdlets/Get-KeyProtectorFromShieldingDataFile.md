@@ -11,9 +11,9 @@ ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
-online version: 
+online version:
 schema: 2.0.0
 title: Get-KeyProtectorFromShieldingDataFile
 ms.reviewer:
@@ -61,7 +61,7 @@ Specifies the location of a Shielding Data File (.pdk).
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -77,12 +77,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
+### Byte[]
+
 This cmdlet returns a Byte\[\] array that represents the raw key protector structure.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Shielded Virtual Machine Provioning Cmdlets in Windows PowerShell](./shieldedvmprovisioning.md)
-
+[Shielded Virtual Machine Provisioning Cmdlets in Windows PowerShell](./shieldedvmcmdlets.md)

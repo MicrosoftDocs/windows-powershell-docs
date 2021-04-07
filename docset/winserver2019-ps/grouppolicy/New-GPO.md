@@ -82,7 +82,7 @@ The GPO is pre-populated with the settings of the Starter GPO.
 
 ### Example 3: Create a GPO in the domain of the user and link it to an OU
 ```
-PS C:\> new-gpo -name TestGPO | new-gplink -target "ou=marketing,dc=contoso,dc=com" | set-gppermissions -permissionlevel gpoedit -targetname "Marketing Admins" -targettype group 
+PS C:\> New-GPO -Name TestGPO | New-GPLink -Target "ou=marketing,dc=contoso,dc=com" | Set-GPPermissions -PermissionLevel GpoEdit -TargetName "Marketing Admins" -TargetType Group
 
 DisplayName      : TestGPO 
 DomainName       : contoso.com 

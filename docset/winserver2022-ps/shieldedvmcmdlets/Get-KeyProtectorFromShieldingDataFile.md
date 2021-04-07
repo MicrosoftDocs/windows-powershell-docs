@@ -8,9 +8,9 @@ ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/shieldedvmcmdlets/get-keyprotectorfromshieldingdatafile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -75,7 +75,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###
+### None
+
 This cmdlet returns a Byte\[\] array that represents the raw key protector structure.
 
 ## NOTES

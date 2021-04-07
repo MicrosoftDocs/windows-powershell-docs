@@ -1,12 +1,12 @@
 ---
-Module Name: ADFS
-Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390747
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
+Module Guid: 5c958595-c68c-4c00-a468-9763de83bbee
+Module Name: ADFS
+ms.author: v-anbarr
+ms.reviewer: 
 ---
 
 # ADFS Module

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: PlatformIdentifier
-Module Guid: 327C8F02-3D5D-42DA-ABB3-3AB07C62839D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799341
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: PlatformIdentifier
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 327c8f02-3d5d-42da-abb3-3ab07c62839d
+Module Name: PlatformIdentifier
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: BD6D6930-6F47-48CF-AD35-AD04E1C1FCBB
+ms.topic: reference
+title: PlatformIdentifier
 ---
 
 # PlatformIdentifier Module

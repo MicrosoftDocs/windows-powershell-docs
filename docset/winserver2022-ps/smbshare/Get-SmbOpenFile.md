@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SmbOpenFile.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: SmbShare
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbopenfile?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbOpenFile
-ms.reviewer:
-ms.assetid: 20AA3A6F-38D3-4692-98E5-4F510B9BE782
 ---
 
 # Get-SmbOpenFile

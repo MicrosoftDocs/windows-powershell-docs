@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerV4Reservation_v1.0.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: DhcpServer
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv4reservation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-DhcpServerv4Reservation
-ms.reviewer:
-ms.assetid: 8D308DAE-D3A5-44A5-8AC7-3F890596B4E6
 ---
 
 # Remove-DhcpServerv4Reservation

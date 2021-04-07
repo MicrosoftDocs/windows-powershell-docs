@@ -1,14 +1,13 @@
 ---
-external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-online version:
-schema: 2.0.0
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-title: New-IISSiteBinding
-ms.author: v-kaunu
 author: Kateyanne
-ms.reviewer:
-online version:
-keywords: powershell, cmdlet
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
+Module Name: IISAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/new-iissitebinding?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
+title: New-IISSiteBinding
 ---
 
 # New-IISSiteBinding

@@ -1,12 +1,12 @@
 ---
-Module Name: HgsAttestation
-Module Guid: B0121942-ED2D-4A2B-959E-F0CFA64B48A9
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519073
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.2
 Locale: en-US
+Module Guid: b0121942-ed2d-4a2b-959e-f0cfa64b48a9
+Module Name: HgsAttestation
+ms.author: v-anbarr
+ms.reviewer: 
 title: HgsAttestation
 ---
 

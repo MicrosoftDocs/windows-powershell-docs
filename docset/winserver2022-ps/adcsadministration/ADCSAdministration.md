@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ADCSAdministration
-Module Guid: BCC14C75-EDE8-486E-97A5-5BF775C4A221
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285732
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
-title: ADCSAdministration
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: bcc14c75-ede8-486e-97a5-5bf775c4a221
+Module Name: ADCSAdministration
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 38D3C333-40AB-4E35-943F-6AC57DEB55A7
+ms.topic: reference
+title: ADCSAdministration
 ---
 
 # ADCSAdministration Module

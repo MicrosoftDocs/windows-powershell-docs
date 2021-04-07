@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: IpamCapabilities.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: IpamServer
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/ipamserver/enable-ipamcapability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-IpamCapability
-ms.reviewer:
-ms.assetid: 206E881B-091C-442E-9E30-3DBA3A3320A5
 ---
 
 # Enable-IpamCapability

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: StorageReplica
-Module Guid: F04004D8-804D-4427-8311-92FA44BCE42C
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=397379
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: StorageReplica
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: f04004d8-804d-4427-8311-92fa44bce42c
+Module Name: StorageReplica
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 600B93F2-5D7E-4E65-992F-C0BA34104DDE
+ms.topic: reference
+title: StorageReplica
 ---
 
 # StorageReplica Module

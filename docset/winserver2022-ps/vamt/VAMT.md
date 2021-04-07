@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: VAMT
-Module Guid: C04E5406-950F-4CB4-9C5D-3E8C952214E6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390841
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: VAMT
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: c04e5406-950f-4cb4-9c5d-3e8c952214e6
+Module Name: VAMT
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 38E37D22-F0CF-4EBC-8E1D-8F75A0376C6A
+ms.topic: reference
+title: VAMT
 ---
 
 # VAMT Module

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: IscsiTarget
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iscsitarget/set-iscsivirtualdisk?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-IscsiVirtualDisk
-ms.reviewer:
-ms.assetid: 8591CC9C-AEFF-47B0-B51F-EE2C85572688
 ---
 
 # Set-IscsiVirtualDisk

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: HardwareCertification
-Module Guid: 3A1FCD12-4C5B-4E54-81E8-547D545A2C50
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390773
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: HardwareCertification
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 3a1fcd12-4c5b-4e54-81e8-547d545a2c50
+Module Name: HardwareCertification
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 86F7C9A7-92BA-48A0-BE1A-BE6D933DB8C2
+ms.topic: reference
+title: HardwareCertification
 ---
 
 # HardwareCertification Module

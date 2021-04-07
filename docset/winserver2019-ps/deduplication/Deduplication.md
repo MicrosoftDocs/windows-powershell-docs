@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: Deduplication
-Module Guid: 1395ECA7-7EAF-4958-A114-FB8AB76B86CC
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390761
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.5.1
 Locale: en-US
-title: Deduplication
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 1395eca7-7eaf-4958-a114-fb8ab76b86cc
+Module Name: Deduplication
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: D93886EE-21C3-470A-B4A5-54F64A74A491
+ms.topic: reference
+title: Deduplication
 ---
 
 # Deduplication Module

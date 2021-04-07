@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: DnsClient
-Module Guid: 5696D5EF-FA2D-4997-94F1-0BC13DAA2AC5
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390768
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
-title: DnsClient
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 5696d5ef-fa2d-4997-94f1-0bc13daa2ac5
+Module Name: DnsClient
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 5B9BD6D4-1894-4173-8801-D433B8EE6EE8
+ms.topic: reference
+title: DnsClient
 ---
 
 # DnsClient Module

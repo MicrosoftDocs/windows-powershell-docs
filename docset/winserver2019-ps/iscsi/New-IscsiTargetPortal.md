@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: iSCSITargetPortal.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: iSCSI
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iscsi/new-iscsitargetportal?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-IscsiTargetPortal
-ms.reviewer:
-ms.assetid: 8740AFC8-89A6-404C-967D-F7C0D3877BC5
 ---
 
 # New-IscsiTargetPortal

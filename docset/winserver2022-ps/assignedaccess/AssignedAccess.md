@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: AssignedAccess
-Module Guid: 9E72217E-9E27-45F7-81FC-048763587E0A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390753
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: AssignedAccess
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 9e72217e-9e27-45f7-81fc-048763587e0a
+Module Name: AssignedAccess
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: FABEBB69-AEC2-4F06-8F23-872169149054
+ms.topic: reference
+title: AssignedAccess
 ---
 
 # AssignedAccess Module

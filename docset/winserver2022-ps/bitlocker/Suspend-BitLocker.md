@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BitLocker-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: BitLocker
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/bitlocker/suspend-bitlocker?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-BitLocker
-ms.reviewer:
-ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
 ---
 
 # Suspend-BitLocker

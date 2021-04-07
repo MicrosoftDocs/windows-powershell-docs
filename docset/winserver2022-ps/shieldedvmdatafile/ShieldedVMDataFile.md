@@ -1,12 +1,12 @@
 ---
-Module Name: ShieldedVMDataFile
-Module Guid: 9E8B69B3-2CC7-4060-8D66-6F86BE39FEBF
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=524081
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.2
 Locale: en-US
+Module Guid: 9e8b69b3-2cc7-4060-8d66-6f86be39febf
+Module Name: ShieldedVMDataFile
+ms.author: v-anbarr
+ms.reviewer: 
 title: ShieldedVMDataFile
 ---
 

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BootEventCollector-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: BootEventCollector
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/booteventcollector/set-sbecactiveconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SbecActiveConfig
-ms.reviewer:
-ms.assetid: 0D9E3E5F-2E41-4695-82A3-420DCAD727EF
 ---
 
 # Set-SbecActiveConfig

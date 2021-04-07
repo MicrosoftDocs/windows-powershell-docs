@@ -1,22 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: SoftwareInventoryLogging
-Module Guid: 421A5B89-0F16-4DF7-B607-FFFD66107510
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390830
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: SoftwareInventoryLogging
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-01-24
-ms.topic: reference
+Module Guid: 421a5b89-0f16-4df7-b607-fffd66107510
+Module Name: SoftwareInventoryLogging
+ms.author: v-anbarr
+ms.date: 01/24/2017
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
+ms.topic: reference
+title: SoftwareInventoryLogging
 ---
 
 # SoftwareInventoryLogging Module

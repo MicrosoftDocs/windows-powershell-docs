@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: SyncUserStatus.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: SyncShare
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/syncshare/get-syncuserstatus?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SyncUserStatus
-ms.reviewer:
-ms.assetid: E8A1ED3A-6950-4E75-835A-16B37A21CD10
 ---
 
 # Get-SyncUserStatus

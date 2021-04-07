@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: WindowsSearch
-Module Guid: 562C6233-EAEE-4876-B36C-D6B1F256D4E6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390852
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-title: WindowsSearch
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 562c6233-eaee-4876-b36c-d6b1f256d4e6
+Module Name: WindowsSearch
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 52850230-53B5-4AC7-A3C9-2C902AE68972
+ms.topic: reference
+title: WindowsSearch
 ---
 
 # WindowsSearch Module

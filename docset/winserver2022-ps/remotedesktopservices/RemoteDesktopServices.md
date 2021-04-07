@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: RemoteDesktopServices
-Module Guid: 9FDB63CA-68AE-4034-A9FA-78529396C689
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=294194
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.2.2
 Locale: en-US
-title: RemoteDesktopServices
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 9fdb63ca-68ae-4034-a9fa-78529396c689
+Module Name: RemoteDesktopServices
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 0A78697D-BDA5-428D-83A8-74773C1A3323
+ms.topic: reference
+title: RemoteDesktopServices
 ---
 
 # RemoteDesktopServices Module

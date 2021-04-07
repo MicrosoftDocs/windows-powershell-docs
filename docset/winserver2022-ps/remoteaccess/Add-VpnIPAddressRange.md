@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_VPNIPAddressRange_v1.0.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-vpnipaddressrange?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VpnIPAddressRange
-ms.reviewer:
-ms.assetid: 5FB50005-2B96-4D3D-BE43-0AE72AB0E85F
 ---
 
 # Add-VpnIPAddressRange

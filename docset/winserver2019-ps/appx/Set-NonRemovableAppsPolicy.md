@@ -1,21 +1,19 @@
 ---
+audiencems.localizationpriority: ITPro
 author: rdmaclachlan
 description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
-keywords: powershell, cmdlet, msix, appx, block uninstall
 manager: jvintzel
 Module Name: Appx
-ms.assetid: 
 ms.author: romaclac
 ms.date: 02/05/2020
-audiencems.localizationpriority: ITPro
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer:
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version:
+online version: https://docs.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NonRemovableAppsPolicy
 ---

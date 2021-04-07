@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: MPIO
-Module Guid: 2FBFFABE-343D-4DB8-AD9E-A8943F50D096
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285760
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
-title: MPIO
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 2fbffabe-343d-4db8-ad9e-a8943f50d096
+Module Name: MPIO
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 1B4E2CDA-BA8A-47CE-8DA3-8D349D12DC38
+ms.topic: reference
+title: MPIO
 ---
 
 # MPIO Module

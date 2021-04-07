@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetConnection
-Module Guid: CE4FF86E-9416-4F2D-A869-C860AC543B5E
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390795
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetConnection
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: ce4ff86e-9416-4f2d-a869-c860ac543b5e
+Module Name: NetConnectionProfile
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: DAAD0289-056C-4259-ADA4-2245C2EEE4AA
+ms.topic: reference
+title: NetConnection
 ---
 
 # NetConnection Module

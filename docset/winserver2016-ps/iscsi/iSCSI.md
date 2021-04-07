@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: iSCSI
-Module Guid: 53E1C251-4283-4B07-AB02-FC492C7AB8C5
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390778
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: iSCSI
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 53e1c251-4283-4b07-ab02-fc492c7ab8c5
+Module Name: iSCSI
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 186C3096-479F-4044-A9E8-43C964056B04
+ms.topic: reference
+title: iSCSI
 ---
 
 # iSCSI Module

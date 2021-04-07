@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: GroupPolicy
-Module Guid: 03E49E3A-BE77-4422-9D97-8FE355C2284C
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390772
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: GroupPolicy
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 03e49e3a-be77-4422-9d97-8fe355c2284c
+Module Name: GroupPolicy
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
+ms.topic: reference
+title: GroupPolicy
 ---
 
 # GroupPolicy Module

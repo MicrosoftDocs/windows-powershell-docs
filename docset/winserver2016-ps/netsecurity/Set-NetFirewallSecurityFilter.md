@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallSecurityFilter.cmdletDefinition.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetSecurity
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/set-netfirewallsecurityfilter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetFirewallSecurityFilter
-ms.reviewer:
-ms.assetid: B2D4E04A-1B8A-4083-BF4C-85BB12B74B26
 ---
 
 # Set-NetFirewallSecurityFilter

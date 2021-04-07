@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdclientaccessname?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDClientAccessName
-ms.reviewer:
-ms.assetid: 9FB71EBC-BCD7-4603-896D-2A299F607321
 ---
 
 # Set-RDClientAccessName
@@ -51,7 +50,7 @@ Specifies a DNS name for clients to use to connect to a Remote Desktop deploymen
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -67,7 +66,7 @@ If you do not specify a value, the cmdlet uses the FQDN of the local computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

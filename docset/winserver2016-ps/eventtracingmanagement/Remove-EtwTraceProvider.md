@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_EtwTraceProvider_v1.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: EventTracingManagement
+ms.author: v-kaunu
 ms.date: 01/05/2017
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/remove-etwtraceprovider?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-EtwTraceProvider
-ms.reviewer:
-ms.assetid: 1E0E1954-13A2-4F00-91C8-9105731CA3B3
 ---
 
 # Remove-EtwTraceProvider

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetAdapter
-Module Guid: 1042B422-63A8-4016-A6D6-293E19E8F8A6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390794
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetAdapter
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
+Module Name: NetAdapter
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C1D9BE44-72F2-443E-B550-D6D9AA7B213E
+ms.topic: reference
+title: NetAdapter
 ---
 
 # NetAdapter Module

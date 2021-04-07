@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopconcurrency?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDVirtualDesktopConcurrency
-ms.reviewer:
-ms.assetid: FD860ADB-81AC-45A9-95EC-BF16FDE70D7C
 ---
 
 # Set-RDVirtualDesktopConcurrency
@@ -64,7 +63,7 @@ Specifies a collection of values (key/value pair) that specify the concurrency f
 ```yaml
 Type: Hashtable
 Parameter Sets: Allocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -79,7 +78,7 @@ Specifies the batch size.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -94,7 +93,7 @@ Specifies the number of virtual desktops that RDS can create in parallel.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,7 +109,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -127,7 +126,7 @@ For virtual desktop collections the host server has the name of the Remote Deskt
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

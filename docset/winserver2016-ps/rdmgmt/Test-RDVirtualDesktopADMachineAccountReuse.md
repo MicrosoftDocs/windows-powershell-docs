@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/test-rdvirtualdesktopadmachineaccountreuse?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-RDVirtualDesktopADMachineAccountReuse
-ms.reviewer:
-ms.assetid: A1305ECB-EC4B-4580-8667-1554C7B746BA
 ---
 
 # Test-RDVirtualDesktopADMachineAccountReuse
@@ -50,7 +49,7 @@ If not supplied, defaults to the fully qualified domain name (FQDN) of the local
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdremoteapp?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDRemoteApp
-ms.reviewer:
-ms.assetid: 3318F2BE-ACA1-4C08-885F-76C00E476807
 ---
 
 # Get-RDRemoteApp
@@ -61,7 +60,7 @@ Specifies an alias for a RemoteApp program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -76,7 +75,7 @@ Specifies the name of a personal virtual desktop collection or session collectio
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -92,7 +91,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -108,7 +107,7 @@ You can use a wildcard character.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

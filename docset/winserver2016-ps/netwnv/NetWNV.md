@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetWNV
-Module Guid: B47767EC-A4D6-488D-915D-5070791AC6D4
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390803
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.1.0
 Locale: en-US
-title: NetWNV
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: b47767ec-a4d6-488d-915d-5070791ac6d4
+Module Name: NetWNV
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: BA0E9FC6-6949-4BF6-A231-B45FC76F66B9
+ms.topic: reference
+title: NetWNV
 ---
 
 # NetWNV Module

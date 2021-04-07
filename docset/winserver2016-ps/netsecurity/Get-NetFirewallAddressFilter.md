@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallAddressFilter.cmdletDefinition.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetSecurity
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewalladdressfilter?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallAddressFilter
-ms.reviewer:
-ms.assetid: F4FD0A59-8C76-41FD-AA4B-8C19CF03D213
 ---
 
 # Get-NetFirewallAddressFilter

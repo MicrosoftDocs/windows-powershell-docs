@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: AppBackgroundTask
-Module Guid: EB40BD55-3BAB-4FA6-88EE-0DCF3CAD5A25
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390750
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.2
 Locale: en-US
-title: AppBackgroundTask
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: eb40bd55-3bab-4fa6-88ee-0dcf3cad5a25
+Module Name: AppBackgroundTask
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 859B925B-6E44-40AA-8453-0BB77E592DDF
+ms.topic: reference
+title: AppBackgroundTask
 ---
 
 # AppBackgroundTask Module

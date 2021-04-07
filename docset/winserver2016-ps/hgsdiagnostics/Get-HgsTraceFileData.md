@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.HostGuardianService.Diagnostics.Payload.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsDiagnostics
-ms.assetid: 24D57C3F-89E1-4E42-8A28-E003EF979568
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/hgsdiagnostics/get-hgstracefiledata?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HgsTraceFileData
-ms.reviewer:
 ---
 
 # Get-HgsTraceFileData

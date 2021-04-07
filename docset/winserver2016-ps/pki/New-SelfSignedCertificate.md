@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: pki
+ms.author: v-kaunu
 ms.date: 10/06/2019
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/pki/new-selfsignedcertificate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SelfSignedCertificate
-ms.reviewer:
-ms.assetid: 72FCDAEA-BB33-40C6-AFCE-E7C33CF622D0
 ---
 
 # New-SelfSignedCertificate

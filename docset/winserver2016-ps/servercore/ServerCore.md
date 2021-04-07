@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ServerCore
-Module Guid: 21B0D06C-E02A-46CC-849B-11C36EC94FB8
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390824
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: ServerCore
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 21b0d06c-e02a-46cc-849b-11c36ec94fb8
+Module Name: ServerCore
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: ECA5B1BF-C761-4D9B-A8B3-CCA27F1A3E5F
+ms.topic: reference
+title: ServerCore
 ---
 
 # ServerCore Module

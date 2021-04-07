@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: SmbWitness
-Module Guid: EF018256-3318-4E74-A823-158022778487
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390828
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: SmbWitness
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: ef018256-3318-4e74-a823-158022778487
+Module Name: SmbWitness
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 4F0AD55F-79C7-4918-B66D-D337FC3DBB99
+ms.topic: reference
+title: SmbWitness
 ---
 
 # SmbWitness Module

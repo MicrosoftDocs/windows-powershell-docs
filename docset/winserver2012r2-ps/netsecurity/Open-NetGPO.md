@@ -1,10 +1,10 @@
 ---
 external help file: NetGPO.cmdletDefinition.cdxml-help.xml
 Module Name: NetSecurity
-online version: 
+online version:
 schema: 2.0.0
 title: Open-NetGPO
-description: 
+description:
 keywords: powershell, cmdlet
 author: Kateyanne
 manager: jasgro
@@ -86,7 +86,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ To help target a writeable DC, use the cmdlets in the Active Directory module us
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,53 +130,53 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-Specifies the policy store from which to retrieve the rules to be stored. 
-                         
-A policy store is a container for firewall and IPsec policy. 
+Specifies the policy store from which to retrieve the rules to be stored.
+
+A policy store is a container for firewall and IPsec policy.
 The acceptable values for this parameter are:
-                         
+
  -- PersistentStore: Sometimes called static rules, this store contains the persistent policy for the local computer.
 This policy is not from GPOs, and has been created manually or programmatically (during application installation) on the computer.
-Rules created in this store are attached to the ActiveStore and activated on the computer immediately. 
-                         
+Rules created in this store are attached to the ActiveStore and activated on the computer immediately.
+
  -- ActiveStore: This store contains the currently active policy, which is the sum of all policy stores that apply to the computer.
 This is the resultant set of policy (RSOP) for the local computer (the sum of all GPOs that apply to the computer), and the local stores (the PersistentStore, the static Windows service hardening (WSH), and the configurable WSH).
-                         
+
  -- -- GPOs are also policy stores.
-Computer GPOs can be specified as follows. 
-                         
- --- -- `-PolicyStore hostname`. 
-                         
- -- -- Active Directory GPOs can be specified as follows. 
-                         
- --- -- `-PolicyStore domain.fqdn.com\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`. 
-                         
- --- -- Such as the following. 
-                         
+Computer GPOs can be specified as follows.
+
+ --- -- `-PolicyStore hostname`.
+
+ -- -- Active Directory GPOs can be specified as follows.
+
+ --- -- `-PolicyStore domain.fqdn.com\GPO_Friendly_Namedomain.fqdn.comGPO_Friendly_Name`.
+
+ --- -- Such as the following.
+
  --- -- -- `-PolicyStore localhost`
-                         
+
  --- -- -- `-PolicyStore corp.contoso.com\FirewallPolicy`
-                         
- -- -- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console. 
-                         
- -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer. 
-                         
- -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server 2012. 
-                         
+
+ -- -- Active Directory GPOs can be created using the New-GPO cmdlet or the Group Policy Management Console.
+
+ -- RSOP: This read-only store contains the sum of all GPOs applied to the local computer.
+
+ -- SystemDefaults: This read-only store contains the default state of firewall rules that ship with Windows Server 2012.
+
  -- StaticServiceStore: This read-only store contains all the service restrictions that ship with Windows Server 2012.
-Optional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS. 
-                         
+Optional and product-dependent features are considered part of Windows Server 2012 for the purposes of WFAS.
+
  -- ConfigurableServiceStore: This read-write store contains all the service restrictions that are added for third-party services.
-In addition, network isolation rules that are created for Windows Store application containers will appear in this policy store. 
-                         
-The default value is PersistentStore. 
+In addition, network isolation rules that are created for Windows Store application containers will appear in this policy store.
+
+The default value is PersistentStore.
 Note: The Set-NetIPsecRule cmdlet cannot be used to add an object to a policy store.
 An object can only be added to a policy store at creation time with this Copy-NetIPsecRule cmdlet or with the New-NetIPsecRule cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -187,13 +187,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -231,7 +231,7 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
 
-[Get-ADDomainController](../addsadministration/Get-ADDomainController.md)
+[Get-ADDomainController](../activedirectory/Get-ADDomainController.md)
 
 [New-GPO](../grouppolicy/New-GPO.md)
 

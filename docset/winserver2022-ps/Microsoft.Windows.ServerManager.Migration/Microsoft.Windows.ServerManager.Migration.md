@@ -1,20 +1,19 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Module Name: Microsoft.Windows.ServerManager.Migration
-Module Guid:
-ms.topic: reference
-manager: jasgro
 author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
+manager: jasgro
+Module Guid: 
+Module Name: Microsoft.Windows.ServerManager.Migration
+ms.author: v-anbarr
+ms.date: 01/03/2017
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
-keywords: powershell, cmdlet
-ms.date: 2017-01-03
-title: Microsoft.Windows.ServerManager.Migration
-ms.reviewer:
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
+ms.topic: reference
+title: Microsoft.Windows.ServerManager.Migration
 ---
 
 

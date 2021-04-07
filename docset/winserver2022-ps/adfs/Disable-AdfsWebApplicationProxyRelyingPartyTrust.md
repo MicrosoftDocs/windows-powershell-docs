@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
-ms.assetid: E5C7CA93-89D1-4077-9F46-20D7137D4197
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/adfs/disable-adfswebapplicationproxyrelyingpartytrust?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-AdfsWebApplicationProxyRelyingPartyTrust
-ms.reviewer:
 ---
 
 # Disable-AdfsWebApplicationProxyRelyingPartyTrust

@@ -1,22 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetworkControllerDiagnostics
-Module Guid: D6DF305A-D5C8-4AD6-9161-5EE6BA44B501
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=799475
-Help Version: 5.0.1.0
-title: NetworkControllerDiagnostics
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
 author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
+Help Version: 5.0.1.0
 manager: jasgro
+Module Guid: d6df305a-d5c8-4ad6-9161-5ee6ba44b501
+Module Name: NetworkControllerDiagnostics
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: ED8A9D35-E584-4167-994B-CBC23B841CC1
+ms.topic: reference
+title: NetworkControllerDiagnostics
 ---
 
 # NetworkControllerDiagnostics Module

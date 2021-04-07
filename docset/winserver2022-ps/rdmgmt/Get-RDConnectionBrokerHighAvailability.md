@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdconnectionbrokerhighavailability?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDConnectionBrokerHighAvailability
-ms.reviewer:
-ms.assetid: 4B896F36-CE23-4AE9-B887-F155EB316E6B
 ---
 
 # Get-RDConnectionBrokerHighAvailability
@@ -40,7 +39,7 @@ List of RD Connection Broker servers.
 - ClientAccessName.
 Client access name for the group of RD Connection Broker servers.
 - DatabaseConnectionString.
-Database connection string of the central database that stores the configuration. 
+Database connection string of the central database that stores the configuration.
 - DatabaseSecondaryConnectionString.
 Database secondary connection string of the central database that stores the configuration.
 This setting is displayed if the high availability configuration is on a shared database server.
@@ -65,7 +64,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

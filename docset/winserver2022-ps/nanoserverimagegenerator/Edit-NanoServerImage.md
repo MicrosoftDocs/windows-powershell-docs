@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NanoServerImageGenerator-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NanoServerImageGenerator
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/nanoserverimagegenerator/edit-nanoserverimage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Edit-NanoServerImage
-ms.reviewer:
-ms.assetid: 544FB377-8C33-467E-864B-AC7D0F94C570
 ---
 
 # Edit-NanoServerImage

@@ -1,23 +1,22 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
-Module Name: systeminsights 
-Download Help Link: http://go.microsoft.com
-Locale: en-US
-title: Set-InsightsCapabilityAction
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file:
-keywords: powershell, cmdlet
 author: Kateyanne
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: http://go.microsoft.com
+external help file: 
+Locale: en-US
 manager: elizapo
+Module Name: SystemInsights
+ms.author: v-kaunu
 ms.date: 06/18/2018
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
-ms.assetid: 38D3C433-40AB-4E45-765F-5AC57EEB55A7
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/systeminsights/set-insightscapabilityaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-InsightsCapabilityAction
 ---
 
 # Set-InsightsCapabilityAction

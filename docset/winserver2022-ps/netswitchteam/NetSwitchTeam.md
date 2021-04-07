@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetSwitchTeam
-Module Guid: E83097B1-4470-4F37-8CE3-A6B0AC5ED8F5
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390801
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetSwitchTeam
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: e83097b1-4470-4f37-8ce3-a6b0ac5ed8f5
+Module Name: NetSwitchTeam
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 195E80D5-EC10-425B-B7D9-F5322AE491A7
+ms.topic: reference
+title: NetSwitchTeam
 ---
 
 # NetSwitchTeam Module

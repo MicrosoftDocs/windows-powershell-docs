@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: WebAdministration
-Module Guid: 13C15630-959C-49E4-A977-758C5CC93408
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285576
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
-title: WebAdministration
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 13c15630-959c-49e4-a977-758c5cc93408
+Module Name: WebAdministration
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: E202D545-2B83-4532-B016-BD96727B4DBE
+ms.topic: reference
+title: WebAdministration
 ---
 
 # WebAdministration Module

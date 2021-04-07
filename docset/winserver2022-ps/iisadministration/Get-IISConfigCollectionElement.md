@@ -2,18 +2,17 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: 659BEAE2-D810-4F9B-9223-51F303E5D2D2
 manager: dansimp
+Module Name: IISAdministration
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
+ms.reviewer: 
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/get-iisconfigcollectionelement?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-IISConfigCollectionElement
-ms.author: v-kaunu
-ms.reviewer:
 ---
 
 # Get-IISConfigCollectionElement

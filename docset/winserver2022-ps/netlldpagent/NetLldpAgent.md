@@ -1,22 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetLdpAgent
-Module Guid: 46F598E5-9907-42B2-AFBB-68EAF7E34604
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-title: NetLldpAgent
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 46f598e5-9907-42b2-afbb-68eaf7e34604
+Module Name: NetLldpAgent
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 29C55F63-4B4F-4E08-919C-E23079F69F7C
+ms.topic: reference
+title: NetLldpAgent
 ---
 
 # NetLldpAgent Module

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rddatabaseconnectionstring?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-RDDatabaseConnectionString
-ms.reviewer:
-ms.assetid: 3EE6029A-4C7B-40A8-BBB3-77388E8A2AC4
 ---
 
 # Remove-RDDatabaseConnectionString
@@ -67,7 +66,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -82,7 +81,7 @@ This parameter is not currently supported.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DatabaseConnectionString
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +96,7 @@ Indicates that this cmdlet removes the secondary database connection string.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DatabaseSecondaryConnectionString
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,7 +111,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

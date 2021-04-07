@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: IscsiTarget
-Module Guid: A1DA990A-4DC2-4F7E-BEB4-046A89B9D473
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390779
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: IscsiTarget
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: a1da990a-4dc2-4f7e-beb4-046a89b9d473
+Module Name: IscsiTarget
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 701252C5-688B-4916-B563-2D6E9563E743
+ms.topic: reference
+title: IscsiTarget
 ---
 
 # IscsiTarget Module

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: AppLocker
-Module Guid: 9DAFD409-67DE-4108-8EE9-73CD61F5B7BF
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390751
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: AppLocker
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 9dafd409-67de-4108-8ee9-73cd61f5b7bf
+Module Name: AppLocker
+ms.author: v-anbarr
 ms.date: 09/28/2020
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 4BB540B4-DE3E-4ADF-B306-5E714C527017
+ms.topic: reference
+title: AppLocker
 ---
 
 # AppLocker Module

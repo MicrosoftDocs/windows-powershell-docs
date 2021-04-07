@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopidlecount?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDVirtualDesktopIdleCount
-ms.reviewer:
-ms.assetid: F8336BA2-8B4C-4724-8C6B-B74CD9F92B60
 ---
 
 # Set-RDVirtualDesktopIdleCount
@@ -69,7 +68,7 @@ Specifies a collection of values (key/value pair) that allocate idle virtual des
 ```yaml
 Type: Hashtable
 Parameter Sets: Allocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -84,7 +83,7 @@ Specifies the batch size.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +99,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +116,7 @@ For virtual desktop collections the host server has the name of the Remote Deskt
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -132,7 +131,7 @@ Specifies the number of idle virtual desktops.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

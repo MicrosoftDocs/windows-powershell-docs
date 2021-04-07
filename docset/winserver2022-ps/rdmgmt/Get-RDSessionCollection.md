@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdsessioncollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDSessionCollection
-ms.reviewer:
-ms.assetid: 35443D32-EFDE-4F01-8028-D30B281120B0
 ---
 
 # Get-RDSessionCollection
@@ -33,7 +32,7 @@ Get-RDSessionCollection [[-CollectionName] <String>] [-ConnectionBroker <String>
 The **Get-RDSessionCollection** cmdlet gets session collections in a Remote Desktop deployment.
 A session collection consists of one or more Remote Desktop Session Host (RD Session Host) servers.
 Users can connect to RD Session Host servers in a session collection to run programs, save files, and use resources on those servers.
-The user needs to be a member of the local computer Administrator group to run this command. 
+The user needs to be a member of the local computer Administrator group to run this command.
 
 ## EXAMPLES
 
@@ -52,7 +51,7 @@ Specifies the name of a session collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -68,7 +67,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

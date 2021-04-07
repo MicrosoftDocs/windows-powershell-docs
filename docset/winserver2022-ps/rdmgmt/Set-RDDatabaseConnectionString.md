@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rddatabaseconnectionstring?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDDatabaseConnectionString
-ms.reviewer:
-ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
 ---
 
 # Set-RDDatabaseConnectionString
@@ -77,7 +76,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -88,7 +87,7 @@ Accept wildcard characters: False
 
 ### -DatabaseConnectionString
 Specifies the database connection string.
-The database connection string supports both high availability configurations: 
+The database connection string supports both high availability configurations:
 
 - Dedicated database server.
 Uses Windows Authentication to connect to the database.
@@ -98,7 +97,7 @@ Uses database authentication (such as SQL authentication) with a user name and p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -114,7 +113,7 @@ Specify the secondary connection string if the high availability configuration u
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -130,7 +129,7 @@ If you specify this parameter, you must also specify the *RestoreDatabaseConnect
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -147,7 +146,7 @@ You can use **Set-RDDatabaseConnectionString** on the active management broker t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3

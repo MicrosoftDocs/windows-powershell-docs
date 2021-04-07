@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ADCSDeployment
-Module Guid: 5919A3CB-977E-464F-A221-421C270218B4
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285733
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.2.1
 Locale: en-US
-title: ADCSDeployment
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 5919a3cb-977e-464f-a221-421c270218b4
+Module Name: ADCSDeployment
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C8A2C20B-27E4-4A1B-BFEB-12B4C3BC6133
+ms.topic: reference
+title: ADCSDeployment
 ---
 
 # ADCSDeployment Module

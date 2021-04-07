@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DhcpServerVersion_v1.0.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: DhcpServer
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverversion?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DhcpServerVersion
-ms.reviewer:
-ms.assetid: 05E7A9C2-2568-4B89-9C76-C48EAAA45718
 ---
 
 # Get-DhcpServerVersion

@@ -1,11 +1,11 @@
 ---
+author: Kateyanne
 external help file: DDVCmdlets.dll-Help.xml
 Module Name: Microsoft.DiagnosticDataViewer
-online version:
-schema: 2.0.0
-ms.reviewer:
 ms.author: v-kaunu
-author: Kateyanne
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdata?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 title: Get-DiagnosticData
 ---
 

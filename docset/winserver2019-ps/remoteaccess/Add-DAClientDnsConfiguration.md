@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_DAClientDNSConfiguration_v1.0.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/add-daclientdnsconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-DAClientDnsConfiguration
-ms.reviewer:
-ms.assetid: F087B662-BC9C-4772-8648-9B49FD3C9C21
 ---
 
 # Add-DAClientDnsConfiguration

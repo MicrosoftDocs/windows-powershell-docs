@@ -1,24 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: jgerend
-Module Name: systeminsights
-Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
-Download Help Link: http://go.microsoft.com
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: SystemInsights
-ms.author: v-anbarr
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: elizapo
+Module Guid: b55fd86f-287c-470c-9ac6-647dc76c15ce
+Module Name: SystemInsights
+ms.author: jgerend
 ms.date: 06/18/2018
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 38D4C333-40CC-4E35-943F-5AC57EEB53A7
+ms.topic: reference
+title: SystemInsights
 ---
 
 # SystemInsights Module

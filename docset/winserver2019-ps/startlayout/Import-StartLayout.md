@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.StartLayout.Commands.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: StartLayout
+ms.author: v-kaunu
 ms.date: 09/13/2018
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/startlayout/import-startlayout?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-StartLayout
-ms.reviewer:
-ms.assetid: F5C1A068-96E5-4A35-AE11-C447ADAAF4EC
 ---
 
 # Import-StartLayout

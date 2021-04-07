@@ -2,7 +2,7 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com
-external help file: 
+external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
 Locale: en-US
 manager: elizapo
 Module Name: SystemInsights
@@ -10,9 +10,9 @@ ms.author: v-kaunu
 ms.date: 06/18/2018
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/systeminsights/remove-insightscapabilityaction?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -51,14 +51,14 @@ The **Remove-InsightsCapabilityAction** cmdlet removes the action(s) associated 
 PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type OK, Warning
 ```
 
-This example removes the **OK** and **Warning** actions for the **CPU capacity forecasting** capability. 
+This example removes the **OK** and **Warning** actions for the **CPU capacity forecasting** capability.
 
 ### Example 2
 ```powershell
 PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -AllActions
 ```
 
-This example removes all actions for the **CPU capacity forecasting** capability. 
+This example removes all actions for the **CPU capacity forecasting** capability.
 
 ## PARAMETERS
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name. 
+Specifies a capability using a capability name.
 
 ```yaml
 Type: String

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkController
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networkcontroller/get-networkcontrollervirtualswitchconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetworkControllerVirtualSwitchConfiguration
-ms.reviewer:
-ms.assetid: 617F439B-D3EC-4C06-B24F-853D1777F2AE
 ---
 
 # Get-NetworkControllerVirtualSwitchConfiguration

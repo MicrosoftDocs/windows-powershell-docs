@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: BranchCacheOrchestrator.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: BranchCache
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/set-bcminsmblatency?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-BCMinSMBLatency
-ms.reviewer:
-ms.assetid: AA728517-3C09-455C-8285-B7C5F8A1DEA5
 ---
 
 # Set-BCMinSMBLatency

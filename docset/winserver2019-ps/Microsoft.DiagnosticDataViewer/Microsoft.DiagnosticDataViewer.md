@@ -1,12 +1,12 @@
 ---
-Module Name: Microsoft.DiagnosticDataViewer
-Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: {{Please enter FwLink manually}}
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
+Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
+Module Name: Microsoft.DiagnosticDataViewer
+ms.author: v-anbarr
+ms.reviewer: 
 title: Microsoft.DiagnosticsDataViewer
 ---
 

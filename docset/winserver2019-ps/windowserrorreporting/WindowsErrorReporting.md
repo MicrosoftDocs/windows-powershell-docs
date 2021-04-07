@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: WindowsErrorReporting
-Module Guid: 4BC4DED7-249B-41AC-973F-83AF4D25D82B
-Download Help Link: na
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: WindowsErrorReporting
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 4bc4ded7-249b-41ac-973f-83af4d25d82b
+Module Name: WindowsErrorReporting
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 7710FA9C-A106-4C4A-BC8F-0EB352538B04
+ms.topic: reference
+title: WindowsErrorReporting
 ---
 
 # WindowsErrorReporting Module

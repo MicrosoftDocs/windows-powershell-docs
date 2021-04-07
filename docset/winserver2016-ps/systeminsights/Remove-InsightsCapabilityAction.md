@@ -1,23 +1,22 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
-Module Name: systeminsights
-Download Help Link: http://go.microsoft.com
-Locale: en-US
-title: Remove-InsightsCapabilityAction
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file:
-keywords: powershell, cmdlet
 author: Kateyanne
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: http://go.microsoft.com
+external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
+Locale: en-US
 manager: elizapo
+Module Name: SystemInsights
+ms.author: v-kaunu
 ms.date: 06/18/2018
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
-ms.assetid: 38D3C557-40AB-4E35-943F-5AC58EEB55A7
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/systeminsights/remove-insightscapabilityaction?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Remove-InsightsCapabilityAction
 ---
 
 # Remove-InsightsCapabilityAction
@@ -52,14 +51,14 @@ The **Remove-InsightsCapabilityAction** cmdlet removes the action(s) associated 
 PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type OK, Warning
 ```
 
-This example removes the **OK** and **Warning** actions for the **CPU capacity forecasting** capability. 
+This example removes the **OK** and **Warning** actions for the **CPU capacity forecasting** capability.
 
 ### Example 2
 ```powershell
 PS C:\> Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -AllActions
 ```
 
-This example removes all actions for the **CPU capacity forecasting** capability. 
+This example removes all actions for the **CPU capacity forecasting** capability.
 
 ## PARAMETERS
 
@@ -124,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name. 
+Specifies a capability using a capability name.
 
 ```yaml
 Type: String

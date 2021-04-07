@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: Hyper-V
-Module Guid: AF4BDDD0-8583-4FF2-84B2-A33F5C8DE8A7
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=390775
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
-title: Hyper-V
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
+Module Name: Hyper-V
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: BBEE3D24-D776-468A-B8CF-6878D2F0570F
+ms.topic: reference
+title: Hyper-V
 ---
 
 # Hyper-V Module

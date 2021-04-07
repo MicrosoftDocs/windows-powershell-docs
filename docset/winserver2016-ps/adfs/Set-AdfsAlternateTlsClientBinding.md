@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
-ms.assetid: DF0ED3AD-B550-4B24-B520-18BF6D8D7E83
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/adfs/set-adfsalternatetlsclientbinding?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AdfsAlternateTlsClientBinding
-ms.reviewer:
 ---
 
 # Set-AdfsAlternateTlsClientBinding

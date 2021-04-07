@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ScheduledTasks
-Module Guid: 5378EE8E-E349-49BB-83B9-F3D9C396C0A6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390822
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
-title: ScheduledTasks
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 5378ee8e-e349-49bb-83b9-f3d9c396c0a6
+Module Name: ScheduledTasks
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 969AF3A6-0C60-4790-94D9-9E4920052551
+ms.topic: reference
+title: ScheduledTasks
 ---
 
 # ScheduledTasks Module

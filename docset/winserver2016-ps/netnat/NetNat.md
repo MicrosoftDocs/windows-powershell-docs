@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetNat
-Module Guid: E5439F56-42AA-4FDF-8705-50C782A89345
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390798
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetNat
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: e5439f56-42aa-4fdf-8705-50c782a89345
+Module Name: NetNat
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 0ABD4E3E-8A9B-4AF3-9197-675EB828DD25
+ms.topic: reference
+title: NetNat
 ---
 
 # NetNat Module

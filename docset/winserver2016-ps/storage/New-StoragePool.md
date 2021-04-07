@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: StorageSubSystem.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Storage
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version:
+online version: https://docs.microsoft.com/powershell/module/storage/new-storagepool?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-StoragePool
-ms.reviewer:
-ms.assetid: A789707E-04CB-4F49-B785-92247C8EB8AB
 ---
 
 # New-StoragePool

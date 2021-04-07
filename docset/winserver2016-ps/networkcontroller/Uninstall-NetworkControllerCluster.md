@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.NetworkController.Powershell.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetworkController
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/networkcontroller/uninstall-networkcontrollercluster?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Uninstall-NetworkControllerCluster
-ms.reviewer:
-ms.assetid: D3AC9AAD-4EE0-4533-B187-E2BA0E4AF07A
 ---
 
 # Uninstall-NetworkControllerCluster

@@ -2,18 +2,17 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: 23E94844-DF20-457A-A28E-8194A4D692EE
 manager: dansimp
+Module Name: IISAdministration
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
+ms.reviewer: 
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/enable-iiscentralcertprovider?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-IISCentralCertProvider
-ms.reviewer:
 ---
 
 # Enable-IISCentralCertProvider

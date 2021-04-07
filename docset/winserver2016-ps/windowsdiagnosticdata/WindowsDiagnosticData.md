@@ -1,12 +1,12 @@
 ---
-Module Name: WindowsDiagnosticData
-Module Guid: 11888dc4-4830-4138-b422-e8bc2209ffb9
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: https://go.microsoft.com/fwlink/?linkid=2028917
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
+Module Guid: 11888dc4-4830-4138-b422-e8bc2209ffb9
+Module Name: WindowsDiagnosticData
+ms.author: v-anbarr
+ms.reviewer: 
 title: WindowsDiagnosticData
 ---
 

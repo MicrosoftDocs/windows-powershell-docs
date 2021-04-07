@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Mpio-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: MPIO
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/mpio/enable-msdsmautomaticclaim?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-MSDSMAutomaticClaim
-ms.reviewer:
-ms.assetid: 8F71F9B3-68C3-4D0A-9D49-A6209B469015
 ---
 
 # Enable-MSDSMAutomaticClaim

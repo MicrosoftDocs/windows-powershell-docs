@@ -217,4 +217,4 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 
 [Set-NetIPsecRule](./Set-NetIPsecRule.md)
 
-[Get-ADDomainController](/winserver2019-ps/activedirectory/Get-ADDomainController)
+[Get-ADDomainController](../activedirectory/Get-ADDomainController.md)

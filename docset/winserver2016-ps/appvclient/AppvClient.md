@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: AppvClient
-Module Guid: 596D7B43-928B-44D4-89E7-17D34740ECC2
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403113
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: AppvClient
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 596d7b43-928b-44d4-89e7-17d34740ecc2
+Module Name: AppvClient
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C9C572CE-DFD4-41D8-8F26-968A2931F477
+ms.topic: reference
+title: AppvClient
 ---
 
 # AppvClient Module

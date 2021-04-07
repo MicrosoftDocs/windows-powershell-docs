@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: dism
-online version: https://go.microsoft.com/fwlink/?LinkId=289359
+Module Name: System.Object[]
+online version: https://docs.microsoft.com/powershell/module/dism/get-windowsreservedstoragestate?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

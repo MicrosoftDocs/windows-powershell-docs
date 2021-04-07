@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IdentityServer.Management.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: ADFS
-ms.assetid: 06A9591A-5F92-4B62-A837-C1EF3F4C02DC
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/adfs/enable-adfsapplicationgroup?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-AdfsApplicationGroup
-ms.reviewer:
 ---
 
 # Enable-AdfsApplicationGroup

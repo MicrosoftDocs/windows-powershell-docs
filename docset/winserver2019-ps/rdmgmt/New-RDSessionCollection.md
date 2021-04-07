@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdsessioncollection?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-RDSessionCollection
-ms.reviewer:
-ms.assetid: B59F93B4-115B-44BB-A349-8D915D281FC7
 ---
 
 # New-RDSessionCollection
@@ -61,7 +60,7 @@ Indicates that this cmdlet enables automatic session desktop assignments for a p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalSessionCollection
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -76,7 +75,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +90,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -106,7 +105,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +121,7 @@ This parameter applies only to personal virtual desktop collections.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalSessionCollection
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -137,7 +136,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalSessionCollection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -152,7 +151,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PooledSessionCollection
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +166,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

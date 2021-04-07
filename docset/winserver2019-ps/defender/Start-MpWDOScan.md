@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpWDOScan.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: Defender
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/defender/start-mpwdoscan?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-MpWDOScan
-ms.reviewer:
-ms.assetid: 6DDD7E0D-244E-42E1-B4CD-81250E6B7059
 ---
 
 # Start-MpWDOScan

@@ -2,18 +2,17 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: 33B108B2-CB02-442E-8323-B91229F1B690
 manager: dansimp
+Module Name: IISAdministration
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: w10
+ms.reviewer: 
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/remove-iisconfigcollectionelement?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-IISConfigCollectionElement
-ms.author: v-kaunu
-ms.reviewer:
 ---
 
 # Remove-IISConfigCollectionElement

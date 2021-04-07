@@ -2,7 +2,7 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com
-external help file: 
+external help file: Microsoft.SystemInsights.Management.PowerShell.dll-help.xml
 Locale: en-US
 manager: elizapo
 Module Name: SystemInsights
@@ -10,9 +10,9 @@ ms.author: v-kaunu
 ms.date: 06/18/2018
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/systeminsights/set-insightscapabilityschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -75,7 +75,7 @@ This example sets a daily schedule for the **CPU capacity forecasting** capabili
 
 ### Example 2
 ```powershell
-PS C:\> Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Daily -DaysInterval 2 
+PS C:\> Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Daily -DaysInterval 2
 ```
 
 This example sets a daily schedule for the **CPU capacity forecasting** capability, which runs every 2 days.
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -Daily
-Uses days as the scheduled time interval. 
+Uses days as the scheduled time interval.
 
 ```yaml
 Type: SwitchParameter
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSchedule
-Restores the default schedule of the capability. 
+Restores the default schedule of the capability.
 
 ```yaml
 Type: SwitchParameter
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hourly
-Uses hours as the scheduled time interval. 
+Uses hours as the scheduled time interval.
 
 ```yaml
 Type: SwitchParameter
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -Minute
-Uses minutes as the scheduled time interval. 
+Uses minutes as the scheduled time interval.
 
 ```yaml
 Type: SwitchParameter
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinutesInterval
-Specifies the interval between minutes in the schedule. An interval of 5 produces a prediction every 5 minutes. An interval of 10 produces a prediction every 10 minutes. The default value is 30, and it is not recommended to specify low values of this parameter, as it may negatively impact performance. 
+Specifies the interval between minutes in the schedule. An interval of 5 produces a prediction every 5 minutes. An interval of 10 produces a prediction every 10 minutes. The default value is 30, and it is not recommended to specify low values of this parameter, as it may negatively impact performance.
 
 ```yaml
 Type: UInt16
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies a capability using a capability name. 
+Specifies a capability using a capability name.
 
 ```yaml
 Type: String

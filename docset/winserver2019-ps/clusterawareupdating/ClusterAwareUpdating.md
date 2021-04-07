@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: ClusterAwareUpdating
-Module Guid: 4E804861-1DCE-46C1-868D-C8F2AB9D220A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390759
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: ClusterAwareUpdating
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
+Module Name: ClusterAwareUpdating
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 58543A60-45DE-4020-95FE-803B65203C2C
+ms.topic: reference
+title: ClusterAwareUpdating
 ---
 
 # ClusterAwareUpdating Module

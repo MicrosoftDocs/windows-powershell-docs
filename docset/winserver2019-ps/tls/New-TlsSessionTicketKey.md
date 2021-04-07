@@ -2,20 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.WindowsAuthenticationProtocols.Commands.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
-ms.assetid: 1B64E8FA-A404-4C5F-8FE7-230B5E717F08
+Module Name: TLS
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/tls/new-tlssessionticketkey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-TlsSessionTicketKey
-ms.reviewer:
 ---
 
 # New-TlsSessionTicketKey

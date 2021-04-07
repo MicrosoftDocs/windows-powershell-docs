@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdsessionhost?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDSessionHost
-ms.reviewer:
-ms.assetid: 9447CF73-4CD4-495F-8757-DA8156325BCC
 ---
 
 # Set-RDSessionHost
@@ -54,7 +53,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -70,7 +69,7 @@ The acceptable values for this parameter are: Yes, NotUntilReboot, or No.
 ```yaml
 Type: RDServerNewConnectionAllowed
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, NotUntilReboot, No
 
 Required: True
@@ -86,7 +85,7 @@ Specifies an array that contains the fully qualified domain name (FQDN) of one o
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

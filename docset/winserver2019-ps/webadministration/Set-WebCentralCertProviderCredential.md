@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: WebAdministration
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/set-webcentralcertprovidercredential?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WebCentralCertProviderCredential
-ms.reviewer:
-ms.assetid: D0323D6F-2D42-49EE-93CA-9B4B1EB8663C
 ---
 
 # Set-WebCentralCertProviderCredential

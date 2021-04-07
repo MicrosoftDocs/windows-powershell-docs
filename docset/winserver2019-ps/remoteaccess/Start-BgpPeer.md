@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_BgpPeer_v1.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/start-bgppeer?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-BgpPeer
-ms.reviewer:
-ms.assetid: ECED1D43-9CE2-4B06-907A-9BEC72A0B235
 ---
 
 # Start-BgpPeer

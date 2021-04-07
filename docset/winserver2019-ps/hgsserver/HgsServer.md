@@ -1,12 +1,12 @@
 ---
-Module Name: HgsServer
-Module Guid: FDA18D7C-B57D-47D7-801C-14832537A1BA
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=519072
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.3
 Locale: en-US
+Module Guid: fda18d7c-b57d-47d7-801c-14832537a1ba
+Module Name: HgsServer
+ms.author: v-anbarr
+ms.reviewer: 
 title: HgsServer
 ---
 

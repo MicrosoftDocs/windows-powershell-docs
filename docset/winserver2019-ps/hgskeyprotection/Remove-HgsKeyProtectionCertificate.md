@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
-ms.assetid: 69C62781-F17B-43FE-A695-1F1D09D7F6EE
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/remove-hgskeyprotectioncertificate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-HgsKeyProtectionCertificate
-ms.reviewer:
 ---
 
 # Remove-HgsKeyProtectionCertificate

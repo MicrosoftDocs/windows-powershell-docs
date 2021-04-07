@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDPersonalVirtualDesktopPatchSchedule
-ms.reviewer:
-ms.assetid: 70F30CA6-41F3-4676-8806-90BB9173AA98
 ---
 
 # Get-RDPersonalVirtualDesktopPatchSchedule
@@ -65,7 +64,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -81,7 +80,7 @@ The ID of a patch schedule is a system-assigned GUID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -97,7 +96,7 @@ If you do not specify a value for this parameter, the cmdlet returns patch sched
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -123,7 +122,7 @@ EndTime : This is the latest the patch can be started
 ID : Unique identifier of the patch schedule
 Label : A string that describes the purpose of the patch
 Plugin : Plugin that created the patch schedule
-PatchStatus  : 
+PatchStatus  :
 - RDV_TASK_STATUS_UNKNOWN.
 (Not used by task agent.)
 - RDV_TASK_STATUS_SEARCHING.

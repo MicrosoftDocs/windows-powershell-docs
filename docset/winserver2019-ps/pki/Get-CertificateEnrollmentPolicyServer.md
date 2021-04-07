@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: pki
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/pki/get-certificateenrollmentpolicyserver?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-CertificateEnrollmentPolicyServer
-ms.reviewer:
-ms.assetid: 0129619B-6FDE-44E0-9BD4-5C96326B76BC
 ---
 
 # Get-CertificateEnrollmentPolicyServer

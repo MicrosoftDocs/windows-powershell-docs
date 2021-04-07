@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: MMAgent
-Module Guid: E1383A06-D48B-45E0-81E4-5EAD146E81A8
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390789
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: MMAgent
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
+Module Name: MMAgent
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 52420F30-6CDF-4123-A5F6-DA377A7C386A
+ms.topic: reference
+title: MMAgent
 ---
 
 # MMAgent Module

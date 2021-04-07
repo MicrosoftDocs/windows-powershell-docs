@@ -1,12 +1,12 @@
 ---
-Module Name: HgsDiagnostics
-Module Guid: 0D5D372A-6B2C-4C48-9151-1DEAD3B52FA7
-ms.reviewer:
-ms.author: v-anbarr
 author: andreabarr
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=760404
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
+Module Guid: 0d5d372a-6b2c-4c48-9151-1dead3b52fa7
+Module Name: HgsDiagnostics
+ms.author: v-anbarr
+ms.reviewer: 
 title: HgsDiagnostics
 ---
 

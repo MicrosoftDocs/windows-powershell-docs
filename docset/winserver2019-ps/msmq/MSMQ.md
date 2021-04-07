@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: MSMQ
-Module Guid: 33CA09B1-A7FE-42E0-8AA1-E7203746CA94
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285552
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 4.0.5.1
 Locale: en-US
-title: MSMQ
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 33ca09b1-a7fe-42e0-8aa1-e7203746ca94
+Module Name: MSMQ
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 85AAA420-97F3-423E-AE94-080BC32A8A27
+ms.topic: reference
+title: MSMQ
 ---
 
 # MSMQ Module

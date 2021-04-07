@@ -1,15 +1,15 @@
 ---
+author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetAdapterPowerManagement.cmdletDefinition.cdxml-help.xml
-ms.date: 2/14/2018
-online version: 
+manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.date: 02/14/2018
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/disable-netadapterpowermanagement?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetAdapterPowerManagement
-ms.author: v-kaunu
-author: Kateyanne
-ms.reviewer:
-ms.assetid: 34CA425A-4EED-42E9-8614-BBFF6C792393
-manager: dansimp
 ---
 
 # Disable-NetAdapterPowerManagement

@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetQosFlowControl.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: DcbQoS
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/dcbqos/get-netqosflowcontrol?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetQosFlowControl
-ms.reviewer:
-ms.assetid: C42A7FA6-75A9-4E20-8A8D-8F9F28A35C88
 ---
 
 # Get-NetQosFlowControl

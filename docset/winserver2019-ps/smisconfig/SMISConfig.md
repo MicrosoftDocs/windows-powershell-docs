@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: SMISConfig
-Module Guid: 74EBB94B-28F7-47CA-86A6-D16922665B88
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285570
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
-title: SMISConfig
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 74ebb94b-28f7-47ca-86a6-d16922665b88
+Module Name: SMISConfig
+ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 339A6EE3-4826-43D3-99DE-5C719EE117DC
+ms.topic: reference
+title: SMISConfig
 ---
 
 # SMISConfig Module

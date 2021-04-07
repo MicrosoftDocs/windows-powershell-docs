@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NFS
-Module Guid: 108AE179-3094-4223-91E4-B9099069017A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390807
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NFS
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 108ae179-3094-4223-91e4-b9099069017a
+Module Name: NFS
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 68C7868F-B038-4DBC-8EC0-744F671B3BA7
+ms.topic: reference
+title: NFS
 ---
 
 # NFS Module

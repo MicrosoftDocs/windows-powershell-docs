@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: DhcpServer
-Module Guid: 90EAA9DF-133A-450C-8728-91055CD946A1
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390765
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: DhcpServer
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
+Module Name: DhcpServer
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 4ABFF348-0669-4EDA-8B88-9C4F2A9BA5DE
+ms.topic: reference
+title: DhcpServer
 ---
 
 # DhcpServer Module

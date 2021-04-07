@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
-ms.assetid: 3D50802F-80A3-4110-B6B9-75BB7E71D4AD
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/import-hgskeyprotectionstate?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-HgsKeyProtectionState
-ms.reviewer:
 ---
 
 # Import-HgsKeyProtectionState

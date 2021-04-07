@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetFirewallSetting.cmdletDefinition.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetSecurity
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallsetting?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallSetting
-ms.reviewer:
-ms.assetid: 58853456-35AA-4F6C-84E2-461BB7F6374A
 ---
 
 # Get-NetFirewallSetting

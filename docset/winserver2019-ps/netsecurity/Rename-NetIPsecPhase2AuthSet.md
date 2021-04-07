@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: NetIPsecPhase2AuthSet.cmdletDefinition.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetSecurity
+ms.author: v-kaunu
 ms.date: 12/27/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/rename-netipsecphase2authset?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Rename-NetIPsecPhase2AuthSet
-ms.reviewer:
-ms.assetid: 75C04B9E-DEBF-4026-B7B2-A52937E0C221
 ---
 
 # Rename-NetIPsecPhase2AuthSet

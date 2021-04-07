@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_VpnConnectionTriggerDnsConfiguration_v1.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: VpnClient
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/vpnclient/remove-vpnconnectiontriggerdnsconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-VpnConnectionTriggerDnsConfiguration
-ms.reviewer:
-ms.assetid: EEC4627A-3CB1-4B40-93A2-4B0A14298DA6
 ---
 
 # Remove-VpnConnectionTriggerDnsConfiguration

@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: WindowsUpdate
-Module Guid: CMDLETS
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=614995
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: WindowsUpdate
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: cmdlets
+Module Name: WindowsUpdate
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: B8D6B3A1-AFBF-4428-A95C-103704EDB001
+ms.topic: reference
+title: WindowsUpdate
 ---
 
 # WindowsUpdate Module

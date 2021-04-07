@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIPInterface.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: NetTCPIP
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipinterface?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPInterface
-ms.reviewer:
-ms.assetid: 8215EF05-BA8C-4476-B394-A0A4FA917924
 ---
 
 # Get-NetIPInterface

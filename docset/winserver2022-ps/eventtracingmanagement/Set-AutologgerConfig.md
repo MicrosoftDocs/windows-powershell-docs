@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_AutologgerConfig_v1.0.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: EventTracingManagement
+ms.author: v-kaunu
 ms.date: 01/05/2017
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/eventtracingmanagement/set-autologgerconfig?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-AutologgerConfig
-ms.reviewer:
-ms.assetid: 2CD2279D-00DA-4DE9-BAB1-7E579901649E
 ---
 
 # Set-AutologgerConfig

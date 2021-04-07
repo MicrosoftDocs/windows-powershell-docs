@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: NetQoS
-Module Guid: 743692B7-A227-4389-B082-2B47DE1D0D2D
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390799
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-title: NetQoS
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: 743692b7-a227-4389-b082-2b47de1d0d2d
+Module Name: NetQoS
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: C7CB3606-F583-4B89-BAAB-C0FEA48D0678
+ms.topic: reference
+title: NetQoS
 ---
 
 # NetQoS Module

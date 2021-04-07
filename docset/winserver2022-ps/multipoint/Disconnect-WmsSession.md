@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MultiPoint.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/multipoint/disconnect-wmssession?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-WmsSession
-ms.reviewer:
-ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
 ---
 
 # Disconnect-WmsSession

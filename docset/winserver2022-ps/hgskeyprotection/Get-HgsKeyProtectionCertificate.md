@@ -2,21 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.Windows.KpsServer.Administration.dll-Help.xml
-keywords: powershell, cmdlet
 manager: jasgro
 Module Name: HgsKeyProtection
-ms.assetid: BBB61EA6-74AB-4DE2-A51C-6C74C8E8958D
 ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/hgskeyprotection/get-hgskeyprotectioncertificate?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-HgsKeyProtectionCertificate
-ms.reviewer:
 ---
 
 # Get-HgsKeyProtectionCertificate

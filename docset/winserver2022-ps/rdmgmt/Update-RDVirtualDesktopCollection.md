@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/update-rdvirtualdesktopcollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-RDVirtualDesktopCollection
-ms.reviewer:
-ms.assetid: 935B633B-91C9-4ABE-8646-F32DDD0DDFC9
 ---
 
 # Update-RDVirtualDesktopCollection
@@ -72,7 +71,7 @@ Specifies the name of a virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -103,7 +102,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -118,7 +117,7 @@ Indicates that the server prevents the rollback of a virtual desktop deployment.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +132,7 @@ Forces the command to run without asking for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -148,7 +147,7 @@ Specifies a date and time by which the server ends the session if the operation 
 ```yaml
 Type: DateTime
 Parameter Sets: OnUserLogoff, OnSchedule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -163,7 +162,7 @@ Specifies a date and time to start the operation.
 ```yaml
 Type: DateTime
 Parameter Sets: OnUserLogoff
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -178,7 +177,7 @@ Specifies the number of days after which the server forces a password update for
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -193,7 +192,7 @@ Specifies the fully qualified domain name (FQDN) of the server where the virtual
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -208,7 +207,7 @@ Specifies a descriptive name for the virtual desktop template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

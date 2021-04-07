@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdpersonalvirtualdesktopassignment?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDPersonalVirtualDesktopAssignment
-ms.reviewer:
-ms.assetid: 9E44FA3F-AD00-43B5-B5CE-D10F4DD4C9B6
 ---
 
 # Get-RDPersonalVirtualDesktopAssignment
@@ -64,7 +63,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -80,7 +79,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +94,7 @@ Specifies one or more user accounts, in DOMAIN\User format.
 ```yaml
 Type: String
 Parameter Sets: GetByUser
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -112,7 +111,7 @@ The virtual desktop identified here must be a member of the collection that the 
 ```yaml
 Type: String
 Parameter Sets: GetByDesktop
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

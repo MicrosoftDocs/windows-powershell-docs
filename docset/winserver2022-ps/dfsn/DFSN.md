@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: DFSN
-Module Guid: CMDLETS
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390763
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.100.1
 Locale: en-US
-title: DFSN
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: cmdlets
+Module Name: DFSN
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: 2A1924D6-3934-48B8-807D-D4E417625396
+ms.topic: reference
+title: DFSN
 ---
 
 # DFSN Module

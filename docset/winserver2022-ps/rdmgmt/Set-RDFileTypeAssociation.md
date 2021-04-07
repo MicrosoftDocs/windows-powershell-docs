@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdfiletypeassociation?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDFileTypeAssociation
-ms.reviewer:
-ms.assetid: 4EAAD44F-74D9-4714-989B-7D694BDCEEDF
 ---
 
 # Set-RDFileTypeAssociation
@@ -51,11 +50,11 @@ PS C:\> Set-RDFileTypeAssociation -CollectionName "Virtual Desktop Collection" -
 
 This command sets the following options for file type association:
 
-- Collection named Virtual Desktop Collection. 
-- Remote Desktop application alias of iexplore. 
-- File name extension of .html to associate with the application. 
+- Collection named Virtual Desktop Collection.
+- Remote Desktop application alias of iexplore.
+- File name extension of .html to associate with the application.
 - Virtual desktop named RDS-WKS-A27.
- 
+
 - Users can see the file name extension.
 
 ### Example 2: Set a file type association for a session collection
@@ -65,10 +64,10 @@ PS C:\> Set-RDFileTypeAssociation -CollectionName "Session Collection" -AppAlias
 
 This command sets these options for file type association:
 
-- Collection named Session Collection. 
-- Remote Desktop application alias of Notepad. 
+- Collection named Session Collection.
+- Remote Desktop application alias of Notepad.
 - File name extension of .txt to associate with the application.
- 
+
 - The icon for the Remote Desktop program Notepad.exe appears in the \System32 subfolder of the Windows folder.
 The icon that appears for Notepad is at the first position of the icon file.
 
@@ -81,7 +80,7 @@ The default alias is the program's file name without the extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -96,7 +95,7 @@ Specifies the name of the session or virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -113,7 +112,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +127,7 @@ Specifies the file name extension of the file type whose association you change.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -144,7 +143,7 @@ The **IconPath** parameter specifies the icon file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +161,7 @@ For virtual desktop collections, the path must be a valid local path on all virt
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -182,7 +181,7 @@ For example, if you have published Microsoft Word as a RemoteApp, but you want e
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

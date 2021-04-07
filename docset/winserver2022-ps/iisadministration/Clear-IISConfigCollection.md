@@ -2,20 +2,19 @@
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.IIS.Powershell.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-ms.assetid: 6154557C-CFC4-4D97-91B4-A06646F50F2B
 manager: dansimp
+Module Name: IISAdministration
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
 ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/iisadministration/clear-iisconfigcollection?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-IISConfigCollection
-ms.author: v-kaunu
-ms.reviewer:
 ---
 
 # Clear-IISConfigCollection

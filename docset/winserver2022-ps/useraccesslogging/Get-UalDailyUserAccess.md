@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MsftUal_DailyUserAccess.cdxml-help.xml
-keywords: powershell, cmdlet
 manager: jasgro
+Module Name: UserAccessLogging
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: 
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualdailyuseraccess?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-UalDailyUserAccess
-ms.reviewer:
-ms.assetid: 4A985890-7B29-4CDB-B3EC-9A5A4F18DB94
 ---
 
 # Get-UalDailyUserAccess

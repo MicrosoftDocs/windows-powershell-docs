@@ -1,23 +1,21 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-anbarr
-Module Name: FileServerResourceManager
-Module Guid: FAA199B6-C378-4AAD-9D4D-F0E99F3F4845
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=390771
+author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
+Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-title: FileServerResourceManager
-ms.reviewer:
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
+Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
+Module Name: FileServerResourceManager
+ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.topic: reference
+ms.mktglfcycl: manage
 ms.prod: w10
+ms.reviewer: 
+ms.sitesec: library
 ms.technology: powershell-windows
-ms.assetid: CD5BB115-897D-406C-B649-5B5F75E4FC84
+ms.topic: reference
+title: FileServerResourceManager
 ---
 
 # FileServerResourceManager Module

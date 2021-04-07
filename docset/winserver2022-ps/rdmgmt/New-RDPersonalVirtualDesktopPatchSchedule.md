@@ -1,21 +1,20 @@
 ---
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.author: v-kaunu
 author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-external help file: 
-keywords: powershell, cmdlet
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
 ms.date: 12/20/2016
+ms.mktglfcycl: manage
 ms.prod: w10
-ms.technology: 
+ms.reviewer:
+ms.sitesec: library
+ms.technology:
 ms.topic: reference
-online version: 
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-RDPersonalVirtualDesktopPatchSchedule
-ms.reviewer:
-ms.assetid: ECE5D121-F6DD-4EB5-B630-61C9A64A08A2
 ---
 
 # New-RDPersonalVirtualDesktopPatchSchedule
@@ -61,7 +60,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 8
@@ -77,7 +76,7 @@ This data is transparent to the user.
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -93,7 +92,7 @@ The server uses this value to prioritize the order in which patches are installe
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -108,7 +107,7 @@ Specifies the latest date and time by which the patch operation must begin.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -124,7 +123,7 @@ If you do not specify an ID, the system assigns an ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -140,7 +139,7 @@ Add a user-friendly, descriptive string so that the patch is easy to distinguish
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -156,7 +155,7 @@ For example, Windows Update.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -171,7 +170,7 @@ Specifies the earliest date and time by which to begin the patch operation.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -186,7 +185,7 @@ Specifies the name of a person virtual desktop.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -206,13 +205,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 VirtualDesktopName: Name of virtual desktop
 Context: Opaque binary data associated with the patch schedule
 Deadline: System uses this to prioritize patches.
-The patch with the earliest deadline gets highest priority. 
+The patch with the earliest deadline gets highest priority.
 StartTime : This is the earliest the patch can be started
 EndTime : This is the latest the patch can be started
 ID : Unique identifier of the patch schedule
 Label : A string that describes the purpose of the patch
 Plugin : Plugin that created the patch schedule
-PatchStatus : 
+PatchStatus :
  -- RDV_TASK_STATUS_UNKNOWN.
 (Not used by task agent.)
 - RDV_TASK_STATUS_SEARCHING.

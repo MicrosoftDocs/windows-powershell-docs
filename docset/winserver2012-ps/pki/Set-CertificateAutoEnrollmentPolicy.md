@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-ms.assetid: 37D54E2D-3003-4889-B8A6-78BFA3798342
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: pki
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/pki/set-certificateautoenrollmentpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-CertificateAutoEnrollmentPolicy

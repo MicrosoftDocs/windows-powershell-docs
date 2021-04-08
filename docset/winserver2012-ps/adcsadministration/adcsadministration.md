@@ -1,14 +1,13 @@
 ---
-Module Name: ADCSAdministration
-Module Guid: BCC14C75-EDE8-486E-97A5-5BF775C4A221
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=229087
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.3.0.0
 Locale: en-US
-ms.assetid: 38D3C333-40AB-4E35-943F-6AC57DEB55A7
 manager: dansimp
-ms.reviewer:
+Module Guid: bcc14c75-ede8-486e-97a5-5bf775c4a221
+Module Name: adcsadministration
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADCSAdministration Module

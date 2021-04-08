@@ -1,12 +1,12 @@
 ---
-external help file: NetTCPIP_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3FFBE8B0-365B-45AD-9237-6FA5FA01438A
+external help file: NetTCPIP_Cmdlets.xml
 manager: dansimp
+Module Name: NetTCPIP
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetRoute

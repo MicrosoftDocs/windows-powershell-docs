@@ -1,12 +1,12 @@
 ---
-external help file: FSRM_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 636F18BD-3619-48ED-B68E-7F1EAB89C744
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: FSRM_Cmdlets.xml
+manager: dansimp
+Module Name: FileServerResourceManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/stop-fsrmclassification?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Stop-FsrmClassification

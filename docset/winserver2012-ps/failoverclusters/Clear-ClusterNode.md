@@ -1,12 +1,12 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 0A717105-0C81-4F09-BE6A-19E7E770E435
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Failoverv2_Cmdlets.xml
+manager: dansimp
+Module Name: FailoverClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/clear-clusternode?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Clear-ClusterNode

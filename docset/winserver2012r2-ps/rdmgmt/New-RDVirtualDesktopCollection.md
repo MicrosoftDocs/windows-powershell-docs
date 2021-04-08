@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -79,7 +79,7 @@ Indicates that the server automatically associates virtual desktops with user ac
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalMgd, PersonalUnmgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ Use the **StorageType** parameter to specify the type of storage (local or centr
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -110,7 +110,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -126,7 +126,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Provides the path to the .xml file that contains unattended installation setting
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ Specifies a descriptive name for the unattended installation file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ Indicates that the server prevents rollback of a virtual desktop deployment.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PooledMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -186,7 +186,7 @@ Specifies the fully qualified domain name (FQDN) of the Active Directory domain 
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ Runs the operation without prompting for user confirmation.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ This parameter applies only to personal virtual desktop collections.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalMgd, PersonalUnmgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ Use the **StorageType** parameter to specify the type of storage for this collec
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -248,7 +248,7 @@ Specifies the maximum size (in gigabytes) for the user profile disk.
 ```yaml
 Type: Int32
 Parameter Sets: PooledMgd, PooledUnmgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -264,7 +264,7 @@ OU names must be unique within a forest.
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ New virtual desktops that you add to this collection are based on the template t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -296,7 +296,7 @@ New virtual desktops that you add to this collection are based on the template t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PersonalUnmgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -312,7 +312,7 @@ New virtual desktops that you add to this collection are based on the template t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PooledMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -328,7 +328,7 @@ New virtual desktops that you add to this collection are based on the template t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PooledUnmgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -351,7 +351,7 @@ If you specify CentralSMBSharedStorage or CentralSanStorage, specify a value for
 ```yaml
 Type: VirtualDesktopStorageType
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 Accepted values: LocalStorage, CentralSmbShareStorage, CentralSanStorage
 
 Required: True
@@ -367,7 +367,7 @@ Specifies an array of user groups that are authorized to connect to the collecti
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +382,7 @@ Specifies the path to the user profile disk for the collection.
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PooledUnmgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -397,7 +397,7 @@ Specifies a collection of values (key=value pair) that allocate virtual desktops
 ```yaml
 Type: Hashtable
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -412,7 +412,7 @@ Specifies the name of a virtual desktop to add to an unmanaged collection.
 ```yaml
 Type: String[]
 Parameter Sets: PooledUnmgd, PersonalUnmgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -427,7 +427,7 @@ Specifies a prefix for virtual desktop names that Remote Desktop Services automa
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -442,7 +442,7 @@ Specifies the number of days after which the server enforces a password update.
 ```yaml
 Type: Int32
 Parameter Sets: PooledMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -457,7 +457,7 @@ Specifies the fully qualified domain name (FQDN) of the server where the virtual
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -472,7 +472,7 @@ Specifies a descriptive name for the virtual desktop template.
 ```yaml
 Type: String
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -487,7 +487,7 @@ Specifies the path where the template for the virtual desktop collection is stor
 ```yaml
 Type: String
 Parameter Sets: PooledMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -1,12 +1,12 @@
 ---
-external help file: NFS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: D8B6D787-7615-4DF0-A7E9-90311AA2BAAD
+external help file: NFS_Cmdlets.xml
 manager: dansimp
+Module Name: NFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsopenfile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NfsOpenFile

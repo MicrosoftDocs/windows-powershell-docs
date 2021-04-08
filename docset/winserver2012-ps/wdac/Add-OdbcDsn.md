@@ -1,12 +1,12 @@
 ---
-external help file: WDAC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9666B815-41BC-4944-B19D-53DF84407B86
+external help file: WDAC_Cmdlets.xml
 manager: dansimp
+Module Name: Wdac
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wdac/add-odbcdsn?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-OdbcDsn

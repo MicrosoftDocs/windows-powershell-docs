@@ -1,14 +1,13 @@
 ---
-Module Name: WebAdministration
-Module Guid: 13C15630-959C-49E4-A977-758C5CC93408
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216903
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-ms.assetid: E202D545-2B83-4532-B016-BD96727B4DBE
 manager: dansimp
-ms.reviewer:
+Module Guid: 13c15630-959c-49e4-a977-758c5cc93408
+Module Name: WebAdministration
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WebAdministration Module

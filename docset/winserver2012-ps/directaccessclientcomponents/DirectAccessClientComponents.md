@@ -1,14 +1,13 @@
 ---
-Module Name: DirectAccessClientFIX
-Module Guid: 244F8FC0-A410-4B87-8237-7496F557E6D4
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=206776
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 6E108A49-889B-47B0-8537-FEC153F66809
 manager: dansimp
-ms.reviewer:
+Module Guid: 244f8fc0-a410-4b87-8237-7496f557e6d4
+Module Name: DirectAccessClientComponents
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DirectAccessClientFIX Module

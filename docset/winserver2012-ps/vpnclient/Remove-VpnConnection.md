@@ -1,12 +1,12 @@
 ---
-external help file: VpnClient_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 12C3BB17-8513-458E-AC0E-ED9776F2CD32
+external help file: VpnClient_Cmdlets.xml
 manager: dansimp
+Module Name: VpnClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/vpnclient/remove-vpnconnection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-VpnConnection

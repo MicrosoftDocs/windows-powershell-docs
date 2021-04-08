@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
-ms.assetid: FE86231C-AE53-42AF-B38F-9EE7386BF08C
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: ADFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adfs/get-adfsproxyconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-ADFSProxyConfiguration

@@ -1,12 +1,12 @@
 ---
-external help file: DnsServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 9EB56481-7D34-4087-811D-7C6BC30499DA
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DnsServer_Cmdlets.xml
+manager: dansimp
+Module Name: DnsServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsserver/convertto-dnsserversecondaryzone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # ConvertTo-DnsServerSecondaryZone

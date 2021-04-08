@@ -1,12 +1,12 @@
 ---
-external help file: DnsServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 663650C2-63F6-4B1C-8787-D5935F484B92
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DnsServer_Cmdlets.xml
+manager: dansimp
+Module Name: DnsServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverforwarder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-DnsServerForwarder

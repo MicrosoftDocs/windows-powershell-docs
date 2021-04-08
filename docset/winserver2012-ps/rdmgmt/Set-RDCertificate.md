@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 599AFD94-083E-48BD-8E92-FC718167D94B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdcertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDCertificate
@@ -68,7 +68,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies the location of a certificate as a file that has a .pfx extension.
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ See the Examples section.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RDCertificateRole
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDGateway, RDWebAccess, RDRedirector, RDPublishing
 
 Required: True

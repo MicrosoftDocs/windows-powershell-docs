@@ -1,12 +1,12 @@
 ---
-external help file: NetWNV_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 1EE6D032-B38A-44BB-98E9-01005266EA53
+external help file: NetWNV_Cmdlets.xml
 manager: dansimp
+Module Name: NetWNV
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netwnv/new-netvirtualizationlookuprecord?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NetVirtualizationLookupRecord

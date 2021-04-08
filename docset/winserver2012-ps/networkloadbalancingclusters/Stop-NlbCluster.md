@@ -1,12 +1,12 @@
 ---
-external help file: NLB_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 4ACF3C94-5AA5-45A5-9E0F-A57EDA1AA5E7
+external help file: NLB_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkLoadBalancingClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/stop-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Stop-NlbCluster

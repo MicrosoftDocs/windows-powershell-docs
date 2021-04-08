@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -74,7 +74,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ Performs the action without displaying a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ Specifies the FQDN of the RD Licensing server to configure.
 ```yaml
 Type: String[]
 Parameter Sets: BothPS, LicenseServerPS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ Valid values are PerUser, PerDevice, and NotConfigured.
 ```yaml
 Type: LicensingMode
 Parameter Sets: ModePS, BothPS
-Aliases: 
+Aliases:
 Accepted values: PerDevice, PerUser, NotConfigured
 
 Required: True

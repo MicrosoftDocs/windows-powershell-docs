@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_ServerDevice.cdxml-help.xml
-ms.assetid: 72F77C6E-41D5-4305-BC19-7C8C8FB2965F
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_ServerDevice.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualserverdevice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-UalServerDevice

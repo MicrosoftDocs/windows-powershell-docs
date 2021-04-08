@@ -1,14 +1,13 @@
 ---
-Module Name: WHEA
-Module Guid: B7BF4D74-F837-430E-810F-234F26021253
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285577
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-ms.assetid: 5881494F-DCEB-422C-8009-80D0630946B2
 manager: dansimp
-ms.reviewer:
+Module Guid: b7bf4d74-f837-430e-810f-234f26021253
+Module Name: WHEA
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WHEA Module

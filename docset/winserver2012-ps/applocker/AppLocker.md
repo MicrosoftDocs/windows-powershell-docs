@@ -1,14 +1,13 @@
 ---
-Module Name: AppLocker
-Module Guid: 9DAFD409-67DE-4108-8EE9-73CD61F5B7BF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216155
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 4BB540B4-DE3E-4ADF-B306-5E714C527017
 manager: dansimp
-ms.reviewer:
+Module Guid: 9dafd409-67de-4108-8ee9-73cd61f5b7bf
+Module Name: AppLocker
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # AppLocker Module

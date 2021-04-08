@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
-ms.assetid: CA3E100C-A668-4B7F-9080-43D66DBC5BC6
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+manager: dansimp
+Module Name: ADDSDeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/addsdeployment/install-addsdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-ADDSDomain

@@ -1,12 +1,12 @@
 ---
-external help file: NLB_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 46FF081F-B532-4CAE-92BA-789872928D0E
+external help file: NLB_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkLoadBalancingClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/new-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NlbCluster

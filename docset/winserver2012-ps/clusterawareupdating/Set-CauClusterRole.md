@@ -1,12 +1,12 @@
 ---
-external help file: ClusterAware_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: F3EE6EC5-BA2A-4734-897A-ACD4DB9CC4B5
+external help file: ClusterAware_Cmdlets.xml
 manager: dansimp
+Module Name: ClusterAwareUpdating
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/set-cauclusterrole?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-CauClusterRole

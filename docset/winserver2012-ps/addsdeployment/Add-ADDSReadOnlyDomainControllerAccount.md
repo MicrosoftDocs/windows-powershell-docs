@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
-ms.assetid: 3946BA04-13FB-482D-9824-89F8994FBF03
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+manager: dansimp
+Module Name: ADDSDeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/addsdeployment/add-addsreadonlydomaincontrolleraccount?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-ADDSReadOnlyDomainControllerAccount

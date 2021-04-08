@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheSecondaryRepublicationCacheFile.cdxml-help.xml
-ms.assetid: C1A8FD1E-6416-4071-844B-744DAD59DD76
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheSecondaryRepublicationCacheFile.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bcdatacacheextension?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BCDataCacheExtension

@@ -1,14 +1,13 @@
 ---
-Module Name: SmbWitness
-Module Guid: EF018256-3318-4E74-A823-158022778487
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216864
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 4F0AD55F-79C7-4918-B66D-D337FC3DBB99
 manager: dansimp
-ms.reviewer:
+Module Guid: ef018256-3318-4e74-a823-158022778487
+Module Name: SmbWitness
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # SmbWitness Module

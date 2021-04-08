@@ -1,12 +1,12 @@
 ---
-external help file: Iscsi_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C6D1C713-F3D8-4BC2-9DDC-B2FD87E0C025
+external help file: Iscsi_Cmdlets.xml
 manager: dansimp
+Module Name: iSCSI
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iscsi/disconnect-iscsitarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disconnect-IscsiTarget

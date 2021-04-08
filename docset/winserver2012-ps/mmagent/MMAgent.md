@@ -1,14 +1,13 @@
 ---
-Module Name: MMAgent
-Module Guid: E1383A06-D48B-45E0-81E4-5EAD146E81A8
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=232887
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 52420F30-6CDF-4123-A5F6-DA377A7C386A
 manager: dansimp
-ms.reviewer:
+Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
+Module Name: MMAgent
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # MMAgent Module

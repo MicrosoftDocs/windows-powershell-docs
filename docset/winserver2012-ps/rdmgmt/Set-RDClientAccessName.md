@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 9FB71EBC-BCD7-4603-896D-2A299F607321
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdclientaccessname?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDClientAccessName
@@ -42,7 +42,7 @@ Specifies a DNS name for clients to use to connect to a Remote Desktop deploymen
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -58,7 +58,7 @@ If you do not specify a value, the cmdlet uses the FQDN of the local computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

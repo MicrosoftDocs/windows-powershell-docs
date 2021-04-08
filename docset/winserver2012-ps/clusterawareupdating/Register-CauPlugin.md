@@ -1,12 +1,12 @@
 ---
-external help file: ClusterAware_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 8150ACFB-8077-4394-9FF1-3293F28FF32E
+external help file: ClusterAware_Cmdlets.xml
 manager: dansimp
+Module Name: ClusterAwareUpdating
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/register-cauplugin?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Register-CauPlugin

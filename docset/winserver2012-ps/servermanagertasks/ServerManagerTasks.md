@@ -1,14 +1,13 @@
 ---
-Module Name: ServerManagerTasks
-Module Guid: BF4656AC-2663-4636-8B38-7D78FD587D0B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=252257
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: A97F254E-658B-4B70-9B0D-6BEC29434DA3
 manager: dansimp
-ms.reviewer:
+Module Guid: bf4656ac-2663-4636-8b38-7d78fd587d0b
+Module Name: ServerManagerTasks
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ServerManagerTasks Module

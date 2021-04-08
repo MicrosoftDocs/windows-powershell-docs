@@ -1,12 +1,12 @@
 ---
-external help file: NetQos_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 7ED74C03-8727-4956-86D3-E389EDCE72CF
+external help file: NetQos_Cmdlets.xml
 manager: dansimp
+Module Name: NetQoS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netqos/new-netqospolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NetQosPolicy

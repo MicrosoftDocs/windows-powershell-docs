@@ -1,14 +1,13 @@
 ---
-Module Name: WasPSExt
-Module Guid: 0FDD54FB-8B9E-40B6-9669-F77E6FA92737
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285575
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-ms.assetid: 5B1B0758-8039-4C2C-974A-8FE94E72A9D2
 manager: dansimp
-ms.reviewer:
+Module Guid: 0fdd54fb-8b9e-40b6-9669-f77e6fa92737
+Module Name: WasPSExt
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WasPSExt Module

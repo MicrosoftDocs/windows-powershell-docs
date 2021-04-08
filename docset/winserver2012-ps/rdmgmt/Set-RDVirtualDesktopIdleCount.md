@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: F8336BA2-8B4C-4724-8C6B-B74CD9F92B60
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopidlecount?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDVirtualDesktopIdleCount
@@ -59,7 +59,7 @@ Specifies a collection of values (key=value pair) that allocate idle virtual des
 ```yaml
 Type: Hashtable
 Parameter Sets: Allocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -75,7 +75,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ For virtual desktop collections the host server has the name of the Remote Deskt
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -107,7 +107,7 @@ Specifies the number of idle virtual desktops.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

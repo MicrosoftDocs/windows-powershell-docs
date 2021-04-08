@@ -1,14 +1,13 @@
 ---
-Module Name: MsDTC
-Module Guid: 52923875-F2E3-4AD2-8E0C-96C7B10E2E3D
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285761
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-ms.assetid: C362E2E9-6D95-4A7F-A526-C553D116023B
 manager: dansimp
-ms.reviewer:
+Module Guid: 52923875-f2e3-4ad2-8e0c-96c7b10e2e3d
+Module Name: MsDTC
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # MsDTC Module

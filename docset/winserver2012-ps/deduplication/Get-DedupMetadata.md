@@ -1,12 +1,12 @@
 ---
-external help file: Dedup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 9B853179-B5D9-4340-B2DC-EE8B75671B22
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Dedup_Cmdlets.xml
+manager: dansimp
+Module Name: Deduplication
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/deduplication/get-dedupmetadata?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DedupMetadata

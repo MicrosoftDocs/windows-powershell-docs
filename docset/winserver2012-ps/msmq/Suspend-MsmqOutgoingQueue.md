@@ -1,12 +1,12 @@
 ---
-external help file: MSMQ_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9798E2C3-2CB1-403F-8FF0-82DAE207D842
+external help file: MSMQ_Cmdlets.xml
 manager: dansimp
+Module Name: MSMQ
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msmq/suspend-msmqoutgoingqueue?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Suspend-MsmqOutgoingQueue

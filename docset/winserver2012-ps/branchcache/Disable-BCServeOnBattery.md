@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheOrchestrator.cdxml-help.xml
-ms.assetid: E0EE50C8-85C4-403D-9679-0667C6732BC6
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheOrchestrator.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/disable-bcserveonbattery?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-BCServeOnBattery

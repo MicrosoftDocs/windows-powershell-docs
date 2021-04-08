@@ -1,12 +1,12 @@
 ---
-external help file: NetWNV_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9E327856-C0B0-47E5-8127-A4DFB7FFD3A5
+external help file: NetWNV_Cmdlets.xml
 manager: dansimp
+Module Name: NetWNV
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netwnv/remove-netvirtualizationproviderroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetVirtualizationProviderRoute

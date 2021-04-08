@@ -1,12 +1,12 @@
 ---
-external help file: DnsServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 775D3DB5-F7E7-4954-B2DA-9CC2E73009EE
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DnsServer_Cmdlets.xml
+manager: dansimp
+Module Name: DnsServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverzonedelegation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-DnsServerZoneDelegation

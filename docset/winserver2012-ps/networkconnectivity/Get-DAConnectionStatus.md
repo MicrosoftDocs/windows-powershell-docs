@@ -1,12 +1,12 @@
 ---
-external help file: NetConnect_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 08B732CF-73C6-46BA-83DD-2C859D791B76
+external help file: NetConnect_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkConnectivity
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networkconnectivity/get-daconnectionstatus?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DAConnectionStatus

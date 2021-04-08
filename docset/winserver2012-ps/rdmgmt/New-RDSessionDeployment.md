@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: D1AF1DE6-F925-4926-9911-2C53B7D1568E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/new-rdsessiondeployment?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-RDSessionDeployment
@@ -57,7 +57,7 @@ Specifies the FQDN of a server to host the RD Connection Broker role service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -72,7 +72,7 @@ Specifies an array of the FQDNs of servers to host the RD Session Host role serv
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -87,7 +87,7 @@ Specifies the FQDN of a server to host the RD Web Access role service.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

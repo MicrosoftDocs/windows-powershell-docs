@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
-ms.assetid: 1DD02CBB-CE03-49A3-AE33-8BC1A7DD3830
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+manager: dansimp
+Module Name: ADDSDeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/addsdeployment/test-addsdomaininstallation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Test-ADDSDomainInstallation

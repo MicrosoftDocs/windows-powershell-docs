@@ -1,12 +1,12 @@
 ---
-external help file: ScheduledTask_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 393366D5-4123-42FC-BC28-B015002280A6
+external help file: ScheduledTask_Cmdlets.xml
 manager: dansimp
+Module Name: ScheduledTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/get-clusteredscheduledtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-ClusteredScheduledTask

@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-ms.assetid: A584AF83-A2B0-4200-97B7-63C762946A49
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dism/remove-windowspackage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

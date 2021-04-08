@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
-ms.assetid: 5825E1DE-2EBE-4063-8BCA-68B770468D1B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.SecureBoot.Commands.dll-Help.xml
+manager: dansimp
+Module Name: SecureBoot
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/secureboot/get-securebootpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-SecureBootPolicy

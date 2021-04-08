@@ -1,14 +1,13 @@
 ---
-Module Name: PKIClient
-Module Guid: CF094C6B-63D1-4DDA-BF70-15A602C4EB2B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216900
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 8008D3A6-4E97-4977-92F7-795EF45B4A27
 manager: dansimp
-ms.reviewer:
+Module Guid: cf094c6b-63d1-4dda-bf70-15a602c4eb2b
+Module Name: pki
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # PKIClient Module

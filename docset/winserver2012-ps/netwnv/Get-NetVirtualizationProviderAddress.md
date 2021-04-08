@@ -1,12 +1,12 @@
 ---
-external help file: NetWNV_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 53931D5D-5833-40A4-AF39-ABD24BA69FF1
+external help file: NetWNV_Cmdlets.xml
 manager: dansimp
+Module Name: NetWNV
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netwnv/get-netvirtualizationprovideraddress?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetVirtualizationProviderAddress

@@ -1,12 +1,12 @@
 ---
-external help file: WSBackup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 88E64DC6-0DA0-4ABA-B686-B7EA5F6B0BF4
+external help file: WSBackup_Cmdlets.xml
 manager: dansimp
+Module Name: WindowsServerBackup
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/remove-wbcatalog?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-WBCatalog

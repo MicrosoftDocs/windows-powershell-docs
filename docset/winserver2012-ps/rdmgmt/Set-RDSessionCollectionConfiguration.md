@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 12AFAB28-DFFC-4E61-A0BD-637C517A71FD
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdsessioncollectionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDSessionCollectionConfiguration
@@ -80,7 +80,7 @@ The command specifies a path and file to exclude from the user profile.
 
 ### Example 4: Configure load balancing
 ```
-PS C:\> $LoadBalanceObjectsArray = New-Object System.Collections.Generic.List[Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance] 
+PS C:\> $LoadBalanceObjectsArray = New-Object System.Collections.Generic.List[Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance]
 PS C:\>$LoadBalanceSessionHost1 = New-Object Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance( "SessionHostCollection", 50, 200, "RDSH-1.Contoso.com" )
 PS C:\> $LoadBalanceObjectsArray.Add($LoadBalanceSessionHost1)
 PS C:\> $LoadBalanceSessionHost2 = New-Object Microsoft.RemoteDesktopServices.Management.RDSessionHostCollectionLoadBalancingInstance( "SessionHostCollection", 50, 300, "RDSH-2Contoso.com" )
@@ -105,7 +105,7 @@ After this period, the RD Session Host server ends the session.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ If this value is $True, Remote Desktop uses NLA to authenticate a user before th
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Indicates whether the Remote Desktop client attempts to reconnect after a connec
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RDBrokenConnectionAction
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Accepted values: None, Disconnect, LogOff
 
 Required: False
@@ -186,7 +186,7 @@ You can use binary-or to combine two or more values of this enum to specify mult
 ```yaml
 Type: RDClientDeviceRedirectionOptions
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Accepted values: None, AudioVideoPlayBack, AudioRecording, COMPort, PlugAndPlayDevice, SmartCard, Clipboard, LPTPort, Drive, TimeZone
 
 Required: False
@@ -204,7 +204,7 @@ If this value is $False, use the server as default.
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ Indicates whether to use client printer redirection, which routes print jobs fro
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ Specifies a description of the session collection.
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Specifies the name of a session collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -265,7 +265,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -280,7 +280,7 @@ Specifies Remote Desktop Protocol (RDP) settings to include in the .rdp files fo
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Indicates that Remote Desktop does not use a user profile to configure the sessi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DisableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -311,7 +311,7 @@ After client disconnection from a session for this period, the RD Session Host e
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ Specifies a path for the user profile disk.
 ```yaml
 Type: String
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -342,7 +342,7 @@ A user profile disk stores user profile information as a separate virtual hard d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -365,7 +365,7 @@ The default value is ClientCompatible.
 ```yaml
 Type: RDEncryptionLevel
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Accepted values: Low, ClientCompatible, High, FipsCompliant
 
 Required: False
@@ -384,7 +384,7 @@ This parameter overrides any identical values specified in the **IncludeFilePath
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -402,7 +402,7 @@ This parameter overrides any identical values specified in the **IncludeFilePath
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -418,7 +418,7 @@ The **BrokenConnectionAction** parameter determines whether to log off or discon
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -433,7 +433,7 @@ Specifies an array of file paths to include in a user profile disk.
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -448,7 +448,7 @@ Specifies an array of folder paths to include in a user profile disk.
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -464,7 +464,7 @@ Each object specifies the collection name, RD Session Host server name, relative
 ```yaml
 Type: RDSessionHostCollectionLoadBalancingInstance[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -480,7 +480,7 @@ The highest value for this parameter is 16.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -495,7 +495,7 @@ Specifies the maximum size, in gigabytes, for a user profile disk.
 ```yaml
 Type: Int32
 Parameter Sets: EnableUserProfileDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -510,7 +510,7 @@ Specifies whether to enable the Remote Desktop Easy Print driver.
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -532,7 +532,7 @@ The default value is Negotiate.
 ```yaml
 Type: RDSecurityLayer
 Parameter Sets: Default
-Aliases: 
+Aliases:
 Accepted values: RDP, Negotiate, SSL
 
 Required: False
@@ -548,7 +548,7 @@ Specifies whether to delete temporary folders from the RD Session Host server fo
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -565,7 +565,7 @@ If this value is $False, individual users have separate folders to store tempora
 ```yaml
 Type: Boolean
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -580,7 +580,7 @@ Specifies an array of domain groups and users authorized to connect to the RD Se
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DASiteTableEntry.cdxml-help.xml
-ms.assetid: CC431359-C693-42CB-9D09-49D886FA8255
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DASiteTableEntry.cdxml-help.xml
+manager: dansimp
+Module Name: DirectAccessClientComponents
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/disable-damanualentrypointselection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

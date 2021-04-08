@@ -1,12 +1,12 @@
 ---
-external help file: WSUS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 045A4D3E-67C8-4AD9-8C5A-94AA8F9300BB
+external help file: WSUS_Cmdlets.xml
 manager: dansimp
+Module Name: UpdateServices
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/updateservices/get-wsusupdate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WsusUpdate

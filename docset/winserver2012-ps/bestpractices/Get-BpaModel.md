@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
-ms.assetid: CC4D5797-49C2-4842-94CE-7509EE977374
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: BestPractices
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/bestpractices/get-bpamodel?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BpaModel

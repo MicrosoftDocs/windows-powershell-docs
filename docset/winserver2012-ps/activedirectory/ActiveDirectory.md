@@ -1,14 +1,13 @@
 ---
-Module Name: ActiveDirectory
-Module Guid: 43C15630-959C-49E4-A977-758C5CC93408
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206729
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 8AD46969-D3B0-4DE9-81D3-D485B99CB93F
 manager: dansimp
-ms.reviewer:
+Module Guid: 43c15630-959c-49e4-a977-758c5cc93408
+Module Name: ActiveDirectory
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ActiveDirectory Module

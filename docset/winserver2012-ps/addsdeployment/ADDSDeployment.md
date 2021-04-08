@@ -1,14 +1,13 @@
 ---
-Module Name: ADDSDeployment
-Module Guid: DF736400-2E72-4A7B-8EDA-D5B28421881F
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206728
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-ms.assetid: 7F1FAA42-ECF3-4C09-B95D-961C5E18453A
 manager: dansimp
-ms.reviewer:
+Module Guid: df736400-2e72-4a7b-8eda-d5b28421881f
+Module Name: ADDSDeployment
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADDSDeployment Module

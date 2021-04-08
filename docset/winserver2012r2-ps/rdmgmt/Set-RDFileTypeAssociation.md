@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -53,7 +53,7 @@ This command sets the following options for file type association:
 
 - File name extension of .html to associate with the application.
 
-- Virtual desktop named RDS-WKS-A27. 
+- Virtual desktop named RDS-WKS-A27.
 
 - Users can see the file name extension.
 
@@ -68,7 +68,7 @@ This command sets these options for file type association:
 
 - Remote Desktop application alias of Notepad.
 
-- File name extension of .txt to associate with the application. 
+- File name extension of .txt to associate with the application.
 
 - The icon for the Remote Desktop program Notepad.exe appears in the \System32 subfolder of the Windows folder.
 The icon that appears for Notepad is at the first position of the icon file.
@@ -82,7 +82,7 @@ The default alias is the program's file name without the extension.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -97,7 +97,7 @@ Specifies the name of the session or virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -114,7 +114,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ Specifies the file name extension of the file type whose association you change.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -145,7 +145,7 @@ The **IconPath** parameter specifies the icon file.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ For virtual desktop collections, the path must be a valid local path on all virt
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ For example, if you have published Microsoft Word as a RemoteApp, but you want e
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

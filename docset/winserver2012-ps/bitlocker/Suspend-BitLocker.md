@@ -1,12 +1,12 @@
 ---
-external help file: Bitlocker_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 8E8FB6A9-6A17-45FE-9037-A3A2C9E63AA9
+external help file: Bitlocker_Cmdlets.xml
 manager: dansimp
+Module Name: BitLocker
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/bitlocker/suspend-bitlocker?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Suspend-BitLocker

@@ -1,12 +1,12 @@
 ---
-external help file: NetWNV_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: B6372E82-9666-4E79-984A-65B9138D8477
+external help file: NetWNV_Cmdlets.xml
 manager: dansimp
+Module Name: NetWNV
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netwnv/new-netvirtualizationcustomerroute?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NetVirtualizationCustomerRoute

@@ -1,14 +1,13 @@
 ---
-Module Name: NetLbfo
-Module Guid: 80CF4C6D-30B7-4B0F-A035-DBB23A65EF1D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=225664
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 7C63E721-88B9-415B-953C-77FCEDA47F90
 manager: dansimp
-ms.reviewer:
+Module Guid: 80cf4c6d-30b7-4b0f-a035-dbb23a65ef1d
+Module Name: NetLbfo
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetLbfo Module

@@ -1,14 +1,13 @@
 ---
-Module Name: DcbQoS
-Module Guid: B57D41F8-8B6B-4012-912F-B08109101281
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216148
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 4ACBF941-38FF-485B-8919-22C594AC7788
 manager: dansimp
-ms.reviewer:
+Module Guid: b57d41f8-8b6b-4012-912f-b08109101281
+Module Name: DcbQoS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DcbQoS Module

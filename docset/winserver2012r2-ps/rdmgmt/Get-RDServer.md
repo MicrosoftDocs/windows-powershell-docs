@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -62,7 +62,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -91,7 +91,7 @@ Remote Desktop Licensing (RD Licensing).
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDS-VIRTUALIZATION, RDS-RD-SERVER, RDS-CONNECTION-BROKER, RDS-WEB-ACCESS, RDS-GATEWAY, RDS-LICENSING
 
 Required: False

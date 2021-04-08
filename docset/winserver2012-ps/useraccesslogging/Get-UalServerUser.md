@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_ServerUser.cdxml-help.xml
-ms.assetid: 3781A1E1-B43D-4F5A-836D-923B8581C271
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_ServerUser.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualserveruser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-UalServerUser

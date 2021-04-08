@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
-ms.assetid: ED5FC3AA-CDAE-41F9-AA7E-C27B48A7E3EA
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
+manager: dansimp
+Module Name: ADDSDeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/addsdeployment/test-addsreadonlydomaincontrolleraccountcreation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Test-ADDSReadOnlyDomainControllerAccountCreation

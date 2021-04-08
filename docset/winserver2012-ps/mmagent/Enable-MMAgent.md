@@ -1,12 +1,12 @@
 ---
-external help file: MMAgent_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 6432D312-2D2F-4411-BEAD-6E7479659FC3
+external help file: MMAgent_Cmdlets.xml
 manager: dansimp
+Module Name: MMAgent
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/mmagent/enable-mmagent?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-MMAgent

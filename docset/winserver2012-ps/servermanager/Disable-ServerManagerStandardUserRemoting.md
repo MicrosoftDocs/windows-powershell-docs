@@ -1,12 +1,12 @@
 ---
-external help file: ServerManager-help.xml
-ms.assetid: BD7DEDAA-EDD2-430F-8C0C-1F1320939062
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: ServerManager-help.xml
+manager: dansimp
+Module Name: ServerManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/servermanager/disable-servermanagerstandarduserremoting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-ServerManagerStandardUserRemoting

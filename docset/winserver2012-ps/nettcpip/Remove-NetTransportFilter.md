@@ -1,12 +1,12 @@
 ---
-external help file: NetTCPIP_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 54CBC60C-5295-4FCC-8F7C-2FC73E26DACC
+external help file: NetTCPIP_Cmdlets.xml
 manager: dansimp
+Module Name: NetTCPIP
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/remove-nettransportfilter?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetTransportFilter

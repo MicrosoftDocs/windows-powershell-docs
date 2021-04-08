@@ -1,14 +1,13 @@
 ---
-Module Name: DhcpServer
-Module Guid: 90EAA9DF-133A-450C-8728-91055CD946A1
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=217874
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 4ABFF348-0669-4EDA-8B88-9C4F2A9BA5DE
 manager: dansimp
-ms.reviewer:
+Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
+Module Name: DhcpServer
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DhcpServer Module

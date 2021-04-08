@@ -1,14 +1,13 @@
 ---
-Module Name: VAMT
-Module Guid: C04E5406-950F-4CB4-9C5D-3E8C952214E6
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285574
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-ms.assetid: 38E37D22-F0CF-4EBC-8E1D-8F75A0376C6A
 manager: dansimp
-ms.reviewer:
+Module Guid: c04e5406-950f-4cb4-9c5d-3e8c952214e6
+Module Name: VAMT
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # VAMT Module

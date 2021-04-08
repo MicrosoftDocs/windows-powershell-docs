@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Tpm.Commands.dll-Help.xml
-ms.assetid: 20939446-FC0F-44A7-901E-365868E7BDA9
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: dansimp
+Module Name: TrustedPlatformModule
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/enable-tpmautoprovisioning?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-TpmAutoProvisioning

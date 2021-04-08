@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_Admin.cdxml-help.xml
-ms.assetid: 2238EB3C-700E-4DDD-9550-FFF15924C4DA
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_Admin.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ual?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-Ual

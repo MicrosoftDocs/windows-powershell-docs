@@ -1,14 +1,13 @@
 ---
-Module Name: NetWNV
-Module Guid: B47767EC-A4D6-488D-915D-5070791AC6D4
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=230561
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: BA0E9FC6-6949-4BF6-A231-B45FC76F66B9
 manager: dansimp
-ms.reviewer:
+Module Guid: b47767ec-a4d6-488d-915d-5070791ac6d4
+Module Name: NetWNV
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetWNV Module

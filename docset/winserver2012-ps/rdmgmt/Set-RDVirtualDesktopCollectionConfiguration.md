@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 522034EF-E6D6-47B5-88B9-2E052E5B9B68
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdvirtualdesktopcollectionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDVirtualDesktopCollectionConfiguration
@@ -76,7 +76,7 @@ Indicates that the server automatically associates virtual desktops with user ac
 ```yaml
 Type: Boolean
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Specifies a type of client device to be redirected to an RD Session Host server 
 The acceptable values for this parameter are:
 
 - 0x0000.
-None. 
+None.
 - 0x0001.
 AudioVideoPlayBack.
 - 0x0002.
@@ -100,11 +100,11 @@ COMPort.
 - 0x0008.
 PlugAndPlayDevice.
 - 0x0010.
-SmartCard. 
+SmartCard.
 - 0x0020.
-Clipboard. 
+Clipboard.
 - 0x0040.
-LPTPort. 
+LPTPort.
 - 0x0080.
 Drive.
 - 0x0100.
@@ -115,7 +115,7 @@ You can use binary-or to combine two or more values of this enum to specify mult
 ```yaml
 Type: RDClientDeviceRedirectionOptions
 Parameter Sets: General
-Aliases: 
+Aliases:
 Accepted values: None, AudioVideoPlayBack, AudioRecording, COMPort, PlugAndPlayDevice, SmartCard, Clipboard, LPTPort, Drive, TimeZone
 
 Required: False
@@ -131,7 +131,7 @@ Specifies a description for the collection.
 ```yaml
 Type: String
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -162,7 +162,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ Specifies Remote Desktop Protocol (RDP) settings to include in the .rdp files fo
 ```yaml
 Type: String
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ Indicates that the server prevents you from using a user profile disk when you c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DisableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -207,7 +207,7 @@ Specifies the path of the user profile disk.
 ```yaml
 Type: String
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -223,7 +223,7 @@ A user profile disk stores user profile information in a separate virtual hard d
 ```yaml
 Type: SwitchParameter
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -242,7 +242,7 @@ This parameter overrides any identical values that you specify in the **IncludeF
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ This parameter overrides any identical values that you specify in the **IncludeF
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -277,7 +277,7 @@ This parameter applies only to personal virtual desktop collections.
 ```yaml
 Type: Boolean
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Use this parameter with or without the **IncludeFolderPath** parameter to create
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -313,7 +313,7 @@ Use this parameter with or without the **IncludeFilePath** parameter to create f
 ```yaml
 Type: String[]
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -328,7 +328,7 @@ Specifies the maximum size, in gigabytes, for the user profile disk.
 ```yaml
 Type: Int32
 Parameter Sets: EnableUserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -344,7 +344,7 @@ Specify $false to redirect a single monitor to the remote session.
 ```yaml
 Type: Boolean
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -359,7 +359,7 @@ Indicates whether the server redirects the client printers to the server printer
 ```yaml
 Type: Boolean
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -374,7 +374,7 @@ Specifies the delay, in minutes, before the server saves a virtual desktop that 
 ```yaml
 Type: Int32
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -389,7 +389,7 @@ Specifies an array of user groups that are authorized to connect to the collecti
 ```yaml
 Type: String[]
 Parameter Sets: General
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

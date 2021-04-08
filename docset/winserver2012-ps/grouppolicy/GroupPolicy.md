@@ -1,14 +1,13 @@
 ---
-Module Name: GroupPolicy
-Module Guid: 03E49E3A-BE77-4422-9D97-8FE355C2284C
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216171
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: A065C279-1A39-4B46-AB1C-B96F64578D20
 manager: dansimp
-ms.reviewer:
+Module Guid: 03e49e3a-be77-4422-9d97-8fe355c2284c
+Module Name: GroupPolicy
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # GroupPolicy Module

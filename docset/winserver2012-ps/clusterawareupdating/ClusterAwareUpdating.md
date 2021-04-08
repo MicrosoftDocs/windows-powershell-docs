@@ -1,14 +1,13 @@
 ---
-Module Name: ClusterAwareUpdating
-Module Guid: 4E804861-1DCE-46C1-868D-C8F2AB9D220A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216168
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 58543A60-45DE-4020-95FE-803B65203C2C
 manager: dansimp
-ms.reviewer:
+Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
+Module Name: ClusterAwareUpdating
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ClusterAwareUpdating Module

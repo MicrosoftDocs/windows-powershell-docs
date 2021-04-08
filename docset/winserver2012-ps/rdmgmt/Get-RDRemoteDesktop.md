@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 37504AB6-22BD-495A-81BC-032541BD594B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdremotedesktop?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDRemoteDesktop
@@ -23,7 +23,7 @@ Get-RDRemoteDesktop [[-ConnectionBroker] <String>] [<CommonParameters>]
 ## DESCRIPTION
 The **Get-RDRemoteDesktop** cmdlet gets published Remote Desktop connections.
 
-When you publish a Remote Desktop connection, the Remote Desktop Web Access (RD Web Access) server displays the Remote Desktop connection for the collection defined by the **CollectionName** parameter. 
+When you publish a Remote Desktop connection, the Remote Desktop Web Access (RD Web Access) server displays the Remote Desktop connection for the collection defined by the **CollectionName** parameter.
 RemoteApp and Desktop Connections that the user subscribes to also display published Remote Desktop connections.
 
 ## EXAMPLES
@@ -44,7 +44,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

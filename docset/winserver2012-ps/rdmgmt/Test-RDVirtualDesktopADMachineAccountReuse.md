@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: A1305ECB-EC4B-4580-8667-1554C7B746BA
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/test-rdvirtualdesktopadmachineaccountreuse?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Test-RDVirtualDesktopADMachineAccountReuse
@@ -41,7 +41,7 @@ If not supplied, defaults to the fully qualified domain name (FQDN) of the local
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

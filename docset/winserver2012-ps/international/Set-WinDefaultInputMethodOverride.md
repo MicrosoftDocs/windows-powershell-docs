@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
-ms.assetid: F8C3B107-1E88-445D-8C51-D9EAED20A0C2
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+manager: dansimp
+Module Name: International
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/international/set-windefaultinputmethodoverride?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-WinDefaultInputMethodOverride

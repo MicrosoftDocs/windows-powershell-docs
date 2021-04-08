@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-ms.assetid: DB15EC96-69EF-4303-BD9B-254619C02C4C
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsdeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsonlineresponder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Uninstall-AdcsOnlineResponder

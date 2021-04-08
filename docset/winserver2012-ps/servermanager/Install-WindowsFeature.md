@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
-ms.assetid: 9801D051-0445-4245-BCEA-1805848AF9AA
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.ServerManager.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: ServerManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-WindowsFeature

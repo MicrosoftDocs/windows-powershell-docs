@@ -1,14 +1,13 @@
 ---
-Module Name: WindowsServerBackup
-Module Guid: D27A5D7A-8B1D-4B0A-809D-65EF33EE2F2D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=220984
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-ms.assetid: 0F8EB40C-4481-4DA7-9D60-62847E2BD367
 manager: dansimp
-ms.reviewer:
+Module Guid: d27a5d7a-8b1d-4b0a-809d-65ef33ee2f2d
+Module Name: WindowsServerBackup
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WindowsServerBackup Module

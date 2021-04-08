@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: F22E8EB8-2A09-4D79-9D8C-01B2FF72777C
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/send-rdusermessage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Send-RDUserMessage
@@ -45,7 +45,7 @@ For virtual desktop collections the host server has the name of the Remote Deskt
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -60,7 +60,7 @@ Specifies the text for the message body.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -75,7 +75,7 @@ Specifies the text for the message title.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -91,7 +91,7 @@ Use Get-RDUserSession to retrieve the unique ID for a specific session.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

@@ -1,14 +1,13 @@
 ---
-Module Name: KDS
-Module Guid: 176542F6-2A6B-11E0-AB18-D010E0D72085
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216899
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 0205E61B-2D3B-474B-B549-4F81AD7ABE65
 manager: dansimp
-ms.reviewer:
+Module Guid: 176542f6-2a6b-11e0-ab18-d010e0d72085
+Module Name: KDS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # KDS Module

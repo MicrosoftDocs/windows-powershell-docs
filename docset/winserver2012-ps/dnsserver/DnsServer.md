@@ -1,14 +1,13 @@
 ---
-Module Name: DnsServer
-Module Guid: 46F598E5-9907-42B2-AFBB-68E5F7E34604
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=217875
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 17943C3D-8F94-4892-A3A3-B1862A685756
 manager: dansimp
-ms.reviewer:
+Module Guid: 46f598e5-9907-42b2-afbb-68e5f7e34604
+Module Name: DnsServer
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DnsServer Module

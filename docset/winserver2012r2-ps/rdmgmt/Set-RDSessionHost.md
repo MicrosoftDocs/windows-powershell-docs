@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -50,7 +50,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ The acceptable values for this parameter are: Yes, NotUntilReboot, or No.
 ```yaml
 Type: RDServerNewConnectionAllowed
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Yes, NotUntilReboot, No
 
 Required: True
@@ -82,7 +82,7 @@ Specifies an array that contains the name of one or more RD Session Host servers
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

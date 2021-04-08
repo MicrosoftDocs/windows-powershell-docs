@@ -1,12 +1,12 @@
 ---
-external help file: NetLbfo_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 87EAA7C7-9042-49F9-8970-E9C29D393F8B
+external help file: NetLbfo_Cmdlets.xml
 manager: dansimp
+Module Name: NetLbfo
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netlbfo/rename-netlbfoteam?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Rename-NetLbfoTeam

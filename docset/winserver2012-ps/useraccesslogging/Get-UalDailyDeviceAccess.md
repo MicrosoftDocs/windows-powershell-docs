@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_DailyDeviceAccess.cdxml-help.xml
-ms.assetid: 5523CF82-D156-4C50-AB59-FEE5747B099B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_DailyDeviceAccess.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualdailydeviceaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-UalDailyDeviceAccess

@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Tpm.Commands.dll-Help.xml
-ms.assetid: 8A2DF9AD-A0C9-4559-97E9-8E1267DC68FD
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: dansimp
+Module Name: TrustedPlatformModule
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/get-tpm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-Tpm

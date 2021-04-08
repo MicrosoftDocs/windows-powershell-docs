@@ -1,12 +1,12 @@
 ---
-external help file: MSMQ_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 67BE94A0-781F-4AA1-8CAC-43E03BC71C4A
+external help file: MSMQ_Cmdlets.xml
 manager: dansimp
+Module Name: MSMQ
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msmq/clear-msmqoutgoingqueue?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Clear-MsmqOutgoingQueue

@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheOrchestrator.cdxml-help.xml
-ms.assetid: 6B3BBE29-2BE9-45B8-97E0-05E10C29F5ED
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheOrchestrator.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/disable-bc?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-BC

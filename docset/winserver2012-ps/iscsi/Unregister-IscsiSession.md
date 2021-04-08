@@ -1,12 +1,12 @@
 ---
-external help file: Iscsi_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: BD05B373-4201-4531-BBAE-89C400F95573
+external help file: Iscsi_Cmdlets.xml
 manager: dansimp
+Module Name: iSCSI
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iscsi/unregister-iscsisession?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Unregister-IscsiSession

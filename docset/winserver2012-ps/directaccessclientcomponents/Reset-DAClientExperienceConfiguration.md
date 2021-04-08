@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
-ms.assetid: 824DFA09-0751-4C4E-839D-C3497BD088B0
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DAClientExperienceConfiguration.cdxml-help.xml
+manager: dansimp
+Module Name: DirectAccessClientComponents
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/reset-daclientexperienceconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

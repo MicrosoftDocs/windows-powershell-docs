@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceFolder.cdxml-help.xml
-ms.assetid: EC97581D-B896-492F-94A5-1A214FD409CC
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceFolder.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/move-dfsnfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

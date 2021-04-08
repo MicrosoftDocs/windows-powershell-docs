@@ -1,12 +1,12 @@
 ---
-external help file: SMTasks_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 7AA84241-05D6-41CF-8B3C-68C5B81F213C
+external help file: SMTasks_Cmdlets.xml
 manager: dansimp
+Module Name: ServerManagerTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/servermanagertasks/get-smserverservice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-SMServerService

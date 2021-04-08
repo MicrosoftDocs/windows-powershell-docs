@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-ms.assetid: FEC58154-D4DF-4F65-9FF5-D26ADE2AA7B7
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: pki
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/pki/switch-certificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Switch-Certificate

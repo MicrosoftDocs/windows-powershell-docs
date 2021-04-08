@@ -1,14 +1,13 @@
 ---
-Module Name: RemoteDesktop
-Module Guid: 81D5DF9C-8FE3-46D7-A9BF-2AEDD60D1843
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=225876
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 2DCC3D8E-4155-44FC-AF0E-DC6608D33D8D
 manager: dansimp
-ms.reviewer:
+Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
+Module Name: RDMgmt
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # RemoteDesktop Module

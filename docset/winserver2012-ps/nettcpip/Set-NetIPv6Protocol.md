@@ -1,12 +1,12 @@
 ---
-external help file: NetTCPIP_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C245B3BC-7471-4BBD-88AD-B87E916FB0B3
+external help file: NetTCPIP_Cmdlets.xml
 manager: dansimp
+Module Name: NetTCPIP
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/set-netipv6protocol?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetIPv6Protocol

@@ -1,12 +1,12 @@
 ---
-external help file: NFS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C627F113-DEC4-4AA1-9DA5-0A0BD1AF0209
+external help file: NFS_Cmdlets.xml
 manager: dansimp
+Module Name: NFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nfs/install-nfsmappingstore?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-NfsMappingStore

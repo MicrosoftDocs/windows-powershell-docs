@@ -1,12 +1,12 @@
 ---
-external help file: WasPsExt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3BF3937D-CBD9-4051-B7CA-4F95A5E30A49
+external help file: WasPsExt_Cmdlets.xml
 manager: dansimp
+Module Name: WasPSExt
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/waspsext/get-wasjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WASJob

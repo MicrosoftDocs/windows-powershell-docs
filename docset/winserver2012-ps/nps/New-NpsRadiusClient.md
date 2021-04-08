@@ -1,12 +1,12 @@
 ---
-external help file: NPS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 1BE74D0B-12D7-4E3C-99B3-F0F3764F658F
+external help file: NPS_Cmdlets.xml
 manager: dansimp
+Module Name: NPS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nps/new-npsradiusclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NpsRadiusClient

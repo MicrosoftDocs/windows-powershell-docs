@@ -1,12 +1,12 @@
 ---
-external help file: NPS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 575A8489-73DB-4C77-BB77-15971D5D159B
+external help file: NPS_Cmdlets.xml
 manager: dansimp
+Module Name: NPS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nps/remove-npsradiusclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NpsRadiusClient

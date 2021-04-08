@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-ms.assetid: 855A4537-3F85-470D-93C0-1F6CA48958B3
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+manager: dansimp
+Module Name: ADRMSAdmin
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrmsadmin/update-rmsmfgenrollment?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-RmsMfgEnrollment

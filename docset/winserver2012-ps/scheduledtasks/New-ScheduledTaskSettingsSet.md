@@ -1,12 +1,12 @@
 ---
-external help file: ScheduledTask_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: FBC4B2C5-A56C-4D97-B1AC-20C0A62F8D07
+external help file: ScheduledTask_Cmdlets.xml
 manager: dansimp
+Module Name: ScheduledTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasksettingsset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-ScheduledTaskSettingsSet

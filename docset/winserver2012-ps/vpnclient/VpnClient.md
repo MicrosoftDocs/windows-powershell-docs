@@ -1,14 +1,13 @@
 ---
-Module Name: VpnClient
-Module Guid: 3389CC73-DAA3-4D25-BD50-B1730925D2DF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=246609
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 71B470A7-DC58-4A30-9F5E-AB0B25A64625
 manager: dansimp
-ms.reviewer:
+Module Guid: 3389cc73-daa3-4d25-bd50-b1730925d2df
+Module Name: VpnClient
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # VpnClient Module

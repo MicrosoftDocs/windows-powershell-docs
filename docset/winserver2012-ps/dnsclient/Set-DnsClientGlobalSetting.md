@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DnsClientGlobalSetting.cdxml-help.xml
-ms.assetid: 73E5376E-DD75-4771-8F03-C91E1C736DB5
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DnsClientGlobalSetting.cdxml-help.xml
+manager: dansimp
+Module Name: DnsClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclientglobalsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -1,14 +1,13 @@
 ---
-Module Name: WindowsErrorReporting
-Module Guid: 4BC4DED7-249B-41AC-973F-83AF4D25D82B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285579
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-ms.assetid: 7710FA9C-A106-4C4A-BC8F-0EB352538B04
 manager: dansimp
-ms.reviewer:
+Module Guid: 4bc4ded7-249b-41ac-973f-83af4d25d82b
+Module Name: WindowsErrorReporting
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WindowsErrorReporting Module

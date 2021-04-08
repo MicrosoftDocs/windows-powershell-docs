@@ -1,14 +1,13 @@
 ---
-Module Name: BranchCache
-Module Guid: D57AEE1E-6FE7-4BBC-8C57-8675A3A83E0D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=206777
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 05AD9108-DE76-4F8C-B0AC-DFB2E99ADD66
 manager: dansimp
-ms.reviewer:
+Module Guid: d57aee1e-6fe7-4bbc-8c57-8675a3a83e0d
+Module Name: BranchCache
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # BranchCache Module

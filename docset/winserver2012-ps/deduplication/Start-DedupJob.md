@@ -1,12 +1,12 @@
 ---
-external help file: Dedup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 65F8D64E-DCD6-430D-816D-5CD061885059
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Dedup_Cmdlets.xml
+manager: dansimp
+Module Name: Deduplication
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/deduplication/start-dedupjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Start-DedupJob

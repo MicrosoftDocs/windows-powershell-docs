@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
-ms.assetid: EE3463D6-A81F-4C97-900B-E6C0F400D40F
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Security.ApplicationId.PolicyManagement.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: AppLocker
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/applocker/get-applockerpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-AppLockerPolicy

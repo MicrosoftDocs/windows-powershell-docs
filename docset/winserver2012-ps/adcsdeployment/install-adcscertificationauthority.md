@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-ms.assetid: DDC9BA9F-B2B7-47AA-A5C8-4E7E4DFE189E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsdeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcscertificationauthority?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-AdcsCertificationAuthority

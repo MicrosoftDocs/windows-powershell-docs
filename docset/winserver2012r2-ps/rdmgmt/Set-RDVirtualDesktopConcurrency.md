@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -59,7 +59,7 @@ Specifies a collection of values (key=value pair) that specify the concurrency f
 ```yaml
 Type: Hashtable
 Parameter Sets: Allocation
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -74,7 +74,7 @@ Specifies the number of virtual desktops that RDS can create in parallel.
 ```yaml
 Type: Int32
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -90,7 +90,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ For virtual desktop collections the host server has the name of the Remote Deskt
 ```yaml
 Type: String[]
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-ms.assetid: 09B401A9-4E53-4CEC-AC08-419B9EE87BB2
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: dansimp
+Module Name: WebAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/convertto-webapplication?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # ConvertTo-WebApplication

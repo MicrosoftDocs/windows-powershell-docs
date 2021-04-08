@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
-ms.assetid: 73687EB6-DAF8-4003-BDB3-5599E543F67E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+manager: dansimp
+Module Name: WindowsDeveloperLicense
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/windowsdeveloperlicense/get-windowsdeveloperlicense?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WindowsDeveloperLicense

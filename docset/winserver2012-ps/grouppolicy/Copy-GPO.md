@@ -1,12 +1,12 @@
 ---
-external help file: GPv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: DAFF749E-E1A0-47A2-B468-FDEA347F6335
+external help file: GPv2_Cmdlets.xml
 manager: dansimp
+Module Name: GroupPolicy
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/grouppolicy/copy-gpo?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Copy-GPO

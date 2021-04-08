@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 70F30CA6-41F3-4676-8806-90BB9173AA98
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdpersonalvirtualdesktoppatchschedule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDPersonalVirtualDesktopPatchSchedule
@@ -56,7 +56,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -72,7 +72,7 @@ The ID of a patch schedule is a system-assigned GUID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -88,7 +88,7 @@ If you do not specify a value for this parameter, the cmdlet returns patch sched
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -122,7 +122,7 @@ Label : A string that describes the purpose of the patch
 
 Plugin : Plugin that created the patch schedule
 
-PatchStatus  : 
+PatchStatus  :
 - RDV_TASK_STATUS_UNKNOWN.
 (Not used by task agent.)
 - RDV_TASK_STATUS_SEARCHING.

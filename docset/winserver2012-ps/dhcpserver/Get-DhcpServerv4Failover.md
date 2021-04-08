@@ -1,12 +1,12 @@
 ---
-external help file: DhcpServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: B7898336-3532-422D-A1F5-C8360D554F8D
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DhcpServer_Cmdlets.xml
+manager: dansimp
+Module Name: DhcpServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv4failover?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DhcpServerv4Failover

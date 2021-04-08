@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 01A588C3-6EE1-463F-B907-302499DA3704
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rddatabaseconnectionstring?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDDatabaseConnectionString
@@ -44,7 +44,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -59,7 +59,7 @@ Specifies the database connection string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,12 +1,12 @@
 ---
-external help file: FSRM_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 6251E38E-ECB1-451F-BA9C-5DC494549898
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: FSRM_Cmdlets.xml
+manager: dansimp
+Module Name: FileServerResourceManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/set-fsrmadrsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-FsrmAdrSetting

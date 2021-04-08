@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
-ms.assetid: 7498D415-277F-448F-94B9-70BCB8C46DEF
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: ADFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsorganization?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-ADFSOrganization

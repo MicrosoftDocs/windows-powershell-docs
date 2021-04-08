@@ -1,12 +1,12 @@
 ---
-external help file: GPv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C19D7D52-EF72-44E3-AC03-FD5B401769D1
+external help file: GPv2_Cmdlets.xml
 manager: dansimp
+Module Name: GroupPolicy
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/grouppolicy/get-gpo?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-GPO

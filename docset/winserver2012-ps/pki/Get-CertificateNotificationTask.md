@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-ms.assetid: 7B652875-587E-4E6E-838C-BDA9BFC67FC8
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: pki
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/pki/get-certificatenotificationtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-CertificateNotificationTask

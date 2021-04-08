@@ -1,12 +1,12 @@
 ---
-external help file: WSS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: D6532B58-32E7-4A6B-8574-A6B9E082B863
+external help file: WSS_Cmdlets.xml
 manager: dansimp
+Module Name: WssCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/start-wssclientbackup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Start-WssClientBackup

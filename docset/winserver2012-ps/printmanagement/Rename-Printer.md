@@ -1,12 +1,12 @@
 ---
-external help file: PrintMgmt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9B460E62-2F2F-43F9-89F3-D296D6F1F0D2
+external help file: PrintMgmt_Cmdlets.xml
 manager: dansimp
+Module Name: PrintManagement
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/printmanagement/rename-printer?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Rename-Printer

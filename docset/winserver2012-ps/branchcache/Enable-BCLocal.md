@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheOrchestrator.cdxml-help.xml
-ms.assetid: 37869BE1-F2D1-4C2D-BCC0-106DE7ADE2C4
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheOrchestrator.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/enable-bclocal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-BCLocal

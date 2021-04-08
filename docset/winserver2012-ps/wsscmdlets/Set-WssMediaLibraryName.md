@@ -1,12 +1,12 @@
 ---
-external help file: WSS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9B539128-39E2-479D-9255-916BE6CE0392
+external help file: WSS_Cmdlets.xml
 manager: dansimp
+Module Name: WssCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssmedialibraryname?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-WssMediaLibraryName

@@ -1,12 +1,12 @@
 ---
-external help file: Storage2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C5ECB381-3631-4AB3-A0FD-DE20FC412E7B
+external help file: Storage2_Cmdlets.xml
 manager: dansimp
+Module Name: Storage
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/storage/new-virtualdiskclone?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-VirtualDiskClone

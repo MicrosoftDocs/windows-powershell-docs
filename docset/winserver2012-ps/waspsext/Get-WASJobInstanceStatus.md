@@ -1,12 +1,12 @@
 ---
-external help file: WasPsExt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3DD2E5D5-B7DC-47E1-9F2E-8C40D8BEFEFB
+external help file: WasPsExt_Cmdlets.xml
 manager: dansimp
+Module Name: WasPSExt
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/waspsext/get-wasjobinstancestatus?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WASJobInstanceStatus

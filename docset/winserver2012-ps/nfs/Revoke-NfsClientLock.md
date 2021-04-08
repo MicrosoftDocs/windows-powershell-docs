@@ -1,12 +1,12 @@
 ---
-external help file: NFS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3E674637-CC4D-43AF-B051-71728F09F909
+external help file: NFS_Cmdlets.xml
 manager: dansimp
+Module Name: NFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nfs/revoke-nfsclientlock?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Revoke-NfsClientLock

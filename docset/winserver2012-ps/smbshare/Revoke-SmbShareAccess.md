@@ -1,12 +1,12 @@
 ---
-external help file: SmbShare_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 8FA4EB50-F97F-4B69-A582-005B103E3A3E
+external help file: SmbShare_Cmdlets.xml
 manager: dansimp
+Module Name: SmbShare
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/revoke-smbshareaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Revoke-SmbShareAccess

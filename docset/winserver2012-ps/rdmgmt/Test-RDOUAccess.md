@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: FB468190-FA3E-4A38-BC4A-8F2645373055
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/test-rdouaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Test-RDOUAccess
@@ -43,7 +43,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -58,7 +58,7 @@ Specifies the Active Directory (AD) domain for which to verify access.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -73,7 +73,7 @@ Specifies one or more OUs for which to verify access.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

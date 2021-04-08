@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespace.cdxml-help.xml
-ms.assetid: F067DDB3-A300-46C8-BE2C-9E3769FFBE35
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespace.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

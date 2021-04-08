@@ -1,12 +1,12 @@
 ---
-external help file: Iscsi_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 98C6A7C9-CDFE-49B9-896F-14DD979DF05C
+external help file: Iscsi_Cmdlets.xml
 manager: dansimp
+Module Name: iSCSI
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iscsi/set-iscsichapsecret?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-IscsiChapSecret

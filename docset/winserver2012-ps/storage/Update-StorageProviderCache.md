@@ -1,12 +1,12 @@
 ---
-external help file: Storage2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 5314BD55-B77B-43F0-8680-DC3012F87440
+external help file: Storage2_Cmdlets.xml
 manager: dansimp
+Module Name: Storage
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/storage/update-storageprovidercache?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-StorageProviderCache

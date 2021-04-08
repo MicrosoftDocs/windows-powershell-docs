@@ -1,12 +1,12 @@
 ---
-external help file: MPIO_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: D72F57C7-F3A5-4D38-A658-BFA8B0A4B0FE
+external help file: MPIO_Cmdlets.xml
 manager: dansimp
+Module Name: MPIO
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/mpio/set-mpiosetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-MPIOSetting

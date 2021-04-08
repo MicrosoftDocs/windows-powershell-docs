@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
-ms.assetid: 42D79D03-3D10-4D4C-9102-0A3F7C784B24
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: WindowsErrorReporting
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/disable-windowserrorreporting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-WindowsErrorReporting

@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -49,7 +49,7 @@ Specifies the name of the RD Session Host collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -66,7 +66,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ Specifies an array that contains the name of one or more servers that run the RD
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

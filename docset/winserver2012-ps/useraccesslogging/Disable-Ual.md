@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_Admin.cdxml-help.xml
-ms.assetid: DA0D5341-D9DB-4D04-AF50-BF16C4041BB0
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_Admin.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/disable-ual?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-Ual

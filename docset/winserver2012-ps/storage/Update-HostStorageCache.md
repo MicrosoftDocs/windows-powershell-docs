@@ -1,12 +1,12 @@
 ---
-external help file: Storage2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: E8D3BC14-4851-4E1A-9855-99BFB38A1CB6
+external help file: Storage2_Cmdlets.xml
 manager: dansimp
+Module Name: Storage
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/storage/update-hoststoragecache?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-HostStorageCache

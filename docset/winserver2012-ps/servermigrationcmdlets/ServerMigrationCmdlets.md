@@ -1,14 +1,13 @@
 ---
-Module Name: ServerMig_Cmdlets
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-ms.assetid: 02BBB040-10B1-4771-B928-EA4DA6E5D54F
 manager: dansimp
-ms.reviewer:
+Module Guid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+Module Name: ServerMigrationCmdlets
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ServerMig_Cmdlets Module

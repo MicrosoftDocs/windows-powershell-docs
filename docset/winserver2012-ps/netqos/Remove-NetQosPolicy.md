@@ -1,12 +1,12 @@
 ---
-external help file: NetQos_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 0043C08D-E596-4177-A981-0CD8C04CA7E4
+external help file: NetQos_Cmdlets.xml
 manager: dansimp
+Module Name: NetQoS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netqos/remove-netqospolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetQosPolicy

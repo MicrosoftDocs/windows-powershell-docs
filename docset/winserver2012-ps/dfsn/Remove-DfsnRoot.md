@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespace.cdxml-help.xml
-ms.assetid: 14D4A623-C595-4DEC-A8AF-AFE74AB71D2E
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespace.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/remove-dfsnroot?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

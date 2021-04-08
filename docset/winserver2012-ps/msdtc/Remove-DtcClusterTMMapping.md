@@ -1,12 +1,12 @@
 ---
-external help file: MsDTC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: D4FFA9BB-16B1-44B5-83C7-E95E32DCB451
+external help file: MsDTC_Cmdlets.xml
 manager: dansimp
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msdtc/remove-dtcclustertmmapping?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-DtcClusterTMMapping

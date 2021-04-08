@@ -1,12 +1,12 @@
 ---
-external help file: NetAdapter_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3AE20759-18A2-49EC-9CF4-71B59B7DC9F6
+external help file: NetAdapter_Cmdlets.xml
 manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapteripsecoffload?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetAdapterIPsecOffload

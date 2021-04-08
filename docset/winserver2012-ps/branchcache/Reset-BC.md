@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheOrchestrator.cdxml-help.xml
-ms.assetid: D34852CB-CB0D-4670-91C2-2CE19A3070CC
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheOrchestrator.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/reset-bc?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Reset-BC

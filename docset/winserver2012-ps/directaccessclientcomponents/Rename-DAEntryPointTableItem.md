@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DASiteTableEntry.cdxml-help.xml
-ms.assetid: F68C0ECF-F064-4C50-B164-15224780EB90
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DASiteTableEntry.cdxml-help.xml
+manager: dansimp
+Module Name: DirectAccessClientComponents
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/rename-daentrypointtableitem?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

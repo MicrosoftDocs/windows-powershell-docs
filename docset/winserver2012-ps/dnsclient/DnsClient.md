@@ -1,14 +1,13 @@
 ---
-Module Name: DnsClient
-Module Guid: 5696D5EF-FA2D-4997-94F1-0BC13DAA2AC5
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216157
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 5B9BD6D4-1894-4173-8801-D433B8EE6EE8
 manager: dansimp
-ms.reviewer:
+Module Guid: 5696d5ef-fa2d-4997-94f1-0bc13daa2ac5
+Module Name: DnsClient
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DnsClient Module

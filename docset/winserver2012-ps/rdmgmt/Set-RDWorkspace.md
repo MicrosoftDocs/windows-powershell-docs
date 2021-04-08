@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: EA0B41A7-7083-4F56-B752-70AEAC0D117D
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdworkspace?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDWorkspace
@@ -43,7 +43,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -58,7 +58,7 @@ Specifies a workspace name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
-ms.assetid: 00607943-4ED6-4BFB-B2AF-B43BD542722C
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+manager: dansimp
+Module Name: Appx
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/appx/remove-appxpackage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-AppxPackage

@@ -1,12 +1,12 @@
 ---
-external help file: WSS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: FD98B9EC-0249-45D9-B2AD-B3CD70A8639E
+external help file: WSS_Cmdlets.xml
 manager: dansimp
+Module Name: WssCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssremoteconnection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WssRemoteConnection

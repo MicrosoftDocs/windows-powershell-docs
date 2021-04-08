@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
-ms.assetid: F025132E-9FD5-4870-BE58-A1AB16DCBC3A
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: kenwith
 author: kenwith
+external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: dansimp
+Module Name: ActiveDirectory
+ms.author: kenwith
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adserviceaccount?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-ADServiceAccount

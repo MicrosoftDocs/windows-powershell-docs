@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -61,7 +61,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -77,7 +77,7 @@ The ID of a patch schedule is a system-assigned GUID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -93,7 +93,7 @@ If you do not specify a value for this parameter, the cmdlet returns patch sched
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -127,7 +127,7 @@ Label : A string that describes the purpose of the patch
 
 Plugin : Plugin that created the patch schedule
 
-PatchStatus  : 
+PatchStatus  :
 - RDV_TASK_STATUS_UNKNOWN.
 (Not used by task agent.)
 - RDV_TASK_STATUS_SEARCHING.

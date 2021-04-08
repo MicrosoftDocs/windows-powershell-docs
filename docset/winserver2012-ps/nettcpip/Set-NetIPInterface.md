@@ -1,12 +1,12 @@
 ---
-external help file: NetTCPIP_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3268460C-920A-4E06-9A45-4A2BFFD63E3C
+external help file: NetTCPIP_Cmdlets.xml
 manager: dansimp
+Module Name: NetTCPIP
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/set-netipinterface?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetIPInterface

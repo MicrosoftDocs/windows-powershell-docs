@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 156B1FE2-0A43-4198-8412-1D5D56CD689B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/disable-rdvirtualdesktopadmachineaccountreuse?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-RDVirtualDesktopADMachineAccountReuse
@@ -43,7 +43,7 @@ If not supplied, defaults to the fully qualified domain name (FQDN) of the local
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

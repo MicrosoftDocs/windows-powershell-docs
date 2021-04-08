@@ -1,12 +1,12 @@
 ---
-external help file: VAMT_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 7962B7C4-B722-428A-AB8C-5050975EDBAF
+external help file: VAMT_Cmdlets.xml
 manager: dansimp
+Module Name: VAMT
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/vamt/get-vamtproduct?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-VamtProduct

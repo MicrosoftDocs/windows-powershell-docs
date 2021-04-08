@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
-ms.assetid: F4D7A3B4-8F8E-4B26-9586-16E56473BF85
-manager: dansimp
-online version:
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: dansimp
+Module Name: ActiveDirectory
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/activedirectory/remove-aduser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-ADUser

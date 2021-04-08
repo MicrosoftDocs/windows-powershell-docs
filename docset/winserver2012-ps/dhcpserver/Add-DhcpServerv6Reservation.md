@@ -1,12 +1,12 @@
 ---
-external help file: DhcpServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: D1B1F504-0087-4DBE-8C99-0A364ADA0663
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DhcpServer_Cmdlets.xml
+manager: dansimp
+Module Name: DhcpServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverv6reservation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-DhcpServerv6Reservation

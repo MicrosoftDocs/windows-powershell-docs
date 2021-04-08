@@ -1,12 +1,12 @@
 ---
-external help file: DnsServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: EC24BA06-03D9-48A9-8FEA-830DCE8E4B34
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DnsServer_Cmdlets.xml
+manager: dansimp
+Module Name: DnsServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecorddnskey?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-DnsServerResourceRecordDnsKey

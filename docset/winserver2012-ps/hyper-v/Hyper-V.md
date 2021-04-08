@@ -1,12 +1,12 @@
 ---
-Module Name: Hyper-V
-Module Guid: AF4BDDD0-8583-4FF2-84B2-A33F5C8DE8A7
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206726
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.5.0.0
 Locale: en-US
-author: andreabarr
+Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
+Module Name: Hyper-V
 ms.author: v-anbarr
-ms.reviewer:
+ms.reviewer: 
 ---
 
 # Hyper-V Module

@@ -1,12 +1,12 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: FEE8A735-0D5F-4C07-A70E-73F0BB90DEB1
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Failoverv2_Cmdlets.xml
+manager: dansimp
+Module Name: FailoverClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustersharedvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-ClusterSharedVolume

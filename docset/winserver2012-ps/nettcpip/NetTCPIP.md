@@ -1,14 +1,13 @@
 ---
-Module Name: NetTCPIP
-Module Guid: 2D0B6C7F-16A0-4185-843F-AE47B6DB4551
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=230560
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.4.0.0
 Locale: en-US
-ms.assetid: 2E018228-3ABE-4901-B33D-92C2D16262CC
 manager: dansimp
-ms.reviewer:
+Module Guid: 2d0b6c7f-16a0-4185-843f-ae47b6db4551
+Module Name: NetTCPIP
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetTCPIP Module

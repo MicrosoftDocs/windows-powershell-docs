@@ -1,12 +1,12 @@
 ---
-external help file: FSRM_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 3FE2F1F8-0CFC-4D74-B465-E7DA2B20E0E4
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: FSRM_Cmdlets.xml
+manager: dansimp
+Module Name: FileServerResourceManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/get-fsrmmgmtproperty?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-FsrmMgmtProperty

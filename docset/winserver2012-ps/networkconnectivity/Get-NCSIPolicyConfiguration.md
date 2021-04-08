@@ -1,12 +1,12 @@
 ---
-external help file: NetConnect_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: AD6DD8E8-6C58-456B-8C05-43F59567141F
+external help file: NetConnect_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkConnectivity
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networkconnectivity/get-ncsipolicyconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NCSIPolicyConfiguration

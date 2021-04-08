@@ -1,12 +1,12 @@
 ---
-external help file: WasPsExt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: CBBA788E-2BC9-448F-8CC6-B5DD4F2B727E
+external help file: WasPsExt_Cmdlets.xml
 manager: dansimp
+Module Name: WasPSExt
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/waspsext/reset-wascomputer?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Reset-WASComputer

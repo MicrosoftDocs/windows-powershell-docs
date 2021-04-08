@@ -1,12 +1,12 @@
 ---
-external help file: WSBackup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: FE786AAE-7B79-4D2E-9594-0D48AEF2CD0F
+external help file: WSBackup_Cmdlets.xml
 manager: dansimp
+Module Name: WindowsServerBackup
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/get-wbbackupset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WBBackupSet

@@ -1,14 +1,13 @@
 ---
-Module Name: ADCSDeployment
-Module Guid: 5919A3CB-977E-464F-A221-421C270218B4
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216146
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: C8A2C20B-27E4-4A1B-BFEB-12B4C3BC6133
 manager: dansimp
-ms.reviewer:
+Module Guid: 5919a3cb-977e-464f-a221-421c270218b4
+Module Name: adcsdeployment
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADCSDeployment Module

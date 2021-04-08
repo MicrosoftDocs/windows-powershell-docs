@@ -1,14 +1,13 @@
 ---
-Module Name: DFSN
-Module Guid: D94CF4D4-F7F8-4967-8D7C-1C9FFEF8DA12
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=216859
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 2A1924D6-3934-48B8-807D-D4E417625396
 manager: dansimp
-ms.reviewer:
+Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
+Module Name: DFSN
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # DFSN Module

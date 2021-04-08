@@ -1,12 +1,12 @@
 ---
-external help file: SmbShare_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 828A3C72-A3B9-41B2-9315-28A818974E3B
+external help file: SmbShare_Cmdlets.xml
 manager: dansimp
+Module Name: SmbShare
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbmultichannelconstraint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-SmbMultichannelConstraint

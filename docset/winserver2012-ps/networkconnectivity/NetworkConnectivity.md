@@ -1,14 +1,13 @@
 ---
-Module Name: NetworkConnectivity
-Module Guid: 6C9A449B-B0C6-4386-B139-EE0A55638803
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=232919
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 639DAD91-9062-4005-A4B9-A9BCD71FD1D4
 manager: dansimp
-ms.reviewer:
+Module Guid: 6c9a449b-b0c6-4386-b139-ee0a55638803
+Module Name: NetworkConnectivity
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetworkConnectiviFIX Module

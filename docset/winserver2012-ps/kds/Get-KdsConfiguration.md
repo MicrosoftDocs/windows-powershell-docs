@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
-ms.assetid: 7ED02CD3-B127-4EA4-9625-8D6FF3141E54
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.KeyDistributionService.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: KDS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/kds/get-kdsconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-KdsConfiguration

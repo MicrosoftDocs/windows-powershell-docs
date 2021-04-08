@@ -1,14 +1,13 @@
 ---
-Module Name: ADRMSAdmin
-Module Guid: BEB3DB13-EED6-4F7B-8420-079E395B58F9
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206733
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 3CC98C40-7578-4C90-9F53-A5CD7DDA1574
 manager: dansimp
-ms.reviewer:
+Module Guid: beb3db13-eed6-4f7b-8420-079e395b58f9
+Module Name: ADRMSAdmin
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADRMSAdmin Module

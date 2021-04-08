@@ -1,12 +1,12 @@
 ---
-external help file: UnifiedRA_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 77ADE910-15EE-4438-94D2-9789B90A5BF4
+external help file: UnifiedRA_Cmdlets.xml
 manager: dansimp
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/remove-vpnipaddressrange?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-VpnIPAddressRange

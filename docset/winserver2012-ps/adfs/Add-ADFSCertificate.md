@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
-ms.assetid: 8C858920-7B90-490B-9C6C-45B97EF82F7E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: ADFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adfs/add-adfscertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-ADFSCertificate

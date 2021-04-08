@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-ms.assetid: 1B795A4D-53BF-4DCD-9C8D-BBAB52B0F5B4
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dism/set-windowsproductkey?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

@@ -1,12 +1,12 @@
 ---
-external help file: NFS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 34880FC4-4062-40D4-A0B2-7D775C64F03B
+external help file: NFS_Cmdlets.xml
 manager: dansimp
+Module Name: NFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsnetgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NfsNetgroup

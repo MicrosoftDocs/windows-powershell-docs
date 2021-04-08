@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
-ms.assetid: 96C6614D-C050-4706-B727-D61D43B115B8
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: dansimp
+Module Name: ActiveDirectory
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/activedirectory/set-adgroup?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-ADGroup

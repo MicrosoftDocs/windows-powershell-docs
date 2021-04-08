@@ -1,12 +1,12 @@
 ---
-external help file: WDAC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3A39F5C4-6AC1-4B3E-A4CB-4D6C876BA4B4
+external help file: WDAC_Cmdlets.xml
 manager: dansimp
+Module Name: Wdac
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wdac/enable-wdacbidtrace?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-WdacBidTrace

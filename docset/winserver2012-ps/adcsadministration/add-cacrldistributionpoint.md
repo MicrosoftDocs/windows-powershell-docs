@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-ms.assetid: AA0516E7-8C3A-4F18-9AC1-7E08244A19E8
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/add-cacrldistributionpoint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-CACrlDistributionPoint

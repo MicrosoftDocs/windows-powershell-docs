@@ -1,12 +1,12 @@
 ---
-external help file: UnifiedRA_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: B49B434A-027E-4AB5-9717-AD930B15AA5A
+external help file: UnifiedRA_Cmdlets.xml
 manager: dansimp
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/get-damgmtserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DAMgmtServer

@@ -1,12 +1,12 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: CC4C1119-2255-4E52-85B0-DDF5270C2180
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Failoverv2_Cmdlets.xml
+manager: dansimp
+Module Name: FailoverClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/update-clustervirtualmachineconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-ClusterVirtualMachineConfiguration

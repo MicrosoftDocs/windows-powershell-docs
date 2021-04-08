@@ -1,12 +1,12 @@
 ---
-external help file: NetSecurity_Function.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: AB2A3A95-6027-4D3D-8C6F-AC7D61491CE4
+external help file: NetSecurity_Function.xml
 manager: dansimp
+Module Name: NetSecurity
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netipsecquickmodecryptoset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetIPsecQuickModeCryptoSet

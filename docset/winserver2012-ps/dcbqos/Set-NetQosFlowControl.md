@@ -1,12 +1,12 @@
 ---
-external help file: DcbQos_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 04AA0089-AD47-46ED-9B16-370F5B785196
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DcbQos_Cmdlets.xml
+manager: dansimp
+Module Name: DcbQoS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dcbqos/set-netqosflowcontrol?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetQosFlowControl

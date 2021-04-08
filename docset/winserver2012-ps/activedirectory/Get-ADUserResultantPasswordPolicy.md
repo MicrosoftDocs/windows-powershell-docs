@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
-ms.assetid: D46999F5-C859-46D8-8496-A75C561CC78A
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: dansimp
+Module Name: ActiveDirectory
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/activedirectory/get-aduserresultantpasswordpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-ADUserResultantPasswordPolicy

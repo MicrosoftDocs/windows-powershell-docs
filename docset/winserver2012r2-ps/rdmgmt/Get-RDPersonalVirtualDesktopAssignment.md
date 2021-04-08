@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -60,7 +60,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -76,7 +76,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Specifies one or more user accounts, in DOMAIN\User format.
 ```yaml
 Type: String
 Parameter Sets: GetByUser
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ The virtual desktop identified here must be a member of the collection that the 
 ```yaml
 Type: String
 Parameter Sets: GetByDesktop
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

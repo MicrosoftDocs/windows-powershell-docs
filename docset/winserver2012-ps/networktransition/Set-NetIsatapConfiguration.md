@@ -1,12 +1,12 @@
 ---
-external help file: NetTransition_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: BA799DEA-5F13-4831-BA31-16D8C2F5A5ED
+external help file: NetTransition_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkTransition
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/set-netisatapconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetIsatapConfiguration

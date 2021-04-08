@@ -1,12 +1,12 @@
 ---
-external help file: MSFT_NetConnectionProfile.cdxml-help.xml
-ms.assetid: 30A7D679-081F-467E-AAFE-54F31EABBC4C
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MSFT_NetConnectionProfile.cdxml-help.xml
+manager: dansimp
+Module Name: NetConnectionProfile
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/set-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetConnectionProfile

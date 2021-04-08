@@ -1,12 +1,12 @@
 ---
-external help file: MsDTC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 52539594-92A8-4E49-B96D-C0FD19BC165D
+external help file: MsDTC_Cmdlets.xml
 manager: dansimp
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msdtc/get-dtcdefault?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DtcDefault

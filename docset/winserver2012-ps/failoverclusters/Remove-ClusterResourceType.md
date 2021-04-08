@@ -1,12 +1,12 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: BC4F51A9-B0EC-4908-B251-C2469FA470A4
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Failoverv2_Cmdlets.xml
+manager: dansimp
+Module Name: FailoverClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/remove-clusterresourcetype?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-ClusterResourceType

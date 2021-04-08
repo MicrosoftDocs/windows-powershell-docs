@@ -1,12 +1,12 @@
 ---
-external help file: VAMT_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: BE17A551-4DE8-4660-826B-5E53C1503551
+external help file: VAMT_Cmdlets.xml
 manager: dansimp
+Module Name: VAMT
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/vamt/get-vamtconfirmationid?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-VamtConfirmationId

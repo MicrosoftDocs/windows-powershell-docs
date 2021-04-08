@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
-ms.assetid: EDD7A403-DDE3-4E61-AAC3-CC39F24ABEB3
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
+manager: dansimp
+Module Name: ActiveDirectory
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-ADReplicationUpToDatenessVectorTable

@@ -1,12 +1,12 @@
 ---
-external help file: GPv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 2B4BA841-DD58-4384-A6E4-70909BDD77A1
+external help file: GPv2_Cmdlets.xml
 manager: dansimp
+Module Name: GroupPolicy
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/grouppolicy/get-gpinheritance?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-GPInheritance

@@ -1,12 +1,12 @@
 ---
-external help file: WSS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: C23AC990-B422-4923-B01F-07D3C7E49D1F
+external help file: WSS_Cmdlets.xml
 manager: dansimp
+Module Name: WssCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssbackupdisk?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WssBackupDisk

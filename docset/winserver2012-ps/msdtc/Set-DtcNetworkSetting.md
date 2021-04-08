@@ -1,12 +1,12 @@
 ---
-external help file: MsDTC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 104F9A14-DBE9-4C5B-9F66-54E2A1C95761
+external help file: MsDTC_Cmdlets.xml
 manager: dansimp
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msdtc/set-dtcnetworksetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-DtcNetworkSetting

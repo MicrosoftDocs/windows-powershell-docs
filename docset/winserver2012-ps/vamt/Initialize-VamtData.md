@@ -1,12 +1,12 @@
 ---
-external help file: VAMT_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 6DF25E18-FC39-42E2-B616-1EC5EE860ED6
+external help file: VAMT_Cmdlets.xml
 manager: dansimp
+Module Name: VAMT
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/vamt/initialize-vamtdata?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Initialize-VamtData

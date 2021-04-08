@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-ms.assetid: 6545F6DF-6593-4DD4-9391-98DBDCE63F64
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/remove-catemplate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-CATemplate

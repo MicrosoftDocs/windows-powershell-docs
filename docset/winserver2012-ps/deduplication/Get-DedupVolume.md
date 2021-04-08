@@ -1,12 +1,12 @@
 ---
-external help file: Dedup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: B95430BE-3433-4A31-9442-EDCE96C3DB89
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Dedup_Cmdlets.xml
+manager: dansimp
+Module Name: Deduplication
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/deduplication/get-dedupvolume?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DedupVolume

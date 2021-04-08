@@ -1,12 +1,12 @@
 ---
-external help file: NetSwitchTeam_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 10898514-4FF4-4C40-832B-F3190AF58088
+external help file: NetSwitchTeam_Cmdlets.xml
 manager: dansimp
+Module Name: NetSwitchTeam
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netswitchteam/remove-netswitchteam?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetSwitchTeam

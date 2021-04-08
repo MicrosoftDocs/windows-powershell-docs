@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 935B633B-91C9-4ABE-8646-F32DDD0DDFC9
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/update-rdvirtualdesktopcollection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-RDVirtualDesktopCollection
@@ -63,7 +63,7 @@ Specifies the name of a virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -94,7 +94,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -109,7 +109,7 @@ Indicates that the server prevents the rollback of a virtual desktop deployment.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ Specifies a date and time by which the server ends the session if the operation 
 ```yaml
 Type: DateTime
 Parameter Sets: OnUserLogoff, OnSchedule
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +154,7 @@ Specifies a date and time to start the operation.
 ```yaml
 Type: DateTime
 Parameter Sets: OnUserLogoff
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -169,7 +169,7 @@ Specifies the number of days after which the server forces a password update for
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specifies the fully qualified domain name (FQDN) of the server where the virtual
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -199,7 +199,7 @@ Specifies a descriptive name for the virtual desktop template.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

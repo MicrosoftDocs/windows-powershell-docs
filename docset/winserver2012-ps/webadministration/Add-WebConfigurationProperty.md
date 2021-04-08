@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-ms.assetid: 4FD9596E-88F3-4A3F-A341-11B6BEEDF013
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: dansimp
+Module Name: WebAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/add-webconfigurationproperty?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-WebConfigurationProperty

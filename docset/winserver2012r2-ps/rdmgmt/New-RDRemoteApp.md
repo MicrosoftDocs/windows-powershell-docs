@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -75,7 +75,7 @@ This alias must be unique within the collection specified by the **CollectionNam
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ The cmdlet publishes the RemoteApp program to this collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -114,7 +114,7 @@ Allows only command-line arguments specified in the **RequiredCommandLine** para
 ```yaml
 Type: CommandLineSettingValue
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: DoNotAllow, Allow, Require
 
 Required: False
@@ -131,7 +131,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ Specifies a name to display to users for the RemoteApp program.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ For virtual desktop collections, this path must be a valid local path on all vir
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -180,7 +180,7 @@ This path resolves to the same location as the value of the **FilePath** paramet
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Specifies the name of the folder that the RemoteApp program appears in on the Re
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Specifies the index within the icon file (specified by the **IconPath** paramete
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ For virtual desktop collections, the path must be a valid local path on all virt
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ If you specify this parameter, the **CommandLineSetting** parameter must have a 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ Specifies whether to show the RemoteApp program in the RD Web Access server, and
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ To allow all users to see a RemoteApp program, provide a value of $Null.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

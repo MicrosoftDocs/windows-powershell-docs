@@ -1,12 +1,12 @@
 ---
-external help file: NetAdapter_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 8D323C9D-EE85-4390-A4D9-D10D69FA3486
+external help file: NetAdapter_Cmdlets.xml
 manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadaptervport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetAdapterVPort

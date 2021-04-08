@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
-ms.assetid: 97366B7B-1099-48C3-B895-F46C61DB6EE1
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IdentityServer.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: ADFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adfs/new-adfsclaimruleset?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-ADFSClaimRuleSet

@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceServerConfig.cdxml-help.xml
-ms.assetid: 6D47E67A-A9DF-4E0B-95AD-CACC3D5C2DCA
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceServerConfig.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnserverconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

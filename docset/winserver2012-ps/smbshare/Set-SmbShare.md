@@ -1,12 +1,12 @@
 ---
-external help file: SmbShare_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: EFEB7C1D-EBC2-4DB0-958A-FE922AE516B8
+external help file: SmbShare_Cmdlets.xml
 manager: dansimp
+Module Name: SmbShare
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/set-smbshare?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-SmbShare

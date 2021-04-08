@@ -1,12 +1,12 @@
 ---
-external help file: MsDTC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 4EA71110-A579-4C1F-A91B-F24FB99B8BBD
+external help file: MsDTC_Cmdlets.xml
 manager: dansimp
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msdtc/start-dtcdiagnosticresourcemanager?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Start-DtcDiagnosticResourceManager

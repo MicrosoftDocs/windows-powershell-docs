@@ -1,12 +1,12 @@
 ---
-external help file: NPS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: CF8BA4DF-3B15-436C-AFD3-97A2B69764BB
+external help file: NPS_Cmdlets.xml
 manager: dansimp
+Module Name: NPS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nps/export-npsconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Export-NpsConfiguration

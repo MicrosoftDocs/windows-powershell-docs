@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
-ms.assetid: D64F31FE-AAE2-4364-8DF4-88065DFFEE40
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+manager: dansimp
+Module Name: International
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/international/new-winuserlanguagelist?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-WinUserLanguageList

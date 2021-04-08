@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: E1FDA538-4A2A-4B25-99D2-4846977505E5
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdpersonalvirtualdesktopassignment?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-RDPersonalVirtualDesktopAssignment
@@ -56,7 +56,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -87,7 +87,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Performs the action without displaying a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Specifies the user account to remove, in DOMAIN\User format.
 ```yaml
 Type: String
 Parameter Sets: RemoveByUser
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -134,7 +134,7 @@ The virtual desktop identified here must be a member of the collection that the 
 ```yaml
 Type: String
 Parameter Sets: RemoveByDesktop
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

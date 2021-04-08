@@ -1,12 +1,12 @@
 ---
-external help file: NetAdapter_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A2360AAE-2FCF-4C8A-8063-923162B47F90
+external help file: NetAdapter_Cmdlets.xml
 manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/set-netadapterbinding?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-NetAdapterBinding

@@ -1,12 +1,12 @@
 ---
-external help file: MPIO_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 93241A3A-A0AD-414A-A8F5-1A633F39C6C3
+external help file: MPIO_Cmdlets.xml
 manager: dansimp
+Module Name: MPIO
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/mpio/get-msdsmsupportedhw?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-MSDSMSupportedHW

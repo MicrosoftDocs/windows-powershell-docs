@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: F36CC27A-AE6B-4017-A1FC-6253B607566E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/remove-rdserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-RDServer
@@ -43,7 +43,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -58,7 +58,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ Remote Desktop Licensing (RD Licensing).
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDS-CONNECTION-BROKER, RDS-VIRTUALIZATION, RDS-RD-SERVER, RDS-WEB-ACCESS, RDS-GATEWAY, RDS-LICENSING
 
 Required: True
@@ -103,7 +103,7 @@ Specifies the FQDN of the server to be removed from the Remote Desktop deploymen
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

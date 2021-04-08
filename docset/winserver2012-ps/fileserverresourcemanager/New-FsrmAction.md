@@ -1,12 +1,12 @@
 ---
-external help file: FSRM_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 0B4B9F8D-D43E-4054-88B4-0E16B9058762
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: FSRM_Cmdlets.xml
+manager: dansimp
+Module Name: FileServerResourceManager
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/new-fsrmaction?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-FsrmAction

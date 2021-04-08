@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-ms.assetid: 3E0D9B0B-766A-4EF6-B4C7-1CF6D1FF0FF5
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: pki
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/pki/remove-certificatenotificationtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-CertificateNotificationTask

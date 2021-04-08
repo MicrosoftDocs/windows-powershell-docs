@@ -1,12 +1,12 @@
 ---
-external help file: NetSecurity_Function.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A3673B8E-4659-473E-B398-CBAD53255613
+external help file: NetSecurity_Function.xml
 manager: dansimp
+Module Name: NetSecurity
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/new-netfirewallrule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NetFirewallRule

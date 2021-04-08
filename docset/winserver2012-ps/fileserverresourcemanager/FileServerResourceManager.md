@@ -1,14 +1,13 @@
 ---
-Module Name: FileServerResourceManager
-Module Guid: FAA199B6-C378-4AAD-9D4D-F0E99F3F4845
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=206734
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: CD5BB115-897D-406C-B649-5B5F75E4FC84
 manager: dansimp
-ms.reviewer:
+Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
+Module Name: FileServerResourceManager
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # FileServerResourceManager Module

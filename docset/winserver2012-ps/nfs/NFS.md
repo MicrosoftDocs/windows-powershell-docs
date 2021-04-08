@@ -1,14 +1,13 @@
 ---
-Module Name: NFS
-Module Guid: 108AE179-3094-4223-91E4-B9099069017A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216862
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 68C7868F-B038-4DBC-8EC0-744F671B3BA7
 manager: dansimp
-ms.reviewer:
+Module Guid: 108ae179-3094-4223-91e4-b9099069017a
+Module Name: NFS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NFS Module

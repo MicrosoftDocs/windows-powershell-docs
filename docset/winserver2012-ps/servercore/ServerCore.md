@@ -1,14 +1,13 @@
 ---
-Module Name: ServerCore
-Module Guid: 21B0D06C-E02A-46CC-849B-11C36EC94FB8
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=247822
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: ECA5B1BF-C761-4D9B-A8B3-CCA27F1A3E5F
 manager: dansimp
-ms.reviewer:
+Module Guid: 21b0d06c-e02a-46cc-849b-11c36ec94fb8
+Module Name: ServerCore
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ServerCore Module

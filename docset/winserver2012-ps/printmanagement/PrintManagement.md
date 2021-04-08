@@ -1,14 +1,13 @@
 ---
-Module Name: PrintManagement
-Module Guid: 8466AE97-2C03-4385-A501-7E74CF6BB1DF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216901
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 8C40FD13-5AE8-4410-850F-839841C1B9DB
 manager: dansimp
-ms.reviewer:
+Module Guid: 8466ae97-2c03-4385-a501-7e74cf6bb1df
+Module Name: PrintManagement
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # PrintManagement Module

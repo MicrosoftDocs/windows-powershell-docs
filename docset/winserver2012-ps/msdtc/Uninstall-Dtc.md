@@ -1,12 +1,12 @@
 ---
-external help file: MsDTC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 7F79A4D3-08FB-4A2A-871B-C994F351B635
+external help file: MsDTC_Cmdlets.xml
 manager: dansimp
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msdtc/uninstall-dtc?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Uninstall-Dtc

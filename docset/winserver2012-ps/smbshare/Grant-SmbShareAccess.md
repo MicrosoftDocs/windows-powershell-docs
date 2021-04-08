@@ -1,12 +1,12 @@
 ---
-external help file: SmbShare_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3E2369C0-B136-4569-BB31-F111C361A1CF
+external help file: SmbShare_Cmdlets.xml
 manager: dansimp
+Module Name: SmbShare
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/grant-smbshareaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Grant-SmbShareAccess

@@ -1,12 +1,12 @@
 ---
-external help file: NetSecurity_Function.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: EC1F98C4-4B51-4124-ACF0-918DBC82BAB0
+external help file: NetSecurity_Function.xml
 manager: dansimp
+Module Name: NetSecurity
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netsecurity/remove-netipsecdospsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetIPsecDospSetting

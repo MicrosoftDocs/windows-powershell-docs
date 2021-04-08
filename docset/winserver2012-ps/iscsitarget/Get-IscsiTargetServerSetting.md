@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
-ms.assetid: 07C8D0C2-6032-453C-9E66-AA58669EC71D
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+manager: dansimp
+Module Name: IscsiTarget
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iscsitarget/get-iscsitargetserversetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-IscsiTargetServerSetting

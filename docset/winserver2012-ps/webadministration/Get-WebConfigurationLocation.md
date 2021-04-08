@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-ms.assetid: A0C732EB-6D51-45C2-BDAF-144305A59E83
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: dansimp
+Module Name: WebAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/get-webconfigurationlocation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WebConfigurationLocation

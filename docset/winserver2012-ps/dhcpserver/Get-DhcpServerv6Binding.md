@@ -1,12 +1,12 @@
 ---
-external help file: DhcpServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: FF7A07D1-467C-4E4C-BEFE-83F034C43CD3
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DhcpServer_Cmdlets.xml
+manager: dansimp
+Module Name: DhcpServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6binding?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DhcpServerv6Binding

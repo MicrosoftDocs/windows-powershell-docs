@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: D25A387A-2DF6-417E-9BCB-CA33895F5087
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdusersession?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDUserSession
@@ -49,7 +49,7 @@ If this parameter does not appear, the cmdlet returns all user sessions across a
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -66,7 +66,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1

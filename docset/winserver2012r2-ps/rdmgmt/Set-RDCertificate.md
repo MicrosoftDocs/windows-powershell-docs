@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -73,7 +73,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -88,7 +88,7 @@ Performs the action without a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ Specifies the location of a certificate as a file that has a .pfx extension.
 ```yaml
 Type: String
 Parameter Sets: Import
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ See the Examples section.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RDCertificateRole
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDGateway, RDWebAccess, RDRedirector, RDPublishing
 
 Required: True

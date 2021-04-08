@@ -1,12 +1,12 @@
 ---
-external help file: Iscsi_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 8740AFC8-89A6-404C-967D-F7C0D3877BC5
+external help file: Iscsi_Cmdlets.xml
 manager: dansimp
+Module Name: iSCSI
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/iscsi/new-iscsitargetportal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-IscsiTargetPortal

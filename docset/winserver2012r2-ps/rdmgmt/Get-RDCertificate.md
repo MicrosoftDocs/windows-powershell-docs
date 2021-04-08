@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -28,7 +28,7 @@ Get-RDCertificate [[-Role] <RDCertificateRole>] [-ConnectionBroker <String>] [<C
 ## DESCRIPTION
 The **Get-RDCertificate** cmdlet gets certificates associated with Remote Desktop Services (RDS) roles.
 
-This cmdlet modifies an object that contains the following information: 
+This cmdlet modifies an object that contains the following information:
 
 - Subject.
 The subject of the certificate.
@@ -48,12 +48,12 @@ The possible roles are: RDGateway, RDWebAccess, RDRedirector, and RDPublishing.
 - Level.
 Certification level.
 
-The certification levels are: 
+The certification levels are:
 
 - Not Configured.
-The role service is not configured with a certificate or the certificate is not valid. 
+The role service is not configured with a certificate or the certificate is not valid.
 - Untrusted.
-The role service is configured with a self-signed certificate. 
+The role service is configured with a self-signed certificate.
 - Trusted.
 The role service is configured with either enterprise certificate or public certificate.
 
@@ -75,7 +75,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: RDCertificateRole
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: RDGateway, RDWebAccess, RDRedirector, RDPublishing
 
 Required: False

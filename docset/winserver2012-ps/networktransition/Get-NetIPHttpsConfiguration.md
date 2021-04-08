@@ -1,12 +1,12 @@
 ---
-external help file: NetTransition_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: E3DB6861-8AC4-43D7-96A7-E832280B9A10
+external help file: NetTransition_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkTransition
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/get-netiphttpsconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetIPHttpsConfiguration

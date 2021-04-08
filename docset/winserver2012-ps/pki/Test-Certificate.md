@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-ms.assetid: D0E2D004-0EA9-45E4-B520-F14FCA21516D
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: pki
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/pki/test-certificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Test-Certificate

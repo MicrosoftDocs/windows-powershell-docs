@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-ms.assetid: 089DFEB5-D3C7-42E6-A304-A8F1DA9BC837
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: dansimp
+Module Name: WebAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/get-webappdomain?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WebAppDomain

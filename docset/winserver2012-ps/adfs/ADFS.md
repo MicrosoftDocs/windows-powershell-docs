@@ -1,14 +1,13 @@
 ---
-Module Name: ADFS
-Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216848
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: D45D3A6B-876A-4733-B855-ACCF1C2121BA
 manager: dansimp
-ms.reviewer:
+Module Guid: 5c958595-c68c-4c00-a468-9763de83bbee
+Module Name: ADFS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADFS Module

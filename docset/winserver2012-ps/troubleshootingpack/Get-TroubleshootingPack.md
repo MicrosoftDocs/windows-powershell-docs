@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
-ms.assetid: 9ED46ACE-1590-4CCA-97A8-C494DD1162BE
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
+manager: dansimp
+Module Name: TroubleshootingPack
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/troubleshootingpack/get-troubleshootingpack?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-TroubleshootingPack

@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 9780A261-DF3C-4FC4-8A02-3A2110094EA5
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/add-rdvirtualdesktoptocollection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-RDVirtualDesktopToCollection
@@ -58,7 +58,7 @@ Specifies the name of a virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -74,7 +74,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ Specifies a collection of values (key=value pair) that allocate virtual desktops
 ```yaml
 Type: Hashtable
 Parameter Sets: PooledMgd, PersonalMgd
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ Specifies an array of names of a virtual desktops.
 ```yaml
 Type: String[]
 Parameter Sets: UnManaged
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -119,7 +119,7 @@ Specifies the number of days after which the server enforces a password update.
 ```yaml
 Type: Int32
 Parameter Sets: PooledMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Specifies the fully qualified domain name (FQDN) of the server where the virtual
 ```yaml
 Type: String
 Parameter Sets: PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Specifies a descriptive name for the virtual desktop template.
 ```yaml
 Type: String
 Parameter Sets: PersonalMgd
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

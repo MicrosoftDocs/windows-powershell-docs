@@ -1,12 +1,12 @@
 ---
-external help file: DhcpServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 08DE836C-462A-4E59-9E3B-1D3D22C61135
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DhcpServer_Cmdlets.xml
+manager: dansimp
+Module Name: DhcpServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4binding?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-DhcpServerv4Binding

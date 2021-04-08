@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceFolder.cdxml-help.xml
-ms.assetid: 99850379-D448-42D9-91D0-1720A83798F9
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceFolder.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnfolder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

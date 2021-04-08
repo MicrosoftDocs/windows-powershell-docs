@@ -1,12 +1,12 @@
 ---
-external help file: Storage2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9C4C2E0D-3B0A-4A1B-9824-E5FD86644A5A
+external help file: Storage2_Cmdlets.xml
 manager: dansimp
+Module Name: Storage
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/storage/set-storagesetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-StorageSetting

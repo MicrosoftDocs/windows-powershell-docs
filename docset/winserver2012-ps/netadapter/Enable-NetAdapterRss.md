@@ -1,12 +1,12 @@
 ---
-external help file: NetAdapter_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 11368008-F0DA-460E-9400-BD142B953830
+external help file: NetAdapter_Cmdlets.xml
 manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/enable-netadapterrss?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-NetAdapterRss

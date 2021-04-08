@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
-ms.assetid: 1F36F293-04EC-44A7-935E-8F71AD81B178
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
+manager: dansimp
+Module Name: ADRMS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrms/update-adrms?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Update-ADRMS

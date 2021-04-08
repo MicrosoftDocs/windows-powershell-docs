@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 5C117FBB-2D76-4F8D-A434-E6539E28C25D
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/invoke-rduserlogoff?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Invoke-RDUserLogoff
@@ -54,7 +54,7 @@ Indicates that the cmdlet ends the user session and closes all running applicati
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ For virtual desktop collections the server name is the name of the Remote Deskto
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -87,7 +87,7 @@ Use Get-RDUserSession to retrieve the unique ID for a specific user session.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

@@ -1,14 +1,13 @@
 ---
-Module Name: BitLocker
-Module Guid: 0FF02BB8-300A-4262-AC08-E06DD810F1B6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216897
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 6F49F904-E04D-4B90-AFBC-84BC45D4D30D
 manager: dansimp
-ms.reviewer:
+Module Guid: 0ff02bb8-300a-4262-ac08-e06dd810f1b6
+Module Name: BitLocker
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # BitLocker Module

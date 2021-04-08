@@ -1,12 +1,12 @@
 ---
-external help file: MSMQ_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 43423EEE-4176-4736-A3B6-874A31BA0D15
+external help file: MSMQ_Cmdlets.xml
 manager: dansimp
+Module Name: MSMQ
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msmq/remove-msmqcertificate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-MsmqCertificate

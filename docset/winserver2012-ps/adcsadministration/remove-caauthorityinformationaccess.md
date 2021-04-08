@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-ms.assetid: 8A3ABA4F-7422-48DD-AA60-A943E8D31474
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/remove-caauthorityinformationaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-CAAuthorityInformationAccess

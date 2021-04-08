@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 7AAB8E9E-6BAC-4C06-BCD9-3CB1D94D014B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdsessioncollectionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDSessionCollectionConfiguration
@@ -124,7 +124,7 @@ Indicates that the cmdlet gets client settings for the session collection, such 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Client
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +139,7 @@ Specifies the name of a session collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -154,7 +154,7 @@ Indicates that the cmdlet displays connection settings for the session collectio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Connection
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -170,7 +170,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ Indicates that the cmdlet gets load balancing settings for the session collectio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: LoadBalancing
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -200,7 +200,7 @@ Indicates that the parameter gets the security protocol in use for the session c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Security
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -215,7 +215,7 @@ Indicates that the cmdlet gets the list of domain groups and users authorized to
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -230,7 +230,7 @@ Indicates that the cmdlet gets settings for the user profile disk for the sessio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserProfileDisk
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

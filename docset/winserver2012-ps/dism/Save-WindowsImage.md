@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-ms.assetid: 65DA4CC2-7DCB-4AA4-9132-8365B8E628BE
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dism/save-windowsimage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

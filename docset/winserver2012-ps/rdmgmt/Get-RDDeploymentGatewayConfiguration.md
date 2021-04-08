@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: F98C4DF8-F841-41F4-AD23-450D017BC0A4
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rddeploymentgatewayconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDDeploymentGatewayConfiguration
@@ -41,7 +41,7 @@ If this parameter does not appear, the default value is the fully qualified doma
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0

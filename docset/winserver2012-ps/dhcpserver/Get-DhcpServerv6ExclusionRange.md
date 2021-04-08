@@ -1,12 +1,12 @@
 ---
-external help file: DhcpServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 77586C17-1CE1-408F-96A6-CA5437DB4601
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DhcpServer_Cmdlets.xml
+manager: dansimp
+Module Name: DhcpServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverv6exclusionrange?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DhcpServerv6ExclusionRange

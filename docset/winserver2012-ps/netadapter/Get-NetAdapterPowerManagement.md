@@ -1,12 +1,12 @@
 ---
-external help file: NetAdapter_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 85E56DA8-8A5A-4BFF-BF13-30A923379E1A
+external help file: NetAdapter_Cmdlets.xml
 manager: dansimp
+Module Name: NetAdapter
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netadapter/get-netadapterpowermanagement?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetAdapterPowerManagement

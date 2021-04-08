@@ -1,12 +1,12 @@
 ---
-external help file: UnifiedRA_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 514EA24C-98AE-4DDD-8927-3A6648376DB3
+external help file: UnifiedRA_Cmdlets.xml
 manager: dansimp
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/uninstall-remoteaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Uninstall-RemoteAccess

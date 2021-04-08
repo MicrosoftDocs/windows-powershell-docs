@@ -1,12 +1,12 @@
 ---
-external help file: NLB_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: ECC2F884-EFBF-49EF-B9A5-E003C61F3662
+external help file: NLB_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkLoadBalancingClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/enable-nlbclusterportrule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-NlbClusterPortRule

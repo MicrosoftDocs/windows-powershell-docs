@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
-ms.assetid: 669C0C9E-37E4-474C-BC4C-465AE06EAFA3
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
+manager: dansimp
+Module Name: International
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/international/get-winhomelocation?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-WinHomeLocation

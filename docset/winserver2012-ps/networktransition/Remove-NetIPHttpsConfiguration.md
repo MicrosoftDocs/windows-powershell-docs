@@ -1,12 +1,12 @@
 ---
-external help file: NetTransition_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: DA59CF8F-6554-47FD-9691-DFC1E3E93E10
+external help file: NetTransition_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkTransition
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/remove-netiphttpsconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetIPHttpsConfiguration

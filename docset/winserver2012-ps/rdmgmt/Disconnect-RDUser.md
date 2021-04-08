@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 2D60E839-014C-4D8D-9BF9-C6ABEA237B6E
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/disconnect-rduser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disconnect-RDUser
@@ -47,7 +47,7 @@ Disconnects the user from a session on the remote server without prompting the u
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -64,7 +64,7 @@ For virtual desktop collections the server name is the name of the Remote Deskto
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -80,7 +80,7 @@ Use the Get-RDUserSession cmdlet to retrieve the user session ID.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

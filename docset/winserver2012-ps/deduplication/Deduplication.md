@@ -1,14 +1,13 @@
 ---
-Module Name: Deduplication
-Module Guid: 1395ECA7-7EAF-4958-A114-FB8AB76B86CC
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=216858
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: D93886EE-21C3-470A-B4A5-54F64A74A491
 manager: dansimp
-ms.reviewer:
+Module Guid: 1395eca7-7eaf-4958-a114-fb8ab76b86cc
+Module Name: Deduplication
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # Deduplication Module

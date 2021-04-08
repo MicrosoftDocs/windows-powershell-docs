@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceFolderTarget.cdxml-help.xml
-ms.assetid: 9CC8E2DF-1EBF-4E77-A5EF-D4B60B5367E9
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceFolderTarget.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/get-dfsnfoldertarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

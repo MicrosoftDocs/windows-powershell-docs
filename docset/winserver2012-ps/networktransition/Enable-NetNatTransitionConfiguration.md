@@ -1,12 +1,12 @@
 ---
-external help file: NetTransition_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: D762C819-2100-4D2B-9BFD-58C49D9D15AC
+external help file: NetTransition_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkTransition
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/enable-netnattransitionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Enable-NetNatTransitionConfiguration

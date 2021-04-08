@@ -1,12 +1,12 @@
 ---
-external help file: ScheduledTask_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: B653E721-E267-436D-893F-FED53A6D3EE7
+external help file: ScheduledTask_Cmdlets.xml
 manager: dansimp
+Module Name: ScheduledTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtasktrigger?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-ScheduledTaskTrigger

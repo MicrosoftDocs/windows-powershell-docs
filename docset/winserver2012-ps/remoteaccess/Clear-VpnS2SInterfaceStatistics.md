@@ -1,12 +1,12 @@
 ---
-external help file: UnifiedRA_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: EBA1933F-2D9D-4CEB-BB0A-41B6AC3C98A8
+external help file: UnifiedRA_Cmdlets.xml
 manager: dansimp
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/clear-vpns2sinterfacestatistics?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Clear-VpnS2SInterfaceStatistics

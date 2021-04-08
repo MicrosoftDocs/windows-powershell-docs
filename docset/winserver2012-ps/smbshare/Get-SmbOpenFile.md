@@ -1,12 +1,12 @@
 ---
-external help file: SmbShare_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 20AA3A6F-38D3-4692-98E5-4F510B9BE782
+external help file: SmbShare_Cmdlets.xml
 manager: dansimp
+Module Name: SmbShare
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbopenfile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-SmbOpenFile

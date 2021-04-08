@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
-ms.assetid: 81C2DCCF-49AF-4948-97B3-EE9EEE723B64
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: dansimp
+Module Name: WebAdministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/webadministration/restore-webconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Restore-WebConfiguration

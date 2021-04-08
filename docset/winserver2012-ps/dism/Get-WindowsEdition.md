@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-ms.assetid: E195C42C-5048-488D-8BF4-0B14EB520A53
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dism/get-windowsedition?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

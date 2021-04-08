@@ -1,12 +1,12 @@
 ---
-external help file: Failoverv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 4C3E1376-B8DE-4B3E-87F3-E351F369E314
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Failoverv2_Cmdlets.xml
+manager: dansimp
+Module Name: FailoverClusters
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/failoverclusters/add-clustercheckpoint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-ClusterCheckpoint

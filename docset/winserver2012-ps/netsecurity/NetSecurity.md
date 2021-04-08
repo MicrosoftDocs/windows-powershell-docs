@@ -1,14 +1,13 @@
 ---
-Module Name: NetSecurity
-Module Guid: 4B26FF51-7AEE-4731-9CF7-508B82532CBF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=217095
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 9E474DAE-3089-41AF-98FF-30EA9FDB0C32
 manager: dansimp
-ms.reviewer:
+Module Guid: 4b26ff51-7aee-4731-9cf7-508b82532cbf
+Module Name: NetSecurity
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetSecurity Module

@@ -1,14 +1,13 @@
 ---
-Module Name: ServerManager
-Module Guid: D8E0CAE9-8E9B-45BC-BFED-0AAD50938AF0
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206724
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.3.0.0
 Locale: en-US
-ms.assetid: 0D218C17-08CF-4334-AFAA-94FDC14BB2B6
 manager: dansimp
-ms.reviewer:
+Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
+Module Name: ServerManager
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ServerManager Module

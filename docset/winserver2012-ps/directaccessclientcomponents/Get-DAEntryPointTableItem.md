@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DASiteTableEntry.cdxml-help.xml
-ms.assetid: E47810FF-1046-4C1D-BD9B-692667C9B996
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DASiteTableEntry.cdxml-help.xml
+manager: dansimp
+Module Name: DirectAccessClientComponents
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/directaccessclientcomponents/get-daentrypointtableitem?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

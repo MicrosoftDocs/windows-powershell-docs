@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: DF7E9738-084E-47F7-A8CE-ABBA85A5FE51
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdconnectionbrokerhighavailability?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDConnectionBrokerHighAvailability
@@ -45,7 +45,7 @@ This is the DNS round robin name that contains fully qualified domain names (FQD
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -61,7 +61,7 @@ If you do not specify a value, the cmdlet uses the FQDN of the local computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -76,7 +76,7 @@ Specifies a connection string for the database that stores the high availability
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -91,7 +91,7 @@ Specifies a path to the database supplied by the **DatabaseConnectionString** pa
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2

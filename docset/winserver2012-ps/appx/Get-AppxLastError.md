@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
-ms.assetid: 658F6689-4A9E-4EF1-8C2F-F06BBD0947BD
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
+manager: dansimp
+Module Name: Appx
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/appx/get-appxlasterror?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-AppxLastError

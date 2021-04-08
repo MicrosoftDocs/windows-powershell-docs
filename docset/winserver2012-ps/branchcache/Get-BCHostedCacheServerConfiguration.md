@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheHostedCacheServerSettingData.cdxml-help.xml
-ms.assetid: 64B1F603-57F4-476D-AB00-DF0554402944
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheHostedCacheServerSettingData.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bchostedcacheserverconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BCHostedCacheServerConfiguration

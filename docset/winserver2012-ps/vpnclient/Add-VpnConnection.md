@@ -1,12 +1,12 @@
 ---
-external help file: VpnClient_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9E500D0B-AD09-463E-A5B7-E2986476BC58
+external help file: VpnClient_Cmdlets.xml
 manager: dansimp
+Module Name: VpnClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/vpnclient/add-vpnconnection?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-VpnConnection

@@ -1,12 +1,12 @@
 ---
-external help file: ScheduledTask_Cmdlets.xml
-online version:
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 0A57ABC4-35A8-43B2-81C2-193EB5E1FDA7
+external help file: ScheduledTask_Cmdlets.xml
 manager: dansimp
+Module Name: ScheduledTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/unregister-scheduledtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Unregister-ScheduledTask

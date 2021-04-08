@@ -1,12 +1,12 @@
 ---
-external help file: UnifiedRA_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A4DCA216-584F-48F5-8594-0B04F010B3AC
+external help file: UnifiedRA_Cmdlets.xml
 manager: dansimp
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/disconnect-vpnuser?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disconnect-VpnUser

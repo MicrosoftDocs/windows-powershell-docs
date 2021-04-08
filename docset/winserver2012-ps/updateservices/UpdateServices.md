@@ -1,14 +1,13 @@
 ---
-Module Name: UpdateServices
-Module Guid: 1C1D7545-E04A-4B31-9024-F0357C3B935F
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216177
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.4.0
 Locale: en-US
-ms.assetid: D462BB6C-68B0-46A6-A3AD-2DD0523DB8BD
 manager: dansimp
-ms.reviewer:
+Module Guid: 1c1d7545-e04a-4b31-9024-f0357c3b935f
+Module Name: UpdateServices
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # UpdateServices Module

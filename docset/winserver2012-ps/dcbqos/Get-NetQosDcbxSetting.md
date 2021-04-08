@@ -1,12 +1,12 @@
 ---
-external help file: DcbQos_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 922F1C02-895E-42C1-B1CE-30667A6CEA07
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DcbQos_Cmdlets.xml
+manager: dansimp
+Module Name: DcbQoS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dcbqos/get-netqosdcbxsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetQosDcbxSetting

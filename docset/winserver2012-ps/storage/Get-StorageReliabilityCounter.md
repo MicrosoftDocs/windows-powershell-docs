@@ -1,12 +1,12 @@
 ---
-external help file: Storage2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A2A63CBE-B973-469C-BC23-82A0E3763C7C
+external help file: Storage2_Cmdlets.xml
 manager: dansimp
+Module Name: Storage
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/storage/get-storagereliabilitycounter?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-StorageReliabilityCounter

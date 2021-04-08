@@ -1,12 +1,12 @@
 ---
-external help file: PrintMgmt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: B6173813-10C8-4649-B116-FC2AD2C63059
+external help file: PrintMgmt_Cmdlets.xml
 manager: dansimp
+Module Name: PrintManagement
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/printmanagement/get-printerport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-PrinterPort

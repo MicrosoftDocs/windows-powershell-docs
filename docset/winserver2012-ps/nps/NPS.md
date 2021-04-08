@@ -1,14 +1,13 @@
 ---
-Module Name: NPS
-Module Guid: 5EE6F0A2-BFC8-4824-A1E2-F974D39CA886
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=214112
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 320D8BC5-D906-4FB4-9713-75CECABDBAA4
 manager: dansimp
-ms.reviewer:
+Module Guid: 5ee6f0a2-bfc8-4824-a1e2-f974d39ca886
+Module Name: NPS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NPS Module

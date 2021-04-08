@@ -1,14 +1,13 @@
 ---
-Module Name: iSCSI
-Module Guid: 53E1C251-4283-4B07-AB02-FC492C7AB8C5
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=209168
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.3.0.0
 Locale: en-US
-ms.assetid: 186C3096-479F-4044-A9E8-43C964056B04
 manager: dansimp
-ms.reviewer:
+Module Guid: 53e1c251-4283-4b07-ab02-fc492c7ab8c5
+Module Name: iSCSI
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # iSCSI Module

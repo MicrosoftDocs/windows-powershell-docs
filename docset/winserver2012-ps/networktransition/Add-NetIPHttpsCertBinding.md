@@ -1,12 +1,12 @@
 ---
-external help file: NetTransition_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 2F79CD8C-FF12-4BBB-ACC4-5600BF8318BF
+external help file: NetTransition_Cmdlets.xml
 manager: dansimp
+Module Name: NetworkTransition
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/networktransition/add-netiphttpscertbinding?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-NetIPHttpsCertBinding

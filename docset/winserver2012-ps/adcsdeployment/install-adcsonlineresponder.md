@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-ms.assetid: 461DA0B7-62C8-4299-9A58-42C4F15146F5
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsdeployment
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsonlineresponder?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-AdcsOnlineResponder

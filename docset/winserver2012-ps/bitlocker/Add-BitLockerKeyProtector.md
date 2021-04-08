@@ -1,12 +1,12 @@
 ---
-external help file: Bitlocker_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 4AB130BF-4F93-492A-9AE9-B8406FD9D181
+external help file: Bitlocker_Cmdlets.xml
 manager: dansimp
+Module Name: BitLocker
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/bitlocker/add-bitlockerkeyprotector?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-BitLockerKeyProtector

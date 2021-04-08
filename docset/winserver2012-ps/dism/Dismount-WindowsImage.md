@@ -1,11 +1,11 @@
 ---
-external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-ms.assetid: ED90878C-C306-4BBE-902D-EDF4BE37E8BC
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: Microsoft.Dism.PowerShell.dll-Help.xml
+manager: dansimp
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dism/dismount-windowsimage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

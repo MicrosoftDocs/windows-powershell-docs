@@ -1,11 +1,11 @@
 ---
-external help file: PS_DnsClientNrptPolicy_v1.0.0.cdxml-help.xml
-ms.assetid: C87EF4C2-589F-4779-AC7F-F510D30A50F5
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: PS_DnsClientNrptPolicy_v1.0.0.cdxml-help.xml
+manager: dansimp
+Module Name: DnsClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientnrptpolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

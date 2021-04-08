@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: FAF3EE07-CB81-4BB1-BB2B-437C1B15D367
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktopcollectionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RDVirtualDesktopCollectionConfiguration
@@ -73,7 +73,7 @@ Indicates that cmdlet gets Remote Desktop Protocol (RDP) settings for virtual de
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Client
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Specifies the name of a virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -104,7 +104,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ Indicates that the cmdlet gets a list of domain groups and users that are author
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserGroups
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -134,7 +134,7 @@ Indicates that the cmdlet gets a list of user profile disk settings for the coll
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -149,7 +149,7 @@ Indicates that the cmdlet gets configuration settings for virtual desktops in th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: VirtualDesktopConfiguration
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

@@ -1,12 +1,12 @@
 ---
-external help file: WSS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: F488A290-A46A-47D7-9066-3F27D7A71E8D
+external help file: WSS_Cmdlets.xml
 manager: dansimp
+Module Name: WssCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/set-wssbackuppolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-WssBackupPolicy

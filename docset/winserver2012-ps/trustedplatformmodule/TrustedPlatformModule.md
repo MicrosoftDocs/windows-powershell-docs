@@ -1,14 +1,13 @@
 ---
-Module Name: TrustedPlatformModule
-Module Guid: 17FC1F02-CFF3-45FB-AC4F-126594C70B1E
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216898
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 2F5F8534-8D34-4AA2-B8F2-8404D15EAC44
 manager: dansimp
-ms.reviewer:
+Module Guid: 17fc1f02-cff3-45fb-ac4f-126594c70b1e
+Module Name: TrustedPlatformModule
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # TrustedPlatformModule Module

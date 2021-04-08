@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -61,7 +61,7 @@ Specifies the name of a personal virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -92,7 +92,7 @@ If you do not supply a value, the cmdlet uses the fully qualified domain name (F
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Performs the action without displaying a confirmation message.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +122,7 @@ Specifies the user account to remove, in DOMAIN\User format.
 ```yaml
 Type: String
 Parameter Sets: RemoveByUser
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -139,7 +139,7 @@ The virtual desktop identified here must be a member of the collection that the 
 ```yaml
 Type: String
 Parameter Sets: RemoveByDesktop
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1

@@ -1,14 +1,13 @@
 ---
-Module Name: International_Cmdlets
-Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
-Download Help Link: {{Please enter FwLink manually}}
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0
 Locale: en-US
-ms.assetid: D1DAE87F-87F4-417F-A5F2-69CAA548E1E8
 manager: dansimp
-ms.reviewer:
+Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
+Module Name: International
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # International Module

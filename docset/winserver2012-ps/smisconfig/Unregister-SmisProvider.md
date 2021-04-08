@@ -1,12 +1,12 @@
 ---
-external help file: SMISConfig_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 82D7C783-EE46-46A1-AC2C-A6FD93FD1184
+external help file: SMISConfig_Cmdlets.xml
 manager: dansimp
+Module Name: SMISConfig
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smisconfig/unregister-smisprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Unregister-SmisProvider

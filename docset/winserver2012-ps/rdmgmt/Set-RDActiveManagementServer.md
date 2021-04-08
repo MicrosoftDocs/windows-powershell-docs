@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: 973B1B3B-5265-4359-8360-F481A4C450B7
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdactivemanagementserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-RDActiveManagementServer
@@ -43,7 +43,7 @@ Specifies the name of a server that acts as the active RD Connection Broker for 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

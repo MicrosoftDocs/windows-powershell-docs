@@ -1,12 +1,12 @@
 ---
-external help file: DnsServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: 90D337A9-9489-4D50-9F27-A154ABBBADBF
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: DnsServer_Cmdlets.xml
+manager: dansimp
+Module Name: DnsServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverdiagnostics?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-DnsServerDiagnostics

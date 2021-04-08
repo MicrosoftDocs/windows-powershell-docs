@@ -1,12 +1,12 @@
 ---
-external help file: 
-ms.assetid: C87A1EFA-63A6-4EBD-91D5-23CB0C6EDA73
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: RemoteDesktop.psm1-help.xml
+manager: dansimp
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.reviewer:
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/move-rdvirtualdesktop?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Move-RDVirtualDesktop
@@ -53,7 +53,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -70,7 +70,7 @@ If you do not specify user credentials for the virtual desktop and you run the c
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -85,7 +85,7 @@ Specifies the fully qualified domain name (FQDN) of the new RD Virtualization Ho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ Specifies the name of a virtual desktop.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -115,7 +115,7 @@ Specifies the fully qualified domain name (FQDN) of the current RD Virtualizatio
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0

@@ -1,7 +1,7 @@
 ---
 author: Kateyanne
-description: 
-external help file: 
+description:
+external help file: RemoteDesktop.psm1-help.xml
 manager: jasgro
 Module Name: RDMgmt
 ms.author: v-kaunu
@@ -78,7 +78,7 @@ Indicates that cmdlet gets Remote Desktop Protocol (RDP) settings for virtual de
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Client
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ Specifies the name of a virtual desktop collection.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -109,7 +109,7 @@ If you do not specify a value, the cmdlet uses the fully qualified domain name (
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Indicates that the cmdlet gets a list of domain groups and users that are author
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserGroups
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -139,7 +139,7 @@ Indicates that the cmdlet gets a list of user profile disk settings for the coll
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UserProfileDisks
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -154,7 +154,7 @@ Indicates that the cmdlet gets configuration settings for virtual desktops in th
 ```yaml
 Type: SwitchParameter
 Parameter Sets: VirtualDesktopConfiguration
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

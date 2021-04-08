@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-ms.assetid: 4ED8DED4-AF0B-416E-A815-A2AF00AFD6F0
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+manager: dansimp
+Module Name: ADRMSAdmin
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrmsadmin/export-rmsreportdefinitionlanguage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Export-RmsReportDefinitionLanguage

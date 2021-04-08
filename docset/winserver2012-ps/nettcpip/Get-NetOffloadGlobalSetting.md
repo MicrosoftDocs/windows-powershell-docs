@@ -1,12 +1,12 @@
 ---
-external help file: NetTCPIP_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 68E1CC66-8A5C-4BD3-B7A5-3ED958FC4A3C
+external help file: NetTCPIP_Cmdlets.xml
 manager: dansimp
+Module Name: NetTCPIP
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netoffloadglobalsetting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetOffloadGlobalSetting

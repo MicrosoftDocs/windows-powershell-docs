@@ -1,8 +1,8 @@
 ---
 Module Name: International_Cmdlets
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
 Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+Help Version: 4.0
 Locale: en-US
 ms.assetid: D1DAE87F-87F4-417F-A5F2-69CAA548E1E8
 manager: dansimp
@@ -11,13 +11,13 @@ ms.author: v-anbarr
 author: andreabarr
 ---
 
-# International_Cmdlets Module
+# International Module
 ## Description
 You can use the International Settings cmdlets to control the language that is used for various elements of the user interface (UI).
 
 This reference provides cmdlet descriptions and syntax for all International Settings-specific cmdlets. It lists the cmdlets in alphabetical order.
 
-## International_Cmdlets Cmdlets
+## International Cmdlets
 ### [Get-WinAcceptLanguageFromLanguageListOptOut](./Get-WinAcceptLanguageFromLanguageListOptOut.md)
 Gets the HTTP Accept Language from the Language List opt-out setting for the current user account.
 

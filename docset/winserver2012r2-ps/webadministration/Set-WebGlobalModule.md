@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: jasgro
 Module Name: WebAdministration
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webadministration/set-webglobalmodule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-WebGlobalModule
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 52001509-E658-458F-A729-B34C655743AA
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-WebGlobalModule

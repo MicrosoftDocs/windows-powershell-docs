@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetAdapterBinding.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetAdapter
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netadapter/disable-netadapterbinding?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetAdapterBinding
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 305CF732-2A47-4D45-A97C-9694B7B5F1B3
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Disable-NetAdapterBinding

@@ -1,21 +1,19 @@
 ---
-Module Name: DnsClient
-Module Guid: 5696D5EF-FA2D-4997-94F1-0BC13DAA2AC5
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285547
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: DnsClient
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 5696d5ef-fa2d-4997-94f1-0bc13daa2ac5
+Module Name: DnsClient
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: d19ff3d3-67d3-4d67-b96d-8a777bc379d0
+ms.topic: reference
+title: DnsClient
 ---
 
 # DnsClient Module

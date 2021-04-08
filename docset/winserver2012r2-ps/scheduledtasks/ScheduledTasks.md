@@ -1,21 +1,19 @@
 ---
-Module Name: ScheduledTasks
-Module Guid: 5378EE8E-E349-49BB-83B9-F3D9C396C0A6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285565
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.6.0
 Locale: en-US
-title: ScheduledTasks
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 95f6725a-dafe-421e-8d9e-448e58397293
+Module Guid: 5378ee8e-e349-49bb-83b9-f3d9c396c0a6
+Module Name: ScheduledTasks
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: ScheduledTasks
 ---
 
 # ScheduledTasks Module

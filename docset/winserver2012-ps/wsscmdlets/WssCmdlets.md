@@ -1,14 +1,13 @@
 ---
-Module Name: WssCmdlets
-Module Guid: E20EC0F8-88B6-4BD9-9538-BCE80F33752A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=244181
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 47AE3C34-CFD1-464E-A172-7FD9CC746E1D
 manager: dansimp
-ms.reviewer:
+Module Guid: e20ec0f8-88b6-4bd9-9538-bce80f33752a
+Module Name: WssCmdlets
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WssCmdlets Module

@@ -1,12 +1,12 @@
 ---
-external help file: ScheduledTask_Cmdlets.xml
-online version:
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 5B59047C-9C06-422F-8382-5C81DC285F3E
+external help file: ScheduledTask_Cmdlets.xml
 manager: dansimp
+Module Name: ScheduledTasks
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/disable-scheduledtask?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-ScheduledTask

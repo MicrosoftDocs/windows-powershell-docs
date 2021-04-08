@@ -1,14 +1,13 @@
 ---
-Module Name: SecureBoot
-Module Guid: A5BD98E1-E44C-44FB-B88F-5AF9BDE66FDF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216896
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 5069B711-43A1-412B-B7CC-249C39814FD4
 manager: dansimp
-ms.reviewer:
+Module Guid: a5bd98e1-e44c-44fb-b88f-5af9bde66fdf
+Module Name: SecureBoot
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # SecureBoot Module

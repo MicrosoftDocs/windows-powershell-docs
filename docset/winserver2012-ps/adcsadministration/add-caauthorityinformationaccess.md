@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-ms.assetid: 8E46D7F9-433C-4196-BF9C-4E1EC7A37210
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/add-caauthorityinformationaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-CAAuthorityInformationAccess

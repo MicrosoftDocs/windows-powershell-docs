@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.Management.Proxy.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: WebApplicationProxy
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/update-webapplicationproxydeviceregistration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-WebApplicationProxyDeviceRegistration
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 966F0141-96E7-40D2-AEFD-31F568867464
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Update-WebApplicationProxyDeviceRegistration

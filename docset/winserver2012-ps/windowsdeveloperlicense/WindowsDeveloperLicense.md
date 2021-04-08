@@ -1,14 +1,13 @@
 ---
-Module Name: WindowsDeveloperLicense
-Module Guid: 8AB5FE0D-DB4A-49F2-93A3-040CF12840CC
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=233767
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: F939544D-0DF1-49DA-8CA1-72F4DF42E6A0
 manager: dansimp
-ms.reviewer:
+Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
+Module Name: WindowsDeveloperLicense
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # WindowsDeveloperLicense Module

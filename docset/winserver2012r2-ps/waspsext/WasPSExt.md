@@ -1,21 +1,19 @@
 ---
-Module Name: WasPSExt
-Module Guid: 0FDD54FB-8B9E-40B6-9669-F77E6FA92737
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285575
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: WasPSExt
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 268369b2-22f0-4c97-926a-a0072f1c6fbf
+Module Guid: 0fdd54fb-8b9e-40b6-9669-f77e6fa92737
+Module Name: WasPSExt
 ms.author: v-anbarr
+ms.date: 12/05/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WasPSExt
 ---
 
 # WasPSExt Module

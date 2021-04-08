@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorSpaces2_Cmdlets.xml
-online version: 
+manager: jasgro
+Module Name: StorageSpaces
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storagespaces/new-spacesvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-SpacesVolume
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 4BDC4BE1-9954-499E-985B-6C33C8A72B3D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-SpacesVolume

@@ -1,11 +1,11 @@
 ---
-external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
-ms.assetid: AE7B2DEE-7132-4CCA-90D0-8BA1A1D885AB
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: PS_DnsClientNRPTGlobal_v1.0.0.cdxml-help.xml
+manager: dansimp
+Module Name: DnsClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclientnrptglobal?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

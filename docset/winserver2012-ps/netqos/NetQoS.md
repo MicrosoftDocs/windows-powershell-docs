@@ -1,14 +1,13 @@
 ---
-Module Name: NetQoS
-Module Guid: 743692B7-A227-4389-B082-2B47DE1D0D2D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216150
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: C7CB3606-F583-4B89-BAAB-C0FEA48D0678
 manager: dansimp
-ms.reviewer:
+Module Guid: 743692b7-a227-4389-b082-2b47de1d0d2d
+Module Name: NetQoS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetQoS Module

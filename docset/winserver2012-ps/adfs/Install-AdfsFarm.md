@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
-ms.assetid: 58B222D8-94BC-4243-94A7-9692EF2EA7EE
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.FederationServices.Deployment.dll-Help.xml
+manager: dansimp
+Module Name: ADFS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adfs/install-adfsfarm?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-AdfsFarm

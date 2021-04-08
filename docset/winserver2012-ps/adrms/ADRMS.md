@@ -1,14 +1,13 @@
 ---
-Module Name: ADRMS
-Module Guid: A127FB5D-22A6-4056-A043-B16196305CC7
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=206732
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 1CC7729F-B905-4461-A895-3E6A612953AA
 manager: dansimp
-ms.reviewer:
+Module Guid: a127fb5d-22a6-4056-a043-b16196305cc7
+Module Name: ADRMS
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ADRMS Module

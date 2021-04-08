@@ -1,21 +1,19 @@
 ---
-Module Name: ServerMigration
-Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-title: ServerMigration
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-06
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: f26a956e-b0fa-4e44-b11e-553d97b25f1d
-ms.reviewer:
+Module Guid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+Module Name: ServerMigration
 ms.author: v-anbarr
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.technology: powershell
+ms.topic: reference
+title: ServerMigration
 ---
 
 # ServerMigration Module

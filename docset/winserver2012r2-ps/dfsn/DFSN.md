@@ -1,21 +1,19 @@
 ---
-Module Name: DFSN
-Module Guid: D94CF4D4-F7F8-4967-8D7C-1C9FFEF8DA12
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=285545
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: DFSN
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
+Module Name: DFSN
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: f2f787ee-8a15-498e-bba7-2742234d975c
+ms.topic: reference
+title: DFSN
 ---
 
 # DFSN Module

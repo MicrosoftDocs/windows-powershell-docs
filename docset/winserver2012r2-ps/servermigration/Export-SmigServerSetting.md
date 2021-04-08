@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Windows.ServerManager.Migration.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: ServerMigration
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/servermigration/export-smigserversetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-SmigServerSetting
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: ACDA05AE-6AD0-4F38-8448-DDC2D7D3025F
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Export-SmigServerSetting

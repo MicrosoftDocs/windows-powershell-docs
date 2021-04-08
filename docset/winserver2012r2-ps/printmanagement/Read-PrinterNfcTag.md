@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_PrinterNfcTagTasks_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: PrintManagement
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/printmanagement/read-printernfctag?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Read-PrinterNfcTag
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8CCCE06D-8B66-4AB3-8EF9-A5D44D93E2CD
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Read-PrinterNfcTag

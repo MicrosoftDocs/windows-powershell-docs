@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceRootTarget.cdxml-help.xml
-ms.assetid: E84B8448-420D-4784-B444-EFFDAFFB5069
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceRootTarget.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/remove-dfsnroottarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

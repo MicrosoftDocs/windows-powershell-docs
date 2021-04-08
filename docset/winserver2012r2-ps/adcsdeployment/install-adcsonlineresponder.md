@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-Module Name: ADCSDeployment
-online version: 
+manager: jasgro
+Module Name: adcsdeployment
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsonlineresponder?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-AdcsOnlineResponder
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 461DA0B7-62C8-4299-9A58-42C4F15146F5
 ---
 
 # Install-AdcsOnlineResponder

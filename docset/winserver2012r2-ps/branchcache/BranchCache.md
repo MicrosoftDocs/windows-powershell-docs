@@ -1,21 +1,19 @@
 ---
-Module Name: BranchCache
-Module Guid: D57AEE1E-6FE7-4BBC-8C57-8675A3A83E0D
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285541
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: BranchCache
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: d57aee1e-6fe7-4bbc-8c57-8675a3a83e0d
+Module Name: BranchCache
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 8b85e860-a3b4-4fb0-8eda-bf8ebe55b5a7
+ms.topic: reference
+title: BranchCache
 ---
 
 # BranchCache Module

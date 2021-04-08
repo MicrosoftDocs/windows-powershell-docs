@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DnsClient.cdxml-help.xml
-ms.assetid: B4FECE71-0E71-4819-9E3D-9117AC72CCFB
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DnsClient.cdxml-help.xml
+manager: dansimp
+Module Name: DnsClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsclient/set-dnsclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

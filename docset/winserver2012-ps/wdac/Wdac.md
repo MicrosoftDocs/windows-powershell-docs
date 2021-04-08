@@ -1,14 +1,13 @@
 ---
-Module Name: Wdac
-Module Guid: 78A7A38C-A446-43FE-B643-9ABACF843112
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=216151
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.2.0
 Locale: en-US
-ms.assetid: 517B5AA8-5FAF-41F1-BA11-2C87D3E78FC1
 manager: dansimp
-ms.reviewer:
+Module Guid: 78a7a38c-a446-43fe-b643-9abacf843112
+Module Name: Wdac
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # Wdac Module

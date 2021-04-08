@@ -1,12 +1,12 @@
 ---
-external help file: MPIO_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: B5C4D790-55E1-45DB-9DA0-4B2371E6576A
+external help file: MPIO_Cmdlets.xml
 manager: dansimp
+Module Name: MPIO
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/mpio/clear-msdsmsupportedhw?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Clear-MSDSMSupportedHW

@@ -1,21 +1,19 @@
 ---
-Module Name: ServerManagerTasks
-Module Guid: BF4656AC-2663-4636-8B38-7D78FD587D0B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285568
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: ServerManagerTasks
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 3febea63-5191-49af-8523-6e6fdf58df80
+Module Guid: bf4656ac-2663-4636-8b38-7d78fd587d0b
+Module Name: ServerManagerTasks
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: ServerManagerTasks
 ---
 
 # ServerManagerTasks Module

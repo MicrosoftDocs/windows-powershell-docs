@@ -1,21 +1,19 @@
 ---
-Module Name: RemoteDesktopServices
-Module Guid: 9FDB63CA-68AE-4034-A9FA-78529396C689
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=294194
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: RemoteDesktopServices
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 42ed417b-4077-4aa2-a3e0-9289f69098e6
+Module Guid: 9fdb63ca-68ae-4034-a9fa-78529396c689
+Module Name: RemoteDesktopServices
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: RemoteDesktopServices
 ---
 
 # RemoteDesktopServices Module

@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheNetworkSettingData.cdxml-help.xml
-ms.assetid: 9E0B31CF-D75A-4FA8-A5CD-BA1C1A8EFA1A
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheNetworkSettingData.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bcnetworkconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BCNetworkConfiguration

@@ -1,12 +1,12 @@
 ---
-external help file: IpamServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A1EF39D0-A8D3-4104-B7DA-FDF64A5FFA94
+external help file: IpamServer_Cmdlets.xml
 manager: dansimp
+Module Name: IpamServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/ipamserver/add-ipamcustomvalue?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-IpamCustomValue

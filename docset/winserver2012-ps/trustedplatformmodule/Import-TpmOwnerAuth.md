@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Tpm.Commands.dll-Help.xml
-ms.assetid: 5B8BC758-8BA0-476E-A895-60E11D3C9591
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: dansimp
+Module Name: TrustedPlatformModule
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/import-tpmownerauth?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Import-TpmOwnerAuth

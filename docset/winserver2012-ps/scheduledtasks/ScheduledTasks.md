@@ -1,14 +1,13 @@
 ---
-Module Name: ScheduledTasks
-Module Guid: 5378EE8E-E349-49BB-83B9-F3D9C396C0A6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=255117
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-ms.assetid: 969AF3A6-0C60-4790-94D9-9E4920052551
 manager: dansimp
-ms.reviewer:
+Module Guid: 5378ee8e-e349-49bb-83b9-f3d9c396c0a6
+Module Name: ScheduledTasks
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # ScheduledTasks Module

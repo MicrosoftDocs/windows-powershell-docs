@@ -1,12 +1,12 @@
 ---
-external help file: GPv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 2096B6E1-DF11-4864-92D1-FB9371BE4C99
+external help file: GPv2_Cmdlets.xml
 manager: dansimp
+Module Name: GroupPolicy
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/grouppolicy/set-gppermission?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-GPPermission

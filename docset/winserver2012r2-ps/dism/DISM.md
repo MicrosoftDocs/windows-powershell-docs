@@ -1,21 +1,19 @@
 ---
-Module Name: DISM
-Module Guid: 389C464D-8B8D-48E9-AAFE-6D8A590D6798
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285743
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: DISM
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
+Module Name: System.Object[]
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 05584e32-4e39-43bf-973b-afa4e1fb9c9b
+ms.topic: reference
+title: DISM
 ---
 
 # DISM Module

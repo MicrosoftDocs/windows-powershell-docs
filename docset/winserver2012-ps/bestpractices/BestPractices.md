@@ -1,14 +1,13 @@
 ---
-Module Name: BestPractices
-Module Guid: 5551EA86-919D-499B-948F-87305E4F2344
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=206723
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-ms.assetid: F8643E33-1240-44C1-A3E3-08A355A4E190
 manager: dansimp
-ms.reviewer:
+Module Guid: 5551ea86-919d-499b-948f-87305e4f2344
+Module Name: BestPractices
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # BestPractices Module

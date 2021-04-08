@@ -1,12 +1,12 @@
 ---
-external help file: PrintMgmt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 207632BA-A5A0-4D2E-B3FA-7CEBFE61E9E2
+external help file: PrintMgmt_Cmdlets.xml
 manager: dansimp
+Module Name: PrintManagement
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/printmanagement/resume-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Resume-PrintJob

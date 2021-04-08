@@ -1,12 +1,12 @@
 ---
-external help file: MSMQ_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 5BBFBEF5-2964-4140-97D8-CD852FBFA9F1
+external help file: MSMQ_Cmdlets.xml
 manager: dansimp
+Module Name: MSMQ
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/msmq/get-msmqqueuemanageracl?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-MsmqQueueManagerACL

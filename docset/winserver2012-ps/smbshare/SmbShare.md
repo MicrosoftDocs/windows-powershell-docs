@@ -1,14 +1,13 @@
 ---
-Module Name: SmbShare
-Module Guid: 3AF1699D-CC54-4E54-81CF-28D2DF5CCE0A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=216863
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: D4DCA601-168D-4943-9778-1975F870BAA9
 manager: dansimp
-ms.reviewer:
+Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
+Module Name: SmbShare
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # SmbShare Module

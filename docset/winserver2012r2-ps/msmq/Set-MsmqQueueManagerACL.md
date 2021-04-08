@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+manager: jasgro
 Module Name: MSMQ
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msmq/set-msmqqueuemanageracl?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MsmqQueueManagerACL
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B0D7C113-9A7F-4C83-93BE-06BF8795F19E
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-MsmqQueueManagerACL

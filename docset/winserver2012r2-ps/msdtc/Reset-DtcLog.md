@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_DtcLogTask_v1.0.cdxml-help.xml
-Module Name: MsDtc
-online version: 
+manager: jasgro
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msdtc/reset-dtclog?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Reset-DtcLog
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D2D0AA6A-7B24-4D1D-BEE2-ED13B039B2B2
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Reset-DtcLog

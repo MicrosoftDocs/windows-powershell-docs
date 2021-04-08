@@ -1,12 +1,12 @@
 ---
-external help file: GPv2_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: ABCBB483-2A0D-4380-83A0-B5F8D4AD13CA
+external help file: GPv2_Cmdlets.xml
 manager: dansimp
+Module Name: GroupPolicy
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/grouppolicy/import-gpo?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Import-GPO

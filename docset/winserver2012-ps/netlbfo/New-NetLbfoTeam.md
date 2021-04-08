@@ -1,12 +1,12 @@
 ---
-external help file: NetLbfo_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 7FB6DF2E-5E77-4118-AB5F-D09E6C57D763
+external help file: NetLbfo_Cmdlets.xml
 manager: dansimp
+Module Name: NetLbfo
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netlbfo/new-netlbfoteam?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NetLbfoTeam

@@ -1,12 +1,12 @@
 ---
-external help file: MsftUal_SystemId.cdxml-help.xml
-ms.assetid: 6595F712-6714-497D-A95D-18C7043EA8E8
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: MsftUal_SystemId.cdxml-help.xml
+manager: dansimp
+Module Name: UserAccessLogging
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualsystemid?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-UalSystemId

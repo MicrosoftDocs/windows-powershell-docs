@@ -1,12 +1,12 @@
 ---
-external help file: Bitlocker_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 90042DB2-7289-4167-A7B3-245D316EF361
+external help file: Bitlocker_Cmdlets.xml
 manager: dansimp
+Module Name: BitLocker
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/bitlocker/lock-bitlocker?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Lock-BitLocker

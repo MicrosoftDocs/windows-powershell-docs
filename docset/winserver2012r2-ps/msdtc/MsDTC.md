@@ -1,21 +1,19 @@
 ---
-Module Name: MsDTC
-Module Guid: 52923875-F2E3-4AD2-8E0C-96C7B10E2E3D
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285761
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: MsDTC
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 36d0ffb2-9f29-465e-b5f2-0d8ada31d35c
+Module Guid: 52923875-f2e3-4ad2-8e0c-96c7b10e2e3d
+Module Name: MsDTC
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: MsDTC
 ---
 
 # MsDTC Module

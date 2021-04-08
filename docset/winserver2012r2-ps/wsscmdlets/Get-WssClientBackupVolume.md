@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WssCmdlets.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: WSSCmdlets
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/wsscmdlets/get-wssclientbackupvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WssClientBackupVolume
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 73476D36-C62C-484B-B674-9D549686C92C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-WssClientBackupVolume

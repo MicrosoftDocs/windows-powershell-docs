@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetAdapterEncapsulatedPacketTaskOffload.cdxml-help.xml
+manager: jasgro
 Module Name: NetAdapter
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netadapter/disable-netadapterencapsulatedpackettaskoffload?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetAdapterEncapsulatedPacketTaskOffload
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F4ECCCD6-AC57-4EE4-BD8A-7436885A1265
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Disable-NetAdapterEncapsulatedPacketTaskOffload

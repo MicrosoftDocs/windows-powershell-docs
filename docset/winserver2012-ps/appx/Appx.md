@@ -1,14 +1,13 @@
 ---
-Module Name: Appx
-Module Guid: AEEF2BEF-EBA9-4A1D-A3D2-D0B52DF76DEB
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=212974
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.2.0
 Locale: en-US
-ms.assetid: 1848DCF8-9EA3-4E54-9DFC-C40A6CC14BB6
 manager: dansimp
-ms.reviewer:
+Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
+Module Name: Appx
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # Appx Module

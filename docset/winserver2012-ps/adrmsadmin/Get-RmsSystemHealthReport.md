@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-ms.assetid: B017BBE0-7879-44F2-996D-82CC934E2AA3
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+manager: dansimp
+Module Name: ADRMSAdmin
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrmsadmin/get-rmssystemhealthreport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RmsSystemHealthReport

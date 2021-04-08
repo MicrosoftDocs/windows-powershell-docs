@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
-ms.assetid: F44B9525-0E1E-43EA-8FC0-CE9514EEF950
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Configuration.dll-Help.xml
+manager: dansimp
+Module Name: ADRMS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrms/install-adrms?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Install-ADRMS

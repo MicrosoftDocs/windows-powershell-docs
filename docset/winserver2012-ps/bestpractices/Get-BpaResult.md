@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
-ms.assetid: F6E226F7-FA6A-4FC6-A02E-518AB4939045
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
+manager: dansimp
+Module Name: BestPractices
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/bestpractices/get-bparesult?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BpaResult

@@ -1,12 +1,12 @@
 ---
-external help file: ServerMig_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: DDB21AFA-CAF9-481C-9E65-2513595D2DB0
+external help file: ServerMig_Cmdlets.xml
 manager: dansimp
+Module Name: ServerMigrationCmdlets
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/servermigrationcmdlets/get-smigserverfeature?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-SmigServerFeature

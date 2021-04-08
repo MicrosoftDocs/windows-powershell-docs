@@ -1,14 +1,13 @@
 ---
-Module Name: IscsiTarget
-Module Guid: A1DA990A-4DC2-4F7E-BEB4-046A89B9D473
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=216861
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: 701252C5-688B-4916-B563-2D6E9563E743
 manager: dansimp
-ms.reviewer:
+Module Guid: a1da990a-4dc2-4f7e-beb4-046a89b9d473
+Module Name: IscsiTarget
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # IscsiTarget Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetFirewallProfile.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallprofile?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallProfile
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D16B99D0-29BC-4A04-A644-0AE63D8FEF58
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NetFirewallProfile

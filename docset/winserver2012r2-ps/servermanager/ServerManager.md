@@ -1,21 +1,19 @@
 ---
-Module Name: ServerManager
-Module Guid: D8E0CAE9-8E9B-45BC-BFED-0AAD50938AF0
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285567
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.6.0
 Locale: en-US
-title: ServerManager
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: f9cbd6d5-42e5-4d80-a2d8-ceef3ef1d6fe
+Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
+Module Name: ServerManager
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: ServerManager
 ---
 
 # ServerManager Module

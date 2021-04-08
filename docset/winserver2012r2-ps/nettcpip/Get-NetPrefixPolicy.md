@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetPrefixPolicy.cdxml-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netprefixpolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetPrefixPolicy
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B96C9816-A124-4722-8928-F18E391EC72E
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NetPrefixPolicy

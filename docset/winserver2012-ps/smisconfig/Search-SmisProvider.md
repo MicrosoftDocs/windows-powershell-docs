@@ -1,12 +1,12 @@
 ---
-external help file: SMISConfig_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 48F983FE-A8EA-4A2E-9CAF-A6B41B990EB9
+external help file: SMISConfig_Cmdlets.xml
 manager: dansimp
+Module Name: SMISConfig
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/smisconfig/search-smisprovider?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Search-SmisProvider

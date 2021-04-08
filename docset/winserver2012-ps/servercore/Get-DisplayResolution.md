@@ -1,12 +1,12 @@
 ---
-external help file: ServerCore-help.xml
-ms.assetid: 8CB75672-CF46-4A73-BAD2-B65A6A02D54B
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: ServerCore-help.xml
+manager: dansimp
+Module Name: ServerCore
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/servercore/get-displayresolution?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-DisplayResolution

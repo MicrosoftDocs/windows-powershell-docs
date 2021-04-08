@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: TestDtc-help.xml
-Module Name: MsDtc
-online version: 
+manager: jasgro
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msdtc/test-dtc?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-Dtc
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 170C623D-6B36-4297-8235-DD65A594871C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Test-Dtc

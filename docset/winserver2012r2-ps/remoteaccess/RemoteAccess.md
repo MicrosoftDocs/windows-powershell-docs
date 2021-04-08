@@ -1,21 +1,19 @@
 ---
-Module Name: RemoteAccess
-Module Guid: D9D222A9-756C-41F8-B23A-2A596093216B
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285218
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: RemoteAccess
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: c2ec7e10-1e49-4321-8bc6-2e57d0b0b237
+Module Guid: d9d222a9-756c-41f8-b23a-2a596093216b
+Module Name: RemoteAccess
 ms.author: v-anbarr
+ms.date: 12/05/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: RemoteAccess
 ---
 
 # RemoteAccess Module

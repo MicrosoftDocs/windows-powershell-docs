@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_DAConnectionStatus.cdxml-help.xml
+manager: jasgro
 Module Name: NetworkConnectivityStatus
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/networkconnectivitystatus/get-daconnectionstatus?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DAConnectionStatus
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 08B732CF-73C6-46BA-83DD-2C859D791B76
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-DAConnectionStatus

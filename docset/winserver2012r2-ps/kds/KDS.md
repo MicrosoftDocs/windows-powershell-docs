@@ -1,21 +1,19 @@
 ---
-Module Name: KDS
-Module Guid: 176542F6-2A6B-11E0-AB18-D010E0D72085
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285550
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: KDS
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 176542f6-2a6b-11e0-ab18-d010e0d72085
+Module Name: KDS
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 52cdbc8f-6bd0-4f77-951c-ff94db16a00b
+ms.topic: reference
+title: KDS
 ---
 
 # KDS Module

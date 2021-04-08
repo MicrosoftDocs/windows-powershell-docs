@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.ApplicationProxy.Management.PowerShell.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: WebApplicationProxy
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/get-webapplicationproxyhealth?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WebApplicationProxyHealth
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 98669250-60D7-4503-8AD9-B1E998C3695D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-WebApplicationProxyHealth

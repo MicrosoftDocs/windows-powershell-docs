@@ -1,21 +1,19 @@
 ---
-Module Name: ADRMSAdmin
-Module Guid: BEB3DB13-EED6-4F7B-8420-079E395B58F9
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285539
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: ADRMSAdmin
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: beb3db13-eed6-4f7b-8420-079e395b58f9
+Module Name: ADRMSAdmin
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 42a05332-4d83-4db3-9021-44a5f0f36b24
+ms.topic: reference
+title: ADRMSAdmin
 ---
 
 # ADRMSAdmin Module

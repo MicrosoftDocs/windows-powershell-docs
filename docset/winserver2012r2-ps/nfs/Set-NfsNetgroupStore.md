@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NfsNetgroupStore.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsnetgroupstore?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NfsNetgroupStore
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E209B8C9-9715-4B37-AD0A-2120DF79F72C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NfsNetgroupStore

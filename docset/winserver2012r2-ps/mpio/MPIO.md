@@ -1,21 +1,19 @@
 ---
-Module Name: MPIO
-Module Guid: 2FBFFABE-343D-4DB8-AD9E-A8943F50D096
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285760
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: MPIO
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9b0e0c5d-43a9-4aae-b1bd-e32f23ba31c2
+Module Guid: 2fbffabe-343d-4db8-ad9e-a8943f50d096
+Module Name: MPIO
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: MPIO
 ---
 
 # MPIO Module

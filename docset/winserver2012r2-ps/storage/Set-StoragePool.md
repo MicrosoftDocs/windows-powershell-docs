@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorageCmdlets.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/set-storagepool?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-StoragePool
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 5B3F6CD1-E97E-4AB6-921C-3FE55C0821EB
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-StoragePool

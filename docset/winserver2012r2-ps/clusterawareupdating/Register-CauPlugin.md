@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: ClusterAwareUpdating.dll-Help.xml
+manager: jasgro
 Module Name: ClusterAwareUpdating
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/register-cauplugin?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Register-CauPlugin
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8150ACFB-8077-4394-9FF1-3293F28FF32E
 ---
 
 # Register-CauPlugin

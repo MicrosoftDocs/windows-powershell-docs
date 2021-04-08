@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.NetworkLoadBalancingClusters.PowerShell.dll-Help.xml
+manager: jasgro
 Module Name: NetworkLoadBalancingClusters
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/set-nlbclustervip?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NlbClusterVip
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3DBBE42B-2064-441C-B548-D75CB06D2AA1
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NlbClusterVip

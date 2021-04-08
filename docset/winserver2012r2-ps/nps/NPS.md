@@ -1,21 +1,19 @@
 ---
-Module Name: NPS
-Module Guid: 5EE6F0A2-BFC8-4824-A1E2-F974D39CA886
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285561
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: NPS
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 036cbded-6934-4827-bd6a-54dec539e0da
+Module Guid: 5ee6f0a2-bfc8-4824-a1e2-f974d39ca886
+Module Name: NPS
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NPS
 ---
 
 # NPS Module

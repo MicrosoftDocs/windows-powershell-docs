@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NfsMountedClient.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nfs/get-nfsmountedclient?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NfsMountedClient
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E1F71CF4-D149-4CA2-B8A6-BFF510B546D1
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NfsMountedClient

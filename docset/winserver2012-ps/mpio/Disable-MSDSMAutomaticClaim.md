@@ -1,12 +1,12 @@
 ---
-external help file: MPIO_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 18902AAE-5A6D-4E05-99AA-9B6AC326A97E
+external help file: MPIO_Cmdlets.xml
 manager: dansimp
+Module Name: MPIO
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/mpio/disable-msdsmautomaticclaim?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-MSDSMAutomaticClaim

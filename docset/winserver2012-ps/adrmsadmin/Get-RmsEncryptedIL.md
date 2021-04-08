@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-ms.assetid: 0E60DBB0-CC4A-4D2E-832E-970657361CA3
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+manager: dansimp
+Module Name: ADRMSAdmin
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrmsadmin/get-rmsencryptedil?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-RmsEncryptedIL

@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-ms.assetid: 459FC3FA-77AD-47BD-9F02-B113A87FD347
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
+manager: dansimp
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/remove-cacrldistributionpoint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-CACrlDistributionPoint

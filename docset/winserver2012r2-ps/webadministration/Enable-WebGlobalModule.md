@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: jasgro
 Module Name: WebAdministration
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webadministration/enable-webglobalmodule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-WebGlobalModule
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 59C27F43-7D72-4D8C-8D4F-42ED6E220E03
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Enable-WebGlobalModule

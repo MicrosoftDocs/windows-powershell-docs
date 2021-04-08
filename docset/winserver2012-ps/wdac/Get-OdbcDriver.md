@@ -1,12 +1,12 @@
 ---
-external help file: WDAC_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 00890D77-4875-4EA6-A243-D78479DE8541
+external help file: WDAC_Cmdlets.xml
 manager: dansimp
+Module Name: Wdac
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/wdac/get-odbcdriver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-OdbcDriver

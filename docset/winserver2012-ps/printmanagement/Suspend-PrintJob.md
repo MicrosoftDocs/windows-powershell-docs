@@ -1,12 +1,12 @@
 ---
-external help file: PrintMgmt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: BA57BB18-9ADC-4C6C-95A3-57F273C77732
+external help file: PrintMgmt_Cmdlets.xml
 manager: dansimp
+Module Name: PrintManagement
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/printmanagement/suspend-printjob?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Suspend-PrintJob

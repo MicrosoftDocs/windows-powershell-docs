@@ -1,21 +1,19 @@
 ---
-Module Name: SmbShare
-Module Guid: 3AF1699D-CC54-4E54-81CF-28D2DF5CCE0A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285773
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: SmbShare
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 6677aaa5-5508-46c0-9b81-a067ecde5d08
+Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
+Module Name: SmbShare
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SmbShare
 ---
 
 # SmbShare Module

@@ -1,12 +1,12 @@
 ---
-external help file: NPS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 70DFEF1B-FA97-4700-92A9-C4A698551DE6
+external help file: NPS_Cmdlets.xml
 manager: dansimp
+Module Name: NPS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nps/get-npssharedsecrettemplate?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NpsSharedSecretTemplate

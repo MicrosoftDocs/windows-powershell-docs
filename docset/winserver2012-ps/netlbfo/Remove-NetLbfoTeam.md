@@ -1,12 +1,12 @@
 ---
-external help file: NetLbfo_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 3A22E200-366D-4CC8-92DB-51BF4B085D1F
+external help file: NetLbfo_Cmdlets.xml
 manager: dansimp
+Module Name: NetLbfo
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netlbfo/remove-netlbfoteam?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Remove-NetLbfoTeam

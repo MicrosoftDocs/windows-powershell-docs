@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
-ms.assetid: AEDADF61-840D-4F98-B949-D95779ED2B40
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
+manager: dansimp
+Module Name: WHEA
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/whea/set-wheamemorypolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Set-WheaMemoryPolicy

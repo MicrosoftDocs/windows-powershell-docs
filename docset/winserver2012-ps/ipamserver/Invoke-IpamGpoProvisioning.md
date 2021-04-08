@@ -1,12 +1,12 @@
 ---
-external help file: IpamServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9695BA66-C9A5-430A-98F0-40A6B22AE9B2
+external help file: IpamServer_Cmdlets.xml
 manager: dansimp
+Module Name: IpamServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/ipamserver/invoke-ipamgpoprovisioning?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Invoke-IpamGpoProvisioning

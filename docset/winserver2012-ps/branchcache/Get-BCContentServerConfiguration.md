@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheContentServerSettingData.cdxml-help.xml
-ms.assetid: ACA95D26-1438-42F5-80A6-E3D0FFC1BC33
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheContentServerSettingData.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bccontentserverconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BCContentServerConfiguration

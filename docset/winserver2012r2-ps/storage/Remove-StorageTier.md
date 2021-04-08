@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorageTier.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/remove-storagetier?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-StorageTier
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: BDD970F2-4741-4B7D-AA83-4AA1BB3FF5F8
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-StorageTier

@@ -1,21 +1,19 @@
 ---
-Module Name: HCS
-Module Guid: ECD3ACDA-CB76-43F1-B968-EEDE82710337
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285410
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: HCS
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
+Module Guid: ecd3acda-cb76-43f1-b968-eede82710337
+Module Name: HCS
+ms.author: v-anbarr
+ms.date: 12/05/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: d2c2a595-855a-49f3-97c8-1092df8ff0fe
+ms.topic: reference
+title: HCS
 ---
 
 # HCS Module

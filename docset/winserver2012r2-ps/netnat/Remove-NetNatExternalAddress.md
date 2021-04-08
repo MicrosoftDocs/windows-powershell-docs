@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetNatExternalAddress.cdxml-help.xml
+manager: jasgro
 Module Name: NetNat
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netnat/remove-netnatexternaladdress?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetNatExternalAddress
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D045ACB3-08E5-4B78-9FCC-D599725E7281
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-NetNatExternalAddress

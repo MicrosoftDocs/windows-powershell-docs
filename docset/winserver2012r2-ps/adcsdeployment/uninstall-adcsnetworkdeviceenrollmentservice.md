@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-Module Name: ADCSDeployment
-online version: 
+manager: jasgro
+Module Name: adcsdeployment
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adcsdeployment/uninstall-adcsnetworkdeviceenrollmentservice?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Uninstall-AdcsNetworkDeviceEnrollmentService
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: BD14AF56-FE90-4C77-BA1C-27DC49E11FA1
 ---
 
 # Uninstall-AdcsNetworkDeviceEnrollmentService

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: DfsrPowerShell.dll-Help.xml
+manager: jasgro
 Module Name: DFSR
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dfsr/suspend-dfsreplicationgroup?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Suspend-DfsReplicationGroup
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 634E4EA6-F41F-459D-9295-4FB158141F15
 ---
 
 # Suspend-DfsReplicationGroup

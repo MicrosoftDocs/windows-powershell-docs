@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PhysicalDisk.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/get-physicaldisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-PhysicalDisk
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: A204DCDE-BFAC-43AC-9B79-D81384F255BE
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-PhysicalDisk

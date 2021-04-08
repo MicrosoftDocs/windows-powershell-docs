@@ -1,21 +1,19 @@
 ---
-Module Name: PCSVDevice
-Module Guid: 576FF287-7D01-46A3-8A88-94DF7581A2B0
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=282628
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: PCSVDevice
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 4ac305e6-508a-4942-8ef4-378bd8069c90
+Module Guid: 576ff287-7d01-46a3-8a88-94df7581a2b0
+Module Name: PCSVDevice
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: PCSVDevice
 ---
 
 # PCSVDevice Module

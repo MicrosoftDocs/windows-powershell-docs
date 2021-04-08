@@ -1,21 +1,19 @@
 ---
-Module Name: PowerShellWebAccess
-Module Guid: 3FED3F16-4EB3-40FB-8797-E71483B3D832
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285767
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: PowerShellWebAccess
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 90cebd5f-789b-42f6-bad6-d3e5b375281b
+Module Guid: 3fed3f16-4eb3-40fb-8797-e71483b3d832
+Module Name: PowerShellWebAccess
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: PowerShellWebAccess
 ---
 
 # PowerShellWebAccess Module

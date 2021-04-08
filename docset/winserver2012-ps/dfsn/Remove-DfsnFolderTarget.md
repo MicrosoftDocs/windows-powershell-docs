@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceFolderTarget.cdxml-help.xml
-ms.assetid: 23FF6F79-DEE0-4531-9221-88C71580B901
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceFolderTarget.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/remove-dfsnfoldertarget?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

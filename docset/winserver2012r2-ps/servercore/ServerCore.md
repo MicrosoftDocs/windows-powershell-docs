@@ -1,21 +1,19 @@
 ---
-Module Name: ServerCore
-Module Guid: 21B0D06C-E02A-46CC-849B-11C36EC94FB8
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285566
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: ServerCore
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9fc79994-7fb7-401c-a1c0-6afb7d907d8d
+Module Guid: 21b0d06c-e02a-46cc-849b-11c36ec94fb8
+Module Name: ServerCore
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: ServerCore
 ---
 
 # ServerCore Module

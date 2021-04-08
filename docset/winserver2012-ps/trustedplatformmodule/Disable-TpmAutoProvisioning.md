@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Tpm.Commands.dll-Help.xml
-ms.assetid: 1D4F82DB-0AF0-4DE5-8587-46037ED3BCDE
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: dansimp
+Module Name: TrustedPlatformModule
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/disable-tpmautoprovisioning?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Disable-TpmAutoProvisioning

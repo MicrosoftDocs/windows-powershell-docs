@@ -1,21 +1,19 @@
 ---
-Module Name: DnsServer
-Module Guid: 46F598E5-9907-42B2-AFBB-68E5F7E34604
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285744
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.9.0
 Locale: en-US
-title: DnsServer
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 46f598e5-9907-42b2-afbb-68e5f7e34604
+Module Name: DnsServer
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 31826370-741a-4ca3-923f-b36fb2ffbf25
+ms.topic: reference
+title: DnsServer
 ---
 
 # DnsServer Module

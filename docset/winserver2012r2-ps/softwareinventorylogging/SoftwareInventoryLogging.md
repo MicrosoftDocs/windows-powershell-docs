@@ -1,21 +1,19 @@
 ---
-Module Name: SoftwareInventoryLogging
-Module Guid: 421A5B89-0F16-4DF7-B607-FFFD66107510
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=286788
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US
-title: SoftwareInventoryLogging
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 8552b19d-8db7-4722-b04e-960053720b71
+Module Guid: 421a5b89-0f16-4df7-b607-fffd66107510
+Module Name: SoftwareInventoryLogging
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SoftwareInventoryLogging
 ---
 
 # SoftwareInventoryLogging Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: SmbServerNetworkInterface.cdxml-help.xml
+manager: jasgro
 Module Name: SmbShare
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbservernetworkinterface?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbServerNetworkInterface
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D0052C35-1789-4FF7-A349-AE9D98A13946
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-SmbServerNetworkInterface

@@ -1,14 +1,13 @@
 ---
-Module Name: NetworkLoadBalancingClusters
-Module Guid: 52832D3A-17D8-48FF-A5BC-F5078492ECBE
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=214655
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 5633F599-8F57-4452-B083-B79D0E68C11E
 manager: dansimp
-ms.reviewer:
+Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
+Module Name: NetworkLoadBalancingClusters
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetworkLoadBalancingClusters Module

@@ -1,12 +1,12 @@
 ---
-external help file: WasPsExt_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 0352DFC2-5F5D-49A1-9B78-E1C460945DC2
+external help file: WasPsExt_Cmdlets.xml
 manager: dansimp
+Module Name: WasPSExt
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/waspsext/resume-wascomputer?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Resume-WASComputer

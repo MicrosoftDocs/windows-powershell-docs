@@ -1,12 +1,12 @@
 ---
-external help file: NPS_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 15428631-C8D6-4BA6-A9B4-7795384C3015
+external help file: NPS_Cmdlets.xml
 manager: dansimp
+Module Name: NPS
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/nps/new-npsremediationserver?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-NpsRemediationServer

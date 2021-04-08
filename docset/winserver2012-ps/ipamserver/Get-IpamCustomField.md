@@ -1,12 +1,12 @@
 ---
-external help file: IpamServer_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 9BCC66AB-9EA9-4616-A9CD-AB97B41573F4
+external help file: IpamServer_Cmdlets.xml
 manager: dansimp
+Module Name: IpamServer
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/ipamserver/get-ipamcustomfield?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-IpamCustomField

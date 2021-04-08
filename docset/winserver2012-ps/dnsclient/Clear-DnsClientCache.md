@@ -1,11 +1,11 @@
 ---
-external help file: MSFT_DnsClientCache.cdxml-help.xml
-ms.assetid: 0511A109-5A9D-4EC6-B315-F5DB1EB2F512
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: MSFT_DnsClientCache.cdxml-help.xml
+manager: dansimp
+Module Name: DnsClient
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dnsclient/clear-dnsclientcache?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

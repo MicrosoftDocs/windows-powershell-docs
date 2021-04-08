@@ -1,21 +1,19 @@
 ---
-Module Name: NetworkLoadBalancingClusters
-Module Guid: 52832D3A-17D8-48FF-A5BC-F5078492ECBE
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285558
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: NetworkLoadBalancingClusters
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 4da033d4-091b-429d-9d63-73ca250b1fee
+Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
+Module Name: NetworkLoadBalancingClusters
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetworkLoadBalancingClusters
 ---
 
 # NetworkLoadBalancingClusters Module

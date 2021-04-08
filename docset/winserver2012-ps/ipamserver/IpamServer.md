@@ -1,14 +1,13 @@
 ---
-Module Name: IpamServer
-Module Guid: 69775F93-9317-4234-A558-13B6655FC41B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=232918
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: E3FDBFD8-19FB-42FE-B426-B83DAC1CCC08
 manager: dansimp
-ms.reviewer:
+Module Guid: 69775f93-9317-4234-a558-13b6655fc41b
+Module Name: IpamServer
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # IpamServer Module

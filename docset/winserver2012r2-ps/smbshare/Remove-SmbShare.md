@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: SmbShare.cdxml-help.xml
+manager: jasgro
 Module Name: SmbShare
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/smbshare/remove-smbshare?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-SmbShare
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: C898693C-2EBD-4288-ADCD-40A6F52C5D33
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-SmbShare

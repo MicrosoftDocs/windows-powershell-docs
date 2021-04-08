@@ -1,21 +1,19 @@
 ---
-Module Name: Hyper-V
-Module Guid: AF4BDDD0-8583-4FF2-84B2-A33F5C8DE8A7
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285748
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.11.0
 Locale: en-US
-title: Hyper-V
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
+Module Name: Hyper-V
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 34d88f07-de09-4c08-b82d-651bcc869128
+ms.topic: reference
+title: Hyper-V
 ---
 
 # Hyper-V Module

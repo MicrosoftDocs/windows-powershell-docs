@@ -1,21 +1,19 @@
 ---
-Module Name: DhcpServer
-Module Guid: 90EAA9DF-133A-450C-8728-91055CD946A1
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285742
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: DhcpServer
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
+Module Name: DhcpServer
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 9e6d983a-3172-499b-a3ce-468c62134af7
+ms.topic: reference
+title: DhcpServer
 ---
 
 # DhcpServer Module

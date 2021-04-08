@@ -1,12 +1,12 @@
 ---
-external help file: WSBackup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: A103C75B-F0D3-4E9C-978A-D1897460FC01
+external help file: WSBackup_Cmdlets.xml
 manager: dansimp
+Module Name: WindowsServerBackup
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/start-wbapplicationrecovery?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Start-WBApplicationRecovery

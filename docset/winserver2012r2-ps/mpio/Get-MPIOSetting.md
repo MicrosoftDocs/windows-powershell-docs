@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Mpio-help.xml
+manager: jasgro
 Module Name: MPIO
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/mpio/get-mpiosetting?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-MPIOSetting
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8B410DD8-9F6C-4077-A087-40771E19E468
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-MPIOSetting

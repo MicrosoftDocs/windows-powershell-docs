@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: FSRMAutoQuota.cdxml-help.xml
+manager: jasgro
 Module Name: FileServerResourceManager
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/fileserverresourcemanager/get-fsrmautoquota?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-FsrmAutoQuota
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D1D3A53B-CFC3-47EB-A46E-39418A86F5D2
 ---
 
 # Get-FsrmAutoQuota

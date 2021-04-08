@@ -1,21 +1,19 @@
 ---
-Module Name: WindowsErrorReporting
-Module Guid: 4BC4DED7-249B-41AC-973F-83AF4D25D82B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285579
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: WindowsErrorReporting
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 34efbe6a-fe4f-4fe2-b32d-2861531a4054
+Module Guid: 4bc4ded7-249b-41ac-973f-83af4d25d82b
+Module Name: WindowsErrorReporting
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WindowsErrorReporting
 ---
 
 # WindowsErrorReporting Module

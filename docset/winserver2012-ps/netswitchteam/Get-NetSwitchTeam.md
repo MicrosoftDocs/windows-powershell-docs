@@ -1,12 +1,12 @@
 ---
-external help file: NetSwitchTeam_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: 5404450B-5476-4D33-9FFA-8D600CDCDCFF
+external help file: NetSwitchTeam_Cmdlets.xml
 manager: dansimp
+Module Name: NetSwitchTeam
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netswitchteam/get-netswitchteam?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-NetSwitchTeam

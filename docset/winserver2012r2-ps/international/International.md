@@ -1,21 +1,19 @@
 ---
-Module Name: International
-Module Guid: 561544E6-3A83-4D24-B140-78AD771EAF10
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285548
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: International
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
+Module Name: International
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: e519608d-d9d7-4204-beb4-093916c833e6
+ms.topic: reference
+title: International
 ---
 
 # International Module

@@ -1,12 +1,12 @@
 ---
-external help file: BranchCacheClientSettingData.cdxml-help.xml
-ms.assetid: 7E93378E-58C5-4548-B827-B03DB745AC26
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: BranchCacheClientSettingData.cdxml-help.xml
+manager: dansimp
+Module Name: BranchCache
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/branchcache/get-bcclientconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-BCClientConfiguration

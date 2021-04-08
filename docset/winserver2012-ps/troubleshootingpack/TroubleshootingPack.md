@@ -1,14 +1,13 @@
 ---
-Module Name: TroubleshootingPack
-Module Guid: D6FDB0D8-2B0F-406B-AFC6-68F60569EBDF
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=220950
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 4F9928C1-F895-4015-8C58-BB0DA8A99EF7
 manager: dansimp
-ms.reviewer:
+Module Guid: d6fdb0d8-2b0f-406b-afc6-68f60569ebdf
+Module Name: TroubleshootingPack
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # TroubleshootingPack Module

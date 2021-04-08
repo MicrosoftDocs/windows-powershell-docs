@@ -1,12 +1,12 @@
 ---
-external help file: NetSwitchTeam_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-ms.assetid: ED76A9C8-B2F3-4F12-9615-0BD8F067307E
+external help file: NetSwitchTeam_Cmdlets.xml
 manager: dansimp
+Module Name: NetSwitchTeam
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/netswitchteam/add-netswitchteammember?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Add-NetSwitchTeamMember

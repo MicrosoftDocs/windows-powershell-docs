@@ -1,14 +1,13 @@
 ---
-Module Name: RemoteAccess
-Module Guid: D9D222A9-756C-41F8-B23A-2A596093216B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=217864
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 6A012DA3-8BD5-4EC5-8CF6-75A3F1C00430
 manager: dansimp
-ms.reviewer:
+Module Guid: d9d222a9-756c-41f8-b23a-2a596093216b
+Module Name: RemoteAccess
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # RemoteAccess Module

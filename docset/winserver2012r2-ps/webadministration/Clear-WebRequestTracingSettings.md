@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: jasgro
 Module Name: WebAdministration
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webadministration/clear-webrequesttracingsettings?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-WebRequestTracingSettings
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D4CBAE62-5E57-4122-9FF8-242C6DA44186
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Clear-WebRequestTracingSettings

@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
-ms.assetid: 9F4A31F1-9110-4A66-BF20-961CC447DFC8
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
+manager: dansimp
+Module Name: Appx
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackagemanifest?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Get-AppxPackageManifest

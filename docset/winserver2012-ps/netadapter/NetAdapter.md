@@ -1,14 +1,13 @@
 ---
-Module Name: NetAdapter
-Module Guid: 1042B422-63A8-4016-A6D6-293E19E8F8A6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=225662
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-ms.assetid: C1D9BE44-72F2-443E-B550-D6D9AA7B213E
 manager: dansimp
-ms.reviewer:
+Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
+Module Name: NetAdapter
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetAdapter Module

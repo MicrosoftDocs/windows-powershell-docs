@@ -1,14 +1,13 @@
 ---
-Module Name: NetSwitchTeam
-Module Guid: E83097B1-4470-4F37-8CE3-A6B0AC5ED8F5
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=230535
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 195E80D5-EC10-425B-B7D9-F5322AE491A7
 manager: dansimp
-ms.reviewer:
+Module Guid: e83097b1-4470-4f37-8ce3-a6b0ac5ed8f5
+Module Name: NetSwitchTeam
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetSwitchTeam Module

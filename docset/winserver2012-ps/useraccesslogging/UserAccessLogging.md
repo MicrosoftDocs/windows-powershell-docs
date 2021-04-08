@@ -1,14 +1,13 @@
 ---
-Module Name: UserAccessLogging
-Module Guid: E507509A-EB81-4AF2-A141-B50CB24000F0
-Download Help Link: http://go.microsoft.com/fwlink/p/?LinkID=16989
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 40047A3B-9473-49D1-B164-84FA6CCC9AFA
 manager: dansimp
-ms.reviewer:
+Module Guid: e507509a-eb81-4af2-a141-b50cb24000f0
+Module Name: UserAccessLogging
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # UserAccessLogging Module

@@ -1,21 +1,19 @@
 ---
-Module Name: WHEA
-Module Guid: B7BF4D74-F837-430E-810F-234F26021253
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285577
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: WHEA
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9a8817c8-fb3e-4214-8e51-a2004cb59e37
+Module Guid: b7bf4d74-f837-430e-810f-234f26021253
+Module Name: WHEA
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WHEA
 ---
 
 # WHEA Module

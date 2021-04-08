@@ -1,14 +1,13 @@
 ---
-Module Name: NetworkTransition
-Module Guid: EFF9CCF9-53ED-423D-B0DA-23E6772AACAA
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=232920
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 4FF8EEDB-5AB8-4C70-8290-4B11A6D04791
 manager: dansimp
-ms.reviewer:
+Module Guid: eff9ccf9-53ed-423d-b0da-23e6772aacaa
+Module Name: NetworkTransition
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # NetworkTransition Module

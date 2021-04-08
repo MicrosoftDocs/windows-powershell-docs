@@ -1,14 +1,13 @@
 ---
-Module Name: Dism
-Module Guid: 389C464D-8B8D-48E9-AAFE-6D8A590D6798
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285743
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.2.0
 Locale: en-US
-ms.assetid: 3DD32417-9E7D-41FE-BB76-8F24D96B835A
 manager: dansimp
-ms.reviewer:
+Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
+Module Name: System.Object[]
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # Dism Module

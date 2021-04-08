@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/sync-netipsecrule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Sync-NetIPsecRule
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: BFAE990E-59A8-4632-8F37-E8B561A8BD2F
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Sync-NetIPsecRule

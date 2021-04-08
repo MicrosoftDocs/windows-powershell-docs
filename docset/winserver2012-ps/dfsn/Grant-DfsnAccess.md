@@ -1,11 +1,11 @@
 ---
-external help file: DfsNamespaceAccess.cdxml-help.xml
-ms.assetid: 956730DE-562C-46BB-817C-3949CDDB6E4F
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
-online version: 
+external help file: DfsNamespaceAccess.cdxml-help.xml
+manager: dansimp
+Module Name: DFSN
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/dfsn/grant-dfsnaccess?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---
 

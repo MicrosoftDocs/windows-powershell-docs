@@ -1,21 +1,19 @@
 ---
-Module Name: SMISConfig
-Module Guid: 74EBB94B-28F7-47CA-86A6-D16922665B88
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285570
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: SMISConfig
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: d3c1ca0e-1f09-4e9e-ac82-0ed3736020df
+Module Guid: 74ebb94b-28f7-47ca-86a6-d16922665b88
+Module Name: SMISConfig
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SMISConfig
 ---
 
 # SMISConfig Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Test-NetConnection-help.xml
+manager: jasgro
 Module Name: NetTCPIP
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nettcpip/test-netconnection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-NetConnection
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F76921D4-3657-40BF-A99F-2E83609EA048
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Test-NetConnection

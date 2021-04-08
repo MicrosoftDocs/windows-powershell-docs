@@ -1,12 +1,12 @@
 ---
-external help file: Dedup_Cmdlets.xml
-online version: 
-schema: 2.0.0
-ms.assetid: A28A368B-2C90-46EE-BF1A-5361455E72DC
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Dedup_Cmdlets.xml
+manager: dansimp
+Module Name: Deduplication
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # New-DedupSchedule

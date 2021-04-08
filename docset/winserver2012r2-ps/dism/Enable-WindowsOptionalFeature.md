@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Dism.PowerShell.dll-Help.xml
-Module Name: Dism
-online version: 
+manager: jasgro
+Module Name: System.Object[]
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dism/enable-windowsoptionalfeature?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-WindowsOptionalFeature
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 0A8A980F-2C51-41DF-ACAF-227054806EB2
 ---
 
 # Enable-WindowsOptionalFeature

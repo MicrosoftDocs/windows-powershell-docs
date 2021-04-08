@@ -1,12 +1,12 @@
 ---
-external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-ms.assetid: FF0D9DD1-4B65-41E0-B18F-614FD80BC779
-manager: dansimp
-online version: 
-schema: 2.0.0
-ms.reviewer:
-ms.author: v-kaunu
 author: Kateyanne
+external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
+manager: dansimp
+Module Name: ADRMSAdmin
+ms.author: v-kaunu
+ms.reviewer: 
+online version: https://docs.microsoft.com/powershell/module/adrmsadmin/export-rmstud?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+schema: 2.0.0
 ---
 
 # Export-RmsTUD

@@ -1,14 +1,13 @@
 ---
-Module Name: SMISConfig
-Module Guid: 74EBB94B-28F7-47CA-86A6-D16922665B88
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=230521
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 339A6EE3-4826-43D3-99DE-5C719EE117DC
 manager: dansimp
-ms.reviewer:
+Module Guid: 74ebb94b-28f7-47ca-86a6-d16922665b88
+Module Name: SMISConfig
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # SMISConfig Module

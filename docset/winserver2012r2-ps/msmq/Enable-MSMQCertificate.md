@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Msmq.PowerShell.Commands.dll-Help.xml
+manager: jasgro
 Module Name: MSMQ
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msmq/enable-msmqcertificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-MSMQCertificate
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3A1265A7-FDE8-469E-87B8-9E0EC72E8BBA
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Enable-MsmqCertificate

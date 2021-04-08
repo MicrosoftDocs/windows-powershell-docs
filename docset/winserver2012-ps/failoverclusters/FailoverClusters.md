@@ -1,14 +1,13 @@
 ---
-Module Name: FailoverClusters
-Module Guid: CC3E946B-9141-48C2-95D8-D9E56594416A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=214656
+author: andreabarr
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-ms.assetid: 1149AB0F-CE0C-4F56-8352-15D29814411F
 manager: dansimp
-ms.reviewer:
+Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
+Module Name: FailoverClusters
 ms.author: v-anbarr
-author: andreabarr
+ms.reviewer: 
 ---
 
 # FailoverClusters Module

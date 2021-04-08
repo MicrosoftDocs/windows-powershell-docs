@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+manager: jasgro
 Module Name: IscsiTarget
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/iscsitarget/checkpoint-iscsivirtualdisk?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Checkpoint-IscsiVirtualDisk
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 6854D819-70B6-488B-A2C6-6001BBCBD344
 ---
 
 # Checkpoint-IscsiVirtualDisk

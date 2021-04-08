@@ -1,31 +1,17 @@
 ---
 author: Kateyanne
-ms.author: v-kaunu
-description:
+description: 
 external help file: CCPPSH.dll-Help.xml
-keywords: powershell, cmdlet
 manager: New-HpcSoftCard
+Module Name: HPC
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: powershell
+ms.reviewer: 
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=217207
+online version: https://docs.microsoft.com/powershell/module/hpc/new-hpcsoftcard?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-HpcSoftCard
-ms.assetid: FAADB299-ED6E-40CD-9E7C-D655205B60CE
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title:
-description:
-keywords: powershell, cmdlet
-ms.date: 12/20/2016
-ms.prod: powershell
-ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
-schema: 2.0.0
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
-ms.reviewer:
 ---
 
 # New-HpcSoftCard

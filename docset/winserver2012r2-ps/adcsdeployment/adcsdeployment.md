@@ -1,21 +1,19 @@
 ---
-Module Name: ADCSDeployment
-Module Guid: 5919A3CB-977E-464F-A221-421C270218B4
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285733
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: ADCSDeployment
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 5919a3cb-977e-464f-a221-421c270218b4
+Module Name: adcsdeployment
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 3454c4c0-c216-477b-99ee-2e879c3ae018
+ms.topic: reference
+title: ADCSDeployment
 ---
 
 # ADCSDeployment Module

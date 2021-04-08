@@ -1,21 +1,19 @@
 ---
-Module Name: ActiveDirectory
-Module Guid: 43C15630-959C-49E4-A977-758C5CC93408
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301394
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.7.0
 Locale: en-US
-title: ActiveDirectory
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 43c15630-959c-49e4-a977-758c5cc93408
+Module Name: ActiveDirectory
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: abd8d8e8-580a-4d3b-850c-4fbd7ae386e4
+ms.topic: reference
+title: ActiveDirectory
 ---
 
 # ActiveDirectory Module

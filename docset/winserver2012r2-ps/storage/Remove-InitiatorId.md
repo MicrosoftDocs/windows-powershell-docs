@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: InitiatorId.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/remove-initiatorid?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-InitiatorId
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F5B949CB-0F3B-440B-812C-22342401B08C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-InitiatorId

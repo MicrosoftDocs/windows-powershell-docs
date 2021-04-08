@@ -1,21 +1,19 @@
 ---
-Module Name: WebApplicationProxy
-Module Guid: DCFDD8A2-772E-443B-9108-0FDFE8356F22
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=282438
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: WebApplicationProxy
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 0caca7be-4ea5-42d5-9cf2-418c6907f51d
+Module Guid: dcfdd8a2-772e-443b-9108-0fdfe8356f22
+Module Name: WebApplicationProxy
 ms.author: v-anbarr
+ms.date: 12/05/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WebApplicationProxy
 ---
 
 # WebApplicationProxy Module

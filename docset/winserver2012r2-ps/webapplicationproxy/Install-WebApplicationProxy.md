@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IdentityServer.Management.Proxy.dll-Help.xml
-online version: 
+manager: jasgro
+Module Name: WebApplicationProxy
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webapplicationproxy/install-webapplicationproxy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Install-WebApplicationProxy
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FDEC245A-F5E7-496A-A302-638E2E2000A4
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Install-WebApplicationProxy

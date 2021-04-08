@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DhcpServerv6Lease_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DhcpServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/remove-dhcpserverv6lease?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-DhcpServerv6Lease
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 95D63DB2-6825-4F68-AA05-0AAD56EAA1CE
 ---
 
 # Remove-DhcpServerv6Lease

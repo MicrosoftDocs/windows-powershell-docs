@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WmsCmdlets.dll-Help.xml
-Module Name: WmsCmdlets
-online version: 
+manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/multipoint/new-wmsuser?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-WmsUser
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 33DAEC0D-DC28-48F8-84B7-E1F8BAC16B6C
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # New-WmsUser

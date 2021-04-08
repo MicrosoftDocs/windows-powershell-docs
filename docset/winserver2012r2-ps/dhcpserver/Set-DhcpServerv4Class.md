@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DhcpServerv4Class_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DhcpServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dhcpserver/set-dhcpserverv4class?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DhcpServerv4Class
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 814B1BD6-49C5-41E3-B345-D04D124C33C1
 ---
 
 # Set-DhcpServerv4Class

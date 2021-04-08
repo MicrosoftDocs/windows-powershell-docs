@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_VpnConnectionRoute_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: VpnClient
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/vpnclient/add-vpnconnectionroute?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-VpnConnectionRoute
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F8452B3A-29FD-4775-97BE-A53210E7AF48
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Add-VpnConnectionRoute

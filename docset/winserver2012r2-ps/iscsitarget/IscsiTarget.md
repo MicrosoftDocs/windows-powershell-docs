@@ -1,21 +1,19 @@
 ---
-Module Name: IscsiTarget
-Module Guid: A1DA990A-4DC2-4F7E-BEB4-046A89B9D473
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285751
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: IscsiTarget
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: a1da990a-4dc2-4f7e-beb4-046a89b9d473
+Module Name: IscsiTarget
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 5e639b6b-8be5-4abe-859f-ce842558e3de
+ms.topic: reference
+title: IscsiTarget
 ---
 
 # IscsiTarget Module

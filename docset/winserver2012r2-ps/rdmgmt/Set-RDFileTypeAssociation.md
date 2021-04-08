@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: 
-Module Name: RemoteDesktop
-online version: 
+manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/set-rdfiletypeassociation?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-RDFileTypeAssociation
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 4EAAD44F-74D9-4714-989B-7D694BDCEEDF
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-RDFileTypeAssociation

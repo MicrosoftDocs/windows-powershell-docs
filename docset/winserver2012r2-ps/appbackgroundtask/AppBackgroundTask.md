@@ -1,21 +1,19 @@
 ---
-Module Name: AppBackgroundTask
-Module Guid: EB40BD55-3BAB-4FA6-88EE-0DCF3CAD5A25
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=286813
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: AppBackgroundTask
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: eb40bd55-3bab-4fa6-88ee-0dcf3cad5a25
+Module Name: AppBackgroundTask
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: e2a5768c-acfe-4697-a636-ac975b62d532
+ms.topic: reference
+title: AppBackgroundTask
 ---
 
 # AppBackgroundTask Module

@@ -1,21 +1,19 @@
 ---
-Module Name: ClusterAwareUpdating
-Module Guid: 4E804861-1DCE-46C1-868D-C8F2AB9D220A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285543
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: ClusterAwareUpdating
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
+Module Name: ClusterAwareUpdating
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: a6771a5e-e72b-4188-9658-a5e07e3f5b7a
+ms.topic: reference
+title: ClusterAwareUpdating
 ---
 
 # ClusterAwareUpdating Module

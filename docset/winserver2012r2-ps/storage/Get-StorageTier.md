@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorageTier.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/get-storagetier?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-StorageTier
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 620540D9-1E94-4E25-954D-A9B21E83C60E
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-StorageTier

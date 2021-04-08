@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetQosPolicy.cdxml-help.xml
-Module Name: NetQos
-online version: 
+manager: jasgro
+Module Name: NetQoS
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netqos/remove-netqospolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetQosPolicy
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 0043C08D-E596-4177-A981-0CD8C04CA7E4
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-NetQosPolicy

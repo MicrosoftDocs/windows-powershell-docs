@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetIPsecMainModeRule.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/disable-netipsecmainmoderule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-NetIPsecMainModeRule
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 4DC0A3E7-F1F0-48B0-B7E1-3EA7E9E7A91C
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Disable-NetIPsecMainModeRule

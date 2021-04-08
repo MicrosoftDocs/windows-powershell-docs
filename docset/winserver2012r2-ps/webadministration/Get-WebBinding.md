@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.IIS.PowerShell.Provider.dll-Help.xml
+manager: jasgro
 Module Name: WebAdministration
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/webadministration/get-webbinding?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WebBinding
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 891FBBE3-BA55-4E84-B0B7-9EDDB1CF98E7
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-WebBinding

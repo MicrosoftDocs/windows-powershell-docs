@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: CIM_PhysicalComputerSystemView.cdxml-help.xml
-Module Name: PcsvDevice
-online version: 
+manager: jasgro
+Module Name: PCSVDevice
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/pcsvdevice/start-pcsvdevice?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Start-PcsvDevice
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FA6DE65B-0DF1-47C9-8CF5-03C8DC5D95B8
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Start-PcsvDevice

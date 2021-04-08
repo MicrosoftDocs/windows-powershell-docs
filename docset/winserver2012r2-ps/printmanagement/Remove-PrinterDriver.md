@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_PrinterDriver_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: PrintManagement
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/printmanagement/remove-printerdriver?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-PrinterDriver
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 1CBF356C-E2C6-4D56-AA74-99DF5A6B170A
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-PrinterDriver

@@ -1,21 +1,19 @@
 ---
-Module Name: NetWNV
-Module Guid: B47767EC-A4D6-488D-915D-5070791AC6D4
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285766
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: NetWNV
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: d30a8bfb-7690-43b8-b57d-a7850f44a412
+Module Guid: b47767ec-a4d6-488d-915d-5070791ac6d4
+Module Name: NetWNV
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetWNV
 ---
 
 # NetWNV Module

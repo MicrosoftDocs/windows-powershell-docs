@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-Module Name: PKI
-online version: 
+manager: jasgro
+Module Name: pki
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/pki/export-pfxcertificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Export-PfxCertificate
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 7E97BC6B-B6E0-4BCA-98CE-E83D307FA3A6
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Export-PfxCertificate

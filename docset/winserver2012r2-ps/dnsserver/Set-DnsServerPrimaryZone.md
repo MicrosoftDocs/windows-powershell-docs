@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DnsServerPrimaryZone_v1.0.0.cdxml-help.xml
+manager: jasgro
 Module Name: DnsServer
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dnsserver/set-dnsserverprimaryzone?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DnsServerPrimaryZone
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 3C26B80A-DBEB-45CE-8644-4D2EBAD9408E
 ---
 
 # Set-DnsServerPrimaryZone

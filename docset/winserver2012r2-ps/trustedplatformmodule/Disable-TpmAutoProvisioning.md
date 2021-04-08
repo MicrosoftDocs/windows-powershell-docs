@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: jasgro
 Module Name: TrustedPlatformModule
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/disable-tpmautoprovisioning?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-TpmAutoProvisioning
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 1D4F82DB-0AF0-4DE5-8587-46037ED3BCDE
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Disable-TpmAutoProvisioning

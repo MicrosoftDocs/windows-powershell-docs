@@ -1,21 +1,19 @@
 ---
-Module Name: NetSwitchTeam
-Module Guid: E83097B1-4470-4F37-8CE3-A6B0AC5ED8F5
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285556
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: NetSwitchTeam
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 0b4d26a2-29a7-4dd1-9151-6073068c756f
+Module Guid: e83097b1-4470-4f37-8ce3-a6b0ac5ed8f5
+Module Name: NetSwitchTeam
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetSwitchTeam
 ---
 
 # NetSwitchTeam Module

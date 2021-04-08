@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.CertificateServices.Administration.Commands.dll-Help.xml
-Module Name: ADCSAdministration
-online version: 
+manager: jasgro
+Module Name: adcsadministration
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/adcsadministration/restore-caroleservice?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restore-CARoleService
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 6AB4E278-DA57-44BD-AC5E-6E0BECE6A574
 ---
 
 # Restore-CARoleService

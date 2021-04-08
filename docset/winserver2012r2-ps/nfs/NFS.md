@@ -1,21 +1,19 @@
 ---
-Module Name: NFS
-Module Guid: 108AE179-3094-4223-91E4-B9099069017A
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285560
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: NFS
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 79d83761-7659-40f1-95ca-9cd0e0e6c9f0
+Module Guid: 108ae179-3094-4223-91e4-b9099069017a
+Module Name: NFS
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NFS
 ---
 
 # NFS Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: 
-Module Name: RemoteDesktop
-online version: 
+manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdlicenseconfiguration?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDLicenseConfiguration
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E77214D7-17EF-4BA4-B4EE-4CC7E741C4BE
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-RDLicenseConfiguration

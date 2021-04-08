@@ -1,21 +1,19 @@
 ---
-Module Name: PKIClient
-Module Guid: CF094C6B-63D1-4DDA-BF70-15A602C4EB2B
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285562
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: PKIClient
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: de298728-d0ea-41e7-adff-7be820241f67
+Module Guid: cf094c6b-63d1-4dda-bf70-15a602c4eb2b
+Module Name: pki
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: PKIClient
 ---
 
 # PKIClient Module

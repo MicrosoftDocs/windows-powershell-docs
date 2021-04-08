@@ -1,21 +1,19 @@
 ---
-Module Name: FailoverClusters
-Module Guid: CC3E946B-9141-48C2-95D8-D9E56594416A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285745
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: FailoverClusters
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
+Module Name: FailoverClusters
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 62e0ebe3-243c-40b5-8797-e82888103ee3
+ms.topic: reference
+title: FailoverClusters
 ---
 
 # FailoverClusters Module

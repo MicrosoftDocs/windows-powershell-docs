@@ -1,21 +1,19 @@
 ---
-Module Name: WSSCmdlets
-Module Guid: E20EC0F8-88B6-4BD9-9538-BCE80F33752A
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285781
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: WSSCmdlets
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-12-05
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 1a33adf2-6f03-4353-b167-87fa8c0e9f48
+Module Guid: e20ec0f8-88b6-4bd9-9538-bce80f33752a
+Module Name: WSSCmdlets
 ms.author: v-anbarr
+ms.date: 12/05/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WSSCmdlets
 ---
 
 # WSSCmdlets Module

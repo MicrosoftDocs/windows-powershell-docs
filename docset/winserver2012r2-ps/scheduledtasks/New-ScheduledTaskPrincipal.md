@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_ScheduledTask_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: ScheduledTasks
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/scheduledtasks/new-scheduledtaskprincipal?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-ScheduledTaskPrincipal
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FAC8BDBD-5700-4566-B58D-197602DC59F1
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-ScheduledTaskPrincipal

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetQosPolicy.cdxml-help.xml
-Module Name: NetQos
-online version: 
+manager: jasgro
+Module Name: NetQoS
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netqos/get-netqospolicy?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetQosPolicy
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 7E4D1383-2439-4F10-A86D-AA2BD4EC54E6
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NetQosPolicy

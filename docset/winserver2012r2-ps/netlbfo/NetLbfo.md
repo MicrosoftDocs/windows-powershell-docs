@@ -1,21 +1,19 @@
 ---
-Module Name: NetLbfo
-Module Guid: 80CF4C6D-30B7-4B0F-A035-DBB23A65EF1D
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285763
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: NetLbfo
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 3f3c6acc-3d5a-4d36-86ed-948cd39970fa
+Module Guid: 80cf4c6d-30b7-4b0f-a035-dbb23a65ef1d
+Module Name: NetLbfo
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetLbfo
 ---
 
 # NetLbfo Module

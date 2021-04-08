@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetFirewallApplicationFilter.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/get-netfirewallapplicationfilter?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetFirewallApplicationFilter
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FAB5A143-9D6F-42AB-9ECB-0EF05A72A7A3
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-NetFirewallApplicationFilter

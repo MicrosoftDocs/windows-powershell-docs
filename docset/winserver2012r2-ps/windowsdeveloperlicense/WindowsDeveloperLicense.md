@@ -1,21 +1,19 @@
 ---
-Module Name: WindowsDeveloperLicense
-Module Guid: 8AB5FE0D-DB4A-49F2-93A3-040CF12840CC
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285578
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: WindowsDeveloperLicense
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: a32e896c-8a77-40f1-a5b6-6874400d5df3
+Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
+Module Name: WindowsDeveloperLicense
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WindowsDeveloperLicense
 ---
 
 # WindowsDeveloperLicense Module

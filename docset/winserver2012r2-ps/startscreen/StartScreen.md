@@ -1,21 +1,19 @@
 ---
-Module Name: StartScreen
-Module Guid: 6C813093-9E3A-47E8-84B4-C7B49589F04C
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=280239
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: StartScreen
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: aebac44f-7eb4-4b1b-89b1-82d2ee8e75f0
+Module Guid: 6c813093-9e3a-47e8-84b4-c7b49589f04c
+Module Name: StartScreen
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: StartScreen
 ---
 
 # StartScreen Module

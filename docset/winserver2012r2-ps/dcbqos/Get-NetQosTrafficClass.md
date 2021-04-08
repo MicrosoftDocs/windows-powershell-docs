@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetQosTrafficClass.cdxml-help.xml
-Module Name: DcbQos
-online version: 
+manager: jasgro
+Module Name: DcbQoS
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/dcbqos/get-netqostrafficclass?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetQosTrafficClass
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2E6A3602-4064-47B5-B326-20BC5D3393D0
 ---
 
 # Get-NetQosTrafficClass

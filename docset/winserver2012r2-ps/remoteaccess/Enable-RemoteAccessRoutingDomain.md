@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_RemoteAccessRoutingDomain_v1.0.cdxml-help.xml
-online version: 
+manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/enable-remoteaccessroutingdomain?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-RemoteAccessRoutingDomain
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 45A60B09-63C0-4170-8DB2-11A2B6024F69
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Enable-RemoteAccessRoutingDomain

@@ -1,18 +1,17 @@
 ---
 author: Kateyanne
-description:
+description: 
 external help file: CCPPSH.dll-Help.xml
-keywords: powershell, cmdlet
-manager:
+manager: 
+Module Name: HPC
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: powershell
+ms.reviewer: 
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182867
+online version: https://docs.microsoft.com/powershell/module/hpc/set-hpcnodestate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-HpcNodeState
-ms.assetid: 7DC6022D-942F-43EB-846F-609EE83B6F23
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Set-HpcNodeState

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetIPsecPhase1AuthSet.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/copy-netipsecphase1authset?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Copy-NetIPsecPhase1AuthSet
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: CB953D49-0297-4C2B-8308-6E208250C6B9
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Copy-NetIPsecPhase1AuthSet

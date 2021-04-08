@@ -1,21 +1,19 @@
 ---
-Module Name: SmbWitness
-Module Guid: EF018256-3318-4E74-A823-158022778487
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285774
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: SmbWitness
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 9818d5ef-968b-4d95-abe7-a2d303511992
+Module Guid: ef018256-3318-4e74-a823-158022778487
+Module Name: SmbWitness
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SmbWitness
 ---
 
 # SmbWitness Module

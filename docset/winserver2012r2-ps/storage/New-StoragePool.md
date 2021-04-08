@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: StorageSubSystem.cdxml-help.xml
+manager: jasgro
 Module Name: Storage
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/storage/new-storagepool?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-StoragePool
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: A789707E-04CB-4F49-B785-92247C8EB8AB
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-StoragePool

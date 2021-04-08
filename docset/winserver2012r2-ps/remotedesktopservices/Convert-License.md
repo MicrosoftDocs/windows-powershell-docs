@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: TSPSCmdlets.dll-Help.xml
+manager: jasgro
 Module Name: RemoteDesktopServices
-online version:
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remotedesktopservices/convert-license?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Convert-License
-description:
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: AF891764-E427-4256-AB2F-B2FCB4E640F3
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Convert-License

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WmsCmdlets.dll-Help.xml
-Module Name: WmsCmdlets
-online version: 
+manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/multipoint/disconnect-wmssession?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disconnect-WmsSession
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: FCB27786-1D95-4C7D-8D7E-C7C4A8D600FD
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Disconnect-WmsSession

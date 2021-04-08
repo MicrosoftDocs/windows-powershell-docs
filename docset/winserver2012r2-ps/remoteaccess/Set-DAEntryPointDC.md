@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_DAEntryPointDC_v1.0.0.cdxml-help.xml
-online version: 
+manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/set-daentrypointdc?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-DAEntryPointDC
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8F633555-CDC1-4232-B746-E78A18959939
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-DAEntryPointDC

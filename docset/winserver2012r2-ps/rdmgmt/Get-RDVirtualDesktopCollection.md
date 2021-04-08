@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: 
-Module Name: RemoteDesktop
-online version: 
+manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktopcollection?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-RDVirtualDesktopCollection
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: E3466976-DD21-435B-AA98-7DB9817FC946
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-RDVirtualDesktopCollection

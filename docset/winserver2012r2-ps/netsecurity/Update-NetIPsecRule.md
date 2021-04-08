@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: NetIPsecRule.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NetSecurity
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/netsecurity/update-netipsecrule?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Update-NetIPsecRule
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F303B0A3-1070-45CB-8AB4-2BF4E4B26623
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Update-NetIPsecRule

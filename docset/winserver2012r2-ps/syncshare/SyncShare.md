@@ -1,21 +1,19 @@
 ---
-Module Name: SyncShare
-Module Guid: 5CE60F84-4560-40A6-AB86-62E7F8BA89D1
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280241
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US
-title: SyncShare
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 056f244d-563f-4fbd-8ac3-1b625c5848da
+Module Guid: 5ce60f84-4560-40a6-ab86-62e7f8ba89d1
+Module Name: SyncShare
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: SyncShare
 ---
 
 # SyncShare Module

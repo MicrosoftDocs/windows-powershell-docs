@@ -1,21 +1,19 @@
 ---
-Module Name: NetworkTransition
-Module Guid: EFF9CCF9-53ED-423D-B0DA-23E6772AACAA
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285559
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: NetworkTransition
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: dc6139c2-39af-4426-b6b2-8e502cfccdef
+Module Guid: eff9ccf9-53ed-423d-b0da-23e6772aacaa
+Module Name: NetworkTransition
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetworkTransition
 ---
 
 # NetworkTransition Module

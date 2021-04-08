@@ -1,21 +1,19 @@
 ---
-Module Name: Deduplication
-Module Guid: 1395ECA7-7EAF-4958-A114-FB8AB76B86CC
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285740
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: Deduplication
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 1395eca7-7eaf-4958-a114-fb8ab76b86cc
+Module Name: Deduplication
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 72144cf9-f9f5-43b3-be84-5c959089c28f
+ms.topic: reference
+title: Deduplication
 ---
 
 # Deduplication Module

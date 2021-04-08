@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.CertificateServices.PKIClient.Cmdlets.dll-Help.xml
-Module Name: PKI
-online version: 
+manager: jasgro
+Module Name: pki
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/pki/import-pfxcertificate?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Import-PfxCertificate
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 22EF79AB-E28C-454F-B539-BD3A69CFB58D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Import-PfxCertificate

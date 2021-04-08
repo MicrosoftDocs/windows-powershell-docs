@@ -1,21 +1,19 @@
 ---
-Module Name: StorageSpaces
-Module Guid: D84E3C43-EEA6-471E-AD89-68BEAE6F1482
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=237119
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-title: StorageSpaces
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 1abbed1a-ec33-4df5-9135-7e144a34e0bf
+Module Guid: d84e3c43-eea6-471e-ad89-68beae6f1482
+Module Name: StorageSpaces
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: StorageSpaces
 ---
 
 # StorageSpaces Module

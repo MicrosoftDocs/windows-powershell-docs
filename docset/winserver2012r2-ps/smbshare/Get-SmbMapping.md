@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: SmbMapping.cdxml-help.xml
+manager: jasgro
 Module Name: SmbShare
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/smbshare/get-smbmapping?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-SmbMapping
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F7E6F380-A274-4326-B121-49128FF2A37B
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-SmbMapping

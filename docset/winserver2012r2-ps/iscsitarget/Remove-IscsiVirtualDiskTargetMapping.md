@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
+manager: jasgro
 Module Name: IscsiTarget
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/iscsitarget/remove-iscsivirtualdisktargetmapping?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-IscsiVirtualDiskTargetMapping
-ms.author: v-kaunu
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: B16EE8B7-74D1-448F-B7F5-3E4CE192E8AF
 ---
 
 # Remove-IscsiVirtualDiskTargetMapping

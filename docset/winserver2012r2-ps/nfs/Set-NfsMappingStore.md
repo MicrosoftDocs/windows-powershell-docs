@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NfsMappingStore.cmdletDefinition.cdxml-help.xml
+manager: jasgro
 Module Name: NFS
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/nfs/set-nfsmappingstore?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NfsMappingStore
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 97B6FB6C-D855-49B2-970E-D0AEEBEE85C4
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-NfsMappingStore

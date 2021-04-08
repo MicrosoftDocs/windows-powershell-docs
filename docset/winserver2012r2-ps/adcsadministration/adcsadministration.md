@@ -1,21 +1,19 @@
 ---
-Module Name: ADCSAdministration
-Module Guid: BCC14C75-EDE8-486E-97A5-5BF775C4A221
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285732
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: ADCSAdministration
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: bcc14c75-ede8-486e-97a5-5bf775c4a221
+Module Name: adcsadministration
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: c51c7f98-8cc5-46ef-aa0f-9f65764b94dd
+ms.topic: reference
+title: ADCSAdministration
 ---
 
 # ADCSAdministration Module

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: WmsCmdlets.dll-Help.xml
-Module Name: WmsCmdlets
-online version: 
+manager: jasgro
+Module Name: MultiPoint
+ms.author: v-kaunu
+ms.date: 12/06/2017
+ms.prod: powershell
+ms.reviewer: 
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/multipoint/get-wmsstation?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-WmsStation
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/06/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: F523F1F9-74B5-42BD-B155-A7220B300ECA
-ms.reviewer:
-ms.author: v-kaunu
 ---
 
 # Get-WmsStation

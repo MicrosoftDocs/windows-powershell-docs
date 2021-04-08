@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: wsbcmdlet.dll-Help.xml
+manager: jasgro
 Module Name: WindowsServerBackup
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/add-wbvolume?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Add-WBVolume
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: DB178BEF-D267-4546-9A2F-138E6F48A960
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Add-WBVolume

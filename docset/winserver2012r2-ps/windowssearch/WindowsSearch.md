@@ -1,21 +1,19 @@
 ---
-Module Name: WindowsSearch
-Module Guid: 562C6233-EAEE-4876-B36C-D6B1F256D4E6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=280243
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-title: WindowsSearch
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 3587c63b-76ae-4bb2-b94a-5a6007cb7126
+Module Guid: 562c6233-eaee-4876-b36c-d6b1f256d4e6
+Module Name: WindowsSearch
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: WindowsSearch
 ---
 
 # WindowsSearch Module

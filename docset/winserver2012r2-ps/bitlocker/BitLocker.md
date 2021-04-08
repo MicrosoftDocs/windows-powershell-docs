@@ -1,21 +1,19 @@
 ---
-Module Name: BitLocker
-Module Guid: 0FF02BB8-300A-4262-AC08-E06DD810F1B6
-Download Help Link: http://go.microsoft.com/fwlink/?LinkID=285738
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US
-title: BitLocker
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 0ff02bb8-300a-4262-ac08-e06dd810f1b6
+Module Name: BitLocker
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 09aea62d-54fa-458b-9b82-f13a8ed77fa6
+ms.topic: reference
+title: BitLocker
 ---
 
 # BitLocker Module

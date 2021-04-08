@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_NetIpHTTPsConfiguration.cdxml-help.xml
+manager: jasgro
 Module Name: NetworkTransition
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/networktransition/remove-netiphttpscertbinding?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-NetIPHttpsCertBinding
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: A0B842F3-74DA-404A-A1CB-92F278813694
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Remove-NetIPHttpsCertBinding

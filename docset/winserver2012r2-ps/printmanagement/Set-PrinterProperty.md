@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MSFT_PrinterProperty_v1.0.cdxml-help.xml
+manager: jasgro
 Module Name: PrintManagement
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/printmanagement/set-printerproperty?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-PrinterProperty
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 28E76B8B-6F8F-4554-A8F7-B0375A1D8D9D
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Set-PrinterProperty

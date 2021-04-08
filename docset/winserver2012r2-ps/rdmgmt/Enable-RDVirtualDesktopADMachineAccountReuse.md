@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: 
-Module Name: RemoteDesktop
-online version: 
+manager: jasgro
+Module Name: RDMgmt
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/rdmgmt/enable-rdvirtualdesktopadmachineaccountreuse?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Enable-RDVirtualDesktopADMachineAccountReuse
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 33D5210F-CA52-4E43-AA55-859E2C7C5D13
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Enable-RDVirtualDesktopADMachineAccountReuse

@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: MsftUal_Overview.cdxml-help.xml
+manager: jasgro
 Module Name: UserAccessLogging
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/useraccesslogging/get-ualoverview?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-UalOverview
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 098C9B5C-B92F-4C55-8973-51FA89748F54
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-UalOverview

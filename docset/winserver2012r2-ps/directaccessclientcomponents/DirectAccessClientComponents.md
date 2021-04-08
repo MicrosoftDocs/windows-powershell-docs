@@ -1,21 +1,19 @@
 ---
-Module Name: DirectAccessClientFIX
-Module Guid: 244F8FC0-A410-4B87-8237-7496F557E6D4
-Download Help Link: http://go.microsoft.com/fwlink/?Linkid=285546
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: DirectAccessClientFIX
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
+Module Guid: 244f8fc0-a410-4b87-8237-7496f557e6d4
+Module Name: DirectAccessClientComponents
+ms.author: v-anbarr
+ms.date: 10/29/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 5936eef3-8e31-44d7-b070-eb716de98d4a
+ms.topic: reference
+title: DirectAccessClientFIX
 ---
 
 # DirectAccessClientFIX Module

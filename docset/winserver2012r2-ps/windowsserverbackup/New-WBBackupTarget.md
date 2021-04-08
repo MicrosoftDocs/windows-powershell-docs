@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: wsbcmdlet.dll-Help.xml
+manager: jasgro
 Module Name: WindowsServerBackup
-online version: 
+ms.author: v-kaunu
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/windowsserverbackup/new-wbbackuptarget?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-WBBackupTarget
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/30/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: D4D0C006-575E-4F0D-87AB-FD4E9E727D27
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # New-WBBackupTarget

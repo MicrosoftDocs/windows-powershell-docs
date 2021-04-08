@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: CIM_PhysicalComputerSystemView.cdxml-help.xml
-Module Name: PcsvDevice
-online version: 
+manager: jasgro
+Module Name: PCSVDevice
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/pcsvdevice/restart-pcsvdevice?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Restart-PcsvDevice
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2371F425-650C-4AAE-AA00-3FE6947C3D77
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Restart-PcsvDevice

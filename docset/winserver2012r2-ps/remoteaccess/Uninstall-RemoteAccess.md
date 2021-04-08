@@ -1,18 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: PS_RemoteAccess_v1.0.0.cdxml-help.xml
-online version: 
+manager: jasgro
+Module Name: RemoteAccess
+ms.author: v-kaunu
+ms.date: 12/05/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/remoteaccess/uninstall-remoteaccess?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Uninstall-RemoteAccess
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 12/05/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 514EA24C-98AE-4DDD-8927-3A6648376DB3
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Uninstall-RemoteAccess

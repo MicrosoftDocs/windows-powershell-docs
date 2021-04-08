@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Windows.DeveloperLicense.Commands.dll-Help.xml
+manager: jasgro
 Module Name: WindowsDeveloperLicense
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/windowsdeveloperlicense/unregister-windowsdeveloperlicense?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unregister-WindowsDeveloperLicense
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 2D3D3DD5-BA97-4613-BADE-609298A6229B
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Unregister-WindowsDeveloperLicense

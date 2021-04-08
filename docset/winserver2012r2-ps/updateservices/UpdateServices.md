@@ -1,21 +1,19 @@
 ---
-Module Name: UpdateServices
-Module Guid: 1C1D7545-E04A-4B31-9024-F0357C3B935F
-Download Help Link: http://go.microsoft.com/fwlink/?LinkId=285572
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: UpdateServices
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: 206f4838-e9e5-4c57-a385-0110ecc9dcb9
+Module Guid: 1c1d7545-e04a-4b31-9024-f0357c3b935f
+Module Name: UpdateServices
 ms.author: v-anbarr
+ms.date: 10/30/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: UpdateServices
 ---
 
 # UpdateServices Module

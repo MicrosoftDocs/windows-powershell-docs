@@ -1,21 +1,19 @@
 ---
-Module Name: ADFS
-Module Guid: 5C958595-C68C-4C00-A468-9763DE83BBEE
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=285735
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: ADFS
-ms.author: v-anbarr
-ms.reviewer: brianlic
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-30
-ms.topic: reference
+Module Guid: 5c958595-c68c-4c00-a468-9763de83bbee
+Module Name: ADFS
+ms.author: v-anbarr
+ms.date: 10/30/2017
 ms.prod: powershell
+ms.reviewer: brianlic
 ms.technology: powershell
-ms.assetid: 627a0682-cc70-4354-8984-0ab8e07d251a
+ms.topic: reference
+title: ADFS
 ---
 
 # ADFS Module

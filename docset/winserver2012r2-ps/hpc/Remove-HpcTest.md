@@ -1,21 +1,17 @@
 ---
-external help file:
-Module Name: hpc
-online version:
-schema: 2.0.0
-title: Remove-HpcTest
-description:
-keywords: powershell, cmdlet
+author: Kateyanne
+description: 
+external help file: 
+manager: dansimp
+Module Name: HPC
+ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.prod: powershell
+ms.reviewer: 
 ms.topic: reference
-online version: http://go.microsoft.com/fwlink/?LinkId=182659
+online version: https://docs.microsoft.com/powershell/module/hpc/remove-hpctest?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-ms.assetid: B0D29FB7-E5E3-466A-8247-05A7151F1734
-manager: dansimp
-ms.reviewer:
-ms.author: v-kaunu
-author: Kateyanne
+title: Remove-HpcTest
 ---
 
 # Remove-HpcTest

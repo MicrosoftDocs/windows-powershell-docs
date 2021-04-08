@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Dtc.PowerShell.dll-Help.xml
-Module Name: MsDtc
-online version: 
+manager: jasgro
+Module Name: MsDTC
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/msdtc/join-dtcdiagnosticresourcemanager?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Join-DtcDiagnosticResourceManager
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 68A0664C-705E-48D4-8A80-F036FA000ECE
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Join-DtcDiagnosticResourceManager

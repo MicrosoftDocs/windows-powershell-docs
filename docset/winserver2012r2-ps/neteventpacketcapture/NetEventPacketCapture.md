@@ -1,21 +1,19 @@
 ---
-Module Name: NetEventPacketCapture
-Module Guid: 7E984F2F-35DA-48A2-A3C1-40CE59930A7C
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=280240
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-title: NetEventPacketCapture
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: df241ef0-5fcf-4dc6-a7cf-a37bf951f254
+Module Guid: 7e984f2f-35da-48a2-a3c1-40ce59930a7c
+Module Name: NetEventPacketCapture
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: NetEventPacketCapture
 ---
 
 # NetEventPacketCapture Module

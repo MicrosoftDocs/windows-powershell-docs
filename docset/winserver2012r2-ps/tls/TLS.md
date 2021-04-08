@@ -1,21 +1,19 @@
 ---
-Module Name: TLS
-Module Guid: 1E28C697-2370-42F2-ACE1-5AC8777F8053
-Download Help Link: http://go.microsoft.com/fwlink/?linkid=287167
+author: andreabarr
+description: 
+Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-title: TLS
-description: 
-keywords: powershell, cmdlet
-author: andreabarr
 manager: jasgro
-ms.date: 2017-10-29
-ms.topic: reference
-ms.prod: powershell
-ms.technology: powershell
-ms.assetid: ba7ebe54-dd05-466b-addc-107ac492d04e
+Module Guid: 1e28c697-2370-42f2-ace1-5ac8777f8053
+Module Name: TLS
 ms.author: v-anbarr
+ms.date: 10/29/2017
+ms.prod: powershell
 ms.reviewer: brianlic
+ms.technology: powershell
+ms.topic: reference
+title: TLS
 ---
 
 # TLS Module

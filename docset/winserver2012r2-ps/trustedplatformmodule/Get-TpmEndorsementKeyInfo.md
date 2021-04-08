@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Tpm.Commands.dll-Help.xml
+manager: jasgro
 Module Name: TrustedPlatformModule
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/trustedplatformmodule/get-tpmendorsementkeyinfo?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-TpmEndorsementKeyInfo
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 8D577517-4B3A-4AD1-B427-1A443C3F35CD
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Get-TpmEndorsementKeyInfo

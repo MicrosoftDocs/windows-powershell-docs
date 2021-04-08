@@ -1,19 +1,17 @@
 ---
+author: Kateyanne
+description: 
 external help file: Microsoft.Windows.Diagnosis.TroubleshootingPack.dll-Help.xml
+manager: jasgro
 Module Name: TroubleshootingPack
-online version: 
+ms.author: v-kaunu
+ms.date: 10/29/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.topic: reference
+online version: https://docs.microsoft.com/powershell/module/troubleshootingpack/invoke-troubleshootingpack?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Invoke-TroubleshootingPack
-description: 
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro
-ms.date: 10/29/2017
-ms.topic: reference
-ms.prod: powershell
-ms.assetid: 25FC6F1B-B88E-457B-8AC2-95A35E63FF63
-ms.author: v-kaunu
-ms.reviewer: brianlic
 ---
 
 # Invoke-TroubleshootingPack

@@ -298,7 +298,7 @@ Accept wildcard characters: False
 Specifies that matching firewall rules of the indicated edge traversal policy are created. 
 This parameter specifies how this firewall rule will handle edge traversal cases.
 Valid only when the *Direction* parameter is set to Inbound. 
-The acceptable values for this parameter are: Block or Allow.
+The acceptable values for this parameter are Block and Allow.
 This parameter specifies that traffic that traverses an edge device, such as a network address translation (NAT)-enabled router, between the local and remote computer matches this rule.
 
 ```yaml
@@ -1007,4 +1007,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetFirewallSetting](./Set-NetFirewallSetting.md)
 
 [Show-NetFirewallRule](./Show-NetFirewallRule.md)
-

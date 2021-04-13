@@ -372,7 +372,12 @@
     },
     {
       "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
-      "redirect_url": "/powershell/module/pkiclient",
+      "redirect_url": "/powershell/module/pki",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/pki/pki.md",
+      "redirect_url": "/powershell/module/pki",
       "redirect_document_id": false
     },
     {
@@ -407,7 +412,12 @@
     },
     {
       "source_path": "docset/virtual-directory-module/remotedesktop/remotedesktop.md",
-      "redirect_url": "/powershell/module/remotedesktop",
+      "redirect_url": "/powershell/module/rdmgmt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/rdmgmt/rdmgmt.md",
+      "redirect_url": "/powershell/module/rdmgmt",
       "redirect_document_id": false
     },
     {

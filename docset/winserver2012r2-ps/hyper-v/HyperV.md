@@ -1,6 +1,6 @@
 ---
 author: andreabarr
-description: 
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.11.0
 Locale: en-US
@@ -15,12 +15,14 @@ ms.technology: powershell
 ms.topic: reference
 title: Hyper-V
 ---
-
 # Hyper-V Module
+
 ## Description
+
 This reference provides cmdlet descriptions and syntax for all Hyper-V-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Hyper-V Cmdlets
+
 ### [Add-VMDvdDrive](./Add-VMDvdDrive.md)
 Adds a DVD drive to a virtual machine.
 

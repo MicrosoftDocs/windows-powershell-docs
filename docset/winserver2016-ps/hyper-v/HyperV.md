@@ -11,18 +11,20 @@ ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
 title: Hyper-V
 ---
-
 # Hyper-V Module
+
 ## Description
+
 This reference provides cmdlet descriptions and syntax for all Hyper-V-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Hyper-V Cmdlets
+
 ### [Add-VMDvdDrive](./Add-VMDvdDrive.md)
 Adds a DVD drive to a virtual machine.
 
@@ -658,5 +660,3 @@ Tests the connection between a primary server and a Replica server.
 
 ### [Update-VMVersion](./Update-VMVersion.md)
 Updates the version of virtual machines.
-
-

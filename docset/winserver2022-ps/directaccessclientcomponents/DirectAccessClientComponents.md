@@ -11,19 +11,23 @@ ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-title: DirectAccessClientComponent
+title: DirectAccessClientComponents
 ---
 
-# DirectAccessClientComponent Module
-## Description
-This reference provides cmdlet descriptions and syntax for all DirectAccess Client Components-specific cmdlets. 
-It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+# DirectAccessClientComponents Module
 
-## DirectAccessClientComponent Cmdlets
+## Description
+
+This reference provides cmdlet descriptions and syntax for all DirectAccess Client
+Components-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the
+beginning of the cmdlet.
+
+## DirectAccessClientComponents Cmdlets
+
 ### [Disable-DAManualEntryPointSelection](./Disable-DAManualEntryPointSelection.md)
 Disables a manually selected DirectAccess site, and reverts the selection to the default.
 
@@ -56,5 +60,3 @@ Modifies the configuration of the specified DirectAccess client user experience.
 
 ### [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
 Modifies the configuration of a DirectAccess entry point stored in a Group Policy object.
-
-

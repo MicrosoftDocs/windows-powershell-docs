@@ -1,36 +1,32 @@
 ---
 author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2022-pshelp
-Help Version: 5.0.2.1
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
+Help Version: 3.5.0.0
 Locale: en-US
-manager: jasgro
 Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
 Module Name: Hyper-V
 ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
+ms.date: 10/30/2017
+ms.prod: powershell
+ms.reviewer: brianlic
+ms.technology: powershell
 ms.topic: reference
 title: Hyper-V
 ---
-
 # Hyper-V Module
+
 ## Description
+
 This reference provides cmdlet descriptions and syntax for all Hyper-V-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## Hyper-V Cmdlets
+
 ### [Add-VMDvdDrive](./Add-VMDvdDrive.md)
 Adds a DVD drive to a virtual machine.
 
 ### [Add-VMFibreChannelHba](./Add-VMFibreChannelHba.md)
 Adds a virtual Fibre Channel host bus adapter to a virtual machine.
-
-### [Add-VMGroupMember](./Add-VMGroupMember.md)
-Adds group members to a virtual machine group.
 
 ### [Add-VMHardDiskDrive](./Add-VMHardDiskDrive.md)
 Adds a hard disk drive to a virtual machine.
@@ -38,17 +34,11 @@ Adds a hard disk drive to a virtual machine.
 ### [Add-VMMigrationNetwork](./Add-VMMigrationNetwork.md)
 Adds a network for virtual machine migration on one or more virtual machine hosts.
 
-### [Add-VMNetworkAdapter](./Add-VMNetworkAdapter.md)
-Adds a virtual network adapter to a virtual machine.
-
 ### [Add-VMNetworkAdapterAcl](./Add-VMNetworkAdapterAcl.md)
 Creates an ACL to apply to the traffic through a virtual machine network adapter.
 
-### [Add-VMNetworkAdapterExtendedAcl](./Add-VMNetworkAdapterExtendedAcl.md)
-Creates an extended ACL for a virtual network adapter.
-
-### [Add-VmNetworkAdapterRoutingDomainMapping](./Add-VmNetworkAdapterRoutingDomainMapping.md)
-Adds a routing domain and virtual subnets to a virtual network adapter.
+### [Add-VMNetworkAdapter](./Add-VMNetworkAdapter.md)
+Adds a virtual network adapter to a virtual machine.
 
 ### [Add-VMRemoteFx3dVideoAdapter](./Add-VMRemoteFx3dVideoAdapter.md)
 Adds a RemoteFX video adapter in a virtual machine.
@@ -59,17 +49,14 @@ Adds a SCSI controller in a virtual machine.
 ### [Add-VMStoragePath](./Add-VMStoragePath.md)
 Adds a path to a storage resource pool.
 
-### [Add-VMSwitch](./Add-VMSwitch.md)
-Adds a virtual switch to an Ethernet resource pool.
-
 ### [Add-VMSwitchExtensionPortFeature](./Add-VMSwitchExtensionPortFeature.md)
 Adds a feature to a virtual network adapter.
 
 ### [Add-VMSwitchExtensionSwitchFeature](./Add-VMSwitchExtensionSwitchFeature.md)
 Adds a feature to a virtual switch.
 
-### [Add-VMSwitchTeamMember](./Add-VMSwitchTeamMember.md)
-Adds members to a virtual switch team.
+### [Add-VMSwitch](./Add-VMSwitch.md)
+Adds a virtual switch to an Ethernet resource pool.
 
 ### [Checkpoint-VM](./Checkpoint-VM.md)
 Creates a checkpoint of a virtual machine.
@@ -89,15 +76,6 @@ Associates a host bus adapter with a virtual storage area network (SAN).
 ### [Convert-VHD](./Convert-VHD.md)
 Converts the format, version type, and block size of a virtual hard disk file.
 
-### [Copy-VMFile](./Copy-VMFile.md)
-Copies a file to a virtual machine.
-
-### [Debug-VM](./Debug-VM.md)
-Debugs a virtual machine.
-
-### [Disable-VMConsoleSupport](./Disable-VMConsoleSupport.md)
-Disables keyboard, video, and mouse for virtual machines.
-
 ### [Disable-VMEventing](./Disable-VMEventing.md)
 Disables virtual machine eventing.
 
@@ -116,9 +94,6 @@ Disables collection of resource utilization data for a virtual machine or resour
 ### [Disable-VMSwitchExtension](./Disable-VMSwitchExtension.md)
 Disables one or more extensions on one or more virtual switches.
 
-### [Disable-VMTPM](./Disable-VMTPM.md)
-Disables TPM functionality on a virtual machine.
-
 ### [Disconnect-VMNetworkAdapter](./Disconnect-VMNetworkAdapter.md)
 Disconnects a virtual network adapter from a virtual switch or Ethernet resource pool.
 
@@ -127,9 +102,6 @@ Removes a host bus adapter from a virtual storage area network (SAN).
 
 ### [Dismount-VHD](./Dismount-VHD.md)
 Dismounts a virtual hard disk.
-
-### [Enable-VMConsoleSupport](./Enable-VMConsoleSupport.md)
-Enables keyboard, video, and mouse for virtual machines.
 
 ### [Enable-VMEventing](./Enable-VMEventing.md)
 Enables virtual machine eventing.
@@ -152,26 +124,14 @@ Collects resource utilization data for a virtual machine or resource pool.
 ### [Enable-VMSwitchExtension](./Enable-VMSwitchExtension.md)
 Enables one or more extensions on one or more switches.
 
-### [Enable-VMTPM](./Enable-VMTPM.md)
-Enables TPM functionality on a virtual machine.
+### [Export-VMSnapshot](./Export-VMSnapshot.md)
+Exports a virtual machine checkpoint to disk.
 
 ### [Export-VM](./Export-VM.md)
 Exports a virtual machine to disk.
 
-### [Export-VMSnapshot](./Export-VMSnapshot.md)
-Exports a virtual machine checkpoint to disk.
-
 ### [Get-VHD](./Get-VHD.md)
 Gets the virtual hard disk object associated with a virtual hard disk.
-
-### [Get-VHDSet](./Get-VHDSet.md)
-Gets information about a VHD set.
-
-### [Get-VHDSnapshot](./Get-VHDSnapshot.md)
-Gets information about a checkpoint in a VHD set.
-
-### [Get-VM](./Get-VM.md)
-Gets the virtual machines from one or more Hyper-V hosts.
 
 ### [Get-VMBios](./Get-VMBios.md)
 Gets the BIOS of a virtual machine or snapshot.
@@ -188,32 +148,20 @@ Gets the DVD drives attached to a virtual machine or snapshot.
 ### [Get-VMFibreChannelHba](./Get-VMFibreChannelHba.md)
 Gets the Fibre Channel host bus adapters associated with one or more virtual machines.
 
-### [Get-VMFirmware](./Get-VMFirmware.md)
-Gets the firmware configuration of a virtual machine.
-
 ### [Get-VMFloppyDiskDrive](./Get-VMFloppyDiskDrive.md)
 Gets the floppy disk drives of a virtual machine or snapshot.
-
-### [Get-VMGroup](./Get-VMGroup.md)
-Gets virtual machine groups.
 
 ### [Get-VMHardDiskDrive](./Get-VMHardDiskDrive.md)
 Gets the virtual hard disk drives attached to one or more virtual machines.
 
-### [Get-VMHost](./Get-VMHost.md)
-Gets a Hyper-V host.
-
-### [Get-VMHostCluster](./Get-VMHostCluster.md)
-Gets virtual machine host clusters.
+### [Get-VMHostNumaNodeStatus](./Get-VMHostNumaNodeStatus.md)
+Gets the status of the virtual machines on the non-uniform memory access (NUMA) nodes of a virtual machine host or hosts.
 
 ### [Get-VMHostNumaNode](./Get-VMHostNumaNode.md)
 Gets the NUMA topology of a virtual machine host.
 
-### [Get-VMHostNumaNodeStatus](./Get-VMHostNumaNodeStatus.md)
-Gets the status of the virtual machines on the non-uniform memory access (NUMA) nodes of a virtual machine host or hosts.
-
-### [Get-VMHostSupportedVersion](./Get-VMHostSupportedVersion.md)
-Returns a list of virtual machine configuration versions that are supported on a host.
+### [Get-VMHost](./Get-VMHost.md)
+Gets a Hyper-V host.
 
 ### [Get-VMIdeController](./Get-VMIdeController.md)
 Gets the IDE controllers of a virtual machine or snapshot.
@@ -221,38 +169,23 @@ Gets the IDE controllers of a virtual machine or snapshot.
 ### [Get-VMIntegrationService](./Get-VMIntegrationService.md)
 Gets the integration services of a virtual machine or snapshot.
 
-### [Get-VMKeyProtector](./Get-VMKeyProtector.md)
-Retrieves a key protector for a virtual machine.
-
 ### [Get-VMMemory](./Get-VMMemory.md)
 Gets the memory of a virtual machine or snapshot.
 
 ### [Get-VMMigrationNetwork](./Get-VMMigrationNetwork.md)
 Gets the networks added for migration to one or more virtual machine hosts.
 
-### [Get-VMNetworkAdapter](./Get-VMNetworkAdapter.md)
-Gets the virtual network adapters of a virtual machine, snapshot, management operating system, or of a virtual machine and management operating system.
-
 ### [Get-VMNetworkAdapterAcl](./Get-VMNetworkAdapterAcl.md)
 Gets the ACLs configured for a virtual machine network adapter.
-
-### [Get-VMNetworkAdapterExtendedAcl](./Get-VMNetworkAdapterExtendedAcl.md)
-Gets extended ACLs configured for a virtual network adapter.
 
 ### [Get-VMNetworkAdapterFailoverConfiguration](./Get-VMNetworkAdapterFailoverConfiguration.md)
 Gets the IP address of a virtual network adapter configured to be used when a virtual machine fails over.
 
-### [Get-VmNetworkAdapterIsolation](./Get-VmNetworkAdapterIsolation.md)
-Gets isolation settings for a virtual network adapter.
-
-### [Get-VMNetworkAdapterRoutingDomainMapping](./Get-VMNetworkAdapterRoutingDomainMapping.md)
-Gets members of a routing domain.
-
-### [Get-VMNetworkAdapterTeamMapping](./Get-VMNetworkAdapterTeamMapping.md)
-
-
 ### [Get-VMNetworkAdapterVlan](./Get-VMNetworkAdapterVlan.md)
 Gets the virtual LAN settings configured on a virtual network adapter.
+
+### [Get-VMNetworkAdapter](./Get-VMNetworkAdapter.md)
+Gets the virtual network adapters of a virtual machine, snapshot, management OS, or of a virtual machine and management OS.
 
 ### [Get-VMProcessor](./Get-VMProcessor.md)
 Gets the processor of a virtual machine or snapshot.
@@ -263,14 +196,14 @@ Gets the RemoteFX video adapter of a virtual machine or snapshot.
 ### [Get-VMRemoteFXPhysicalVideoAdapter](./Get-VMRemoteFXPhysicalVideoAdapter.md)
 Gets the RemoteFX physical graphics adapters on one or more Hyper-V hosts.
 
-### [Get-VMReplication](./Get-VMReplication.md)
-Gets the replication settings for a virtual machine.
-
 ### [Get-VMReplicationAuthorizationEntry](./Get-VMReplicationAuthorizationEntry.md)
 Gets the authorization entries of a Replica server.
 
 ### [Get-VMReplicationServer](./Get-VMReplicationServer.md)
 Gets the replication and authentication settings of a Replica server.
+
+### [Get-VMReplication](./Get-VMReplication.md)
+Gets the replication settings for a virtual machine.
 
 ### [Get-VMResourcePool](./Get-VMResourcePool.md)
 Gets the resource pools on one or more virtual machine hosts.
@@ -281,20 +214,11 @@ Gets the available virtual machine storage area networks on a Hyper-V host or ho
 ### [Get-VMScsiController](./Get-VMScsiController.md)
 Gets the SCSI controllers of a virtual machine or snapshot.
 
-### [Get-VMSecurity](./Get-VMSecurity.md)
-Gets security information about a virtual machine.
-
 ### [Get-VMSnapshot](./Get-VMSnapshot.md)
 Gets the checkpoints associated with a virtual machine or checkpoint.
 
 ### [Get-VMStoragePath](./Get-VMStoragePath.md)
 Gets the storage paths in a storage resource pool.
-
-### [Get-VMSwitch](./Get-VMSwitch.md)
-Gets virtual switches from one or more virtual Hyper-V hosts.
-
-### [Get-VMSwitchExtension](./Get-VMSwitchExtension.md)
-Gets the extensions on one or more virtual switches.
 
 ### [Get-VMSwitchExtensionPortData](./Get-VMSwitchExtensionPortData.md)
 Retrieves the status of a virtual switch extension feature applied to a virtual network adapter.
@@ -308,11 +232,11 @@ Gets the status of a virtual switch extension feature applied on a virtual switc
 ### [Get-VMSwitchExtensionSwitchFeature](./Get-VMSwitchExtensionSwitchFeature.md)
 Gets the features configured on a virtual switch.
 
-### [Get-VMSwitchTeam](./Get-VMSwitchTeam.md)
-Gets virtual switch teams from Hyper-V hosts.
+### [Get-VMSwitchExtension](./Get-VMSwitchExtension.md)
+Gets the extensions on one or more virtual switches.
 
-### [Get-VMSystemSwitchExtension](./Get-VMSystemSwitchExtension.md)
-Gets the switch extensions installed on a virtual machine host.
+### [Get-VMSwitch](./Get-VMSwitch.md)
+Gets virtual switches from one or more virtual Hyper-V hosts.
 
 ### [Get-VMSystemSwitchExtensionPortFeature](./Get-VMSystemSwitchExtensionPortFeature.md)
 Gets the port-level features supported by virtual switch extensions on one or more Hyper-V hosts.
@@ -320,20 +244,20 @@ Gets the port-level features supported by virtual switch extensions on one or mo
 ### [Get-VMSystemSwitchExtensionSwitchFeature](./Get-VMSystemSwitchExtensionSwitchFeature.md)
 Gets the switch-level features on one or more Hyper-V hosts.
 
-### [Get-VMVideo](./Get-VMVideo.md)
-Gets video settings for virtual machines.
+### [Get-VMSystemSwitchExtension](./Get-VMSystemSwitchExtension.md)
+Gets the switch extensions installed on a virtual machine host.
+
+### [Get-VM](./Get-VM.md)
+Gets the virtual machines from one or more Hyper-V hosts.
 
 ### [Grant-VMConnectAccess](./Grant-VMConnectAccess.md)
 Grants a user or users access to connect to a virtual machine or machines.
 
-### [Import-VM](./Import-VM.md)
-Imports a virtual machine from a file.
-
 ### [Import-VMInitialReplication](./Import-VMInitialReplication.md)
 Imports initial replication files for a Replica virtual machine to complete the initial replication when using external media as the source.
 
-### [Measure-VM](./Measure-VM.md)
-Reports resource utilization data for one or more virtual machines.
+### [Import-VM](./Import-VM.md)
+Imports a virtual machine from a file.
 
 ### [Measure-VMReplication](./Measure-VMReplication.md)
 Gets replication statistics and information associated with a virtual machine.
@@ -341,29 +265,26 @@ Gets replication statistics and information associated with a virtual machine.
 ### [Measure-VMResourcePool](./Measure-VMResourcePool.md)
 Reports resource utilization data for one or more resource pools.
 
+### [Measure-VM](./Measure-VM.md)
+Reports resource utilization data for one or more virtual machines.
+
 ### [Merge-VHD](./Merge-VHD.md)
 Merges virtual hard disks.
 
 ### [Mount-VHD](./Mount-VHD.md)
 Mounts one or more virtual hard disks.
 
-### [Move-VM](./Move-VM.md)
-Moves a virtual machine to a new Hyper-V host.
-
 ### [Move-VMStorage](./Move-VMStorage.md)
 Moves the storage of a virtual machine.
+
+### [Move-VM](./Move-VM.md)
+Moves a virtual machine to a new Hyper-V host.
 
 ### [New-VFD](./New-VFD.md)
 Creates a virtual floppy disk.
 
 ### [New-VHD](./New-VHD.md)
 Creates one or more new virtual hard disks.
-
-### [New-VM](./New-VM.md)
-Creates a new virtual machine.
-
-### [New-VMGroup](./New-VMGroup.md)
-Creates a virtual machine group.
 
 ### [New-VMReplicationAuthorizationEntry](./New-VMReplicationAuthorizationEntry.md)
 Creates a new authorization entry that allows one or more primary servers to replicate data to a specified Replica server.
@@ -377,17 +298,11 @@ Creates a new virtual storage area network (SAN) on a Hyper-V host.
 ### [New-VMSwitch](./New-VMSwitch.md)
 Creates a new virtual switch on one or more virtual machine hosts.
 
+### [New-VM](./New-VM.md)
+Creates a new virtual machine.
+
 ### [Optimize-VHD](./Optimize-VHD.md)
 Optimizes the allocation of space used by virtual hard disk files, except for fixed virtual hard disks.
-
-### [Optimize-VHDSet](./Optimize-VHDSet.md)
-Optimizes VHD set files.
-
-### [Remove-VHDSnapshot](./Remove-VHDSnapshot.md)
-Removes a checkpoint from a VHD set file.
-
-### [Remove-VM](./Remove-VM.md)
-Deletes a virtual machine.
 
 ### [Remove-VMDvdDrive](./Remove-VMDvdDrive.md)
 Deletes a DVD drive from a virtual machine.
@@ -395,41 +310,26 @@ Deletes a DVD drive from a virtual machine.
 ### [Remove-VMFibreChannelHba](./Remove-VMFibreChannelHba.md)
 Removes a Fibre Channel host bus adapter from a virtual machine.
 
-### [Remove-VMGroup](./Remove-VMGroup.md)
-Removes a virtual machine group.
-
-### [Remove-VMGroupMember](./Remove-VMGroupMember.md)
-Removes members from a virtual machine group.
-
 ### [Remove-VMHardDiskDrive](./Remove-VMHardDiskDrive.md)
 Deletes a hard disk drive from a virtual machine.
 
 ### [Remove-VMMigrationNetwork](./Remove-VMMigrationNetwork.md)
 Removes a network from use with migration.
 
-### [Remove-VMNetworkAdapter](./Remove-VMNetworkAdapter.md)
-Removes one or more virtual network adapters from a virtual machine.
-
 ### [Remove-VMNetworkAdapterAcl](./Remove-VMNetworkAdapterAcl.md)
 Removes an ACL applied to the traffic through a virtual network adapter.
 
-### [Remove-VMNetworkAdapterExtendedAcl](./Remove-VMNetworkAdapterExtendedAcl.md)
-Removes an extended ACL for a virtual network adapter.
-
-### [Remove-VMNetworkAdapterRoutingDomainMapping](./Remove-VMNetworkAdapterRoutingDomainMapping.md)
-Removes a routing domain from a virtual network adapter.
-
-### [Remove-VMNetworkAdapterTeamMapping](./Remove-VMNetworkAdapterTeamMapping.md)
-
+### [Remove-VMNetworkAdapter](./Remove-VMNetworkAdapter.md)
+Removes one or more virtual network adapters from a virtual machine.
 
 ### [Remove-VMRemoteFx3dVideoAdapter](./Remove-VMRemoteFx3dVideoAdapter.md)
 Removes a RemoteFX 3D video adapter from a virtual machine.
 
-### [Remove-VMReplication](./Remove-VMReplication.md)
-Removes the replication relationship of a virtual machine.
-
 ### [Remove-VMReplicationAuthorizationEntry](./Remove-VMReplicationAuthorizationEntry.md)
 Removes an authorization entry from a Replica server.
+
+### [Remove-VMReplication](./Remove-VMReplication.md)
+Removes the replication relationship of a virtual machine.
 
 ### [Remove-VMResourcePool](./Remove-VMResourcePool.md)
 Deletes a resource pool from one or more virtual machine hosts.
@@ -449,23 +349,17 @@ Deletes a virtual machine checkpoint.
 ### [Remove-VMStoragePath](./Remove-VMStoragePath.md)
 Removes a path from a storage resource pool.
 
-### [Remove-VMSwitch](./Remove-VMSwitch.md)
-Deletes a virtual switch.
-
 ### [Remove-VMSwitchExtensionPortFeature](./Remove-VMSwitchExtensionPortFeature.md)
 Removes a feature from a virtual network adapter.
 
 ### [Remove-VMSwitchExtensionSwitchFeature](./Remove-VMSwitchExtensionSwitchFeature.md)
 Removes a feature from a virtual switch.
 
-### [Remove-VMSwitchTeamMember](./Remove-VMSwitchTeamMember.md)
-Removes a member from a virtual machine switch team.
+### [Remove-VMSwitch](./Remove-VMSwitch.md)
+Deletes a virtual switch.
 
-### [Rename-VM](./Rename-VM.md)
-Renames a virtual machine.
-
-### [Rename-VMGroup](./Rename-VMGroup.md)
-Renames virtual machine groups.
+### [Remove-VM](./Remove-VM.md)
+Deletes a virtual machine.
 
 ### [Rename-VMNetworkAdapter](./Rename-VMNetworkAdapter.md)
 Renames a virtual network adapter on a virtual machine or on the management operating system.
@@ -481,6 +375,9 @@ Renames a virtual machine checkpoint.
 
 ### [Rename-VMSwitch](./Rename-VMSwitch.md)
 Renames a virtual switch.
+
+### [Rename-VM](./Rename-VM.md)
+Renames a virtual machine.
 
 ### [Repair-VM](./Repair-VM.md)
 Repairs one or more virtual machines.
@@ -500,23 +397,20 @@ Restarts a virtual machine.
 ### [Restore-VMSnapshot](./Restore-VMSnapshot.md)
 Restores a virtual machine checkpoint.
 
+### [Resume-VMReplication](./Resume-VMReplication.md)
+Resumes a virtual machine replication that is in a Paused, Error, Resynchronization Required, or Suspended state.
+
 ### [Resume-VM](./Resume-VM.md)
 Resumes a suspended (paused) virtual machine.
 
-### [Resume-VMReplication](./Resume-VMReplication.md)
-Resumes a virtual machine replication that is in a state of Paused, Error, Resynchronization Required, or Suspended.
-
 ### [Revoke-VMConnectAccess](./Revoke-VMConnectAccess.md)
-Revokes access for one or more users to connect to a one or more virtual machines.
+Revokes access for one or more users to connect to one or more virtual machines.
 
 ### [Save-VM](./Save-VM.md)
 Saves a virtual machine.
 
 ### [Set-VHD](./Set-VHD.md)
-Sets properties associated with a virtual hard disk.
-
-### [Set-VM](./Set-VM.md)
-Configures a virtual machine.
+Set properties associated with a virtual hard disk.
 
 ### [Set-VMBios](./Set-VMBios.md)
 Configures the BIOS of a Generation 1 virtual machine.
@@ -530,9 +424,6 @@ Configures a virtual DVD drive.
 ### [Set-VMFibreChannelHba](./Set-VMFibreChannelHba.md)
 Configures a Fibre Channel host bus adapter on a virtual machine.
 
-### [Set-VMFirmware](./Set-VMFirmware.md)
-Sets the firmware configuration of a virtual machine.
-
 ### [Set-VMFloppyDiskDrive](./Set-VMFloppyDiskDrive.md)
 Configures a virtual floppy disk drive.
 
@@ -542,35 +433,20 @@ Configures a virtual hard disk.
 ### [Set-VMHost](./Set-VMHost.md)
 Configures a Hyper-V host.
 
-### [Set-VMHostCluster](./Set-VMHostCluster.md)
-Configures a virtual machine host cluster.
-
-### [Set-VMKeyProtector](./Set-VMKeyProtector.md)
-Configures a key protector for a virtual machine.
-
 ### [Set-VMMemory](./Set-VMMemory.md)
 Configures the memory of a virtual machine.
 
 ### [Set-VMMigrationNetwork](./Set-VMMigrationNetwork.md)
 Sets the subnet, subnet mask, and/or priority of a migration network.
 
-### [Set-VMNetworkAdapter](./Set-VMNetworkAdapter.md)
-Configures features of the virtual network adapter in a virtual machine or the management operating system.
-
 ### [Set-VMNetworkAdapterFailoverConfiguration](./Set-VMNetworkAdapterFailoverConfiguration.md)
 Configures the IP address of a virtual network adapter to be used when a virtual machine fails over.
 
-### [Set-VmNetworkAdapterIsolation](./Set-VmNetworkAdapterIsolation.md)
-Modifies isolation settings for a virtual network adapter.
-
-### [Set-VmNetworkAdapterRoutingDomainMapping](./Set-VmNetworkAdapterRoutingDomainMapping.md)
-Sets virtual subnets on a routing domain.
-
-### [Set-VMNetworkAdapterTeamMapping](./Set-VMNetworkAdapterTeamMapping.md)
-
-
 ### [Set-VMNetworkAdapterVlan](./Set-VMNetworkAdapterVlan.md)
 Configures the virtual LAN settings for the traffic through a virtual network adapter.
+
+### [Set-VMNetworkAdapter](./Set-VMNetworkAdapter.md)
+Configures features of the virtual network adapter in a virtual machine or the management operating system.
 
 ### [Set-VMProcessor](./Set-VMProcessor.md)
 Configures one or more processors of a virtual machine.
@@ -578,14 +454,14 @@ Configures one or more processors of a virtual machine.
 ### [Set-VMRemoteFx3dVideoAdapter](./Set-VMRemoteFx3dVideoAdapter.md)
 Configures the RemoteFX 3D video adapter of a virtual machine.
 
-### [Set-VMReplication](./Set-VMReplication.md)
-Modifies the replication settings of a virtual machine.
-
 ### [Set-VMReplicationAuthorizationEntry](./Set-VMReplicationAuthorizationEntry.md)
 Modifies an authorization entry on a Replica server.
 
 ### [Set-VMReplicationServer](./Set-VMReplicationServer.md)
 Configures a host as a Replica server.
+
+### [Set-VMReplication](./Set-VMReplication.md)
+Modifies the replication settings of a virtual machine.
 
 ### [Set-VMResourcePool](./Set-VMResourcePool.md)
 Sets the parent resource pool for a selected resource pool.
@@ -593,29 +469,17 @@ Sets the parent resource pool for a selected resource pool.
 ### [Set-VMSan](./Set-VMSan.md)
 Configures a virtual storage area network (SAN) on one or more Hyper-V hosts.
 
-### [Set-VMSecurity](./Set-VMSecurity.md)
-Configures security settings for a virtual machine.
-
-### [Set-VMSecurityPolicy](./Set-VMSecurityPolicy.md)
-Configures the security policy for a virtual machine.
-
-### [Set-VMSwitch](./Set-VMSwitch.md)
-Configures a virtual switch.
-
 ### [Set-VMSwitchExtensionPortFeature](./Set-VMSwitchExtensionPortFeature.md)
 Configures a feature on a virtual network adapter.
 
 ### [Set-VMSwitchExtensionSwitchFeature](./Set-VMSwitchExtensionSwitchFeature.md)
 Configures a feature on a virtual switch.
 
-### [Set-VMSwitchTeam](./Set-VMSwitchTeam.md)
-Configures a virtual switch team.
+### [Set-VMSwitch](./Set-VMSwitch.md)
+Configures a virtual switch.
 
-### [Set-VMVideo](./Set-VMVideo.md)
-Configures video settings for virtual machines.
-
-### [Start-VM](./Start-VM.md)
-Starts a virtual machine.
+### [Set-VM](./Set-VM.md)
+Configures a virtual machine.
 
 ### [Start-VMFailover](./Start-VMFailover.md)
 Starts failover on a virtual machine.
@@ -623,11 +487,8 @@ Starts failover on a virtual machine.
 ### [Start-VMInitialReplication](./Start-VMInitialReplication.md)
 Starts replication of a virtual machine.
 
-### [Start-VMTrace](./Start-VMTrace.md)
-Starts tracing to a file.
-
-### [Stop-VM](./Stop-VM.md)
-Shuts down, turns off, or saves a virtual machine.
+### [Start-VM](./Start-VM.md)
+Starts a virtual machine.
 
 ### [Stop-VMFailover](./Stop-VMFailover.md)
 Stops failover of a virtual machine.
@@ -638,25 +499,18 @@ Stops an ongoing initial replication.
 ### [Stop-VMReplication](./Stop-VMReplication.md)
 Cancels an ongoing virtual machine resynchronization.
 
-### [Stop-VMTrace](./Stop-VMTrace.md)
-Stops tracing to file.
-
-### [Suspend-VM](./Suspend-VM.md)
-Suspends, or pauses, a virtual machine.
+### [Stop-VM](./Stop-VM.md)
+Shuts down, turns off, or saves a virtual machine.
 
 ### [Suspend-VMReplication](./Suspend-VMReplication.md)
 Suspends replication of a virtual machine.
 
+### [Suspend-VM](./Suspend-VM.md)
+Suspends or pauses a virtual machine.
+
 ### [Test-VHD](./Test-VHD.md)
 Tests a virtual hard disk for any problems that would make it unusable.
 
-### [Test-VMNetworkAdapter](./Test-VMNetworkAdapter.md)
-Tests connectivity between virtual machines.
-
 ### [Test-VMReplicationConnection](./Test-VMReplicationConnection.md)
 Tests the connection between a primary server and a Replica server.
-
-### [Update-VMVersion](./Update-VMVersion.md)
-Updates the version of virtual machines.
-
 

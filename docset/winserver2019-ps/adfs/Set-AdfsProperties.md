@@ -580,6 +580,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExtranetLockoutMode:
+Specifies Extranet Smart Lockout mode
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: ADPasswordCounter, ADFSSmartLockoutLogOnly, ADFSSmartLockoutEnforce
+
+Required: False
+Position: Named
+Default value: ADPasswordCounter
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExtranetLockoutRequirePDC
 Specifies whether extranet lockout requires a primary domain controller (PDC).
 

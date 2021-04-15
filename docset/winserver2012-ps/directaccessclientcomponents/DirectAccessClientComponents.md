@@ -1,5 +1,6 @@
 ---
 author: andreabarr
+description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
@@ -7,16 +8,26 @@ manager: dansimp
 Module Guid: 244f8fc0-a410-4b87-8237-7496f557e6d4
 Module Name: DirectAccessClientComponents
 ms.author: v-anbarr
-ms.reviewer: 
+ms.date: 12/20/2016
+ms.mktglfcycl: manage
+ms.prod: w10
+ms.reviewer:
+ms.sitesec: library
+ms.technology: powershell-windows
+ms.topic: reference
+title: DirectAccessClientComponents
 ---
 
-# DirectAccessClientFIX Module
+# DirectAccessClientComponents Module
+
 ## Description
-This reference provides cmdlet descriptions and syntax for all DirectAccess Client Components-specific cmdlets. 
-It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
+This reference provides cmdlet descriptions and syntax for all DirectAccess Client
+Components-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the
+beginning of the cmdlet.
 
-## DirectAccessClientFIX Cmdlets
+## DirectAccessClientComponents Cmdlets
+
 ### [Disable-DAManualEntryPointSelection](./Disable-DAManualEntryPointSelection.md)
 Disables a manually selected DirectAccess site, and reverts the selection to the default.
 
@@ -49,4 +60,3 @@ Modifies the configuration of the specified DirectAccess client user experience.
 
 ### [Set-DAEntryPointTableItem](./Set-DAEntryPointTableItem.md)
 Modifies the configuration of a DirectAccess entry point stored in a Group Policy object.
-

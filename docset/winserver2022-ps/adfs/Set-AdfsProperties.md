@@ -43,7 +43,7 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-EnablePersistentSso <Boolean>] [-PersistentSsoCutoffTime <DateTime>] [-EnableKmsi <Boolean>]
  [-WIASupportedUserAgents <String[]>] [-BrowserSsoSupportedUserAgents <String[]>]
  [-BrowserSsoEnabled <Boolean>] [-LoopDetectionTimeIntervalInSeconds <Int32>]
- [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>]
+ [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>] [-ExtranetLockoutMode <String>] 
  [-ExtranetLockoutThreshold <Int32>] [-EnableExtranetLockout <Boolean>] [-ExtranetObservationWindow <TimeSpan>]
  [-ExtranetLockoutRequirePDC <Boolean>] [-SendClientRequestIdAsQueryStringParameter <Boolean>]
  [-GlobalRelyingPartyClaimsIssuancePolicy <String>] [-EnableLocalAuthenticationTypes <Boolean>]

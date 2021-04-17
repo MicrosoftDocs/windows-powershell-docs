@@ -581,7 +581,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtranetLockoutMode:
-Specifies Extranet Smart Lockout mode
+Specifies Extranet Smart Lockout mode.
 
 ```yaml
 Type: String

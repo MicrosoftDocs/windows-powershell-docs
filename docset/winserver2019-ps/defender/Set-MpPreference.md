@@ -115,7 +115,7 @@ Accept wildcard characters: False
 Indicates whether to check for new virus and spyware definitions before Windows Defender runs a scan.
 If you specify a value of $True, Windows Defender checks for new definitions.
 If you specify $False or do not specify a value, the scan begins with existing definitions.
-This value applies to scheduled scans and to scans that you start from the command line, but it does not affect scans that you start from the user interface.
+This value applies to scheduled scans, but it does not affect scans that you start from the user interface or to scans that you start from the command line.
 
 ```yaml
 Type: Boolean
@@ -149,6 +149,7 @@ Accept wildcard characters: False
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
 If you specify a value of $False or do not specify a value, Windows Defender scans archive files.
+However, archives are always scanned during directed scans.
 
 ```yaml
 Type: Boolean
@@ -260,6 +261,7 @@ Accept wildcard characters: False
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
 If you specify a value of $False or do not specify a value, Windows Defender performs email scanning. If you specify a value of $True, Windows Defender does not perform email scanning.
+This configuration is not applicable to modern email clients.
 
 ```yaml
 Type: Boolean

@@ -43,7 +43,7 @@ Set-AdfsProperties [-AuthenticationContextOrder <Uri[]>] [-AcceptableIdentifiers
  [-EnablePersistentSso <Boolean>] [-PersistentSsoCutoffTime <DateTime>] [-EnableKmsi <Boolean>]
  [-WIASupportedUserAgents <String[]>] [-BrowserSsoSupportedUserAgents <String[]>]
  [-BrowserSsoEnabled <Boolean>] [-LoopDetectionTimeIntervalInSeconds <Int32>]
- [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>]
+ [-LoopDetectionMaximumTokensIssuedInInterval <Int32>] [-EnableLoopDetection <Boolean>] [-ExtranetLockoutMode <String>]
  [-ExtranetLockoutThreshold <Int32>] [-EnableExtranetLockout <Boolean>] [-ExtranetObservationWindow <TimeSpan>]
  [-ExtranetLockoutRequirePDC <Boolean>] [-SendClientRequestIdAsQueryStringParameter <Boolean>]
  [-GlobalRelyingPartyClaimsIssuancePolicy <String>] [-EnableLocalAuthenticationTypes <Boolean>]
@@ -576,6 +576,22 @@ Accepted values: Allow, Require, None
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExtranetLockoutMode:
+Specifies Extranet Smart Lockout mode.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Accepted values: ADPasswordCounter, ADFSSmartLockoutLogOnly, ADFSSmartLockoutEnforce
+
+Required: False
+Position: Named
+Default value: ADPasswordCounter
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

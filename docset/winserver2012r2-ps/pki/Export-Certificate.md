@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Specifies that the exported certificate file will overwrite an existing certificate file, unless the Read-only or hidden attribute is set or the **NoClobber** parameter is also used.
+Specifies that the exported certificate file will overwrite an existing certificate file, even if it has the Read-only attribute set.
 The **NoClobber** parameter takes precedence over this parameter when both are used.
 
 ```yaml
@@ -215,4 +215,3 @@ The FileInfo object contains the information about the certificate file.
 [Get-ChildItem](https://go.microsoft.com/fwlink/?LinkId=290488)
 
 [Import-Certificate](./Import-Certificate.md)
-

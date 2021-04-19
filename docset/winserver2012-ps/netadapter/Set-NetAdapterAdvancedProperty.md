@@ -74,7 +74,7 @@ This example sets the value of the Flow Control advanced property on the network
 
 ### EXAMPLE 3
 ```
-PS C:\>Set-NetAdapterAdvancedProperty -Name MyAdapter -RegistryKeyword "*Flo*rol" -RegistryValue "Disable"
+PS C:\>Set-NetAdapterAdvancedProperty -Name MyAdapter -RegistryKeyword "*Flo*rol" -RegistryValue 0
 ```
 
 This example sets the value of the Flow Control advanced property on the network adapter named MyAdapter using wildcard characters in the keyword name.

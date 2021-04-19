@@ -215,7 +215,7 @@ You can pipe a Partition object to the **InputObject** parameter.
 ### System.UInt64
 
 ## NOTES
-
+* This cmdlet starts the "Optimize Drive" (`defragsvc`) service. This could lead to longer execution time on larger fragmented drives.
 ## RELATED LINKS
 
 [Get-Partition](./Get-Partition.md)

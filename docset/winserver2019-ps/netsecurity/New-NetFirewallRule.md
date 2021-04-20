@@ -306,7 +306,7 @@ If this parameter is set to DeferToUser or DeferToApp, then Windows allows the u
 Type: EdgeTraversal
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Block, Allow
+Accepted values: Block, Allow, DeferToUser, DeferToApp
 
 Required: False
 Position: Named

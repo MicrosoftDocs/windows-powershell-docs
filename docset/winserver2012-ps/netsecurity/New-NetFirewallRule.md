@@ -289,7 +289,6 @@ The acceptable values for this parameter are: Block, Allow, DeferToUser, or Defe
 This parameter specifies that traffic that traverses an edge device, such as a network address translation (NAT)-enabled router, between the local and remote computer matches this rule.
 If this parameter is set to DeferToUser or DeferToApp, then Windows allows the user or application to programmatically register with the firewall to receive inbound unsolicited application traffic from the edge device. 
 Note: The DeferToApp and DeferToUser options are only valid for computers running Windows 7, Windows Server 2008 R2, and Windows Server 2012.
-> The DeferToApp and DeferToUser options are only valid for computers running Windows 7, Windows Server 2008 R2, and Windows Server 2012.
 
 ```yaml
 Type: EdgeTraversal

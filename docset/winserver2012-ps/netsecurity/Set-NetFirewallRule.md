@@ -330,13 +330,10 @@ Edge traversal allows the computer to accept unsolicited inbound packets that ha
 This option applies to inbound rules only. 
 The acceptable values for this parameter are: Block, Allow, DeferToUser, or DeferToApp. 
 
- -- Block: Prevents applications from receiving unsolicited traffic from the Internet through a NAT edge device. 
-
- -- Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
-
- -- DeferToUser: Allows the user to decide whether to allow unsolicited traffic from the Internet through a NAT edge device when an application requests it. 
-
- -- DeferToApp: Allows each application to determine whether to allow unsolicited traffic from the Internet through a NAT edge device. 
+ - Block: Prevents applications from receiving unsolicited traffic from the Internet through a NAT edge device. 
+ - Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
+ - DeferToUser: Allows the user to decide whether to allow unsolicited traffic from the Internet through a NAT edge device when an application requests it. 
+ - DeferToApp: Allows each application to determine whether to allow unsolicited traffic from the Internet through a NAT edge device. 
 
 The default value is Block. 
 

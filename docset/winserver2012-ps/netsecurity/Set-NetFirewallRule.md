@@ -332,14 +332,13 @@ The acceptable values for this parameter are: Block, Allow, DeferToUser, or Defe
 
  -- Block: Prevents applications from receiving unsolicited traffic from the Internet through a NAT edge device. 
 
- --Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
+ -- Allow: Allows applications to receive unsolicited traffic directly from the Internet through a NAT edge device. 
 
  -- DeferToUser: Allows the user to decide whether to allow unsolicited traffic from the Internet through a NAT edge device when an application requests it. 
 
  -- DeferToApp: Allows each application to determine whether to allow unsolicited traffic from the Internet through a NAT edge device. 
 
 The default value is Block. 
-Note: The DeferToApp and DeferToUser options are only valid for computers running firstref_client_7, firstref_server_7, and Windows Server® 2012.
 
 ```yaml
 Type: EdgeTraversal

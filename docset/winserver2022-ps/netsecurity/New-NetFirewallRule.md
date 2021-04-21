@@ -298,10 +298,9 @@ Accept wildcard characters: False
 Specifies that matching firewall rules of the indicated edge traversal policy are created. 
 This parameter specifies how this firewall rule will handle edge traversal cases.
 Valid only when the *Direction* parameter is set to Inbound. 
-The acceptable values for this parameter are: Block, Allow, DeferToUser, or DeferToApp.
+The acceptable values for this parameter are: Block, Allow, DeferToUser, or DeferToApp. 
 This parameter specifies that traffic that traverses an edge device, such as a network address translation (NAT)-enabled router, between the local and remote computer matches this rule.
-If this parameter is set to DeferToUser or DeferToApp, then Windows allows the user or application to programmatically register with the firewall to receive inbound unsolicited application traffic from the edge device. 
-The DeferToApp and DeferToUser options are only valid for computers running firstref_client_7, firstref_server_7, and Windows Server® 2012.
+If this parameter is set to DeferToUser or DeferToApp, then Windows allows the user or application to programmatically register with the firewall to receive inbound unsolicited application traffic from the edge device.
 
 ```yaml
 Type: EdgeTraversal
@@ -1009,4 +1008,3 @@ The path after the pound sign (`#`) provides the namespace and class name for th
 [Set-NetFirewallSetting](./Set-NetFirewallSetting.md)
 
 [Show-NetFirewallRule](./Show-NetFirewallRule.md)
-

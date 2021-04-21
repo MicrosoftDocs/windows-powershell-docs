@@ -26,31 +26,27 @@ The Get-WebConfigurationProperty cmdlet is similar to the Get-WebConfiguration c
 
 ## EXAMPLES
 
-### -------------- EXAMPLE 1: Return the Default Documents for the Default Web Site --------------
+### Example 1: Return the default documents for the default website
+```powershell
+C:\PS> Get-WebConfigurationProperty -Filter "//defaultDocument/files/add" -PSPath "IIS:\Sites\Default Web Site" -Name "value" | select value
 ```
-C:\PS>Get-WebConfigurationProperty -Filter //defaultDocument/files/add -PSPath 'IIS:\Sites\Default Web Site' -Name value | select value
-```
-
-Returns a list of the default documents associated with the Default Web Site.
-
+```output
 Default.htm
-
 Default.asp
-
 Index.htm
-
 Index.html
-
 Iisstart.htm
-
 Default.aspx
-
-### -------------- EXAMPLE 2: Show handlers mapped to ASPNET_ISAPI.DLL --------------
-```
-C:\PS>Get-WebConfigurationProperty //handlers 'IIS:\sites\Default Web Site' -Property Collection[scriptProcessor="*aspnet_isapi.dll"] | select path,name
 ```
 
-Demonstrates how to get the handlers mapped to aspnet_isapi.dll.
+This command returns a list of the default documents associated with the default website.
+
+### Example 2: Show handlers mapped to Aspnet_isapi.dll
+```powershell
+C:\PS> Get-WebConfigurationProperty -Filter "//handlers" -PSPath "IIS:\sites\Default Web Site" -Name Collection[scriptProcessor="*aspnet_isapi.dll"] | select path,name
+```
+
+This command gets the handlers mapped to aspnet_isapi.dll.
 
 ## PARAMETERS
 

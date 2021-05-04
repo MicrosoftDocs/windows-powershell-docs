@@ -371,7 +371,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docset/virtual-directory-module/pki/index.md",
+      "source_path": "docset/virtual-directory-module/pki/index.yml",
       "redirect_url": "/powershell/module/pki/pki",
       "redirect_document_id": false
     },

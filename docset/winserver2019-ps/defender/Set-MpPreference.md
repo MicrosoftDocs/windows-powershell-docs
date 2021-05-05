@@ -755,6 +755,8 @@ The default value is 50.
 
 Note: This is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum on average.
 
+Note: Manually run scans will ignore this setting and run without any CPU limits
+
 ```yaml
 Type: Byte
 Parameter Sets: (All)

@@ -371,12 +371,17 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
+      "source_path": "docset/virtual-directory-module/pki/index.yml",
       "redirect_url": "/powershell/module/pki",
       "redirect_document_id": false
     },
     {
-      "source_path": "docset/virtual-directory-module/pki/pki.md",
+      "source_path": "docset/virtual-directory-module/pkiclient/index.yml",
+      "redirect_url": "/powershell/module/pki",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docset/virtual-directory-module/pkiclient/pkiclient.md",
       "redirect_url": "/powershell/module/pki",
       "redirect_document_id": false
     },
@@ -1232,7 +1237,7 @@
     },
     {
       "source_path": "docset/winserver2012-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/pki?view=winserver2012-ps",
+      "redirect_url": "/powershell/module/pki/?view=winserver2012-ps",
       "redirect_document_id": false
     },
     {
@@ -2472,7 +2477,7 @@
     },
     {
       "source_path": "docset/winserver2012r2-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/pki?view=winserver2012r2-ps",
+      "redirect_url": "/powershell/module/pki/?view=winserver2012r2-ps",
       "redirect_document_id": false
     },
     {
@@ -3662,7 +3667,7 @@
     },
     {
       "source_path": "docset/winserver2016-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/pki?view=windowsserver2016-ps",
+      "redirect_url": "/powershell/module/pki/?view=windowsserver2016-ps",
       "redirect_document_id": false
     },
     {
@@ -4642,7 +4647,7 @@
     },
     {
       "source_path": "docset/winserver2019-ps/pkiclient/PKIClient.md",
-      "redirect_url": "/powershell/module/pki/pki?view=windowsserver2019-ps",
+      "redirect_url": "/powershell/module/pki/?view=windowsserver2019-ps",
       "redirect_document_id": false
     },
     {

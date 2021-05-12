@@ -5,7 +5,7 @@
                 "exclude": [
                     "docset/winserver2022-ps/Microsoft.DiagnosticDataViewer",
                     "docset/winserver2022-ps/windowsdiagnosticdata",
-                    "docset/winserver2022-ps/hyperv"
+                    "docset/winserver2022-ps/hyper-v"
                 ]
             }
         }

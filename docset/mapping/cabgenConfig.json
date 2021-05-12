@@ -1,0 +1,13 @@
+{
+    "monikers": [
+        {
+            "WindowsServer2022-ps": {
+                "exclude": [
+                    "docset/winserver2022-ps/Microsoft.DiagnosticDataViewer",
+                    "docset/winserver2022-ps/windowsdiagnosticdata",
+                    "docset/winserver2022-ps/hyperv"
+                ]
+            }
+        }
+    ]
+}

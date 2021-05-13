@@ -3,18 +3,18 @@
         {
             "WindowsServer2022-ps": {
                 "exclude": [
-                    "docset/winserver2016-ps/hyper-v",
-                    "docset/winserver2016-ps/Microsoft.DiagnosticDataViewer",
-                    "docset/winserver2016-ps/Microsoft.Windows.ServerManager.Migration",
-                    "docset/winserver2016-ps/windowsdiagnosticdata"
+                    "docset/winserver2022-ps/hyper-v",
+                    "docset/winserver2022-ps/Microsoft.DiagnosticDataViewer",
+                    "docset/winserver2022-ps/Microsoft.Windows.ServerManager.Migration",
+                    "docset/winserver2022-ps/windowsdiagnosticdata"
                 ]
             },
             "WindowsServer2019-ps": {
                 "exclude": [
-                    "docset/winserver2016-ps/hyper-v",
-                    "docset/winserver2016-ps/Microsoft.DiagnosticDataViewer",
-                    "docset/winserver2016-ps/Microsoft.Windows.ServerManager.Migration",
-                    "docset/winserver2016-ps/windowsdiagnosticdata"
+                    "docset/winserver2019-ps/hyper-v",
+                    "docset/winserver2019-ps/Microsoft.DiagnosticDataViewer",
+                    "docset/winserver2019-ps/Microsoft.Windows.ServerManager.Migration",
+                    "docset/winserver2019-ps/windowsdiagnosticdata"
                 ]
             },
             "WindowsServer2016-ps": {

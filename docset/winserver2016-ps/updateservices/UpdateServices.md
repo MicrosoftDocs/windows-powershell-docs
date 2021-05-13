@@ -5,13 +5,13 @@ Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: 1c1d7545-e04a-4b31-9024-f0357c3b935f
 Module Name: UpdateServices
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference

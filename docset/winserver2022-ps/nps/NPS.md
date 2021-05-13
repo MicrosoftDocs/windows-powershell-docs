@@ -5,7 +5,7 @@ Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: 5ee6f0a2-bfc8-4824-a1e2-f974d39ca886
 Module Name: NPS
 ms.author: v-anbarr
 ms.date: 12/20/2016

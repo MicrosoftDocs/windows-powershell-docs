@@ -3,6 +3,7 @@ author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.0
+Locale: en-US
 manager: jasgro
 Module Guid: d6df305a-d5c8-4ad6-9161-5ee6ba44b501
 Module Name: NetworkControllerDiagnostics
@@ -10,7 +11,7 @@ ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference

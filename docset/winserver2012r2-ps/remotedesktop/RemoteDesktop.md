@@ -1,12 +1,12 @@
 ---
 author: andreabarr
-description: 
+description:
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
 manager: jasgro
 Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
-Module Name: RDMgmt
+Module Name: RemoteDesktop
 ms.author: v-anbarr
 ms.date: 10/29/2017
 ms.prod: powershell

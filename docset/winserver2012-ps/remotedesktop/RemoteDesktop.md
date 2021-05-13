@@ -1,21 +1,13 @@
 ---
 author: andreabarr
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2016-pshelp
-Help Version: 5.0.2.0
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
+Help Version: 3.1.0.0
 Locale: en-US
-manager: jasgro
-Module Guid: cmdlets
-Module Name: RDMgmt
+manager: dansimp
+Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
+Module Name: RemoteDesktop
 ms.author: v-anbarr
-ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
-title: RemoteDesktop
+ms.reviewer:
 ---
 
 # RemoteDesktop Module
@@ -41,14 +33,11 @@ Disconnects a user from a session that runs on a remote server.
 ### [Enable-RDVirtualDesktopADMachineAccountReuse](./Enable-RDVirtualDesktopADMachineAccountReuse.md)
 Configures the RD Connection Broker server to reuse existing AD DS computer accounts.
 
-### [Export-RDPersonalSessionDesktopAssignment](./Export-RDPersonalSessionDesktopAssignment.md)
-Exports the current map of personal session desktops to users.
-
 ### [Export-RDPersonalVirtualDesktopAssignment](./Export-RDPersonalVirtualDesktopAssignment.md)
 Exports the current associations between users and personal virtual desktops to a file.
 
 ### [Get-RDAvailableApp](./Get-RDAvailableApp.md)
-Gets a list of publishable applications from a collection.
+Retrieves a list of publishable applications from a collection.
 
 ### [Get-RDCertificate](./Get-RDCertificate.md)
 Gets certificates associated with RDS roles.
@@ -64,9 +53,6 @@ Displays the file extensions associated with a RemoteApp program.
 
 ### [Get-RDLicenseConfiguration](./Get-RDLicenseConfiguration.md)
 Retrieves the current settings for the RD Licensing server and the licensing mode of the Remote Desktop deployment.
-
-### [Get-RDPersonalSessionDesktopAssignment](./Get-RDPersonalSessionDesktopAssignment.md)
-Gets personal session desktop assignments.
 
 ### [Get-RDPersonalVirtualDesktopAssignment](./Get-RDPersonalVirtualDesktopAssignment.md)
 Retrieves a list of personal virtual desktops and associated user accounts.
@@ -102,7 +88,7 @@ Gets a list of virtual desktops in the remote desktop deployment.
 Gets a list of virtual desktop collections in a remote desktop deployment.
 
 ### [Get-RDVirtualDesktopCollectionConfiguration](./Get-RDVirtualDesktopCollectionConfiguration.md)
-Gets configuration details of a virtual desktop collection.
+Gets configuration settings of a virtual desktop collection.
 
 ### [Get-RDVirtualDesktopCollectionJobStatus](./Get-RDVirtualDesktopCollectionJobStatus.md)
 Gets the status of a job on a virtual desktop collection.
@@ -121,9 +107,6 @@ Gets the workspace name for a Remote Desktop deployment.
 
 ### [Grant-RDOUAccess](./Grant-RDOUAccess.md)
 Grants the Remote Desktop Connection Broker server access to one or more organizational units in a given domain of Active Directory Domain Services.
-
-### [Import-RDPersonalSessionDesktopAssignment](./Import-RDPersonalSessionDesktopAssignment.md)
-Imports a map of personal session desktops to users.
 
 ### [Import-RDPersonalVirtualDesktopAssignment](./Import-RDPersonalVirtualDesktopAssignment.md)
 Imports associations between user accounts and personal virtual desktops from a text file.
@@ -150,16 +133,10 @@ Creates a session collection of RD Session Host servers.
 Installs the required role services for session-based desktop deployment.
 
 ### [New-RDVirtualDesktopCollection](./New-RDVirtualDesktopCollection.md)
-Creates a virtual desktop collection.
+Creates a new virtual desktop collection.
 
 ### [New-RDVirtualDesktopDeployment](./New-RDVirtualDesktopDeployment.md)
 Installs role services for Virtual Desktop Infrastructure.
-
-### [Remove-RDDatabaseConnectionString](./Remove-RDDatabaseConnectionString.md)
-Removes the secondary database connection string for the shared database server in a high availability environment configuration.
-
-### [Remove-RDPersonalSessionDesktopAssignment](./Remove-RDPersonalSessionDesktopAssignment.md)
-Removes the association between a personal session desktop assignment and a user.
 
 ### [Remove-RDPersonalVirtualDesktopAssignment](./Remove-RDPersonalVirtualDesktopAssignment.md)
 Removes the association between a personal virtual desktop and a user.
@@ -201,7 +178,7 @@ Sets a DNS name that clients use to connect to a Remote Desktop deployment.
 Sets high availability settings for RD Connection Broker servers for a Remote Desktop deployment.
 
 ### [Set-RDDatabaseConnectionString](./Set-RDDatabaseConnectionString.md)
-Configures the database connection string for the database server used in a high availability environment.
+Configures the database connection string for the SQL Server database used in high availability environments.
 
 ### [Set-RDDeploymentGatewayConfiguration](./Set-RDDeploymentGatewayConfiguration.md)
 Specifies settings for the RD Gateway server for a Remote Desktop deployment.
@@ -211,9 +188,6 @@ Changes the file type association of a RemoteApp program in a Remote Desktop dep
 
 ### [Set-RDLicenseConfiguration](./Set-RDLicenseConfiguration.md)
 Defines settings for the RD Licensing server and the licensing mode of the Remote Desktop deployment.
-
-### [Set-RDPersonalSessionDesktopAssignment](./Set-RDPersonalSessionDesktopAssignment.md)
-Associates a personal session desktop assignment with a user.
 
 ### [Set-RDPersonalVirtualDesktopAssignment](./Set-RDPersonalVirtualDesktopAssignment.md)
 Creates an association between a personal virtual desktop and a user account.

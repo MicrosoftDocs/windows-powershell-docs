@@ -5,7 +5,7 @@ Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.100.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
 Module Name: DFSN
 ms.author: v-anbarr
 ms.date: 12/20/2016

@@ -1,11 +1,7 @@
 ---
-ms.author: jgerend
-title: Windows 10 and Windows Server 2019
-ms.reviewer:
 description: Use this topic to help manage Windows 10 and Windows Server 2019 technologies with Windows PowerShell.
-author: JasonGerend
-manager: dansimp
 ms.date: 03/29/2021
+title: Windows 10 and Windows Server 2019
 ---
 
 # Windows 10 and Windows Server 2019

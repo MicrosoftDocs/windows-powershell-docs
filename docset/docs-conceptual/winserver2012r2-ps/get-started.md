@@ -1,10 +1,7 @@
 ---
-title: Windows 8.1 and Windows Server 2012 R2
 description: Use this topic to help manage Windows 8.1 and Windows Server 21012 R2 technologies with Windows PowerShell.
-manager: dansimp
 ms.date: 03/29/2021
-ms.author: v-kaunu
-author: Kateyanne
+title: Windows 8.1 and Windows Server 2012 R2
 ---
 
 # Windows Server 2012 R2 and Windows 8.1

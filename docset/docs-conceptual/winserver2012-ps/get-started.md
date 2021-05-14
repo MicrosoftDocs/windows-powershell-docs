@@ -1,10 +1,7 @@
 ---
-title: Windows 8 and Windows Server 2012
 description: Use this topic to help manage Windows 8 and Windows Server 2012 technologies with Windows PowerShell.
-manager: dansimp
 ms.date: 03/29/2021
-ms.author: v-kaunu
-author: Kateyanne
+title: Windows 8 and Windows Server 2012
 ---
 
 # Windows Server 2012 and Windows 8

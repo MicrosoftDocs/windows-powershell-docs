@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 5c958595-c68c-4c00-a468-9763de83bbee
 Module Name: ADFS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ADFS Module

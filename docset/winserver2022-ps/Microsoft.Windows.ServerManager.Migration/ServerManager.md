@@ -1,19 +1,10 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com/fwlink/?linkid=390825
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
 Module Name: Microsoft.Windows.ServerManager.Migration
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/servermanager?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 title: ServerManager
 ---

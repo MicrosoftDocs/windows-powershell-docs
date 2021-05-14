@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: HgsClient-help.xml
 Module Name: HgsClient
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/hgsclient/test-hgsclientconfiguration?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-HgsClientConfiguration

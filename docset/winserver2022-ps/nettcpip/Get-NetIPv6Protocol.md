@@ -1,17 +1,8 @@
 ---
-author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIPv6Protocol.cdxml-help.xml
-manager: jasgro
 Module Name: NetTCPIP
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipv6protocol?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPv6Protocol

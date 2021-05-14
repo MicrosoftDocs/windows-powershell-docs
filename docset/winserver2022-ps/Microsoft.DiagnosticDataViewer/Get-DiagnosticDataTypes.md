@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: DDVCmdlets.dll-Help.xml
 Module Name: Microsoft.DiagnosticDataViewer
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/get-diagnosticdatatypes?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-DiagnosticDataTypes

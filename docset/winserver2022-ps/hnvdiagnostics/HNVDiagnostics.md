@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
 Module Guid: 75e89c8e-8680-4ea4-bb7e-e55316bd56a6
 Module Name: HNVDiagnostics
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: HNVDiagnostics
 ---
 

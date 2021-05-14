@@ -67,18 +67,11 @@
       "ROBOTS": "INDEX, FOLLOW",
       "breadcrumb_path": "/powershell/windows/bread/toc.json",
       "ms.prod": "w10",
-      "products": [
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8"
-        ],
-      "ms.technology": "",
-      "ms.topic": "reference",
+      "ms.technology": "windows",
+      "ms.topic": "managed-reference",
       "ms.author": "jgerend",
       "author": "JasonGerend",
-      "ms.date": "03/11/2021",
       "manager": "femila",
-      "keywords": "powershell, cmdlet",
-      "ms.mktglfcycl": "manage",
-      "ms.sitesec": "library",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/windows-powershell-docs",
       "feedback_product_url": "https://windowsserver.uservoice.com/forums/301869-powershell",
@@ -89,7 +82,8 @@
         "claydetels19",
         "jborsecnik",
         "tiburd",
-        "garycentric"
+        "garycentric",
+        "sdwheeler"
       ],
       "_op_documentIdPathDepotMapping": {
         "./": {
@@ -99,20 +93,31 @@
     },
     "fileMetadata": {
       "products": {
-        "windows/**/*.md": [
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8"
+        "mdop/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/211bc889-ad71-4c77-b1cd-8ea0d02263f9"
+        ],
+        "winserver2022-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+        ],
+        "winserver2019-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/46091ca5-09b4-466c-9539-c4f93b01a036"
+        ],
+        "winserver2016-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/ba9cbf34-2075-4eb6-8fe8-8a65dc77b667",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8"
         ],
         "winserver2012-ps/**/*.md": [
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
         ],
         "winserver2012r2-ps/**/*.md": [
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
-        "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
         ]
       }
-
     },
     "template": [],
     "dest": "powershell-windows"

@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 Module Guid: 651ce3cf-ba16-4933-b656-7cd7bd64c3a8
 Module Name: HgsKeyProtection
-ms.author: v-anbarr
-ms.reviewer: 
 title: HgsKeyProtection
 ---
 

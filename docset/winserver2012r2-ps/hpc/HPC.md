@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 5.0.0.0
 Locale: en-US
-manager: 
 Module Guid: 00000000-0000-0000-0000-000000000000
 Module Name: HPC
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.prod: powershell
-ms.reviewer: 
-ms.technology: powershell
-ms.topic: reference
 title: HPC
 ---
 

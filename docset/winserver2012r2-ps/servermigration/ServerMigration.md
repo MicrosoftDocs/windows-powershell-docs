@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-manager: jasgro
 Module Guid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Module Name: ServerMigration
-ms.author: v-anbarr
 ms.date: 12/06/2017
-ms.prod: powershell
-ms.reviewer: 
-ms.technology: powershell
-ms.topic: reference
 title: ServerMigration
 ---
 

@@ -1,14 +1,7 @@
 ---
-author: Kateyanne
-description: 
 external help file: WmsCmdlets.dll-Help.xml
-manager: jasgro
 Module Name: MultiPoint
-ms.author: v-kaunu
 ms.date: 12/06/2017
-ms.prod: powershell
-ms.reviewer: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/multipoint/show-wmssystem?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Show-WmsSystem

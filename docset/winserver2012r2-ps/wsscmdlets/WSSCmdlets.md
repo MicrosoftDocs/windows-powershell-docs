@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: e20ec0f8-88b6-4bd9-9538-bce80f33752a
 Module Name: WSSCmdlets
-ms.author: v-anbarr
 ms.date: 12/05/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: WSSCmdlets
 ---
 

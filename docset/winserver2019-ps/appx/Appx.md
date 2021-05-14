@@ -1,18 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.6.4
 Locale: en-US
-manager: jasgro
 Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
 Module Name: Appx
-ms.author: v-anbarr
 ms.date: 05/19/2017
-ms.prod: w10
-ms.reviewer: 
-ms.technology: powershell-windows
-ms.topic: reference
 title: Appx
 ---
 

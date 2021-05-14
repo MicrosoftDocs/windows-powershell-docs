@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.2.2
 Locale: en-US
 Module Guid: afb7d213-3f7e-4a0d-86eb-02d57ad7b858
 Module Name: ShieldedVMTemplate
-ms.author: v-anbarr
-ms.reviewer: 
 title: ShieldedVMTemplate
 ---
 

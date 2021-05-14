@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.Windows.HardenedFabric.Cmdlets.dll-Help.xml
 Module Name: ShieldedVMDataFile
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/shieldedvmdatafile/unprotect-shieldedvmrecoverykey?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Unprotect-ShieldedVMRecoveryKey

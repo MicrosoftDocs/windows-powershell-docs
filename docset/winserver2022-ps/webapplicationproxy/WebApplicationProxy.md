@@ -5,7 +5,7 @@ Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: dcfdd8a2-772e-443b-9108-0fdfe8356f22
 Module Name: WebApplicationProxy
 ms.author: v-anbarr
 ms.date: 12/20/2016

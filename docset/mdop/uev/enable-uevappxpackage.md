@@ -1,22 +1,10 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Uev.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: BA8CF585-7F9E-4A13-91BC-FAB390E1AD00
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Enable-UevAppxPackage
-ms.reviewer:
 ---
 
 # Enable-UevAppxPackage

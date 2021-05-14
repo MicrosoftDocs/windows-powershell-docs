@@ -1,22 +1,10 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.MBAM.Server.Commands.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: DCDD5CDF-2A20-4C18-BA41-BE8B81AC07A8
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Disable-MbamCMIntegration
-ms.reviewer:
 ---
 
 # Disable-MbamCMIntegration

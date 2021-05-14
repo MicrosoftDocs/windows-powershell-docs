@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.2.0
 Locale: en-US
-manager: dansimp
 Module Guid: 78a7a38c-a446-43fe-b643-9abacf843112
 Module Name: Wdac
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # Wdac Module

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 4e804861-1dce-46c1-868d-c8f2ab9d220a
 Module Name: ClusterAwareUpdating
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ClusterAwareUpdating Module

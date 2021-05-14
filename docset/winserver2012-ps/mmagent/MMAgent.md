@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
 Module Name: MMAgent
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # MMAgent Module

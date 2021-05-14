@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: a127fb5d-22a6-4056-a043-b16196305cc7
 Module Name: ADRMS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ADRMS Module

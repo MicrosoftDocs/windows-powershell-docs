@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: df736400-2e72-4a7b-8eda-d5b28421881f
 Module Name: ADDSDeployment
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ADDSDeployment Module

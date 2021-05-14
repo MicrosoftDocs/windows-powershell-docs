@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: e20ec0f8-88b6-4bd9-9538-bce80f33752a
 Module Name: WssCmdlets
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WssCmdlets Module

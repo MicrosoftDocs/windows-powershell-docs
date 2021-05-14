@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.BestPractices.Cmdlets.dll-Help.xml
-manager: dansimp
 Module Name: BestPractices
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/bestpractices/invoke-bpamodel?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

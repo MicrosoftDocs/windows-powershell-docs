@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
-manager: dansimp
 Module Guid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 Module Name: ServerMigrationCmdlets
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ServerMig_Cmdlets Module

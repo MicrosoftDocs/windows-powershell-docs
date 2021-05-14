@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-manager: dansimp
 Module Guid: 0fdd54fb-8b9e-40b6-9669-f77e6fa92737
 Module Name: WasPSExt
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WasPSExt Module

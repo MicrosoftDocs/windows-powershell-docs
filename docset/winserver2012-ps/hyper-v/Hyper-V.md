@@ -1,17 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.5.0.0
 Locale: en-US
 Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
 Module Name: Hyper-V
-ms.author: v-anbarr
 ms.date: 10/30/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: Hyper-V
 ---
 # Hyper-V Module

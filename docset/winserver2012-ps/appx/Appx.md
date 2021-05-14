@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.2.0
 Locale: en-US
-manager: dansimp
 Module Guid: aeef2bef-eba9-4a1d-a3d2-d0b52df76deb
 Module Name: Appx
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # Appx Module

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0
 Locale: en-US
-manager: dansimp
 Module Guid: 561544e6-3a83-4d24-b140-78ad771eaf10
 Module Name: International
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # International Module

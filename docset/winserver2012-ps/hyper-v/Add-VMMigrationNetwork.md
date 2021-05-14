@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: Hyper-V_Cmdlets.xml
 Module Name: Hyper-V
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/hyper-v/add-vmmigrationnetwork?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

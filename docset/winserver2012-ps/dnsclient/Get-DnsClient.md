@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: MSFT_DnsClient.cdxml-help.xml
-manager: dansimp
 Module Name: DnsClient
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/dnsclient/get-dnsclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

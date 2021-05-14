@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 8466ae97-2c03-4385-a501-7e74cf6bb1df
 Module Name: PrintManagement
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # PrintManagement Module

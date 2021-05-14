@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 33ca09b1-a7fe-42e0-8aa1-e7203746ca94
 Module Name: MSMQ
-ms.author: v-anbarr
-ms.reviewer:
 ---
 
 # MSMQ_Cmdlets Module

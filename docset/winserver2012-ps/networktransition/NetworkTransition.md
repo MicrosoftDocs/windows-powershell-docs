@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: eff9ccf9-53ed-423d-b0da-23e6772aacaa
 Module Name: NetworkTransition
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetworkTransition Module

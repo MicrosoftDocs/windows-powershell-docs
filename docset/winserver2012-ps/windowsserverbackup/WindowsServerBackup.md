@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: d27a5d7a-8b1d-4b0a-809d-65ef33ee2f2d
 Module Name: WindowsServerBackup
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WindowsServerBackup Module

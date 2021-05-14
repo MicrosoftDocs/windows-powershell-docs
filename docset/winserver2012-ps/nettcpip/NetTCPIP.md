@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.4.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 2d0b6c7f-16a0-4185-843f-ae47b6db4551
 Module Name: NetTCPIP
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetTCPIP Module

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: a1da990a-4dc2-4f7e-beb4-046a89b9d473
 Module Name: IscsiTarget
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # IscsiTarget Module

@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: NLB_Cmdlets.xml
-manager: dansimp
 Module Name: NetworkLoadBalancingClusters
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/networkloadbalancingclusters/stop-nlbcluster?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

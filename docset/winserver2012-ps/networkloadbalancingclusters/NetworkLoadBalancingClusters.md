@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
 Module Name: NetworkLoadBalancingClusters
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetworkLoadBalancingClusters Module

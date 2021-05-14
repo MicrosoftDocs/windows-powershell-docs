@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: b57d41f8-8b6b-4012-912f-b08109101281
 Module Name: DcbQoS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # DcbQoS Module

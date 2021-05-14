@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-Help.xml
-manager: dansimp
 Module Name: Appx
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/appx/get-appxpackage?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

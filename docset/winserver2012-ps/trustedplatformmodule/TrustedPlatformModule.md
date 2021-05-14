@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 17fc1f02-cff3-45fb-ac4f-126594c70b1e
 Module Name: TrustedPlatformModule
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # TrustedPlatformModule Module

@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.InternationalSettings.Commands.dll-Help.xml
-manager: dansimp
 Module Name: International
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/international/set-winculturefromlanguagelistoptout?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

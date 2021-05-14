@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
 Module Name: WindowsDeveloperLicense
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WindowsDeveloperLicense Module

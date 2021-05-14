@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: ServerMig_Cmdlets.xml
-manager: dansimp
 Module Name: ServerMigrationCmdlets
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/servermigrationcmdlets/send-smigserverdata?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

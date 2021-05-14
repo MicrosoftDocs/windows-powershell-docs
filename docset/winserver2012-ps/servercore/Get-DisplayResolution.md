@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: ServerCore-help.xml
-manager: dansimp
 Module Name: ServerCore
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/servercore/get-displayresolution?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

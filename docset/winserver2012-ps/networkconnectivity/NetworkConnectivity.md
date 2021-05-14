@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 6c9a449b-b0c6-4386-b139-ee0a55638803
 Module Name: NetworkConnectivity
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetworkConnectiviFIX Module

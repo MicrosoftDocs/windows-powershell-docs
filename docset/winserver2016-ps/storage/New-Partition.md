@@ -8,9 +8,9 @@ ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/storage/new-partition?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -72,7 +72,7 @@ PS C:\> Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -Pass
 
 This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then to format them.
 
-### Example 3: Create a new EFI partition on GTP disk 2
+### Example 3: Create a new EFI partition on GPT disk 2
 ```powershell
 PS C:\> New-Partition -DiskNumber 2 -Size 500MB -GptType "{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"
 ```

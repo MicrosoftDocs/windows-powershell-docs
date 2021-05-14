@@ -1,11 +1,7 @@
 ---
-ms.author: jgerend
-title: Windows 10 and Windows Server 2019
-ms.reviewer:
 description: Use this topic to help manage Windows 10 and Windows Server 2022 technologies with Windows PowerShell.
-author: JasonGerend
-manager: dansimp
 ms.date: 03/29/2021
+title: Windows 10 and Windows Server 2019
 ---
 
 # Windows 10 and Windows Server 2022
@@ -20,7 +16,7 @@ The table below also shows the latest published version of the Help for each mod
 available through the links below, or as Updatable Help files. Updatable Help was introduced with
 Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your
 computer. For more information, see
-[about_Updatable_Help](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_updatable_help).
+[about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
 | Module name | Title and link to Web version |
 | - | - |

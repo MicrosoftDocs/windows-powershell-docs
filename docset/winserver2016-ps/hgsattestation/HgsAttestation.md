@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.2
 Locale: en-US
 Module Guid: b0121942-ed2d-4a2b-959e-f0cfa64b48a9
 Module Name: HgsAttestation
-ms.author: v-anbarr
-ms.reviewer: 
 title: HgsAttestation
 ---
 

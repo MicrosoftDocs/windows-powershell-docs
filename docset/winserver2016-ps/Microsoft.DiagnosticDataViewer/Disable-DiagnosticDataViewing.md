@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: DDVCmdlets.dll-Help.xml
 Module Name: Microsoft.DiagnosticDataViewer
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/microsoft.diagnosticdataviewer/disable-diagnosticdataviewing?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Disable-DiagnosticDataViewing

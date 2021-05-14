@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
-manager: jasgro
 Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
 Module Name: FileServerResourceManager
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: FileServerResourceManager
 ---
 

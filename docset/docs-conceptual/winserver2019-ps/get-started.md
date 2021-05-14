@@ -1,18 +1,22 @@
 ---
-ms.author: jgerend
-title: Windows 10 and Windows Server 2019
-ms.reviewer:
 description: Use this topic to help manage Windows 10 and Windows Server 2019 technologies with Windows PowerShell.
-author: JasonGerend
-manager: dansimp
 ms.date: 03/29/2021
+title: Windows 10 and Windows Server 2019
 ---
 
 # Windows 10 and Windows Server 2019
 
-This topic lists the Windows PowerShell modules included with Windows Server 2019 and Windows 10. The Windows PowerShell modules in the list support automating the features of those versions of the Windows operating system and provide links to the cmdlet references for each module. These modules enable you to use Windows PowerShell to administer, maintain, configure, and develop new features for Windows Server 2019 and Windows 10.
+This topic lists the Windows PowerShell modules included with Windows Server 2019 and Windows 10.
+The Windows PowerShell modules in the list support automating the features of those versions of the
+Windows operating system and provide links to the cmdlet references for each module. These modules
+enable you to use Windows PowerShell to administer, maintain, configure, and develop new features
+for Windows Server 2019 and Windows 10.
 
-The table below also shows the latest published version of the Help for each module. The Help is available through the links below, or as Updatable Help files. Updatable Help was introduced with Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your computer. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
+The table below also shows the latest published version of the Help for each module. The Help is
+available through the links below, or as Updatable Help files. Updatable Help was introduced with
+Windows PowerShell 3.0 and enables you to have the latest Help topics available locally on your
+computer. For more information, see
+[about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
 | Module name | Title and link to Web version |
 | - | - |

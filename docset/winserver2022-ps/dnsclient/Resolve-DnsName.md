@@ -1,14 +1,7 @@
 ---
-author: Kateyanne
-description: 
 external help file: dnslookup.dll-Help.xml
-manager: jasgro
 Module Name: DnsClient
-ms.author: v-kaunu
 ms.date: 05/20/2019
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/dnsclient/resolve-dnsname?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Resolve-DnsName

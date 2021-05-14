@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 4.0.3.1
 Locale: en-US
-manager: jasgro
 Module Guid: 74ebb94b-28f7-47ca-86a6-d16922665b88
 Module Name: SMISConfig
-ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: SMISConfig
 ---
 

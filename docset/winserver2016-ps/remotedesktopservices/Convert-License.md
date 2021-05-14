@@ -1,17 +1,8 @@
 ---
-author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: TSPSCmdlets.dll-Help.xml
-manager: jasgro
 Module Name: RemoteDesktopServices
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/remotedesktopservices/convert-license?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Convert-License
@@ -139,9 +130,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-RDLicenseConfiguration](../rdmgmt/Get-RDLicenseConfiguration.md)
+[Get-RDLicenseConfiguration](../remotedesktop/Get-RDLicenseConfiguration.md)
 
-[Get-RDSessionHost](../rdmgmt/Get-RDSessionHost.md)
+[Get-RDSessionHost](../remotedesktop/Get-RDSessionHost.md)
 
 [Get-WmiObject](https://go.microsoft.com/fwlink/?LinkId=821595)
 

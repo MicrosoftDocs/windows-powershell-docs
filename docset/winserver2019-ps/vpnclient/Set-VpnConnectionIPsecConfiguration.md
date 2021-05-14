@@ -1,17 +1,8 @@
 ---
-author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: PS_VpnConnectionIPsecConfiguration_v1.0.cdxml-help.xml
-manager: jasgro
 Module Name: VpnClient
-ms.author: v-kaunu
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/vpnclient/set-vpnconnectionipsecconfiguration?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-VpnConnectionIPsecConfiguration

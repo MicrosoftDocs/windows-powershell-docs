@@ -1,9 +1,6 @@
 ---
-author: Kateyanne
 external help file: ClearWindowsDiagnosticData.psm1-help.xml
 Module Name: WindowsDiagnosticData
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/windowsdiagnosticdata/clear-windowsdiagnosticdata?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Clear-WindowsDiagnosticData

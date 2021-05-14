@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.2.1
 Locale: en-US
-manager: jasgro
 Module Guid: af4bddd0-8583-4ff2-84b2-a33f5c8de8a7
 Module Name: Hyper-V
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer:
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: Hyper-V
 ---
 # Hyper-V Module

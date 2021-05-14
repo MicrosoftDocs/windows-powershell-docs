@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: b47767ec-a4d6-488d-915d-5070791ac6d4
 Module Name: NetWNV
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetWNV Module

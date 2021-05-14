@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-manager: dansimp
 Module Guid: c04e5406-950f-4cb4-9c5d-3e8c952214e6
 Module Name: VAMT
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # VAMT Module

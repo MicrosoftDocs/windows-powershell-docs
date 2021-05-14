@@ -1,22 +1,10 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Medv.Administration.Commands.WorkspacePackager.dll-Help.xml
-online version: 
+ms.date: 12/05/2016
+ms.devlang: powershell
 schema: 2.0.0
 title: New-MedvWorkspace
-ms.reviewer:
-description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro 
-ms.date: 12/05/2016
-ms.topic: reference
-ms.devlang: powershell
-ms.assetid: 2B8498E7-38E2-4A78-84B7-541E6364F810
 ---
 
 # New-MedvWorkspace

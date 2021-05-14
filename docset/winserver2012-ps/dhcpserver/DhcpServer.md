@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
 Module Name: DhcpServer
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # DhcpServer Module

@@ -1,18 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: 244f8fc0-a410-4b87-8237-7496f557e6d4
 Module Name: DirectAccessClientComponents
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: DirectAccessClientComponents
 ---
 

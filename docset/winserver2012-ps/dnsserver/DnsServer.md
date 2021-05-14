@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 46f598e5-9907-42b2-afbb-68e5f7e34604
 Module Name: DnsServer
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # DnsServer Module

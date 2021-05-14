@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: cf094c6b-63d1-4dda-bf70-15a602c4eb2b
 Module Name: pki
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # PKIClient Module

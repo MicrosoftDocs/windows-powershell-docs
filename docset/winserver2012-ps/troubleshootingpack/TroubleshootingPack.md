@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: d6fdb0d8-2b0f-406b-afc6-68f60569ebdf
 Module Name: TroubleshootingPack
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # TroubleshootingPack Module

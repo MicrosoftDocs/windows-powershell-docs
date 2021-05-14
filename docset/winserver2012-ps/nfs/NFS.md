@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 108ae179-3094-4223-91e4-b9099069017a
 Module Name: NFS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NFS Module

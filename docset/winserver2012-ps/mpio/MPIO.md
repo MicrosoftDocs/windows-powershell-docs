@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 2fbffabe-343d-4db8-ad9e-a8943f50d096
 Module Name: MPIO
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # MPIO Module

@@ -1,24 +1,13 @@
 ---
-ms.technology: powershell-mdop
-ms.mktglfcycl: manage
-ms.author: v-anbarr
-ms.prod: w10
-ms.sitesec: library
-Module Name: UEV
-Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=301255
 Help Version: 4.0.100.0
 Locale: en-US
-title: UEV
-ms.reviewer:
-description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
-manager: jasgro 
-ms.date: 2016-12-05
-ms.topic: reference
+Module Guid: D22E34C9-0A99-47D7-98F3-C0570257DEB6
+Module Name: UEV
+ms.date: 12/05/2016
 ms.devlang: powershell
-ms.assetid: A64F3106-5418-4496-B06B-9F511C91377D
+title: UEV
 ---
 
 # UEV Module

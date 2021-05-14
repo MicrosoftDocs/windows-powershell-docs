@@ -1,14 +1,7 @@
 ---
-author: Kateyanne
-description: 
 external help file: Disk.cdxml-help.xml
-manager: jasgro
 Module Name: Storage
-ms.author: v-kaunu
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/storage/new-partition?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: New-Partition
@@ -69,7 +62,7 @@ PS C:\> Get-Disk | Where-Object PartitionStyle -Eq "RAW" | Initialize-Disk -Pass
 
 This example uses five cmdlets and the pipeline to get all disks, filter them for only RAW, unpartitioned disks, initialize the disks, partition the disks, and then to format them.
 
-### Example 3: Create a new EFI partition on GTP disk 2
+### Example 3: Create a new EFI partition on GPT disk 2
 ```powershell
 PS C:\> New-Partition -DiskNumber 2 -Size 500MB -GptType "{c12a7328-f81f-11d2-ba4b-00a0c93ec93b}"
 ```
@@ -92,7 +85,7 @@ Specifies the alignment boundary in bytes.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,7 +100,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -122,7 +115,7 @@ Assigns a drive letter to the new partition.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +162,7 @@ Specifies the number of the disk.
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByNumber
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -184,7 +177,7 @@ Specifies the path of the disk on which to create the partition.
 ```yaml
 Type: String[]
 Parameter Sets: ByPath
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -241,7 +234,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -258,7 +251,7 @@ Marks the partition as active:
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -273,7 +266,7 @@ Creates a hidden partition.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +297,7 @@ Specifies the starting offset, in bytes.
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +314,7 @@ The acceptable value for this parameter is a positive number followed by the one
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -338,7 +331,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -353,7 +346,7 @@ Creates the largest possible partition on the specified disk.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

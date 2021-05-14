@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.7.0
 Locale: en-US
-manager: jasgro
 Module Guid: 41486f7d-842f-40f1-ace4-8405f9c2ed9b
 Module Name: Storage
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: Storage
 ---
 

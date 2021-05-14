@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Failoverv2_Cmdlets.xml
-manager: dansimp
 Module Name: FailoverClusters
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/failoverclusters/get-clustercheckpoint?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

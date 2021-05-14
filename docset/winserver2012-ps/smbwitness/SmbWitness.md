@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: ef018256-3318-4e74-a823-158022778487
 Module Name: SmbWitness
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # SmbWitness Module

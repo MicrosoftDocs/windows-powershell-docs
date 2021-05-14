@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: RemoteDesktop.psm1-help.xml
-manager: dansimp
 Module Name: RDMgmt
-ms.author: v-kaunu
-ms.reviewer:
 online version: https://docs.microsoft.com/powershell/module/rdmgmt/get-rdvirtualdesktoptemplateexportpath?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 5ee6f0a2-bfc8-4824-a1e2-f974d39ca886
 Module Name: NPS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NPS Module

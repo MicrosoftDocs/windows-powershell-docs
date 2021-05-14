@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-manager: dansimp
 Module Guid: 4bc4ded7-249b-41ac-973f-83af4d25d82b
 Module Name: WindowsErrorReporting
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WindowsErrorReporting Module

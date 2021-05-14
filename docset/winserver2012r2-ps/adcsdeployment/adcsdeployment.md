@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-manager: jasgro
 Module Guid: 5919a3cb-977e-464f-a221-421c270218b4
 Module Name: adcsdeployment
-ms.author: v-anbarr
 ms.date: 10/30/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: ADCSDeployment
 ---
 

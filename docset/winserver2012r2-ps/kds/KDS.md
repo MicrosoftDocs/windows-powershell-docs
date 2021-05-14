@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-manager: jasgro
 Module Guid: 176542f6-2a6b-11e0-ab18-d010e0d72085
 Module Name: KDS
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: KDS
 ---
 

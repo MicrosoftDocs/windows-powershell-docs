@@ -1,19 +1,8 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.AppV.AppVClientPowerShell.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: D56935C5-10BC-478F-B660-F6CF599474A5
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Publish-AppvClientPackage
 ---

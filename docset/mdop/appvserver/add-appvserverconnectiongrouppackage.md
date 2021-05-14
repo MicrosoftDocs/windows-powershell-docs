@@ -1,19 +1,8 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: C2CD32BC-53CE-41EE-B1DC-6F53A286AF9C
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Add-AppvServerConnectionGroupPackage
 ---

@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.Windows.Whea.WheaMemoryPolicy.dll-Help.xml
-manager: dansimp
 Module Name: WHEA
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/whea/get-wheamemorypolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

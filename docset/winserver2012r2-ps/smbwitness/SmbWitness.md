@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-manager: jasgro
 Module Guid: ef018256-3318-4e74-a823-158022778487
 Module Name: SmbWitness
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: SmbWitness
 ---
 

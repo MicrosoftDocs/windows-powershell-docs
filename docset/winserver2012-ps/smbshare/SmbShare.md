@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 3af1699d-cc54-4e54-81cf-28d2df5cce0a
 Module Name: SmbShare
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # SmbShare Module

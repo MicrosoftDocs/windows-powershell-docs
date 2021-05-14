@@ -1,19 +1,8 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVServerCmdlets.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: 996C2F77-E67E-49D1-AFDB-37AA0FB19E75
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Remove-AppvServerConnectionGroupPackage
 ---

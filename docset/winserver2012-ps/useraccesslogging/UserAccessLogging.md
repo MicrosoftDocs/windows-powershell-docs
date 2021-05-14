@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: e507509a-eb81-4af2-a141-b50cb24000f0
 Module Name: UserAccessLogging
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # UserAccessLogging Module

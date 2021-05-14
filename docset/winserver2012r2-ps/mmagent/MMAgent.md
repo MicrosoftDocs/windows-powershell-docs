@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-manager: jasgro
 Module Guid: e1383a06-d48b-45e0-81e4-5ead146e81a8
 Module Name: MMAgent
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: MMAgent
 ---
 

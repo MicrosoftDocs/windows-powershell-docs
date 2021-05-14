@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: ClusterAware_Cmdlets.xml
-manager: dansimp
 Module Name: ClusterAwareUpdating
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/clusterawareupdating/get-caureport?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

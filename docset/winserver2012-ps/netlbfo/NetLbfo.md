@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 80cf4c6d-30b7-4b0f-a035-dbb23a65ef1d
 Module Name: NetLbfo
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetLbfo Module

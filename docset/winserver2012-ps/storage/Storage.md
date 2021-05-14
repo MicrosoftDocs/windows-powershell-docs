@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 41486f7d-842f-40f1-ace4-8405f9c2ed9b
 Module Name: Storage
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # Storage Module

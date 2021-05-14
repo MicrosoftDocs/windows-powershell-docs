@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.Iscsi.Target.Commands.dll-Help.xml
-manager: dansimp
 Module Name: IscsiTarget
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/iscsitarget/mount-iscsivirtualdisksnapshot?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

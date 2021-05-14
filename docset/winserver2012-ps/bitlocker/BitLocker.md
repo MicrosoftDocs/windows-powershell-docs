@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 0ff02bb8-300a-4262-ac08-e06dd810f1b6
 Module Name: BitLocker
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # BitLocker Module

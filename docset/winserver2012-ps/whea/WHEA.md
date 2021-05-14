@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.1.0
 Locale: en-US
-manager: dansimp
 Module Guid: b7bf4d74-f837-430e-810f-234f26021253
 Module Name: WHEA
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WHEA Module

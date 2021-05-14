@@ -1,19 +1,8 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Agpm.Client.Powershell.dll-Help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: 2202E5F2-71C6-4420-AB47-E9D14A1F636B
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Unlock-ControlledGpo
 ---

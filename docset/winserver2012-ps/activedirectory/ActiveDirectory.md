@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 43c15630-959c-49e4-a977-758c5cc93408
 Module Name: ActiveDirectory
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ActiveDirectory Module

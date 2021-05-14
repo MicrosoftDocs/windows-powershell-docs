@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 4b26ff51-7aee-4731-9cf7-508b82532cbf
 Module Name: NetSecurity
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetSecurity Module

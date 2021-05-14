@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.2.0
 Locale: en-US
-manager: jasgro
 Module Guid: a127fb5d-22a6-4056-a043-b16196305cc7
 Module Name: ADRMS
-ms.author: v-anbarr
 ms.date: 10/30/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: ADRMS
 ---
 

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: a5bd98e1-e44c-44fb-b88f-5af9bde66fdf
 Module Name: SecureBoot
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # SecureBoot Module

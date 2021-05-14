@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: 90eaa9df-133a-450c-8728-91055cd946a1
 Module Name: DhcpServer
-ms.author: v-anbarr
 ms.date: 10/30/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: DhcpServer
 ---
 

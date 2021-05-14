@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.RightsManagementServices.Admin.dll-Help.xml
-manager: dansimp
 Module Name: ADRMSAdmin
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/adrmsadmin/initialize-rmscryptomode2?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

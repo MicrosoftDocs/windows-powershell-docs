@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.1.1
 Locale: en-US
 Module Guid: 20acb5fb-7322-411f-a933-49a79b25f2c1
 Module Name: ShieldedVmCmdlets
-ms.author: v-anbarr
-ms.reviewer: 
 title: ShieldedVMProvisioning
 ---
 

@@ -1,17 +1,8 @@
 ---
-author: Kateyanne
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.DirectoryServices.Deployment.dll-Help.xml
-manager: jasgro
 Module Name: ADDSDeployment
-ms.author: v-kaunu
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/addsdeployment/test-addsdomaincontrollerinstallation?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Test-ADDSDomainControllerInstallation

@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
 Module Guid: 11888dc4-4830-4138-b422-e8bc2209ffb9
 Module Name: WindowsDiagnosticData
-ms.author: v-anbarr
-ms.reviewer: 
 title: WindowsDiagnosticData
 ---
 

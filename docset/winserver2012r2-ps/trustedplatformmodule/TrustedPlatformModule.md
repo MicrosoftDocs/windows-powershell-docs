@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: 17fc1f02-cff3-45fb-ac4f-126594c70b1e
 Module Name: TrustedPlatformModule
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: TrustedPlatformModule
 ---
 

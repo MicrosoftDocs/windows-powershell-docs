@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: d6fdb0d8-2b0f-406b-afc6-68f60569ebdf
 Module Name: TroubleshootingPack
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: TroubleshootingPack
 ---
 

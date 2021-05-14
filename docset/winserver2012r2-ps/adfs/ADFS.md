@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.3.0
 Locale: en-US
-manager: jasgro
 Module Guid: 5c958595-c68c-4c00-a468-9763de83bbee
 Module Name: ADFS
-ms.author: v-anbarr
 ms.date: 10/30/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: ADFS
 ---
 

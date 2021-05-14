@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-manager: jasgro
 Module Guid: 7e984f2f-35da-48a2-a3c1-40ce59930a7c
 Module Name: NetEventPacketCapture
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: NetEventPacketCapture
 ---
 

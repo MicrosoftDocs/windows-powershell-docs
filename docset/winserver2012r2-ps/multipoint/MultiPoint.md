@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
-manager: jasgro
 Module Guid: bed96625-7e2a-47e7-82c7-f10c76790ed5
 Module Name: MultiPoint
-ms.author: v-anbarr
 ms.date: 12/06/2017
-ms.prod: powershell
-ms.reviewer: 
-ms.technology: powershell
-ms.topic: reference
 title: MultiPoint
 ---
 

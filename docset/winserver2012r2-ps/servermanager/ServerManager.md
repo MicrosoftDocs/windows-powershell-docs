@@ -1,18 +1,10 @@
 ---
-author: andreabarr
-description: 
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.6.0
 Locale: en-US
-manager: jasgro
 Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
 Module Name: ServerManager
-ms.author: v-anbarr
 ms.date: 10/29/2017
-ms.prod: powershell
-ms.reviewer: brianlic
-ms.technology: powershell
-ms.topic: reference
 title: ServerManager
 ---
 

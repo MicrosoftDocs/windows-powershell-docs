@@ -5,13 +5,13 @@ Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
 Module Name: WindowsDeveloperLicense
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
@@ -20,7 +20,7 @@ title: WindowsDevLic
 
 # WindowsDevLic Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all Windows Developer License cmdlets. 
+This reference provides cmdlet descriptions and syntax for all Windows Developer License cmdlets.
 
 The developer license is deprecated in the Windows 10 operating system. Developer Mode replaces the use of a developer license. You no longer need a Microsoft account. You no longer have to obtain and renew a developer license.
 

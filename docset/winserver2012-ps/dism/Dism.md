@@ -5,7 +5,7 @@ Help Version: 3.0.2.0
 Locale: en-US
 manager: dansimp
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
-Module Name: System.Object[]
+Module Name: DISM
 ms.author: v-anbarr
 ms.reviewer: 
 ---

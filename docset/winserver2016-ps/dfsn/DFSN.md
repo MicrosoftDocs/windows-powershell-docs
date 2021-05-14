@@ -5,13 +5,13 @@ Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.100.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
 Module Name: DFSN
 ms.author: v-anbarr
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
@@ -20,7 +20,7 @@ title: DFSN
 
 # DFSN Module
 ## Description
-This reference provides cmdlet descriptions and syntax for all DFS Namespace cmdlets. 
+This reference provides cmdlet descriptions and syntax for all DFS Namespace cmdlets.
 It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## DFSN Cmdlets

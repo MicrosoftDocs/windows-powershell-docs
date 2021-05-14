@@ -5,7 +5,7 @@ Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: 8ab5fe0d-db4a-49f2-93a3-040cf12840cc
 Module Name: WindowsDeveloperLicense
 ms.author: v-anbarr
 ms.date: 12/20/2016

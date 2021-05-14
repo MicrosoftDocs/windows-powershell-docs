@@ -3,7 +3,7 @@ author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2019-pshelp
 Help Version: 5.0.6.1
-Locale: en-us
+Locale: en-US
 manager: jasgro
 Module Guid: 05718206-c147-47b6-83f5-92f52af61c6e
 Module Name: NetworkController

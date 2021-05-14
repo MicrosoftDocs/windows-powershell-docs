@@ -5,7 +5,7 @@ Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 5.0.2.0
 Locale: en-US
 manager: jasgro
-Module Guid: cmdlets
+Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
 Module Name: RDMgmt
 ms.author: v-anbarr
 ms.date: 12/20/2016
@@ -15,10 +15,10 @@ ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
-title: RemoteDesktop
+title: RDMgmt
 ---
 
-# RemoteDesktop Module
+# RDMgmt Module
 ## Description
 This reference provides cmdlet descriptions and syntax for all Remote Desktop Service-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 

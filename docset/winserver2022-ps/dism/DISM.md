@@ -6,12 +6,12 @@ Help Version: 5.0.1.1
 Locale: en-US
 manager: jasgro
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
-Module Name: System.Object[]
+Module Name: DISM
 ms.author: v-anbarr
 ms.date: 12/21/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
 ms.technology: powershell-windows
 ms.topic: reference
@@ -19,21 +19,45 @@ title: DISM
 ---
 
 # DISM Module
+
 ## Description
-The Deployment Image Servicing and Management (DISM) platform is used to mount and service Windows images before deployment. A subset of DISM commands can be used on online Windows images. You can use DISM tools to mount, and get information about, Windows image (.wim) files or virtual hard disks (.vhd or .vhdx). You can also use it to install, uninstall, configure, and update Windows features, packages, and drivers in a Windows image or to change the edition of a Windows image.
 
-This topic introduces the DISM cmdlets available in the DISM PowerShell module. This module is available in Windows 8.1 and Windows Server 2012 R2. On other supported operating systems, you can install the DISM module from the [Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587). For more information about how to use the DISM PowerShell module installed with the ADK, see [How to Use DISM in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=239927).
+The Deployment Image Servicing and Management (DISM) platform is used to mount and service Windows
+images before deployment. A subset of DISM commands can be used on online Windows images. You can
+use DISM tools to mount, and get information about, Windows image (.wim) files or virtual hard disks
+(.vhd or .vhdx). You can also use it to install, uninstall, configure, and update Windows features,
+packages, and drivers in a Windows image or to change the edition of a Windows image.
 
-For Windows 8.1 and Windows Server 2012 R2, Windows PowerShell 4.0 is included in the installation. For other supported versions of Windows and Windows Server, (including Windows 8, Windows 7 SP1, Windows Server 2012, and Windows Server 2008 R2 SP1), you must install Windows Management Framework 4.0. You can download and install [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881) from the Microsoft Download Center.
+This topic introduces the DISM cmdlets available in the DISM PowerShell module. This module is
+available in Windows 8.1 and Windows Server 2012 R2. On other supported operating systems, you can
+install the DISM module from the
+[Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587).
+For more information about how to use the DISM PowerShell module installed with the ADK, see
+[How to Use DISM in Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=239927).
 
-The DISM platform also includes a command-line tool, DISM.exe, and the [DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in the [Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587) and includes additional functionality that supports servicing commands for international settings.
+For Windows 8.1 and Windows Server 2012 R2, Windows PowerShell 4.0 is included in the installation.
+For other supported versions of Windows and Windows Server, (including Windows 8, Windows 7 SP1,
+Windows Server 2012, and Windows Server 2008 R2 SP1), you must install Windows Management Framework
+4.0. You can download and install
+[Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=293881) from the
+Microsoft Download Center.
 
-You can check for errors when running DISM cmdlets by checking if the $?. If set to True the last operation succeeded. If False the last operation failed. The $LASTEXITCODE contains the exit code of the last Win32 executable run. For example, to check that the **Get-WindowsImage** cmdlet fails to get information about the Windows image contained in the file, E:\images\c.wim, type the following: 
+The DISM platform also includes a command-line tool, DISM.exe, and the
+[DISM API](https://go.microsoft.com/fwlink/?LinkID=237611). The command-line tool is available in
+the
+[Windows Assessment and Deployment Kit (Windows ADK)](https://go.microsoft.com/fwlink/?LinkId=206587)
+and includes additional functionality that supports servicing commands for international settings.
+
+You can check for errors when running DISM cmdlets by checking if the `$?`. If set to True the last
+operation succeeded. If False the last operation failed. The `$LASTEXITCODE` contains the exit code
+of the last Win32 executable run. For example, to check that the `Get-WindowsImage` cmdlet fails to
+get information about the Windows image contained in the file, `E:\images\c.wim`, type the
+following:
 
 ```
 try
 {
-       
+
     Get-WindowsImage -ImagePath E:\images\c.wim
 }
 catch
@@ -44,7 +68,8 @@ catch
 
 ```
 
-For more information about error handling, see the [about_Try_Catch_Finally](https://go.microsoft.com/fwlink/p/?LinkID=317390).
+For more information about error handling, see the
+[about_Try_Catch_Finally](https://go.microsoft.com/fwlink/p/?LinkID=317390).
 
 ## DISM Cmdlets
 ### [Add-AppxProvisionedPackage](./Add-AppxProvisionedPackage.md)

@@ -1,6 +1,6 @@
 ---
 author: andreabarr
-description: 
+description:
 Download Help Link: https://aka.ms/winsvr-2012r2-pshelp
 Help Version: 4.0.5.0
 Locale: en-US

@@ -26,6 +26,9 @@
       "monikerPath": [
         "mapping/monikerMapping.json"
       ],
+      "cabgenConfigPath": [
+        "mapping/cabgenConfig.json"
+      ],
       "moniker_ranges": [],
       "monikers": [],
       "open_to_public_contributors": true,

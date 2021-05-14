@@ -6,7 +6,7 @@ Help Version: 5.0.1.1
 Locale: en-US
 manager: jasgro
 Module Guid: 389c464d-8b8d-48e9-aafe-6d8a590d6798
-Module Name: System.Object[]
+Module Name: DISM
 ms.author: v-anbarr
 ms.date: 12/21/2016
 ms.mktglfcycl: manage

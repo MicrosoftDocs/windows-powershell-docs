@@ -1,21 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2022-pshelp
 Help Version: 1.0.0.0
 Locale: en-US
-manager: jasgro
 Module Guid: 1323f046-a4bd-47df-a8bc-8253eabc49b2
 Module Name: Provisioning
-ms.author: v-anbarr
 ms.date: 05/09/2017
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Provisioning
 ---

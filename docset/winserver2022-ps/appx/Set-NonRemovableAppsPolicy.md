@@ -1,18 +1,9 @@
 ---
 audiencems.localizationpriority: ITPro
-author: rdmaclachlan
 description: Use this topic to help prevent the uninstall of specific Windows apps with Windows PowerShell.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
-manager: jvintzel
 Module Name: Appx
-ms.author: romaclac
 ms.date: 02/05/2020
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: 
-ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/appx/set-nonremovableappspolicy?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NonRemovableAppsPolicy

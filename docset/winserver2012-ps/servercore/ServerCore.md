@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 21b0d06c-e02a-46cc-849b-11c36ec94fb8
 Module Name: ServerCore
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ServerCore Module

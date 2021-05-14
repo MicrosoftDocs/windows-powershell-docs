@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.CertificateServices.Deployment.Commands.dll-Help.xml
-manager: dansimp
 Module Name: adcsdeployment
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

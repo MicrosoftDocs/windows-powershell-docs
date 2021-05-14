@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 5551ea86-919d-499b-948f-87305e4f2344
 Module Name: BestPractices
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # BestPractices Module

@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: NetTransition_Cmdlets.xml
-manager: dansimp
 Module Name: NetworkTransition
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/networktransition/enable-netdnstransitionconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

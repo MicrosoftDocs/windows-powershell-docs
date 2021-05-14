@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 13c15630-959c-49e4-a977-758c5cc93408
 Module Name: WebAdministration
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # WebAdministration Module

@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 81d5df9c-8fe3-46d7-a9bf-2aedd60d1843
 Module Name: RemoteDesktop
-ms.author: v-anbarr
-ms.reviewer:
 ---
 
 # RemoteDesktop Module

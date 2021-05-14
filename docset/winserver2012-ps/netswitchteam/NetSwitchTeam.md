@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: e83097b1-4470-4f37-8ce3-a6b0ac5ed8f5
 Module Name: NetSwitchTeam
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetSwitchTeam Module

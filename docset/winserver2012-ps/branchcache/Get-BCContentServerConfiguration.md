@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: BranchCacheContentServerSettingData.cdxml-help.xml
-manager: dansimp
 Module Name: BranchCache
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/branchcache/get-bccontentserverconfiguration?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

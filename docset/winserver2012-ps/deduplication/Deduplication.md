@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 1395eca7-7eaf-4958-a114-fb8ab76b86cc
 Module Name: Deduplication
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # Deduplication Module

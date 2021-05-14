@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: d94cf4d4-f7f8-4967-8d7c-1c9ffef8da12
 Module Name: DFSN
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # DFSN Module

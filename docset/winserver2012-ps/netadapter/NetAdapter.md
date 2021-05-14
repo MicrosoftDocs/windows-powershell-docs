@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 1042b422-63a8-4016-a6d6-293e19e8f8a6
 Module Name: NetAdapter
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetAdapter Module

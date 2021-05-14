@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 743692b7-a227-4389-b082-2b47de1d0d2d
 Module Name: NetQoS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # NetQoS Module

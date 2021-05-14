@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.2.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 5378ee8e-e349-49bb-83b9-f3d9c396c0a6
 Module Name: ScheduledTasks
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ScheduledTasks Module

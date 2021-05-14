@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 9dafd409-67de-4108-8ee9-73cd61f5b7bf
 Module Name: AppLocker
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # AppLocker Module

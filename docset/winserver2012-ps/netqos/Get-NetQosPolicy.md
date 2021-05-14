@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: NetQos_Cmdlets.xml
-manager: dansimp
 Module Name: NetQoS
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/netqos/get-netqospolicy?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

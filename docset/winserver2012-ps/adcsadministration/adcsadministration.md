@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.3.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: bcc14c75-ede8-486e-97a5-5bf775c4a221
 Module Name: adcsadministration
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ADCSAdministration Module

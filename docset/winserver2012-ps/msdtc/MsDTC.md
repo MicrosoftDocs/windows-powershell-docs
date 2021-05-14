@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 4.0.4.0
 Locale: en-US
-manager: dansimp
 Module Guid: 52923875-f2e3-4ad2-8e0c-96c7b10e2e3d
 Module Name: MsDTC
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # MsDTC Module

@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
-manager: dansimp
 Module Name: NetConnectionProfile
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/get-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

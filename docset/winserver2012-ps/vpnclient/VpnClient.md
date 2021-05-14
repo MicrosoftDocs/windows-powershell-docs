@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 3389cc73-daa3-4d25-bd50-b1730925d2df
 Module Name: VpnClient
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # VpnClient Module

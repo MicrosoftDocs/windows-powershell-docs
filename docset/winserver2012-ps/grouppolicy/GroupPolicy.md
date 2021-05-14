@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.1.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 03e49e3a-be77-4422-9d97-8fe355c2284c
 Module Name: GroupPolicy
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # GroupPolicy Module

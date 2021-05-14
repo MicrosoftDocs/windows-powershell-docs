@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: SmbWitnessWmiClient.cdxml-help.xml
-manager: dansimp
 Module Name: SmbWitness
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/smbwitness/move-smbwitnessclient?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

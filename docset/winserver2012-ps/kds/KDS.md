@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 176542f6-2a6b-11e0-ab18-d010e0d72085
 Module Name: KDS
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # KDS Module

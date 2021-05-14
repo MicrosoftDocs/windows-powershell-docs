@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: faa199b6-c378-4aad-9d4d-f0e99f3f4845
 Module Name: FileServerResourceManager
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # FileServerResourceManager Module

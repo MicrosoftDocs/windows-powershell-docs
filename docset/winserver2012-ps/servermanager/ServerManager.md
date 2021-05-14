@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.3.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: d8e0cae9-8e9b-45bc-bfed-0aad50938af0
 Module Name: ServerManager
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # ServerManager Module

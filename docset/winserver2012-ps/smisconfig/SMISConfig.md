@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: 74ebb94b-28f7-47ca-86a6-d16922665b88
 Module Name: SMISConfig
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # SMISConfig Module

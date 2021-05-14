@@ -1,10 +1,6 @@
 ---
-author: Kateyanne
 external help file: Microsoft.WindowsErrorReporting.PowerShell.dll-Help.xml
-manager: dansimp
 Module Name: WindowsErrorReporting
-ms.author: v-kaunu
-ms.reviewer: 
 online version: https://docs.microsoft.com/powershell/module/windowserrorreporting/enable-windowserrorreporting?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 ---

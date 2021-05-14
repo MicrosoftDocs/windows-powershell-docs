@@ -1,13 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2012-pshelp
 Help Version: 3.0.0.0
 Locale: en-US
-manager: dansimp
 Module Guid: cc3e946b-9141-48c2-95d8-d9e56594416a
 Module Name: FailoverClusters
-ms.author: v-anbarr
-ms.reviewer: 
 ---
 
 # FailoverClusters Module

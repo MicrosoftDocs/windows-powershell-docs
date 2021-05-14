@@ -1,19 +1,8 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
-author: Kateyanne
 description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: AppVClientCmdlets-help.xml
-keywords: powershell, cmdlet
-manager: jasgro 
-ms.assetid: 6DEA9891-B4C8-4334-ADAA-D19D9747A416
 ms.date: 12/05/2016
 ms.devlang: powershell
-ms.topic: reference
-online version: 
 schema: 2.0.0
 title: Start-AppvVirtualProcess
 ---

@@ -1,22 +1,10 @@
 ---
-ms.technology: 
-ms.mktglfcycl: manage
-ms.author: v-kaunu
-ms.prod: w10
-ms.sitesec: library
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 external help file: Microsoft.Medv.Administration.Commands.Configuration.dll-Help.xml
-online version: 
+ms.date: 12/05/2016
+ms.devlang: powershell
 schema: 2.0.0
 title: Export-MedvConfiguration
-ms.reviewer:
-description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: Kateyanne
-manager: jasgro 
-ms.date: 12/05/2016
-ms.topic: reference
-ms.devlang: powershell
-ms.assetid: 23E84610-D01D-4E48-9DE3-D2FE3B4E45BD
 ---
 
 # Export-MedvConfiguration

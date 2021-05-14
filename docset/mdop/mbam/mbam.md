@@ -1,24 +1,13 @@
 ---
-ms.technology: powershell-mdop
-ms.mktglfcycl: manage
-ms.author: v-anbarr
-ms.prod: w10
-ms.sitesec: library
-Module Name: MBAM
-Module Guid: CMDLETS
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=615114
 Help Version: 4.0.2.0
 Locale: en-US
-title: MBAM
-ms.reviewer:
-description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
-manager: jasgro 
-ms.date: 2016-12-05
-ms.topic: reference
+Module Guid: CMDLETS
+Module Name: MBAM
+ms.date: 12/05/2016
 ms.devlang: powershell
-ms.assetid: 9373C97E-6191-45B5-8305-0D503E1A6F12
+title: MBAM
 ---
 
 # MBAM Module

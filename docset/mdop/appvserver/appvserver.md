@@ -1,23 +1,13 @@
 ---
-ms.technology: powershell-mdop
-ms.mktglfcycl: manage
-ms.author: v-anbarr
-ms.prod: w10
-ms.sitesec: library
-Module Name: AppVServer
-Module Guid: F395C50F-FC15-4FC7-B45C-BBBE0359F08B
+description: Use this topic to help manage MDOP technologies with Windows PowerShell.
 Download Help Link: http://go.microsoft.com/fwlink/?LinkId=403039
 Help Version: 4.0.3.0
 Locale: en-US
-title: AppVServer
-description: Use this topic to help manage MDOP technologies with Windows PowerShell.
-keywords: powershell, cmdlet
-author: andreabarr
-manager: jasgro 
-ms.date: 2016-12-05
-ms.topic: reference
+Module Guid: F395C50F-FC15-4FC7-B45C-BBBE0359F08B
+Module Name: AppVServer
+ms.date: 12/05/2016
 ms.devlang: powershell
-ms.assetid: D59916DD-802A-4D28-97FD-DD5439AE7F23
+title: AppVServer
 ---
 
 # AppVServer Module

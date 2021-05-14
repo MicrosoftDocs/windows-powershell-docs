@@ -1,12 +1,9 @@
 ---
-author: andreabarr
 Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 Module Guid: 9bd99f27-788b-4912-8f67-5d9d1640fd9b
 Module Name: Microsoft.DiagnosticDataViewer
-ms.author: v-anbarr
-ms.reviewer: 
 title: Microsoft.DiagnosticsDataViewer
 ---
 

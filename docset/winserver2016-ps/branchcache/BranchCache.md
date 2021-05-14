@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 5.0.0.1
 Locale: en-US
-manager: jasgro
 Module Guid: d57aee1e-6fe7-4bbc-8c57-8675a3a83e0d
 Module Name: BranchCache
-ms.author: v-anbarr
 ms.date: 12/20/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: BranchCache
 ---
 

@@ -1,20 +1,11 @@
 ---
-author: andreabarr
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 Download Help Link: https://aka.ms/winsvr-2016-pshelp
 Help Version: 4.0.3.2
 Locale: en-US
-manager: jasgro
 Module Guid: 52832d3a-17d8-48ff-a5bc-f5078492ecbe
 Module Name: NetworkLoadBalancingClusters
-ms.author: v-anbarr
 ms.date: 12/27/2016
-ms.mktglfcycl: manage
-ms.prod: w10
-ms.reviewer: 
-ms.sitesec: library
-ms.technology: powershell-windows
-ms.topic: reference
 title: NetworkLoadBalancingClusters
 ---
 

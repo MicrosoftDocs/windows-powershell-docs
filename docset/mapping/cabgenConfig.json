@@ -28,8 +28,8 @@
             "winserver2012r2-ps": {
                 "exclude": [
                     "docset/winserver2012r2-ps/hpc",
-                    "docset/winserver2012-ps/hyper-v",
-                    "docset/winserver2012-ps/servermigrationcmdlets"
+                    "docset/winserver2012r2-ps/hyper-v",
+                    "docset/winserver2012r2-ps/servermigrationcmdlets"
                 ]
             },
             "winserver2012-ps": {

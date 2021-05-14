@@ -97,11 +97,23 @@
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/211bc889-ad71-4c77-b1cd-8ea0d02263f9"
         ],
+        "mdop/**/*.yml": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/211bc889-ad71-4c77-b1cd-8ea0d02263f9"
+        ],
         "winserver2022-ps/**/*.md": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56754133-c3c3-4a9f-af19-71bdbe19fccf"
         ],
+        "winserver2022-ps/**/*.yml": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56754133-c3c3-4a9f-af19-71bdbe19fccf"
+        ],
         "winserver2019-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/46091ca5-09b4-466c-9539-c4f93b01a036"
+        ],
+        "winserver2019-ps/**/*.yml": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/46091ca5-09b4-466c-9539-c4f93b01a036"
         ],
@@ -110,11 +122,24 @@
           "https://authoring-docs-microsoft.poolparty.biz/devrel/ba9cbf34-2075-4eb6-8fe8-8a65dc77b667",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8"
         ],
+        "winserver2016-ps/**/*.yml": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/ba9cbf34-2075-4eb6-8fe8-8a65dc77b667",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8"
+        ],
         "winserver2012-ps/**/*.md": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
         ],
+        "winserver2012-ps/**/*.yml": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
+        ],
         "winserver2012r2-ps/**/*.md": [
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
+          "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
+        ],
+        "winserver2012r2-ps/**/*.yml": [
           "https://authoring-docs-microsoft.poolparty.biz/devrel/56936876-97d9-45cc-ad1b-9d63320447c8",
           "https://authoring-docs-microsoft.poolparty.biz/devrel/e27ad519-5489-476b-be3f-292774021345"
         ]

@@ -1,6 +1,6 @@
 ---
 author: Kateyanne
-description: 
+description:
 external help file: MSFT_NetLbfoTeam.cdxml-help.xml
 manager: jasgro
 Module Name: NetLbfo
@@ -47,7 +47,7 @@ This command creates a new team named Team1 with two team members named NIC1 and
 
 ### ---------- Example 2: Create a new team with specified properties ----------
 ```
-PS C:\> New-NetLbfoTeam -Name Team1 -TeamMembers NIC1,NIC2 -TeamingMode LACP -LoadBalancingAlgorithm HyperVPorts
+PS C:\> New-NetLbfoTeam -Name Team1 -TeamMembers NIC1,NIC2 -TeamingMode LACP -LoadBalancingAlgorithm HyperVPort
 ```
 
 This command creates a new team named Team1 that consists of two team members named NIC1 and NIC2.
@@ -70,7 +70,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Specifies the name of the new NIC team.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -165,7 +165,7 @@ Specify multiple network adapter names (or wildcard patterns) separated by a com
 ```yaml
 Type: WildcardPattern[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -181,7 +181,7 @@ This is the name used to reference the teamed network adapters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -223,7 +223,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -272,4 +272,3 @@ This cmdlet produces an **MSFT_NetLbfoTeam** object, corresponding to the newly 
 [Rename-NetLbfoTeam](./Rename-NetLbfoTeam.md)
 
 [Remove-NetLbfoTeam](./Remove-NetLbfoTeam.md)
-

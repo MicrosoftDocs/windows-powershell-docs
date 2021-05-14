@@ -8,9 +8,9 @@ ms.author: v-kaunu
 ms.date: 12/20/2016
 ms.mktglfcycl: manage
 ms.prod: w10
-ms.reviewer: 
+ms.reviewer:
 ms.sitesec: library
-ms.technology: 
+ms.technology:
 ms.topic: reference
 online version: https://docs.microsoft.com/powershell/module/netlbfo/new-netlbfoteam?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
@@ -50,7 +50,7 @@ This command creates a team named Team1 with two team members named NIC1 and NIC
 
 ### Example 2: Create a team with specified properties
 ```
-PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1","NIC2" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPorts
+PS C:\> New-NetLbfoTeam -Name "Team1" -TeamMembers "NIC1","NIC2" -TeamingMode LACP -LoadBalancingAlgorithm HyperVPort
 ```
 
 This command creates a team named Team1 that consists of two team members named NIC1 and NIC2.
@@ -73,7 +73,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,23 +133,23 @@ Accept wildcard characters: False
 ### -LoadBalancingAlgorithm
 Specifies the load-balancing algorithm the new team uses to distribute network traffic between the interfaces.
 
-You can specify one of the following load balancing algorithms: 
+You can specify one of the following load balancing algorithms:
 
 - Dynamic.
 Uses the source and destination TCP ports and the IP addresses to create a hash for outbound traffic.  Moves outbound streams from team member to team member as needed to balance team member utilization.
-When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, inbound traffic is routed to a particular team member. 
+When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, inbound traffic is routed to a particular team member.
 
 - TransportPorts.
 Uses the source and destination TCP ports and the IP addresses to create a hash and then assigns the packets that have the matching hash value to one of the available interfaces.
-When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member. 
+When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member.
 
 - IPAddresses.
 Uses the source and destination IP addresses to create a hash and then assigns the packets that have the matching hash value to one of the available interfaces.
-When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member. 
+When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member.
 
 - MacAddresses.
 Uses the source and destination MAC addresses to create a hash and then assigns the packets that have the matching hash value to one of the available interfaces.
-When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member. 
+When you specify this algorithm with the *TeamingMode* parameter and the SwitchIndependent value, all inbound traffic arrives on the primary team member.
 
 - HyperVPort.
 Distributes network traffic based on the source virtual machine Hyper-V switch port identifier.
@@ -174,7 +174,7 @@ Specifies the name of the new NIC team.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -190,7 +190,7 @@ Specify multiple network adapter names (or wildcard patterns) separated by a com
 ```yaml
 Type: WildcardPattern[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -206,7 +206,7 @@ This is the name used to reference the teamed network adapters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -217,14 +217,14 @@ Accept wildcard characters: False
 
 ### -TeamingMode
 Specifies the mode of the NIC teaming.
-You can specify one of the following three teaming modes: 
+You can specify one of the following three teaming modes:
 
 - LACP.
 Uses the IEEE 802.1ax Link Aggregation Control Protocol (LACP) to dynamically identify links that are connected between the host and a given switch.
-(This protocol was formerly known as IEEE 802.3ad draft.) 
+(This protocol was formerly known as IEEE 802.3ad draft.)
 
 - Static.
-Requires configuration on both the switch and the host to identify which links form the team. 
+Requires configuration on both the switch and the host to identify which links form the team.
 
 - SwitchIndependent.
 Specifies that a network switch configuration is not needed for the NIC team.
@@ -251,7 +251,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -300,4 +300,3 @@ This cmdlet produces an **MSFT_NetLbfoTeam** object, corresponding to the newly 
 [Rename-NetLbfoTeam](./Rename-NetLbfoTeam.md)
 
 [Set-NetLbfoTeam](./Set-NetLbfoTeam.md)
-

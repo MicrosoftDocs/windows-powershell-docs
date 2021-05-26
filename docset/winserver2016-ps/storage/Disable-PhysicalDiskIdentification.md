@@ -45,9 +45,7 @@ This cmdlet requires a storage enclosure that supports SCSI Enclosure Services (
 PS C:\> Get-PhysicalDisk -StoragePool $pool | Disable-PhysicalDiskIdentification
 ```
 
-The command stores the pool in the $StPool variable.
-
-The second command disables the identification LED on all physical disks associated with the storage pool in $StPool.
+This example disables the identification LED on all physical disks associated with the storage pool in $pool.
 
 ## PARAMETERS
 

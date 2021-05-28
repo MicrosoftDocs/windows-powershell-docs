@@ -16,7 +16,7 @@ Modifies the name and ID of a Code Integrity policy.
 ## SYNTAX
 
 ```
-Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-PolicyId <String>] [<CommonParameters>]
+Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-PolicyId <String>] [-BasePolicyToSupplementPath <string>] [-SupplementsBasePolicyID <String>] [-ResetPolicyID] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,6 +39,13 @@ PS C:\> Set-CIPolicyIdInfo -FilePath ".\Policy03.xml" -PolicyName "CIPolicy77"
 ```
 
 This command modifies only the policy name for the policy stored in the Policy03.xml file.
+
+### Example 3: Specify the base policy ID of a supplemental policy
+```
+PS C:\> Set-CIPolicyIdInfo -FilePath ".\Supplemental_Policy.xml" -BasePolicyToSupplementPath ".\Base_Policy.xml"
+```
+
+This command will extract the PolicyID field from Base_Policy.xml file and modify the BasePolicyID field in the Supplemental_Policy.xml file.
 
 ## PARAMETERS
 
@@ -87,6 +94,52 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -BasePolicyToSupplementPath
+Specifies the path to a base policy to get the value for the **BasePolicyID** property for a supplemental policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: None
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SupplementsBasePolicyID
+Specifies the value for the **BasePolicyID** property for a supplemental policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: None
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResetPolicyID
+Resets both the PolicyID and BasePolicyID values. This parameter will convert a single-policy format policy to multi-policy format. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: None
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

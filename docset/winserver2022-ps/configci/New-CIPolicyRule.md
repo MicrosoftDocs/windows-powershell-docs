@@ -11,7 +11,7 @@ title: New-CIPolicyRule
 # New-CIPolicyRule
 
 ## SYNOPSIS
-Generates Code Integrity policy rules for drivers.
+Generates Code Integrity policy rules for user mode code and drivers.
 
 ## SYNTAX
 
@@ -31,6 +31,11 @@ New-CIPolicyRule -DriverFilePath <String> -Level <RuleLevel> [-Fallback <RuleLev
 ```
 New-CIPolicyRule -FilePathRule <String> [-Deny]
  [-ScriptFileNames] [<CommonParameters>]
+```
+
+### PackagedAppRule
+```
+New-CIPolicyRule -Package <String> [-Deny] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -192,6 +197,48 @@ attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [FilePath, .\temp\C
 
 This command generates a filepath rule for the specific path verbatim string. This will allow anything in the parent folder. 
 
+### Example 5: Create a policy rule for a packaged application and its dependencies
+```
+PS C:\> $package = Get-AppxPackage -Name *Microsoft.Whiteboard*
+PS C:\> $package_dependencies = $package.Dependencies
+
+PS C:\> $package_rule = New-CIPolicyRule -Package $package
+PS C:\> $package_rule += New-CIPolicyRule -Package $dependency[0] # repeat for all dependencies in array
+
+PS C:\> $package_rule
+
+
+Name           : Microsoft.Whiteboard_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_D
+TypeId         : Allow
+Root           : 
+FileVersionRef : 
+AppIDRef       : 
+Wellknown      : False
+Ekus           : 
+Exceptions     : 
+FileAttributes : 
+FileException  : False
+UserMode       : True
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.Whiteboard_8wekyb3d8bbwe], [PackageVersion, 21.10503.5662.0]}
+
+Name           : Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe FileRule
+Id             : ID_ALLOW_A_E
+TypeId         : Allow
+Root           : 
+FileVersionRef : 
+AppIDRef       : 
+Wellknown      : False
+Ekus           : 
+Exceptions     : 
+FileAttributes : 
+FileException  : False
+UserMode       : True
+attributes     : {[AppIDs, ], [MinimumFileVersion, 0.0.0.0], [PackageFamilyName, Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe], [PackageVersion, 2.2.28604.0]}
+```
+
+This set of commands finds a packaged application matching the specified name and generates an allow rule for the packaged application and its dependencies. 
+
 
 ## PARAMETERS
 
@@ -287,6 +334,21 @@ Aliases: l
 Accepted values: None, Hash, FileName, FilePath, SignedVersion, PFN, Publisher, FilePublisher, LeafCertificate, PcaCertificate, RootCertificate, WHQL, WHQLPublisher, WHQLFilePublisher
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Package
+Specifies the packaged app (MSIX/Appx) to base the rule. 
+
+```yaml
+Type: AppxPackage
+Parameter Sets: (All)
+Aliases: None
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

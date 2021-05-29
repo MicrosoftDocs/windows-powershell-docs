@@ -16,7 +16,7 @@ Modifies the name and ID of a Code Integrity policy.
 ## SYNTAX
 
 ```
-Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-PolicyId <String>] [-BasePolicyToSupplementPath <string>] [-SupplementsBasePolicyID <String>] [-ResetPolicyID] [<CommonParameters>]
+Set-CIPolicyIdInfo [-FilePath] <String> [-PolicyName <String>] [-PolicyId <String>] [-BasePolicyToSupplementPath <string>] [-SupplementsBasePolicyID <Guid>] [-ResetPolicyID] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 Specifies the value for the **BasePolicyID** property for a supplemental policy.
 
 ```yaml
-Type: String
+Type: Guid
 Parameter Sets: (All)
 Aliases: None
 

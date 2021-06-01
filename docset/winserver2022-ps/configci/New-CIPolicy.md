@@ -210,7 +210,7 @@ Hash="DA737C142A51A73D82E6AD677474C8031486FDEF018A6FE9D178564F83AB284B" />
 </SiPolicy>
 ```
 
-The first command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy in multiple policy format and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
+The first command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy in multiple policy format and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only portable executable files (PE files).
 
 ### Example 2: Scan unsigned files
 ```
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 
 ### -MultiplePolicyFormat
 Indicates that this cmdlet should create a policy in multiple policy format as opposed to a single policy format. 
-Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
+Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
 
 ```yaml
 Type: SwitchParameter

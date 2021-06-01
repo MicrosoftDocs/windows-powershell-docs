@@ -204,7 +204,8 @@ PS C:\> $package_dependencies = $package.Dependencies
 
 PS C:\> $package_rule = New-CIPolicyRule -Package $package
 PS C:\> $package_rule += New-CIPolicyRule -Package $dependency[0] # repeat for all dependencies in array
-
+```
+```output
 PS C:\> $package_rule
 
 

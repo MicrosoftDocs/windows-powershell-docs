@@ -45,7 +45,7 @@ This command modifies only the policy name for the policy stored in the Policy03
 PS C:\> Set-CIPolicyIdInfo -FilePath ".\Supplemental_Policy.xml" -BasePolicyToSupplementPath ".\Base_Policy.xml"
 ```
 
-This command will extract the PolicyID field from Base_Policy.xml file and modify the BasePolicyID field in the Supplemental_Policy.xml file.
+This command will extract the PolicyID field from the Base_Policy.xml file and modify the BasePolicyID field in the Supplemental_Policy.xml file.
 
 ## PARAMETERS
 
@@ -153,4 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CIPolicyIdInfo](./Get-CIPolicyIdInfo.md)
-

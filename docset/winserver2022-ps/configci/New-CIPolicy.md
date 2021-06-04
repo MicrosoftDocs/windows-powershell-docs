@@ -19,13 +19,13 @@ Creates a Code Integrity policy as an .xml file.
 ```
 New-CIPolicy [-FilePath] <String> [-DriverFiles <DriverFile[]>] -Level <RuleLevel> [-Fallback <RuleLevel[]>]
  [-Audit] [-ScanPath <String>] [-ScriptFileNames] [-UserPEs] [-NoScript] [-Deny] [-NoShadowCopy]
- [-OmitPaths <String[]>] [-PathToCatroot <String>] [<CommonParameters>]
+ [-OmitPaths <String[]>] [-PathToCatroot <String>] [-MultiplePolicyFormat] [<CommonParameters>]
 ```
 
 ### Rules
 ```
 New-CIPolicy [-FilePath] <String> -Rules <Rule[]> [-Audit] [-ScanPath <String>] [-ScriptFileNames] [-UserPEs]
- [-NoScript] [-Deny] [-NoShadowCopy] [-OmitPaths <String[]>] [-PathToCatroot <String>] [<CommonParameters>]
+ [-NoScript] [-Deny] [-NoShadowCopy] [-OmitPaths <String[]>] [-PathToCatroot <String>] [-MultiplePolicyFormat] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,18 +43,18 @@ If you specify the **Audit** parameter, this cmdlet scans the Code Integrity Aud
 
 ## EXAMPLES
 
-### Example 1: Create a policy
+### Example 1: Create a policy in multiple policy format
 ```
-The first command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only PE files.
-PS C:\> New-CIPolicy -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript -FilePath '.\Policy.xml' -Level Publisher
+PS C:\> New-CIPolicy -ScanPath '.\temp\' -UserPEs -OmitPaths '.\temp\ConfigCITestBinaries' -NoScript -FilePath '.\Policy.xml' -Level Publisher -MultiplePolicyFormat
 Scan completed successfully
 
 The second command displays the contents of the policy. 
 PS C:\> Get-Content -Path '.\policy.xml'
 <?xml version="1.0" encoding="utf-8"?>
-<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy">
+<SiPolicy xmlns="urn:schemas-microsoft-com:sipolicy" PolicyType="Base Policy">
   <VersionEx>10.0.0.0</VersionEx>
-  <PolicyTypeID>{A244370E-44C9-4C06-B551-F6016E563076}</PolicyTypeID>
+  <BasePolicyID>{BB9EC112-DD85-41AD-9778-22680D3D8A22}</BasePolicyID>
+  <PolicyID>{BB9EC112-DD85-41AD-9778-22680D3D8A22}</PolicyID>
   <PlatformID>{2E07F7E4-194C-4D20-B7C9-6F44A6C5A234}</PlatformID>
   <Rules>
     <Rule>
@@ -209,6 +209,8 @@ Hash="DA737C142A51A73D82E6AD677474C8031486FDEF018A6FE9D178564F83AB284B" />
   <HvciOptions>0</HvciOptions>
 </SiPolicy>
 ```
+
+The first command scans for user-mode executables (applications) along with kernel-mode binaries such as drivers and creates rules at the Publisher level. The command creates a policy in multiple policy format and stores it in the file that is named Policy.xml. This command specifies the **OmitPaths** parameter to exclude files in the temp\ConfigCITestBinaries folder. The command specifies the **NoScript** parameter so that it gets information for only portable executable files (PE files).
 
 ### Example 2: Scan unsigned files
 ```
@@ -531,6 +533,22 @@ Specify this parameter only if you do not provide driver files or rules.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: u
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MultiplePolicyFormat
+Indicates that this cmdlet should create a policy in multiple policy format as opposed to a single policy format. 
+Refer to [Create WDAC policies in Multiple Policy Format](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies#creating-wdac-policies-in-multiple-policy-format) for the difference between the policy formats. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: None
 
 Required: False
 Position: Named

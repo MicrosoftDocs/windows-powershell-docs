@@ -101,7 +101,7 @@ Protocols             : {771, 65277}
 
 This command gets all the cipher suites that have names that contain the string `AES`.
 Note that the name match is case sensitive and this command returns no output for the name `aes`.
-The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
+The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
 
 
 ## PARAMETERS
@@ -137,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-TlsCipherSuite](./Disable-TlsCipherSuite.md)
 
 [Enable-TlsCipherSuite](./Enable-TlsCipherSuite.md)
-

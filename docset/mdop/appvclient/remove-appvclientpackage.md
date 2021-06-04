@@ -58,7 +58,7 @@ This value is obtained from the package manifest.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -73,7 +73,7 @@ Not Specified.
 ```yaml
 Type: AppvClientPackage
 Parameter Sets: ByPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -90,7 +90,7 @@ The package ID is shared by all versions of a specific package.
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -106,7 +106,7 @@ If you do not specify this parameter, the cmdlet operates on all versions on the
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -122,7 +122,7 @@ If you do not specify this parameter, the cmdlet operates on all versions of the
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -144,22 +144,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvClientPackage](./Add-AppvClientPackage.md)
+[Add-AppvClientPackage](./add-appvclientpackage.md)
 
-[Get-AppvClientPackage](./Get-AppvClientPackage.md)
+[Get-AppvClientPackage](./get-appvclientpackage.md)
 
-[Mount-AppvClientPackage](./Mount-AppvClientPackage.md)
+[Mount-AppvClientPackage](./mount-appvclientpackage.md)
 
-[Publish-AppvClientPackage](./Publish-AppvClientPackage.md)
+[Publish-AppvClientPackage](./publish-appvclientpackage.md)
 
-[Publish-AppvClientPackage](./Publish-AppvClientPackage.md)
+[Publish-AppvClientPackage](./publish-appvclientpackage.md)
 
-[Repair-AppvClientPackage](./Repair-AppvClientPackage.md)
+[Repair-AppvClientPackage](./repair-appvclientpackage.md)
 
-[Set-AppvClientPackage](./Set-AppvClientPackage.md)
+[Set-AppvClientPackage](./set-appvclientpackage.md)
 
-[Stop-AppvClientPackage](./Stop-AppvClientPackage.md)
+[Stop-AppvClientPackage](./stop-appvclientpackage.md)
 
-[Unpublish-AppvClientPackage](./Unpublish-AppvClientPackage.md)
-
-
+[Unpublish-AppvClientPackage](./unpublish-appvclientpackage.md)

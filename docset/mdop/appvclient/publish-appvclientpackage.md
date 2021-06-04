@@ -72,7 +72,7 @@ The cmdlet uses the Dynamic User Configuration file to override the default beha
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -86,7 +86,7 @@ Specifies what should be done in the absence of a defined dynamic user configura
 Valid values are:
 
 - UseDeploymentConfiguration.
-The package uses the user configuration portion of deployment configuration. 
+The package uses the user configuration portion of deployment configuration.
 - UseNoConfiguration.
 Clear any previous configuration and use settings from the manifest.
 - UseExistingConfiguration.
@@ -100,7 +100,7 @@ It is not valid for global publish.
 ```yaml
 Type: DynamicUserConfiguration
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: UseDeploymentConfiguration, UseNoConfiguration, UseExistingConfiguration
 
 Required: False
@@ -117,7 +117,7 @@ Otherwise, the packages are only published to the currently running user.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ This value is obtained from the package manifest.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -148,7 +148,7 @@ Not Specified
 ```yaml
 Type: AppvClientPackage
 Parameter Sets: ByPackage
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -165,7 +165,7 @@ The package ID is shared by all versions of a package.
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -181,7 +181,7 @@ This parameter requires elevated rights to run.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -197,7 +197,7 @@ If you do not specify this parameter, the cmdlet operates on the latest of the p
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -213,7 +213,7 @@ If you do not specify this parameter, the cmdlet operateson the latest version o
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -235,22 +235,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvClientPackage](./Add-AppvClientPackage.md)
+[Add-AppvClientPackage](./add-appvclientpackage.md)
 
-[Get-AppvClientPackage](./Get-AppvClientPackage.md)
+[Get-AppvClientPackage](./get-appvclientpackage.md)
 
-[Mount-AppvClientPackage](./Mount-AppvClientPackage.md)
+[Mount-AppvClientPackage](./mount-appvclientpackage.md)
 
-[Publish-AppvClientPackage](./Publish-AppvClientPackage.md)
+[Publish-AppvClientPackage](./publish-appvclientpackage.md)
 
-[Remove-AppvClientPackage](./Remove-AppvClientPackage.md)
+[Remove-AppvClientPackage](./remove-appvclientpackage.md)
 
-[Repair-AppvClientPackage](./Repair-AppvClientPackage.md)
+[Repair-AppvClientPackage](./repair-appvclientpackage.md)
 
-[Set-AppvClientPackage](./Set-AppvClientPackage.md)
+[Set-AppvClientPackage](./set-appvclientpackage.md)
 
-[Stop-AppvClientPackage](./Stop-AppvClientPackage.md)
+[Stop-AppvClientPackage](./stop-appvclientpackage.md)
 
-[Unpublish-AppvClientPackage](./Unpublish-AppvClientPackage.md)
-
-
+[Unpublish-AppvClientPackage](./unpublish-appvclientpackage.md)

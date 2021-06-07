@@ -11,7 +11,7 @@ title: Get-TlsCipherSuite
 # Get-TlsCipherSuite
 
 ## SYNOPSIS
-Gets the list of cipher suites for TLS for a computer.
+2022 
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-TlsCipherSuite [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-TlsCipherSuite** cmdlet gets the ordered list of cipher suites for a computer that Transport Layer Security (TLS) can use.
+The **Get-TlsCipherSuite** cmdlet gets an ordered collection of cipher suites for a computer that Transport Layer Security (TLS) can use.
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 
@@ -99,7 +99,8 @@ Name                  : TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
 Protocols             : {771, 65277}
 ```
 
-This command gets all the cipher suites that have names that contain the string AES.
+This command gets all the cipher suites that have names that contain the string `AES`.
+Note that the name match is case sensitive and this command returns no output for the name `aes`.
 The output includes a field for the TLS/SSL protocols supported by the cipher. See [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/secauthn/cipher-suites-in-schannel) for more information.
 
 
@@ -108,6 +109,7 @@ The output includes a field for the TLS/SSL protocols supported by the cipher. S
 ### -Name
 Specifies the name of the TLS cipher suite to get.
 The cmdlet gets cipher suites that match the string that this cmdlet specifies, so you can specify a partial name.
+The name match is case sensitive.
 
 ```yaml
 Type: String

@@ -11,7 +11,7 @@ title: Get-TlsCipherSuite
 # Get-TlsCipherSuite
 
 ## SYNOPSIS
-Gets the cipher suites for TLS for a computer.
+Gets the TLS cipher suites for a computer.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-TlsCipherSuite [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-TlsCipherSuite** cmdlet gets the ordered list of cipher suites for a computer that Transport Layer Security (TLS) can use.
+The **Get-TlsCipherSuite** cmdlet gets an ordered collection of cipher suites for a computer that Transport Layer Security (TLS) can use.
 
 For more information about the TLS cipher suites, see the documentation for the Enable-TlsCipherSuite cmdlet or type `Get-Help Enable-TlsCipherSuite`.
 

@@ -11,7 +11,7 @@ title: Get-TlsCipherSuite
 # Get-TlsCipherSuite
 
 ## SYNOPSIS
-2022 
+Gets the TLS cipher suites for a computer.
 
 ## SYNTAX
 
@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Disable-TlsCipherSuite](./Disable-TlsCipherSuite.md)
 
 [Enable-TlsCipherSuite](./Enable-TlsCipherSuite.md)
-

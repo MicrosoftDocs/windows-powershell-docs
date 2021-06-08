@@ -59,7 +59,7 @@ Adds a virtual hard disk to SCSI controller number 0 on virtual machine Test.
 
 ### Example 3
 ```
-PS C:\>Get-VMScsiController -VMName Test -Number 0 | Add-VMHardDiskDrive -DiskNumber 2
+PS C:\>Get-VMScsiController -VMName Test -ControllerNumber 0 | Add-VMHardDiskDrive -DiskNumber 2
 ```
 
 This example gets a SCSI controller on a virtual machine named Test and then adds physical disk 2 to that controller.
@@ -80,7 +80,7 @@ This parameter is applicable to clustered virtual machines.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ If not specified, the first available location in the controller specified with 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -144,7 +144,7 @@ If not specified, this parameter assumes the value of the first available contro
 ```yaml
 Type: Int32
 Parameter Sets: VMName, VMObject
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -162,7 +162,7 @@ Allowed values are **IDE** and **SCSI**.
 ```yaml
 Type: ControllerType
 Parameter Sets: VMName, VMObject
-Aliases: 
+Aliases:
 Accepted values: IDE, SCSI, Floppy
 
 Required: False
@@ -194,7 +194,7 @@ Hyper-V calculates normalized IOPS as the total size of I/O per second divided b
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -210,7 +210,7 @@ Hyper-V calculates normalized IOPS as the total size of I/O per second divided b
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ Passes the added **Microsoft.HyperV.PowerShell.HardDiskDrive** object through to
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ Specifies the full path of the hard disk drive file to be added.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -255,7 +255,7 @@ Specifies the friendly name of the ISO resource pool to which this virtual hard 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ Specifies the virtual machine to which the hard disk drive is to be added.
 ```yaml
 Type: VirtualMachine[]
 Parameter Sets: VMObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -301,7 +301,7 @@ Specifies the controller to which the hard disk drive is to be added.
 ```yaml
 Type: VMDriveController
 Parameter Sets: VMDriveController
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -316,7 +316,7 @@ Specifies the name of the virtual machine to which the hard disk drive is to be 
 ```yaml
 Type: String[]
 Parameter Sets: VMName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -352,10 +352,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-###  
-None by default; **Microsoft.HyperV.PowerShell.HardDiskDrive** if **-PassThru** is specified.
+### None
+Default
+
+### Microsoft.HyperV.PowerShell.HardDiskDrive
+If **-PassThru** is specified.
 
 ## NOTES
 
 ## RELATED LINKS
-

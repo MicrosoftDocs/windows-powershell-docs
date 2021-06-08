@@ -226,7 +226,7 @@ Accept wildcard characters: False
 Specifies which files and folders in the new SMB share are visible to users.
 The acceptable values for this parameter are:
 
- -- AccessBased: SMB will not the display the files and folders for a share to a user unless that user has rights to access the files and folders.
+ -- AccessBased: SMB will not display the files and folders for a share to a user unless that user has rights to access the files and folders.
 By default, access-based enumeration is disabled for new SMB shares.
 
  -- Unrestricted: SMB will display files and folders to a user even when the user does not have permission to access the items.

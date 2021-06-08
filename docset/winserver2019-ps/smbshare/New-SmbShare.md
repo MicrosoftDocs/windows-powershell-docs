@@ -241,7 +241,7 @@ Specifies which files and folders in the SMB share are visible to users.
 The acceptable values for this parameter are:
 
 - AccessBased.
-SMB does not the display the files and folders for a share to a user unless that user has rights to access the files and folders.
+SMB does not display the files and folders for a share to a user unless that user has rights to access the files and folders.
 By default, access-based enumeration is disabled for new SMB shares.
 - Unrestricted.
 SMB displays files and folders to a user even when the user does not have permission to access the items.

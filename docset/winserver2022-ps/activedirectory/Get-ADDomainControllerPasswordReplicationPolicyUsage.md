@@ -85,6 +85,21 @@ This command gets the list of accounts cached across all RODCs in the domain.
 
 ## PARAMETERS
 
+### -AuthenticatedAccounts
+Specifies a search for accounts that have been authenticated by a read-only domain controller.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuthenticatedAccounts
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AuthType
 Specifies the authentication method to use.
 The acceptable values for this parameter are:
@@ -109,20 +124,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthenticatedAccounts
-Specifies a search for accounts that have been authenticated by a read-only domain controller.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AuthenticatedAccounts
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Credential
 Specifies the user account credentials to use to perform this task.

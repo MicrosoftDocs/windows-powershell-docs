@@ -16,9 +16,9 @@ Removes one or more members from an Active Directory group.
 ## SYNTAX
 
 ```
-Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADGroup>
- [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>] [-DisablePermissiveModify]
- [<CommonParameters>]
+Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+ [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>]
+ [-DisablePermissiveModify] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -135,6 +135,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisablePermissiveModify
+Group membership updates use permissive modify by default. This suppresses an error when removing a member that is not member of the group.
+When this parameter is used, an error "The specified account name is not a member of the group" is returned.
+
+This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -297,23 +316,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisablePermissiveModify
-Group membership updates use permissive modify by default. This suppresses an error when removing a member that is not member of the group.
-When this parameter is used, an error “The specified account name is not a member of the group” is returned.
-
-This parameter is available in Windows Server 2019 with the September 2020 Updates.
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.

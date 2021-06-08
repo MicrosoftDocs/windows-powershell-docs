@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ### -DefinitionUpdatesChannel
 Enable this policy to specify when devices receive daily Microsoft Defender definition updates during the daily gradual rollout. 
 
-Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%) 
+Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).
 
 Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
 

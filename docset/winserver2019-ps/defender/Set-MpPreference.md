@@ -161,7 +161,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -DisableArchiveScanning
 Indicates whether to scan archive files, such as .zip and .cab files, for malicious and unwanted software.
 If you specify a value of $False or do not specify a value, Windows Defender scans archive files.

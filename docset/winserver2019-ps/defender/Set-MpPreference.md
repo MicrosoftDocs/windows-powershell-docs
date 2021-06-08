@@ -32,7 +32,8 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
+ [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>]
+ [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
@@ -40,7 +41,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>]
 ```
 
 ## DESCRIPTION

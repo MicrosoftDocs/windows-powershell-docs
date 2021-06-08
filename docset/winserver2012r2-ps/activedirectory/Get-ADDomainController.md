@@ -39,7 +39,7 @@ You can get domain controllers by setting the **Identity**, **Filter** or **Disc
 
 The **Identity** parameter specifies the domain controller to get.
 You can identify a domain controller by its GUID, IPV4Address, global IPV6Address, or DNS host name.
-You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller. 
+You can also identify a domain controller by the name of the server object that represents the domain controller, the distinguished name of the NTDS settings object or the server object, the GUID of the NTDS settings object or the server object under the configuration partition, or the distinguished name of the computer object that represents the domain controller.
 You can also set the **Identity** parameter to a domain controller object variable, such as **$\<localDomainControllerObject\>**, or pass a domain controller object through the pipeline to the **Identity** parameter.
 
 To search for and retrieve more than one domain controller, use the **Filter** parameter.
@@ -89,7 +89,7 @@ PS C:\>Get-ADDomainController -Discover -Domain "user01.com"
 
 This command gets one available domain controller in a given domain using Discovery.
 
-### Example 6: Get the primary domain controller using discovery and set it up as time server
+### Example 6: Get the primary domain controller that is advertising as a time server using discovery
 ```
 PS C:\>Get-ADDomainController -Discover -Domain "corp.contoso.com" -Service "PrimaryDC","TimeService"
 ```
@@ -126,7 +126,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -144,7 +144,7 @@ You can specify this parameter when you want to get the name of another domain c
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: Identity, Filter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Along with this parameter, you can provide search criteria by setting parameters
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -204,7 +204,7 @@ Specify the domain by using the NetBIOS name or Fully Qualified Domain Name (FQD
 ```yaml
 Type: String
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ Note: To query using LDAP query strings, use the **LDAPFilter** parameter.
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -259,13 +259,13 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDiscover
-Indicates that the cmdlet to clears any cached domain controller information and perform a new discovery. 
+Indicates that the cmdlet to clears any cached domain controller information and perform a new discovery.
 If this parameter is not specified the cmdlet  may return cached domain controller information.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,7 +299,7 @@ This parameter can also get this object through the pipeline or you can set this
 ```yaml
 Type: ADDomainController
 Parameter Sets: Identity
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -318,7 +318,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ADMinimumDirectoryServiceVersion
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 Accepted values: Windows2000, Windows2008, Windows2012, Windows2012R2
 
 Required: False
@@ -336,7 +336,7 @@ Costs between sites are based on factors such as bandwidth, as well as physical 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -349,14 +349,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following:  Active Directory Lightweight Domain Services, Active Directory Domain Services or Active Directory snapshot instance.
 
-Specify the Active Directory Domain Services instance in one of the following ways:  
+Specify the Active Directory Domain Services instance in one of the following ways:
 
  Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
- Directory server values: 
+ Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -371,7 +371,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: Identity, Filter
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -395,7 +395,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: ADDiscoverableService[]
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 Accepted values: PrimaryDC, GlobalCatalog, KDC, TimeService, ReliableTimeService, ADWS
 
 Required: False
@@ -413,7 +413,7 @@ The name of the site is defined by the **Name** property of the site object.
 ```yaml
 Type: String
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -428,7 +428,7 @@ Specifies whether this is a writable domain controller.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DiscoverByService
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -478,4 +478,3 @@ With the **Identity** or the **Filter** parameter, the **HostName** property wil
 [Get-ADDomainControllerPasswordReplicationPolicy](./Get-ADDomainControllerPasswordReplicationPolicy.md)
 
 [Remove-ADDomainControllerPasswordReplicationPolicy](./Remove-ADDomainControllerPasswordReplicationPolicy.md)
-

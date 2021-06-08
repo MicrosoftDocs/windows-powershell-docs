@@ -689,8 +689,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### -QuarantinePurgeItemsAfterDelay
 Specifies the number of days to keep items in the Quarantine folder.
 If you specify a value of zero or do not specify a value for this parameter, items stay in the Quarantine folder indefinitely.

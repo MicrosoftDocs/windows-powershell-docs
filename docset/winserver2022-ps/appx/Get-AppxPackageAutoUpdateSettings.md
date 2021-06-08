@@ -1,5 +1,5 @@
 ---
-description: 
+description: Provides guidance on how to view the auto-update and repair settings of a Windows App.
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
 ms.date: 06/07/2021
@@ -53,7 +53,7 @@ This will return the Auto Update and Repair settings for a specific Windows App 
 ## PARAMETERS
 
 ### -PackageFullName
-
+Specifies the Package Full Name of that app that is being queried.
 
 ```yaml
 Type: String[]
@@ -68,7 +68,7 @@ Accept wildcard characters: True
 ```
 
 ### -ShowUpdateAvailability
-
+Specifies to display available update informaiton for a specific Windows App
 
 ```yaml
 Type: Switch
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllUsers
-
+Specifies to display Windows App auto update and repair settings for all that are installed for all users.
 
 ```yaml
 Type: Switch

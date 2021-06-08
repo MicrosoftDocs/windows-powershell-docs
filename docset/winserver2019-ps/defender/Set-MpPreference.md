@@ -32,7 +32,8 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-DisablePrivacyMode <Boolean>] [-RandomizeScheduleTaskTimes <Boolean>] [-DisableBehaviorMonitoring <Boolean>]
  [-DisableIntrusionPreventionSystem <Boolean>] [-DisableIOAVProtection <Boolean>]
  [-DisableRealtimeMonitoring <Boolean>] [-DisableScriptScanning <Boolean>] [-DisableArchiveScanning <Boolean>]
- [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>] [-DisableEmailScanning <Boolean>]
+ [-DisableCatchupFullScan <Boolean>] [-DisableCatchupQuickScan <Boolean>] [-DisableCpuThrottleOnIdleScans <Boolean>]
+ [-DisableEmailScanning <Boolean>]
  [-DisableRemovableDriveScanning <Boolean>] [-DisableRestorePoint <Boolean>]
  [-DisableScanningMappedNetworkDrivesForFullScan <Boolean>] [-DisableScanningNetworkFiles <Boolean>]
  [-UILockdown <Boolean>] [-ThreatIDDefaultAction_Ids <Int64[]>]
@@ -40,7 +41,7 @@ Set-MpPreference [-ExclusionPath <String[]>] [-ExclusionExtension <String[]>] [-
  [-LowThreatDefaultAction <ThreatAction>] [-ModerateThreatDefaultAction <ThreatAction>]
  [-HighThreatDefaultAction <ThreatAction>] [-SevereThreatDefaultAction <ThreatAction>] [-Force]
  [-DisableBlockAtFirstSeen <Boolean>] [-PUAProtection <PUAProtectionType>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>]
+ [-ThrottleLimit <Int32>] [-AsJob]  [<CommonParameters>] [-DisableGradualRelease <Boolean>] [-DefinitionUpdatesChannel <UpdatesChannelType>] [-EngineUpdatesChannel <UpdatesChannelType>] [-PlatformUpdatesChannel <UpdatesChannelType>]
 ```
 
 ## DESCRIPTION
@@ -130,6 +131,29 @@ Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefinitionUpdatesChannel
+Enable this policy to specify when devices receive daily Microsoft Defender definition updates during the daily gradual rollout. 
+
+Current Channel (Staged): Devices will be offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%).
+
+Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
+
+If you disable or do not configure this policy, the device will stay up to date automatically during the daily release cycle. Suitable for most devices. 
+
+Supported OS versions: Windows 10 
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Staged|Broad|Not Configured
 Required: False
 Position: Named
 Default value: None
@@ -248,6 +272,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableGradualRelease
+
+Enable this policy to disable gradual rollout of monthly and daily Defender updates. 
+
+Devices will be offered all Defender updates after the gradual release cycle completes. Best for datacenter machines that only receive limited updates. 
+
+Note: This setting applies to both monthly as well as daily Defender updates and will override any previously configured channel selections for platform and engine updates. 
+
+If you disable or do not configure this policy, the device will remain in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+
+Supported OS versions: Windows 10 
+
+```yaml
+Type: Boolean
+Aliases: 
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -DisableEmailScanning
 Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments.
 Windows Defender supports several formats, including .pst, .dbx, .mbx, .mime, and .binhex.
@@ -265,6 +311,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -DisableIOAVProtection
 Indicates whether Windows Defender scans all downloaded files and attachments.
@@ -402,6 +449,35 @@ If you specify a value of $False or do not specify a value, Windows Defender doe
 Type: Boolean
 Parameter Sets: (All)
 Aliases: dscrptsc
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EngineUpdatesChannel 
+
+Enable this policy to specify when devices receive Microsoft Defender engine updates during the monthly gradual rollout. 
+
+Beta Channel: Devices set to this channel will be the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices. 
+
+Current Channel (Preview): Devices set to this channel will be offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments. 
+
+Current Channel (Staged): Devices will be offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%). 
+
+Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
+
+If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+
+Supported OS versions: Windows 10 
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases:
+Accepted values:Beta|Preview|Staged|Broad|NotConfigured 
 
 Required: False
 Position: Named
@@ -578,6 +654,34 @@ Parameter Sets: (All)
 Aliases: 
 Accepted values: Disabled, Enabled, AuditMode
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PlatformUpdatesChannel 
+
+Enable this policy to specify when devices receive Microsoft Defender platform updates during the monthly gradual rollout.
+
+Beta Channel: Devices set to this channel will be the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices. 
+
+Current Channel (Preview): Devices set to this channel will be offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments. 
+
+Current Channel (Staged): Devices will be offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%). 
+
+Current Channel (Broad): Devices will be offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). 
+
+If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
+
+Supported OS versions: Windows 10 
+
+```yaml
+Type: UpdatesChannelType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Beta|Preview|Staged|Broad|NotConfigured 
 Required: False
 Position: Named
 Default value: None

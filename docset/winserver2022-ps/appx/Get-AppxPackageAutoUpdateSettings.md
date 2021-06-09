@@ -3,9 +3,8 @@ description: Provides guidance on how to view the auto-update and repair setting
 external help file: Microsoft.Windows.Appx.PackageManager.Commands.dll-help.xml
 Module Name: Appx
 ms.date: 06/07/2021
-online version: https://docs.microsoft.com/powershell/module/appx/reset-appxpackage?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/appx/Get-AppxPackageAutoUpdateSettings?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
-title: Get-AppxPackageAutoUpdateSettings
 ---
 
 # Get-AppxPackageAutoUpdateSettings
@@ -15,12 +14,9 @@ Available in the Windows Insider Preview Builds of windows 10, is the `Get-AppxP
 
 ## SYNTAX
 
-```PowerShell
-Get-AppxPackageAutoUpdateSettings 
-                [-PackageFullName] <string>
-                [ShowUpdateAvailability]
-                [AllUsers]
-                [<CommonParameters>]
+```
+Get-AppxPackageAutoUpdateSettings [[-PackageFullName] <String>] [-ShowUpdateAvailability] [-AllUsers]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,14 +52,14 @@ This will return the Auto Update and Repair settings for a specific Windows App 
 Specifies the Package Full Name of that app that is being queried.
 
 ```yaml
-Type: String[]
-Parameter Sets: None
-Aliases: None
+Type: String
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
 Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: True
 ```
 
@@ -71,14 +67,14 @@ Accept wildcard characters: True
 Specifies to display available update informaiton for a specific Windows App
 
 ```yaml
-Type: Switch
-Parameter Sets: None
-Aliases: None
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -86,14 +82,14 @@ Accept wildcard characters: False
 Specifies to display Windows App auto update and repair settings for all that are installed for all users.
 
 ```yaml
-Type: Switch
-Parameter Sets: None
-Aliases: None
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -103,12 +99,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
+### System.String
+
+### System.Management.Automation.SwitchParameter
 
 ## OUTPUTS
 
-### None
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

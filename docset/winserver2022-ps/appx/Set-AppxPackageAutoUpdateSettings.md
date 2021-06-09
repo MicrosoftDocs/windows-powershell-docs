@@ -16,39 +16,18 @@ Available in the Windows Insider Preview Builds of windows 10, is the `Set-AppxP
 ## SYNTAX
 
 ### SetAutoUpdateOptionsSet (Default)
-```PowerShell
-Set-AppxPackageAutoUpdateSettings 
-                -PackageFamilyName <string>
-                -AppInstallerURI <string>
-                [-CheckOnLaunch]
-                [-Confirm]
-                [-DependencyPackages] <string>
-                [-DisableAutoRepair]
-                [-EnableAutomaticBackgroundTask]
-                [-ForceUpdateFromAnyVersion]
-                [-HoursBetweenUpdateChecks] <int>
-                [-OptionalPackages] <string>
-                [-RepairUris] <string>
-                [-ShowPrompt]
-                [-UpdateBlocksActivation]
-                [-UpdateUris] <string>
-                [-UseSystemPolicySource]
-                [-Version] <string>
-                [-WhatIf] 
-                [-Confirm] 
-                [<CommonParameters>]
+```
+Set-AppxPackageAutoUpdateSettings [-PackageFamilyName] <String> -AppInstallerUri <String>
+ [-UpdateUris <String[]>] [-RepairUris <String[]>] [-OptionalPackages <String[]>]
+ [-DependencyPackages <String[]>] [-EnableAutomaticBackgroundTask] [-ForceUpdateFromAnyVersion]
+ [-DisableAutoRepairs] [-CheckOnLaunch] [-ShowPrompt] [-UpdateBlocksActivation] [-UseSystemPolicySource]
+ [-HoursBetweenUpdateChecks <UInt32>] [-Version <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PauseAutoUpdateOptionsSet
-```PowerShell
-Set-AppxPackageAutoUpdateSettings 
-                -PackageFamilyName <string>
-                -PauseUpdates
-                -HoursToPause <int>
-                [-UseSystemPolicySource]
-                [-WhatIf] 
-                [-Confirm] 
-                [<CommonParameters>]
+```
+Set-AppxPackageAutoUpdateSettings [-PackageFamilyName] <String> [-PauseUpdates] [-UseSystemPolicySource]
+ -HoursToPause <UInt32> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,12 +69,27 @@ This cmdlet will re-enable automatic updating of the Windows App.
 Specifies the duration of time in hours, that the Windows App will not check for updates.
 
 ```yaml
-Type: Int
-Parameter Sets: SetAutoUpdateOptionsSet, PauseAutoUpdateOptionsSet
-Aliases: None
+Type: UInt32
+Parameter Sets: PauseAutoUpdateOptionsSet
+Aliases: 
 
 Required: True
-Position: N/A
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PauseUpdates
+Specifies if the Windows App updates are to be paused.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: PauseAutoUpdateOptionsSet
+Aliases:
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -106,13 +100,13 @@ Specifies the Package Family Name of the Windows App which is being modified.
 
 ```yaml
 Type: String
-Parameter Sets: SetAutoUpdateOptionsSet, PauseAutoUpdateOptionsSet
-Aliases: None
+Parameter Sets: (All)
+Aliases: 
 
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -120,12 +114,12 @@ Accept wildcard characters: False
 Specifies the location of the AppInstaller file targetted by this Windows App.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: True
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -135,12 +129,12 @@ Accept wildcard characters: False
 Specifies that the Windows App will check for new updates when the App is launched.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -152,10 +146,10 @@ Specifies any Dependency Packages being used by the Windows App.
 ```yaml
 Type: String[]
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -165,12 +159,12 @@ Accept wildcard characters: False
 Turns off the automatic repair of a broken Windows App.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -180,12 +174,12 @@ Accept wildcard characters: False
 Specifies that the automation of updating and repairing will occur as a background task.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -195,12 +189,12 @@ Accept wildcard characters: False
 Specifies that the next update of the Windows App can be of a higher, or lower version.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -210,12 +204,12 @@ Accept wildcard characters: False
 Specifies the time between update checks allowed for a specific Windows App.
 
 ```yaml
-Type: Int
+Type: UInt32
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -227,10 +221,10 @@ Specifies the Optional Packages being used by the Windows App.
 ```yaml
 Type: String[]
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -242,10 +236,10 @@ Specifies the location which will be sourced from when repairing the Windows App
 ```yaml
 Type: String[]
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -255,12 +249,12 @@ Accept wildcard characters: False
 Specifies that if any action is occurring for the Windows App, a prompt will be displayed.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -270,12 +264,12 @@ Accept wildcard characters: False
 Specifies that if an update is available for a Windows App, the App will prevent launching until the update has been installed.
 
 ```yaml
-Type: Switch
+Type: SwitchParameter
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -287,10 +281,10 @@ Specifies the location which will be sourced from when updating the Windows App.
 ```yaml
 Type: String[]
 Parameter Sets: SetAutoUpdateOptionsSet
-Aliases: None
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -300,12 +294,12 @@ Accept wildcard characters: False
 Specifies that an override can be applied to the Developer set settings.
 
 ```yaml
-Type: Switch
-Parameter Sets: SetAutoUpdateOptionsSet, PauseAutoUpdateOptionsSet
-Aliases: None
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -316,11 +310,11 @@ Specifies the version of the Update Settings being applied.
 
 ```yaml
 Type: String
-Parameter Sets: SetAutoUpdateOptionsSet, PauseAutoUpdateOptionsSet
-Aliases: None
+Parameter Sets: SetAutoUpdateOptionsSet
+Aliases: 
 
 Required: False
-Position: N/A
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -331,14 +325,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.String[]
-
-### System.IO.FileInfo
+### System.String
 
 ## OUTPUTS
 
-### None
-
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

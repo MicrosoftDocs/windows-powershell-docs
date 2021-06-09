@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDiscover
-Indicates that the cmdlet to clears any cached domain controller information and perform a new discovery.
+Indicates to the cmdlet to clear any cached domain controller information and perform a new discovery.
 If this parameter is not specified the cmdlet  may return cached domain controller information.
 
 ```yaml

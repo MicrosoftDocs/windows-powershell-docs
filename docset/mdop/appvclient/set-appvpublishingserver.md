@@ -51,7 +51,7 @@ Specifies whether the server does automatic syncs with the publishing server for
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -66,7 +66,7 @@ Specifies a time span representing the period where refreshes occur for packages
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -82,7 +82,7 @@ Valid values are: day and hour.
 ```yaml
 Type: IntervalUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hour, Day
 
 Required: False
@@ -98,7 +98,7 @@ Specifies whether a refresh occurs for all package published globally every time
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -113,7 +113,7 @@ Not Specified.
 ```yaml
 Type: AppvPublishingServer
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -129,7 +129,7 @@ This can be queried using the **Get-AppvPublishingServer** cmdlet.
 ```yaml
 Type: UInt32
 Parameter Sets: ByServerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 5
@@ -157,7 +157,7 @@ Specifies a time span representing the period when refreshes occur for packages 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 7
@@ -173,7 +173,7 @@ Valid values are:  day and hour.
 ```yaml
 Type: IntervalUnit
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Hour, Day
 
 Required: False
@@ -189,7 +189,7 @@ Specifies whether a refresh occurs every time a user logs into the computer.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 6
@@ -213,12 +213,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvPublishingServer](./Add-AppvPublishingServer.md)
+[Add-AppvPublishingServer](./add-appvpublishingserver.md)
 
-[Get-AppvPublishingServer](./Get-AppvPublishingServer.md)
+[Get-AppvPublishingServer](./get-appvpublishingserver.md)
 
-[Remove-AppvPublishingServer](./Remove-AppvPublishingServer.md)
+[Remove-AppvPublishingServer](./remove-appvpublishingserver.md)
 
-[Sync-AppvPublishingServer](./Sync-AppvPublishingServer.md)
-
-
+[Sync-AppvPublishingServer](./sync-appvpublishingserver.md)

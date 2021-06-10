@@ -34,8 +34,8 @@ To delete a share that was created by this cmdlet, use the Remove-SmbShare cmdle
 ### Example 1: Create an SMB share
 ```
 PS C:\>New-SmbShare -Name "VMSFiles" -Path "C:\ClusterStorage\Volume1\VMFiles" -FullAccess "Contoso\Administrator", "Contoso\Contoso-HV1$"
-Name                          ScopeName                     Path                          Description 
-----                          ---------                     ----                          ----------- 
+Name                          ScopeName                     Path                          Description
+----                          ---------                     ----                          -----------
 VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
 ```
 
@@ -44,8 +44,8 @@ This command creates an SMB share named "VMSFiles" and grants Full Access permis
 ### Example 2: Create an encrypted SMB share
 ```
 PS C:\>New-SmbShare -Name "Data" -Path "J:\Data" -EncryptData $True
-Name                          ScopeName                     Path                          Description 
-----                          ---------                     ----                          ----------- 
+Name                          ScopeName                     Path                          Description
+----                          ---------                     ----                          -----------
 Data                          Contoso-FS                    J:\Data
 ```
 
@@ -55,8 +55,8 @@ This command creates an encrypted SMB share.
 ```
 PS C:\>New-SmbShare -Name "VMSFiles" -Path "C:\ClusterStorage\Volume1\VMFiles" -ChangeAccess "Users" -FullAccess "Administrators"
 
-Name                          ScopeName                     Path                          Description 
-----                          ---------                     ----                          ----------- 
+Name                          ScopeName                     Path                          Description
+----                          ---------                     ----                          -----------
 VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
 ```
 
@@ -71,7 +71,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Specifies the continuous availability time-out for the share.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,20 +100,20 @@ Specifies the caching mode of the offline files for the SMB share.
 There are five caching modes:
 
 - None.
-Prevents users from storing documents and programs offline. 
+Prevents users from storing documents and programs offline.
 - Manual.
-Allows users to identify the documents and programs they want to store offline. 
+Allows users to identify the documents and programs they want to store offline.
 - Programs.
-Automatically stores documents and programs offline. 
+Automatically stores documents and programs offline.
 - Documents.
-Automatically stores documents offline. 
+Automatically stores documents offline.
 - BranchCache.
 Enables BranchCache and manual caching of documents on the shared folder.
 
 ```yaml
 Type: CachingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, Manual, Documents, Programs, BranchCache, Unknown
 
 Required: False
@@ -130,7 +130,7 @@ Multiple users can be specified by using a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ The default value is zero (0).
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Indicates that the share is continuously available.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +212,7 @@ The default value no description, or an empty description.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ Indicates that the share is encrypted.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -241,17 +241,17 @@ Specifies which files and folders in the SMB share are visible to users.
 The acceptable values for this parameter are:
 
 - AccessBased.
-SMB does not the display the files and folders for a share to a user unless that user has rights to access the files and folders.
+SMB does not display the files and folders for a share to a user unless that user has rights to access the files and folders.
 By default, access-based enumeration is disabled for new SMB shares.
 - Unrestricted.
-SMB displays files and folders to a user even when the user does not have permission to access the items. 
+SMB displays files and folders to a user even when the user does not have permission to access the items.
 
 The default value is Unrestricted.
 
 ```yaml
 Type: FolderEnumerationMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: AccessBased, Unrestricted
 
 Required: False
@@ -269,7 +269,7 @@ An account may not be specified more than once in the *FullAccess*, *ChangeAcces
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -286,7 +286,7 @@ The names `pipe` and `mailslot` are reserved for use by the computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -302,7 +302,7 @@ Multiple accounts can be specified by supplying a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -319,7 +319,7 @@ Relative paths or paths that contain wildcard characters are not permitted.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -335,7 +335,7 @@ Multiple users can be specified by supplying a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -350,7 +350,7 @@ Specifies the scope name of the share.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -365,7 +365,7 @@ Specifies the security descriptor for the SMB share in string format.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -382,7 +382,7 @@ By default, new SMB shares are persistent, and non-temporary.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -399,7 +399,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,6 +411,8 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
+
+NOTE: The WhatIf switch does not work with this cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -447,4 +449,3 @@ This cmdlet returns a **MSFT_SmbShare** object that represents the SMB share.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

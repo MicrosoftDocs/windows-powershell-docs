@@ -45,7 +45,7 @@ This means all adding and publishing of App-V packages and creating of Virtual e
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Normal
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -61,7 +61,7 @@ This is set to enable an uninstall of the App-V Client to properly occur.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Uninstall
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -81,6 +81,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AppvClientMode](./Get-AppvClientMode.md)
-
-
+[Get-AppvClientMode](./get-appvclientmode.md)

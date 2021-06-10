@@ -62,7 +62,7 @@ If you do not specify this parameter, the App-V client assigns the default compu
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -102,22 +102,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AppvClientPackage](./Get-AppvClientPackage.md)
+[Get-AppvClientPackage](./get-appvclientpackage.md)
 
-[Mount-AppvClientPackage](./Mount-AppvClientPackage.md)
+[Mount-AppvClientPackage](./mount-appvclientpackage.md)
 
-[Publish-AppvClientPackage](./Publish-AppvClientPackage.md)
+[Publish-AppvClientPackage](./publish-appvclientpackage.md)
 
-[Publish-AppvClientPackage](./Publish-AppvClientPackage.md)
+[Publish-AppvClientPackage](./publish-appvclientpackage.md)
 
-[Remove-AppvClientPackage](./Remove-AppvClientPackage.md)
+[Remove-AppvClientPackage](./remove-appvclientpackage.md)
 
-[Repair-AppvClientPackage](./Repair-AppvClientPackage.md)
+[Repair-AppvClientPackage](./repair-appvclientpackage.md)
 
-[Set-AppvClientPackage](./Set-AppvClientPackage.md)
+[Set-AppvClientPackage](./set-appvclientpackage.md)
 
-[Stop-AppvClientPackage](./Stop-AppvClientPackage.md)
+[Stop-AppvClientPackage](./stop-appvclientpackage.md)
 
-[Unpublish-AppvClientPackage](./Unpublish-AppvClientPackage.md)
-
-
+[Unpublish-AppvClientPackage](./unpublish-appvclientpackage.md)

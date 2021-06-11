@@ -353,7 +353,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### None
-Default
+By default.
 
 ### Microsoft.HyperV.PowerShell.HardDiskDrive
 If **-PassThru** is specified.

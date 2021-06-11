@@ -63,7 +63,7 @@ Accept wildcard characters: True
 ```
 
 ### -ShowUpdateAvailability
-Specifies to display available update informaiton for a specific Windows App
+Specifies to display available update information for a specific Windows App.
 
 ```yaml
 Type: SwitchParameter

@@ -47,7 +47,7 @@ Specifies the name of the App-V publishing server.
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -62,7 +62,7 @@ Specifies the unique identifier of the App-V Publishing Server.
 ```yaml
 Type: UInt32
 Parameter Sets: ByServerId
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -77,7 +77,7 @@ Specifies the URL path to the App-V Publishing server
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -102,12 +102,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvPublishingServer](./Add-AppvPublishingServer.md)
+[Add-AppvPublishingServer](./add-appvpublishingserver.md)
 
-[Remove-AppvPublishingServer](./Remove-AppvPublishingServer.md)
+[Remove-AppvPublishingServer](./remove-appvpublishingserver.md)
 
-[Set-AppvPublishingServer](./Set-AppvPublishingServer.md)
+[Set-AppvPublishingServer](./set-appvpublishingserver.md)
 
-[Sync-AppvPublishingServer](./Sync-AppvPublishingServer.md)
-
-
+[Sync-AppvPublishingServer](./sync-appvpublishingserver.md)

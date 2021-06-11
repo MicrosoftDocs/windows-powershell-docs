@@ -36,7 +36,7 @@ This will return the Auto Update and Repair settings for all configured, and ins
 PS C:\> Get-AppxPackageAutoUpdateSettings -AllUsers
 ```
 
-This will return the Auto Update and Repair settings for all configured and isntalled Windows Apps that have been registered for all users.
+This will return the Auto Update and Repair settings for all configured and installed Windows Apps that have been registered for all users.
 
 ### Example 3: Get a single App Package Auto Update Setting
 ```

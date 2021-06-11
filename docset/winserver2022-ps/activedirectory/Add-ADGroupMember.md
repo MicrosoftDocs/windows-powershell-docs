@@ -146,6 +146,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisablePermissiveModify
+Group membership updates use permissive modify by default. This suppresses an error when adding a member that is already member of the group.
+When this parameter is used, an error "The specified account name is already a member of the group" is returned.
+
+This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 Specifies an Active Directory group object by providing one of the following values.
 The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP) display name for the attribute.

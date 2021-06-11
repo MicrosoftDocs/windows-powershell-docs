@@ -12,7 +12,7 @@ title: Provisioning
 
 # Provisioning Module
 ## Description
-This reference cmdlet provides descriptions and syntax for all provisioning-specific cmdlets. It lists cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
+This reference provides descriptions and syntax for all provisioning-specific cmdlets. It lists cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
 ## provisioning Cmdlets
 ### [Export-ProvisioningPackage](Export-ProvisioningPackage.md)
@@ -37,4 +37,4 @@ Adds a certificate to the Trusted Certificate Store.
 Uninstalls .PPKG package from the local machine.
 
 ### [Uninstall-TrustedProvisioningCertificate](Uninstall-TrustedProvisioningCertificate.md)
-Removes a previously-installed provisioning certificate.
+Removes a previously installed provisioning certificate.

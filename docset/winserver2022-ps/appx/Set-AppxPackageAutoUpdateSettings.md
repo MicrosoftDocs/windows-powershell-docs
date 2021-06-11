@@ -186,7 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpdateFromAnyVersion
-Specifies that the next update of the Windows App can be of a higher, or lower version.
+Specifies that the next update of the Windows App can be of a higher or lower version.
 
 ```yaml
 Type: SwitchParameter

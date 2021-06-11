@@ -20,7 +20,7 @@ Get-AppxPackageAutoUpdateSettings [[-PackageFullName] <String>] [-ShowUpdateAvai
 ```
 
 ## DESCRIPTION
-The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet will return the settings configured for a specific or all installed Windows Apps in relation to Auto Update and Repair
+The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet will return the settings configured for a specific or all installed Windows Apps in relation to Auto Update and Repair.
 
 ## EXAMPLES
 

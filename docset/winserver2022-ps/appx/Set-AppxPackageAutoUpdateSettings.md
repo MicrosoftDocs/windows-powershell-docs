@@ -44,7 +44,7 @@ This cmdlet will update the Auto Update settings of the *PackageName_8h66172c634
 
 ### Example 2: Disable the Auto Repair setting for an App
 ```
-PS C:\> et-AppxPackageAutoUpdateSettings -AppInstallerUri https://website.com/PackageName.appinstaller -PackageFamilyName PackageName_8h66172c634n0 -DisableAutoRepairs
+PS C:\> Set-AppxPackageAutoUpdateSettings -AppInstallerUri https://website.com/PackageName.appinstaller -PackageFamilyName PackageName_8h66172c634n0 -DisableAutoRepairs
 ```
 
 This cmdlet will disable the automatic repair of the Windows App.

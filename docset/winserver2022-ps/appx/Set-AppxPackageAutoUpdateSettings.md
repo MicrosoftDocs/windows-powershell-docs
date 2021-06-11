@@ -338,10 +338,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [How to Add and Remove Apps](http://go.microsoft.com/fwlink/?LinkID=231020)
 
-[Get-AppxPackage](./Get-AppxPackage.md)
+[Get-AppxPackage](Get-AppxPackage.md)
 
-[Get-AppxPackageManifest](./Get-AppxPackageManifest.md)
+[Get-AppxPackageManifest](Get-AppxPackageManifest.md)
 
-[Move-AppxPackage](./Move-AppxPackage.md)
+[Move-AppxPackage](Move-AppxPackage.md)
 
-[Remove-AppxPackage](./Remove-AppxPackage.md)
+[Remove-AppxPackage](Remove-AppxPackage.md)

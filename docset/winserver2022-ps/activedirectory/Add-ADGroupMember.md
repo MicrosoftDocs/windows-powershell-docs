@@ -17,7 +17,7 @@ Adds one or more members to an Active Directory group.
 
 ```
 Add-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
- [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>] 
+ [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-MemberTimeToLive <TimeSpan>] [-Partition <String>]
  [-PassThru] [-Server <String>] [-DisablePermissiveModify] [<CommonParameters>]
 ```
 
@@ -55,7 +55,7 @@ This command adds the user accounts with the SAM account names SQL01 and SQL02 t
 ```
 PS C:\> Add-ADGroupMember
 cmdlet Add-ADGroupMember at command pipeline position 1
-Supply values for the following parameters: 
+Supply values for the following parameters:
 Identity: RodcAdmins
 Members[0]: DavidChew
 Members[1]: PattiFuller
@@ -83,7 +83,7 @@ This command adds the user CN=Chew David,OU=UserAccounts from the North America 
 ## PARAMETERS
 
 ### -AuthType
-Specifies the authentication method to use. 
+Specifies the authentication method to use.
 The acceptable values for this parameter are:
 
 - Negotiate or 0
@@ -96,7 +96,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -137,7 +137,7 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -152,8 +152,8 @@ The identifier in parentheses is the Lightweight Directory Access Protocol (LDAP
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID) 
-- A security identifier (objectSid) 
+- A GUID (objectGUID)
+- A security identifier (objectSid)
 - A Security Account Manager account name (sAMAccountName)
 
 The cmdlet searches the default naming context or partition to find the object.
@@ -164,7 +164,7 @@ This parameter can also get this object through the pipeline or you can set this
 ```yaml
 Type: ADGroup
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -179,7 +179,7 @@ Specifies a Time to Live (TTL) for the new group members.
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,9 +194,9 @@ To identify each object, use one of the following property values.
 Note: The identifier in parentheses is the LDAP display name.
 The acceptable values for this parameter are:
 
-- Distinguished name 
-- GUID (objectGUID) 
-- Security identifier (objectSid) 
+- Distinguished name
+- GUID (objectGUID)
+- Security identifier (objectSid)
 - SAM account name (sAMAccountName)
 
 You can also provide objects to this parameter directly.
@@ -224,7 +224,7 @@ You cannot pass objects through the pipeline to this parameter.
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -242,24 +242,24 @@ In many cases, a default value is used for the *Partition* parameter if no value
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
+In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases:
 
 - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
 In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
 
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the *Partition* parameter does not take a default value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -288,14 +288,14 @@ Accept wildcard characters: False
 Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: Active Directory Lightweight Domain Services (AD LDS), AD DS, or Active Directory snapshot instance.
 
-Specify the AD DS instance in one of the following ways:  
+Specify the AD DS instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -310,7 +310,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -321,15 +321,12 @@ Accept wildcard characters: False
 
 ### -DisablePermissiveModify
 Group membership updates use permissive modify by default. This suppresses an error when adding a member that is already member of the group.
-When this parameter is used, an error “The specified account name is already a member of the group” is returned.
-
-This parameter is available in Windows Server 2019 with the September 2020 Updates.
-
+When this parameter is used, an error "The specified account name is already a member of the group" is returned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: False

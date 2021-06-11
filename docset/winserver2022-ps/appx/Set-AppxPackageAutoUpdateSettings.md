@@ -66,7 +66,7 @@ This cmdlet will re-enable automatic updating of the Windows App.
 ## PARAMETERS
 
 ### -HoursToPause
-Specifies the duration of time in hours, that the Windows App will not check for updates.
+Specifies the duration of time in hours that the Windows App will not check for updates.
 
 ```yaml
 Type: UInt32

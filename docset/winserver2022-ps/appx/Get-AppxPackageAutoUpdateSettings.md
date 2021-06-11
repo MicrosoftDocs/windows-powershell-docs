@@ -24,7 +24,7 @@ The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet will return the settin
 
 ## EXAMPLES
 
-### Example 1: Get All App Package Auto Update Settings
+### Example 1: Get all App Package Auto Update settings
 ```
 PS C:\> Get-AppxPackageAutoUpdateSettings
 ```

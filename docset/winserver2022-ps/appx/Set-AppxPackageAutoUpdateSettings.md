@@ -40,7 +40,7 @@ The **Set-AppxPackageAutoUpdateSettings** cmdlet provides access to configure a 
 PS C:\> Set-AppxPackageAutoUpdateSettings -AppInstallerUri https://website.com/PackageName.appinstaller -PackageFamilyName PackageName_8h66172c634n0 -CheckOnLaunch -ForceUpdateFromAnyVersion -HoursBetweenUpdateChecks 2 -ShowPrompt -UpdateUris file://ComputerName/Share/PackageName_x64.appinstaller
 ```
 
-This cmdlet will update the Auto-Update settings of the *PackageName_8h66172c634n0* Windows App to target an AppInstaller file on a network accessible file share every two hours, displaying a prompt to the user. Allowing for the Windows App to update to any version (higher or lower) despite the version of the installed Windows App.
+This cmdlet will update the Auto Update settings of the *PackageName_8h66172c634n0* Windows App to target an AppInstaller file on a network accessible file share every two hours, displaying a prompt to the user. Allowing for the Windows App to update to any version (higher or lower) despite the version of the installed Windows App.
 
 ### Example 2: Disable the Auto-Repair setting for an App
 ```

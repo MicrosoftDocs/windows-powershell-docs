@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllUsers
-Specifies to display Windows App auto update and repair settings for all that are installed for all users.
+Specifies to display Windows App Auto Update and Repair settings for all that are installed for all users.
 
 ```yaml
 Type: SwitchParameter

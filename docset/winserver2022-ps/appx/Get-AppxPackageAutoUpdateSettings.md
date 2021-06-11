@@ -10,7 +10,7 @@ schema: 2.0.0
 # Get-AppxPackageAutoUpdateSettings
 
 ## SYNOPSIS
-Available in the Windows Insider Preview Builds of windows 10, is the `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet. The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides visibility to the settings configured on a Windows 10 client device for a particular Windows App. 
+Available in the Windows Insider Preview Builds of Windows 10, is the `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet. The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides visibility to the settings configured on a Windows 10 client device for a particular Windows App. 
 
 ## SYNTAX
 

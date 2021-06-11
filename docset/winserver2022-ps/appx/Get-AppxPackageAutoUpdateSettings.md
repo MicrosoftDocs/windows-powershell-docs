@@ -48,7 +48,7 @@ This will return the Auto Update and Repair settings for a specific Windows App 
 ## PARAMETERS
 
 ### -PackageFullName
-Specifies the Package Full Name of that app that is being queried.
+Specifies the Package Full Name of the app that is being queried.
 
 ```yaml
 Type: String

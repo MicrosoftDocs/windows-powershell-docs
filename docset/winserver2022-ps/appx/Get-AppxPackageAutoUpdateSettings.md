@@ -43,7 +43,7 @@ This will return the Auto Update and Repair settings for all configured and inst
 PS C:\> Get-AppxPackageAutoUpdateSettings -PackageFullName publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe
 ```
 
-This will return the Auto Update and Repair settings for a specific Windows App that has been installed and registered to the logged on user.
+This will return the Auto Update and Repair settings for a specific Windows App that has been installed and registered to the signed-in user.
 
 ## PARAMETERS
 

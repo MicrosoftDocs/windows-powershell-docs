@@ -291,7 +291,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSystemPolicySource
-Specifies that an override can be applied to the Developer set settings.
+Specifies that an override can be applied to the Developer configured settings.
 
 ```yaml
 Type: SwitchParameter

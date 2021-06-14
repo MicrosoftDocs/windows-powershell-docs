@@ -11,7 +11,7 @@ title: Set-AppxPackageAutoUpdateSettings
 # Set-AppxPackageAutoUpdateSettings
 
 ## SYNOPSIS
-Available in the Windows Insider Preview Builds of windows 10, is the `Set-AppxPackageAutoUpdateSettings` PowerShell cmdlet. The `Set-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides access to configure a specific Windows App's Auto Update and Repair settings. Including pausing update checks.
+The `Get-AppxPackageAutoUpdateSettings` PowerShell cmdlet is only available in the Windows Insider Preview Builds of Windows 10. The `Set-AppxPackageAutoUpdateSettings` PowerShell cmdlet provides access to configure a specific Windows App's Auto Update and Repair settings. Including pausing update checks.
 
 ## SYNTAX
 

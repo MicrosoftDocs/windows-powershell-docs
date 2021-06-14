@@ -32,7 +32,7 @@ By default, the cmdlet places the file in the Domain Name System (DNS) directory
 PS C:\> Export-DnsServerZone -Name "western.contoso.com" -FileName "exportedcontoso.com"
 ```
 
-This command exports the zone named western.contoso.com to a file called exportedcontoso.com.
+This command exports the zone named western.contoso.com to a file called exportedcontoso.com located in C:\Windows\System32\DNS on the DNS server.  Note that -FileName is a filename not a filepath.
 
 ## PARAMETERS
 

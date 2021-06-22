@@ -22,7 +22,7 @@ Get-NetIPv6Protocol [-DefaultHopLimit <UInt32[]>] [-NeighborCacheLimitEntries <U
  [-MediaSenseEventLog <MediaSenseEventLog[]>] [-MldLevel <MldLevel[]>] [-MldVersion <MldVersion[]>]
  [-MulticastForwarding <MulticastForwarding[]>] [-GroupForwardedFragments <GroupForwardedFragments[]>]
  [-RandomizeIdentifiers <RandomizeIdentifiers[]>] [-AddressMaskReply <AddressMaskReply[]>]
- [-UseTemporaryAddresses <UseTemporaryAddresses[]>] [-MaxTemporaryDadAttempts <UInt32[]>]
+ [-DeadGatewayDetection <DeadGatewayDetection[]>] [-UseTemporaryAddresses <UseTemporaryAddresses[]>] [-MaxTemporaryDadAttempts <UInt32[]>]
  [-MaxTemporaryValidLifetime <TimeSpan[]>] [-MaxTemporaryPreferredLifetime <TimeSpan[]>]
  [-TemporaryRegenerateTime <TimeSpan[]>] [-MaxTemporaryDesyncTime <TimeSpan[]>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
@@ -103,6 +103,21 @@ The default is the current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeadGatewayDetection
+{{ Fill DeadGatewayDetection Description }}
+
+```yaml
+Type: DeadGatewayDetection[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

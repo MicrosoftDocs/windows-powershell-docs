@@ -19,8 +19,9 @@ Gets the IP route information from the IP routing table.
 Get-NetRoute [[-DestinationPrefix] <String[]>] [-InterfaceIndex <UInt32[]>] [-InterfaceAlias <String[]>]
  [-NextHop <String[]>] [-AddressFamily <AddressFamily[]>] [-Publish <Publish[]>] [-RouteMetric <UInt16[]>]
  [-Protocol <Protocol[]>] [-CompartmentId <UInt32[]>] [-ValidLifetime <TimeSpan[]>]
- [-PreferredLifetime <TimeSpan[]>] [-AssociatedIPInterface <CimInstance>] [-PolicyStore <String>]
- [-IncludeAllCompartments] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PreferredLifetime <TimeSpan[]>] [-State <State[]>] [-InterfaceMetric <UInt32[]>]
+ [-AssociatedIPInterface <CimInstance>] [-PolicyStore <String>] [-IncludeAllCompartments]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -248,6 +249,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InterfaceMetric
+{{ Fill InterfaceMetric Description }}
+
+```yaml
+Type: UInt32[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NextHop
 Specifies an array of next hop values.
 The cmdlet gets IP routes that have the next hop values that you specify.
@@ -380,6 +396,21 @@ To modify the interface metric, use the Set-NetIPInterface cmdlet.
 Type: UInt16[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+{{ Fill State Description }}
+
+```yaml
+Type: State[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

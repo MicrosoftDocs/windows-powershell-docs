@@ -22,11 +22,11 @@ Set-NetIPv6Protocol [-InputObject <CimInstance[]>] [-DefaultHopLimit <UInt32>]
  [-DhcpMediaSense <DhcpMediaSense>] [-MediaSenseEventLog <MediaSenseEventLog>] [-MldLevel <MldLevel>]
  [-MldVersion <MldVersion>] [-MulticastForwarding <MulticastForwarding>]
  [-GroupForwardedFragments <GroupForwardedFragments>] [-RandomizeIdentifiers <RandomizeIdentifiers>]
- [-AddressMaskReply <AddressMaskReply>] [-UseTemporaryAddresses <UseTemporaryAddresses>]
- [-MaxTemporaryDadAttempts <UInt32>] [-MaxTemporaryValidLifetime <TimeSpan>]
- [-MaxTemporaryPreferredLifetime <TimeSpan>] [-TemporaryRegenerateTime <TimeSpan>]
- [-MaxTemporaryDesyncTime <TimeSpan>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddressMaskReply <AddressMaskReply>] [-DeadGatewayDetection <DeadGatewayDetection>]
+ [-UseTemporaryAddresses <UseTemporaryAddresses>] [-MaxTemporaryDadAttempts <UInt32>]
+ [-MaxTemporaryValidLifetime <TimeSpan>] [-MaxTemporaryPreferredLifetime <TimeSpan>]
+ [-TemporaryRegenerateTime <TimeSpan>] [-MaxTemporaryDesyncTime <TimeSpan>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -119,6 +119,21 @@ Aliases: cf
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeadGatewayDetection
+{{ Fill DeadGatewayDetection Description }}
+
+```yaml
+Type: DeadGatewayDetection
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

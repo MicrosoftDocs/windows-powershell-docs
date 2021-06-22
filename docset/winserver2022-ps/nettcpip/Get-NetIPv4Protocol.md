@@ -22,7 +22,7 @@ Get-NetIPv4Protocol [-DefaultHopLimit <UInt32[]>] [-NeighborCacheLimitEntries <U
  [-MediaSenseEventLog <MediaSenseEventLog[]>] [-IGMPLevel <MldLevel[]>] [-IGMPVersion <MldVersion[]>]
  [-MulticastForwarding <MulticastForwarding[]>] [-GroupForwardedFragments <GroupForwardedFragments[]>]
  [-RandomizeIdentifiers <RandomizeIdentifiers[]>] [-AddressMaskReply <AddressMaskReply[]>]
- [-MinimumMtu <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-DeadGatewayDetection <DeadGatewayDetection[]>] [-MinimumMtu <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -99,6 +99,21 @@ The default is the current session on the local computer.
 Type: CimSession[]
 Parameter Sets: (All)
 Aliases: Session
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeadGatewayDetection
+{{ Fill DeadGatewayDetection Description }}
+
+```yaml
+Type: DeadGatewayDetection[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -1154,7 +1154,7 @@ If you disable or do not configure this policy, the device will stay up to date 
 
 Supported OS versions: Windows 10 
 
-Note: This policy is available starting with platform version 4.18.2106.X and later
+Note: This policy is available starting with platform version 4.18.2106.5 and later
 
 ```yaml
 Type: UpdatesChannelType

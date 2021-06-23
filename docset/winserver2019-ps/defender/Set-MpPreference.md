@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_MpPreference.cdxml-help.xml
 Module Name: Defender
-ms.date: 06/10/2021
+ms.date: 06/23/2021
 online version: https://docs.microsoft.com/powershell/module/defender/set-mppreference?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-MpPreference
@@ -279,7 +279,7 @@ If you disable or do not configure this policy, the device will remain in Curren
 
 Supported OS versions: Windows 10 
 
-Note: This policy is available starting with platform version 4.18.2106.X and later
+Note: This policy is available starting with platform version 4.18.2106.5 and later
 
 ```yaml
 Type: Boolean
@@ -449,7 +449,7 @@ Current Channel (Broad): Devices will be offered updates only after the gradual 
 If you disable or do not configure this policy, the device will stay up to date automatically during the gradual release cycle. Suitable for most devices. 
 
 Supported OS versions: Windows 10 
-Note: This policy is available starting with platform version 4.18.2106.X and later
+Note: This policy is available starting with platform version 4.18.2106.5 and later
 
 ```yaml
 Type: UpdatesChannelType
@@ -652,7 +652,7 @@ If you disable or do not configure this policy, the device will stay up to date 
 
 Supported OS versions: Windows 10 
 
-Note: This policy is available starting with platform version 4.18.2106.X and later
+Note: This policy is available starting with platform version 4.18.2106.5 and later
 
 ```yaml
 Type: UpdatesChannelType

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIPAddress.cdxml-help.xml
 Module Name: NetTCPIP
-ms.date: 12/20/2016
+ms.date: 06/23/2021
 online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipaddress?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPAddress
@@ -85,7 +85,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AddressFamily[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: IPv4, IPv6
 
 Required: False
@@ -102,24 +102,24 @@ The acceptable values for this parameter are:
 
 
  -- Invalid.
-IP address configuration information for addresses that are not valid and will not be used. 
-                         
+IP address configuration information for addresses that are not valid and will not be used.
+
  -- Tentative.
-IP address configuration information for addresses that are not used for communication, as the uniqueness of those IP addresses is being verified. 
-                         
+IP address configuration information for addresses that are not used for communication, as the uniqueness of those IP addresses is being verified.
+
  -- Duplicate.
-IP address configuration information for addresses for which a duplicate IP address has been detected and the current IP address will not be used. 
-                         
+IP address configuration information for addresses for which a duplicate IP address has been detected and the current IP address will not be used.
+
  -- Deprecated.
-IP address configuration information for addresses that will no longer be used to establish new connections, but will continue to be used with existing connections. 
-                         
+IP address configuration information for addresses that will no longer be used to establish new connections, but will continue to be used with existing connections.
+
  -- Preferred.
 IP address configuration information for addresses that are valid and available for use.
 
 ```yaml
 Type: AddressState[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Invalid, Tentative, Duplicate, Deprecated, Preferred
 
 Required: False
@@ -135,7 +135,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ To obtain an IP interface, use the Get-NetIPInterface cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ If you do not specify this parameter, the cmdlet gets only addresses in the defa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+Accept wildcard characters: True
 ```
 
 ### -InterfaceIndex
@@ -241,24 +241,24 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyStore
-Specifies a **PolicyStore** value. 
+Specifies a **PolicyStore** value.
 The acceptable values for this parameter are:
 
 
  -- ActiveStore.
-The IP address information is valid. 
-                         
+The IP address information is valid.
+
  -- PersistentStore.
 The computer saves IP address information across restarts.
-When the computer restarts, it copies the saved settings to the ActiveStore. 
+When the computer restarts, it copies the saved settings to the ActiveStore.
 
-                         
+
 The default value is ActiveStore.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -274,7 +274,7 @@ To obtain a **TimeSpan** object, use the **New-TimeSpan** cmdlet.
 ```yaml
 Type: TimeSpan[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ This parameter defines the local subnet size, and is also known as a subnet mask
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -307,24 +307,24 @@ The acceptable values for this parameter are:
 
 
  -- Manual.
-The IP address prefix was manually specified. 
-                         
+The IP address prefix was manually specified.
+
  -- WellKnown.
-The IP address prefix is from a well-known source. 
-                         
+The IP address prefix is from a well-known source.
+
  -- DHCP.
-The IP address prefix was provided by DHCP settings. 
-                         
+The IP address prefix was provided by DHCP settings.
+
  -- RouterAdvertisement.
 The IP address prefix was obtained through a router advertisement (RA).
-                         
+
  -- Other.
 The IP address prefix was obtained from another source, such as a VPN.
 
 ```yaml
 Type: PrefixOrigin[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Other, Manual, WellKnown, Dhcp, RouterAdvertisement
 
 Required: False
@@ -342,7 +342,7 @@ If this parameter is set to True, the addresses are not used for outgoing traffi
 ```yaml
 Type: Boolean[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -359,27 +359,27 @@ The acceptable values for this parameter are:
 
 
  -- Manual.
-The IP address suffix was manually specified. 
-                         
+The IP address suffix was manually specified.
+
  -- WellKnown.
-The IP address suffix is from a well-known source. 
-                         
+The IP address suffix is from a well-known source.
+
  -- DHCP.
-The IP address suffix was provided by DHCP settings. 
-                         
+The IP address suffix was provided by DHCP settings.
+
  -- Link.
-The IP address suffix was obtained from the link-layer address. 
-                         
+The IP address suffix was obtained from the link-layer address.
+
  -- Random.
 The IP address suffix was obtained from a random source.
-                         
+
  -- Other.
 The IP address suffix was obtained from another source, such as a VPN.
 
 ```yaml
 Type: SuffixOrigin[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Other, Manual, WellKnown, Dhcp, Link, Random
 
 Required: False
@@ -391,13 +391,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -411,17 +411,17 @@ Specifies an array of IP address types.
 The acceptable values for this parameter are:
 
 
- -- Unicast 
-                         
- -- Anycast 
+ -- Unicast
 
-                         
+ -- Anycast
+
+
 The default value is Unicast.
 
 ```yaml
 Type: Type[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Unicast, Anycast
 
 Required: False
@@ -438,7 +438,7 @@ To obtain a **TimeSpan** object, use the **New-TimeSpan** cmdlet.
 ```yaml
 Type: TimeSpan[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

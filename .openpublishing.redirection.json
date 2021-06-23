@@ -1,6 +1,81 @@
 {
   "redirections": [
     {
+      "source_path": "winserver2012-ps/netconnectionprofile/Get-NetConnectionProfile.md",
+      "redirect_url": "/powershell/module/netconnection/Get-NetConnectionProfile?view=winserver2012-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2012-ps/netconnectionprofile/NetConnectionProfile.md",
+      "redirect_url": "/powershell/module/netconnection/NetConnection?view=winserver2012-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2012-ps/netconnectionprofile/Set-NetConnectionProfile.md",
+      "redirect_url": "/powershell/module/netconnection/Set-NetConnectionProfile?view=winserver2012-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2012r2-ps/netconnectionprofile/Get-NetConnectionProfile.md",
+      "redirect_url": "winserver2012r2-ps/netconnection/Get-NetConnectionProfile?view=winserver2012r2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2012r2-ps/netconnectionprofile/NetConnectionProfile.md",
+      "redirect_url": "winserver2012r2-ps/netconnection/NetConnection?view=winserver2012r2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2012r2-ps/netconnectionprofile/Set-NetConnectionProfile.md",
+      "redirect_url": "winserver2012r2-ps/netconnection/Set-NetConnectionProfile?view=winserver2012r2-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "winserver2016-ps/netconnectionprofile/Get-NetConnectionProfile.md",
+      "redirect_url": "winserver2016-ps/netconnection/Get-NetConnectionProfile?view=WindowsServer2016-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2016-ps/netconnectionprofile/NetConnectionProfile.md",
+      "redirect_url": "winserver2016-ps/netconnection/NetConnection?view=WindowsServer2016-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2016-ps/netconnectionprofile/Set-NetConnectionProfile.md",
+      "redirect_url": "winserver2016-ps/netconnection/Set-NetConnectionProfile?view=WindowsServer2016-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2019-ps/netconnectionprofile/Get-NetConnectionProfile.md",
+      "redirect_url": "winserver2019-ps/netconnection/Get-NetConnectionProfile?view=WindowsServer2019-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2019-ps/netconnectionprofile/NetConnectionProfile.md",
+      "redirect_url": "winserver2019-ps/netconnection/NetConnection?view=WindowsServer2019-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2019-ps/netconnectionprofile/Set-NetConnectionProfile.md",
+      "redirect_url": "winserver2019-ps/netconnection/Set-NetConnectionProfile?view=WindowsServer2019-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2022-ps/netconnectionprofile/Get-NetConnectionProfile.md",
+      "redirect_url": "winserver2022-ps/netconnection/Get-NetConnectionProfile?view=WindowsServer2022-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2022-ps/netconnectionprofile/NetConnectionProfile.md",
+      "redirect_url": "winserver2022-ps/netconnection/NetConnection?view=WindowsServer2022-ps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "winserver2022-ps/netconnectionprofile/Set-NetConnectionProfile.md",
+      "redirect_url": "winserver2022-ps/netconnection/Set-NetConnectionProfile?view=WindowsServer2022-ps",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docset/docs-conceptual/windows/index.md",
       "redirect_url": "/powershell/windows/get-started",
       "redirect_document_id": false

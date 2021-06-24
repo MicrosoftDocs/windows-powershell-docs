@@ -52,7 +52,7 @@ Specifies the name of the composition.
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -68,7 +68,7 @@ To obtain an **AppvPublishingServer** object, use the **Get-AppvPublishingServer
 ```yaml
 Type: AppvPublishingServer
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -83,7 +83,7 @@ Specifies the ID for the publishing server.
 ```yaml
 Type: UInt32
 Parameter Sets: ByServerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -98,7 +98,7 @@ Specifies the URL path to the publishing server.
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -122,12 +122,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvPublishingServer](./Add-AppvPublishingServer.md)
+[Add-AppvPublishingServer](./add-appvpublishingserver.md)
 
-[Get-AppvPublishingServer](./Get-AppvPublishingServer.md)
+[Get-AppvPublishingServer](./get-appvpublishingserver.md)
 
-[Set-AppvPublishingServer](./Set-AppvPublishingServer.md)
+[Set-AppvPublishingServer](./set-appvpublishingserver.md)
 
-[Sync-AppvPublishingServer](./Sync-AppvPublishingServer.md)
-
-
+[Sync-AppvPublishingServer](./sync-appvpublishingserver.md)

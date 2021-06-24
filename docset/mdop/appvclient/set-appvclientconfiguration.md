@@ -51,7 +51,7 @@ Specifies whether virtualized applications are launched on Windows 8 computers c
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -62,16 +62,16 @@ Accept wildcard characters: False
 
 ### -AutoLoad
 Specifies how new packages should be loaded automatically by App-V on a specific computer.
-Valid values are: 
+Valid values are:
 
-- 0 for None 
+- 0 for None
 - 1 for Previously used
 - 2 for All
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Specifies the path to a valid certificate in the certificate store.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ Dynamic virtualization allows supported Shell Extensions, Browser Helper Objects
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ Specifies whether to enable the ability for scripts defined in the package manif
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Specifies whether to enable the publishing refresh progress bar for the Client.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ Specifies whether to opt in ($True) or opt out ($False) of the Customer Experien
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ Specifies whether to force the client to ignore the Location Provider path and i
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ For example: %allusersprofile%\Microsoft\AppV\Client\Integration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ For example: %localappdata%\Microsoft\AppV\Client\Integration.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Specifies the class ID (CLSID) for a compatible implementation of the IAppvPacka
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ Migration mode allows the App-V client to control shortcuts and FTAs for package
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ Specifies directory where all new applications and updates are installed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -259,7 +259,7 @@ Specifies a value that overrides source location for downloading package content
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -276,7 +276,7 @@ Only processes whose full path matches one of these items can use dynamic virtua
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,7 +292,7 @@ Valid values are: between 0 and 3600.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -308,7 +308,7 @@ Valid values are: between 0 and 99.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -325,7 +325,7 @@ Valid values are: between 1024 and unlimited.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -343,7 +343,7 @@ Valid values are: between 0 and 1024.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -358,7 +358,7 @@ Specifies whether to enable the client to return information to a reporting serv
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -373,7 +373,7 @@ Specifies the retry interval that the client uses to resend data to the reportin
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -383,14 +383,14 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingRandomDelay
-Specifies the maximum delay, in minutes, for data to be sent to the reporting server. 
+Specifies the maximum delay, in minutes, for data to be sent to the reporting server.
 When the scheduled task is started, the client generates a random delay between 0 and *ReportingRandomDelay* and waits the specified duration before sending data.
 This can help to prevent collisions on the server.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -405,7 +405,7 @@ Specifies the location on the reporting server where client information is saved
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -422,7 +422,7 @@ By default, the *ReportingStartTime* starts on the current day at 10 P.M or 22.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -437,7 +437,7 @@ Accept wildcard characters: False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -453,7 +453,7 @@ Example usage: `-RoamingFileExclusions='desktop;my pictures'`.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -469,7 +469,7 @@ Example usage: `-RoamingRegistryExclusions=software\\\\classes;software\\\\clien
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -484,7 +484,7 @@ Specifies whether streamed package contents are not saved to the local hard disk
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -499,7 +499,7 @@ Specifies whether branch caching is turned on.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -514,7 +514,7 @@ Specifies whether to verify Server certificate revocation status before steaming
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -547,6 +547,4 @@ In the case where the name/value option is passed, the cmdlet returns the same t
 
 ## RELATED LINKS
 
-[Get-AppvClientConfiguration](./Get-AppvClientConfiguration.md)
-
-
+[Get-AppvClientConfiguration](./get-appvclientconfiguration.md)

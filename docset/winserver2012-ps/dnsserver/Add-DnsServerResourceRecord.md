@@ -237,7 +237,7 @@ PS C:\>Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -Dom
 This command adds a service locator (SRV) resource record for the _sip service on port 5060 with a weight and priority of 0 to the contoso.com domain.
 The host that offers the service is sipserver1.contoso.com.
 
-### Example 8: Add multiline TXT resource record
+### Example 8: Add a multiline TXT resource record
 ```powershell
 $dkim2 = "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy6OAXCmjYT823gq+DXRjXdsypt7iepfl4pkvLRVN8wRwoND2Fk2aVlG+CitAeJ0nqWn7JAPjoTXpFtHnOWMN7ay/atQd+DcLLHfJkpRvsYSDQ1jkI2s7CkWF6G+nwLGJcNFndOdB8oawpppyESE7+DiZae8bDicaTK8oPU0J7iogeZ1fgvmutwNtNzZHiSgwF9euCiX6lTmGe+0oZ+gRUJnUmZevh//IZ+NyDkRV2kPxQBtM8brHUpRL1c11q/CA0kC6C3ku+Pqmf6A8CGT+qvlCeQ2lVqlBydQL5UjiixUEwkSrgUEKoKE2Hqw97WrDEJZqngtuqma9hWoAsKVbzwIDAQAB"
 $dkim2_part1 = $dkim2.Substring(0,252)
@@ -245,10 +245,9 @@ $dkim2_part1 = $dkim2.Substring(0,252)
 $dkim2_part2 = $dkim2.Substring(252,$dkim2.Length - 252)
 
 Add-DnsServerResourceRecord -DescriptiveText "$dkim2_part1`r`n$dkim_part2" -Name sea2048._domainkey -Txt -ZoneName $domain -TimeToLive 0:1:0:0
-
 ```
 
-This command adds a mutliline TXT resource record. String is split in 252 characters sets and then new line is added in the end which is 2 characters in Windows.
+This command adds a multiline TXT resource record. The string is split into 252 character sets and the new line, which is two characters in Windows, is added at the end.
 
 ## PARAMETERS
 

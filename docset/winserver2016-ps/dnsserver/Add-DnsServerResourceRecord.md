@@ -202,7 +202,7 @@ Add-DnsServerResourceRecord [-ZoneName] <String> [-ComputerName <String>] [-Pass
 ## DESCRIPTION
 The **Add-DnsServerResourceRecord** cmdlet adds a resource record for a Domain Name System (DNS) zone on a DNS server.
 You can add different types of resource records.
-Use different switches for different record types. 
+Use different switches for different record types.
 For more information about resource records, see [Managing Resource Records](https://technet.microsoft.com/en-us/library/cc754308.aspx).
 
 By using this cmdlet, you can change a value for a record, configure whether a record has a time stamp, whether any authenticated user can update a record with the same owner name, and change lookup timeout values, Windows Internet Name Service (WINS) cache settings, and replication settings.
@@ -268,6 +268,19 @@ PS C:\> Add-DnsServerResourceRecord -Srv -Name "sip" -ZoneName "contoso.com" -Do
 This command adds a service locator (SRV) resource record for the _sip service on port 5060 with a weight and priority of 0 to the contoso.com domain.
 The host that offers the service is sipserver1.contoso.com.
 
+### Example 8: Add multiline TXT resource record
+```powershell
+$dkim2 = "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy6OAXCmjYT823gq+DXRjXdsypt7iepfl4pkvLRVN8wRwoND2Fk2aVlG+CitAeJ0nqWn7JAPjoTXpFtHnOWMN7ay/atQd+DcLLHfJkpRvsYSDQ1jkI2s7CkWF6G+nwLGJcNFndOdB8oawpppyESE7+DiZae8bDicaTK8oPU0J7iogeZ1fgvmutwNtNzZHiSgwF9euCiX6lTmGe+0oZ+gRUJnUmZevh//IZ+NyDkRV2kPxQBtM8brHUpRL1c11q/CA0kC6C3ku+Pqmf6A8CGT+qvlCeQ2lVqlBydQL5UjiixUEwkSrgUEKoKE2Hqw97WrDEJZqngtuqma9hWoAsKVbzwIDAQAB"
+$dkim2_part1 = $dkim2.Substring(0,252)
+
+$dkim2_part2 = $dkim2.Substring(252,$dkim2.Length - 252)
+
+Add-DnsServerResourceRecord -DescriptiveText "$dkim2_part1`r`n$dkim_part2" -Name sea2048._domainkey -Txt -ZoneName $domain -TimeToLive 0:1:0:0
+
+```
+
+This command adds a mutliline TXT resource record. String is split in 252 characters sets and then new line is added in the end which is 2 characters in Windows.
+
 ## PARAMETERS
 
 ### -A
@@ -277,7 +290,7 @@ An A resource record maps a host name to an IPv4 address.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: A
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -293,7 +306,7 @@ An AAAA resource record maps a host name to an IPv6 address.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AAAA
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -311,7 +324,7 @@ The most significant byte is byte 0.
 ```yaml
 Type: String
 Parameter Sets: ATMA
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -327,7 +340,7 @@ Valid values are: 0, for an ATM End System Address (AESA) format, and 1, for an 
 ```yaml
 Type: String
 Parameter Sets: ATMA
-Aliases: 
+Aliases:
 Accepted values: E164, AESA
 
 Required: True
@@ -344,7 +357,7 @@ An AFSDB resource record gives the location of the AFS cell database server and 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AFSDB
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -360,7 +373,7 @@ A DNS server can scavenge resource records that have become stale based on a tim
 ```yaml
 Type: SwitchParameter
 Parameter Sets: X25, TLSA
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -372,7 +385,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WKS, Unknown, TXT, SRV, RT, RP, PTR, NS, MX, ISDN, HINFO, DNAME, DHCID, CNAME, ATMA, AFSDB, AAAA, A
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -387,7 +400,7 @@ Indicates that any authenticated user can update a resource record that has the 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: InputObject, TLSA
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -399,7 +412,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: X25, WKS, Unknown, TXT, SRV, RT, RP, PTR, NS, MX, ISDN, HINFO, DNAME, DHCID, CNAME, ATMA, AFSDB, AAAA, A
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -409,19 +422,19 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -436,7 +449,7 @@ Indicates that the record that this cmdlet adds to the DNS server is an ATM addr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ATMA
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -451,7 +464,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a canonical
 ```yaml
 Type: SwitchParameter
 Parameter Sets: CNAME
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -466,7 +479,7 @@ Specifies how long, in seconds, that a DNS server caches a response from a WINS 
 ```yaml
 Type: TimeSpan
 Parameter Sets: WINSR, WINS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -481,7 +494,7 @@ Specifies the certificate association data for a Transport Layer Security (TLS) 
 ```yaml
 Type: String
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -496,7 +509,7 @@ Specifies the certificate usage TLS authentication record.
 ```yaml
 Type: String
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 Accepted values: CAConstraint, ServiceCertificateConstraint, TrustAnchorAssertion, DomainIssuedCertificate
 
 Required: True
@@ -562,7 +575,7 @@ You can find the CPU type in a host information (HINFO) resource record.
 ```yaml
 Type: String
 Parameter Sets: HINFO
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -578,7 +591,7 @@ A PTR resource record maps an IP address to a host name.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AAAA
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -590,7 +603,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: A
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -606,7 +619,7 @@ A DNAME resource record renames the root and all descendants in a domain namespa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DNAME
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -621,7 +634,7 @@ Specifies text to describe the person or people that are responsible for the dom
 ```yaml
 Type: String
 Parameter Sets: RP
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -631,12 +644,12 @@ Accept wildcard characters: False
 ```
 
 ### -DescriptiveText
-Specifies additional text to describe a resource record on a DNS server.
+Specifies additional text to describe a resource record on a DNS server. It is limited to 254 characters per line.
 
 ```yaml
 Type: String
 Parameter Sets: TXT
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -651,7 +664,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a Dynamic H
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DHCID
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -666,7 +679,7 @@ Specifies a public key that is associated with an FQDN, as described in section 
 ```yaml
 Type: String
 Parameter Sets: DHCID
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -681,7 +694,7 @@ Specifies the name of a domain.
 ```yaml
 Type: String
 Parameter Sets: SRV
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -696,7 +709,7 @@ Specifies the alias for a domain name.
 ```yaml
 Type: String
 Parameter Sets: DNAME
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -712,7 +725,7 @@ By default, the cmdlet prompts you for confirmation before it proceeds.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: InputObject, WINSR, WINS
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -727,7 +740,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a host info
 ```yaml
 Type: SwitchParameter
 Parameter Sets: HINFO
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -743,7 +756,7 @@ This must be a fully qualified domain name (FQDN).
 ```yaml
 Type: String
 Parameter Sets: CNAME
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -758,7 +771,7 @@ Specifies the IPv4 address of a host.
 ```yaml
 Type: IPAddress
 Parameter Sets: A
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -773,7 +786,7 @@ Specifies the IPv6 address of a host.
 ```yaml
 Type: IPAddress
 Parameter Sets: AAAA
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -783,13 +796,13 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
+Specifies the input to this cmdlet.
 You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml
 Type: CimInstance
 Parameter Sets: InputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -804,7 +817,7 @@ Specifies the FQDN of a host that routes packets to a destination host.
 ```yaml
 Type: String
 Parameter Sets: RT
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -819,7 +832,7 @@ Specifies the IP address of the owner of a resource record.
 ```yaml
 Type: IPAddress
 Parameter Sets: WKS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -835,7 +848,7 @@ Valid values are: UDP or TCP.
 ```yaml
 Type: String
 Parameter Sets: WKS
-Aliases: 
+Aliases:
 Accepted values: UDP, TCP
 
 Required: True
@@ -851,7 +864,7 @@ Indicates that the record that this cmdlet adds to the DNS server is an Integrat
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ISDN
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -868,7 +881,7 @@ The phone number can contain a country/region code, an area code, and a local ph
 ```yaml
 Type: String
 Parameter Sets: ISDN
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -885,7 +898,7 @@ The subaddress is an identifier that describes the ISDN subaddress encoding type
 ```yaml
 Type: String
 Parameter Sets: ISDN
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -900,7 +913,7 @@ Specifies the lookup time-out value for a resource record.
 ```yaml
 Type: TimeSpan
 Parameter Sets: WINSR, WINS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -915,7 +928,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a mail exch
 ```yaml
 Type: SwitchParameter
 Parameter Sets: MX
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -930,7 +943,7 @@ Specifies the FQDN of the host that is acting as a mail exchanger for the owner.
 ```yaml
 Type: String
 Parameter Sets: MX
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -943,14 +956,14 @@ Accept wildcard characters: False
 Specifies the matching type for the record.
 The acceptable values for this parameter are:
 
-- ExactMatch 
-- Sha256Hash 
+- ExactMatch
+- Sha256Hash
 - Sha512Hash
 
 ```yaml
 Type: String
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 Accepted values: ExactMatch, Sha256Hash, Sha512Hash
 
 Required: True
@@ -966,7 +979,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a Name Serv
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NS
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -981,7 +994,7 @@ Specifies the name of a DNS server resource record object.
 ```yaml
 Type: String
 Parameter Sets: X25, WKS, Unknown, TXT, SRV, RT, RP, PTR, NS, MX, ISDN, HINFO, DNAME, DHCID, CNAME, ATMA, AFSDB, AAAA, A
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -993,7 +1006,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -1008,7 +1021,7 @@ Specifies the name server of a domain.
 ```yaml
 Type: String
 Parameter Sets: NS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1024,7 +1037,7 @@ You can find the operating system identifier in a HINFO resource record.
 ```yaml
 Type: String
 Parameter Sets: HINFO
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1040,7 +1053,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1055,7 +1068,7 @@ Specifies the port where the server listens for the service.
 ```yaml
 Type: UInt16
 Parameter Sets: SRV
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1070,7 +1083,7 @@ Specifies the priority for this resource record among other resource records tha
 ```yaml
 Type: UInt16
 Parameter Sets: RT, MX
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1086,7 +1099,7 @@ Clients try to contact the server that has the lowest priority.
 ```yaml
 Type: UInt16
 Parameter Sets: SRV
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1101,7 +1114,7 @@ Specifies the public switched data network (PSDN) address of the owner of a reso
 ```yaml
 Type: String
 Parameter Sets: X25
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1116,7 +1129,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a PTR resou
 ```yaml
 Type: SwitchParameter
 Parameter Sets: PTR
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1131,7 +1144,7 @@ Specifies the FQDN of the host when you add a PTR resource record.
 ```yaml
 Type: String
 Parameter Sets: PTR
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1146,7 +1159,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a Responsib
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RP
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1161,7 +1174,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a Route Thr
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RT
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1176,7 +1189,7 @@ Specifies the data contained in the resource record you want to add.
 ```yaml
 Type: String
 Parameter Sets: Unknown
-Aliases: 
+Aliases:
 
 Required: True
 Position: 4
@@ -1191,7 +1204,7 @@ Indicates that the DNS server allows WINS replication.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WINSR, WINS
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1208,7 +1221,7 @@ When used together with the MR parameter set, this value specifies a mailbox tha
 ```yaml
 Type: String
 Parameter Sets: RP
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1223,7 +1236,7 @@ Specifies the domain name to append to returned NetBIOS names.
 ```yaml
 Type: String
 Parameter Sets: WINSR
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1238,7 +1251,7 @@ Specifies a selector.
 ```yaml
 Type: String
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 Accepted values: FullCertificate, SubjectPublicKeyInfo
 
 Required: True
@@ -1256,7 +1269,7 @@ For subtype 2 (value=2), the host has an authenticated name server holding the c
 ```yaml
 Type: String
 Parameter Sets: AFSDB
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1273,7 +1286,7 @@ Available services include Well-known Service (WKS) and NAPTR.
 ```yaml
 Type: String[]
 Parameter Sets: WKS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1288,7 +1301,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a Service (
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SRV
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1307,7 +1320,7 @@ For more information about server subtypes, see [RFC 1183](http://www.ietf.org/r
 ```yaml
 Type: UInt16
 Parameter Sets: AFSDB
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1322,7 +1335,7 @@ Indicates that the record that this cmdlet adds is a TLS authentication resource
 ```yaml
 Type: SwitchParameter
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1339,7 +1352,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1355,7 +1368,7 @@ Other DNS servers use this length of time to determine how long to cache a recor
 ```yaml
 Type: TimeSpan
 Parameter Sets: X25, WKS, Unknown, TXT, SRV, RT, RP, PTR, NS, MX, ISDN, HINFO, DNAME, DHCID, CNAME, ATMA, AFSDB, AAAA, A
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1367,7 +1380,7 @@ Accept wildcard characters: False
 ```yaml
 Type: TimeSpan
 Parameter Sets: TLSA
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1382,7 +1395,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a TXT resou
 ```yaml
 Type: SwitchParameter
 Parameter Sets: TXT
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1397,7 +1410,7 @@ Specifies the type of the resource record.
 ```yaml
 Type: UInt16
 Parameter Sets: Unknown
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1415,7 +1428,7 @@ This parameter is optional and if not provided it will add the zone into the def
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1432,7 +1445,7 @@ Use of the host is proportional to its weight.
 ```yaml
 Type: UInt16
 Parameter Sets: SRV
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1463,7 +1476,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a WINS reso
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WINS
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1478,7 +1491,7 @@ Indicates that the record that this cmdlet adds to the DNS server is a WINS reve
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WINSR
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1493,7 +1506,7 @@ Specifies one or more IP addresses of WINS servers that you want to use for a re
 ```yaml
 Type: IPAddress[]
 Parameter Sets: WINS
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -1508,7 +1521,7 @@ Indicates that the record that this cmdlet adds to the DNS server is WKS resourc
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WKS
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1523,7 +1536,7 @@ Indicates that the record that this cmdlet adds to the DNS server is an X25 reso
 ```yaml
 Type: SwitchParameter
 Parameter Sets: X25
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -1538,7 +1551,7 @@ Specifies the name of a DNS zone.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -1553,7 +1566,7 @@ Specifies the name of a zone scope.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -1582,4 +1595,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Show-DnsServerCache](./Show-DnsServerCache.md)
 
 [Set-DnsServerZoneAging](./Set-DnsServerZoneAging.md)
-

@@ -1,10 +1,9 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
-Download Help Link: https://aka.ms/winsvr-2019-pshelp
-Help Version: 5.0.0.1
+Download Help Link: https://aka.ms/winsvr-2012-pshelp
+Help Version: 3.0.0.0
 Locale: en-US
 Module Guid: ce4ff86e-9416-4f2d-a869-c860ac543b5e
-Module Name: NetConnectionProfile
+Module Name: NetConnection
 ms.date: 12/20/2016
 title: NetConnection
 ---
@@ -19,5 +18,4 @@ Gets a connection profile.
 
 ### [Set-NetConnectionProfile](./Set-NetConnectionProfile.md)
 Changes the network category of a connection profile.
-
 

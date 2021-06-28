@@ -51,7 +51,7 @@ Indicates that the cmdlet forces all publishes and unpublishes of packages.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 2
@@ -66,7 +66,7 @@ Indicates that the cmdlet synchronizes packages from the App-V publishing server
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -81,7 +81,7 @@ Indicates that the cmdlet suppresses the Publishing Refresh Progress bar.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -96,7 +96,7 @@ Specifies the friendly name of the server.
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 3
@@ -124,7 +124,7 @@ Not Specified.
 ```yaml
 Type: AppvPublishingServer
 Parameter Sets: ByObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 ```yaml
 Type: UInt32
 Parameter Sets: ByServerId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -152,7 +152,7 @@ Specifies the URL path to the server.
 ```yaml
 Type: String
 Parameter Sets: ByNameUrl
-Aliases: 
+Aliases:
 
 Required: False
 Position: 1
@@ -172,14 +172,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvPublishingServer](./Add-AppvPublishingServer.md)
+[Add-AppvPublishingServer](./add-appvpublishingserver.md)
 
-[Get-AppvPublishingServer](./Get-AppvPublishingServer.md)
+[Get-AppvPublishingServer](./get-appvpublishingserver.md)
 
-[Remove-AppvPublishingServer](./Remove-AppvPublishingServer.md)
+[Remove-AppvPublishingServer](./remove-appvpublishingserver.md)
 
-[Set-AppvPublishingServer](./Set-AppvPublishingServer.md)
+[Set-AppvPublishingServer](./set-appvpublishingserver.md)
 
-[Sync-AppvPublishingServer](./Sync-AppvPublishingServer.md)
-
-
+[Sync-AppvPublishingServer](./sync-appvpublishingserver.md)

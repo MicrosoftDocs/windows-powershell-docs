@@ -64,7 +64,7 @@ Not Specified
 ```yaml
 Type: AppvClientConnectionGroup
 Parameter Sets: ByConnectionGroup
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -80,7 +80,7 @@ Usage of the *Global* parameter requires administrative privileges.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ Specifies the group ID of a specific connection group.
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -110,7 +110,7 @@ Specifies the name of the Microsoft Application Virtualization (App-V) connectio
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -126,7 +126,7 @@ If you do not specify this parameter, the cmdlet operates on all versions of the
 ```yaml
 Type: Guid
 Parameter Sets: ByGuid
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -151,20 +151,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-AppvClientConnectionGroup](./Add-AppvClientConnectionGroup.md)
+[Add-AppvClientConnectionGroup](./add-appvclientconnectiongroup.md)
 
-[Disable-AppvClientConnectionGroup](./Disable-AppvClientConnectionGroup.md)
+[Disable-AppvClientConnectionGroup](./disable-appvclientconnectiongroup.md)
 
-[Enable-AppvClientConnectionGroup](./Enable-AppvClientConnectionGroup.md)
+[Enable-AppvClientConnectionGroup](./enable-appvclientconnectiongroup.md)
 
-[Get-AppvClientConnectionGroup](./Get-AppvClientConnectionGroup.md)
+[Get-AppvClientConnectionGroup](./get-appvclientconnectiongroup.md)
 
-[Mount-AppvClientConnectionGroup](./Mount-AppvClientConnectionGroup.md)
+[Mount-AppvClientConnectionGroup](./mount-appvclientconnectiongroup.md)
 
-[Remove-AppvClientConnectionGroup](./Remove-AppvClientConnectionGroup.md)
+[Remove-AppvClientConnectionGroup](./remove-appvclientconnectiongroup.md)
 
-[Repair-AppvClientConnectionGroup](./Repair-AppvClientConnectionGroup.md)
+[Repair-AppvClientConnectionGroup](./repair-appvclientconnectiongroup.md)
 
-[Stop-AppvClientPackage](./Stop-AppvClientPackage.md)
-
-
+[Stop-AppvClientPackage](./stop-appvclientpackage.md)

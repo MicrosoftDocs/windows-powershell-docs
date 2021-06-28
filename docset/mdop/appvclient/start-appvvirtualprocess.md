@@ -36,7 +36,7 @@ The **Start-AppvVirtualProcess** cmdlet starts a new virtual process.
 
 ### Example 1: Start a virtual process in a virtual environment of a package
 ```
-PS C:\>$AppVObj = Get-AppvClientPackage -Name "MyPackage" 
+PS C:\>$AppVObj = Get-AppvClientPackage -Name "MyPackage"
 PS C:\> Start-AppvVirtualProcess -FilePath "C:\Calc.exe" -AppvClientObject $AppVObj
 ```
 
@@ -58,7 +58,7 @@ Specifies an **AppvClientPackage** or **AppvClientConnectionGroup** object.
 ```yaml
 Type: Object
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Default
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```yaml
 Type: String
 Parameter Sets: UseShellExecute
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ The cmdlet waits to exit until the virtual process exits.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,23 +240,23 @@ Accept wildcard characters: False
 
 ### -WindowStyle
 Specifies what to do in the absence of a Process Window Style.
-Valid values are: 
+Valid values are:
 
 - Normal.
-Display the normal window. 
+Display the normal window.
 - Hidden.
-Launch a hidden window. 
+Launch a hidden window.
 - Minimized.
-Launch a minimized window. 
+Launch a minimized window.
 - Maximized.
-Launch a maximized window. 
+Launch a maximized window.
 
 The default value is Normal.
 
 ```yaml
 Type: ProcessWindowStyle
 Parameter Sets: UseShellExecute
-Aliases: 
+Aliases:
 Accepted values: Normal, Hidden, Minimized, Maximized
 
 Required: False
@@ -272,7 +272,7 @@ Specifies working directory of the process.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -292,10 +292,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AppvVirtualProcess](./Get-AppvVirtualProcess.md)
+[Get-AppvVirtualProcess](./get-appvvirtualprocess.md)
 
-[Get-AppvClientPackage](./Get-AppvClientPackage.md)
+[Get-AppvClientPackage](./get-appvclientpackage.md)
 
-[Get-AppvClientConnectionGroup](./Get-AppvClientConnectionGroup.md)
-
-
+[Get-AppvClientConnectionGroup](./get-appvclientconnectiongroup.md)

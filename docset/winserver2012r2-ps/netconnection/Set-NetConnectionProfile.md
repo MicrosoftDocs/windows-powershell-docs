@@ -1,8 +1,10 @@
 ---
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
-Module Name: NetConnectionProfile
-online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/set-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
+Module Name: NetConnection
+ms.date: 10/29/2017
+online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/set-netconnectionprofile?view=windowsserver2012r2-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
+title: Set-NetConnectionProfile
 ---
 
 # Set-NetConnectionProfile
@@ -41,19 +43,19 @@ PS C:\> Set-NetConnectionProfile -InterfaceAlias Ethernet1 -NetworkCategory "Pub
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +108,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: IPv4Connectivity[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 Accepted values: Disconnected, NoTraffic, Subnet, LocalNetwork, Internet
 
 Required: False
@@ -128,7 +130,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: IPv6Connectivity[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 Accepted values: Disconnected, NoTraffic, Subnet, LocalNetwork, Internet
 
 Required: False
@@ -145,7 +147,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -160,7 +162,7 @@ Specifies an array of names of network adapters.
 ```yaml
 Type: String[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -175,7 +177,7 @@ Specifies an array of numerical index values associated with the network adapter
 ```yaml
 Type: UInt32[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -190,7 +192,7 @@ Specifies an array of names of networks with which the connection is currently e
 ```yaml
 Type: String[]
 Parameter Sets: Query (cdxml)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -212,7 +214,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: NetworkCategory
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Public, Private, DomainAuthenticated
 
 Required: False
@@ -229,7 +231,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -240,13 +242,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

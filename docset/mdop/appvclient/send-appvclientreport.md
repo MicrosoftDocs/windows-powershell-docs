@@ -78,7 +78,7 @@ The data is not deleted.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -106,7 +106,7 @@ Specifies the location on the reporting server where client information is saved
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -126,8 +126,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AppvClientConfiguration](./Get-AppvClientConfiguration.md)
+[Get-AppvClientConfiguration](./get-appvclientconfiguration.md)
 
-[Set-AppvClientConfiguration](./Set-AppvClientConfiguration.md)
-
-
+[Set-AppvClientConfiguration](./set-appvclientconfiguration.md)

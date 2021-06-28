@@ -30,8 +30,8 @@ To delete a share that was created by this cmdlet, use the Remove-SMBShare cmdle
 ### EXAMPLE 1
 ```
 PS C:\>New-SmbShare -Name VMSFiles -Path C:\ClusterStorage\Volume1\VMFiles -FullAccess Contoso\Administrator, Contoso\Contoso-HV1$
-Name                          ScopeName                     Path                          Description 
-----                          ---------                     ----                          ----------- 
+Name                          ScopeName                     Path                          Description
+----                          ---------                     ----                          -----------
 VMSFiles                      Contoso-SO                    C:\ClusterStorage\Volume1\...
 ```
 
@@ -40,8 +40,8 @@ This example creates a new SMB share.
 ### EXAMPLE 2
 ```
 PS C:\>New-SmbShare -Name Data -Path J:\Data -EncryptData $true
-Name                          ScopeName                     Path                          Description 
-----                          ---------                     ----                          ----------- 
+Name                          ScopeName                     Path                          Description
+----                          ---------                     ----                          -----------
 Data                          Contoso-FS                    J:\Data
 ```
 
@@ -55,7 +55,7 @@ ps_cimcommon_asjob
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -68,20 +68,20 @@ Accept wildcard characters: False
 Specifies the caching mode of the offline files for the SMB share.
 There are five different caching modes:
 
- -- None: Prevents users from storing documents and programs offline. 
+ -- None: Prevents users from storing documents and programs offline.
 
- -- Manual: Allows users to identify the documents and programs they want to store offline. 
+ -- Manual: Allows users to identify the documents and programs they want to store offline.
 
- -- Programs: Automatically stores documents and programs offline. 
+ -- Programs: Automatically stores documents and programs offline.
 
- -- Documents: Automatically stores documents offline. 
+ -- Documents: Automatically stores documents offline.
 
  -- BranchCache: Enables BranchCache and manual caching of documents on the shared folder.
 
 ```yaml
 Type: CachingMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -96,7 +96,7 @@ Specifies the continuous availability timeout for the share.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Multiple users can be specified by using a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ The default is the current session on the local computer.
 ```yaml
 Type: CimSession[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ The default value is zero (0).
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ Indicates that the share is continuously available.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ The default value no description, or an empty description
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -194,7 +194,7 @@ Indicates that the share is encrypted.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -207,17 +207,17 @@ Accept wildcard characters: False
 Specifies which files and folders in the new SMB share are visible to users.
 The acceptable values for this parameter are:
 
- -- AccessBased: SMB will not the display the files and folders for a share to a user unless that user has rights to access the files and folders.
+ -- AccessBased: SMB will not display the files and folders for a share to a user unless that user has rights to access the files and folders.
 By default, access-based enumeration is disabled for new SMB shares.
 
- -- Unrestricted: SMB will display files and folders to a user even when the user does not have permission to access the items. 
+ -- Unrestricted: SMB will display files and folders to a user even when the user does not have permission to access the items.
 
 The default value is Unrestricted.
 
 ```yaml
 Type: FolderEnumerationMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -234,7 +234,7 @@ An account may not be specified more than once in the FullAccess, ChangeAccess, 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -251,7 +251,7 @@ The names `pipe` and `mailslot` are reserved for use by the computer.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 2
@@ -267,7 +267,7 @@ Multiple accounts can be specified by supplying a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -283,7 +283,7 @@ The path must be fully qualified; relative paths or paths that contain wildcard 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 3
@@ -299,7 +299,7 @@ Multiple users can be specified by supplying a comma-separated list.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -314,7 +314,7 @@ Specifies the scope name of the share.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 4
@@ -331,7 +331,7 @@ By default, new SMB shares are persistent, and non-temporary.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -348,7 +348,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -363,7 +363,7 @@ Prompts you for confirmation before running the cmdlet.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -376,10 +376,12 @@ Accept wildcard characters: False
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
+NOTE: The WhatIf switch does not work with this cmdlet.
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -409,4 +411,3 @@ The MSFT_SmbShare object represents the new SMB share.
 [Remove-SmbShare](./Remove-SmbShare.md)
 
 [Set-SmbShare](./Set-SmbShare.md)
-

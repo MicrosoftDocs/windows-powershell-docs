@@ -38,6 +38,9 @@ Adds an empty resource group to the failover cluster configuration, in preparati
 ### [Add-ClusterGroupSetDependency](./Add-ClusterGroupSetDependency.md)
 Adds a dependency to a cluster set.
 
+### [Add-ClusterGroupToAffinityRule](./Add-ClusterGroupToAffinityRule.md)
+{{*Fill in the Synopsis**}}
+
 ### [Add-ClusterGroupToSet](./Add-ClusterGroupToSet.md)
 Adds a group to a set.
 
@@ -59,8 +62,17 @@ Adds a resource type to a failover cluster, and specifies information such as th
 ### [Add-ClusterScaleOutFileServerRole](./Add-ClusterScaleOutFileServerRole.md)
 Creates a clustered file server for scale-out application data.
 
+### [Add-ClusterServerRole](./Add-ClusterServerRole.md)
+{{*Fill in the Synopsis**}}
+
 ### [Add-ClusterSharedVolume](./Add-ClusterSharedVolume.md)
 Makes a volume available in Cluster Shared Volumes in a failover cluster.
+
+### [Add-ClusterSharedVolumeToAffinityRule](./Add-ClusterSharedVolumeToAffinityRule.md)
+{{*Fill in the Synopsis**}}
+
+### [Add-ClusterStorageNode](./Add-ClusterStorageNode.md)
+{{*Fill in the Synopsis**}}
 
 ### [Add-ClusterVirtualMachineRole](./Add-ClusterVirtualMachineRole.md)
 Creates a clustered virtual machine, that is, a virtual machine that can be failed over if necessary to a different server in the failover cluster.
@@ -83,11 +95,17 @@ Disables S2D.
 ### [Enable-ClusterStorageSpacesDirect](./Enable-ClusterStorageSpacesDirect.md)
 Enables S2D.
 
+### [Export-HealthAgentConfig](./Export-HealthAgentConfig.md)
+{{*Fill in the Synopsis**}}
+
 ### [Get-Cluster](./Get-Cluster.md)
 Gets information about one or more failover clusters in a given domain.
 
 ### [Get-ClusterAccess](./Get-ClusterAccess.md)
 Gets information about permissions that control access to a failover cluster.
+
+### [Get-ClusterAffinityRule](./Get-ClusterAffinityRule.md)
+{{*Fill in the Synopsis**}}
 
 ### [Get-ClusterAvailableDisk](./Get-ClusterAvailableDisk.md)
 Gets information about the disks that can support Failover Clustering and are visible to all nodes, but are not yet part of the set of clustered disks.
@@ -113,6 +131,9 @@ Gets the group sets in the cluster.
 ### [Get-ClusterGroupSetDependency](./Get-ClusterGroupSetDependency.md)
 Gets the cluster group sets based on dependency relationships.
 
+### [Get-ClusterHCSVM](./Get-ClusterHCSVM.md)
+{{*Fill in the Synopsis**}}
+
 ### [Get-ClusterLog](./Get-ClusterLog.md)
 Creates a log file for all nodes, or a specific a node, in a failover cluster.
 
@@ -125,11 +146,17 @@ Gets information about one or more network adapters in a failover cluster.
 ### [Get-ClusterNode](./Get-ClusterNode.md)
 Gets information about one or more nodes, or servers, in a failover cluster.
 
+### [Get-ClusterNodeSupportedVersion](./Get-ClusterNodeSupportedVersion.md)
+{{*Fill in the Synopsis**}}
+
 ### [Get-ClusterOwnerNode](./Get-ClusterOwnerNode.md)
 Gets information about which nodes can own a resource in a failover cluster or information about the order of preference among owner nodes for a clustered role.
 
 ### [Get-ClusterParameter](./Get-ClusterParameter.md)
 Gets detailed information about an object in a failover cluster, such as a cluster resource.
+
+### [Get-ClusterPerformanceHistory](./Get-ClusterPerformanceHistory.md)
+{{*Fill in the Synopsis**}}
 
 ### [Get-ClusterQuorum](./Get-ClusterQuorum.md)
 Gets information about the quorum configuration of a failover cluster.
@@ -152,14 +179,26 @@ Gets information about Cluster Shared Volumes in a failover cluster.
 ### [Get-ClusterSharedVolumeState](./Get-ClusterSharedVolumeState.md)
 Gets the state of Cluster Shared Volumes in a cluster.
 
+### [Get-ClusterStorageNode](./Get-ClusterStorageNode.md)
+{{*Fill in the Synopsis**}}
+
 ### [Get-ClusterStorageSpacesDirect](./Get-ClusterStorageSpacesDirect.md)
 Gets the S2D settings from a cluster.
 
 ### [Get-ClusterVMMonitoredItem](./Get-ClusterVMMonitoredItem.md)
 Gets the list of services and events currently being monitored in the virtual machine.
 
+### [Get-HealthFault](./Get-HealthFault.md)
+{{*Fill in the Synopsis**}}
+
 ### [Grant-ClusterAccess](./Grant-ClusterAccess.md)
 Grants access to a failover cluster, either full access or read-only access.
+
+### [Import-HealthAgentConfig](./Import-HealthAgentConfig.md)
+{{*Fill in the Synopsis**}}
+
+### [Invoke-HealthCommand](./Invoke-HealthCommand.md)
+{{*Fill in the Synopsis**}}
 
 ### [Move-ClusterGroup](./Move-ClusterGroup.md)
 Moves a clustered role (a resource group) from one node to another in a failover cluster.
@@ -175,6 +214,12 @@ Moves the ownership of a clustered virtual machine to a different node.
 
 ### [New-Cluster](./New-Cluster.md)
 Creates a new failover cluster.
+
+### [New-ClusterAffinityRule](./New-ClusterAffinityRule.md)
+{{*Fill in the Synopsis**}}
+
+### [New-ClusterAvailabilitySet](./New-ClusterAvailabilitySet.md)
+{{*Fill in the Synopsis**}}
 
 ### [New-ClusterFaultDomain](./New-ClusterFaultDomain.md)
 Creates a fault domain in the cluster.

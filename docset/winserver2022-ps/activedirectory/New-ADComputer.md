@@ -180,30 +180,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
-
-- Negotiate or 0
-- Basic or 1
-
-The default authentication method is Negotiate.
-
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-```yaml
-Type: ADAuthType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Negotiate, Basic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AuthenticationPolicy
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
@@ -251,6 +227,30 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthType
+Specifies the authentication method to use.
+The acceptable values for this parameter are:
+
+- Negotiate or 0
+- Basic or 1
+
+The default authentication method is Negotiate.
+
+A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+```yaml
+Type: ADAuthType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Negotiate, Basic
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -376,23 +376,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DNSHostName
-Specifies the fully qualified domain name (FQDN) of the computer.
-This parameter sets the **DNSHostName** property for a computer object.
-The LDAP display name for this property is dNSHostName.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Description
 Specifies a description of the object.
 This parameter sets the value of the **Description** property for the object.
@@ -414,6 +397,23 @@ Accept wildcard characters: False
 Specifies the display name of the object.
 This parameter sets the **DisplayName** property of the object.
 The LDAP display name (**ldapDisplayName**) for this property is displayName.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DNSHostName
+Specifies the fully qualified domain name (FQDN) of the computer.
+This parameter sets the **DNSHostName** property for a computer object.
+The LDAP display name for this property is dNSHostName.
 
 ```yaml
 Type: String

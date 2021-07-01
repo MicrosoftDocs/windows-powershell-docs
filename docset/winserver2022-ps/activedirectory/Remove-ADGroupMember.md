@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: Microsoft.ActiveDirectory.Management.dll-Help.xml
 Module Name: ActiveDirectory
-ms.date: 12/27/2016
+ms.date: 06/11/2021
 online version: https://docs.microsoft.com/powershell/module/activedirectory/remove-adgroupmember?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Remove-ADGroupMember
@@ -16,9 +16,9 @@ Removes one or more members from an Active Directory group.
 ## SYNTAX
 
 ```
-Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>] [-Identity] <ADGroup>
- [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>] [-DisablePermissiveModify]
- [<CommonParameters>]
+Remove-ADGroupMember [-WhatIf] [-Confirm] [-AuthType <ADAuthType>] [-Credential <PSCredential>]
+ [-Identity] <ADGroup> [-Members] <ADPrincipal[]> [-Partition <String>] [-PassThru] [-Server <String>]
+ [-DisablePermissiveModify] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +48,7 @@ To specify a default naming context for an AD LDS environment, set the **msDS-de
 ```
 PS C:\> Remove-ADGroupMember -Identity DocumentReaders -Members DavidChew
 Confirm
-Are you sure you want to perform this action? 
+Are you sure you want to perform this action?
 Performing operation "Set" on Target "CN=DocumentReaders,CN=Users,DC=Fabrikam,DC=com".
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
 ```
@@ -89,7 +89,7 @@ A Secure Sockets Layer (SSL) connection is required for the Basic authentication
 ```yaml
 Type: ADAuthType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Negotiate, Basic
 
 Required: False
@@ -130,11 +130,30 @@ If the acting credentials do not have directory-level permission to perform the 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisablePermissiveModify
+Group membership updates use permissive modify by default. This suppresses an error when removing a member that is not member of the group.
+When this parameter is used, an error "The specified account name is not a member of the group" is returned.
+
+This parameter is available in Windows Server 2019 with the September 2020 Updates.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -145,8 +164,8 @@ The identifier in parentheses is the LDAP display name for the attribute.
 The acceptable values for this parameter are:
 
 - A distinguished name
-- A GUID (objectGUID) 
-- A security identifier (objectSid) 
+- A GUID (objectGUID)
+- A security identifier (objectSid)
 - A Security Account Manager account name (sAMAccountName)
 
 The cmdlet searches the default naming context or partition to find the object.
@@ -157,7 +176,7 @@ This parameter can also get this object through the pipeline or you can set this
 ```yaml
 Type: ADGroup
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -172,9 +191,9 @@ To identify each object, use one of the following property values.
 Note: The identifier in parentheses is the LDAP display name.
 The acceptable values for this parameter are:
 
-- Distinguished name 
-- GUID (objectGUID) 
-- Security identifier (objectSid) 
+- Distinguished name
+- GUID (objectGUID)
+- Security identifier (objectSid)
 - SAM account name (sAMAccountName)
 
 You can also provide objects to this parameter directly.
@@ -202,7 +221,7 @@ You cannot pass objects through the pipeline to this parameter.
 ```yaml
 Type: ADPrincipal[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -220,24 +239,24 @@ In many cases, a default value is used for the *Partition* parameter if no value
 The rules for determining the default value are given below.
 Note that rules listed first are evaluated first and once a default value can be determined, no further rules are evaluated.
 
-In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases: 
+In Active Directory Domain Services (AD DS) environments, a default value for *Partition* is set in the following cases:
 
 - If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If none of the previous cases apply, the default value of *Partition* is set to the default partition or naming context of the target domain.
 
 In Active Directory Lightweight Directory Services (AD LDS) environments, a default value for *Partition* is set in the following cases:
 
-- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name. 
-- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive. 
+- If the *Identity* parameter is set to a distinguished name, the default value of *Partition* is automatically generated from this distinguished name.
+- If running cmdlets from an Active Directory provider drive, the default value of *Partition* is automatically generated from the current path in the drive.
 - If the target AD LDS instance has a default naming context, the default value of *Partition* is set to the default naming context.
-To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance. 
+To specify a default naming context for an AD LDS environment, set the **msDS-defaultNamingContext** property of the Active Directory directory service agent object (**nTDSDSA**) for the AD LDS instance.
 - If none of the previous cases apply, the *Partition* parameter does not take a default value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -253,7 +272,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -266,14 +285,14 @@ Accept wildcard characters: False
 Specifies the AD DS instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
 The service may be any of the following: AD LDS, AD DS, or Active Directory snapshot instance.
 
-Specify the AD DS instance in one of the following ways:  
+Specify the AD DS instance in one of the following ways:
 
 Domain name values:
 
 - Fully qualified domain name
 - NetBIOS name
 
-Directory server values:  
+Directory server values:
 
 - Fully qualified directory server name
 - NetBIOS name
@@ -288,7 +307,7 @@ The default value for this parameter is determined by one of the following metho
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -299,15 +318,12 @@ Accept wildcard characters: False
 
 ### -DisablePermissiveModify
 Group membership updates use permissive modify by default. This suppresses an error when removing a member that is not member of the group.
-When this parameter is used, an error “The specified account name is not a member of the group” is returned.
-
-This parameter is available in Windows Server 2019 with the September 2020 Updates.
-
+When this parameter is used, an error "The specified account name is not a member of the group" is returned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Required: False
 Position: Named
 Default value: False

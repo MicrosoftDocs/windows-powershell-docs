@@ -36,17 +36,18 @@ New-ADDCCloneConfigFile [-AlternateWINSServer <String>] [-CloneComputerName <Str
  [-PreferredWINSServer <String>] [-SiteName <String>] [-Static] [<CommonParameters>]
 ```
 
+### IPv6DynamicSettings
+```
+New-ADDCCloneConfigFile [-CloneComputerName <String>] [-IPv6DNSResolver <String[]>] [-Path <String>]
+ [-SiteName <String>] [<CommonParameters>]
+```
+
 ### IPv6StaticSettings
 ```
 New-ADDCCloneConfigFile [-CloneComputerName <String>] -IPv6DNSResolver <String[]> [-Path <String>]
  [-SiteName <String>] [-Static] [<CommonParameters>]
 ```
 
-### IPv6DynamicSettings
-```
-New-ADDCCloneConfigFile [-CloneComputerName <String>] [-IPv6DNSResolver <String[]>] [-Path <String>]
- [-SiteName <String>] [<CommonParameters>]
-```
 
 ## DESCRIPTION
 The **New-ADDCCloneConfigFile** cmdlet performs prerequisite checks for cloning a domain controller when run locally on the domain controller being prepared for cloning.
@@ -188,6 +189,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### -IPv4DefaultGateway
+Specifies the Internet Protocol version 4 (IPv4) address for the default gateway to be used by the cloned domain controller.
+
+```yaml
+Type: String
+Parameter Sets: OfflineExecution, IPv4StaticSettings
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IPv4DNSResolver
 Specifies the Internet Protocol version 4 (IPv4) address for the DNS server to be used by the cloned domain controller to resolve names.
 A maximum of four string values can be provided.
@@ -210,21 +227,6 @@ Parameter Sets: IPv4StaticSettings
 Aliases: 
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IPv4DefaultGateway
-Specifies the Internet Protocol version 4 (IPv4) address for the default gateway to be used by the cloned domain controller.
-
-```yaml
-Type: String
-Parameter Sets: OfflineExecution, IPv4StaticSettings
-Aliases: 
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -310,7 +312,7 @@ when the *Offline* parameter is specified), however, the *Path* parameter is req
 
 ```yaml
 Type: String
-Parameter Sets: IPv4DynamicSettings, IPv4StaticSettings, IPv6StaticSettings, IPv6DynamicSettings
+Parameter Sets: IPv4DynamicSettings, IPv4StaticSettings, IPv6DynamicSettings, IPv6StaticSettings
 Aliases: 
 
 Required: False

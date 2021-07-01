@@ -17,8 +17,8 @@ Creates a new failover cluster.
 
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
- [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
- [-Force] [<CommonParameters>]
+ [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>] [-Force] 
+ [-ManagementPointNetworkType <AdminAccessPointResType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -168,6 +168,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ManagementPointNetworkType
+{{ Fill ManagementPointNetworkType Description }}
+
+```yaml
+Type: AdminAccessPointResType
+Parameter Sets: (All)
+Aliases: apnt
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Name
 Specifies the name of the cluster to create.
 

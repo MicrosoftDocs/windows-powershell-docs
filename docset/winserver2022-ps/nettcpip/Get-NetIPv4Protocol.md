@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetIPv4Protocol.cdxml-help.xml
 Module Name: NetTCPIP
-ms.date: 12/20/2016
+ms.date: 06/23/2021
 online version: https://docs.microsoft.com/powershell/module/nettcpip/get-netipv4protocol?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Get-NetIPv4Protocol
@@ -22,7 +22,7 @@ Get-NetIPv4Protocol [-DefaultHopLimit <UInt32[]>] [-NeighborCacheLimitEntries <U
  [-MediaSenseEventLog <MediaSenseEventLog[]>] [-IGMPLevel <MldLevel[]>] [-IGMPVersion <MldVersion[]>]
  [-MulticastForwarding <MulticastForwarding[]>] [-GroupForwardedFragments <GroupForwardedFragments[]>]
  [-RandomizeIdentifiers <RandomizeIdentifiers[]>] [-AddressMaskReply <AddressMaskReply[]>]
- [-MinimumMtu <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-DeadGatewayDetection <DeadGatewayDetection[]>] [-MinimumMtu <UInt32[]>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,14 +58,14 @@ Address mask reply specifies how the computer responds to ICMP address mask pack
 The acceptable values for this parameter are:
 
 - Enabled.
-The computer responds to ICMP address mask packets. 
+The computer responds to ICMP address mask packets.
 - Disabled.
 The computer does not respond to ICMP address mask packets.
 
 ```yaml
 Type: AddressMaskReply[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -81,7 +81,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -107,6 +107,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeadGatewayDetection
+Specifies an array of values for dead gateway detection. The cmdlet gets IPv4 protocol
+configurations that have these values.
+Dead gateway detection is a feature that identifies gateways that are not operating properly and
+switches the computer to a new default gateway if available.
+The acceptable values for this parameter are:
+
+- Enabled
+- Disabled
+
+
+```yaml
+Type: DeadGatewayDetection[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultHopLimit
 Specifies an array of values for the default hop limit.
 The cmdlet gets the IPv4 protocol configurations that have these values.
@@ -117,7 +140,7 @@ When routers forward a packet, they decrement the hop limit by 1 and discard the
 ```yaml
 Type: UInt32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -141,7 +164,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: DhcpMediaSense[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -158,14 +181,14 @@ Group forwarded fragments specifies whether the IP interface collects fragments 
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface collects IPv4 protocol fragments into groups before it forwards the fragments. 
+The IP interface collects IPv4 protocol fragments into groups before it forwards the fragments.
 - Disabled.
 The IP interface does not collect IPv4 protocol fragments into groups before it forwards the fragments.
 
 ```yaml
 Type: GroupForwardedFragments[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -223,14 +246,14 @@ ICMP redirects specifies whether to update the path cache in response to ICMP re
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface updates the path cache in response to ICMP redirect packets. 
+The IP interface updates the path cache in response to ICMP redirect packets.
 - Disabled.
 The IP interface does not update the path cache in response to ICMP redirect packets.
 
 ```yaml
 Type: IcmpRedirects[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -254,7 +277,7 @@ The IP interface does not log DHCP Media Sense events in the event log.
 ```yaml
 Type: MediaSenseEventLog[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -271,7 +294,7 @@ The cmdlet gets settings that have the Mtu values that you specify.
 ```yaml
 Type: UInt32[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -293,7 +316,7 @@ The computer cannot forward multicast packets.
 ```yaml
 Type: MulticastForwarding[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -325,14 +348,14 @@ The cmdlet gets IPv4 protocol configurations that have these values.
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface randomizes identifiers when it creates an IP address. 
+The IP interface randomizes identifiers when it creates an IP address.
 - Disabled.
 The IP interface does not randomize identifiers when it creates an IP address.
 
 ```yaml
 Type: RandomizeIdentifiers[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -380,14 +403,14 @@ The cmdlet gets IPv4 protocol configurations that have these values.
 The acceptable values for this parameter are:
 
 - DontForward.
-The computer can receive but not forward source-routed packets. 
+The computer can receive but not forward source-routed packets.
 - Drop.
 The computer drops source-routed packets.
 
 ```yaml
 Type: SourceRoutingBehavior[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Forward, DontForward, Drop
 
 Required: False
@@ -399,13 +422,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

@@ -20,9 +20,10 @@ Removes IP routes from the IP routing table.
 Remove-NetRoute [[-DestinationPrefix] <String[]>] [-InterfaceIndex <UInt32[]>] [-InterfaceAlias <String[]>]
  [-NextHop <String[]>] [-AddressFamily <AddressFamily[]>] [-Publish <Publish[]>] [-RouteMetric <UInt16[]>]
  [-Protocol <Protocol[]>] [-CompartmentId <UInt32[]>] [-ValidLifetime <TimeSpan[]>]
- [-PreferredLifetime <TimeSpan[]>] [-AssociatedIPInterface <CimInstance>] [-PolicyStore <String>]
- [-IncludeAllCompartments] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-PreferredLifetime <TimeSpan[]>] [-State <State[]>] [-InterfaceMetric <UInt32[]>]
+ [-AssociatedIPInterface <CimInstance>] [-PolicyStore <String>] [-IncludeAllCompartments]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -67,7 +68,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: AddressFamily[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 Accepted values: IPv4, IPv6
 
 Required: False
@@ -83,7 +84,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +101,7 @@ To obtain an IP interface, use the Get-NetIPInterface cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -134,7 +135,7 @@ If you specify a value, the cmdlet removes any matching Net routes in all compar
 ```yaml
 Type: UInt32[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -167,7 +168,7 @@ A value of 0.0.0.0/0 for IPv4 or ::/0 for IPv6 indicates that the value of the *
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -183,7 +184,7 @@ If you do not specify this parameter, the cmdlet removes only routes in the defa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -198,7 +199,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -239,6 +240,22 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InterfaceMetric
+Specifies an array of integer interface metrics for network interfaces. The cmdlet gets IP routes
+for the interfaces that have the metric that you specify.
+
+```yaml
+Type: UInt32[]
+Parameter Sets: ByName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NextHop
 Specifies an array of next hop values.
 The cmdlet removes routes that have the next hop values that you specify.
@@ -247,7 +264,7 @@ A value of 0.0.0.0 for IPv4 or :: for IPv6 indicates that the route is on the lo
 ```yaml
 Type: String[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -263,7 +280,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -278,7 +295,7 @@ The cmdlet removes IP routes that have the **PolicyStore** value that you specif
 The acceptable values for this parameter are:
 
 - ActiveStore.
-The IP address information is valid. 
+The IP address information is valid.
 - PersistentStore.
 The computer saves IP address information across restarts.
 When the computer restarts, it copies the saved settings to the ActiveStore.
@@ -286,7 +303,7 @@ When the computer restarts, it copies the saved settings to the ActiveStore.
 ```yaml
 Type: String
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -304,7 +321,7 @@ For more information, type `Get-Help New-TimeSpan`.
 ```yaml
 Type: TimeSpan[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -341,7 +358,7 @@ The acceptable values for this parameter are:
 ```yaml
 Type: Protocol[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 Accepted values: Other, Local, NetMgmt, Icmp, Egp, Ggp, Hello, Rip, IsIs, EsIs, Igrp, Bbn, Ospf, Bgp, Idpr, Eigrp, Dvmrp, Rpl, Dhcp
 
 Required: False
@@ -357,16 +374,16 @@ The cmdlet removes IP routes that have the publish settings that you specify.
 The acceptable values for this parameter are:
 
 - No.
-Do not publish or advertise IP route information in router advertisements. 
+Do not publish or advertise IP route information in router advertisements.
 - Yes.
-Publish and advertise IP route information that includes an infinite valid lifetime in router advertisements 
+Publish and advertise IP route information that includes an infinite valid lifetime in router advertisements
 - Age.
 Publish and advertise IP route information with a finite valid lifetime in router advertisements.
 
 ```yaml
 Type: Publish[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 Accepted values: No, Age, Yes
 
 Required: False
@@ -386,7 +403,23 @@ To modify the interface metric, use the Set-NetIPInterface cmdlet.
 ```yaml
 Type: UInt16[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -State
+Specifies an array of state values for IP routes. The cmdlet gets entries that have the state values
+that you specify.
+
+```yaml
+Type: State[]
+Parameter Sets: ByName
+Aliases:
 
 Required: False
 Position: Named
@@ -397,13 +430,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -420,7 +453,7 @@ To obtain a **TimeSpan** object, use the New-TimeSpan cmdlet.
 ```yaml
 Type: TimeSpan[]
 Parameter Sets: ByName
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

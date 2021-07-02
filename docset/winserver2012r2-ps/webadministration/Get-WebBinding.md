@@ -39,7 +39,7 @@ Specifies the host name for which the binding is configured.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -54,7 +54,7 @@ Specifies the IP address for which the binding is configured.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -69,7 +69,7 @@ Specifies the name of the site for which this cmdlet returns binding information
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: 0
@@ -84,7 +84,7 @@ Specifies the port for which the binding is configured.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ The protocol is usually HTTP, HTTPS, or FTP.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -116,6 +116,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.IIs.PowerShell.Framework.ConfigurationElement#bindings#binding
+
 ## NOTES
 
 ## RELATED LINKS
@@ -125,4 +127,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-WebBinding](./Remove-WebBinding.md)
 
 [Set-WebBinding](./Set-WebBinding.md)
-

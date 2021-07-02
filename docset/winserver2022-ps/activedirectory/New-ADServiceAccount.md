@@ -184,29 +184,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
-
-- Negotiate or 0
-- Basic or 1
-
-The default authentication method is Negotiate.
-
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-```yaml
-Type: ADAuthType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Negotiate, Basic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AuthenticationPolicy
 Specifies an Active Directory Domain Services authentication policy object.
@@ -255,6 +232,30 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthType
+Specifies the authentication method to use.
+The acceptable values for this parameter are:
+
+- Negotiate or 0
+- Basic or 1
+
+The default authentication method is Negotiate.
+
+A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+```yaml
+Type: ADAuthType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Negotiate, Basic
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -367,21 +368,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DNSHostName
-Specifies the DNS host name of Service Account.
-
-```yaml
-Type: String
-Parameter Sets: Group
-Aliases: 
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Description
 Specifies a description of the object.
 This parameter sets the value of the **Description** property for the object.
@@ -410,6 +396,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DNSHostName
+Specifies the DNS host name of Service Account.
+
+```yaml
+Type: String
+Parameter Sets: Group
+Aliases: 
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)

@@ -77,10 +77,10 @@ This command creates a user named ChewDavid with a certificate imported from the
 
 ### Example 2: Create a user and set properties
 ```
-PS C:\> New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'mail'="chewdavid@fabrikam.com"}
+PS C:\> New-ADUser -Name "ChewDavid" -OtherAttributes @{'title'="director";'EmailAddress'="chewdavid@fabrikam.com"}
 ```
 
-This command creates a new user named ChewDavid and sets the **title** and **mail** properties on the new object.
+This command creates a new user named ChewDavid and sets the **title** and **email** properties on the new object.
 
 ### Example 3: Create an inetOrgPerson user
 ```

@@ -173,11 +173,9 @@ Specifies the network configuration used to determine IP address settings.
 
 The acceptable values for this parameter are:
 
-```yaml
-Singleton: Uses the traditional method of DHCP or static IP address.
-Distributed: Use a Distributed Network Name by using Node IP addresses.
-Automatic: Uses detection to determine the appropriate setting. If SQL Server is running in Azure, uses Distributed. If SQL Server is running on-premises, uses Singleton (default setting).
-```
+- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default Setting)
+- Singleton: The traditional method of DHCP or static IP address.
+- Distributed: Use a Distributed Network Name by using Node IP addresses.
 
 ```yaml
 Type: AdminAccessPointResType
@@ -186,7 +184,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Automatic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

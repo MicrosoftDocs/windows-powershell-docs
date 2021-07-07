@@ -22,11 +22,11 @@ Set-NetIPv6Protocol [-InputObject <CimInstance[]>] [-DefaultHopLimit <UInt32>]
  [-DhcpMediaSense <DhcpMediaSense>] [-MediaSenseEventLog <MediaSenseEventLog>] [-MldLevel <MldLevel>]
  [-MldVersion <MldVersion>] [-MulticastForwarding <MulticastForwarding>]
  [-GroupForwardedFragments <GroupForwardedFragments>] [-RandomizeIdentifiers <RandomizeIdentifiers>]
- [-AddressMaskReply <AddressMaskReply>] [-UseTemporaryAddresses <UseTemporaryAddresses>]
- [-MaxTemporaryDadAttempts <UInt32>] [-MaxTemporaryValidLifetime <TimeSpan>]
- [-MaxTemporaryPreferredLifetime <TimeSpan>] [-TemporaryRegenerateTime <TimeSpan>]
- [-MaxTemporaryDesyncTime <TimeSpan>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AddressMaskReply <AddressMaskReply>] [-DeadGatewayDetection <DeadGatewayDetection>]
+ [-UseTemporaryAddresses <UseTemporaryAddresses>] [-MaxTemporaryDadAttempts <UInt32>]
+ [-MaxTemporaryValidLifetime <TimeSpan>] [-MaxTemporaryPreferredLifetime <TimeSpan>]
+ [-TemporaryRegenerateTime <TimeSpan>] [-MaxTemporaryDesyncTime <TimeSpan>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,14 +59,14 @@ Address mask reply specifies how the computer responds to ICMP address mask pack
 The acceptable values for this parameter are:
 
 - Enabled.
-The computer responds to ICMP address mask packets. 
+The computer responds to ICMP address mask packets.
 - Disabled.
 The computer does not respond to ICMP address mask packets.
 
 ```yaml
 Type: AddressMaskReply
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -82,7 +82,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -123,6 +123,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeadGatewayDetection
+Specifies an array of values for dead gateway detection. The cmdlet gets IPv6 protocol
+configurations that have these values.
+Dead gateway detection is a feature that identifies gateways that are not operating properly and
+switches the computer to a new default gateway if available.
+The acceptable values for this parameter are:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: DeadGatewayDetection
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultHopLimit
 Specifies a value for the default hop limit.
 The cmdlet modifies the value for this setting.
@@ -134,7 +156,7 @@ The default value is 128.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -160,7 +182,7 @@ The default value is Enabled.
 ```yaml
 Type: DhcpMediaSense
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -178,16 +200,16 @@ This parameter sets the **GroupForwardedFragments** property in the IP interface
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface collects IPv6 protocol fragments into groups before it forwards the fragments. 
+The IP interface collects IPv6 protocol fragments into groups before it forwards the fragments.
 - Disabled.
-The IP interface does not collect IPv6 protocol fragments into groups before it forwards the fragments. 
+The IP interface does not collect IPv6 protocol fragments into groups before it forwards the fragments.
 
 The default value is Disabled.
 
 ```yaml
 Type: GroupForwardedFragments
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -205,16 +227,16 @@ This parameter sets the **IcmpRedirects** property in the IP interface.
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface updates the path cache in response to ICMP redirect packets. 
+The IP interface updates the path cache in response to ICMP redirect packets.
 - Disabled.
-The IP interface does not update the path cache in response to ICMP redirect packets. 
+The IP interface does not update the path cache in response to ICMP redirect packets.
 
 The default value is Enabled.
 
 ```yaml
 Type: IcmpRedirects
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -230,7 +252,7 @@ Specifies the input object that is used in a pipeline command.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -311,14 +333,14 @@ The acceptable values for this parameter are:
 - Enabled.
 The IP interface logs DHCP Media Sense events in the event log for troubleshooting purposes.
 - Disabled.
-The IP interface does not log DHCP Media Sense events in the event log. 
+The IP interface does not log DHCP Media Sense events in the event log.
 
 The default value is Disabled.
 
 ```yaml
 Type: MediaSenseEventLog
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -334,16 +356,16 @@ The cmdlet modifies the value for this setting.
 The acceptable values for this parameter are:
 
 - All.
-The computer can send and receive multicast packets. 
+The computer can send and receive multicast packets.
 - None.
-The computer cannot send or receive multicast packets. 
+The computer cannot send or receive multicast packets.
 - SendOnly.
 The computer can send but not receive multicast packets.
 
 ```yaml
 Type: MldLevel
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: None, SendOnly, All
 
 Required: False
@@ -360,7 +382,7 @@ The cmdlet modifies the value for this setting.
 ```yaml
 Type: MldVersion
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Version1, Version2
 
 Required: False
@@ -378,14 +400,14 @@ The acceptable values for this parameter are:
 - Enabled.
 The computer can forward multicast packets.
 - Disabled.
-The computer cannot forward multicast packets. 
+The computer cannot forward multicast packets.
 
 The default value is Disabled.
 
 ```yaml
 Type: MulticastForwarding
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -397,7 +419,7 @@ Accept wildcard characters: False
 
 ### -NeighborCacheLimitEntries
 Specifies the maximum number of neighbor cache entries.
-The cmdlet modifies the value for this setting. 
+The cmdlet modifies the value for this setting.
 
 The default value is 256.
 
@@ -420,7 +442,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -435,16 +457,16 @@ The cmdlet modifies the value for this setting.
 The acceptable values for this parameter are:
 
 - Enabled.
-The IP interface randomizes identifiers when it creates an IP address. 
+The IP interface randomizes identifiers when it creates an IP address.
 - Disabled.
-The IP interface does not randomize identifiers when it creates an IP address. 
+The IP interface does not randomize identifiers when it creates an IP address.
 
 The default value is Enabled.
 
 ```yaml
 Type: RandomizeIdentifiers
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -494,16 +516,16 @@ The cmdlet modifies the value for this setting.
 The acceptable values for this parameter are:
 
 - DontForward.
-The computer can receive but not forward source-routed packets. 
+The computer can receive but not forward source-routed packets.
 - Drop.
-The computer drops source-routed packets. 
+The computer drops source-routed packets.
 
 The default value is DontForward.
 
 ```yaml
 Type: SourceRoutingBehavior
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Forward, DontForward, Drop
 
 Required: False
@@ -532,13 +554,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -549,22 +571,22 @@ Accept wildcard characters: False
 
 ### -UseTemporaryAddresses
 Specifies a value for temporary addresses.
-The cmdlet modifies the value for this setting. 
+The cmdlet modifies the value for this setting.
 
 - Always.
-The computer always generates temporary addresses by using random numbers. 
+The computer always generates temporary addresses by using random numbers.
 - Counter.
 The computer generates temporary addresses by using the interface identifier.
-You typically use this identifier for test purposes. 
+You typically use this identifier for test purposes.
 - Disabled.
-The computer does not use temporary addresses. 
+The computer does not use temporary addresses.
 - Enabled.
 The computer uses temporary addresses.
 
 ```yaml
 Type: UseTemporaryAddresses
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled, Always
 
 Required: False

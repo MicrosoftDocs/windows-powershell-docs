@@ -233,30 +233,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
-
-- Negotiate or 0
-- Basic or 1
-
-The default authentication method is Negotiate.
-
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-```yaml
-Type: ADAuthType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Negotiate, Basic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AuthenticationPolicy
 Specifies an Active Directory Domain Services authentication policy object.
 Specify the authentication policy object in one of the following formats: 
@@ -299,6 +275,30 @@ If the cmdlet finds two or more objects, the cmdlet returns a non-terminating er
 Type: ADAuthenticationPolicySilo
 Parameter Sets: Identity
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthType
+Specifies the authentication method to use.
+The acceptable values for this parameter are:
+
+- Negotiate or 0
+- Basic or 1
+
+The default authentication method is Negotiate.
+
+A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+```yaml
+Type: ADAuthType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Negotiate, Basic
 
 Required: False
 Position: Named
@@ -1007,23 +1007,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -POBox
-Specifies the user's post office box number.
-This parameter sets the **POBox** property of a user object.
-The LDAP display name (**ldapDisplayName**) of this property is postOfficeBox.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Partition
 Specifies the distinguished name of an Active Directory partition.
 The distinguished name must be one of the naming contexts on the current directory server.
@@ -1109,6 +1092,23 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: Boolean
+Parameter Sets: Identity
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -POBox
+Specifies the user's post office box number.
+This parameter sets the **POBox** property of a user object.
+The LDAP display name (**ldapDisplayName**) of this property is postOfficeBox.
+
+```yaml
+Type: String
 Parameter Sets: Identity
 Aliases: 
 

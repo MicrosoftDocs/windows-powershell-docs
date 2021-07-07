@@ -16,7 +16,7 @@ Moves a clustered role (a resource group) from one node to another in a failover
 ## SYNTAX
 
 ```
-Move-ClusterGroup [[-Name] <String>] [[-Node] <String>] [-IgnoreLocked] [-Wait <Int32>]
+Move-ClusterGroup [[-Name] <String>] [[-Node] <String>] [-IgnoreLocked][-IgnoreAffinityRule]  [-Wait <Int32>]
  [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -82,6 +82,21 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreAffinityRule
+{{ Fill IgnoreAffinityRule Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

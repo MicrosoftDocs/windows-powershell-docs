@@ -17,7 +17,7 @@ Runs validation tests for failover cluster hardware and settings.
 
 ```
 Test-Cluster [[-Node] <StringCollection>] [-Disk <Object[]>] [-Pool <Object[]>] [-ReportName <String>] [-List]
- [-Include <StringCollection>] [-Ignore <StringCollection>] [-Force] [-InputObject <PSObject>]
+ [-Include <StringCollection>] [-Ignore <StringCollection>] [-Force] [-KeepLocalStoragePoolsOnline] [-InputObject <PSObject>]
  [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -295,6 +295,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -KeepLocalStoragePoolsOnline
+{{ Fill KeepLocalStoragePoolsOnline Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

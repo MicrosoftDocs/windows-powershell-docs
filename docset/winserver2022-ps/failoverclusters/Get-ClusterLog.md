@@ -16,8 +16,9 @@ Creates a log file for all nodes, or a specific a node, in a failover cluster.
 ## SYNTAX
 
 ```
-Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>] [-TimeSpan <UInt32>] [-UseLocalTime]
- [-SkipClusterState] [-Health] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+Get-ClusterLog [[-Node] <StringCollection>] [-Destination <String>][-PerformanceHistoryTimeFrame <String>] 
+[-TimeSpan <UInt32>] [-UseLocalTime] [-SkipClusterState] [-Health]  [-ExportClusterPerformanceHistory]
+  [-NetworkDiagnostics] [-NetworkDiagnosticsLevel <Int32>] [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -98,6 +99,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExportClusterPerformanceHistory
+Export the ClusterPorformanceHistory data.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Health
 Indicates that the cmdlet also logs the health information of the cluster.
 
@@ -128,6 +144,36 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -NetworkDiagnostics
+Generate the cluster network diagnotics logs.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkDiagnosticsLevel
+Specifies the level of depth of the network diagnotics logs.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Node
 Specifies the name of the cluster node for which to generate the cluster log.
 
@@ -138,6 +184,21 @@ Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PerformanceHistoryTimeFrame
+{{ Fill PerformanceHistoryTimeFrame Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

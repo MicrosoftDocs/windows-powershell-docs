@@ -15,9 +15,18 @@ Configures the system to enable S2D to claim or not claim specific physical disk
 
 ## SYNTAX
 
+### ByPhysicalDiskGuid (Default)
 ```
-Set-ClusterStorageSpacesDirectDisk [-CanBeClaimed <Boolean>] [-PhysicalDiskIds <String[]>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-ClusterStorageSpacesDirectDisk -PhysicalDiskGuid <String[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ByPhysicalDisk
+```
+Set-ClusterStorageSpacesDirectDisk -PhysicalDisk <CimInstance[]> [-CanBeClaimed <Boolean>] [-Reset]
+ [-CacheUsage <S2DDiskUsage>] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,6 +63,22 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CacheUsage
+{{ Fill CacheUsage Description }}
+
+```yaml
+Type: S2DDiskUsage
+Parameter Sets: (All)
+Aliases:
+Accepted values: NonHybrid, Capacity, Cache, Auto
 
 Required: False
 Position: Named
@@ -110,14 +135,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhysicalDiskIds
-Specifies an array of unique IDs of physical disks.
-This cmdlet set S2D to claim or not claim the specified disks.
+### -PhysicalDisk
+{{ Fill PhysicalDisk Description }}
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: ByPhysicalDisk
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -PhysicalDiskGuid
+{{ Fill PhysicalDiskGuid Description }}
 
 ```yaml
 Type: String[]
+Parameter Sets: ByPhysicalDiskGuid
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Reset
+{{ Fill Reset Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -Reset
+{{ Fill Reset Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: StorageReplica
-ms.date: 12/20/2016
+ms.date: 07/06/2021
 online version: https://docs.microsoft.com/powershell/module/storagereplica/set-srnetworkconstraint?view=windowsserver2019-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SRNetworkConstraint
@@ -30,8 +30,10 @@ Any networks not specified by this cmdlet are no longer used by Storage Replica.
 ## EXAMPLES
 
 ### Example 1: Set a constraint for stand-alone computers
+
+This command lists available interface indexes by using the **Get-NetIPConfiguration** cmdlet. Run this command on both servers.
+
 ```
-This command lists available interface indexes by using the **Get-NetIPConfiguration** cmdlet. Run this command on both servers. 
 PS C:\>Get-NetIPConfiguration
 InterfaceAlias       : Ethernet
 InterfaceIndex       : 2
@@ -54,18 +56,21 @@ IPv6DefaultGateway   : fe80::ea65:49ff:fecd:4141
 IPv4DefaultGateway   : 172.24.18.1
 DNSServer            : 10.177.9.210
                        10.177.9.211
+```
 
+The next command sets the network constraint for interfaces and replication groups. The final command makes sure that the constraint takes effect immediately by using the **Update-SmbMultichannelConnection** cmdlet.
 
-The next command sets the network constraint for interfaces and replication groups. The final command makes sure that the constraint takes effect immediately by using the Update-SmbMultichannelConnection cmdlet. 
-PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterface 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterface 2
+```
+PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterfaceIndex 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterfaceIndex 2
 C:\PS> Update-SmbMultichannelConnection
 ```
 
 This example sets the network constraint for interfaces and replication groups on stand-alone computers.
 
 ### Example 2: Set a constraint for a stretch cluster
+
 ```
-PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV01" -SourceRGName "Group01" -SourceNWInterfaceIndex "Cluster Network 1","Cluster Network 2" -DestinationComputerName "SR-SRV03" -DestinationRGName "Group02" -DestinationNWInterfaceIndex "Cluster Network 1","Cluster Network 2"
+PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV01" -SourceRGName "Group01" -SourceNWInterface "Cluster Network 1","Cluster Network 2" -DestinationComputerName "SR-SRV03" -DestinationRGName "Group02" -DestinationNWInterface "Cluster Network 1","Cluster Network 2"
 ```
 
 This command sets a network constraint for a specific set of cluster networks in a stretch cluster.
@@ -78,7 +83,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -204,13 +209,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

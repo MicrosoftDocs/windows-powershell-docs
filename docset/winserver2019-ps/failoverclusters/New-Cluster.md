@@ -175,7 +175,7 @@ The acceptable values for this parameter are:
 
 - Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default Setting)
 - Singleton: The traditional method of DHCP or static IP address.
-- Distributed: Use a Distributed Network Name by using Node IP addresses.
+- Distributed: Uses a Distributed Network Name by using Node IP addresses.
 
 ```yaml
 Type: AdminAccessPointResType

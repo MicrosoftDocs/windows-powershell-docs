@@ -19,7 +19,8 @@ Enables Storage Spaces Direct on a Fail-Over Cluster.
 ```
 Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boolean>]
  [-CacheState <CacheStateType>] [-CacheMetadataReserveBytes <UInt64>] [-CachePageSizeKBytes <UInt32>]
- [-SkipEligibilityChecks] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [-SkipEligibilityChecks]  [-CollectPerformanceHistory <Boolean>] [-BusTypesToUse <S2DBusType[]>]
+ [-SedProtectionState <SedProtectionStateType>] [-UseSedExclusively <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -27,7 +28,8 @@ Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boo
 ```
 Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boolean>]
  [-CacheState <CacheStateType>] [-CacheMetadataReserveBytes <UInt64>] [-CachePageSizeKBytes <UInt32>]
- [-SkipEligibilityChecks] -XML <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
+ [-SkipEligibilityChecks] [-CollectPerformanceHistory <Boolean>] [-BusTypesToUse <S2DBusType[]>]
+  [-SedProtectionState <SedProtectionStateType>] [-UseSedExclusively <Boolean>] -XML <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -35,7 +37,9 @@ Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boo
 ```
 Enable-ClusterStorageSpacesDirect [-PoolFriendlyName <String>] [-Autoconfig <Boolean>]
  [-CacheState <CacheStateType>] [-CacheMetadataReserveBytes <UInt64>] [-CachePageSizeKBytes <UInt32>]
- [-SkipEligibilityChecks] -CacheDeviceModel <String[]> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-SkipEligibilityChecks] -CacheDeviceModel <String[]> [-CollectPerformanceHistory <Boolean>]
+ [-BusTypesToUse <S2DBusType[]>] [-SedProtectionState <SedProtectionStateType>] [-UseSedExclusively <Boolean>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
  [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -92,6 +96,21 @@ If you do not want the pool to be automatically created, but created manually, y
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BusTypesToUse
+{{ Fill BusTypesToUse Description }}
+
+```yaml
+Type: S2DBusType[]
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -185,6 +204,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CollectPerformanceHistory
+{{ Fill CollectPerformanceHistory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -207,6 +241,21 @@ Specifies the friendly name of the Storage Spaces Direct pool when it is created
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SedProtectionState
+{{ Fill SedProtectionState Description }}
+
+```yaml
+Type: SedProtectionStateType
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -239,6 +288,21 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseSedExclusively
+{{ Fill UseSedExclusively Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

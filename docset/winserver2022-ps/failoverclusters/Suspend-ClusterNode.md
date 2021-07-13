@@ -16,8 +16,9 @@ Suspends activity on a failover cluster node, that is, pauses the node.
 ## SYNTAX
 
 ```
-Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-Wait] [[-TargetNode] <String>]
- [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Suspend-ClusterNode [[-Name] <StringCollection>] [-Drain] [-ForceDrain] [-RetryDrainOnFailure]
+ [-AvoidPlacement] [-Wait] [[-TargetNode] <String>] [-InputObject <PSObject>] [-Cluster <String>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,6 +69,21 @@ What if: Performing operation "Suspend-ClusterNode" on Target "node1".
 This example provides a preview of the operation that will be performed on the node named node1.
 
 ## PARAMETERS
+
+### -AvoidPlacement
+{{ Fill AvoidPlacement Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Cluster
 Specifies the name of the cluster on which to run this cmdlet.
@@ -157,6 +173,21 @@ Aliases:
 
 Required: False
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetryDrainOnFailure
+{{ Fill RetryDrainOnFailure Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

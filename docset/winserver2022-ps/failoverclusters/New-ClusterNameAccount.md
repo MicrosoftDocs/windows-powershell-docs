@@ -18,12 +18,14 @@ Creates a cluster name account in Active Directory Domain Services.
 ### InputObject (Default)
 ```
 New-ClusterNameAccount -Name <String> [-Credentials <PSCredential>] [-Domain <String>]
- [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
+ [-ManagementPointNetworkType <AdminAccessPointResType>] [-UpgradeVCOs]  [-InputObject <PSObject>]
+ [-Cluster <String>] [<CommonParameters>]
 ```
 
 ### Credentials
 ```
-New-ClusterNameAccount -Name <String> -Credentials <PSCredential> -Domain <String> [-Cluster <String>]
+New-ClusterNameAccount -Name <String> -Credentials <PSCredential> -Domain <String>
+ [-ManagementPointNetworkType <AdminAccessPointResType>] [-UpgradeVCOs] [-Cluster <String>]
  [<CommonParameters>]
 ```
 
@@ -143,6 +145,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -ManagementPointNetworkType
+{{ Fill ManagementPointNetworkType Description }}
+
+```yaml
+Type: AdminAccessPointResType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the cluster name account that this cmdlet creates.
 
@@ -152,6 +169,21 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UpgradeVCOs
+{{ Fill UpgradeVCOs Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

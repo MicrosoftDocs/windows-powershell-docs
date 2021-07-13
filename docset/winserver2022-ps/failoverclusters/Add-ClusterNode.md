@@ -16,7 +16,7 @@ Adds a node (server) to a failover cluster.
 ## SYNTAX
 
 ```
-Add-ClusterNode [[-Name] <StringCollection>] [-NoStorage] [-InputObject <PSObject>] [-Cluster <String>]
+Add-ClusterNode [[-Name] <StringCollection>] [-Type <NodeType>] [-NoStorage] [-InputObject <PSObject>] [-Cluster <String>]
  [<CommonParameters>]
 ```
 
@@ -107,6 +107,21 @@ Shared storage can be added by piping the ClusterDiskInfo object from the **Get-
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+{{ Fill Type Description }}
+
+```yaml
+Type: NodeType
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

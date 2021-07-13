@@ -17,7 +17,8 @@ Configures quorum options for a failover cluster.
 
 ```
 Set-ClusterQuorum [-DiskOnly <String>] [-NoWitness] [-DiskWitness <String>] [-FileShareWitness <String>]
- [-CloudWitness] [-AccountName <String>] [-Endpoint <String>] [-AccessKey <String>] [-InputObject <PSObject>]
+ [-CloudWitness] [-AccountName <String>] [-Endpoint <String>] [-AccessKey <String>] [-SASToken <String>]
+ [-ContainerName <String>] [-Credential <PSCredential>]  [-InputObject <PSObject>]
  [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -127,6 +128,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ContainerName
+{{ Fill ContainerName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+{{ Fill Credential Description }}
+
+```yaml
+Type: PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DiskOnly
 Causes the cluster quorum to be set to disk only type.
 This is not recommended as it creates a single point of failure for the cluster.
@@ -212,6 +243,21 @@ Indicates that the cmdlet sets the cluster quorum to the Node Majority type.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NodeMajority
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SASToken
+{{ Fill SASToken Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -16,7 +16,7 @@ Starts one or more clustered roles, also known as resource groups, on a failover
 ## SYNTAX
 
 ```
-Start-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-Wait <Int32>]
+Start-ClusterGroup [[-Name] <String>] [-IgnoreLocked] [-ChooseBestNode] [-IgnoreAffinityRule] [-Wait <Int32>]
  [-InputObject <PSObject>] [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -72,6 +72,21 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IgnoreAffinityRule
+{{ Fill IgnoreAffinityRule Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

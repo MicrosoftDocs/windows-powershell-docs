@@ -16,7 +16,7 @@ Creates a clustered file server for scale-out application data.
 ## SYNTAX
 
 ```
-Add-ClusterScaleOutFileServerRole [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
+Add-ClusterScaleOutFileServerRole[-Infrastructure] [[-Name] <String>] [-Wait <Int32>] [-InputObject <PSObject>]
  [-Cluster <String>] [<CommonParameters>]
 ```
 
@@ -62,6 +62,21 @@ If the input for this parameter is `.` or it is omitted, then the cmdlet runs on
 Type: String
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Infrastructure
+Create Cluster Infrastructure Scale Out File Server.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: Infra
 
 Required: False
 Position: Named

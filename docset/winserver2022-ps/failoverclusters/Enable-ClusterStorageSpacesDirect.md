@@ -60,24 +60,24 @@ This command enables S2D on the cluster.
 PS C:\> Enable-ClusterStorageSpacesDirect -PoolFriendlyName 'Sales'
 ```
 
-This command enables S2d on the cluster and sets a friendly name for the Storage Spaces Direct pool. 
+This command enables S2d on the cluster and sets a friendly name for the Storage Spaces Direct pool.
 
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ If you do not want the pool to be automatically created, but created manually, y
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ When this parameter is omitted the system automatically determines which disks t
 ```yaml
 Type: String[]
 Parameter Sets: WithCacheDeviceModel
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```yaml
 Type: UInt64
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ The default value is 16 KB, which represents a good tradeoff on most systems.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: 8, 16, 32, 64
 
 Required: False
@@ -177,7 +177,7 @@ The default value is Enabled.
 ```yaml
 Type: CacheStateType
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Disabled, Enabled
 
 Required: False
@@ -240,7 +240,7 @@ Specifies the friendly name of the Storage Spaces Direct pool when it is created
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -250,7 +250,13 @@ Accept wildcard characters: False
 ```
 
 ### -SedProtectionState
-{{ Fill SedProtectionState Description }}
+Indicates the desired SED protection state. The acceptable values for this parameter are: Disabled, Provisioned, or Protected.
+
+Disabled (default): CacheMgr does not configure drives even if they support self-encryption. Drives are be treated as regular (non-SED) drives by S2D.
+
+Provisioned: CacheMgr configures local band spanning for the entire disk on each drive that supports self-encryption.
+
+Protected: CacheMgr configures user-provided authentication key on the local band on each drive that supports self-encryption. Once protected, CacheMgr (and other cluster components) can lock/unlock the local band thus protecting the data within the band.
 
 ```yaml
 Type: SedProtectionStateType
@@ -270,7 +276,7 @@ Indicates that this cmdlet skips cache eligibility checks.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -281,13 +287,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -297,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseSedExclusively
-{{ Fill UseSedExclusively Description }}
+Indicates that S2D should be configured exclusively with SED drives.
 
 ```yaml
 Type: Boolean
@@ -333,7 +339,7 @@ Specifies the XML file that contains the storage supported configuration informa
 ```yaml
 Type: String
 Parameter Sets: WithXML
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named

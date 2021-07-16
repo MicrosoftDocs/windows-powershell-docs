@@ -50,19 +50,19 @@ Omitting that parameter has the same effect.
 ## PARAMETERS
 
 ### -AsJob
-Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete. 
+Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
 
-The cmdlet immediately returns an object that represents the job and then displays the command prompt. 
-You can continue to work in the session while the job completes. 
-To manage the job, use the `*-Job` cmdlets. 
-To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet. 
+The cmdlet immediately returns an object that represents the job and then displays the command prompt.
+You can continue to work in the session while the job completes.
+To manage the job, use the `*-Job` cmdlets.
+To get the job results, use the [Receive-Job](https://go.microsoft.com/fwlink/?LinkID=113372) cmdlet.
 
 For more information about Windows PowerShell background jobs, see [about_Jobs](https://go.microsoft.com/fwlink/?LinkID=113251).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -CacheUsage
-{{ Fill CacheUsage Description }}
+The desired cache usage of the disk. The acceptable values for this parameter are: NonHybrid, Capacity, Cache, and Auto.
 
 ```yaml
 Type: S2DDiskUsage
@@ -94,7 +94,7 @@ If you do not specify this parameter, this cmdlet indicates that the specified p
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -166,21 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reset
-{{ Fill Reset Description }}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-### -Reset
-{{ Fill Reset Description }}
+Indicates whether the disk can be reset.
 
 ```yaml
 Type: SwitchParameter
@@ -196,13 +182,13 @@ Accept wildcard characters: False
 
 ### -ThrottleLimit
 Specifies the maximum number of concurrent operations that can be established to run the cmdlet.
-If this parameter is omitted or a value of `0` is entered, then Windows PowerShell® calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
+If this parameter is omitted or a value of `0` is entered, then Windows PowerShell&reg; calculates an optimum throttle limit for the cmdlet based on the number of CIM cmdlets that are running on the computer.
 The throttle limit applies only to the current cmdlet, not to the session or to the computer.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

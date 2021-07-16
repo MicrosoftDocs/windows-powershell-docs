@@ -44,7 +44,8 @@ InititorIPAdressListNumber : 4294967295
 IsDataDigest               : False 
 IsHeaderDigest             : False 
 TargetPortalAddress        : testiSCSI-deepcore 
-TargetPortalPortNumber     : 3260 PS C:\> Get-IscsiTargetPortal | Update-IscsiTargetPortal
+TargetPortalPortNumber     : 3260
+PS C:\> Get-IscsiTargetPortal | Update-IscsiTargetPortal
 ```
 
 This command updates information about the specified iSCSI target portal.

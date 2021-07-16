@@ -132,7 +132,7 @@ Gets the group sets in the cluster.
 Gets the cluster group sets based on dependency relationships.
 
 ### [Get-ClusterHCSVM](./Get-ClusterHCSVM.md)
-{{ Fill in the Synopsis }}
+Gets cluster HCS VM resources.
 
 ### [Get-ClusterLog](./Get-ClusterLog.md)
 Creates a log file for all nodes, or a specific a node, in a failover cluster.
@@ -228,7 +228,7 @@ Creates a fault domain in the cluster.
 Create a names set of groups in the cluster.
 
 ### [New-ClusterHCSVM](./New-ClusterHCSVM.md)
-{{ Fill in the Synopsis }}
+Creates a new instance of an HCS VM resource.
 
 ### [New-ClusterNameAccount](./New-ClusterNameAccount.md)
 Creates a cluster name account in Active Directory Domain Services.
@@ -261,7 +261,7 @@ Removes a group set from the cluster.
 Removes a dependency from a group set.
 
 ### [Remove-ClusterHCSVM](./Remove-ClusterHCSVM.md)
-{{ Fill in the Synopsis }}
+Removes an instance of an HCS VM resource.
 
 ### [Remove-ClusterNameAccount](./Remove-ClusterNameAccount.md)
 {{ Fill in the Synopsis }}
@@ -348,7 +348,7 @@ Starts the Cluster service on all nodes of the cluster on which it is not yet st
 Starts one or more clustered roles, also known as resource groups, on a failover cluster.
 
 ### [Start-ClusterHCSVM](./Start-ClusterHCSVM.md)
-{{ Fill in the Synopsis }}
+Starts an HCS VM resource.
 
 ### [Start-ClusterNode](./Start-ClusterNode.md)
 Starts the Cluster service on a node in a failover cluster.
@@ -369,7 +369,7 @@ Stops the Cluster service on all nodes in a failover cluster, which will stop al
 Stops one or more clustered roles on a failover cluster.
 
 ### [Stop-ClusterHCSVM](./Stop-ClusterHCSVM.md)
-{{ Fill in the Synopsis }}
+Stops an HCS VM resource.
 
 ### [Stop-ClusterNode](./Stop-ClusterNode.md)
 Stops the Cluster service on a node in a failover cluster.

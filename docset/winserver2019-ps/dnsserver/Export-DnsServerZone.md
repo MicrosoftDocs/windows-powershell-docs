@@ -109,7 +109,6 @@ Accept wildcard characters: False
 
 ### -FileName
 Specifies a name for the export file.
-You can include a file path.
 
 ```yaml
 Type: String

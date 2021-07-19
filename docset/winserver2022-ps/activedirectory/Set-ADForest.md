@@ -185,6 +185,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Server
+Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
+The service may be any of the following: Active Directory Lightweight Directory Services (AD LDS), AD DS, or Active Directory snapshot instance.
+
+Specify the AD DS instance in one of the following ways:  
+
+Domain name values:
+
+- Fully qualified domain name
+- NetBIOS name
+
+Directory server values:  
+
+- Fully qualified directory server name
+- NetBIOS name
+- Fully qualified directory server name and port
+
+The default value for this parameter is determined by one of the following methods in the order that they are listed:
+
+- By using the *Server* value from objects passed through the pipeline
+- By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
+- By using the domain of the computer running Windows PowerShell
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -SPNSuffixes
 Modifies the list of service principal name (SPN) suffixes of the forest.
 This parameter sets the multi-valued **msDS-SPNSuffixes** property of the cross-reference container.
@@ -229,40 +263,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Server
-Specifies the Active Directory Domain Services (AD DS) instance to connect to, by providing one of the following values for a corresponding domain name or directory server.
-The service may be any of the following: Active Directory Lightweight Directory Services (AD LDS), AD DS, or Active Directory snapshot instance.
-
-Specify the AD DS instance in one of the following ways:  
-
-Domain name values:
-
-- Fully qualified domain name
-- NetBIOS name
-
-Directory server values:  
-
-- Fully qualified directory server name
-- NetBIOS name
-- Fully qualified directory server name and port
-
-The default value for this parameter is determined by one of the following methods in the order that they are listed:
-
-- By using the *Server* value from objects passed through the pipeline
-- By using the server information associated with the AD DS Windows PowerShell provider drive, when the cmdlet runs in that drive
-- By using the domain of the computer running Windows PowerShell
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -UPNSuffixes
 Modifies the list of user principal name (UPN) suffixes of the forest.

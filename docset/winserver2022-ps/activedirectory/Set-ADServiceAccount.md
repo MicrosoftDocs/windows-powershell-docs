@@ -169,29 +169,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AuthType
-Specifies the authentication method to use.
-The acceptable values for this parameter are:
-
-- Negotiate or 0
-- Basic or 1
-
-The default authentication method is Negotiate.
-
-A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
-
-```yaml
-Type: ADAuthType
-Parameter Sets: (All)
-Aliases: 
-Accepted values: Negotiate, Basic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -AuthenticationPolicy
 Specifies an Active Directory Domain Services (AD DS) authentication policy object.
@@ -235,6 +212,30 @@ If the cmdlet finds two or more objects, the cmdlet returns a non-terminating er
 Type: ADAuthenticationPolicySilo
 Parameter Sets: Identity
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthType
+Specifies the authentication method to use.
+The acceptable values for this parameter are:
+
+- Negotiate or 0
+- Basic or 1
+
+The default authentication method is Negotiate.
+
+A Secure Sockets Layer (SSL) connection is required for the Basic authentication method.
+
+```yaml
+Type: ADAuthType
+Parameter Sets: (All)
+Aliases: 
+Accepted values: Negotiate, Basic
 
 Required: False
 Position: Named
@@ -376,20 +377,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DNSHostName
-Specifies the DNS host name.
-
-```yaml
-Type: String
-Parameter Sets: Identity
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Specifies a description of the object.
@@ -412,6 +399,21 @@ Accept wildcard characters: False
 Specifies the display name of the object.
 This parameter sets the **DisplayName** property of the object.
 The LDAP display name (**ldapDisplayName**) for this property is displayName.
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DNSHostName
+Specifies the DNS host name.
 
 ```yaml
 Type: String
@@ -774,8 +776,8 @@ The following example shows how to add and remove service principal names:
 
 ```yaml
 Type: Hashtable
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: Identity
+Aliases:
 
 Required: False
 Position: Named

@@ -25,6 +25,11 @@ Export-StartLayout [-Path] <String> [-UseDesktopApplicationID] [-WhatIf] [-Confi
 Export-StartLayout -LiteralPath <String> [-UseDesktopApplicationID] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### For Windows 11 Start menu
+```
+Export-StartLayout -Path <String>
+```
+
 ## DESCRIPTION
 The **Export-StartLayout** cmdlet exports the layout of the tiles on Start of the current user.
 You can export layout and use Import-StartLayout as well as other management policies for the Start layout.
@@ -38,6 +43,13 @@ PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.xml"
 ```
 
 This command exports the layout of the tiles on Start to a file named Marketing.xml in the C:\Layouts folder.
+
+### Example 2: Export the layout of the Windows 11 Start menu
+```
+PS C:\> Export-StartLayout -Path "C:\Layouts\Marketing.json"
+```
+
+This command exports the layout of the tiles on the Windows 11 Start menu to a file named Marketing.json in the C:\Layouts folder. Note that JSON is the only supported format for the output file and only the `-Path` parameter is supported.
 
 ## PARAMETERS
 

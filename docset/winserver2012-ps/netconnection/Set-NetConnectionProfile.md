@@ -1,9 +1,8 @@
 ---
-description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_NetConnectionProfile.cdxml-help.xml
-Module Name: NetConnectionProfile
+Module Name: NetConnection
 ms.date: 12/20/2016
-online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/set-netconnectionprofile?view=windowsserver2016-ps&wt.mc_id=ps-gethelp
+online version: https://docs.microsoft.com/powershell/module/netconnectionprofile/set-netconnectionprofile?view=windowsserver2012-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-NetConnectionProfile
 ---
@@ -100,7 +99,6 @@ Accept wildcard characters: False
 ### -IPv4Connectivity
 Specifies an array of IPv4 protocol connectivity status values.
 The acceptable values for this parameter are:
-
 - Disconnected
 - NoTraffic
 - Subnet
@@ -123,7 +121,6 @@ Accept wildcard characters: False
 ### -IPv6Connectivity
 Specifies an array of IPv6 protocol connectivity status values.
 The acceptable values for this parameter are:
-
 - Disconnected
 - NoTraffic
 - Subnet
@@ -144,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Specifies the input to this cmdlet. 
+Specifies the input to this cmdlet.
 You can use this parameter, or you can pipe the input to this cmdlet.
 
 ```yaml

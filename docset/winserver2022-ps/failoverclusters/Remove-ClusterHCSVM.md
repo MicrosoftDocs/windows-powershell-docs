@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-ClusterHCSVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes an instance of an HCS VM resource.
 
 ## SYNTAX
 

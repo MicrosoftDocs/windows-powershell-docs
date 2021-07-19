@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-ClusterHCSVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets cluster HCS VM resources.
 
 ## SYNTAX
 

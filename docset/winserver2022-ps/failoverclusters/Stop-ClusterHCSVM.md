@@ -8,7 +8,7 @@ schema: 2.0.0
 # Stop-ClusterHCSVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Stops an HCS VM resource.
 
 ## SYNTAX
 

@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-ClusterHCSVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a new instance of an HCS VM resource.
 
 ## SYNTAX
 

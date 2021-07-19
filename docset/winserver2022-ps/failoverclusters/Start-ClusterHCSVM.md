@@ -8,7 +8,7 @@ schema: 2.0.0
 # Start-ClusterHCSVM
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Starts an HCS VM resource.
 
 ## SYNTAX
 

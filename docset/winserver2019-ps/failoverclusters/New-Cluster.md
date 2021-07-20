@@ -18,7 +18,7 @@ Creates a new failover cluster.
 ```
 New-Cluster [-Name] <String> [-Node <StringCollection>] [-StaticAddress <StringCollection>]
  [-IgnoreNetwork <StringCollection>] [-NoStorage] [-S2D] [-AdministrativeAccessPoint <AdminAccessPoint>]
- [-Force] [-ManagementPointNetworkType {Automatic | Singleton | Distributed}] [<CommonParameters>]
+ [-Force] [-ManagementPointNetworkType <AdminAccessPointResType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -173,7 +173,7 @@ Specifies the network configuration used to determine IP address settings.
 
 The acceptable values for this parameter are:
 
-- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default Setting)
+- Automatic: Automatically detects the appropriate setting. If SQL Server is running in Azure, uses `Distributed`. If SQL Server is running on-premises, uses `Singleton`. (Default setting)
 - Singleton: The traditional method of DHCP or static IP address.
 - Distributed: Uses a Distributed Network Name by using Node IP addresses.
 

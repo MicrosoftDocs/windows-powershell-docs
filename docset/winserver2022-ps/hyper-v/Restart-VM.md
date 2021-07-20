@@ -18,14 +18,14 @@ Restarts a virtual machine.
 ### Name (Default)
 ```
 Restart-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-Name] <String[]> [-Force] [-AsJob] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Name] <String[]> [-Force] [-AsJob] [-Passthru] [-Type <RestartType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NameWait
 ```
 Restart-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-Name] <String[]> [-Force] [-AsJob] [-Passthru] [-Wait] [-For <WaitVMTypes>] [-Delay <UInt16>]
- [-Timeout <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Timeout <Int32>] [-Type <RestartType>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
@@ -223,6 +223,22 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: NameWait, VMObjectWait
 Aliases: TimeoutSec
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+{{ Fill Type Description }}
+
+```yaml
+Type: RestartType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Reset, Reboot
 
 Required: False
 Position: Named

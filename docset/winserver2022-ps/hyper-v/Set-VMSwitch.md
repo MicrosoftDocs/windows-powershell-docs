@@ -21,8 +21,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-Name] <String[]> [-SwitchType <VMSwitchType>] [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SwitchObject_SwitchType
@@ -31,8 +34,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-VMSwitch] <VMSwitch[]> [-SwitchType <VMSwitchType>] [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SwitchName_NetAdapterInterfaceDescription
@@ -41,8 +47,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-Name] <String[]> [-NetAdapterInterfaceDescription] <String> [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SwitchName_NetAdapterName
@@ -51,8 +60,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-Name] <String[]> [-NetAdapterName] <String> [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SwitchObject_NetAdapterInterfaceDescription
@@ -61,8 +73,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-VMSwitch] <VMSwitch[]> [-NetAdapterInterfaceDescription] <String> [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### SwitchObject_NetAdapterName
@@ -71,8 +86,11 @@ Set-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
  [-VMSwitch] <VMSwitch[]> [-NetAdapterName] <String> [-AllowManagementOS <Boolean>]
  [-DefaultFlowMinimumBandwidthAbsolute <Int64>] [-DefaultFlowMinimumBandwidthWeight <Int64>]
  [-DefaultQueueVrssEnabled <Boolean>] [-DefaultQueueVmmqEnabled <Boolean>]
- [-DefaultQueueVmmqQueuePairs <UInt32>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultQueueVrssMaxQueuePairs <UInt32>] [-DefaultQueueVrssMinQueuePairs <UInt32>]
+ [-DefaultQueueVrssQueueSchedulingMode <VrssQueueSchedulingModeType>]
+ [-DefaultQueueVrssExcludePrimaryProcessor <Boolean>] [-EnableSoftwareRsc <Boolean>]
+ [-EnableRscOffload <Boolean>] [-Extensions <VMSwitchExtension[]>] [-Notes <String>] [-Passthru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -249,11 +267,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultQueueVmmqQueuePairs
+### -DefaultQueueVrssEnabled
 
 
 ```yaml
-Type: UInt32
+Type: Boolean
 Parameter Sets: (All)
 Aliases: 
 
@@ -264,13 +282,89 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultQueueVrssEnabled
-
+### -DefaultQueueVrssExcludePrimaryProcessor
+{{ Fill DefaultQueueVrssExcludePrimaryProcessor Description }}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultQueueVrssMaxQueuePairs
+{{ Fill DefaultQueueVrssMaxQueuePairs Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: DefaultQueueVmmqQueuePairs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultQueueVrssMinQueuePairs
+{{ Fill DefaultQueueVrssMinQueuePairs Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultQueueVrssQueueSchedulingMode
+{{ Fill DefaultQueueVrssQueueSchedulingMode Description }}
+
+```yaml
+Type: VrssQueueSchedulingModeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Dynamic, StaticVmq, StaticVrss
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRscOffload
+{{ Fill EnableRscOffload Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSoftwareRsc
+{{ Fill EnableSoftwareRsc Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -20,7 +20,7 @@ Creates a new virtual machine.
 
 ```
 New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-NoVHD]
- [-SwitchName <String>] [-Path <String>] [-Version <Version>] [-Prerelease] [-Experimental]
+ [-SwitchName <String>] [-Path <String>] [-Version <Version>] [-Prerelease]
  [[-Generation] <Int16>] [-Force] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
  [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -30,7 +30,7 @@ New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevi
 ```
 New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-SwitchName <String>]
  -NewVHDPath <String> -NewVHDSizeBytes <UInt64> [-Path <String>] [-Version <Version>] [-Prerelease]
- [-Experimental] [[-Generation] <Int16>] [-Force] [-AsJob] [-CimSession <CimSession[]>]
+ [[-Generation] <Int16>] [-Force] [-AsJob] [-CimSession <CimSession[]>]
  [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevi
 
 ```
 New-VM [[-Name] <String>] [[-MemoryStartupBytes] <Int64>] [-BootDevice <BootDevice>] [-SwitchName <String>]
- -VHDPath <String> [-Path <String>] [-Version <Version>] [-Prerelease] [-Experimental] [[-Generation] <Int16>]
+ -VHDPath <String> [-Path <String>] [-Version <Version>] [-Prerelease] [[-Generation] <Int16>]
  [-Force] [-AsJob] [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -204,20 +204,6 @@ The default is the current user.
 
 ```yaml
 Type: PSCredential[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Experimental
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

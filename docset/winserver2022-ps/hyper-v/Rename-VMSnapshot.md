@@ -18,7 +18,7 @@ Renames a virtual machine checkpoint.
 ### SnapshotName (Default)
 ```
 Rename-VMSnapshot [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-Name] <String> [-VMName] <String> [-NewName] <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Name <String> [-VMName] <String> [-NewName] <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SnapshotObject

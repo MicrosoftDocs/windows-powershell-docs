@@ -18,26 +18,26 @@ title: Set-VMNetworkAdapterTeamMapping
 ```
 Set-VMNetworkAdapterTeamMapping [-CimSession <CimSession[]>] [-ComputerName <String[]>]
  [-Credential <PSCredential[]>] [-VMName] <String> [-VMNetworkAdapterName <String>]
- -PhysicalNetAdapterName <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -PhysicalNetAdapterName <String> [-DisableOnFailover <DisableOnFailoverFeature>] -Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ManagementOS
 ```
 Set-VMNetworkAdapterTeamMapping [-ManagementOS] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
  [-Credential <PSCredential[]>] [-VMNetworkAdapterName <String>] [-SwitchName <String>]
- -PhysicalNetAdapterName <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -PhysicalNetAdapterName <String> [-DisableOnFailover <DisableOnFailoverFeature>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceObject
 ```
 Set-VMNetworkAdapterTeamMapping [-VMNetworkAdapter] <VMNetworkAdapterBase> -PhysicalNetAdapterName <String>
- [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DisableOnFailover <DisableOnFailoverFeature>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
 Set-VMNetworkAdapterTeamMapping [-VM] <VirtualMachine> [-VMNetworkAdapterName <String>]
- -PhysicalNetAdapterName <String> [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -PhysicalNetAdapterName <String> [-DisableOnFailover <DisableOnFailoverFeature>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -106,6 +106,22 @@ The default is the current user.
 Type: PSCredential[]
 Parameter Sets: VMName, ManagementOS
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableOnFailover
+{{ Fill DisableOnFailover Description }}
+
+```yaml
+Type: DisableOnFailoverFeature
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, RDMA
 
 Required: False
 Position: Named

@@ -18,12 +18,12 @@ Updates the version of virtual machines.
 ### Name (Default)
 ```
 Update-VMVersion [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-Name] <String[]> [-Force] [-AsJob] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Name] <String[]> [-TargetVersion <Version>] [-Force] [-AsJob] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
-Update-VMVersion [-VM] <VirtualMachine[]> [-Force] [-AsJob] [-Passthru] [-WhatIf] [-Confirm]
+Update-VMVersion [-VM] <VirtualMachine[]> [-TargetVersion <Version>] [-Force] [-AsJob] [-Passthru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -159,6 +159,21 @@ Indicates that this cmdlet returns the **Microsoft.HyperV.VirtualMachine** objec
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetVersion
+{{ Fill TargetVersion Description }}
+
+```yaml
+Type: Version
+Parameter Sets: (All)
+Aliases: Version
 
 Required: False
 Position: Named

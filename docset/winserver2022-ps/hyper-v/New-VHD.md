@@ -32,8 +32,9 @@ New-VHD [-Path] <String[]> [-ParentPath] <String> [[-SizeBytes] <UInt64>] [-Diff
 ### FixedWithoutSource
 ```
 New-VHD [-Path] <String[]> [-SizeBytes] <UInt64> [-Fixed] [-BlockSizeBytes <UInt32>]
- [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>] [-AsJob] [-CimSession <CimSession[]>]
- [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-LogicalSectorSizeBytes <UInt32>] [-PhysicalSectorSizeBytes <UInt32>]
+ [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>] [-DataAlignmentBytes <UInt64>] [-AsJob]
+ [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### FixedWithSource
@@ -97,6 +98,22 @@ PS C:\> New-VHD -Path $vhdpath -Dynamic -SizeBytes $vhdsize | Mount-VHD -Passthr
 This example creates a new 127GB VHD and then mounts, initializes, and formats it so the drive is ready to use.
 
 ## PARAMETERS
+
+### -AddressAbstractionType
+{{ Fill AddressAbstractionType Description }}
+
+```yaml
+Type: VirtualHardDiskPmemAddressAbstractionType
+Parameter Sets: FixedWithoutSource
+Aliases:
+Accepted values: None, BTT
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job.
@@ -186,6 +203,22 @@ The default is the current user.
 Type: PSCredential[]
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DataAlignmentBytes
+{{ Fill DataAlignmentBytes Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: FixedWithoutSource
+Aliases:
+Accepted values: 0, 1GB, 1073741824
 
 Required: False
 Position: Named

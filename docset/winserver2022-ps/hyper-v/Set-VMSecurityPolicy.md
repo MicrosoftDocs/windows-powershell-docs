@@ -18,12 +18,12 @@ Configures the security policy for a virtual machine.
 ### VMName (Default)
 ```
 Set-VMSecurityPolicy [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-VMName] <String[]> [-Passthru] [-Shielded <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VMName] <String[]> [-Passthru] [-Shielded <Boolean>] [-BindToHostTpm <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
-Set-VMSecurityPolicy [-VM] <VirtualMachine[]> [-Passthru] [-Shielded <Boolean>] [-WhatIf] [-Confirm]
+Set-VMSecurityPolicy [-VM] <VirtualMachine[]> [-Passthru] [-Shielded <Boolean>] [-BindToHostTpm <Boolean>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -34,6 +34,21 @@ The **Set-VMSecurityPolicy** cmdlet configures the security policy for a virtual
 
 
 ## PARAMETERS
+
+### -BindToHostTpm
+{{ Fill BindToHostTpm Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.

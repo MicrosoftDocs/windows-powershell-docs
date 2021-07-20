@@ -18,24 +18,30 @@ Configures features of the virtual network adapter in a virtual machine or the m
 ### VMName (Default)
 ```
 Set-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-VMName] <String> [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
- [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>]
- [-PortMirroring <VMNetworkAdapterPortMirroringMode>] [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>]
- [-IovQueuePairsRequested <UInt32>] [-IovInterruptModeration <IovInterruptModerationValue>]
- [-IovWeight <UInt32>] [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+ [-VMName] <String> [-Name <String>] [-DynamicMacAddress] [-MediaType <UInt32>] [-NumaAwarePlacement <Boolean>]
+ [-InterruptModeration <Boolean>] [-StaticMacAddress <String>] [-MacAddressSpoofing <OnOffState>]
+ [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>] [-PortMirroring <VMNetworkAdapterPortMirroringMode>]
+ [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>] [-IovQueuePairsRequested <UInt32>]
+ [-IovInterruptModeration <IovInterruptModerationValue>] [-IovWeight <UInt32>]
+ [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
  [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
  [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
  [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
  [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
  [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
  [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
- [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VrssMaxQueuePairs <UInt32>] [-VrssMinQueuePairs <UInt32>]
+ [-VrssQueueSchedulingMode <VrssQueueSchedulingModeType>] [-VrssExcludePrimaryProcessor <Boolean>]
+ [-VrssIndependentHostSpreading <Boolean>]
+ [-VrssVmbusChannelAffinityPolicy <VrssVmbusChannelAffinityPolicyType>] [-RscEnabled <Boolean>] [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ManagementOS
 ```
 Set-VMNetworkAdapter [-ManagementOS] [-CimSession <CimSession[]>] [-ComputerName <String[]>]
- [-Credential <PSCredential[]>] [-Name <String>] [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>]
+ [-Credential <PSCredential[]>] [-Name <String>] [-MediaType <UInt32>] [-NumaAwarePlacement <Boolean>]
+ [-InterruptModeration <Boolean>] [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>]
  [-RouterGuard <OnOffState>] [-PortMirroring <VMNetworkAdapterPortMirroringMode>]
  [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>] [-IovQueuePairsRequested <UInt32>]
  [-IovInterruptModeration <IovInterruptModerationValue>] [-IovWeight <UInt32>]
@@ -46,29 +52,17 @@ Set-VMNetworkAdapter [-ManagementOS] [-CimSession <CimSession[]>] [-ComputerName
  [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
  [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
  [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
- [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VrssMaxQueuePairs <UInt32>] [-VrssMinQueuePairs <UInt32>]
+ [-VrssQueueSchedulingMode <VrssQueueSchedulingModeType>] [-VrssExcludePrimaryProcessor <Boolean>]
+ [-VrssIndependentHostSpreading <Boolean>]
+ [-VrssVmbusChannelAffinityPolicy <VrssVmbusChannelAffinityPolicyType>] [-RscEnabled <Boolean>] [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ResourceObject
 ```
-Set-VMNetworkAdapter [-VMNetworkAdapter] <VMNetworkAdapterBase> [-DynamicMacAddress]
- [-StaticMacAddress <String>] [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>]
- [-RouterGuard <OnOffState>] [-PortMirroring <VMNetworkAdapterPortMirroringMode>]
- [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>] [-IovQueuePairsRequested <UInt32>]
- [-IovInterruptModeration <IovInterruptModerationValue>] [-IovWeight <UInt32>]
- [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
- [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
- [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
- [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
- [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
- [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
- [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
- [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### VMObject
-```
-Set-VMNetworkAdapter [-VM] <VirtualMachine> [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
+Set-VMNetworkAdapter [-VMNetworkAdapter] <VMNetworkAdapterBase> [-DynamicMacAddress] [-MediaType <UInt32>]
+ [-NumaAwarePlacement <Boolean>] [-InterruptModeration <Boolean>] [-StaticMacAddress <String>]
  [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>]
  [-PortMirroring <VMNetworkAdapterPortMirroringMode>] [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>]
  [-IovQueuePairsRequested <UInt32>] [-IovInterruptModeration <IovInterruptModerationValue>]
@@ -79,7 +73,33 @@ Set-VMNetworkAdapter [-VM] <VirtualMachine> [-Name <String>] [-DynamicMacAddress
  [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
  [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
  [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
- [-VmmqQueuePairs <UInt32>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-VrssMaxQueuePairs <UInt32>] [-VrssMinQueuePairs <UInt32>]
+ [-VrssQueueSchedulingMode <VrssQueueSchedulingModeType>] [-VrssExcludePrimaryProcessor <Boolean>]
+ [-VrssIndependentHostSpreading <Boolean>]
+ [-VrssVmbusChannelAffinityPolicy <VrssVmbusChannelAffinityPolicyType>] [-RscEnabled <Boolean>] [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### VMObject
+```
+Set-VMNetworkAdapter [-VM] <VirtualMachine> [-Name <String>] [-DynamicMacAddress] [-MediaType <UInt32>]
+ [-NumaAwarePlacement <Boolean>] [-InterruptModeration <Boolean>] [-StaticMacAddress <String>]
+ [-MacAddressSpoofing <OnOffState>] [-DhcpGuard <OnOffState>] [-RouterGuard <OnOffState>]
+ [-PortMirroring <VMNetworkAdapterPortMirroringMode>] [-IeeePriorityTag <OnOffState>] [-VmqWeight <UInt32>]
+ [-IovQueuePairsRequested <UInt32>] [-IovInterruptModeration <IovInterruptModerationValue>]
+ [-IovWeight <UInt32>] [-IPsecOffloadMaximumSecurityAssociation <UInt32>] [-MaximumBandwidth <Int64>]
+ [-MinimumBandwidthAbsolute <Int64>] [-MinimumBandwidthWeight <UInt32>] [-MandatoryFeatureId <String[]>]
+ [-ResourcePoolName <String>] [-TestReplicaPoolName <String>] [-TestReplicaSwitchName <String>]
+ [-VirtualSubnetId <UInt32>] [-AllowTeaming <OnOffState>] [-NotMonitoredInCluster <Boolean>]
+ [-StormLimit <UInt32>] [-DynamicIPAddressLimit <UInt32>] [-DeviceNaming <OnOffState>]
+ [-FixSpeed10G <OnOffState>] [-PacketDirectNumProcs <UInt32>] [-PacketDirectModerationCount <UInt32>]
+ [-PacketDirectModerationInterval <UInt32>] [-VrssEnabled <Boolean>] [-VmmqEnabled <Boolean>]
+ [-VrssMaxQueuePairs <UInt32>] [-VrssMinQueuePairs <UInt32>]
+ [-VrssQueueSchedulingMode <VrssQueueSchedulingModeType>] [-VrssExcludePrimaryProcessor <Boolean>]
+ [-VrssIndependentHostSpreading <Boolean>]
+ [-VrssVmbusChannelAffinityPolicy <VrssVmbusChannelAffinityPolicyType>] [-RscEnabled <Boolean>] [-Passthru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+
 ```
 
 ## DESCRIPTION
@@ -297,22 +317,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IPsecOffloadMaximumSecurityAssociation
-Specifies the maximum number of security associations that can be offloaded to the physical network adapter that is bound to the virtual switch and that supports IPSec Task Offload.
-Specify zero to disable the feature.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -IeeePriorityTag
 Specifies whether IEEE 802.1p tagged packets from the virtual machine should be trusted.
 The value should be either **On** (trusted) or **Off** (not trusted).
@@ -324,6 +328,21 @@ Type: OnOffState
 Parameter Sets: (All)
 Aliases: 
 Accepted values: On, Off
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InterruptModeration
+{{ Fill InterruptModeration Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -378,6 +397,22 @@ Specify 0 to disable SR-IOV on the virtual network adapter.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IPsecOffloadMaximumSecurityAssociation
+Specifies the maximum number of security associations that can be offloaded to the physical network adapter that is bound to the virtual switch and that supports IPSec Task Offload.
+Specify zero to disable the feature.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -450,6 +485,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MediaType
+{{ Fill MediaType Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MinimumBandwidthAbsolute
 Specifies the minimum bandwidth, in bits per second, for the virtual network adapter.
 The specified value is rounded to the nearest multiple of eight.
@@ -509,6 +559,21 @@ By default, network adapters for clustered virtual machines are monitored.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NumaAwarePlacement
+{{ Fill NumaAwarePlacement Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -633,6 +698,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RscEnabled
+{{ Fill RscEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StaticMacAddress
 Assigns a specific a MAC address to the virtual network adapter.
 
@@ -697,6 +777,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VirtualSubnetId
+Specifies the virtual subnet ID to use with Hyper-V Network Virtualization.
+Allowed values range from 4096 to 16777215 (2^24 - 1), in addition to 0.
+Use 0 to clear this parameter.
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -VM
 Specifies the virtual machine that has the virtual network you want to configure.
 
@@ -709,6 +806,20 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -VmmqEnabled
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -742,53 +853,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -VirtualSubnetId
-Specifies the virtual subnet ID to use with Hyper-V Network Virtualization.
-Allowed values range from 4096 to 16777215 (2^24 - 1), in addition to 0.
-Use 0 to clear this parameter.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VmmqEnabled
-
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VmmqQueuePairs
-
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -VmqWeight
 Specifies whether virtual machine queue (VMQ) is to be enabled on the virtual network adapter.
 . The relative weight describes the affinity of the virtual network adapter to use VMQ.
@@ -814,6 +878,98 @@ Accept wildcard characters: False
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssExcludePrimaryProcessor
+{{ Fill VrssExcludePrimaryProcessor Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssIndependentHostSpreading
+{{ Fill VrssIndependentHostSpreading Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssMaxQueuePairs
+{{ Fill VrssMaxQueuePairs Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases: VmmqQueuePairs
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssMinQueuePairs
+{{ Fill VrssMinQueuePairs Description }}
+
+```yaml
+Type: UInt32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssQueueSchedulingMode
+{{ Fill VrssQueueSchedulingMode Description }}
+
+```yaml
+Type: VrssQueueSchedulingModeType
+Parameter Sets: (All)
+Aliases:
+Accepted values: Dynamic, StaticVmq, StaticVrss
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VrssVmbusChannelAffinityPolicy
+{{ Fill VrssVmbusChannelAffinityPolicy Description }}
+
+```yaml
+Type: VrssVmbusChannelAffinityPolicyType
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, Weak, Strong, Strict
 
 Required: False
 Position: Named

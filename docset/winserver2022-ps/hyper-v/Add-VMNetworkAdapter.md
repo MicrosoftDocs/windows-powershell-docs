@@ -19,21 +19,21 @@ Adds a virtual network adapter to a virtual machine.
 ```
 Add-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-VMName] <String[]> [-SwitchName <String>] [-IsLegacy <Boolean>] [-Name <String>] [-DynamicMacAddress]
- [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-DeviceNaming <OnOffState>] [-WhatIf]
+ [-NumaAwarePlacement <Boolean>] [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-DeviceNaming <OnOffState>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ManagementOS
 ```
 Add-VMNetworkAdapter [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-ManagementOS] [-SwitchName <String>] [-Name <String>] [-DynamicMacAddress] [-StaticMacAddress <String>]
- [-Passthru] [-DeviceNaming <OnOffState>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ManagementOS] [-SwitchName <String>] [-Name <String>] [-DynamicMacAddress] [-NumaAwarePlacement <Boolean>] [-StaticMacAddress <String>]
+ [-Passthru] [-DeviceNaming <OnOffState>] [-PortId <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
 Add-VMNetworkAdapter [-SwitchName <String>] [-IsLegacy <Boolean>] [-Name <String>] [-DynamicMacAddress]
- [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-VM] <VirtualMachine[]>
+ [-NumaAwarePlacement <Boolean>] [-StaticMacAddress <String>] [-Passthru] [-ResourcePoolName <String>] [-VM] <VirtualMachine[]>
  [-DeviceNaming <OnOffState>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -215,6 +215,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NumaAwarePlacement
+{{ Fill NumaAwarePlacement Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Passthru
 Specifies that an object is to be passed through to be pipeline representing the network adapter to be added.
 If you specify **-ManagementOS**, the object passed is a **Microsoft.HyperV.PowerShell.VMInternalNetworkAdapter**; otherwise the object passed is a **Microsoft.HyperV.PowerShell.VMNetworkAdapter**.
@@ -223,6 +238,21 @@ If you specify **-ManagementOS**, the object passed is a **Microsoft.HyperV.Powe
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PortId
+{{ Fill PortId Description }}
+
+```yaml
+Type: String
+Parameter Sets: ManagementOS
+Aliases: Id
 
 Required: False
 Position: Named

@@ -17,7 +17,8 @@ Converts the format, version type, and block size of a virtual hard disk file.
 
 ```
 Convert-VHD [-Path] <String> [-DestinationPath] <String> [-VHDType <VhdType>] [-ParentPath <String>]
- [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob] [-Passthru] [-CimSession <CimSession[]>]
+ [-BlockSizeBytes <UInt32>] [-DeleteSource] [-AsJob] [-Passthru] 
+ [-AddressAbstractionType <VirtualHardDiskPmemAddressAbstractionType>] [-CimSession <CimSession[]>]
  [-ComputerName <String[]>] [-Credential <PSCredential[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,6 +45,22 @@ PS C:\> Convert-VHD -Path c:\test\child1vhdx.vhdx -DestinationPath c:\test\child
 This example converts a source differencing disk of VHDX format to a destination differencing disk of VHD format that is connected to an existing parent disk.
 
 ## PARAMETERS
+
+### -AddressAbstractionType
+{{ Fill AddressAbstractionType Description }}
+
+```yaml
+Type: VirtualHardDiskPmemAddressAbstractionType
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, BTT, Unknown
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job.

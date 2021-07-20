@@ -19,26 +19,26 @@ Configures a virtual machine.
 ```
 Set-VM [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-Name] <String[]> [-GuestControlledCacheTypes <Boolean>] [-LowMemoryMappedIoSpace <UInt32>]
- [-HighMemoryMappedIoSpace <UInt64>] [-ProcessorCount <Int64>] [-DynamicMemory] [-StaticMemory]
+ [-HighMemoryMappedIoSpace <UInt64>] [-HighMemoryMappedIoBaseAddress <UInt64>] [-BatteryPassthroughEnabled <Boolean>] [-ProcessorCount <Int64>] [-DynamicMemory] [-StaticMemory]
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
  [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
- [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
+ [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-EnhancedSessionTransportType <EnhancedSessionTransportType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
 Set-VM [-VM] <VirtualMachine[]> [-GuestControlledCacheTypes <Boolean>] [-LowMemoryMappedIoSpace <UInt32>]
- [-HighMemoryMappedIoSpace <UInt64>] [-ProcessorCount <Int64>] [-DynamicMemory] [-StaticMemory]
+ [-HighMemoryMappedIoSpace <UInt64>] [-HighMemoryMappedIoBaseAddress <UInt64>] [-BatteryPassthroughEnabled <Boolean>] [-ProcessorCount <Int64>] [-DynamicMemory] [-StaticMemory]
  [-MemoryMinimumBytes <Int64>] [-MemoryMaximumBytes <Int64>] [-MemoryStartupBytes <Int64>]
  [-AutomaticStartAction <StartAction>] [-AutomaticStopAction <StopAction>] [-AutomaticStartDelay <Int32>]
  [-AutomaticCriticalErrorAction <CriticalErrorAction>] [-AutomaticCriticalErrorActionTimeout <Int32>]
  [-AutomaticCheckpointsEnabled <Boolean>]
  [-LockOnDisconnect <OnOffState>] [-Notes <String>] [-NewVMName <String>] [-SnapshotFileLocation <String>]
- [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-Passthru] [-AllowUnverifiedPaths]
+ [-SmartPagingFilePath <String>] [-CheckpointType <CheckpointType>] [-EnhancedSessionTransportType <EnhancedSessionTransportType>] [-Passthru] [-AllowUnverifiedPaths]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -175,6 +175,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BatteryPassthroughEnabled
+{{ Fill BatteryPassthroughEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CheckpointType
 Allows you to configure the type of checkpoints created by Hyper-V.
 The acceptable values for this parameter are:
@@ -284,6 +299,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnhancedSessionTransportType
+{{ Fill EnhancedSessionTransportType Description }}
+
+```yaml
+Type: EnhancedSessionTransportType
+Parameter Sets: (All)
+Aliases:
+Accepted values: VMBus, HvSocket
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -GuestControlledCacheTypes
 Specifies whether this virtual machine uses guest controlled cache types.
 
@@ -291,6 +322,21 @@ Specifies whether this virtual machine uses guest controlled cache types.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighMemoryMappedIoBaseAddress
+{{ Fill HighMemoryMappedIoBaseAddress Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -28,7 +28,7 @@ Restore-VMSnapshot [-VMSnapshot] <VMSnapshot> [-AsJob] [-Passthru] [-WhatIf] [-C
 
 ### VM
 ```
-Restore-VMSnapshot [-VM] <VirtualMachine> [-Name] <String> [-AsJob] [-Passthru] [-WhatIf] [-Confirm]
+Restore-VMSnapshot [-VM] <VirtualMachine> -Name <String> [-AsJob] [-Passthru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 

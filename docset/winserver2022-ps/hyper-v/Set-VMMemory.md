@@ -27,7 +27,7 @@ Set-VMMemory [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credentia
 ```
 Set-VMMemory [-VM] <VirtualMachine[]> [-Buffer <Int32>] [-DynamicMemoryEnabled <Boolean>]
  [-MaximumBytes <Int64>] [-StartupBytes <Int64>] [-MinimumBytes <Int64>] [-Priority <Int32>]
- [-MaximumAmountPerNumaNodeBytes <Int64>] [-ResourcePoolName <String>] [-Passthru] [-WhatIf] [-Confirm]
+ [-MaximumAmountPerNumaNodeBytes <Int64>] [-HugePagesEnabled <Boolean>] [-AlignProperties] [-ResourcePoolName <String>] [-Passthru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -35,7 +35,7 @@ Set-VMMemory [-VM] <VirtualMachine[]> [-Buffer <Int32>] [-DynamicMemoryEnabled <
 ```
 Set-VMMemory [-VMMemory] <VMMemory[]> [-Buffer <Int32>] [-DynamicMemoryEnabled <Boolean>]
  [-MaximumBytes <Int64>] [-StartupBytes <Int64>] [-MinimumBytes <Int64>] [-Priority <Int32>]
- [-MaximumAmountPerNumaNodeBytes <Int64>] [-ResourcePoolName <String>] [-Passthru] [-WhatIf] [-Confirm]
+ [-MaximumAmountPerNumaNodeBytes <Int64>] [-HugePagesEnabled <Boolean>] [-AlignProperties] [-ResourcePoolName <String>] [-Passthru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -52,6 +52,21 @@ PS C:\> Set-VMMemory TestVM -DynamicMemoryEnabled $true -MinimumBytes 64MB -Star
 Enables dynamic memory on virtual machine TestVM, sets its minimum, startup, and maximum memory, its memory priority, and its buffer.
 
 ## PARAMETERS
+
+### -AlignProperties
+{{ Fill AlignProperties Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Buffer
 Specifies the percentage of memory to reserve as a buffer in the virtual machine to be configured.
@@ -142,6 +157,21 @@ Specifies whether dynamic memory is to be enabled on the virtual machine to be c
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HugePagesEnabled
+{{ Fill HugePagesEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

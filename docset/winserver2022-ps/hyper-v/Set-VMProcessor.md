@@ -19,28 +19,37 @@ Configures settings for the virtual processors of a virtual machine. Settings ar
 ```
 Set-VMProcessor [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
  [-VMName] <String[]> [-Count <Int64>] [-CompatibilityForMigrationEnabled <Boolean>]
+ [-CompatibilityForMigrationMode <CompatibilityForMigrationMode>]
  [-CompatibilityForOlderOperatingSystemsEnabled <Boolean>] [-HwThreadCountPerCore <Int64>] [-Maximum <Int64>]
  [-Reserve <Int64>] [-RelativeWeight <Int32>] [-MaximumCountPerNumaNode <Int32>]
- [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-Perfmon <String>] [-EnableHostResourceProtection <Boolean>]
- [-ExposeVirtualizationExtensions <Boolean>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-EnableHostResourceProtection <Boolean>]
+ [-ExposeVirtualizationExtensions <Boolean>] [-Perfmon <String[]>] [-EnableLegacyApicMode <Boolean>]
+ [-ApicMode <ApicMode>] [-AllowACountMCount <Boolean>] [-CpuBrandString <String>] [-PerfCpuFreqCapMhz <Int32>]
+ [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMObject
 ```
 Set-VMProcessor [-VM] <VirtualMachine[]> [-Count <Int64>] [-CompatibilityForMigrationEnabled <Boolean>]
+ [-CompatibilityForMigrationMode <CompatibilityForMigrationMode>]
  [-CompatibilityForOlderOperatingSystemsEnabled <Boolean>] [-HwThreadCountPerCore <Int64>] [-Maximum <Int64>]
  [-Reserve <Int64>] [-RelativeWeight <Int32>] [-MaximumCountPerNumaNode <Int32>]
  [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-EnableHostResourceProtection <Boolean>]
- [-ExposeVirtualizationExtensions <Boolean>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ExposeVirtualizationExtensions <Boolean>] [-Perfmon <String[]>] [-EnableLegacyApicMode <Boolean>]
+ [-ApicMode <ApicMode>] [-AllowACountMCount <Boolean>] [-CpuBrandString <String>] [-PerfCpuFreqCapMhz <Int32>]
+ [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### VMProcessor
 ```
 Set-VMProcessor [-VMProcessor] <VMProcessor[]> [-Count <Int64>] [-CompatibilityForMigrationEnabled <Boolean>]
+ [-CompatibilityForMigrationMode <CompatibilityForMigrationMode>]
  [-CompatibilityForOlderOperatingSystemsEnabled <Boolean>] [-HwThreadCountPerCore <Int64>] [-Maximum <Int64>]
  [-Reserve <Int64>] [-RelativeWeight <Int32>] [-MaximumCountPerNumaNode <Int32>]
  [-MaximumCountPerNumaSocket <Int32>] [-ResourcePoolName <String>] [-EnableHostResourceProtection <Boolean>]
- [-ExposeVirtualizationExtensions <Boolean>] [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ExposeVirtualizationExtensions <Boolean>] [-Perfmon <String[]>] [-EnableLegacyApicMode <Boolean>]
+ [-ApicMode <ApicMode>] [-AllowACountMCount <Boolean>] [-CpuBrandString <String>] [-PerfCpuFreqCapMhz <Int32>]
+ [-Passthru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,6 +98,37 @@ Configure your VM to expose PMU, PEBS, LBR for Performance Monitoring.
 
 ## PARAMETERS
 
+### -AllowACountMCount
+{{ Fill AllowACountMCount Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApicMode
+{{ Fill ApicMode Description }}
+
+```yaml
+Type: ApicMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Default, Legacy, x2Apic
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CimSession
 Runs the cmdlet in a remote session or on a remote computer.
 Enter a computer name or a session object, such as the output of a [New-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227967) or [Get-CimSession](https://go.microsoft.com/fwlink/p/?LinkId=227966) cmdlet.
@@ -113,6 +153,22 @@ Specifies whether the virtual processor's features are to be limited for compati
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompatibilityForMigrationMode
+{{ Fill CompatibilityForMigrationMode Description }}
+
+```yaml
+Type: CompatibilityForMigrationMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: MinimumFeatureSet, CommonClusterFeatureSet
 
 Required: False
 Position: Named
@@ -184,6 +240,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CpuBrandString
+{{ Fill CpuBrandString Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Credential
 Specifies one or more user accounts that have permission to perform this action.
 The default is the current user.
@@ -214,6 +285,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -EnableLegacyApicMode
+{{ Fill EnableLegacyApicMode Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -ExposeVirtualizationExtensions
 Specifies whether the hypervisor should expose the presence of virtualization extensions to the virtual machine, which enables support for nested virtualization,.
@@ -294,12 +381,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PerfCpuFreqCapMhz
+{{ Fill PerfCpuFreqCapMhz Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Perfmon
 Specifies the hardware to be Exposed for Performance Monitoring. For more information about requirements, visit [Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/performance-monitoring-hardware).
 
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases: 
 

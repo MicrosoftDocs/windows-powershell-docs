@@ -18,9 +18,9 @@ Creates a new virtual switch on one or more virtual machine hosts.
 ### NetAdapterName (Default)
 ```
 New-VMSwitch [-CimSession <CimSession[]>] [-ComputerName <String[]>] [-Credential <PSCredential[]>]
- [-Name] <String> [-AllowManagementOS <Boolean>] -NetAdapterName <String[]> [-Notes <String>]
+ [-Name] <String> [-Id <String>] [-AllowManagementOS <Boolean>] -NetAdapterName <String[]> [-Notes <String>]
  [-MinimumBandwidthMode <VMSwitchBandwidthMode>] [-EnableIov <Boolean>] [-EnablePacketDirect <Boolean>]
- [-EnableEmbeddedTeaming <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-EnableEmbeddedTeaming <Boolean>] [-AllowNetLbfoTeams <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### NetAdapterInterfaceDescription
@@ -61,6 +61,21 @@ the management operating system) is to have access to the physical NIC bound to 
 Type: Boolean
 Parameter Sets: NetAdapterName, NetAdapterInterfaceDescription
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowNetLbfoTeams
+{{ Fill AllowNetLbfoTeams Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -173,6 +188,21 @@ The default value is $False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+{{ Fill Id Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: SwitchId
 
 Required: False
 Position: Named

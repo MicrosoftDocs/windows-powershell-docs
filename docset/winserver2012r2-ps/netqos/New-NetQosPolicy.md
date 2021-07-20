@@ -148,7 +148,7 @@ Owner          : PowerShell / WMI
 NetworkProfile : All 
 Precedence     : 127 
 AppPathName    : ftp.exe 
-ThrottleRate   : 1 MBytes/sec
+ThrottleRate   : 1.049 MBits/sec
 ```
 
 This example creates a QoS policy named FTP, that matches an application path at ftp.exe and throttles the traffic at 1,000,000 bytes per second.
@@ -180,7 +180,7 @@ NetworkProfile : All
 Precedence     : 127 
 IPProtocol     : TCP 
 IPPort         : 80 
-ThrottleRate   : 10 MBytes/sec
+ThrottleRate   : 10.486 MBits/sec
 ```
 
 This example creates a QoS policy that matches TCP traffic sent to port 80 and rate-limits it at 10,000,000 bytes per second.
@@ -207,7 +207,7 @@ NetworkProfile : Domain
 Precedence     : 127 
 URI            : http://training/ 
 URIRecursive   : False 
-ThrottleRate   : 500 KBytes/sec
+ThrottleRate   : 516.096 KBits/sec
 ```
 
 This example creates a QoS policy named IIS, that matches return traffic from an HTTP server application with the specified URI and rate limit the return traffic at 500,000 bytes per second.

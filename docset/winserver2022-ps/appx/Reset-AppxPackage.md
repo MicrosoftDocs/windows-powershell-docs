@@ -41,11 +41,26 @@ This cmdlet will reset the `publisher.package1_1.0.0.0_neutral__8wekyb3d8bbwe` a
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Package
 Specifies the package full name (PFuN) of the app which will be reset.
 
 ```yaml
-Type: String[]
+Type: String
 Parameter Sets: None
 Aliases: None
 
@@ -53,6 +68,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

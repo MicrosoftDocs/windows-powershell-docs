@@ -16,7 +16,7 @@ Returns the  a list of the app packages that are installed and configured as non
 
 ## SYNTAX
 
-### ByOffline
+### Offline
 
 ```powershell
 Get-NonRemovableAppsPolicy 
@@ -29,7 +29,7 @@ Get-NonRemovableAppsPolicy
     [<CommonParameters>]
 ```
 
-### ByOnline
+### Online
 
 ```powershell
 Get-NonRemovableAppsPolicy 
@@ -68,7 +68,7 @@ Indicates that the cmdlet operates on a running operating system on the local ho
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByOnline
+Parameter Sets: Online
 Aliases: 
 
 Required: True
@@ -83,7 +83,7 @@ Specifies the full path to the root directory of the offline Windows image that 
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
+Parameter Sets: Offline
 Aliases: 
 
 Required: True
@@ -98,7 +98,7 @@ Specifies a temporary directory that will be used when extracting files for use 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: 
 
 Required: False
@@ -113,7 +113,7 @@ Specifies the path to the location of the BootMgr files. This is necessary only 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: 
 
 Required: False
@@ -128,7 +128,7 @@ Specifies the path to the Windows directory relative to the image path. This can
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
+Parameter Sets: Offline
 Aliases: 
 
 Required: False
@@ -163,7 +163,7 @@ Specifies the maximum output level shown in the logs. The default log level is 3
 
 ```yaml
 Type: LogLevel
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LL
 
 Required: False

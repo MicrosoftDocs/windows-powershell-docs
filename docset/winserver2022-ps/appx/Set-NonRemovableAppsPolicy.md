@@ -16,7 +16,7 @@ Sets an app packages as non-removable (can not be uninstalled).
 
 ## SYNTAX
 
-### ByOffline
+###  Offline
 ```powershell
 Set-NonRemovableAppsPolicy 
     -PackageFamilyName <string> 
@@ -30,7 +30,7 @@ Set-NonRemovableAppsPolicy
     [<CommonParameters>]
 ```
 
-### ByOnline
+### Online
 ```powershell
 Set-NonRemovableAppsPolicy 
     -PackageFamilyName <string> 
@@ -123,7 +123,7 @@ Specifies the full path to the root directory of the offline Windows image that 
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
+Parameter Sets: Offline
 Aliases: 
 
 Required: True
@@ -138,7 +138,7 @@ Specifies a temporary directory that will be used when extracting files for use 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: 
 
 Required: False
@@ -153,7 +153,7 @@ Specifies the path to the location of the BootMgr files. This is necessary only 
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: 
 
 Required: False
@@ -168,7 +168,7 @@ Specifies the path to the Windows directory relative to the image path. This can
 
 ```yaml
 Type: String
-Parameter Sets: ByOffline
+Parameter Sets: Offline
 Aliases: 
 
 Required: False
@@ -183,7 +183,7 @@ Specifies the full path and file name to log to. If not set, the default is `%WI
 
 ```yaml
 Type: String
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LP
 
 Required: False
@@ -202,7 +202,7 @@ Specifies the maximum output level shown in the logs. The default log level is 3
 
 ```yaml
 Type: Loglevel
-Parameter Sets: ByOnline, ByOffline
+Parameter Sets: Online, Offline
 Aliases: LL
 
 Required: False

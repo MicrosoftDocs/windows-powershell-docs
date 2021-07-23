@@ -18,17 +18,23 @@ Removes an app package from one or more user accounts.
 
 ### RemoveByPackageSet (Default)
 ```
-Remove-AppxPackage [-Package]  [-PreserveApplicationData] [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> [-PreserveApplicationData] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveByPackageForRoamingSet
+```
+Remove-AppxPackage [-Package] <String> [-PreserveRoamableApplicationData] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### AllUsersSet
 ```
-Remove-AppxPackage [-Package]  [-AllUsers] [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> [-AllUsers] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UserSet
 ```
-Remove-AppxPackage [-Package]  -User  [-WhatIf] [-Confirm] []
+Remove-AppxPackage [-Package] <String> -User <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -124,6 +130,21 @@ that are registered from file layout (Loose file registered).
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveByPackageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreserveRoamableApplicationData
+{{ Fill PreserveRoamableApplicationData Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: RemoveByPackageForRoamingSet
 Aliases:
 
 Required: False

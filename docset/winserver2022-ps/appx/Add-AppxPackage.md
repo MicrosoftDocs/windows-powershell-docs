@@ -20,9 +20,9 @@ Adds a signed app package to a user account.
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly]
  [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
  [-RetainFilesOnFailure] [-InstallAllResources] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
- [-DeferRegistrationWhenPackagesAreInUse] [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] 
-
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-ExternalLocation <String>]
+ [-DeferRegistrationWhenPackagesAreInUse]  [-StubPackageOption <StubPackageOption>] [-AllowUnsigned] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### AddByAppInstallerSet
@@ -36,7 +36,7 @@ Add-AppxPackage [-Path] <String> [-RequiredContentGroupOnly] [-AppInstallerFile]
 ```
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-Register] [-DisableDevelopmentMode]
  [-ForceApplicationShutdown] [-ForceTargetApplicationShutdown] [-ForceUpdateFromAnyVersion]
- [-InstallAllResources] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InstallAllResources] [-ExternalLocation <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateSet
@@ -50,7 +50,8 @@ Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentG
 ```
 Add-AppxPackage [-Path] <String> [-DependencyPath <String[]>] [-RequiredContentGroupOnly] [-Stage]
  [-ForceUpdateFromAnyVersion] [-Volume <AppxVolume>] [-ExternalPackages <String[]>]
- [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OptionalPackages <String[]>] [-RelatedPackages <String[]>] [-ExternalLocation <String>]
+ [-StubPackageOption <StubPackageOption>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RegisterByPackageFullNameSet
@@ -120,6 +121,53 @@ This command adds an app package but only installs the required section of a str
 
 ## PARAMETERS
 
+### -AllowUnsigned
+{{ Fill AllowUnsigned Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppInstallerFile
+Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
+For more information, see [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddByAppInstallerSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeferRegistrationWhenPackagesAreInUse
+Specifies that the app will not register for a user if currently in use. The app will update on the next launch.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet
+Aliases:
+ 
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DependencyPackages
 Specifies the dependency package full name or dependency package bundle full name to be registered.
 
@@ -161,6 +209,21 @@ Use the *Register* parameter to specify the location of the app package manifest
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RegisterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalLocation
+{{ Fill ExternalLocation Description }}
+
+```yaml
+Type: String
+Parameter Sets: AddSet, RegisterSet, StageSet
 Aliases:
 
 Required: False
@@ -217,6 +280,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ForceUpdateFromAnyVersion
+This parameter is used to force a specific version of a package to be staged/registered, regardless of whether a higher version is already staged/registered.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet, RegisterSet, UpdateSet, StageSet, RegisterByPackageFullNameSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InstallAllResources
 Indicates that this cmdlet forces the deployment of all resource packages specified from a bundle argument.
 This overrides the resource applicability check of the deployment engine and forces staging of all resource packages, registration of all resource packages, or staging and registration of all resource packages.
@@ -225,6 +303,21 @@ This parameter can only be used when specifying a resource bundle or resource bu
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AddSet, AddByAppInstallerSet, RegisterSet, UpdateSet, RegisterByPackageFullNameSet, RegisterByPackageFamilyNameSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LimitToExistingPackages
+This parameter is used to prevent missing referenced packages to be downloaded.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddByAppInstallerSet
 Aliases:
 
 Required: False
@@ -326,12 +419,72 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RelatedPackages
+This is an optional element that is used to specify the other optional packages that are specified in the main app package. These packages will not be installed as part of the deployment operation.
+
+```yaml
+Type: String[]
+Parameter Sets: AddSet, StageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RequiredContentGroupOnly
 Specifies that only the required content group that is specified in the AppxContentGroupMap.xml must be installed. At this point the app can be launched. Calling add-appxpackage specifying the path to the app, triggers the rest of the app to be installed in the order defined in the AppxContentGroupMap.xml.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AddSet, AddByAppInstallerSet, UpdateSet, StageSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RetainFilesOnFailure
+In the case of a failed deployment, if this switch is set to $true, files that have been created on the target machine during the installation process are not removed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AddSet, UpdateSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Stage
+Stages a package to the system without registering it.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: StageSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StubPackageOption
+{{ Fill StubPackageOption Description }}
+
+```yaml
+Type: StubPackageOption
+Parameter Sets: AddSet, StageSet
 Aliases:
 
 Required: False
@@ -399,113 +552,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppInstallerFile
-Runs an appinstaller file and allows the user to install all of the defined packages with a single click.
-For more information, see [Create an App Installer file manually](https://github.com/microsoftdocs/msix-docs/blob/master/msix-src/app-installer/how-to-create-appinstaller-file.md).
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddByAppInstallerSet
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ForceUpdateFromAnyVersion
-This parameter is used to force a specific version of a package to be staged/registered, regardless of whether a higher version is already staged/registered.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddSet, RegisterSet, UpdateSet, StageSet, RegisterByPackageFullNameSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LimitToExistingPackages
-This parameter is used to prevent missing referenced packages to be downloaded.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddByAppInstallerSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RelatedPackages
-This is an optional element that is used to specify the other optional packages that are specified in the main app package. These packages will not be installed as part of the deployment operation.
-
-```yaml
-Type: String[]
-Parameter Sets: AddSet, StageSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RetainFilesOnFailure
-In the case of a failed deployment, if this switch is set to $true, files that have been created on the target machine during the installation process are not removed.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddSet, UpdateSet
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Stage
-Stages a package to the system without registering it.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: StageSet
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DeferRegistrationWhenPackagesAreInUse
-Specifies that the app will not register for a user if currently in use. The app will update on the next launch.
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: AddSet
-Aliases:
- 
 Required: False
 Position: Named
 Default value: False

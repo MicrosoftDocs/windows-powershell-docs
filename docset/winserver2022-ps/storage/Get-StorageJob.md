@@ -15,28 +15,16 @@ Returns information about long-running Storage module jobs, such as a repair tas
 
 ## SYNTAX
 
-### ByFriendlyName (Default)
+### ByName (Default)
 ```
-Get-StorageJob [<CommonParameters>]
+Get-StorageJob [-Name <String[]>] [-JobState <JobState[]>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
 Get-StorageJob [-UniqueId <String[]>] [-JobState <JobState[]>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
-```
-
-### ByVirtualDisk
-```
-Get-StorageJob [-Name <String[]>] [-JobState <JobState[]>] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
-```
-
-### ByStoragePool
-```
-Get-StorageJob [-Name <String[]>] [-JobState <JobState[]>] [-StoragePool <CimInstance>]
- [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
 ```
 
 ### ByVolume
@@ -51,7 +39,19 @@ Get-StorageJob [-JobState <JobState[]>] [-Disk <CimInstance>] [-CimSession <CimS
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
-### BySubsystem
+### ByVirtualDisk
+```
+Get-StorageJob [-JobState <JobState[]>] [-VirtualDisk <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStoragePool
+```
+Get-StorageJob [-JobState <JobState[]>] [-StoragePool <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageSubSystem
 ```
 Get-StorageJob [-JobState <JobState[]>] [-StorageSubsystem <CimInstance>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
@@ -86,7 +86,7 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -103,7 +103,7 @@ The default is the current session on the local computer.
 
 ```yaml
 Type: CimSession[]
-Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
+Parameter Sets: (All)
 Aliases: Session
 
 Required: False
@@ -135,7 +135,7 @@ Acceptable values are Completed, Exception, Killed, New, QueryPending, Running, 
 
 ```yaml
 Type: JobState[]
-Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
+Parameter Sets: (All)
 Aliases:
 Accepted values: New, Starting, Running, Suspended, ShuttingDown, Completed, Terminated, Killed, Exception, Service, QueryPending
 
@@ -151,7 +151,7 @@ Specifies the name the storage job to get.
 
 ```yaml
 Type: String[]
-Parameter Sets: ByVirtualDisk, ByStoragePool
+Parameter Sets: ByName
 Aliases:
 
 Required: False
@@ -185,7 +185,7 @@ The StorageSubsystem CIM object is exposed by the Get-StorageSubSystem cmdlet.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: BySubsystem
+Parameter Sets: ByStorageSubSystem
 Aliases:
 
 Required: False
@@ -202,7 +202,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 
 ```yaml
 Type: Int32
-Parameter Sets: ByUniqueId, ByVirtualDisk, ByStoragePool, ByVolume, ByDisk, BySubsystem
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -234,7 +234,7 @@ The Virtual Disk CIM object is exposed by the Get-VirtualDisk cmdlet.
 
 ```yaml
 Type: CimInstance
-Parameter Sets: ByStoragePool
+Parameter Sets: ByVirtualDisk
 Aliases:
 
 Required: False

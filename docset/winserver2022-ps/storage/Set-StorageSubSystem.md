@@ -24,8 +24,8 @@ Set-StorageSubSystem [-Description <String>] -UniqueId <String> [-CimSession <Ci
 ### ByObjectSetAttributes
 ```
 Set-StorageSubSystem [-InputObject] <CimInstance[]> [-AutomaticClusteringEnabled <Boolean>]
- [-FaultDomainAwarenessDefault <FaultDomainType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+ [-VirtualDiskRepairQueueDepth <RepairPriority>] [-FaultDomainAwarenessDefault <FaultDomainType>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByObjectDescription
@@ -49,22 +49,22 @@ Set-StorageSubSystem [-Description <String>] [-FriendlyName] <String> [-CimSessi
 ### ByUniqueIdSetAttributes
 ```
 Set-StorageSubSystem -UniqueId <String> [-AutomaticClusteringEnabled <Boolean>]
- [-FaultDomainAwarenessDefault <FaultDomainType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+ [-VirtualDiskRepairQueueDepth <RepairPriority>] [-FaultDomainAwarenessDefault <FaultDomainType>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByFriendlyNameSetAttributes
 ```
 Set-StorageSubSystem [-FriendlyName] <String> [-AutomaticClusteringEnabled <Boolean>]
- [-FaultDomainAwarenessDefault <FaultDomainType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+ [-VirtualDiskRepairQueueDepth <RepairPriority>] [-FaultDomainAwarenessDefault <FaultDomainType>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByNameSetAttributes
 ```
 Set-StorageSubSystem -Name <String> [-AutomaticClusteringEnabled <Boolean>]
- [-FaultDomainAwarenessDefault <FaultDomainType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
- [-AsJob] [<CommonParameters>]
+ [-VirtualDiskRepairQueueDepth <RepairPriority>] [-FaultDomainAwarenessDefault <FaultDomainType>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -248,6 +248,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VirtualDiskRepairQueueDepth
+{{ Fill VirtualDiskRepairQueueDepth Description }}
+
+```yaml
+Type: RepairPriority
+Parameter Sets: ByObjectSetAttributes, ByUniqueIdSetAttributes, ByFriendlyNameSetAttributes, ByNameSetAttributes
+Aliases: VirtualDiskRepairPriority
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

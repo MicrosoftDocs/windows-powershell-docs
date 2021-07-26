@@ -21,6 +21,13 @@ Set-VirtualDisk [-NewFriendlyName <String>] [-Usage <Usage>] [-OtherUsageDescrip
  -UniqueId <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
+### ByObjectProperties
+```
+Set-VirtualDisk [-InputObject] <CimInstance[]> [-ProvisioningType <ProvisioningType>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-MaxIops <UInt64>]
+ [-MaxIoBandwidth <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
 ### ByObjectAttributes
 ```
 Set-VirtualDisk [-InputObject] <CimInstance[]> [-IsManualAttach <Boolean>] [-StorageNodeName <String>]
@@ -46,16 +53,37 @@ Set-VirtualDisk [-NewFriendlyName <String>] [-Usage <Usage>] [-OtherUsageDescrip
  [-FriendlyName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
+### ByUniqueIdProperties
+```
+Set-VirtualDisk -UniqueId <String> [-ProvisioningType <ProvisioningType>] [-PhysicalDiskRedundancy <UInt16>]
+ [-NumberOfDataCopies <UInt16>] [-MaxIops <UInt64>] [-MaxIoBandwidth <UInt64>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
 ### ByUniqueIdAttributes
 ```
 Set-VirtualDisk -UniqueId <String> [-IsManualAttach <Boolean>] [-StorageNodeName <String>] [-Access <Access>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
+### ByFriendlyNameProperties
+```
+Set-VirtualDisk [-FriendlyName] <String> [-ProvisioningType <ProvisioningType>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-MaxIops <UInt64>]
+ [-MaxIoBandwidth <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
 ### ByFriendlyNameAttributes
 ```
 Set-VirtualDisk [-FriendlyName] <String> [-IsManualAttach <Boolean>] [-StorageNodeName <String>]
  [-Access <Access>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByNameProperties
+```
+Set-VirtualDisk -Name <String> [-ProvisioningType <ProvisioningType>] [-PhysicalDiskRedundancy <UInt16>]
+ [-NumberOfDataCopies <UInt16>] [-MaxIops <UInt64>] [-MaxIoBandwidth <UInt64>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByNameAttributes
@@ -139,7 +167,7 @@ The friendly name may be defined by a user and is not guaranteed to be unique.
 
 ```yaml
 Type: String
-Parameter Sets: ByFriendlyName, ByFriendlyNameAttributes
+Parameter Sets: ByFriendlyName, ByFriendlyNameProperties, ByFriendlyNameAttributes
 Aliases:
 
 Required: True
@@ -154,7 +182,7 @@ Specifies the input object that is used in a pipeline command.
 
 ```yaml
 Type: CimInstance[]
-Parameter Sets: ByObjectAttributes, ByObject
+Parameter Sets: ByObjectProperties, ByObjectAttributes, ByObject
 Aliases:
 
 Required: True
@@ -179,12 +207,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MaxIoBandwidth
+{{ Fill MaxIoBandwidth Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: ByObjectProperties, ByUniqueIdProperties, ByFriendlyNameProperties, ByNameProperties
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxIops
+{{ Fill MaxIops Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: ByObjectProperties, ByUniqueIdProperties, ByFriendlyNameProperties, ByNameProperties
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 Specifies the name of the virtual disk to modify.
 
 ```yaml
 Type: String
-Parameter Sets: ByName, ByNameAttributes
+Parameter Sets: ByName, ByNameProperties, ByNameAttributes
 Aliases:
 
 Required: True
@@ -209,12 +267,57 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NumberOfDataCopies
+{{ Fill NumberOfDataCopies Description }}
+
+```yaml
+Type: UInt16
+Parameter Sets: ByObjectProperties, ByUniqueIdProperties, ByFriendlyNameProperties, ByNameProperties
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OtherUsageDescription
 Specifies the usage of this object.
 
 ```yaml
 Type: String
 Parameter Sets: ByUniqueId, ByObject, ByName, ByFriendlyName
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PhysicalDiskRedundancy
+{{ Fill PhysicalDiskRedundancy Description }}
+
+```yaml
+Type: UInt16
+Parameter Sets: ByObjectProperties, ByUniqueIdProperties, ByFriendlyNameProperties, ByNameProperties
+Aliases: FaultDomainRedundancy
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProvisioningType
+{{ Fill ProvisioningType Description }}
+
+```yaml
+Type: ProvisioningType
+Parameter Sets: ByObjectProperties, ByUniqueIdProperties, ByFriendlyNameProperties, ByNameProperties
 Aliases:
 
 Required: False
@@ -264,7 +367,7 @@ Specifies the unique ID of the virtual disk to modify.
 
 ```yaml
 Type: String
-Parameter Sets: ByUniqueId, ByUniqueIdAttributes
+Parameter Sets: ByUniqueId, ByUniqueIdProperties, ByUniqueIdAttributes
 Aliases: Id
 
 Required: True

@@ -15,21 +15,39 @@ Updates the firmware on a storage device.
 
 ## SYNTAX
 
-### ByName (Default)
+### ByPhysicalDiskFriendlyName (Default)
 ```
 Update-StorageFirmware [-FriendlyName] <String> [-ImagePath <String>] [-SlotNumber <UInt16>]
  [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
-### ByUniqueId
+### ByPhysicalDiskUniqueId
 ```
 Update-StorageFirmware -UniqueId <String> [-ImagePath <String>] [-SlotNumber <UInt16>]
  [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
-### ByInputObject
+### ByPhysicalDisk
 ```
-Update-StorageFirmware -InputObject <CimInstance[]> [-ImagePath <String>] [-SlotNumber <UInt16>]
+Update-StorageFirmware -InputObject <CimInstance> [-ImagePath <String>] [-SlotNumber <UInt16>]
+ [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosureUniqueId
+```
+Update-StorageFirmware -StorageEnclosureUniqueId <String> [-ImagePath <String>] [-SlotNumber <UInt16>]
+ [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosureFriendlyName
+```
+Update-StorageFirmware [-StorageEnclosureFriendlyName] <String> [-ImagePath <String>] [-SlotNumber <UInt16>]
+ [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosure
+```
+Update-StorageFirmware -StorageEnclosure <CimInstance> [-ImagePath <String>] [-SlotNumber <UInt16>]
  [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -92,8 +110,8 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByName
-Aliases:
+Parameter Sets: ByPhysicalDiskFriendlyName
+Aliases: PhysicalDiskFriendlyName
 
 Required: True
 Position: 0
@@ -121,9 +139,9 @@ Accept wildcard characters: False
 Specifies the input object that is used in a pipeline command.
 
 ```yaml
-Type: CimInstance[]
-Parameter Sets: ByInputObject
-Aliases:
+Type: CimInstance
+Parameter Sets: ByPhysicalDisk
+Aliases: PhysicalDisk
 
 Required: True
 Position: Named
@@ -141,6 +159,51 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageEnclosure
+{{ Fill StorageEnclosure Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageEnclosure
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageEnclosureFriendlyName
+{{ Fill StorageEnclosureFriendlyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByStorageEnclosureFriendlyName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageEnclosureUniqueId
+{{ Fill StorageEnclosureUniqueId Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByStorageEnclosureUniqueId
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -167,8 +230,8 @@ Specifies an array of IDs, as strings.
 
 ```yaml
 Type: String
-Parameter Sets: ByUniqueId
-Aliases: Id
+Parameter Sets: ByPhysicalDiskUniqueId
+Aliases: PhysicalDiskUniqueId, Id
 
 Required: True
 Position: Named

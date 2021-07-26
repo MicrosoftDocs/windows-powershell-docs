@@ -16,32 +16,44 @@ Performs repairs on a volume.
 
 ### ByDriveLetter (Default)
 ```
-Repair-Volume [-DriveLetter] <Char[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+Repair-Volume [-DriveLetter] <Char[]> [-OfflineScanAndFix] [-Scan] [-SpotFix] [-DetectLeaks <DetectLeakMode>]
+ [-ScratchFile <String>] [-Threads <UInt32>] [-Triage] [-DirectoryIds <UInt64[]>] [-Salvage <SalvageMode>]
+ [-ScratchDir <String>] [-TargetFile <String>] [-TargetDir <String>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ById
 ```
-Repair-Volume -ObjectId <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+Repair-Volume -ObjectId <String[]> [-OfflineScanAndFix] [-Scan] [-SpotFix] [-DetectLeaks <DetectLeakMode>]
+ [-ScratchFile <String>] [-Threads <UInt32>] [-Triage] [-DirectoryIds <UInt64[]>] [-Salvage <SalvageMode>]
+ [-ScratchDir <String>] [-TargetFile <String>] [-TargetDir <String>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByPaths
 ```
-Repair-Volume -Path <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
+Repair-Volume -Path <String[]> [-OfflineScanAndFix] [-Scan] [-SpotFix] [-DetectLeaks <DetectLeakMode>]
+ [-ScratchFile <String>] [-Threads <UInt32>] [-Triage] [-DirectoryIds <UInt64[]>] [-Salvage <SalvageMode>]
+ [-ScratchDir <String>] [-TargetFile <String>] [-TargetDir <String>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByLabel
 ```
-Repair-Volume -FileSystemLabel <String[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Repair-Volume -FileSystemLabel <String[]> [-OfflineScanAndFix] [-Scan] [-SpotFix]
+ [-DetectLeaks <DetectLeakMode>] [-ScratchFile <String>] [-Threads <UInt32>] [-Triage]
+ [-DirectoryIds <UInt64[]>] [-Salvage <SalvageMode>] [-ScratchDir <String>] [-TargetFile <String>]
+ [-TargetDir <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Repair-Volume -InputObject <CimInstance[]> [-OfflineScanAndFix] [-SpotFix] [-Scan] [-CimSession <CimSession[]>]
- [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+Repair-Volume -InputObject <CimInstance[]> [-OfflineScanAndFix] [-Scan] [-SpotFix]
+ [-DetectLeaks <DetectLeakMode>] [-ScratchFile <String>] [-Threads <UInt32>] [-Triage]
+ [-DirectoryIds <UInt64[]>] [-Salvage <SalvageMode>] [-ScratchDir <String>] [-TargetFile <String>]
+ [-TargetDir <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -139,6 +151,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DetectLeaks
+{{ Fill DetectLeaks Description }}
+
+```yaml
+Type: DetectLeakMode
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DirectoryIds
+{{ Fill DirectoryIds Description }}
+
+```yaml
+Type: UInt64[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DriveLetter
 Specifies a letter used to identify a drive or volume in the system.
 
@@ -231,6 +273,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Salvage
+{{ Fill Salvage Description }}
+
+```yaml
+Type: SalvageMode
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Scan
 Scans the volume.
 
@@ -246,11 +303,86 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScratchDir
+{{ Fill ScratchDir Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScratchFile
+{{ Fill ScratchFile Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SpotFix
 Takes the volume offline and fixes any issues that are logged in the $corrupt file.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetDir
+{{ Fill TargetDir Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetFile
+{{ Fill TargetFile Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Threads
+{{ Fill Threads Description }}
+
+```yaml
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -278,6 +410,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Triage
+{{ Fill Triage Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

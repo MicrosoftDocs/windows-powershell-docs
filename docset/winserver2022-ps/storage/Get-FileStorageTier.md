@@ -17,26 +17,30 @@ Gets the files assigned to a Storage tier on a volume, and their status.
 
 ### ByVolumeDriveLetter (Default)
 ```
-Get-FileStorageTier -VolumeDriveLetter <Char> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
-```
-
-### ByVolumePath
-```
-Get-FileStorageTier -VolumePath <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
-```
-
-### ByVolume
-```
-Get-FileStorageTier -Volume <CimInstance> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+Get-FileStorageTier -VolumeDriveLetter <Char> [-PinnedState <PinnedState>]
+ [-PinnedStorageTierClass <StorageTierClass>] [-AllocatedStorageTierClass <StorageTierClass>]
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByFilePath
 ```
-Get-FileStorageTier -FilePath <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+Get-FileStorageTier [-PinnedState <PinnedState>] [-PinnedStorageTierClass <StorageTierClass>]
+ [-AllocatedStorageTierClass <StorageTierClass>] -FilePath <String> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByVolume
+```
+Get-FileStorageTier [-PinnedState <PinnedState>] [-PinnedStorageTierClass <StorageTierClass>]
+ [-AllocatedStorageTierClass <StorageTierClass>] -Volume <CimInstance> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByVolumePath
+```
+Get-FileStorageTier [-PinnedState <PinnedState>] [-PinnedStorageTierClass <StorageTierClass>]
+ [-AllocatedStorageTierClass <StorageTierClass>] -VolumePath <String> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,6 +69,21 @@ PS C:\>Get-FileStorageTier -VolumePath "\\?\Volume{6d6e000d-6038-11e2-be6d-806e6
 This command gets the pinned files for the specified volume, and their status values.
 
 ## PARAMETERS
+
+### -AllocatedStorageTierClass
+{{ Fill AllocatedStorageTierClass Description }}
+
+```yaml
+Type: StorageTierClass
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
@@ -111,6 +130,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PinnedState
+{{ Fill PinnedState Description }}
+
+```yaml
+Type: PinnedState
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PinnedStorageTierClass
+{{ Fill PinnedStorageTierClass Description }}
+
+```yaml
+Type: StorageTierClass
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

@@ -18,20 +18,22 @@ Sets attributes on a specific physical disk.
 ### ByUniqueId (Default)
 ```
 Set-PhysicalDisk [-NewFriendlyName <String>] [-Description <String>] [-Usage <Usage>] [-MediaType <MediaType>]
- -UniqueId <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-StorageEnclosureId <String>] [-StorageScaleUnitId <String>] [-IsHidden <Boolean>] -UniqueId <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByObject
 ```
 Set-PhysicalDisk -InputObject <CimInstance[]> [-NewFriendlyName <String>] [-Description <String>]
- [-Usage <Usage>] [-MediaType <MediaType>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-Usage <Usage>] [-MediaType <MediaType>] [-StorageEnclosureId <String>] [-StorageScaleUnitId <String>]
+ [-IsHidden <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByFriendlyName
 ```
 Set-PhysicalDisk [-NewFriendlyName <String>] [-Description <String>] [-Usage <Usage>] [-MediaType <MediaType>]
- [-FriendlyName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-StorageEnclosureId <String>] [-StorageScaleUnitId <String>] [-IsHidden <Boolean>] [-FriendlyName] <String>
+ [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -134,6 +136,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -IsHidden
+{{ Fill IsHidden Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MediaType
 Specifies a media type.
 The cmdlet changes the media type that is associated with physical disk to the media type that you specify.
@@ -157,6 +174,36 @@ Accept wildcard characters: False
 
 ### -NewFriendlyName
 Specifies the new friendly name of the physical disk.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageEnclosureId
+{{ Fill StorageEnclosureId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageScaleUnitId
+{{ Fill StorageScaleUnitId Description }}
 
 ```yaml
 Type: String

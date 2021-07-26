@@ -29,6 +29,13 @@ Get-PhysicalDisk [-ObjectId <String>] [-Usage <PhysicalDiskUsage>] [-Description
  [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
+### ByDeviceNumber
+```
+Get-PhysicalDisk [-DeviceNumber <String>] [-Usage <PhysicalDiskUsage>] [-Description <String>]
+ [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+ [-CimSession <CimSession>] [<CommonParameters>]
+```
+
 ### ByName
 ```
 Get-PhysicalDisk [[-FriendlyName] <String>] [[-SerialNumber] <String>] [-Usage <PhysicalDiskUsage>]
@@ -55,6 +62,34 @@ Get-PhysicalDisk -StorageEnclosure <CimInstance> [-Usage <PhysicalDiskUsage>] [-
  [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
+### ByStorageScaleUnit
+```
+Get-PhysicalDisk -StorageScaleUnit <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+ [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+ [-CimSession <CimSession>] [<CommonParameters>]
+```
+
+### ByStorageChassis
+```
+Get-PhysicalDisk -StorageChassis <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+ [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+ [-CimSession <CimSession>] [<CommonParameters>]
+```
+
+### ByStorageRack
+```
+Get-PhysicalDisk -StorageRack <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+ [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+ [-CimSession <CimSession>] [<CommonParameters>]
+```
+
+### ByStorageSite
+```
+Get-PhysicalDisk -StorageSite <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+ [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
+ [-CimSession <CimSession>] [<CommonParameters>]
+```
+
 ### ByStorageNode
 ```
 Get-PhysicalDisk -StorageNode <CimInstance> [-PhysicallyConnected] [-Usage <PhysicalDiskUsage>]
@@ -64,7 +99,7 @@ Get-PhysicalDisk -StorageNode <CimInstance> [-PhysicallyConnected] [-Usage <Phys
 
 ### ByStoragePool
 ```
-Get-PhysicalDisk -StoragePool <CimInstance> [-Usage <PhysicalDiskUsage>] [-Description <String>]
+Get-PhysicalDisk -StoragePool <CimInstance> [-HasMetadata] [-Usage <PhysicalDiskUsage>] [-Description <String>]
  [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>] [-HealthStatus <PhysicalDiskHealthStatus>]
  [-CimSession <CimSession>] [<CommonParameters>]
 ```
@@ -72,7 +107,7 @@ Get-PhysicalDisk -StoragePool <CimInstance> [-Usage <PhysicalDiskUsage>] [-Descr
 ### ByVirtualDisk
 ```
 Get-PhysicalDisk -VirtualDisk <CimInstance> [-VirtualRangeMin <UInt64>] [-VirtualRangeMax <UInt64>]
- [-HasAllocations <Boolean>] [-SelectedForUse <Boolean>] [-NoRedundancy] [-Usage <PhysicalDiskUsage>]
+ [-HasAllocations <Boolean>] [-SelectedForUse <Boolean>] [-NoRedundancy] [-HasMetadata] [-Usage <PhysicalDiskUsage>]
  [-Description <String>] [-Manufacturer <String>] [-Model <String>] [-CanPool <Boolean>]
  [-HealthStatus <PhysicalDiskHealthStatus>] [-CimSession <CimSession>] [<CommonParameters>]
 ```
@@ -107,7 +142,7 @@ Gets physical disks that are available for use in a storage pool.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
+Parameter Sets: ByUniqueId, ByObjectId, ByDeviceNumber, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageScaleUnit, ByStorageChassis, ByStorageRack, ByStorageSite, ByStorageNode, ByStoragePool, ByVirtualDisk
 Aliases:
 
 Required: False
@@ -150,6 +185,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DeviceNumber
+{{ Fill DeviceNumber Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByDeviceNumber
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FriendlyName
 Gets the physical disk with the specified friendly name.
 Enter a friendly name or use wildcard characters to enter a name pattern.
@@ -181,6 +231,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HasMetadata
+{{ Fill HasMetadata Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByStoragePool, ByVirtualDisk
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HealthStatus
 Specifies the **health status** of physical disks.
 The acceptable values for this parameter are:
@@ -192,7 +257,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: PhysicalDiskHealthStatus
-Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
+Parameter Sets: ByUniqueId, ByObjectId, ByDeviceNumber, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageScaleUnit, ByStorageChassis, ByStorageRack, ByStorageSite, ByStorageNode, ByStoragePool, ByVirtualDisk
 Aliases:
 Accepted values: Healthy, Warning, Unhealthy, Unknown
 
@@ -224,7 +289,7 @@ Enter a manufacturer string or use wildcard characters to enter a pattern.
 
 ```yaml
 Type: String
-Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
+Parameter Sets: ByUniqueId, ByObjectId, ByDeviceNumber, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageScaleUnit, ByStorageChassis, ByStorageRack, ByStorageSite, ByStorageNode, ByStoragePool, ByVirtualDisk
 Aliases:
 
 Required: False
@@ -240,7 +305,7 @@ Enter a model string or use wildcard characters to enter a pattern.
 
 ```yaml
 Type: String
-Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
+Parameter Sets: ByUniqueId, ByObjectId, ByDeviceNumber, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageScaleUnit, ByStorageChassis, ByStorageRack, ByStorageSite, ByStorageNode, ByStoragePool, ByVirtualDisk
 Aliases:
 
 Required: False
@@ -326,6 +391,21 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -StorageChassis
+{{ Fill StorageChassis Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageChassis
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -StorageEnclosure
 Specifies a storage enclosure associated with the physical disk that this cmdlet gets.
 To obtain a **StorageEnclosure** object, use the **Get-StorageEnclosure** cmdlet.
@@ -375,6 +455,51 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -StorageRack
+{{ Fill StorageRack Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageRack
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageScaleUnit
+{{ Fill StorageScaleUnit Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageScaleUnit
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageSite
+{{ Fill StorageSite Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageSite
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -StorageSubsystem
 Specifies a storage subsystem.
 This cmdlet gets physical disks attached to the storage subsystem that you specify.
@@ -404,7 +529,7 @@ Aliases: Id
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -422,7 +547,7 @@ The acceptable values for this parameter are:
 
 ```yaml
 Type: PhysicalDiskUsage
-Parameter Sets: ByUniqueId, ByObjectId, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageNode, ByStoragePool, ByVirtualDisk
+Parameter Sets: ByUniqueId, ByObjectId, ByDeviceNumber, ByName, ByStorageSubsystem, ByStorageEnclosure, ByStorageScaleUnit, ByStorageChassis, ByStorageRack, ByStorageSite, ByStorageNode, ByStoragePool, ByVirtualDisk
 Aliases:
 Accepted values: Unknown, AutoSelect, ManualSelect, HotSpare, Retired, Journal
 

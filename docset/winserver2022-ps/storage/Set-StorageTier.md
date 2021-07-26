@@ -29,11 +29,14 @@ Set-StorageTier -InputObject <CimInstance[]> [-Description <String>] [-CimSessio
 
 ### ByObjectAttributes
 ```
-Set-StorageTier -InputObject <CimInstance[]> [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
- [-ColumnIsolation <FaultDomainType>] [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>]
- [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+Set-StorageTier -InputObject <CimInstance[]> [-ProvisioningType <ProvisioningType>]
+ [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
+ [-ColumnIsolation <FaultDomainType>] [-ResiliencySettingName <String>] [-Usage <StorageTierUsage>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>]
+ [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
 ```
+
 
 ### ByObjectNewFriendlyName
 ```
@@ -49,16 +52,18 @@ Set-StorageTier [-NewFriendlyName <String>] [-FriendlyName] <String> [-CimSessio
 
 ### ByFriendlyNameAttributes
 ```
-Set-StorageTier [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
- [-ColumnIsolation <FaultDomainType>] [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>]
+Set-StorageTier [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
+ [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
+ [-ResiliencySettingName <String>] [-Usage <StorageTierUsage>] [-PhysicalDiskRedundancy <UInt16>]
  [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
  [-FriendlyName] <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueIdAttributes
 ```
-Set-StorageTier [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
- [-ColumnIsolation <FaultDomainType>] [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>]
+Set-StorageTier [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
+ [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
+ [-ResiliencySettingName <String>] [-Usage <StorageTierUsage>] [-PhysicalDiskRedundancy <UInt16>]
  [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
  -UniqueId <String> [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
@@ -97,6 +102,21 @@ This command uses the Get-StorageTier cmdlet to get the storage tier named FastT
 The **Set-StorageTier** cmdlet changes the description of the storage tier to the specified string.
 
 ## PARAMETERS
+
+### -AllocationUnitSize
+{{ Fill AllocationUnitSize Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: ByObjectAttributes, ByFriendlyNameAttributes, ByUniqueIdAttributes
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
@@ -349,6 +369,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProvisioningType
+{{ Fill ProvisioningType Description }}
+
+```yaml
+Type: ProvisioningType
+Parameter Sets: ByObjectAttributes, ByFriendlyNameAttributes, ByUniqueIdAttributes
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResiliencySettingName
 Specifies the resiliency setting, or storage layout, to use for the virtual disk.
 Acceptable values vary by storage subsystem.
@@ -401,6 +436,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Usage
+{{ Fill Usage Description }}
+
+```yaml
+Type: StorageTierUsage
+Parameter Sets: ByObjectAttributes, ByFriendlyNameAttributes, ByUniqueIdAttributes
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

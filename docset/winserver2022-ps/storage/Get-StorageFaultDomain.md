@@ -17,20 +17,26 @@ Gets a Storage fault domain object.
 
 ### EnumerateFaultDomains (Default)
 ```
-Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>] [-CimSession <CimSession>]
+Get-StorageFaultDomain [-FriendlyName <String>] [-SerialNumber <String>] [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>] [-CimSession <CimSession>]
  [<CommonParameters>]
 ```
 
 ### ByStorageFaultDomain
 ```
 Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>]
- -StorageFaultDomain <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+ -StorageFaultDomain <CimInstance> [-FriendlyName <String>] [-SerialNumber <String>] [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ### ByStorageSubsystem
 ```
-Get-StorageFaultDomain [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>]
+Get-StorageFaultDomain [-FriendlyName <String>] [-SerialNumber <String>] [-Type <StorageFaultDomainType>] [-PhysicalLocation <String>] 
  -StorageSubsystem <CimInstance> [-CimSession <CimSession>] [<CommonParameters>]
+```
+
+### ByVirtualDisk
+```
+Get-StorageFaultDomain -VirtualDisk <CimInstance> [-FriendlyName <String>] [-SerialNumber <String>]
+ [-PhysicalLocation <String>] [-CimSession <CimSession>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,8 +69,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FriendlyName
+{{ Fill FriendlyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhysicalLocation
 Specifies the physical location of the hardware.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SerialNumber
+{{ Fill SerialNumber Description }}
 
 ```yaml
 Type: String
@@ -129,6 +165,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VirtualDisk
+{{ Fill VirtualDisk Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByVirtualDisk
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

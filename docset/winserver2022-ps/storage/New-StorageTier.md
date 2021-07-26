@@ -17,38 +17,43 @@ Creates a storage tier.
 
 ### ByFriendlyName (Default)
 ```
-New-StorageTier [-StoragePoolFriendlyName] <String[]> -FriendlyName <String> [-MediaType <MediaType>]
+New-StorageTier [-StoragePoolFriendlyName] <String[]> -FriendlyName <String>
+ [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
  [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-Description <String>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-StorageFaultDomainsToUse <CimInstance[]>] [-ResiliencySettingName <String>] [-Usage <Usage>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>]
+ [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-Description <String>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
-New-StorageTier -StoragePoolUniqueId <String[]> -FriendlyName <String> [-MediaType <MediaType>]
- [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-Description <String>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+New-StorageTier -StoragePoolUniqueId <String[]> -FriendlyName <String> [-ProvisioningType <ProvisioningType>]
+ [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
+ [-ColumnIsolation <FaultDomainType>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-ResiliencySettingName <String>] [-Usage <Usage>] [-PhysicalDiskRedundancy <UInt16>]
+ [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
+ [-Description <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-New-StorageTier -StoragePoolName <String[]> -FriendlyName <String> [-MediaType <MediaType>]
- [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-Description <String>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+New-StorageTier -StoragePoolName <String[]> -FriendlyName <String> [-ProvisioningType <ProvisioningType>]
+ [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
+ [-ColumnIsolation <FaultDomainType>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-ResiliencySettingName <String>] [-Usage <Usage>] [-PhysicalDiskRedundancy <UInt16>]
+ [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
+ [-Description <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-New-StorageTier -InputObject <CimInstance[]> -FriendlyName <String> [-MediaType <MediaType>]
- [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-ResiliencySettingName <String>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>] [-Description <String>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+New-StorageTier -InputObject <CimInstance[]> -FriendlyName <String> [-ProvisioningType <ProvisioningType>]
+ [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>] [-FaultDomainAwareness <FaultDomainType>]
+ [-ColumnIsolation <FaultDomainType>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-ResiliencySettingName <String>] [-Usage <Usage>] [-PhysicalDiskRedundancy <UInt16>]
+ [-NumberOfDataCopies <UInt16>] [-NumberOfGroups <UInt16>] [-NumberOfColumns <UInt16>] [-Interleave <UInt64>]
+ [-Description <String>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,6 +69,21 @@ PS C:\> New-StorageTier -StoragePoolFriendlyName "TierPool01" -FriendlyName "Sta
 This command creates a storage tier for hard disk drives named Tier11 in the storage pool named TierPool01.
 
 ## PARAMETERS
+
+### -AllocationUnitSize
+{{ Fill AllocationUnitSize Description }}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Runs the cmdlet as a background job. Use this parameter to run commands that take a long time to complete.
@@ -303,6 +323,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProvisioningType
+{{ Fill ProvisioningType Description }}
+
+```yaml
+Type: ProvisioningType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResiliencySettingName
 Specifies the resiliency setting, or storage layout, to use for the virtual disk.
 The acceptable values for this parameter are: Simple, Mirror, and Parity.
@@ -316,6 +351,21 @@ To create a dual-parity space, specify 2 for the *PhysicalDiskRedundancy* parame
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageFaultDomainsToUse
+{{ Fill StorageFaultDomainsToUse Description }}
+
+```yaml
+Type: CimInstance[]
 Parameter Sets: (All)
 Aliases:
 
@@ -382,6 +432,21 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Usage
+{{ Fill Usage Description }}
+
+```yaml
+Type: Usage
 Parameter Sets: (All)
 Aliases:
 

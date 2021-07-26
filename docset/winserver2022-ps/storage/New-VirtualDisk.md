@@ -21,11 +21,12 @@ New-VirtualDisk [-StoragePoolFriendlyName] <String[]> -FriendlyName <String> [-U
  [-OtherUsageDescription <String>] [-ResiliencySettingName <String>] [-Size <UInt64>] [-UseMaximumSize]
  [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
  [-IsEnclosureAware <Boolean>] [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-PhysicalDisksToUse <CimInstance[]>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfColumns <UInt16>] [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>]
- [-StorageTiers <CimInstance[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
- [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-PhysicalDisksToUse <CimInstance[]>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>] [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>]
+ [-IsManualAttach <Boolean>] [-AddToCluster <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
@@ -34,11 +35,12 @@ New-VirtualDisk -StoragePoolUniqueId <String[]> -FriendlyName <String> [-Usage <
  [-OtherUsageDescription <String>] [-ResiliencySettingName <String>] [-Size <UInt64>] [-UseMaximumSize]
  [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
  [-IsEnclosureAware <Boolean>] [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-PhysicalDisksToUse <CimInstance[]>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfColumns <UInt16>] [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>]
- [-StorageTiers <CimInstance[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
- [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-PhysicalDisksToUse <CimInstance[]>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>] [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>]
+ [-IsManualAttach <Boolean>] [-AddToCluster <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
 ```
 
 ### ByName
@@ -47,11 +49,12 @@ New-VirtualDisk -StoragePoolName <String[]> -FriendlyName <String> [-Usage <Usag
  [-OtherUsageDescription <String>] [-ResiliencySettingName <String>] [-Size <UInt64>] [-UseMaximumSize]
  [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
  [-IsEnclosureAware <Boolean>] [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-PhysicalDisksToUse <CimInstance[]>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfColumns <UInt16>] [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>]
- [-StorageTiers <CimInstance[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
- [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-PhysicalDisksToUse <CimInstance[]>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>] [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>]
+ [-IsManualAttach <Boolean>] [-AddToCluster <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -60,12 +63,14 @@ New-VirtualDisk -InputObject <CimInstance[]> -FriendlyName <String> [-Usage <Usa
  [-OtherUsageDescription <String>] [-ResiliencySettingName <String>] [-Size <UInt64>] [-UseMaximumSize]
  [-ProvisioningType <ProvisioningType>] [-AllocationUnitSize <UInt64>] [-MediaType <MediaType>]
  [-IsEnclosureAware <Boolean>] [-FaultDomainAwareness <FaultDomainType>] [-ColumnIsolation <FaultDomainType>]
- [-PhysicalDisksToUse <CimInstance[]>] [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>]
- [-NumberOfColumns <UInt16>] [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>]
- [-StorageTiers <CimInstance[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
- [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob]
- [<CommonParameters>]
+ [-PhysicalDisksToUse <CimInstance[]>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-AutoNumberOfColumns] [-NumberOfGroups <UInt16>] [-Interleave <UInt64>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>] [-AutoWriteCacheSize] [-ReadCacheSize <UInt64>]
+ [-IsManualAttach <Boolean>] [-AddToCluster <Boolean>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+ [-AsJob] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 The **New-VirtualDisk** cmdlet creates a new virtual disk in the specified storage pool.
@@ -119,6 +124,21 @@ PS C:\>New-VirtualDisk -StoragePoolFriendlyName "CompanyData" -FriendlyName "Arc
 This example creates a virtual disk on the Windows Storage subsystem that uses the dual-parity resiliency type to help protect against two simultaneous disk failures and maximize capacity efficiency.
 
 ## PARAMETERS
+
+### -AddToCluster
+{{ Fill AddToCluster Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllocationUnitSize
 Specifies the allocation unit size to use when create the virtual disk.
@@ -320,6 +340,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsManualAttach
+{{ Fill IsManualAttach Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MediaType
 Specifies the media type of the storage tier.
 The cmdlet creates the storage tier for the media type that you specify.
@@ -506,6 +541,21 @@ The default unit is Bytes; to specify a different unit, enter the size followed 
 
 ```yaml
 Type: UInt64
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageFaultDomainsToUse
+{{ Fill StorageFaultDomainsToUse Description }}
+
+```yaml
+Type: CimInstance[]
 Parameter Sets: (All)
 Aliases:
 

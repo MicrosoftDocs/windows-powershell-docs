@@ -15,22 +15,40 @@ Gets information about firmware on a storage object.
 
 ## SYNTAX
 
-### ByName (Default)
+### ByPhysicalDiskFriendlyName (Default)
 ```
 Get-StorageFirmwareInformation [-FriendlyName] <String> [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
  [-AsJob] [<CommonParameters>]
 ```
 
-### ByUniqueId
+### ByPhysicalDiskUniqueId
 ```
 Get-StorageFirmwareInformation -UniqueId <String> [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob]
  [<CommonParameters>]
 ```
 
-### ByInputObject
+### ByPhysicalDisk
 ```
-Get-StorageFirmwareInformation -InputObject <CimInstance[]> [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
+Get-StorageFirmwareInformation -InputObject <CimInstance> [-CimSession <CimSession>] [-ThrottleLimit <Int32>]
  [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosureUniqueId
+```
+Get-StorageFirmwareInformation -StorageEnclosureUniqueId <String> [-CimSession <CimSession>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosureFriendlyName
+```
+Get-StorageFirmwareInformation [-StorageEnclosureFriendlyName] <String> [-CimSession <CimSession>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosure
+```
+Get-StorageFirmwareInformation -StorageEnclosure <CimInstance> [-CimSession <CimSession>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -83,7 +101,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: String
-Parameter Sets: ByName
+Parameter Sets: ByPhysicalDiskFriendlyName
 Aliases:
 
 Required: True
@@ -97,7 +115,7 @@ Accept wildcard characters: False
 Specifies the input object that is used in a pipeline command.
 
 ```yaml
-Type: CimInstance[]
+Type: CimInstance
 Parameter Sets: ByInputObject
 Aliases:
 
@@ -108,6 +126,50 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -StorageEnclosure
+{{ Fill StorageEnclosure Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageEnclosure
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageEnclosureFriendlyName
+{{ Fill StorageEnclosureFriendlyName Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByStorageEnclosureFriendlyName
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageEnclosureUniqueId
+{{ Fill StorageEnclosureUniqueId Description }}
+
+```yaml
+Type: String
+Parameter Sets: ByStorageEnclosureUniqueId
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -ThrottleLimit
 
 
@@ -129,7 +191,7 @@ The ID persists through restarts.
 
 ```yaml
 Type: String
-Parameter Sets: ByUniqueId
+Parameter Sets: ByPhysicalDiskUniqueId
 Aliases: Id
 
 Required: True

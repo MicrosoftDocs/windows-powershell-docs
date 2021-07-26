@@ -18,7 +18,7 @@ Enables storage maintenance mode on a device.
 ```
 Enable-StorageMaintenanceMode -InputObject <CimInstance> [-IgnoreDetachedVirtualDisks]
  [-ValidateVirtualDisksHealthy <Boolean>] [-Model <String>] [-Manufacturer <String>] [-CimSession <CimSession>]
- [-AsJob] [<CommonParameters>]
+ [-ValidateMaintenanceMode <Boolean>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -133,6 +133,21 @@ If multiple devices fit a model string, this cmdlet places those devices in main
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidateMaintenanceMode
+{{ Fill ValidateMaintenanceMode Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

@@ -17,31 +17,31 @@ Cleans a disk by removing all partition information and un-initializing it, eras
 
 ### ByNumber (Default)
 ```
-Clear-Disk [-Number] <UInt32[]> [-RemoveData] [-RemoveOEM] [-CimSession <CimSession[]>]
+Clear-Disk [-Number] <UInt32[]> [-RemoveData] [-RemoveOEM] [-Sanitize] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByUniqueId
 ```
-Clear-Disk -UniqueId <String[]> [-RemoveData] [-RemoveOEM] [-CimSession <CimSession[]>]
+Clear-Disk -UniqueId <String[]> [-RemoveData] [-RemoveOEM] [-Sanitize] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByName
 ```
-Clear-Disk [-FriendlyName <String[]>] [-RemoveData] [-RemoveOEM] [-CimSession <CimSession[]>]
+Clear-Disk [-FriendlyName <String[]>] [-RemoveData] [-RemoveOEM] [-Sanitize] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ByPath
 ```
-Clear-Disk -Path <String[]> [-RemoveData] [-RemoveOEM] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
+Clear-Disk -Path <String[]> [-RemoveData] [-RemoveOEM] [-Sanitize] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>]
  [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
 ```
-Clear-Disk -InputObject <CimInstance[]> [-RemoveData] [-RemoveOEM] [-CimSession <CimSession[]>]
+Clear-Disk -InputObject <CimInstance[]> [-RemoveData] [-RemoveOEM] [-Sanitize] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -217,6 +217,21 @@ Accept wildcard characters: False
 
 ### -RemoveOEM
 Enables the removal of any OEM recovery partitions from the disk.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sanitize
+{{ Fill Sanitize Description }}
 
 ```yaml
 Type: SwitchParameter

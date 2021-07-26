@@ -15,15 +15,17 @@ Creates a volume with the specified file system.
 
 ## SYNTAX
 
-### ByStoragePool
+### ByStoragePool (Default)
 ```
-New-Volume [-StoragePool] <CimInstance> -FriendlyName <String> [-FileSystem <FileSystemType>]
+New-Volume [[-StoragePool] <CimInstance>] -FriendlyName <String> [-FileSystem <FileSystemType>]
  [-AccessPath <String>] [-DriveLetter <Char>] [-AllocationUnitSize <UInt32>] [-Size <UInt64>]
  [-ResiliencySettingName <String>] [-ProvisioningType <ProvisioningType>] [-MediaType <MediaType>]
- [-PhysicalDiskRedundancy <UInt16>] [-NumberOfColumns <UInt16>] [-NumberOfGroups <UInt16>]
- [-StorageTiers <CimInstance[]>] [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>]
- [-WriteCacheSize <UInt64>] [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-NumberOfGroups <UInt16>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-StorageFaultDomainsToUseFriendlyNames <String[]>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
+ [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ### ByStoragePoolFriendlyName
@@ -31,10 +33,12 @@ New-Volume [-StoragePool] <CimInstance> -FriendlyName <String> [-FileSystem <Fil
 New-Volume -StoragePoolFriendlyName <String> -FriendlyName <String> [-FileSystem <FileSystemType>]
  [-AccessPath <String>] [-DriveLetter <Char>] [-AllocationUnitSize <UInt32>] [-Size <UInt64>]
  [-ResiliencySettingName <String>] [-ProvisioningType <ProvisioningType>] [-MediaType <MediaType>]
- [-PhysicalDiskRedundancy <UInt16>] [-NumberOfColumns <UInt16>] [-NumberOfGroups <UInt16>]
- [-StorageTiers <CimInstance[]>] [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>]
- [-WriteCacheSize <UInt64>] [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-NumberOfGroups <UInt16>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-StorageFaultDomainsToUseFriendlyNames <String[]>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
+ [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ### ByStoragePoolName
@@ -42,10 +46,12 @@ New-Volume -StoragePoolFriendlyName <String> -FriendlyName <String> [-FileSystem
 New-Volume -StoragePoolName <String> -FriendlyName <String> [-FileSystem <FileSystemType>]
  [-AccessPath <String>] [-DriveLetter <Char>] [-AllocationUnitSize <UInt32>] [-Size <UInt64>]
  [-ResiliencySettingName <String>] [-ProvisioningType <ProvisioningType>] [-MediaType <MediaType>]
- [-PhysicalDiskRedundancy <UInt16>] [-NumberOfColumns <UInt16>] [-NumberOfGroups <UInt16>]
- [-StorageTiers <CimInstance[]>] [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>]
- [-WriteCacheSize <UInt64>] [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-NumberOfGroups <UInt16>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-StorageFaultDomainsToUseFriendlyNames <String[]>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
+ [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
 
 ### ByStoragePoolUniqueId
@@ -53,11 +59,14 @@ New-Volume -StoragePoolName <String> -FriendlyName <String> [-FileSystem <FileSy
 New-Volume -StoragePoolUniqueId <String> -FriendlyName <String> [-FileSystem <FileSystemType>]
  [-AccessPath <String>] [-DriveLetter <Char>] [-AllocationUnitSize <UInt32>] [-Size <UInt64>]
  [-ResiliencySettingName <String>] [-ProvisioningType <ProvisioningType>] [-MediaType <MediaType>]
- [-PhysicalDiskRedundancy <UInt16>] [-NumberOfColumns <UInt16>] [-NumberOfGroups <UInt16>]
- [-StorageTiers <CimInstance[]>] [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>]
- [-WriteCacheSize <UInt64>] [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>]
- [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-PhysicalDiskRedundancy <UInt16>] [-NumberOfDataCopies <UInt16>] [-NumberOfColumns <UInt16>]
+ [-NumberOfGroups <UInt16>] [-StorageFaultDomainsToUse <CimInstance[]>]
+ [-StorageFaultDomainsToUseFriendlyNames <String[]>] [-StorageTiers <CimInstance[]>]
+ [-StorageTierFriendlyNames <String[]>] [-StorageTierSizes <UInt64[]>] [-WriteCacheSize <UInt64>]
+ [-ReadCacheSize <UInt64>] [-UseMaximumSize] [-CimSession <CimSession>] [-ThrottleLimit <Int32>] [-AsJob]
+ [<CommonParameters>]
 ```
+
 
 ### ByDisk
 ```
@@ -327,6 +336,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NumberOfDataCopies
+{{ Fill NumberOfDataCopies Description }}
+
+```yaml
+Type: UInt16
+Parameter Sets: ByStoragePool, ByStoragePoolFriendlyName, ByStoragePoolName, ByStoragePoolUniqueId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NumberOfGroups
 Specifies the number of groups used by Local Reconstruction Coding (LRC) with a dual parity virtual disk.
 We recommend omitting this parameter and using the defaults.
@@ -438,6 +462,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StorageFaultDomainsToUse
+{{ Fill StorageFaultDomainsToUse Description }}
+
+```yaml
+Type: CimInstance[]
+Parameter Sets: ByStoragePool, ByStoragePoolFriendlyName, ByStoragePoolName, ByStoragePoolUniqueId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageFaultDomainsToUseFriendlyNames
+{{ Fill StorageFaultDomainsToUseFriendlyNames Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: ByStoragePool, ByStoragePoolFriendlyName, ByStoragePoolName, ByStoragePoolUniqueId
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -StoragePool
 Specifies the storage pool object in which you want to create a volume.
 To obtain a storage pool object, use the Get-StoragePool cmdlet.
@@ -447,7 +501,7 @@ Type: CimInstance
 Parameter Sets: ByStoragePool
 Aliases:
 
-Required: True
+Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)

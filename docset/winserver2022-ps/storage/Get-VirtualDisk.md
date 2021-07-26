@@ -53,7 +53,7 @@ Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnaps
 ### BySourceVirtualDisk
 ```
 Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
- [-HealthStatus <HealthStatus[]>] [-SourceVirtualDisk <CimInstance>] [-CimSession <CimSession[]>]
+ [-HealthStatus <HealthStatus[]>] [-SourceVirtualDisk <CimInstance>] [-AssociatedObjects] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -96,6 +96,34 @@ Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnaps
 ```
 Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
  [-HealthStatus <HealthStatus[]>] [-StorageTier <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageRack
+```
+Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+ [-HealthStatus <HealthStatus[]>] [-StorageRack <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageChassis
+```
+Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+ [-HealthStatus <HealthStatus[]>] [-StorageChassis <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageScaleUnit
+```
+Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+ [-HealthStatus <HealthStatus[]>] [-StorageScaleUnit <CimInstance>] [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+```
+
+### ByStorageEnclosure
+```
+Get-VirtualDisk [-Usage <Usage[]>] [-OtherUsageDescription <String[]>] [-IsSnapshot <Boolean[]>]
+ [-HealthStatus <HealthStatus[]>] [-StorageEnclosure <CimInstance>] [-CimSession <CimSession[]>]
  [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
@@ -174,6 +202,21 @@ Runs the cmdlet as a background job. Use this parameter to run commands that tak
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssociatedObjects
+{{ Fill AssociatedObjects Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: BySourceVirtualDisk
 Aliases:
 
 Required: False
@@ -415,7 +458,37 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageChassis
+{{ Fill StorageChassis Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageChassis
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageEnclosure
+{{ Fill StorageEnclosure Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageEnclosure
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -461,6 +534,36 @@ The Storage Pool CIM object is exposed by the [Get-StoragePool](https://technet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByStoragePool
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageRack
+{{ Fill StorageRack Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageRack
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -StorageScaleUnit
+{{ Fill StorageScaleUnit Description }}
+
+```yaml
+Type: CimInstance
+Parameter Sets: ByStorageScaleUnit
 Aliases:
 
 Required: False

@@ -22,7 +22,7 @@ New-StoragePool [-StorageSubSystemFriendlyName] <String[]> -FriendlyName <String
  [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
  [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
  [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-Version <Version>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByUniqueId
@@ -32,7 +32,7 @@ New-StoragePool -StorageSubSystemUniqueId <String[]> -FriendlyName <String> [-Us
  [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
  [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
  [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-Version <Version>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### ByName
@@ -42,7 +42,7 @@ New-StoragePool -StorageSubSystemName <String[]> -FriendlyName <String> [-Usage 
  [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
  [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
  [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-Version <Version>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ### InputObject (cdxml)
@@ -52,7 +52,7 @@ New-StoragePool -InputObject <CimInstance[]> -FriendlyName <String> [-Usage <Usa
  [-MediaTypeDefault <MediaType>] [-EnclosureAwareDefault <Boolean>]
  [-FaultDomainAwarenessDefault <FaultDomainType>] [-ResiliencySettingNameDefault <String>]
  [-LogicalSectorSizeDefault <UInt64>] [-WriteCacheSizeDefault <UInt64>] [-AutoWriteCacheSize <Boolean>]
- [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
+ [-Version <Version>] [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -405,6 +405,21 @@ Accepted values: Other, Unrestricted, ReservedForComputerSystem, ReservedAsDelta
 Required: False
 Position: Named
 Default value: Other
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Version
+{{ Fill Version Description }}
+
+```yaml
+Type: Version
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

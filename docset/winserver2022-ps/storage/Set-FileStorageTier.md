@@ -21,6 +21,12 @@ Set-FileStorageTier -FilePath <String> -DesiredStorageTierFriendlyName <String> 
  [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByDesiredStorageTierClass
+```
+Set-FileStorageTier -FilePath <String> -DesiredStorageTierClass <StorageTierClass> [-CimSession <CimSession[]>]
+ [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### ByDesiredStorageTier
 ```
 Set-FileStorageTier -FilePath <String> -DesiredStorageTier <CimInstance> [-CimSession <CimSession[]>]
@@ -119,6 +125,21 @@ To obtain a storage tier object, use the Get-StorageTier cmdlet.
 ```yaml
 Type: CimInstance
 Parameter Sets: ByDesiredStorageTier
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DesiredStorageTierClass
+{{ Fill DesiredStorageTierClass Description }}
+
+```yaml
+Type: StorageTierClass
+Parameter Sets: ByDesiredStorageTierClass
 Aliases:
 
 Required: True

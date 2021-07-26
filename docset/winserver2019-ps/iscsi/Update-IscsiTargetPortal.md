@@ -35,8 +35,9 @@ The **Update-IscsiTargetPortal** cmdlet refreshes cached information about an iS
 ## EXAMPLES
 
 ### Example 1: Update information about an iSCSI target portal
-```
-PS C:\> Get-IscsiTargetPortal
+```PowerShell
+Get-IscsiTargetPortal
+```Output
 InitiatorInstanceName      : 
 InitiatorNodeAddress       : 
 InitiatorPortalAddress     : 
@@ -45,7 +46,8 @@ IsDataDigest               : False
 IsHeaderDigest             : False 
 TargetPortalAddress        : testiSCSI-deepcore 
 TargetPortalPortNumber     : 3260
-PS C:\> Get-IscsiTargetPortal | Update-IscsiTargetPortal
+```PowerShell
+ Get-IscsiTargetPortal | Update-IscsiTargetPortal
 ```
 
 This command updates information about the specified iSCSI target portal.

@@ -2,7 +2,7 @@
 description: Use this topic to help manage Windows and Windows Server technologies with Windows PowerShell.
 external help file: MSFT_WvrAdminTasks.cdxml-help.xml
 Module Name: StorageReplica
-ms.date: 07/06/2021
+ms.date: 07/28/2021
 online version: https://docs.microsoft.com/powershell/module/storagereplica/set-srnetworkconstraint?view=windowsserver2022-ps&wt.mc_id=ps-gethelp
 schema: 2.0.0
 title: Set-SRNetworkConstraint
@@ -61,7 +61,7 @@ DNSServer            : 10.177.9.210
 The next command sets the network constraint for interfaces and replication groups. The final command makes sure that the constraint takes effect immediately by using the Update-SmbMultichannelConnection cmdlet.
 
 ```
-PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterfaceIndex 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterfaceIndex 2
+PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterface 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterface 2
 C:\PS> Update-SmbMultichannelConnection
 ```
 

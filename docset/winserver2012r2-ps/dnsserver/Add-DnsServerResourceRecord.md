@@ -167,7 +167,7 @@ Add-DnsServerResourceRecord [-ZoneName] <String> [-ComputerName <String>] [-Pass
 The **Add-DnsServerResourceRecord** cmdlet adds a resource record for a Domain Name System (DNS) zone on a DNS server.
 You can add different types of resource records.
 Use different switches for different record types.
-For more information about resource records, see [Managing Resource Records](https://technet.microsoft.com/library/cc754308.aspx).
+For more information about resource records, see [Managing Resource Records](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754308(v=ws.11)).
 
 By using this cmdlet, you can change a value for a record, configure whether a record has a time stamp, whether any authenticated user can update a record with the same owner name, and change lookup timeout values, Windows Internet Name Service (WINS) cache settings, and replication settings.
 

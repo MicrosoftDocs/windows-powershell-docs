@@ -7,7 +7,6 @@ online version: https://docs.microsoft.com/powershell/module/iscsi/update-iscsit
 schema: 2.0.0
 title: Update-IscsiTargetPortal
 ---
-
 # Update-IscsiTargetPortal
 
 ## SYNOPSIS
@@ -42,7 +41,7 @@ The `Update-IscsiTargetPortal` cmdlet refreshes cached information about an iSCS
 This command updates information about the specified iSCSI target portal.
 The first command displays target portals by using the **Get-IscsiTargetPortal** cmdlet.
 
-```PowerShell
+```powershell
 Get-IscsiTargetPortal
 ```
 
@@ -57,7 +56,7 @@ TargetPortalAddress        : testiSCSI-deepcore
 TargetPortalPortNumber     : 3260
 ```
 
-```PowerShell
+```powershell
 Get-IscsiTargetPortal | Update-IscsiTargetPortal
 ```
 The second command passes the same target portals to the current cmdlet to update them.
@@ -78,7 +77,7 @@ For more information about Windows PowerShell background jobs, see [about_Jobs](
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -114,7 +113,7 @@ If no instance name is specified, the iSCSI initiator service chooses the initia
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -130,7 +129,7 @@ Specifies the IP address or DNS name that is associated with the portal.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -147,7 +146,7 @@ You can use this parameter, or you can pipe the input to this cmdlet.
 ```yaml
 Type: CimInstance[]
 Parameter Sets: InputObject (cdxml)
-Aliases: 
+Aliases:
 
 Required: True
 Position: Named
@@ -164,7 +163,7 @@ By default, this cmdlet does not generate any output.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -180,7 +179,7 @@ Specifies the IP address or DNS name of the target portal.
 ```yaml
 Type: String[]
 Parameter Sets: ByTargetPortalAddress
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -192,12 +191,12 @@ Accept wildcard characters: False
 ### -TargetPortalPortNumber
 
 Specifies the TCP/IP port number for the target portal.
-By default, the port number is 3260.
+By default, the port number is `3260`.
 
 ```yaml
 Type: UInt16
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -216,7 +215,7 @@ The throttle limit applies only to the current cmdlet, not to the session or to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named

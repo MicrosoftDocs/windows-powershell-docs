@@ -34,7 +34,7 @@ Any networks not specified by this cmdlet are no longer used by Storage Replica.
 The first command sets the network constraint for interfaces and replication groups. The final command makes sure that the constraint takes effect immediately by using the **Update-SmbMultichannelConnection** cmdlet.
 
 ```powershell
-PS C:\>Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterface 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterface 2
+Set-SRNetworkConstraint -SourceComputerName "SR-SRV06" -SourceRGName "ReplicationGroup02" -SourceNWInterface 6 -DestinationComputerName "SR-SRV05" -DestinationRGName "ReplicationGroup01" -DestinationNWInterface 2
 
 Update-SmbMultichannelConnection
 ```

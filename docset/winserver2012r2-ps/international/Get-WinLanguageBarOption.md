@@ -27,7 +27,7 @@ The default value for each setting is false.
 
 ### Example 1
 ```
-PS C:\>Get-WinLanguageBarOptions
+PS C:\>Get-WinLanguageBarOption
 IsLegacyLanguageBar    IsLegacySwitchingMode
 
 -------------------    ---------------------

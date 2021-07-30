@@ -18,7 +18,7 @@ Adds a policy for query resolution to a DNS server.
 ### Server (Default)
 ```
 Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-Name] <String> [-Fqdn <String>]
- [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>] [-InternetProtocol <String>]
+ [-ECS <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>] [-InternetProtocol <String>]
  [[-Action] <String>] [-ApplyOnRecursion] [-ServerInterfaceIP <String>] [-QType <String>]
  [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-RecursionScope <String>] [-Disable]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -27,7 +27,7 @@ Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-Name] 
 ### Zone
 ```
 Add-DnsServerQueryResolutionPolicy [-PassThru] [-ComputerName <String>] [-ZoneName] <String> [-Name] <String>
- [-Fqdn <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>]
+ [-Fqdn <String>] [-ECS <String>] [-ClientSubnet <String>] [-TimeOfDay <String>] [-TransportProtocol <String>]
  [-InternetProtocol <String>] [[-Action] <String>] [-ServerInterfaceIP <String>] [-QType <String>]
  [-ProcessingOrder <UInt32>] [[-Condition] <String>] [-Disable] [-ZoneScope <String>]
  [-CimSession <CimSession[]>] [-ThrottleLimit <Int32>] [-AsJob] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -502,6 +502,21 @@ If you do not specify this parameter, the cmdlet creates the policy and enables 
 Type: SwitchParameter
 Parameter Sets: Server, Zone
 Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ECS
+{{ Fill ECS Description }}
+
+```yaml
+Type: String
+Parameter Sets: Server, Zone
+Aliases:
 
 Required: False
 Position: Named
